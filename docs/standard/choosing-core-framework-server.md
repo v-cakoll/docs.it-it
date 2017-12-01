@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -40,7 +39,7 @@ Nelle sezioni seguenti sono descritti in modo più dettagliato i motivi indicati
 
 Usare .NET Core se l'applicazione (Web/servizio) deve essere eseguita su più piattaforme (Windows, Linux e macOS).
 
-.NET Core supporta i sistemi operativi indicati in precedenza come workstation di sviluppo. Visual Studio fornisce un ambiente di sviluppo integrato (IDE) per Windows e Mac. È anche possibile usare Visual Studio Code, che viene eseguito in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. La maggior parte degli editor di terze parti, ad esempio Sublime, Emacs e VI, è compatibile con .NET Core. Questi editor di terze parti accedono alla funzionalità IntelliSense dell'editor tramite [Omnisharp](http://www.omnisharp.net/). È inoltre possibile evitare di usare gli editor di codice ricorrendo direttamente agli [strumenti dell'interfaccia della riga di comando di .NET Core](../core/tools/index.md), disponibili per tutte le piattaforme supportate.
+.NET Core supporta i sistemi operativi indicati in precedenza come workstation di sviluppo. Visual Studio fornisce un ambiente di sviluppo integrato (IDE) per Windows e macOS. È anche possibile usare Visual Studio Code, che viene eseguito in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. La maggior parte degli editor di terze parti, ad esempio Sublime, Emacs e VI, è compatibile con .NET Core. Questi editor di terze parti accedono alla funzionalità IntelliSense dell'editor tramite [Omnisharp](http://www.omnisharp.net/). È inoltre possibile evitare di usare gli editor di codice ricorrendo direttamente agli [strumenti dell'interfaccia della riga di comando di .NET Core](../core/tools/index.md), disponibili per tutte le piattaforme supportate.
 
 ### <a name="microservices-architecture"></a>Architettura di microservizi
 
@@ -107,10 +106,9 @@ In aggiunta a quanto indicato nella roadmap ufficiale, sono presenti altri frame
 Alcune piattaforme Microsoft o di terze parti non supportano .NET Core. Alcuni servizi di Azure come i servizi Reliable con stato di Service Fabric e Reliable Actors di Service Fabric, ad esempio, richiedono .NET Framework. Altri servizi forniscono un SDK non ancora disponibile per l'utilizzo in .NET Core. Questa situazione è transitoria poiché tutti i servizi di Azure usano .NET Core. Nel frattempo, è possibile usare l'API REST equivalente anziché l'SDK client.
 
 ## <a name="see-also"></a>Vedere anche
- [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework)  (Scegliere tra ASP.NET e ASP.NET Core)  
- [Guida a .NET Core](../core/index.md)   
- [Porting from .NET Framework to .NET Core](../core/porting/index.md)  (Portabilità da .NET Framework a .NET Core)  
- [Guida a .NET Framework su Docker](../framework/docker/index.md)   
- [Componenti dell'architettura .NET](components.md)   
+ [Scegliere tra ASP.NET e ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
+ [Guida a .NET Core](../core/index.md)  
+ [Porting from .NET Framework to .NET Core](../core/porting/index.md) (Portabilità da .NET Framework a .NET Core)  
+ [.NET Framework on Docker Guide](../framework/docker/index.md) (Guida a .NET Framework su Docker)  
+ [.NET Components Overview](components.md) (Panoramica dei componenti .NET)  
  [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori)
-

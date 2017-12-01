@@ -1,59 +1,66 @@
 ---
-title: "Applicazione di attributi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assembly [.NET Framework], attributi"
-  - "attributi [.NET Framework], applicazione"
+title: Applicazione di attributi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- assemblies [.NET Framework], attributes
+- attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Applicazione di attributi
-Per applicare un attributo a un elemento del codice utilizzare la seguente procedura.  
+# <a name="applying-attributes"></a>Applicazione di attributi
+Usare il processo seguente per applicare un attributo a un elemento del codice.  
   
-1.  Definire un nuovo attributo o utilizzare un attributo esistente importandone lo spazio dei nomi da .NET Framework.  
+1.  Definire un nuovo attributo o usare un attributo esistente importando lo spazio dei nomi da .NET Framework.  
   
-2.  Applicare l'attributo all'elemento di codice posizionandolo immediatamente prima dell'elemento.  
+2.  Applicare l'attributo dell'elemento di codice posizionandolo immediatamente prima dell'elemento.  
   
-     Ogni linguaggio ha una propria sintassi di attributo.  In C\+\+ e C\# l'attributo è racchiuso tra parentesi quadre e separato dall'elemento da uno spazio, che può includere un'interruzione di riga.  In Visual Basic l'attributo è racchiuso tra parentesi angolari e deve essere presente sulla stessa riga logica. È possibile utilizzare il carattere di continuazione di riga se si desidera inserire un'interruzione di riga.  In J\# l'attributo viene collegato utilizzando una sintassi di commento speciale.  
+     Ogni linguaggio ha una propria sintassi di attributo. In C++ e C#, l'attributo è racchiuso tra parentesi quadre e separato dall'elemento da spazi vuoti, che possono includere un'interruzione di riga. In Visual Basic, l'attributo è racchiuso tra parentesi acute e deve essere nella stessa riga logica. Se si desidera un'interruzione di riga, è possibile usare il carattere di continuazione di riga.
   
 3.  Specificare i parametri posizionali e i parametri denominati per l'attributo.  
   
-     I parametri posizionali sono obbligatori e devono precedere eventuali parametri denominati. Corrispondono ai parametri di uno dei costruttori dell'attributo.  I parametri denominati sono facoltativi e corrispondono a proprietà di lettura\/scrittura dell'attributo.  In C\+\+, C\# e J\# specificare `name`\=`value` per ogni parametro facoltativo, dove `name` è il nome della proprietà.  In Visual Basic specificare `name`:\=`value`.  
+     I parametri posizionali sono necessari e devono precedere eventuali parametri denominati. Corrispondono ai parametri di uno dei costruttori dell'attributo. I parametri denominati sono facoltativi e corrispondono a proprietà dell'attributo di lettura/scrittura. In C++ e c#, specificare `name` = `value` per ciascun parametro facoltativo, dove `name` è il nome della proprietà. In Visual Basic specificare `name`:=`value`.  
   
- L'attributo viene emesso nei metadati quando si compila il codice ed è disponibile per Common Language Runtime e qualsiasi strumento o applicazione tramite i servizi di reflection in fase di esecuzione.  
+ L'attributo viene emesso nei metadati quando si compila il codice ed è disponibile per il Common Language Runtime e qualsiasi strumento personalizzato o l'applicazione tramite i servizi di reflection di runtime.  
   
- Per convenzione tutti i nomi di attributo terminano con Attribute.  In diversi linguaggi destinati alla fase di esecuzione, quali Visual Basic e C\#, non è tuttavia necessario specificare il nome completo degli attributi.  Se si desidera inizializzare, ad esempio, <xref:System.ObsoleteAttribute?displayProperty=fullName> sarà sufficiente farvi riferimento come **Obsolete**.  
+ Per convenzione, tutti i nomi dell'attributo terminano con Attribute. Tuttavia, per molti linguaggi destinati al runtime, come Visual Basic e C#, non è necessario specificare il nome completo di un attributo. Ad esempio, se si desidera inizializzare <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, è necessario farvi riferimento come **obsoleto**.  
   
-## Applicazione di un attributo a un metodo  
- Nell'esempio di codice riportato di seguito si illustra come dichiarare l'attributo **System.ObsoleteAttribute**, che contrassegna il codice come obsoleto.  La stringa `"Will be removed in next version"` viene passata all'attributo.  Questo attributo fa sì che, quando viene chiamato il codice descritto dall'attributo stesso, venga generato un avviso del compilatore che visualizza la stringa passata.  
+## <a name="applying-an-attribute-to-a-method"></a>Applicazione di un attributo a un metodo  
+ L'esempio di codice seguente illustra come dichiarare **System.ObsoleteAttribute**, che marca il codice come obsoleto. La stringa `"Will be removed in next version"` viene passato all'attributo. Questo attributo genera un avviso del compilatore che mostra la stringa passata quando viene chiamato il codice descritto dall'attributo.  
   
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
-## Applicazione di attributi a livello di assembly  
- Se si desidera applicare un attributo a livello di assembly utilizzare la parola chiave **assembly** \(`Assembly` in Visual Basic\).  Nel codice riportato di seguito si illustra l'attributo **AssemblyTitleAttribute** applicato a livello di assembly.  
+## <a name="applying-attributes-at-the-assembly-level"></a>Applicazione di attributi a livello di assembly  
+ Se si desidera applicare un attributo a livello di assembly usare la parola chiave **assembly** (`Assembly` in Visual Basic). Nel codice riportato di seguito viene illustrato l'attributo **AssemblyTitleAttribute** applicato a livello di assembly.  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- All'applicazione di questo attributo la stringa `"My Assembly"` viene inserita nel manifesto dell'assembly nella porzione del file costituita da metadati.  È possibile visualizzare l'attributo sia mediante lo strumento [MSIL Disassembler \(Ildasm.exe\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) sia creando un programma personalizzato che recuperi l'attributo.  
+ Quando viene applicato questo attributo, la stringa `"My Assembly"` viene inserita nel manifesto dell'assembly nella porzione di metadati del file. È possibile visualizzare l'attributo tramite [Disassembler MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o creando un programma personalizzato per recuperare l'attributo.  
   
-## Vedere anche  
- [Attributi](../../../docs/standard/attributes/index.md)   
- [Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)   
- [Concepts](../Topic/Attributed%20Programming%20Concepts.md)   
- [Attributi](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi](../../../docs/standard/attributes/index.md)  
+ [Recupero di informazioni memorizzate negli attributi](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [Concetti](/cpp/windows/attributed-programming-concepts)  
+ [Attributi](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

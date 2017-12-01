@@ -1,61 +1,67 @@
 ---
-title: "How to: Perform Action When a Dataflow Block Receives Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, receiving data"
+title: 'Procedura: eseguire un''azione alla ricezione di dati in un blocco di flussi di dati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Perform Action When a Dataflow Block Receives Data
-I tipi di *blocco del flusso di esecuzione* chiamano il delegato fornito dall'utente quando ricevono i dati.  Le classi <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=fullName>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=fullName> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=fullName> sono tipi di blocco del flusso di esecuzione.  È possibile utilizzare la parola chiave `delegate` \(`Sub` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), <xref:System.Action%601>, <xref:System.Func%602>, o un'espressione lambda quando viene fornita una funzione lavoro a un blocco di dati di esecuzione.  In questo documento viene descritto come utilizzare <xref:System.Func%602> ed espressioni lambda per eseguire l'operazione nei blocchi di esecuzione.  
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Procedura: eseguire un'azione alla ricezione di dati in un blocco di flussi di dati
+Tramite i tipi di *blocchi di flussi di esecuzione* viene chiamato un delegato fornito dall'utente alla ricezione dei dati. Le classi <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sono tipi di blocchi di flussi di dati di esecuzione. È possibile utilizzare la parola chiave `delegate` (`Sub` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, o un'espressione lambda, quando viene fornita una funzione lavoro a un blocco di flussi di dati di esecuzione. In questo documento viene descritto come utilizzare <xref:System.Func%602> e le espressioni lambda per eseguire l'azione nei blocchi di esecuzione.  
   
 > [!TIP]
->  La libreria del flusso di dati TPL \(spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Per installare lo spazio dei nomi <xref:System.Threading.Tasks.Dataflow>, aprire il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere dal menu del progetto **Gestisci pacchetti NuGet** e scegliere cerca online il pacchetto `Microsoft.Tpl.Dataflow`.  
+>  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
   
-## Esempio  
- Nell'esempio seguente viene utilizzato il flusso di dati per leggere un file da disco e viene calcolato il numero di byte nel file uguali a zero.  Utilizza <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> per leggere il file e calcolare il numero di byte zero e <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> per stampare il numero di byte zero nella console.  L'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> specifica un oggetto <xref:System.Func%602> per eseguire il lavoro quando i blocchi ricevono i dati.  L'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> utilizza un'espressione lambda per la stampa nella console del numero di byte zero che vengono letti.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene utilizzato un flusso di dati per leggere un file da un disco e viene calcolato il numero di byte del file in questione che corrisponde a zero. Vengono utilizzati <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> per leggere il file e calcolare il numero di byte zero e <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> per stampare il numero di byte zero sulla console. Tramite l'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> viene specificato un oggetto <xref:System.Func%602> per eseguire il lavoro quando vengono ricevuti i dati da parte dei blocchi. Nell'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> viene utilizzata un'espressione lambda per stampare sulla console il numero di byte zero che vengono letti.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
  [!code-vb[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#1)]  
   
- Sebbene sia possibile immettere un'espressione lambda in un oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, questo esempio utilizza <xref:System.Func%602> per consentire all'altro codice di utilizzare il metodo `CountBytes`.  L'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> utilizza un'espressione lambda in quanto il lavoro da eseguire è specifico di questa attività e non potrà essere utile ad altri codici.  Per ulteriori informazioni sull'utilizzo di espressioni lambda nella Task Parallel Library, vedere [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Sebbene sia possibile fornire un'espressione lambda a un oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, in questo esempio viene utilizzato l'oggetto <xref:System.Func%602> per consentire l'utilizzo del metodo `CountBytes` ad altro codice. Nell'oggetto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> viene utilizzata un'espressione lambda in quanto il lavoro da eseguire è specifico per questa attività e probabilmente non è utile per altro codice. Per altre informazioni sull'uso di espressioni lambda nella libreria TPL, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
- La sezione Sommario dei Tipi Delegato nel documento di [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) riepiloga i tipi delegati da poter fornire a <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, a <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e agli oggetti <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>.  La tabella specifica anche se il tipo delegato viene eseguito in modo sincrono o asincrono.  
+ La sezione di riepilogo dei tipi delegati nel [flussi di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) documento riepiloga i tipi delegati che è possibile fornire a <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> oggetti. Nella tabella viene inoltre specificato se il tipo delegato viene eseguito in modo sincrono o asincrono.  
   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio, oppure incollarlo in un file denominato `DataflowExecutionBlocks.cs` \(`DataflowExecutionBlocks.vb` per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) e quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), quindi eseguire il comando riportato di seguito in una finestra del prompt dei comandi di Visual Studio.  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
-## Programmazione efficiente  
- In questo esempio viene fornito un delegato di tipo <xref:System.Func%602> all'oggetto di <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> per eseguire l'attività del blocco di dati in modo sincrono.  Per consentire al blocco di dati di comportarsi in modo asincrono, fornire un delegato di tipo <xref:System.Func%601> al blocco di dati.  Quando un blocco di dati funziona in modo asincrono, l'attività del blocco del flusso di dati è completa solo quando l'oggetto <xref:System.Threading.Tasks.Task%601> restituito finisce.  Nell'esempio seguente viene modificato il metodo `CountBytes` e vengono utilizzati gli operatori [async](../Topic/async%20\(C%23%20Reference\).md) e [await](../Topic/await%20\(C%23%20Reference\).md) \([Async](../Topic/Async%20\(Visual%20Basic\).md) e [Await](../Topic/Await%20Operator%20\(Visual%20Basic\).md) in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) per calcolare in modo asincrono il numero totale di byte che sono zero nel file specificato.  Il metodo <xref:System.IO.FileStream.ReadAsync%2A> esegue operazioni di lettura da file in modo asincrono.  
+## <a name="robust-programming"></a>Programmazione efficiente  
+ In questo esempio viene fornito un delegato di tipo <xref:System.Func%602> all'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> per eseguire l'attività del blocco di flussi di dati in modo sincrono. Per abilitare un comportamento asincrono del blocco di flussi di dati, fornire un delegato di tipo <xref:System.Func%601> a questo tipo di blocco. Quando il comportamento di un blocco di flussi di dati è asincrono, l'attività del blocco di flussi di dati viene completata solo quando termina l'oggetto <xref:System.Threading.Tasks.Task%601> restituito. Nell'esempio seguente viene modificato il metodo `CountBytes` e vengono usati gli operatori [async](~/docs/csharp/language-reference/keywords/async.md) e [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) e [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) per calcolare in modo asincrono il numero totale di byte che è pari a zero nel file specificato. Tramite il metodo <xref:System.IO.FileStream.ReadAsync%2A> vengono eseguite operazioni di lettura da file in modo asincrono.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
   
- È inoltre possibile utilizzare le espressioni lambda asincrone per eseguire operazioni in un blocco di dati di esecuzione.  Nell'esempio seguente viene modificato l'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> utilizzato nell'esempio precedente in modo da utilizzare un'espressione lambda per eseguire il lavoro in modo asincrono.  
+ È inoltre possibile utilizzare le espressioni lambda asincrone per eseguire azioni in un blocco di flussi di dati di esecuzione. Nell'esempio seguente viene modificato l'oggetto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> utilizzato nell'esempio precedente in modo da utilizzare un'espressione lambda per eseguire il lavoro in modo asincrono.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

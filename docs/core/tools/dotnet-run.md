@@ -3,22 +3,21 @@ title: Comando dotnet run - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet run`: esegue il codice sorgente senza comandi espliciti di compilazione o avvio.
 
@@ -74,6 +73,10 @@ Definisce la configurazione di compilazione. Il valore predefinito è `Debug`.
 
 Compila ed esegue l'app usando il [framework](../../standard/frameworks.md) specificato. Il framework deve essere specificato nel file di progetto.
 
+`--force`
+
+Forza la risoluzione di tutte le dipendenze, anche se l'ultimo ripristino ha avuto esito positivo. Ciò equivale a eliminare *project.assets.json*.
+
 `-h|--help`
 
 Stampa una breve guida per il comando.
@@ -85,6 +88,10 @@ Il nome del profilo di avvio, se presente, da usare all'avvio dell'applicazione.
 `--no-build`
 
 Non compila il progetto prima dell'esecuzione.
+
+`--no-dependencies`
+
+Durante il ripristino di un progetto con riferimenti da progetto a progetto, ripristina il progetto radice e non i riferimenti.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ Eseguire il progetto specificato:
 Eseguire il progetto nella directory corrente. L'argomento `--help` in questo esempio viene passato all'applicazione perché viene usato l'argomento `--`:
 
 `dotnet run --configuration Release -- --help`
-

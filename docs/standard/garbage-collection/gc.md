@@ -1,22 +1,21 @@
 ---
 title: Gestione automatica della memoria e Garbage Collection
-description: Gestione automatica della memoria e Garbage Collection
+description: "Informazioni su come automatica della memoria management è uno dei servizi forniti da Common Language Runtime durante l'esecuzione gestita."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
-ms.lasthandoff: 03/02/2017
-
+ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="automatic-memory-management-and-garbage-collection"></a>Gestione automatica della memoria e Garbage Collection
 
 Gestione automatica della memoria è uno dei servizi offerti da Common Language Runtime durante l'esecuzione gestita. L'allocazione e il rilascio di memoria per un'applicazione vengono gestiti da Garbage Collector di Common Language Runtime. Agli sviluppatori non viene quindi richiesta la scrittura di codice per eseguire attività di gestione della memoria quando si sviluppano applicazioni gestite. La gestione automatica della memoria consente di evitare che si verifichino i problemi consueti legati alla gestione della memoria, quale la mancata liberazione di un oggetto e il conseguente spreco di memoria allocata ma non più referenziabile o il tentativo di accesso alla memoria per un oggetto già liberato. In questa sezione viene descritta la modalità utilizzata dal Garbage Collector per l'allocazione e il rilascio di memoria.
@@ -56,5 +55,4 @@ Le attività di gestione della memoria necessarie vengono effettuate dal Garbage
 [System.GC](xref:System.GC)
 
 [Garbage Collection in .NET](index.md)
-
 

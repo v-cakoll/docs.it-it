@@ -1,95 +1,98 @@
 ---
-title: "Deciding When to Implement the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: Quando implementare il modello asincrono basato su eventi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Deciding When to Implement the Event-based Asynchronous Pattern
-Il modello asincrono basato su eventi consente di esporre il comportamento asincrono di una classe.  Con l'introduzione di questo modello, in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono ora disponibili due modelli per l'esposizione del comportamento asincrono: il modello asincrono basato sull'interfaccia <xref:System.IAsyncResult?displayProperty=fullName> e il modello basato su eventi.  In questo argomento vengono illustrati i casi in cui è opportuno implementare entrambi i modelli.  
+# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Quando implementare il modello asincrono basato su eventi
+Il modello asincrono basato su eventi fornisce un modello per esporre il comportamento asincrono di una classe. Con l'introduzione di questo modello, il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce due modelli per l'esposizione del comportamento asincrono: il modello asincrono basato sul <xref:System.IAsyncResult?displayProperty=nameWithType> interfaccia e il modello basato su eventi. In questo argomento viene descritto quando è appropriato per l'implementazione di entrambi i modelli.  
   
- Per ulteriori informazioni sulla programmazione asincrona con l'interfaccia <xref:System.IAsyncResult>, vedere [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Per ulteriori informazioni sulla programmazione asincrona con il <xref:System.IAsyncResult> interfaccia, vedere [basato su eventi modello asincrono (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
-## Principi generali  
- In genere, è sempre opportuno esporre le funzionalità asincrone utilizzando il modello asincrono basato su eventi, se possibile.  Esistono tuttavia alcuni requisiti che il modello basato su eventi non è in grado di soddisfare.  In questi casi, può essere necessario implementare il modello <xref:System.IAsyncResult>, oltre a quello basato su eventi.  
+## <a name="general-principles"></a>Principi generali  
+ In generale, è necessario esporre funzionalità asincrone mediante il modello asincrono con codifica basata su eventi ogni volta che è possibile. Tuttavia, esistono alcuni requisiti che non soddisfa il criterio basato su eventi. In questi casi, è necessario implementare la <xref:System.IAsyncResult> modello oltre il modello basato su eventi.  
   
 > [!NOTE]
->  È raro che il modello <xref:System.IAsyncResult> venga implementato senza che lo sia anche il modello basato su eventi.  
+>  È raro che il <xref:System.IAsyncResult> modello venga implementato senza anche il modello basato su eventi.  
   
-## Indicazioni  
- Di seguito vengono fornite alcune indicazioni in base alle quali stabilire quando è necessario implementare il modello asincrono basato su eventi.  
+## <a name="guidelines"></a>Indicazioni  
+ Nell'elenco seguente vengono descritte le linee guida per quando è necessario implementare modello asincrono basato su eventi:  
   
--   Utilizzare il modello basato su eventi come API predefinita per esporre il comportamento asincrono della classe.  
+-   Utilizzare il modello basato su eventi come API predefinita per esporre il comportamento asincrono per la classe.  
   
--   Non esporre il modello <xref:System.IAsyncResult> se la classe viene principalmente utilizzata in un'applicazione client, ad esempio Windows Form.  
+-   Non esporre il <xref:System.IAsyncResult> di schema quando la classe viene utilizzata principalmente in un'applicazione client, ad esempio Windows Form.  
   
--   Esporre il modello <xref:System.IAsyncResult> solo quando risulta necessario per soddisfare i requisiti.  È ad esempio possibile che il modello <xref:System.IAsyncResult> debba essere esposto per motivi di compatibilità con un'API esistente.  
+-   Esporre solo le <xref:System.IAsyncResult> quando è necessario per soddisfare i requisiti di schema. Ad esempio, la compatibilità con un'API esistente potrebbe essere necessario esporre il <xref:System.IAsyncResult> modello.  
   
--   Non esporre il modello <xref:System.IAsyncResult> senza esporre anche quello basato su eventi.  
+-   Non esporre il <xref:System.IAsyncResult> modello senza esporre anche il modello basato su eventi.  
   
--   Se è necessario esporre il modello <xref:System.IAsyncResult>, eseguire questa operazione come opzione avanzata.  Se ad esempio si genera un oggetto proxy, generare il modello basato su eventi per impostazione predefinita, inserendo un'opzione per la generazione del modello <xref:System.IAsyncResult>.  
+-   Se è necessario esporre la <xref:System.IAsyncResult> di schema, eseguire questa operazione come un'opzione avanzata. Ad esempio, se si genera un oggetto proxy, generare il modello basato su eventi per impostazione predefinita, con un'opzione per generare il <xref:System.IAsyncResult> modello.  
   
--   Compilare l'implementazione del modello basato su eventi nell'implementazione del modello <xref:System.IAsyncResult>.  
+-   L'implementazione del modello basato su eventi di compilazione <xref:System.IAsyncResult> implementazione del modello.  
   
--   Evitare di esporre il modello basato su eventi e il modello <xref:System.IAsyncResult> nella stessa classe.  Esporre il modello basato su eventi in classi di livello superiore e il modello <xref:System.IAsyncResult> in classi di livello inferiore.  Ad esempio, confrontare il modello basato su eventi nel componente <xref:System.Net.WebClient> con il modello <xref:System.IAsyncResult> nella classe <xref:System.Web.HttpRequest>.  
+-   Evitare di esporre il modello basato su eventi e <xref:System.IAsyncResult> modello sulla stessa classe. Esporre il modello basato su eventi nelle classi "di livello superiore" e <xref:System.IAsyncResult> su "livello inferiore" classi di pattern. Ad esempio, confrontare il modello basato su eventi nel <xref:System.Net.WebClient> componente con il <xref:System.IAsyncResult> serie sul <xref:System.Web.HttpRequest> classe.  
   
-    -   Esporre il modello basato su eventi e il modello <xref:System.IAsyncResult> nella stessa classe quando necessario per motivi di compatibilità.  Se ad esempio è stata già rilasciata un'API che utilizza il modello <xref:System.IAsyncResult>, sarà necessario mantenere il modello <xref:System.IAsyncResult> per compatibilità con le versioni precedenti.  
+    -   Esporre il modello basato su eventi e <xref:System.IAsyncResult> modello nella stessa classe quando richiede la compatibilità. Ad esempio, se già stata rilasciata un'API che utilizza il <xref:System.IAsyncResult> modello, è necessario mantenere il <xref:System.IAsyncResult> modello per la compatibilità con le versioni precedenti.  
   
-    -   Esporre il modello basato su eventi e il modello <xref:System.IAsyncResult> nella stessa classe se la complessità del modello a oggetti risultante è superiore al vantaggio offerto da implementazioni separate.  È preferibile esporre entrambi i modelli in una singola classe anziché evitare di esporre il modello basato su eventi.  
+    -   Esporre il modello basato su eventi e <xref:System.IAsyncResult> sulla stessa classe di schema se la complessità del modello di oggetto risultante superiore al vantaggio offerto da implementazioni separate. È consigliabile esporre entrambi i modelli in una singola classe anziché evitare di esporre il modello basato su eventi.  
   
-    -   Se è necessario esporre sia il modello basato su eventi che il modello <xref:System.IAsyncResult> in una singola classe, utilizzare <xref:System.ComponentModel.EditorBrowsableAttribute> impostato su <xref:System.ComponentModel.EditorBrowsableState> per contrassegnare l'implementazione del modello <xref:System.IAsyncResult> come funzionalità avanzata.  In questo modo verrà indicato agli ambienti di sviluppo, ad esempio IntelliSense di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], di non visualizzare i metodi o le proprietà di <xref:System.IAsyncResult>.  Tali metodi e proprietà potranno comunque essere utilizzati in modo completo, ma lo sviluppatore che opera mediante IntelliSense avrà una visualizzazione più chiara dell'API.  
+    -   Se è necessario esporre il modello basato su eventi e <xref:System.IAsyncResult> modello in una singola classe, utilizzare <xref:System.ComponentModel.EditorBrowsableAttribute> impostato su <xref:System.ComponentModel.EditorBrowsableState.Advanced> per contrassegnare il <xref:System.IAsyncResult> implementazione del modello come una funzionalità avanzata. Indica agli ambienti di sviluppo, ad esempio [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, per non visualizzare il <xref:System.IAsyncResult> proprietà e metodi. Queste proprietà e metodi sono ancora completamente utilizzabili, ma lo sviluppatore in IntelliSense è una visualizzazione più chiara dell'API.  
   
-## Criteri per esporre il modello IAsyncResult insieme al modello basato su eventi  
- Il modello asincrono basato su eventi offre numerosi vantaggi negli scenari descritti in precedenza, ma presenta anche alcuni inconvenienti, di cui è necessario essere a conoscenza se le prestazioni rappresentano un requisito fondamentale.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Criteri per esporre il modello di IAsyncResult oltre il modello basato su eventi  
+ Mentre il modello asincrono basato su eventi offre numerosi vantaggi sotto gli scenari indicati in precedenza, presenta alcuni svantaggi, tra cui è necessario essere a conoscenza se le prestazioni sono un requisito fondamentale.  
   
- Esistono tre scenari in cui il modello basato su eventi offre vantaggi minori rispetto al modello <xref:System.IAsyncResult>:  
+ Esistono tre scenari in cui non si applica il modello basato su eventi, nonché <xref:System.IAsyncResult> modello:  
   
--   Attesa bloccante su un singolo oggetto <xref:System.IAsyncResult>  
+-   Attesa su una bloccante<xref:System.IAsyncResult>  
   
--   Attesa bloccante su numerosi oggetti <xref:System.IAsyncResult>  
+-   Attesa bloccante su numerosi <xref:System.IAsyncResult> oggetti  
   
--   Polling per il completamento sull'oggetto <xref:System.IAsyncResult>  
+-   Polling per il completamento nel<xref:System.IAsyncResult>  
   
- È possibile operare in questi scenari utilizzando il modello basato su eventi, anche se il modello <xref:System.IAsyncResult> risulterebbe meno complicato.  
+ È possibile gestire questi scenari utilizzando il modello basato su eventi, ma in questo modo è più complesso rispetto all'utilizzo di <xref:System.IAsyncResult> modello.  
   
- Gli sviluppatori spesso utilizzano il modello <xref:System.IAsyncResult> per servizi che presentano in genere requisiti di prestazioni molto elevati.  Il polling per lo scenario di completamento è ad esempio un tecnica per server ad alte prestazioni.  
+ Gli sviluppatori usano spesso il <xref:System.IAsyncResult> modello per i servizi che in genere presentano i requisiti di prestazioni molto elevate. Ad esempio, il polling per lo scenario di completamento è una tecnica di server ad alte prestazioni.  
   
- Inoltre, il modello basato su eventi è meno efficiente del modello <xref:System.IAsyncResult> perché crea più oggetti, in particolare <xref:System.EventArgs>, ed esegue la sincronizzazione attraverso i thread.  
+ Inoltre, il modello basato su eventi è meno efficiente il <xref:System.IAsyncResult> di schema perché crea più oggetti, specialmente <xref:System.EventArgs>, ed esegue la sincronizzazione tra thread.  
   
- Nell'elenco riportato di seguito vengono fornite alcune indicazioni a cui attenersi se si sceglie di utilizzare il modello <xref:System.IAsyncResult>:  
+ Nell'elenco seguente sono riportati alcuni consigli da seguire se si decide di utilizzare il <xref:System.IAsyncResult> modello:  
   
--   Esporre il modello <xref:System.IAsyncResult> solo quando è necessario disporre del supporto per l'oggetto <xref:System.Threading.WaitHandle> o <xref:System.IAsyncResult>.  
+-   Esporre solo le <xref:System.IAsyncResult> di schema quando è necessario disporre del supporto per <xref:System.Threading.WaitHandle> o <xref:System.IAsyncResult> oggetti.  
   
--   Esporre il modello <xref:System.IAsyncResult> solo quando è disponibile un'API esistente che utilizza il modello <xref:System.IAsyncResult>.  
+-   Esporre solo le <xref:System.IAsyncResult> di schema quando si dispone di un'API esistente che utilizza il <xref:System.IAsyncResult> modello.  
   
--   Se si dispone di un'API esistente basata sul modello <xref:System.IAsyncResult>, può essere opportuno esporre anche il modello basato su eventi nel rilascio successivo.  
+-   Se si dispone di un'API esistente basata sul <xref:System.IAsyncResult> di schema, è consigliabile esporre anche il modello basato su eventi nel rilascio successivo.  
   
--   Esporre il modello <xref:System.IAsyncResult> solo se esistono requisiti di prestazioni elevate già verificati che non possono essere soddisfatti dal modello basato su eventi, ma dal modello <xref:System.IAsyncResult>.  
+-   Esporre solo <xref:System.IAsyncResult> modello se si dispone di requisiti di prestazioni elevate, che significa che non possono essere soddisfatti dal modello basato su eventi, ma possono essere soddisfatti dal <xref:System.IAsyncResult> modello.  
   
-## Vedere anche  
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)   
- [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura dettagliata: implementazione di un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi)  
+ [Programmazione multithreading con il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [Implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework e rilascio fuori programma
 L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windows Phone e Windows Store, nonché app desktop e Web tradizionali, e consentirà di ottimizzare il riutilizzo del codice. Oltre ai regolari rilasci di .NET Framework, verranno rese disponibili nuove funzionalità fuori banda per migliorare lo sviluppo per più piattaforme o introdurre alcune novità. In questo argomento verrà illustrato l'orientamento futuro di .NET Framework e dei rilasci fuori banda.  
@@ -30,7 +28,7 @@ L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windo
  Se si usa una funzionalità fuori banda nell'app, gli utenti non devono installare la versione più recente di .NET Framework per eseguirla, poiché gli assembly fuori banda vengono distribuiti con il pacchetto dell'app.  
   
 ## <a name="how-oob-packages-are-distributed"></a>Modalità di distribuzione dei pacchetti fuori banda  
- I rilasci fuori banda per i componenti principali di Common Language Runtime (CLR) vengono forniti tramite [Gestione pacchetti NuGet](http://nuget.codeplex.com/), un'estensione open source di Visual Studio. NuGet consente di cercare e aggiungere facilmente librerie ai progetti .NET Framework da Esplora soluzioni in Visual Studio. NuGet è incluso in tutte le edizioni di Visual Studio a partire da Visual Studio 2012. Per verificare se NuGet è installato, individuare **Gestione pacchetti di librerie** dal menu **Strumenti** di Visual Studio. Se non è installato:  
+I rilasci fuori banda per i componenti di base common language runtime (CLR) vengono forniti tramite il [NuGet](https://www.nuget.org/), che è una gestione pacchetti per .NET. NuGet consente di cercare e aggiungere facilmente librerie ai progetti .NET Framework da Esplora soluzioni in Visual Studio. NuGet è incluso in tutte le edizioni di Visual Studio a partire da Visual Studio 2012. Per verificare se NuGet è installato, individuare **Gestione pacchetti di librerie** dal menu **Strumenti** di Visual Studio. Se non è installato:  
   
 1.  Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Estensioni e aggiornamenti** (in Visual Studio 2010, scegliere **Gestione estensioni**).  
   
@@ -66,4 +64,3 @@ L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windo
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione](../../../docs/framework/get-started/index.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
+ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/19/2017
 ---
-
 # <a name="console-application"></a>Applicazione console
 
 ## <a name="introduction"></a>Introduzione
@@ -36,7 +34,7 @@ In questa esercitazione verranno create anche numerose funzionalità.
 ## <a name="create-the-application"></a>Creare l'applicazione
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi Questa operazione crea i file iniziali per un'applicazione "Hello World" di base.
 
-Prima di iniziare ad apportare modifiche, è opportuno ripercorrere i passaggi necessari per eseguire l'applicazione Hello World semplice. Dopo aver creato l'applicazione, digitare `dotnet restore` al prompt dei comandi. Questo comando esegue il processo di ripristino dei pacchetti NuGet. Lo strumento NuGet consente di gestire pacchetti .NET. Questo comando scarica eventuali dipendenze mancanti per il progetto. Poiché si tratta di un nuovo progetto, non è ancora presente alcuna dipendenza e con la prima esecuzione verrà quindi scaricato .NET Core Framework. Dopo questo passaggio iniziale, sarà sufficiente eseguire `dotnet restore` quando si aggiungono nuovi pacchetti dipendenti o si aggiorna la versione di una delle dipendenze. Questo processo consente anche di creare il file di blocco del progetto (project.lock.json) nella directory del progetto. Con questo file è possibile gestire le dipendenze del progetto. Contiene infatti il percorso locale di tutte le dipendenze del progetto. Non è necessario inserire il file nel controllo del codice sorgente. Verrà generato quando si esegue `dotnet restore`. 
+Prima di iniziare ad apportare modifiche, è opportuno ripercorrere i passaggi necessari per eseguire l'applicazione Hello World semplice. Dopo aver creato l'applicazione, digitare `dotnet restore` ([vedere la nota](#dotnet-restore-note)) al prompt dei comandi. Questo comando esegue il processo di ripristino dei pacchetti NuGet. Lo strumento NuGet consente di gestire pacchetti .NET. Questo comando scarica eventuali dipendenze mancanti per il progetto. Poiché si tratta di un nuovo progetto, non è ancora presente alcuna dipendenza e con la prima esecuzione verrà quindi scaricato .NET Core Framework. Dopo questo passaggio iniziale, sarà solo necessario eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)) quando si aggiungere nuovi pacchetti di dipendenti o aggiornare le versioni di una delle dipendenze. Questo processo consente anche di creare il file di blocco del progetto (project.lock.json) nella directory del progetto. Con questo file è possibile gestire le dipendenze del progetto. Contiene infatti il percorso locale di tutte le dipendenze del progetto. Non è necessario inserire il file nel controllo del codice sorgente; verrà generato quando si esegue `dotnet restore` ([vedere la nota](#dotnet-restore-note)). 
 
 Dopo aver ripristinato i pacchetti, eseguire `dotnet build` per avviare il motore di compilazione e creare il file eseguibile dell'applicazione. Eseguire infine `dotnet run` per avviare l'applicazione.  
 
@@ -79,13 +77,13 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-L'interfaccia `IEnumerable<T>` è definita nello spazio dei nomi `System.Collections.Generic`. La classe @System.IO.File è definita nello spazio dei nomi `System.IO`.
+L'interfaccia `IEnumerable<T>` è definita nello spazio dei nomi `System.Collections.Generic`. La classe <xref:System.IO.File> è definita nello spazio dei nomi `System.IO`.
 
 Questo metodo è un tipo speciale di metodo C# denominato *metodo enumeratore*. I metodi enumeratore restituiscono sequenze che vengono valutate in modo differito. In altre parole, ogni elemento della sequenza viene generato nel momento in cui viene richiesto dal codice che utilizza la sequenza. I metodi enumeratore contengono una o più istruzioni `yield return`. L'oggetto restituito dal metodo `ReadFrom` contiene il codice per generare ogni elemento della sequenza. In questo esempio, ciò consiste nella lettura della riga di testo successiva dal file di origine e nella restituzione della stringa. Ogni volta che il codice chiamante richiede l'elemento successivo della sequenza, il codice legge la riga di testo successiva dal file e la restituisce. Quando il file è stato letto completamente, la sequenza indica che non sono presenti altri elementi.
 
-Altri due elementi della sintassi C# possono risultare nuovi all'utente. L'istruzione `using` gestisce la pulizia delle risorse in questo metodo. La variabile inizializzata nell'istruzione `using` (`reader`, in questo esempio) deve implementare l'interfaccia `IDisposable`. L'interfaccia @System.IDisposable definisce un singolo metodo, `Dispose`, che deve essere chiamato quando deve essere rilasciata la risorsa. Il compilatore genera la chiamata quando l'esecuzione raggiunge la parentesi graffa di chiusura dell'istruzione `using`. Il codice generato dal compilatore assicura che la risorsa venga rilasciata anche se viene generata un'eccezione dal codice nel blocco definito tramite l'istruzione using.
+Altri due elementi della sintassi C# possono risultare nuovi all'utente. L'istruzione `using` gestisce la pulizia delle risorse in questo metodo. La variabile inizializzata nell'istruzione `using` (`reader`, in questo esempio) deve implementare l'interfaccia `IDisposable`. L'interfaccia <xref:System.IDisposable> definisce un singolo metodo, `Dispose`, che deve essere chiamato quando deve essere rilasciata la risorsa. Il compilatore genera la chiamata quando l'esecuzione raggiunge la parentesi graffa di chiusura dell'istruzione `using`. Il codice generato dal compilatore assicura che la risorsa venga rilasciata anche se viene generata un'eccezione dal codice nel blocco definito tramite l'istruzione using.
 
-La variabile `reader` viene definita tramite la parola chiave `var`. `var` definisce una *variabile locale tipizzata in modo implicito*, ovvero il tipo della variabile è determinato dal tipo in fase di compilazione dell'oggetto assegnato alla variabile. In questo caso, corrisponde al valore restituito @System.IO.File.OpenText, ovvero a un oggetto @System.IO.StreamReader.
+La variabile `reader` viene definita tramite la parola chiave `var`. `var` definisce una *variabile locale tipizzata in modo implicito*, ovvero il tipo della variabile è determinato dal tipo in fase di compilazione dell'oggetto assegnato alla variabile. Qui, ovvero il valore restituito dal <xref:System.IO.File.OpenText(System.String)> metodo, ovvero un <xref:System.IO.StreamReader> oggetto.
  
 Si compilerà ora il codice per leggere il file nel metodo `Main`: 
 
@@ -154,7 +152,7 @@ Eseguire l'esempio. Sarà possibile ora leggere ad alta voce alla velocità pres
 
 ## <a name="async-tasks"></a>Attività asincrone
 In questa fase finale si aggiungerà il codice per scrivere l'output in modo asincrono in un'attività e si eseguirà anche un'altra attività per leggere l'input dell'utente, nel caso in cui si voglia velocizzare o rallentare la visualizzazione del testo. Sarà necessario eseguire alcuni passaggi ma, al termine, saranno implementati tutti gli aggiornamenti necessari.
-Il primo passaggio consiste nel creare un metodo di restituzione asincrono @System.Threading.Tasks.Task che rappresenta il codice creato finora per leggere e visualizzare il file.
+Il primo passaggio consiste nel creare un metodo di restituzione asincrono <xref:System.Threading.Tasks.Task> che rappresenta il codice creato finora per leggere e visualizzare il file.
 
 Aggiungere questo metodo alla classe `Program` (tratto dal corpo del metodo `Main`):
 
@@ -173,7 +171,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-Si noteranno due modifiche. Nel corpo del metodo, anziché chiamare @System.Threading.Tasks.Task.Wait per attendere in modo sincrono il completamento di un'attività, questa versione usa la parola chiave `await`. A questo scopo, è necessario aggiungere il modificatore `async` alla firma del metodo. Il metodo restituisce `Task`. Osservare inoltre come non siano presenti istruzioni return che restituiscono un oggetto `Task`. L'oggetto `Task`, infatti, viene creato dal codice che il compilatore genera quando si usa l'operatore `await`. È possibile immaginare quindi che il metodo restituisca l'oggetto quando raggiunge la parola chiave `await`. L'oggetto `Task` restituito indica che il lavoro non è stato completato.
+Si noteranno due modifiche. Nel corpo del metodo, anziché chiamare <xref:System.Threading.Tasks.Task.Wait> per attendere in modo sincrono il completamento di un'attività, questa versione usa la parola chiave `await`. A questo scopo, è necessario aggiungere il modificatore `async` alla firma del metodo. Il metodo restituisce `Task`. Osservare inoltre come non siano presenti istruzioni return che restituiscono un oggetto `Task`. L'oggetto `Task`, infatti, viene creato dal codice che il compilatore genera quando si usa l'operatore `await`. È possibile immaginare quindi che il metodo restituisca l'oggetto quando raggiunge la parola chiave `await`. L'oggetto `Task` restituito indica che il lavoro non è stato completato.
 Il metodo riprende l'esecuzione quando viene completata l'attività attesa. Al termine dell'esecuzione, l'oggetto `Task` restituito indica che il lavoro è stato completato.
 Il codice chiamante può monitorare l'oggetto `Task` restituito per determinare quando è stato completato.
 
@@ -209,7 +207,7 @@ private static async Task GetInput()
 }
 ```
 
-Si crea in questo modo un'espressione lambda per rappresentare un delegato @System.Action che legge un carattere dalla console e modifica una variabile locale che rappresenta il ritardo quando l'utente preme il tasto < o >. Questo metodo usa @System.Console.ReadKey per bloccare l'operazione e attendere che l'utente prema un tasto.
+Si crea in questo modo un'espressione lambda per rappresentare un delegato <xref:System.Action> che legge un carattere dalla console e modifica una variabile locale che rappresenta il ritardo quando l'utente preme il tasto < o >. Questo metodo usa <xref:System.Console.ReadKey> per bloccare l'operazione e attendere che l'utente prema un tasto.
 
 Per completare questa funzionalità, è necessario creare un nuovo metodo di restituzione `async Task` in grado di avviare entrambe le attività (`GetInput` e `ShowTeleprompter`) e gestire i dati condivisi tra di esse.
  
@@ -257,7 +255,7 @@ private static async Task RunTeleprompter()
 }
 ```
 
-Il nuovo metodo corrisponde in questo caso alla chiamata @System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[]). In questo modo si crea un oggetto `Task` che termina non appena viene completata un'attività inclusa nel relativo elenco di argomenti.
+Il nuovo metodo qui è la <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> chiamare. In questo modo si crea un oggetto `Task` che termina non appena viene completata un'attività inclusa nel relativo elenco di argomenti.
 
 È ora necessario aggiornare i metodi `ShowTeleprompter` e `GetInput` affinché usino l'oggetto `config` per il ritardo:
 
@@ -316,4 +314,5 @@ public void SetDone()
 In questa esercitazione sono state illustrate diverse funzionalità del linguaggio C# e presentate le librerie .NET Core correlate all'uso di applicazioni console.
 A partire da queste informazioni è possibile approfondire la conoscenza del linguaggio e delle classi presentate nell'esercitazione. Sono state inoltre fornite nozioni di base sulle operazioni di input/output del file e della console e sull'uso bloccante e non bloccante del modello di programmazione asincrona basato sulle attività, è stata offerta una panoramica del linguaggio C# ed è stata descritta l'organizzazione dei programmi C# e degli strumenti e dell'interfaccia della riga di comando di .NET Core.
  
-
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -1,37 +1,18 @@
 ---
 title: Direttiva using static (Riferimenti per C#)
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- using static directive [C#]
+helpviewer_keywords: using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5838bede475cf2ad1b72518770241e86206a06bb
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7d69d0262ba6f450e2cc0d5b30692bba181f9d9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-static-directive-c-reference"></a>Direttiva using static (Riferimenti per C#)
 
@@ -49,13 +30,13 @@ La direttiva `using static` è stata introdotta in C# 6.
 
 ## <a name="remarks"></a>Note
  
-Quando si chiama un membro statico si fornisce in genere il nome del tipo e il nome del membro. Immettere ripetutamente lo stesso nome di tipo per chiamare i membri del tipo può generare codice troppo dettagliato e incomprensibile. Ad esempio, la seguente definizione di una classe `Circle` fa riferimento a un numero di membri della classe @System.Math.
+Quando si chiama un membro statico si fornisce in genere il nome del tipo e il nome del membro. Immettere ripetutamente lo stesso nome di tipo per chiamare i membri del tipo può generare codice troppo dettagliato e incomprensibile. Ad esempio, la seguente definizione di una classe `Circle` fa riferimento a un numero di membri della classe <xref:System.Math>.
   
-[!code-cs[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
-Eliminando la necessità di fare riferimento in modo esplicito alla classe @System.Math ogni volta che si fa riferimento a un membro, la direttiva `using static` genera un codice più chiaro:
+Eliminando la necessità di fare riferimento in modo esplicito alla classe <xref:System.Math> ogni volta che si fa riferimento a un membro, la direttiva `using static` genera un codice più chiaro:
 
-[!code-cs[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
 `using static` importa solo i membri statici accessibili e i tipi annidati dichiarati nel tipo specificato.  I membri ereditati non vengono importati.  È possibile eseguire l'importazione da qualsiasi tipo denominato con una direttiva using static, inclusi i moduli Visual Basic.  Se nei metadati vengono visualizzate funzioni di primo livello F# come membri statici di un tipo denominato il cui nome è un identificatore C# valido, le funzioni F# possono essere importate.  
   
@@ -65,11 +46,11 @@ Eliminando la necessità di fare riferimento in modo esplicito alla classe @Syst
   
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa la direttiva `using static` per rendere i membri statici della classe @System.Console, @System.Math e @System.String disponibili senza dover specificare il nome del tipo.
+L'esempio seguente usa la direttiva `using static` per rendere i membri statici della classe <xref:System.Console>, <xref:System.Math> e <xref:System.String> disponibili senza dover specificare il nome del tipo.
 
-[!code-cs[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-Nell'esempio la direttiva `using static` può anche essere stata applicata al tipo @System.Double. In questo caso sarebbe stato possibile chiamare il metodo @System.Double.TryParse(System.String,System.Double@) senza specificare un nome di tipo. Ciò crea tuttavia codice meno leggibile, poiché è necessario controllare le istruzioni `using static` per quale metodo `TryParse` di tipo numerico viene chiamato.
+Nell'esempio la direttiva `using static` può anche essere stata applicata al tipo <xref:System.Double>. Questo sarebbe hanno reso possibile chiamare il <xref:System.Double.TryParse(System.String,System.Double@)> metodo senza specificare un nome di tipo. Ciò crea tuttavia codice meno leggibile, poiché è necessario controllare le istruzioni `using static` per quale metodo `TryParse` di tipo numerico viene chiamato.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -79,4 +60,3 @@ Nell'esempio la direttiva `using static` può anche essere stata applicata al ti
 [Uso degli spazi dei nomi](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
 [Parole chiave per gli spazi dei nomi](../../../csharp/language-reference/keywords/namespace-keywords.md)   
 [Spazi dei nomi](../../../csharp/programming-guide/namespaces/index.md)   
-

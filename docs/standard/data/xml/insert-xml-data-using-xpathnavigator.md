@@ -1,37 +1,39 @@
 ---
-title: "Inserimento dei dati XML utilizzando XPathNavigator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Inserimento dei dati XML utilizzando XPathNavigator
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 34151590a14c48c0a84677f2d7cae662291edf40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Inserimento dei dati XML utilizzando XPathNavigator
-La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per inserire nodi di pari livello, nodi figlio e nodi Attribute in un documento XML.  Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
+# <a name="insert-xml-data-using-xpathnavigator"></a>Inserimento dei dati XML utilizzando XPathNavigator
+La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per inserire nodi di pari livello, nodi figlio e nodi Attribute in un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
   
- Gli oggetti <xref:System.Xml.XPath.XPathNavigator> che possono modificare un documento XML vengono creati dal metodo <xref:System.Xml.XmlDocument.CreateNavigator%2A> della classe <xref:System.Xml.XmlDocument>.  Gli oggetti <xref:System.Xml.XPath.XPathNavigator> creati dalla classe <xref:System.Xml.XPath.XPathDocument> sono di sola lettura e qualsiasi tentativo di usare i metodi di modifica di un oggetto <xref:System.Xml.XPath.XPathNavigator> creato da un oggetto <xref:System.Xml.XPath.XPathDocument> genererà un oggetto <xref:System.NotSupportedException>.  
+ Gli oggetti <xref:System.Xml.XPath.XPathNavigator> che possono modificare un documento XML vengono creati dal metodo <xref:System.Xml.XmlDocument.CreateNavigator%2A> della classe <xref:System.Xml.XmlDocument>. Gli oggetti <xref:System.Xml.XPath.XPathNavigator> creati dalla classe <xref:System.Xml.XPath.XPathDocument> sono di sola lettura e qualsiasi tentativo di usare i metodi di modifica di un oggetto <xref:System.Xml.XPath.XPathNavigator> creato da un oggetto <xref:System.Xml.XPath.XPathDocument> genererà un oggetto <xref:System.NotSupportedException>.  
   
- Per altre informazioni sulla creazione di oggetti modificabili <xref:System.Xml.XPath.XPathNavigator>, vedere [Lettura di dati XML con XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Per ulteriori informazioni sulla creazione modificabile <xref:System.Xml.XPath.XPathNavigator> degli oggetti, vedere [lettura di dati XML con XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
-## Inserimento di nodi  
- La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i metodi per inserire nodi di pari livello, nodi figlio e nodi Attribute in un documento XML.  Tali metodi consentono di inserire nodi e attributi in diverse posizioni in relazione alla posizione corrente di un oggetto <xref:System.Xml.XPath.XPathNavigator> e vengono descritti nelle seguenti sezioni.  
+## <a name="inserting-nodes"></a>Inserimento di nodi  
+ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i metodi per inserire nodi di pari livello, nodi figlio e nodi Attribute in un documento XML. Tali metodi consentono di inserire nodi e attributi in diverse posizioni in relazione alla posizione corrente di un oggetto <xref:System.Xml.XPath.XPathNavigator> e vengono descritti nelle seguenti sezioni.  
   
-### Inserimento di nodi di pari livello  
+### <a name="inserting-sibling-nodes"></a>Inserimento di nodi di pari livello  
  La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i seguenti metodi per inserire nodi di pari livello.  
   
 -   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
@@ -44,7 +46,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
  Tali metodi consentono di inserire nodi di pari livello prima e dopo il nodo su cui l'oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato.  
   
- I metodi <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> e <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> sono in overload e accettano un oggetto `string`, <xref:System.Xml.XmlReader> o un oggetto <xref:System.Xml.XPath.XPathNavigator> contenente il nodo di pari livello da aggiungere come parametro.  Entrambi i metodi restituiscono inoltre un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi di pari livello.  
+ I metodi <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> e <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> sono in overload e accettano un oggetto `string`, <xref:System.Xml.XmlReader> o un oggetto <xref:System.Xml.XPath.XPathNavigator> contenente il nodo di pari livello da aggiungere come parametro. Entrambi i metodi restituiscono inoltre un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi di pari livello.  
   
  Nei metodi <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> e <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A> viene inserito un nodo singolo di pari livello prima e dopo il nodo su cui un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato usando come parametri il prefisso dello spazio dei nomi, il nome locale, l'URI dello spazio dei nomi e il valore specificato.  
   
@@ -60,7 +62,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
  Per altre informazioni sui metodi <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A> e <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>, vedere la documentazione di riferimento per la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-### Inserimento di nodi figlio  
+### <a name="inserting-child-nodes"></a>Inserimento di nodi figlio  
  La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i seguenti metodi per inserire nodi figlio.  
   
 -   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
@@ -73,7 +75,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
  In tali metodi i nodi figlio sono aggiunti o anteposti alla fine e all'inizio dell'elenco dei nodi figlio del nodo sul quale un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato.  
   
- Analogamente ai metodi descritti nella sezione "Inserimento di nodi di pari livello", nei metodi <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> e <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> viene accettato un oggetto `string`, <xref:System.Xml.XmlReader> o un oggetto <xref:System.Xml.XPath.XPathNavigator> contenente il nodo figlio da aggiungere come parametri.  Entrambi i metodi restituiscono inoltre un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi figlio.  
+ Analogamente ai metodi descritti nella sezione "Inserimento di nodi di pari livello", nei metodi <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> e <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> viene accettato un oggetto `string`, <xref:System.Xml.XmlReader> o un oggetto <xref:System.Xml.XPath.XPathNavigator> contenente il nodo figlio da aggiungere come parametri. Entrambi i metodi restituiscono inoltre un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi figlio.  
   
  Analogamente ai metodi descritti nella sezione "Inserimento di nodi di pari livello", nei metodi <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> e <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A> viene inserito un singolo nodo figlio alla fine e all'inizio dell'elenco dei nodi figlio del nodo su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator> usando come parametri il prefisso dello spazio dei nomi, il nome locale, l'URI dello spazio dei nomi e il valore specificato.  
   
@@ -89,14 +91,14 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
  Per altre informazioni sui metodi <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A> e <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>, vedere la documentazione di riferimento per la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-### Inserimento di nodi Attribute  
+### <a name="inserting-attribute-nodes"></a>Inserimento di nodi Attribute  
  La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i seguenti metodi per inserire nodi Attribute.  
   
 -   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
 -   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
- Tali metodi consentono di inserire nodi Attribute sul nodo di tipo element su cui un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato.  Nel metodo <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> viene creato un nodo Attribute sul nodo di tipo element su cui un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato usando come parametri il prefisso dello spazio dei nomi, il nome locale, l'URI dello spazio dei nomi e il valore specificato.  Il metodo <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> restituisce un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi Attribute.  
+ Tali metodi consentono di inserire nodi Attribute sul nodo di tipo element su cui un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato. Nel metodo <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> viene creato un nodo Attribute sul nodo di tipo element su cui un oggetto <xref:System.Xml.XPath.XPathNavigator> è attualmente posizionato usando come parametri il prefisso dello spazio dei nomi, il nome locale, l'URI dello spazio dei nomi e il valore specificato. Il metodo <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> restituisce un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi Attribute.  
   
  Nell'esempio seguente vengono creati nuovi attributi `discount` e `currency` sull'elemento figlio `price` del primo elemento `book` nel file `contosoBooks.xml` usando l'oggetto <xref:System.Xml.XmlWriter> restituito dal metodo <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>.  
   
@@ -110,8 +112,8 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
   
  Per altre informazioni sui metodi <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> e <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>, vedere la documentazione di riferimento per la classe <xref:System.Xml.XPath.XPathNavigator>.  
   
-## Copia di nodi  
- In alcuni casi può essere necessario compilare un documento XML con il contenuto di un altro documento XML.  Entrambe le classi <xref:System.Xml.XPath.XPathNavigator> e <xref:System.Xml.XmlWriter> sono in grado di copiare i nodi in un oggetto<xref:System.Xml.XmlDocument> proveniente da un oggetto <xref:System.Xml.XmlReader> esistente o da un oggetto <xref:System.Xml.XPath.XPathNavigator>.  
+## <a name="copying-nodes"></a>Copia di nodi  
+ In alcuni casi può essere necessario compilare un documento XML con il contenuto di un altro documento XML. Entrambe le classi <xref:System.Xml.XPath.XPathNavigator> e <xref:System.Xml.XmlWriter> sono in grado di copiare i nodi in un oggetto<xref:System.Xml.XmlDocument> proveniente da un oggetto <xref:System.Xml.XmlReader> esistente o da un oggetto <xref:System.Xml.XPath.XPathNavigator>.  
   
  Gli overload dei metodi <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A> e <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> della classe <xref:System.Xml.XPath.XPathNavigator> accettano tutti un oggetto <xref:System.Xml.XPath.XPathNavigator> o un oggetto <xref:System.Xml.XmlReader> come parametro.  
   
@@ -155,11 +157,11 @@ foreach (XPathNavigator nav in newBooksNavigator.SelectDescendants("book", "", f
 document.Save("newBooks.xml");  
 ```  
   
-## Inserimento dei valori  
+## <a name="inserting-values"></a>Inserimento dei valori  
  La classe <xref:System.Xml.XPath.XPathNavigator> fornisce i metodi <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> per inserire i valori di un nodo in un oggetto <xref:System.Xml.XmlDocument>.  
   
-### Inserimento di valori non tipizzati  
- Il metodo <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> consente semplicemente di inserire il valore non tipizzato `string`, passato come parametro, come valore del nodo su cui è attualmente posizionato l'oggetto <xref:System.Xml.XPath.XPathNavigator>.  Il valore viene inserito senza alcun tipo o senza verificare la validità del nuovo valore in base al tipo del nodo se sono disponibili le informazioni sullo schema.  
+### <a name="inserting-untyped-values"></a>Inserimento di valori non tipizzati  
+ Il metodo <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> consente semplicemente di inserire il valore non tipizzato `string`, passato come parametro, come valore del nodo su cui è attualmente posizionato l'oggetto <xref:System.Xml.XPath.XPathNavigator>. Il valore viene inserito senza alcun tipo o senza verificare la validità del nuovo valore in base al tipo del nodo se sono disponibili le informazioni sullo schema.  
   
  Nell'esempio seguente, il metodo <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> viene usato per aggiornare tutti gli elementi `price` nel file `contosoBooks.xml`.  
   
@@ -171,10 +173,10 @@ document.Save("newBooks.xml");
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
-### Inserimento di valori tipizzati  
- Quando il tipo di un nodo è un tipo semplice di W3C XML Schema, il nuovo valore inserito tramite il metodo <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> viene controllato rispetto ai facet del tipo semplice prima dell'impostazione del valore.  Se il nuovo valore non è valido in base al tipo del nodo \(ad esempio, l'impostazione di un valore `-1` su un elemento il cui tipo è `xs:positiveInteger`\), viene generata un'eccezione.  
+### <a name="inserting-typed-values"></a>Inserimento di valori tipizzati  
+ Quando il tipo di un nodo è un tipo semplice di W3C XML Schema, il nuovo valore inserito tramite il metodo <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> viene controllato rispetto ai facet del tipo semplice prima dell'impostazione del valore. Se il nuovo valore non è valido in base al tipo del nodo (ad esempio, l'impostazione di un valore `-1` su un elemento il cui tipo è `xs:positiveInteger`), viene generata un'eccezione.  
   
- Nell'esempio seguente si tenta di modificare il valore dell'elemento `price` del primo elemento `book` nel file `contosoBooks.xml` in un valore <xref:System.DateTime>.  Poiché il tipo XML Schema dell'elemento `price` viene definito come `xs:decimal` nei file `contosoBooks.xsd`, viene generata un'eccezione.  
+ Nell'esempio seguente si tenta di modificare il valore dell'elemento `price` del primo elemento `book` nel file `contosoBooks.xml` in un valore <xref:System.DateTime>. Poiché il tipo XML Schema dell'elemento `price` viene definito come `xs:decimal` nei file `contosoBooks.xsd`, viene generata un'eccezione.  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -220,14 +222,14 @@ navigator.SetTypedValue(DateTime.Now);
   
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
-## Proprietà InnerXml e OuterXml  
+## <a name="the-innerxml-and-outerxml-properties"></a>Proprietà InnerXml e OuterXml  
  Le proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> della classe <xref:System.Xml.XPath.XPathNavigator> consentono di modificare il markup XML dei nodi su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator>.  
   
- La proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> consente di modificare il markup XML dei nodi figlio su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator> con il contenuto analizzato della `string` XML specificata.  Allo stesso modo, la proprietà <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> consente di modificare il markup XML dei nodi figlio su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator> nonché il nodo corrente stesso.  
+ La proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> consente di modificare il markup XML dei nodi figlio su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator> con il contenuto analizzato della `string` XML specificata. Allo stesso modo, la proprietà <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> consente di modificare il markup XML dei nodi figlio su cui è attualmente posizionato un oggetto <xref:System.Xml.XPath.XPathNavigator> nonché il nodo corrente stesso.  
   
- Oltre ai metodi descritti in questo argomento, è possibile usare le proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> per rimuovere nodi e valori da un documento XML.  Per altre informazioni sull'utilizzo delle proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> per l'inserimento di nodi e valori, vedere l'argomento [Modifica dei dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md).  
+ Oltre ai metodi descritti in questo argomento, è possibile usare le proprietà <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> per rimuovere nodi e valori da un documento XML. Per ulteriori informazioni sull'utilizzo di <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> e <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> proprietà per inserire nodi e valori, vedere il [modificare dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md) argomento.  
   
-## Conflitti tra spazio dei nomi e xml:lang  
+## <a name="namespace-and-xmllang-conflicts"></a>Conflitti tra spazio dei nomi e xml:lang  
  Determinati conflitti relativi all'ambito dello spazio dei nomi e delle dichiarazioni `xml:lang` possono verificarsi quando si inseriscono i dati XML usando i metodi <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A> e <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> della classe<xref:System.Xml.XPath.XPathNavigator> che accetta oggetti <xref:System.Xml.XmlReader> come parametri.  
   
  Di seguito sono riportati alcuni tra i possibili conflitti tra gli spazi dei nomi.  
@@ -241,7 +243,7 @@ navigator.SetTypedValue(DateTime.Now);
 -   Se il prefisso e l'URI dello spazio dei nomi in entrambi i contesti dell'oggetto <xref:System.Xml.XmlReader> e dell'oggetto <xref:System.Xml.XPath.XPathNavigator> sono gli stessi, non viene aggiunta alcuna nuova dichiarazione dello spazio dei nomi al nuovo nodo inserito.  
   
 > [!NOTE]
->  La descrizione precedente è valida anche per le dichiarazioni dello spazio dei nomi con la `string` vuota come prefisso \(ad esempio la dichiarazione dello spazio dei nomi predefinita\).  
+>  La descrizione precedente è valida anche per le dichiarazioni dello spazio dei nomi con la `string` vuota come prefisso (ad esempio la dichiarazione dello spazio dei nomi predefinita).  
   
  Di seguito sono riportati alcuni tra i possibili conflitti `xml:lang`.  
   
@@ -253,11 +255,11 @@ navigator.SetTypedValue(DateTime.Now);
   
 -   Se viene rilevato un attributo `xml:lang` nell'ambito del contesto dell'oggetto <xref:System.Xml.XPath.XPathNavigator> ma non nel contesto dell'oggetto <xref:System.Xml.XmlReader>, non viene aggiunto alcun attributo `xml:lang` al nuovo nodo inserito.  
   
-## Inserimento di nodi con XmlWriter  
- I metodi usati per inserire nodi di pari livello, nodi figlio e nodi Attribute descritti nella sezione "Inserimento di nodi e valori" sono in overload.  I metodi <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> e <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> della classe <xref:System.Xml.XPath.XPathNavigator> restituiscono un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi.  
+## <a name="inserting-nodes-with-xmlwriter"></a>Inserimento di nodi con XmlWriter  
+ I metodi usati per inserire nodi di pari livello, nodi figlio e nodi Attribute descritti nella sezione "Inserimento di nodi e valori" sono in overload. I metodi <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> e <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> della classe <xref:System.Xml.XPath.XPathNavigator> restituiscono un oggetto <xref:System.Xml.XmlWriter> usato per inserire i nodi.  
   
-### Metodi XmlWriter non supportati  
- Non tutti i metodi usati per scrivere le informazioni in un documento XML usando la classe <xref:System.Xml.XmlWriter> sono supportati dalla classe <xref:System.Xml.XPath.XPathNavigator> a causa della differenza tra il modello dati XPath e il modello DOM \(Document Object Model\).  
+### <a name="unsupported-xmlwriter-methods"></a>Metodi XmlWriter non supportati  
+ Non tutti i metodi usati per scrivere le informazioni in un documento XML usando la classe <xref:System.Xml.XmlWriter> sono supportati dalla classe <xref:System.Xml.XPath.XPathNavigator> a causa della differenza tra il modello dati XPath e il modello DOM (Document Object Model).  
   
  Nella tabella seguente vengono descritti i metodi della classe <xref:System.Xml.XmlWriter> non supportati dalla classe <xref:System.Xml.XPath.XPathNavigator>.  
   
@@ -271,18 +273,18 @@ navigator.SetTypedValue(DateTime.Now);
   
  Per altre informazioni sulla classe <xref:System.Xml.XmlWriter>, vedere la documentazione di riferimento per la classe <xref:System.Xml.XmlWriter>.  
   
-### Più oggetti XmlWriter  
- È possibile disporre di più oggetti <xref:System.Xml.XPath.XPathNavigator> che scelgono parti diverse di un documento XML con uno o più oggetti <xref:System.Xml.XmlWriter> aperti.  Sono consentiti e supportati più oggetti <xref:System.Xml.XmlWriter> in scenari a thread singolo.  
+### <a name="multiple-xmlwriter-objects"></a>Più oggetti XmlWriter  
+ È possibile disporre di più oggetti <xref:System.Xml.XPath.XPathNavigator> che scelgono parti diverse di un documento XML con uno o più oggetti <xref:System.Xml.XmlWriter> aperti. Sono consentiti e supportati più oggetti <xref:System.Xml.XmlWriter> in scenari a thread singolo.  
   
  Di seguito sono riportate note importanti relative all'utilizzo di più oggetti <xref:System.Xml.XmlWriter>.  
   
--   I frammenti XML scritti dagli oggetti <xref:System.Xml.XmlWriter> vengono aggiunti al documento XML quando viene chiamato il metodo <xref:System.Xml.XmlWriter.Close%2A> di ciascun oggetto <xref:System.Xml.XmlWriter>.  Fino a quel punto, l'oggetto <xref:System.Xml.XmlWriter> sta scrivendo un frammento disconnesso.  Se viene eseguita un'operazione sul documento XML, i frammenti scritti da un oggetto <xref:System.Xml.XmlWriter> prima che sia stato chiamato il metodo <xref:System.Xml.XmlWriter.Close%2A> non sono interessati dall'operazione.  
+-   I frammenti XML scritti dagli oggetti <xref:System.Xml.XmlWriter> vengono aggiunti al documento XML quando viene chiamato il metodo <xref:System.Xml.XmlWriter.Close%2A> di ciascun oggetto <xref:System.Xml.XmlWriter>. Fino a quel punto, l'oggetto <xref:System.Xml.XmlWriter> sta scrivendo un frammento disconnesso. Se viene eseguita un'operazione sul documento XML, i frammenti scritti da un oggetto <xref:System.Xml.XmlWriter> prima che sia stato chiamato il metodo <xref:System.Xml.XmlWriter.Close%2A> non sono interessati dall'operazione.  
   
--   Se viene rilevato un oggetto <xref:System.Xml.XmlWriter> aperto in un particolare sottoalbero XML che viene in seguito eliminato, l'oggetto <xref:System.Xml.XmlWriter> può ancora essere aggiunto al sottoalbero.  Il sottoalbero diviene semplicemente un frammento eliminato.  
+-   Se viene rilevato un oggetto <xref:System.Xml.XmlWriter> aperto in un particolare sottoalbero XML che viene in seguito eliminato, l'oggetto <xref:System.Xml.XmlWriter> può ancora essere aggiunto al sottoalbero. Il sottoalbero diviene semplicemente un frammento eliminato.  
   
 -   Se più oggetti <xref:System.Xml.XmlWriter> vengono aperti nello stesso punto del documento XML, verranno aggiunti al documento XML in base all'ordine in cui gli oggetti<xref:System.Xml.XmlWriter> sono stati chiusi, non nell'ordine in base al quale sono stati aperti.  
   
- Nell'esempio seguente viene creato un oggetto <xref:System.Xml.XmlDocument>, quindi un oggetto <xref:System.Xml.XPath.XPathNavigator> e infine viene usato l'oggetto <xref:System.Xml.XmlWriter> restituito dal metodo <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> per creare la struttura del primo libro nel file `books.xml`.  L'oggetto viene quindi salvato come file `book.xml`.  
+ Nell'esempio seguente viene creato un oggetto <xref:System.Xml.XmlDocument>, quindi un oggetto <xref:System.Xml.XPath.XPathNavigator> e infine viene usato l'oggetto <xref:System.Xml.XmlWriter> restituito dal metodo <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> per creare la struttura del primo libro nel file `books.xml`. L'oggetto viene quindi salvato come file `book.xml`.  
   
 ```vb  
 Dim document As XmlDocument = New XmlDocument()  
@@ -332,13 +334,13 @@ using (XmlWriter writer = navigator.PrependChild())
 document.Save("book.xml");  
 ```  
   
-## Salvataggio di un documento XML  
- Il salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument> mediante i metodi descritti in questo argomento viene eseguito usando i metodi della classe <xref:System.Xml.XmlDocument>.  Per altre informazioni sul salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument>, vedere [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+## <a name="saving-an-xml-document"></a>Salvataggio di un documento XML  
+ Il salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument> mediante i metodi descritti in questo argomento viene eseguito usando i metodi della classe <xref:System.Xml.XmlDocument>. Per ulteriori informazioni sul salvataggio le modifiche apportate a un <xref:System.Xml.XmlDocument> , vedere [salvataggio e la scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
-## Vedere anche  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Modifica dei dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Modifica dei dati XML con XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
  [Rimozione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

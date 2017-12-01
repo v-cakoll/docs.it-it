@@ -1,12 +1,9 @@
 ---
 title: Risorse aggiuntive per i programmatori Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, additional resources
 - Help
@@ -19,29 +16,14 @@ helpviewer_keywords:
 - support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Risorse aggiuntive per i programmatori Visual Basic
 Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzione ai problemi comuni.  
@@ -63,7 +45,7 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 |Termine|Definizione|  
 |----------|----------------|  
 |[Code Gallery](http://code.msdn.microsoft.com/)|È possibile scaricare e condividere applicazioni di esempio e altre risorse con la community degli sviluppatori.|  
-|[CodePlex](http://www.codeplex.com/)|Ospita progetti software open source. È possibile usare CodePlex per trovare software open source o creare progetti nuovi da condividere con gli altri utente.|  
+|[GitHub](http://www.github.com/)|Ospita progetti software open source. È possibile utilizzare GitHub per trovare software open source o creare progetti nuovi da condividere con il mondo.|  
 |[Esempi di codice Visual Basic](http://msdn.microsoft.com/vbasic/ms789074)|Vengono forniti esempi di dati, Web e applicazioni in Visual Basic.|  
   
 ### <a name="forums"></a>Forum  
@@ -106,6 +88,5 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 |[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|È possibile accedere a un forum di discussione sulle nuove funzionalità di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nei forum DevX.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione](../../visual-basic/getting-started/index.md)   
+ [Introduzione](../../visual-basic/getting-started/index.md)  
  [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)
-

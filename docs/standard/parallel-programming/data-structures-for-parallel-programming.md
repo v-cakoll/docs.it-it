@@ -1,78 +1,80 @@
 ---
-title: "Data Structures for Parallel Programming | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data structures, multi-threading"
+title: Strutture di dati per la programmazione in parallelo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f35c5382455021f0a001604367e59204ce4ad93c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Data Structures for Parallel Programming
-La versione 4 di .NET Framework introduce molti nuovi tipi particolarmente utili per la programmazione in parallelo, fra cui un set di classi di raccolte simultanee, primitive di sincronizzazione leggere e tipi per l'inizializzazione differita.  Questi tipi possono essere utilizzati con qualsiasi codice di applicazione multithreading, compresi Task Parallel Library e PLINQ.  
+# <a name="data-structures-for-parallel-programming"></a>Strutture di dati per la programmazione in parallelo
+.NET Framework versione 4 introduce numerosi nuovi tipi che consentono la programmazione in parallelo, tra cui un set di classi collection simultanee, le primitive di sincronizzazione leggera e tipi per l'inizializzazione differita. È possibile utilizzare questi tipi con qualsiasi codice di applicazione multithreading, inclusa la libreria Task Parallel Library e PLINQ.  
   
-## Classi di raccolte simultanee  
- Le classi di raccolte nello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=fullName> forniscono operazioni di aggiunta e rimozione thread\-safe che, laddove possibile, evitano i blocchi. Quando i blocchi sono necessari, tali classi utilizzano blocchi con granularità fine.  A differenza delle raccolte introdotte nelle versioni 1.0 e 2.0 di .NET Framework, una classe di raccolte simultanee non richiede l'acquisizione di blocchi da parte del codice utente quando quest'ultimo accede agli elementi.  Le classi di raccolte simultanee possono migliorare significativamente le prestazioni dei tipi quali <xref:System.Collections.ArrayList?displayProperty=fullName> e <xref:System.Collections.Generic.List%601?displayProperty=fullName> \(con blocco implementato dall'utente\) negli scenari in cui più thread aggiungono e rimuovono elementi da una raccolta.  
+## <a name="concurrent-collection-classes"></a>Classi Collection simultanei  
+ Le classi di raccolte di <xref:System.Collections.Concurrent?displayProperty=nameWithType> dello spazio dei nomi forniscono thread-safe aggiunta e rimozione di operazioni che, se possibile, evitare blocchi e utilizza il blocco con granularità fine in cui i blocchi sono necessari. A differenza delle raccolte che sono state introdotte in .NET Framework versioni 1.0 e 2.0, una classe collection simultanee non richiede il codice utente per l'acquisizione di blocchi quando accede agli elementi. Le classi di raccolta simultanea possono migliorare significativamente le prestazioni dei tipi, ad esempio <xref:System.Collections.ArrayList?displayProperty=nameWithType> e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (con blocco implementato dall'utente) in scenari in cui più thread aggiungere e rimuovere elementi da una raccolta.  
   
- Nella tabella seguente vengono elencate le nuove classi di raccolte simultanee:  
+ Nella tabella seguente sono elencate le nuove classi di raccolte simultanee:  
   
-|Type|Descrizione|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>|Fornisce funzionalità di blocco e limitazione per le raccolte thread\-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName>.  I thread producer si bloccano in caso di assenza di slot disponibili o se la raccolta è completa.  I thread consumer si bloccano se la raccolta è vuota.  Questo tipo supporta inoltre l'accesso non bloccante da parte di consumer e producer.  L'oggetto <xref:System.Collections.Concurrent.BlockingCollection%601> può essere utilizzato come una classe base o un archivio di backup per fornire funzionalità di blocco e limitazione per qualsiasi classe di raccolte che supporta <xref:System.Collections.Generic.IEnumerable%601>.|  
-|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>|Implementazione di contenitore thread\-safe che fornisce operazioni scalabili di aggiunta e get.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>|Tipo di dizionario simultaneo e scalabile.|  
-|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>|Coda FIFO simultanea e scalabile.|  
-|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName>|Stack LIFO simultaneo e scalabile.|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornisce funzionalità di blocco e limitazione per le raccolte thread-safe che implementano <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Thread producer si bloccano se non sono disponibili slot o se la raccolta è di tipo completa. I thread consumer si bloccano se la raccolta è vuota. Questo tipo supporta inoltre l'accesso non bloccante dal producer e consumer. <xref:System.Collections.Concurrent.BlockingCollection%601>può essere utilizzato come classe base o l'archivio di backup per fornire il blocco e limitazione per qualsiasi classe di raccolta che supporta <xref:System.Collections.Generic.IEnumerable%601>.|  
+|<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Un'implementazione del contenitore thread-safe che fornisce scalabili e aggiungere le operazioni.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>|Un tipo di dizionario simultaneo e scalabile.|  
+|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>|Una coda FIFO simultanea e scalabile.|  
+|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>|Stack LIFO simultaneo e scalabile.|  
   
- Per ulteriori informazioni, vedere [Raccolte thread\-safe](../../../docs/standard/collections/thread-safe/index.md).  
+ Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
-## Primitive di sincronizzazione  
- Le nuove primitive di sincronizzazione nello spazio dei nomi <xref:System.Threading?displayProperty=fullName> evitano i dispendiosi meccanismi di blocco presenti nel codice multithreading legacy e pertanto sono in grado di offrire una concorrenza con granularità fine e una maggiore velocità di esecuzione.  Per alcuni dei nuovi tipi, ad esempio <xref:System.Threading.Barrier?displayProperty=fullName> e <xref:System.Threading.CountdownEvent?displayProperty=fullName>, non esiste alcuna controparte nelle prime versioni di .NET Framework.  
+## <a name="synchronization-primitives"></a>Primitive di sincronizzazione  
+ Le primitive di sincronizzazione di nuovo nel <xref:System.Threading?displayProperty=nameWithType> dello spazio dei nomi consentono di concorrenza con granularità fine e migliorare le prestazioni evitando dispendiosi meccanismi di blocco rilevati nel codice multithreading legacy. Alcuni dei nuovi tipi, ad esempio <xref:System.Threading.Barrier?displayProperty=nameWithType> e <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> non esiste alcuna controparte nelle versioni precedenti di .NET Framework.  
   
  Nella tabella seguente sono elencati i nuovi tipi di sincronizzazione:  
   
-|Type|Descrizione|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Threading.Barrier?displayProperty=fullName>|Consente a più thread di utilizzare un algoritmo in parallelo fornendo un punto in cui ogni attività può segnalare il proprio arrivo e quindi bloccarsi fino all'arrivo di tutte le attività o di una parte di esse.  Per ulteriori informazioni, vedere [Barrier](../../../docs/standard/threading/barrier.md).|  
-|<xref:System.Threading.CountdownEvent?displayProperty=fullName>|Semplifica gli scenari di fork e join fornendo un facile meccanismo di incontro.  Per ulteriori informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>|Primitiva di sincronizzazione simile a <xref:System.Threading.ManualResetEvent?displayProperty=fullName>.  L'oggetto <xref:System.Threading.ManualResetEventSlim> è più leggero ma può essere utilizzato solo per le comunicazioni interne del processo.  Per ulteriori informazioni, vedere [ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
-|<xref:System.Threading.SemaphoreSlim?displayProperty=fullName>|Primitiva di sincronizzazione che limita il numero di thread che possono accedere simultaneamente a una risorsa o a un pool di risorse.  Per ulteriori informazioni, vedere [Semaphore and SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=fullName>|Primitiva di blocco di esclusione reciproca che impone a un thread che sta tentando di acquisire il blocco di restare in attesa in un ciclo \(*spin*\) per un periodo di tempo prima di cedere il proprio il quantum.  Negli scenari in cui si prevede che l'attesa del blocco sarà breve, <xref:System.Threading.SpinLock> offre prestazioni migliori rispetto alle altre forme di blocco.  Per ulteriori informazioni, vedere [SpinLock](../../../docs/standard/threading/spinlock.md).|  
-|<xref:System.Threading.SpinWait?displayProperty=fullName>|Tipo leggero e di dimensioni ridotte che eseguirà spin per un determinato periodo di tempo e che infine metterà il thread in uno stato di attesa se viene superato il numero di spin.  Per ulteriori informazioni, vedere [SpinWait](../../../docs/standard/threading/spinwait.md).|  
+|<xref:System.Threading.Barrier?displayProperty=nameWithType>|Consente di utilizzare un algoritmo in parallelo, fornendo un punto in cui ogni attività possono segnalare l'arrivo e quindi si bloccano fino a quando non sono arrivato alcune o tutte le attività di più thread. Per altre informazioni, vedere [Barriera](../../../docs/standard/threading/barrier.md).|  
+|<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Semplifica gli scenari di fork e join fornendo un meccanismo semplice rendezvous. Per ulteriori informazioni, vedere [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Primitiva di sincronizzazione simile a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim>è più semplice, ma può essere utilizzato solo per comunicazioni interne del processo. Per ulteriori informazioni, vedere [ManualResetEvent e ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Primitiva di sincronizzazione che limita il numero di thread che possono accedere simultaneamente a una risorsa o a un pool di risorse. Per ulteriori informazioni, vedere [Semaphore e SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Una primitiva di blocco a esclusione reciproca che determina che il thread che sta tentando di acquisire il blocco di attesa in un ciclo, o *selezione*, per un periodo di tempo prima di restituire il quantum. Negli scenari in cui l'attesa del blocco deve essere breve, <xref:System.Threading.SpinLock> offre migliori prestazioni rispetto alle altre forme di blocco. Per ulteriori informazioni, vedere [SpinLock](../../../docs/standard/threading/spinlock.md).|  
+|<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Un tipo di piccolo e leggero che eseguirà spin per un determinato periodo e infine inserito il thread in uno stato di attesa, se viene superato il numero di selezione.  Per ulteriori informazioni, vedere [SpinWait](../../../docs/standard/threading/spinwait.md).|  
   
- Per ulteriori informazioni, vedere:  
+ Per altre informazioni, vedere:  
   
--   [How to: Use SpinLock for Low\-Level Synchronization](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [Procedura: Usare SpinLock per la sincronizzazione di basso livello](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [How to: Synchronize Concurrent Operations with a Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+-   [Procedura: sincronizzare operazioni simultanee con una barriera](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
-## Classi di inizializzazione differita  
- Nell'inizializzazione differita la memoria per un oggetto viene allocata solo quando occorre.  L'inizializzazione differita può migliorare le prestazioni distribuendo uniformemente le allocazioni degli oggetti nel corso della durata di un programma.  È possibile consentire l'inizializzazione differita di qualsiasi tipo personalizzato tramite il wrapping del tipo <xref:System.Lazy%601>.  
+## <a name="lazy-initialization-classes"></a>Classi di inizializzazione differita  
+ Con inizializzazione differita, la memoria per un oggetto non è allocata fino a quando non è necessaria. L'inizializzazione differita può migliorare le prestazioni suddividendo le allocazioni di oggetti in modo uniforme per tutta la durata di un programma. È possibile abilitare l'inizializzazione differita per qualsiasi tipo personalizzato eseguendo il wrapping del tipo <xref:System.Lazy%601>.  
   
  Nella tabella seguente sono elencati i tipi di inizializzazione differita:  
   
-|Type|Descrizione|  
+|Tipo|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Lazy%601?displayProperty=fullName>|Fornisce un'inizializzazione differita leggera e thread\-safe.|  
-|<xref:System.Threading.ThreadLocal%601?displayProperty=fullName>|Fornisce per ogni singolo thread un valore con inizializzazione differita, in cui ogni thread richiama in modo differito la funzione di inizializzazione.|  
-|<xref:System.Threading.LazyInitializer?displayProperty=fullName>|Fornisce metodi statici che evitano la necessità di allocare un'istanza dedicata con inizializzazione differita.  Tali metodi, invece, utilizzano riferimenti per garantire che le destinazioni siano state inizializzate al momento dell'accesso.|  
+|<xref:System.Lazy%601?displayProperty=nameWithType>|Fornisce leggero, thread-safe con inizializzazione differita.|  
+|<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornisce un valore di inizializzazione differita in base al thread, con ogni thread in modo differito-richiamando la funzione di inizializzazione.|  
+|<xref:System.Threading.LazyInitializer?displayProperty=nameWithType>|Fornisce metodi statici che evitare la necessità di allocare un'istanza dedicata con inizializzazione differita. Al contrario, usano i riferimenti per verificare le destinazioni sono state inizializzate al momento dell'accesso.|  
   
- Per ulteriori informazioni, vedere [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+ Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
   
-## Eccezioni di aggregazione  
- È possibile utilizzare il tipo <xref:System.AggregateException?displayProperty=fullName> per acquisire più eccezioni generate contemporaneamente in thread separati e restituirle al thread di unione come singola eccezione.  I tipi <xref:System.Threading.Tasks.Task?displayProperty=fullName> e <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> e PLINQ utilizzano ampiamente <xref:System.AggregateException> a tale scopo.  Per ulteriori informazioni, vedere [NIB: How to: Handle Exceptions Thrown by Tasks](http://msdn.microsoft.com/it-it/d6c47ec8-9de9-4880-beb3-ff19ae51565d) e [How to: Handle Exceptions in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+## <a name="aggregate-exceptions"></a>Eccezioni di aggregazione  
+ Il <xref:System.AggregateException?displayProperty=nameWithType> tipo può essere usato per acquisire più eccezioni generate contemporaneamente su un thread separato e restituiscono al thread di unione come singola eccezione. Il <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> tipi e PLINQ utilizzano <xref:System.AggregateException> ampiamente a questo scopo. Per ulteriori informazioni, vedere [NIB: procedura: gestire le eccezioni generate dalle attività](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) e [come: gestire le eccezioni in una Query PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
-## Vedere anche  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- <xref:System.Threading?displayProperty=fullName>   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ <xref:System.Threading?displayProperty=nameWithType>  
+ [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)

@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
+ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
 Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core per macOS. Si imparerà come creare progetti, unit test, usare gli strumenti di debug e incorporare librerie di terze parti tramite [NuGet](https://www.nuget.org/).
@@ -82,7 +80,7 @@ Questa operazione aggiunge `Newtonsoft.Json` e le relative dipendenze al progett
 </ItemGroup>
 ```
 
-Eseguire [`dotnet restore`](../tools/dotnet-restore.md), che ripristina le dipendenze e crea una cartella *obj* all'interno della *libreria* con tre file all'interno, tra cui un file *project.assets.json*:
+Eseguire [ `dotnet restore` ](../tools/dotnet-restore.md), ([vedere la nota](#dotnet-restore-note)) che consente di ripristinare le dipendenze e crea un *obj* cartella *libreria* con tre file in essa contenuti, tra cui un *project.assets.json* file:
 
 ```console
 dotnet restore
@@ -162,7 +160,7 @@ Si noti che si afferma che il valore 42 non è uguale a 19+23 (o 42) quando si c
 Dalla cartella *golden*, eseguire i comandi seguenti:
 
 ```console
-dotnet restore
+dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
 
@@ -196,7 +194,7 @@ Creare la dipendenza dalla libreria eseguendo il `dotnet add reference` comando:
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Eseguire `dotnet restore` per ripristinare le dipendenze dei tre progetti nella soluzione. Aprire *Program.cs* e sostituire il contenuto del metodo `Main` con la riga seguente:
+Eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)) per ripristinare le dipendenze di tre progetti nella soluzione. Aprire *Program.cs* e sostituire il contenuto del metodo `Main` con la riga seguente:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
@@ -225,3 +223,5 @@ Aprire la scheda del debugger selezionando l'icona Debug sulla barra degli strum
 
 Premere il pulsante per la riproduzione per avviare l'applicazione nel debugger. L'applicazione inizia l'esecuzione e procede fino al punto di interruzione, in cui si arresta. Eseguire un'istruzione nel metodo `Get` e assicurarsi di aver passato gli argomenti corretti. Confermare che la risposta è 42.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

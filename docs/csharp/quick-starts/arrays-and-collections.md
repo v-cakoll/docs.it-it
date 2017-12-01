@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>Guida introduttiva per C#: raccolte #
 
-Questa esercitazione offre informazioni introduttive sul linguaggio C# e i concetti di base della classe <xref:System.Collections.Generic.List%601>.
+Questa Guida introduttiva viene fornita un'introduzione al linguaggio c# e i concetti di base di <xref:System.Collections.Generic.List%601> classe.
 
-## <a name="a-simple-list-example"></a>Un esempio di elenco semplice
+Questa Guida introduttiva prevede di disporre di un computer in cui che è possibile utilizzare per lo sviluppo. L'argomento .NET [Introduzione a 10 minuti](https://www.microsoft.com/net/core) con le istruzioni per configurare l'ambiente di sviluppo locale in Mac, Linux o PC.
 
-> [!NOTE]
-> Se si inizia dal codice scritto in [dot.net](https://dot.net/), il codice scritto in questa sezione è già disponibile. Passare quindi a [Modificare il contenuto dell'elenco](#modify-list-contents).
-
-In questa lezione si presuppone che siano state completate le guide introduttive online e che siano stati installati [.NET Core SDK](http://dot.net/core) e [Visual Studio Code](https://code.visualstudio.com/). 
+## <a name="a-basic-list-example"></a>Un esempio di elenco semplice.
 
 Creare una directory denominata **list-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console`.
 
+> [!NOTE]
+> Se è completato [Introduzione a .NET 10 minuti](https://www.microsoft.com/net), è possibile continuare a usare l'applicazione myApp appena creato.
+ 
 Aprire **Program.cs** nell'editor preferito e sostituire il codice esistente con il seguente:
 
 ```csharp
@@ -213,10 +214,10 @@ Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 
 ## <a name="complete-challenge"></a>Completare l'esercizio
 
-È possibile visualizzare una soluzione di esempio [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs)
+È possibile visualizzare una soluzione di esempio [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23)
 
 A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.
 
-Complimenti, è stata completata questa esercitazione dedicata agli elenchi.
+Complimenti, aver completato l'avvio rapido di elenco. È possibile continuare con la [Introduzione alle classi](introduction-to-classes.md) avvio rapido nel proprio ambiente di sviluppo.
 
 Altre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.

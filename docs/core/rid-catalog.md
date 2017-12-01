@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
+ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
 ms.translationtype: HT
-ms.sourcegitcommit: 2943cc58d29323afb81f1c9ae7fc71b538851186
-ms.openlocfilehash: e1cb22d78ab9a28cbcd28a99b0b44415b5c46a4d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="net-core-rid-catalog"></a>Catalogo RID di .NET Core
 
@@ -112,6 +111,8 @@ L'elenco seguente mostra i RID più comuni usati per ogni sistema operativo. Non
   - `win10-arm`
   - `win10-arm64`
 
+Vedere [prerequisiti per .NET Core in Windows](windows-prerequisites.md) per ulteriori informazioni.
+
 ## <a name="linux-rids"></a>RID Linux
 
 - Portabile
@@ -164,12 +165,19 @@ L'elenco seguente mostra i RID più comuni usati per ogni sistema operativo. Non
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64` (.NET Core 2.0 o versioni successive)
 
-## <a name="os-x-rids"></a>RID OS X
+Vedere [prerequisiti per .NET Core su Linux](linux-prerequisites.md) per ulteriori informazioni.
 
-- `osx-x64` (.NET Core 2.0 o versioni successive)
+## <a name="macos-rids"></a>macOS RID
+
+RID macOS utilizzare la personalizzazione "OSX" precedente.
+
+- `osx-x64`(.NET core 2.0 o versioni successive, la versione minima è `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64` (.NET Core 1.1 o versioni successive)
+- `osx.10.13-x64`
+
+Vedere [prerequisiti per .NET Core su macOS](macos-prerequisites.md) per ulteriori informazioni.
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>RID Android (.NET Core 2.0 o versioni successive)
 
@@ -177,5 +185,5 @@ L'elenco seguente mostra i RID più comuni usati per ogni sistema operativo. Non
 - `android.21`
 
 ## <a name="see-also"></a>Vedere anche
- [ID di runtime](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
 
+[ID di runtime](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

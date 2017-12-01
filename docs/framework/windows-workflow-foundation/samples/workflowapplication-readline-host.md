@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a65ca3d3d4a787132246312e28213e71defc94ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Host ReadLine di WorkflowApplication
 Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire qualsiasi flusso di lavoro usando l'attività `ReadLine` inclusa (o altre attività quali quelle che ottengono dati dai segnalibri ripresi con le stringhe). L'output dell'attività `WriteLine` o qualsiasi elemento che scrive nell'estensione della proprietà <xref:System.Activities.Statements.WriteLine.TextWriter%2A> è diretto alla finestra host. Quando un'istanza è inattiva, i segnalibri disponibili per tale istanza vengono visualizzati in una casella combinata. Selezionando un segnalibro, inserendo un testo e premendo il pulsante di ripresa del segnalibro viene continuata l'esecuzione del flusso di lavoro. Inoltre, è possibile annullare, interrompere o terminare un flusso di lavoro selezionato. La persistenza è attiva per impostazione predefinita; è possibile arrestare l'host e ripristinarlo in modo che l'elenco di istanze venga popolato con le istanze archiviate nel database. Il rilevamento viene usato per restituire gli eventi a livello dell'oggetto <xref:System.Activities.WorkflowApplication> all'host con la possibilità di aggiungere il rilevamento dettagliato a livello di attività.  
@@ -67,6 +67,4 @@ Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire q
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

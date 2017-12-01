@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
+ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a8185c21e129c91b2c3ecb1f74f8ce2f75c5db9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="strongly-typed-delegates"></a>Delegati fortemente tipizzati
 
 [Precedente](delegate-class.md)
@@ -30,7 +28,7 @@ In pratica, verranno creati nuovi tipi delegati ogni volta che è necessaria una
 
 Fortunatamente, questo non è necessario. Il framework .NET Core include diversi tipi che è possibile riutilizzare quando sono necessari tipi delegati. Poiché si tratta di definizioni [generiche](programming-guide/generics/index.md) è possibile dichiarare personalizzazioni quando sono necessarie nuove dichiarazioni di metodi. 
 
-Il primo di questi tipi è il tipo @System.Action e diverse variazioni:
+Il primo di questi tipi è il tipo <xref:System.Action> e diverse variazioni:
 
 ```csharp
 public delegate void Action();
@@ -41,7 +39,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 Il modificatore `in` nell'argomento di tipo generico è descritto nell'articolo sulla covarianza.
 
-Sono disponibili variazioni del delegato `Action` che contengono fino a 16 argomenti, ad esempio @System.Action%6016 .
+Sono disponibili varianti del `Action` delegato contenenti fino a 16 argomenti, ad esempio <xref:System.Action%6016>.
 È importante che queste definizioni usino argomenti generici diversi per ogni argomento di delegato in modo da offrire la massima flessibilità. Gli argomenti del metodo possono essere dello stesso tipo, ma non devono esserlo necessariamente.
 
 Usare uno dei tipi `Action` per ogni tipo delegato con tipo restituito void.
@@ -57,12 +55,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 Il modificatore `out` nell'argomento di tipo generico del risultato è descritto nell'articolo sulla covarianza.
 
-Sono disponibili variazioni del delegato `Func` che contengono fino a 16 argomenti di input, ad esempio @System.Func%6017.
+Sono disponibili varianti del `Func` delegato con un massimo di 16 argomenti di input, ad esempio <xref:System.Func%6017>.
 Per convenzione, il tipo del risultato è sempre l'ultimo parametro di tipo in tutte le dichiarazioni `Func`.
 
 Usare uno dei tipi `Func` per ogni tipo delegato che restituisce un valore.
 
-È anche disponibile un tipo @System.Predicate%601 specializzato per un delegato che restituisce un test su un singolo valore:
+È anche un specializzato <xref:System.Predicate%601> tipo per un delegato che restituisce un test a un singolo valore:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -85,4 +83,3 @@ Ciò dovrebbe consentire di risparmiare tempo e di ridurre il numero di nuovi ti
 Nel articolo successivo sono descritti diversi modelli comuni per l'uso pratico dei delegati.
 
 [Successivo](delegates-patterns.md)
-

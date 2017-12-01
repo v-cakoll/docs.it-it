@@ -1,30 +1,24 @@
 ---
 title: -refonly (opzioni del compilatore C#)
-ms.date: 2017-07-08
+ms.date: 07/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refonly
-dev_langs:
-- CSharp
+f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: af99f7565a43dd28b6271611bc8690e7a2e51482
-ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refonly-c-compiler-options"></a>/refonly (opzioni del compilatore C#)
 
-**/refonly**: questa opzione indica che l'output deve essere un assembly di riferimento anziché un assembly di implementazione, come output primario. Il parametro `/refonly` disabilita automaticamente l'output dei file PDB poiché non è possibile eseguire gli assembly di riferimento.
+Il **/refonly** opzione indica che un assembly di riferimento deve essere output invece di un assembly di implementazione, come l'output primario. Il parametro `/refonly` disabilita automaticamente l'output dei file PDB poiché non è possibile eseguire gli assembly di riferimento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,6 +43,5 @@ Gli assembly di riferimento rimuovono ulteriormente i metadati (membri privati) 
 Le opzioni `/refonly` e [`/refout`](refout-compiler-option.md) si escludono reciprocamente.
 
 ## <a name="see-also"></a>Vedere anche
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
-

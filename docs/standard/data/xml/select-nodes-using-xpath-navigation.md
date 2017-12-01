@@ -1,33 +1,34 @@
 ---
-title: "Selezione di nodi utilizzando la navigazione XPath | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Selezione di nodi utilizzando la navigazione XPath
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Selezione di nodi utilizzando la navigazione XPath
-Il DOM \(Document Object Model\) XML contiene metodi che consentono di usare la navigazione XPath \(XML Path Language\) per eseguire query sulle informazioni del DOM.  È possibile usare XPath per individuare un singolo nodo specifico o tutti i nodi che corrispondono a certi criteri.  
+# <a name="select-nodes-using-xpath-navigation"></a>Selezione di nodi utilizzando la navigazione XPath
+Il DOM (Document Object Model) XML contiene metodi che consentono di usare la navigazione XPath (XML Path Language) per eseguire query sulle informazioni del DOM. È possibile usare XPath per individuare un singolo nodo specifico o tutti i nodi che corrispondono a certi criteri.  
   
-## Metodi di selezione XPath  
- Le classi DOM forniscono due metodi per la selezione XPath: il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> e il metodo <xref:System.Xml.XmlNode.SelectNodes%2A>.  Il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> restituisce il primo nodo che corrisponde ai criteri di selezione.  Il metodo <xref:System.Xml.XmlNode.SelectNodes%2A> restituisce un oggetto <xref:System.Xml.XmlNodeList> contenente i nodi corrispondenti.  
+## <a name="xpath-select-methods"></a>Metodi di selezione XPath  
+ Le classi DOM forniscono due metodi per la selezione XPath: il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> e il metodo <xref:System.Xml.XmlNode.SelectNodes%2A>. Il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> restituisce il primo nodo che corrisponde ai criteri di selezione. Il metodo <xref:System.Xml.XmlNode.SelectNodes%2A> restituisce un oggetto <xref:System.Xml.XmlNodeList> contenente i nodi corrispondenti.  
   
- Nell'esempio seguente viene usato il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> per selezionare il primo nodo `book` nel quale il cognome dell'autore soddisfa i criteri specificati.  Il file bookstore.xml, fornito alla fine di questo argomento, viene usato come file di input.  
+ Nell'esempio seguente viene usato il metodo <xref:System.Xml.XmlNode.SelectSingleNode%2A> per selezionare il primo nodo `book` nel quale il cognome dell'autore soddisfa i criteri specificati. Il file bookstore.xml, fornito alla fine di questo argomento, viene usato come file di input.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -62,7 +63,7 @@ XmlNode node = root.SelectSingleNode(
 Console.WriteLine(node.InnerXml);  
 ```  
   
- Nell'esempio successivo viene usato il metodo <xref:System.Xml.XmlNode.SelectNodes%2A> per selezionare tutti i nodi libro in cui il prezzo è maggiore di una quantità specificata.  Il prezzo di ogni libro nell'elenco selezionato viene quindi ridotto a livello di codice del dieci percento.  Infine, il file aggiornato viene scritto nella console.  Il file bookstore.xml, fornito alla fine di questo argomento, viene usato come file di input.  
+ Nell'esempio successivo viene usato il metodo <xref:System.Xml.XmlNode.SelectNodes%2A> per selezionare tutti i nodi libro in cui il prezzo è maggiore di una quantità specificata. Il prezzo di ogni libro nell'elenco selezionato viene quindi ridotto a livello di codice del dieci percento. Infine, il file aggiornato viene scritto nella console. Il file bookstore.xml, fornito alla fine di questo argomento, viene usato come file di input.  
   
 ```vb  
 ' Load the document and set the root element.  
@@ -114,7 +115,7 @@ foreach (XmlNode book in nodeList)
 doc.Save(Console.Out);  
 ```  
   
- Negli esempi precedenti la query XPath inizia dall'elemento del documento.  Impostando il punto iniziale per la query XPath si imposta il nodo di contesto, che è il punto da cui inizia la query XPath.  Se non si desidera iniziare dall'elemento del documento, ma dal primo elemento figlio di tale elemento, è possibile codificare l'istruzione Select come segue:  
+ Negli esempi precedenti la query XPath inizia dall'elemento del documento. Impostando il punto iniziale per la query XPath si imposta il nodo di contesto, che è il punto da cui inizia la query XPath. Se non si desidera iniziare dall'elemento del documento, ma dal primo elemento figlio di tale elemento, è possibile codificare l'istruzione Select come segue:  
   
 ```vb  
 doc.DocumentElement.FirstChild.SelectNodes(. . . )  
@@ -124,21 +125,21 @@ doc.DocumentElement.FirstChild.SelectNodes(. . . )
 this doc.DocumentElement.FirstChild.SelectNodes(. . .);  
 ```  
   
- Tutti gli oggetti <xref:System.Xml.XmlNodeList> sono sincronizzati con il documento sottostante.  Per questo motivo, se si scorre l'elenco dei nodi e si modifica il valore di un nodo, quest'ultimo verrà aggiornato anche nel documento dal quale proviene.  Si noti nell'esempio precedente che quando un nodo viene modificato nell'oggetto <xref:System.Xml.XmlNodeList> selezionato, viene modificato anche il documento sottostante.  
+ Tutti gli oggetti <xref:System.Xml.XmlNodeList> sono sincronizzati con il documento sottostante. Per questo motivo, se si scorre l'elenco dei nodi e si modifica il valore di un nodo, quest'ultimo verrà aggiornato anche nel documento dal quale proviene. Si noti nell'esempio precedente che quando un nodo viene modificato nell'oggetto <xref:System.Xml.XmlNodeList> selezionato, viene modificato anche il documento sottostante.  
   
 > [!NOTE]
->  Quando si modifica il documento sottostante, è consigliabile eseguire nuovamente la selezione.  Se il nodo modificato è un nodo che potrebbe causare l'aggiunta del nodo all'elenco dove non figurava in precedenza o la relativa rimozione dall'elenco di nodi, è possibile che tale elenco non sia preciso.  
+>  Quando si modifica il documento sottostante, è consigliabile eseguire nuovamente la selezione. Se il nodo modificato è un nodo che potrebbe causare l'aggiunta del nodo all'elenco dove non figurava in precedenza o la relativa rimozione dall'elenco di nodi, è possibile che tale elenco non sia preciso.  
   
-## Spazi dei nomi nelle espressioni XPath  
- Le espressioni XPath possono includere spazi dei nomi.  La risoluzione dello spazio dei nomi viene supportata usando il tipo <xref:System.Xml.XmlNamespaceManager>.  Se l'espressione XPath include un prefisso, sarà necessario aggiungere la coppia costituita dal prefisso e dall'URI dello spazio dei nomi all'oggetto <xref:System.Xml.XmlNamespaceManager> e l'oggetto <xref:System.Xml.XmlNamespaceManager> verrà passato al metodo <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> o <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>.  Si noti che negli esempi di codice precedenti viene usato l'oggetto <xref:System.Xml.XmlNamespaceManager> per risolvere lo spazio dei nomi del documento bookstore.xml.  
+## <a name="namespaces-in-xpath-expressions"></a>Spazi dei nomi nelle espressioni XPath  
+ Le espressioni XPath possono includere spazi dei nomi. La risoluzione dello spazio dei nomi viene supportata usando il tipo <xref:System.Xml.XmlNamespaceManager>. Se l'espressione XPath include un prefisso, sarà necessario aggiungere la coppia costituita dal prefisso e dall'URI dello spazio dei nomi all'oggetto <xref:System.Xml.XmlNamespaceManager> e l'oggetto <xref:System.Xml.XmlNamespaceManager> verrà passato al metodo <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> o <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>. Si noti che negli esempi di codice precedenti viene usato l'oggetto <xref:System.Xml.XmlNamespaceManager> per risolvere lo spazio dei nomi del documento bookstore.xml.  
   
 > [!NOTE]
->  Se l'espressione XPath non include un prefisso, si presuppone che l'URI dello spazio dei nomi \(Uniform Resource Identifier\) sia lo spazio dei nomi vuoto.  Se l'XML include uno spazio dei nomi predefinito, sarà necessario aggiungere un prefisso e un URI dello spazio dei nomi anche all'oggetto <xref:System.Xml.XmlNamespaceManager>. In caso contrario, non verrà selezionato alcun nodo.  
+>  Se l'espressione XPath non include un prefisso, si presuppone che l'URI dello spazio dei nomi (Uniform Resource Identifier) sia lo spazio dei nomi vuoto. Se l'XML include uno spazio dei nomi predefinito, sarà necessario aggiungere un prefisso e un URI dello spazio dei nomi anche all'oggetto <xref:System.Xml.XmlNamespaceManager>. In caso contrario, non verrà selezionato alcun nodo.  
   
-#### File di input  
+#### <a name="input-file"></a>File di input  
  Di seguito è riportato il file bookstore.xml usato come file di input negli esempi di questo argomento:  
   
-```  
+```xml  
 <?xml version='1.0'?>  
 <bookstore xmlns="urn:newbooks-schema">  
   <book genre="novel" style="hardcover">  
@@ -168,5 +169,5 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 </bookstore>  
 ```  
   
-## Vedere anche  
- [Modello DOM \(Document Object Model\) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Vedere anche  
+ [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

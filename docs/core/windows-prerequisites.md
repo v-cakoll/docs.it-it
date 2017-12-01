@@ -6,12 +6,11 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 84f1eaf5fbfcdf8d1dd1b90545f9236e2daedd15
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -39,9 +38,9 @@ Per l'elenco completo dei sistemi operativi supportati .NET Core 1.x, vedere [.N
 
 ## <a name="net-core-dependencies"></a>Dipendenze .NET Core
 
-.NET Core richiede Visual C++ Redistributable per l'esecuzione in versioni di Windows precedenti a Windows 10 e Windows Server 2016. Questa dipendenza viene installata automaticamente dal programma di installazione di .NET Core.
+.NET core 1.1 e versioni precedenti richiede Visual C++ Redistributable durante l'esecuzione in versioni di Windows precedenti a Windows 10 e Windows Server 2016. Questa dipendenza viene installata automaticamente dal programma di installazione di .NET Core.
 
-[Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685) deve essere installato manualmente nei seguenti casi:
+[Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685) deve essere installato manualmente nei seguenti casi:
 
    * Installazione di .NET Core con lo [script del programma di installazione](./tools/dotnet-install-script.md).
    * Distribuzione di un'applicazione .NET Core indipendente.
@@ -95,4 +94,3 @@ Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visua
      > * Nella finestra di dialogo **Informazioni su Microsoft Visual Studio** verificare il numero di versione.
 >     * Per le app .NET Core 2.x, Visual Studio 2017 versione 15.3 (26730.01) o successiva.
 >     * Per le app .NET Core 1.x, Visual Studio 2017 versione 15.0 (26228.04) o successiva.
-

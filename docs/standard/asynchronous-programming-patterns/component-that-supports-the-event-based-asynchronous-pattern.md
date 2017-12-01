@@ -1,45 +1,51 @@
 ---
-title: "Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "Asynchronous Pattern"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "components [.NET Framework], asynchronous"
-  - "AsyncOperation class"
-  - "threading [Windows Forms], asynchronous features"
-  - "AsyncCompletedEventArgs class"
+title: 'Procedura dettagliata: implementazione di un componente che supporta il modello asincrono basato su eventi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- threading [Windows Forms], asynchronous features
+- AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 150e4b27cc149774895574ddd196de5f9bc2acd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern
-Se la scrittura di una classe implica operazioni che possono causare ritardi notevoli, è possibile assegnare alla classe la funzionalità asincrona implementando [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+# <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedura dettagliata: implementazione di un componente che supporta il modello asincrono basato su eventi
+Se si sta scrivendo una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnandogli funzionalità asincrona implementando il [Panoramica del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
- In questa procedura dettagliata viene illustrato come creare un componente che implementa il modello asincrono basato su eventi.  L'implementazione viene eseguita mediante le classi di supporto dello spazio dei nomi <xref:System.ComponentModel?displayProperty=fullName>. In questo modo è garantito il funzionamento del componente in qualsiasi modello di applicazione, incluse le applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], console e Windows Form.  Questo componente può anche essere progettato con un controllo <xref:System.Windows.Forms.PropertyGrid> e con strumenti di progettazione personalizzati.  
+ Questa procedura dettagliata viene illustrato come creare un componente che implementa il modello asincrono basato su eventi. Viene implementato utilizzando le classi di supporto dal <xref:System.ComponentModel?displayProperty=nameWithType> spazio dei nomi, che assicura che il componente funzioni correttamente con qualsiasi modello di applicazione, tra cui [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], Console, applicazioni e le applicazioni Windows Form. Questo componente è inoltre essere progettato con una <xref:System.Windows.Forms.PropertyGrid> controllo e strumenti di progettazione personalizzate.  
   
- Nel corso della procedura si disporrà di un'applicazione che consente di calcolare in modo asincrono i numeri primi.  L'applicazione in questione contiene un thread dell'interfaccia utente principale e un thread per ogni calcolo eseguito sui numeri primi.  Sebbene il test eseguito per verificare se un numero grande è un numero primo possa richiedere una notevole quantità di tempo, il thread dell'interfaccia utente principale non verrà interrotto da questo ritardo e il form sarà reattivo nel corso dei calcoli.  Sarà possibile eseguire il numero desiderato di calcoli concorrenti e annullare in modo selettivo i calcoli in sospeso.  
+ Durante la creazione, si disporrà di un'applicazione che consente di calcolare i numeri primi in modo asincrono. L'applicazione disporrà di un thread dell'interfaccia utente principale e un thread per ogni calcolo dei numeri primi. Anche se il test se è un numero elevato primi possono richiedere una notevole quantità di tempo, non verrà interrotto il thread dell'interfaccia utente principale per questo ritardo e il form sarà reattivo durante i calcoli. Sarà in grado di eseguire molti calcoli desiderato simultaneamente e in modo selettivo annullare i calcoli in sospeso.  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
 -   Creazione del componente  
   
--   Definizione di eventi e delegati asincroni pubblici  
+-   Definizione di delegati e gli eventi asincroni pubblici  
   
 -   Definizione di delegati privati  
   
@@ -49,214 +55,214 @@ Se la scrittura di una classe implica operazioni che possono causare ritardi not
   
 -   Implementazione dei metodi di lavoro  
   
--   Implementazione dei metodi di avvio e annullamento  
+-   Implementazione di avvio e i metodi di annullamento  
   
- Per copiare il codice nell'argomento corrente come un elenco singolo, vedere [How to: Implement a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
-## Creazione del componente  
- Il primo passaggio consiste nella creazione del componente che implementerà il modello asincrono basato su eventi.  
+## <a name="creating-the-component"></a>Creazione del componente  
+ Il primo passaggio consiste nel creare il componente che consente di implementare il modello asincrono basato su eventi.  
   
-#### Per creare un componente  
+#### <a name="to-create-the-component"></a>Per creare il componente  
   
 -   Creare una classe denominata `PrimeNumberCalculator` che eredita da <xref:System.ComponentModel.Component>.  
   
-## Definizione di eventi e delegati asincroni pubblici  
- Il componente comunica con i client per mezzo degli eventi.  L'evento *MethodName*`Completed` avvisa i client del completamento di un'attività asincrona, mentre l'evento *NomeMetodo*`ProgressChanged` li informa dello stato di avanzamento di tale attività.  
+## <a name="defining-public-asynchronous-events-and-delegates"></a>Definizione di delegati e gli eventi asincroni pubblici  
+ Il componente comunica con i client che usano gli eventi. Il *NomeMetodo* `Completed` avvisa i client per il completamento di un'attività asincrona e *NomeMetodo* `ProgressChanged` evento informa dello stato di avanzamento di un'attività asincrona.  
   
-#### Per definire eventi asincroni per i client del componente:  
+#### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Per definire gli eventi asincroni per i client del componente:  
   
-1.  Importare gli spazi dei nomi <xref:System.Threading?displayProperty=fullName> e <xref:System.Collections.Specialized?displayProperty=fullName> nella parte superiore del file.  
+1.  Importazione di <xref:System.Threading?displayProperty=nameWithType> e <xref:System.Collections.Specialized?displayProperty=nameWithType> gli spazi dei nomi nella parte superiore del file.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
   
-2.  Prima della definizione della classe `PrimeNumberCalculator` , dichiarare i delegati per gli eventi di avanzamento e completamento.  
+2.  Prima di `PrimeNumberCalculator` definizione di classe dichiarare i delegati per gli eventi di stato di avanzamento e il completamento.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#7)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#7)]  
   
-3.  Prima della definizione della classe `PrimeNumberCalculator` , dichiarare gli eventi per la generazione di report sullo stato di avanzamento e sul completamento destinati ai client.  
+3.  Nel `PrimeNumberCalculator` definizione di classe, dichiarare gli eventi per segnalare lo stato di avanzamento e completamento per i client.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#8)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#8)]  
   
-4.  Dopo la definizione della classe `PrimeNumberCalculator` , derivare la classe  `CalculatePrimeCompletedEventArgs` per la generazione del report sul risultato di ogni calcolo destinato al gestore eventi del client relativo all'evento `CalculatePrimeCompleted`.  Oltre alle proprietà `AsyncCompletedEventArgs`, questa classe consente al client di determinare il numero sottoposto a test, se si tratta di un numero primo e il valore del primo divisore, se non è numero primo.  
+4.  Dopo il `PrimeNumberCalculator` definizione di classe, derivare la `CalculatePrimeCompletedEventArgs` classe per la segnalazione sul risultato di ogni calcolo al gestore eventi del client per il `CalculatePrimeCompleted`Event. Oltre al `AsyncCompletedEventArgs` proprietà, questa classe consente al client di determinare il numero è stato testato, se si tratta di un numero primo e che cos'è il divisore prima se non è principale.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### Per eseguire il test del componente  
+#### <a name="to-test-your-component"></a>Per testare il componente  
   
 -   Compilare il componente.  
   
-     Verranno visualizzati due messaggi di avviso del compilatore:  
+     Verranno visualizzati due avvisi del compilatore:  
   
     ```  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.ProgressChanged' is never used  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.CalculatePrimeCompleted' is never used  
     ```  
   
-     Questi messaggi verranno eliminati nella sezione successiva.  
+     Nella sezione successiva verranno cancellati tali avvisi.  
   
-## Definizione di delegati privati  
- Le caratteristiche asincrone del componente `PrimeNumberCalculator` vengono implementate internamente con un delegato speciale noto come <xref:System.Threading.SendOrPostCallback> Un <xref:System.Threading.SendOrPostCallback> che rappresenta un metodo di callback eseguito su un thread <xref:System.Threading.ThreadPool>.  Il metodo di callback deve presentare una firma che accetti un solo parametro di tipo <xref:System.Object>. In altre parole, sarà necessario passare lo stato tra i delegati di una classe wrapper.  Per ulteriori informazioni, vedere <xref:System.Threading.SendOrPostCallback>.  
+## <a name="defining-private-delegates"></a>Definizione di delegati privati  
+ Gli aspetti di asincrona di `PrimeNumberCalculator` componente sono implementate internamente con un delegato speciale noto come un <xref:System.Threading.SendOrPostCallback>. Oggetto <xref:System.Threading.SendOrPostCallback> rappresenta un metodo di callback che viene eseguito in un <xref:System.Threading.ThreadPool> thread. Il metodo di callback deve avere una firma che accetta un solo parametro di tipo <xref:System.Object>, pertanto sarà necessario passare lo stato tra i delegati in una classe wrapper. Per altre informazioni, vedere <xref:System.Threading.SendOrPostCallback>.  
   
-#### Per implementare il comportamento asincrono interno del componente:  
+#### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Per implementare il comportamento asincrono interno del componente:  
   
-1.  Dichiarare e creare i delegati <xref:System.Threading.SendOrPostCallback> nella classe `PrimeNumberCalculator` .  Creare gli oggetti <xref:System.Threading.SendOrPostCallback> in un metodo di utilità denominato  `InitializeDelegates`.  
+1.  Dichiarare e creare il <xref:System.Threading.SendOrPostCallback> dei delegati nel `PrimeNumberCalculator` classe. Creare il <xref:System.Threading.SendOrPostCallback> gli oggetti di un metodo di utilità denominati `InitializeDelegates`.  
   
-     Saranno necessari due delegati, ovvero uno per segnalare lo stato di avanzamento al client e uno per informarlo del completamento dell'operazione.  
+     Sono necessari due delegati: uno per i report di stato al client e uno per in fase di completamento al client.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#9)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#9)]  
     [!code-csharp[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#20)]
     [!code-vb[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#20)]  
   
-2.  Chiamare il metodo `InitializeDelegates` nel costruttore del componente.  
+2.  Chiamare il `InitializeDelegates` metodo nel costruttore del componente.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#21)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#21)]  
   
-3.  Dichiarare un delegato nella classe `PrimeNumberCalculator` che gestisce il lavoro effettivo da eseguire in modo asincrono.  Questo delegato esegue il wrapping del metodo di lavoro che esegue il test per verificare se un numero è numero primo.  Il delegato accetta un parametro <xref:System.ComponentModel.AsyncOperation> che verrà utilizzato per tenere traccia del ciclo di vita dell'operazione asincrona.  
+3.  Dichiarare un delegato di `PrimeNumberCalculator` classe che gestisce il lavoro effettivo da eseguire in modo asincrono. Questo delegato il wrapping del metodo di lavoro che controlla se un numero è primo. Il delegato accetta un <xref:System.ComponentModel.AsyncOperation> parametro, che verrà utilizzato per tenere traccia della durata dell'operazione asincrona.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#22)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#22)]  
   
-4.  Creare una raccolta per la gestione dei cicli di vita delle operazioni asincrone in sospeso.  Al client è necessario un sistema per tenere traccia delle operazioni nel corso dell'esecuzione e al completamento e tale sistema consiste nella richiesta di passare un token univoco o un ID attività quando il client effettua la chiamata al metodo asincrono.  Il componente `PrimeNumberCalculator` deve tenere traccia di ogni chiamata associando l'ID attività al relativo richiamo.  Se il client passa un ID attività non univoco, il componente `PrimeNumberCalculator` deve generare un'eccezione.  
+4.  Creare una raccolta per la gestione di durata delle operazioni asincrone in sospeso. Il client è necessario un modo per tenere traccia delle operazioni vengono eseguite e completati e il rilevamento viene eseguito tramite la richiesta client passare un token univoco o un ID attività, quando il client effettua la chiamata al metodo asincrono. Il `PrimeNumberCalculator` componente deve tenere traccia di ogni chiamata associando l'ID attività corrispondente chiamata. Se il client passa un ID attività non è univoco, il `PrimeNumberCalculator` componente deve generare un'eccezione.  
   
-     Il componente `PrimeNumberCalculator` tiene traccia dell'ID attività utilizzando una classe di raccolta speciale denominata <xref:System.Collections.Specialized.HybridDictionary>.  Nella definizione della classe creare un oggetto <xref:System.Collections.Specialized.HybridDictionary> denominato  `userTokenToLifetime`.  
+     Il `PrimeNumberCalculator` componente tiene traccia dell'ID attività utilizzando una classe di raccolta speciale denominata un <xref:System.Collections.Specialized.HybridDictionary>. Nella definizione della classe, creare un <xref:System.Collections.Specialized.HybridDictionary> chiamato `userTokenToLifetime`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#23)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#23)]  
   
-## Implementazione di eventi pubblici  
- I componenti che implementano il modello asincrono basato su eventi comunicano con i client mediante gli eventi.  Tali eventi vengono richiamati sul thread appropriato con il supporto della classe <xref:System.ComponentModel.AsyncOperation>.  
+## <a name="implementing-public-events"></a>Implementazione di eventi pubblici  
+ I componenti che implementano il modello asincrono basato su eventi comunicano ai client mediante gli eventi. Questi eventi vengono richiamati sul thread appropriato con l'aiuto del <xref:System.ComponentModel.AsyncOperation> classe.  
   
-#### Per generare eventi per i client del componente:  
+#### <a name="to-raise-events-to-your-components-clients"></a>Per generare eventi per i client del componente:  
   
-1.  Implementare gli eventi pubblici per la generazione di report destinati ai client.  Sono necessari un evento per la generazione di report sullo stato di avanzamento e uno per la generazione di report sul completamento.  
+1.  Implementare gli eventi pubblici per i report ai client. È necessario un evento per segnalare lo stato di avanzamento e uno per il completamento di creazione di report.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#24)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#24)]  
   
-## Implementazione del metodo di completamento  
- Il delegato di completamento è il metodo richiamato dal comportamento asincrono di threading Free sottostante quando un'operazione asincrona viene terminata per completamento, errore o annullamento.  Questo richiamo si verifica su un thread arbitrario.  
+## <a name="implementing-the-completion-method"></a>Implementazione del metodo di completamento  
+ Il delegato di completamento è il metodo che verrà richiamato il comportamento sottostante, a thread libero asincrono al completamento dell'operazione asincrona per il completamento, errore o annullamento. Questa chiamata si verifica su un thread arbitrario.  
   
- Il metodo in questione rappresenta la posizione in cui l'ID attività del client viene rimosso dalla raccolta interna di token client univoci  e termina il ciclo di vita di una determinata operazione asincrona mediante la chiamata del metodo <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> sull'oggetto <xref:System.ComponentModel.AsyncOperation> corrispondente.  Questa chiamata genera l'evento di completamento sul thread appropriato per il modello di applicazione.  In seguito alla chiamata del metodo <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>, questa istanza di <xref:System.ComponentModel.AsyncOperation> non potrà essere più utilizzata. Pertanto, tutti i tentativi successivi di utilizzo genereranno un'eccezione.  
+ Questo metodo è in un ID attività del client viene rimosso dalla raccolta interna di token client univoci. Questo metodo termina il ciclo di vita di una determinata operazione asincrona chiamando il <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> metodo sull'oggetto corrispondente <xref:System.ComponentModel.AsyncOperation>. Questa chiamata genera l'evento di completamento sul thread appropriato per il modello di applicazione. Dopo il <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> metodo viene chiamato, l'istanza di <xref:System.ComponentModel.AsyncOperation> non può più essere utilizzato, e tutti i tentativi successivi di usarlo genererà un'eccezione.  
   
- La firma `CompletionMethod` deve contenere qualsiasi stato necessario a descrivere il risultato dell'operazione asincrona.  Il parametro contiene lo stato relativo al numero sottoposto a test nel corso dell'operazione asincrona, la specifica di numero primo, se applicabile, e il valore del primo divisore, se non corrisponde a un numero primo,  nonché lo stato che descrive le eventuali eccezioni generate e l'oggetto <xref:System.ComponentModel.AsyncOperation> corrispondente all'attività in questione.  
+ Il `CompletionMethod` firma deve contenere tutti gli stati necessari per descrivere il risultato dell'operazione asincrona. Contiene lo stato per il numero che è stato testato da questa specifica operazione asincrona, se il numero è primo e il valore del primo divisore se non è un numero primo. Contiene inoltre che descrive le eccezioni che si sono verificati, stato e <xref:System.ComponentModel.AsyncOperation> corrispondente a questa particolare attività.  
   
-#### Per completare un'operazione asincrona:  
+#### <a name="to-complete-an-asynchronous-operation"></a>Per completare un'operazione asincrona:  
   
--   Implementare il metodo di completamento  Accetta sei parametri che utilizza per inserire i dati in un oggetto  `CalculatePrimeCompletedEventArgs` restituito al client tramite l'oggetto  `CalculatePrimeCompletedEventHandler` del client.  Tale metodo rimuove l'ID attività del client dalla raccolta interna e termina il ciclo di vita dell'operazione asincrona con una chiamata al metodo <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>.  L'oggetto <xref:System.ComponentModel.AsyncOperation> esegue il marshalling della chiamata al thread o al contesto appropriato per il modello di applicazione.  
+-   Implementare il metodo di completamento. Accetta sei parametri, che viene utilizzato per popolare un `CalculatePrimeCompletedEventArgs` che viene restituito al client tramite il client `CalculatePrimeCompletedEventHandler`. L'ID attività del client viene rimosso dalla raccolta interna e termina la durata dell'operazione asincrona con una chiamata a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. Il <xref:System.ComponentModel.AsyncOperation> effettua il marshalling di chiamate al thread o contesto adeguato per il modello di applicazione.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### Per eseguire il test del componente  
+#### <a name="to-test-your-component"></a>Per testare il componente  
   
 -   Compilare il componente.  
   
-     Verrà visualizzato un messaggio di avviso del compilatore:  
+     Si riceverà un avviso del compilatore:  
   
     ```  
     warning CS0169: The private field 'AsynchronousPatternExample.PrimeNumberCalculator.workerDelegate' is never used  
     ```  
   
-     Questo messaggio verrà eliminato nella sezione successiva.  
+     Questo avviso verrà risolto nella sezione successiva.  
   
-## Implementazione dei metodi di lavoro  
- Finora è stato implementato il codice asincrono di supporto del componente `PrimeNumberCalculator`.  A questo punto, è possibile implementare il codice che esegue le operazioni effettive.  Verranno implementati tre metodi: `CalculateWorker`, `BuildPrimeNumberList` e `IsPrime`.  Insieme, i metodi `BuildPrimeNumberList` e `IsPrime` formano un algoritmo, noto come crivello di Eratostene, che determina se un numero è primo mediante la ricerca di tutti i numeri primi fino alla radice quadrata del numero sottoposto a test.  Se non vengono individuati divisori in corrispondenza di tale punto, il numero sottoposto a test è un numero primo.  
+## <a name="implementing-the-worker-methods"></a>Implementazione dei metodi di lavoro  
+ Finora è stato implementato il codice asincrono di supporto per il `PrimeNumberCalculator` componente. Ora è possibile implementare il codice che esegue il lavoro effettivo. Verranno implementati tre metodi: `CalculateWorker`, `BuildPrimeNumberList`, e `IsPrime`. Insieme, `BuildPrimeNumberList` e `IsPrime` costituiscono un noto algoritmo crivello di Eratostene, che determina se un numero è primo mediante la ricerca di tutti i numeri primi fino alla radice quadrata del numero di test. Se non vengono individuati divisori di tale punto, il numero di test è un numero primo.  
   
- Se il componente fosse stato scritto per ottenere i massimi risultati, avrebbe tenuto traccia di tutti i numeri primi rilevati dai vari richiami dei diversi numeri sottoposti a test  Avrebbe inoltre verificato la presenza di divisori triviali come 2, 3 e 5.  Lo scopo di questo esempio è dimostrare come eseguire in modo asincrono operazioni che richiedono molto tempo. Pertanto, questi esempi di ottimizzazione vengono lasciati come esercizio per l'utente.  
+ Se questo componente sono state scritte per ottenere la massima efficienza, avrebbe tenuto traccia di tutti i numeri primi individuati da varie chiamate per i numeri di test diversi. È necessario anche triviali come 2, 3 e 5. Lo scopo di questo esempio è dimostrare come tempo operazioni possono essere eseguite in modo asincrono, tuttavia, in modo da queste ottimizzazioni vengono lasciate come un esercizio per l'utente.  
   
- Il metodo `CalculateWorker` viene sottoposto a wrapping in un delegato e richiamato in modo asincrono con una chiamata a `BeginInvoke`.  
+ Il `CalculateWorker` metodo viene eseguito il wrapping in un delegato e viene richiamato in modo asincrono con una chiamata a `BeginInvoke`.  
   
 > [!NOTE]
->  La segnalazione dello stato di avanzamento è implementata nel metodo `BuildPrimeNumberList`.  Nei computer veloci gli eventi `ProgressChanged` possono essere generati in rapida successione.  Il thread del client, su cui vengono generati tali eventi, deve essere in grado di gestire la situazione.  Il codice dell'interfaccia utente può venire sovraccaricato dai messaggi e non riuscire a tenere il passo, giungendo a un punto di stallo.  Per un esempio di interfaccia utente in grado di gestire tale situazione, vedere [How to: Implement a Client of the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+>  Report di stato viene implementato nel `BuildPrimeNumberList` metodo. Nei computer veloci, `ProgressChanged` eventi possono essere generati in rapida successione. Il thread del client, in cui vengono generati, deve essere in grado di gestire questa situazione. Codice dell'interfaccia utente potrebbe essere sovraccaricato dai messaggi e non è possibile tenere il passo, giungendo. Per un esempio di interfaccia utente che gestisce questa situazione, vedere [procedura: implementare un Client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-#### Per eseguire in modo asincrono il calcolo dei numeri primi:  
+#### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Per eseguire in modo asincrono il calcolo dei numeri primi:  
   
-1.  Implementare il metodo di utilità `TaskCanceled`.  Viene così verificato se nella raccolta dei cicli di vita delle attività è presente l'ID attività specificato e, in caso negativo, viene restituito `true`.  
+1.  Implementare il `TaskCanceled` metodo di utilità. Questo controlla la raccolta di durata di attività per l'ID attività specificato e restituisce `true` se non viene trovato l'ID attività.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#32)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#32)]  
   
-2.  Implementare il metodo `CalculateWorker`.  Il metodo accetta due parametri, ovvero il numero da sottoporre a test e un oggetto <xref:System.ComponentModel.AsyncOperation>,  
+2.  Implementare il metodo `CalculateWorker`. Il metodo accetta due parametri: un numero di test e un <xref:System.ComponentModel.AsyncOperation>.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3.  Implementare `BuildPrimeNumberList` Il metodo accetta due parametri, ovvero il numero da sottoporre a test e un oggetto <xref:System.ComponentModel.AsyncOperation>,  e utilizza l'oggetto <xref:System.ComponentModel.AsyncOperation> per generare report sullo stato di avanzamento e sui risultati incrementali.  In questo modo è garantito che i gestori eventi del client vengano chiamati sul thread o sul contesto appropriato al modello di applicazione.  Quando `BuildPrimeNumberList` trova un numero primo, lo inserisce come risultato incrementale in un report destinato al gestore eventi del client per l'evento `ProgressChanged`.  È richiesta una classe derivata da <xref:System.ComponentModel.ProgressChangedEventArgs>, denominata `CalculatePrimeProgressChangedEventArgs`, avente una proprietà aggiuntiva `LatestPrimeNumber`.  
+3.  Implementare `BuildPrimeNumberList`. Il metodo accetta due parametri: il numero di test e un <xref:System.ComponentModel.AsyncOperation>. Usa il <xref:System.ComponentModel.AsyncOperation> per segnalare lo stato e sui risultati incrementali. Ciò assicura che i gestori di eventi del client vengono chiamati nel thread appropriato o contesto per il modello di applicazione. Quando `BuildPrimeNumberList` trova un numero primo, segnala questo come un risultato incrementale al gestore eventi del client per il `ProgressChanged` evento. È richiesta una classe derivata da <xref:System.ComponentModel.ProgressChangedEventArgs>, denominato `CalculatePrimeProgressChangedEventArgs`, che è una proprietà aggiuntiva `LatestPrimeNumber`.  
   
-     Il metodo `BuildPrimeNumberList` inoltre chiama periodicamente il metodo `TaskCanceled` e viene terminato se viene restituito `true`.  
+     Il `BuildPrimeNumberList` metodo chiama anche periodicamente il `TaskCanceled` metodo e viene chiusa se il metodo restituisce `true`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4.  Implementare `IsPrime` Tale metodo accetta tre parametri, ovvero un elenco dei numeri primi noti, il numero di cui eseguire il test e un parametro di output per il primo divisore trovato.  Partendo dall'elenco di numeri primi, il metodo determina se il numero sottoposto a test ne fa parte.  
+4.  Implementare `IsPrime`. Il metodo accetta tre parametri: un elenco di numeri primi noti, il numero di test e un parametro di output per il primo divisore trovato. Dato l'elenco di numeri primi, determina se il numero di test è un numero primo.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
   
-5.  Derivare `CalculatePrimeProgressChangedEventArgs` da <xref:System.ComponentModel.ProgressChangedEventArgs>.  Questa classe è necessaria per la generazione di report sui risultati incrementali destinati al gestore eventi del client relativo all'evento `ProgressChanged` e presenta una proprietà aggiuntiva denominata `LatestPrimeNumber`.  
+5.  Derivare `CalculatePrimeProgressChangedEventArgs` da <xref:System.ComponentModel.ProgressChangedEventArgs>. Questa classe è necessaria per i report sui risultati incrementali al gestore eventi del client per il `ProgressChanged` evento. Contiene una proprietà aggiuntiva denominata `LatestPrimeNumber`.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### Per eseguire il test del componente  
+#### <a name="to-test-your-component"></a>Per testare il componente  
   
 -   Compilare il componente.  
   
-     Gli unici elementi ancora da scrivere sono i metodi di avvio e annullamento delle operazioni asincrone, `CalculatePrimeAsync` e `CancelAsync`.  
+     Gli unici elementi ancora da scrivere è i metodi di avvio e annullamento di operazioni asincrone, `CalculatePrimeAsync` e `CancelAsync`.  
   
-## Implementazione dei metodi di avvio e annullamento  
- Per avviare il metodo di lavoro sul relativo thread è possibile chiamare `BeginInvoke` sul delegato che lo contiene.  Per gestire il ciclo di vita di una determinata operazione asincrona, è possibile chiamare il metodo <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> sulla classe di supporto <xref:System.ComponentModel.AsyncOperationManager>.  Viene restituito un oggetto <xref:System.ComponentModel.AsyncOperation> che esegue il marshalling delle chiamate sui gestori eventi del client al thread o al contesto appropriato.  
+## <a name="implementing-the-start-and-cancel-methods"></a>Implementazione dei metodi di annullamento e di avvio  
+ Per avviare il metodo di lavoro nel proprio thread, è possibile chiamare `BeginInvoke` sul delegato che lo contiene. Per gestire la durata di una determinata operazione asincrona, si chiama il <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> metodo la <xref:System.ComponentModel.AsyncOperationManager> classe helper. Restituisce un <xref:System.ComponentModel.AsyncOperation>, che effettua il marshalling delle chiamate sui gestori di eventi del client per il thread o contesto appropriato.  
   
- Per annullare una determinata operazione in corso è possibile chiamare <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> sull'oggetto <xref:System.ComponentModel.AsyncOperation> corrispondente.  In questo modo l'operazione specifica viene terminata e tutte le chiamate successive al relativo oggetto <xref:System.ComponentModel.AsyncOperation> generano un'eccezione.  
+ Per annullare una determinata operazione in sospeso chiamando <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> sull'oggetto corrispondente <xref:System.ComponentModel.AsyncOperation>. Verrà terminata l'operazione e tutte le chiamate successive al relativo <xref:System.ComponentModel.AsyncOperation> genererà un'eccezione.  
   
-#### Per implementare la funzionalità di avvio e annullamento:  
+#### <a name="to-implement-start-and-cancel-functionality"></a>Per implementare l'inizio e funzionalità di annullamento:  
   
-1.  Implementare il metodo `CalculatePrimeAsync`.  Verificare che il token fornito dal client \(ID attività\) sia univoco rispetto a tutti i token che rappresentano le attività in sospeso.  Se il client passa un token non univoco, `CalculatePrimeAsync` genera un'eccezione.  In caso contrario, il token viene aggiunto alla raccolta di ID attività.  
+1.  Implementare il metodo `CalculatePrimeAsync`. Verificare che il token fornito dal client (ID attività) sia univoco rispetto a tutti i token che rappresenta attualmente attività in sospeso. Se il client passa un token non univoco, `CalculatePrimeAsync` genera un'eccezione. In caso contrario, il token viene aggiunto alla raccolta di ID attività.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
   
-2.  Implementare il metodo `CancelAsync`.  Se nella raccolta dei token è presente il parametro `taskId`, verrà rimosso.  In questo modo viene impedita l'esecuzione delle attività annullate non ancora avviate.  Se l'attività è in esecuzione, il metodo `BuildPrimeNumberList` viene terminato quando rileva che l'ID attività è stato rimosso dalla raccolta dei cicli di vita.  
+2.  Implementare il metodo `CancelAsync`. Se il `taskId` parametro esiste nella raccolta di token, viene rimosso. In questo modo non sono stata avviata l'esecuzione delle attività annullate. Se l'attività è in esecuzione, il `BuildPrimeNumberList` metodo termina quando viene rilevato che l'ID attività è stato rimosso dalla raccolta durata.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
  A questo punto, è possibile compilare il componente.  
   
-#### Per eseguire il test del componente  
+#### <a name="to-test-your-component"></a>Per testare il componente  
   
 -   Compilare il componente.  
   
- A questo punto, il componente `PrimeNumberCalculator` è completo e può essere utilizzato.  
+ Il `PrimeNumberCalculator` componente è ora completo e pronto per l'uso.  
   
- Per un client di esempio che utilizzi il componente `PrimeNumberCalculator`, vedere [How to: Implement a Client of the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Per un client di esempio che utilizza il `PrimeNumberCalculator` componente, vedere [procedura: implementare un Client del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
-## Passaggi successivi  
- Per completare l'esempio è possibile scrivere `CalculatePrime`, l'equivalente sincrono del metodo `CalculatePrimeAsync`.  In questo modo il componente `PrimeNumberCalculator` verrà reso completamente conforme al modello asincrono basato su eventi.  
+## <a name="next-steps"></a>Passaggi successivi  
+ È possibile compilare questo esempio scrivendo `CalculatePrime`, l'equivalente di sincrono `CalculatePrimeAsync` metodo. In questo modo il `PrimeNumberCalculator` componente completamente compatibile con il modello asincrono basato su eventi.  
   
- Per migliorare l'esempio è possibile conservare l'elenco di tutti i numeri primi rilevati durante i vari richiami dei diversi numeri sottoposti a test.  Con questo approccio ogni attività potrà usufruire dei vantaggi derivanti dalle attività già eseguite.  Proteggere l'elenco con le aree `lock` in modo da serializzarne l'accesso da parte dei diversi thread.  
+ In questo esempio è possibile migliorare mantenendo l'elenco di tutti i numeri primi individuati da varie chiamate per i numeri di test diversi. In questo modo, ogni attività trarranno vantaggio dal lavoro svolto dall'attività precedente. Assicurarsi di proteggere l'elenco con `lock` aree, pertanto l'accesso all'elenco da thread diversi è serializzato.  
   
- Per migliorare ulteriormente l'esempio è possibile eseguire il test di divisori triviali come 2, 3 e 5.  
+ È inoltre possibile migliorare l'esempio eseguendo il test di divisori semplici, ad esempio 2, 3 e 5.  
   
-## Vedere anche  
- [Procedura: eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)   
- [NOT IN BUILD: Multithreading in Visual Basic](http://msdn.microsoft.com/it-it/c731a50c-09c1-4468-9646-54c86b75d269)   
- [How to: Implement a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: Eseguire un'operazione in background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Panoramica sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [NOT IN BUILD: Multithreading in Visual Basic](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Programmazione multithreading con il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)

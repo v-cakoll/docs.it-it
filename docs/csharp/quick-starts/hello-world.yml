@@ -1,178 +1,40 @@
-### YamlMime:YamlDocument
 documentType: Tutorial
-title: 'Hello C#'
+title: Hello C#
 metadata:
-  title: 'Hello C#. Introduzione iniziale al linguaggio C#.'
-  description: 'In questa esercitazione si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser.'
+  title: Hello C#. Introduzione iniziale al linguaggio C#.
+  description: "In questa Guida introduttiva, si userà il browser per informazioni su c# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser."
   audience: Developer
   level: Beginner
   nextTutorialHref: numbers-in-csharp
-  nextTutorialTitle: 'Numbers in C#'
+  nextTutorialTitle: Numeri in C#
   displayType: two-column
   interactive: csharp
+  ms.custom: mvc
 items:
-  - durationInMinutes: 1
-    content: |
-      In questa esercitazione il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. Contiene una serie di lezioni che iniziano con un programma "Hello World". Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
-  - title: 'Eseguire il primo programma C#'
-    durationInMinutes: 2
-    content: |
-      Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:
-
-      ```csharp
-      Console.WriteLine("Hello World!");
-      ```
-
-      La procedura è stata completata. È stato eseguito il primo programma C#, ovvero un semplice programma che stampa il messaggio "Hello World!". Per stampare il messaggio, viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` è un tipo che rappresenta la finestra della console. `WriteLine` è un metodo del tipo `Console` che stampa una riga di testo nella console di testo.
-
-      Nel resto di questa lezione viene descritto l'uso del tipo `string`, che rappresenta il testo in C#. Come il tipo `Console`, anche per il tipo `string` sono disponibili metodi. I metodi `string` operano sul testo. 
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - title: Dichiarare e usare le variabili
-    durationInMinutes: 3
-    content: |
-      Il primo programma ha stampato la stringa (`string`) "Hello World!" sullo schermo. 
-
-      > [!TIP]
-      > Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.
-      > Questo esercizio sarà utile per imparare la struttura del codice C#. 
-
-      Il primo programma è limitato alla stampa di un solo messaggio. È possibile scrivere programmi più utili usando le **variabili**. Una **variabile** è un simbolo utilizzabile per eseguire lo stesso codice con valori diversi. Per provarle le variabili nella pratica, sostituire il codice scritto nella finestra interattiva con il codice seguente:
-
-      ```csharp
-      string aFriend = "Bill";
-      Console.WriteLine(aFriend);
-      ```
-
-      La prima riga dichiara la variabile `aFriend` e le assegna il valore "Bill". La seconda riga stampa il nome.
-
-      È possibile assegnare valori diversi a qualsiasi variabile dichiarata. È possibile sostituire il nome con quello di un amico. Aggiungere queste due righe nella finestra interattiva dopo il codice già aggiunto:
-
-      ```csharp
-      aFriend = "Maria";
-      Console.WriteLine(aFriend);
-      ```
-
-      Si noti che la stessa riga di codice stampa due messaggi diversi, in base al valore archiviato nella variabile `aFriend`.
-
-      Forse si è anche notato che la parola "Hello" manca negli ultime due messaggi. Per ovviare a questa mancanza,  modificare ora le righe che stampano il messaggio come segue:
-
-      ```csharp
-      Console.WriteLine("Hello " + aFriend);
-      ```
-
-      Fare clic su **Esegui** di nuovo per visualizzare i risultati.
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - title: Usare le stringhe
-    durationInMinutes: 5
-    content: |
-      L'ultima modifica era solo un assaggio di quello che si può fare con le stringhe. L'esplorazione continua nelle prossime lezioni.
-
-      Il carattere `+` è chiamato operatore in C#. Quando viene applicato a stringhe come in `firstString + secondString`, viene creata una nuova stringa con il testo dalla prima seguito dal testo della seconda. Questa operazione è nota come *concatenazione di stringhe*. È possibile combinare un numero qualsiasi di stringhe, incluse le variabili stringa.  Provare questo codice:
-
-      ```csharp
-      string firstFriend = "Maria";
-      string secondFriend = "Sage";
-      Console.WriteLine("My friends are " + firstFriend + " and " + secondFriend);
-      ```
-
-      Per eseguire operazioni più avanzate con le stringhe, è utile sapere che è possibile trovare la lunghezza di una stringa con `Length`. `Length` è una **proprietà** di una stringa e restituisce il numero di caratteri nella stringa. Aggiungere il codice seguente nella parte inferiore della finestra interattiva:
-
-      ```csharp
-      Console.WriteLine("The name " + firstFriend + " has " + firstFriend.Length + " letters.");
-      Console.WriteLine("The name " + secondFriend + " has " + secondFriend.Length + " letters.");
-      ```
-
-      > [!TIP]
-      > Può essere un buon momento per sperimentare da soli. Si è appreso che `Console.WriteLine()` scrive testo sullo schermo. È stato spiegato come dichiarare le variabili e concatenare le stringhe. Sperimentare nella finestra interattiva scrivendo altri messaggi e componendo stringhe con l'operatore `+`.
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - title: Altre operazioni sulle stringhe
-    durationInMinutes: 5
-    content: |
-      Si è visto come usare un **metodo**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, per stampare messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili. 
-
-      Il tipo `string` include numerosi metodi utili. Di seguito verranno presentati il metodo <xref:System.String.Trim%2A> e i metodi correlati <xref:System.String.TrimStart%2A> e <xref:System.String.TrimEnd%2A>. Questi metodi consentono di rimuovere gli spazi iniziali e finali:
-
-      ```csharp
-      string message = "      Hello World!       ";
-      Console.WriteLine("[" + message + "]");
-
-      string trimmedMessage = message.TrimStart();
-      Console.WriteLine("[" + trimmedMessage + "]");
-
-      trimmedMessage = message.TrimEnd();
-      Console.WriteLine("[" + trimmedMessage + "]");
-
-      trimmedMessage = message.Trim();
-      Console.WriteLine("[" + trimmedMessage + "]");
-      ```
-
-      Questo esempio mette in rilievo un paio di concetti importanti correlati all'uso delle stringhe. I metodi che operano sulle stringhe restituiscono nuovi oggetti stringa, anziché apportare le modifiche sul posto. Si può notare che ogni chiamata di uno qualsiasi dei metodi `Trim` restituisce una nuova stringa, ma non modifica il messaggio originale.
-
-      Sono disponibili altri metodi per lavorare su una stringa. Ad esempio, è probabile che si usino comunemente i comandi per la ricerca e la sostituzione in un editor o un elaboratore di testo. Il metodo <xref:System.String.Replace%2A> esegue un'operazione simile in un oggetto `string`, ovvero cerca una sottostringa e la sostituisce con testo diverso. Il metodo <xref:System.String.Replace%2A> accetta due **parametri**. Queste sono le stringhe tra parentesi. La prima stringa è il testo da cercare. La seconda stringa è il testo sostitutivo. Provare direttamente. Aggiungere questo codice:
-
-      ```csharp
-      string message = "Hello World!";
-      Console.WriteLine(message);
-      message = message.Replace("Hello", "Greetings");
-      Console.WriteLine(message);
-      ```
-
-      Altri due metodi utili consentono di trasformare una stringa in tutte maiuscole o tutte minuscole. Provare il codice seguente:
-
-      ```csharp
-      string message = "Hello World!";
-      Console.WriteLine(message);
-      Console.WriteLine(message.ToUpper());
-      Console.WriteLine(message.ToLower());
-      ```
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - title: Stringhe di ricerca
-    durationInMinutes: 10
-    content: |
-      L'altra parte di un'operazione di *ricerca e sostituzione* consiste nel trovare testo all'interno di una stringa. È possibile usare il metodo <xref:System.String.Contains%2A> per la ricerca. Questo metodo indica se una stringa contiene una sottostringa. Provare il codice seguente per sperimentare <xref:System.String.Contains%2A>:
-
-      ```csharp
-      string message = "You say goodbye, and I say hello";
-      Console.WriteLine(message.Contains("goodbye"));
-      Console.WriteLine(message.Contains("greetings"));
-      ```
-
-      Il metodo <xref:System.String.Contains%2A> restituisce un valore **booleano** che indica se la stringa di ricerca è stata trovata. Un valore **booleano** archivia un valore `true` o `false`. In una lezione successiva verranno fornite ulteriori informazioni sui valori **booleani**.
-
-      ***Esercizio***
-
-      Esistono altri due metodi simili, <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> che consentono di cercare sottostringhe in una stringa, in particolare di trovare una sottostringa all'inizio o alla fine della stringa. Provare a modificare l'esempio precedente per usare <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> invece di <xref:System.String.Contains%2A>. Cercare "You" o "goodbye" all'inizio di una stringa. Cercare "hello" o "goodbye" alla fine di una stringa.
-
-      > [!Note]
-      > Tenere conto della punteggiatura per la ricerca del testo alla fine della stringa. Se la stringa termina con un punto, è necessario cercare una stringa che termina con un punto.
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - title: Completare l'esercizio
-    durationInMinutes: 3
-    content: |
-      I risultati ottenuti sono simili a questi?
-
-      ```csharp
-      string message = "You say goodbye, and I say hello";
-      Console.WriteLine(message.StartsWith("You"));
-      Console.WriteLine(message.StartsWith("goodbye"));
-
-      Console.WriteLine(message.EndsWith("hello"));
-      Console.WriteLine(message.EndsWith("goodbye"));
-      ```
-
-      > [!NOTE]
-      > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
-  - content: |
-      È stata completata l'esercitazione "Hello C#".
-
-      Altre informazioni sull'uso del tipo `string` sono disponibili nell'argomento della [Guida per programmatori C#](../programming-guide/index.md) dedicato alle [stringhe](../programming-guide/strings/index.md).
+- durationInMinutes: 1
+  content: >
+    Questa Guida introduttiva illustra c# in modo interattivo, utilizzando il browser per scrivere in c# e visualizzare i risultati della compilazione e l'esecuzione del codice. Contiene una serie di lezioni che iniziano con un programma "Hello World". Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
+  ms.openlocfilehash: 2089af6dbf418c87dfd28e1a2a8cf2814b40df6c
+  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 11/22/2017
+- title: Eseguire il primo programma C#
+  durationInMinutes: 2
+  content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nLa procedura è stata completata. È stato eseguito il primo programma C#, ovvero un semplice programma che stampa il messaggio \"Hello World!\". Per stampare il messaggio, viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` è un tipo che rappresenta la finestra della console. `WriteLine` è un metodo del tipo `Console` che stampa una riga di testo nella console di testo.\n\nNel resto di questa lezione viene descritto l'uso del tipo `string`, che rappresenta il testo in C#. Come il tipo `Console`, anche per il tipo `string` sono disponibili metodi. I metodi `string` operano sul testo. \n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Dichiarare e usare le variabili
+  durationInMinutes: 3
+  content: "Il primo programma ha stampato la stringa (`string`) \"Hello World!\" sullo schermo. \n\n> [!TIP]\n> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.\n> Questo esercizio sarà utile per imparare la struttura del codice C#. \n\nIl primo programma è limitato alla stampa di un solo messaggio. È possibile scrivere programmi più utili usando le **variabili**. Una **variabile** è un simbolo utilizzabile per eseguire lo stesso codice con valori diversi. Per provarle le variabili nella pratica, sostituire il codice scritto nella finestra interattiva con il codice seguente:\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\nLa prima riga dichiara la variabile `aFriend` e le assegna il valore \"Bill\". La seconda riga stampa il nome.\n\nÈ possibile assegnare valori diversi a qualsiasi variabile dichiarata. È possibile sostituire il nome con quello di un amico. Aggiungere queste due righe nella finestra interattiva dopo il codice già aggiunto:\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\nSi noti che la stessa riga di codice stampa due messaggi diversi, in base al valore archiviato nella variabile `aFriend`.\n\nForse si è anche notato che la parola \"Hello\" manca negli ultime due messaggi. Per ovviare a questa mancanza,  modificare ora le righe che stampano il messaggio come segue:\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nFare clic su **Esegui** di nuovo per visualizzare i risultati.\n\nNel corso, la creazione di stringhe per stampare utilizzando `+` diventa eccessivamente complessa. Interpolazione di stringhe consente di riunire le stringhe in modo più conciso e leggibile.\n\nSe si aggiunge un `$` prima le virgolette di apertura della stringa, è quindi possibile includere espressioni stringa, ad esempio il `aFriend` variabile all'interno della stringa racchiuso tra parentesi graffe.\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nFare clic su **Esegui** di nuovo per visualizzare i risultati.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Usare le stringhe
+  durationInMinutes: 5
+  content: "L'ultima modifica era solo un assaggio di quello che si può fare con le stringhe. L'esplorazione continua nelle prossime lezioni.\n\nIl carattere `+` è chiamato operatore in C#. Quando viene applicato a stringhe come in `firstString + secondString`, viene creata una nuova stringa con il testo dalla prima seguito dal testo della seconda. Questa operazione è nota come *concatenazione di stringhe*. È possibile combinare un numero qualsiasi di stringhe, incluse le variabili stringa.  Provare questo codice:\n\n```csharp\nstring firstFriend = \"Maria\";\nstring secondFriend = \"Sage\";\nConsole.WriteLine($\"My friends are {firstFriend} and {secondFriend}\");\n```\n\nPer eseguire operazioni più avanzate con le stringhe, è utile sapere che è possibile trovare la lunghezza di una stringa con `Length`. `Length` è una **proprietà** di una stringa e restituisce il numero di caratteri nella stringa. Aggiungere il codice seguente nella parte inferiore della finestra interattiva:\n\n```csharp\nConsole.WriteLine($\"The name {firstFriend} has {firstFriend.Length} letters.\");\nConsole.WriteLine($\"The name {secondFriend} has {secondFriend.Length} letters.\");\n```\n\n> [!TIP]\n> Può essere un buon momento per sperimentare da soli. Si è appreso che `Console.WriteLine()` scrive testo sullo schermo. È stato spiegato come dichiarare le variabili e concatenare le stringhe. Sperimentare nella finestra interattiva scrivendo altri messaggi e componendo stringhe con l'operatore `+`.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Altre operazioni sulle stringhe
+  durationInMinutes: 5
+  content: "Si è visto come usare un **metodo**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, per stampare messaggi. Un **metodo** è un blocco di codice che implementa un'azione. I metodi hanno un nome, quindi sono accessibili. \n\nIl tipo `string` include numerosi metodi utili. Di seguito verranno presentati il metodo <xref:System.String.Trim%2A> e i metodi correlati <xref:System.String.TrimStart%2A> e <xref:System.String.TrimEnd%2A>. Questi metodi consentono di rimuovere gli spazi iniziali e finali:\n\n```csharp\nstring message = \"      Hello World!       \";\nConsole.WriteLine($\"[{message}]\");\n\nstring trimmedMessage = message.TrimStart();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.TrimEnd();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.Trim();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n```\n\nQuesto esempio mette in rilievo un paio di concetti importanti correlati all'uso delle stringhe. I metodi che operano sulle stringhe restituiscono nuovi oggetti stringa, anziché apportare le modifiche sul posto. Si può notare che ogni chiamata di uno qualsiasi dei metodi `Trim` restituisce una nuova stringa, ma non modifica il messaggio originale.\n\nSono disponibili altri metodi per lavorare su una stringa. Ad esempio, è probabile che si usino comunemente i comandi per la ricerca e la sostituzione in un editor o un elaboratore di testo. Il metodo <xref:System.String.Replace%2A> esegue un'operazione simile in un oggetto `string`, ovvero cerca una sottostringa e la sostituisce con testo diverso. Il metodo <xref:System.String.Replace%2A> accetta due **parametri**. Queste sono le stringhe tra parentesi. La prima stringa è il testo da cercare. La seconda stringa è il testo sostitutivo. Provare direttamente. Aggiungere questo codice:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nmessage = message.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(message);\n```\n\nAltri due metodi utili consentono di trasformare una stringa in tutte maiuscole o tutte minuscole. Provare il codice seguente:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nConsole.WriteLine(message.ToUpper());\nConsole.WriteLine(message.ToLower());\n```\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Stringhe di ricerca
+  durationInMinutes: 10
+  content: "L'altra parte di un'operazione di *ricerca e sostituzione* consiste nel trovare testo all'interno di una stringa. È possibile usare il metodo <xref:System.String.Contains%2A> per la ricerca. Questo metodo indica se una stringa contiene una sottostringa. Provare il codice seguente per sperimentare <xref:System.String.Contains%2A>:\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.Contains(\"goodbye\"));\nConsole.WriteLine(message.Contains(\"greetings\"));\n```\n\nIl metodo <xref:System.String.Contains%2A> restituisce un valore **booleano** che indica se la stringa di ricerca è stata trovata. Un valore **booleano** archivia un valore `true` o `false`. In una lezione successiva verranno fornite ulteriori informazioni sui valori **booleani**.\n\n***Esercizio***\n\nEsistono altri due metodi simili, <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> che consentono di cercare sottostringhe in una stringa, in particolare di trovare una sottostringa all'inizio o alla fine della stringa. Provare a modificare l'esempio precedente per usare <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> invece di <xref:System.String.Contains%2A>. Cercare \"You\" o \"goodbye\" all'inizio di una stringa. Cercare \"hello\" o \"goodbye\" alla fine di una stringa.\n\n> [!Note]\n> Tenere conto della punteggiatura per la ricerca del testo alla fine della stringa. Se la stringa termina con un punto, è necessario cercare una stringa che termina con un punto.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Completare l'esercizio
+  durationInMinutes: 3
+  content: "I risultati ottenuti sono simili a questi?\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- content: "È stata completata la \"Hello c#\" Guida introduttiva.\n\nÈ possibile continuare a queste guide introduttive sull'ambiente di sviluppo. L'argomento .NET [Introduzione a 10 minuti](https://www.microsoft.com/net/core) contiene istruzioni per l'impostazione dell'ambiente di sviluppo locale. Una volta completate, continuare con [numeri in c#](numbers-in-chsarp-local.md) nell'ambiente locale.\n\nAltre informazioni sull'uso del tipo `string` sono disponibili nell'argomento della [Guida per programmatori C#](../programming-guide/index.md) dedicato alle [stringhe](../programming-guide/strings/index.md).\0"

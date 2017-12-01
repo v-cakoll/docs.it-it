@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 30aa268fbfa8a6f59491de30dbde6508ccdd7a68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: affc9d1638148971dd9c57969c75166facfd545c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="auto-confirm-pattern"></a>Modello di conferma automatica
 Questa esempio è costituito da tre scenari in cui viene eseguita l'illustrazione di un'attività `AutoConfirmScope` personalizzata. Nel primo esempio viene illustrata l'esecuzione riuscita di una sequenza di quattro attività compensabili dove la seconda e la terza sono annidate in un oggetto `AutoConfirmScope`. Nel secondo esempio viene illustrata la stessa sequenza con un'eccezione che si verifica dopo l'esecuzione della quarta attività <xref:System.Activities.Statements.CompensableActivity>. Nel terzo scenario viene illustrata la stessa sequenza con un'eccezione che si verifica in `AutoConfirmScope` dopo il completamento del secondo <xref:System.Activities.Statements.CompensableActivity>.  
@@ -46,6 +46,4 @@ Questa esempio è costituito da tre scenari in cui viene eseguita l'illustrazion
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

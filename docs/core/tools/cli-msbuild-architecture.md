@@ -9,14 +9,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
+ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6830cc46994aa44d46a9c862efff525142578003
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
 
 Questo documento descrive le modifiche associate al passaggio da *project.json* a MSBuild e al sistema di progetti *csproj* con informazioni sulle modifiche ai livelli degli strumenti .NET Core e all'implementazione dei comandi dell'interfaccia della riga di comando. Queste modifiche sono state introdotte con il rilascio di .NET Core SDK 1.0 e Visual Studio 2017 il 7 marzo 2017 (vedere l'[annuncio](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), ma sono state implementate inizialmente con il rilascio di .NET Core SDK Preview 3.
@@ -36,7 +34,7 @@ Nella figura seguente viene fornito un breve riepilogo dei livelli dell'anteprim
 
 ![Architettura di alto livello degli strumenti dell'anteprima 2](media/cli-msbuild-architecture/p2-arch.png)
 
-L'organizzazione su più livelli degli strumenti è piuttosto semplice. Al livello più basso, come base, si trovano gli strumenti della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per la compilazione dei progetti, il ripristino delle dipendenze e così via. Ad esempio, questo significa che, se Visual Studio voleva eseguire un'operazione di ripristino, doveva chiamare il comando `dotnet restore` nell'interfaccia della riga di comando. 
+L'organizzazione su più livelli degli strumenti è piuttosto semplice. Al livello più basso, come base, si trovano gli strumenti della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per la compilazione dei progetti, il ripristino delle dipendenze e così via. Questo significa che, ad esempio, se Visual Studio desideri eseguire un'operazione di ripristino, chiama in `dotnet restore` ([vedere la nota](#dotnet-restore-note)) comando CLI. 
 
 Con il passaggio al nuovo sistema di progetto, il diagramma precedente risulta modificato nel modo illustrato di seguito: 
 
@@ -47,7 +45,7 @@ La differenza principale è che l'interfaccia della riga di comando non è più 
 > [!NOTE]
 > "Destinazione" è un termine di MSBuild che indica un'operazione denominata che può essere richiamata da MSBuild. La destinazione è in genere associata a una o più attività che eseguono la logica dell'operazione. MSBuild supporta diverse destinazioni predefinite, ad esempio `Copy` o `Execute`. Consente inoltre agli utenti di scrivere le proprie attività usando codice gestito e definire destinazioni per eseguire tali attività. Per altre informazioni, vedere [Attività di MSBuild](/visualstudio/msbuild/msbuild-tasks). 
 
-Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, la prossima versione di Visual Studio non chiamerà il comando `dotnet restore` per ripristinare le dipendenze per i progetti .NET Core, ma userà direttamente la destinazione "Restore". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md). 
+Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, la prossima versione di Visual Studio non verrà chiamato in `dotnet restore` ([vedere la nota](#dotnet-restore-note)) di comando per ripristinare le dipendenze per i progetti .NET Core, utilizza direttamente la destinazione di "Ripristino". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md). 
 
 ### <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 Con l'introduzione del componente SDK condiviso, la maggior parte dei comandi dell'interfaccia della riga di comando esistenti sono stati reimplementati come attività e destinazioni MSBuild. Cosa significa questo per i comandi dell'interfaccia della riga di comando e per l'utilizzo del set di strumenti? 
@@ -74,3 +72,4 @@ Questo comando pubblica un'applicazione in una cartella `pub` usando la configur
 
 La principale eccezione a questa regola sono i comandi `new` e `run`, che non sono stati implementati come destinazioni MSBuild.
 
+<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 07b7381ddc94e3bc40a4eb0ed546f9526b57600a
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -39,8 +32,8 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
- [Processo di distribuzione](#the_deployment_process)   
- [Distribuzione di .NET Framework](#deploying_in_a_test_environment)   
+ [Il processo di distribuzione](#the_deployment_process)  
+ [Distribuzione di .NET Framework](#deploying_in_a_test_environment)  
  [Creare una raccolta](#creating_a_collection)  
  [Creare un pacchetto e un programma](#creating_a_package)  
  [Selezionare un punto di distribuzione](#select_dist_point)  
@@ -145,8 +138,8 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 |**/norestart**|Impedisce il riavvio automatico del programma di installazione. Se si usa questa opzione, il riavvio del computer deve essere gestito da Configuration Manager.|  
 |**/chainingpackage** *NomePacchetto*|Specifica il nome del pacchetto che esegue il concatenamento. Questa informazione viene riportata insieme alle altre informazioni sulla sessione di installazione per coloro sono registrati in [Programma Analisi utilizzo software (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Applicazione di concatenamento"**.|  
   
- Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile, gli utenti non interagiscono con il processo d'installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio. Vedere [Getting Progress Information from an Installation Package](http://go.microsoft.com/fwlink/?LinkId=179606) (Informazioni di stato da un pacchetto di installazione) nella libreria MSDN.  
-  
+ Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile all'utente, gli utenti non interagiscono con il processo di installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio; vedere [recupero di informazioni di stato di avanzamento da un pacchetto di installazione](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ 
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Selezionare un punto di distribuzione  
  Per distribuire il pacchetto e il programma da un server ai computer client, è innanzitutto necessario specificare un sistema di siti come punto di distribuzione e distribuire il pacchetto al punto di distribuzione.  
@@ -236,7 +229,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 ### <a name="log-file-locations"></a>Percorsi dei file di log  
  Durante l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] vengono generati i seguenti file di log:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt   
+ %temp%\Microsoft .NET Framework 4.5*.txt  
  %temp%\Microsoft .NET Framework 4.5\*.html  
   
  È possibile usare lo [strumento di raccolta dei log](http://www.microsoft.com/download/details.aspx?id=12493) per raccogliere i file di log di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e creare un file di archivio (CAB) compresso che riduce le dimensioni dei file.  
@@ -272,6 +265,5 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 -   [Windows Update Agent result codes](http://technet.microsoft.com/library/cc720442.aspx) (Codici restituiti dall'Agente di Windows Update)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
-

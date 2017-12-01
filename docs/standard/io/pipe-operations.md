@@ -1,46 +1,49 @@
 ---
-title: "Operazioni pipe in .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pipe [.NET Framework]"
-  - "pipe (operazioni) [.NET Framework]"
-  - "comunicazione interprocesso [.NET Framework], pipe"
-  - "I/O [.NET Framework], pipe"
+title: Operazioni pipe in .NET Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pipes [.NET Framework]
+- pipe operations [.NET Framework]
+- interprocess communication [.NET Framework], pipes
+- I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Operazioni pipe in .NET Framework
-Le pipe forniscono un mezzo per la comunicazione interprocesso.  Esistono due tipi di pipe:  
+# <a name="pipe-operations-in-the-net-framework"></a>Operazioni pipe in .NET Framework
+Pipe forniscono un mezzo per la comunicazione interprocesso. Esistono due tipi di pipe:  
   
 -   Unnamed pipe.  
   
-     Le unnamed pipe forniscono la comunicazione interprocesso su un computer locale.  Richiedono meno sovraccarico delle named pipe ma offrono servizi limitati.  Le unnamed pipe sono unidirezionali e non possono essere utilizzate su una rete.  Supportano solo una singola istanza del server.  Sono utili per la comunicazione tra thread o tra processi padre e figlio dove gli handle della pipe possono essere passati facilmente al processo figlio quando viene creato.  
+     Le unnamed pipe forniscono la comunicazione interprocesso in un computer locale. Le unnamed pipe comportano un sovraccarico minore rispetto alle named pipe, ma offrono servizi limitati. Le unnamed pipe sono unidirezionali e non possono essere utilizzate in una rete. Supportano solo una singola istanza del server. Le unnamed pipe sono utili per la comunicazione tra thread o tra processi padre e figlio in cui gli handle di pipe possono essere facilmente passati al processo figlio quando viene creato.  
   
-     In .NET Framework le unnamed pipe vengono implementate utilizzando le classi <xref:System.IO.Pipes.AnonymousPipeClientStream> e <xref:System.IO.Pipes.AnonymousPipeServerStream>.  
+     In .NET Framework, si implementano le unnamed pipe mediante il <xref:System.IO.Pipes.AnonymousPipeServerStream> e <xref:System.IO.Pipes.AnonymousPipeClientStream> classi.  
   
-     Vedere [Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
+     Vedere [procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md).  
   
 -   Named pipe.  
   
-     Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno o più client pipe.  Le named pipe possono essere unidirezionali o duplex.  Supportano la comunicazione basata su messaggi e consentono a più client di connettersi simultaneamente al processo server utilizzando lo stesso nome di pipe.  Supportano inoltre la rappresentazione, che consente ai processi di connessione di utilizzare le proprie autorizzazioni sui server remoti.  
+     Named pipe forniscono la comunicazione interprocesso tra un server di pipe e uno o più client pipe. Named pipe possono essere unidirezionale o duplex. Supportano la comunicazione basata su messaggi e consentire a più client di connettersi contemporaneamente al processo del server utilizzando lo stesso nome di pipe. Named pipe supportano inoltre la rappresentazione, che consente ai processi di connessione utilizzare le proprie autorizzazioni nei server remoti.  
   
-     In .NET Framework, le named pipe vengono implementate utilizzando le classi <xref:System.IO.Pipes.NamedPipeClientStream> e <xref:System.IO.Pipes.NamedPipeServerStream>.  
+     In .NET Framework, named pipe vengono implementate utilizzando il <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream> classi.  
   
-     Vedere [Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
+     Vedere [procedura: utilizzare le Named pipe per la comunicazione interprocesso rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
-## Vedere anche  
- [I\/O di file e di flussi](../../../docs/standard/io/index.md)   
- [Procedura: utilizzare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)   
- [Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](../../../docs/standard/io/index.md)  
+ [Procedura: Usare le unnamed pipe per la comunicazione interprocesso locale](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+ [Procedura: Usare le named pipe per la comunicazione interprocesso in rete](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

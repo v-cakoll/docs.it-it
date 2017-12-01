@@ -1,23 +1,19 @@
 ---
 title: Framework di destinazione
 description: Informazioni sui framework di destinazione per app e librerie di .NET Core.
-keywords: .NET, .NET Core, framework, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 09/22/2017
 ms.topic: article
+ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
+ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
-ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="target-frameworks"></a>Framework di destinazione
 
 Quando si specifica come destinazione un framework in un'app o in una libreria, si specifica il set di API da rendere disponibile all'app o alla libreria. Per specificare il framework di destinazione nel file di progetto, usare i moniker framework di destinazione.
@@ -34,11 +30,11 @@ Per i framework di destinazione basati su pacchetti, ad esempio .NET Standard e 
 
 La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](~/docs/standard/net-standard.md) implementate da tali pacchetti. Queste versioni di framework di destinazione sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive. Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET. 
 
-| Framework di destinazione      | Ultima versione | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Versione standard di .NET | Metapackage |
-| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 2.0.0          | netstandard2.0                 | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Applicazione .NET Core | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.7            | net47                          | 1,5                   | N/D |
+| Framework di destinazione      | Ultima versione | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementata <br/> Versione standard di .NET |
+| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
+| .NET Standard         | 2.0            | netstandard2.0                 | N/D                                     |
+| Applicazione .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versioni supportate dei framework di destinazione
 
@@ -48,7 +44,7 @@ Un framework di destinazione viene in genere specificato come riferimento da un 
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -143,4 +139,3 @@ I framework di destinazione seguenti sono deprecati. I pacchetti che hanno come 
 [dotnet/standard GitHub repository](https://github.com/dotnet/standard) (Repository dotnet/standard di GitHub)  
 [NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools) (Repository di GitHub per strumenti NuGet)  
 [Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profili di framework in .NET)
-

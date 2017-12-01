@@ -1,5 +1,5 @@
 ---
-title: Variabili discard - Guida di C# | Microsoft Docs
+title: Variabili discard - Guida di C#
 description: "Descrive il supporto in C# delle variabili discard, che sono variabili non assegnate e rimovibili, e le modalità d'uso di tali variabili."
 keywords: .NET,.NET Core
 author: rpetrusha
@@ -9,21 +9,20 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
+ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
+ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
 
 A partire dalla versione 7, C# supporta le variabili discard, variabili dummy temporanee intenzionalmente inutilizzate nel codice dell'applicazione. Le variabili discard sono equivalenti alle variabili non assegnate e non hanno un valore. Dato che è presente un'unica variabile discard alla quale potrebbe non essere allocata nessuna archiviazione, le variabili discard possono ridurre le allocazioni di memoria. Dato che rendono chiaro l'obiettivo del codice, ne migliorano la leggibilità e la gestibilità.
 
-Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio la seguente chiamata di metodo restituisce una tupla con 3 elementi nella quale il primo e il secondo valore sono variabili discard:
+Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio, la seguente chiamata al metodo restituisce una tupla con 3 elementi in cui i valori del primo e secondo sono scartati e *area* è una variabile dichiarata in precedenza da impostare per il terzo componente corrispondente restituito da  *GetCityInformation*:
 
 ```csharp
-(var _, _, area) = city.GetCityInformation(cityName);
+(_, _, area) = city.GetCityInformation(cityName);
 ```
 
 In C# 7 le variabili discard sono supportate nelle assegnazioni nei seguenti contesti:
@@ -89,4 +88,3 @@ Si noti che anche `_` è un identificatore valido. Quando viene usata fuori da u
 [Decostruzione di tuple e altri tipi](deconstruct.md)   
 [`is` - Parola chiave](language-reference/keywords/is.md)   
 [`switch` - Parola chiave](language-reference/keywords/switch.md)   
-

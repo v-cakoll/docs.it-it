@@ -1,1 +1,1 @@
-**Le informazioni contenute in questo argomento sono valide per: ✓** .NET Core 1.x **✓** .NET Core 2.x
+**In questo argomento si applica a: ✓** .NET Core SDK 1. x **✓** .NET Core SDK 2. x

@@ -1,57 +1,63 @@
 ---
-title: "Procedura: Implementare un elemento Observer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "observer [.NET Framework], schema progettuale"
-  - "schema progettuale observer [.NET Framework], implementazione di observer"
+title: 'Procedura: Implementare un elemento Observer'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- observers [.NET Framework], observer design pattern
+- observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a964bd031f6f8a7fc029b2b209b9693b72e688af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: Implementare un elemento Observer
-Il modello di progettazione osservatore richiede una divisione tra un osservatore, che effettua la registrazione per le notifiche, e un provider, che consente di monitorare i dati e inviare notifiche a uno o più osservatori.  In questo argomento viene illustrato come creare un osservatore.  In un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), viene illustrato come creare un provider.  
+# <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
+Il modello di progettazione osservatore richiede una divisione tra un osservatore, che registra per le notifiche, e un provider, che esegue il monitoraggio dei dati e inviare notifiche agli osservatori di uno o più. In questo argomento viene illustrato come creare un osservatore. Un argomento correlato, [procedura: implementare un Provider](../../../docs/standard/events/how-to-implement-a-provider.md), viene illustrato come creare un provider.  
   
-### Per creare un osservatore  
+### <a name="to-create-an-observer"></a>Per creare un elemento observer  
   
-1.  Definire l'osservatore, che è un tipo che implementa l'interfaccia <xref:System.IObserver%601?displayProperty=fullName>.  Nel codice seguente viene ad esempio definito un tipo denominato `TemperatureReporter`, che costituisce un'implementazione di <xref:System.IObserver%601?displayProperty=fullName> costruita con un argomento di tipo generico di `Temperature`.  
+1.  Definire l'osservatore, che è un tipo che implementa il <xref:System.IObserver%601?displayProperty=nameWithType> interfaccia. Ad esempio, il codice seguente definisce un tipo denominato `TemperatureReporter` che rappresenta un elemento costruito <xref:System.IObserver%601?displayProperty=nameWithType> implementazione con un argomento di tipo generico di `Temperature`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#8)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#8)]  
   
-2.  Se l'osservatore può smettere di ricevere notifiche prima che il provider chiami la relativa implementazione di <xref:System.IObserver%601.OnCompleted%2A?displayProperty=fullName>, definire una variabile privata che conterrà l'implementazione di <xref:System.IDisposable> restituita dal metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=fullName> del provider.  È inoltre necessario definire un metodo di sottoscrizione che chiami il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e archivi l'oggetto <xref:System.IDisposable> restituito.  Il codice seguente, ad esempio, consente di definire una variabile privata denominata `unsubscriber` e un metodo `Subscribe` che chiama il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e assegna l'oggetto restituito alla variabile `unsubscriber`.  
+2.  Se l'osservatore può interrompere la ricezione di notifiche prima che il provider chiama il relativo <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> implementazione, definire una variabile privata che conterrà il <xref:System.IDisposable> implementazione il provider ha restituito <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> metodo. È inoltre necessario definire un metodo di sottoscrizione che chiama il provider <xref:System.IObservable%601.Subscribe%2A> (metodo) e archivia l'oggetto restituito <xref:System.IDisposable> oggetto. Ad esempio, il codice seguente definisce una variabile privata denominata `unsubscriber` e definisce un `Subscribe` metodo che chiama il provider <xref:System.IObservable%601.Subscribe%2A> metodo e assegna l'oggetto restituito per il `unsubscriber` variabile.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#9)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#9)]  
   
-3.  Definire un metodo che consenta all'osservatore di interrompere la ricezione delle notifiche prima che il provider chiami la relativa implementazione di <xref:System.IObserver%601.OnCompleted%2A?displayProperty=fullName>, se questa funzionalità è necessaria.  Nell'esempio seguente viene definito un metodo `Unsubscribe`.  
+3.  Definire un metodo che consente l'osservatore interrompere la ricezione di notifiche prima che il provider chiama il relativo <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> implementazione, se questa funzionalità è necessaria. L'esempio seguente definisce un `Unsubscribe` metodo.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#10)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#10)]  
   
-4.  Fornire le implementazioni dei tre metodi definiti dall'interfaccia <xref:System.IObserver%601>: <xref:System.IObserver%601.OnNext%2A?displayProperty=fullName>, <xref:System.IObserver%601.OnError%2A?displayProperty=fullName> e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=fullName>.  A seconda del provider e delle esigenze dell'applicazione, i metodi <xref:System.IObserver%601.OnError%2A> e <xref:System.IObserver%601.OnCompleted%2A> possono essere implementazioni dello stub.  Si noti che il metodo <xref:System.IObserver%601.OnError%2A> non può gestire l'oggetto <xref:System.Exception> passato come eccezione e il metodo <xref:System.IObserver%601.OnCompleted%2A> è libero di chiamare l'implementazione di <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> del provider.  Nell'esempio seguente viene illustrata l'implementazione di <xref:System.IObserver%601> della classe `TemperatureReporter`.  
+4.  Fornire le implementazioni dei tre metodi definiti dal <xref:System.IObserver%601> interfaccia: <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. A seconda di provider e le esigenze dell'applicazione, il <xref:System.IObserver%601.OnError%2A> e <xref:System.IObserver%601.OnCompleted%2A> metodi possono essere implementazioni dello stub. Si noti che il <xref:System.IObserver%601.OnError%2A> metodo non deve gestire l'oggetto passato <xref:System.Exception> oggetto come un'eccezione e <xref:System.IObserver%601.OnCompleted%2A> metodo è libero di chiamare il provider <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementazione. Nell'esempio seguente il <xref:System.IObserver%601> implementazione del `TemperatureReporter` classe.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#11)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
-## Esempio  
- Nell'esempio seguente è incluso il codice sorgente completo per la classe `TemperatureReporter`, che fornisce l'implementazione di <xref:System.IObserver%601> per un'applicazione di monitoraggio della temperatura.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente contiene il codice sorgente completo per il `TemperatureReporter` (classe), che fornisce il <xref:System.IObserver%601> implementazione per un'applicazione di monitoraggio della temperatura.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## Vedere anche  
- <xref:System.IObserver%601>   
- [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)   
- [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.IObserver%601>  
+ [Modello di progettazione observer](../../../docs/standard/events/observer-design-pattern.md)  
+ [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md)  
  [Procedure consigliate per un modello di progettazione observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)
