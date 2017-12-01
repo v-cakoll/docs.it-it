@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -165,7 +165,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Tipo a cui viene fatto riferimento|Interfaccia implementata dal tipo a cui viene fatto riferimento|Esempio|Tipo trattato come|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Non generico o generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> o<br /><br /> `MyType<T> : IDictionary` dove T=`int`|Generico chiuso `IDictionary<object,object>`|  
-|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>, chiuso|`MyType<T> : IDictionary\<string, bool>` dove T=`int`|Generico chiuso (ad esempio `IDIctionary\<string,bool>`)|  
-|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, la chiave o il valore è chiuso, l'altro è aperto e utilizza uno dei parametri del tipo|`MyType\<T,U,V> : IDictionary\<string,V>` dove T=`int`, U=`float`, V=`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary\<Z,bool>` dove Z=`string`|Generico chiuso (ad esempio `IDictionary\<string,bool>`)|  
-|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, chiave e valore sono aperti e ognuno utilizza uno dei parametri del tipo|`MyType\<T,U,V> : IDictionary\<V,U>` dove T=`int`, U=`bool`, V=`string`|Generico chiuso (ad esempio `IDictionary\<string,bool>`)|  
-|Generico aperto (due parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, aperto, utilizza entrambi i parametri generici del tipo nell'ordine in cui sono visualizzati.|`MyType\<K,V> : IDictionary\<K,V>`, K e V entrambi aperti|Generico aperto (ad esempio `IDictionary\<K,V>`)|  
+|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>, chiuso|`MyType<T> : IDictionary<string, bool>`dove T =`int`|Generico chiuso (ad esempio `IDIctionary<string,bool>`)|  
+|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, la chiave o il valore è chiuso, l'altro è aperto e utilizza uno dei parametri del tipo|`MyType<T,U,V> : IDictionary<string,V>`dove T =`int`, U =`float`, V =`bool`<br /><br /> o<br /><br /> `MyType<Z> : IDictionary<Z,bool>`dove Z =`string`|Generico chiuso (ad esempio `IDictionary<string,bool>`)|  
+|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, chiave e valore sono aperti e ognuno utilizza uno dei parametri del tipo|`MyType<T,U,V> : IDictionary<V,U>` dove T=`int`, U=`bool`, V=`string`|Generico chiuso (ad esempio `IDictionary<string,bool>`)|  
+|Generico aperto (due parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, aperto, utilizza entrambi i parametri generici del tipo nell'ordine in cui sono visualizzati.|`MyType<K,V> : IDictionary<K,V>`, K e V entrambi aperti|Generico aperto (ad esempio `IDictionary<K,V>`)|  
   
  Se il tipo implementa sia <xref:System.Collections.IDictionary> che <xref:System.Collections.Generic.IDictionary%602>generico, solo <xref:System.Collections.Generic.IDictionary%602> generico viene considerato.  
   

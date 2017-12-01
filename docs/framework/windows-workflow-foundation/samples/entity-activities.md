@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc1ddb69e69e603c4460ef6db1a60f4e2e650749
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 6a3f50999e80cea0cf2d3e8280abe4204076e653
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="entity-activities"></a>Attività dell'entità
 In questo esempio viene illustrato come usare ADO.NET Entity Framework con [!INCLUDE[wf2](../../../../includes/wf2-md.md)] per semplificare l'accesso ai dati.  
@@ -24,17 +24,17 @@ In questo esempio viene illustrato come usare ADO.NET Entity Framework con [!INC
  ADO.NET Entity Framework consente agli sviluppatori di usare dati nel formato oggetti, proprietà e relazioni specifici di dominio, quali Customers, Orders, Order Details e le relazioni tra queste entità. A tale scopo, ADO.NET Entity Framework dispone di un livello di astrazione che consente la programmazione in un modello di applicazione concettuale anziché programmando direttamente in uno schema di archiviazione relazionale. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework, vedere [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- In questo esempio viene usato il database `Northwind` e sono inclusi script per la creazione e la rimozione di database `Northwind` (Setup.cmd e Cleanup.cmd). I progetti in questo esempio includono un modello Entity Data Model basato sul database `Northwind`. Il modello può essere trovato aprendo il file `Northwind.edmx` incluso nel progetto. Si tratta del modello che definisce la forma degli oggetti a cui è possibile accedere tramite ADO.NET Entity Framework.  
+ In questo esempio viene usato il database `Northwind` e sono inclusi script per la creazione e la rimozione di `Northwind` (Setup.cmd e Cleanup.cmd). I progetti in questo esempio includono un modello Entity Data Model basato sul database `Northwind`. Il modello può essere trovato aprendo il file `Northwind.edmx` incluso nel progetto. Si tratta del modello che definisce la forma degli oggetti a cui è possibile accedere tramite ADO.NET Entity Framework.  
   
  In questo esempio sono incluse le attività seguenti:  
   
--   `EntitySQLQuery`: `EntitySQLQuery` attività consente di recuperare oggetti dal database in base a una stringa di query Entity SQL. Entity SQL è un linguaggio indipendente dall'archiviazione simile a SQL e consente di specificare query in base al modello concettuale e alle entità che sono parte del modello o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Linguaggio Entity SQL, vedere [linguaggio Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: `EntitySQLQuery` consente di recuperare oggetti dal database in base a una stringa di query Entity SQL. Entity SQL è un linguaggio indipendente dall'archiviazione simile a SQL e consente di specificare query in base al modello concettuale e alle entità che sono parte del modello o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Linguaggio Entity SQL, vedere [linguaggio Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: questa attività consente di recuperare oggetti dal database in base a un predicato o query LINQ.  
   
--   `EntityAdd`: `EntityAdd` attività consente di aggiungere un'entità o una raccolta di entità al database.  
+-   `EntityAdd`: `EntityAdd` consente di aggiungere un'entità o una raccolta di entità al database.  
   
--   `EntityDelete`: `EntityDelete` attività consente di eliminare un'entità o una raccolta di entità dal database.  
+-   `EntityDelete`: `EntityDelete` consente di eliminare un'entità o una raccolta di entità dal database.  
   
 -   `ObjectContextScope`: le attività indicate in precedenza possono essere usate solo all'interno di un'istanza dell'attività `ObjectContextScope` contenitore. L'attività `ObjectContextScope` imposta la connessione sul database e richiede una stringa di connessione (passata o recuperata usando un'impostazione del file di configurazione). L'attività `ObjectContextScope` facilita l'esecuzione di un gruppo di operazioni correlate nelle entità. Poiché questo ambito gestisce una connessione attiva, si tratta di un ambito di non persistenza. Inoltre, quando l'attività `ObjectContextScope` viene chiusa, qualsiasi modifica apportata agli oggetti recuperati tramite le attività dell'entità all'interno di tale ambito viene resa persistente nel database, senza dover eseguire alcuna azione esplicita o successiva per un nuovo salvataggio degli oggetti nel database.  
   
@@ -263,6 +263,4 @@ return new ObjectContextScope
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

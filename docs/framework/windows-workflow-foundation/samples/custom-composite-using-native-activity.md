@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 7af9562f38b68acc95c051e85d007ce9bd5a2c87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 7e67febe1197a026b7bdcc6a4be27467c24da1c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-composite-using-native-activity"></a>Attività composta personalizzata tramite l'oggetto NativeActivity
 In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activities.NativeActivity> che pianifica altri oggetti <xref:System.Activities.Activity> per controllare il flusso dell'esecuzione di un flusso di lavoro. In questo esempio vengono usati due flussi di controllo comuni, Sequence e While, per illustrate le operazioni da eseguire.  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activit
   
  Ogni volta che un'attività espone una raccolta pubblica di attività figlio, è probabile che queste ultime condividano lo stato. Una procedura consigliata per l'attività padre, in questo caso `MySequence`, consiste nell'esporre anche una raccolta di variabili tramite cui le attività figlio possono portare a termine questa operazione. Come attività figlio, il <xref:System.Activities.Activity.CacheMetadata%2A> metodo aggiunge proprietà pubbliche di tipo <xref:System.Activities.Variable> o <xref:System.Collections.IEnumerable> \< <xref:System.Activities.Variable>> come variabili associate con il `MySequence` attività.  
   
- Oltre alle variabili pubbliche che vengono modificate dagli elementi figlio dell'oggetto `MySequence`, il `MySequence` deve anche tenere traccia della posizione occupata nell'esecuzione dei relativi elementi figlio. Per eseguire questa operazione, usa una variabile privata, ovvero `currentIndex`. Questa variabile viene registrata come parte dell'ambiente `MySequence` aggiungendo una chiamata al metodo <xref:System.Activities.NativeActivityMetadata.AddImplementationVariable%2A> all'interno del metodo `MySequence` dell'attività <xref:System.Activities.Activity.CacheMetadata%2A>. Gli oggetti <xref:System.Activities.Activity> aggiunti alla raccolta `MySequence``Activities` non possono accedere alle variabili aggiunte in questo modo.  
+ Oltre alle variabili pubbliche che vengono modificate dagli elementi figlio dell'oggetto `MySequence`, `MySequence` deve anche tenere traccia della posizione occupata nell'esecuzione dei relativi elementi figlio. Per eseguire questa operazione, usa una variabile privata, ovvero `currentIndex`. Questa variabile viene registrata come parte dell'ambiente `MySequence` aggiungendo una chiamata al metodo <xref:System.Activities.NativeActivityMetadata.AddImplementationVariable%2A> all'interno del metodo `MySequence` dell'attività <xref:System.Activities.Activity.CacheMetadata%2A>. Gli oggetti <xref:System.Activities.Activity> aggiunti alla raccolta `MySequence``Activities` non possono accedere alle variabili aggiunte in questo modo.  
   
  Quando l'oggetto `MySequence` viene eseguito dal runtime, quest'ultimo chiama il metodo <xref:System.Activities.NativeActivity.Execute%2A>, passando un oggetto <xref:System.Activities.NativeActivityContext>. L'oggetto <xref:System.Activities.NativeActivityContext> è il proxy dell'attività di nuovo nel runtime per dereferenziare gli argomenti e le variabili nonché pianificare altri oggetti <xref:System.Activities.Activity> o `ActivityDelegates`. `MySequence` usa un metodo `InternalExecute` per incapsulare la logica di pianificazione del primo elemento figlio e di tutti gli elementi figlio successivi in un singolo metodo. Inizia dereferenziando il riferimento `currentIndex`. Se è uguale al conteggio nella raccolta `Activities`, la sequenza è completata, l'attività viene restituita senza pianificare nessuna operazione e lo stato del runtime viene impostato su <xref:System.Activities.ActivityInstanceState.Closed>. Se il `currentIndex` è minore rispetto al numero di attività, l'elemento figlio successivo viene ottenuto dal `Activities` insieme e `MySequence` chiamate <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, passando l'elemento figlio da pianificare e un <xref:System.Activities.CompletionCallback> che punta al `InternalExecute` metodo. Infine, viene incrementato l'oggetto `currentIndex` e il controllo viene di nuovo restituito al runtime. Finché un'istanza dell'oggetto `MySequence` dispone di un oggetto <xref:System.Activities.Activity> figlio pianificato, il runtime considera che si trovi nello stato Executing.  
   
@@ -49,6 +49,4 @@ In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activit
 >   
 >  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`  
-  
-## <a name="see-also"></a>Vedere anche
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`
