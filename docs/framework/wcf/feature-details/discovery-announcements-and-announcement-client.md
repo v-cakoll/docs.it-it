@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36003933a9fb49fe4fe4f0b677ee584066d415ac
-ms.sourcegitcommit: ea1fd4ff4c36169fc722ef263e24884c5cd431a2
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6da9c2e251a6592bb0af039d552d02e7e4fd3fd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Annunci di individuazione e client annunci
 La funzionalità di individuazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente ai componenti di annunciare la propria disponibilità. Se viene configurato a tale scopo, un servizio invia annunci Hello e Bye. I client o altri componenti possono attendere tali messaggi dell'annuncio ed eseguire azioni su di loro. In questo modo viene fornito un metodo alternativo che consente ai client di essere consapevoli della presenza di servizi. La funzionalità degli annunci può essere utilizzata per vari scopi. Se ad esempio i servizi entrano ed escono periodicamente da una rete, gli annunci possono costituire un'alternativa migliore rispetto alla ricerca di servizi. Con questo approccio, il traffico di rete è ridotto e il client è in grado di sapere se un servizio è presente o assente contestualmente alla ricezione degli annunci.  

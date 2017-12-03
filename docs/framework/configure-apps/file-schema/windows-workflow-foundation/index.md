@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e83b85d970f36745bb1a0bcf04253c678764805e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a85e09e92ebea4cdc0c1de93f4e9a4a21ff4d7e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Schema di configurazione di Windows Workflow Foundation
 Gli elementi di configurazione di [!INCLUDE[wf](../../../../../includes/wf-md.md)] consentono di configurare applicazioni flusso di lavoro. Per un'applicazione flusso di lavoro, è anche possibile configurare il rilevamento e la traccia. Per altre informazioni sul rilevamento e la traccia, vedere [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Per i servizi flusso di lavoro, è anche possibile utilizzare gli elementi di configurazione di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Per altri dettagli su [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], vedere [Schema di configurazione di WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

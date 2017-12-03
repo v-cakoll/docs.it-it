@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2ffd220babe99661d8b6aaf271a566d415af5eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f70283e15bbfaf111c8e677641682538a2361942
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="out-of-order-message-processing"></a>Elaborazione di messaggi nell'ordine non corretto
 I servizi flusso di lavoro possono dipendere da messaggi inviati in un ordine specifico. Un servizio flusso di lavoro contiene una o più attività <xref:System.ServiceModel.Activities.Receive> e ogni attività <xref:System.ServiceModel.Activities.Receive> attende un messaggio specifico. Senza particolari garanzie di recapito di trasporto, i messaggi inviati dai client possono essere differiti e pertanto recapitati in un ordine inatteso dal servizio flusso di lavoro. L'implementazione di un servizio flusso di lavoro che non richiede l'invio di messaggi in un ordine specifico viene in genere effettuata mediante un'attività Parallel. Per un protocollo dell'applicazione più complicato, il flusso di lavoro diverrebbe rapidamente molto complesso.  La funzionalità di elaborazione di messaggi nell'ordine non corretto in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di creare un flusso di lavoro simile senza la complessità derivante dalle attività Parallel annidate. L'elaborazione di messaggi nell'ordine non corretto è supportata solo in canali che supportano <xref:System.ServiceModel.Channels.ReceiveContext>, ad esempio le associazioni MSMQ di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

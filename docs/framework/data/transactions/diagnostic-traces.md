@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 59e91b76245c7bdfd40f6fc449edbbcd47449f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ddbc445d86024c077ebbc0049d12bfb8a21dfcdb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="diagnostic-traces"></a>Tracce di diagnostica
 Le tracce consistono nella pubblicazione di messaggi specifici generati durante l'esecuzione di un'applicazione. Quando si utilizza la tracciatura è necessario disporre di un meccanismo per raccogliere e registrare i messaggi inviati. I messaggi di traccia vengono ricevuti dai listener. Il compito di un listener è raccogliere, archiviare e inviare messaggi di errore. I listener indirizzano l'output di tracciatura a una destinazione appropriata, ad esempio un file di log, una finestra o un file di testo.  
@@ -48,7 +48,7 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
   
 |Livello di traccia|Descrizione|  
 |-----------------|-----------------|  
-|Critical|Si sono verificati errori gravi. Ad esempio:<br /><br /> -Un errore che può causare una perdita immediata delle funzionalità di utente.<br />-Un evento che richiede un amministratore di intervenire per evitare la perdita di funzionalità.<br />-Blocchi di codice.<br />-Il livello di traccia può anche offrire un contesto sufficiente per l'interpretazione di altre tracce critico. Ciò può semplificare l'identificazione della sequenza di operazioni che ha portato all'errore grave.|  
+|Critico|Si sono verificati errori gravi. Ad esempio:<br /><br /> -Un errore che può causare una perdita immediata delle funzionalità di utente.<br />-Un evento che richiede un amministratore di intervenire per evitare la perdita di funzionalità.<br />-Blocchi di codice.<br />-Il livello di traccia può anche offrire un contesto sufficiente per l'interpretazione di altre tracce critico. Ciò può semplificare l'identificazione della sequenza di operazioni che ha portato all'errore grave.|  
 |Errore|Si è verificato un errore (ad esempio, un errore di configurazione o un comportamento di rete non valido) che può comportare la perdita di funzionalità dell'utente.|  
 |Avviso|È stata rilevata una condizione che in seguito può dare luogo a un errore standard o critico, ad esempio un errore di allocazione o il raggiungimento di un limite. Gli avvisi possono anche essere generati durante la normale elaborazione degli errori del codice utente, ad esempio l'interruzione di una transazione, lo scadere di un timeout o l'esito negativo di un'autenticazione.|  
 |Informazioni|Il sistema genera messaggi informativi che semplificano il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. Questi messaggi possono ad esempio riguardare gli eventi durata di transazione e integrazione (quali la creazione o il commit di una transazione), l'attraversamento di un confine importante o l'allocazione di risorse significative. Gli sviluppatori possono quindi utilizzare queste informazioni durante la pianificazione delle capacità e la gestione delle prestazioni.|  
@@ -58,27 +58,27 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
   
 |TraceCode|EventType|Dati aggiuntivi in TraceRecord|  
 |---------------|---------------|-------------------------------|  
-|TransactionCreated|Informazioni|TransactionTraceId|  
-|TransactionPromoted|Informazioni|TransactionTraceId della transazione locale, TransactionTraceId della transazione distribuita|  
-|EnlistmentCreated|Informazioni|TransactionTraceId, EnlistmentTraceId, EnlistmentType (durable/volatile), EnlistmentOptions|  
+|TransactionCreated|Info|TransactionTraceId|  
+|TransactionPromoted|Info|TransactionTraceId della transazione locale, TransactionTraceId della transazione distribuita|  
+|EnlistmentCreated|Info|TransactionTraceId, EnlistmentTraceId, EnlistmentType (durable/volatile), EnlistmentOptions|  
 |EnlistmentCallbackNegative|Avviso|TransactionTraceId, EnlistmentTraceId<br /><br /> Callback (forcerollback/aborted/indoubt)|  
 |TransactionRollbackCalled|Avviso|TransactionTraceId|  
 |TransactionAborted|Avviso|TransactionTraceId|  
 |TransactionInDoubt|Avviso|TransactionTraceId|  
-|TransactionScopeCreated|Informazioni|TransactionScopeResult. Risultati possibili:<br /><br /> -Nuova transazione.<br />-Transaction è stato passato.<br />-Transazione dipendente passato.<br />-Utilizzo di transazione corrente.<br />-Nessuna transazione.<br /><br /> nuovo TransactionTraceId corrente|  
-|TransactionScopeDisposed|Informazioni|TransactionTraceId dell'ambito transazione corrente "previsto".|  
+|TransactionScopeCreated|Info|TransactionScopeResult. Risultati possibili:<br /><br /> -Nuova transazione.<br />-Transaction è stato passato.<br />-Transazione dipendente passato.<br />-Utilizzo di transazione corrente.<br />-Nessuna transazione.<br /><br /> nuovo TransactionTraceId corrente|  
+|TransactionScopeDisposed|Info|TransactionTraceId dell'ambito transazione corrente "previsto".|  
 |TransactionScopeIncomplete|Avviso|TransactionTraceId dell'ambito transazione corrente "previsto".|  
 |TransactionScopeNestedIncorrectly|Avviso|TransactionTraceId dell'ambito transazione corrente "previsto".|  
 |TransactionScopeCurrentTransactionChanged|Avviso|vecchio TransactionTraceId corrente, altro TransactionTraceId|  
 |TransactionScopeTimeout|Avviso|TransactionTraceId dell'ambito transazione corrente "previsto".|  
-|DependentCloneCreated|Informazioni|TransactionTraceId, tipo di transazione dipendente creata (RollbackIfNotComplete/BlockCommitUntilComplete)|  
-|DependentCloneComplete|Informazioni|TransactionTraceId|  
-|RecoveryComplete|Informazioni|GUID del gestore di risorse (dalla base)|  
-|Reenlist|Informazioni|GUID del gestore di risorse (dalla base)|  
-|TransactionSerialized|Informazioni|TransactionTraceId.|  
+|DependentCloneCreated|Info|TransactionTraceId, tipo di transazione dipendente creata (RollbackIfNotComplete/BlockCommitUntilComplete)|  
+|DependentCloneComplete|Info|TransactionTraceId|  
+|RecoveryComplete|Info|GUID del gestore di risorse (dalla base)|  
+|Reenlist|Info|GUID del gestore di risorse (dalla base)|  
+|TransactionSerialized|Info|TransactionTraceId.|  
 |TransactionException|Errore|Messaggio eccezione|  
 |InvalidOperationException|Errore|Messaggio eccezione|  
-|InternalError|Critical|Messaggio eccezione|  
+|InternalError|Critico|Messaggio eccezione|  
 |TransferEvent||Quando una transazione viene deserializzata o promossa da transazione dello spazio dei nomi <xref:System.Transactions> a transazione distribuita, il sistema scrive l'ActivityID corrente ricavato dal contesto ExecutionContext e l'ID della transazione distribuita.<br /><br /> Quando il gestore DTC esegue il callback al codice gestito, l'ID della transazione distribuita viene impostato per la durata del callback come ActivityID del contesto ExecutionContext.|  
 |ConfiguredDefaultTimeoutAdjusted|Avviso|Nessun dato aggiuntivo|  
 |TransactionTimeout|Avviso|TransactionTraceId della transazione per cui è scaduto il timeout.|  

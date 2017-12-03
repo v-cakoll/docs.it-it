@@ -15,14 +15,14 @@ helpviewer_keywords:
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
 caps.latest.revision: "45"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 27c1a240817be169decbb0bbbac9fc78b189fc2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione per i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite un'interfaccia utente grafica. Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza la necessità di modificare direttamente i file di configurazione XML.  

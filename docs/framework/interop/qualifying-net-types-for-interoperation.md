@@ -1,12 +1,8 @@
 ---
 title: "Qualificazione di tipi .NET per l'interoperabilità"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,24 +12,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 165536656f0de6b53680565bee93f0bb8d607d48
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
   
 -   Le classi devono implementare le interfacce in modo esplicito.  
   
-     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per informazioni, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Anche se l'interoperabilità COM fornisce un meccanismo per generare automaticamente un'interfaccia contenente tutti i membri della classe e i membri della relativa classe di base, è decisamente preferibile fornire interfacce esplicite. L'interfaccia generata automaticamente è detta interfaccia di classe. Per istruzioni, vedere [Introduzione all'interfaccia di classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Per incorporare le definizioni di interfaccia nel codice è possibile usare [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++ invece del linguaggio di definizione dell'interfaccia (IDL, Interface Definition Language) o di soluzioni equivalenti. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
+     È possibile utilizzare Visual Basic, c# e C++ per incorporare le definizioni di interfaccia nel codice, invece di utilizzare Strumentazione gestione Windows (IDL, Interface Definition Language) o l'equivalente. Per informazioni dettagliate sulla sintassi, vedere la documentazione relativa al linguaggio.  
   
 -   I tipi gestiti devono essere pubblici.  
   

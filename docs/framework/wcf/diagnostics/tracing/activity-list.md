@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81cf157070686885677002ec21880519bd4508f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="activity-list"></a>Elenco delle attività
 In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -33,7 +33,7 @@ In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indig
 |A, M|Attività di ambiente|N/D (non controllata da ServiceModel)|Attività il cui ID viene impostato in TLS prima che venga effettuata qualsiasi chiamata al codice di ServiceModel, sia esso lato client o lato server.<br /><br /> Esempio: un'attività in cui viene chiamata l'attività di apertura del client [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oppure dove viene chiamata l'attività serviceHost.open.|  
 |B|Costrutto<br /><br /> ChannelFactory. ContractType : "[tipo]".|Costrutto||  
 |C|Apri<br /><br /> [ClientBase &#124; ChannelFactory]. ContractType : "[tipo]".|Apri||  
-|T|Chiusura [ClientBase &#124; ChannelFactory]. ContractType : "[tipo]".|Chiudi||  
+|I|Chiusura [ClientBase &#124; ChannelFactory]. ContractType : "[tipo]".|Chiudi||  
 |M|Costruzione ServiceHost. ServiceType: "[tipo]".|Costrutto||  
 |N|Apertura di ServiceHost. ServiceType: "[tipo]".|Apri||  
 |Z|Chiusura di ServiceHost. ServiceType: "[tipo]".|Chiudi||  

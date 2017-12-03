@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 599fdb099a1c22e28ce36527a43a66430cfc2e4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-metadata"></a>Uso di metadati
 I metadati del servizio contengono una descrizione leggibile dal computer del servizio. In essi sono incluse le descrizioni degli endpoint del servizio, delle associazioni, dei contratti, delle operazioni e dei messaggi. Possono essere utilizzati per vari scopi, tra cui la generazione automatica di un client per l'utilizzo del servizio, l'implementazione della descrizione del servizio e l'aggiornamento dinamico dell'associazione per un client.  

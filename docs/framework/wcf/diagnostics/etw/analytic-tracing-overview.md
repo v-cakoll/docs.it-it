@@ -11,24 +11,24 @@ ms.topic: article
 helpviewer_keywords: analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cd064228f374cf99540e2a5467bbab6d25dd00f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dd456401073d8c7f3c7bc9fbfbe5c11dbbd4e58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="analytic-tracing-overview"></a>Panoramica della traccia analitica
 La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows (ETW). ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia. Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio. I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.  
   
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, vedere [Migliorare il debug e l'ottimizzazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Oltre a utilizzare i registri eventi relativi al sistema Windows, alla sicurezza e alle applicazioni per analizzare l'applicazione, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto altri log nel nodo di livello superiore Registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], log dei messaggi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] a Registri applicazioni e servizi.  
+ Oltre a utilizzare i registri eventi relativi al sistema Windows, alla sicurezza e alle applicazioni per analizzare l'applicazione, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto altri log nel nodo di livello superiore Registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , log dei messaggi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] a Registri applicazioni e servizi.  
   
 ## <a name="concepts-and-capabilities"></a>Concetti e funzionalità  
- I concetti e le funzionalità seguenti si applicano alla traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ I concetti e le funzionalità seguenti si applicano alla traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .  
   
 ### <a name="enabling-wcf-diagnostics-settings"></a>Abilitazione di impostazioni di diagnostica WCF  
  Diagnostica WCF è abilitata all'interno di \<System. ServiceModel >\<diagnostica > sezione di configurazione.  

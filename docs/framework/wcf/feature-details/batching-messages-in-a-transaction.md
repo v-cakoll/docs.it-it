@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Raggruppamento di messaggi in una transazione
 Le applicazioni in coda utilizzano le transazioni per garantire che i messaggi siano corretti e che vengano recapitati in modo affidabile. Tuttavia, le transazioni sono operazioni che richiedono un'elevata quantità di risorse e che pertanto possono comportare una notevole riduzione della velocità effettiva di recapito dei messaggi. Un modo per migliorare questa velocità è configurare un'applicazione affinché legga ed elabori più messaggi in un'unica transazione. Il compromesso è tra prestazioni e ripristino: il numero di messaggi raggruppati in un batch è infatti direttamente proporzionale alla quantità di operazioni di ripristino necessarie in caso di rollback delle transazioni. È importante notare la differenza tra raggruppare i messaggi in una transazione e raggruppare i messaggi in una sessione. Oggetto *sessione* è un raggruppamento di messaggi correlati che vengono elaborati da un'unica applicazione e sottoposte a commit come singola unità. In genere le sessioni vengono utilizzate quando occorre elaborare nello stesso contesto un gruppo di messaggi correlati. Ad esempio, questo tipo di elaborazione viene utilizzato nei siti Web che consentono di fare acquisti in linea. *Batch* vengono utilizzati per elaborare più, non correlata di messaggi in modo che aumenta la velocità effettiva dei messaggi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le sessioni, vedere [raggruppamento dei messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Anche per i messaggi raggruppati in batch l'elaborazione viene eseguita da un'unica applicazione e il commit viene svolto in un'unica operazione. A differenza delle sessioni, tuttavia, fra i messaggi di un batch è possibile che non sussista alcuna correlazione. Il raggruppamento dei messaggi in una transazione è un'ottimizzazione che non influisce sulla modalità di esecuzione dell'applicazione.  

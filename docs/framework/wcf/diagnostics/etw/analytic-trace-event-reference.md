@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 caps.latest.revision: "50"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b47456ecea86652e80bb60f155bffd6100e1fc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 616751adfd14e2f07de764b37d684ecdc276847b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="analytic-trace-event-reference"></a>Riferimento dell'evento di traccia analitica
 Nella tabella seguente vengono definiti i livelli di evento, gli identificatori e i messaggi associati alla traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
@@ -170,7 +170,7 @@ Nella tabella seguente vengono definiti i livelli di evento, gli identificatori 
 |[3345 - SessionPreambleUnderstood](../../../../../docs/framework/wcf/diagnostics/etw/3345-sessionpreambleunderstood.md)|Dettagliato|Preambolo sessione per '%1' riconosciuto.|Canale|  
 |[3346 - ConnectionReaderSendFault](../../../../../docs/framework/wcf/diagnostics/etw/3346-connectionreadersendfault.md)|Errore|Invio errore '%1' da parte del lettore di connessione.|Canale|  
 |[3347 - SocketAcceptClosed](../../../../../docs/framework/wcf/diagnostics/etw/3347-socketacceptclosed.md)|Dettagliato|Accettazione socket chiusa.|TCP|  
-|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|Critical|Errore host del servizio.|TCP|  
+|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|Critico|Errore host del servizio.|TCP|  
 |[3349 - ListenerOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/3349-listeneropenstart.md)|Dettagliato|Apertura listener per '%1'.|Canale|  
 |[3350 - ListenerOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/3350-listeneropenstop.md)|Dettagliato|Apertura listener completata.|Canale|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](../../../../../docs/framework/wcf/diagnostics/etw/3351-servermaxpooledconnectionsquotareached.md)|Dettagliato|Quota massima connessioni server in pool di server raggiunta.|Quota|  
@@ -287,7 +287,7 @@ Nella tabella seguente vengono definiti i livelli di evento, gli identificatori 
 |[3831 - RoutingServiceHandledException](../../../../../docs/framework/wcf/diagnostics/etw/3831-routingservicehandledexception.md)|Dettagliato|Eccezione gestita dal servizio di routing.|RoutingServices|  
 |[3832 - RoutingServiceTransmitSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/3832-routingservicetransmitsucceeded.md)|Informazioni|Il servizio di routing ha trasmesso correttamente il messaggio con ID: '%1 [operazione %2] di '%3'.|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](../../../../../docs/framework/wcf/diagnostics/etw/4001-transportlistenersessionsreceived.md)|Dettagliato|Sessione listener di trasporto ricevuta tramite '%1'|ActivationServices|  
-|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|Critical|FailFastException.|ActivationServices|  
+|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|Critico|FailFastException.|ActivationServices|  
 |[4003 - ServiceStartPipeError](../../../../../docs/framework/wcf/diagnostics/etw/4003-servicestartpipeerror.md)|Errore|Errore della pipe di avvio del servizio.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|Dettagliato|Invio sessione avviato.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|Avviso|Invio di sessione per '%1' non riuscito. La coda delle sessioni in sospeso è piena con '%2' elementi in sospeso.|ActivationServices|  
@@ -310,7 +310,7 @@ Nella tabella seguente vengono definiti i livelli di evento, gli identificatori 
 |[4029 - PipeTransportListenerListeningStop](../../../../../docs/framework/wcf/diagnostics/etw/4029-pipetransportlistenerlisteningstop.md)|Dettagliato|Arresto dell'ascolto del listener di trasporto della pipe.|ActivationServices|  
 |[4030 - DispatchSessionSuccess](../../../../../docs/framework/wcf/diagnostics/etw/4030-dispatchsessionsuccess.md)|Informazioni|Invio sessione completato.|ActivationServices|  
 |[4031 - DispatchSessionFailed](../../../../../docs/framework/wcf/diagnostics/etw/4031-dispatchsessionfailed.md)|Errore|Invio sessione non riuscito.|ActivationServices|  
-|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|Critical|Connessione WAS scaduta.|ActivationServices|  
+|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|Critico|Connessione WAS scaduta.|ActivationServices|  
 |[4033 - RoutingTableLookupStart](../../../../../docs/framework/wcf/diagnostics/etw/4033-routingtablelookupstart.md)|Dettagliato|Ricerca tabella di routing avviata.|ActivationServices|  
 |[4034 - RoutingTableLookupStop](../../../../../docs/framework/wcf/diagnostics/etw/4034-routingtablelookupstop.md)|Dettagliato|Ricerca tabella di routing completata.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](../../../../../docs/framework/wcf/diagnostics/etw/4035-pendingsessionqueueratio.md)|Dettagliato|Percentuale coda di sessione in sospeso: %1/%2|Quota|  
@@ -372,8 +372,8 @@ Nella tabella seguente vengono definiti i livelli di evento, gli identificatori 
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|Informazioni|Gestione di un'eccezione.|Infrastruttura|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Errore|Errore imprevisto. Le applicazioni non devono tentare di gestire questo errore. Per motivi di diagnostica, all'errore è associato questo messaggio in inglese: %1.|Infrastruttura|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|Avviso|Generazione di un'eccezione. Origine %1.|Infrastruttura|  
-|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|Critical|Eccezione non gestita.|Infrastruttura|  
-|[57399 - occasione di TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|Critical|Scrittura in EventLog completata.|Infrastruttura|  
+|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|Critico|Eccezione non gestita.|Infrastruttura|  
+|[57399 - occasione di TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|Critico|Scrittura in EventLog completata.|Infrastruttura|  
 |[57400 - TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Errore|Scrittura in EventLog completata.|Infrastruttura|  
 |[57401 - TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|Informazioni|Scrittura in EventLog completata.|Infrastruttura|  
 |[57402 - TraceCodeEventLogVerbose](../../../../../docs/framework/wcf/diagnostics/etw/57402-tracecodeeventlogverbose.md)|Dettagliato|Scrittura in EventLog completata.|Infrastruttura|  

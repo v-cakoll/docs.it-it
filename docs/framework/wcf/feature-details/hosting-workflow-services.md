@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad4e5af26291c210f4f46f20e5b9585e3e095ae7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-workflow-services"></a>Hosting di servizi flusso di lavoro
 Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e sono quindi ospitati in modi analoghi. Come i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o nel servizio Attivazione processo Windows (WAS). I servizi flusso di lavoro possono inoltre essere ospitati in Windows Server AppFabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vedere Windows Server AppFabric [documentazione di Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [funzionalità di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), e [concetti di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]i vari modi per host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  

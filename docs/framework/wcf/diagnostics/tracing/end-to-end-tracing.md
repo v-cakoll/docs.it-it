@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b4cdbc12f57c733d8e8ba3753ce5a2f29ab28ffd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="end-to-end-tracing"></a>Analisi end-to-end
 La traccia end-to-end (e2e) consente agli sviluppatori di seguire l'esecuzione del codice nell'infrastruttura [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] per analizzare il motivo per cui un percorso di codice ha dato esito negativo o per fornire una traccia dettagliata per la pianificazione della capacità e per l'analisi delle prestazioni. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] offre tre meccanismi di correlazione per consentire la diagnosi della causa di un errore: attività, trasferimenti e propagazione.  
