@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36eb5940fa1d869948a94fcbbb1945aea1c534ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abdc2a1cca721450a780f81ff8795fc4e648453f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="metadata-extensibility"></a><span data-ttu-id="32fb8-102">Estensibilità dei metadati</span><span class="sxs-lookup"><span data-stu-id="32fb8-102">Metadata Extensibility</span></span>
-<span data-ttu-id="32fb8-103">Contenuto della sezione sono inclusi esempi che descrivono metadati personalizzati.</span><span class="sxs-lookup"><span data-stu-id="32fb8-103">This section contains samples that demonstrate custom metadata.</span></span>  
+# <a name="metadata-extensibility"></a><span data-ttu-id="38e0b-102">Estensibilità dei metadati</span><span class="sxs-lookup"><span data-stu-id="38e0b-102">Metadata Extensibility</span></span>
+<span data-ttu-id="38e0b-103">Contenuto della sezione sono inclusi esempi che descrivono metadati personalizzati.</span><span class="sxs-lookup"><span data-stu-id="38e0b-103">This section contains samples that demonstrate custom metadata.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32fb8-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="32fb8-104">In This Section</span></span>  
- [<span data-ttu-id="32fb8-105">Endpoint di metadati protetto personalizzato</span><span class="sxs-lookup"><span data-stu-id="32fb8-105">Custom Secure Metadata Endpoint</span></span>](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
- <span data-ttu-id="32fb8-106">Viene illustrato come implementare un servizio con un endpoint di metadati protetto che utilizza una delle associazioni non-metadata exchange e come configurare [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o ai client di recuperare i metadati da tale endpoint di metadati.</span><span class="sxs-lookup"><span data-stu-id="32fb8-106">Demonstrates how to implement a service with a secure metadata endpoint that uses one of the non-metadata exchange bindings and how to configure [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) or clients to fetch the metadata from such a metadata endpoint.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="38e0b-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="38e0b-104">In This Section</span></span>  
+ [<span data-ttu-id="38e0b-105">Endpoint di metadati protetto personalizzato</span><span class="sxs-lookup"><span data-stu-id="38e0b-105">Custom Secure Metadata Endpoint</span></span>](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
+ <span data-ttu-id="38e0b-106">Viene illustrato come implementare un servizio con un endpoint di metadati protetto che utilizza una delle associazioni non-metadata exchange e come configurare [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o ai client di recuperare i metadati da tale endpoint di metadati.</span><span class="sxs-lookup"><span data-stu-id="38e0b-106">Demonstrates how to implement a service with a secure metadata endpoint that uses one of the non-metadata exchange bindings and how to configure [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) or clients to fetch the metadata from such a metadata endpoint.</span></span>  
   
- [<span data-ttu-id="32fb8-107">Pubblicazione WSDL personalizzata</span><span class="sxs-lookup"><span data-stu-id="32fb8-107">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- <span data-ttu-id="32fb8-108">Viene illustrato come implementare un oggetto <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> su un attributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizzato per esportare le proprietà dell'attributo come annotazioni WSDL, tra le altre funzionalità.</span><span class="sxs-lookup"><span data-stu-id="32fb8-108">Demonstrates how to implement a <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> on a custom <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> attribute to export attribute properties as WSDL annotations, among other functionality.</span></span>
+ [<span data-ttu-id="38e0b-107">Pubblicazione WSDL personalizzata</span><span class="sxs-lookup"><span data-stu-id="38e0b-107">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ <span data-ttu-id="38e0b-108">Viene illustrato come implementare un oggetto <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> su un attributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizzato per esportare le proprietà dell'attributo come annotazioni WSDL, tra le altre funzionalità.</span><span class="sxs-lookup"><span data-stu-id="38e0b-108">Demonstrates how to implement a <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> on a custom <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> attribute to export attribute properties as WSDL annotations, among other functionality.</span></span>
