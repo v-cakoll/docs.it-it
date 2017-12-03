@@ -10,27 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 55b489bcad85eff5adba16f6f40493c88e476505
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d4b819b47d682a81bdcc031cc6b09604b072be7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqmessagedropped"></a><span data-ttu-id="ebca6-102">System.ServiceModel.Channels.MsmqMessageDropped</span><span class="sxs-lookup"><span data-stu-id="ebca6-102">System.ServiceModel.Channels.MsmqMessageDropped</span></span>
-<span data-ttu-id="ebca6-103">MSMQ ha rilasciato il messaggio.</span><span class="sxs-lookup"><span data-stu-id="ebca6-103">MSMQ dropped the message.</span></span>  
+# <a name="systemservicemodelchannelsmsmqmessagedropped"></a><span data-ttu-id="a9600-102">System.ServiceModel.Channels.MsmqMessageDropped</span><span class="sxs-lookup"><span data-stu-id="a9600-102">System.ServiceModel.Channels.MsmqMessageDropped</span></span>
+<span data-ttu-id="a9600-103">MSMQ ha rilasciato il messaggio.</span><span class="sxs-lookup"><span data-stu-id="a9600-103">MSMQ dropped the message.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ebca6-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ebca6-104">Description</span></span>  
- <span data-ttu-id="ebca6-105">La traccia indica che è stato eliminato un messaggio MSMQ.</span><span class="sxs-lookup"><span data-stu-id="ebca6-105">The trace indicates that an MSMQ message was dropped.</span></span> <span data-ttu-id="ebca6-106">I messaggi MSMQ possono essere eliminati quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (utilizzato con NetMsmqBinding o MsmqIntegrationBinding) non è in grado di elaborarli.</span><span class="sxs-lookup"><span data-stu-id="ebca6-106">MSMQ messages can be dropped when [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (used with either the NetMsmqBinding or MsmqIntegrationBinding) is unable to process them.</span></span> <span data-ttu-id="ebca6-107">Tali messaggi vengono definiti messaggi non elaborabili.</span><span class="sxs-lookup"><span data-stu-id="ebca6-107">Such messages are referred to as poison messages.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9600-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a9600-104">Description</span></span>  
+ <span data-ttu-id="a9600-105">La traccia indica che è stato eliminato un messaggio MSMQ.</span><span class="sxs-lookup"><span data-stu-id="a9600-105">The trace indicates that an MSMQ message was dropped.</span></span> <span data-ttu-id="a9600-106">I messaggi MSMQ possono essere eliminati quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (utilizzato con NetMsmqBinding o MsmqIntegrationBinding) non è in grado di elaborarli.</span><span class="sxs-lookup"><span data-stu-id="a9600-106">MSMQ messages can be dropped when [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (used with either the NetMsmqBinding or MsmqIntegrationBinding) is unable to process them.</span></span> <span data-ttu-id="a9600-107">Tali messaggi vengono definiti messaggi non elaborabili.</span><span class="sxs-lookup"><span data-stu-id="a9600-107">Such messages are referred to as poison messages.</span></span>  
   
- <span data-ttu-id="ebca6-108">Un messaggio non elaborabile viene eliminato quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Drop`.</span><span class="sxs-lookup"><span data-stu-id="ebca6-108">A poison message is dropped when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Drop`.</span></span> <span data-ttu-id="ebca6-109">Un messaggio eliminato viene rimosso dalla coda e non è più recuperabile.</span><span class="sxs-lookup"><span data-stu-id="ebca6-109">A dropped message is removed from the queue and is no longer recoverable.</span></span>  
+ <span data-ttu-id="a9600-108">Un messaggio non elaborabile viene eliminato quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Drop`.</span><span class="sxs-lookup"><span data-stu-id="a9600-108">A poison message is dropped when the `ReceiveErrorHandling` property on the NetMsmqBinding or MsmqIntegrationBinding is set to `Drop`.</span></span> <span data-ttu-id="a9600-109">Un messaggio eliminato viene rimosso dalla coda e non è più recuperabile.</span><span class="sxs-lookup"><span data-stu-id="a9600-109">A dropped message is removed from the queue and is no longer recoverable.</span></span>  
   
- <span data-ttu-id="ebca6-110">Vedere [dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546) per ulteriori informazioni su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestirli nel modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="ebca6-110">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkID=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span>  
+ <span data-ttu-id="a9600-110">Vedere [dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546) per ulteriori informazioni su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestirli nel modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="a9600-110">See [Poison-Message Handling](http://go.microsoft.com/fwlink/?LinkID=99546) for more details on when messages become poison and how to configure your service to handle them appropriately.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ebca6-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ebca6-111">See Also</span></span>  
- [<span data-ttu-id="ebca6-112">Traccia</span><span class="sxs-lookup"><span data-stu-id="ebca6-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ebca6-113">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="ebca6-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ebca6-114">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ebca6-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [<span data-ttu-id="ebca6-115">Messaggi non elaborabili</span><span class="sxs-lookup"><span data-stu-id="ebca6-115">Poison-Message Handling</span></span>](http://go.microsoft.com/fwlink/?LinkID=99546)
+## <a name="see-also"></a><span data-ttu-id="a9600-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9600-111">See Also</span></span>  
+ [<span data-ttu-id="a9600-112">Traccia</span><span class="sxs-lookup"><span data-stu-id="a9600-112">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a9600-113">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="a9600-113">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a9600-114">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="a9600-114">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [<span data-ttu-id="a9600-115">Messaggi non elaborabili</span><span class="sxs-lookup"><span data-stu-id="a9600-115">Poison-Message Handling</span></span>](http://go.microsoft.com/fwlink/?LinkID=99546)

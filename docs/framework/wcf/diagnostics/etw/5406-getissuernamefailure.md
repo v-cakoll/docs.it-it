@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea38c75b-f594-49c1-8800-ccbf1b8306f1
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3dc0ecda0687128126b6a82c35623dfe2b9ef55d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61d278ef00c3dc367c981692fbd21fe09667ee9e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="5406---getissuernamefailure"></a><span data-ttu-id="f22b2-102">5406 - GetIssuerNameFailure</span><span class="sxs-lookup"><span data-stu-id="f22b2-102">5406 - GetIssuerNameFailure</span></span>
-## <a name="properties"></a><span data-ttu-id="f22b2-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="f22b2-103">Properties</span></span>  
+# <a name="5406---getissuernamefailure"></a><span data-ttu-id="37494-102">5406 - GetIssuerNameFailure</span><span class="sxs-lookup"><span data-stu-id="37494-102">5406 - GetIssuerNameFailure</span></span>
+## <a name="properties"></a><span data-ttu-id="37494-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="37494-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f22b2-104">ID</span><span class="sxs-lookup"><span data-stu-id="f22b2-104">ID</span></span>|<span data-ttu-id="f22b2-105">5406</span><span class="sxs-lookup"><span data-stu-id="f22b2-105">5406</span></span>|  
-|<span data-ttu-id="f22b2-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="f22b2-106">Keywords</span></span>|<span data-ttu-id="f22b2-107">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="f22b2-107">Security</span></span>|  
-|<span data-ttu-id="f22b2-108">Livello</span><span class="sxs-lookup"><span data-stu-id="f22b2-108">Level</span></span>|<span data-ttu-id="f22b2-109">Errore</span><span class="sxs-lookup"><span data-stu-id="f22b2-109">Error</span></span>|  
-|<span data-ttu-id="f22b2-110">Canale</span><span class="sxs-lookup"><span data-stu-id="f22b2-110">Channel</span></span>|<span data-ttu-id="f22b2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f22b2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="37494-104">ID</span><span class="sxs-lookup"><span data-stu-id="37494-104">ID</span></span>|<span data-ttu-id="37494-105">5406</span><span class="sxs-lookup"><span data-stu-id="37494-105">5406</span></span>|  
+|<span data-ttu-id="37494-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="37494-106">Keywords</span></span>|<span data-ttu-id="37494-107">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="37494-107">Security</span></span>|  
+|<span data-ttu-id="37494-108">Livello</span><span class="sxs-lookup"><span data-stu-id="37494-108">Level</span></span>|<span data-ttu-id="37494-109">Errore</span><span class="sxs-lookup"><span data-stu-id="37494-109">Error</span></span>|  
+|<span data-ttu-id="37494-110">Canale</span><span class="sxs-lookup"><span data-stu-id="37494-110">Channel</span></span>|<span data-ttu-id="37494-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="37494-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f22b2-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f22b2-112">Description</span></span>  
- <span data-ttu-id="f22b2-113">Questo evento viene generato in caso di esito negativo del recupero del nome dell'autorità emittente.</span><span class="sxs-lookup"><span data-stu-id="f22b2-113">This event is emitted when the retrieval of the issuer name failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="37494-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="37494-112">Description</span></span>  
+ <span data-ttu-id="37494-113">Questo evento viene generato in caso di esito negativo del recupero del nome dell'autorità emittente.</span><span class="sxs-lookup"><span data-stu-id="37494-113">This event is emitted when the retrieval of the issuer name failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f22b2-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="f22b2-114">Message</span></span>  
- <span data-ttu-id="f22b2-115">Recupero nome autorità emittente da tokenId %1 non riuscito.</span><span class="sxs-lookup"><span data-stu-id="f22b2-115">Retrieval of issuer name from tokenId:%1 failed.</span></span>  
+## <a name="message"></a><span data-ttu-id="37494-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="37494-114">Message</span></span>  
+ <span data-ttu-id="37494-115">Recupero nome autorità emittente da tokenId %1 non riuscito.</span><span class="sxs-lookup"><span data-stu-id="37494-115">Retrieval of issuer name from tokenId:%1 failed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f22b2-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="f22b2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="37494-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="37494-116">Details</span></span>
