@@ -12,14 +12,14 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22405b5cb7bcc4f59fb4acb4a9e3de06137d8b56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38471f3b41f636a8294c4e240d452361c969ac58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Novità &#39; s New in Windows Workflow Foundation
 [!INCLUDE[wf](../../../includes/wf-md.md)] in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] modifica diversi paradigmi di sviluppo delle versioni precedenti. I flussi di lavoro sono ora più facili da creare, eseguire e gestire e consentono di implementare un host della nuova funzionalità. [!INCLUDE[crabout](../../../includes/crabout-md.md)]migrazione .NET 3.0 e le applicazioni del flusso di lavoro di .NET 3.5 per usare la versione più recente, vedere [materiale sussidiario sulla migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

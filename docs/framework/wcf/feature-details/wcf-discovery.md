@@ -14,14 +14,14 @@ helpviewer_keywords:
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fda50f14d9003b81f93840571b8b27f874f7730b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c9b083180870e451816b54dddc10068ca7ec5db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery"></a>WCF Discovery
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce il supporto per l'individuabilità dei servizi in fase di esecuzione in una modalità interoperativa utilizzando il protocollo WS-Discovery. I servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] possono annunciare la disponibilità alla rete utilizzando un messaggio multicast o a un server proxy di individuazione. Le applicazioni client possono eseguire ricerche nella rete o in un server proxy di individuazione per trovare servizi che soddisfano un set di criteri. Negli argomenti di questa sezione viene fornita una panoramica e viene proposta una descrizione dettagliata del modello di programmazione per questa funzionalità.  

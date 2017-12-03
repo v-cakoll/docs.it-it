@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 68b0bea0253e32384291e5e73cc81367b0fb3305
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Gestione di più versioni in WorkflowServiceHost
 Il controllo delle versioni side-by-side di <xref:System.ServiceModel.Activities.WorkflowServiceHost> introdotto in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] fornisce la possibilità di ospitare più versioni di un servizio di flusso di lavoro in un unico endpoint. La funzionalità side-by-side consente di configurare un servizio di flusso di lavoro in modo che le sue nuove istanze vengano create con la nuova definizione del flusso di lavoro, mentre le istanze in esecuzione vengono completate con la definizione esistente. In questo argomento viene fornita una panoramica dell'esecuzione side-by-side del servizio di flusso di lavoro usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

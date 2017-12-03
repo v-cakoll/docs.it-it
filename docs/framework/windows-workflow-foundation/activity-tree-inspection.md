@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5a93b2d46dee3aab963e7ec97618661435e18def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91f706b527551bd66bfa18dc926f9453ea9b30fe
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="activity-tree-inspection"></a>Ispezione dell'albero delle attività
 L'ispezione dell'albero delle attività viene usata dagli autori dell'applicazione flusso di lavoro per controllare i flussi di lavoro ospitati dall'applicazione. Tramite l'oggetto <xref:System.Activities.WorkflowInspectionServices>, nei flussi di lavoro è possibile cercare attività figlio specifiche, enumerare attività singole e le relative proprietà, nonché memorizzare nella cache i metadati di runtime delle attività in un momento specifico. In questo argomento viene fornita una panoramica sull'oggetto <xref:System.Activities.WorkflowInspectionServices> e viene descritto come usarlo per controllare un albero delle attività.  

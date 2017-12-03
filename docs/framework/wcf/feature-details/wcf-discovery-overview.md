@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1afd3d94ceb3389a7d87528371925120f3c92764
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb9fc13d7facf3bdc3f9da43297a47fd1cf4af65
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery-overview"></a>Panoramica di WCF Discovery
 Le API di individuazione offrono un modello di programmazione unificato per la pubblicazione dinamica e l'individuazione di servizi Web utilizzando il protocollo WS-Discovery. Queste API consentono la pubblicazione dei servizi e l'individuazione di tali servizi da parte dei client. Una volta reso individuabile un servizio, quest'ultimo è in grado di inviare messaggi di annuncio nonché di essere in ascolto e di rispondere alle richieste di individuazione. I servizi individuabili possono inviare messaggi Hello per annunciare la propria presenza in rete e messaggi Bye per annunciare la propria uscita dalla rete. Per trovare un servizio, i client inviano una richiesta `Probe` contenente criteri specifici quali il tipo di contratto servizio, le parole chiave e l'ambito nella rete. I servizi ricevono la richiesta `Probe` e determinano se corrisponde ai criteri. Se un servizio corrisponde, risponde restituendo un messaggio `ProbeMatch` al client con le informazioni necessarie per contattare il servizio. I client possono inoltre inviare richieste `Resolve` che consentono loro di individuare i servizi che hanno modificato il relativo indirizzo endpoint. I servizi corrispondenti rispondono alle richieste `Resolve` restituendo al client un messaggio `ResolveMatch`.  

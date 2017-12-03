@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 82fb1848fc329db2921b626a894b9f91e766cd30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] include un'opzione della modalità compatibilità ASP.NET che consente alle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di essere programmate e configurate come servizi Web ASP.NET e riprodurne il comportamento. Nelle sezioni seguenti viene eseguito un confronto tra servizi Web ASP.NET e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basato sugli elementi necessari per lo sviluppo di applicazioni usando entrambe le tecnologie.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0c913896611ea4b336f7626b21f9fe959ef4fd09
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
 *Credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'attestazione di identità o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o una regione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  

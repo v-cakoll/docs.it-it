@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
 L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono supportati due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni, noto come il *modello di identità*. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato il modello di identità per creare attestazioni dai messaggi in ingresso; le classi di tale modello possono essere estese per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  

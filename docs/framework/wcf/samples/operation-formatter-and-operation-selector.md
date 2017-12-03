@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c0e2dbd255a1fbadbd5dd4cd7e676b75e659fe2a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
 In questo esempio viene illustrato come utilizzare i punti di estensibilità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per consentire l'uso di dati del messaggio in un formato diverso da quello previsto da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per impostazione predefinita, i formattatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevedono che i parametri del metodo siano inclusi nell'elemento `soap:body`. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ba33dff4be8ae3e75ee4d1873feeb4d5e5944b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Host ReadLine di WorkflowApplication
 Questo esempio è un host ReadLine generico. È possibile caricare ed eseguire qualsiasi flusso di lavoro usando l'attività `ReadLine` inclusa (o altre attività quali quelle che ottengono dati dai segnalibri ripresi con le stringhe). L'output dell'attività `WriteLine` o qualsiasi elemento che scrive nell'estensione della proprietà <xref:System.Activities.Statements.WriteLine.TextWriter%2A> è diretto alla finestra host. Quando un'istanza è inattiva, i segnalibri disponibili per tale istanza vengono visualizzati in una casella combinata. Selezionando un segnalibro, inserendo un testo e premendo il pulsante di ripresa del segnalibro viene continuata l'esecuzione del flusso di lavoro. Inoltre, è possibile annullare, interrompere o terminare un flusso di lavoro selezionato. La persistenza è attiva per impostazione predefinita; è possibile arrestare l'host e ripristinarlo in modo che l'elenco di istanze venga popolato con le istanze archiviate nel database. Il rilevamento viene usato per restituire gli eventi a livello dell'oggetto <xref:System.Activities.WorkflowApplication> all'host con la possibilità di aggiungere il rilevamento dettagliato a livello di attività.  

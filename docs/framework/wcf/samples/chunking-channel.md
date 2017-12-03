@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 414f350b7fe70cae196ad056f96a158da8128dd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="chunking-channel"></a>Chunking del canale
 Quando si inviano messaggi di grandi dimensioni usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], spesso è consigliabile limitare la quantità di memoria usata per memorizzare quei messaggi nel buffer. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  

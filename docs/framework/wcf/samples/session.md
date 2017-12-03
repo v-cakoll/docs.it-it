@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e36666b72d14bbe257cd6ced8a35c360659a91dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01c1bc2d202080349db32452adfe549d7a6dd3cc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="session"></a>Sessione
 Nell'esempio della sessione viene illustrato come implementare un contratto che richiede una sessione. Una sessione fornisce il contesto per l'esecuzione di più operazioni. Ciò consente a un servizio di associare lo stato a una sessione specifica, in modo che le operazioni successive possano utilizzare lo stato di un'operazione precedente. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa un servizio di calcolatrice. Il contratto `ICalculator` è stato modificato per consentire l'esecuzione di un insieme di operazioni aritmetiche, mantenendo il risultato parziale. Questa funzionalità è definita dal contratto `ICalculatorSession`. Il servizio gestisce lo stato di un client mentre vengono chiamate più operazioni del servizio per eseguire un calcolo. Il client può recuperare il risultato corrente chiamando `Result()` e azzerare il risultato chiamando `Clear()`.  

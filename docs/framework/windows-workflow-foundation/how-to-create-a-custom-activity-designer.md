@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cdf64dd7aca82fb0d0b3111832aca863a327270b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedura: Creare un ActivityDesigner personalizzato
 Gli ActivityDesigner personalizzati vengono in genere implementati in modo che le attività associate siano componibili con altre attività le cui finestre di progettazione possono essere rilasciate sull'area di progettazione insieme ad esse. Questa funzionalità richiede che un ActivityDesigner personalizzato fornisca un' "area di rilascio" in cui è possibile posizionare un'attività arbitraria, nonché i mezzi per gestire la raccolta di elementi nell'area di progettazione risultante. In questo argomento viene descritto come creare un ActivityDesigner personalizzato contenente tale area di rilascio e come creare un ActivityDesigner personalizzato che fornisca la funzionalità di modifica necessaria per gestire la raccolta di elementi della finestra di progettazione.  

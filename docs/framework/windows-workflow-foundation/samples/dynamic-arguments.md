@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fe6de5ec72edf752261beb5621f19772a1df150e
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 582f8815bd121199e564af7d1806f2e76f4595cd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="dynamic-arguments"></a>Argomenti dinamici
 In questo esempio viene illustrato come implementare un'attività per la quale gli argomenti sono definiti dal consumer dell'attività anziché dall'autore dell'attività. Questa operazione viene eseguita tramite l'override del modo in cui i metadati dell'attività vengono costruiti dal runtime.  

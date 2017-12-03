@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acd45c82983cb122844866b9db4a356b746a10eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4284f07a21a9bb176a78a8a2abefe7c7c7c6b66
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Estensione del controllo sulla gestione e sulla segnalazione degli errori
 In questo esempio viene illustrato come estendere il controllo sulla gestione e sulla segnalazione degli errori in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizzando l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>. L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) con altro codice aggiunto al servizio di gestione degli errori. Il client forza diverse condizioni di errore. Il servizio intercetta gli errori e li registra in un file.  

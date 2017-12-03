@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: eff6ffe73d5296fb103811a51d94636ea757854e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guida di interoperabilità dei protocolli di servizi Web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa una serie di protocolli di servizi Web. Molti di questi protocolli includono diverse opzioni e punti estendibilità lasciati alla discrezione dell'implementatore. In questo argomento viene fornito un elenco di protocolli di servizi Web implementati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Altri argomenti di questa sezione forniscono dettagli di implementazione per ogni protocollo supportato.  

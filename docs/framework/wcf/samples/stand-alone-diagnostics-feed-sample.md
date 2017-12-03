@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c95a2e1e1790633df77e7c4ecd6603e68321e478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89de6bcbb44ca70592697ccf891099446b230ce6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Esempio di feed di diagnostica autonomo
 Questo esempio dimostra come creare un feed in formato RSS o ATOM di diffusione con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Si tratta di un programma "Hello World" di base che illustra le funzionalità di base del modello a oggetti e descrive come configurarlo in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  

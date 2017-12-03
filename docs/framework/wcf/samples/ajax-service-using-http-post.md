@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 004bb41ad1662ddd6518c25acc1cac36dda3339c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 59195742fb799e9bc26034d5689f0be196e5362d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ajax-service-using-http-post"></a>Servizio AJAX con il protocollo HTTP POST
 In questo esempio viene illustrato come utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per creare un servizio Asynchronous JavaScript and XML (AJAX) [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che utilizza HTTP POST. È possibile accedere a questo servizio utilizzando il codice JavaScript di base da un client del browser Web. In questo esempio si basa il [servizio AJAX di base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) esempio; l'unica differenza tra i due esempi è l'utilizzo di HTTP POST invece di HTTP GET.  

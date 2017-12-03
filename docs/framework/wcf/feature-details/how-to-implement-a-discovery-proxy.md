@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d3c4dd0ec54334cb59b8cc896ddcd9fcc6af482e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Procedura: implementare un proxy di individuazione
 In questo argomento viene illustrato come implementare un proxy di individuazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la funzionalità di individuazione in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). È possibile implementare un proxy di individuazione creando una classe che estende la classe astratta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. In questo esempio vengono definite e utilizzate altre classi di supporto. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Queste classi implementano l'interfaccia <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> vedere [interfaccia IAsyncResult](xref:System.IAsyncResult).

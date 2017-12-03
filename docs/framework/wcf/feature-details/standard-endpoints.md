@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 755669b1305060efeb6af592867844b571b67020
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 869861ce1e2ba4456c8e8fbd06f9ff590fb3576a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="standard-endpoints"></a>Endpoint standard
 Gli endpoint vengono definiti specificando un indirizzo, un'associazione e un contratto. Altri parametri che è possibile impostare su un endpoint includono la configurazione di comportamento, le intestazioni e gli URI di ascolto.  Per determinati tipi di endpoint tali valori non cambiano. Gli endpoint di scambio dei metadati utilizzano ad esempio sempre il contratto <xref:System.ServiceModel.Description.IMetadataExchange>. Altri endpoint, quali <xref:System.ServiceModel.Description.WebHttpEndpoint>, richiedono sempre un comportamento di endpoint specificato. L'usabilità di un endpoint può essere migliorata grazie a endpoint con valori predefiniti per le proprietà di endpoint di uso comune. Gli endpoint standard consentono a uno sviluppatore di definire un endpoint che dispone di valori predefiniti o in cui una o più proprietà di endpoint non cambiano.  Questi endpoint consentono di utilizzare tale endpoint senza dovere specificare informazioni di natura statica. Gli endpoint standard possono essere utilizzati per endpoint infrastruttura ed endpoint applicazione.  

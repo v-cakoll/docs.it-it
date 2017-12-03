@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1cdc4327c38de16e8ff472001622f3b25e0fe6f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2428aead99f387d4fffe3d583b9843cb7492c1ac
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo
 Una definizione del flusso di lavoro è un albero degli oggetti attività configurati che può essere definita in diversi modi, ad esempio modificando manualmente il codice XAML o usando l'utilità di progettazione del flusso di lavoro per produrre codice XAML. L'utilizzo di XAML tuttavia non è un requisito. Le definizioni del flusso di lavoro possono essere create anche a livello di codice. In questo argomento viene fornita una panoramica sulla creazione di definizioni del flusso di lavoro, di attività e di espressioni tramite codice. Per esempi di utilizzo di flussi di lavoro XAML mediante il codice, vedere [la serializzazione di flussi di lavoro e attività da e verso XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

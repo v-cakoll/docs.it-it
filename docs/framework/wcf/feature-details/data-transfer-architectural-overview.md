@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a2adbc1e281e978c1f579d1e7b0cc0cf75cd36a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Panoramica dell'architettura di trasferimento dei dati
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere considerato un'infrastruttura di messaggistica. Può ricevere messaggi, elaborarli e inviarli a codice utente per ulteriori azioni, oppure può costruire messaggi dai dati forniti dal codice utente e recapitarli a una destinazione. In questo argomento, rivolto agli sviluppatori avanzati, viene illustrata l'architettura per la gestione dei messaggi e dei dati in essi contenuti. Per informazioni più semplici e orientate alle attività su come inviare e ricevere dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  

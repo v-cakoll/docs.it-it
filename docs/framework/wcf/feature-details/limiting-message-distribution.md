@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab46b1c908e8eb61ea49315e120973f1ea381bc6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="limiting-message-distribution"></a>Limitazione della distribuzione di messaggi
 In base alla progettazione, il canale peer è una rete di trasmissione. Il relativo modello di flooding di base prevede la distribuzione di ogni messaggio inviato da qualsiasi membro di una rete a tutti gli altri membri di quella stessa rete. Questa soluzione è ideale nelle situazioni in cui tutti i messaggi generati da un membro sono attinenti e utili a tutti gli altri membri, ad esempio in una chat. Tuttavia, molte applicazioni hanno occasionalmente la necessità di limitare la distribuzione dei messaggi. Ad esempio, se un nuovo membro si aggiunge a una rete e desidera recuperare l'ultimo messaggio inviato attraverso di essa, non è necessario che questa richiesta venga propagata a ogni membro della rete. È possibile limitare la richiesta ai router adiacenti oppure applicare un filtro ai messaggi generati in locale. I messaggi possono anche essere inviati a un singolo nodo della rete. In questo argomento viene illustrato come utilizzare il conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta per controllare il modo in cui i messaggi vengono inoltrati attraverso la rete. Vengono inoltre fornite linee guida generali per la scelta dell'approccio più appropriato.  

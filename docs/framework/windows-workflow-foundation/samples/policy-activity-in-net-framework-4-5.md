@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d12a3d5a74fa8b0d266fb2ba9494e1a5775f0411
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 68c81b81ac8070cff539b52c75e1cd7ffb3e54b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Attività Policy in .NET Framework 4.5
 L'attività Policy4 consente di usare gli oggetti [!INCLUDE[wf2](../../../../includes/wf2-md.md)] di [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] in <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) direttamente da [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) tramite il motore fornito in WF 3.5. Usando questa attività, è possibile creare ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> di WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] motore per le regole di WF 3.5, incluso in Windows Workflow Foundation, vedere Introduzione al motore per le regole di Windows Workflow Foundation. Per ulteriori informazioni sulla migrazione di regole di WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], leggere [materiale sussidiario sulla migrazione](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

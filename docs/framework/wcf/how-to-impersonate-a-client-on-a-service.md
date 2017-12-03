@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e6140e7d66ecdd905c0595cb813752d4e0a870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Procedura: rappresentare un client in un servizio
 La rappresentazione di un client in un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente a quest'ultimo di eseguire azioni per conto del client. Per le azioni soggette ai controlli dell'elenco di controllo di accesso (ACL), ad esempio l'accesso a directory e file in un computer o l'accesso a un database SQL Server, il controllo ACL si basa sull'account utente del client. In questo argomento vengono illustrati i passaggi di base necessari che consentono a un client in un dominio Windows di impostare un livello di rappresentazione di client. Per un esempio pratico, vedere [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]la rappresentazione del client, vedere [delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

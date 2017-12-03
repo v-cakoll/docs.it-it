@@ -1,40 +1,38 @@
 ---
 title: Guida a F#
-description: 'Informazioni su F # linguaggio di programmazione, un linguaggio open source per .NET, che fornisce il supporto di primaria importanza per la programmazione funzionale.'
+description: 'Informazioni su F #, un linguaggio di programmazione funzionale che viene eseguita su .NET.'
 keywords: .NET, .NET Core
 author: jackfoxy
 ms.author: phcart
-ms.date: 06/20/2016
+ms.date: 12/01/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 4ddd77cef6cf70a63f1af81359d82eda27a01593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="f-guide"></a>Guida a F#
 
-F# è un linguaggio di programmazione open source multipiattaforma per .NET che offre supporto importante per la programmazioni funzionale, insieme al supporto della programmazione imperativa e orientata agli oggetti.  Il compilatore e gli strumenti di Visual F# sono strumenti e implementazioni di Microsoft per il linguaggio di programmazione F#, rendendo F# un membro importante di .NET.
+F # è un linguaggio di programmazione funzionale che viene eseguito su .NET.  Oltre a supporto costrutti di programmazione funzionale, include anche funzionalità di programmazione degli oggetti.  Rende questa ibrida della programmazione funzionale con funzionalità orientate F # una lingua valido per il completamento di qualsiasi attività.
 
 ## <a name="if-youre-new-to-f"></a>Se si ha familiarità con F # #
 
-Se si ha familiarità con F #, iniziare con il [presentazione di F #](tour.md) per ottenere una panoramica del linguaggio.
-
-È inoltre consigliabile eseguire il [funzioni come valori di prima classe](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Progamming](introduction-to-functional-programming/index.md)--> apprendere i concetti relativi alla programmazione funzionale che sono essenziali per l'utilizzo con F #.
-
-Le [esercitazioni](tutorials/getting-started/index.md) hanno anche procedure dettagliate per vari livelli di competenza e funzionalità del linguaggio.
+Se si ha familiarità con F #, iniziare con il [presentazione di F #](tour.md) per ottenere una panoramica del linguaggio e alcuni dei relativi concetti relativi alla programmazione.  Se si utilizza Visual Studio, il modello di progetto dell'esercitazione contiene lo stesso contenuto.
 
 ## <a name="if-youre-experienced-with-f"></a>Se si è esperti con F # #
 
-Se si ha familiarità con F#, è possibile trovare molte informazioni d'uso in [Language Reference](language-reference/index.md) (Riferimento per il linguaggio), che documenta in maniera completa ogni aspetto del linguaggio e include numerosi esempi di codice.  Sono anche disponibili molte informazioni d'uso in [F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) (Riferimento alle librerie di base di F#).  Il riferimento alla libreria componenti di base F # alla fine verrà spostata da MSDN e in questi documenti corrente.
+Se si ha una buona conoscenza F # o per altre informazioni su un costrutto di linguaggio specifico, vedere il [riferimenti al linguaggio](language-reference/index.md).  Si tratta di una guida completa di tutte le funzionalità del linguaggio F #.
+
+Inoltre, il [riferimenti alla libreria di base F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) è un'ottima risorsa per l'apprendimento di FSharp. core, la libreria di base che fa parte di F #.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
-Sebbene Microsoft sia lo sviluppatore principale del linguaggio F# e degli strumenti di Visual F# , F# è anche supportato da una fondazione indipendente denominata F# Software Foundation (FSSF).
+Anche se lo sviluppatore primario del linguaggio F # e relativi strumenti di Microsoft, F # è anche supportato da una base indipendente, di F # Software Foundation (FSSF).
 
 La missione della F# Software Foundation è promuovere, proteggere e migliorare il linguaggio di programmazione F# e supportare e agevolare la crescita di una comunità varia e internazionale di programmatori F#.
 

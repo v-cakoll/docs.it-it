@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66966668bb91a857503a82449633f8dd1ae621b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9f153d212e1180e5de92a6299d2fbb2d6864c42
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML
 In questo esempio viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] scrive informazioni nel documento XAML, che è noto come stato di visualizzazione. Lo stato di visualizzazione si riferisce alle informazioni richieste in fase di progettazione, ad esempio il posizionamento del layout, che non sono richieste in fase di esecuzione. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] inserisce queste informazioni nel documento XAML man mano che viene modificato. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] scrive lo stato di visualizzazione nel file XAML con un attributo `mc:Ignorable`, in modo che queste informazioni non vengano caricate quando il runtime carica il file XAML. In questo esempio viene illustrato come creare una classe che rimuove tali informazioni sullo stato di visualizzazione durante l'elaborazione di nodi XAML.  

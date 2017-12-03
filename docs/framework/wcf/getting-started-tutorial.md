@@ -14,14 +14,14 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 caps.latest.revision: "47"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
 Gli argomenti contenuti in questa sezione intendono fornire una rapida descrizione dell'esperienza di programmazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Nel corso di questa esercitazione vengono fornite informazioni introduttive sui passaggi necessari per creare applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità viene fornita dal servizio ai propri client.  

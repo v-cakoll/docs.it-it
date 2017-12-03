@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b9d55087eb46cc304fa2a42a3e64208d9a4fec5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d17c9c97e98a62cf0cbda38bae4adad32c4b5eae
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="two-way-communication"></a>Comunicazione bidirezionale
 Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM. In questo esempio viene usata l'associazione `netMsmqBinding`. In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  

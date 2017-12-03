@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b40b93b33e57bf15b7ab614405ccffa44abb8df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-service-contracts"></a>Implementazione dei contratti di servizio
 Un servizio è una classe che espone le funzionalità disponibili per i client a uno o più endpoint. Per creare un servizio, scrivere una classe che implementi un contratto [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Questa operazione può essere eseguita in due modi. È possibile definire il contratto separatamente come un'interfaccia e quindi creare una classe che implementi tale interfaccia. In alternativa, è possibile creare direttamente la classe e il contratto posizionando l'attributo <xref:System.ServiceModel.ServiceContractAttribute> sulla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> sui metodi disponibili per i client del servizio.  

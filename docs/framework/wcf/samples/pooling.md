@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e7e893a48e590f2b8a2ada88662cf454dc7881e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb45a08e9f21578b69dedbe504cfb8bbd21193bb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="pooling"></a>Pooling
 In questo esempio viene illustrato come estendere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per supportare i pool di oggetti. L'esempio illustra come creare un attributo sintatticamente e semanticamente simile alla funzionalità dell'attributo `ObjectPoolingAttribute` di Enterprise Services. Il pool degli oggetti può fornire una spinta notevole alle prestazioni di un'applicazione. Tuttavia, può avere l'effetto contrario se non utilizzato correttamente. Il pool degli oggetti consente di ridurre il sovraccarico dovuto alla creazione continua di oggetti frequentemente utilizzati che richiedono un'inizializzazione estesa. Tuttavia, se una chiamata a un metodo su un oggetto del pool richiede una quantità considerevole di tempo, il pool degli oggetti mette in coda richieste aggiuntive appena viene raggiunta la dimensione del pool massima. Pertanto può non riuscire a soddisfare richieste di creazione di oggetti generando un'eccezione di timeout.  

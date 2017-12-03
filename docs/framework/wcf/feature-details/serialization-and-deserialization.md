@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6334a5b866d239dc5f961ce4f1c89eac5b6ed3b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
 In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuovo motore di serializzazione, ovvero <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> esegue la conversione tra oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
@@ -32,7 +32,7 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include anche un serializzatore complementare, <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> è simile ai serializzatori <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> perché emette anche nomi di tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come parte dei dati serializzati. Viene utilizzato quando gli stessi tipi sono condivisi alle estremità di serializzazione e deserializzazione. Sia <xref:System.Runtime.Serialization.DataContractSerializer> che <xref:System.Runtime.Serialization.NetDataContractSerializer> derivano da una classe di base comune, <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> serializza stringhe che contengono caratteri di controllo con un valore esadecimale inferiore a 20 come entità XML. Questa situazione potrebbe provocare un problema con un client non WCF durante l'invio di dati di questo tipo a un servizio WCF.  
+>  <xref:System.Runtime.Serialization.DataContractSerializer> serializza stringhe che contengono caratteri di controllo con un valore esadecimale inferiore a 20 come entità XML. Questo può causare un problema con un client non WCF durante l'invio di tali dati a un servizio WCF.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Creazione di un'istanza DataContractSerializer  
  La creazione di un'istanza di <xref:System.Runtime.Serialization.DataContractSerializer> è un passaggio importante. Dopo la costruzione, non è possibile modificare nessuna di queste impostazioni.  

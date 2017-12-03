@@ -24,14 +24,14 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c8ec820d631532b782b738f0fefcffce3e4b93d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0f174ef3ada619e20d375035bee82b0ed9bbc145
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serializzazione XML con Servizi Web XML
 La serializzazione XML è il meccanismo di trasporto sottostante utilizzato nell'architettura dei servizi Web XML, eseguita dalla classe <xref:System.Xml.Serialization.XmlSerializer>. Per controllare il codice XML generato da un servizio Web XML, è possibile applicare gli attributi elencati in [Attributi per il controllo della serializzazione XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) e in [Attributi per il controllo della serializzazione SOAP codificata](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) alle classi, ai valori restituiti, ai parametri e ai campi di un file usato per creare un servizio Web XML (file con estensione asmx). Per altre informazioni sulla creazione di un servizio Web XML, vedere [Building XML Web Services Using ASP.NET](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c) (Creazione di servizi Web XML tramite ASP.NET).  

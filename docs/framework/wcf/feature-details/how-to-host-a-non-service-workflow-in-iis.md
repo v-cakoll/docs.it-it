@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Procedura: ospitare un flusso di lavoro non di servizio in IIS
 I flussi di lavoro che non sono servizi flusso di lavoro possono essere ospitati in IIS/WAS. Tale possibilità si rivela utile quando è necessario ospitare un flusso di lavoro scritto da un altro utente, ad esempio se si ospita di nuovo Progettazione flussi di lavoro e si consente agli utenti di creare flussi di lavoro.  L'host di flussi di lavoro non di servizio in IIS fornisce supporto per caratteristiche quali il riciclo dei processi, la chiusura per inattività, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi. I servizi flusso di lavoro ospitati in IIS includono le attività <xref:System.ServiceModel.Activities.Receive> e vengono attivati quando un messaggio viene ricevuto da IIS. Nei flussi di lavoro non di servizio non sono contenute attività di messaggistica e, per impostazione predefinita, non possono essere attivati inviando un messaggio.  È necessario derivare una classe dall'oggetto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definire un contratto di servizio contenente le operazioni per creare un'istanza del flusso di lavoro. Questo argomento viene descritta la creazione di un flusso di lavoro semplice, definendo un contratto di servizio, un client può utilizzare per attivare il flusso di lavoro e derivando una classe dal <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> che utilizza il contratto di servizio in ascolto di richieste di creazione del flusso di lavoro.  

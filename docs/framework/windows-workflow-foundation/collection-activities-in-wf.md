@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9d044ab9b95eb4144770a90367028b5b513a69c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
 Le attività di raccolta vengono usate per operare con gli oggetti Collection in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  

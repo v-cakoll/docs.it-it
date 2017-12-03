@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c78e5ff1310951defdfaa38a9b63aacb9c27872b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c794c6e20b479ea4686caba29704f8851d108432
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="instance-stores"></a>Archivio di istanze
 Un archivio di istanze è un contenitore logico di istanze, ovvero lo spazio in cui vengono archiviati i dati e i metadati dell'istanza. Un archivio di istanze non implica l'archiviazione fisica dedicata e può contenere informazioni durevoli in un database di SQL Server o informazioni sullo stato non durevoli in una memoria. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è disponibile l'archivio di istanze del flusso di lavoro SQL, vale a dire un'implementazione concreta di un archivio di istanze che consente ai flussi di lavoro di rendere persistenti i dati e i metadati dell'istanza in un database di SQL Server 2005 o di SQL Server 2008. Windows Server AppFabric fornisce inoltre un'implementazione concreta di un archivio di istanze. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Archivio di istanze di Windows Server App Fabric, Query e provider del controllo](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

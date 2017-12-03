@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97bf047f26b95cdd4ac4a40e6b2284ec170442bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>Esempio relativo all'individuazione di ambiti
 In questo esempio viene illustrato come utilizzare gli ambiti per suddividere in categorie gli endpoint individuabili e come utilizzare <xref:System.ServiceModel.Discovery.DiscoveryClient> per eseguire una ricerca asincrona per gli endpoint. Nel servizio questo esempio mostra come personalizzare l'individuazione per ogni endpoint aggiungendo un comportamento di individuazione dell'endpoint e utilizzandolo per aggiungere un ambito all'endpoint. Viene inoltre illustrato come controllare l'individuabilità dell'endpoint. Nel client l'esempio illustra come i client possono creare un <xref:System.ServiceModel.Discovery.DiscoveryClient> e ottimizzare i parametri di ricerca per includere gli ambiti aggiungendo ambiti a <xref:System.ServiceModel.Discovery.FindCriteria>. Questo esempio mostra anche come i client possono limitare le risposte aggiungendo un criterio di chiusura.  

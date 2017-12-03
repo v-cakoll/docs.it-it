@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6d8745b8a27ac0e7c301eceda9664f9fc30ce0ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-resolvers"></a>Resolver del peer
 Per connettersi a una mesh, un nodo peer necessita dell'indirizzo IP di altri nodi. Gli indirizzi IP si ottengono contattando un servizio resolver, che accetta l'ID della rete e restituisce un elenco di indirizzi corrispondenti ai nodi registrati con quel particolare ID di rete. Il resolver mantiene un elenco di indirizzi registrati, creato facendo in modo che ogni nodo nella mesh venga registrato con il servizio.  

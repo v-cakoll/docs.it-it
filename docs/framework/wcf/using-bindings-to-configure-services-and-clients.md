@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 49c5a778bf44fa4e997b3c93ced4b51452a46862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  

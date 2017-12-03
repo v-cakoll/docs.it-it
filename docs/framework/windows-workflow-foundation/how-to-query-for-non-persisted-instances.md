@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1957db5af18a571e209c62332e95d844fa866f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Procedura: Eseguire query per istanze non persistenti
 Quando viene creata una nuova istanza di un servizio e per tale servizio è definito il comportamento dell'archivio di istanze del flusso di lavoro SQL, l'host del servizio crea una voce iniziale per tale istanza del servizio nell'archivio di istanze. Successivamente, quando l'istanza del servizio viene salvata in modo permanente per la prima volta, il comportamento dell'archivio di istanze del flusso di lavoro SQL archivia lo stato dell'istanza corrente insieme ai dati aggiuntivi richiesti per le operazioni di attivazione, recupero e controllo.  

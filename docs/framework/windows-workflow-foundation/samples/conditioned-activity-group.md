@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab8f47601f84267d1ac357b313fa5d2215a586d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0df4ddc6f2cc5404c8153b30df66cda41487691
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditioned-activity-group"></a>ConditionedActivityGroup
 Nell'esempio viene illustrata un'applicazione di prenotazione di viaggio. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) ha due attività di codice: un'attività Car e una attività Airline. Nel costruttore `SimpleCAGWorkflow`, un oggetto ArrayList "travelNeedType" viene popolato con i tipi di prenotazioni di viaggio richiesti. Tramite l'aggiunta di commenti a una o entrambe le istruzioni `travelNeeds.Add`, il comportamento di CAG viene modificato di conseguenza. Entrambi le attività Car e Airline dispongono della condizione <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> popolata con una <xref:System.Workflow.Activities.CodeCondition>. L'attività Car viene eseguita solo se la raccolta `travelNeeds` dispone di una voce `TravelNeeds.Car` e l'attività Airline viene eseguita solo se la raccolta `travelNeeds` dispone di una voce `TravelNeeds.Airline`.  

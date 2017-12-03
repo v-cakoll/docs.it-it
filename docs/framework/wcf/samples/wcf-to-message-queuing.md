@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6800db4e5f8dc1a0d571be3eed556503b907e16e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d3a9dd8c17b39ae52fffb5995f4763b250a3551
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Da Windows Communication Foundation a Accodamento messaggi
 Questo esempio illustra come un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può inviare un messaggio a un'applicazione di accodamento messaggi (MSMQ). Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda. Non è necessario che il servizio e il client siano in esecuzione contemporaneamente.  

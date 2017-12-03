@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b3e09af7491b57d0b318b88623343aaa6bfcf8b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Serializzazione JSON autonoma
 JSON (JavaScript Object Notation) è un formato dati progettato specificatamente per essere utilizzato dal codice JavaScript in esecuzione su pagine Web all'interno del browser. JSON è il formato dati predefinito utilizzato dai servizi ASP.NET AJAX creati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -34,11 +34,11 @@ JSON (JavaScript Object Notation) è un formato dati progettato specificatamente
 |Tipi .NET|JSON/JavaScript|Note|  
 |----------------|----------------------|-----------|  
 |Tutti i tipi numerici, ad esempio <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double>|Number|I valori speciali quali `Double.NaN`, `Double.PositiveInfinity` e `Double.NegativeInfinity` non sono supportati e determinano un tipo JSON non valido.|  
-|<xref:System.Enum>|Numero|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|  
+|<xref:System.Enum>|Number|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|  
 |<xref:System.Boolean>|Booleano|--|  
-|<xref:System.String>, <xref:System.Char>|String|--|  
+|<xref:System.String>, <xref:System.Char>|Stringa|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Il formato di questi tipi in JSON è lo stesso che in XML (fondamentalmente TimeSpan nel formato durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella sua forma di stringa naturale, ad esempio "http://www.example.com") Per informazioni dettagliate, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
-|<xref:System.Xml.XmlQualifiedName>|String|Il formato è "nome:spazio dei nomi" (tutto ciò che si trova prima del primo segno di due punti è il nome). Il nome o lo spazio dei nomi potrebbero non essere presenti. Se non esiste alcuno spazio dei nomi, è possibile omettere anche i due punti.|  
+|<xref:System.Xml.XmlQualifiedName>|Stringa|Il formato è "nome:spazio dei nomi" (tutto ciò che si trova prima del primo segno di due punti è il nome). Il nome o lo spazio dei nomi potrebbero non essere presenti. Se non esiste alcuno spazio dei nomi, è possibile omettere anche i due punti.|  
 |<xref:System.Array>di tipo<xref:System.Byte>|Matrice di numeri|Ogni numero rappresenta il valore di un byte.|  
 |<xref:System.DateTime>|DateTime o String|Vedere Date/Ore e JSON più avanti in questo argomento.|  
 |<xref:System.DateTimeOffset>|Tipo complesso|Vedere Date/Ore e JSON più avanti in questo argomento.|  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e4ab4d0a97cbbaa2e5aaee25e0154e1cc94a82f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 59a9f0638855206f390ee7fbace580ba37e25e23
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditional-get-and-put"></a>Verifica Get e Put condizionale
 In questo esempio viene descritto come utilizzare le nuove API di aggiornamento e recupero condizionali per il modello di programmazione WCF REST. Poiché sono più appropriati per recuperare condizionale e aggiornare orientato alle risorse e i servizi REST, in questo esempio estende la [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio. Questo esempio si concentra sull'aggiunta di supporto per recupero condizionali e l'aggiornamento per il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) di esempio utilizzando le nuove API introdotta in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
