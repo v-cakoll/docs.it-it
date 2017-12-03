@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 147af2a40994b7889551d1a3f521e8c097610050
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06444f30ab06f04644a7a6c5ad596388ecceeaf1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltmetadatagt"></a><span data-ttu-id="58d55-102">&lt;metadati&gt;</span><span class="sxs-lookup"><span data-stu-id="58d55-102">&lt;metadata&gt;</span></span>
-<span data-ttu-id="58d55-103">Specifica la modalità di elaborazione dei metadati di servizio.</span><span class="sxs-lookup"><span data-stu-id="58d55-103">Specifies how service metadata can be processed.</span></span>  
+# <a name="ltmetadatagt"></a><span data-ttu-id="8e090-102">&lt;metadati&gt;</span><span class="sxs-lookup"><span data-stu-id="8e090-102">&lt;metadata&gt;</span></span>
+<span data-ttu-id="8e090-103">Specifica la modalità di elaborazione dei metadati di servizio.</span><span class="sxs-lookup"><span data-stu-id="8e090-103">Specifies how service metadata can be processed.</span></span>  
   
- <span data-ttu-id="58d55-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="58d55-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="58d55-105">\<client ></span><span class="sxs-lookup"><span data-stu-id="58d55-105">\<client></span></span>  
+ <span data-ttu-id="8e090-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8e090-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8e090-105">\<client ></span><span class="sxs-lookup"><span data-stu-id="8e090-105">\<client></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58d55-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="58d55-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e090-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8e090-106">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -42,30 +42,30 @@ ms.lasthandoff: 11/21/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="58d55-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="58d55-107">Attributes and Elements</span></span>  
- <span data-ttu-id="58d55-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="58d55-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8e090-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="8e090-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="8e090-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="8e090-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="58d55-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="58d55-109">Attributes</span></span>  
- <span data-ttu-id="58d55-110">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="58d55-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8e090-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="8e090-109">Attributes</span></span>  
+ <span data-ttu-id="8e090-110">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="8e090-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="58d55-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="58d55-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8e090-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="8e090-111">Child Elements</span></span>  
   
-|<span data-ttu-id="58d55-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="58d55-112">Element</span></span>|<span data-ttu-id="58d55-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58d55-113">Description</span></span>|  
+|<span data-ttu-id="8e090-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="8e090-112">Element</span></span>|<span data-ttu-id="8e090-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8e090-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="58d55-114">\<policyImporters ></span><span class="sxs-lookup"><span data-stu-id="58d55-114">\<policyImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|<span data-ttu-id="58d55-115">Specifica tutte le unità di importazione dei criteri che controllano l'importazione di asserzioni di criteri personalizzati sulle associazioni.</span><span class="sxs-lookup"><span data-stu-id="58d55-115">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="58d55-116">Un'unità di importazione dei criteri viene usata per la ricerca di asserzioni di criteri personalizzati sulle funzionalità delle associazioni e per allegare un elemento di associazione personalizzato che implementa le funzionalità richieste dall'asserzione.</span><span class="sxs-lookup"><span data-stu-id="58d55-116">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>|  
-|[<span data-ttu-id="58d55-117">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="58d55-117">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="58d55-118">Specifica tutte le unità di importazione WSDL che importano metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="58d55-118">Specifies all the WSDL importers that import Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="58d55-119">Un'unità di importazione WSDL viene usata per importare metadati e per convertire tali informazioni in diverse classi che rappresentano informazioni di contratto e di endpoint.</span><span class="sxs-lookup"><span data-stu-id="58d55-119">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="58d55-120">Può importare selettivamente informazioni di contratto e di endpoint e proprietà che espongono qualsiasi errore di importazione e accettano informazioni sul tipo relative al processo di importazione e di conversione.</span><span class="sxs-lookup"><span data-stu-id="58d55-120">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="58d55-121">Supporta inoltre l'importazione di informazioni dell'associazione e proprietà che forniscono accesso a qualsiasi documento di criteri, documento WSDL, estensione WSDL e documento di XML Schema.</span><span class="sxs-lookup"><span data-stu-id="58d55-121">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>|  
+|[<span data-ttu-id="8e090-114">\<policyImporters ></span><span class="sxs-lookup"><span data-stu-id="8e090-114">\<policyImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|<span data-ttu-id="8e090-115">Specifica tutte le unità di importazione dei criteri che controllano l'importazione di asserzioni di criteri personalizzati sulle associazioni.</span><span class="sxs-lookup"><span data-stu-id="8e090-115">Specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="8e090-116">Un'unità di importazione dei criteri viene usata per la ricerca di asserzioni di criteri personalizzati sulle funzionalità delle associazioni e per allegare un elemento di associazione personalizzato che implementa le funzionalità richieste dall'asserzione.</span><span class="sxs-lookup"><span data-stu-id="8e090-116">A policy importer is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>|  
+|[<span data-ttu-id="8e090-117">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="8e090-117">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="8e090-118">Specifica tutte le unità di importazione WSDL che importano metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="8e090-118">Specifies all the WSDL importers that import Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span> <span data-ttu-id="8e090-119">Un'unità di importazione WSDL viene usata per importare metadati e per convertire tali informazioni in diverse classi che rappresentano informazioni di contratto e di endpoint.</span><span class="sxs-lookup"><span data-stu-id="8e090-119">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="8e090-120">Può importare selettivamente informazioni di contratto e di endpoint e proprietà che espongono qualsiasi errore di importazione e accettano informazioni sul tipo relative al processo di importazione e di conversione.</span><span class="sxs-lookup"><span data-stu-id="8e090-120">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="8e090-121">Supporta inoltre l'importazione di informazioni dell'associazione e proprietà che forniscono accesso a qualsiasi documento di criteri, documento WSDL, estensione WSDL e documento di XML Schema.</span><span class="sxs-lookup"><span data-stu-id="8e090-121">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="58d55-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="58d55-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8e090-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="8e090-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="58d55-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="58d55-123">Element</span></span>|<span data-ttu-id="58d55-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58d55-124">Description</span></span>|  
+|<span data-ttu-id="8e090-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="8e090-123">Element</span></span>|<span data-ttu-id="8e090-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8e090-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="58d55-125">\<client ></span><span class="sxs-lookup"><span data-stu-id="58d55-125">\<client></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|<span data-ttu-id="58d55-126">La sezione client definisce un elenco di endpoint ai quali un client può connettersi.</span><span class="sxs-lookup"><span data-stu-id="58d55-126">The client section defines a list of endpoints that a client can connect to.</span></span>|  
+|[<span data-ttu-id="8e090-125">\<client ></span><span class="sxs-lookup"><span data-stu-id="8e090-125">\<client></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|<span data-ttu-id="8e090-126">La sezione client definisce un elenco di endpoint ai quali un client può connettersi.</span><span class="sxs-lookup"><span data-stu-id="8e090-126">The client section defines a list of endpoints that a client can connect to.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="58d55-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="58d55-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8e090-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8e090-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [<span data-ttu-id="58d55-128">Configurazione di Client WCF</span><span class="sxs-lookup"><span data-stu-id="58d55-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [<span data-ttu-id="58d55-129">Client</span><span class="sxs-lookup"><span data-stu-id="58d55-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+ [<span data-ttu-id="8e090-128">Configurazione di Client WCF</span><span class="sxs-lookup"><span data-stu-id="8e090-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [<span data-ttu-id="8e090-129">Client</span><span class="sxs-lookup"><span data-stu-id="8e090-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)

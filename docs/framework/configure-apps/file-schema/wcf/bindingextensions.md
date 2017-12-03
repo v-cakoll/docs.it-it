@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c02af972ad52119af07da404a61fd3afc0facbeb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02f29ec698584ebe8b2ca1b5d438ac06ba6503b5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltbindingextensionsgt"></a><span data-ttu-id="39ea5-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="39ea5-102">&lt;bindingExtensions&gt;</span></span>
-<span data-ttu-id="39ea5-103">Questa sezione consente l'uso di un'associazione definita dall'utente dal file di configurazione di un computer o di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="39ea5-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="39ea5-104">È possibile aggiungere un binding definito dall'utente a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento su un'associazione definita dall'utente e anche l'attributo `name` sul nome dell'associazione definita dall'utente.</span><span class="sxs-lookup"><span data-stu-id="39ea5-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
+# <a name="ltbindingextensionsgt"></a><span data-ttu-id="11290-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="11290-102">&lt;bindingExtensions&gt;</span></span>
+<span data-ttu-id="11290-103">Questa sezione consente l'uso di un'associazione definita dall'utente dal file di configurazione di un computer o di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="11290-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="11290-104">È possibile aggiungere un binding definito dall'utente a questa raccolta usando la parola chiave `add` e impostando l'attributo `type` dell'elemento su un'associazione definita dall'utente e anche l'attributo `name` sul nome dell'associazione definita dall'utente.</span><span class="sxs-lookup"><span data-stu-id="11290-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
   
- <span data-ttu-id="39ea5-105">Le estensioni dell'associazione consentono di creare associazioni definite dall'utente da usare come parte di una configurazione di endpoint.</span><span class="sxs-lookup"><span data-stu-id="39ea5-105">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="39ea5-106">A livello di programmazione, un'estensione di associazione è un tipo che implementa la classe astratta <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="39ea5-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
+ <span data-ttu-id="11290-105">Le estensioni dell'associazione consentono di creare associazioni definite dall'utente da usare come parte di una configurazione di endpoint.</span><span class="sxs-lookup"><span data-stu-id="11290-105">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="11290-106">A livello di programmazione, un'estensione di associazione è un tipo che implementa la classe astratta <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="11290-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
   
- <span data-ttu-id="39ea5-107">Nell'esempio seguente viene usato l'elemento `add` e l'attributo `name` per aggiungere un'estensione di associazione alla sezione `bindingElementExtensions` del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="39ea5-107">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
+ <span data-ttu-id="11290-107">Nell'esempio seguente viene usato l'elemento `add` e l'attributo `name` per aggiungere un'estensione di associazione alla sezione `bindingElementExtensions` del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="11290-107">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -37,9 +37,9 @@ ms.lasthandoff: 10/18/2017
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="39ea5-108">Per aggiungere capacità di configurazione all'elemento, è necessario scrivere e registrare un elemento `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="39ea5-108">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="39ea5-109">Per altre informazioni a tal proposito, vedere la documentazione di <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="39ea5-109">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+ <span data-ttu-id="11290-108">Per aggiungere capacità di configurazione all'elemento, è necessario scrivere e registrare un elemento `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="11290-108">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="11290-109">Per altre informazioni a tal proposito, vedere la documentazione di <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="11290-109">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
   
- <span data-ttu-id="39ea5-110">Dopo la definizione dell'elemento e del relativo tipo di configurazione, è possibile usare l'estensione in un endpoint come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="39ea5-110">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+ <span data-ttu-id="11290-110">Dopo la definizione dell'elemento e del relativo tipo di configurazione, è possibile usare l'estensione in un endpoint come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="11290-110">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
   
 ```xml  
 <services>  
@@ -49,5 +49,5 @@ ms.lasthandoff: 10/18/2017
 </services>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="39ea5-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="39ea5-111">See Also</span></span>  
- [<span data-ttu-id="39ea5-112">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="39ea5-112">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="11290-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="11290-111">See Also</span></span>  
+ [<span data-ttu-id="11290-112">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="11290-112">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)

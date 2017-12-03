@@ -13,89 +13,89 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d183516b7e431131f61c3fe1f27bd8deea8fa6d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a72445a73be44e8c7b039463ccd8b939ae6a148
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="application-scenarios-wcf-data-services"></a><span data-ttu-id="ff3ae-102">Scenari di applicazione (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="ff3ae-102">Application Scenarios (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="ff3ae-103">supporta un set principale di scenari per l'esposizione e utilizzo dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-103"> supports a core set of scenarios for exposing and consuming data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="ff3ae-104">In questo argomento vengono elencati gli argomenti relativi a questi scenari.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-104">This topic points you to the topics relevant to these scenarios.</span></span>  
+# <a name="application-scenarios-wcf-data-services"></a><span data-ttu-id="60aaf-102">Scenari di applicazione (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="60aaf-102">Application Scenarios (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="60aaf-103">supporta un set principale di scenari per l'esposizione e utilizzo dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="60aaf-103"> supports a core set of scenarios for exposing and consuming data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="60aaf-104">In questo argomento vengono elencati gli argomenti relativi a questi scenari.</span><span class="sxs-lookup"><span data-stu-id="60aaf-104">This topic points you to the topics relevant to these scenarios.</span></span>  
   
- <span data-ttu-id="ff3ae-105">Esporre dati relazionali da un database come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-105">Expose relational data from a database as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
- -   [<span data-ttu-id="ff3ae-106">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="ff3ae-106">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-105">Esporre dati relazionali da un database come un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="60aaf-105">Expose relational data from a database as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
+ -   [<span data-ttu-id="60aaf-106">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="60aaf-106">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-107">Esposizione dei dati come un servizio</span><span class="sxs-lookup"><span data-stu-id="ff3ae-107">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-107">Esposizione dei dati come un servizio</span><span class="sxs-lookup"><span data-stu-id="60aaf-107">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-108">Procedura: creare un servizio dati tramite un'origine dati di ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="ff3ae-108">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [<span data-ttu-id="60aaf-108">Procedura: creare un servizio dati tramite un'origine dati di ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="60aaf-108">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
- <span data-ttu-id="ff3ae-109">Esporre classi di dati CLR arbitrarie come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ff3ae-109">Expose arbitrary CLR data classes as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
- -   [<span data-ttu-id="ff3ae-110">Esposizione dei dati come un servizio</span><span class="sxs-lookup"><span data-stu-id="ff3ae-110">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-109">Esporre classi di dati CLR arbitrarie come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="60aaf-109">Expose arbitrary CLR data classes as an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>  
+ -   [<span data-ttu-id="60aaf-110">Esposizione dei dati come un servizio</span><span class="sxs-lookup"><span data-stu-id="60aaf-110">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-111">Procedura: creare un servizio dati tramite il Provider di Reflection</span><span class="sxs-lookup"><span data-stu-id="ff3ae-111">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-111">Procedura: creare un servizio dati tramite il Provider di Reflection</span><span class="sxs-lookup"><span data-stu-id="60aaf-111">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-112">Provider di servizi dati</span><span class="sxs-lookup"><span data-stu-id="ff3ae-112">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-112">Provider di servizi dati</span><span class="sxs-lookup"><span data-stu-id="60aaf-112">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
- <span data-ttu-id="ff3ae-113">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-113">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a .NET Framework-based client application.</span></span>  
- -   [<span data-ttu-id="ff3ae-114">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="ff3ae-114">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-113">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="60aaf-113">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a .NET Framework-based client application.</span></span>  
+ -   [<span data-ttu-id="60aaf-114">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="60aaf-114">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-115">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="ff3ae-115">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-115">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="60aaf-115">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-116">Libreria client WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="ff3ae-116">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+-   [<span data-ttu-id="60aaf-116">Libreria client WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="60aaf-116">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
- <span data-ttu-id="ff3ae-117">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su Silverlight.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-117">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a Silverlight-based client application.</span></span>  
- -   [<span data-ttu-id="ff3ae-118">WCF Data Services (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="ff3ae-118">WCF Data Services (Silverlight)</span></span>](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ <span data-ttu-id="60aaf-117">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su Silverlight.</span><span class="sxs-lookup"><span data-stu-id="60aaf-117">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a Silverlight-based client application.</span></span>  
+ -   [<span data-ttu-id="60aaf-118">WCF Data Services (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="60aaf-118">WCF Data Services (Silverlight)</span></span>](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
--   [<span data-ttu-id="ff3ae-119">Operazioni asincrone</span><span class="sxs-lookup"><span data-stu-id="ff3ae-119">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-119">Operazioni asincrone</span><span class="sxs-lookup"><span data-stu-id="60aaf-119">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-120">Procedura: associare dati del servizio dati a controlli (WCF Data Services/Silverlight)</span><span class="sxs-lookup"><span data-stu-id="ff3ae-120">How to: Bind Data Service Data to Controls (WCF Data Services/Silverlight)</span></span>](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [<span data-ttu-id="60aaf-120">Procedura: associare dati del servizio dati a controlli (WCF Data Services/Silverlight)</span><span class="sxs-lookup"><span data-stu-id="60aaf-120">How to: Bind Data Service Data to Controls (WCF Data Services/Silverlight)</span></span>](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
- <span data-ttu-id="ff3ae-121">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su AJAX.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-121">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in an AJAX-based client application.</span></span>  
- -   [<span data-ttu-id="ff3ae-122">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="ff3ae-122">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-121">Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su AJAX.</span><span class="sxs-lookup"><span data-stu-id="60aaf-121">Consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in an AJAX-based client application.</span></span>  
+ -   [<span data-ttu-id="60aaf-122">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="60aaf-122">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-123">OData: Convenzioni URI</span><span class="sxs-lookup"><span data-stu-id="ff3ae-123">OData: URI Conventions</span></span>](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [<span data-ttu-id="60aaf-123">OData: Convenzioni URI</span><span class="sxs-lookup"><span data-stu-id="60aaf-123">OData: URI Conventions</span></span>](http://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [<span data-ttu-id="ff3ae-124">OData: Formato JavaScript Object Notation (JSON)</span><span class="sxs-lookup"><span data-stu-id="ff3ae-124">OData: JavaScript Object Notation (JSON) Format</span></span>](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [<span data-ttu-id="60aaf-124">OData: Formato JavaScript Object Notation (JSON)</span><span class="sxs-lookup"><span data-stu-id="60aaf-124">OData: JavaScript Object Notation (JSON) Format</span></span>](http://go.microsoft.com/fwlink/?LinkId=185790)  
   
- <span data-ttu-id="ff3ae-125">Creare una soluzione end-to-end dati che utilizza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per trasferire dati tra client e server.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-125">Create an end-to-end data solution that uses [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] to transfer data between client and server.</span></span>  
- -   [<span data-ttu-id="ff3ae-126">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="ff3ae-126">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-125">Creare una soluzione end-to-end dati che utilizza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per trasferire dati tra client e server.</span><span class="sxs-lookup"><span data-stu-id="60aaf-125">Create an end-to-end data solution that uses [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] to transfer data between client and server.</span></span>  
+ -   [<span data-ttu-id="60aaf-126">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="60aaf-126">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-127">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="ff3ae-127">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-127">Utilizza un servizio dati in un'applicazione Client</span><span class="sxs-lookup"><span data-stu-id="60aaf-127">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-128">Libreria client WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="ff3ae-128">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+-   [<span data-ttu-id="60aaf-128">Libreria client WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="60aaf-128">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
- <span data-ttu-id="ff3ae-129">Creare un'applicazione client basata su .NET Framework che usa un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in modo asincrono per evitare problemi di latenza nel client.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-129">Create a .NET Framework-based client application that consumes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed asynchronously to avoid latency issues on the client.</span></span>  
- -   [<span data-ttu-id="ff3ae-130">Procedura: eseguire query sul servizio dati asincroni</span><span class="sxs-lookup"><span data-stu-id="ff3ae-130">How to: Execute Asynchronous Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-129">Creare un'applicazione client basata su .NET Framework che usa un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in modo asincrono per evitare problemi di latenza nel client.</span><span class="sxs-lookup"><span data-stu-id="60aaf-129">Create a .NET Framework-based client application that consumes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed asynchronously to avoid latency issues on the client.</span></span>  
+ -   [<span data-ttu-id="60aaf-130">Procedura: eseguire query sul servizio dati asincroni</span><span class="sxs-lookup"><span data-stu-id="60aaf-130">How to: Execute Asynchronous Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-131">Operazioni asincrone</span><span class="sxs-lookup"><span data-stu-id="ff3ae-131">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-131">Operazioni asincrone</span><span class="sxs-lookup"><span data-stu-id="60aaf-131">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-132">WCF Data Services (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="ff3ae-132">WCF Data Services (Silverlight)</span></span>](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [<span data-ttu-id="60aaf-132">WCF Data Services (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="60aaf-132">WCF Data Services (Silverlight)</span></span>](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- <span data-ttu-id="ff3ae-133">Esporre e usare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed con un oggetto binario di grandi dimensioni che è accessibile e modificato come flusso.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-133">Expose and consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed with a binary large object that is accessed and changed as a stream.</span></span>  
- -   [<span data-ttu-id="ff3ae-134">Provider di flusso</span><span class="sxs-lookup"><span data-stu-id="ff3ae-134">Streaming Provider</span></span>](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-133">Esporre e usare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed con un oggetto binario di grandi dimensioni che è accessibile e modificato come flusso.</span><span class="sxs-lookup"><span data-stu-id="60aaf-133">Expose and consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed with a binary large object that is accessed and changed as a stream.</span></span>  
+ -   [<span data-ttu-id="60aaf-134">Provider di flusso</span><span class="sxs-lookup"><span data-stu-id="60aaf-134">Streaming Provider</span></span>](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-135">Utilizzo di dati binari</span><span class="sxs-lookup"><span data-stu-id="ff3ae-135">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-135">Utilizzo di dati binari</span><span class="sxs-lookup"><span data-stu-id="60aaf-135">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- <span data-ttu-id="ff3ae-136">Associare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed ai controlli in un'applicazione Windows Presentation Framework (WPF).</span><span class="sxs-lookup"><span data-stu-id="ff3ae-136">Bind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds to controls in a Windows Presentation Framework (WPF) application.</span></span>  
- -   [<span data-ttu-id="ff3ae-137">Associazione dati ai controlli</span><span class="sxs-lookup"><span data-stu-id="ff3ae-137">Binding Data to Controls</span></span>](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-136">Associare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed ai controlli in un'applicazione Windows Presentation Framework (WPF).</span><span class="sxs-lookup"><span data-stu-id="60aaf-136">Bind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds to controls in a Windows Presentation Framework (WPF) application.</span></span>  
+ -   [<span data-ttu-id="60aaf-137">Associazione dati ai controlli</span><span class="sxs-lookup"><span data-stu-id="60aaf-137">Binding Data to Controls</span></span>](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-138">Procedura: Associare dati a elementi Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="ff3ae-138">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-138">Procedura: Associare dati a elementi Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="60aaf-138">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-139">Procedura: associare dati utilizzando un'origine dati del progetto</span><span class="sxs-lookup"><span data-stu-id="ff3ae-139">How to: Bind Data Using a Project Data Source</span></span>](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-139">Procedura: associare dati utilizzando un'origine dati del progetto</span><span class="sxs-lookup"><span data-stu-id="60aaf-139">How to: Bind Data Using a Project Data Source</span></span>](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
- <span data-ttu-id="ff3ae-140">Intercettare messaggi in arrivo per il servizio dati per eseguire la convalida dei dati e il filtro basato sui ruoli delle query.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-140">Intercept incoming messages to the data service to perform data validation and role-based filtering of queries.</span></span>  
- -   [<span data-ttu-id="ff3ae-141">Procedura: intercettare messaggi del servizio dati</span><span class="sxs-lookup"><span data-stu-id="ff3ae-141">How to: Intercept Data Service Messages</span></span>](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-140">Intercettare messaggi in arrivo per il servizio dati per eseguire la convalida dei dati e il filtro basato sui ruoli delle query.</span><span class="sxs-lookup"><span data-stu-id="60aaf-140">Intercept incoming messages to the data service to perform data validation and role-based filtering of queries.</span></span>  
+ -   [<span data-ttu-id="60aaf-141">Procedura: intercettare messaggi del servizio dati</span><span class="sxs-lookup"><span data-stu-id="60aaf-141">How to: Intercept Data Service Messages</span></span>](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-142">Intercettori</span><span class="sxs-lookup"><span data-stu-id="ff3ae-142">Interceptors</span></span>](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-142">Intercettori</span><span class="sxs-lookup"><span data-stu-id="60aaf-142">Interceptors</span></span>](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
- <span data-ttu-id="ff3ae-143">Creare endpoint in un servizio dati per abilitare i comportamenti del servizio personalizzati.</span><span class="sxs-lookup"><span data-stu-id="ff3ae-143">Create endpoints on a data service to enable custom service behaviors.</span></span>  
- -   [<span data-ttu-id="ff3ae-144">Procedura: definire un'operazione del servizio</span><span class="sxs-lookup"><span data-stu-id="ff3ae-144">How to: Define a Service Operation</span></span>](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ <span data-ttu-id="60aaf-143">Creare endpoint in un servizio dati per abilitare i comportamenti del servizio personalizzati.</span><span class="sxs-lookup"><span data-stu-id="60aaf-143">Create endpoints on a data service to enable custom service behaviors.</span></span>  
+ -   [<span data-ttu-id="60aaf-144">Procedura: definire un'operazione del servizio</span><span class="sxs-lookup"><span data-stu-id="60aaf-144">How to: Define a Service Operation</span></span>](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
--   [<span data-ttu-id="ff3ae-145">Operazioni del servizio</span><span class="sxs-lookup"><span data-stu-id="ff3ae-145">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
+-   [<span data-ttu-id="60aaf-145">Operazioni del servizio</span><span class="sxs-lookup"><span data-stu-id="60aaf-145">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ff3ae-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff3ae-146">See Also</span></span>  
- [<span data-ttu-id="ff3ae-147">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="ff3ae-147">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [<span data-ttu-id="ff3ae-148">Risorse</span><span class="sxs-lookup"><span data-stu-id="ff3ae-148">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a><span data-ttu-id="60aaf-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60aaf-146">See Also</span></span>  
+ [<span data-ttu-id="60aaf-147">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="60aaf-147">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ [<span data-ttu-id="60aaf-148">Risorse</span><span class="sxs-lookup"><span data-stu-id="60aaf-148">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
