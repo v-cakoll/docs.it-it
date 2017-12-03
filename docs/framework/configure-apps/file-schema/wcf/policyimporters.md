@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f8267a6f-bc09-4ec1-9b26-9445f137f663
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 358e4752b448d79aaa3039d133553166feb87ab4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ee6b62068a1d9532345dacd84e133064fd540f8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 Questo elemento di configurazione specifica tutte le unità di importazione dei criteri che controllano l'importazione di asserzioni di criteri personalizzate relative alle associazioni. Ogni elemento figlio è un elemento <`policyImporter`> che viene usato per la ricerca di asserzioni di criteri personalizzati sulle funzionalità di associazione e per allegare un elemento di associazione personalizzato che implementa le funzionalità richieste dall'asserzione.  
