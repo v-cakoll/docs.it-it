@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4052971746086061cb2ed091bd13c962318b2d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 Lo stack di canali di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza canali di codifica e di trasporto per trasformare le rappresentazioni interne dei messaggi nel relativo formato di trasmissione e quindi per inviare i dati così ottenuti mediante un trasporto specifico. Il trasporto più comunemente utilizzato per garantire l'interoperabilità dei servizi Web è il protocollo HTTP, mentre le codifiche utilizzate dai servizi Web sono in genere SOAP 1.1 basato su XML, SOAP 1.2 e il protocollo MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi).  
@@ -323,11 +323,11 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Utilizzare il riferimento a endpoint nell'elemento wsdl:port  
  La sezione 4.1 di WS-ADDR10-WSDL estende l'elemento `wsdl:port` per includere l'elemento figlio `<wsa10:EndpointReference…/>` allo scopo di descrivere l'endpoint in termini di WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estende questa utilità in WS-Addressing 2004/08, consentendo di visualizzare `<wsa:EndpointReference…/>` come elemento figlio di `wsdl:port`.  
   
--   R3531: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsaw10:UsingAddressing/>`, l'elemento `wsdl:port` corrispondente può contenere un elemento figlio `<wsa10:EndpointReference …/>`.  
+-   R3531: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsaw10:UsingAddressing/>`, l'elemento`wsdl:port` corrispondente può contenere un elemento figlio`<wsa10:EndpointReference …/>`.  
   
 -   R3532: Se un `wsdl:port` contiene un elemento figlio `<wsa10:EndpointReference …/>`, `wsa10:EndpointReference/wsa10:Address` valore dell'elemento figlio deve corrispondere al valore del `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
   
--   R3533: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsap:UsingAddressing/>`, l'elemento `wsdl:port` corrispondente può contenere un elemento figlio`<wsa:EndpointReference …/>`.  
+-   R3533: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsap:UsingAddressing/>`, l'elemento`wsdl:port`corrispondente può contenere un elemento figlio`<wsa:EndpointReference …/>`.  
   
 -   R3534: Se un `wsdl:port` contiene un elemento figlio `<wsa:EndpointReference …/>`, `wsa:EndpointReference/wsa:Address` valore dell'elemento figlio deve corrispondere al valore del `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
   

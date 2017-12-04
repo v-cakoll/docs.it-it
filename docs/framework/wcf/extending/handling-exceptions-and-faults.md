@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf621ce53b1e0aa5fd95adbd9de01bdbd97392bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a69acb9b640c17e6641efc6c30798e3856ef6e9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
 Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno del servizio o nell'implementazione del client. Gli errori, d'altra parte, vengono utilizzati per comunicare problemi tra servizi, ad esempio dal server al client o viceversa. Oltre agli errori, i canali del trasporto spesso utilizzano meccanismi specifici per comunicare errori a livello di trasporto. Il trasporto HTTP, ad esempio, utilizza codici di stato, come 404, per comunicare un URL di endpoint inesistente (nessun endpoint al quale restituire un errore). Questo documento è composto da tre sezioni che contengono istruzioni utili per gli autori di canali personalizzati. Nella prima sezione sono contenute linee guida sulle circostanze e le modalità di definizione e generazione delle eccezioni. Nella seconda sezione sono fornite istruzioni sulla generazione e l'utilizzo di errori. Nella terza sezione viene spiegato come fornire informazioni di traccia per aiutare l'utente del canale personalizzato a risolvere i problemi delle applicazioni in esecuzione.  
@@ -56,7 +56,7 @@ Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno de
  ![Gestione di eccezioni ed errori](../../../../docs/framework/wcf/extending/media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
 Errore SOAP 1.2 (sinistra) ed errore SOAP 1.1 (destra). Si noti che in SOAP 1.1 solo l'elemento Fault è qualificato con lo spazio dei nomi.  
   
- In SOAP un messaggio di errore viene definito come messaggio contenente solo un elemento Fault (un elemento denominato `<env:Fault>`<env:Body>) come elemento figlio di`<env:Body>`. Il contenuto dell'elemento errore differisce leggermente SOAP 1.1 e SOAP 1.2, come mostrato in Figura 1. Tuttavia, la classe <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normalizza queste differenze in un unico modello a oggetti:  
+ In SOAP un messaggio di errore viene definito come messaggio contenente solo un elemento Fault (un elemento denominato `<env:Fault>` come elemento figlio di `<env:Body>`. Il contenuto dell'elemento errore differisce leggermente SOAP 1.1 e SOAP 1.2, come mostrato in Figura 1. Tuttavia, la classe <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normalizza queste differenze in un unico modello a oggetti:  
   
 ```  
 public abstract class MessageFault  

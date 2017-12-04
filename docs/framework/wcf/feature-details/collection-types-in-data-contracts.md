@@ -17,14 +17,14 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e22763f78d8a40ced4350a93a1f1833e19aac17f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -331,12 +331,12 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Il tipo di raccolta implementa|Metodo/i chiamato/i durante la serializzazione|Metodo/i chiamato/i durante la deserializzazione|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|<xref:System.Collections.Generic.IDictionary%602> generico|`get_Keys`, `get_Values`|Add generico|  
+|<xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Add generico|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|<xref:System.Collections.Generic.IList%601> generico|Indicizzatore <xref:System.Collections.Generic.IList%601> generico|Add generico|  
-|<xref:System.Collections.Generic.ICollection%601> generico|Enumerator|Add generico|  
+|<xref:System.Collections.Generic.IList%601>|Indicizzatore <xref:System.Collections.Generic.IList%601> generico|Add generico|  
+|<xref:System.Collections.Generic.ICollection%601>|Enumerator|Add generico|  
 |<xref:System.Collections.IList>|Indicizzatore<xref:System.Collections.IList> |`Add`|  
-|<xref:System.Collections.Generic.IEnumerable%601> generico|`GetEnumerator`|Metodo non statico denominato `Add` che accetta un parametro del tipo appropriato (il tipo del parametro generico o uno dei tipi di base). È necessario che tale metodo esista affinché il serializzatore tratti un tipo di raccolta come raccolta sia durante la serializzazione che durante la deserializzazione.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Metodo non statico denominato `Add` che accetta un parametro del tipo appropriato (il tipo del parametro generico o uno dei tipi di base). È necessario che tale metodo esista affinché il serializzatore tratti un tipo di raccolta come raccolta sia durante la serializzazione che durante la deserializzazione.|  
 |<xref:System.Collections.IEnumerable> (e di conseguenza <xref:System.Collections.ICollection>, interfaccia derivata)|`GetEnumerator`|Metodo non statico denominato `Add` che accetta un parametro di tipo `Object`. È necessario che tale metodo esista affinché il serializzatore tratti un tipo di raccolta come raccolta sia durante la serializzazione che durante la deserializzazione.|  
   
  Nella tabella precedente sono elencate le interfacce di raccolta in ordine decrescente di precedenza. Se un tipo implementa sia <xref:System.Collections.IList> che <xref:System.Collections.Generic.IEnumerable%601>generico, ad esempio, la raccolta viene serializzata e deserializzata secondo le regole di <xref:System.Collections.IList> :  

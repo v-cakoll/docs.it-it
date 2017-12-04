@@ -16,14 +16,14 @@ helpviewer_keywords:
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 47cf0961c6f9292d034e2ba8b345763aaff2c12a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>Procedura: creare un client federato
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un client per un *servizio federato* è costituito da tre passaggi principali:  
@@ -103,7 +103,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un clie
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
     ```  
   
-5.  Se una modalità entropia chiave diversa da `CombinedEntropy` è su un'associazione che non utilizza la protezione del messaggio o la protezione del trasporto con le credenziali del messaggio (ad esempio, l'associazione non ha un `SecurityBindingElement`), impostare l'attributo `defaultKeyEntropyMode` nell'elemento `<issuedToken>` su `ServerEntropy` o `ClientEntropy`, come richiesto.  
+5.  Se una modalità entropia chiave diversa da `CombinedEntropy` è su un'associazione che non utilizza la protezione del messaggio o la protezione del trasporto con le credenziali del messaggio (ad esempio, l'associazione non ha un `SecurityBindingElement`), impostare l'attributo `defaultKeyEntropyMode` nell'elemento `<issuedToken>`ServerEntropy su `ServerEntropy`ClientEntropy o`ClientEntropy`, come richiesto.  
   
     ```xml  
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  

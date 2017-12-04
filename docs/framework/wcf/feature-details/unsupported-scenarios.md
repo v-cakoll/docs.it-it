@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 caps.latest.revision: "43"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a518f1bc6019aea0667f6be018e06bbcf36e6e9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per varie ragioni, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non supporta alcuni scenari di sicurezza specifici. Ad esempio, i protocolli di autenticazione SSPI e Kerberos non sono implementati in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition. Pertanto, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] l'esecuzione dei servizi che utilizzano l'autenticazione di Windows su questa piattaforma non è supportata. Altri meccanismi di autenticazione, ad esempio l'autenticazione integrata basata su nome utente/password e HTTP/HTTPS, sono supportati se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguito in Windows XP Home Edition.  
@@ -114,7 +114,7 @@ Per varie ragioni, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non s
  È possibile risolvere questo scenario collocando l'endpoint `issue_ticket` in un'altra posizione.  
   
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Gli attributi di importazione di WSDL possono andare persi  
- In WCF si perde traccia degli attributi in un elemento `<wst:Claims>` in un modello `RST` quando viene eseguita un'importazione WSDL. Questa situazione si verifica durante un'importazione WSDL se si specifica `<Claims>` direttamente in `WSFederationHttpBinding.Security.Message.TokenRequestParameters` o in `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` anziché utilizzare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.  
+ In WCF si perde traccia degli attributi in un elemento `<wst:Claims>`RST in un modello`RST` quando viene eseguita un'importazione WSDL. Questa situazione si verifica durante un'importazione WSDL se si specifica `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters direttamente in`WSFederationHttpBinding.Security.Message.TokenRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters o in`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` anziché utilizzare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.  
   
  Per risolvere il problema è necessario modificare l'associazione direttamente nel client dopo aver eseguito l'importazione.  
   
