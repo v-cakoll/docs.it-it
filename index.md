@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: True
 title: Documentazione di .NET
 description: Informazioni su come usare .NET per creare un'ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
-ms.openlocfilehash: e2e5e0d63464cdfad3432daa2d99da08fefedb5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -600,7 +600,7 @@ ms.lasthandoff: 10/18/2017
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="http://docs.cryengine.com/display/CEPROG/CE%23+Programming">
+                                                <a href="http://docs.cryengine.com/display/CEPROG/C%23+Programming">
                                                 <h3>CRYENGINE</h3>
                                                 <p>Informazioni su come usare CRYENGINE per creare giochi con C#.</p>
                                                 </a>
