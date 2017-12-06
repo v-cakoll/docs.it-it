@@ -114,6 +114,7 @@
         "csharp"
       ],
       "author": "dotnet-bot",
+      "bilingual_type": "hover over",
       "ms.author": "dotnetcontent",
       "manager": "wpickett",
       "searchScope": [".NET"],
