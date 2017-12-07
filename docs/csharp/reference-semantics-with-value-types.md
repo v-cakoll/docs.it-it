@@ -1,6 +1,6 @@
 ---
-title: Semantica di riferimento con tipi di valore
-description: "Comprendere le funzionalità del linguaggio che riducono al minimo la copia di strutture in modo sicuro"
+title: Semantica di riferimento con i tipi valore
+description: "Informazioni sulle funzionalità del linguaggio che riducono al minimo la copia delle strutture in modo sicuro"
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,18 +9,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9eeaf201c1f5a58044db62e356199b609c4c035a
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con tipi di valore
+# <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con i tipi valore
 
-Un vantaggio dell'utilizzo di tipi di valore è spesso evitare allocazioni di heap.
-Lo svantaggio corrispondente è che vengono copiati dal valore. Questo compromesso rende più difficile ottimizzare gli algoritmi che operano su grandi quantità di dati. Nuove funzionalità del linguaggio c# 7.2 fornire meccanismi che consentano la semantica di passaggio per riferimento con tipi di valore. Se si utilizzano queste funzionalità in modo appropriato, è possibile ridurre al minimo entrambe le allocazioni e operazioni di copia. Questo articolo esamina le nuove funzionalità.
+Un vantaggio dell'uso dei tipi valore è che spesso evitano le allocazioni heap.
+Lo svantaggio è invece che vengono copiati in base al valore. Risulta quindi più difficile ottimizzare gli algoritmi che operano su grandi quantità di dati. Le nuove funzionalità del linguaggio C# 7.2 forniscono meccanismi che abilitano la semantica pass-by-reference con i tipi valore. Se si usano queste funzionalità con criterio, è possibile ridurre al minimo sia le allocazioni che le operazioni di copia. Questo articolo esamina le nuove funzionalità.
 
-Gran parte del codice di esempio in questo articolo illustra le funzionalità aggiunte in c# 7.2. Per utilizzare queste funzionalità, è necessario configurare il progetto per l'utilizzo di c# 7.2 o versione successiva nel progetto. È possibile utilizzare Visual Studio per selezionarlo. Per ogni progetto, selezionare **progetto** dal menu, quindi **proprietà**. Selezionare il **compilare** scheda e fare clic su **avanzate**. Da qui, è possibile configurare la versione in lingua. Selezionare "7.2" o "più recente".  È possibile modificare il *csproj* file e aggiungere il nodo seguente:
+Gran parte del codice di esempio in questo articolo illustra le funzionalità aggiunte in C# 7.2. Per usare tali funzionalità, è necessario configurare il progetto per usare C# 7.2 o versione successiva nel progetto. È possibile usare Visual Studio per selezionarlo. Per ogni progetto, scegliere **Progetto** dal menu, quindi **Proprietà**. Nella scheda **Compilazione** scegliere **Avanzate**. Da qui è possibile configurare la versione del linguaggio. Scegliere "7.2" o "più recente".  Oppure è possibile modificare il file con estensione *csproj* e aggiungere il nodo seguente:
 
 ```XML
   <PropertyGroup>
@@ -28,89 +28,89 @@ Gran parte del codice di esempio in questo articolo illustra le funzionalità ag
   </PropertyGroup>
 ```
 
-È possibile utilizzare "7,2" o "più recente" per il valore.
+È possibile usare "7.2" o "latest" come valore.
 
-## <a name="specifying-in-parameters"></a>Specifica di `in` parametri
+## <a name="specifying-in-parameters"></a>Specifica dei parametri `in`
 
-7.2 c# aggiunge il `in` (parola chiave) per integrare esistente `ref` e `out` parole chiave quando si scrive un metodo che passa gli argomenti per riferimento. Il `in` (parola chiave) specifica che si passa il parametro per riferimento e il metodo chiamato non modifica il valore passato. 
+In C# 7.2 è stata aggiunta la parola chiave `in` a complemento delle parole chiave `ref` e `out` esistenti quando si scrive un metodo che passa gli argomenti per riferimento. La parola chiave `in` specifica che si sta passando il parametro per riferimento e che il metodo chiamato non modifica il valore passato. 
 
-In questo modo fornisce un vocabolario completo per esprimere la finalità di progettazione. Tipi di valore vengono copiati quando viene passato a un metodo chiamato quando non si specifica uno dei seguenti modificatori. Ognuno di questi modificatori di specificare un tipo di valore viene passato per riferimento, di copia. Ogni modificatore esprime diversi:
+Questa aggiunta fornisce un vocabolario completo per esprimere le finalità di progettazione. I tipi valore vengono copiati quando sono passati a un metodo denominato se non si specifica nessuno dei modificatori seguenti. Ogni modificatore specifica che un tipo valore viene passato per riferimento, evitando la copia. Ogni modificatore esprime una finalità diversa:
 
-- `out`: Questo metodo imposta il valore dell'argomento utilizzato come questo parametro.
-- `ref`: Questo metodo consente di impostare il valore dell'argomento utilizzato come questo parametro.
-- `in`: Questo metodo non modifica il valore dell'argomento utilizzato come questo parametro.
+- `out`: questo metodo imposta il valore dell'argomento usato come parametro.
+- `ref`: questo metodo può impostare il valore dell'argomento usato come parametro.
+- `in`: questo metodo non modifica il valore dell'argomento usato come parametro.
 
-Quando si aggiunge il `in` modificatore per passare un argomento per riferimento, si dichiara la finalità di progettazione consiste nel passare argomenti per riferimento per evitare la copia non necessarie. Non si intende modificare l'oggetto utilizzato come argomento. Il codice seguente viene illustrato un esempio di un metodo che calcola la distanza tra due punti nello spazio 3D. 
+Quando si aggiunge il modificatore `in` per passare un argomento per riferimento, si dichiara che la finalità della progettazione è quella di passare gli argomenti per riferimento per evitare operazioni di copia non necessarie, non quella di modificare l'oggetto usato come argomento. Il codice seguente illustra un esempio di metodo che calcola la distanza tra due punti nello spazio 3D. 
 
 [!code-csharp[InArgument](../../samples/csharp/reference-semantics/Program.cs#InArgument "Specifying an In argument")]
 
-Gli argomenti sono due strutture di ciascuno dei quali contiene tre valori Double. Un valore double è di 8 byte, pertanto ogni argomento è di 24 byte. Specificando il `in` modificatore, passare 4 o 8 byte riferimento a tali argomenti, a seconda dell'architettura del computer. Differenza nella dimensione è ridotto, ma è possibile aggiungere rapidamente quando l'applicazione chiama questo metodo in un ciclo rigido utilizzando molti valori diversi.
+Gli argomenti sono due strutture, contenenti ognuna tre valori double. Un valore double è pari a 8 byte, quindi ogni argomento è pari a 24 byte. Specificando il modificatore `in`, si passa un riferimento a 4 byte o 8 byte a tali argomenti, a seconda dell'architettura del computer. La differenza a livello di dimensioni è piccola, ma può aumentare rapidamente quando l'applicazione chiama questo metodo in un ciclo ridotto usando più valori diversi.
  
-Il `in` modificatore integra `out` e `ref` in anche altri modi. Non è possibile creare gli overload di un metodo che differiscono solo in presenza di `in`, `out` o `ref`. Queste nuove regole di estendono lo stesso comportamento che sempre fosse stato definito per `out` e `ref` parametri.
+Il modificatore `in` integra `out` e `ref` anche in altri modi. Non è possibile creare overload di un metodo che si distinguono solo per la presenza di `in`, `out` o `ref`. Queste nuove regole estendono lo stesso comportamento da sempre definito per i parametri `out` e `ref`.
 
-Il `in` modificatore può essere applicato a qualsiasi membro che accetta parametri: metodi, delegati, le espressioni lambda, le funzioni locali, gli indicizzatori, gli operatori.
+Il modificatore `in` può essere applicato a tutti i membri che accettano parametri: metodi, delegati, espressioni lambda, funzioni locali, indicizzatori, operatori.
 
-A differenza di `ref` e `out` argomenti, è possibile utilizzare valori letterali o le costanti per l'argomento di un `in` parametro. Inoltre, a differenza di un `ref` o `out` parametro, non è necessario applicare il `in` modificatore nel sito di chiamata. Il codice seguente mostra due esempi di chiamata di `CalculateDistance` metodo. Il primo usa due variabili locali, passate per riferimento. Il secondo include una variabile temporanea creata come parte della chiamata al metodo. 
+Diversamente dagli argomenti `ref` e `out`, è possibile usare valori letterali o costanti per l'argomento in un parametro `in`. Inoltre, diversamente da un parametro `ref` o `out`, non è necessario applicare il modificatore `in` nel sito di chiamata. Il codice seguente illustra due esempi di chiamata al metodo `CalculateDistance`. Il primo usa due variabili locali passate per riferimento. Il secondo include una variabile temporanea creata durante la chiamata al metodo. 
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#UseInArgument "Specifying an In argument")]
 
-Esistono diversi modi in cui il compilatore garantisce che la natura di sola lettura di un `in` viene applicato l'argomento.  Prima di tutto, il metodo chiamato non è possibile assegnare direttamente un `in` parametro. È possibile assegnare direttamente a qualsiasi campo di un `in` parametro. Inoltre, non è possibile passare un `in` parametro alle eventuali rigorose del metodo di `ref` o `out` modificatore.
-Il compilatore impone che il `in` argomento è una variabile di sola lettura. È possibile chiamare qualsiasi metodo di istanza che utilizza la semantica pass-by-value. In tali casi, una copia del `in` parametro viene creato. Poiché il compilatore può creare una variabile temporanea per qualsiasi `in` parametro, è anche possibile specificare i valori predefiniti per qualsiasi `in` parametro. Nel codice seguente che usa per specificare l'origine (punto 0,0) come valore predefinito per il secondo punto:
+Il compilatore assicura che venga applicata la natura di sola lettura di un argomento `in` in diversi modi.  Prima di tutto il metodo chiamato non può essere direttamente assegnato a un parametro `in`. Non può essere direttamente assegnato ai campi di un parametro `in`. Non è neppure possibile passare un parametro `in` ai metodi che richiedono il modificatore `ref` o `out`.
+Il compilatore fa in modo che l'argomento `in` sia una variabile di sola lettura. È possibile chiamare qualsiasi metodo di istanza che usa la semantica pass-by-value. In tali istanze viene creata una copia del parametro `in`. Poiché il compilatore può creare una variabile temporanea per qualsiasi parametro `in`, è anche possibile specificare i valori predefiniti per qualsiasi parametro `in`. Il codice seguente adotta tale comportamento per specificare l'origine (punto 0,0) come valore predefinito per il secondo punto:
 
 [!code-csharp[InArgumentDefault](../../samples/csharp/reference-semantics/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-Il `in` designazione di parametro può essere utilizzata con tipi di riferimento o compilazione nei valori numerici. Tuttavia, i vantaggi in entrambi i casi sono minimi, se presente.
+La designazione del parametro `in` può anche essere usata con i tipi riferimento o i valori numerici predefiniti. Gli eventuali vantaggi in entrambi i casi sono tuttavia minimi.
 
-## <a name="ref-readonly-returns"></a>`ref readonly`Restituisce
+## <a name="ref-readonly-returns"></a>Valori restituiti `ref readonly`
 
-È anche possibile restituire un tipo di valore per riferimento, ma non consentire al chiamante di modificare tale valore. Utilizzare il `ref readonly` modificatore per esprimere la finalità di progettazione. Invia una notifica a lettori che restituisce un riferimento ai dati esistenti, ma non consente la modifica. 
+È anche possibile restituire un tipo valore per riferimento, ma non consentire al chiamante di modificare tale valore. Usare il modificatore `ref readonly` per esprimere tale finalità di progettazione. Notifica ai lettori che si restituirà un riferimento ai dati esistenti, ma non si consentirà la modifica. 
 
-Il compilatore impone che il chiamante non è possibile modificare il riferimento. Tenta di assegnare direttamente il valore generato un errore in fase di compilazione. Tuttavia, il compilatore non sa se qualsiasi metodo di membro viene modificato lo stato dello struct.
-Per garantire che l'oggetto non viene modificato, il compilatore crea una copia e chiama membro riferimenti utilizzando tale copia. Tutte le modifiche sono a tale copia difensivo. 
+Il compilatore fa in modo che il chiamante non possa modificare il riferimento. I tentativi di assegnazione diretta al valore generano un errore in fase di compilazione. Il compilatore non può tuttavia sapere se un metodo del membro modifica lo stato dello struct.
+Per assicurarsi che l'oggetto non venga modificato, il compilatore crea una copia e chiama i riferimenti al membro usando tale copia. Tutte le modifiche vengono apportate a tale copia difensiva. 
 
-È probabile che la libreria utilizzando `Point3D` spesso utilizzerebbe l'origine in tutto il codice. Ogni istanza crea un nuovo oggetto nello stack. Può risultare utile per creare una costante e viene restituito per riferimento. Tuttavia, se si restituisce un riferimento all'archiviazione interna, si desidera imporre che il chiamante non è possibile modificare lo spazio di archiviazione a cui fa riferimento. Il codice seguente definisce una proprietà di sola lettura che restituisce un `readonly ref` per un `Point3D` che specifica l'origine.
+È probabile che la libreria che usa `Point3D` usi spesso l'origine in tutto il codice. Ogni istanza crea un nuovo oggetto nello stack. Può essere vantaggioso creare una costante e usarla per riferimento, ma, se si restituisce un riferimento alla risorsa di archiviazione interna, è possibile fare in modo che il chiamante non possa modificare la risorsa di archiviazione di riferimento. Il codice seguente definisce una proprietà di sola lettura che restituisce `readonly ref` a un oggetto `Point3D` che specifica l'origine.
 
 [!code-csharp[OriginReference](../../samples/csharp/reference-semantics/Point3D.cs#OriginReference "Creating a readonly Origin reference")]
 
-Creazione di una copia di un riferimento di sola lettura restituito è semplice: assegna semplicemente a una variabile non è dichiarata con la `ref readonly` modificatore. Il compilatore genera codice per copiare l'oggetto come parte dell'assegnazione. 
+Per creare una copia di un valore restituito ref readonly, è sufficiente assegnarlo a una variabile non dichiarata con il modificatore `ref readonly`. Il compilatore genera il codice per copiare l'oggetto durante l'assegnazione. 
 
-Quando si assegna una variabile per un `ref readonly return`, è possibile specificare un `ref readonly` variabile o una copia in base al valore del riferimento di sola lettura:
+Quando si assegna una variabile a `ref readonly return`, è possibile specificare una variabile `ref readonly` o una copia per valore del riferimento di sola lettura:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/reference-semantics/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
-Copia la prima assegnazione nel codice precedente il `Origin` costante e assegna tale copia. Il secondo consente di assegnare un riferimento. Si noti che il `readonly` modificatore deve essere parte della dichiarazione della variabile. Il riferimento a cui viene fatto riferimento non può essere modificato. I tentativi di eseguire questa operazione generano un errore in fase di compilazione.
+La prima assegnazione del codice precedente crea una copia della costante `Origin` e assegna tale copia. La seconda assegna un riferimento. Si noti che il modificatore `readonly` deve fare parte della dichiarazione della variabile. Il riferimento a cui viene fatto riferimento non può essere modificato. I tentativi di eseguire questa operazione generano un errore in fase di compilazione.
 
 ## <a name="readonly-struct-type"></a>Tipo `readonly struct`
 
-L'applicazione `ref readonly` a traffico elevato utilizzi di uno struct, potrebbe essere sufficiente.
-In altri casi, è consigliabile creare un struct non modificabile. È sempre possibile passare per riferimento di sola lettura. Di norma rimuove difensiva copia che si verificano quando si accede ai metodi di una struttura utilizzata come un `in` parametro.
+Applicare `ref readonly` agli usi a traffico elevato di uno struct può essere sufficiente.
+In altri casi, è possibile creare uno struct non modificabile. È quindi sempre possibile eseguire il passaggio per riferimento di sola lettura. Tale procedura rimuove le copie difensive che vengono eseguite quando si accede ai metodi di uno struct usato come parametro `in`.
 
-È possibile farlo creando un `readonly struct` tipo. È possibile aggiungere il `readonly` modificatore in una dichiarazione di struttura. Il compilatore impone che tutti i membri dello struct sono `readonly`; `struct` deve essere non modificabile.
+A tale scopo, è possibile creare un tipo `readonly struct`. È possibile aggiungere il modificatore `readonly` a una dichiarazione di struct. Il compilatore fa in modo che tutti i membri di istanza dello struct siano `readonly`. `struct` deve essere non modificabile.
 
-Sono disponibili altre ottimizzazioni per un `readonly struct`. È possibile utilizzare il `in` modificatore in qualunque posizione in cui un `readonly struct` è un argomento. Inoltre, è possibile restituire un `readonly struct` come un `ref return` quando viene restituito un oggetto la cui durata si estende oltre l'ambito del metodo restituisce l'oggetto.
+Esistono altre ottimizzazioni per `readonly struct`. È possibile usare il modificatore `in` in ogni posizione in cui `readonly struct` è un argomento. È anche possibile restituire `readonly struct` come `ref return` quando si restituisce un oggetto la cui durata si estende oltre l'ambito del metodo che restituisce l'oggetto.
 
-Infine, il compilatore genera codice più efficiente quando si chiamano i membri di un `readonly struct`: il `this` riferimento, anziché una copia del ricevitore, è sempre un `in` parametro passato per riferimento al metodo del membro. Questa ottimizzazione consente di salvare la copia più quando si utilizza un `readonly struct`. Il `Point3D` è un ottimo candidato per la modifica. Nel codice seguente viene aggiornata `ReadonlyPoint3D` struttura:
+Il compilatore genera infine un codice più efficiente quando si chiamano i membri di `readonly struct`: il riferimento `this`, invece di una copia del ricevitore, è sempre un parametro `in` passato per riferimento al metodo dei membri. Questa ottimizzazione consente un risparmio a livello di copie quando si usa `readonly struct`. `Point3D` è un candidato ideale per questa modifica. Nel codice seguente viene illustrata una struttura `ReadonlyPoint3D` aggiornata:
 
 [!code-csharp[ReadonlyOnlyPoint3D](../../samples/csharp/reference-semantics/Point3D.cs#ReadonlyOnlyPoint3D "Defining an immutable structure")]
 
 ## <a name="ref-struct-type"></a>Tipo `ref struct`
 
-Un'altra funzionalità del linguaggio correlato è la possibilità di dichiarare un tipo di valore che deve essere allocato nello stack. In altre parole, questi tipi non possono mai essere creati nell'heap come membro di un'altra classe. La principale motivazione per questa funzionalità è stata <xref:System.Span%601> e strutture correlate. <xref:System.Span%601>contenga un puntatore gestito come uno dei relativi membri, mentre l'altro è la lunghezza dell'intervallo. È effettivamente implementata in modo leggermente diverso perché c# non supporta i puntatori alla memoria gestita di fuori di un contesto unsafe. Qualsiasi scrittura che modifica il puntatore del mouse e la lunghezza non è atomico. Ciò significa che un <xref:System.Span%601> sarà soggetto a errori di intervallo insufficiente o altre violazioni di sicurezza di tipo sono stati non è vincolato da un unico stack frame. Inoltre, l'inserimento di un puntatore gestito nell'heap GC in genere si blocca in fase di JIT.
+Un'altra funzionalità del linguaggio correlata è la possibilità di dichiarare un tipo valore che deve essere allocato nello stack. In altre parole, questi tipi non possono mai essere creati nell'heap come membro di un'altra classe. La principale motivazione di questa funzionalità sono stati <xref:System.Span%601> e le strutture correlate. <xref:System.Span%601> può contenere un puntatore gestito come uno dei membri, mentre l'altro è la lunghezza dell'intervallo. In realtà l'implementazione è leggermente diversa perché C# non supporta i puntatori alla memoria gestita al di fuori di un contesto non sicuro. Le operazioni di scrittura che modificano il puntatore e la lunghezza non sono atomiche. Per questo <xref:System.Span%601> sarà soggetto a errori non compresi nell'intervallo o ad altre violazioni dell'indipendenza dai tipi se non è vincolato a un singolo stack frame. Inoltre l'inserimento di un puntatore gestito nell'heap GC provoca in genere un arresto anomalo del sistema in fase JIT.
 
-È possibile requisiti simili operazioni con la memoria creata utilizzando [ `stackalloc` ](language-reference/keywords/stackalloc.md) o quando si utilizza memoria dalle API di interoperabilità. È possibile definire `ref struct` tipi per tali requisiti. In questo articolo si vedere esempi di utilizzo `Span<T>` per semplicità.
+Possono esistere requisiti simili quando si usa la memoria creata con [`stackalloc`](language-reference/keywords/stackalloc.md) o quando si usa la memoria delle API di interoperabilità. È possibile definire i tipi `ref struct` in base a tali esigenze. In questo articolo vengono illustrati esempi che usano `Span<T>` per semplicità.
 
-Il `ref struct` dichiarazione dichiara che una struttura di questo tipo deve essere nello stack. Le regole del linguaggio verificare l'utilizzo sicuro di questi tipi. Altri tipi dichiarati come `ref struct` includono <xref:System.ReadOnlySpan%601>. 
+La dichiarazione `ref struct` dichiara che uno struct di questo tipo deve essere nello stack. Le regole del linguaggio garantiscono l'uso sicuro di questi tipi. Gli altri tipi dichiarati come `ref struct` includono <xref:System.ReadOnlySpan%601>. 
 
-L'obiettivo di mantenere un `ref struct` digitare come una variabile allocato dallo stack introduce diverse regole che il compilatore impone per tutti i `ref struct` tipi.
+L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stack comporta diverse regole che il compilatore applica per tutti i tipi `ref struct`.
 
-- Non supporta il boxing è una `ref struct`. Non è possibile assegnare un `ref struct` tipo a una variabile di tipo `object`, `dynamic`, o qualsiasi tipo di interfaccia.
-- Non è possibile dichiarare un `ref struct` come membro di una classe o uno struct normale.
-- Non è possibile dichiarare le variabili locali con `ref struct` tipi di metodi asincroni. È possibile dichiararli in metodi sincroni che restituiscono `Task`, `Task<T>` o tipi di attività.
-- Non è possibile dichiarare `ref struct` variabili locali, gli iteratori.
-- Non è possibile acquisire `ref struct` variabili nelle espressioni lambda o di funzioni locali.
+- Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
+- Non è possibile dichiarare `ref struct` come membro di una classe o di un normale struct.
+- Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi `Task`, `Task<T>` o simili a Task.
+- Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
+- Non è possibile acquisire variabili `ref struct` in espressioni lambda o funzioni locali.
 
-In questo modo che non si accidentalmente utilizza un `ref struct` in modo che è stato possibile alzare di livello per l'heap gestito.
+Queste restrizioni garantiscono che non si usi accidentalmente `ref struct` in modo tale che possa essere alzato di livello nell'heap gestito.
 
 ## <a name="conclusions"></a>Conclusioni
 
-Questi miglioramenti del linguaggio c# sono progettati per gli algoritmi di prestazioni critiche in cui le allocazioni di memoria possono essere fondamentale per ottenere le prestazioni necessarie. È possibile che non vengano utilizzati spesso queste funzionalità nel codice che scritto. Tuttavia, questi miglioramenti sono stati adottati in numerose posizioni in .NET Framework. Come rendere più API utilizzare queste funzionalità, si noterà un' migliorare le prestazioni delle applicazioni.
+Questi miglioramenti del linguaggio C# sono progettati per gli algoritmi con prestazioni critiche in cui le allocazioni della memoria possono essere strategiche per raggiungere le prestazioni necessarie. È possibile che non si usino spesso queste funzionalità nella scrittura del codice. Questi miglioramenti sono stati tuttavia adottati in diverse posizioni di .NET Framework. Il sempre maggior numero di API che useranno queste funzionalità renderà evidente il miglioramento delle prestazioni delle applicazioni.
