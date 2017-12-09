@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Hello C#
 metadata:
@@ -10,15 +11,15 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-items:
-- durationInMinutes: 1
-  content: >
-    In questa guida introduttiva il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. Contiene una serie di lezioni che iniziano con un programma "Hello World". Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
   ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: HT
   ms.contentlocale: it-IT
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: >
+    In questa guida introduttiva il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. Contiene una serie di lezioni che iniziano con un programma "Hello World". Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 - title: Eseguire il primo programma C#
   durationInMinutes: 2
   content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nLa procedura è stata completata. È stato eseguito il primo programma C#, ovvero un semplice programma che stampa il messaggio \"Hello World!\". Per stampare il messaggio, viene usato il metodo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>. `Console` è un tipo che rappresenta la finestra della console. `WriteLine` è un metodo del tipo `Console` che stampa una riga di testo nella console di testo.\n\nNel resto di questa lezione viene descritto l'uso del tipo `string`, che rappresenta il testo in C#. Come il tipo `Console`, anche per il tipo `string` sono disponibili metodi. I metodi `string` operano sul testo. \n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"

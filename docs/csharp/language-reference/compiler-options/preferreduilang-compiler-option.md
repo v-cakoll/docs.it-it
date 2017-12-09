@@ -13,11 +13,11 @@ ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ccf25e9a5d5d025f9024519b41c4afa17a5081f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a96a054b3d1f73b0fee209557388f7ea213ebbe9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (opzioni del compilatore C#)
 Utilizzando l'opzione del compilatore `/preferreduilang`, è possibile specificare la lingua in cui tramite il compilatore C# viene visualizzato l'output, ad esempio i messaggi di errore.  
@@ -30,7 +30,7 @@ Utilizzando l'opzione del compilatore `/preferreduilang`, è possibile specifica
   
 ## <a name="arguments"></a>Argomenti  
  `language`  
- [Nome](http://go.microsoft.com/fwlink/p/?LinkId=236992) della lingua da usare per l'output del compilatore.  
+ [Nome](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) della lingua da usare per l'output del compilatore.  
   
 ## <a name="remarks"></a>Note  
  È possibile utilizzare l'opzione del compilatore `/preferreduilang` per specificare la lingua che si desidera venga utilizzata dal compilatore C# per i messaggi di errore e altri output della riga di comando. Se il Language Pack della lingua non è installato, viene utilizzata l'impostazione della lingua del sistema operativo e non viene segnalato alcun errore.  

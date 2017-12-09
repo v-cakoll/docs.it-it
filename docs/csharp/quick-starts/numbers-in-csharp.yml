@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Numeri in C#
 metadata:
@@ -10,15 +11,15 @@ metadata:
   nextTutorialTitle: Rami e cicli in c#
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: >
-    Questa Guida introduttiva illustra sui tipi di numero in c# in modo interattivo, utilizzando il browser per scrivere in c# e visualizzare i risultati della compilazione e l'esecuzione del codice. L'esercitazione contiene una serie di lezioni che illustrano l'uso dei numeri e le operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
   ms.translationtype: HT
   ms.contentlocale: it-IT
   ms.lasthandoff: 11/22/2017
+items:
+- durationInMinutes: 1
+  content: >
+    Questa Guida introduttiva illustra sui tipi di numero in c# in modo interattivo, utilizzando il browser per scrivere in c# e visualizzare i risultati della compilazione e l'esecuzione del codice. L'esercitazione contiene una serie di lezioni che illustrano l'uso dei numeri e le operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 - title: Esplorare le operazioni matematiche su interi
   durationInMinutes: 4
   content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nQuesta è una delle operazioni matematiche fondamentali su interi. Il tipo `int` rappresenta un **intero**, ovvero un numero intero positivo o negativo. Per l'addizione si usa il simbolo `+`. Altre operazioni matematiche comuni per gli interi includono:\n\n- `-` per la sottrazione\n- `*` per la moltiplicazione\n- `/` per la divisione\n\n> [!TIP]\n> In tutta questa Guida introduttiva, è possibile esplorare in totale autonomia modificando il codice che scritto nella finestra interattiva. Questa Guida introduttiva vengono forniti esempi che è possibile provare a ogni passaggio.\n\nPer iniziare, esplorare le diverse operazioni. Modificare la terza riga per provare ognuna di queste operazioni. Dopo ogni modifica, fare clic sul pulsante **Esegui**.\n\nSottrazione:\n\n```csharp\nint c = a - b;\n```\n\nMoltiplicazione:\n\n```csharp\nint c = a * b;\n```\n\nDivisione: \n\n```csharp\nint c = a / b;\n```\n\nÈ anche possibile sperimentare eseguendo più operazioni matematiche nella stessa riga.\n\n> [!TIP]\n> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.\n> Questo esercizio sarà utile per imparare la struttura del codice C#.     \n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
