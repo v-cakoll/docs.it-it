@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  [<span data-ttu-id="ffea1-155">Procedura: Implementare in modo esplicito i membri di due interfacce</span><span class="sxs-lookup"><span data-stu-id="ffea1-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  <span data-ttu-id="ffea1-156">Fornisce un esempio di come implementare in modo esplicito i membri delle interfacce con l'ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="ffea1-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <span data-ttu-id="ffea1-157"><a name="BKMK_RelatedSections"></a> Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ffea1-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a> <span data-ttu-id="ffea1-157">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ffea1-157">Related Sections</span></span>  
   
 -   [<span data-ttu-id="ffea1-158">Proprietà dell'interfaccia</span><span class="sxs-lookup"><span data-stu-id="ffea1-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   

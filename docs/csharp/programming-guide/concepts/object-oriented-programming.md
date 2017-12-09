@@ -59,7 +59,7 @@ ms.lasthandoff: 11/08/2017
   
 -   [<span data-ttu-id="a7f07-124">Delegati</span><span class="sxs-lookup"><span data-stu-id="a7f07-124">Delegates</span></span>](#Delegates)  
   
-##  <span data-ttu-id="a7f07-125"><a name="Classes"></a> Classi e oggetti</span><span class="sxs-lookup"><span data-stu-id="a7f07-125"><a name="Classes"></a> Classes and Objects</span></span>  
+##  <a name="Classes"></a> <span data-ttu-id="a7f07-125">Classi e oggetti</span><span class="sxs-lookup"><span data-stu-id="a7f07-125">Classes and Objects</span></span>  
  <span data-ttu-id="a7f07-126">I termini *classe* e *oggetto* vengono talvolta usati in modo intercambiabile. Di fatto, però, le classi descrivono il *tipo* degli oggetti, mentre gli oggetti sono *istanze* utilizzabili delle classi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="a7f07-127">L'atto di creare un oggetto viene pertanto chiamato *creazione di istanze*.</span><span class="sxs-lookup"><span data-stu-id="a7f07-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="a7f07-128">Rifacendoci all'analogia precedente, la classe corrisponde al progetto iniziale e l'oggetto all'edificio realizzato in base a tale progetto.</span><span class="sxs-lookup"><span data-stu-id="a7f07-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>  
   
  <span data-ttu-id="a7f07-129">Per definire una classe:</span><span class="sxs-lookup"><span data-stu-id="a7f07-129">To define a class:</span></span>  
@@ -86,10 +86,10 @@ struct SampleStruct
   
 -   [<span data-ttu-id="a7f07-134">struct</span><span class="sxs-lookup"><span data-stu-id="a7f07-134">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <span data-ttu-id="a7f07-135"><a name="Members"></a> Membri di classi</span><span class="sxs-lookup"><span data-stu-id="a7f07-135"><a name="Members"></a> Class Members</span></span>  
+###  <a name="Members"></a> <span data-ttu-id="a7f07-135">Membri di classi</span><span class="sxs-lookup"><span data-stu-id="a7f07-135">Class Members</span></span>  
  <span data-ttu-id="a7f07-136">Ogni classe può avere *membri di classe* diversi che includono proprietà che descrivono i dati della classe, i metodi che definiscono il comportamento della classe e gli eventi che offrono la comunicazione tra classi e oggetti diversi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>  
   
-####  <span data-ttu-id="a7f07-137"><a name="Properties"></a> Proprietà e campi</span><span class="sxs-lookup"><span data-stu-id="a7f07-137"><a name="Properties"></a> Properties and Fields</span></span>  
+####  <a name="Properties"></a> <span data-ttu-id="a7f07-137">Proprietà e campi</span><span class="sxs-lookup"><span data-stu-id="a7f07-137">Properties and Fields</span></span>  
  <span data-ttu-id="a7f07-138">I campi e le proprietà rappresentano le informazioni contenute in un oggetto.</span><span class="sxs-lookup"><span data-stu-id="a7f07-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="a7f07-139">I campi sono simili a variabili in quanto possono essere letti o impostati direttamente.</span><span class="sxs-lookup"><span data-stu-id="a7f07-139">Fields are like variables because they can be read or set directly.</span></span>  
   
  <span data-ttu-id="a7f07-140">Per definire un campo:</span><span class="sxs-lookup"><span data-stu-id="a7f07-140">To define a field:</span></span>  
@@ -138,7 +138,7 @@ class SampleClass
   
 -   [<span data-ttu-id="a7f07-151">set</span><span class="sxs-lookup"><span data-stu-id="a7f07-151">set</span></span>](../../../csharp/language-reference/keywords/set.md)  
   
-####  <span data-ttu-id="a7f07-152"><a name="Methods"></a> Metodi</span><span class="sxs-lookup"><span data-stu-id="a7f07-152"><a name="Methods"></a> Methods</span></span>  
+####  <a name="Methods"></a> <span data-ttu-id="a7f07-152">Metodi</span><span class="sxs-lookup"><span data-stu-id="a7f07-152">Methods</span></span>  
  <span data-ttu-id="a7f07-153">Un *metodo* è un'azione che può essere eseguita da un oggetto.</span><span class="sxs-lookup"><span data-stu-id="a7f07-153">A *method* is an action that an object can perform.</span></span>  
   
  <span data-ttu-id="a7f07-154">Per definire un metodo di una classe:</span><span class="sxs-lookup"><span data-stu-id="a7f07-154">To define a method of a class:</span></span>  
@@ -170,7 +170,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [<span data-ttu-id="a7f07-161">Metodi di estensione</span><span class="sxs-lookup"><span data-stu-id="a7f07-161">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <span data-ttu-id="a7f07-162"><a name="Constructors"></a> Costruttori</span><span class="sxs-lookup"><span data-stu-id="a7f07-162"><a name="Constructors"></a> Constructors</span></span>  
+####  <a name="Constructors"></a> <span data-ttu-id="a7f07-162">Costruttori</span><span class="sxs-lookup"><span data-stu-id="a7f07-162">Constructors</span></span>  
  <span data-ttu-id="a7f07-163">I costruttori sono metodi di classe che vengono eseguiti automaticamente durante la creazione di un oggetto di un tipo specifico.</span><span class="sxs-lookup"><span data-stu-id="a7f07-163">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="a7f07-164">I costruttori in genere inizializzano i membri dati del nuovo oggetto.</span><span class="sxs-lookup"><span data-stu-id="a7f07-164">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="a7f07-165">Un costruttore può essere eseguito solo una volta alla creazione di una classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-165">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="a7f07-166">Inoltre, il codice nel costruttore viene sempre eseguito prima di qualsiasi altro codice in una classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-166">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="a7f07-167">Tuttavia, è possibile creare più overload del costruttore esattamente come per qualsiasi altro metodo.</span><span class="sxs-lookup"><span data-stu-id="a7f07-167">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>  
   
  <span data-ttu-id="a7f07-168">Per definire un costruttore per una classe:</span><span class="sxs-lookup"><span data-stu-id="a7f07-168">To define a constructor for a class:</span></span>  
@@ -189,12 +189,12 @@ public class SampleClass
   
  <span data-ttu-id="a7f07-170">[Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-170">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span>  
   
-####  <span data-ttu-id="a7f07-171"><a name="Finalizers"></a> Finalizzatori</span><span class="sxs-lookup"><span data-stu-id="a7f07-171"><a name="Finalizers"></a> Finalizers</span></span>  
+####  <a name="Finalizers"></a> <span data-ttu-id="a7f07-171">Finalizzatori</span><span class="sxs-lookup"><span data-stu-id="a7f07-171">Finalizers</span></span>  
  <span data-ttu-id="a7f07-172">I finalizzatori sono usati per distruggere istanze di classi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-172">Finalizers are used to destruct instances of classes.</span></span> <span data-ttu-id="a7f07-173">In .NET Framework, il Garbage Collector gestisce l'allocazione e il rilascio di memoria per gli oggetti gestiti di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a7f07-173">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="a7f07-174">Potrebbero, tuttavia, essere necessari finalizzatori per pulire eventuali risorse non gestite create dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a7f07-174">However, you may still need finalizers to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="a7f07-175">Può esistere un solo finalizzatore per classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-175">There can be only one finalizers for a class.</span></span>  
   
  <span data-ttu-id="a7f07-176">Per altre informazioni sui finalizzatori e sull'operazione di Garbage Collection in .NET Framework, vedere [Garbage Collection](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-176">For more information about finalizers and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
-####  <span data-ttu-id="a7f07-177"><a name="Events"></a> Eventi</span><span class="sxs-lookup"><span data-stu-id="a7f07-177"><a name="Events"></a> Events</span></span>  
+####  <a name="Events"></a> <span data-ttu-id="a7f07-177">Eventi</span><span class="sxs-lookup"><span data-stu-id="a7f07-177">Events</span></span>  
  <span data-ttu-id="a7f07-178">Tramite gli eventi una classe o un oggetto sono in grado di segnalare ad altre classi o oggetti una situazione di interesse.</span><span class="sxs-lookup"><span data-stu-id="a7f07-178">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="a7f07-179">La classe che invia o genera l'evento è chiamata *editore* e le classi che ricevono o gestiscono l'evento sono chiamate *sottoscrittori*.</span><span class="sxs-lookup"><span data-stu-id="a7f07-179">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="a7f07-180">Per altre informazioni sugli eventi e sulla loro generazione e gestione, vedere [Eventi](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-180">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>  
   
 -   <span data-ttu-id="a7f07-181">Per dichiarare un evento in una classe, usare la parola chiave [event](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-181">To declare an event in a class, use the [event](../../../csharp/language-reference/keywords/event.md) keyword.</span></span>  
@@ -203,7 +203,7 @@ public class SampleClass
   
 -   <span data-ttu-id="a7f07-183">Per sottoscrivere un evento, utilizzare l'operatore `+=`. Per annullare la sottoscrizione a un evento utilizzare l'operatore `-=`:</span><span class="sxs-lookup"><span data-stu-id="a7f07-183">To subscribe to an event, use the `+=` operator; to unsubscribe from an event, use the `-=` operator.</span></span>  
   
-####  <span data-ttu-id="a7f07-184"><a name="NestedClasses"></a> Classi annidate</span><span class="sxs-lookup"><span data-stu-id="a7f07-184"><a name="NestedClasses"></a> Nested Classes</span></span>  
+####  <a name="NestedClasses"></a> <span data-ttu-id="a7f07-184">Classi annidate</span><span class="sxs-lookup"><span data-stu-id="a7f07-184">Nested Classes</span></span>  
  <span data-ttu-id="a7f07-185">Una classe definita all'interno di un'altra classe è denominata *annidata*.</span><span class="sxs-lookup"><span data-stu-id="a7f07-185">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="a7f07-186">Per impostazione predefinita, la classe annidata è privata.</span><span class="sxs-lookup"><span data-stu-id="a7f07-186">By default, the nested class is private.</span></span>  
   
 ```csharp  
@@ -222,7 +222,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <span data-ttu-id="a7f07-188"><a name="AccessModifiers"></a> Modificatori di accesso e livelli di accesso</span><span class="sxs-lookup"><span data-stu-id="a7f07-188"><a name="AccessModifiers"></a> Access Modifiers and Access Levels</span></span>  
+###  <a name="AccessModifiers"></a> <span data-ttu-id="a7f07-188">Modificatori di accesso e livelli di accesso</span><span class="sxs-lookup"><span data-stu-id="a7f07-188">Access Modifiers and Access Levels</span></span>  
  <span data-ttu-id="a7f07-189">Tutte le classi e i membri della classe possono specificare il livello di accesso offerto alle altre classi usando i *modificatori di accesso*.</span><span class="sxs-lookup"><span data-stu-id="a7f07-189">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>  
   
  <span data-ttu-id="a7f07-190">Sono disponibili i seguenti modificatori di accesso:</span><span class="sxs-lookup"><span data-stu-id="a7f07-190">The following access modifiers are available:</span></span>  
@@ -238,7 +238,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  <span data-ttu-id="a7f07-205">Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-205">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-###  <span data-ttu-id="a7f07-206"><a name="InstantiatingClasses"></a> Creazione di istanze di classi</span><span class="sxs-lookup"><span data-stu-id="a7f07-206"><a name="InstantiatingClasses"></a> Instantiating Classes</span></span>  
+###  <a name="InstantiatingClasses"></a> <span data-ttu-id="a7f07-206">Creazione di istanze di classi</span><span class="sxs-lookup"><span data-stu-id="a7f07-206">Instantiating Classes</span></span>  
  <span data-ttu-id="a7f07-207">Per creare un oggetto, è necessario creare un'istanza di una classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-207">To create an object, you need to instantiate a class, or create a class instance.</span></span>  
   
 ```csharp  
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [<span data-ttu-id="a7f07-212">Inizializzatori di oggetto e di raccolta</span><span class="sxs-lookup"><span data-stu-id="a7f07-212">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <span data-ttu-id="a7f07-213"><a name="Static"></a> Classi e membri statici</span><span class="sxs-lookup"><span data-stu-id="a7f07-213"><a name="Static"></a> Static Classes and Members</span></span>  
+###  <a name="Static"></a> <span data-ttu-id="a7f07-213">Classi e membri statici</span><span class="sxs-lookup"><span data-stu-id="a7f07-213">Static Classes and Members</span></span>  
  <span data-ttu-id="a7f07-214">Un membro statico della classe è una proprietà, una routine o un campo condiviso da tutte le istanze di una classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-214">A static member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="a7f07-215">Per definire un membro statico:</span><span class="sxs-lookup"><span data-stu-id="a7f07-215">To define a static member:</span></span>  
@@ -290,7 +290,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  <span data-ttu-id="a7f07-219">Per altre informazioni, vedere [static](../../../csharp/language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-219">For more information, see: [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
-###  <span data-ttu-id="a7f07-220"><a name="AnonymousTypes"></a> Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="a7f07-220"><a name="AnonymousTypes"></a> Anonymous Types</span></span>  
+###  <a name="AnonymousTypes"></a> <span data-ttu-id="a7f07-220">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="a7f07-220">Anonymous Types</span></span>  
  <span data-ttu-id="a7f07-221">I tipi anonimi consentono di creare oggetti senza scrivere una definizione della classe per il tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="a7f07-221">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="a7f07-222">La classe viene generata direttamente dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="a7f07-222">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="a7f07-223">La classe non ha un nome utilizzabile e contiene le proprietà specificate nella dichiarazione dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="a7f07-223">The class has no usable name and contains the properties you specify in declaring the object.</span></span>  
   
  <span data-ttu-id="a7f07-224">Per creare un'istanza di un tipo anonimo:</span><span class="sxs-lookup"><span data-stu-id="a7f07-224">To create an instance of an anonymous type:</span></span>  
@@ -303,7 +303,7 @@ var sampleObject =
   
  <span data-ttu-id="a7f07-225">Per altre informazioni, vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="a7f07-225">For more information, see: [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-##  <span data-ttu-id="a7f07-226"><a name="Inheritance"></a> Ereditarietà</span><span class="sxs-lookup"><span data-stu-id="a7f07-226"><a name="Inheritance"></a> Inheritance</span></span>  
+##  <a name="Inheritance"></a> <span data-ttu-id="a7f07-226">Ereditarietà</span><span class="sxs-lookup"><span data-stu-id="a7f07-226">Inheritance</span></span>  
  <span data-ttu-id="a7f07-227">L'ereditarietà permette di creare una nuova classe che riutilizza, estende e modifica il comportamento definito in un'altra classe.</span><span class="sxs-lookup"><span data-stu-id="a7f07-227">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="a7f07-228">La classe i cui membri vengono ereditati è denominata *classe base*, mentre la classe che eredita i membri è denominata *classe derivata*.</span><span class="sxs-lookup"><span data-stu-id="a7f07-228">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="a7f07-229">Tuttavia, tutte le classi in C# ereditano in modo implicito dalla classe <xref:System.Object> che supporta la gerarchia di classi .NET e offre servizi di basso livello a tutte le classi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-229">However, all classes in C# implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>  
   
 > [!NOTE]
@@ -335,7 +335,7 @@ public abstract class B { }
   
 -   [<span data-ttu-id="a7f07-239">abstract</span><span class="sxs-lookup"><span data-stu-id="a7f07-239">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <span data-ttu-id="a7f07-240"><a name="Overriding"></a> Override di membri</span><span class="sxs-lookup"><span data-stu-id="a7f07-240"><a name="Overriding"></a> Overriding Members</span></span>  
+###  <a name="Overriding"></a> <span data-ttu-id="a7f07-240">Override di membri</span><span class="sxs-lookup"><span data-stu-id="a7f07-240">Overriding Members</span></span>  
  <span data-ttu-id="a7f07-241">Per impostazione predefinita, in una classe derivata vengono ereditati tutti i membri della classe base relativa.</span><span class="sxs-lookup"><span data-stu-id="a7f07-241">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="a7f07-242">Se si desidera modificare il comportamento del membro ereditato, è necessario eseguirne l'override.</span><span class="sxs-lookup"><span data-stu-id="a7f07-242">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="a7f07-243">È possibile definire una nuova implementazione del metodo, della proprietà o dell'evento nella classe derivata.</span><span class="sxs-lookup"><span data-stu-id="a7f07-243">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>  
   
  <span data-ttu-id="a7f07-244">I seguenti modificatori consentono di controllare le modalità di override di proprietà e metodi:</span><span class="sxs-lookup"><span data-stu-id="a7f07-244">The following modifiers are used to control how properties and methods are overridden:</span></span>  
@@ -347,7 +347,7 @@ public abstract class B { }
 |[<span data-ttu-id="a7f07-251">abstract</span><span class="sxs-lookup"><span data-stu-id="a7f07-251">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="a7f07-252">Richiede che un membro della classe venga sottoposto a override nella classe derivata.</span><span class="sxs-lookup"><span data-stu-id="a7f07-252">Requires that a class member to be overridden in the derived class.</span></span>|  
 |[<span data-ttu-id="a7f07-253">Modificatore new</span><span class="sxs-lookup"><span data-stu-id="a7f07-253">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)|<span data-ttu-id="a7f07-254">Nasconde un membro ereditato da una classe base.</span><span class="sxs-lookup"><span data-stu-id="a7f07-254">Hides a member inherited from a base class</span></span>|  
   
-##  <span data-ttu-id="a7f07-255"><a name="Interfaces"></a> Interfacce</span><span class="sxs-lookup"><span data-stu-id="a7f07-255"><a name="Interfaces"></a> Interfaces</span></span>  
+##  <a name="Interfaces"></a> <span data-ttu-id="a7f07-255">Interfacce</span><span class="sxs-lookup"><span data-stu-id="a7f07-255">Interfaces</span></span>  
  <span data-ttu-id="a7f07-256">Le interfacce, come le classi, consentono di definire un insieme di proprietà, metodi ed eventi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-256">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="a7f07-257">A differenza delle classi, però, le interfacce non forniscono l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="a7f07-257">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="a7f07-258">Esse sono infatti implementate dalle classi e definite come entità distinte da queste.</span><span class="sxs-lookup"><span data-stu-id="a7f07-258">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="a7f07-259">Un'interfaccia rappresenta un contratto, in quanto è necessario che una classe che implementa un'interfaccia implementi ogni aspetto esattamente come è stato definito.</span><span class="sxs-lookup"><span data-stu-id="a7f07-259">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>  
   
  <span data-ttu-id="a7f07-260">Per definire un'interfaccia:</span><span class="sxs-lookup"><span data-stu-id="a7f07-260">To define an interface:</span></span>  
@@ -377,7 +377,7 @@ class SampleClass : ISampleInterface
   
  [<span data-ttu-id="a7f07-264">interface</span><span class="sxs-lookup"><span data-stu-id="a7f07-264">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <span data-ttu-id="a7f07-265"><a name="Generics"></a> Generics</span><span class="sxs-lookup"><span data-stu-id="a7f07-265"><a name="Generics"></a> Generics</span></span>  
+##  <a name="Generics"></a> <span data-ttu-id="a7f07-265">Generics</span><span class="sxs-lookup"><span data-stu-id="a7f07-265">Generics</span></span>  
  <span data-ttu-id="a7f07-266">Classi, strutture, interfacce e metodi in .NET Framework possono includere *parametri di tipo* che definiscono tipi di oggetti che possono archiviare o usare.</span><span class="sxs-lookup"><span data-stu-id="a7f07-266">Classes, structures, interfaces and methods in the .NET Framework can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="a7f07-267">L'esempio più comune di generics è una raccolta, dove è possibile specificare il tipo di oggetti da archiviare in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="a7f07-267">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>  
   
  <span data-ttu-id="a7f07-268">Per definire una classe generica:</span><span class="sxs-lookup"><span data-stu-id="a7f07-268">To define a generic class:</span></span>  
@@ -402,7 +402,7 @@ sampleObject.Field = "Sample string";
   
 -   [<span data-ttu-id="a7f07-272">Generics</span><span class="sxs-lookup"><span data-stu-id="a7f07-272">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
   
-##  <span data-ttu-id="a7f07-273"><a name="Delegates"></a> Delegati</span><span class="sxs-lookup"><span data-stu-id="a7f07-273"><a name="Delegates"></a> Delegates</span></span>  
+##  <a name="Delegates"></a> <span data-ttu-id="a7f07-273">Delegati</span><span class="sxs-lookup"><span data-stu-id="a7f07-273">Delegates</span></span>  
  <span data-ttu-id="a7f07-274">Un *delegato* è un tipo che definisce una firma di metodo e può offrire un riferimento a qualsiasi metodo con una firma compatibile.</span><span class="sxs-lookup"><span data-stu-id="a7f07-274">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="a7f07-275">Tramite il delegato è possibile invocare (o chiamare) il metodo.</span><span class="sxs-lookup"><span data-stu-id="a7f07-275">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="a7f07-276">I delegati vengono utilizzati per passare metodi come argomenti ad altri metodi.</span><span class="sxs-lookup"><span data-stu-id="a7f07-276">Delegates are used to pass methods as arguments to other methods.</span></span>  
   
 > [!NOTE]
