@@ -23,9 +23,8 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a><span data-ttu-id="a9ca4-102">Sviluppo di applicazioni</span><span class="sxs-lookup"><span data-stu-id="a9ca4-102">Application Development</span></span>
-<span data-ttu-id="a9ca4-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]è un framework di presentazione che può essere usato per sviluppare i seguenti tipi di applicazioni:</span><span class="sxs-lookup"><span data-stu-id="a9ca4-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
+<a name="introduction"></a>
+<span data-ttu-id="a9ca4-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]è un framework di presentazione che può essere usato per sviluppare i seguenti tipi di applicazioni:</span><span class="sxs-lookup"><span data-stu-id="a9ca4-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
   
 -   <span data-ttu-id="a9ca4-104">Applicazioni autonome, ovvero applicazioni [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dallo stile tradizionale compilate come assembly eseguibili installati nel computer client, da cui vengono eseguite.</span><span class="sxs-lookup"><span data-stu-id="a9ca4-104">Standalone Applications (traditional style [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications built as executable assemblies that are installed to and run from the client computer).</span></span>  
   

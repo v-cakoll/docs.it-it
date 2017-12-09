@@ -49,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="4daab-117">Per abilitare l'avvio delle versioni precedenti dei flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="4daab-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <span data-ttu-id="4daab-118"><a name="BKMK_CreateProject"></a>Per creare il progetto CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="4daab-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
+###  <a name="BKMK_CreateProject"></a><span data-ttu-id="4daab-118">Per creare il progetto CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="4daab-118">To create the CreateUpdateMaps project</span></span>  
   
 1.  <span data-ttu-id="4daab-119">Fare doppio clic su **WF45GettingStartedTutorial** in **Esplora** e scegliere **Aggiungi**, **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="4daab-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="4daab-143"><a name="BKMK_StateMachine"></a>Per aggiornare StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_StateMachine"></a><span data-ttu-id="4daab-143">Per aggiornare StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-143">To update StateMachineNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="4daab-144">Aggiungere un oggetto `CreateStateMachineUpdateMap` alla classe `Program` (o `Module1`).</span><span class="sxs-lookup"><span data-stu-id="4daab-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
@@ -426,7 +426,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="4daab-151"><a name="BKMK_Flowchart"></a>Per aggiornare FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Flowchart"></a><span data-ttu-id="4daab-151">Per aggiornare FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-151">To update FlowchartNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="4daab-152">Aggiungere l'oggetto `CreateFlowchartUpdateMethod` seguente alla classe `Program` (o `Module1`).</span><span class="sxs-lookup"><span data-stu-id="4daab-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="4daab-153">Questo metodo è simile a `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="4daab-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="4daab-154">Inizia con una chiamata all'oggetto `StartUpdate`, consente di aggiornare la definizione del flusso di lavoro del diagramma di flusso, quindi termina salvando il mapping di aggiornamento e la definizione aggiornata del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="4daab-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -540,7 +540,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="4daab-155"><a name="BKMK_Sequential"></a>Per aggiornare SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Sequential"></a><span data-ttu-id="4daab-155">Per aggiornare SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="4daab-155">To update SequentialNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="4daab-156">Aggiungere l'oggetto `CreateSequentialUpdateMethod` seguente alla classe `Program` (o `Module1`).</span><span class="sxs-lookup"><span data-stu-id="4daab-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="4daab-157">Questo metodo è simile ad altri due metodi.</span><span class="sxs-lookup"><span data-stu-id="4daab-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="4daab-158">Inizia con una chiamata all'oggetto `StartUpdate`, consente di aggiornare la definizione del flusso di lavoro sequenziale, quindi termina salvando il mapping di aggiornamento e la definizione aggiornata del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="4daab-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -620,7 +620,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="4daab-159"><a name="BKMK_CreateUpdateMaps"></a>Per compilare ed eseguire l'applicazione CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="4daab-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
+###  <a name="BKMK_CreateUpdateMaps"></a><span data-ttu-id="4daab-159">Per compilare ed eseguire l'applicazione CreateUpdateMaps</span><span class="sxs-lookup"><span data-stu-id="4daab-159">To build and run the CreateUpdateMaps application</span></span>  
   
 1.  <span data-ttu-id="4daab-160">Aggiornare il metodo `Main` e aggiungere le seguenti tre chiamate ai metodi.</span><span class="sxs-lookup"><span data-stu-id="4daab-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="4daab-161">Questi metodi vengono aggiunti nelle sezioni riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="4daab-161">These methods are added in the following sections.</span></span> <span data-ttu-id="4daab-162">Tramite ciascun metodo viene aggiornato il flusso di lavoro per determinare il numero corrispondente e viene creato un oggetto `DynamicUpdateMap` mediante il quale vengono descritti gli aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="4daab-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
@@ -654,7 +654,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="4daab-166">Una volta creati i mapping di aggiornamento e aggiornate le definizioni del flusso di lavoro, il passaggio successivo consiste nel compilare un assembly aggiornato del flusso di lavoro contenente le definizioni aggiornate.</span><span class="sxs-lookup"><span data-stu-id="4daab-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-###  <span data-ttu-id="4daab-167"><a name="BKMK_BuildAssembly"></a>Per compilare l'assembly del flusso di lavoro aggiornato</span><span class="sxs-lookup"><span data-stu-id="4daab-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
+###  <a name="BKMK_BuildAssembly"></a><span data-ttu-id="4daab-167">Per compilare l'assembly del flusso di lavoro aggiornato</span><span class="sxs-lookup"><span data-stu-id="4daab-167">To build the updated workflow assembly</span></span>  
   
 1.  <span data-ttu-id="4daab-168">Aprire una seconda istanza di [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4daab-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -685,7 +685,7 @@ ms.lasthandoff: 12/02/2017
   
 12. <span data-ttu-id="4daab-185">Rinominare **NumberGuessWorkflowActivities.dll** a **NumberGuessWorkflowActivities_v15.dll**e copiare il **PreviousVersions** cartella creata nel [Procedura: ospitare più versioni di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="4daab-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-###  <span data-ttu-id="4daab-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>Per aggiornare WorkflowVersionMap con le nuove versioni</span><span class="sxs-lookup"><span data-stu-id="4daab-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="4daab-186">Per aggiornare WorkflowVersionMap con le nuove versioni</span><span class="sxs-lookup"><span data-stu-id="4daab-186">To update WorkflowVersionMap with the new versions</span></span>  
   
 1.  <span data-ttu-id="4daab-187">Tornare all'istanza iniziale di [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4daab-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -1072,7 +1072,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  <span data-ttu-id="4daab-195">Premere CTRL+MAIUSC+B per compilare il progetto.</span><span class="sxs-lookup"><span data-stu-id="4daab-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <span data-ttu-id="4daab-196"><a name="BKMK_ApplyUpdate"></a>Per applicare gli aggiornamenti dinamici</span><span class="sxs-lookup"><span data-stu-id="4daab-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
+###  <a name="BKMK_ApplyUpdate"></a><span data-ttu-id="4daab-196">Per applicare gli aggiornamenti dinamici</span><span class="sxs-lookup"><span data-stu-id="4daab-196">To apply the dynamic updates</span></span>  
   
 1.  <span data-ttu-id="4daab-197">Fare doppio clic su **WF45GettingStartedTutorial** in **Esplora** e scegliere **Aggiungi**, **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="4daab-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -1447,7 +1447,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="4daab-261">**Controllo: SequentialNumberGuessWorkflow; Versione 2.0.0.0 =** </span><span class="sxs-lookup"><span data-stu-id="4daab-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
 <span data-ttu-id="4daab-262">**Premere un tasto qualsiasi per continuare...**</span><span class="sxs-lookup"><span data-stu-id="4daab-262">**Press any key to continue . . .**</span></span>  
   
-###  <span data-ttu-id="4daab-263"><a name="BKMK_BuildAndRun"></a>Per eseguire l'applicazione con i flussi di lavoro aggiornati</span><span class="sxs-lookup"><span data-stu-id="4daab-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="4daab-263">Per eseguire l'applicazione con i flussi di lavoro aggiornati</span><span class="sxs-lookup"><span data-stu-id="4daab-263">To run the application with the updated workflows</span></span>  
   
 1.  <span data-ttu-id="4daab-264">Fare doppio clic su **NumberGuessWorkflowHost** in **Esplora** e scegliere **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="4daab-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
@@ -1482,7 +1482,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="4daab-291">**Immettere un numero compreso tra 1 e 10** </span><span class="sxs-lookup"><span data-stu-id="4daab-291">**Please enter a number between 1 and 10** </span></span>  
 <span data-ttu-id="4daab-292">**6 è corretto. Esatto a sua 4 volta.**</span><span class="sxs-lookup"><span data-stu-id="4daab-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <span data-ttu-id="4daab-293"><a name="BKMK_StartPreviousVersions"></a>Per abilitare l'avvio delle versioni precedenti dei flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="4daab-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+###  <a name="BKMK_StartPreviousVersions"></a><span data-ttu-id="4daab-293">Per abilitare l'avvio delle versioni precedenti dei flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="4daab-293">To enable starting previous versions of the workflows</span></span>  
  <span data-ttu-id="4daab-294">Se si esauriscono i flussi di lavoro da aggiornare, è possibile modificare l'applicazione `NumberGuessWorkflowHost` per abilitare l'avvio delle versioni precedenti dei flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="4daab-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
 1.  <span data-ttu-id="4daab-295">Fare doppio clic su **WorkflowHostForm** in **Esplora**e selezionare il **WorkflowType** casella combinata.</span><span class="sxs-lookup"><span data-stu-id="4daab-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  
