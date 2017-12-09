@@ -52,7 +52,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="f2a6d-102">Modello a oggetti delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="f2a6d-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="f2a6d-103"><a name="introduction"></a>In questo argomento viene descritto il modello a oggetti utilizzato durante l'utilizzo di espressioni regolari di .NET.</span><span class="sxs-lookup"><span data-stu-id="f2a6d-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="f2a6d-104">Include le sezioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f2a6d-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="f2a6d-103">In questo argomento viene descritto il modello a oggetti utilizzato durante l'utilizzo di espressioni regolari di .NET.</span><span class="sxs-lookup"><span data-stu-id="f2a6d-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="f2a6d-104">Include le sezioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f2a6d-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="f2a6d-105">Il motore delle espressioni regolari</span><span class="sxs-lookup"><span data-stu-id="f2a6d-105">The Regular Expression Engine</span></span>](#Engine)  
   
