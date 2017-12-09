@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="51811-215">Inizializzatori di oggetto: tipi denominati e tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="51811-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="51811-216"><a name="Static"></a>Classi condivise e i membri</span><span class="sxs-lookup"><span data-stu-id="51811-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="51811-216">Classi condivise e i membri</span><span class="sxs-lookup"><span data-stu-id="51811-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="51811-217">Un membro condiviso della classe è una proprietà, routine o campo condiviso da tutte le istanze di una classe.</span><span class="sxs-lookup"><span data-stu-id="51811-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="51811-218">Per definire un membro condiviso:</span><span class="sxs-lookup"><span data-stu-id="51811-218">To define a shared member:</span></span>  
