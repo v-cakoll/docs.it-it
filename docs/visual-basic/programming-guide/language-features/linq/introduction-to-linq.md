@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 64e01fdfc4951dc23cd7ce92941a367882b3b6bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 Language-Integrated Query (LINQ) aggiunge funzionalità di query a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e fornisce semplici e potenti funzionalità da utilizzare con qualsiasi tipo di dati. Anziché inviare una query a un database da elaborare, o utilizzare sintassi di query differenti per ogni tipo di dati da ricercare, LINQ introduce le query come parti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
@@ -71,7 +71,7 @@ Language-Integrated Query (LINQ) aggiunge funzionalità di query a [!INCLUDE[vbp
 |Provider|Descrizione|  
 |---|---|  
 |LINQ to Objects|Il provider LINQ to Objects consente di eseguire una query su raccolte e matrici in memoria. Se un oggetto supporta l'interfaccia <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, il provider LINQ to Objects consente di eseguire una query su di esso.<br /><br /> È possibile attivare il provider LINQ to Objects importando lo spazio dei nomi <xref:System.Linq>, che viene importato per impostazione predefinita per tutti i progetti [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].<br /><br /> Per ulteriori informazioni il provider LINQ to Objects, vedere [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ to SQL|Il provider LINQ to SQL consente di eseguire query e di modificare i dati su un database SQL server. Questo semplifica il mapping del modello a oggetti per un'applicazione alle tabelle e agli oggetti in un database.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] semplifica l'utilizzo di LINQ to SQL includendo Object Relational Designer (O/R Designer). Questa finestra di progettazione viene utilizzata per creare un modello a oggetti in un'applicazione con mapping sugli oggetti in un database. O/R Designer fornisce funzionalità per eseguire il mapping di stored procedure e funzioni ai anche il <xref:System.Data.Linq.DataContext> oggetto, che gestisce la comunicazione con il database e archivia lo stato per i controlli di concorrenza ottimistica.<br /><br /> Per ulteriori informazioni il provider LINQ to SQL, vedere [LINQ to SQL](https://msdn.microsoft.com/library/bb386976). Per ulteriori informazioni su Progettazione relazionale oggetti, vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to SQL|Il provider LINQ to SQL consente di eseguire query e di modificare i dati su un database SQL server. Questo semplifica il mapping del modello a oggetti per un'applicazione alle tabelle e agli oggetti in un database.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] semplifica l'utilizzo di LINQ to SQL includendo Object Relational Designer (O/R Designer). Questa finestra di progettazione viene utilizzata per creare un modello a oggetti in un'applicazione con mapping sugli oggetti in un database. O/R Designer fornisce funzionalità per eseguire il mapping di stored procedure e funzioni ai anche il <xref:System.Data.Linq.DataContext> oggetto, che gestisce la comunicazione con il database e archivia lo stato per i controlli di concorrenza ottimistica.<br /><br /> Per ulteriori informazioni il provider LINQ to SQL, vedere [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md). Per ulteriori informazioni su Progettazione relazionale oggetti, vedere [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Il provider LINQ to XML consente di eseguire query e di modificare l'XML. È possibile modificare l'XML in memoria o caricare l'XML da file o salvare l'XML in un file.<br /><br /> Inoltre, il provider LINQ to XML abilita i valori letterali XML e le proprietà asse XML che consentono di scrivere direttamente l'XML nel codice [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Per ulteriori informazioni, vedere [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ to DataSet|Il provider LINQ to DataSet consente di eseguire query e aggiornare dati in un [!INCLUDE[vstecado](~/includes/vstecado-md.md)] set di dati. È possibile aggiungere le caratteristiche avanzate di LINQ ad applicazioni che utilizzano set di dati per semplificare ed estendere le funzionalità per l'esecuzione di query, l'aggregazione e l'aggiornamento dei dati nel set di dati.<br /><br /> Per altre informazioni, vedere [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
@@ -82,7 +82,7 @@ Language-Integrated Query (LINQ) aggiunge funzionalità di query a [!INCLUDE[vbp
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- In questo esempio viene illustrata una query valida; tuttavia, la query diventa molto più efficace quando si aggiungono altre clausole di query per perfezionare il risultato. Ad esempio, è possibile aggiungere una clausola `Where` per filtrare il risultato per uno o più valori. Le espressioni di query consistono in una sola riga di codice; è possibile inserire clausole aggiuntive solo alla fine della query. È possibile suddividere una query su più righe del testo per migliorarne la leggibilità utilizzando il carattere di continuazione della riga: il segno di sottolineatura (_). Nell'esempio di codice seguente viene illustrato un esempio di query che include una clausola `Where`.  
+ In questo esempio viene illustrata una query valida; tuttavia, la query diventa molto più efficace quando si aggiungono altre clausole di query per perfezionare il risultato. Ad esempio, è possibile aggiungere una clausola `Where` per filtrare il risultato per uno o più valori. Le espressioni di query consistono in una sola riga di codice; è possibile inserire clausole aggiuntive solo alla fine della query. È possibile suddividere una query su più righe di testo per migliorarne la leggibilità utilizzando il carattere di sottolineatura (\_) carattere di continuazione di riga. Nell'esempio di codice seguente viene illustrato un esempio di query che include una clausola `Where`.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ Language-Integrated Query (LINQ) aggiunge funzionalità di query a [!INCLUDE[vbp
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Vengono descritte le funzionalità XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sulle quali è possibile eseguire una query e che consentono di includere l'XML come oggetto dati di prima classe nel codice [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
 |[Query](../../../../visual-basic/language-reference/queries/queries.md)|Vengono fornite informazioni di riferimento sulle clausole query disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
 |[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Sono incluse informazioni generali, materiale sussidiario sulla programmazione ed esempi per LINQ.|  
-|[LINQ to SQL](https://msdn.microsoft.com/library/bb386976)|Sono incluse informazioni generali, materiale sussidiario sulla programmazione ed esempi per LINQ to SQL.|  
+|[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|Sono incluse informazioni generali, materiale sussidiario sulla programmazione ed esempi per LINQ to SQL.|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Sono incluse informazioni generali, materiale sussidiario sulla programmazione ed esempi per LINQ to Objects.|  
 |[LINQ to ADO.NET (pagina portale)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Sono inclusi collegamenti a informazioni generali, indicazioni di programmazione ed esempi per LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Sono incluse informazioni generali, indicazioni di programmazione ed esempi per LINQ to XML.|  
@@ -204,6 +204,6 @@ Language-Integrated Query (LINQ) aggiunge funzionalità di query a [!INCLUDE[vbp
  [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  [LINQ to DataSet Overview](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [Metodi DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -12,11 +12,11 @@ ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: efdfa297099fb5538e7b92514c8440c2722f3fe1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
 Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -154,4 +154,4 @@ Module: CLSCompliant(True)>
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)  
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Attributi](https://msdn.microsoft.com/library/5x6cd29c)
+ [Attributi](../../../../../docs/standard/attributes/index.md)

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Esercitazione: Creazione di un Provider di tipi
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 In alternativa, aprire Visual Studio, aprire il menu Debug, scegli `Debug/Attach to process…`e associare a un altro `devenv` processo in cui si sta modificando lo script. Tramite questo metodo, è possibile assegnare più facilmente particolare logica nel provider di tipi digitando in modo interattivo le espressioni nella seconda istanza (con e altre funzionalità di IntelliSense completo).
 
-È possibile disattivare Just My Code di debug per meglio identificare gli errori nel codice generato. Per informazioni su come abilitare o disabilitare questa funzionalità, vedere [spostarsi nel codice con il Debugger](https://msdn.microsoft.com/library/y740d9d3.aspx). Inoltre, è inoltre possibile impostare le eccezioni first-chance intercettazione aprendo il `Debug` menu e scegliendo `Exceptions` oppure scegliendo i tasti Ctrl + Alt + E aprire il `Exceptions` la finestra di dialogo. Nella finestra di dialogo, in `Common Language Runtime Exceptions`, selezionare il `Thrown` casella di controllo.
+È possibile disattivare Just My Code di debug per meglio identificare gli errori nel codice generato. Per informazioni su come abilitare o disabilitare questa funzionalità, vedere [spostarsi nel codice con il Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Inoltre, è inoltre possibile impostare le eccezioni first-chance intercettazione aprendo il `Debug` menu e scegliendo `Exceptions` oppure scegliendo i tasti Ctrl + Alt + E aprire il `Exceptions` la finestra di dialogo. Nella finestra di dialogo, in `Common Language Runtime Exceptions`, selezionare il `Thrown` casella di controllo.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementazione del Provider di tipi

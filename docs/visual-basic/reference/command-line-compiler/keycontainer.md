@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -44,7 +44,7 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
   
  È possibile passare al compilatore le informazioni di crittografia anche tramite [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Usare [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) se si vuole che l'assembly abbia una firma parziale.  
   
- Vedere [creazione e uso degli assembly](https://msdn.microsoft.com/library/xwb8f617) per ulteriori informazioni su come firmare un assembly.  
+ Vedere [creazione e uso degli assembly](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) per ulteriori informazioni su come firmare un assembly.  
   
 > [!NOTE]
 >  Il `/keycontainer` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  

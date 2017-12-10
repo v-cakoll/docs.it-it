@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Considerazioni sulla distribuzione (Entity Framework)
 In questo argomento vengono fornite informazioni sulla distribuzione di applicazioni che usano ADO.NET Entity Framework per l'accesso ai dati. Per ulteriori informazioni su Entity Framework, vedere [Introduzione](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
   
  Entity Framework fornisce un set di strumenti che si integrano con Visual Studio e semplificano le attività di sviluppo in questo ambiente. Per ulteriori informazioni, vedere [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527). In questo argomento non viene descritto come usare le tecnologie specifiche per distribuire un'applicazione basata su Entity Framework.  
   
- Visual Studio include strumenti per la distribuzione di applicazioni, ad esempio ClickOnce. Per ulteriori informazioni, vedere [distribuzione di applicazioni e componenti](https://msdn.microsoft.com/library/wtzawcsz) nella documentazione di Visual Studio.  
+ Visual Studio include strumenti per la distribuzione di applicazioni, ad esempio ClickOnce. Per ulteriori informazioni, vedere [distribuzione di applicazioni e componenti](/visualstudio/deployment/deploying-applications-services-and-components) nella documentazione di Visual Studio.  
   
  Le considerazioni seguenti riguardano la distribuzione di un'applicazione che usa Entity Framework:  
   

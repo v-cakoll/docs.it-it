@@ -14,11 +14,11 @@ ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa9fca7f0590846f60577787aa476539a2c872a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cdbd8edaefba4554e8de92cb600f045dc39f780
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; non è conforme a CLS perché esegue l'overload &lt;proceduresignature2&gt; che differisce da esso solo per la matrice di tipi di parametro matrice o per numero di dimensioni dei tipi di parametro matrice
 Una routine o proprietà è contrassegnata come `<CLSCompliant(True)>` quando viene eseguito l'override di un'altra routine o proprietà e l'unica differenza tra gli elenchi dei parametri è il livello di nidificazione di una matrice di matrici o il numero di dimensioni di una matrice.  
@@ -31,7 +31,7 @@ Una routine o proprietà è contrassegnata come `<CLSCompliant(True)>` quando vi
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- La seconda dichiarazione modifica il parametro unidimensionale originario `arrayParam` a una matrice di matrici. La terza dichiarazione modifica `arrayParam` a una matrice bidimensionale (2 dimensioni). Anche se Visual Basic consente l'overload per differiscono solo per una di queste modifiche, questo tipo di overload non è compatibile con il [indipendenza del linguaggio e componenti indipendenti dal linguaggio](https://msdn.microsoft.com/library/12a7a7h3) (CLS).  
+ La seconda dichiarazione modifica il parametro unidimensionale originario `arrayParam` a una matrice di matrici. La terza dichiarazione modifica `arrayParam` a una matrice bidimensionale (2 dimensioni). Anche se Visual Basic consente l'overload per differiscono solo per una di queste modifiche, questo tipo di overload non è compatibile con il [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Quando <xref:System.CLSCompliantAttribute> viene applicato a un elemento di programmazione, il parametro `isCompliant` dell'attributo viene impostato su `True` o `False` per indicare la conformità o la non conformità. L'impostazione predefinita per questo parametro non è disponibile, quindi è necessario specificare un valore.  
   

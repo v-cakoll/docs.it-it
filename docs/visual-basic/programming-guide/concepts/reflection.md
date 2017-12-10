@@ -11,14 +11,14 @@ ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7b94e25d2ca9563cd50f454c94092f18e295863
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8c2ae87eae971129059a7e84b36971c13a5fe71b
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
-La reflection specifica oggetti di tipo <xref:System.Type> che descrivono assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà. Se si usano attributi nel codice, la reflection consente di accedervi. Per altre informazioni, vedere [Attributi](https://msdn.microsoft.com/library/5x6cd29c).  
+La reflection specifica oggetti di tipo <xref:System.Type> che descrivono assembly, moduli e tipi. È possibile usare la reflection per creare in modo dinamico un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà. Se si usano attributi nel codice, la reflection consente di accedervi. Per altre informazioni, vedere [Attributi](../../../../docs/standard/attributes/index.md).  
   
  Di seguito è riportato un esempio semplice di reflection che usa il metodo statico `GetType` ereditato da tutti i tipi dalla classe di base `Object` per ottenere il tipo di una variabile:  
   
@@ -71,4 +71,4 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori Visual Basic](../../../visual-basic/programming-guide/index.md)  
- [Assembly in Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)
+ [Assembly in Common Language Runtime](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -30,11 +30,11 @@ ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b32707456c9e59d5a81d76c73d867b33554bdbcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76383ae886a5e965c0daefc281c4842a4e563ec7
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Procedura: utilizzare una classe generica (Visual Basic)
 Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si usa una classe generica, è possibile generare una *classe costruita* da essa fornendo un *argomento di tipo* per ciascuno di questi parametri. È possibile quindi dichiarare una variabile del tipo di classe costruita, creare un'istanza della classe costruita e assegnarla alla variabile.  
@@ -56,7 +56,7 @@ Una classe che accetta *parametri di tipo* è chiamato *classe generica*. Se si 
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](https://msdn.microsoft.com/library/12a7a7h3)  
+ [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Procedura: Definire una classe in grado di fornire funzionalità identiche con tipi di dati diversi](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  

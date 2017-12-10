@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Procedura dettagliata: generazione di tipi F# da un file DBML
 
@@ -24,7 +24,7 @@ Questa guida è stata scritta per F # 3.0 e verrà aggiornata.  Per provider di 
 > [!NOTE]
 I collegamenti di riferimento API richiederà a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
 
-Questa procedura dettagliata per F # 3.0 viene descritto come creare tipi di dati da un database quando si dispone di informazioni sullo schema con codificate in un file. dbml. LINQ to SQL Usa questo formato di file per rappresentare lo schema del database. È possibile generare un file LINQ to SQL dello schema in Visual Studio utilizzando la finestra di Progettazione relazionale oggetti (O/R). Per ulteriori informazioni, vedere [O/R Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) e [generazione di codice in LINQ to SQL](https://msdn.microsoft.com/library/bb386976).
+Questa procedura dettagliata per F # 3.0 viene descritto come creare tipi di dati da un database quando si dispone di informazioni sullo schema con codificate in un file. dbml. LINQ to SQL Usa questo formato di file per rappresentare lo schema del database. È possibile generare un file LINQ to SQL dello schema in Visual Studio utilizzando la finestra di Progettazione relazionale oggetti (O/R). Per ulteriori informazioni, vedere [O/R Designer Overview](https://msdn.microsoft.com/library/bb384511.aspx) e [generazione di codice in LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 Il provider di tipi di Database Markup Language (DBML) consente di scrivere codice che usa i tipi basati su uno schema di database senza che sia necessario specificare una stringa di connessione statica in fase di compilazione. Che può essere utile se è necessario consentire la possibilità che l'applicazione finale utilizzerà un database diverso, credenziali diverse o una stringa di connessione diverso da quello utilizzato per sviluppare l'applicazione. Se si dispone di una connessione diretta del database che è possibile utilizzare in fase di compilazione e questo è lo stesso database e le credenziali che verranno usati nell'applicazione compilata, è inoltre possibile utilizzare il provider di tipi SQLDataConnection. Per ulteriori informazioni, vedere [procedura dettagliata: accesso a un Database SQL dal provider di tipi con](accessing-a-sql-database.md).
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurazione di progetti in Visual Studio
 
@@ -32,7 +32,7 @@ Il **progettazione** e il relativo utilizzo generale vengono descritti dettaglia
 |`Build`|[Compilare una pagina, Progettazione progetti &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di controllare la modalità con cui il codice viene compilato.|
 |`Build Events`|[Compila pagina eventi, Progettazione progetti &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di specificare i comandi da eseguire prima o dopo una compilazione.|
 |`Debug`|[Pagina Debug, Creazione progetti](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Consente di controllare l'esecuzione dell'applicazione durante il debug. Sono incluse la riga di comando da utilizzare e qual è la directory dell'applicazione iniziale e qualsiasi speciale che si desidera abilitare, ad esempio SQL e codice nativo modalità di debug.|
-|`Reference Paths`|[Gestione dei riferimenti in un progetto](https://msdn.microsoft.com/library/ez524kew.aspx)|Consente di specificare la posizione in cui cercare gli assembly che dipende dal codice.|
+|`Reference Paths`|[Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)|Consente di specificare la posizione in cui cercare gli assembly che dipende dal codice.|
 
 ## <a name="f-specific-settings"></a>F #-impostazioni specifiche
 Nella tabella seguente vengono riepilogate le impostazioni specifiche di F #:

@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
 Sebbene sia possibile rappresentare graficamente un progetto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi è basata su eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
@@ -113,5 +113,5 @@ Sebbene sia possibile rappresentare graficamente un progetto [!INCLUDE[vsprvs](~
 |[Procedura: Dichiarare eventi personalizzati per proteggere la memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Illustra come definire un evento personalizzato che usa la memoria solo quando viene gestito l'evento.|  
 |[Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Elenca i problemi comuni che si verificano con i gestori eventi nei componenti ereditati.|  
 |[Eventi](../../../../standard/events/index.md)|Panoramica del modello di eventi usato in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Creazione di gestori eventi in Windows Form](https://msdn.microsoft.com/library/dacysss4.aspx)|Descrive come usare gli eventi associati agli oggetti di Windows Form.|  
+|[Creazione di gestori eventi in Windows Form](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Descrive come usare gli eventi associati agli oggetti di Windows Form.|  
 |[Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Panoramica dei delegati in Visual Basic.|
