@@ -13,11 +13,11 @@ ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilità (Guida per programmatori C#)
 L'interoperabilità consente di preservare e sfruttare appieno gli investimenti effettuati in codice non gestito. Il codice eseguito sotto il controllo del Common Language Runtime (CLR) è detto *codice gestito*, mentre quello eseguito all'esterno è detto *codice non gestito*. Esempi di codice non gestito sono i componenti COM, COM+, C++, i componenti ActiveX e le API Microsoft Win32.  
@@ -49,5 +49,5 @@ L'interoperabilità consente di preservare e sfruttare appieno gli investimenti 
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Interoperabilità con codice non gestito](https://msdn.microsoft.com/library/sd10k43k)  
+ [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)  
  [Procedura dettagliata: Programmazione di Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
