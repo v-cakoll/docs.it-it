@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.  
@@ -46,7 +46,7 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 -   **Ricerca**. È possibile eseguire una query e modificare la propria posizione nel flusso.  
   
- Per altre informazioni, vedere [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
+ Per altre informazioni, vedere [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Tipi di flussi  
  Nel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] un flusso è rappresentato dalla classe <xref:System.IO.Stream> che costituisce la classe astratta per tutti i flussi. Non è possibile creare direttamente un'istanza della classe <xref:System.IO.Stream> ma è necessario usare una delle classi che essa implementa.  
@@ -65,13 +65,13 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 |Per|Vedere|
 |---|---|   
-|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Leggere testo da un file|[Procedura: Leggere testo da un file](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Crittografare i dati|[Crittografia di dati](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Decrittografare i dati|[Decrittografia di dati](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|Crittografare i dati|[Crittografia di dati](../../../../../docs/standard/security/encrypting-data.md)|  
+|Decrittografare i dati|[Decrittografia di dati](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Accesso ai file e attributi  
  È possibile controllare come i file vengono creati, aperti e condivisi con le enumerazioni <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> e <xref:System.IO.FileShare>, che contengono i flag utilizzati dai costruttori della classe <xref:System.IO.FileStream>. Ad esempio, quando si apre o si crea un nuovo <xref:System.IO.FileStream>, l'enumerazione <xref:System.IO.FileMode> consente di specificare se il file viene aperto per operazioni di accodamento, se viene creato un nuovo file quando il file specificato non esiste, se il file viene sovrascritto e così via.  
@@ -82,7 +82,7 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 |Per|Vedere|  
 |---|---|
-|Aprire e accodare testo in un file di log|[Procedura: Aprire e accodare un file di log](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|Aprire e accodare testo in un file di log|[Procedura: Aprire e accodare un file di log](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Determinare gli attributi di un file|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Autorizzazioni di file  
@@ -95,19 +95,19 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 |Per|Vedere|
 |---|---|  
-|Creare un spazio di memorizzazione isolato|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Enumerare gli spazi di memorizzazione isolati|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Leggere o scrivere su un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|Creare un spazio di memorizzazione isolato|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Enumerare gli spazi di memorizzazione isolati|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Leggere o scrivere su un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Eventi di file  
  Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modifiche nei file e nelle directory del sistema o in qualsiasi computer a cui si ha accesso dalla rete. Ad esempio, se un file viene modificato, è consigliabile inviare all'utente un avviso che la modifica ha avuto luogo. Quando vengono apportate modifiche, vengono generati uno o più eventi, che vengono archiviati in un buffer e consegnati al componente <xref:System.IO.FileSystemWatcher> per l'elaborazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composizione dei flussi](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Composizione dei flussi](../../../../../docs/standard/io/composing-streams.md)  
  [I/O di file e di flussi](https://msdn.microsoft.com/library/k3352a4t)  
  [I/O di file asincrono](https://msdn.microsoft.com/library/kztecsys)  
  [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))

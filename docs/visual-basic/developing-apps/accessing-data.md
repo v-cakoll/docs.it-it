@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accesso ai dati nelle applicazioni Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] include numerose nuove funzionalità per semplificare lo sviluppo di applicazioni che accedono ai dati. I moduli associati ai dati per applicazioni Windows vengono creati trascinando elementi dalla [finestra Origine dati](/visualstudio/data-tools/add-new-data-sources) nel modulo. I controlli ai dati si associano trascinando elementi dalla **finestra Origini dati** nei controlli esistenti.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 10/18/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Include collegamenti agli argomenti che descrivono come usare LINQ con Visual Basic.  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  Include informazioni su [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Include esempi di programmazione.  
   
  [Strumenti LINQ to SQL in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Include collegamenti agli argomenti che illustrano come creare un modello di oggetto [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) nelle applicazioni.  
+ Include collegamenti agli argomenti che illustrano come creare un modello di oggetto [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) nelle applicazioni.  
   
  [Uso dei set di dati nelle applicazioni a più livelli](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Include collegamenti agli argomenti che illustrano come creare applicazioni dati a più livelli.  
