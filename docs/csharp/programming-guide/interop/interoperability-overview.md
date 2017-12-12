@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Cenni preliminari sull'interoperabilità (Guida per programmatori C#)
 In questo argomento vengono descritti i metodi per consentire l'interoperabilità tra il codice gestito C# e il codice non gestito.  
@@ -63,9 +63,9 @@ In questo argomento vengono descritti i metodi per consentire l'interoperabilit�
  Per altre informazioni, vedere [Esposizione di componenti .NET Framework a COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) e [Esempio di classe COM](../../../csharp/programming-guide/interop/example-com-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramento delle prestazioni di interoperabilità](http://go.microsoft.com/fwlink/?LinkId=99564)  
+ [Improving Interop Performance (Miglioramento delle prestazioni di interoperabilità)](http://go.microsoft.com/fwlink/?LinkId=99564)  
  [Introduzione all'interoperabilità COM](http://go.microsoft.com/fwlink/?LinkId=112406)  
- [Effettuare il marshalling tra codice gestito e](http://go.microsoft.com/fwlink/?LinkId=112398)  
- [Interoperabilità con codice non gestito](https://msdn.microsoft.com/library/sd10k43k)  
+ [Marshaling between Managed and Unmanaged Code (Marshalling tra codice gestito e non gestito)](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)  
  [Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

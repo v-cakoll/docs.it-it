@@ -1,5 +1,5 @@
 ---
-title: "Novità di c# 7 - Guida per c#"
+title: "Novità di C# 7 - Guida a C#"
 description: "Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#."
 keywords: "C#, .NET, .NET Core, funzionalità più recenti, novità"
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>Novità di C# 7
 
 C# 7 aggiunge diverse nuove funzionalità al linguaggio C#:
-* [`out`variabili](#out-variables)
+* [Variabili `out`](#out-variables)
     - È possibile dichiarare valori `out` inline come argomenti al metodo in cui vengono usati.
 * [Tuple](#tuples)
     - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
 * [Variabili discard](#discards)
-    - Elimina è variabili temporanee e di sola scrittura utilizzate nelle assegnazioni quando non si è interessati al valore assegnato. Sono particolarmente utili Decostruzione dei tuple e tipi definiti dall'utente, nonché quando si chiamano metodi con `out` parametri.
+    - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono particolarmente utili per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
 * [Criteri di ricerca](#pattern-matching)
     - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
 * [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
@@ -82,20 +82,20 @@ return result;
 > Le nuove funzionalità delle tuple richiedono i tipi <xref:System.ValueTuple>.
 > È necessario aggiungere il pacchetto NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) per usarlo nelle piattaforme che non includono i tipi.
 >
-> È simile ad altre funzionalità del linguaggio basate sui tipi resi disponibili nel framework. Esempio includono `async` e `await` affidarsi il `INotifyCompletion` interfaccia e basarsi su LINQ `IEnumerable<T>`. Tuttavia, il meccanismo di distribuzione sta cambiando perché .NET sta diventando più indipendente dalla piattaforma. .NET Framework potrebbe non essere sempre distribuito secondo la stessa cadenza del compilatore del linguaggio. Quando nuove funzionalità del linguaggio si basano su nuovi tipi, tali tipi saranno disponibili come pacchetti NuGet al momento della distribuzione delle funzionalità del linguaggio. Una volta che questi nuovi tipi vengono aggiunti all'API standard .NET e distribuiti come parte del framework, il requisito del pacchetto NuGet viene rimosso.
+> È simile ad altre funzionalità del linguaggio basate sui tipi resi disponibili nel framework. Alcuni esempi sono `async` e `await`, basati sull'interfaccia `INotifyCompletion`, e LINQ, basato su `IEnumerable<T>`. Tuttavia, il meccanismo di distribuzione sta cambiando perché .NET sta diventando più indipendente dalla piattaforma. .NET Framework potrebbe non essere sempre distribuito secondo la stessa cadenza del compilatore del linguaggio. Quando nuove funzionalità del linguaggio si basano su nuovi tipi, tali tipi saranno disponibili come pacchetti NuGet al momento della distribuzione delle funzionalità del linguaggio. Una volta che questi nuovi tipi vengono aggiunti all'API standard .NET e distribuiti come parte del framework, il requisito del pacchetto NuGet viene rimosso.
 
 C# offre una sintassi completa per le classi e gli struct usati per spiegare la finalità della progettazione. In alcuni casi tale sintassi richiede ulteriore lavoro con vantaggi minimi. Spesso è possibile scrivere metodi che richiedono una struttura semplice contenente più di un elemento dati. Per supportare questi scenari, sono state aggiunte *tuple* a C#. Le tuple sono strutture di dati leggere che contengono più campi per rappresentare i membri dati.
 I campi non vengono convalidati e non è possibile definire i propri metodi
 
 > [!NOTE]
-> Le tuple sono disponibili prima di C# 7, ma sono stati inefficiente e non aveva alcun supporto del linguaggio.
-> Questo significa che gli elementi tupla possono fare riferimento solo come `Item1`, `Item2` e così via. C# 7 introduce il supporto lingua per le tuple, che consente di semantici nomi per i campi di una tupla con tipi di tupla nuovo e più efficiente.
+> Le tuple erano già disponibili prima di C# 7, ma in modo poco efficiente e senza supporto del linguaggio.
+> Questo significava poter fare riferimento agli elementi delle tuple solo come `Item1`, `Item2` e così via. C# 7 introduce il supporto del linguaggio per le tuple, che consente nomi semantici per i campi di una tupla con tipi di tupla nuovi e più efficienti.
 
 È possibile creare una tupla assegnando ogni membro a un valore:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-Assegnazione consente di creare una tupla i cui membri sono `Item1` e `Item2`, che è possibile utilizzare in modo analogo <xref:System.Tuple> è possibile modificare la sintassi per creare una tupla che fornisce nomi semantici a ognuno dei membri della tupla:
+L'assegnazione consente di creare una tupla i cui membri sono `Item1` e `Item2`, che è possibile usare in modo analogo a <xref:System.Tuple>. È possibile modificare la sintassi per creare una tupla che fornisce nomi semantici per ognuno dei membri della tupla:
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
@@ -105,7 +105,7 @@ In un'assegnazione di tupla è anche possibile specificare i nomi dei campi sul 
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-È possibile specificare i nomi per i campi sul lato sinistro e destro dell'assegnazione:
+È possibile specificare nomi per i campi sia a sinistra che a destra dell'assegnazione:
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -149,25 +149,25 @@ Non si è vincolati dai nomi definiti nel metodo `Deconstruct`. È possibile rin
 
 Informazioni più approfondite sulle tuple sono disponibili nell'[argomento relativo ai tipi di tuple](../tuples.md).
 
-## <a name="discards"></a>Elimina
+## <a name="discards"></a>Variabili discard
 
-Spesso quando Decostruzione di una tupla o chiamare un metodo con `out` parametri, si è costretti a definire una variabile il cui valore non interessa e non prevede di utilizzare. C# aggiunge il supporto per *Elimina* per gestire questo scenario. Un'eliminazione è una variabile di sola scrittura il cui nome è `_` (carattere di sottolineatura); è possibile assegnare tutti i valori che si intendono eliminare per una singola variabile. Un'eliminazione è simile a una variabile non assegnata; oltre l'istruzione di assegnazione, l'eliminazione non possa essere usate nel codice.
+Spesso durante lo decostruzione di una tupla o la chiamata di un metodo con parametri `out`, si è costretti a definire una variabile con un valore non significativo e che non si intende usare. C# aggiunge il supporto delle *variabili discard* per gestire questo scenario. Una variabile discard è una variabile di sola scrittura il cui nome è `_` (carattere di sottolineatura). È possibile assegnare tutti i valori che non occorre mantenere alla singola variabile. Una variabile discard è simile a una variabile non assegnata. Con l'eccezione dell'istruzione di assegnazione, la variabile discard non può essere usata nel codice.
 
-Elimina è supportati negli scenari seguenti:
+Le variabili discard sono supportate negli scenari seguenti:
 
-* Quando Decostruzione delle tuple o i tipi definiti dall'utente.
+* Per la decostruzione di tuple o tipi definiti dall'utente.
 
-* Quando si chiamano metodi con [out](../language-reference/keywords/out.md) parametri.
+* Per la chiamata di metodi con parametri [out](../language-reference/keywords/out.md).
 
-* In un'operazione con il [è](../language-reference/keywords/is.md) e [passare](../language-reference/keywords/switch.md) istruzioni.
+* In operazioni con criteri di ricerca con le istruzioni [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
 
-* Come identificatore autonomo quando si desidera in modo esplicito, identificare il valore di un'assegnazione come un'eliminazione.
+* Come identificatore autonomo quando si vuole identificare in modo esplicito il valore di un'assegnazione come variabile discard.
 
-L'esempio seguente definisce un `QueryCityDataForYears` metodo che restituisce una tupla con 6 elementi che contiene i dati di una città per due anni diversi. La chiamata al metodo nell'esempio è interessata solo con i valori di due popolamento restituiti dal metodo e quindi considera i valori rimanenti nella tupla, Elimina annullamento della costruzione di tupla.
+L'esempio seguente definisce un metodo `QueryCityDataForYears` che restituisce una tupla con 6 elementi che contiene i dati di una città per due anni diversi. La chiamata del metodo nell'esempio è interessata solo ai due valori di popolazione restituiti dal metodo e quindi gestisce i valori rimanenti nella tupla come variabili discard quando decostruisce la tupla.
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Per ulteriori informazioni, vedere [Elimina](../discards.md).
+Per altre informazioni, vedere [Variabili discard](../discards.md).
  
 ## <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -175,15 +175,15 @@ L'uso dei *criteri di ricerca* consente di implementare l'invio dei metodi per l
 
 I criteri di ricerca supportano le espressioni `is` e le espressioni `switch`. Ognuno consente di esaminare un oggetto e le relative proprietà per determinare se l'oggetto soddisfa il criterio ricercato. Usare la parola chiave `when` per specificare regole aggiuntive per il modello.
 
-### <a name="is-expression"></a>`is`espressione
+### <a name="is-expression"></a>Espressione `is`
 
-Il `is` espressione di criteri estende le ben note `is` operatore di query in un oggetto oltre il relativo tipo.
+L'espressione con criterio `is` estende il noto operatore `is` per eseguire query su un oggetto oltre il relativo tipo.
 
 Iniziamo con uno scenario semplice a cui verranno aggiunte delle funzionalità per spiegare in che modo le espressioni di criteri di ricerca semplificano gli algoritmi usati con i tipi non correlati. Si inizierà con un metodo che calcola la somma di un numero di tirate di dadi:
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-È possibile vedere rapidamente che è necessario trovare la somma delle tirate di dadi dove alcune delle tirate sono fatte con più di un dado. Parte della sequenza di input può essere costituita da più risultati anziché un singolo numero:
+È possibile vedere rapidamente che è necessario trovare la somma delle tirate di dadi dove alcune delle tirate sono fatte con più dadi. Parte della sequenza di input può essere costituita da più risultati anziché un singolo numero:
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -203,7 +203,7 @@ Le espressioni di ricerca supportano anche le costanti. Ciò consente di risparm
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-Il codice riportato sopra aggiunge casi per `0` come caso speciale di `int` e `null` come caso speciale quando non vi è alcun input. Questo esempio dimostra un nuovo importante aspetto delle espressioni con criterio switch: l'ordine delle espressioni `case` ora viene tenuto in considerazione. Il caso `0` deve essere visualizzato prima del caso `int` generale. In caso contrario, il primo criterio di corrispondenza sarebbe il caso `int`, anche se il valore è `0`. Se si ordinano accidentalmente espressioni match in modo che un case successivo è già stato gestito, il compilatore verrà flag che e generare un errore.
+Il codice riportato sopra aggiunge casi per `0` come caso speciale di `int` e `null` come caso speciale quando non vi è alcun input. Questo esempio dimostra un nuovo importante aspetto delle espressioni con criterio switch: l'ordine delle espressioni `case` ora viene tenuto in considerazione. Il caso `0` deve essere visualizzato prima del caso `int` generale. In caso contrario, il primo criterio di corrispondenza sarebbe il caso `int`, anche se il valore è `0`. Se le espressioni di ricerca vengono accidentalmente ordinate in modo tale che un caso successivo sia già stato gestito, il compilatore applica un contrassegno e genera un errore.
 
 Questo stesso comportamento abilita il caso speciale per una sequenza di input vuota.
 Come si può vedere, il caso per un oggetto `IEnumerable` con elementi deve apparire prima del caso `IEnumerable` generale.
@@ -215,9 +215,9 @@ Infine, si aggiungerà un ultimo `case` per un nuovo stile di dado. Alcuni gioch
 > [!NOTE]
 > Due dadi percentili a 10 facce possono rappresentare qualsiasi numero da 0 a 99. Un dado ha le facce etichettate con `00`, `10`, `20`,... `90`. L'altro dado ha le facce etichettate con `0`, `1`, `2`, ... `9`. Sommare i valori dei due dadi e si potrà avere qualsiasi numero compreso tra 0 e 99.
 
-Per aggiungere questo tipo di dado alla raccolta, per prima cosa definire un tipo per rappresentare il dado percentile:
+Per aggiungere questo tipo di dado alla raccolta, per prima cosa definire un tipo per rappresentare il dado percentile. La proprietà `TensDigit` archivia i valori `0`, `10`, `20` fino a `90`:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 Aggiungere quindi un'espressione di ricerca `case` per il nuovo tipo:
 
@@ -277,14 +277,14 @@ Per ottenere il risultato desiderato, è necessario aggiungere il modificatore `
 
 A questo punto, la seconda istruzione `WriteLine` nell'esempio precedente consente di stampare il valore `24`, che indica che la memorizzazione nella matrice è stata modificata. La variabile locale è stata dichiarata con il modificatore `ref` e accetterà un valore restituito `ref`. È necessario inizializzare una variabile `ref` quando viene dichiarata, non è possibile separare la dichiarazione e l'inizializzazione.
 
-Il linguaggio c# dispone di tre altre regole che si proteggono da impropriamente il `ref` variabili locali e restituisce:
+Il linguaggio C# usa altre tre regole per evitare usi impropri delle variabili locali e dei valori restituiti `ref`:
 
-* Non è possibile assegnare un valore restituito del metodo standard per un `ref` variabile locale.
+* Non è possibile assegnare un valore restituito del metodo standard a una variabile locale `ref`.
     - Questo non consente istruzioni come `ref int i = sequence.Count();`
 * Non è possibile restituire un oggetto `ref` a una variabile la cui durata non si estende oltre l'esecuzione del metodo.
-    - Ciò significa che non è possibile restituire un riferimento a una variabile locale o una variabile con un ambito simile.
-* `ref`variabili locali e restituisce non possono essere utilizzate con i metodi asincroni.
-    - Il compilatore non è possibile sapere se la variabile a cui fa riferimento è stata impostata sul valore finale quando restituito dal metodo asincrono.
+    - Ciò significa che non è possibile restituire un riferimento a una variabile locale o a una variabile con ambito simile.
+* Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
+    - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
 
 L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione. 
 
@@ -366,7 +366,7 @@ La nuova funzionalità del linguaggio consente ai metodi asincroni di restituire
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> È necessario aggiungere il pacchetto NuGet [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) per utilizzare il <xref:System.Threading.Tasks.ValueTask%601> tipo.
+> È necessario aggiungere il pacchetto NuGet [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) per usare il tipo <xref:System.Threading.Tasks.ValueTask%601>.
 
 Una semplice ottimizzazione sarebbe usare `ValueTask` in posizioni in cui prima sarebbe stato usato `Task`. Tuttavia, se si vogliono eseguire manualmente altre ottimizzazioni, è possibile memorizzare nella cache i risultati delle attività asincrone e usarli di nuovo nelle chiamate successive. Lo struct `ValueTask` include un costruttore con un parametro `Task` in modo che sia possibile costruire un oggetto `ValueTask` dal valore restituito di qualsiasi metodo asincrono esistente:
 

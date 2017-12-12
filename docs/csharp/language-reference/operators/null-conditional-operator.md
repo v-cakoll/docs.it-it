@@ -13,17 +13,17 @@ ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1a49d36b8580812c08e9ee080a9602d9fc2027ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c2372380d8162d3e7760bba4a43cdb1c568bf5b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="-operator-c-reference"></a>?? Operatore (Riferimenti per C#)
 L'operatore `??` viene chiamato operatore null-coalescing.  Restituisce l'operando sinistro se non è Null. In caso contrario, restituisce l'operando destro.  
   
 ## <a name="remarks"></a>Note  
- Un tipo nullable può rappresentare un valore dal dominio del tipo oppure il valore può essere indefinito, nel qual caso è Null. È possibile utilizzare il `??` espressività sintattica dell'operatore per restituire un valore appropriato (l'operando destro) quando l'operando sinistro è un tipo nullable il cui valore è null. Se si tenta di assegnare un tipo di valore nullable a un tipo non nullable senza utilizzare l'operatore `??`, verrà generato un errore in fase di compilazione. Se si utilizza un cast e il tipo di valore nullable non è attualmente definito, verrà generata un'eccezione `InvalidOperationException`.  
+ Un tipo nullable può rappresentare un valore dal dominio del tipo oppure il valore può essere indefinito, nel qual caso è Null. È possibile usare l'espressività sintattica dell'operatore `??` per restituire un valore appropriato (l'operando destro) quando l'operando sinistro è un tipo nullable il cui valore è Null. Se si tenta di assegnare un tipo di valore nullable a un tipo non nullable senza utilizzare l'operatore `??`, verrà generato un errore in fase di compilazione. Se si utilizza un cast e il tipo di valore nullable non è attualmente definito, verrà generata un'eccezione `InvalidOperationException`.  
   
  Per altre informazioni, vedere [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md).  
   
@@ -37,4 +37,4 @@ L'operatore `??` viene chiamato operatore null-coalescing.  Restituisce l'operan
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Operatori C#](../../../csharp/language-reference/operators/index.md)  
  [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)  
- [Cosa significa esattamente "elevato"?](http://go.microsoft.com/fwlink/?LinkID=112382)
+ [Cosa significa esattamente "elevato"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

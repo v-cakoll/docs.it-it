@@ -1,6 +1,6 @@
 ---
 title: "Livelli di accessibilità (Riferimenti per C#)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Livelli di accessibilità (Riferimenti per C#)
+
 Usano i modificatori di accesso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md) per specificare uno dei livelli seguenti di accessibilità dichiarata per i membri.  
   
 |Accessibilità dichiarata|Significato|  
@@ -27,9 +27,9 @@ Usano i modificatori di accesso [public](../../../csharp/language-reference/keyw
 |`internal`|L'accesso è limitato all'assembly corrente.|  
 |`protected internal`|L'accesso è limitato all'assembly corrente o ai tipi derivati dalla classe che li contiene.|  
 |`private`|L'accesso è limitato al tipo contenitore.|  
-|`private protected`|Accesso è limitato a una classe o i tipi derivati dalla classe di appartenenza all'interno dell'assembly corrente.|  
+|`private protected`|L'accesso è limitato alla classe o ai tipi derivati dalla classe che li contiene all'interno dell'assembly corrente. Disponibile da C# 7.2. |  
   
- Solo un modificatore di accesso è consentito per un membro o un tipo, tranne quando si utilizza il `protected internal` o `private protected` combinazioni.  
+ Per un membro o un tipo è consentito solo un modificatore di accesso, tranne quando si usano le combinazioni `protected internal` o `private protected`.  
   
  I modificatori di accesso non sono consentiti negli spazi dei nomi. Gli spazi dei nomi non hanno restrizioni di accesso.  
   

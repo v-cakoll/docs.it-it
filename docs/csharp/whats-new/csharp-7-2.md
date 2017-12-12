@@ -1,57 +1,57 @@
 ---
-title: "Novità di c# 7.2"
-description: "Panoramica delle nuove funzionalità in c# 7.2."
-keywords: Progettazione del linguaggio c#, 7.2, Visual Studio 2017,
+title: "Novità di C# 7.2"
+description: "Panoramica delle nuove funzionalità in C# 7.2."
+keywords: Progettazione del linguaggio C#, 7.2, Visual Studio 2017,
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: a580a4a3a0a49e97ea8fb96699d1d978a9bc0a64
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
-# <a name="whats-new-in-c-72"></a>Novità di c# 7.2
+# <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
-7.2 c# è un altro punto di rilascio che aggiunge il numero di funzionalità utili.
-Un tema per questa versione funziona in modo più efficiente con tipi di valore, evitando inutili copie o le allocazioni. 
+C# 7.2 è un'altra Point Release che aggiunge numerose funzionalità utili.
+Il tema centrale di questa versione è l'uso più efficiente dei tipi valore, evitando inutili copie o allocazioni. 
 
-Le funzionalità rimanenti sono piccole, nice hanno funzionalità.
+Le funzionalità rimanenti sono piccole e utili.
 
-7.2 c# utilizza il [selezione della lingua versione](csharp-7-1.md#language-version-selection) elemento di configurazione per selezionare la lingua del compilatore.
+C# 7.2 usa l'elemento di configurazione per la [selezione della versione del linguaggio](csharp-7-1.md#language-version-selection) per selezionare la versione del linguaggio del compilatore.
 
-Le nuove funzionalità del linguaggio in questa versione sono:
+Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-* [Semantica di riferimento con tipi di valore](#reference-semantics-with-value-types)
-  - Una combinazione di miglioramenti di sintassi che consentono l'utilizzo di tipi di valore utilizzando la semantica di riferimento.
-* [Argomenti denominati finali non](#non-trailing-named-arguments)
-  - Argomenti denominati possono essere seguiti da argomenti posizionali.
+* [Semantica di riferimento con i tipi valore](#reference-semantics-with-value-types)
+  - Una combinazione di miglioramenti della sintassi che consentono l'utilizzo dei tipi valore tramite la semantica di riferimento.
+* [Argomenti denominati non finali](#non-trailing-named-arguments)
+  - Gli argomenti denominati possono essere seguiti da argomenti posizionali.
 * [Caratteri di sottolineatura iniziali nei valori letterali numerici](#leading-underscores-in-numeric-literals)
-  - Valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima delle cifre stampate.
-* [`private protected`modificatore di accesso](#private-protected)
-  - Il `private protected` modificatore di accesso consente l'accesso per le classi derivate nello stesso assembly.
+  - I valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima di qualsiasi cifra stampata.
+* [Modificatore di accesso `private protected`](#private-protected)
+  - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
 
-## <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con tipi di valore
+## <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con i tipi valore
 
-Funzionalità del linguaggio introdotte in 7.2 consentono di lavorare con i tipi di valore quando si utilizza la semantica di riferimento. Essi sono progettati per migliorare le prestazioni riducendo al minimo la copia tipi di valore senza incorrere nelle allocazioni di memoria associate all'utilizzo di tipi di riferimento. Le funzionalità includono:
+Le funzionalità del linguaggio introdotte nella versione 7.2 consentono di lavorare con i tipi valore usando allo stesso tempo la semantica di riferimento. Queste funzionalità sono state progettate per migliorare le prestazioni riducendo al minimo la copia dei tipi valore senza dover sostenere le allocazioni di memoria associate all'uso dei tipi riferimento. Sono incluse le funzionalità seguenti:
 
- - Il `in` modificatore sui parametri, per specificare che un argomento è passato per riferimento, ma non è stato modificato dal metodo chiamato.
- - Il `ref readonly` modificatore nel metodo restituisce, per indicare che un metodo restituisce il valore per riferimento, ma non consentire la scrittura in quell'oggetto.
- - Il `readonly struct` dichiarazione, per indicare che una struttura non è modificabile e deve essere passata come un `in` parametro ai relativi metodi membro.
- - Il `ref struct` dichiarazione, per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere stack allocato.
+ - Il modificatore `in` per i parametri, per specificare che un argomento viene passato per riferimento, ma non modificato dal metodo chiamato.
+ - Il modificatore `ref readonly` per i valori restituiti dai metodi, per indicare che un metodo restituisce il valore per riferimento, ma non consente scritture su tale oggetto.
+ - La dichiarazione `readonly struct` per indicare che uno struct non è modificabile e deve essere passato come parametro `in` ai relativi metodi membro.
+ - La dichiarazione `ref struct` per indicare che un tipo di struct accede direttamente alla memoria gestita e deve sempre essere allocato nello stack.
 
-Per ulteriori informazioni su tutte queste modifiche nel [utilizzo di tipi di valore con la semantica di riferimento](../reference-semantics-with-value-types.md).
+Per altre informazioni su tutte queste modifiche, vedere [Semantica di riferimento con tipi di valore](../reference-semantics-with-value-types.md).
 
-## <a name="non-trailing-named-arguments"></a>Argomenti denominati finali non
+## <a name="non-trailing-named-arguments"></a>Argomenti denominati non finali
 
-Chiamate al metodo è ora possono utilizzare argomenti denominati che precedono gli argomenti posizionali quando questi argomenti sono nelle posizioni corrette. Per ulteriori informazioni vedere [argomenti denominati e facoltativi](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
+Per le chiamate di metodi è ora possibile usare argomenti denominati che precedono gli argomenti posizionali quando questi argomenti denominati sono nelle posizioni corrette. Per altre informazioni, vedere [Argomenti denominati e facoltativi](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Caratteri di sottolineatura iniziali nei valori letterali numerici
 
-L'implementazione del supporto per i separatori di cifre in c# 7.0 non ha consentito di `_` sia il primo carattere del valore letterale. Esadecimale e valori letterali numerici binari ora possono iniziare con un `_`. 
+L'implementazione del supporto per i separatori di cifre in C# 7.0 non consentiva l'uso di `_` come primo carattere del valore letterale. I valori letterali numerici esadecimali e binari possono ora iniziare con `_`. 
 
 Ad esempio:
 
@@ -61,6 +61,6 @@ int binaryValue = 0b_0101_0101;
 
 ## `private protected`
 
-Infine, un nuovo modificatore di accesso composta: `private protected` indica che un membro sono accessibili dalle classi derivate che vengono dichiarate nello stesso assembly. Mentre `protected internal` consente l'accesso da classi derivate o le classi che sono nello stesso assembly, `private protected` limita l'accesso ai tipi derivati dichiarato nello stesso assembly.
+Infine, il nuovo modificatore di accesso composto `private protected` indica che un membro è accessibile dalla classe che lo contiene o dalle classi derivate dichiarate nello stesso assembly. Anche se `protected internal` consente l'accesso da classi derivate o classi nello stesso assembly, `private protected` limita l'accesso ai tipi derivati dichiarati nello stesso assembly.
 
-Per ulteriori informazioni vedere [modificatori di accesso](../language-reference/keywords/access-modifiers.md) nella Guida di riferimento.
+Per altre informazioni, vedere [Modificatori di accesso](../language-reference/keywords/access-modifiers.md) nelle informazioni di riferimento sul linguaggio.

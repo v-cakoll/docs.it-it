@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   I metodi di estensione vengono inseriti nell'ambito al livello dello spazio dei nomi. Se, ad esempio, si dispone di più classi statiche contenenti metodi di estensione in un solo spazio dei nomi denominato `Extensions`, verranno tutti inseriti nell'ambito dalla direttiva `using Extensions;`.  
   
- Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](https://msdn.microsoft.com/library/51ket42z).  
+ Per una libreria di classi implementata, non è necessario utilizzare i metodi di estensione per evitare l'incremento del numero di versione di un assembly. Se si desidera aggiungere funzionalità significative a una libreria per il quale si è proprietari del codice sorgente, è necessario seguire le linee guida standard di .NET Framework per il controllo delle versioni degli assembly. Per altre informazioni, vedere [Controllo delle versioni degli assembly](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Esempi di programmazione parallela (tra molti metodi di estensione di esempio)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Cenni preliminari sugli operatori di query standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversione delle regole, ad esempio parametri e il relativo impatto](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Metodi di estensione interoperabilità tra linguaggi](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Metodi di estensione e delegati](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Regole di conversione per parametri Instance e relativo impatto](http://go.microsoft.com/fwlink/?LinkId=112385)  
+ [Interoperabilità dei metodi di estensione tra linguaggi](http://go.microsoft.com/fwlink/?LinkId=112386)  
+ [Metodi di estensione e delegati sottoposti a currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
  [Associazione di metodi di estensione e segnalazione errori](http://go.microsoft.com/fwlink/?LinkId=112388)
