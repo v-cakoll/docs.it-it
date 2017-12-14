@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: creazione di un pulsante tramite XAML
 L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare un pulsante animato per l'utilizzo in un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] dell'applicazione. Questa procedura dettagliata utilizza stili e un modello per creare una risorsa pulsante personalizzato che consente il riutilizzo del codice e la separazione logica dalla dichiarazione del pulsante. Questa procedura dettagliata viene scritta interamente in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
     </Application>  
     ```  
   
-     Ambito di risorse è determinato in cui si definisce la risorsa. Definizione delle risorse in `Application.Resoureses` nell'app. XAML file abilita la risorsa essere utilizzato da un punto qualsiasi nell'applicazione. Per ulteriori informazioni sulla definizione dell'ambito delle risorse, vedere [risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Ambito di risorse è determinato in cui si definisce la risorsa. Definizione delle risorse in `Application.Resources` nell'app. XAML file abilita la risorsa essere utilizzato da un punto qualsiasi nell'applicazione. Per ulteriori informazioni sulla definizione dell'ambito delle risorse, vedere [risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Creare uno stile e definire i valori delle proprietà di base:** il markup seguente per aggiungere il `Application.Resources` blocco. Questo codice crea un <xref:System.Windows.Style> che si applica a tutti i pulsanti nell'applicazione, l'impostazione di <xref:System.Windows.FrameworkElement.Width%2A> dei pulsanti su 90 e <xref:System.Windows.FrameworkElement.Margin%2A> a 10:  
   
@@ -328,7 +328,7 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
   
      Premere F5 per eseguire l'applicazione e fare clic su uno dei pulsanti. Si noti che il pulsante rimane evidenziato dopo aver selezionato perché è ancora attiva. Se si fa clic su un altro pulsante, il nuovo pulsante Ottiene lo stato attivo mentre l'ultimo perde.  
   
-4.  **Aggiungere le animazioni per** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** successivo verranno aggiunte alcune animazioni ai trigger.   Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco.  
+4.  **Aggiungere le animazioni per** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** successivo verranno aggiunte alcune animazioni ai trigger. Aggiungere il markup seguente in un punto qualsiasi all'interno del `ControlTemplate.Triggers` blocco.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
