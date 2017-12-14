@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testing unità in .NET Core e .NET Standard
 
@@ -34,15 +34,18 @@ Quando si scrivono unit test, fare attenzione a non introdurre accidentalmente d
 
 Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 
-I progetti di unit test per .NET Core sono supportati per [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). È anche possibile scegliere tra [xUnit](http://xunit.github.io) e [MSTest](https://github.com/Microsoft/vstest-docs).
+I progetti di unit test per .NET Core sono supportati per [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). È anche possibile scegliere tra [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) e [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Informazioni su tali combinazioni sono disponibili in queste procedure dettagliate:
 
 * Creare unit test con [*XUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md).
+* Creare unit test con [*NUnit* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-nunit.md).
 * Creare unit test con [*MSTest* e *C#* con l'interfaccia della riga di comando di .NET Core](unit-testing-with-mstest.md).
 * Creare unit test con [*XUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Creare unit test con [*NUnit* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-nunit.md).
 * Creare unit test con [*MSTest* e *F#* con l'interfaccia della riga di comando di .NET Core](unit-testing-fsharp-with-mstest.md).
 * Creare unit test con [*XUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Creare unit test con [*NUnit* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Creare unit test con [*MSTest* e *Visual Basic* con l'interfaccia della riga di comando di .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 È possibile scegliere linguaggi diversi per le librerie di classi e le librerie di unit test. Le istruzioni, per le varie combinazioni, sono disponibili nelle procedure dettagliate indicate in precedenza.
