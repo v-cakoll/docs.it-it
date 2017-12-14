@@ -17,16 +17,15 @@ helpviewer_keywords:
 - exceptions [.NET Framework]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d44996042d167c029291f2b454dc1a22cfbcfb4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestione e generazione di eccezioni in .NET
 
@@ -36,7 +35,7 @@ Le applicazioni devono essere in grado di gestire in modo coerente gli errori ch
 
 Un'eccezione è una condizione di errore o un comportamento imprevisto riscontrato da un programma in esecuzione. Le eccezioni possono essere generate in caso di errori nel codice dell'applicazione o nel codice chiamato (ad esempio una libreria condivisa), in caso di risorse del sistema operativo non disponibili, di condizioni impreviste riscontrate dal runtime (ad esempio codice impossibile da verificare) e così via. L'applicazione è in grado di gestire alcune di queste condizioni, altre no. Sebbene sia possibile gestire gran parte delle eccezioni dell'applicazione, la maggior parte delle eccezioni di runtime risulta ingestibile.
 
-In .NET un'eccezione è un oggetto che eredita dalla classe [System.Exception](xref:System.Exception). Le eccezioni vengono generate dalle aree di codice in cui si è verificato un problema. Ogni eccezione viene passata ai livelli superiori dello stack finché non viene gestita dall'applicazione o non si arresta il programma.
+In .NET un'eccezione è un oggetto che eredita dalla classe <xref:System.Exception?displayProperty=nameWithType>. Le eccezioni vengono generate dalle aree di codice in cui si è verificato un problema. Ogni eccezione viene passata ai livelli superiori dello stack finché non viene gestita dall'applicazione o non si arresta il programma.
 
 ## <a name="exceptions-vs-traditional-error-handling-methods"></a>Confronto tra eccezioni e metodi di gestione degli errori tradizionali
 
@@ -58,13 +57,13 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 
 | Tipo di eccezione | Tipo base | Descrizione | Esempio |
 | -------------- | --------- | ----------- | ------- |
-| @System.Exception | @System.Object | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
-| @System.IndexOutOfRangeException | @System.Exception | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: `arr[arr.Length+1]` |
-| @System.NullReferenceException | @System.Exception | Generata dal runtime solo quando viene fatto riferimento a un oggetto Null. | `object o = null; o.ToString();` |
-| @System.InvalidOperationException | @System.Exception | Generata dai metodi con uno stato non valido. | Chiamata di `Enumerator.GetNext()` dopo la rimozione di un elemento dalla raccolta sottostante. |
-| @System.ArgumentException | @System.Exception | Classe base per tutte le eccezioni di argomento. | Nessuno (usare una classe derivata di questa eccezione). |
-| @System.ArgumentNullException | @System.Exception | Generata dai metodi che non consentono un argomento Null. | `String s = null; "Calculate".IndexOf (s);` |
-| @System.ArgumentOutOfRangeException | @System.Exception | Generata dai metodi che verificano se gli argomenti sono compresi in un determinato intervallo. | `String s = "string"; s.Substring(s.Length+1);` |
+| <xref:System.Exception> | <xref:System.Object> | Classe base per tutte le eccezioni. | Nessuno (usare una classe derivata di questa eccezione). |
+| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Generata dal runtime solo quando una matrice viene indicizzata in modo non corretto. | Indicizzazione di una matrice esternamente al relativo intervallo valido: `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | <xref:System.Exception> | Generata dal runtime solo quando viene fatto riferimento a un oggetto Null. | `object o = null; o.ToString();` |
+| <xref:System.InvalidOperationException> | <xref:System.Exception> | Generata dai metodi con uno stato non valido. | Chiamata di `Enumerator.GetNext()` dopo la rimozione di un elemento dalla raccolta sottostante. |
+| <xref:System.ArgumentException> | <xref:System.Exception> | Classe base per tutte le eccezioni di argomento. | Nessuno (usare una classe derivata di questa eccezione). |
+| <xref:System.ArgumentNullException> | <xref:System.Exception> | Generata dai metodi che non consentono un argomento Null. | `String s = null; "Calculate".IndexOf (s);` |
+| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Generata dai metodi che verificano se gli argomenti sono compresi in un determinato intervallo. | `String s = "string"; s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -79,4 +78,3 @@ Nella tabella seguente sono elencate alcune eccezioni comuni con esempi di possi
 * [Procedure consigliate per le eccezioni](best-practices-for-exceptions.md)
 
 Per altre informazioni sull'uso delle eccezioni in .NET, vedere [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Informazioni per gli sviluppatori sulle eccezioni nel runtime).
-

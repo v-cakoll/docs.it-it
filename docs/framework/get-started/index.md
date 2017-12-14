@@ -1,30 +1,23 @@
 ---
 title: Introduzione a .NET Framework
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
-ms.openlocfilehash: 327aad36a560a772e9ddb4d8d721c2545f800151
-ms.contentlocale: it-it
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
 .NET Framework è un ambiente di esecuzione runtime in cui vengono gestite le app destinate a .NET Framework. È costituito da Common Language Runtime, che fornisce la gestione della memoria e altri servizi di sistema, e da un'ampia libreria di classi, che consente ai programmatori di sfruttare codice affidabile per tutte le aree principali dello sviluppo di app.
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/05/2017
 
 - Compatibilità tra versioni. In rare eccezioni, le app sviluppate usando una particolare versione di .NET Framework vengono eseguite senza modifiche in una versione successiva.
 
-- Esecuzione affiancata. .NET Framework consente di risolvere conflitti tra versioni permettendo la coesistenza di più versioni di Common Language Runtime nello stesso computer. Ciò significa che possono coesistere più versioni di app e che un'app può essere eseguita nella versione di .NET Framework con cui è stata creata. L'esecuzione side-by-side è possibile per i gruppi di versioni di .NET Framework 1.0/1.1, 2.0/3.0/3.5 e 4/4.5.x/4.6.x/4.7.
+- Esecuzione affiancata. .NET Framework consente di risolvere conflitti tra versioni permettendo la coesistenza di più versioni di Common Language Runtime nello stesso computer. Ciò significa che possono coesistere più versioni di app e che un'app può essere eseguita nella versione di .NET Framework con cui è stata creata. L'esecuzione side-by-side è possibile per i gruppi di versioni di .NET Framework 1.0/1.1, 2.0/3.0/3.5 e 4/4.5.x/4.6.x/4.7.x.
 
 - Multitargeting. Scegliendo [.NET Standard](~/docs/standard/net-standard.md) come destinazione, gli sviluppatori possono creare assembly che funzionano su più piattaforme .NET Framework, come ad esempio Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Phone e Xbox 360.
 
@@ -61,7 +54,7 @@ In generale, le versioni di .NET Framework installate nel computer non devono es
 
 - Se un'app in uso dipende da una specifica versione di .NET Framework che viene rimossa, l'app potrebbe smettere di funzionare.
 
-- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7 è un aggiornamento sul posto alle versioni 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1 e 4.6.2. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7.1 è un aggiornamento sul posto alle versioni 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 e 4.7. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
 Se si sceglie di rimuovere .NET Framework, usare sempre **Programmi e funzionalità** dal Pannello di controllo per disinstallarlo. Non rimuovere mai manualmente una versione di .NET Framework.
 
@@ -74,7 +67,7 @@ Uno sviluppatore può scegliere qualsiasi linguaggio di programmazione che suppo
 
 Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
-1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7, preinstallata in Windows 10 Creators Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.1, preinstallata in Windows 10 Falll Creators Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui Visual Basic, C#, Visual F# e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).
 
@@ -99,4 +92,3 @@ Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere 
 [Novità](../../../docs/framework/whats-new/index.md)   
 [Browser API .NET](/dotnet/api/)   
 [Guida di sviluppo](../../../docs/framework/development-guide.md)
-
