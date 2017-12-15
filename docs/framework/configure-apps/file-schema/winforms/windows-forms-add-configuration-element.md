@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form aggiungere l'elemento di configurazione
 
@@ -113,7 +113,7 @@ A partire dal 4.7 di .NET Framework, i controlli Windows Form generano un numero
 
 ### <a name="single-pass-scaling"></a>Singola passata scalabilità
 
-Uno o più passate ridimensionamento influisce sulla velocità di risposta percepita dell'interfaccia utente e l'aspetto visivo dell'utente elementi dell'interfaccia utente come essi vengono ridimensionati. A partire dal 4.7 di .NET Framework, Windows Form usa il ridimensionamento unico passaggio. Nelle versioni precedenti di .NET Framework, il ridimensionamento è stato eseguito tramite più passaggi, che ha provocato alcuni controlli scalabilità più necessarie. Scalabilità singola passata deve essere disattivata solo se l'applicazione dipende dal comportamento precedente.  
+Uno o più passate scalabilità influenza la velocità di risposta percepita dell'interfaccia utente e l'aspetto visivo di elementi dell'interfaccia utente come essi vengono ridimensionati. A partire dal 4.7 di .NET Framework, Windows Form usa il ridimensionamento unico passaggio. Nelle versioni precedenti di .NET Framework, il ridimensionamento è stato eseguito tramite più passaggi, che ha provocato alcuni controlli scalabilità più necessarie. Scalabilità singola passata deve essere disattivata solo se l'applicazione dipende dal comportamento precedente.  
 
 ## <a name="see-also"></a>Vedere anche
  

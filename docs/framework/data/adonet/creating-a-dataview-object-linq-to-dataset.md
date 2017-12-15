@@ -16,11 +16,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b82b409f27b14109c8e13fc8909235befc7a8d1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Creazione di un oggetto DataView (LINQ to DataSet)
 Per creare un oggetto <xref:System.Data.DataView> nel contesto [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], sono disponibili due modalità. È possibile creare un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] su <xref:System.Data.DataTable> oppure da un oggetto <xref:System.Data.DataTable> tipizzato o non tipizzato. In entrambi i casi, si crea il <xref:System.Data.DataView> utilizzando uno del <xref:System.Data.DataTableExtensions.AsDataView%2A> metodi di estensione. <xref:System.Data.DataView> non è possibile costruire direttamente nel [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contesto.  
@@ -60,7 +60,7 @@ Per creare un oggetto <xref:System.Data.DataView> nel contesto [!INCLUDE[linq_da
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- È inoltre possibile usare le proprietà basate su stringa <xref:System.Data.DataView.RowFilter%2A> e <xref:System.Data.DataView.Sort%2A> per filtrare e ordinare un oggetto <xref:System.Data.DataView> creato da una query. Si noti che in questo caso le informazioni di ordinamento e di filtro ereditate dalla query verranno cancellate. Nell'esempio seguente viene creato un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] che filtra i contatti in base ai cognomi che iniziano con 'S'. La proprietà <xref:System.Data.DataView.Sort%2A> basata su stringa è impostata per ordinare i cognomi in ordine crescente e quindi i nomi in ordine decrescente:  
+ È inoltre possibile utilizzare una stringa basata sul <xref:System.Data.DataView.RowFilter%2A> e <xref:System.Data.DataView.Sort%2A> proprietà da filtrare e ordinare un <xref:System.Data.DataView> dopo che è stato creato da una query. Si noti che in questo caso le informazioni di ordinamento e di filtro ereditate dalla query verranno cancellate. Nell'esempio seguente viene creato un oggetto <xref:System.Data.DataView> da una query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] che filtra i contatti in base ai cognomi che iniziano con 'S'. La proprietà <xref:System.Data.DataView.Sort%2A> basata su stringa è impostata per ordinare i cognomi in ordine crescente e quindi i nomi in ordine decrescente:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
@@ -81,6 +81,6 @@ Per creare un oggetto <xref:System.Data.DataView> nel contesto [!INCLUDE[linq_da
  Se tuttavia la proprietà <xref:System.Data.DataView.RowFilter%2A> o <xref:System.Data.DataView.Sort%2A> viene impostata dopo la creazione di <xref:System.Data.DataView> da una query, si verifica un decremento delle prestazioni perché <xref:System.Data.DataView> costruisce un indice per supportare le operazioni di filtro e ordinamento. L'impostazione della proprietà <xref:System.Data.DataView.RowFilter%2A> o <xref:System.Data.DataView.Sort%2A> provoca una ricompilazione dell'indice dei dati, aggiungendo un sovraccarico all'applicazione e riducendo le prestazioni. Se possibile, è preferibile specificare le impostazioni di filtro e ordinamento la prima volta che viene creato l'oggetto <xref:System.Data.DataView> ed evitare di modificarle in seguito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [Data binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Filtro con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  [Ordinamento con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

@@ -36,11 +36,11 @@ ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
 caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02ba9a999db20abce2106269522c9a3221a00cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sub-statement-visual-basic"></a>Istruzione Sub (Visual Basic)
 Dichiara il nome, parametri e il codice che definiscono un `Sub` stored procedure.  
@@ -224,7 +224,7 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, `DelayAsync` è un un `Async``Function` che presenta un tipo restituito di <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ha un'istruzione `Return` che restituisce un numero intero. Pertanto, la dichiarazione di funzione di `DelayAsync` deve avere un tipo restituito di `Task(Of Integer)`. Poiché il tipo restituito è `Task(Of Integer)`, la valutazione del `Await` espressione `DoSomethingAsync` genera un numero intero, come illustrato nell'istruzione seguente: `Dim result As Integer = Await delayTask`.  
+ Nell'esempio seguente, `DelayAsync` è un `Async``Function` che presenta un tipo restituito di <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ha un'istruzione `Return` che restituisce un numero intero. Pertanto, la dichiarazione di funzione di `DelayAsync` deve avere un tipo restituito di `Task(Of Integer)`. Poiché il tipo restituito è `Task(Of Integer)`, la valutazione del `Await` espressione `DoSomethingAsync` genera un numero intero, come illustrato nell'istruzione seguente: `Dim result As Integer = Await delayTask`.  
   
  Il `startButton_Click` procedure è un esempio di un `Async Sub` stored procedure. Poiché `DoSomethingAsync` è un `Async` (funzione), l'attività per la chiamata a `DoSomethingAsync` deve essere attesa, come illustrato nell'istruzione seguente: `Await DoSomethingAsync()`. Il `startButton_Click``Sub` procedura deve essere definita con la `Async` modificatore perché contiene un `Await` espressione.  
   

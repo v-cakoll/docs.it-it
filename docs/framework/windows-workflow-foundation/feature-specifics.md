@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Specifiche delle funzionalità di Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] aggiunge una serie di funzionalità a Windows Workflow Foundation. Questo documento descrive alcune delle nuove funzionalità e fornisce informazioni dettagliate sugli scenari nei quali potrebbero essere utili.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Un esempio di correlazione usata per raggruppare i messaggi è una correlazione Request-Reply che raggruppa i messaggi.  
   
-    -   In un'attività <xref:System.ServiceModel.Activities.Receive>, fare clic sulla proprietà <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato in precedenza nel primo passaggio.  
+    -   In un <xref:System.ServiceModel.Activities.Receive> attività, fare clic su di <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> proprietà e aggiungere un <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> usando il CorrelationHandle creato nel primo passaggio precedente.  
   
     -   Crea un <xref:System.ServiceModel.Activities.SendReply> attività facendo clic su di <xref:System.ServiceModel.Activities.Receive> e facendo clic su "Crea SendReply". Incollarla nel flusso di lavoro dopo l'attività <xref:System.ServiceModel.Activities.Receive>.  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [Guida per gli sviluppatori di WCF 4.0](http://go.microsoft.com/fwlink/?LinkId=204940)  
   
--   [Configurazione di una Channel Factory](http://go.microsoft.com/fwlink/?LinkId=204941)  
+-   [Configurazione di una channel factory](http://go.microsoft.com/fwlink/?LinkId=204941)  
   
 -   [Elemento Endpoint standard](http://go.microsoft.com/fwlink/?LinkId=204942)  
   
@@ -180,9 +180,9 @@ ms.lasthandoff: 12/02/2017
   
 -   Esempi:  
   
-    -   [La gestione degli errori in un'attività Flowchart utilizzando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    -   [Gestione errori in un'attività Flowchart usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [Scenario StateMachine utilizzando una combinazione attività FlowChart e Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Scenario StateMachine usando una combinazione attività FlowChart e Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
     -   [Processo di assunzione](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -258,9 +258,9 @@ ms.lasthandoff: 12/02/2017
   
 -   Esempi:  
   
-    1.  [La gestione degli errori in un'attività Flowchart utilizzando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    1.  [Gestione errori in un'attività Flowchart usando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [Utilizzo di attività procedurali](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+    2.  [Uso di attività procedurali](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
 -   Documentazione della finestra di progettazione: [ActivityDesigner gestione errori](/visualstudio/workflow-designer/error-handling-activity-designers)  
   

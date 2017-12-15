@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini eventi verranno eliminati, in coordinamento con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicata per eventi specifici e implementando un'interfaccia nei listener di tale evento. Questo modello di progettazione è noto come il *modello di eventi deboli*.  
@@ -45,7 +45,7 @@ Nelle applicazioni, è possibile che i gestori associati alle origini eventi ver
 |--------------|-----------------------|  
 |Utilizzare una classe di gestione di eventi deboli esistente|Se l'evento che si desidera eseguire la sottoscrizione ha un corrispondente <xref:System.Windows.WeakEventManager>, utilizzare la gestione di eventi deboli esistente. Per un elenco di gestori di eventi deboli incluse in WPF, vedere la gerarchia di ereditarietà nel <xref:System.Windows.WeakEventManager> classe. Si noti, tuttavia, che sono presenti relativamente pochi gestori di eventi deboli che sono inclusi in WPF, pertanto sarà probabilmente necessario scegliere uno degli approcci.|  
 |Utilizzare una classe di gestione di eventi deboli generico|Utilizzare un oggetto generico <xref:System.Windows.WeakEventManager%602> quando un oggetto esistente <xref:System.Windows.WeakEventManager> non disponibile, si desidera un modo semplice per implementare e non si intende l'efficienza. Il tipo generico <xref:System.Windows.WeakEventManager%602> è meno efficace rispetto a un gestore di eventi deboli esistenti o personalizzate. Ad esempio, la classe generica non più la reflection per individuare l'evento specificato il nome dell'evento. Inoltre, il codice per registrare l'evento utilizzando il tipo generico <xref:System.Windows.WeakEventManager%602> è più dettagliato rispetto all'utilizzo di un oggetto esistente o personalizzato <xref:System.Windows.WeakEventManager>.|  
-|Creare una classe di gestione di eventi deboli personalizzato|Creare una classe personalizzata <xref:System.Windows.WeakEventManager> quando è un oggetto esistente <xref:System.Windows.WeakEventManager> non è disponibile e si desidera ottenere migliori prestazioni. Utilizzo di un <xref:System.Windows.WeakEventManager> per sottoscrivere un evento sarà più efficiente, ma si comportano il costo della scrittura del codice più all'inizio.|  
+|Creare una classe di gestione di eventi deboli personalizzato|Creare una classe personalizzata <xref:System.Windows.WeakEventManager> quando un oggetto esistente <xref:System.Windows.WeakEventManager> non è disponibile e si desidera ottenere migliori prestazioni. Utilizzo di un <xref:System.Windows.WeakEventManager> per sottoscrivere un evento sarà più efficiente, ma si comportano il costo della scrittura del codice più all'inizio.|  
   
  Nelle sezioni seguenti viene descritto come implementare il modello di eventi deboli.  Ai fini di questa discussione, sottoscrivere l'evento ha le caratteristiche seguenti.  
   

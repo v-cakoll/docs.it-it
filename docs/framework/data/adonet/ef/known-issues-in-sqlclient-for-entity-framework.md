@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemi noti in SqlClient per Entity Framework
 Questa sezione descrive i problemi noti relativi al provider di dati .NET Framework per SQL Server.  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Determinati comportamenti del database dipendono dal livello di compatibilità impostato per il database. Se l'attributo `ProviderManifestToken` è impostato su 2005 e si usa la versione 2005 di SQL Server, ma il livello di compatibilità di un database è impostato su "80" (SQL Server 2000), il codice [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] generato avrà come destinazione SQL Server 2005, ma potrebbe non essere eseguito nel modo previsto a causa dell'impostazione del livello di compatibilità. Se, ad esempio, un nome di colonna nell'elenco ORDER BY corrisponde a un nome di colonna nel selettore, può verificarsi la perdita delle informazioni sugli ordini.  
   
 ## <a name="nested-queries-in-projection"></a>Query annidate nella proiezione  
- Le query annidate in una clausola di proiezione potrebbero essere tradotte in query di un prodotto cartesiano sul server. Su alcuni server di back-end, tra cui Server SLQ, questo può provocare l'aumento delle dimensioni della tabella TempDB, con una conseguente riduzione della prestazione del server.  
+ Le query annidate in una clausola di proiezione potrebbero essere tradotte in query di un prodotto cartesiano sul server. In alcuni server back-end, tra cui Server SLQ, questo può causare la tabella di TempDB raggiungere dimensioni notevoli. con una conseguente riduzione della prestazione del server.  
   
  Di seguito è riportato un esempio di query annidata in una clausola di proiezione:  
   
