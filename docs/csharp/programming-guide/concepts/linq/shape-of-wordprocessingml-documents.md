@@ -11,11 +11,11 @@ ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c1ccbfd71baff50a8055cd89ddecf47bd35cac9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19820cd20ea87720968298aad8edef69d2bd1603
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Forma dei documenti WordprocessingML (C#)
 In questo argomento viene descritta la forma XML di un documento WordprocessingML.  
@@ -23,7 +23,7 @@ In questo argomento viene descritta la forma XML di un documento WordprocessingM
 ## <a name="microsoft-office-formats"></a>Formati di Microsoft Office  
  Il formato di file nativo per Microsoft Office System 2007 è Office Open XML (più comunemente, Open XML). Open XML è un formato basato su XML conforme allo standard ECMA e attualmente in approvazione per gli standard ISO-IEC. Il linguaggio di markup per i file di elaborazione testi all'interno di Open XML è denominato WordprocessingML. In questa esercitazione vengono usati file di origine WordprocessingML come di input per gli esempi.  
   
- Se si usa Microsoft Office 2003, possibile salvare i documenti nel formato Office Open XML se è stato installato il pacchetto di compatibilità di Microsoft Office per i formati di file Word, Excel e PowerPoint 2007.  
+ Se si usa Microsoft Office 2003, è possibile salvare i documenti nel formato Office Open XML se è stato installato Microsoft Office Compatibility Pack per formati di file di Word, Excel e PowerPoint 2007.  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>Forma dei documenti WordprocessingML  
  Il primo aspetto da considerare è la forma dei documenti WordprocessingML. Un documento WordprocessingML contiene un elemento corpo, denominato `w:body`, che contiene i paragrafi del documento. Ogni paragrafo contiene una o più sequenze di testo, denominate `w:r`. Ogni sequenza di testo contiene uno o più parti di testo, denominate `w:t`.  

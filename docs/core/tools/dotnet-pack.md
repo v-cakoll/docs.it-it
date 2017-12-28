@@ -3,15 +3,15 @@ title: Comando dotnet pack - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -45,7 +45,7 @@ Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensio
 
 Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuole evitare questo comportamento, passare l'opzione `--no-build`. Questo può essere utile negli scenari di compilazione di integrazione continua (CI, Continuous Integration), in cui si sa che il codice è stato compilato in precedenza.
 
-È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild).
+È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild). La sezione [Esempi](#examples) illustra come usare l'opzione di MSBuild /p per due diversi scenari.
 
 ## <a name="arguments"></a>Argomenti
 
@@ -172,3 +172,7 @@ Con il suffisso della versione del progetto configurato come `<VersionSuffix>$(V
 Impostare la versione del pacchetto su `2.1.0` con la proprietà MSBuild `PackageVersion`:
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+Comprimere il progetto per un [framework di destinazione](../../standard/frameworks.md) specifico:
+
+`dotnet pack /p:TargetFrameworks=net45`

@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>Guida introduttiva per C#: raccolte #
 
-Questa Guida introduttiva viene fornita un'introduzione al linguaggio c# e i concetti di base di <xref:System.Collections.Generic.List%601> classe.
+Questa guida introduttiva presenta il linguaggio C# e i concetti di base della classe <xref:System.Collections.Generic.List%601>.
 
-Questa Guida introduttiva prevede di disporre di un computer in cui che è possibile utilizzare per lo sviluppo. L'argomento .NET [Introduzione a 10 minuti](https://www.microsoft.com/net/core) con le istruzioni per configurare l'ambiente di sviluppo locale in Mac, Linux o PC.
+Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
 
-## <a name="a-basic-list-example"></a>Un esempio di elenco semplice.
+## <a name="a-basic-list-example"></a>Esempio di elenco di base.
 
 Creare una directory denominata **list-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console`.
 
 > [!NOTE]
-> Se è completato [Introduzione a .NET 10 minuti](https://www.microsoft.com/net), è possibile continuare a usare l'applicazione myApp appena creato.
+> Se si è già completato [Get started with .NET in 10 minutes](https://www.microsoft.com/net) (Iniziare a usare .NET in 10 minuti), è possibile continuare a usare l'applicazione myApp appena creata.
  
 Aprire **Program.cs** nell'editor preferito e sostituire il codice esistente con il seguente:
 
@@ -210,7 +210,7 @@ Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 > Per concentrarsi solo su questa sezione, è possibile impostare come commento il codice che chiama `WorkingWithStrings();`. Inserire due caratteri `/` prima della chiamata come di seguito: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>Esercizio
-È il momento di scoprire se è possibile mettere in pratica alcune delle conoscenze apprese in questa lezione e in quelle precedenti. Applicare i concetti appresi finora in relazione ai numeri di Fibonacci. Provare a scrivere il codice per generare i primi 20 numeri nella successione.
+È il momento di scoprire se è possibile mettere in pratica alcuni dei concetti appresi in questa lezione e in quelle precedenti. Applicare i concetti appresi finora in relazione ai numeri di Fibonacci. Provare a scrivere il codice per generare i primi 20 numeri nella successione. Tenere presente che il 20° numero di Fibonacci è 6765.
 
 ## <a name="complete-challenge"></a>Completare l'esercizio
 
@@ -218,6 +218,6 @@ Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 
 A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.
 
-Complimenti, aver completato l'avvio rapido di elenco. È possibile continuare con la [Introduzione alle classi](introduction-to-classes.md) avvio rapido nel proprio ambiente di sviluppo.
+È stata completata questa guida introduttiva dedicata agli elenchi. È possibile continuare con la guida introduttiva [Introduzione alle classi](introduction-to-classes.md) nel proprio ambiente di sviluppo.
 
 Altre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.

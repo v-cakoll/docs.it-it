@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
 
@@ -62,7 +62,7 @@ Tutti gli altri membri di una classe di base vengono ereditati dalle classi deri
 
 - I membri [interni](../language-reference/keywords/internal.md) sono visibili solo nelle classi derivate che si trovano nello stesso assembly della classe di base. Non sono visibili nelle classi derivate che si trovano in un assembly diverso dalla classe di base.
 
-- [Pubblica](../language-reference/keywords/public.md) membri sono visibili nelle classi derivate e fanno parte dell'interfaccia pubblica della classe derivata. I membri pubblici ereditati possono essere chiamati come se fossero definiti nella classe derivata. Nell'esempio seguente la classe `A` definisce un metodo denominato `Method1` e la classe `B` eredita dalla classe `A`. Nell'esempio viene quindi chiamato `Method1` come se fosse un metodo di istanza in `B`.
+- I membri [pubblici](../language-reference/keywords/public.md) sono visibili nelle classi derivate e fanno parte dell'interfaccia pubblica della classe derivata. I membri pubblici ereditati possono essere chiamati come se fossero definiti nella classe derivata. Nell'esempio seguente la classe `A` definisce un metodo denominato `Method1` e la classe `B` eredita dalla classe `A`. Nell'esempio viene quindi chiamato `Method1` come se fosse un metodo di istanza in `B`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
@@ -179,7 +179,7 @@ Per progettare la classe `Publication`, è necessario prendere alcune decisioni 
 
 - Quali membri includere nella classe di base `Publication` e se i membri `Publication` forniscono le implementazioni del metodo o se `Publication` è una classe di base astratta che funge da modello per le relative classi derivate.
 
-  In questo caso la classe `Publication` fornirà le implementazioni del metodo. La sezione [Progettazione di classi di base astratte e delle relative classi derivate](#abstract) contiene un esempio in cui viene usata una classe di base astratta per definire i metodi di cui le classi derivate devono eseguire l'override. Le classi derivate possono fornire qualsiasi implementazione adatta al tipo derivato.
+  In questo caso la classe `Publication` fornirà le implementazioni del metodo. La sezione [Progettazione di classi di base astratte e delle relative classi derivate](#abstract) contiene un esempio in cui viene usata una classe base astratta per definire i metodi di cui le classi derivate devono eseguire l'override. Le classi derivate possono fornire qualsiasi implementazione adatta al tipo derivato.
 
   La possibilità di riutilizzare il codice, ovvero il fatto che più classi derivate condividano la dichiarazione e l'implementazione dei metodi della classe di base e non ne richiedano l'override, è un vantaggio delle classi di base non astratte. È quindi necessario aggiungere membri a `Publication` se è probabile che il relativo codice venga condiviso da alcuni o dalla maggior parte dei tipi specializzati `Publication`. Se questa operazione non viene eseguita in modo efficiente, sarà necessario fornire implementazioni di membri pressoché identiche nelle classi derivate anziché una singola implementazione nella classe di base. La necessità di mantenere il codice duplicato in più posizioni è una potenziale fonte di bug.
 

@@ -1,6 +1,6 @@
 ---
-title: Avvio rapido - rami e lops - Guida per c#
-description: In questa Guida introduttiva su cicli e diramazioni, scrivere codice c# per esplorare la sintassi del linguaggio che supporta rami condizionali e cicli per eseguire istruzioni ripetutamente.
+title: Guida introduttiva - Cicli e rami - Guida a C#
+description: In questa guida introduttiva dedicata ai rami e ai cicli si scrive il codice C# per esplorare la sintassi del linguaggio che supporta le diramazioni condizionali e i cicli per eseguire ripetutamente le istruzioni.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,23 +9,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4b077a29cf42072a93b054f50a13a4580ad54304
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="branches-and-loops"></a>Rami e cicli
 
-Questa Guida introduttiva illustra come scrivere codice che esamina le variabili e cambia il percorso di esecuzione in base a tali variabili. Scrivere codice c# e visualizzare i risultati della compilazione e l'esecuzione. La Guida introduttiva contiene una serie di lezioni che esplorano la diramazione e costrutti del linguaggio c# di ciclo. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
+Questa guida introduttiva spiega come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a tali variabili. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. La guida introduttiva contiene una serie di lezioni che esplorano i costrutti per rami e cicli nel linguaggio C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 
-Questa Guida introduttiva prevede di disporre di un computer in cui che è possibile utilizzare per lo sviluppo. L'argomento .NET [Introduzione a 10 minuti](https://www.microsoft.com/net/core) con le istruzioni per configurare l'ambiente di sviluppo locale in Mac, Linux o PC.
+Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
 
-## <a name="make-decisions-using-the-if-statement"></a>Prendere le decisioni utilizzando il `if` istruzione
+## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 
-Creare una directory denominata **Guida introduttiva di rami**. Impostarla come directory corrente ed eseguire `dotnet new console -n BranchesAndLoops -o .`. Questo comando crea una nuova applicazione console .NET Core nella directory corrente. 
+Creare una directory denominata **branches-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console -n BranchesAndLoops -o .`. Questo comando crea una nuova applicazione console .NET Core nella directory corrente. 
 
-Aprire **Program.cs** nel proprio editor preferito e sostituire la riga `Console.Writeline("Hello World!");` con il codice seguente:
+Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.Writeline("Hello World!");` con il codice seguente:
 
 ```csharp
 int a = 5;
@@ -34,7 +34,7 @@ if (a + b > 10)
     Console.WriteLine("The answer is greater than 10.");
 ```
 
-Provare questo codice digitando `dotnet run` nella finestra di console. Verrà visualizzato il messaggio "la risposta è maggiore di 10". stampato sulla console.
+Per provare questo codice, digitare `dotnet run` nella finestra della console. Verrà visualizzato il messaggio "The answer is greater than 10." nella console.
 
 Modificare la dichiarazione di `b` in modo che la somma sia minore di 10: 
 
@@ -42,19 +42,19 @@ Modificare la dichiarazione di `b` in modo che la somma sia minore di 10:
 int b = 3;
 ```
 
-Tipo `dotnet run` nuovamente. Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
+Digitare di nuovo `dotnet run`. Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
 
 > [!TIP]
-> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il compilatore sarà individuare e segnalare gli errori. Esaminare attentamente l'output degli errori e il codice che ha generato l'errore. L'errore compler consentono in genere di individuare il problema. 
+> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il compilatore troverà e segnalerà gli errori. Esaminare attentamente l'output dell'errore e il codice che ha generato l'errore. L'errore del compilatore consente in genere di trovare il problema. 
 
-Questo primo esempio viene illustrata la potenza di `if` e i tipi booleani. Oggetto *booleano* è una variabile che può avere uno dei due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata. 
+Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata. 
 
 Questo processo di controllo delle condizioni ed esecuzione di istruzioni in base a queste condizioni offre molte potenzialità.
 
 
 ## <a name="make-if-and-else-work-together"></a>Usare insieme if ed else
 
-Per eseguire codice diverso per i rami true e false, è necessario creare un ramo `else` che viene eseguito quando la condizione è false. Provare questa. Aggiungere il codice seguente per le ultime due righe del `Main` metodo (dovrebbe già disporre i primi quattro):
+Per eseguire codice diverso per i rami true e false, è necessario creare un ramo `else` che viene eseguito quando la condizione è false. Provare questo codice. Aggiungere le ultime due righe del codice seguente al metodo `Main` (le prime quattro dovrebbero essere già presenti):
 
 ```csharp
 int a = 5;
@@ -65,13 +65,13 @@ else
     Console.WriteLine("The answer is not greater than 10");
 ```
 
-L'istruzione che segue la parola chiave `else` viene eseguita solo quando la condizione testata è `false`. La combinazione di `if` e `else` con valore booleano condizioni fornisce tutte le funzionalità necessarie per gestire entrambi un `true` e `false` condizione.
+L'istruzione che segue la parola chiave `else` viene eseguita solo quando la condizione testata è `false`. La combinazione di `if` e `else` con condizioni booleane offre tutte le potenzialità necessarie per gestire sia una condizione `true` che una condizione `false`.
 
 > [!IMPORTANT]
 > Il rientro applicato alle righe successive alle istruzioni `if` e `else` è pensato per i lettori umani.
-> Nel linguaggio C# i rientri o gli spazi vuoti non sono significativi. L'istruzione che segue la parola chiave `if` o `else` verrà eseguita in base alla condizione. Tutti gli esempi in questa Guida introduttiva seguono una pratica comune per il rientro alle righe in base al flusso di controllo di istruzioni.
+> Nel linguaggio C# i rientri o gli spazi vuoti non sono significativi. L'istruzione che segue la parola chiave `if` o `else` verrà eseguita in base alla condizione. Per tutti gli esempi in questa guida introduttiva viene seguita la pratica comune che prevede il rientro delle righe in base al flusso di controllo delle istruzioni.
 
-Dato che il rientro non è significativo, è necessario usare `{` e `}` per indicare quando si vuole includere più di un'istruzione nel blocco con esecuzione condizionale. I programmatori C# usano in genere le parentesi graffe in tutte le clausole `if` e `else`. L'esempio seguente è lo stesso di quello che appena creato. Modificare il codice precedente in modo che corrisponda il codice seguente:
+Dato che il rientro non è significativo, è necessario usare `{` e `}` per indicare quando si vuole includere più di un'istruzione nel blocco con esecuzione condizionale. I programmatori C# usano in genere le parentesi graffe in tutte le clausole `if` e `else`. L'esempio seguente è identico a quello appena creato. Modificare il codice precedente in modo che corrisponda al codice seguente:
 
 ```csharp
 int a = 5;
@@ -87,9 +87,9 @@ else
 ```
 
 > [!TIP]
-> Resto di questa Guida introduttiva, tutti gli esempi di codice includono le parentesi graffe dopo accettato consigliate.
+> Nelle parti restanti di questa guida introduttiva, tutti gli esempi di codice includono le parentesi graffe conformemente alle consuetudini comuni.
 
-È possibile verificare le condizioni più complesse. Aggiungere il codice seguente nel `Main` metodo dopo il codice scritto finora:
+È possibile testare condizioni più complesse. Aggiungere il codice seguente nel metodo `Main` dopo il codice scritto finora:
 
 ```csharp
     int c = 4;
@@ -107,7 +107,7 @@ else
 
 `&&` rappresenta "e" e significa che entrambe le condizioni devono essere true per eseguire l'istruzione nel ramo true.  Questi esempi mostrano anche che è possibile includere più istruzioni in ogni ramo condizionale, a condizione di racchiuderle tra `{` e `}`.
 
-È inoltre possibile utilizzare `||` per rappresentare "o". Dopo di ciò che è stato scritto fino a questo punto, aggiungere il codice seguente:
+È anche possibile usare `||` per rappresentare "or". Aggiungere il codice seguente dopo il codice già scritto finora:
 
 ```csharp
 if ((a + b + c > 10) || (a > b))
@@ -122,7 +122,7 @@ else
 }
 ```
 
-Il primo passaggio per volta. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `ExploreIf` e scrivere un nuovo metodo `Main` che chiama `ExploreIf`. Al termine, il codice dovrebbe risultare simile al seguente:
+Il primo passaggio è stato completato. Prima di iniziare la sezione successiva, è necessario spostare il codice corrente in un metodo separato. In questo modo sarà più semplice iniziare a lavorare con un nuovo esempio. Rinominare il metodo `Main` in `ExploreIf` e scrivere un nuovo metodo `Main` che chiama `ExploreIf`. Al termine, il codice dovrebbe risultare simile al seguente:
 
 ```csharp
 using System;
@@ -175,17 +175,17 @@ namespace BranchesAndLoops
 }
 ```
 
-Commentare la chiamata a `ExploreIf()`. L'output che meno pieno di informazioni mentre si lavora in questa sezione sarà:
+Impostare come commento la chiamata a `ExploreIf()`. L'output risulterà in questo modo meno disordinato quando si usa questa sezione:
 
 ```csharp
 //ExploreIf();
 ```
 
-Il `//` avvia un **commento** in c#. I commenti sono qualsiasi testo che si desidera mantenere nel codice sorgente, ma non è stato eseguito come codice. Il compilatore non genera codice eseguibile da commenti.
+`//` avvia un **commento** in C#. Un commento è un testo che si vuole conservare nel codice sorgente senza eseguirlo come codice. Il compilatore non genera codici eseguibili da commenti.
 
 ## <a name="use-loops-to-repeat-operations"></a>Usare i cicli per ripetere le operazioni
 
-In questa sezione useranno **cicli** ripetere le istruzioni. Provare questo codice nel `Main` metodo:
+In questa sezione si usano i **cicli** per ripetere le istruzioni. Provare questo codice nel metodo `Main`:
 
 ```csharp
 int counter = 0;
@@ -196,14 +196,14 @@ while (counter < 10)
 }
 ```
 
-Il `while` istruzione verifica una condizione ed esegue l'istruzione o un blocco di istruzione che segue il `while`. Verifica ripetutamente la condizione e l'esecuzione di tali istruzioni fino a quando la condizione è false.
+L'istruzione `while` verifica una condizione ed esegue l'istruzione o il blocco di istruzioni che segue `while`. Ripete la verifica della condizione e l'esecuzione di tali istruzioni fino a quando la condizione è false.
 
-Questo esempio include un altro operatore nuovo. I caratteri `++` dopo la variabile `counter` rappresentano l'operatore di **incremento**. Viene aggiunto 1 al valore di `counter` e archivia il valore nel `counter` variabile.
+Questo esempio include un altro operatore nuovo. I caratteri `++` dopo la variabile `counter` rappresentano l'operatore di **incremento**. Questo operatore aggiunge 1 al valore di `counter` e archivia il valore nella variabile `counter`.
 
 > [!IMPORTANT]
-> Assicurarsi che il `while` ciclo modifiche condizione su false quando si esegue il codice. In caso contrario, si crea un **ciclo infinito** in cui il programma non termina mai. Che non viene dimostrata in questo esempio, in quanto è necessario forzare la chiusura utilizzando il programma **CTRL-C** o altri metodi.
+> Assicurarsi che la condizione del ciclo `while` passi a false quando si esegue il codice. In caso contrario, si crea un **ciclo infinito** in cui il programma non termina mai. Tale situazione non è illustrata in questo esempio, perché è necessario forzare l'uscita dal programma usando **CTRL+C** o in altro modo.
 
-Il ciclo `while` testa la condizione prima di eseguire il codice dopo `while`. Il ciclo `do` ... `while` esegue prima il codice e poi controlla la condizione, L'attività durante il ciclo è illustrato nel codice seguente:
+Il ciclo `while` testa la condizione prima di eseguire il codice dopo `while`. Il ciclo `do` ... `while` esegue prima il codice e poi controlla la condizione, Il ciclo do while è illustrato nel codice riportato di seguito:
 
 ```csharp
 counter = 0;
@@ -214,11 +214,11 @@ do
 } while (counter < 10);
 ```
 
-Questo `do` ciclo e la precedente `while` ciclo producono lo stesso output.
+Questo ciclo `do` e il ciclo `while` precedente generano lo stesso output.
 
 ## <a name="work-with-the-for-loop"></a>Usare il ciclo for
 
-Il **per** ciclo viene utilizzato comunemente in c#. Provare questo codice nel metodo Main ():
+Il ciclo **for** viene in genere usato in C#. Provare questo codice nel metodo Main():
 
 ```csharp
 for(int index = 0; index < 10; index++)
@@ -242,19 +242,19 @@ Sperimentare da soli questi elementi. Eseguire queste prove:
 
 Al termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.
 
-## <a name="combine-branches-and-loops"></a>Combinare i cicli e diramazioni
+## <a name="combine-branches-and-loops"></a>Combinare rami e cicli
 
 Dopo aver esaminato l'istruzione `if` e i costrutti per i cicli nel linguaggio C#, provare a scrivere codice C# per ottenere la somma di tutti i numeri interi da 1 a 20 divisibili per 3.  Ecco alcuni suggerimenti:
 
 - L'operatore `%` restituisce il resto di un'operazione di divisione.
-- Il `if` istruzione che permette la condizione per vedere se un numero deve essere parte della somma.
+- L'istruzione `if` offre la condizione per stabilire se un numero deve fare parte della somma.
 - Il ciclo `for` può essere utile per ripetere una serie di passaggi per tutti i numeri da 1 a 20.
 
-Sperimentare e quindi controllare i risultati. È possibile visualizzare una possibile risposta da [visualizzando il codice completato su GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 63. Per vedere una possibile risposta, [visualizzare il codice completo in GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
-È stata completata la "rami e cicli" Guida introduttiva.
+È stata completata la guida introduttiva "Cicli e rami".
 
-È possibile continuare con la [matrici e raccolte](arrays-and-collections.md) avvio rapido nel proprio ambiente di sviluppo.
+È possibile continuare con la guida introduttiva [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 
 Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
 

@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: b7598309f48cbccf2d270be53a4b40dae11e8df8
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-classes"></a>Introduzione alle classi
 
-In questa lezione si presuppone che siano stati installati [.NET Core SDK](http://dot.net/core) e un editor a scelta. Se non è già disponibile un editor preferito, provare [Visual Studio Code](https://code.visualstudio.com/) o [Visual Studio](https://www.visualstudio.com/) in Mac o Windows.
+Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
 
 ## <a name="create-your-application"></a>Creare l'applicazione
 

@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
 
 .NET è parte integrante di molte app in esecuzione su Windows e offre funzionalità comuni per l'esecuzione di tali app. Per gli sviluppatori, .NET Framework offre un modello di programmazione completo e coerente per la compilazione di app, con esperienze utente di notevole impatto visivo e comunicazioni semplici e sicure.  
 
-Questo articolo contiene i collegamenti necessari per installare tutte le versioni di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] nel computer. Se si è sviluppatori, questi collegamenti possono essere usati anche per scaricare e ridistribuire .NET Framework con le applicazioni.
+Questo articolo contiene i collegamenti necessari per installare tutte le versioni di .NET Framework da .NET Framework 4.5 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] nel computer. Se si è sviluppatori, questi collegamenti possono essere usati anche per scaricare e ridistribuire .NET Framework con le applicazioni. Per informazioni sulla distribuzione di una versione di .NET Framework con l'app, vedere [Guida alla distribuzione di .NET Framework per sviluppatori](../deployment/deployment-guide-for-developers.md).
 
 > [!NOTE]
 > Questo argomento è destinato agli sviluppatori che vogliono installare .NET Framework nel sistema o che vogliono installarlo nelle applicazioni. Gli utenti interessati a installare .NET Framework possono vedere i singoli argomenti che illustrano l'installazione di .NET Framework in specifici sistemi operativi, ad esempio [Installare .NET Framework in Windows 10 e Windows Server 2016](on-windows-10.md).  
