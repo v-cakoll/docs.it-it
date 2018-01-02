@@ -4,6 +4,7 @@
 ### [Tipi di metodi per la gestione delle stringhe](types-of-string-manipulation-methods.md)
 ### [Comportamento di Nothing con le stringhe](nothing-and-strings.md)
 ### [Influenza delle impostazioni cultura sulle stringhe](how-culture-affects-strings.md)
+### [Stringhe interpolate](interpolated-strings.md)
 ### [Accesso alle stringhe in base zero o in base uno](zero-based-vs-one-based-string-access.md)
 ## [Procedura: Creare stringhe usando StringBuilder](how-to-create-strings-using-a-stringbuilder.md)
 ## [Procedura: Cercare all'interno di una stringa](how-to-search-within-a-string.md)

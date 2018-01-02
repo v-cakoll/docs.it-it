@@ -1,14 +1,10 @@
 ---
 title: Operatori [C#]
-ms.date: 2017-03-09
+ms.date: 03/09/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.operators
-dev_langs:
-- CSharp
+f1_keywords: cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -24,29 +20,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-operators"></a>Operatori [C#]
 C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione.  È possibile eseguire l'[overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.  
@@ -221,7 +202,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
 ## <a name="arithmetic-overflow"></a>Overflow aritmetico  
  Gli operatori aritmetici ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) possono produrre risultati non compresi nell'intervallo dei valori possibili per il tipo numerico coinvolto. È consigliabile fare riferimento alla sezione di un particolare operatore per i dettagli, ma in generale:  
   
-- L'overflow aritmetico di interi genera un'eccezione <xref:System.OverflowException> o rimuove i bit più significativi del risultato. La divisione di interi per zero genera sempre un'eccezione @System.DivideByZeroException.  
+- L'overflow aritmetico di interi genera un'eccezione <xref:System.OverflowException> o rimuove i bit più significativi del risultato. La divisione di interi per zero genera sempre un'eccezione <xref:System.DivideByZeroException>.  
 
    Quando si verifica un overflow di interi, ciò che accade dipende dal contesto dell'esecuzione, che può essere [verificato o non verificato](../../../csharp/language-reference/keywords/checked-and-unchecked.md). In un contesto verificato, viene generata un'eccezione <xref:System.OverflowException>. In un contesto non verificato, i bit più significativi del risultato vengono rimossi e l'esecuzione continua. C# consente dunque di scegliere se gestire o ignorare l'overflow. Per impostazione predefinita, le operazioni aritmetiche vengono eseguite in un contesto *non verificato*. 
 
@@ -233,8 +214,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md) [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md) [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-

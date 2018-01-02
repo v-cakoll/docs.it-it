@@ -15,20 +15,18 @@ helpviewer_keywords:
 - C# language
 - Visual C#
 ms.author: wiwagn
+ms.openlocfilehash: 5ecc77970dbd32ca743bcd09fc63d49299a164a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
-ms.contentlocale: it-it
-ms.lasthandoff: 09/02/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="c-guide"></a>Guida a C#
 
 La Guida a C# offre un'ampia gamma di informazioni sul linguaggio C#. Questo sito è rivolto a diverse tipologie di pubblico. A seconda del grado di esperienza riguardo alla programmazione o al linguaggio C# e a .NET, è consigliabile consultare sezioni diverse delle Guida.
 
 * Per sviluppatori senza esperienza:
-    - Iniziare con la sezione [Esercitazioni su C#](tutorials/index.md). Queste esercitazioni illustrano come creare applicazioni C# da zero e offrono processi dettagliati per la scrittura di programmi. Vengono illustrati i concetti chiave del linguaggio e viene spiegato come compilare programmi C# in modo autonomo. Se si preferisce iniziare leggendo informazioni di carattere generale, vedere [Panoramica del linguaggio C#](tour-of-csharp/index.md), in cui vengono illustrati i concetti del linguaggio C#. Dopo la lettura della panoramica, si disporrà di una conoscenza di base del linguaggio sufficiente per eseguire le esercitazioni o provare a sviluppare codice in modo autonomo.
+    - Iniziare dalla sezione delle [guide introduttive](quick-starts/index.md). Queste guide consentono di esplorare interattivamente il linguaggio C# nel browser. Da qui è possibile passare alla sezione delle [esercitazioni](tutorials/index.md). Queste esercitazioni illustrano come creare applicazioni C# da zero e offrono processi dettagliati per la scrittura di programmi. Vengono illustrati i concetti chiave del linguaggio e viene spiegato come compilare programmi C# in modo autonomo. Se si preferisce iniziare leggendo informazioni di carattere generale, vedere [Panoramica del linguaggio C#](tour-of-csharp/index.md), in cui vengono illustrati i concetti del linguaggio C#. Dopo la lettura della panoramica, si disporrà di una conoscenza di base del linguaggio sufficiente per eseguire le esercitazioni o provare a sviluppare codice in modo autonomo.
 
 * Per gli sviluppatori che non conoscono C#: 
     - Gli utenti che hanno già esperienza di sviluppo ma non conoscono il linguaggio C# possono iniziare leggendo [Panoramica del linguaggio C#](tour-of-csharp/index.md). Nella panoramica vengono descritte la sintassi e le strutture di base del linguaggio. È possibile usare le informazioni offerte per confrontare C# con gli altri linguaggi usati. È inoltre possibile eseguire le [Esercitazioni su C#](tutorials/index.md) per provare programmi C# di base.
@@ -44,7 +42,7 @@ La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni n
     - Questa sezione illustra gli elementi necessari per installare un ambiente di sviluppo C# nella piattaforma preferita. I diversi argomenti della sezione spiegano come creare il primo programma in C# in differenti ambienti supportati.
 
 * [Esercitazioni su C#](tutorials/index.md):
-    - Questa sezione offre un'ampia gamma di scenari end-to-end, inclusi descrizioni e codice. Viene illustrato il motivo per cui determinati costrutti sono da preferire, vengono indicate le funzionalità di C# che offrono i risultati migliori in determinate situazioni e vengono offerte implementazioni di riferimento per attività comuni. Se si ritiene di apprendere meglio analizzando il codice, partire da questa sezione. È anche possibile scaricare tutto il codice e sperimentare nel proprio ambiente.
+    - Questa sezione offre un'ampia gamma di scenari end-to-end, inclusi descrizioni e codice. Viene illustrato il motivo per cui preferire determinati costrutti, vengono indicate le funzionalità di C# che offrono i risultati migliori in determinate situazioni e vengono descritte implementazioni di riferimento per attività comuni. Se si ritiene di apprendere meglio analizzando il codice, partire da questa sezione. È anche possibile scaricare tutto il codice e sperimentare nel proprio ambiente.
 
 * [Panoramica di C#](tour-of-csharp/index.md): 
     - Questa sezione offre una panoramica del linguaggio. Vengono descritti gli elementi che costituiscono il linguaggio C# e vengono illustrate le funzionalità di quest'ultimo. Vengono offerti piccoli esempi di tutti gli elementi della sintassi C# e vengono discussi i principali aspetti del linguaggio. 
@@ -77,6 +75,5 @@ La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni n
     - Vengono forniti collegamenti alla versione più aggiornata delle specifiche C# in formato Microsoft Word.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) (Introduzione a Visual C# e Visual Basic)  
  [Sviluppo .NET](https://msdn.microsoft.com/library/ff361664)
-

@@ -8,16 +8,15 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a50c2ad3183c80fd76e6db042674e49367d7ffc9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Distribuzione di applicazioni Web .NET Core basate su singolo contenitore in host di Linux o Windows Nano Server
 
-*È possibile usare i contenitori Docker per la distribuzione monolitica delle applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e distribuzione continua e consente di ottenere risultati ottimali dalla distribuzione alla produzione, evitando situazioni in cui quello che funziona in un singolo computer non funziona più nell'ambiente di produzione.*
+*È possibile usare i contenitori Docker per la distribuzione monolitica delle applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e recapito continuo e consente di ottenere risultati ottimali dalla distribuzione alla produzione, evitando situazioni in cui quello che funziona in un singolo computer non funziona più nell'ambiente di produzione.*
 
 Un'architettura basata su microservizi offre numerosi vantaggi, ma al costo di una maggiore complessità. In alcuni casi i costi superano i vantaggi e si otterranno maggiori benefici con un'applicazione con distribuzione monolitica in esecuzione in un unico contenitore o in pochi contenitori. 
 
@@ -45,7 +44,7 @@ L'applicazione [eShopWeb](https://github.com/dotnet-architecture/eShopOnContaine
 
 L'applicazione usa un database di SQL Server per l'archiviazione del catalogo. Nelle distribuzioni basate su contenitori questa applicazione monolitica può accedere allo stesso archivio dati dell'applicazione basata su microservizi. L'applicazione è configurata per l'esecuzione di SQL Server in un contenitore insieme all'applicazione monolitica. In un ambiente di produzione SQL Server sarebbe eseguito in un computer a disponibilità elevata, all'esterno dell'host Docker. Per praticità, in un ambiente di sviluppo o test è consigliabile eseguire SQL Server nel relativo contenitore.
 
-Il set di funzionalità iniziale consente solo l'esplorazione del catalogo. Gli aggiornamenti garantiscono il set di funzionalità completo dell'applicazione inserita nel contenitore. Un'architettura di applicazione Web monolitica più avanzata è descritta nell'eBook con le [procedure consigliate per l'architettura di un'applicazione Web ASP.NET](https://aka.ms/webappebook) e nella relativa [applicazione di esempio eShopOnWeb](http://aka.ms/WebAppArchitecture), anche se in questo caso non è in esecuzione in contenitori Docker in quanto tale scenario è incentrato sullo sviluppo Web semplice con ASP.NET Core.
+Il set di funzionalità iniziale consente solo l'esplorazione del catalogo. Gli aggiornamenti garantiscono il set di funzionalità completo dell'applicazione inserita nel contenitore. Un'architettura di applicazione Web monolitica più avanzata è descritta nell'eBook [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Procedure per l'architettura di applicazione Web ASP.NET) e nell'[applicazione di esempio eShopOnWeb](http://aka.ms/WebAppArchitecture), ma in questo caso l'applicazione non viene eseguita in contenitori Docker perché lo scenario è incentrato sullo sviluppo Web semplice con ASP.NET.
 
 Tuttavia, la versione semplificata disponibile in eShopOnContainers (eShopWeb) viene eseguita in un contenitore Docker.
 
@@ -119,6 +118,8 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
+**Nota**: a partire da .NET Core 2.0, il comando dotnet restore viene eseguito automaticamente quando si esegue dotnet publish.
+
 Si noti che l'immagine è un'immagine di compilazione ASP.NET Core. L'immagine include gli strumenti SDK e per la compilazione per compilare l'applicazione e creare le immagini necessarie. L'esecuzione del progetto **docker-compose** tramite questo file avvia il contenitore della build dall'immagine, quindi compila l'immagine dell'applicazione in tale contenitore. È necessario specificare tale file docker-compose come parte della riga di comando per compilare l'applicazione in un contenitore Docker, quindi avviarla.
 
 In Visual Studio è possibile eseguire l'applicazione in contenitori Docker selezionando il progetto **docker-compose** come progetto di avvio e quindi premendo CTRL+F5 (F5 per eseguire il debug), come con qualsiasi altra applicazione. Quando si avvia il progetto **docker-compose**, Visual Studio esegue **docker-compose** usando il file docker-compose.yml, il file docker-compose.override.yml e uno dei file docker-compose.vs.\*. Dopo che l'applicazione è stata avviata, il browser si avvia automaticamente in Visual Studio.
@@ -145,4 +146,3 @@ La procedura guidata che aggiunge il supporto per Docker comunica con il process
 
 >[!div class="step-by-step"]
 [Precedente] (../docker-application-development-process/docker-app-development-workflow.md) [Successivo] (../containerize-net-framework-applications/index.md)
-

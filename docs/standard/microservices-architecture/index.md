@@ -8,14 +8,12 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: f869656be4c211c9b028f8ac574eb3bf2de139e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 4307c21f32e914118c03393be7ed7a632c7a7f0b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservizi .NET. Architettura per le applicazioni .NET incluse in contenitori
@@ -130,7 +128,7 @@ Questa guida non tratta gli argomenti relativi a ciclo di vita delle applicazion
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Ciclo di vita delle applicazioni Docker incluse in contenitori con la piattaforma e gli strumenti Microsoft** (eBook scaricabile) [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft** (e-book scaricabile): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Destinatari della guida
 
@@ -158,4 +156,3 @@ Questa guida è stata scritta per aiutare il lettore a comprendere l'architettur
 
 >[!div class="step-by-step"]
 [Avanti] (container-docker-introduction/index.md)
-

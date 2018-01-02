@@ -1,40 +1,22 @@
 ---
 title: Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 458f6770a89f28dce1e441cd38ec9a56a1c58bc1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per gestire qualsiasi situazione imprevista o eccezionale che può verificarsi durante l'esecuzione di un programma. Per la gestione delle eccezioni vengono usate le parole chiave `try`, `catch` e `finally` per provare a eseguire azioni che potrebbero non riuscire, per gestire gli errori quando si decide che è ragionevole farlo e per pulire le risorse in un secondo momento. Le eccezioni possono essere generate da CLR (Common Language Runtime), da .NET Framework o qualsiasi libreria di terze parti o dal codice dell'applicazione. Per creare le eccezioni viene usata la parola chiave `throw`.  
@@ -43,7 +25,7 @@ Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per ge
   
  In questo esempio, un metodo verifica la presenza di divisioni per zero e intercetta l'errore. Senza la gestione delle eccezioni, il programma verrebbe chiuso con un errore **DivideByZeroException non è stata gestita**.  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## <a name="exceptions-overview"></a>Panoramica delle eccezioni  
  Le eccezioni hanno le proprietà seguenti:  
@@ -87,15 +69,14 @@ Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per ge
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.SystemException>   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [Eccezioni](../../../standard/exceptions/index.md)   
- [Gerarchia delle eccezioni](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
- [Scrittura di codice .NET affidabile](http://go.microsoft.com/fwlink/?LinkId=112400)   
+ <xref:System.SystemException>  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+ [Eccezioni](../../../standard/exceptions/index.md)  
+ [Gerarchia delle eccezioni](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+ [Scrittura di codice .NET affidabile](http://go.microsoft.com/fwlink/?LinkId=112400)  
  [Minidump per eccezioni specifiche](http://go.microsoft.com/fwlink/?LinkId=112408)
-

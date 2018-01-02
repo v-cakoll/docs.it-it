@@ -11,11 +11,11 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b07b940d6287de0caf41c7d15f3036ad4041ad0
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (C#)
 Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.  
@@ -66,7 +66,7 @@ Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, 
   
 3.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file Class1.cs e fare clic su **Rinomina**. Rinominare il file `ISampleInterface.cs` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `ISampleInterface`. Questa classe rappresenterà l'interfaccia pubblica per la classe.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.  
+4.  Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**. Fare clic sulla scheda **Generazione**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.  
   
 5.  Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**. Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>**. Nella casella **Nome file di chiave** digitare `key.snk`. Deselezionare la casella di controllo **Proteggi file di chiave con una password**. Fare clic su **OK**.  
   

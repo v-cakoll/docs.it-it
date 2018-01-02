@@ -2,13 +2,10 @@
 title: Classi e struct (Guida per programmatori C#)
 description: "Descrive le modalità d'uso di classi e strutture (struct) in C#."
 keywords: classi (C#), struct (C#), strutture (struct) (C#), tipi riferimento (C#), tipi valore (C#)
-ms.date: 2016-01-17
+ms.date: 01/17/2016
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -17,29 +14,14 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
 Classi e struct sono due dei costrutti di base del Common Type System in .NET Framework. Ognuno di essi è costituito essenzialmente da una struttura di dati che incapsula un set di dati e comportamenti che formano insieme un'unità logica. I dati e i comportamenti sono i *membri* della classe o del tipo struct e ne includono i metodi, le proprietà, gli eventi e così via, come illustrato più avanti in questo argomento.  
@@ -57,7 +39,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente la classe `CustomClass` inclusa nello spazio dei nomi `ProgrammingGuide` contiene tre membri: un costruttore di istanze, una proprietà denominata `Number` e un metodo denominato `Multiply`. Il metodo `Main` nella classe `Program` crea un'istanza (oggetto) di `CustomClass` ed è possibile accedere al metodo e alla proprietà dell'oggetto usando la notazione del punto.
   
- [!code-cs[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
+ [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
 ## <a name="encapsulation"></a>Incapsulamento  
  L'*incapsulamento* è talvolta definito come il principio fondamentale della programmazione orientata agli oggetti. In base al principio di incapsulamento, una classe o un tipo struct può specificare il modo in cui ognuno dei rispettivi membri è accessibile da codice esterno. I metodi e le variabili destinati a non essere usati all'esterno della classe o dell'assembly possono essere nascosti per limitare il rischio di errori di codifica o esiti dannosi.  
@@ -88,7 +70,7 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
 -   [Tipi annidati](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Accessibilità  
- Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare il modo in cui i tipi e i rispettivi membri sono accessibili dal codice client usando i modificatori di accesso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), `protected internal` e [private](../../../csharp/language-reference/keywords/private.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Alcuni metodi e proprietà sono progettati in modo da essere chiamabili o accessibili da codice esterno alla classe o al tipo struct, noto come *codice client*. Altri metodi e proprietà possono invece essere usati esclusivamente all'interno della classe o del tipo struct. Questa distinzione è importante per limitare l'accessibilità del codice in modo che solo il codice client desiderato possa raggiungerlo. È possibile specificare l'accessibilità dei tipi e dei loro membri dal codice client usando i modificatori di accesso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) e [private protected](../../../csharp/language-reference/keywords/private-protected.md). L'accessibilità predefinita è `private`. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Ereditarietà  
  Le classi (ma non i tipi struct) supportano il concetto di ereditarietà. Una classe che deriva da un'altra classe definita *classe di base* contiene automaticamente tutti i membri pubblici, protetti e interni della classe di base, ad eccezione di costruttori e finalizzatori. Per altre informazioni, vedere [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md) e [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -127,4 +109,3 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-

@@ -8,21 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET Framework], events
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae0776501bffc23ae07cc88c7f0d1729ed01b6f7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -30,7 +32,7 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
  Per informazioni sulla gestione di eventi nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vedere la pagina relativa alla [Panoramica degli eventi e degli eventi indirizzati (applicazioni Windows Store)](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
   
 ## <a name="events"></a>Eventi  
- Un evento è un messaggio inviato da un oggetto per segnalare l'occorrenza di un'azione. L'azione può essere causata dall'interazione dell'utente, ad esempio la pressione di un pulsante, oppure generata da altre logiche di programma, ad esempio la modifica di un valore della proprietà. L'oggetto che genera l'evento viene chiamato *mittente dell'evento*. Il mittente dell'evento non sa quale oggetto o metodo riceverà (handle) gli eventi che egli genera. L'evento è in genere un membro del mittente dell'evento. Ad esempio, l'evento <xref:System.Web.UI.WebControls.Button.Click> è un membro della classe <xref:System.Web.UI.WebControls.Button> e l'evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> è un membro della classe che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
+ Un evento è un messaggio inviato da un oggetto per segnalare l'occorrenza di un'azione. L'azione può essere causata dall'interazione dell'utente, ad esempio la pressione di un pulsante, oppure generata da altre logiche di programma, ad esempio la modifica di un valore della proprietà. L'oggetto che genera l'evento viene chiamato *mittente dell'evento*. Il mente dell'evento non sa quale oggetto o metodo riceverà (handle) gli eventi che egli genera. L'evento è in genere un membro del mittente dell'evento. Ad esempio, l'evento <xref:System.Web.UI.WebControls.Button.Click> è un membro della classe <xref:System.Web.UI.WebControls.Button> e l'evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> è un membro della classe che implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
  Per definire un evento, usare la parola chiave `event` (in C#) o `Event` (in Visual Basic) nella firma della classe dell'evento e specificare il tipo di delegato per l'evento. I delegati vengono descritti nella sezione successiva.  
   
@@ -38,7 +40,8 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
   
  Nell'esempio riportato di seguito viene illustrato come dichiarare un evento denominato `ThresholdReached`. L'evento è associato al delegato<xref:System.EventHandler> e generato in un metodo denominato `OnThresholdReached`.  
   
- [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)] [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
+ [!code-csharp[EventsOverview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
+ [!code-vb[EventsOverview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>Delegati  
  Un delegato è un tipo che contiene un riferimento a un metodo. Un delegato è dichiarato con una firma che mostra il tipo restituito e i parametri per i metodi a cui fa riferimento e può contenere riferimenti solo per i metodi che corrispondono alla firma. Un delegato è pertanto equivalente a un puntatore a funzione indipendente dai tipi o un callback. Una dichiarazione di delegato è sufficiente per definire una classe delegata.  
@@ -51,25 +54,28 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
   
  Per gli scenari in cui i delegati <xref:System.EventHandler> e <xref:System.EventHandler%601> non sono appropriati, è possibile definire un delegato. Gli scenari che richiedono di definire un delegato sono molto rari, ad esempio quando è necessario lavorare con un codice che non riconosce i generics. Nella dichiarazione, contrassegnare un delegato con la parola chiave `delegate` (in C#) o `Delegate` (in Visual Basic). Nell'esempio riportato di seguito viene illustrato come dichiarare un delegato denominato `ThresholdReachedEventHandler`.  
   
- [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)] [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
+ [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
+ [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>Dati eventi  
- I dati associati a un evento possono essere forniti tramite una classe di dati eventi. .NET Framework fornisce molte classi di dati eventi che possono essere usate nelle applicazioni. Ad esempio, la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> è la classe di dati eventi per l'evento <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=fullName>. .NET Framework segue un modello di denominazione che prevede di terminare tutte le classi di dati eventi con `EventArgs`. È possibile determinare quale classe di dati eventi è associata a un evento esaminando il delegato per tale evento. Ad esempio, il delegato <xref:System.IO.Ports.SerialDataReceivedEventHandler> include la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> come uno dei relativi parametri.  
+ I dati associati a un evento possono essere forniti tramite una classe di dati eventi. .NET Framework fornisce molte classi di dati eventi che possono essere usate nelle applicazioni. Ad esempio, la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> è la classe di dati eventi per l'evento <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType>. .NET Framework segue un modello di denominazione che prevede di terminare tutte le classi di dati eventi con `EventArgs`. È possibile determinare quale classe di dati eventi è associata a un evento esaminando il delegato per tale evento. Ad esempio, il delegato <xref:System.IO.Ports.SerialDataReceivedEventHandler> include la classe <xref:System.IO.Ports.SerialDataReceivedEventArgs> come uno dei relativi parametri.  
   
- La classe <xref:System.EventArgs> è il tipo base per tutte le classi di dati eventi. <xref:System.EventArgs> è anche la classe usata quando a un evento non sono stati associati dati. Quando si crea un evento il cui solo scopo è quello di segnalare ad altre classi che si è verificato qualcosa e non è necessario passare i dati, includere la classe <xref:System.EventArgs> come secondo parametro nel delegato. È possibile passare il valore <xref:System.EventArgs.Empty?displayProperty=fullName> quando non viene fornito alcun dato. Il delegato <xref:System.EventHandler> include la classe <xref:System.EventArgs> come parametro.  
+ La classe <xref:System.EventArgs> è il tipo base per tutte le classi di dati eventi. <xref:System.EventArgs> è anche la classe usata quando a un evento non sono stati associati dati. Quando si crea un evento il cui solo scopo è quello di segnalare ad altre classi che si è verificato qualcosa e non è necessario passare i dati, includere la classe <xref:System.EventArgs> come secondo parametro nel delegato. È possibile passare il valore <xref:System.EventArgs.Empty?displayProperty=nameWithType> quando non viene fornito alcun dato. Il delegato <xref:System.EventHandler> include la classe <xref:System.EventArgs> come parametro.  
   
  Quando si vuole creare una classe di dati eventi personalizzata, creare una classe che deriva da <xref:System.EventArgs> e quindi specificare i membri necessari per passare i dati correlati all'evento. In genere, è necessario usare lo stesso modello di denominazione di .NET Framework e terminare il nome della classe di dati eventi con `EventArgs`.  
   
  Nell'esempio seguente viene illustrata una classe di dati eventi denominata `ThresholdReachedEventArgs`. Contiene le proprietà specifiche per l'evento generato.  
   
- [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)] [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
+ [!code-csharp[EventsOverview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
+ [!code-vb[EventsOverview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>Gestori eventi  
  Per rispondere a un evento, definire un metodo del gestore eventi nel ricevitore di eventi. Questo metodo deve corrispondere alla firma del delegato per l'evento gestito. Nel gestore eventi eseguire le azioni necessarie quando viene generato l'evento, ad esempio la raccolta dell'input quando un utente fa clic su un pulsante. Per ricevere notifiche quando si verifica l'evento, il metodo del gestore eventi deve sottoscrivere l'evento.  
   
  Nell'esempio seguente viene illustrato un metodo del gestore eventi denominato `c_ThresholdReached` che corrisponde alla firma per il delegato <xref:System.EventHandler>. Il metodo sottoscrive l'evento `ThresholdReached`.  
   
- [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)] [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
+ [!code-csharp[EventsOverview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
+ [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Gestori eventi statici e dinamici  
  .NET Framework consente ai sottoscrittori di registrarsi per le notifiche degli eventi in modo statico o dinamico. I gestori eventi statici sono attivi per l'intera durata della classe di cui gestiscono gli eventi. I gestori eventi dinamici sono attivati e disattivati in modo esplicito durante l'esecuzione del programma, in genere in risposta a una logica di programma condizionale. Ad esempio, possono essere usati se le notifiche degli eventi sono necessarie solo in determinate condizioni oppure se un'applicazione fornisce più gestori eventi e le condizioni di runtime definiscono quello appropriato da usare. Nell'esempio della sezione precedente viene illustrato come aggiungere un gestore eventi in modo dinamico. Per altre informazioni, vedere [Eventi](../../visual-basic/programming-guide/language-features/events/index.md) ed [Eventi](../../csharp/programming-guide/events/index.md).  
@@ -89,11 +95,10 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
 |[Procedura: Usare eventi in un'applicazione Web Form](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Viene illustrato come gestire un evento generato da un controllo Web Form.|  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.EventHandler>   
- <xref:System.EventHandler%601>   
- <xref:System.EventArgs>   
- <xref:System.Delegate>   
- [Panoramica degli eventi e degli eventi indirizzati (applicazioni Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)   
- [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)   
+ <xref:System.EventHandler>  
+ <xref:System.EventHandler%601>  
+ <xref:System.EventArgs>  
+ <xref:System.Delegate>  
+ [Panoramica degli eventi e degli eventi indirizzati (app di Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md)
-

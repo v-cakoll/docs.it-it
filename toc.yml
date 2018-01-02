@@ -13,9 +13,18 @@
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
           items:
-            - name: Microservizi .NET -- Architettura per le applicazioni .NET incluse in contenitori
+            - name: E-book sulle applicazioni Web ASP.NET moderne
+              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
+              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
+            - name: E-book sull'architettura dei microservizi .NET
               tocHref: /dotnet/standard/microservices-architecture/
               topicHref: /dotnet/standard/microservices-architecture/index
+            - name: E-book sulla modernizzazione delle app .NET
+              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
+              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
+            - name: E-book su microservizi .NET e DevOps
+              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
+              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
             - name: Modelli di programmazione asincrona
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -232,7 +241,7 @@
                   topicHref: /dotnet/framework/unmanaged-api/authenticode/index
                 - name: Debug (riferimenti alle API non gestite)
                   tocHref: /dotnet/framework/unmanaged-api/debugging/
-                  topicHref: /dotnet/framework/unmanaged-api/debuggin/index
+                  topicHref: /dotnet/framework/unmanaged-api/debugging/index
                 - name: Archivio dei simboli di diagnostica (riferimenti alle API non gestite)
                   tocHref: /dotnet/framework/unmanaged-api/diagnostics/
                   topicHref: /dotnet/framework/unmanaged-api/diagnostics/index
@@ -341,6 +350,9 @@
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
+            - name: Guide introduttive
+              tocHref: /dotnet/csharp/quick-starts/
+              topicHref: /dotnet/csharp/quick-starts/index
             - name: Per iniziare
               tocHref: /dotnet/csharp/getting-started/
               topicHref: /dotnet/csharp/getting-started/index
@@ -348,8 +360,8 @@
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
             - name: Presentazione
-              tocHref: /dotnet/csharp/tour/
-              topicHref: /dotnet/csharp/tour/index
+              tocHref: /dotnet/csharp/tour-of-csharp/
+              topicHref: /dotnet/csharp/tour-of-csharp/index
             - name: Novità
               tocHref: /dotnet/csharp/whats-new/
               topicHref: /dotnet/csharp/whats-new/index
@@ -380,7 +392,7 @@
                   topicHref: /dotnet/csharp/programming-guide/events/index
                 - name: Eccezioni e gestione delle eccezioni
                   tocHref: /dotnet/csharp/programming-guide/exceptions/
-                  topicHref: /dotnet/csharp/programming-guide/èxceptions/index
+                  topicHref: /dotnet/csharp/programming-guide/exceptions/index
                 - name: File system e Registro di sistema
                   tocHref: /dotnet/csharp/programming-guide/file-system/
                   topicHref: /dotnet/csharp/programming-guide/file-system/index
@@ -395,7 +407,7 @@
                   topicHref: /dotnet/csharp/programming-guide/interfaces/index
                 - name: Interoperabilità
                   tocHref: /dotnet/csharp/programming-guide/interop/
-                  topicHref: /dotnet/csharp/programming-guide/ìnterop/index
+                  topicHref: /dotnet/csharp/programming-guide/interop/index
                 - name: LINQ
                   tocHref: /dotnet/csharp/programming-guide/linq/
                   topicHref: /dotnet/csharp/programming-guide/linq/index
@@ -426,7 +438,7 @@
                       topicHref: /dotnet/csharp/programming-guide/concepts/covariance-contravariance/index
                     - name: Alberi delle espressioni
                       tocHref: /dotnet/csharp/programming-guide/concepts/expression-trees/
-                      topicHref: /dotnet/csharp/programming-guide/concepts/èxpression-trees/index
+                      topicHref: /dotnet/csharp/programming-guide/concepts/expression-trees/index
                     - name: LINQ
                       tocHref: /dotnet/csharp/programming-guide/concepts/linq/
                       topicHref: /dotnet/csharp/programming-guide/concepts/linq/index
@@ -501,7 +513,7 @@
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/attributes/index
                 - name: Alberi delle espressioni
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/
-                  topicHref: /dotnet/visual-basic/programming-guide/concepts/èxpression-trees/index
+                  topicHref: /dotnet/visual-basic/programming-guide/concepts/expression-trees/index
                 - name: LINQ
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/linq/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/linq/index
@@ -558,7 +570,7 @@
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/procedures/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/procedures/index
                 - name: Stringhe
-                  tocHref: /dotnet/visual-basic/programming-guide/language-features/`strings/
+                  tocHref: /dotnet/visual-basic/programming-guide/language-features/strings/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/strings/index
                 - name: Variabili
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/variables/
@@ -572,6 +584,6 @@
             - name: Riferimenti per il linguaggio
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: Riferimento
+            - name: Riferimenti
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
