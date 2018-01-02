@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a6eb2b152f2ab11bbe0e08ff1ad22f94d45057e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab66252ebc5b87c197b3e4ac7b6def9355e5f201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemruntimeserializationgt"></a>&lt;Serialization&gt;
 Rappresenta l'elemento radice della sezione dello spazio dei nomi <xref:System.Runtime.Serialization> e contiene elementi per l'impostazione delle opzioni del serializzatore <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -63,5 +64,5 @@ Rappresenta l'elemento radice della sezione dello spazio dei nomi <xref:System.R
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.Serialization>  
- [Uso di contratti dati](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [Uso di contratti di dati](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Tipi noti di contratto di dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

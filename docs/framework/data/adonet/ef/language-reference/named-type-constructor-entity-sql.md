@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 72a19094beb03982448a102a4c7362a026d9e611
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ab743f3132dc15548735771b13967898b4c3f15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="named-type-constructor-entity-sql"></a>Costruttore di tipo denominato (Entity SQL)
 Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esempio i tipi di entità o i tipi complessi.  
@@ -41,7 +42,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
 ## <a name="remarks"></a>Note  
  Negli esempi seguenti viene illustrato come costruire i tipi nominali e complessi:  
   
- L'espressione seguente consente di creare un'istanza di un tipo `Person`:  
+ L'espressione seguente consente di creare un'istanza di un tipo `Person` :  
   
  `Person("abc", 12)`  
   
@@ -64,7 +65,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
   
 1.  Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery`:  
+2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   

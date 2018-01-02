@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Form aggiungere l'elemento di configurazione
 
@@ -78,13 +79,13 @@ Per una panoramica del supporto di valori DPI alti di Windows Form, vedere [DPI 
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-App di Windows Form che vengono eseguiti in versioni di Windows a partire da Windows 10 creatori Edition e nelle versioni di destinazione di .NET Framework a partire dal 4.7 di .NET Framework possono essere configurate per sfruttare i miglioramenti di DPI elevati introdotta in .NET Framework 4.7. tra cui:
+App di Windows Form che vengono eseguiti in versioni di Windows a partire da Windows 10 creatori Edition e nelle versioni di destinazione di .NET Framework a partire dal 4.7 di .NET Framework possono essere configurate per sfruttare i miglioramenti di DPI elevati introdotta in .NET Framework 4.7. Sono inclusi:
 
 - Supporto per scenari di risoluzione dinamici in cui l'utente modifica il fattore di scala o DPI dopo che è stata avviata un'applicazione Windows Form.
 
 - Miglioramenti nella scalabilità e layout di un numero di Windows Form controlli, ad esempio il <xref:System.Windows.Forms.MonthCalendar> controllo e <xref:System.Windows.Forms.CheckedListBox> controllo. 
 
-Il riconoscimento DPI elevato è una funzionalità di consenso esplicito; Per impostazione predefinita, il valore di `DpiAwareness` è `false`. È possibile scegliere nel supporto di Windows Form per il riconoscimento DPI impostando il valore della chiave su `PerMonitorV2` nel file di configurazione dell'applicazione. Se è abilitato il riconoscimento DPI, sono abilitate anche tutte le funzionalità DPI singoli. tra cui:
+Il riconoscimento DPI elevato è una funzionalità di consenso esplicito; Per impostazione predefinita, il valore di `DpiAwareness` è `false`. È possibile scegliere nel supporto di Windows Form per il riconoscimento DPI impostando il valore della chiave su `PerMonitorV2` nel file di configurazione dell'applicazione. Se è abilitato il riconoscimento DPI, sono abilitate anche tutte le funzionalità DPI singoli. Sono inclusi:
 
 - DPI modificato, i messaggi sono controllati dal `DisableDpiChangedMessageHandling` chiave.
 

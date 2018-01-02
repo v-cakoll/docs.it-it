@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 301a934cad59b14d1a65a1e98247490d578e6866
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77e3a5d0073cb13d1904f802c4d6760fc52caa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-overview"></a>Cenni preliminari su Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è un linguaggio simile a SQL che consente di eseguire query sui modelli concettuali in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. I modelli concettuali rappresentano i dati come entità e relazioni, e [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consente di eseguire una query di queste entità e relazioni in un formato familiare a coloro che usano SQL.  
@@ -28,8 +29,8 @@ ms.lasthandoff: 11/21/2017
   
  Contenuto della sezione vengono fornite informazioni di carattere concettuale su [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Differenze tra Entity SQL da Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Differenze tra Entity SQL e Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
   
  [Riferimento rapido a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  [Costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
   
- [La memorizzazione nella cache di piano di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-plan-caching-entity-sql.md)  
+ [Memorizzazione nella cache di piani di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-plan-caching-entity-sql.md)  
   
  [Spazi dei nomi](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [Valori letterali](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)  
   
- [Valori letterali null e inferenza dei tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
+ [Valori letterali Null e inferenza del tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
   
  [Set di caratteri di input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   

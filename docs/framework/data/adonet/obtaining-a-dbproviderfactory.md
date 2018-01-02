@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d230a122cbc02521c8d300d96cdd074bd7faa979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 379ec77c5a291ff0fcfa535b808f8976bb416d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Recupero di un oggetto DbProviderFactory
 Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory> implica il passaggio delle informazioni su un provider di dati alla classe <xref:System.Data.Common.DbProviderFactories>. Sulla base di queste informazioni, il metodo <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crea una factory del provider fortemente tipizzata. Ad esempio, per creare un oggetto <xref:System.Data.SqlClient.SqlClientFactory>, è possibile passare a `GetFactory` una stringa contenente il nome del provider specificato come "System.Data.SqlClient". L'altro overload di `GetFactory` accetta un oggetto <xref:System.Data.DataRow>. Dopo aver creato la factory del provider, è quindi possibile usarne i metodi per creare altri oggetti. I metodi di un oggetto `SqlClientFactory` includono <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -51,7 +52,7 @@ Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory
   
 |Ordinale colonna|Nome colonna|Output esempio|Descrizione|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Nome**|Provider di dati SqlClient|Nome leggibile del provider di dati|  
+|0|**Name**|Provider di dati SqlClient|Nome leggibile del provider di dati|  
 |1|**Descrizione**|Provider di dati .NET Framework per SQL Server|Descrizione leggibile del provider di dati|  
 |2|**InvariantName**|
           System.Data.SqlClient|Nome da usare a livello di codice per fare riferimento al provider di dati|  

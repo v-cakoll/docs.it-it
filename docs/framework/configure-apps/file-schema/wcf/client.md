@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 260408bd168246b67830637ca53e78b78758b849
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7d52d74c36ea1b1d722d781f554f8cc6691d53e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientgt"></a>&lt;client&gt;
 L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.  
@@ -45,7 +46,7 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuna  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -83,5 +84,5 @@ L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.ClientSection>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
- [Configurazione di Client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [Configurazione del client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Client](../../../../../docs/framework/wcf/feature-details/clients.md)

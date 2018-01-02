@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f52ab1be62f6e196bc1c8aa8874d5aa440ba606f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f9afc2798a4d23425f7308445f96dc87b5159c97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-data-providers"></a>Provider di dati Entity Framework
 Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Provider EntityClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
  Viene illustrato il provider di dati EntityClient che consente di trasformare le query su un modello di dati in un albero dei comandi canonico. L'albero dei comandi può essere quindi usato da un provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
@@ -37,4 +38,4 @@ Questa sezione fornisce informazioni su provider di dati che supportano [!INCLUD
  Elenco dei provider di dati di terze parti attualmente disponibili per Entity Framework.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+ [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

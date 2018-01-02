@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: afb05055d67a4430909a657fc0ee90c97d3ebfb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 471a13b5d209def227bf8bc57b1551550b76a0c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-data-into-a-dataset"></a>Caricamento di dati in un dataset
 Per poter eseguire query su un oggetto <xref:System.Data.DataSet> con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], è prima necessario popolarlo. Sono disponibili diversi modi per popolare <xref:System.Data.DataSet>. Ad esempio, è possibile utilizzare [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] per eseguire query sul database e caricare i risultati nel <xref:System.Data.DataSet>. Per altre informazioni, vedere [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
@@ -34,6 +35,6 @@ Per poter eseguire query su un oggetto <xref:System.Data.DataSet> con [!INCLUDE[
  [!code-vb[DP LINQ to DataSet Examples#FillDataSet](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#filldataset)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to DataSet Overview](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Esecuzione di query su set di dati](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [LINQ to DataSet esempi](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+ [Panoramica di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

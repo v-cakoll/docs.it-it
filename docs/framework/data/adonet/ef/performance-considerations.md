@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: dd42175234418ebd260a85c87bfeae6cf59ceb4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b12703343480c58024d91ee87f001373552f66a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  
@@ -154,7 +155,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 #### <a name="consider-opening-the-database-connection-manually"></a>Aprire manualmente la connessione al database  
  Quando l'applicazione esegue una serie di query di oggetto o chiama spesso <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> per rendere persistenti creare, aggiornare ed eliminare l'origine dati, delle operazioni di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] deve continuamente aprire e chiudere la connessione all'origine dati. In queste situazioni, può essere utile aprire manualmente la connessione all'inizio di queste operazioni e chiuderla o eliminarla quando le operazioni sono completate. Per ulteriori informazioni, vedere [alla gestione delle connessioni e transazioni](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
-## <a name="performance-data"></a>Dati sulle prestazioni  
+## <a name="performance-data"></a>Dati prestazioni  
  Alcuni dati sulle prestazioni per Entity Framework sono pubblicati nei post seguenti nel [blog del team di ADO.NET](http://go.microsoft.com/fwlink/?LinkId=91905):  
   
 -   [Analisi delle prestazioni di ADO.NET Entity Framework - parte 1](http://go.microsoft.com/fwlink/?LinkId=123907)  
@@ -164,4 +165,4 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 -   [Confronto delle prestazioni di ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sviluppo e considerazioni sulla distribuzione](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+ [Considerazioni sullo sviluppo e sulla distribuzione](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc2dfd94ffbf8ce08dee9c14421f389861e99e77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0bd36f0c13aebb75bb9d2147e871224c162b862
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;clientCertificate&gt; di &lt;serviceCredentials&gt;
 Definisce un certificato X.509 usato per firmare e crittografare i messaggi da un client a un servizio in un modello di comunicazione duplex.  
@@ -69,6 +70,6 @@ Definisce un certificato X.509 usato per firmare e crittografare i messaggi da u
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [Procedura: creare un contratto Duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Procedura: Creare un contratto duplex](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

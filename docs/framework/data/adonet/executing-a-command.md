@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e09685c92652e1fcac2486031ecb49bf8399be59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43fb2d8e42aeae5340874ab082f33257b197eac3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="executing-a-command"></a>Esecuzione di un comando
 In ogni provider di dati .NET Framework fornito con .NET Framework è incluso un oggetto comando che eredita da <xref:System.Data.Common.DbCommand>. Nel provider di dati .NET Framework per OLE DB è incluso un oggetto <xref:System.Data.OleDb.OleDbCommand>, in quello per SQL Server un oggetto <xref:System.Data.SqlClient.SqlCommand>, in quello per ODBC un oggetto <xref:System.Data.Odbc.OdbcCommand> e in quello per Oracle un oggetto <xref:System.Data.OracleClient.OracleCommand>. Ognuno di questi oggetti espone metodi per l'esecuzione di comandi in base al tipo di comando e al valore restituito desiderato, come descritto nella tabella seguente.  

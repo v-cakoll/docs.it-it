@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f543742ee4d70f64d3bef64be295a7f353c680d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a41d6134f793c2d8d02fda68a8b61b180485612
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorsgt"></a>&lt;comportamenti&gt;
 Questo elemento definisce due raccolte figlio denominate `endpointBehaviors` e `serviceBehaviors`.  Ogni raccolta definisce elementi di comportamento usati rispettivamente da endpoint e servizi. Ogni elemento di comportamento è identificato dal relativo attributo `name` univoco. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e senza nome associazioni e comportamenti, vedere [configurazione semplificata](../../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -39,7 +40,7 @@ Questo elemento definisce due raccolte figlio denominate `endpointBehaviors` e `
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- Nessuna  
+ nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -63,7 +64,7 @@ Questo elemento definisce due raccolte figlio denominate `endpointBehaviors` e `
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [La configurazione e l'estensione del Runtime dei comportamenti](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
+ [Configurazione ed estensione del runtime con i comportamenti](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
  [Configurazione dei comportamenti client](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [Specifica del comportamento in fase di esecuzione dei client](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [Specifica del comportamento in fase di esecuzione del servizio](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  

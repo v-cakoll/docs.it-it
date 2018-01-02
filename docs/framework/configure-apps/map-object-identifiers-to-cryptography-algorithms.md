@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcde53450e3656ec958898864bb7d7200a4b03e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Mapping di identificatori di oggetti ad algoritmi di crittografia
 Verificare che le firme digitali che dati non vengono alterati quando viene inviato da un programma a un altro. In genere la firma digitale viene calcolata applicando una funzione matematica per l'hash dei dati da firmare. Quando si formatta un valore hash deve essere firmata, alcuni algoritmi di firma digitale accodare un identificatore di oggetto ASN. 1 (OID) come parte dell'operazione di formattazione. L'OID identifica l'algoritmo utilizzato per calcolare il valore hash. È possibile eseguire il mapping di algoritmi agli identificatori di oggetto per estendere il meccanismo di crittografia per l'utilizzo di algoritmi personalizzati. Nell'esempio seguente viene illustrato come eseguire il mapping di un identificatore di oggetto a un nuovo algoritmo di hash.  

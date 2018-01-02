@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b805d4437ffd8d3d56a7cdc599bdda797a763d13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e4ef6edfc56fe73cd509d466fcc26cdb24069c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Specifica il tipo di ordinamento usato per gli oggetti restituiti in un'istruzione SELECT.  
@@ -87,7 +88,7 @@ ORDER BY ...
 ```  
   
 ## <a name="restricted-keywords"></a>Parole chiave con restrizioni  
- Le parole chiave seguenti devono essere racchiuse tra virgolette quando usate in una clausola `ORDER BY`:  
+ Le parole chiave seguenti devono essere racchiuse tra virgolette quando usate in una clausola `ORDER BY` :  
   
 -   CROSS  
   
@@ -130,7 +131,7 @@ SELECT C2.FirstName, C2.LastName
   
 1.  Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery`:  
+2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
@@ -138,5 +139,5 @@ SELECT C2.FirstName, C2.LastName
  [Espressioni di query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
  [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
- [LIMITE](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
- [IN ALTO](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+ [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
+ [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

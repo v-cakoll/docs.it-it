@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8b853eac26f41a3537438bd1f9b0263ae06b6e77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-overview"></a>Cenni preliminari su LINQ to DataSet
 <xref:System.Data.DataSet> è uno dei componenti più utilizzati di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Rappresenta un elemento chiave del modello di programmazione disconnesso su cui si basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e consente di memorizzare in modo esplicito nella cache dati di origini dati diverse. Per il livello della presentazione <xref:System.Data.DataSet> è strettamente integrato nei controlli GUI per l'associazione dati. Per il livello intermedio fornisce una cache che mantiene la forma relazionale dei dati e include servizi di navigazione all'interno della gerarchia e di query semplici e rapidi. Una tecnica comune utilizzata per ridurre il numero di richieste in un database consiste nell'utilizzare il <xref:System.Data.DataSet> per la memorizzazione nella cache di livello intermedio. Si consideri ad esempio basati sui dati [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web. Spesso, una parte significativa dei dati dell'applicazione non viene modificata frequentemente ed è comune a più sessioni o utenti. Tali dati possono essere mantenuti in memoria sul server Web, in modo da ridurre il numero di richieste al database e velocizzare le interazioni utente. Un altro aspetto utile del <xref:System.Data.DataSet> è che consente a un'applicazione per sottoinsiemi di dati da uno o più origini dati nello spazio dell'applicazione. L'applicazione può quindi modificare i dati in memoria, mantenendo comunque la propria forma relazionale.  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  Nelle applicazioni a più livelli <xref:System.Data.DataSet> viene spesso usato nel livello intermedio per memorizzare nella cache le informazioni per un'applicazione Web. Il [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] funzionalità di query viene implementata tramite metodi di estensione ed estende la versione esistente di ADO.NET 2.0 <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query su set di dati](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

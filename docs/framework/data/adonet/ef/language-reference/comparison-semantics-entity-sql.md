@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semantica di confronto (Entity SQL)
 L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguenti comporta un confronto tra istanze di tipi:  
@@ -76,7 +77,7 @@ L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/e
 ## <a name="supported-combinations"></a>Combinazioni supportate  
  Nella tabella seguente sono illustrate tutte le combinazioni supportate di operatori di confronto per ognuno dei tipi:  
   
-|**Type**|**=**<br /><br /> **!=**|**RAGGRUPPA PER**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **SI INTERSECANO**<br /><br /> **LA DIFFERENZA**<br /><br /> **SET**<br /><br /> **SI SOVRAPPONE**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**È NULL**<br /><br /> **NON È NULL**|  
+|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**È NULL**<br /><br /> **NON È NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Tipo di entità|Ref<sup>1</sup>|Tutte le proprietà<sup>2</sup>|Tutte le proprietà<sup>2</sup>|Tutte le proprietà<sup>2</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Ref<sup>1</sup>|  
 |Tipo complesso|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|  
@@ -84,7 +85,7 @@ L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/e
 |Tipo primitivo|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|  
 |Multiset|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|  
 |Rif|Sì<sup>5</sup>|Sì<sup>5</sup>|Sì<sup>5</sup>|Sì<sup>5</sup>|Throw|Throw|Sì<sup>5</sup>|  
-|Associazione<br /><br /> type|Generare<sup>3</sup>|Throw|Throw|Throw|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|  
+|Associazione<br /><br /> tipo|Generare<sup>3</sup>|Throw|Throw|Throw|Generare<sup>3</sup>|Generare<sup>3</sup>|Generare<sup>3</sup>|  
   
  <sup>1</sup>vengono confrontati in modo implicito i riferimenti delle istanze di tipo di entità specificato, come illustrato nell'esempio seguente:  
   

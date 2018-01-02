@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec959a9eeea82c56d6a2ae5ec3a7befce67676e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 351f49c346cb8126cdd9d540a4db382bf5f4e721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; di &lt;client&gt;
 Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del canale usato dai client per connettersi agli endpoint del servizio nel server.  
@@ -85,5 +86,5 @@ Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del ca
  <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
  <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
  <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [Configurazione di Client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [Configurazione del client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Client](../../../../../docs/framework/wcf/feature-details/clients.md)

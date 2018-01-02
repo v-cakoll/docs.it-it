@@ -13,31 +13,32 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e1bfd3e88df4bd90cbcebfa645c2a50159f836db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f28f4ed728ee429a691a0a19b3fc143ac0e832ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commands-and-parameters"></a>Comandi e parametri
 Una volta stabilita una connessione a un'origine dati, è possibile eseguire i comandi e restituire i risultati dell'origine dati usando un oggetto <xref:System.Data.Common.DbCommand>. È possibile creare un comando usando uno dei costruttori di comando del provider di dati .NET Framework usato. I costruttori possono accettare argomenti facoltativi, ad esempio un'istruzione SQL da eseguire nell'origine dati, un oggetto <xref:System.Data.Common.DbConnection> o un oggetto <xref:System.Data.Common.DbTransaction>. È inoltre possibile configurare tali oggetti come proprietà del comando, nonché creare un comando per una particolare connessione usando il metodo <xref:System.Data.Common.DbConnection.CreateCommand%2A> di un oggetto `DbConnection`. È possibile configurare l'istruzione SQL eseguita dal comando tramite la proprietà <xref:System.Data.Common.DbCommand.CommandText%2A>.  
   
  In ogni provider di dati .NET Framework fornito con .NET Framework è incluso un oggetto `Command`. Nel provider di dati .NET Framework per OLE DB è incluso un oggetto <xref:System.Data.OleDb.OleDbCommand>, in quello per SQL Server un oggetto <xref:System.Data.SqlClient.SqlCommand>, in quello per ODBC un oggetto <xref:System.Data.Odbc.OdbcCommand> e in quello per Oracle un oggetto <xref:System.Data.OracleClient.OracleCommand>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Esegue un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Esecuzione di un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
  Viene descritto l'oggetto `Command` di ADO.NET e viene illustrato come usarlo per eseguire query e comandi su un'origine dati.  
   
- [Configurazione di parametri e tipi di dati di parametro](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  Viene descritto l'uso dei parametri di `Command`, inclusa la direzione, i tipi di dati e la sintassi.  
   
- [Generazione di comandi tramite commandbuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
+ [Generazione di comandi tramite CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
  Viene descritto come usare compilatori di comandi per generare automaticamente i comandi INSERT, UPDATE e DELETE per un `DataAdapter` in cui è presente il comando SELECT di una singola tabella.  
   
- [Recupero di un singolo valore da un Database](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
+ [Recupero di un valore singolo da un database](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
  Viene descritto come usare il metodo `ExecuteScalar` di un oggetto `Command` per restituire un singolo valore in una query sul database.  
   
- [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  Viene descritto come usare un provider di dati per eseguire stored procedure o istruzioni DDL (Data Definition Language).  
   
 ## <a name="see-also"></a>Vedere anche  

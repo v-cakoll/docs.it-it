@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 83b004934c303c95bdc4e6edb6031a86e2b1a6ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6887706aeef3855c1e02c8b1379856022cdac04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico
 A partire da [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], quando si compilano app destinate a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], i reindirizzamenti di associazione possono essere aggiunti automaticamente al file di configurazione dell'app per eseguire l'override dell'unificazione degli assembly. I reindirizzamenti di associazione vengono aggiunti se l'app o i relativi componenti fanno riferimento a più di una versione dello stesso assembly, anche se è possibile specificare manualmente i reindirizzamenti di associazione nel file di configurazione dell'app. La funzionalità di reindirizzamento di associazione automatica interessa le app desktop e Web tradizionali destinate a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], anche se il comportamento è leggermente diverso per un'app Web. È possibile abilitare il reindirizzamento di associazione automatico se sono presenti app destinate alle versioni precedenti di .NET Framework o per mantenere i reindirizzamenti di associazione creati manualmente.  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato. EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
@@ -33,17 +34,17 @@ EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei da
   
  [Entity Data Model: spazi dei nomi](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: Tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: tipi di dati primitivi](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [Entity Data Model: ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [entità finale dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
+ [estremità dell'associazione](../../../../docs/framework/data/adonet/association-end.md)  
   
- [molteplicità di entità di associazione finale](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [molteplicità di estremità dell'associazione](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
  [set di associazioni](../../../../docs/framework/data/adonet/association-set.md)  
   
- [fine del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [estremità del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [tipo di associazione](../../../../docs/framework/data/adonet/association-type.md)  
   

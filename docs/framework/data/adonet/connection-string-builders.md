@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 836742264e44c4cb13f97a3528177080bd10c364
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a782969502509cb766e3a1d38222118a352dc3db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-string-builders"></a>Generatori di stringhe di connessione
 Nelle versioni precedenti di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], controllo delle stringhe di connessione con la stringa concatenata valori non è stata eseguita, in modo che in fase di esecuzione, una parola chiave non generato in fase di compilazione un <xref:System.ArgumentException>. Poiché ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta una sintassi diversa per le parole chiave delle stringhe di connessione, la costruzione manuale di stringhe di connessione valide risulta difficile. Per risolvere questo problema, in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ogni provider di dati include una classe di generatori di stringhe di connessione fortemente tipizzata che eredita da <xref:System.Data.Common.DbConnectionStringBuilder>. Nella tabella seguente sono elencati i provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi di compilatori di stringhe di connessione associate.  
@@ -91,5 +92,5 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>Vedere anche  
  [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Privacy e protezione dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Privacy e sicurezza dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

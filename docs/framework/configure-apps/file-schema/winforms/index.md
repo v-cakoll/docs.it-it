@@ -11,11 +11,12 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f2d83f5dcf6fa93ceba4d670470bd768a2ee1f88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-configuration-section"></a>Sezione di configurazione di Windows Form
 Le impostazioni di configurazione di Windows Form consentono a un'app Windows Form di archiviare e recuperare informazioni sulle impostazioni dell'applicazione personalizzate, ad esempio il supporto di più monitor, il supporto di valori DPI alti e altre impostazioni di configurazione predefinite.

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de0f11149c2ec587372b9e25f39f35f8552503c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75ab1e733915349c64742e1a9c1142cad988ade0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 Con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è più facile e veloce eseguire una query su dati memorizzati nella cache di un oggetto <xref:System.Data.DataSet>. In particolare, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] semplifica l'esecuzione di query consentendo agli sviluppatori di scrivere query dal linguaggio di programmazione stesso, anziché tramite un linguaggio di query separata. Ciò è particolarmente utile per [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] che possono trarre vantaggio del controllo della sintassi in fase di compilazione, tipizzazione statica e supporto IntelliSense resi disponibili per gli sviluppatori di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] nelle query.  
@@ -28,12 +29,12 @@ Con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è più fa
   
  ![LINQ to DataSet è basato sul Provider ADO.NET](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
   
  [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Data.DataTableExtensions>  
   
  <xref:System.Data.DataRowExtensions>  

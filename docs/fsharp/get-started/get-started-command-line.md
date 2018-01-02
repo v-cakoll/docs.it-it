@@ -1,6 +1,6 @@
 ---
 title: 'Introduzione a F # con gli strumenti da riga di comando'
-description: "Informazioni sull'utilizzo di F # con più piattaforme .NET Core CLI."
+description: "Informazioni su come utilizzare F # su qualsiasi sistema operativo (MacOS Windows, Linux) con l'interfaccia CLI di più piattaforme .NET Core."
 keywords: visual f#, f#, programmazione funzionale, .NET, .NET Core
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introduzione a F # con l'interfaccia CLI di .NET Core
 
-Questo articolo descrive come è possibile iniziare con l'utilizzo di F # su .NET Core. Analizzerà la creazione di una soluzione multiprogetto con una libreria di classi che viene chiamato da un'applicazione Console.
+Questo articolo descrive come è possibile iniziare in qualsiasi sistema operativo (Windows, Mac OS o Linux) con F # con .NET Core CLI. Analizzerà la creazione di una soluzione multiprogetto con una libreria di classi che viene chiamato da un'applicazione Console.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 Il modulo di generazione SQL nel [Provider di esempio](http://go.microsoft.com/fwlink/?LinkId=180616) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
@@ -425,4 +426,4 @@ IsEmpty(inut) = Not Exists(input)
  Per produrre nomi univoci sia per gli alias degli extent che per le colonne, usare <existing_name>_n, in cui n è l'alias più piccolo che non è stato ancora usato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generazione SQL nel Provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+ [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

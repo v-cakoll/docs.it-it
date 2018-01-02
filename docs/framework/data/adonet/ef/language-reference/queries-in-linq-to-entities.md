@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 220416aa4e282cb342ee6080d9040f9f4818fbf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe20fd26b78bde19ed73e2415b1b5c283a0d1f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queries-in-linq-to-entities"></a>Query in LINQ to Entities
 Una query è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato, ad esempio SQL per i database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati usato per le query. LINQ (Language-Integrated Query) offre un modello più semplice e coerente per l'uso di dati in diversi tipi di origini dati e formati di dati. In una query LINQ vengono sempre usati oggetti di programmazione.  
@@ -34,46 +35,46 @@ Una query è un'espressione che recupera dati da un'origine dati. Le query sono 
 ### <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
  Le espressioni di query vengono scritte in una sintassi di query dichiarativa. Questa sintassi consente a uno sviluppatore di scrivere query in un linguaggio di alto livello formattato in modo simile a Transact-SQL. Tramite la sintassi delle espressioni di query è possibile eseguire anche complesse operazioni di filtro, ordinamento e raggruppamento sulle origini dati usando una quantità minima di codice. Per ulteriori informazioni, [operazioni di Query di base (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Per esempi che illustrano come usare la sintassi delle espressioni di query, vedere gli argomenti seguenti:  
   
--   [Esempi di sintassi di espressione di query: proiezione](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [Esempi di sintassi dell'espressione di query: proiezione](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [Esempi di sintassi di espressione di query: filtro](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+-   [Esempi di sintassi dell'espressione di query: filtro](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [Esempi di sintassi di espressione di query: ordinamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [Esempi di sintassi dell'espressione di query: ordinamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [Esempi di sintassi delle espressioni di query: Operatori di aggregazione](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Esempi di sintassi di espressione di query: operatori di aggregazione](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [Esempi di sintassi di espressione di query: partizionamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [Esempi di sintassi dell'espressione di query: partizionamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [Esempi di sintassi delle espressioni di query: Operatori di Join](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+-   [Esempi di sintassi di espressione di query: operatori di join](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [Esempi di sintassi delle espressioni di query: Operatori di elemento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+-   [Esempi di sintassi di espressione di query: operatori di elemento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [Esempi di sintassi di espressione di query: raggruppamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+-   [Esempi di sintassi dell'espressione di query: raggruppamento](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [Esempi di sintassi delle espressioni di query: Esplorazione di relazioni](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [Esempi di sintassi di espressione di query: esplorazione di relazioni](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Sintassi delle query basate su metodo  
  Per comporre query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], è inoltre possibile usare query basate su metodo. La sintassi di query basate su metodo è una sequenza di chiamate dirette ai metodi dell'operatore LINQ, passando le espressioni lambda come parametri. Per altre informazioni, vedere [Espressioni lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Per esempi che illustrano come usare la sintassi delle query basate su metodo, consultare gli argomenti seguenti:  
   
--   [Esempi di sintassi delle Query basate su metodo: proiezione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [Esempi di sintassi di query basate sul metodo: proiezione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [Esempi di sintassi delle Query basate su metodo: filtro](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [Esempi di sintassi di query basate sul metodo: filtro](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [Esempi di sintassi delle Query basate su metodo: ordinamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [Esempi di sintassi di query basate sul metodo: ordinamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [Esempi di sintassi di Query basate su metodo: Operatori di aggregazione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Esempi di sintassi di query basate sul metodo: operatori di aggregazione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [Esempi di sintassi delle Query basate su metodo: partizionamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [Esempi di sintassi di query basate sul metodo: partizionamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [Esempi di sintassi delle Query basate su metodo: conversione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [Esempi di sintassi di query basate sul metodo: conversione](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [Esempi di sintassi di Query basate su metodo: Operatori di Join](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+-   [Esempi di sintassi di query basate sul metodo: operatori di join](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [Esempi di sintassi di Query basate su metodo: Operatori di elemento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+-   [Esempi di sintassi di query basate sul metodo: operatori di elemento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [Esempi di sintassi delle Query basate su metodo: raggruppamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [Esempi di sintassi di query basate sul metodo: raggruppamento](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [Esempi di sintassi di Query basate su metodo: Esplorazione di relazioni](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [Esempi di sintassi di query basate sul metodo: esplorazione di relazioni](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  

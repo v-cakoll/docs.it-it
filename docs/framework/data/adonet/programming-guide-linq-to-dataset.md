@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guida per programmatori (LINQ to DataSet)
 Contenuto della sezione vengono fornite informazioni di carattere concettuale ed esempi per programmare con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Query in LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
  Vengono fornite informazioni sulla scrittura di query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
- [Esecuzione di query su set di dati](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  Viene descritto come eseguire una query su oggetti <xref:System.Data.DataSet>.  
   
  [Confronto di DataRows](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
  Viene descritto come usare l'oggetto <xref:System.Data.DataRowComparer> per confrontare righe di dati.  
   
- [Creazione di un oggetto DataTable da una Query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ [Creazione di un oggetto DataTable da una query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  Vengono fornite informazioni sulla creazione di un <xref:System.Data.DataTable> da un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query utilizzando il <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metodo.  
   
  [Procedura: implementare CopyToDataTable\<T > in cui il tipo generico T non è un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
@@ -41,19 +42,19 @@ Contenuto della sezione vengono fornite informazioni di carattere concettuale ed
  [Metodi generici Field e SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
  Vengono fornite informazioni sui metodi <xref:System.Data.DataRowExtensions.Field%2A> e <xref:System.Data.DataRowExtensions.SetField%2A> generici.  
   
- [Data Binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [Data binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  Viene descritto il processo di associazione dati usando l'oggetto <xref:System.Data.DataView>.  
   
- [Debug query LINQ to DataSet](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
+ [Debug di query di LINQ to DataSet](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
  Fornisce informazioni sul debug e risoluzione dei problemi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.  
   
  [Sicurezza](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
  Vengono illustrati i problemi di sicurezza in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
- [LINQ to DataSet esempi](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  Vengono forniti esempi di query in cui vengono usati operatori [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)].  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  

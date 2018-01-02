@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84e211a0ecd68634a08965a1a4cc1494e0df0713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2e006cf94e9ec048617856e997271cd450725b94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-configuration-schema"></a>Schema di configurazione di WCF
 Gli elementi di configurazione di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] consentono di configurare applicazioni [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] server e client. È possibile usare lo [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) per creare e modificare i file di configurazione di client e servizi. Poiché i file di configurazione sono in formato XML, per modificarli manualmente usando un editor di testo è necessario avere familiarità con il linguaggio XML. In caso contrario, è possibile che si verifichino problemi. È ad esempio possibile che un tag di elemento XML o un attributo venga digitato in modo errato. Per i tag di elemento XML e gli attributi viene applicata la distinzione tra maiuscole e minuscole.  
@@ -35,7 +36,7 @@ Gli elementi di configurazione di [!INCLUDE[indigo1](../../../../../includes/ind
 > [!CAUTION]
 >  Per evitare qualsiasi possibile rischio di sicurezza, è necessario usare gli elenchi di controllo di accesso (ACL, Access Control List) appropriati per proteggere le sezioni di configurazione di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nei file di configurazione dell'applicazione (app.config).  Ad esempio, è necessario garantire che solo gli utenti appropriati siano in grado di accedere o apportare modifiche alla sezione del modello dei servizi del file di configurazione di un servizio o alle impostazioni di sicurezza relative alle associazioni dell'applicazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
  Descrive l'elemento `ServiceModel`.  
   

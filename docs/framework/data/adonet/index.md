@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 93e631d8f8cc32943f7563495d9846a80822245f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33b41121ff70eaba07e5d3e14f3b828a3d35d34c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET è un set di classi che espongono servizi di accesso ai dati per i programmatori .NET Framework. ADO.NET fornisce un set completo per la creazione di applicazioni distribuite e abilitate alla condivisione dei dati. ADO.NET è parte integrante di .NET Framework e consente l'accesso ai dati relazionali, ai dati XML e ai dati dell'applicazione. Supporta numerose esigenze di sviluppo, inclusa la creazione di client di database front-end e di oggetti business di livello intermedio, usati da applicazioni, strumenti, linguaggi o browser Internet.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Novità in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Vengono descritte le nuove funzionalità di ADO.NET.  
   

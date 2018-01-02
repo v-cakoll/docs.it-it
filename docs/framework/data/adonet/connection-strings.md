@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>Stringhe di connessione in ADO.NET
 In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle stringhe di connessione, tra cui l'introduzione di nuove parole chiave nelle classi di generatori di stringhe di connessione che facilitano la creazione di stringhe di connessione valide in fase di esecuzione.  
@@ -34,14 +35,14 @@ In .NET Framework 2.0 sono state introdotte nuove funzionalità per l'uso delle 
   
  Per risolvere questi problemi, in ADO.NET 2.0 sono stati introdotti nuovi generatori di stringhe di connessione per ogni provider di dati .NET Framework. Le parole chiave sono esposte come proprietà, consentendo la convalida della sintassi delle stringhe di connessione prima dell'invio all'origine dati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Viene illustrato come usare le classi `ConnectionStringBuilder` per creare stringhe di connessione valide in fase di esecuzione.  
   
- [Stringhe di connessione e i file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
+ [Stringhe di connessione e file di configurazione](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
  Viene illustrato come archiviare e recuperare le stringhe di connessione nei file di configurazione.  
   
- [Sintassi della stringa di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ [Sintassi di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
  Viene descritto come configurare stringhe di connessione specifiche del provider per `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.  
   
  [Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 29e2be39c32673202e93bb2f1bfdf09ec68384cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d578c36500af6f388e63ad921a4dbb8acac225f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtro con DataView (LINQ to DataSet)
 La possibilità di filtrare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante del data binding. Con <xref:System.Data.DataView> è possibile filtrare i dati e restituire subset di righe di dati che soddisfano criteri specifici di filtro. Oltre a stringa basata sul filtraggio <xref:System.Data.DataView> fornisce inoltre la possibilità di utilizzare [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] espressioni per i criteri di filtro. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]le espressioni consentono operazioni di filtro più complesse e potenti di filtro basato su stringa.  
@@ -103,5 +104,5 @@ La possibilità di filtrare i dati in base a criteri specifici e quindi di prese
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [Data binding e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Ordinamento con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

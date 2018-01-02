@@ -23,14 +23,15 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>Componenti aggiuntivi ed estensibilità
-<a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline> e <xref:System.AddIn.Contract>.  
+<a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>e <xref:System.AddIn.Contract> .  
   
  In questa panoramica sono incluse le sezioni seguenti:  
   
@@ -119,7 +120,7 @@ Pipeline del componente aggiuntivo
  [Torna all'inizio](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.AddIn?displayProperty=nameWithType>  
   
  <xref:System.AddIn.Contract?displayProperty=nameWithType>  

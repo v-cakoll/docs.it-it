@@ -13,31 +13,32 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 28c1668dcb9678b65db62c0040adcd116221b92e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b4e29a83efaf351ca954493f4dad2bb0fa0bc1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-xml-in-a-dataset"></a>Utilizzo di XML in un dataset
 ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati contenuti in un flusso o documento XML. È possibile usare il flusso o il documento XML per fornire al tipo <xref:System.Data.DataSet> dati o informazioni relative allo schema oppure entrambi. Le informazioni fornite dal flusso o documento XML possono essere combinate con i dati o le informazioni relative allo schema già presenti nel tipo <xref:System.Data.DataSet>.  
   
  ADO.NET consente inoltre di creare una rappresentazione XML di un tipo <xref:System.Data.DataSet>, con o senza il relativo schema, in modo da trasportare il <xref:System.Data.DataSet> tramite HTTP e renderlo disponibile per l'uso da parte di un'altra applicazione o piattaforma abilitata per XML. In una rappresentazione XML di un tipo <xref:System.Data.DataSet> i dati vengono scritti in XML e lo schema, se incluso inline nella rappresentazione, viene scritto usando il linguaggio XSD (XML Schema Definition Language). Il formato ottenuto tramite XML e XSD risulta ottimale per il trasferimento del contenuto di un tipo <xref:System.Data.DataSet> da e verso client remoti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
  Vengono fornite informazioni dettagliate su DiffGram, un formato XML usato per la lettura e la scrittura del contenuto di un tipo <xref:System.Data.DataSet>.  
   
- [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
  Vengono illustrate le diverse opzioni disponibili per il caricamento del contenuto di un tipo <xref:System.Data.DataSet> da un documento XML.  
   
- [Scrittura di contenuto di un DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
  Viene illustrata la generazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e vengono descritte le diverse opzioni disponibili relative al formato XML.  
   
- [Il caricamento delle informazioni dello Schema di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Caricamento delle informazioni dello schema DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  Vengono illustrati i metodi del tipo <xref:System.Data.DataSet> usati per caricare lo schema di un <xref:System.Data.DataSet> da XML.  
   
- [La scrittura di informazioni dello Schema di DataSet come XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
+ [Scrittura di informazioni dello schema DataSet come XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
  Vengono illustrate le modalità di utilizzo di un XML Schema e il modo in cui generarne uno da un oggetto <xref:System.Data.DataSet>.  
   
  [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
@@ -46,10 +47,10 @@ ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati cont
  [Annidamento di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Viene illustrata l'importanza degli oggetti <xref:System.Data.DataRelation> annidati per la rappresentazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e ne viene descritta la creazione.  
   
- [La derivazione di struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Viene descritta la struttura relazionale, o schema, di un oggetto <xref:System.Data.DataSet> creato da un XML Schema.  
   
- [Inferenza della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Deduzione della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
  Viene descritta la struttura relazionale risultante, o schema, di un tipo <xref:System.Data.DataSet> creato tramite inferenza da elementi XML.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

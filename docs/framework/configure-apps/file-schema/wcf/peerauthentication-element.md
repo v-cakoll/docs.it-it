@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddcb8b5199fc46cf3e5058650168131bb457545d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eed1bac41babb970e3d85a8ae1aa5132f44e3621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpeerauthenticationgt-element"></a>Elemento &lt;peerAuthentication&gt;
 Specifica le opzioni di autenticazione dei client peer-to-peer.  
@@ -118,8 +119,8 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Rete peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Uso di certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Reti peer-to-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Autenticazione dei messaggi del canale peer](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
  [Autenticazione personalizzata canale peer](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Protezione delle applicazioni del canale Peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+ [Protezione di applicazioni del canale peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

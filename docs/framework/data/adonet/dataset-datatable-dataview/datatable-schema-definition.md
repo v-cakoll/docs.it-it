@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: be5969bf8653512da27785479ac7feae1f6c09a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e848a0fac5d41628d4d39f1771019eb870e6395b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
 Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli. Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
@@ -29,7 +30,7 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
 > [!NOTE]
 >  Il <xref:System.Data.DataTable.CaseSensitive%2A> proprietà del **DataTable** non influisce su tale comportamento. Il **CaseSensitive** proprietà si applica ai dati in una tabella e influisce sull'ordinamento, ricerca, filtro, vincoli e così via, ma non per i riferimenti a colonne, relazioni e vincoli.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Aggiunta di colonne a un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Viene descritto come definire le colonne di una tabella tramite **DataColumn** oggetti.  
   
@@ -42,7 +43,7 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
  [Definizione di chiavi primarie](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Viene descritto come specificare la chiave primaria di una tabella da uno o più **DataColumn** oggetti.  
   
- [Vincoli DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.  
   
 ## <a name="see-also"></a>Vedere anche  

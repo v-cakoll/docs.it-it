@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 964a4d051600621d581e05dcf6b518b2766e2750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debug di query di LINQ to DataSet
 In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] è supportato il debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Vi sono tuttavia alcune differenze tra l'esecuzione del debug di codice [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] e di codice gestito non [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La maggior parte delle funzionalità di debug è compatibile con le istruzioni [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], inclusa l'esecuzione di istruzioni, l'impostazione dei punti di interruzione e la visualizzazione dei risultati nelle finestre del debugger. Posticipata, tuttavia, l'esecuzione in ha alcuni effetti collaterali da prendere in considerazione durante il debug di query [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] del codice e sono previste alcune limitazioni all'utilizzo di modifica e continuazione. In questo argomento vengono illustrati gli aspetti del debug che la contraddistinguono [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] rispetto a non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] codice gestito.  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 88e968d025c959ec33674a9d8edb5e63341433ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 302ccb3d95fc982ec7950dc7808dce61b263c481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
 Configura il <xref:System.IdentityModel.Services.CookieHandler> che il <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) viene utilizzato per leggere e scrivere i cookie.  
@@ -53,7 +54,7 @@ Configura il <xref:System.IdentityModel.Services.CookieHandler> che il <xref:Sys
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Specifica il nome di base per i cookie scritti. Il valore predefinito è "FedAuth".|  
-|percorso|Specifica il valore di percorso per i cookie scritti. Il valore predefinito è "AppDomainAppVirtualPath".|  
+|path|Specifica il valore di percorso per i cookie scritti. Il valore predefinito è "AppDomainAppVirtualPath".|  
 |modalità|Uno del <xref:System.IdentityModel.Services.CookieHandlerMode> valori che specifica il tipo di gestore di cookie utilizzato per il modulo SAM. Possono essere utilizzati i valori seguenti:<br /><br /> -"Default", ovvero lo stesso come "Chunked".<br />-"Chunked", ovvero viene utilizzata un'istanza di <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. Questo gestore cookie assicura che singoli cookie non superi una dimensione massima del set. Per ottenere questo risultato potenzialmente "suddivisione in blocchi" un cookie logico in un numero di cookie in transito.<br />-"Custom", ovvero viene utilizzata un'istanza di una classe personalizzata derivata da <xref:System.IdentityModel.Services.CookieHandler>. Fa riferimento la classe derivata di `<customCookieHandler>` elemento figlio.<br /><br /> Il valore predefinito è "Default".|  
 |persistentSessionLifetime|Specifica la durata delle sessioni permanenti. Se è zero, le sessioni temporanee vengono sempre utilizzate. Il valore predefinito è "0:0:0", che specifica una sessione temporanea. Il valore massimo è "365:0:0", che specifica una sessione di 365 giorni. Il valore deve essere specificato in base alla restrizione seguente: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, dove il valore più a sinistra specifica giorni, il valore medio, se presente, specifica le ore e il valore più a destra, se presente, specifica i minuti.|  
 |RequireSsl|Specifica se il flag "Secure" viene generato per i cookie scritti. Se questo valore è impostato, i cookie di sessione di accesso sarà disponibili solo tramite HTTPS. Il valore predefinito è "true".|  

@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Istruzione Yield (Visual Basic)
 Invia l'elemento successivo di una raccolta da un `For Each...Next` istruzione.  
@@ -47,7 +47,7 @@ Yield expression
   
  "Yield" non è una parola riservata e ha un significato speciale solo quando è utilizzata in un `Iterator` funzione o `Get` della funzione di accesso.  
   
- Per ulteriori informazioni sulle funzioni di iteratore e `Get` funzioni di accesso, vedere [iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Per ulteriori informazioni sulle funzioni di iteratore e `Get` funzioni di accesso, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Funzioni di iteratore e funzioni di accesso Get  
  La dichiarazione di una funzione iterator o `Get` della funzione di accesso deve soddisfare i requisiti seguenti:  
@@ -60,7 +60,7 @@ Yield expression
   
  In un evento, costruttore di istanza, il costruttore statico o distruttore statico non può verificarsi una funzione iteratore.  
   
- Una funzione iteratore può essere una funzione anonima. Per altre informazioni, vedere [Iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Una funzione iteratore può essere una funzione anonima. Per altre informazioni, vedere [Iteratori](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Gestione delle eccezioni  
  Oggetto `Yield` istruzione può essere presenti in un `Try` blocco di un [provare... Catch... Istruzione finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Oggetto `Try` blocco che ha un `Yield` istruzione possono essere presenti `Catch` blocchi e può avere un `Finally` blocco.  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Per ulteriori esempi, vedere [iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Per ulteriori esempi, vedere [iteratori](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
  [Istruzioni](../../../visual-basic/language-reference/statements/index.md)

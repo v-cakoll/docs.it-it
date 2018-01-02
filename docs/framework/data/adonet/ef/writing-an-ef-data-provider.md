@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Scrittura di un provider di dati Entity Framework
 In questa sezione viene descritto come scrivere un provider [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] per supportare un'origine dati diversa da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è incluso un provider che supporta [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -44,12 +45,12 @@ In questa sezione viene descritto come scrivere un provider [!INCLUDE[adonet_ef]
 ## <a name="sample"></a>Esempio  
  Vedere il [Provider di esempio Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) per un esempio di un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider che supporta un'origine dati diversa da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Generazione SQL di modifica](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [Generazione di comandi SQL di modifica](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
  [Specifica del manifesto del provider](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+ [Uso di provider di dati](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

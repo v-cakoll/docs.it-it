@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram è un formato XML che consente di identificare le versioni correnti e originali degli elementi di dati. Il formato DiffGram viene usato dal tipo <xref:System.Data.DataSet> per caricare e conservare il contenuto e per serializzare tale contenuto in modo da consentirne il trasporto tramite una connessione di rete. Quando un <xref:System.Data.DataSet> viene scritto come DiffGram, DiffGram viene compilato con tutte le informazioni necessarie per ricreare accuratamente il contenuto, anche se non lo schema del <xref:System.Data.DataSet>, inclusi i valori di colonna da entrambe le **originale** e **corrente** ordine delle righe, informazioni sugli errori di riga e le versioni di riga.  
@@ -93,7 +94,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
   
 |Annotazione|Descrizione|  
 |----------------|-----------------|  
-|**id**|Utilizzato per abbinare gli elementi nel  **\<diffgr: prima di >** e  **\<diffgr: Errors >** blocchi agli elementi di  **\<**  ***DataInstance***  **>**  blocco. I valori di **diffgr: ID** annotazione è nel formato *[NomeTabella] [IdentificatoreRiga]*. Ad esempio: `<Customers diffgr:id="Customers1">`.|  
+|**ID**|Utilizzato per abbinare gli elementi nel  **\<diffgr: prima di >** e  **\<diffgr: Errors >** blocchi agli elementi di  **\<**  ***DataInstance***  **>**  blocco. I valori di **diffgr: ID** annotazione è nel formato *[NomeTabella] [IdentificatoreRiga]*. Ad esempio: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Identifica la  **\<**  ***DataInstance***  **>**  blocco è l'elemento padre dell'elemento corrente. I valori di **diffgr: parentId** annotazione è nel formato *[NomeTabella] [IdentificatoreRiga]*. Ad esempio: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Identifica una riga di  **\<**  ***DataInstance***  **>**  blocco come modificata. Il **hasChanges** annotazione può contenere uno dei due valori seguenti:<br /><br /> **inserito**<br /> Identifica un **Added** riga.<br /><br /> **modificato**<br /> Identifica un **Modified** riga che contiene un **originale** versione di riga nel  **\<diffgr: prima di >** blocco. Si noti che **Deleted** righe avranno un **originale** versione di riga nel  **\<diffgr: prima di >** blocco, ma non è presente alcun elemento annotato nel  **\<**  ***DataInstance***  **>**  blocco.|  
 |**hasErrors**|Identifica una riga di  **\<**  ***DataInstance***  **>**  blocco con un **RowError**. L'elemento di errore viene inserito nel  **\<diffgr: Errors >** blocco.|  
@@ -143,7 +144,7 @@ DiffGram è un formato XML che consente di identificare le versioni correnti e o
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Scrittura di contenuto di un DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [Caricamento di un oggetto DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

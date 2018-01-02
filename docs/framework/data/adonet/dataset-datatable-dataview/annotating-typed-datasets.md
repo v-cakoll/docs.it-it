@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3965ced44bae21feef3d01d49149387fce4fa46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **DataSet** fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento per gli oggetti presenti nell'origine dati.  

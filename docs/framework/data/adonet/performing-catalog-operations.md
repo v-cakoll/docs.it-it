@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-catalog-operations"></a>Esecuzione di operazioni di catalogo
 Per eseguire un comando per modificare un database o catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un **comando** utilizzando le istruzioni SQL appropriate e un **connessione** oggetto. Eseguire il comando con il **ExecuteNonQuery** metodo il **comando** oggetto.  
@@ -56,6 +57,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Uso di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

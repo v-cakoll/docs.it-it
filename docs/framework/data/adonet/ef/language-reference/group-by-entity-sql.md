@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb19589fbba12bba710638e061defa198f9fa169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 877478ae953dd5867077608a5e93035b77bcee0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Specifica i gruppi nei quali devono essere inseriti gli oggetti restituiti da un'espressione ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) di query.  
@@ -74,7 +75,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 1.  Attenersi alla procedura di [procedura: eseguire una Query che restituisce risultati di PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery`:  
+2.  Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   

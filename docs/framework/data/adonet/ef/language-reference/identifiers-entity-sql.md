@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 21518cad85ebcfc4c326e99d615b4f2dfccf6a2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebae7ad633273a9c33aa7ddcad1b11ad76d9046c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identifiers-entity-sql"></a>Identificatori (Entity SQL)
 Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]sono disponibili due tipi di identificatori: gli identificatori semplici e gli identificatori tra virgolette.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generazione di relazioni tra dataset da XML Schema (XSD)
 In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre-figlio. Esistono tre modi per rappresentare un **DataSet** relazione all'interno di uno schema di XML Schema definition language (XSD):  
@@ -90,21 +91,21 @@ msdata:childkey="" />
   
  Il processo di mapping viene utilizzato il **relazione** elemento per creare una relazione padre-figlio tra il **OrderNumber** colonna il **ordine** tabella e il **OrderNo** colonna il **OrderDetail** tabella il **DataSet**. Il processo di mapping consente solo di specificare la relazione. Non specifica automaticamente alcun vincolo sui valori di tali colonne, a differenza di quanto avviene mediante i vincoli di chiave primaria/chiave esterna nei database relazionali.  
   
-### <a name="in-this-section"></a>Contenuto della sezione  
- [Eseguire il mapping di relazioni implicite tra elementi di schemi annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+### <a name="in-this-section"></a>In questa sezione  
+ [Mapping di relazioni implicite tra elementi di schemi annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Descrive i vincoli e le relazioni creati implicitamente in un **DataSet** quando sono presenti elementi annidati nello Schema XML.  
   
- [Mappare le relazioni specificate per gli elementi nidificati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [Mapping di relazioni specificate per elementi annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Viene descritto come impostare esplicitamente le relazioni un **DataSet** per gli elementi annidati nello Schema XML.  
   
- [Specificare le relazioni tra elementi senza alcun annidamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Specifica di relazioni tra elementi senza alcun annidamento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Viene descritto come creare relazioni in un **DataSet** tra elementi di XML Schema che non sono annidati.  
   
 ### <a name="related-sections"></a>Sezioni correlate  
- [La derivazione di struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Derivazione della struttura relazionale di DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Viene descritta la struttura relazionale, o schema, di un **DataSet** creato da uno schema XML Schema definition language (XSD).  
   
- [Vincoli di mapping XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapping tra vincoli XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Vengono descritti gli elementi di XML Schema utilizzati per creare vincoli di chiave esterni e univoci in un **DataSet**.  
   
 ## <a name="see-also"></a>Vedere anche  

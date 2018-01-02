@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc04552b9b2ecd85a520ed16ae9a6ee0dfc98a46
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9572cea14b7c15893459133aa75e9fa62b10d4f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltserviceauthorizationgt-element"></a>Elemento &lt;serviceAuthorization&gt;
 Specifica impostazioni che autorizzano accesso alle operazioni del servizio  
@@ -112,6 +113,6 @@ Specifica impostazioni che autorizzano accesso alle operazioni del servizio
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
  [Comportamenti di sicurezza](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Autorizzazione dell'accesso alle operazioni del servizio](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Procedura: creare un gestore autorizzazioni personalizzato per un servizio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  [Criteri di autorizzazione](../../../../../docs/framework/wcf/samples/authorization-policy.md)

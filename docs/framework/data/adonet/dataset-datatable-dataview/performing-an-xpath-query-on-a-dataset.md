@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62c5cef51e125443d87c47f7f62dc76aa5d352b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Esecuzione di una query XPath in un dataset
 La relazione tra un oggetto sincronizzato <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> consente di usare XML servizi, ad esempio le query XML Path Language (XPath), che accedono al **XmlDataDocument** e possono eseguire determinate funzionalità in modo più semplice rispetto all'accesso al **DataSet** direttamente. Ad esempio, anziché usare il **selezionare** metodo di un <xref:System.Data.DataTable> per esplorare le relazioni ad altre tabelle un **set di dati**, è possibile eseguire una query XPath su un **XmlDataDocument**  sincronizzato con il **DataSet**, per ottenere un elenco di elementi XML sotto forma di un <xref:System.Xml.XmlNodeList>. I nodi il **XmlNodeList**, sottoposto a cast come <xref:System.Xml.XmlElement> nodi, quindi può essere passato al **GetRowFromElement** metodo il **XmlDataDocument**, per restituire una corrispondenza <xref:System.Data.DataRow> i riferimenti alle righe della tabella in sincronizzato **DataSet**.  

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e43e79416ddb8862cbc6e52d9d449a02b123af83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f388369d4dc2e590473ad98189ade70b77551b10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Registra una cache di riproduzione token con un servizio o una raccolta di gestore del token di sicurezza.  
@@ -47,7 +48,7 @@ Registra una cache di riproduzione token con un servizio o una raccolta di gesto
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|type|Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.TokenReplayCache> classe. Per ulteriori informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti al tipo personalizzato].
+|tipo|Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.TokenReplayCache> classe. Per ulteriori informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti al tipo personalizzato].
   
 ### <a name="child-elements"></a>Elementi figlio  
  None  

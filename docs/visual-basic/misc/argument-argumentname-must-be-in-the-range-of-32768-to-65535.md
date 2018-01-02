@@ -9,11 +9,11 @@ ms.assetid: d1ab6767-8334-4d7c-bb99-c837a793ed69
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3a6c42d4e56031838a312b2ad22a9b37dd580efe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 24afc8b357ff68db2f23c6bd6382f5988f9eea83
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-in-the-range-of--32768-to-65535"></a>Argomento &#39; &lt;NomeArgomento&gt;&#39; deve essere compreso nell'intervallo compreso tra -32768 e 65535
 Il valore dell'argomento non rientra nell'intervallo consentito tra -32.768 e 65.535.  
@@ -26,4 +26,4 @@ Il valore dell'argomento non rientra nell'intervallo consentito tra -32.768 e 65
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio di argomenti per valore e per riferimento](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Passaggio di parametri meccanismo per gli utenti di Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+

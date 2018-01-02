@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
 ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e XML, sia per origini dati esposte tramite OLE DB e ODBC. Le applicazioni consumer che supportano la condivisione dei dati sono in grado di usare ADO.NET per connettersi a tali origini dati e recuperare, gestire e aggiornare i dati contenuti.  
@@ -32,23 +33,23 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
   
  **Informativa sulla privacy**: gli assembly di System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll e System.Data.DataSetExtensions.dll non distinguere tra un utente dati privati e pubblici.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Architettura di ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Viene fornita una descrizione generale dell'architettura e dei componenti di ADO.NET.  
   
- [Linee guida e le opzioni di tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ [Opzioni e linee guida per la tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Vengono descritti i prodotti e le tecnologie inclusi nella piattaforma EDM.  
   
  [LINQ e ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Viene descritta l'implementazione di Language-Integrated Query (LINQ) in ADO.NET e vengono forniti collegamenti agli argomenti rilevanti.  
   
- [Provider di dati .NET framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Provider di dati .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Vengono fornite informazioni generali sulle caratteristiche del provider di dati .NET Framework e dei provider di dati .NET Framework inclusi in ADO.NET.  
   
- [Set di dati ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Vengono fornite informazioni generali relative all'architettura e ai componenti del `DataSet`.  
   
- [Esecuzione side-by-Side in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [Esecuzione side-by-side in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  Vengono descritte le differenze tra le diverse versioni di ADO.NET e le relative ripercussioni sull'esecuzione contemporanea di diverse versioni e la compatibilità tra applicazioni.  
   
  [Esempi di codice ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  

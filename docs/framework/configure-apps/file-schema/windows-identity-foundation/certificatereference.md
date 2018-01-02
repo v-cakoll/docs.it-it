@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd0d4742a162000d438851cef9c00e21368b7ba1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
 Specifica le impostazioni che consentono di trovare e convalidare un certificato x. 509 nell'archivio certificati.  
@@ -52,11 +53,11 @@ Specifica le impostazioni che consentono di trovare e convalidare un certificato
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|storeName|Il nome dell'archivio certificati x. 509. Il valore predefinito è "My". Parametro facoltativo.|  
-|storeLocation|Oggetto <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica il percorso dell'archivio certificati x. 509. Il valore predefinito è "LocalMachine". Parametro facoltativo.|  
-|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valore che specifica il tipo di ricerca che deve essere eseguito. Il valore predefinito è "FindBySubjectDistinguishedName". Parametro facoltativo.|  
-|findValue|Valore da cercare nell'archivio certificati X.509. Parametro facoltativo.|  
-|isChainIncluded|Specifica se la convalida deve essere eseguita usando la catena di certificati. Il valore predefinito è "true". la convalida viene eseguita usando la catena di certificati. Parametro facoltativo.|  
+|storeName|Il nome dell'archivio certificati x. 509. Il valore predefinito è "My". Facoltativo.|  
+|storeLocation|Oggetto <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica il percorso dell'archivio certificati x. 509. Il valore predefinito è "LocalMachine". Facoltativo.|  
+|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valore che specifica il tipo di ricerca che deve essere eseguito. Il valore predefinito è "FindBySubjectDistinguishedName". Facoltativo.|  
+|findValue|Valore da cercare nell'archivio certificati X.509. Facoltativo.|  
+|isChainIncluded|Specifica se la convalida deve essere eseguita usando la catena di certificati. Il valore predefinito è "true". la convalida viene eseguita usando la catena di certificati. Facoltativo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  None  

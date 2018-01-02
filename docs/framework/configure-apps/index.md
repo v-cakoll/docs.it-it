@@ -34,11 +34,12 @@ caps.latest.revision: "28"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2bd01e697d6852b9eb50418e5b6f506a133cbc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 -   File di configurazione dei criteri utente: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: individuare assembly mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Viene descritto come impostare il runtime in modo da usare la variabile di ambiente DEVPATH durante la ricerca degli assembly.  
   

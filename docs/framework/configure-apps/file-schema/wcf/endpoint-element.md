@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c466d7f7f00d7fd2358f0d5d71c0b705f316f66f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltendpointgt-element"></a>Elemento &lt;endpoint&gt;
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
@@ -96,5 +97,5 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
  <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Endpoint: Indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Procedura: creare un Endpoint del servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+ [Endpoint: indirizzi, associazioni e contratti](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Procedura: Creare un endpoint di servizio nella configurazione](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

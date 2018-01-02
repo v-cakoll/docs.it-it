@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4991fc65a48d620d30d09c44f1a30c2d1839071e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pipeline-development"></a>Sviluppo pipeline
 La pipeline del componente aggiuntivo è il percorso di segmenti della pipeline che l'applicazione host e il componente aggiuntivo deve utilizzare per comunicare tra loro.  
@@ -84,7 +85,7 @@ Percorso di attivazione dal componente aggiuntivo all'host
 ## <a name="walkthroughs"></a>Procedure dettagliate  
  Esistono tre argomenti di questa procedura dettagliata viene descritto come creare pipeline utilizzando Visual Studio:  
   
--   [Procedura dettagliata: Creazione di un'applicazione estensibile](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
+-   [Procedura dettagliata: Creazione di un'applicazione estendibile](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
      Viene descritto un componente aggiuntivo di calcolatrice che esegue l'addizione, sottrazione, moltiplicazione e divisione calcoli per l'host.  
   

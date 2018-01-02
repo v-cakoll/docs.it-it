@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c08e4c8b1008fa6e2625cdb9cd22672daf691a4a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 575bd9491573be949a2a8ea0d0b6a22cb399b977
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; di &lt;basicHttpBinding&gt;
 Definisce proprietà che controllano i parametri di autenticazione per il trasporto HTTP.  
@@ -70,17 +71,17 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
 |Di base|Specifica l'autenticazione di base.|  
 |Digest|Specifica l'autenticazione digest.|  
 |Ntlm|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
-|Windows|Specifica l'autenticazione Windows integrata.|  
+|WINDOWS|Specifica l'autenticazione Windows integrata.|  
   
 ## <a name="proxycredentialtype-attribute"></a>Attributo proxyCredentialType  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|Nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
+|nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Digest|Specifica l'autenticazione digest come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Ntlm|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
-|Windows|Specifica l'autenticazione Windows integrata.|  
+|WINDOWS|Specifica l'autenticazione Windows integrata.|  
 |Certificato|Esegue l'autenticazione client mediante un certificato. Questa opzione funziona solo se l'attributo `Mode` dell'elemento `security` padre è impostato su Transport, mentre non funzionerà se viene impostato su TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementi figlio  

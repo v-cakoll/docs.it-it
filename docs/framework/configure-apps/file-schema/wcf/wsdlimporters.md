@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08dce1244b59a1755afebeaed16f25f51a9480a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56a41174a5a321703fae494e766ef1b2820dc5db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwsdlimportersgt"></a>&lt;wsdlImporters&gt;
 Questo elemento di configurazione specifica tutte le unità di importazione WSDL che importano metadati WSDL 1.1 con allegati di WS-Policy. Ogni elemento figlio è un elemento <`wsdlImporter`> che specifica la modalità usata per importare metadati e per convertire tali informazioni in diverse classi che rappresentano informazioni di contratto e di endpoint. Può importare selettivamente informazioni di contratto e di endpoint e proprietà che espongono qualsiasi errore di importazione e accettano informazioni sul tipo relative al processo di importazione e di conversione. Supporta inoltre l'importazione di informazioni dell'associazione e proprietà che forniscono accesso a qualsiasi documento di criteri, documento WSDL, estensione WSDL e documento di XML Schema.  
@@ -27,5 +28,5 @@ Questo elemento di configurazione specifica tutte le unità di importazione WSDL
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [Configurazione di Client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [Configurazione del client WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Client](../../../../../docs/framework/wcf/feature-details/clients.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e15d5ebca489be07311c5ae2ed7f4201705e352b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f0645509410d0f383caef1a0917138468dc2101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-objects"></a>Utilizzo di oggetti
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] consente di eseguire query sui dati e di inserire, aggiornare ed eliminare dati, espressi come oggetti CLR (Common Language Runtime) tipizzati che sono istanze dei tipi di entità. I tipi di entità rappresentano le entità definite nel modello concettuale. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] esegue il mapping di entità e relazioni definite in un modello concettuale a un'origine dati. Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fornisce funzionalità per eseguire le operazioni seguenti: materializzare i dati restituiti dall'origine dati come oggetti; tenere traccia delle modifiche apportate agli oggetti; gestire la concorrenza, propagare le modifiche di oggetto all'origine dati; e associare oggetti ai controlli.  

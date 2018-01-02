@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d982964b596528b091f5367edd38e0cee5f923c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getschema-and-schema-collections"></a>Raccolte di schemi e GetSchema
 Il **connessione** classi in ogni implementazione di provider gestiti di .NET Framework un **GetSchema** metodo utilizzato per recuperare informazioni sullo schema relative al database che è attualmente connesso e le informazioni sullo schema restituite dal **GetSchema** metodo disponibile sotto forma di un <xref:System.Data.DataTable>. Il **GetSchema** è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e per limitare la quantità di informazioni restituite.  
@@ -115,5 +116,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Durante il recupero delle informazioni sullo Schema di Database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

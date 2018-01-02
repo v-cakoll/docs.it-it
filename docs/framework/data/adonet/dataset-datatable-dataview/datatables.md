@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>DataTables
 Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relazioni e vincoli. In ADO.NET <xref:System.Data.DataTable> gli oggetti vengono utilizzati per rappresentare le tabelle in un **DataSet**. Oggetto **DataTable** rappresenta una tabella di dati relazionali in memoria; i dati sono locali per il. Applicazione basata su rete in cui si trova, ma possono essere popolato da un'origine dati, ad esempio Microsoft SQL Server utilizzando un **DataAdapter** per ulteriori informazioni, vedere [popolamento di un set di dati da un oggetto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -30,17 +31,17 @@ Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relaz
   
  L'utilizzo di una o più colonne correlate delle tabelle consente di creare relazioni padre-figlio tra tabelle. Creare una relazione tra **DataTable** degli oggetti mediante un <xref:System.Data.DataRelation>. **DataRelation** gli oggetti possono quindi essere utilizzati per restituire le righe padre o figlio correlate di una particolare riga. Per ulteriori informazioni, vedere [aggiunta di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione di un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Viene illustrato come creare un **DataTable** e aggiungerla a un **DataSet**.  
   
- [Definizione dello Schema di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Vengono fornite informazioni sulla creazione e utilizzo **DataColumn** oggetti e vincoli.  
   
- [La modifica dei dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Viene spiegato come aggiungere, modificare ed eliminare i dati di una tabella Viene illustrato come utilizzare **DataTable** eventi per esaminare le modifiche ai dati nella tabella.  
   
- [Gestione degli eventi di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  Fornisce informazioni sugli eventi disponibili per l'utilizzo con un **DataTable**, inclusi gli eventi quando vengono modificati i valori delle colonne e righe vengono aggiunte o eliminate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
