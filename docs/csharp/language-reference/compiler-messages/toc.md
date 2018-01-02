@@ -106,6 +106,7 @@
 ## [Errore del compilatore CS1943](cs1943.md)
 ## [Errore del compilatore CS1946](cs1946.md)
 ## [Errore del compilatore CS2032](cs2032.md)
+## [Errore del compilatore CS7003](cs7003.md)
 ## [Avviso del compilatore (livello 1) CS0420](cs0420.md)
 ## [Avviso del compilatore (livello 1) CS0465](cs0465.md)
 ## [Avviso del compilatore (livello 1) CS1058](cs1058.md)

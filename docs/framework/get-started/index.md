@@ -12,20 +12,23 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 66e581e04aa0c3d33fb1ef9a7f4163d131f625bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a7d84b55abd6c7d72c3a74d17b4f24d00e117a0c
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
 .NET Framework è un ambiente di esecuzione runtime in cui vengono gestite le app destinate a .NET Framework. È costituito da Common Language Runtime, che fornisce la gestione della memoria e altri servizi di sistema, e da un'ampia libreria di classi, che consente ai programmatori di sfruttare codice affidabile per tutte le aree principali dello sviluppo di app.
 
+> [!NOTE] 
+> .NET Framework è disponibile solo nei sistemi Windows. È possibile usare [.NET Core](../../core/index.md) per eseguire app in Windows, MacOS e Linux. 
+
 <a name="Introducing"></a>
 ## <a name="what-is-the-net-framework"></a>Cos'è .NET Framework?
 
-.NET Framework è un ambiente di esecuzione gestita che fornisce un'ampia gamma di servizi alle app in esecuzione. È costituito da due componenti principali: Common Language Runtime (CLR), vale a dire il motore di esecuzione mediante il quale vengono gestite le app in esecuzione, e la libreria di classi .NET Framework, che fornisce una raccolta di codice testato e riutilizzabile che gli sviluppatori possono chiamare dalle rispettive app. Tra i servizi forniti da .NET Framework per le app in esecuzione sono inclusi:
+.NET Framework è un ambiente di esecuzione gestita per Windows che fornisce un'ampia gamma di servizi alle app in esecuzione. È costituito da due componenti principali: Common Language Runtime (CLR), vale a dire il motore di esecuzione mediante il quale vengono gestite le app in esecuzione, e la libreria di classi .NET Framework, che fornisce una raccolta di codice testato e riutilizzabile che gli sviluppatori possono chiamare dalle rispettive app. Tra i servizi forniti da .NET Framework per le app in esecuzione sono inclusi:
 
 - Gestione della memoria. In molti linguaggi di programmazione, i programmatori sono responsabili dell'allocazione e del rilascio di memoria, nonché della gestione della durata degli oggetti. Nelle app .NET Framework, CLR fornisce questi servizi per conto dell'app.
 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
 
 - Libreria di classi estesa. Anziché dover scrivere grandi quantità di codice per gestire operazioni comuni di programmazione di basso livello, i programmatori usano una libreria di tipi facilmente accessibile e i relativi membri dalla libreria di classi .NET Framework.
 
-- Framework e tecnologie di sviluppo. In .NET Framework sono incluse librerie per aree specifiche dello sviluppo di app, ad esempio ASP.NET per app Web, ADO.NET per l'accesso ai dati e Windows Communication Foundation per app orientate ai servizi.
+- Framework e tecnologie di sviluppo. In .NET Framework sono incluse librerie per aree specifiche dello sviluppo di app, ad esempio ASP.NET per app Web, ADO.NET per l'accesso ai dati, Windows Communication Foundation per app orientate ai servizi e Windows Presentation Foundation per le app desktop Windows.
 
 - Interoperabilità del linguaggio. Tramite i compilatori di linguaggio destinati a .NET Framework viene generato un codice intermedio denominato Common Intermediate Language (CIL) che, a sua volta, viene compilato in fase di esecuzione tramite Common Language Runtime. Con questa funzionalità, le routine scritte in un linguaggio sono accessibili ad altri linguaggi e i programmatori si concentrano sulla creazione di app nei linguaggi preferiti.
 
@@ -41,14 +44,14 @@ ms.lasthandoff: 10/18/2017
 
 - Esecuzione affiancata. .NET Framework consente di risolvere conflitti tra versioni permettendo la coesistenza di più versioni di Common Language Runtime nello stesso computer. Ciò significa che possono coesistere più versioni di app e che un'app può essere eseguita nella versione di .NET Framework con cui è stata creata. L'esecuzione side-by-side è possibile per i gruppi di versioni di .NET Framework 1.0/1.1, 2.0/3.0/3.5 e 4/4.5.x/4.6.x/4.7.x.
 
-- Multitargeting. Scegliendo [.NET Standard](~/docs/standard/net-standard.md) come destinazione, gli sviluppatori possono creare assembly che funzionano su più piattaforme .NET Framework, come ad esempio Windows 7, Windows 8, Windows 8.1, Windows 10, Windows Phone e Xbox 360.
+- Multitargeting. Usando [.NET Standard](~/docs/standard/net-standard.md) come destinazione, gli sviluppatori possono creare librerie di classi che funzionano su più piattaforme .NET Framework supportate da tale versione dello standard. Ad esempio, le librerie basate su .NET Standard 2.0 possono essere usate dalle app sviluppate per .NET Framework 4.6.1, .NET Core 2.0 e UWP 10.0.16299. 
 
 <a name="ForUsers"></a>
 ## <a name="the-net-framework-for-users"></a>.NET Framework per utenti
 
 Se non si sviluppano ma si usano app .NET Framework, non è necessario avere una specifica conoscenza di .NET Framework o del relativo funzionamento. .NET Framework è sostanzialmente trasparente agli utenti.
 
-Se si usa il sistema operativo Windows, .NET Framework potrebbe essere già installato nel computer. Inoltre, se si installa un'app per cui è richiesto .NET Framework, è possibile che tramite il programma di installazione dell'app venga installata una versione specifica di .NET Framework nel computer in uso. In alcuni casi, potrebbe essere visualizzata una finestra di dialogo in cui viene chiesto di installare .NET Framework. Se si è appena provato a eseguire un'app quando viene visualizzata questa finestra di dialogo e se il computer ha accesso a Internet, è possibile aprire una pagina Web che consente di installare la versione mancante di .NET Framework.
+Se si usa il sistema operativo Windows, .NET Framework potrebbe essere già installato nel computer. Inoltre, se si installa un'app per cui è richiesto .NET Framework, è possibile che tramite il programma di installazione dell'app venga installata una versione specifica di .NET Framework nel computer in uso. In alcuni casi, potrebbe essere visualizzata una finestra di dialogo in cui viene chiesto di installare .NET Framework. Se si è appena provato a eseguire un'app quando viene visualizzata questa finestra di dialogo e se il computer ha accesso a Internet, è possibile aprire una pagina Web che consente di installare la versione mancante di .NET Framework. Per altre informazioni, vedere la [Guida all'installazione](../install/index.md).
 
 In generale, le versioni di .NET Framework installate nel computer non devono essere disinstallate per due motivi:
 
@@ -56,7 +59,7 @@ In generale, le versioni di .NET Framework installate nel computer non devono es
 
 - Alcune versioni di .NET Framework sono aggiornamenti sul posto di versioni precedenti. Ad esempio, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] è un aggiornamento sul posto alla versione 2.0 e .NET Framework 4.7.1 è un aggiornamento sul posto alle versioni 4, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 e 4.7. Per altre informazioni, vedere [Versioni e dipendenze di .NET Framework](../../../docs/framework/migration-guide/versions-and-dependencies.md).
 
-Se si sceglie di rimuovere .NET Framework, usare sempre **Programmi e funzionalità** dal Pannello di controllo per disinstallarlo. Non rimuovere mai manualmente una versione di .NET Framework.
+Nelle versioni di Windows precedenti a Windows 8, se si sceglie di rimuovere .NET Framework, per la disinstallazione usare sempre **Programmi e funzionalità** dal Pannello di controllo. Non rimuovere mai manualmente una versione di .NET Framework. In Windows 8 e versioni successive, .NET Framework è un componente del sistema operativo e non può essere disinstallato in modo indipendente.
 
 Si noti che più versioni di .NET Framework possono coesistere contemporaneamente in un computer. Ciò significa che non è necessario disinstallare le versioni precedenti per installare una versione più recente.
 
@@ -69,7 +72,7 @@ Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
 1. Se non è già preinstallata nel sistema operativo, installare la versione di .NET Framework che verrà usata dall'app. La versione di produzione più recente è .NET Framework 4.7.1, preinstallata in Windows 10 Falll Creators Update e disponibile per il download nelle versioni precedenti del sistema operativo Windows. Per i requisiti di sistema di .NET Framework, vedere [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md). Per informazioni sull'installazione di .NET Framework, vedere [Guida all'installazione](../../../docs/framework/install/guide-for-developers.md). Pacchetti aggiuntivi di .NET Framework vengono rilasciati fuori programma, ovvero all'occorrenza al di fuori di qualsiasi ciclo di rilascio regolare o pianificato. Per informazioni su questi pacchetti, vedere [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
-2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui Visual Basic, C#, Visual F# e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).
+2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e C++/CLI di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).
 
 3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). È disponibile in numerose edizioni.
 
@@ -85,6 +88,7 @@ Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere 
 | [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md) | Vengono elencati i requisiti hardware e software per l'esecuzione di .NET Framework. |
 | [Componenti di base e open-source di .NET](../../../docs/framework/get-started/net-core-and-open-source.md) | Viene descritto .NET Core in relazione a .NET Framework e viene spiegato come accedere ai progetti .NET Core open source. |
 | [Documentazione di .NET Core](https://docs.microsoft.com/dotnet/) | Documentazione concettuale e di riferimento delle API per .NET Core. |
+| [.NET Standard](~/docs/standard/net-standard.md) | Viene descritto .NET Standard, una specifica con versione supportata dalle singole implementazioni di .NET per garantire la disponibilità di un set coerente di API in più piattaforme.
 
 ## <a name="see-also"></a>Vedere anche
 
