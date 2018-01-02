@@ -13,50 +13,51 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b890a56daeab1c3a0fbb8c95ec29a81cb7689e9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 269d0b7942a949b899a445af0fc15502e0ae3f7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="type-definitions-entity-sql"></a><span data-ttu-id="364ea-102">Definizioni dei tipi (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="364ea-102">Type Definitions (Entity SQL)</span></span>
-<span data-ttu-id="364ea-103">Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una funzione inline [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="364ea-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  
+# <a name="type-definitions-entity-sql"></a><span data-ttu-id="9e692-102">Definizioni dei tipi (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="9e692-102">Type Definitions (Entity SQL)</span></span>
+<span data-ttu-id="9e692-103">Una definizione del tipo viene usata nell'istruzione per la dichiarazione di una funzione inline [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9e692-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="364ea-104">Note</span><span class="sxs-lookup"><span data-stu-id="364ea-104">Remarks</span></span>  
- <span data-ttu-id="364ea-105">L'istruzione di dichiarazione per una funzione inline è costituito il [funzione](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) parola chiave seguita da un identificatore che rappresenta il nome della funzione (ad esempio, "MyAvg") seguito da un elenco di definizioni di parametro tra parentesi (per esempio, "dues Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="364ea-105">The declaration statement for an inline function consists of the [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) keyword followed by the identifier representing the function name (for example, "MyAvg") followed by a parameter definition list in parenthesis (for example, "dues Collection(Decimal)").</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e692-104">Note</span><span class="sxs-lookup"><span data-stu-id="9e692-104">Remarks</span></span>  
+ <span data-ttu-id="9e692-105">L'istruzione di dichiarazione per una funzione inline è costituito il [funzione](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) parola chiave seguita da un identificatore che rappresenta il nome della funzione (ad esempio, "MyAvg") seguito da un elenco di definizioni di parametro tra parentesi (per esempio, "dues Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="9e692-105">The declaration statement for an inline function consists of the [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) keyword followed by the identifier representing the function name (for example, "MyAvg") followed by a parameter definition list in parenthesis (for example, "dues Collection(Decimal)").</span></span>  
   
- <span data-ttu-id="364ea-106">L'elenco di definizioni dei parametri è costituito da zero o più definizioni di parametri.</span><span class="sxs-lookup"><span data-stu-id="364ea-106">The parameter definition list consists of zero or more parameter definitions.</span></span> <span data-ttu-id="364ea-107">Ogni definizione di parametro consiste di un identificatore (il nome del parametro alla funzione, ad esempio, "dues") seguito da una definizione del tipo (ad esempio, "Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="364ea-107">Each parameter definition consists of an identifier (the name of the parameter to the function, for example, "dues") followed by a type definition (for example, "Collection(Decimal)").</span></span>  
+ <span data-ttu-id="9e692-106">L'elenco di definizioni dei parametri è costituito da zero o più definizioni di parametri.</span><span class="sxs-lookup"><span data-stu-id="9e692-106">The parameter definition list consists of zero or more parameter definitions.</span></span> <span data-ttu-id="9e692-107">Ogni definizione di parametro consiste di un identificatore (il nome del parametro alla funzione, ad esempio, "dues") seguito da una definizione del tipo (ad esempio, "Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="9e692-107">Each parameter definition consists of an identifier (the name of the parameter to the function, for example, "dues") followed by a type definition (for example, "Collection(Decimal)").</span></span>  
   
- <span data-ttu-id="364ea-108">Le definizioni del tipo possono essere:</span><span class="sxs-lookup"><span data-stu-id="364ea-108">The type definitions can be either:</span></span>  
+ <span data-ttu-id="9e692-108">Le definizioni del tipo possono essere:</span><span class="sxs-lookup"><span data-stu-id="9e692-108">The type definitions can be either:</span></span>  
   
--   <span data-ttu-id="364ea-109">Il tipo dell'identificatore (ad esempio, "Int32" o "AdventureWorks.Order").</span><span class="sxs-lookup"><span data-stu-id="364ea-109">The type of the identifier (for example, "Int32" or "AdventureWorks.Order").</span></span>  
+-   <span data-ttu-id="9e692-109">Il tipo dell'identificatore (ad esempio, "Int32" o "AdventureWorks.Order").</span><span class="sxs-lookup"><span data-stu-id="9e692-109">The type of the identifier (for example, "Int32" or "AdventureWorks.Order").</span></span>  
   
--   <span data-ttu-id="364ea-110">La parola chiave `COLLECTION` seguita da un'altra definizione del tipo tra parentesi (ad esempio "Collection(AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="364ea-110">The keyword `COLLECTION` followed by another type definition in parenthesis (for example, "Collection(AdventureWorks.Order)").</span></span>  
+-   <span data-ttu-id="9e692-110">La parola chiave `COLLECTION` seguita da un'altra definizione del tipo tra parentesi (ad esempio "Collection(AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="9e692-110">The keyword `COLLECTION` followed by another type definition in parenthesis (for example, "Collection(AdventureWorks.Order)").</span></span>  
   
--   <span data-ttu-id="364ea-111">La parola chiave ROW seguita da un elenco di definizioni di proprietà tra parentesi (ad esempio "Row(x AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="364ea-111">The keyword ROW followed by a list of property definitions in parenthesis (for example, "Row(x AdventureWorks.Order)").</span></span> <span data-ttu-id="364ea-112">Le definizioni di proprietà hanno un formato, ad esempio "`identifier type_definition`, `identifier type_definition`,...".</span><span class="sxs-lookup"><span data-stu-id="364ea-112">Property definitions have a format such as "`identifier type_definition`, `identifier type_definition`, ...".</span></span>  
+-   <span data-ttu-id="9e692-111">La parola chiave ROW seguita da un elenco di definizioni di proprietà tra parentesi (ad esempio "Row(x AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="9e692-111">The keyword ROW followed by a list of property definitions in parenthesis (for example, "Row(x AdventureWorks.Order)").</span></span> <span data-ttu-id="9e692-112">Le definizioni di proprietà hanno un formato, ad esempio "`identifier type_definition`, `identifier type_definition`,...".</span><span class="sxs-lookup"><span data-stu-id="9e692-112">Property definitions have a format such as "`identifier type_definition`, `identifier type_definition`, ...".</span></span>  
   
--   <span data-ttu-id="364ea-113">La parola chiave REF seguita dal tipo dell'identificatore tra parentesi (ad esempio "Ref(AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="364ea-113">The keyword REF followed by the type of the identifier in parenthesis (for example, "Ref(AdventureWorks.Order)").</span></span> <span data-ttu-id="364ea-114">L'operatore della definizione del tipo Ref richiede un tipo di entità come argomento.</span><span class="sxs-lookup"><span data-stu-id="364ea-114">The REF type definition operator requires an entity type as the argument.</span></span> <span data-ttu-id="364ea-115">Non è possibile specificare un tipo primitivo come argomento.</span><span class="sxs-lookup"><span data-stu-id="364ea-115">You cannot specify a primitive type as the argument.</span></span>  
+-   <span data-ttu-id="9e692-113">La parola chiave REF seguita dal tipo dell'identificatore tra parentesi (ad esempio "Ref(AdventureWorks.Order)").</span><span class="sxs-lookup"><span data-stu-id="9e692-113">The keyword REF followed by the type of the identifier in parenthesis (for example, "Ref(AdventureWorks.Order)").</span></span> <span data-ttu-id="9e692-114">L'operatore della definizione del tipo Ref richiede un tipo di entità come argomento.</span><span class="sxs-lookup"><span data-stu-id="9e692-114">The REF type definition operator requires an entity type as the argument.</span></span> <span data-ttu-id="9e692-115">Non è possibile specificare un tipo primitivo come argomento.</span><span class="sxs-lookup"><span data-stu-id="9e692-115">You cannot specify a primitive type as the argument.</span></span>  
   
- <span data-ttu-id="364ea-116">È inoltre possibile annidare definizioni del tipo (ad esempio "Collection(Row(x Ref(AdventureWorks.Order)))").</span><span class="sxs-lookup"><span data-stu-id="364ea-116">You can also nest type definitions (for example, "Collection(Row(x Ref(AdventureWorks.Order)))").</span></span>  
+ <span data-ttu-id="9e692-116">È inoltre possibile annidare definizioni del tipo (ad esempio "Collection(Row(x Ref(AdventureWorks.Order)))").</span><span class="sxs-lookup"><span data-stu-id="9e692-116">You can also nest type definitions (for example, "Collection(Row(x Ref(AdventureWorks.Order)))").</span></span>  
   
- <span data-ttu-id="364ea-117">Le opzioni di definizione del tipo sono:</span><span class="sxs-lookup"><span data-stu-id="364ea-117">The type definition options are:</span></span>  
+ <span data-ttu-id="9e692-117">Le opzioni di definizione del tipo sono:</span><span class="sxs-lookup"><span data-stu-id="9e692-117">The type definition options are:</span></span>  
   
--   <span data-ttu-id="364ea-118">`IdentifierName supported_type` o</span><span class="sxs-lookup"><span data-stu-id="364ea-118">`IdentifierName supported_type`, or</span></span>  
+-   <span data-ttu-id="9e692-118">`IdentifierName supported_type` o</span><span class="sxs-lookup"><span data-stu-id="9e692-118">`IdentifierName supported_type`, or</span></span>  
   
--   <span data-ttu-id="364ea-119">`IdentifierName` COLLECTION(`type_definition`) o</span><span class="sxs-lookup"><span data-stu-id="364ea-119">`IdentifierName` COLLECTION(`type_definition`), or</span></span>  
+-   <span data-ttu-id="9e692-119">`IdentifierName` COLLECTION(`type_definition`) o</span><span class="sxs-lookup"><span data-stu-id="9e692-119">`IdentifierName` COLLECTION(`type_definition`), or</span></span>  
   
--   <span data-ttu-id="364ea-120">`IdentifierName` ROW(`property_definition`) o</span><span class="sxs-lookup"><span data-stu-id="364ea-120">`IdentifierName` ROW(`property_definition`), or</span></span>  
+-   <span data-ttu-id="9e692-120">`IdentifierName` ROW(`property_definition`) o</span><span class="sxs-lookup"><span data-stu-id="9e692-120">`IdentifierName` ROW(`property_definition`), or</span></span>  
   
--   <span data-ttu-id="364ea-121">`IdentifierName` REF(`supported_entity_type`)</span><span class="sxs-lookup"><span data-stu-id="364ea-121">`IdentifierName` REF(`supported_entity_type`)</span></span>  
+-   <span data-ttu-id="9e692-121">`IdentifierName` REF(`supported_entity_type`)</span><span class="sxs-lookup"><span data-stu-id="9e692-121">`IdentifierName` REF(`supported_entity_type`)</span></span>  
   
- <span data-ttu-id="364ea-122">L'opzione di definizione delle proprietà è `IdentifierName type_definition`.</span><span class="sxs-lookup"><span data-stu-id="364ea-122">The property definition option is `IdentifierName type_definition`.</span></span>  
+ <span data-ttu-id="9e692-122">L'opzione di definizione delle proprietà è `IdentifierName type_definition`.</span><span class="sxs-lookup"><span data-stu-id="9e692-122">The property definition option is `IdentifierName type_definition`.</span></span>  
   
- <span data-ttu-id="364ea-123">I tipi supportati sono qualsiasi tipo nello spazio dei nomi corrente.</span><span class="sxs-lookup"><span data-stu-id="364ea-123">Supported types are any types in the current namespace.</span></span> <span data-ttu-id="364ea-124">Questi includono sia i tipi primitivi che i tipi di entità.</span><span class="sxs-lookup"><span data-stu-id="364ea-124">These include both primitive and entity types.</span></span>  
+ <span data-ttu-id="9e692-123">I tipi supportati sono qualsiasi tipo nello spazio dei nomi corrente.</span><span class="sxs-lookup"><span data-stu-id="9e692-123">Supported types are any types in the current namespace.</span></span> <span data-ttu-id="9e692-124">Questi includono sia i tipi primitivi che i tipi di entità.</span><span class="sxs-lookup"><span data-stu-id="9e692-124">These include both primitive and entity types.</span></span>  
   
- <span data-ttu-id="364ea-125">Tipi di entità supportati si riferiscono solo a tipi di entità nello spazio dei nomi corrente.</span><span class="sxs-lookup"><span data-stu-id="364ea-125">Supported entity types refer to only entity types in the current namespace.</span></span> <span data-ttu-id="364ea-126">Non includono i tipi primitivi.</span><span class="sxs-lookup"><span data-stu-id="364ea-126">They do not include primitive types.</span></span>  
+ <span data-ttu-id="9e692-125">Tipi di entità supportati si riferiscono solo a tipi di entità nello spazio dei nomi corrente.</span><span class="sxs-lookup"><span data-stu-id="9e692-125">Supported entity types refer to only entity types in the current namespace.</span></span> <span data-ttu-id="9e692-126">Non includono i tipi primitivi.</span><span class="sxs-lookup"><span data-stu-id="9e692-126">They do not include primitive types.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="364ea-127">Esempi</span><span class="sxs-lookup"><span data-stu-id="364ea-127">Examples</span></span>  
- <span data-ttu-id="364ea-128">Di seguito è riportato un esempio di definizione del tipo semplice.</span><span class="sxs-lookup"><span data-stu-id="364ea-128">The following is an example of a simple type definition.</span></span>  
+## <a name="examples"></a><span data-ttu-id="9e692-127">Esempi</span><span class="sxs-lookup"><span data-stu-id="9e692-127">Examples</span></span>  
+ <span data-ttu-id="9e692-128">Di seguito è riportato un esempio di definizione del tipo semplice.</span><span class="sxs-lookup"><span data-stu-id="9e692-128">The following is an example of a simple type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -66,7 +67,7 @@ Function MyRound(p1 EDM.Decimal) AS (
 MyRound(CAST(1.7 as EDM.Decimal))  
 ```  
   
- <span data-ttu-id="364ea-129">Di seguito è riportato un esempio di definizione del tipo COLLECTION.</span><span class="sxs-lookup"><span data-stu-id="364ea-129">The following is an example of a COLLECTION type definition.</span></span>  
+ <span data-ttu-id="9e692-129">Di seguito è riportato un esempio di definizione del tipo COLLECTION.</span><span class="sxs-lookup"><span data-stu-id="9e692-129">The following is an example of a COLLECTION type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -76,7 +77,7 @@ Function MyRound(p1 Collection(EDM.Decimal)) AS (
 MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})  
 ```  
   
- <span data-ttu-id="364ea-130">Di seguito è riportato un esempio di definizione del tipo ROW.</span><span class="sxs-lookup"><span data-stu-id="364ea-130">The following is an example of a ROW type definition.</span></span>  
+ <span data-ttu-id="9e692-130">Di seguito è riportato un esempio di definizione del tipo ROW.</span><span class="sxs-lookup"><span data-stu-id="9e692-130">The following is an example of a ROW type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -86,7 +87,7 @@ Function MyRound(p1 Row(x EDM.Decimal)) AS (
 select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)} as a  
 ```  
   
- <span data-ttu-id="364ea-131">Di seguito è riportato un esempio di definizione del tipo REF.</span><span class="sxs-lookup"><span data-stu-id="364ea-131">The following is an example of a REF type definition.</span></span>  
+ <span data-ttu-id="9e692-131">Di seguito è riportato un esempio di definizione del tipo REF.</span><span class="sxs-lookup"><span data-stu-id="9e692-131">The following is an example of a REF type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -96,6 +97,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="364ea-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="364ea-132">See Also</span></span>  
- [<span data-ttu-id="364ea-133">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="364ea-133">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [<span data-ttu-id="364ea-134">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="364ea-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="9e692-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9e692-132">See Also</span></span>  
+ [<span data-ttu-id="9e692-133">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9e692-133">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="9e692-134">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="9e692-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

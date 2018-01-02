@@ -16,62 +16,63 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad60d73e30bf02fd52f9c8f3bd707b571959bdd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="4471c-102">&lt;PreferComInsteadOfManagedRemoting&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="4471c-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
-<span data-ttu-id="4471c-103">Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per tutte le chiamate tra i limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="4471c-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="35669-102">&lt;PreferComInsteadOfManagedRemoting&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="35669-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
+<span data-ttu-id="35669-103">Specifica se il runtime utilizzerà l'interoperabilità COM anziché remoti per tutte le chiamate tra i limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="35669-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
   
- <span data-ttu-id="4471c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4471c-104">\<configuration></span></span>  
-<span data-ttu-id="4471c-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="4471c-105">\<runtime></span></span>  
-<span data-ttu-id="4471c-106">\<PreferComInsteadOfManagedRemoting ></span><span class="sxs-lookup"><span data-stu-id="4471c-106">\<PreferComInsteadOfManagedRemoting></span></span>  
+ <span data-ttu-id="35669-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="35669-104">\<configuration></span></span>  
+<span data-ttu-id="35669-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="35669-105">\<runtime></span></span>  
+<span data-ttu-id="35669-106">\<PreferComInsteadOfManagedRemoting ></span><span class="sxs-lookup"><span data-stu-id="35669-106">\<PreferComInsteadOfManagedRemoting></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4471c-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4471c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35669-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35669-107">Syntax</span></span>  
   
 ```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4471c-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="4471c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="4471c-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="4471c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="35669-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="35669-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="35669-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="35669-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4471c-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="4471c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="35669-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="35669-110">Attributes</span></span>  
   
-|<span data-ttu-id="4471c-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="4471c-111">Attribute</span></span>|<span data-ttu-id="4471c-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4471c-112">Description</span></span>|  
+|<span data-ttu-id="35669-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="35669-111">Attribute</span></span>|<span data-ttu-id="35669-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35669-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="4471c-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="4471c-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="4471c-114">Indica se il runtime utilizzerà l'interoperabilità COM anziché remoting limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="4471c-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|`enabled`|<span data-ttu-id="35669-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35669-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="35669-114">Indica se il runtime utilizzerà l'interoperabilità COM anziché remoting limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="35669-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="4471c-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="4471c-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="35669-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="35669-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="4471c-116">Valore</span><span class="sxs-lookup"><span data-stu-id="4471c-116">Value</span></span>|<span data-ttu-id="4471c-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4471c-117">Description</span></span>|  
+|<span data-ttu-id="35669-116">Valore</span><span class="sxs-lookup"><span data-stu-id="35669-116">Value</span></span>|<span data-ttu-id="35669-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35669-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="4471c-118">Il runtime utilizza comunicazione remota di limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="4471c-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="4471c-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="4471c-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="4471c-120">Il runtime utilizzerà l'interoperabilità COM limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="4471c-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
+|`false`|<span data-ttu-id="35669-118">Il runtime utilizza comunicazione remota di limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="35669-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="35669-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="35669-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="35669-120">Il runtime utilizzerà l'interoperabilità COM limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="35669-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4471c-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="4471c-121">Child Elements</span></span>  
- <span data-ttu-id="4471c-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="4471c-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="35669-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="35669-121">Child Elements</span></span>  
+ <span data-ttu-id="35669-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="35669-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4471c-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="4471c-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="35669-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="35669-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="4471c-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="4471c-124">Element</span></span>|<span data-ttu-id="4471c-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4471c-125">Description</span></span>|  
+|<span data-ttu-id="35669-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="35669-124">Element</span></span>|<span data-ttu-id="35669-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="35669-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="4471c-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4471c-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="4471c-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="4471c-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="35669-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="35669-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="35669-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="35669-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4471c-128">Note</span><span class="sxs-lookup"><span data-stu-id="4471c-128">Remarks</span></span>  
- <span data-ttu-id="4471c-129">Quando si imposta la `enabled` attributo `true`, il runtime si comporta come segue:</span><span class="sxs-lookup"><span data-stu-id="4471c-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35669-128">Note</span><span class="sxs-lookup"><span data-stu-id="35669-128">Remarks</span></span>  
+ <span data-ttu-id="35669-129">Quando si imposta la `enabled` attributo `true`, il runtime si comporta come segue:</span><span class="sxs-lookup"><span data-stu-id="35669-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
   
--   <span data-ttu-id="4471c-130">Il runtime non chiami [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia quando un [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interfaccia accede al dominio tramite un'interfaccia COM.</span><span class="sxs-lookup"><span data-stu-id="4471c-130">The runtime does not call [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="4471c-131">Invece, costruisce una [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) attorno all'oggetto.</span><span class="sxs-lookup"><span data-stu-id="4471c-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
+-   <span data-ttu-id="35669-130">Il runtime non chiami [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia quando un [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interfaccia accede al dominio tramite un'interfaccia COM.</span><span class="sxs-lookup"><span data-stu-id="35669-130">The runtime does not call [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="35669-131">Invece, costruisce una [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) attorno all'oggetto.</span><span class="sxs-lookup"><span data-stu-id="35669-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
   
--   <span data-ttu-id="4471c-132">Il runtime restituisce E_NOINTERFACE quando riceve un `QueryInterface` chiamare per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) che è stato creato in questo dominio.</span><span class="sxs-lookup"><span data-stu-id="4471c-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
+-   <span data-ttu-id="35669-132">Il runtime restituisce E_NOINTERFACE quando riceve un `QueryInterface` chiamare per un [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interfaccia per qualsiasi [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) che è stato creato in questo dominio.</span><span class="sxs-lookup"><span data-stu-id="35669-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
   
- <span data-ttu-id="4471c-133">Questi due comportamenti assicurarsi che tutte le chiamate tramite COM interfacce tra gli oggetti gestiti attraverso l'utilizzo di limiti di dominio dell'applicazione COM e l'interoperabilità COM anziché servizi remoti.</span><span class="sxs-lookup"><span data-stu-id="4471c-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
+ <span data-ttu-id="35669-133">Questi due comportamenti assicurarsi che tutte le chiamate tramite COM interfacce tra gli oggetti gestiti attraverso l'utilizzo di limiti di dominio dell'applicazione COM e l'interoperabilità COM anziché servizi remoti.</span><span class="sxs-lookup"><span data-stu-id="35669-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4471c-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="4471c-134">Example</span></span>  
- <span data-ttu-id="4471c-135">Nell'esempio seguente viene illustrato come specificare che il runtime deve utilizzare COM interoperabilità attraverso i limiti di isolamento:</span><span class="sxs-lookup"><span data-stu-id="4471c-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
+## <a name="example"></a><span data-ttu-id="35669-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="35669-134">Example</span></span>  
+ <span data-ttu-id="35669-135">Nell'esempio seguente viene illustrato come specificare che il runtime deve utilizzare COM interoperabilità attraverso i limiti di isolamento:</span><span class="sxs-lookup"><span data-stu-id="35669-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,6 +82,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4471c-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4471c-136">See Also</span></span>  
- [<span data-ttu-id="4471c-137">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="4471c-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="4471c-138">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="4471c-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="35669-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35669-136">See Also</span></span>  
+ [<span data-ttu-id="35669-137">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="35669-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="35669-138">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="35669-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

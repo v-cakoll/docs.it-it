@@ -13,21 +13,22 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74dd0827ee073d57c82729ec1e6a9a672aa1f404
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 98112b3f13ff0b8e4be50f158ce40b048b213248
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="0e89e-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="0e89e-102">&lt;certificateValidator&gt;</span></span>
-<span data-ttu-id="0e89e-103">Specifica un tipo personalizzato per la convalida del certificato.</span><span class="sxs-lookup"><span data-stu-id="0e89e-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="0e89e-104">Questo tipo viene utilizzato solo se il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) viene impostato su "Custom".</span><span class="sxs-lookup"><span data-stu-id="0e89e-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
+# <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="0d39f-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="0d39f-102">&lt;certificateValidator&gt;</span></span>
+<span data-ttu-id="0d39f-103">Specifica un tipo personalizzato per la convalida del certificato.</span><span class="sxs-lookup"><span data-stu-id="0d39f-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="0d39f-104">Questo tipo viene utilizzato solo se il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) viene impostato su "Custom".</span><span class="sxs-lookup"><span data-stu-id="0d39f-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  
   
- <span data-ttu-id="0e89e-105">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="0e89e-105">\<system.identityModel></span></span>  
-<span data-ttu-id="0e89e-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="0e89e-106">\<identityConfiguration></span></span>  
-<span data-ttu-id="0e89e-107">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="0e89e-107">\<certificateValidation></span></span>  
-<span data-ttu-id="0e89e-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="0e89e-108">\<certificateValidator></span></span>  
+ <span data-ttu-id="0d39f-105">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="0d39f-105">\<system.identityModel></span></span>  
+<span data-ttu-id="0d39f-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="0d39f-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="0d39f-107">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="0d39f-107">\<certificateValidation></span></span>  
+<span data-ttu-id="0d39f-108">\<certificateValidator ></span><span class="sxs-lookup"><span data-stu-id="0d39f-108">\<certificateValidator></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e89e-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0e89e-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d39f-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0d39f-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -40,25 +41,25 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0e89e-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0e89e-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0e89e-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0e89e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0d39f-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0d39f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0d39f-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0d39f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0e89e-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="0e89e-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0d39f-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="0d39f-112">Attributes</span></span>  
   
-|<span data-ttu-id="0e89e-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="0e89e-113">Attribute</span></span>|<span data-ttu-id="0e89e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0e89e-114">Description</span></span>|  
+|<span data-ttu-id="0d39f-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="0d39f-113">Attribute</span></span>|<span data-ttu-id="0d39f-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0d39f-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0e89e-115">tipo</span><span class="sxs-lookup"><span data-stu-id="0e89e-115">type</span></span>|<span data-ttu-id="0e89e-116">Specifica un tipo personalizzato da cui deriva il <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe.</span><span class="sxs-lookup"><span data-stu-id="0e89e-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="0e89e-117">Impostare il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento su "Custom" per utilizzare questo tipo.</span><span class="sxs-lookup"><span data-stu-id="0e89e-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="0e89e-118">Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="0e89e-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="0e89e-119">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="0e89e-119">Optional.</span></span>|  
+|<span data-ttu-id="0d39f-115">tipo</span><span class="sxs-lookup"><span data-stu-id="0d39f-115">type</span></span>|<span data-ttu-id="0d39f-116">Specifica un tipo personalizzato da cui deriva il <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe.</span><span class="sxs-lookup"><span data-stu-id="0d39f-116">Specifies a custom type that derives from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="0d39f-117">Impostare il `certificateValidationMode` attributo del [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento su "Custom" per utilizzare questo tipo.</span><span class="sxs-lookup"><span data-stu-id="0d39f-117">Set the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element to "Custom" to use this type.</span></span> <span data-ttu-id="0d39f-118">Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d39f-118">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="0d39f-119">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="0d39f-119">Optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0e89e-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0e89e-120">Child Elements</span></span>  
- <span data-ttu-id="0e89e-121">None</span><span class="sxs-lookup"><span data-stu-id="0e89e-121">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0d39f-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0d39f-120">Child Elements</span></span>  
+ <span data-ttu-id="0d39f-121">None</span><span class="sxs-lookup"><span data-stu-id="0d39f-121">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0e89e-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0e89e-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0d39f-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0d39f-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="0e89e-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="0e89e-123">Element</span></span>|<span data-ttu-id="0e89e-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0e89e-124">Description</span></span>|  
+|<span data-ttu-id="0d39f-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="0d39f-123">Element</span></span>|<span data-ttu-id="0d39f-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0d39f-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0e89e-125">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="0e89e-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="0e89e-126">Controlla le impostazioni che utilizzano gestori di token per convalidare i certificati.</span><span class="sxs-lookup"><span data-stu-id="0e89e-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
+|[<span data-ttu-id="0d39f-125">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="0d39f-125">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="0d39f-126">Controlla le impostazioni che utilizzano gestori di token per convalidare i certificati.</span><span class="sxs-lookup"><span data-stu-id="0d39f-126">Controls the settings that token handlers use to validate certificates.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="0e89e-127">Esempio</span><span class="sxs-lookup"><span data-stu-id="0e89e-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0d39f-127">Esempio</span><span class="sxs-lookup"><span data-stu-id="0d39f-127">Example</span></span>  
   
 ```xml  
 <certificateValidation certificateValidationMode="Custom"  

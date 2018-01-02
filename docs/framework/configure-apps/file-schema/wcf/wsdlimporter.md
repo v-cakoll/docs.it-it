@@ -13,22 +13,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f4fe6c82d0a6f53dfa05a82622e0412280212cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc85c93dc73918d661195e33ce5094622db36af4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltwsdlimportergt"></a><span data-ttu-id="4239e-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="4239e-102">&lt;wsdlImporter&gt;</span></span>
-<span data-ttu-id="4239e-103">Specifica tutte le unità di importazione WSDL per l'importazione di metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="4239e-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  
+# <a name="ltwsdlimportergt"></a><span data-ttu-id="1a8df-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="1a8df-102">&lt;wsdlImporter&gt;</span></span>
+<span data-ttu-id="1a8df-103">Specifica tutte le unità di importazione WSDL per l'importazione di metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="1a8df-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  
   
-<span data-ttu-id="4239e-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4239e-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4239e-105">\<client ></span><span class="sxs-lookup"><span data-stu-id="4239e-105">\<client></span></span>  
-<span data-ttu-id="4239e-106">\<metadati ></span><span class="sxs-lookup"><span data-stu-id="4239e-106">\<metadata></span></span>  
-<span data-ttu-id="4239e-107">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="4239e-107">\<wsdlImporters></span></span>  
-<span data-ttu-id="4239e-108">\<wsdlImporter ></span><span class="sxs-lookup"><span data-stu-id="4239e-108">\<wsdlImporter></span></span>  
+<span data-ttu-id="1a8df-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1a8df-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1a8df-105">\<client ></span><span class="sxs-lookup"><span data-stu-id="1a8df-105">\<client></span></span>  
+<span data-ttu-id="1a8df-106">\<metadati ></span><span class="sxs-lookup"><span data-stu-id="1a8df-106">\<metadata></span></span>  
+<span data-ttu-id="1a8df-107">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="1a8df-107">\<wsdlImporters></span></span>  
+<span data-ttu-id="1a8df-108">\<wsdlImporter ></span><span class="sxs-lookup"><span data-stu-id="1a8df-108">\<wsdlImporter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4239e-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4239e-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a8df-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1a8df-109">Syntax</span></span>  
   
 ```xml  
 <metadata>  
@@ -38,32 +39,32 @@ ms.lasthandoff: 12/02/2017
 </metadata>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4239e-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="4239e-110">Attributes and Elements</span></span>  
- <span data-ttu-id="4239e-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="4239e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1a8df-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1a8df-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="1a8df-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="1a8df-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4239e-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="4239e-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1a8df-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="1a8df-112">Attributes</span></span>  
   
-|<span data-ttu-id="4239e-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="4239e-113">Attribute</span></span>|<span data-ttu-id="4239e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4239e-114">Description</span></span>|  
+|<span data-ttu-id="1a8df-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="1a8df-113">Attribute</span></span>|<span data-ttu-id="1a8df-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1a8df-114">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="4239e-115">Tipo di questo elemento.</span><span class="sxs-lookup"><span data-stu-id="4239e-115">The type of this element.</span></span>|  
+|`type`|<span data-ttu-id="1a8df-115">Tipo di questo elemento.</span><span class="sxs-lookup"><span data-stu-id="1a8df-115">The type of this element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4239e-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="4239e-116">Child Elements</span></span>  
- <span data-ttu-id="4239e-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="4239e-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1a8df-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1a8df-116">Child Elements</span></span>  
+ <span data-ttu-id="1a8df-117">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="1a8df-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4239e-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="4239e-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1a8df-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1a8df-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="4239e-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="4239e-119">Element</span></span>|<span data-ttu-id="4239e-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4239e-120">Description</span></span>|  
+|<span data-ttu-id="1a8df-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="1a8df-119">Element</span></span>|<span data-ttu-id="1a8df-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1a8df-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4239e-121">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="4239e-121">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="4239e-122">Specifica tutte le unità di importazione WSDL per l'importazione di metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="4239e-122">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>|  
+|[<span data-ttu-id="1a8df-121">\<wsdlImporters ></span><span class="sxs-lookup"><span data-stu-id="1a8df-121">\<wsdlImporters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|<span data-ttu-id="1a8df-122">Specifica tutte le unità di importazione WSDL per l'importazione di metadati Web Services Description Language (WSDL) 1.1 con allegati WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="1a8df-122">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4239e-123">Note</span><span class="sxs-lookup"><span data-stu-id="4239e-123">Remarks</span></span>  
- <span data-ttu-id="4239e-124">Un'unità di importazione WSDL viene usata per importare metadati e per convertire tali informazioni in diverse classi che rappresentano informazioni di contratto e di endpoint.</span><span class="sxs-lookup"><span data-stu-id="4239e-124">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="4239e-125">Può importare selettivamente informazioni di contratto e di endpoint e proprietà che espongono qualsiasi errore di importazione e accettano informazioni sul tipo relative al processo di importazione e di conversione.</span><span class="sxs-lookup"><span data-stu-id="4239e-125">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="4239e-126">Supporta inoltre l'importazione di informazioni dell'associazione e proprietà che forniscono accesso a qualsiasi documento di criteri, documento WSDL, estensione WSDL e documento di XML Schema.</span><span class="sxs-lookup"><span data-stu-id="4239e-126">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1a8df-123">Note</span><span class="sxs-lookup"><span data-stu-id="1a8df-123">Remarks</span></span>  
+ <span data-ttu-id="1a8df-124">Un'unità di importazione WSDL viene usata per importare metadati e per convertire tali informazioni in diverse classi che rappresentano informazioni di contratto e di endpoint.</span><span class="sxs-lookup"><span data-stu-id="1a8df-124">A WSDL importer is used to import metadata as well as convert that information into various classes that represent contract and endpoint information.</span></span> <span data-ttu-id="1a8df-125">Può importare selettivamente informazioni di contratto e di endpoint e proprietà che espongono qualsiasi errore di importazione e accettano informazioni sul tipo relative al processo di importazione e di conversione.</span><span class="sxs-lookup"><span data-stu-id="1a8df-125">It can selectively import contract and endpoint information and properties that expose any import errors and accept type information relevant to the import and conversion process.</span></span> <span data-ttu-id="1a8df-126">Supporta inoltre l'importazione di informazioni dell'associazione e proprietà che forniscono accesso a qualsiasi documento di criteri, documento WSDL, estensione WSDL e documento di XML Schema.</span><span class="sxs-lookup"><span data-stu-id="1a8df-126">It also supports importing binding information and properties that provide access to any policy documents, WSDL documents, WSDL extensions, and XML schema documents.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4239e-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4239e-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1a8df-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a8df-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElement>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  
  <xref:System.ServiceModel.Description.WsdlImporter>  
- [<span data-ttu-id="4239e-128">Configurazione di Client WCF</span><span class="sxs-lookup"><span data-stu-id="4239e-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [<span data-ttu-id="4239e-129">Client</span><span class="sxs-lookup"><span data-stu-id="4239e-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+ [<span data-ttu-id="1a8df-128">Configurazione del client WCF</span><span class="sxs-lookup"><span data-stu-id="1a8df-128">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
+ [<span data-ttu-id="1a8df-129">Client</span><span class="sxs-lookup"><span data-stu-id="1a8df-129">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)

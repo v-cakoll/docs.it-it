@@ -13,46 +13,47 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d847def6268881cbd288fe9b3ba89de9403b41d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c1fb253ed166b4e8106f68bf2782cf215541294
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="65126-102">&lt;certificate&gt; di &lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="65126-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
-<span data-ttu-id="65126-103">Specifica un certificato X.509 usato per convalidare un server presso un client.</span><span class="sxs-lookup"><span data-stu-id="65126-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  
+# <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="99874-102">&lt;certificate&gt; di &lt;identity&gt;</span><span class="sxs-lookup"><span data-stu-id="99874-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="99874-103">Specifica un certificato X.509 usato per convalidare un server presso un client.</span><span class="sxs-lookup"><span data-stu-id="99874-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  
   
- <span data-ttu-id="65126-104">Per ulteriori informazioni sull'impostazione del valore dell'elemento, vedere [autenticazione e identità del servizio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="65126-104">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
+ <span data-ttu-id="99874-104">Per ulteriori informazioni sull'impostazione del valore dell'elemento, vedere [autenticazione e identità del servizio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="99874-104">For more information about setting the element value, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
- <span data-ttu-id="65126-105">\<identità ></span><span class="sxs-lookup"><span data-stu-id="65126-105">\<identity></span></span>  
-<span data-ttu-id="65126-106">\<certificato ></span><span class="sxs-lookup"><span data-stu-id="65126-106">\<certificate></span></span>  
+ <span data-ttu-id="99874-105">\<identità ></span><span class="sxs-lookup"><span data-stu-id="99874-105">\<identity></span></span>  
+<span data-ttu-id="99874-106">\<certificato ></span><span class="sxs-lookup"><span data-stu-id="99874-106">\<certificate></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65126-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="65126-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99874-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="99874-107">Syntax</span></span>  
   
 ```xml  
 <certificate encodedValue = "String" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="65126-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="65126-108">Attributes and Elements</span></span>  
- <span data-ttu-id="65126-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="65126-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="99874-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="99874-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="99874-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="99874-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="65126-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="65126-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="99874-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="99874-110">Attributes</span></span>  
   
-|<span data-ttu-id="65126-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="65126-111">Attribute</span></span>|<span data-ttu-id="65126-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="65126-112">Description</span></span>|  
+|<span data-ttu-id="99874-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="99874-111">Attribute</span></span>|<span data-ttu-id="99874-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="99874-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="65126-113">encodedValue</span><span class="sxs-lookup"><span data-stu-id="65126-113">encodedValue</span></span>|<span data-ttu-id="65126-114">Codifica Base64 del certificato.</span><span class="sxs-lookup"><span data-stu-id="65126-114">A Base64 encoding of the certificate.</span></span>|  
+|<span data-ttu-id="99874-113">encodedValue</span><span class="sxs-lookup"><span data-stu-id="99874-113">encodedValue</span></span>|<span data-ttu-id="99874-114">Codifica Base64 del certificato.</span><span class="sxs-lookup"><span data-stu-id="99874-114">A Base64 encoding of the certificate.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="65126-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="65126-115">Child Elements</span></span>  
- <span data-ttu-id="65126-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="65126-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="99874-115">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="99874-115">Child Elements</span></span>  
+ <span data-ttu-id="99874-116">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="99874-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="65126-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="65126-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="99874-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="99874-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="65126-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="65126-118">Element</span></span>|<span data-ttu-id="65126-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="65126-119">Description</span></span>|  
+|<span data-ttu-id="99874-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="99874-118">Element</span></span>|<span data-ttu-id="99874-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="99874-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="65126-120">\<identità ></span><span class="sxs-lookup"><span data-stu-id="65126-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="65126-121">Specifica l'identità del servizio da autenticare presso il client.</span><span class="sxs-lookup"><span data-stu-id="65126-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
+|[<span data-ttu-id="99874-120">\<identità ></span><span class="sxs-lookup"><span data-stu-id="99874-120">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="99874-121">Specifica l'identità del servizio da autenticare presso il client.</span><span class="sxs-lookup"><span data-stu-id="99874-121">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="65126-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="65126-122">Example</span></span>  
- <span data-ttu-id="65126-123">Nel codice seguente viene specificata la rappresentazione codificata di un certificato usato per convalidare un server presso un client.</span><span class="sxs-lookup"><span data-stu-id="65126-123">The following code specifies the encoded representation of a certificate used to validate a server to a client.</span></span>  
+## <a name="example"></a><span data-ttu-id="99874-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="99874-122">Example</span></span>  
+ <span data-ttu-id="99874-123">Nel codice seguente viene specificata la rappresentazione codificata di un certificato usato per convalidare un server presso un client.</span><span class="sxs-lookup"><span data-stu-id="99874-123">The following code specifies the encoded representation of a certificate used to validate a server to a client.</span></span>  
   
 ```xml  
 <identity>  
@@ -60,10 +61,10 @@ ms.lasthandoff: 12/02/2017
 </identity>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="65126-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65126-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="99874-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99874-124">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.EndpointIdentity>  
- [<span data-ttu-id="65126-125">L'autenticazione e identità del servizio</span><span class="sxs-lookup"><span data-stu-id="65126-125">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="65126-126">\<identità ></span><span class="sxs-lookup"><span data-stu-id="65126-126">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [<span data-ttu-id="99874-125">Identità del servizio e autenticazione</span><span class="sxs-lookup"><span data-stu-id="99874-125">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="99874-126">\<identità ></span><span class="sxs-lookup"><span data-stu-id="99874-126">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

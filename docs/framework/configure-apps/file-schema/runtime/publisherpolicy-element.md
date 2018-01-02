@@ -21,62 +21,63 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltpublisherpolicygt-element"></a><span data-ttu-id="966a4-102">&lt;publisherPolicy&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="966a4-102">&lt;publisherPolicy&gt; Element</span></span>
-<span data-ttu-id="966a4-103">Specifica se il runtime applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="966a4-103">Specifies whether the runtime applies publisher policy.</span></span>  
+# <a name="ltpublisherpolicygt-element"></a><span data-ttu-id="dd7a1-102">&lt;publisherPolicy&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="dd7a1-102">&lt;publisherPolicy&gt; Element</span></span>
+<span data-ttu-id="dd7a1-103">Specifica se il runtime applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-103">Specifies whether the runtime applies publisher policy.</span></span>  
   
- <span data-ttu-id="966a4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="966a4-104">\<configuration></span></span>  
-<span data-ttu-id="966a4-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="966a4-105">\<runtime></span></span>  
-<span data-ttu-id="966a4-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="966a4-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="966a4-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="966a4-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="966a4-108">\<publisherPolicy ></span><span class="sxs-lookup"><span data-stu-id="966a4-108">\<publisherPolicy></span></span>  
+ <span data-ttu-id="dd7a1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dd7a1-104">\<configuration></span></span>  
+<span data-ttu-id="dd7a1-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="dd7a1-105">\<runtime></span></span>  
+<span data-ttu-id="dd7a1-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="dd7a1-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="dd7a1-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="dd7a1-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="dd7a1-108">\<publisherPolicy ></span><span class="sxs-lookup"><span data-stu-id="dd7a1-108">\<publisherPolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="966a4-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="966a4-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd7a1-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dd7a1-109">Syntax</span></span>  
   
 ```xml  
 <publisherPolicy apply="yes|no"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="966a4-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="966a4-110">Attributes and Elements</span></span>  
- <span data-ttu-id="966a4-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="966a4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dd7a1-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="dd7a1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="dd7a1-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="966a4-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="966a4-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dd7a1-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="dd7a1-112">Attributes</span></span>  
   
-|<span data-ttu-id="966a4-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="966a4-113">Attribute</span></span>|<span data-ttu-id="966a4-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="966a4-114">Description</span></span>|  
+|<span data-ttu-id="dd7a1-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="dd7a1-113">Attribute</span></span>|<span data-ttu-id="dd7a1-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd7a1-114">Description</span></span>|  
 |---------------|-----------------|  
-|`apply`|<span data-ttu-id="966a4-115">Specifica se applicare i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="966a4-115">Specifies whether to apply publisher policy.</span></span>|  
+|`apply`|<span data-ttu-id="dd7a1-115">Specifica se applicare i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-115">Specifies whether to apply publisher policy.</span></span>|  
   
-## <a name="apply-attribute"></a><span data-ttu-id="966a4-116">applicare l'attributo</span><span class="sxs-lookup"><span data-stu-id="966a4-116">apply Attribute</span></span>  
+## <a name="apply-attribute"></a><span data-ttu-id="dd7a1-116">applicare l'attributo</span><span class="sxs-lookup"><span data-stu-id="dd7a1-116">apply Attribute</span></span>  
   
-|<span data-ttu-id="966a4-117">Valore</span><span class="sxs-lookup"><span data-stu-id="966a4-117">Value</span></span>|<span data-ttu-id="966a4-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="966a4-118">Description</span></span>|  
+|<span data-ttu-id="dd7a1-117">Valore</span><span class="sxs-lookup"><span data-stu-id="dd7a1-117">Value</span></span>|<span data-ttu-id="dd7a1-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd7a1-118">Description</span></span>|  
 |-----------|-----------------|  
-|`yes`|<span data-ttu-id="966a4-119">Applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="966a4-119">Applies publisher policy.</span></span> <span data-ttu-id="966a4-120">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="966a4-120">This is the default setting.</span></span>|  
-|`no`|<span data-ttu-id="966a4-121">Non si applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="966a4-121">Does not apply publisher policy.</span></span>|  
+|`yes`|<span data-ttu-id="dd7a1-119">Applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-119">Applies publisher policy.</span></span> <span data-ttu-id="dd7a1-120">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-120">This is the default setting.</span></span>|  
+|`no`|<span data-ttu-id="dd7a1-121">Non si applica i criteri dell'editore.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-121">Does not apply publisher policy.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="966a4-122">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="966a4-122">Child Elements</span></span>  
- <span data-ttu-id="966a4-123">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="966a4-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dd7a1-122">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="dd7a1-122">Child Elements</span></span>  
+ <span data-ttu-id="dd7a1-123">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="966a4-124">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="966a4-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dd7a1-124">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="dd7a1-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="966a4-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="966a4-125">Element</span></span>|<span data-ttu-id="966a4-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="966a4-126">Description</span></span>|  
+|<span data-ttu-id="dd7a1-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="dd7a1-125">Element</span></span>|<span data-ttu-id="dd7a1-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd7a1-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="966a4-127">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="966a4-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="966a4-128">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="966a4-128">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="dd7a1-127">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="dd7a1-128">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-128">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="966a4-129">Note</span><span class="sxs-lookup"><span data-stu-id="966a4-129">Remarks</span></span>  
- <span data-ttu-id="966a4-130">Quando un fornitore del componente rilascia una nuova versione di un assembly, può includere i criteri dell'editore in modo da applicazioni che utilizzano la versione precedente a questo punto utilizzare la nuova versione.</span><span class="sxs-lookup"><span data-stu-id="966a4-130">When a component vendor releases a new version of an assembly, the vendor can include a publisher policy so applications that use the old version now use the new version.</span></span> <span data-ttu-id="966a4-131">Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire il  **\<publisherPolicy >** elemento il  **\<dependentAssembly >** elemento.</span><span class="sxs-lookup"><span data-stu-id="966a4-131">To specify whether to apply publisher policy for a particular assembly, put the **\<publisherPolicy>** element in the **\<dependentAssembly>** element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd7a1-129">Note</span><span class="sxs-lookup"><span data-stu-id="dd7a1-129">Remarks</span></span>  
+ <span data-ttu-id="dd7a1-130">Quando un fornitore del componente rilascia una nuova versione di un assembly, può includere i criteri dell'editore in modo da applicazioni che utilizzano la versione precedente a questo punto utilizzare la nuova versione.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-130">When a component vendor releases a new version of an assembly, the vendor can include a publisher policy so applications that use the old version now use the new version.</span></span> <span data-ttu-id="dd7a1-131">Per specificare se applicare i criteri dell'editore per un particolare assembly, inserire il  **\<publisherPolicy >** elemento il  **\<dependentAssembly >** elemento.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-131">To specify whether to apply publisher policy for a particular assembly, put the **\<publisherPolicy>** element in the **\<dependentAssembly>** element.</span></span>  
   
- <span data-ttu-id="966a4-132">L'impostazione predefinita per il **applicare** attributo **Sì**.</span><span class="sxs-lookup"><span data-stu-id="966a4-132">The default setting for the **apply** attribute is **yes**.</span></span> <span data-ttu-id="966a4-133">L'impostazione di **applicare** attributo **non** sostituzioni precedenti **Sì** le impostazioni per un assembly.</span><span class="sxs-lookup"><span data-stu-id="966a4-133">Setting the **apply** attribute to **no** overrides any previous **yes** settings for an assembly.</span></span>  
+ <span data-ttu-id="dd7a1-132">L'impostazione predefinita per il **applicare** attributo **Sì**.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-132">The default setting for the **apply** attribute is **yes**.</span></span> <span data-ttu-id="dd7a1-133">L'impostazione di **applicare** attributo **non** sostituzioni precedenti **Sì** le impostazioni per un assembly.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-133">Setting the **apply** attribute to **no** overrides any previous **yes** settings for an assembly.</span></span>  
   
- <span data-ttu-id="966a4-134">Autorizzazione è necessaria per un'applicazione ignorare in modo esplicito criteri editore utilizzando il [ \<publisherPolicy applicare = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="966a4-134">Permission is required for an application to explicitly ignore publisher policy using the [\<publisherPolicy apply="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) element in the application configuration file.</span></span> <span data-ttu-id="966a4-135">L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag di <xref:System.Security.Permissions.SecurityPermission>.</span><span class="sxs-lookup"><span data-stu-id="966a4-135">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="966a4-136">Per ulteriori informazioni, vedere [autorizzazione di sicurezza il reindirizzamento di Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span><span class="sxs-lookup"><span data-stu-id="966a4-136">For more information, see [Assembly Binding Redirection Security Permission](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span></span>  
+ <span data-ttu-id="dd7a1-134">Autorizzazione è necessaria per un'applicazione ignorare in modo esplicito criteri editore utilizzando il [ \<publisherPolicy applicare = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) elemento nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-134">Permission is required for an application to explicitly ignore publisher policy using the [\<publisherPolicy apply="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) element in the application configuration file.</span></span> <span data-ttu-id="dd7a1-135">L'autorizzazione viene concessa impostando il <xref:System.Security.Permissions.SecurityPermissionFlag> flag di <xref:System.Security.Permissions.SecurityPermission>.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-135">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="dd7a1-136">Per ulteriori informazioni, vedere [autorizzazione di sicurezza il reindirizzamento di Assembly](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span><span class="sxs-lookup"><span data-stu-id="dd7a1-136">For more information, see [Assembly Binding Redirection Security Permission](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="966a4-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="966a4-137">Example</span></span>  
- <span data-ttu-id="966a4-138">Nell'esempio seguente consente di disattivare i criteri dell'editore per l'assembly, `myAssembly`.</span><span class="sxs-lookup"><span data-stu-id="966a4-138">The following example turns off publisher policy for the assembly, `myAssembly`.</span></span>  
+## <a name="example"></a><span data-ttu-id="dd7a1-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="dd7a1-137">Example</span></span>  
+ <span data-ttu-id="dd7a1-138">Nell'esempio seguente consente di disattivare i criteri dell'editore per l'assembly, `myAssembly`.</span><span class="sxs-lookup"><span data-stu-id="dd7a1-138">The following example turns off publisher policy for the assembly, `myAssembly`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -93,8 +94,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="966a4-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="966a4-139">See Also</span></span>  
- [<span data-ttu-id="966a4-140">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="966a4-140">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="966a4-141">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="966a4-141">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="966a4-142">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="966a4-142">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="966a4-143">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="966a4-143">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="dd7a1-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dd7a1-139">See Also</span></span>  
+ [<span data-ttu-id="dd7a1-140">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="dd7a1-140">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="dd7a1-141">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="dd7a1-141">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="dd7a1-142">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="dd7a1-142">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="dd7a1-143">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="dd7a1-143">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
