@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a29bb5b8a21a9d8082564ec377edc20cd62378a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2363b3159bef4453eb3eeb910d3d304806c56e6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugappdomainenumeratebreakpoints-method"></a><span data-ttu-id="4de0b-102">Metodo ICorDebugAppDomain::EnumerateBreakpoints</span><span class="sxs-lookup"><span data-stu-id="4de0b-102">ICorDebugAppDomain::EnumerateBreakpoints Method</span></span>
-<span data-ttu-id="4de0b-103">Ottiene un enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4de0b-103">Gets an enumerator for all active breakpoints in the application domain.</span></span>  
+# <a name="icordebugappdomainenumeratebreakpoints-method"></a><span data-ttu-id="9509f-102">Metodo ICorDebugAppDomain::EnumerateBreakpoints</span><span class="sxs-lookup"><span data-stu-id="9509f-102">ICorDebugAppDomain::EnumerateBreakpoints Method</span></span>
+<span data-ttu-id="9509f-103">Ottiene un enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9509f-103">Gets an enumerator for all active breakpoints in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4de0b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4de0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9509f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9509f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateBreakpoints (  
@@ -38,18 +39,18 @@ HRESULT EnumerateBreakpoints (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4de0b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="4de0b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9509f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9509f-105">Parameters</span></span>  
  `ppBreakpoints`  
- <span data-ttu-id="4de0b-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugBreakpointEnum che è l'enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4de0b-106">[out] A pointer to the address of an ICorDebugBreakpointEnum object that is the enumerator for all active breakpoints in the application domain.</span></span>  
+ <span data-ttu-id="9509f-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugBreakpointEnum che è l'enumeratore per tutti i punti di interruzione attivi nel dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="9509f-106">[out] A pointer to the address of an ICorDebugBreakpointEnum object that is the enumerator for all active breakpoints in the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4de0b-107">Note</span><span class="sxs-lookup"><span data-stu-id="4de0b-107">Remarks</span></span>  
- <span data-ttu-id="4de0b-108">L'enumeratore include tutti i tipi di punti di interruzione, inclusi i punti di interruzione di funzione e i punti di interruzione di dati.</span><span class="sxs-lookup"><span data-stu-id="4de0b-108">The enumerator includes all types of breakpoints, including function breakpoints and data breakpoints.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9509f-107">Note</span><span class="sxs-lookup"><span data-stu-id="9509f-107">Remarks</span></span>  
+ <span data-ttu-id="9509f-108">L'enumeratore include tutti i tipi di punti di interruzione, inclusi i punti di interruzione di funzione e i punti di interruzione di dati.</span><span class="sxs-lookup"><span data-stu-id="9509f-108">The enumerator includes all types of breakpoints, including function breakpoints and data breakpoints.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4de0b-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4de0b-109">Requirements</span></span>  
- <span data-ttu-id="4de0b-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4de0b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9509f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9509f-109">Requirements</span></span>  
+ <span data-ttu-id="9509f-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9509f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4de0b-111">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="4de0b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9509f-111">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="9509f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4de0b-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4de0b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9509f-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9509f-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4de0b-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4de0b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9509f-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9509f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

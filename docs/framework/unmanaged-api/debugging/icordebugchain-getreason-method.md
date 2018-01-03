@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f0543f31c7b0e5d51f2b12f589ce6dce8552405
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c23385c0d7b6173659e071735dee5d2d75a9e33a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="d0990-102">Metodo ICorDebugChain::GetReason</span><span class="sxs-lookup"><span data-stu-id="d0990-102">ICorDebugChain::GetReason Method</span></span>
-<span data-ttu-id="d0990-103">Ottiene il motivo per la creazione di questa catena di chiamata.</span><span class="sxs-lookup"><span data-stu-id="d0990-103">Gets the reason for the genesis of this calling chain.</span></span>  
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="f2779-102">Metodo ICorDebugChain::GetReason</span><span class="sxs-lookup"><span data-stu-id="f2779-102">ICorDebugChain::GetReason Method</span></span>
+<span data-ttu-id="f2779-103">Ottiene il motivo per la creazione di questa catena di chiamata.</span><span class="sxs-lookup"><span data-stu-id="f2779-103">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0990-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d0990-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2779-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f2779-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReason (  
@@ -38,15 +39,15 @@ HRESULT GetReason (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d0990-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d0990-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f2779-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f2779-105">Parameters</span></span>  
  `pReason`  
- <span data-ttu-id="d0990-106">[out] Un puntatore a un valore (una combinazione bit per bit) dell'enumerazione CorDebugChainReason che indica il motivo per la creazione di questa catena di chiamata.</span><span class="sxs-lookup"><span data-stu-id="d0990-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="f2779-106">[out] Un puntatore a un valore (una combinazione bit per bit) dell'enumerazione CorDebugChainReason che indica il motivo per la creazione di questa catena di chiamata.</span><span class="sxs-lookup"><span data-stu-id="f2779-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0990-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d0990-107">Requirements</span></span>  
- <span data-ttu-id="d0990-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0990-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2779-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f2779-107">Requirements</span></span>  
+ <span data-ttu-id="f2779-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2779-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0990-109">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="d0990-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f2779-109">**Intestazione:** CorDebug.idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="f2779-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d0990-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0990-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f2779-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f2779-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d0990-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0990-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f2779-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2779-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
