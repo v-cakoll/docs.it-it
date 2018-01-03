@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 773fa72f941d9128ae1ad97d44b5e89759fa17e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 272a747883c07c0d31a6cda62bec39f182b5e46c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inotifyconnection2-interface"></a>Interfaccia INotifyConnection2
 Dichiara i metodi per la registrazione e annullamento della registrazione di un'origine di notifica di connessione.  
@@ -32,13 +33,13 @@ Dichiara i metodi per la registrazione e annullamento della registrazione di un'
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[RegisterNotifySource (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installa un oggetto di origine specificato.|  
-|[UnregisterNotifySource (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Rimuove un oggetto di origine di notifica specificato dalla connessione.|  
+|[Metodo RegisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installa un oggetto di origine specificato.|  
+|[Metodo UnregisterNotifySource](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Rimuove un oggetto di origine di notifica specificato dalla connessione.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vedere anche  
- [INotifySink2 (interfaccia)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 (interfaccia)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+ [Interfaccia INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
+ [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
+ [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00a003ee060de59fe0eb8ce8f740a620d77a7c85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c53e03acddc5d732a684cf825bce49a65bb4c31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmda-interface"></a>Interfaccia ICorDebugMDA
 Rappresenta un messaggio relativo all'assistente al debug gestito (MDA, Managed Debugging Assistant).  
@@ -32,11 +33,11 @@ Rappresenta un messaggio relativo all'assistente al debug gestito (MDA, Managed 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetDescription (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Ottiene una stringa contenente una descrizione di questo assistente al debug gestito.|  
+|[Metodo GetDescription](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Ottiene una stringa contenente una descrizione di questo assistente al debug gestito.|  
 |[Metodo GetFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Ottiene i flag associati a questo assistente al debug gestito.|  
-|[GetName (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Ottiene una stringa contenente il nome di questo assistente al debug gestito.|  
-|[GetOSThreadId (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Ottiene l'identificatore del thread del sistema operativo in cui è in esecuzione questo assistente al debug gestito.|  
-|[GetXML (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Ottiene il flusso XML completo associato a questo assistente al debug gestito.|  
+|[Metodo GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Ottiene una stringa contenente il nome di questo assistente al debug gestito.|  
+|[Metodo GetOSThreadId](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Ottiene l'identificatore del thread del sistema operativo in cui è in esecuzione questo assistente al debug gestito.|  
+|[Metodo GetXML](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Ottiene il flusso XML completo associato a questo assistente al debug gestito.|  
   
 ## <a name="remarks"></a>Note  
   

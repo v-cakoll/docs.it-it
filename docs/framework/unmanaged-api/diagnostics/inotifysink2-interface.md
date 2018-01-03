@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e73daf26a6d3620cde75a24d44c75b0f09d4d8cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0462d92d29328330422cd7e81b26f9e6d069df01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inotifysink2-interface"></a>Interfaccia INotifySink2
 Dichiara i metodi per la notifica di sink.  
@@ -32,15 +33,15 @@ Dichiara i metodi per la notifica di sink.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[OnSyncCallEnter (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Viene richiamato quando si immette una chiamata.|  
-|[OnSyncCallExit (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Viene richiamato quando si esce da una chiamata.|  
-|[OnSyncCallOut (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Viene richiamato quando una chiamata non è più valido.|  
-|[OnSyncCallReturn (metodo)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Viene richiamato quando una chiamata restituisce.|  
+|[Metodo OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Viene richiamato quando si immette una chiamata.|  
+|[Metodo OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Viene richiamato quando si esce da una chiamata.|  
+|[Metodo OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Viene richiamato quando una chiamata non è più valido.|  
+|[Metodo OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Viene richiamato quando una chiamata restituisce.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Vedere anche  
- [INotifyConnection2 (interfaccia)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySource2 (interfaccia)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+ [Interfaccia INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
+ [Interfaccia INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
+ [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

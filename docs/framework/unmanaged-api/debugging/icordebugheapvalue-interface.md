@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7868fc84ba3003909992334d1a66e1ed243eca18
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d2ab132b73369526204f8fd811e1567b07b4a9b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue Interface1
 Sottoclasse di "ICorDebugValue" che rappresenta un oggetto raccolto dal garbage collector di common language runtime (CLR).  
@@ -32,8 +33,8 @@ Sottoclasse di "ICorDebugValue" che rappresenta un oggetto raccolto dal garbage 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[CreateRelocBreakpoint (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Non implementato.|  
-|[IsValid (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Ottiene un valore che indica se l'oggetto rappresentato da questo `ICorDebugHeapValue` è valido o è stato recuperato dal garbage collector. Questo metodo è obsoleto in .NET Framework versione 2.0.|  
+|[Metodo CreateRelocBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Non implementato.|  
+|[Metodo IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Ottiene un valore che indica se l'oggetto rappresentato da questo `ICorDebugHeapValue` è valido o è stato recuperato dal garbage collector. Questo metodo è obsoleto in .NET Framework versione 2.0.|  
   
 ## <a name="remarks"></a>Note  
   

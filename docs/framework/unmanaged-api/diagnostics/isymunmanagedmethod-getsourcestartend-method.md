@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b5e4fa5fcdb41126b827ee157230d79e07ed977
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f2bdc044d4560b616bd6eeb8d642567add1f659f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Metodo ISymUnmanagedMethod::GetSourceStartEnd
 Ottiene le posizioni di documento di inizio e di fine per l'origine di questo metodo. La prima posizione di matrice è l'inizio e la seconda è la fine.  
@@ -60,4 +61,4 @@ HRESULT GetSourceStartEnd(
  **Intestazione:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISymUnmanagedMethod (interfaccia)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+ [Interfaccia ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

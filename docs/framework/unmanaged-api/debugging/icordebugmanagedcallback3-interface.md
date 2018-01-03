@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2f24cc8fbd8533ef6717bc1dcd1baab0ea9ab45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a517a9557f84b7eac5d9a773b85ffc7605eba8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>Interfaccia ICorDebugManagedCallback3
 Fornisce un metodo di callback che indica che è stata generata una notifica di debugger personalizzata abilitata.  
@@ -32,7 +33,7 @@ Fornisce un metodo di callback che indica che è stata generata una notifica di 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[CustomNotification (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|Indica che è stata generata una notifica di debugger personalizzata abilitata.|  
+|[Metodo CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|Indica che è stata generata una notifica di debugger personalizzata abilitata.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia è un'estensione logica del [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) e [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfacce.  
@@ -50,7 +51,7 @@ Fornisce un metodo di callback che indica che è stata generata una notifica di 
  **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICorDebugManagedCallback (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  
- [ICorDebugManagedCallback2 (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
+ [Interfaccia ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  
+ [Interfaccia ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
  [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

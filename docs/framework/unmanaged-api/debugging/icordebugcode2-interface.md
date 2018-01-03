@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7de0bdddd20dd073adfd38565bb1e94e8f2806e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54cada8e8211b3837e30f3d058d54af1eaf96a83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcode2-interface1"></a>ICorDebugCode2 Interface1
 Fornisce metodi che estendono le funzionalità di "ICorDebugCode".  
@@ -32,8 +33,8 @@ Fornisce metodi che estendono le funzionalità di "ICorDebugCode".
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetCodeChunks (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|Ottiene i blocchi di codice che è costituito da questo oggetto di codice.|  
-|[GetCompilerFlags (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Ottiene i flag che specificano le condizioni in cui questo oggetto di codice è stato uno just-in-time (JIT) compilata o generato utilizzando il generatore di immagini native (Ngen.exe).|  
+|[Metodo GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|Ottiene i blocchi di codice che è costituito da questo oggetto di codice.|  
+|[Metodo GetCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|Ottiene i flag che specificano le condizioni in cui questo oggetto di codice è stato uno just-in-time (JIT) compilata o generato utilizzando il generatore di immagini native (Ngen.exe).|  
   
 ## <a name="remarks"></a>Note  
   

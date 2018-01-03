@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f964b5390e601b518acad44dd6fd170399ff0af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6000f6d91b3fe2325868b9af58740e1c4cd76127
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugchain-interface1"></a>ICorDebugChain Interface1
 Rappresenta un segmento di uno stack di chiamate fisico o logico.  
@@ -32,18 +33,18 @@ Rappresenta un segmento di uno stack di chiamate fisico o logico.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[EnumerateFrames (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Ottiene un enumeratore che contiene tutti gli stack frame gestiti nella catena, a partire dal frame più recente.|  
-|[GetActiveFrame (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Ottiene attivo (vale a dire più recente) frame sulla catena.|  
-|[GetCallee (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|Ottiene la catena di chiamata da questa catena.|  
-|[GetCaller (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|Ottiene la catena che ha chiamato questa catena.|  
-|[GetContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|Non implementato.|  
-|[GetNext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Ottiene la catena di frame successiva per il thread.|  
-|[GetPrevious (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|Ottiene la catena di frame precedente per il thread.|  
-|[GetReason (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|Ottiene il motivo per la creazione di questa catena di chiamata.|  
-|[GetRegisterSet (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|Ottiene l'insieme di registri per la parte della catena attiva.|  
-|[GetStackRange (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|Ottiene l'intervallo di indirizzi del segmento di stack per questa catena.|  
-|[GetThread (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|Ottiene il thread fisico che questa catena di chiamate è parte di.|  
-|[IsManaged (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|Ottiene un valore che indica se la catena è in esecuzione il codice gestito.|  
+|[Metodo EnumerateFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|Ottiene un enumeratore che contiene tutti gli stack frame gestiti nella catena, a partire dal frame più recente.|  
+|[Metodo GetActiveFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|Ottiene attivo (vale a dire più recente) frame sulla catena.|  
+|[Metodo GetCallee](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|Ottiene la catena di chiamata da questa catena.|  
+|[Metodo GetCaller](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|Ottiene la catena che ha chiamato questa catena.|  
+|[Metodo GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|Non implementato.|  
+|[Metodo GetNext](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|Ottiene la catena di frame successiva per il thread.|  
+|[Metodo GetPrevious](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|Ottiene la catena di frame precedente per il thread.|  
+|[Metodo GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|Ottiene il motivo per la creazione di questa catena di chiamata.|  
+|[Metodo GetRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|Ottiene l'insieme di registri per la parte della catena attiva.|  
+|[Metodo GetStackRange](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|Ottiene l'intervallo di indirizzi del segmento di stack per questa catena.|  
+|[Metodo GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|Ottiene il thread fisico che questa catena di chiamate è parte di.|  
+|[Metodo IsManaged](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|Ottiene un valore che indica se la catena è in esecuzione il codice gestito.|  
   
 ## <a name="remarks"></a>Note  
  Gli stack frame in una catena occupano spazio stack contiguo e condividono lo stesso thread e lo stesso contesto. Una catena può rappresentare uno catene di codice gestito o. Un oggetto vuoto `ICorDebugChain` istanza rappresenta una catena di codice non gestito.  

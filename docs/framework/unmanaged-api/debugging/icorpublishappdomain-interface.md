@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e83a6e4ac64d4b47400a3cbb495169ae46298980
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe8851e0b6e521a293612c140ab8d23e579a6b28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishappdomain-interface"></a>Interfaccia ICorPublishAppDomain
 Rappresenta e fornisce informazioni su un dominio applicazione.  
@@ -32,8 +33,8 @@ Rappresenta e fornisce informazioni su un dominio applicazione.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetID (metodo)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Ottiene l'identificatore univoco per questo `ICorPublishAppDomain`.|  
-|[GetName (metodo)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Ottiene il nome del dominio dell'applicazione a cui fa riferimento questo `ICorPublishAppDomain`.|  
+|[Metodo GetID](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Ottiene l'identificatore univoco per questo `ICorPublishAppDomain`.|  
+|[Metodo GetName](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Ottiene il nome del dominio dell'applicazione a cui fa riferimento questo `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

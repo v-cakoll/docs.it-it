@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38357072b3a6e8e8a326a16600b2d7ed56cdcb2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfdab2857745dee7c40823ad25592de5dc833ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremotetarget-interface"></a>Interfaccia ICorDebugRemoteTarget
 Fornisce i metodi che consentono agli sviluppatori di eseguire il debug delle applicazioni basate su Silverlight nell'ambiente CLR (Common Language Runtime).  
@@ -47,7 +48,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Icordebugremotetarget:: GetHostName (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Restituisce il nome host o l'indirizzo IP di un computer remoto.|  
+|[Metodo ICorDebugRemoteTarget::GetHostName](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Restituisce il nome host o l'indirizzo IP di un computer remoto.|  
   
 ## <a name="remarks"></a>Note  
  Il debug in modalità mista (cioè codice gestito e nativo) non è supportato né da Windows 95, Windows 98 o Windows ME né dalle piattaforme diverse da x86 (ad esempio IA-64 e AMD64).  
@@ -62,6 +63,6 @@ interface ICorDebugRemoteTarget  : IUnknown
  **Versioni di .NET framework:** 3.5 SP1  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICorDebugRemote (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
+ [Interfaccia ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
  [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
  [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

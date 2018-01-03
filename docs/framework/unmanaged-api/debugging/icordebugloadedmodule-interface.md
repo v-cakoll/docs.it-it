@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5cdc89ec81d76a3ce7d39a53e097745d6c9822f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4cc7a36deb7c81ccf67427b833dead7127619b39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugloadedmodule-interface"></a>Interfaccia ICorDebugLoadedModule
 Vengono fornite informazioni su un modulo caricato.  
@@ -27,8 +28,8 @@ Vengono fornite informazioni su un modulo caricato.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo GetBaseAddress](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|Ottiene l'indirizzo di base del modulo caricato.|  
-|[GetName (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|Ottiene il nome del modulo caricato.|  
-|[GetSize (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|Ottiene le dimensioni, in byte, del modulo caricato.|  
+|[Metodo GetName](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|Ottiene il nome del modulo caricato.|  
+|[Metodo GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|Ottiene le dimensioni, in byte, del modulo caricato.|  
   
 ## <a name="remarks"></a>Note  
  L'interfaccia `ICorDebugLoadedModule` viene implementata da un debugger e viene usata dalle interfacce di debug CLR per ottenere informazioni sul modulo caricato dal debugger.  

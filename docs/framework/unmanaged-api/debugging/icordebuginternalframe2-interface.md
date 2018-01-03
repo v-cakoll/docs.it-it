@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b612cb2fb8b2a84555ccf36a8537ebecff673d47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d87303fbe95804b458a42ed43b65f29233814977
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebuginternalframe2-interface"></a>Interfaccia ICorDebugInternalFrame2
 Vengono fornite informazioni sui frame interni, compresi l'indirizzo dello stack e la posizione rispetto agli oggetti ICorDebugFrame.  
@@ -32,8 +33,8 @@ Vengono fornite informazioni sui frame interni, compresi l'indirizzo dello stack
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetFrameAddress (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Restituisce l'indirizzo dello stack del frame interno.|  
-|[IsCloserToLeaf (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Controlla se il `this` frame interno è più vicino alla foglia rispetto all'oggetto ICorDebugFrame specificato.|  
+|[Metodo GetFrameAddress](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Restituisce l'indirizzo dello stack del frame interno.|  
+|[Metodo IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Controlla se il `this` frame interno è più vicino alla foglia rispetto all'oggetto ICorDebugFrame specificato.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia estende l'interfaccia ICorDebugInternalFrame.  

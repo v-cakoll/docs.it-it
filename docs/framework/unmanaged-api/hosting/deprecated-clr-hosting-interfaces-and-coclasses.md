@@ -18,25 +18,26 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4714183eb79a25639dae6824a1d27eb1ca6bb009
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Interfacce di hosting CLR deprecate e coclassi
 In questa sezione vengono descritte le interfacce non gestite host consente di integrare common language runtime (CLR) nelle versioni 1.0 e 1.1 di .NET Framework nelle applicazioni. Queste interfacce forniscono metodi per un host configurare e caricare il runtime in un processo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  IAppDomainSetup  
  Fornisce metodi per l'host configurare un <xref:System.AppDomain>.  
   
- [ICeeFileGen (classe)](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
+ [Classe ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
  (Obsoleto) Fornisce funzionalità per la creazione di un nativo file eseguibile portabile (PE).  
   
- [ICorRuntimeHost (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  Fornisce metodi per l'host configurare le impostazioni di CLR.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Interfacce di Hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
+ [Interfacce di hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  Contiene argomenti che descrivono le interfacce di hosting fornite con la versione di .NET Framework 2.0 e versioni successive.

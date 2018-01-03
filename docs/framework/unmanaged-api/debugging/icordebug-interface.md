@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62a29133252277cbf614a1916af6fa4c6905a920
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebug-interface"></a>Interfaccia ICorDebug
 Fornisce metodi che consentono agli sviluppatori di debug delle applicazioni nell'ambiente common language runtime (CLR).  
@@ -35,15 +36,15 @@ Fornisce metodi che consentono agli sviluppatori di debug delle applicazioni nel
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[CanLaunchOrAttach (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina se avviare un nuovo processo o connettersi al processo specificato è possibili all'interno del contesto della configurazione del computer e di runtime corrente.|  
-|[CreateProcess (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Avvia un processo e il relativo thread primario sotto il controllo del debugger.|  
-|[DebugActiveProcess (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Collega il debugger a un processo esistente.|  
-|[EnumerateProcesses (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Ottiene un enumeratore per i processi sottoposti a debug.|  
-|[GetProcess (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Restituisce l'oggetto "ICorDebugProcess" con l'ID di processo specificato.|  
-|[Initialize (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inizializza il `ICorDebug` oggetto.|  
-|[SetManagedHandler (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Specifica l'oggetto di gestore eventi per gli eventi gestiti.|  
-|[SetUnmanagedHandler (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Specifica l'oggetto di gestore eventi per gli eventi non gestiti.|  
-|[Terminate (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Termina il `ICorDebug` oggetto.|  
+|[Metodo CanLaunchOrAttach](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina se avviare un nuovo processo o connettersi al processo specificato è possibili all'interno del contesto della configurazione del computer e di runtime corrente.|  
+|[Metodo CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Avvia un processo e il relativo thread primario sotto il controllo del debugger.|  
+|[Metodo DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Collega il debugger a un processo esistente.|  
+|[Metodo EnumerateProcesses](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Ottiene un enumeratore per i processi sottoposti a debug.|  
+|[Metodo GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Restituisce l'oggetto "ICorDebugProcess" con l'ID di processo specificato.|  
+|[Metodo Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inizializza il `ICorDebug` oggetto.|  
+|[Metodo SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Specifica l'oggetto di gestore eventi per gli eventi gestiti.|  
+|[Metodo SetUnmanagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Specifica l'oggetto di gestore eventi per gli eventi non gestiti.|  
+|[Metodo Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Termina il `ICorDebug` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  `ICorDebug`rappresenta un ciclo di elaborazione di eventi per un processo del debugger. Il debugger deve attendere il [ICorDebugManagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) callback da tutti i processi in fase di debug prima di rilasciare questa interfaccia.  
