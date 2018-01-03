@@ -17,20 +17,21 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0293a20f5f735dd38b1d167ebc5057f645fa011a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c20bb8a9841b5ebc7a4ca9b5463fe4c541c0a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-structures"></a>Strutture di debug
 Questa sezione descrive le strutture non gestite usate dall'API di debug.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [CLR_DEBUGGING_VERSION (struttura)](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Struttura CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
  Definisce la versione del prodotto di Common Language Runtime (CLR) per fini di debug.  
   
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
+ [Struttura1 CodeChunkInfo](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
  Rappresenta un singolo blocco di codice in memoria.  
   
  [Struttura CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  
@@ -84,7 +85,7 @@ Questa sezione descrive le strutture non gestite usate dall'API di debug.
  COR_VERSION  
  Archivia il numero di versione in quattro parti standard di Common Language Runtime.  
   
- [StackTrace_SimpleContext (struttura)](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
+ [Struttura StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
  Fornisce un contesto semplice che può essere usato invece di una struttura `CONTEXT` completa.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

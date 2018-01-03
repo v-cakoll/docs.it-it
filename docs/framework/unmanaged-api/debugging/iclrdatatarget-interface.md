@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a40276b28f3d20428f0d7eb0556a762fdb56801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73966ffe89f0e84d5a516f20962472d900332faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatarget-interface"></a>Interfaccia ICLRDataTarget
 Fornisce metodi per l'interazione con un elemento di destinazione di common language runtime (CLR).  
@@ -32,16 +33,16 @@ Fornisce metodi per l'interazione con un elemento di destinazione di common lang
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetCurrentThreadID (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Ottiene l'identificatore del sistema operativo per il thread corrente.|  
-|[GetImageBase (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|Ottiene l'indirizzo di memoria di base per l'immagine specificata.|  
-|[GetMachineType (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Ottiene un identificatore per il tipo di set di istruzioni che utilizza il processo di destinazione.|  
-|[GetPointerSize (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Ottiene le dimensioni, in byte, di un puntatore alla destinazione corrente.|  
-|[GetThreadContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Ottiene un puntatore al contesto del thread, con l'identificatore specificato.|  
-|[GetTLSValue (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Ottiene un valore nella memoria locale di thread (TLS) in corrispondenza dell'indice specificato per il thread specificato.|  
-|[ReadVirtual (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Legge i dati dall'indirizzo di memoria virtuale specificato nel buffer specificato.|  
-|[Metodo di richiesta](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per richiedere un'operazione, come definito dall'implementazione.|  
-|[SetThreadContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Imposta il contesto corrente del thread specificato nel processo di destinazione.|  
-|[SetTLSValue (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Imposta un valore nell'archiviazione locale di thread (TLS) del thread nel processo di destinazione specificato.|  
+|[Metodo GetCurrentThreadID](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Ottiene l'identificatore del sistema operativo per il thread corrente.|  
+|[Metodo GetImageBase](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|Ottiene l'indirizzo di memoria di base per l'immagine specificata.|  
+|[Metodo GetMachineType](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Ottiene un identificatore per il tipo di set di istruzioni che utilizza il processo di destinazione.|  
+|[Metodo GetPointerSize](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Ottiene le dimensioni, in byte, di un puntatore alla destinazione corrente.|  
+|[Metodo GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Ottiene un puntatore al contesto del thread, con l'identificatore specificato.|  
+|[Metodo GetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Ottiene un valore nella memoria locale di thread (TLS) in corrispondenza dell'indice specificato per il thread specificato.|  
+|[Metodo ReadVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Legge i dati dall'indirizzo di memoria virtuale specificato nel buffer specificato.|  
+|[Metodo Request](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Chiamato dai servizi di accesso ai dati di common language runtime (CLR) per richiedere un'operazione, come definito dall'implementazione.|  
+|[Metodo SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Imposta il contesto corrente del thread specificato nel processo di destinazione.|  
+|[Metodo SetTLSValue](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Imposta un valore nell'archiviazione locale di thread (TLS) del thread nel processo di destinazione specificato.|  
 |[Metodo WriteVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Scrive dati dal buffer specificato per l'indirizzo di memoria virtuale specificato.|  
   
 ## <a name="remarks"></a>Note  

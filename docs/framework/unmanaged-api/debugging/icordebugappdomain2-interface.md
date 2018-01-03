@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebd1e504cbf2f74ad82e7fea6b6c3f355a1bda34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Interface1
 Fornisce metodi per lavorare con le matrici, puntatori, puntatori a funzione e tipi di riferimento. Questa interfaccia è un'estensione dell'interfaccia ICorDebugAppDomain.  
@@ -32,7 +33,7 @@ Fornisce metodi per lavorare con le matrici, puntatori, puntatori a funzione e t
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetArrayOrPointerType (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Ottiene una matrice di tipo specificato, o un puntatore o un riferimento al tipo specificato.|  
+|[Metodo GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Ottiene una matrice di tipo specificato, o un puntatore o un riferimento al tipo specificato.|  
 |[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Ottiene un puntatore a una funzione che dispone di una determinata firma.|  
   
 ## <a name="remarks"></a>Note  
