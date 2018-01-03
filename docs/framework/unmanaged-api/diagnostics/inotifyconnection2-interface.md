@@ -19,26 +19,27 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 773fa72f941d9128ae1ad97d44b5e89759fa17e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 272a747883c07c0d31a6cda62bec39f182b5e46c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="inotifyconnection2-interface"></a><span data-ttu-id="21a87-102">Interfaccia INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="21a87-102">INotifyConnection2 Interface</span></span>
-<span data-ttu-id="21a87-103">Dichiara i metodi per la registrazione e annullamento della registrazione di un'origine di notifica di connessione.</span><span class="sxs-lookup"><span data-stu-id="21a87-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
+# <a name="inotifyconnection2-interface"></a><span data-ttu-id="5a207-102">Interfaccia INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="5a207-102">INotifyConnection2 Interface</span></span>
+<span data-ttu-id="5a207-103">Dichiara i metodi per la registrazione e annullamento della registrazione di un'origine di notifica di connessione.</span><span class="sxs-lookup"><span data-stu-id="5a207-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="21a87-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="21a87-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5a207-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="5a207-104">Methods</span></span>  
   
-|<span data-ttu-id="21a87-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="21a87-105">Method</span></span>|<span data-ttu-id="21a87-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="21a87-106">Description</span></span>|  
+|<span data-ttu-id="5a207-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="5a207-105">Method</span></span>|<span data-ttu-id="5a207-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5a207-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="21a87-107">RegisterNotifySource (metodo)</span><span class="sxs-lookup"><span data-stu-id="21a87-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="21a87-108">Installa un oggetto di origine specificato.</span><span class="sxs-lookup"><span data-stu-id="21a87-108">Installs a specified notification source object.</span></span>|  
-|[<span data-ttu-id="21a87-109">UnregisterNotifySource (metodo)</span><span class="sxs-lookup"><span data-stu-id="21a87-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="21a87-110">Rimuove un oggetto di origine di notifica specificato dalla connessione.</span><span class="sxs-lookup"><span data-stu-id="21a87-110">Removes a specified notification source object from the connection.</span></span>|  
+|[<span data-ttu-id="5a207-107">Metodo RegisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="5a207-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="5a207-108">Installa un oggetto di origine specificato.</span><span class="sxs-lookup"><span data-stu-id="5a207-108">Installs a specified notification source object.</span></span>|  
+|[<span data-ttu-id="5a207-109">Metodo UnregisterNotifySource</span><span class="sxs-lookup"><span data-stu-id="5a207-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="5a207-110">Rimuove un oggetto di origine di notifica specificato dalla connessione.</span><span class="sxs-lookup"><span data-stu-id="5a207-110">Removes a specified notification source object from the connection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="21a87-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="21a87-111">Requirements</span></span>  
- <span data-ttu-id="21a87-112">**Intestazione:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="21a87-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a207-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5a207-111">Requirements</span></span>  
+ <span data-ttu-id="5a207-112">**Intestazione:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="5a207-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21a87-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="21a87-113">See Also</span></span>  
- [<span data-ttu-id="21a87-114">INotifySink2 (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="21a87-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="21a87-115">INotifySource2 (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="21a87-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="21a87-116">Interfacce dell'archivio dei simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="21a87-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="5a207-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5a207-113">See Also</span></span>  
+ [<span data-ttu-id="5a207-114">Interfaccia INotifySink2</span><span class="sxs-lookup"><span data-stu-id="5a207-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
+ [<span data-ttu-id="5a207-115">Interfaccia INotifySource2</span><span class="sxs-lookup"><span data-stu-id="5a207-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
+ [<span data-ttu-id="5a207-116">Interfacce dell'archivio simboli di diagnostica</span><span class="sxs-lookup"><span data-stu-id="5a207-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

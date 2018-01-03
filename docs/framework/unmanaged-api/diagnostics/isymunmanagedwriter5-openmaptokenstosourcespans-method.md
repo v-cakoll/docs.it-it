@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f226a71ac6381c8ca04093beb1d9772d6e6c75e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb283198de5621748b37fe8e22f2fbc408754ad6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a><span data-ttu-id="a98b7-102">Metodo ISymUnmanagedWriter5::OpenMapTokensToSourceSpans</span><span class="sxs-lookup"><span data-stu-id="a98b7-102">ISymUnmanagedWriter5::OpenMapTokensToSourceSpans Method</span></span>
-<span data-ttu-id="a98b7-103">Aprire una sezione di dati personalizzati speciali per generare informazioni di mapping span token all'origine in.</span><span class="sxs-lookup"><span data-stu-id="a98b7-103">Open a special custom data section to emit token-to-source span mapping information into.</span></span> <span data-ttu-id="a98b7-104">Apertura di questa sezione quando un metodo è già aperto, o viceversa, è un errore.</span><span class="sxs-lookup"><span data-stu-id="a98b7-104">Opening this section when a method is already open, or vice versa, is an error.</span></span>  
+# <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a><span data-ttu-id="d58f4-102">Metodo ISymUnmanagedWriter5::OpenMapTokensToSourceSpans</span><span class="sxs-lookup"><span data-stu-id="d58f4-102">ISymUnmanagedWriter5::OpenMapTokensToSourceSpans Method</span></span>
+<span data-ttu-id="d58f4-103">Aprire una sezione di dati personalizzati speciali per generare informazioni di mapping span token all'origine in.</span><span class="sxs-lookup"><span data-stu-id="d58f4-103">Open a special custom data section to emit token-to-source span mapping information into.</span></span> <span data-ttu-id="d58f4-104">Apertura di questa sezione quando un metodo è già aperto, o viceversa, è un errore.</span><span class="sxs-lookup"><span data-stu-id="d58f4-104">Opening this section when a method is already open, or vice versa, is an error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a98b7-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a98b7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d58f4-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d58f4-105">Syntax</span></span>  
   
 ```idl  
 HRESULT OpenMapTokensToSourceSpans();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="a98b7-106">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a98b7-106">Return Value</span></span>  
- <span data-ttu-id="a98b7-107">Restituisce `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="a98b7-107">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d58f4-106">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d58f4-106">Return Value</span></span>  
+ <span data-ttu-id="d58f4-107">Restituisce `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="d58f4-107">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a98b7-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a98b7-108">Requirements</span></span>  
- <span data-ttu-id="a98b7-109">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a98b7-109">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d58f4-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d58f4-108">Requirements</span></span>  
+ <span data-ttu-id="d58f4-109">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d58f4-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a98b7-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a98b7-110">See Also</span></span>  
- [<span data-ttu-id="a98b7-111">Interfaccia ISymUnmanagedWriter5</span><span class="sxs-lookup"><span data-stu-id="a98b7-111">ISymUnmanagedWriter5 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d58f4-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d58f4-110">See Also</span></span>  
+ [<span data-ttu-id="d58f4-111">Interfaccia ISymUnmanagedWriter5</span><span class="sxs-lookup"><span data-stu-id="d58f4-111">ISymUnmanagedWriter5 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
