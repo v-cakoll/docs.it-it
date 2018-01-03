@@ -17,16 +17,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7746d53748260610a7f0e33611dd672fd644d269
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-base-types-in-net"></a>Uso dei tipi di base in .NET
 Questa sezione descrive le operazioni sui tipi di base .NET, tra cui la formattazione, la conversione e le operazioni comuni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Conversione di tipi in .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
  Descrive come eseguire la conversione da un tipo a un altro.  
   
@@ -36,7 +39,7 @@ Questa sezione descrive le operazioni sui tipi di base .NET, tra cui la formatta
  [Modifica di stringhe](../../../docs/standard/base-types/manipulating-strings.md)  
  Descrive come modificare e formattare le stringhe.  
   
- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  Descrive come eseguire la conversione di stringhe in tipi .NET Framework.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

@@ -21,11 +21,14 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizzazione e localizzazione di applicazioni .NET Framework
 Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/bb978433.aspx), tra cui un'applicazione che può essere localizzata in una o più lingue, include i seguenti tre passaggi: globalizzazione, analisi della localizzabilità e localizzazione.  
@@ -49,7 +52,7 @@ Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/
   
  Per altre informazioni, vedere il [Developer Center sulla globalizzazione delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=235015).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
  Viene descritta la prima fase di creazione di un'applicazione internazionale, che include la progettazione e la codifica di un'applicazione indipendente dalla lingua e dalle impostazioni cultura.  
   
@@ -65,7 +68,7 @@ Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/
  [Procedure consigliate per lo sviluppo di applicazioni internazionali](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Spazio dei nomi <xref:System.Globalization?displayProperty=nameWithType>  
  Contiene classi che definiscono informazioni sulle impostazioni cultura, tra cui la lingua, il paese, il calendario, il formato delle date, delle valute e dei numeri e il criterio di ordinamento delle stringhe.  
   

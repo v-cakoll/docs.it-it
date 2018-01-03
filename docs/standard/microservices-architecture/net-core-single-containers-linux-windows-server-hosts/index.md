@@ -8,15 +8,18 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 73d733a45837d047319312ea7b2e558a02b39eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f85b3db6b4ca6d22c4b855c8b96051c1c31350a6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Distribuzione di applicazioni Web .NET Core basate su singolo contenitore in host di Linux o Windows Nano Server
 
-*È possibile usare i contenitori Docker per la distribuzione monolitica delle applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e recapito continuo e consente di ottenere risultati ottimali dalla distribuzione alla produzione, evitando situazioni in cui quello che funziona in un singolo computer non funziona più nell'ambiente di produzione.*
+*È possibile usare i contenitori Docker per la distribuzione monolitica delle applicazioni Web più semplici. Ciò migliora le pipeline di integrazione continua e distribuzione continua e consente di ottenere risultati ottimali dalla distribuzione alla produzione, evitando situazioni in cui quello che funziona in un singolo computer non funziona più nell'ambiente di produzione.*
 
 Un'architettura basata su microservizi offre numerosi vantaggi, ma al costo di una maggiore complessità. In alcuni casi i costi superano i vantaggi e si otterranno maggiori benefici con un'applicazione con distribuzione monolitica in esecuzione in un unico contenitore o in pochi contenitori. 
 
@@ -111,7 +114,7 @@ version: '2'
   
 services:
   ci-build:
-    image: microsoft/aspnetcore-build:1.0-1.1
+    image: microsoft/aspnetcore-build:latest
     volumes:
       - .:/src
     working_dir: /src
@@ -122,7 +125,7 @@ services:
 
 Si noti che l'immagine è un'immagine di compilazione ASP.NET Core. L'immagine include gli strumenti SDK e per la compilazione per compilare l'applicazione e creare le immagini necessarie. L'esecuzione del progetto **docker-compose** tramite questo file avvia il contenitore della build dall'immagine, quindi compila l'immagine dell'applicazione in tale contenitore. È necessario specificare tale file docker-compose come parte della riga di comando per compilare l'applicazione in un contenitore Docker, quindi avviarla.
 
-In Visual Studio è possibile eseguire l'applicazione in contenitori Docker selezionando il progetto **docker-compose** come progetto di avvio e quindi premendo CTRL+F5 (F5 per eseguire il debug), come con qualsiasi altra applicazione. Quando si avvia il progetto **docker-compose**, Visual Studio esegue **docker-compose** usando il file docker-compose.yml, il file docker-compose.override.yml e uno dei file docker-compose.vs.\*. Dopo che l'applicazione è stata avviata, il browser si avvia automaticamente in Visual Studio.
+In Visual Studio è possibile eseguire l'applicazione in contenitori Docker selezionando il progetto **docker-compose** come progetto di avvio e quindi premendo CTRL+F5 (F5 per eseguire il debug), come con qualsiasi altra applicazione. Quando si avvia il progetto **docker-compose**, Visual Studio esegue **docker-compose** usando il file docker-compose.yml, il file docker-compose.override.yml e uno dei file docker-compose.vs\*. Dopo che l'applicazione è stata avviata, il browser si avvia automaticamente in Visual Studio.
 
 Se si avvia l'applicazione nel debugger, Visual Studio verrà collegato all'applicazione in esecuzione in Docker.
 

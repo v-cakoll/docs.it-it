@@ -13,11 +13,12 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-guide"></a>Guida a .NET Framework
 
@@ -40,7 +41,7 @@ Vedere [Repair the .NET Framework](./install/repair.md) (Ripristinare .NET Frame
 
 Per informazioni più dettagliate sul download di .NET Framework, vedere [Install the .NET Framework for developers](../../docs/framework/install/guide-for-developers.md) (Installare .NET Framework per sviluppatori).  
   
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Novità](../../docs/framework/whats-new/index.md)  
 Vengono descritte le nuove funzionalità e le modifiche principali incluse nelle versioni più recenti di .NET Framework. Sono inclusi elenchi di tipi e membri obsoleti e viene fornita una guida per eseguire la migrazione delle applicazioni dalla versione precedente di .NET Framework.  

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Risorse nelle applicazioni desktop
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
@@ -59,7 +60,7 @@ L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un
   
  Per ulteriori informazioni su come vengono impostate le impostazioni cultura correnti dell'interfaccia utente, vedere le pagine di riferimento <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente utilizzata per recuperare le risorse nelle applicazioni desktop, nello spazio dei nomi <xref:System.Resources?displayProperty=nameWithType> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. tra cui:  
+ È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente utilizzata per recuperare le risorse nelle applicazioni desktop, nello spazio dei nomi <xref:System.Resources?displayProperty=nameWithType> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. Sono inclusi:  
   
 -   La classe <xref:System.Resources.ResourceReader>, che consente di enumerare le risorse incorporate in un assembly o archiviate in un file binario autonomo con estensione resources. È utile quando non si conoscono i nomi esatti delle risorse disponibili in fase di esecuzione.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2615c7b8c75f7736bbf8334512790d0a5c43c8d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-tools"></a>Strumenti di .NET Framework
 Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la gestione di applicazioni e componenti destinati a .NET Framework.  
@@ -36,7 +37,7 @@ Gli strumenti di .NET Framework facilitano la creazione, la distribuzione e la g
 > [!NOTE]
 >  Alcuni strumenti sono specifici per computer a 32 bit o computer a 64 bit. Assicurarsi di eseguire la versione dello strumento appropriata per il computer.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  Genera un file che dispone di un manifesto dell'assembly ricavato da moduli o file di risorse.  
   

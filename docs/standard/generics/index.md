@@ -36,11 +36,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generics-in-the-net-framework"></a>Generics in .NET Framework
 <a name="top"></a> I generics consentono di personalizzare un metodo, una classe o una struttura in base ai dati precisi su cui interviene. Ad esempio, invece di usare la classe <xref:System.Collections.Hashtable> , che consente di avere chiavi e valori di ogni tipo, è possibile usare la classe generica <xref:System.Collections.Generic.Dictionary%602> e specificare il tipo concesso per la chiave e quello concesso per il valore. Tra i vantaggi dei generics ci sono una maggiore riutilizzabilità del codice e l'indipendenza dai tipi.  
@@ -181,7 +184,7 @@ ms.lasthandoff: 10/18/2017
 |[Panoramica di Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Viene descritta la funzionalità generics per gli utenti di C++, incluse le differenze tra generics e modelli.|  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
