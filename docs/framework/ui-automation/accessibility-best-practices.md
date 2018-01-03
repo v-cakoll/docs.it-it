@@ -16,15 +16,16 @@ caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: d8714bb211c649d783cb1cfc46058e3b097def26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83b4c2ae04ab6be1f1a1327649bbf679a24580ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility-best-practices"></a>Procedure consigliate per l'accesso facilitato
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  L'implementazione delle seguenti procedure consigliate nei controlli o nelle applicazioni consente di migliorare l'accessibilità per le persone che usano dispositivi di [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] . Molte di queste procedure consigliate si concentrano su una buona progettazione dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . Ogni procedura consigliata include informazioni sull'implementazione per i controlli o le applicazioni di [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . In molti casi, il lavoro per soddisfare le seguenti procedure consigliate è già incluso nei controlli di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Abilitare l'accesso a livello di codice a tutti gli elementi dell'interfaccia utente e al testo  
- Gli elementi di[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] devono consentire l'accesso a livello di codice. Se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] è un controllo standard di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , il supporto per l'accesso a livello di codice è incluso nel controllo. Se il controllo è personalizzato, cioè un controllo che è stato sottoclassato da un controllo comune o da un controllo sottoclassato da Control, è necessario verificare l'implementazione di <xref:System.Windows.Automation.Peers.AutomationPeer> per le aree che possono richiedere modifiche.  
+ Gli elementi di[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] devono consentire l'accesso a livello di codice. Se [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] è un controllo standard di [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], il supporto per l'accesso a livello di codice è incluso nel controllo. Se il controllo è personalizzato, cioè un controllo che è stato sottoclassato da un controllo comune o da un controllo sottoclassato da Control, è necessario verificare l'implementazione di <xref:System.Windows.Automation.Peers.AutomationPeer> per le aree che possono richiedere modifiche.  
   
  Seguendo questa procedura consigliata, i fornitori di [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] potranno identificare e modificare gli elementi dell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]del prodotto.  
   

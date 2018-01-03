@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 82ed352e3f5fb83a2f464f2d82ff9a9885227fe7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7320bf261f28fed85c44f2550df5ecd06421290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdebugginglibraryprovider-interface"></a>Interfaccia ICLRDebuggingLibraryProvider
 Include il [metodo ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) metodo, che ottiene un provider di librerie di interfaccia di callback che consente a common language runtime librerie di debug specifiche della versione di individuare e caricare su richiesta.  
@@ -32,7 +33,7 @@ Include il [metodo ProvideLibrary](../../../../docs/framework/unmanaged-api/debu
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ProvideLibrary (metodo)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|Consente al debugger di fornire un handle a un modulo che può essere utilizzato per caricare una libreria di debug.|  
+|[Metodo ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|Consente al debugger di fornire un handle a un modulo che può essere utilizzato per caricare una libreria di debug.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

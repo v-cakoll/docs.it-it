@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9e3ff6c4ec8febda93136c5ac88223b5baf80124
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a84fdb104296cf15b5f0d2d04f4ddd7ea1419643
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ
 Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW) che è possibile usare per profilare e risolvere i problemi delle applicazioni con strumenti come Windows Performance Analyzer. Tuttavia, nella maggior parte degli scenari, il modo migliore per profilare il codice dell'applicazione parallela consiste nell'uso del [visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer) in [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  
@@ -37,7 +38,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  
@@ -53,7 +54,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  
@@ -67,7 +68,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  
@@ -83,7 +84,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  
@@ -103,7 +104,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  
@@ -116,7 +117,7 @@ Sia Task Parallel Library che PLINQ generano eventi Event Trace for Windows (ETW
   
 #### <a name="user-data"></a>Dati utente  
   
-|**Nome**|**Type**|**Descrizione**|  
+|**Name**|**Type**|**Descrizione**|  
 |--------------|--------------|---------------------|  
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|ID di TaskScheduler che ha avviato il ciclo.|  
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|ID dell'attività che ha avviato il ciclo.|  

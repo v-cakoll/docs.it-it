@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a72445a73be44e8c7b039463ccd8b939ae6a148
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenari di applicazione (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]supporta un set principale di scenari per l'esposizione e utilizzo dei dati come [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. In questo argomento vengono elencati gli argomenti relativi a questi scenari.  
@@ -30,19 +31,19 @@ ms.lasthandoff: 12/02/2017
   
 -   [Esposizione dei dati come un servizio](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Procedura: creare un servizio dati tramite un'origine dati di ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [Procedura: creare un servizio dati tramite un'origine dati ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  Esporre classi di dati CLR arbitrarie come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
  -   [Esposizione dei dati come un servizio](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Procedura: creare un servizio dati tramite il Provider di Reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [Procedura: creare un servizio dati tramite il provider di reflection](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
  Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su .NET Framework.  
  -   [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [Utilizza un servizio dati in un'applicazione Client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+-   [Utilizzo di un servizio dati in un'applicazione client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
 -   [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
 -   [Procedura: associare dati del servizio dati a controlli (WCF Data Services/Silverlight)](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Usare un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un'applicazione client basata su AJAX.  
- -   [Utilizza un servizio dati in un'applicazione Client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ -   [Utilizzo di un servizio dati in un'applicazione client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
 -   [OData: Convenzioni URI](http://go.microsoft.com/fwlink/?LinkId=185564)  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 12/02/2017
  Creare una soluzione end-to-end dati che utilizza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per trasferire dati tra client e server.  
  -   [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [Utilizza un servizio dati in un'applicazione Client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+-   [Utilizzo di un servizio dati in un'applicazione client](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
 -   [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Creare un'applicazione client basata su .NET Framework che usa un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in modo asincrono per evitare problemi di latenza nel client.  
- -   [Procedura: eseguire query sul servizio dati asincroni](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ -   [Procedura: eseguire query asincrone sul servizio dati](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
 -   [Operazioni asincrone](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
 -   [Utilizzo di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
  Associare [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed ai controlli in un'applicazione Windows Presentation Framework (WPF).  
- -   [Associazione dati ai controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ -   [Associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [Procedura: Associare dati a elementi Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
@@ -92,9 +93,9 @@ ms.lasthandoff: 12/02/2017
 -   [Intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
  Creare endpoint in un servizio dati per abilitare i comportamenti del servizio personalizzati.  
- -   [Procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ -   [Procedura: definire un operatore del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
--   [Operazioni del servizio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
+-   [Operazioni di servizio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrazione dell'app di Windows Store a .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] fornisce la compilazione statica di applicazioni in Windows Store o sul computer dello sviluppatore. Ciò differisce dalla compilazione dinamica eseguita per applicazioni Windows Store dal compilatore just-in-time (JIT) o il [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sul dispositivo. Nonostante le differenze, [!INCLUDE[net_native](../../../includes/net-native-md.md)] prova a mantenere la compatibilità con [.NET per applicazioni Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Nella maggior parte dei casi, ciò che funziona sulle app .NET per Windows Store funziona anche con [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Tuttavia, in alcuni casi, è possibile riscontrare differenze di comportamento. In questo documento vengono illustrate le differenze tra .NET per applicazioni Windows Store standard e [!INCLUDE[net_native](../../../includes/net-native-md.md)] nelle seguenti aree:  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Un ciclo infinito senza eseguire una chiamata (ad esempio, `while(true);`) su qualsiasi thread può comportare l'arresto dell'applicazione. Allo stesso modo, attese lunghe o infinite possono portare all'arresto dell'applicazione.  
   
--   Alcuni cicli di inizializzazione generici non generano eccezioni in [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ad esempio, il codice seguente genera un'eccezione <xref:System.TypeLoadException> sul CLR standard, mentre in [!INCLUDE[net_native](../../../includes/net-native-md.md)] ciò non accade.  
+-   Alcuni cicli di inizializzazione generici non generano eccezioni in [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ad esempio, il codice seguente genera un'eccezione <xref:System.TypeLoadException> sul CLR standard, mentre in [!INCLUDE[net_native](../../../includes/net-native-md.md)]ciò non accade.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Alcune delle proprietà di capacità su <xref:System.Net.Http.HttpClientHandler> restituiscono `false` su [!INCLUDE[net_native](../../../includes/net-native-md.md)], laddove restituiscono `true` in .NET per applicazioni Windows Store standard.  
   
--   Alcune delle le funzioni di accesso `get` della proprietà di configurazione restituisce sempre un valore fisso in [!INCLUDE[net_native](../../../includes/net-native-md.md)], diverso da quello predefinito configurabile in .NET per applicazioni Windows Store.  
+-   Alcune delle le funzioni di accesso `get` della proprietà di configurazione restituisce sempre un valore fisso in [!INCLUDE[net_native](../../../includes/net-native-md.md)] , diverso da quello predefinito configurabile in .NET per applicazioni Windows Store.  
   
  Nelle sottosezioni riportate di seguito sono descritte alcune differenze di comportamento aggiuntive.  
   
@@ -187,7 +188,7 @@ ms.lasthandoff: 11/21/2017
   
  **Decompressione automatica**  
   
- .NET per applicazioni Windows Store consente di impostare la proprietà <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> su <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, sia <xref:System.Net.DecompressionMethods.Deflate> che <xref:System.Net.DecompressionMethods.GZip> o <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)] supporta solo <xref:System.Net.DecompressionMethods.Deflate> assieme a <xref:System.Net.DecompressionMethods.GZip> o <xref:System.Net.DecompressionMethods.None>.  Provare a impostare la proprietà <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> su <xref:System.Net.DecompressionMethods.Deflate> o <xref:System.Net.DecompressionMethods.GZip> da soli comporta l'impostazione automatica su <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>.  
+ .NET per applicazioni Windows Store consente di impostare la proprietà <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> su <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, sia <xref:System.Net.DecompressionMethods.Deflate> che <xref:System.Net.DecompressionMethods.GZip> o <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)] supporta solo <xref:System.Net.DecompressionMethods.Deflate> assieme a <xref:System.Net.DecompressionMethods.GZip>o <xref:System.Net.DecompressionMethods.None>.  Provare a impostare la proprietà <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> su <xref:System.Net.DecompressionMethods.Deflate> o <xref:System.Net.DecompressionMethods.GZip> da soli comporta l'impostazione automatica su <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>.  
   
  **Cookie**  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/21/2017
   
  **Credenziali**  
   
- In .NET per applicazioni Windows Store, le proprietà <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> funzionano in maniera indipendente.  Inoltre, la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> accetta qualsiasi oggetto che implementa l'interfaccia <xref:System.Net.ICredentials>.  In [!INCLUDE[net_native](../../../includes/net-native-md.md)], impostare la proprietà <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> su `true` fa sì che la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> diventi `null`.  Inoltre, la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> può essere impostata solo su `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A> o un oggetto di tipo <xref:System.Net.NetworkCredential>.  L'assegnazione di qualsiasi altro oggetto <xref:System.Net.ICredentials> , il più popolare dei quali è <xref:System.Net.CredentialCache>, alla proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> genera una <xref:System.PlatformNotSupportedException>.  
+ In .NET per applicazioni Windows Store, le proprietà <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> funzionano in maniera indipendente.  Inoltre, la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> accetta qualsiasi oggetto che implementa l'interfaccia <xref:System.Net.ICredentials> .  In [!INCLUDE[net_native](../../../includes/net-native-md.md)], impostare la proprietà <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> su `true` fa sì che la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> diventi `null`.  Inoltre, la proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> può essere impostata solo su `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>o un oggetto di tipo <xref:System.Net.NetworkCredential>.  L'assegnazione di qualsiasi altro oggetto <xref:System.Net.ICredentials> , il più popolare dei quali è <xref:System.Net.CredentialCache>, alla proprietà <xref:System.Net.Http.HttpClientHandler.Credentials%2A> genera una <xref:System.PlatformNotSupportedException>.  
   
  **Altre funzionalità non supportate o non configurabili**  
   
@@ -269,7 +270,7 @@ ms.lasthandoff: 11/21/2017
   
  API di marshalling raramente usate:  
   
-|Tipo|Membro|  
+|Tipo|Member|  
 |----------|------------|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29>|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29>|  
@@ -596,7 +597,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>|  
   
 ### <a name="differences-in-serializers"></a>Differenze nei serializzatori  
- Le differenze riportate di seguito riguardano la serializzazione e la deserializzazione con le classi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>:  
+ Le differenze riportate di seguito riguardano la serializzazione e la deserializzazione con le classi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>e <xref:System.Xml.Serialization.XmlSerializer> :  
   
 -   In [!INCLUDE[net_native](../../../includes/net-native-md.md)], <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> non riescono a serializzare o deserializzare una classe derivata che ha un membro della classe di base il cui tipo non è un tipo di serializzazione radice. Ad esempio, nel codice seguente, il tentativo di serializzare o deserializzare `Y` genererà un errore:  
   
@@ -604,7 +605,7 @@ ms.lasthandoff: 11/21/2017
   
      Il tipo `InnerType` non è noto al serializzatore, perché i membri della classe base non vengono attraversati durante la serializzazione.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> non riescono a serializzare una classe o una struttura che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Ad esempio, i seguenti tipi non riesco a serializzare o deserializzare:  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> non riescono a serializzare una classe o una struttura che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> . Ad esempio, i seguenti tipi non riesco a serializzare o deserializzare:  
   
   
   

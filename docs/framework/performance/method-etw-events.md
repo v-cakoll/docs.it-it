@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-etw-events"></a>Eventi EWT dei metodi
 <a name="top"></a> Questi eventi raccolgono informazioni specifiche dei metodi. Il payload di questi eventi è necessario per la risoluzione dei simboli. Questi eventi forniscono inoltre informazioni utili, ad esempio il numero di volte in cui un metodo è stato chiamato.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="clr-method-events"></a>Eventi dei metodi CLR  
  La tabella seguente illustra la parola chiave e il livello Per altre informazioni, vedere [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10) nel provider di runtime|Informativo (4)|  
 |`NGenKeyword` (0x20) nel provider di runtime|Informativo (4)|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/18/2017
   
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`AppDomainResourceManagementRundownKeyword` (0x800) nel provider di rundown|Informativo (4)|  
 |`JitRundownKeyword` (0x10) nel provider di rundown|Informativo (4)|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="clr-method-verbose-events"></a>Eventi dettagliati dei metodi CLR  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|  
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted  
  La tabella seguente illustra la parola chiave e il livello  
   
-|Parola chiave per la generazione dell'evento|Level|  
+|Parola chiave per la generazione dell'evento|Livello|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10) nel provider di runtime|Dettagliato (5)|  
 |`NGenKeyword` (0x20) nel provider di runtime|Dettagliato (5)|  

@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 160a9597ff22ffc044cf3a35d345ba7d7e1606e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea9e12140e351bb5cc2b51ac2efca8a24e94bf2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-interop-attributes"></a>Applicazione di attributi di interoperabilità
 Lo spazio dei nomi <xref:System.Runtime.InteropServices> offre tre categorie di attributi specifici per l'interoperabilità: quelli applicati manualmente in fase di progettazione, quelli applicati dalle API e dagli strumenti di interoperabilità COM durante il processo di conversione e quelli applicati nell'uno o nell'altro modo.  

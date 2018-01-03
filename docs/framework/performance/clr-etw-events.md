@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d0619388b429bd1824a62bc29ccb222eea1ffde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17701ee1ddbb1056c9b06b2467c4ce10b91271ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-events"></a>Eventi ETW di CLR
 Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracing for Windows). A ogni evento sono associati una parola chiave e un livello, come descritto nell'argomento [Parole chiave e livelli ETW di CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). CLR dispone di due provider per gli eventi:  
@@ -32,7 +33,7 @@ Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracin
   
  Per altre informazioni, vedere [Provider ETW di CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Eventi di informazione di runtime](../../../docs/framework/performance/runtime-information-etw-events.md)  
  Acquisisce informazioni sul runtime, inclusi la SKU, il numero di versione, la modalità di attivazione del runtime, i parametri della riga di comando con i quali è stato avviato, il GUID (se applicabile) e altre informazioni pertinenti.  
   

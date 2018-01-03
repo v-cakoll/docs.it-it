@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-data-service"></a>Creazione del servizio dati
 In questa attività si creerà un servizio dati di esempio che utilizza [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per esporre un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed basato sul database di esempio Northwind. L'attività è costituita dai passaggi principali seguenti:  
@@ -110,7 +111,7 @@ In questa attività si creerà un servizio dati di esempio che utilizza [!INCLUD
 ## <a name="next-steps"></a>Passaggi successivi  
  Creato un nuovo servizio dati che espone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed basato sul database di esempio Northwind ed è stato abilitato l'accesso al feed per i client che dispone delle autorizzazioni per il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web. Successivamente, si avvia il servizio dati da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e si accederà il [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed inviando richieste GET HTTP attraverso un Web browser:  
   
- [Accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Accesso al servizio da un Web browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

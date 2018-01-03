@@ -16,15 +16,16 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>Ottenere elementi di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Questo argomento descrive i diversi modi in cui è possibile ottenere oggetti <xref:System.Windows.Automation.AutomationElement> per gli elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
@@ -107,6 +108,6 @@ ms.lasthandoff: 11/21/2017
  È possibile ricevere un oggetto <xref:System.Windows.Automation.AutomationElement> che rappresenta il controllo con lo stato attivo dalla proprietà <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> statica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Spostarsi tra gli elementi di automazione interfaccia utente TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

@@ -18,15 +18,16 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: af8d519b8036c5598740331960cacce07f375ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Panoramica sugli oggetti incorporati e TextPattern
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa panoramica è descritto come l' [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] espone oggetti incorporati, o elementi figlio, all'interno di un documento di testo o di un contenitore.  
   
@@ -75,7 +76,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
 <a name="Hyperlink"></a>   
-### <a name="hyperlink"></a>Collegamento ipertestuale  
+### <a name="hyperlink"></a>Hyperlink  
  **Esempio 1: intervallo di testo che contiene un collegamento ipertestuale con testo incorporato**  
   
  {L'URL [http://www.microsoft.com](http://www.microsoft.com) è incorporato nel testo}.  
@@ -108,7 +109,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> con i parametri (TextUnit.Word, 1).|Sposta l'estensione dell'intervallo di intervallo di testo ad "http", poiché il testo del collegamento ipertestuale è costituito da parole singole. In questo caso, il collegamento ipertestuale non viene considerato come oggetto singolo.<br /><br /> L'URL {[http]} è incorporato nel testo.|  
   
 <a name="Image"></a>   
-### <a name="image"></a>Immagine  
+### <a name="image"></a>Image  
  **Esempio 1: intervallo di testo che contiene un'immagine incorporata**  
   
  {L'immagine ![esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") è incorporato nel testo}.  
@@ -131,13 +132,13 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> con i parametri (TextUnit.Word, 1).|Sposta l'estensione dell'intervallo di testo a "è". Poiché solo gli oggetti incorporati basati su testo sono considerati parte del flusso di testo, l'immagine in questo esempio non influisce su Move o sul valore restituito da questo metodo (1 in questo caso).|  
   
 <a name="Table"></a>   
-### <a name="table"></a>Tabella  
+### <a name="table"></a>Table  
   
 ### <a name="table-used-for-examples"></a>Tabella usata per gli esempi  
   
 |Cella con immagine|Cella con testo|  
 |---------------------|--------------------|  
-|![Esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
+|![Esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|x|  
 |![Esempio di immagine 2 incorporato](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
 |![Incorporati di esempio di immagine 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Immagine per Z|Z|  
   
@@ -155,7 +156,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> con parametri (1,1).|Restituisce l' <xref:System.Windows.Automation.AutomationElement> che rappresenta il contenuto della cella della tabella; in questo caso, l'elemento è un controllo di testo.|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> con parametri (1,1).|Restituisce l'<xref:System.Windows.Automation.AutomationElement> che rappresenta il contenuto della cella della tabella; in questo caso, l'elemento è un controllo di testo.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo `GetItem` precedente.|Restituisce "Y".|  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -163,7 +164,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
  <xref:System.Windows.Automation.Text.TextPatternRange>  
  <xref:System.Windows.Automation.Provider.ITextProvider>  
  <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [Accesso agli oggetti incorporati utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Scorrere il testo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [Accedere agli oggetti incorporati usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
+ [Esporre il contenuto di una tabella usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Scorrere il testo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
  [Esempio di selezione e ricerca di TextPattern](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

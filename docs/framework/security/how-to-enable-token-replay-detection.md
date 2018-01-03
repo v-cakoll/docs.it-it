@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a7c72d77b4894376fb6cb8aed2d1c6641a3977da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Procedura: Abilitare il rilevamento della riproduzione del token
 ## <a name="applies-to"></a>Si applica a  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="summary"></a>Riepilogo  
  Questo argomento include le procedure dettagliate per abilitare il rilevamento riproduzione del token in un'applicazione ASP.NET che usa WIF. Sono inoltre disponibili istruzioni su come testare l'applicazione per verificare che il rilevamento riproduzione del token sia abilitato. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
   
-## <a name="contents"></a>Contenuto  
+## <a name="contents"></a>Sommario  
   
 -   Obiettivi  
   

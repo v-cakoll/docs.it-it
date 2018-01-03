@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 Le azioni OData consentono di implementare un comportamento che agisce su una risorsa recuperata da un servizio OData.  Ad esempio, se si considera come risorsa un filmato digitale, sono diverse le operazioni che è possibile eseguire, ad esempio l'estrazione, la valutazione, l'aggiunta di commenti o l'archiviazione. Sono tutti esempi di azioni che possono essere implementate da un servizio di WCF Data Services che gestisce i filmati digitali. Le azioni vengono descritte in una risposta OData che contiene una risorsa in cui l'azione può essere richiamata. Quando un utente richiede una risorsa che rappresenta un filmato digitale, la risposta restituita da un servizio di WCF Data Services contiene le informazioni sulle azioni disponibili per tale risorsa. La disponibilità di un'azione può dipendere dallo stato del servizio dati o della risorsa. Ad esempio, una volta estratto, un filmato digitale non può essere estratto da un altro utente. I client possono richiamare un'azione semplicemente specificando un URL. Ad esempio http://MyServer/MovieService.svc/Movies(6) identifica un filmato digitale specifico e http://MyServer/MovieService.svc/Movies(6)/Checkout richiama l'azione sul filmato specifico. Le azioni consentono di esporre il modello di servizio senza esporre il modello di dati. Continuando con l'esempio del servizio del filmato, è possibile che si desideri consentire a un utente di valutare un filmato ma non di esporre direttamente i dati della valutazione come risorsa. È possibile implementare un'azione Rate per consentire all'utente di valutare un filmato ma non di accedere direttamente ai dati della valutazione come risorsa.  
@@ -92,5 +93,5 @@ MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.sv
 ## <a name="see-also"></a>Vedere anche  
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  [Definizione di WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Lo sviluppo e distribuzione di WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
+ [Sviluppo e distribuzione di WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
  [Provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

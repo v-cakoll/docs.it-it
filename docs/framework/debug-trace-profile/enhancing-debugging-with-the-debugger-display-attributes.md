@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c396a794cd3afa394cbb6b2393257a3103c6239d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Miglioramento del debug tramite gli attributi di visualizzazione del debugger
 Gli attributi di visualizzazione del debugger consentono allo sviluppatore del tipo, che specifica e conosce al meglio il comportamento di runtime di tale tipo, di specificare anche quale sarà l'aspetto del tipo quando verrà visualizzato in un debugger. Gli attributi di visualizzazione del debugger che forniscono una proprietà `Target` possono essere applicati a livello di assembly dagli utenti anche senza conoscere il codice sorgente. L'attributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controlla la modalità di visualizzazione di un tipo o di un membro nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina se e come un campo o una proprietà viene visualizzata nelle finestre delle variabili del debugger. L'attributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> specifica un tipo sostituito, o proxy, per un tipo e modifica il modo in cui il tipo viene visualizzato nelle finestre del debugger. Quando si visualizza una variabile che ha un proxy, o tipo sostituito, il proxy prende il posto del tipo originale nella finestra di visualizzazione del debugger**.** Nella finestra delle variabili del debugger vengono visualizzati soltanto i membri pubblici del tipo proxy. I membri privati non vengono visualizzati.  

@@ -20,15 +20,16 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1a0613ecc6693b12dc76b77d6a634aafa599d5ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Questo argomento contiene gli scenari e il codice di esempio che illustrano come e quando sia possibile usare <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> per individuare un elemento nell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -69,4 +70,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
  [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+ [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

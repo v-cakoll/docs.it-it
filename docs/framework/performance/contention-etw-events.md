@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d739eaf73ff8336e74130d7176697229fdffd12
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a09419c208d4ac754eb48da0c8d1b5d93386eb3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contention-etw-events"></a>Eventi ETW di conflitto
 Gli eventi di conflitto vengono generati ogni volta che si verifica un conflitto per i blocchi <xref:System.Threading.Monitor?displayProperty=nameWithType> o nativi usati dal runtime. Un conflitto si verifica quando un thread attende un blocco mentre un altro thread possiede tale blocco.  
@@ -33,7 +34,7 @@ Gli eventi di conflitto vengono generati ogni volta che si verifica un conflitto
   
  La tabella seguente offre informazioni sull'evento.  
   
-|Evento|ID evento|Generato quando|  
+|event|ID evento|Generato quando|  
 |-----------|--------------|-----------------|  
 |`ContentionStart_V1`|81|Inizio del conflitto. Questo evento non include il tempo di rotazione che intercorre prima che un thread attenda l'acquisizione di un blocco; viene generato soltanto quando il thread attende di acquisire un blocco.|  
 |`ContentionStop`|81|Fine del conflitto.|  

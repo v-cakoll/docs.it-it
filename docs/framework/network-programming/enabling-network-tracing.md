@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: da6c9723849694a764a3cb1c050abdb447776113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4957e3ec6891dbee207c7aac5fcf1564ecd0af5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-network-tracing"></a>Abilitazione della traccia di rete
 La funzionalità di traccia di rete consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. È necessario completare le attività seguenti per abilitare la traccia di rete nell'applicazione:  
@@ -55,6 +56,6 @@ La funzionalità di traccia di rete consente di accedere alle informazioni sulle
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interpretazione di tracciatura della rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Traccia di rete in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Introduzione alla strumentazione e alla traccia](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

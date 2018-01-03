@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b960942d17e402b333354bbd932cf63d11b1209f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 458a1e67e9ca4ff3a36f1b0c69fcc4bdc00be3e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cache-management-for-network-applications"></a>Gestione della cache per le applicazioni di rete
 Questo argomento e i relativi sottoargomenti descrivono il funzionamento della cache per le risorse ottenute tramite le classi <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> e <xref:System.Net.FtpWebRequest>.  
@@ -31,7 +32,7 @@ Questo argomento e i relativi sottoargomenti descrivono il funzionamento della c
   
  Per ovvi motivi di protezione, la memorizzazione nella cache **non** è consigliata per scenari di livello intermedio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)  
  Illustra i concetti di base dei criteri di cache e spiega come definirne uno.  
   
@@ -44,6 +45,6 @@ Questo argomento e i relativi sottoargomenti descrivono il funzionamento della c
  [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  Descrive come creare a livello di codice criteri di cache e richieste in cui viene usata la memorizzazione nella cache.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Net.Cache>  
  Definisce i tipi e le enumerazioni usati per impostare i criteri di cache per le risorse ottenute mediante le classi <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> e <xref:System.Net.FtpWebRequest>.

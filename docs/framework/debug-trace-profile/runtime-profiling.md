@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876635cfe0349c734a61dcc827a6f9594bb2a5d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
@@ -50,7 +51,7 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 6.  Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su **\<Tutte le istanze>** per specificare che si vuole monitorare il contatore delle prestazioni per Common Language Runtime globalmente, cioè a livello di sistema.  
   
-     -oppure-  
+     oppure  
   
      Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su un nome dell'applicazione per monitorare il relativo contatore delle prestazioni.  
   
@@ -75,4 +76,4 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Specifica la formula per calcolare il metodo `NextValue` per `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)
+ [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#.  

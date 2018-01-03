@@ -16,18 +16,19 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 27f3ede2967d030d0f85919e658ca6a8dd410743
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ce0b322c2601709bdb17cb6990c4b6d96480bb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-net-framework"></a>Eventi ETW in .NET Framework
 Event Tracing for Windows (ETW) è un sistema di traccia scalabile con prestazioni elevate e sovraccarico ridotto fornito dai sistemi operativi Windows. Integra il supporto per la profilatura e il debug offerto da .NET Framework e può essere usato per risolvere i problemi di svariati scenari.  
   
  In .NET Framework la traccia eventi ETW è disponibile per Common Language Runtime, [Task Parallel Library](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Eventi ETW nella libreria TPL (Task Parallel Library) e PLINQ](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
  Descrive come profilare il codice dell'applicazione parallela.  
   

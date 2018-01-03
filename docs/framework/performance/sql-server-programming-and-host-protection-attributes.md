@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f163223842acd4539872ad1a0ff228a76e33870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>programmazione per SQL Server e attributi di protezione host
 Per poter caricare ed eseguire codice gestito in un host di SQL Server, è necessario soddisfare i requisiti dell'host sia per la sicurezza dall'accesso di codice che per la protezione delle risorse dell'host.  I requisiti di sicurezza dall'accesso di codice sono specificati da uno di tre set di autorizzazioni di SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. L'esecuzione del codice nell'ambito del set di autorizzazioni SAFE o EXTERNAL-ACCESS deve evitare alcuni tipi o membri con l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> applicato. <xref:System.Security.Permissions.HostProtectionAttribute> non è un'autorizzazione di sicurezza, ma piuttosto una garanzia di affidabilità perché identifica specifici costrutti del codice, tipi o metodi, che l'host potrebbe non consentire.  L'uso di <xref:System.Security.Permissions.HostProtectionAttribute> impone un modello di programmazione che contribuisce alla protezione della stabilità dell'host.  
@@ -66,8 +67,8 @@ Per poter caricare ed eseguire codice gestito in un host di SQL Server, è neces
 |Set di autorizzazioni|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
 |Sicurezza dall'accesso di codice|Sola esecuzione|Esecuzione più accesso alle risorse esterne|Senza restrizioni|  
-|Restrizioni relative al modello di programmazione|Sì|Sì|Nessuna restrizione|  
-|Requisito di verificabilità|Sì|Sì|No|  
+|Restrizioni relative al modello di programmazione|Yes|Sì|Nessuna restrizione|  
+|Requisito di verificabilità|Yes|Sì|No|  
 |Possibilità di chiamare codice nativo|No|No|Sì|  
   
  SAFE è la modalità più affidabile e sicura con le restrizioni associate in termini di modello di programmazione consentito. Il codice SAFE dispone di funzionalità di sicurezza e affidabilità elevata. Agli assembly SAFE vengono concesse autorizzazioni sufficienti per l'esecuzione, l'esecuzione di calcoli e l'accesso al database locale. Gli assembly SAFE devono essere indipendenti dai tipi in modo verificabile e non possono chiamare codice non gestito.  

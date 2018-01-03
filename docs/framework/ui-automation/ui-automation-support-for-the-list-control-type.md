@@ -17,15 +17,16 @@ caps.latest.revision: "20"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 63accfc3401bbfdd533f0fbbe8c17471182803cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ff31bd7874af989332e83a05e644c816fc82108
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo List
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo elenco. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |Visualizzazione controlli|Visualizzazione contenuto|  
 |------------------|------------------|  
 |Contiene elementi che corrispondono ai controlli.|Rimuove le informazioni ridondanti dell'albero in modo che i prodotti di assistive technology dispongano di un insieme ridotto di informazioni significative per l'utente finale.|  
-|Elenco<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)<br />-ScrollBar (0, 1 o 2)|Elenco<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)|  
+|List<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)<br />-ScrollBar (0, 1 o 2)|List<br /><br /> -DataItem (0 o più)<br />-ListItem (0 o più)<br />-Group (0 o più)|  
   
  La visualizzazione controlli per un controllo che implementa il tipo di controllo elenco (ad esempio un controllo elenco) contiene:  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|A seconda dei casi|Implementare questo pattern di controllo se gli elementi nel contenitore sono scorrevoli.|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|A seconda dei casi|Implementare questo pattern quando è necessario rendere disponibile lo spostamento nella griglia elemento per elemento.|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|A seconda dei casi|Implementare questo pattern di controllo se il controllo può supportare più visualizzazioni degli elementi nel contenitore.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Mai|`ITableProvider` non è mai supportato per il tipo di controllo elenco. Se il controllo deve supportare questo pattern di controllo, deve essere basato sul tipo del controllo DataGrid.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` non è mai supportato per il tipo di controllo elenco. Se il controllo deve supportare questo pattern di controllo, deve essere basato sul tipo del controllo DataGrid.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventi di automazione interfaccia utente obbligatori  
@@ -101,22 +102,22 @@ ms.lasthandoff: 11/21/2017
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto/valore|Note|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|A seconda dei casi|Nessuno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|A seconda dei casi|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|A seconda dei casi|Nessuna|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|A seconda dei casi|nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|A seconda dei casi|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|A seconda dei casi|Nessuno|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.ControlType.List>  
- [Panoramica dei tipi controllo di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Panoramica di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

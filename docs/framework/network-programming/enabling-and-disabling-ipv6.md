@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9304487963b3df4a3c2870399c474a431deb43b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Abilitazione e disabilitazione di IPv6
 Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema operativo che supporti IPv6 e che il sistema operativo e le classi di rete siano configurati correttamente.  
@@ -28,7 +29,7 @@ Per usare il protocollo IPv6, assicurarsi di eseguire una versione del sistema o
 |-------------------------------------|---------------------------------------|-----------------|  
 |No|No|È possibile analizzare gli indirizzi IPv6.|  
 |No|Sì|È possibile analizzare gli indirizzi IPv6.|  
-|Sì|No|È possibile analizzare gli indirizzi IPv6 e risolvere gli indirizzi IPv6 usando metodi di risoluzione dei nomi non contrassegnati come obsoleti.|  
+|Yes|No|È possibile analizzare gli indirizzi IPv6 e risolvere gli indirizzi IPv6 usando metodi di risoluzione dei nomi non contrassegnati come obsoleti.|  
 |Sì|Sì|È possibile analizzare e risolvere gli indirizzi IPv6 usando tutti i metodi, inclusi quelli contrassegnati come obsoleti.|  
   
  Tenere presente che, per abilitare il supporto IPv6 per tutte le classi nello spazio dei nomi System.Net, è necessario modificare il file di configurazione del computer o il file di configurazione per l'applicazione. Il file di configurazione per un'applicazione ha la precedenza sul file di configurazione del computer.  

@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Libreria client WCF Data Services
 Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] quando è in grado di inviare una richiesta HTTP e di elaborare il feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] restituito da un servizio dati. Questa interoperabilità consente di accedere ai servizi basati su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] da un'ampia gamma di applicazioni Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]include librerie client che consentono un'esperienza di programmazione avanzata quando si usano [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da .NET Framework o le applicazioni basate su Silverlight.  
@@ -30,7 +31,7 @@ Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssOData
   
  Questa sezione descrive come usare le librerie client per accedere ai dati di un'applicazione client .NET Framework e modificarli. Per ulteriori informazioni sull'utilizzo di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client con un'applicazione basata su Silverlight, vedere [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016). Sono disponibili altre librerie client che consentono di utilizzare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in altri tipi di applicazioni. Per ulteriori informazioni, vedere il [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Generazione della libreria client del servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Viene descritto come generare una libreria di classi e classi del servizio dati client basate su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.  
   
@@ -46,10 +47,10 @@ Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssOData
  [Operazioni asincrone](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
  Vengono descritte le funzionalità fornite dalle librerie client per l'uso di un servizio dati in modo asincrono.  
   
- [Operazioni batch](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [Esecuzione di operazioni in batch](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Viene descritto come inviare più richieste al servizio dati in un unico batch usando le librerie client.  
   
- [Associazione dati ai controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Viene descritto come associare controlli a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed restituito da un servizio dati.  
   
  [Operazioni del servizio di chiamata](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  

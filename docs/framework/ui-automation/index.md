@@ -15,11 +15,12 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility"></a>Accessibilità
 > [!NOTE]
@@ -29,14 +30,14 @@ ms.lasthandoff: 10/18/2017
   
  Questa documentazione descrive l'[!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il codice gestito. Per informazioni sulla programmazione per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in C++, vedere [UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx) (Automazione dell'interfaccia utente per le applicazioni Win32).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedure consigliate per l'accesso facilitato](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
  [Nozioni fondamentali sull'automazione interfaccia utente](../../../docs/framework/ui-automation/index.md)  
  [Provider di automazione interfaccia utente per il codice gestito](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
  [Client di automazione interfaccia utente per il codice gestito](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
  [Pattern di controllo per automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [Pattern di testo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [Tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
  [UI Automation Specification e Community Promise](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  

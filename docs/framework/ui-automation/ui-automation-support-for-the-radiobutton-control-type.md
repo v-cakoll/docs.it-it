@@ -17,15 +17,16 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e3b2723aaf61d25afb6164da8c3c6ca7a61e9e52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e3a285e788ee000ff5e572f32119f16692391ab8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Supporto di automazione interfaccia utente per il tipo di controllo RadioButton
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono fornite informazioni sul supporto di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per il tipo di controllo RadioButton. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]un tipo di controllo è un set di condizioni che un controllo deve soddisfare per usare la proprietà <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Le condizioni includono linee guida specifiche per la struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , i valori delle proprietà di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e i pattern di controllo.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 |Pattern di controllo/proprietà del pattern di controllo|Supporto/valore|Note|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Sì|Tutti i controlli pulsante di opzione devono supportare il pattern SelectionItem per poter essere selezionati.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Tutti i controlli pulsante di opzione devono supportare il pattern SelectionItem per poter essere selezionati.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Vedere le note.|La proprietà `SelectionContainerProperty` deve sempre essere completata in modo da consentire a un client di automazione interfaccia utente di determinare quali altri pulsanti di opzione in un contesto specifico sono correlati tra loro.  Per la versione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] del pulsante di opzione questa proprietà non sarà supportata perché non è possibile ottenere questa informazione da tale framework legacy.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Mai|Dopo aver impostato questa proprietà, il pulsante di opzione non può scorrere tra i propri stati.  Questo pattern non deve essere mai supportato nel pulsante di opzione.|  
   
@@ -77,15 +78,15 @@ ms.lasthandoff: 11/21/2017
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Supporto|Note|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Mai|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|Nessuna|  
-|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|Nessuna|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Never|None|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obbligatorio|nessuno|  
+|Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obbligatorio|nessuno|  
 |Evento di modifica della proprietà<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obbligatorio|Nessuna|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obbligatorio|Nessuna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|Nessuno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obbligatorio|nessuno|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Automation.ControlType.RadioButton>  
- [Panoramica dei tipi controllo di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Panoramica di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

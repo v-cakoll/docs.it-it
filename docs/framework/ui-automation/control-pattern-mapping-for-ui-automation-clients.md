@@ -16,15 +16,16 @@ caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapping dei pattern di controllo per i client di automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questo argomento vengono elencati i tipi di controllo e i pattern di controllo associati.  
   
@@ -46,45 +47,45 @@ ms.lasthandoff: 10/18/2017
 |------------------|---------------|-------------------------|-------------------|  
 |Button|Nessuno|Invoke, Toggle, ExpandCollapse|Nessuno|  
 |Calendar|Grid, Table|Selection, Scroll|Value|  
-|CheckBox|Toggle|Nessuno|Nessuno|  
+|CheckBox|Toggle|nessuno|nessuno|  
 |ComboBox|ExpandCollapse|Selection, Value|Scroll|  
 |DataGrid|Grid|Scroll, Selection, Table|Nessuno|  
 |DataItem|SelectionItem|ExpandCollapse, GridItem, ScrollItem, Table, Toggle, Value|Nessuno|  
-|Document|Text|Scroll, Value|Nessuno|  
-|Edit|Nessuno|Text, RangeValue, Value|Nessuno|  
-|Group|Nessuno|ExpandCollapse|Nessuno|  
-|Header|Nessuno|Transform|Nessuno|  
-|HeaderItem|Nessuno|Transform, Invoke|Nessuno|  
-|Hyperlink|Invoke|Value|Nessuno|  
+|Document|Testo|Scroll, Value|Nessuno|  
+|Edit|nessuno|Text, RangeValue, Value|None|  
+|Group|nessuno|ExpandCollapse|nessuno|  
+|Header|nessuno|Transform|nessuno|  
+|HeaderItem|Nessuno|Transform, Invoke|nessuno|  
+|Hyperlink|Invoke|Value|nessuno|  
 |Image|Nessuno|GridItem, TableItem|Invoke, SelectionItem|  
-|List|Nessuno|Grid, MultipleView, Scroll, Selection|Table|  
+|List|nessuno|Grid, MultipleView, Scroll, Selection|Table|  
 |ListItem|SelectionItem|ExpandCollapse, GridItem, Invoke, ScrollItem, Toggle, Value|Nessuno|  
-|Menu|Nessuno|Nessuna|Nessuno|  
-|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|Nessuno|  
+|Menu|nessuno|Nessuna|Nessuno|  
+|MenuBar|Nessuno|ExpandCollapse, Dock, Transform|nessuno|  
 |MenuItem|Nessuno|ExpandCollapse, Invoke, SelectionItem, Toggle|Nessuno|  
 |Pane|Nessuno|Dock Scroll, Transform|Window|  
-|ProgressBar|Nessuno|RangeValue, Value|Nessuno|  
-|RadioButton|SelectionItem|Nessuno|Toggle|  
-|ScrollBar|Nessuno|RangeValue|Scroll|  
-|Separator|Nessuno|Nessuna|Nessuno|  
-|Slider|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Spinner|Nessuno|RangeValue, Selection, Value|Nessuno|  
-|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|Nessuno|  
+|ProgressBar|Nessuno|RangeValue, Value|nessuno|  
+|RadioButton|SelectionItem|nessuno|Toggle|  
+|ScrollBar|nessuno|RangeValue|Scroll|  
+|Separatore|Nessuno|Nessuna|Nessuno|  
+|Slider|nessuno|RangeValue, Selection, Value|Nessuno|  
+|Spinner|nessuno|RangeValue, Selection, Value|nessuno|  
+|Pulsante di menu combinato|Invoke, ExpandCollapse|Nessuno|nessuno|  
 |StatusBar|Nessuno|Grid|Nessuno|  
-|Tab|Selection|Scroll|Nessuno|  
-|TabItem|SelectionItem|Nessuno|Invoke|  
-|Table|Grid, GridItem, Table, TableItem|Nessuno|Nessuno|  
-|Text|Nessuno|GridItem, TableItem, Text|Value|  
-|Thumb|Transform|Nessuno|Nessuno|  
-|TitleBar|Nessuno|Nessuna|Nessuno|  
-|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|Nessuno|  
-|ToolTip|Nessuno|Text, Window|Nessuno|  
-|Tree|Nessuno|Scroll, Selection|Nessuno|  
+|Tab|Selection|Scroll|nessuno|  
+|TabItem|SelectionItem|nessuno|Invoke|  
+|Table|Grid, GridItem, Table, TableItem|Nessuno|nessuno|  
+|Testo|Nessuno|GridItem, TableItem, Text|Valore|  
+|Thumb|Transform|Nessuno|nessuno|  
+|TitleBar|Nessuno|Nessuna|nessuno|  
+|ToolBar|Nessuno|Dock, ExpandCollapse, Transform|nessuno|  
+|ToolTip|nessuno|Text, Window|nessuno|  
+|Tree|Nessuno|Scroll, Selection|nessuno|  
 |TreeItem|ExpandCollapse|Invoke, ScrollItem, SelectionItem, Toggle|Nessuno|  
-|Window|Transform, Window|Dock|Nessuno|  
+|Window|Transform, Window|Dock|nessuno|  
   
 > [!NOTE]
 >  Se un tipo di controllo non dispone di pattern di controllo supportati ma ha uno o più pattern di controllo supportati in modo condizionale, uno dei pattern di controllo condizionali risulterà sempre supportato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [Panoramica di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-overview.md)

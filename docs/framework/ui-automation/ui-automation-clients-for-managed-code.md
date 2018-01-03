@@ -17,29 +17,30 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8142ef17bdfb78226e7a65376e132bad18bc258e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68ff7e03fe30ff61a35b20517ebaea73144ff621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa sezione sono contenute le panoramiche e le procedure per lo sviluppo di client di automazione interfaccia utente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [UI Automation and Screen Scaling](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Supporto di automazione interfaccia utente per i controlli Standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Automazione interfaccia utente e ridimensionamento schermo](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+ [Supporto per automazione interfaccia utente dei controlli standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
  [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [La memorizzazione nella cache nel client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Mapping dei Pattern di controllo per i client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [Memorizzazione nella cache di client di automazione interfaccia utente](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [Proprietà di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [Mapping dei pattern di controllo per client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Ottenere gli elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Problemi relativi al Threading di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Procedure relative](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [Ottenere elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [Problemi relativi al threading di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
+ [Procedure relative alle proprietà](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Automation>

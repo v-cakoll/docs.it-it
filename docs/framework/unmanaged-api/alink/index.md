@@ -15,16 +15,17 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2f8646fbb1c878e850d9bcda4e7117111dc825f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92c4d7c6693e3a2a011cb4ac39b42a1d96985a36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>API ALink (riferimenti alle API non gestite)
 Supporta la creazione di moduli non associati e assembly .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
   
  [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
@@ -33,7 +34,7 @@ Supporta la creazione di moduli non associati e assembly .NET Framework.
   
  [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
   
- [AssemblyOptions (enumerazione)](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
+ [Enumerazione AssemblyOptions](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
   
  [Funzione CreateALink](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
   

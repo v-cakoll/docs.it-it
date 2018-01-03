@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1af6fc1b7802fe69f0585011322e2485695a030c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Procedura: Abilitare WIF per un'applicazione del servizio Web WCF
 ## <a name="applies-to"></a>Si applica a  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="summary"></a>Riepilogo  
  In questa guida procedurale vengono fornite le procedure dettagliate per abilitare WIF in un servizio Web WCF. Vengono inoltre fornite le istruzioni su come testare l'applicazione per verificare il corretto funzionamento del servizio Web presentando delle attestazioni quando l'applicazione viene eseguita. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
   
-## <a name="contents"></a>Contenuto  
+## <a name="contents"></a>Sommario  
   
 -   Obiettivi  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: c6c1b72048f1f7cb421e5a19d34c2c2dea5463ce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5d131a032aa2747bda83874e8dd744588dfe07dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validating-issuer-name-registry"></a>Convalida del registro dei nomi delle autorità emittenti
 Validating Issuer Name Registry (VINR) per Windows Identity Foundation consente alle applicazioni multi-tenant di verificare che un token in ingresso sia stato emesso da un tenant e un provider di identità attendibili. Questa funzionalità è particolarmente utile per le applicazioni multi-tenant in cui viene utilizzato Active Directory di Microsoft Azure perché tutti i token emessi da quest'ultimo sono firmati utilizzando lo stesso certificato. Per poter distinguere tra le richieste provenienti da più tenant che utilizzano lo stesso certificato, e di conseguenza dispongono della stessa identificazione digitale, nell'applicazione deve persistere il nome dell'autorità di certificazione per ogni tenant per eseguire la logica di convalida. VINR fornisce questa funzionalità. Inoltre consente di aggiungere la logica di convalida personalizzata o di archiviare i dati del Registro di sistema dell'autorità di certificazione in percorsi diversi da un file di configurazione. L'estensione può essere aggiunta alla pipeline di WIF dell'applicazione o può essere utilizzata indipendentemente.  

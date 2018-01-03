@@ -16,15 +16,16 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45eca9205e56d1245720425c36c6adfacae720a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Pattern di controllo di automazione interfaccia utente per i client
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa panoramica vengono presentati i pattern di controllo per i client di automazione interfaccia utente. Sono incluse informazioni su come un client di automazione interfaccia utente può usare i pattern di controllo per accedere alle informazioni relative all' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
@@ -57,9 +58,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Vedere anche  
  [Pattern di controllo per automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [Pattern di testo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [Richiamare un controllo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Mapping dei Pattern di controllo per i client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [Richiamare un controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [Ottenere lo stato di attivo/non attivo di una casella di controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Mapping dei pattern di controllo per client di automazione interfaccia utente](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [Esempio di selezione e ricerca di TextPattern](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
  [Esempio di elemento di Menu ExpandCollapsePattern e InvokePattern](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

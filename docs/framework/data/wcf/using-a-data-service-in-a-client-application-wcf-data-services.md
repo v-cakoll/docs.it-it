@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79c4f7e066f4961caa66d3fd19dee9eb0f21ada4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilizzo di un servizio dati in un'applicazione client (WCF Data Services)
 È possibile accedere a un servizio che espone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed specificando un URI a un Web browser. L'URI fornisce l'indirizzo di una risorsa e i messaggi di richiesta vengono inviati a questi indirizzi per accedere ai dati sottostanti rappresentati dalla risorsa o per modificarli. Il browser invia un comando GET HTTP e restituisce la risorsa richiesta come feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Per ulteriori informazioni, vedere [accesso al servizio da un Browser Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -62,5 +63,5 @@ ms.lasthandoff: 12/02/2017
  Sono disponibili librerie di programmazione disponibili che è possibile utilizzare per utilizzare un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in altri tipi di applicazioni client. Per ulteriori informazioni, vedere il [OData SDK](http://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle risorse del servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

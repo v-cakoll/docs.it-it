@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
 Tramite l'autorizzazione di un'applicazione relying party vengono determinate le risorse di un'identità autenticata a cui è consentito l'accesso e le operazioni eseguibili in queste risorse. Un'autorizzazione non corretta o debole comporta la diffusione di informazioni e l'alterazione dei dati. In questo argomento vengono descritti gli approcci disponibili per implementare l'autorizzazione per i servizi e le applicazioni Web ASP.NET in grado di riconoscere attestazioni mediante WIF (Windows Identity Foundation) e un servizio token di sicurezza (STS), ad esempio il Servizio di controllo di accesso (ACS) di Microsoft Azure.  

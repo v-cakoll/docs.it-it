@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fa6b64d37052c40dbef83a25b622e415f6946c1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5a59b8735cf87e8b88036ffb317f7bbeb9f0885
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost (MDA)
 L'assistente al debug gestito `streamWriterBufferedDataLost` viene attivato quando viene scritto un <xref:System.IO.StreamWriter>, ma il metodo <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> non viene chiamato in seguito prima dell'eliminazione definitiva dell'istanza di <xref:System.IO.StreamWriter>. Quando questo assistente al debug gestito è abilitato, il runtime determina se tutti i dati memorizzati nel buffer esistono ancora in <xref:System.IO.StreamWriter>. In caso affermativo, l'assistente al debug gestito viene attivato. La chiamata dei metodi <xref:System.GC.Collect%2A> e <xref:System.GC.WaitForPendingFinalizers%2A> può forzare l'esecuzione dei finalizzatori. In caso contrario, i finalizzatori vengono eseguiti in momenti apparentemente arbitrari e probabilmente non vengono eseguiti affatto all'uscita dal processo. L'esecuzione dei finalizzatori in modo esplicito con questo assistente al debug gestito sarà utile per riprodurre in modo più affidabile questo tipo di problema.  

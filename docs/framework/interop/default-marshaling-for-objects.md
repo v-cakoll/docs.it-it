@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
@@ -254,12 +255,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**TypeCode.Decimal**|**VT_DECIMAL**|  
 |**TypeCode.DateTime**|**VT_DATE**|  
 |**TypeCode.String**|**VT_BSTR**|  
-|Valore non supportato.|**VT_INT**|  
-|Valore non supportato.|**VT_UINT**|  
-|Valore non supportato.|**VT_ARRAY**|  
-|Valore non supportato.|**VT_RECORD**|  
-|Valore non supportato.|**VT_CY**|  
-|Valore non supportato.|**VT_VARIANT**|  
+|Non supportato.|**VT_INT**|  
+|Non supportato.|**VT_UINT**|  
+|Non supportato.|**VT_ARRAY**|  
+|Non supportato.|**VT_RECORD**|  
+|Non supportato.|**VT_CY**|  
+|Non supportato.|**VT_VARIANT**|  
   
  Il valore della variante COM viene determinato chiamando l'interfaccia **IConvertible.To** *Type*, dove **To** *Type* è la routine di conversione che corrisponde al tipo restituito da **IConvertible.GetTypeCode**. Ad esempio, il marshalling di un oggetto che restituisce **TypeCode.Double** da **IConvertible.GetTypeCode** viene effettuato come variante COM di tipo **VT_R8**. Per ottenere il valore della variante (archiviata nel campo **dblVal** della variante COM), è possibile eseguire il cast all'interfaccia **IConvertible** e chiamare il metodo <xref:System.IConvertible.ToDouble%2A>.  
   
@@ -267,7 +268,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-variant-to-object"></a>Marshalling della variante all'oggetto  
  Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volte il valore della variante di cui viene effettuato il marshalling determinano il tipo dell'oggetto prodotto. La tabella seguente identifica tale tipo di variante e il tipo di oggetto corrispondente creato dal gestore di marshalling quando una variante viene passata da COM a .NET Framework.  
   
-|Tipo di variante COM|tipo Object|  
+|Tipo di variante COM|Tipo di oggetto|  
 |----------------------|-----------------|  
 |**VT_EMPTY**|Riferimento all'oggetto null (**Nothing** in Visual Basic).|  
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|  
@@ -293,7 +294,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Tipo valore boxed corrispondente.|  
-|**VT_VARIANT**|Valore non supportato.|  
+|**VT_VARIANT**|Non supportato.|  
   
  I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata. Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework. Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=nameWithType>. Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**. Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.  
   
@@ -331,11 +332,11 @@ Varianti passate per valore e per riferimento
   
 |Da|Per|Modifiche propagate|  
 |----------|--------|-----------------------------|  
-|**Variante**  *v*|**Oggetto**  *o*|Mai|  
-|**Oggetto**  *o*|**Variante**  *v*|Mai|  
-|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Sempre|  
-|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Sempre|  
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Mai|  
+|**Variante**  *v*|**Oggetto**  *o*|Never|  
+|**Oggetto**  *o*|**Variante**  *v*|Never|  
+|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Always|  
+|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Always|  
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Never|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
   
 ## <a name="see-also"></a>Vedere anche  

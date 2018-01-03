@@ -21,15 +21,16 @@ caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 98a2069009d04a2c1ff9127006c2382bf7481e04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] consente agli utenti di modificare l'impostazione [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] in modo da visualizzare la maggior parte degli elementi dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] sullo schermo con dimensioni maggiori. Benché questa funzionalità fosse già disponibile da tempo in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], nelle versioni precedenti era necessario che il ridimensionamento fosse implementato dalle applicazioni. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], con Gestione finestre desktop viene applicato il ridimensionamento predefinito per tutte le applicazioni che non gestiscono direttamente tale funzionalità. Per le applicazioni client di automazione interfaccia utente è necessario tenere conto di questa funzionalità.  
   

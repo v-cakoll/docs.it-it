@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 467c572d456bf2beca9f69359d362867aefbe5a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b93b6e8b6e687f2e39fd5792aba08eaa47fa29fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedura: sviluppare un servizio WCF in esecuzione in IIS
 In questo argomento viene illustrato come utilizzare [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per creare un servizio dati basato sul database di esempio Northwind ospitato da un'applicazione Web ASP.NET che è in esecuzione in Internet Information Services (IIS). Per un esempio di come creare lo stesso servizio dati Northwind come applicazione Web ASP.NET in esecuzione sul Server di sviluppo ASP.NET, vedere il [Guida rapida di WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

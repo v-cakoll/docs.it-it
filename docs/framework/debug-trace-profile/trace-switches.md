@@ -23,14 +23,15 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 082d84fe0ac4193f3da5ac9be52789432bde76aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-switches"></a>Opzioni di traccia
-Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia. Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch>, <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch>. La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  
+Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia. Si tratta di oggetti presenti nel codice che possono essere configurati esternamente tramite il file CONFIG. Esistono tre tipi di opzioni di traccia in .NET Framework, ossia le classi <xref:System.Diagnostics.BooleanSwitch> , <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> . La classe <xref:System.Diagnostics.BooleanSwitch> funge da opzione di attivazione o disabilitazione per diverse istruzioni di traccia. Le classi <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> consentono di attivare un'opzione per un particolare livello di tracciatura, in modo che vengano visualizzati i messaggi di traccia <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> specificati per quel livello e per tutti i livelli inferiori. Se si disabilita l'opzione, i messaggi di traccia non verranno visualizzati. Tutte queste classi derivano dalla classe**Switch**( **MustInherit**) astratta, come avviene per ogni opzione sviluppata dall'utente.  
   
  Le opzioni di traccia possono essere utili per filtrare informazioni. Può essere ad esempio necessario visualizzare ogni messaggio di traccia in un modulo di accesso ai dati, ma solo i messaggi di errore nel resto dell'applicazione. In questo caso, si usa un'opzione di traccia per il modulo di accesso ai dati e un'opzione per il resto dell'applicazione. Usando il file CONFIG per configurare le opzioni sulle impostazioni appropriate, è possibile controllare il tipo di messaggi di traccia ricevuti. Per altre informazioni, vedere [Procedura: Creare, inizializzare e configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
@@ -58,9 +59,9 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
 |Valore enumerato|Valore Integer|Tipo di messaggio visualizzato o scritto in una destinazione di output specificata|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
 |Disattivato|0|nessuno|  
-|Errore|1|Solo messaggi di errore.|  
+|Error|1|Solo messaggi di errore.|  
 |Avviso|2|Messaggi di avviso e messaggi di errore.|  
-|Informazioni|3|Messaggi informativi, messaggi di avviso e messaggi di errore. |  
+|Info|3|Messaggi informativi, messaggi di avviso e messaggi di errore.|  
 |Dettagliato|4|Messaggi dettagliati, messaggi informativi, messaggi di avviso e messaggi di errore.|  
   
  Le proprietà **TraceSwitch** indicano il livello di traccia massimo per l'opzione, ovvero l'informazione di traccia viene scritta per il livello specificato e per tutti i livelli inferiori. Se, ad esempio **TraceInfo** è **true**, anche **TraceError** e **TraceWarning** saranno **true** ma **TraceVerbose** potrebbe essere **false**.  

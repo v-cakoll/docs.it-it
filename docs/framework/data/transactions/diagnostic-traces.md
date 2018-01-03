@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbc445d86024c077ebbc0049d12bfb8a21dfcdb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostic-traces"></a>Tracce di diagnostica
 Le tracce consistono nella pubblicazione di messaggi specifici generati durante l'esecuzione di un'applicazione. Quando si utilizza la tracciatura è necessario disporre di un meccanismo per raccogliere e registrare i messaggi inviati. I messaggi di traccia vengono ricevuti dai listener. Il compito di un listener è raccogliere, archiviare e inviare messaggi di errore. I listener indirizzano l'output di tracciatura a una destinazione appropriata, ad esempio un file di log, una finestra o un file di testo.  
@@ -49,7 +50,7 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
 |Livello di traccia|Descrizione|  
 |-----------------|-----------------|  
 |Critico|Si sono verificati errori gravi. Ad esempio:<br /><br /> -Un errore che può causare una perdita immediata delle funzionalità di utente.<br />-Un evento che richiede un amministratore di intervenire per evitare la perdita di funzionalità.<br />-Blocchi di codice.<br />-Il livello di traccia può anche offrire un contesto sufficiente per l'interpretazione di altre tracce critico. Ciò può semplificare l'identificazione della sequenza di operazioni che ha portato all'errore grave.|  
-|Errore|Si è verificato un errore (ad esempio, un errore di configurazione o un comportamento di rete non valido) che può comportare la perdita di funzionalità dell'utente.|  
+|Error|Si è verificato un errore (ad esempio, un errore di configurazione o un comportamento di rete non valido) che può comportare la perdita di funzionalità dell'utente.|  
 |Avviso|È stata rilevata una condizione che in seguito può dare luogo a un errore standard o critico, ad esempio un errore di allocazione o il raggiungimento di un limite. Gli avvisi possono anche essere generati durante la normale elaborazione degli errori del codice utente, ad esempio l'interruzione di una transazione, lo scadere di un timeout o l'esito negativo di un'autenticazione.|  
 |Informazioni|Il sistema genera messaggi informativi che semplificano il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. Questi messaggi possono ad esempio riguardare gli eventi durata di transazione e integrazione (quali la creazione o il commit di una transazione), l'attraversamento di un confine importante o l'allocazione di risorse significative. Gli sviluppatori possono quindi utilizzare queste informazioni durante la pianificazione delle capacità e la gestione delle prestazioni.|  
   
@@ -76,8 +77,8 @@ Le tracce consistono nella pubblicazione di messaggi specifici generati durante 
 |RecoveryComplete|Info|GUID del gestore di risorse (dalla base)|  
 |Reenlist|Info|GUID del gestore di risorse (dalla base)|  
 |TransactionSerialized|Info|TransactionTraceId.|  
-|TransactionException|Errore|Messaggio eccezione|  
-|InvalidOperationException|Errore|Messaggio eccezione|  
+|TransactionException|Error|Messaggio eccezione|  
+|InvalidOperationException|Error|Messaggio eccezione|  
 |InternalError|Critico|Messaggio eccezione|  
 |TransferEvent||Quando una transazione viene deserializzata o promossa da transazione dello spazio dei nomi <xref:System.Transactions> a transazione distribuita, il sistema scrive l'ActivityID corrente ricavato dal contesto ExecutionContext e l'ID della transazione distribuita.<br /><br /> Quando il gestore DTC esegue il callback al codice gestito, l'ID della transazione distribuita viene impostato per la durata del callback come ActivityID del contesto ExecutionContext.|  
 |ConfiguredDefaultTimeoutAdjusted|Avviso|Nessun dato aggiuntivo|  

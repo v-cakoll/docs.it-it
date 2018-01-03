@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Argomenti sulle procedure relative ai client di automazione interfaccia utente per il codice gestito
 > [!NOTE]
@@ -29,12 +30,12 @@ ms.lasthandoff: 10/18/2017
   
  Questa sezione vengono fornite informazioni dettagliate sull'implementazione delle funzionalità di [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in un'applicazione client.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Trovare un elemento di automazione interfaccia utente in base a una proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Spostarsi tra gli elementi di automazione interfaccia utente TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Trovare un elemento di automazione interfaccia utente per un elemento di elenco](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Ottenere le proprietà di elemento di automazione interfaccia utente](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Utilizzare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Trovare un elemento di automazione interfaccia utente in base a una condizione proprietà](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Navigare tra gli elementi di automazione interfaccia utente con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Trovare un elemento di automazione interfaccia utente per l'elemento di un elenco](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
+ [Ottenere le proprietà degli elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
+ [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Sottoscrivere gli eventi di automazione interfaccia utente](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Registrare un Assembly di Provider lato Client](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Utilizzare la proprietà AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Registrare un assembly di provider lato client](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
+ [Usare la proprietà AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dcfa2e60a9659db6d38e0561785ece5726989ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ddb5abeee9c1cad12e40b84f2e5c81295cbed9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, proprietà ed eventi nonché metodi statici e non statici. Una differenza fondamentale è data dal fatto che le strutture sono tipi di valore e le classi sono tipi di riferimento.  

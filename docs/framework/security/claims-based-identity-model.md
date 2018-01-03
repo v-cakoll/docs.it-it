@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere, ad esempio, il nome dell'utente o un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
@@ -44,7 +45,7 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
 ## <a name="introduction-to-claims-based-identity"></a>Introduzione all'identità basata sulle attestazioni  
  La terminologia e i concetti seguenti sono utili per comprendere la nuova architettura dell'identità.  
   
-### <a name="identity"></a>Identità  
+### <a name="identity"></a>identità  
  Ai fini della descrizione del modello di programmazione in Windows Identity Foundation (WIF), il termine "identità" verrà usato per rappresentare un set di attributi che descrivono un utente o un'altra entità in un sistema che si vuole proteggere.  
   
 ### <a name="claim"></a>Attestazione  

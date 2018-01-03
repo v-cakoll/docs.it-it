@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca710fcd4d5ded93bdc1f47b3c8a523f3afa05f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c374281af80d4546368d33b09a63b4fdb654f16c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern"></a>Pattern di testo per l'automazione interfaccia utente
 > [!NOTE]
@@ -30,12 +31,12 @@ ms.lasthandoff: 11/21/2017
   
  In questo argomento sono riportate alcune panoramiche e procedure che consentono di iniziare la programmazione per elementi di testo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Panoramica di TextPattern di automazione dell'interfaccia utente](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [Panoramica sugli oggetti incorporati e TextPattern](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Procedure relative](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Panoramica di TextPattern di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [Panoramica degli oggetti incorporati e TextPattern](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
+ [Procedure relative alle proprietà](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Vedere anche  

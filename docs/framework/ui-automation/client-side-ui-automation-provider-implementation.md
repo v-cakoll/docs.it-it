@@ -17,15 +17,16 @@ caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf8a054b832b1accdfa8e1d63b2d971a10f244b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementazione dei provider di automazione interfaccia utente sul lato client
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Vengono usati più framework [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] diversi nei sistemi operativi [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , tra cui [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] espone informazioni sugli elementi dell'interfaccia utente ai client. Tuttavia, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è in grado di differenziare i vari tipi di controlli esistenti in tali framework e le tecniche necessarie per estrarre informazioni da essi. Queste attività vengono invece demandate a oggetti denominati provider. Un provider estrae le informazioni da un controllo specifico e inoltra tali informazioni a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], che quindi le visualizza al client in modo coerente.  
   
@@ -60,5 +61,5 @@ ms.lasthandoff: 11/21/2017
  Gli ultimi due parametri sono facoltativi. Il client può specificare il nome dell'immagine dell'applicazione di destinazione quando desidera usare provider diversi per applicazioni diverse. Ad esempio, il client potrebbe usare un provider per un controllo visualizzazione elenco [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] in un'applicazione nota che supporta il pattern MultipleView e un altro per un controllo simile in un'altra applicazione nota che non lo supporta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare un Provider di automazione interfaccia utente lato Client](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementare il provider di automazione interfaccia utente in un'applicazione Client](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Creare un provider di automazione interfaccia utente lato client](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
+ [Implementare provider di automazione interfaccia utente in un'applicazione client](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

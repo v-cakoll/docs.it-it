@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5eb97ea9db0fa7132b1ed4320bf73d124452c201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e la serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -62,7 +63,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
  [!INCLUDE[crexample](../../../../includes/crexample-md.md)]un servizio dati che utilizza il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere il post [serie Provider di flusso di dati Services: implementazione di un Provider di flusso (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
- **Provider di Reflection**  
+ **Provider di reflection**  
  Per indicare che un'entità è un elemento entry di collegamento multimediale, aggiungere <xref:System.Data.Services.Common.HasStreamAttribute> alla classe che definisce il tipo di entità nel provider di reflection.  
   
  **Provider del servizio dati personalizzato**  

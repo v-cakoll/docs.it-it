@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4304a8928b2fe768f20b2ff0bde94921565155ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a249277a82a1b234f83e2fe17510e997425f278
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-server-socket-example"></a>Esempio di socket server sincrono
 Il programma di esempio seguente crea un server che riceve le richieste di connessione dai client. Il server viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione server viene sospesa durante l'attesa di una connessione da un client. L'applicazione riceve una stringa dal client, visualizza la stringa nella console e quindi la restituisce al client. La stringa del client deve contenere la stringa "\<EOF>" per segnalare la fine del messaggio.  
@@ -168,5 +169,5 @@ public class SynchronousSocketListener {
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di socket client sincrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- [Uso di un Socket Server sincroni](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)

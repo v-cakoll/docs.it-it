@@ -17,21 +17,22 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 10af8087eb72577dfabef261544cb2363ba17a0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9960c55e5a47271c0d7091deb61a29daa9ae3433
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Argomenti sulle procedure relative ai pattern di controllo supportati dell'automazione interfaccia utente
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Questa sezione contiene informazioni dettagliate sull'implementazione dei pattern di controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Ottenere pattern di controllo di automazione interfaccia utente supportate](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Ottenere lo stato di attivazione/disattivazione di una casella di controllo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Richiamare un controllo utilizzando automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Esporre il contenuto di una tabella usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Ottenere pattern di controllo supportati per automazione interfaccia utente](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [Ottenere lo stato di attivo/non attivo di una casella di controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Richiamare un controllo usando l'automazione interfaccia utente](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [Spostare un elemento di automazione interfaccia utente](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

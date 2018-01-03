@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6276f2dc2bd57dc3eaf81eb2949e3c1ea3727e69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie a collegamento dinamico (DLL), come quelle nell'API Win32. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità. Per altre informazioni su questo servizio, vedere [Informazioni dettagliate su platform invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
@@ -60,7 +61,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
  Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Informazioni dettagliate su platform invoke  
- Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione. Nell'illustrazione seguente viene mostrato questo processo.  
+ Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione. Nella figura seguente viene illustrato questo processo.  
   
  ![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
 Chiamata di platform invoke a una funzione DLL non gestita  

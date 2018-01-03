@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocollo PNRP (Peer Name Resolution Protocol)
 Negli ambienti peer-to-peer, i peer usano sistemi di risoluzione dei nomi specifici per dedurre l'ubicazione di rete reciproca (indirizzi, protocolli e porte) dai nomi o altri tipi di identificatori. Nel passato, la risoluzione dei nomi peer era complicata dalla transitorietà intrinseca della connettività e da altri inconvenienti nel sistema DNS (Domain Name System).  

@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>Uso di un socket client sincrono
 Un socket client sincrono sospende il programma dell'applicazione in attesa del completamento dell'operazione di rete. I socket sincroni non sono adatti per le applicazioni che fanno un uso massiccio della rete per le loro operazioni, ma consentono di abilitare l'accesso semplice ai servizi di rete per altre applicazioni.  
@@ -80,6 +81,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di un Socket Client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Esempio di socket client sincrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

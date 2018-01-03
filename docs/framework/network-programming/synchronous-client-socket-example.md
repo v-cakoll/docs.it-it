@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-client-socket-example"></a>Esempio di socket client sincrono
 Il programma di esempio seguente crea un client che si connette a un server. Il client viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione client viene sospesa fino a quando il server non restituisce una risposta. L'applicazione invia una stringa al server e quindi visualizza la stringa restituita dal server nella console.  
@@ -146,5 +147,5 @@ public class SynchronousSocketClient {
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di socket server sincrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [Uso di un Socket Client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
  [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)

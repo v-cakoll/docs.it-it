@@ -17,15 +17,16 @@ caps.latest.revision: "39"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 079a778a3518e6632f429a261ee229db0b46d9b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03ebb5a8193d3376d40fa830f13ab9324846ba2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.  
   
@@ -180,11 +181,11 @@ ms.lasthandoff: 11/21/2017
  A tale scopo, il provider di radice del frammento per il controllo Rebar espone un set di elementi figlio che rappresentano le bande. A ogni banda corrisponde un unico provider che può esporre proprietà e pattern. Nella sua implementazione di <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, il provider di bande restituisce il provider di finestra predefinito per il controllo HWND, ottenuto chiamando <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>e passando l'handle della finestra del controllo. Infine, il provider di radice del frammento per il controllo Rebar implementa l'interfaccia <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> e nella sua implementazione di <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> restituisce il provider di bande appropriato per il controllo contenuto nell'HWND specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sui provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Esporre un Provider di automazione interfaccia utente lato Server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Restituire proprietà da un Provider di automazione interfaccia utente](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Generazione di eventi da un Provider di automazione interfaccia utente](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Abilitare la navigazione in un Provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Supportare pattern di controllo in un Provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Panoramica dei provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [Esporre un provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
+ [Restituire proprietà da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [Generare eventi da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
+ [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Esempio di un Provider semplice](http://msdn.microsoft.com/en-us/c10a6255-e8dc-494b-a051-15111b47984a)  
  [Esempio di Provider di frammenti](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

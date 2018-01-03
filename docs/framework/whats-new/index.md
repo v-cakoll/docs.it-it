@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -103,7 +103,7 @@ A partire da .NET Framework versione 4.7.1, sono supportati i file PDB portatili
 È possibile determinare in fase di esecuzione se i file PDB portatili sono supportati nell'implementazione .NET corrente passando la stringa "PortablePdb" al metodo <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> prima di emettere l'assembly.  
  
 <a name="net471"/>
-#### <a name="networking"></a>Rete
+#### <a name="networking"></a>Servizi di rete
 
 **Supporto di SHA-2 per Message.HashAlgorithm**
 
@@ -168,7 +168,7 @@ In .NET Framework 4.7, sono stati aggiunti i metodi `ImportParameters(ECParamete
 In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializza i caratteri di controllo in conformità con lo standard ECMAScript 6. Questo comportamento è abilitato per impostazione predefinita per le applicazioni che utilizzano .NET Framework 4.7 ed è una funzionalità che prevede il consenso esplicito per le applicazioni che sono in esecuzione con .NET Framework 4.7, ma sono destinate a una versione precedente di .NET Framework. Per altre informazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
-#### <a name="networking"></a>Rete
+#### <a name="networking"></a>Servizi di rete
 
 .NET Framework 4.7 aggiunge la seguente funzionalità relativa alla rete:
 
@@ -301,7 +301,7 @@ End Class
 
  È quindi possibile creare il file di risorse DataAnnotation.Localization.fr.resx, la cui chiave è la stringa del messaggio di errore e il cui valore è il messaggio di errore localizzato. Il file deve essere salvato nella cartella `App.LocalResources`. Ad esempio, di seguito vengono riportati la chiave e il relativo valore in un messaggio di errore in lingua francese (fr):
 
-| Nome                                 | Valore                                     |
+| nome                                 | Valore                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La classificazione deve essere compresa tra 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -777,7 +777,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 ### <a name="native-image-generator-ngen-pdbs"></a>PDB del generatore di immagini native (NGEN)
  La traccia eventi tra computer consente ai clienti di profilare un programma sul Computer A e osservare i dati di profilatura con mapping della riga di origine sul Computer B. Nelle versioni precedenti di .NET Framework, l'utente copiava tutti i moduli e le immagini native dalla macchina profilata alla macchina di analisi contenente il PDB IL per creare il mapping sorgente-nativo. Anche se questo processo può funzionare bene quando i file sono relativamente piccoli, ad esempio per le applicazioni telefoniche, i file possono avere dimensioni molto grandi sui sistemi desktop e la copia può richiedere molto tempo.
 
- Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo senza una dipendenza dal PDB IL. In questo scenario di traccia eventi in più computer, è sufficiente copiare il PDB di immagine nativa generato dal Computer A nel Computer B e usare le [API di accesso all'interfaccia di debug](https://msdn.microsoft.com/library/ee8x173s.aspx) per leggere il mapping da codice sorgente a codice IL del PDB IL e il mapping da codice IL a codice nativo del PDB di immagine nativa. La combinazione di entrambi i mapping fornisce un mapping da codice sorgente a codice nativo. Poiché il PDB di immagine nativa è molto più piccolo rispetto a tutti i moduli e alle immagini native, il processo di copia dal Computer A al Computer B è molto più veloce.
+ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo senza una dipendenza dal PDB IL. In questo scenario di traccia eventi in più computer, è sufficiente copiare il PDB di immagine nativa generato dal Computer A nel Computer B e usare le [API di accesso all'interfaccia di debug](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) per leggere il mapping da codice sorgente a codice IL del PDB IL e il mapping da codice IL a codice nativo del PDB di immagine nativa. La combinazione di entrambi i mapping fornisce un mapping da codice sorgente a codice nativo. Poiché il PDB di immagine nativa è molto più piccolo rispetto a tutti i moduli e alle immagini native, il processo di copia dal Computer A al Computer B è molto più veloce.
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>Novità di .NET 2015
@@ -1312,7 +1312,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 - [ASP.NET 4.5.1 e Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=309094) nel sito Web ASP.NET.
 
 <a name="networking"></a> 
-### <a name="networking"></a>Rete
+### <a name="networking"></a>Servizi di rete
  In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] viene fornita una nuova interfaccia di programmazione per applicazioni HTTP. Per altre informazioni, vedere i nuovi spazi dei nomi <xref:System.Net.Http?displayProperty=nameWithType> e <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
  È inoltre incluso il supporto per una nuova interfaccia di programmazione per l'accettazione e l'interazione con una connessione WebSocket usando l'oggetto <xref:System.Net.HttpListener> esistente e le classi correlate. Per altre informazioni, vedere il nuovo spazio dei nomi <xref:System.Net.WebSockets> e la classe <xref:System.Net.HttpListener>.

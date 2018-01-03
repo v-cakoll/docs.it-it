@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 Durante il marshalling il gestore di marshalling di interoperabilità può copiare o bloccare i dati interessati. Tramite l'operazione di copia, una copia dei dati viene spostata da una posizione della memoria a un'altra. La figura seguente illustra le differenze esistenti tra la copia di un tipo valore e quella di un tipo passato per riferimento dalla memoria gestita a quella non gestita.  

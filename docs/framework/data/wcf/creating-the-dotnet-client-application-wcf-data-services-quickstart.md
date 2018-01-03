@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 25a6666127d16a8245093bdf11ae7d0e76fc8365
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Creazione dell'applicazione client .NET Framework (Guida rapida di WCF Data Services)
 Questo è l'attività finale del [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] avvio rapido. In questa attività verrà aggiunta un'applicazione console alla soluzione, aggiungere un riferimento al [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in questa nuova applicazione client e accesso di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed dall'applicazione client utilizzando le classi del servizio dati client generate e client librerie.  
