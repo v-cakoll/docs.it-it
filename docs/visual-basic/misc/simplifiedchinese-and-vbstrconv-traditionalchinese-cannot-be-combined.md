@@ -9,20 +9,20 @@ ms.assetid: d8e6a11b-f549-43b5-8337-0594340e1325
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 602f375eece2d79eb2f839b220b7774ebc3a847e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fd6006fd346b0fe43958bfb6806759a3bcfb0f1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a><span data-ttu-id="ad6cf-102">SimplifiedChinese e VbStrConv.TraditionalChinese non possono essere combinati</span><span class="sxs-lookup"><span data-stu-id="ad6cf-102">SimplifiedChinese and VbStrConv.TraditionalChinese cannot be combined</span></span>
-<span data-ttu-id="ad6cf-103">L'applicazione sta tentando di combinare i membri `VbStrConv` e `SimplifiedChinese` dell'enumerazione `TraditionalChinese`, che si escludono reciprocamente.</span><span class="sxs-lookup"><span data-stu-id="ad6cf-103">Your application is attempting to combine the `VbStrConv` enumeration members `SimplifiedChinese` and `TraditionalChinese`, which are mutually exclusive.</span></span>  
+# <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a><span data-ttu-id="e1e73-102">SimplifiedChinese e VbStrConv.TraditionalChinese non possono essere combinati</span><span class="sxs-lookup"><span data-stu-id="e1e73-102">SimplifiedChinese and VbStrConv.TraditionalChinese cannot be combined</span></span>
+<span data-ttu-id="e1e73-103">L'applicazione sta tentando di combinare i membri `VbStrConv` e `SimplifiedChinese` dell'enumerazione `TraditionalChinese`, che si escludono reciprocamente.</span><span class="sxs-lookup"><span data-stu-id="e1e73-103">Your application is attempting to combine the `VbStrConv` enumeration members `SimplifiedChinese` and `TraditionalChinese`, which are mutually exclusive.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ad6cf-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="ad6cf-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e1e73-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="e1e73-104">To correct this error</span></span>  
   
--   <span data-ttu-id="ad6cf-105">Rimuovere `VbStrConv.SimplifiedChinese` o `VbStrConv.TraditionalChinese`.</span><span class="sxs-lookup"><span data-stu-id="ad6cf-105">Remove either `VbStrConv.SimplifiedChinese` or `VbStrConv.TraditionalChinese`.</span></span>  
+-   <span data-ttu-id="e1e73-105">Rimuovere `VbStrConv.SimplifiedChinese` o `VbStrConv.TraditionalChinese`.</span><span class="sxs-lookup"><span data-stu-id="e1e73-105">Remove either `VbStrConv.SimplifiedChinese` or `VbStrConv.TraditionalChinese`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad6cf-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad6cf-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e1e73-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1e73-106">See Also</span></span>  
  <xref:System.Globalization>  
- [<span data-ttu-id="ad6cf-107">NOTINBUILD Enumerazione VbStrConv</span><span class="sxs-lookup"><span data-stu-id="ad6cf-107">NOTINBUILD VbStrConv Enumeration</span></span>](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)  
- [<span data-ttu-id="ad6cf-108">Introduzione alle applicazioni internazionali basate su .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ad6cf-108">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+   
+ [<span data-ttu-id="e1e73-107">Introduzione alle applicazioni internazionali basate su .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e1e73-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

@@ -16,51 +16,52 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8f791bdca34c49bf925af029d67883dbb49fc3b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6496d628538caa6cd0af328e6594f8453b40afb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a><span data-ttu-id="b9960-102">Esempi di sintassi di query basate sul metodo: ordinamento (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="b9960-102">Method-Based Query Syntax Examples: Ordering (LINQ to DataSet)</span></span>
-<span data-ttu-id="b9960-103">Negli esempi di questo argomento viene illustrato come usare i metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati usando la sintassi delle query basate su metodo.</span><span class="sxs-lookup"><span data-stu-id="b9960-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.OrderBy%2A>,  <xref:System.Linq.Enumerable.Reverse%2A>, and <xref:System.Linq.Enumerable.ThenBy%2A> methods to query a <xref:System.Data.DataSet> and order the results using the method query syntax.</span></span>  
+# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a><span data-ttu-id="2691d-102">Esempi di sintassi di query basate sul metodo: ordinamento (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="2691d-102">Method-Based Query Syntax Examples: Ordering (LINQ to DataSet)</span></span>
+<span data-ttu-id="2691d-103">Negli esempi di questo argomento viene illustrato come usare i metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati usando la sintassi delle query basate su metodo.</span><span class="sxs-lookup"><span data-stu-id="2691d-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.OrderBy%2A>,  <xref:System.Linq.Enumerable.Reverse%2A>, and <xref:System.Linq.Enumerable.ThenBy%2A> methods to query a <xref:System.Data.DataSet> and order the results using the method query syntax.</span></span>  
   
- <span data-ttu-id="b9960-104">Il `FillDataSet` metodo usato in questi esempi è specificato nel [durante il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="b9960-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="2691d-104">Il `FillDataSet` metodo usato in questi esempi è specificato nel [durante il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="2691d-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="b9960-105">Negli esempi di questo argomento vengono usate le tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="b9960-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="2691d-105">Negli esempi di questo argomento vengono usate le tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="2691d-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="b9960-106">Gli esempi in questo argomento usano seguenti `using` / `Imports` istruzioni:</span><span class="sxs-lookup"><span data-stu-id="b9960-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="2691d-106">Gli esempi in questo argomento usano seguenti `using` / `Imports` istruzioni:</span><span class="sxs-lookup"><span data-stu-id="2691d-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="b9960-107">Per ulteriori informazioni, vedere [procedura: creare un LINQ to DataSet progetto In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="b9960-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="2691d-107">Per ulteriori informazioni, vedere [procedura: creare un LINQ to DataSet progetto In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="2691d-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="orderby"></a><span data-ttu-id="b9960-108">OrderBy</span><span class="sxs-lookup"><span data-stu-id="b9960-108">OrderBy</span></span>  
+## <a name="orderby"></a><span data-ttu-id="2691d-108">OrderBy</span><span class="sxs-lookup"><span data-stu-id="2691d-108">OrderBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b9960-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="b9960-109">Example</span></span>  
- <span data-ttu-id="b9960-110">In questo esempio viene usato il metodo <xref:System.Linq.Enumerable.OrderBy%2A> con un operatore di confronto personalizzato per ordinare i cognomi senza distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="b9960-110">This example uses the <xref:System.Linq.Enumerable.OrderBy%2A> method with a custom comparer to do a case-insensitive sort of last names.</span></span>  
+### <a name="example"></a><span data-ttu-id="2691d-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="2691d-109">Example</span></span>  
+ <span data-ttu-id="2691d-110">In questo esempio viene usato il metodo <xref:System.Linq.Enumerable.OrderBy%2A> con un operatore di confronto personalizzato per ordinare i cognomi senza distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="2691d-110">This example uses the <xref:System.Linq.Enumerable.OrderBy%2A> method with a custom comparer to do a case-insensitive sort of last names.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#OrderByComparer_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#orderbycomparer_mq)]
  [!code-vb[DP LINQ to DataSet Examples#OrderByComparer_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#orderbycomparer_mq)]  
   
-## <a name="reverse"></a><span data-ttu-id="b9960-111">Reverse</span><span class="sxs-lookup"><span data-stu-id="b9960-111">Reverse</span></span>  
+## <a name="reverse"></a><span data-ttu-id="2691d-111">Reverse</span><span class="sxs-lookup"><span data-stu-id="2691d-111">Reverse</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b9960-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="b9960-112">Example</span></span>  
- <span data-ttu-id="b9960-113">In questo esempio viene usato il metodo <xref:System.Linq.Enumerable.Reverse%2A> per creare un elenco di ordini in cui il valore di `OrderDate` è precedente al 20 febbraio 2002.</span><span class="sxs-lookup"><span data-stu-id="b9960-113">This example uses the <xref:System.Linq.Enumerable.Reverse%2A> method to create a list of orders where `OrderDate` is earlier than Feb 20, 2002.</span></span>  
+### <a name="example"></a><span data-ttu-id="2691d-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="2691d-112">Example</span></span>  
+ <span data-ttu-id="2691d-113">In questo esempio viene usato il metodo <xref:System.Linq.Enumerable.Reverse%2A> per creare un elenco di ordini in cui il valore di `OrderDate` è precedente al 20 febbraio 2002.</span><span class="sxs-lookup"><span data-stu-id="2691d-113">This example uses the <xref:System.Linq.Enumerable.Reverse%2A> method to create a list of orders where `OrderDate` is earlier than Feb 20, 2002.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Reverse](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#reverse)]
  [!code-vb[DP LINQ to DataSet Examples#Reverse](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#reverse)]  
   
-## <a name="thenby"></a><span data-ttu-id="b9960-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="b9960-114">ThenBy</span></span>  
+## <a name="thenby"></a><span data-ttu-id="2691d-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="2691d-114">ThenBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b9960-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="b9960-115">Example</span></span>  
- <span data-ttu-id="b9960-116">In questo esempio vengono usati i metodi <xref:System.Linq.Enumerable.OrderBy%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> con un operatore di confronto personalizzato per ordinare prima in base al prezzo di listino e quindi applicare l'ordinamento discendente e senza distinzione tra maiuscole e minuscole ai nomi di prodotto.</span><span class="sxs-lookup"><span data-stu-id="b9960-116">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.ThenBy%2A> methods with a custom comparer to first sort by list price, and then perform a case-insensitive descending sort of the product names.</span></span>  
+### <a name="example"></a><span data-ttu-id="2691d-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="2691d-115">Example</span></span>  
+ <span data-ttu-id="2691d-116">In questo esempio vengono usati i metodi <xref:System.Linq.Enumerable.OrderBy%2A> e <xref:System.Linq.Enumerable.ThenBy%2A> con un operatore di confronto personalizzato per ordinare prima in base al prezzo di listino e quindi applicare l'ordinamento discendente e senza distinzione tra maiuscole e minuscole ai nomi di prodotto.</span><span class="sxs-lookup"><span data-stu-id="2691d-116">This example uses <xref:System.Linq.Enumerable.OrderBy%2A> and <xref:System.Linq.Enumerable.ThenBy%2A> methods with a custom comparer to first sort by list price, and then perform a case-insensitive descending sort of the product names.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ThenByDescendingComparer_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#thenbydescendingcomparer_mq)]
  [!code-vb[DP LINQ to DataSet Examples#ThenByDescendingComparer_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#thenbydescendingcomparer_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="b9960-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b9960-117">See Also</span></span>  
- [<span data-ttu-id="b9960-118">Caricamento di dati in un set di dati</span><span class="sxs-lookup"><span data-stu-id="b9960-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="b9960-119">LINQ to DataSet esempi</span><span class="sxs-lookup"><span data-stu-id="b9960-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="b9960-120">Cenni preliminari sugli operatori di query standard</span><span class="sxs-lookup"><span data-stu-id="b9960-120">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="2691d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2691d-117">See Also</span></span>  
+ [<span data-ttu-id="2691d-118">Caricamento di dati in un oggetto DataSet</span><span class="sxs-lookup"><span data-stu-id="2691d-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="2691d-119">Esempi di LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="2691d-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="2691d-120">Cenni preliminari sugli operatori di query standard</span><span class="sxs-lookup"><span data-stu-id="2691d-120">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

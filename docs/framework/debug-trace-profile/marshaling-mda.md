@@ -18,28 +18,29 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3f92e849798f03702ca9a5eab3120067a651c999
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83b621f78e3ba4641540f6125ed14d600cc292d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="marshaling-mda"></a><span data-ttu-id="f6ee2-102">MDA marshalling</span><span class="sxs-lookup"><span data-stu-id="f6ee2-102">marshaling MDA</span></span>
-<span data-ttu-id="f6ee2-103">L'assistente al debug gestito `marshaling` viene attivato quando CLR configura le informazioni di marshalling per un parametro di un metodo o un campo di una struttura.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-103">The `marshaling` managed debugging assistant (MDA) is activated when the CLR sets up marshaling information for a method parameter or a field of a structure.</span></span> <span data-ttu-id="f6ee2-104">Questo assistente al debug gestito non funziona per gli assembly con compilazione JIT.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-104">This MDA does not work for JIT-compiled assemblies.</span></span>  
+# <a name="marshaling-mda"></a><span data-ttu-id="6bb13-102">MDA marshalling</span><span class="sxs-lookup"><span data-stu-id="6bb13-102">marshaling MDA</span></span>
+<span data-ttu-id="6bb13-103">L'assistente al debug gestito `marshaling` viene attivato quando CLR configura le informazioni di marshalling per un parametro di un metodo o un campo di una struttura.</span><span class="sxs-lookup"><span data-stu-id="6bb13-103">The `marshaling` managed debugging assistant (MDA) is activated when the CLR sets up marshaling information for a method parameter or a field of a structure.</span></span> <span data-ttu-id="6bb13-104">Questo assistente al debug gestito non funziona per gli assembly con compilazione JIT.</span><span class="sxs-lookup"><span data-stu-id="6bb13-104">This MDA does not work for JIT-compiled assemblies.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="f6ee2-105">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="f6ee2-105">Effect on the Runtime</span></span>  
- <span data-ttu-id="f6ee2-106">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-106">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="6bb13-105">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="6bb13-105">Effect on the Runtime</span></span>  
+ <span data-ttu-id="6bb13-106">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="6bb13-106">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="f6ee2-107">Output</span><span class="sxs-lookup"><span data-stu-id="f6ee2-107">Output</span></span>  
- <span data-ttu-id="f6ee2-108">L'assistente al debug gestito visualizza il tipo del parametro o del campo nei contesti gestiti e non gestiti e la struttura o il metodo contenente il tipo.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-108">The MDA displays the type of the parameter or field in the managed and unmanaged contexts, and the structure or method containing the type.</span></span>  <span data-ttu-id="f6ee2-109">Di seguito viene riportato un esempio di output per un campo.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-109">The following is an example of the output for a field:</span></span>  
+## <a name="output"></a><span data-ttu-id="6bb13-107">Output</span><span class="sxs-lookup"><span data-stu-id="6bb13-107">Output</span></span>  
+ <span data-ttu-id="6bb13-108">L'assistente al debug gestito visualizza il tipo del parametro o del campo nei contesti gestiti e non gestiti e la struttura o il metodo contenente il tipo.</span><span class="sxs-lookup"><span data-stu-id="6bb13-108">The MDA displays the type of the parameter or field in the managed and unmanaged contexts, and the structure or method containing the type.</span></span>  <span data-ttu-id="6bb13-109">Di seguito viene riportato un esempio di output per un campo.</span><span class="sxs-lookup"><span data-stu-id="6bb13-109">The following is an example of the output for a field:</span></span>  
   
 ```  
 Marshaling from 'Char' to 'ANSI char'  
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="f6ee2-110">Configurazione</span><span class="sxs-lookup"><span data-stu-id="f6ee2-110">Configuration</span></span>  
- <span data-ttu-id="f6ee2-111">La configurazione dell'assistente al debug gestito consente di filtrare le informazioni di marshalling restituite in base ai nomi dei campi o dei metodi coinvolti.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-111">The MDA configuration allows you to filter the reported marshaling information based on the involved field or method names.</span></span>  <span data-ttu-id="f6ee2-112">Il seguente esempio mostra l'uso degli elementi `methodFilter`, `fieldFilter`e `match` per specificare i filtri.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-112">The following example shows the use of the `methodFilter`, `fieldFilter`, and `match` elements to specify filters.</span></span>  <span data-ttu-id="f6ee2-113">Impostando l'attributo `name` su un asterisco (*), tutti gli elementi corrisponderanno.</span><span class="sxs-lookup"><span data-stu-id="f6ee2-113">Setting the `name` attribute to an asterisk (*) will match everything.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="6bb13-110">Configurazione</span><span class="sxs-lookup"><span data-stu-id="6bb13-110">Configuration</span></span>  
+ <span data-ttu-id="6bb13-111">La configurazione dell'assistente al debug gestito consente di filtrare le informazioni di marshalling restituite in base ai nomi dei campi o dei metodi coinvolti.</span><span class="sxs-lookup"><span data-stu-id="6bb13-111">The MDA configuration allows you to filter the reported marshaling information based on the involved field or method names.</span></span>  <span data-ttu-id="6bb13-112">Il seguente esempio mostra l'uso degli elementi `methodFilter`, `fieldFilter`e `match` per specificare i filtri.</span><span class="sxs-lookup"><span data-stu-id="6bb13-112">The following example shows the use of the `methodFilter`, `fieldFilter`, and `match` elements to specify filters.</span></span>  <span data-ttu-id="6bb13-113">Impostando l'attributo `name` su un asterisco (*), tutti gli elementi corrisponderanno.</span><span class="sxs-lookup"><span data-stu-id="6bb13-113">Setting the `name` attribute to an asterisk (*) will match everything.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -58,7 +59,7 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f6ee2-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f6ee2-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6bb13-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6bb13-114">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="f6ee2-115">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="f6ee2-115">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="f6ee2-116">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="f6ee2-116">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="6bb13-115">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="6bb13-115">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="6bb13-116">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="6bb13-116">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae6f7827b7206544ff7547cc04f44b7cda34bef8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dacf3518f77067a34b0da3a8e6438b813fca3912
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="inferring-tables"></a><span data-ttu-id="801aa-102">Deduzione di tabelle</span><span class="sxs-lookup"><span data-stu-id="801aa-102">Inferring Tables</span></span>
-<span data-ttu-id="801aa-103">Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle.</span><span class="sxs-lookup"><span data-stu-id="801aa-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="801aa-104">Le seguenti strutture XML come risultato una tabella per la **DataSet** schema:</span><span class="sxs-lookup"><span data-stu-id="801aa-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  
+# <a name="inferring-tables"></a><span data-ttu-id="25858-102">Deduzione di tabelle</span><span class="sxs-lookup"><span data-stu-id="25858-102">Inferring Tables</span></span>
+<span data-ttu-id="25858-103">Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle.</span><span class="sxs-lookup"><span data-stu-id="25858-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="25858-104">Le seguenti strutture XML come risultato una tabella per la **DataSet** schema:</span><span class="sxs-lookup"><span data-stu-id="25858-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  
   
--   <span data-ttu-id="801aa-105">Elementi con attributi</span><span class="sxs-lookup"><span data-stu-id="801aa-105">Elements with attributes</span></span>  
+-   <span data-ttu-id="25858-105">Elementi con attributi</span><span class="sxs-lookup"><span data-stu-id="25858-105">Elements with attributes</span></span>  
   
--   <span data-ttu-id="801aa-106">Elementi con elementi figlio</span><span class="sxs-lookup"><span data-stu-id="801aa-106">Elements with child elements</span></span>  
+-   <span data-ttu-id="25858-106">Elementi con elementi figlio</span><span class="sxs-lookup"><span data-stu-id="25858-106">Elements with child elements</span></span>  
   
--   <span data-ttu-id="801aa-107">Elementi ripetuti</span><span class="sxs-lookup"><span data-stu-id="801aa-107">Repeating elements</span></span>  
+-   <span data-ttu-id="25858-107">Elementi ripetuti</span><span class="sxs-lookup"><span data-stu-id="25858-107">Repeating elements</span></span>  
   
-## <a name="elements-with-attributes"></a><span data-ttu-id="801aa-108">Elementi con attributi</span><span class="sxs-lookup"><span data-stu-id="801aa-108">Elements with Attributes</span></span>  
- <span data-ttu-id="801aa-109">Gli elementi in cui sono stati specificati degli attributi daranno come risultato delle tabelle inferite.</span><span class="sxs-lookup"><span data-stu-id="801aa-109">Elements that have attributes specified in them result in inferred tables.</span></span> <span data-ttu-id="801aa-110">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="801aa-110">For example, consider the following XML:</span></span>  
+## <a name="elements-with-attributes"></a><span data-ttu-id="25858-108">Elementi con attributi</span><span class="sxs-lookup"><span data-stu-id="25858-108">Elements with Attributes</span></span>  
+ <span data-ttu-id="25858-109">Gli elementi in cui sono stati specificati degli attributi daranno come risultato delle tabelle inferite.</span><span class="sxs-lookup"><span data-stu-id="25858-109">Elements that have attributes specified in them result in inferred tables.</span></span> <span data-ttu-id="25858-110">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="25858-110">For example, consider the following XML:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -38,19 +39,19 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="801aa-111">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="801aa-111">The inference process produces a table named "Element1."</span></span>  
+ <span data-ttu-id="25858-111">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="25858-111">The inference process produces a table named "Element1."</span></span>  
   
- <span data-ttu-id="801aa-112">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="801aa-112">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="25858-112">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="25858-112">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="801aa-113">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="801aa-113">**Table:** Element1</span></span>  
+ <span data-ttu-id="25858-113">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="25858-113">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="801aa-114">attr1</span><span class="sxs-lookup"><span data-stu-id="801aa-114">attr1</span></span>|<span data-ttu-id="801aa-115">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="801aa-115">Element1_Text</span></span>|  
+|<span data-ttu-id="25858-114">attr1</span><span class="sxs-lookup"><span data-stu-id="25858-114">attr1</span></span>|<span data-ttu-id="25858-115">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="25858-115">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|<span data-ttu-id="801aa-116">value1</span><span class="sxs-lookup"><span data-stu-id="801aa-116">value1</span></span>||  
-|<span data-ttu-id="801aa-117">value2</span><span class="sxs-lookup"><span data-stu-id="801aa-117">value2</span></span>|<span data-ttu-id="801aa-118">Text1</span><span class="sxs-lookup"><span data-stu-id="801aa-118">Text1</span></span>|  
+|<span data-ttu-id="25858-116">value1</span><span class="sxs-lookup"><span data-stu-id="25858-116">value1</span></span>||  
+|<span data-ttu-id="25858-117">value2</span><span class="sxs-lookup"><span data-stu-id="25858-117">value2</span></span>|<span data-ttu-id="25858-118">Text1</span><span class="sxs-lookup"><span data-stu-id="25858-118">Text1</span></span>|  
   
-## <a name="elements-with-child-elements"></a><span data-ttu-id="801aa-119">Elementi con elementi figlio</span><span class="sxs-lookup"><span data-stu-id="801aa-119">Elements with Child Elements</span></span>  
- <span data-ttu-id="801aa-120">Gli elementi a cui sono associati elementi figlio daranno come risultato delle tabelle inferite.</span><span class="sxs-lookup"><span data-stu-id="801aa-120">Elements that have child elements result in inferred tables.</span></span> <span data-ttu-id="801aa-121">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="801aa-121">For example, consider the following XML:</span></span>  
+## <a name="elements-with-child-elements"></a><span data-ttu-id="25858-119">Elementi con elementi figlio</span><span class="sxs-lookup"><span data-stu-id="25858-119">Elements with Child Elements</span></span>  
+ <span data-ttu-id="25858-120">Gli elementi a cui sono associati elementi figlio daranno come risultato delle tabelle inferite.</span><span class="sxs-lookup"><span data-stu-id="25858-120">Elements that have child elements result in inferred tables.</span></span> <span data-ttu-id="25858-121">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="25858-121">For example, consider the following XML:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -60,17 +61,17 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="801aa-122">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="801aa-122">The inference process produces a table named "Element1."</span></span>  
+ <span data-ttu-id="25858-122">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="25858-122">The inference process produces a table named "Element1."</span></span>  
   
- <span data-ttu-id="801aa-123">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="801aa-123">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="25858-123">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="25858-123">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="801aa-124">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="801aa-124">**Table:** Element1</span></span>  
+ <span data-ttu-id="25858-124">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="25858-124">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="801aa-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="801aa-125">ChildElement1</span></span>|  
+|<span data-ttu-id="25858-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="25858-125">ChildElement1</span></span>|  
 |-------------------|  
-|<span data-ttu-id="801aa-126">Text1</span><span class="sxs-lookup"><span data-stu-id="801aa-126">Text1</span></span>|  
+|<span data-ttu-id="25858-126">Text1</span><span class="sxs-lookup"><span data-stu-id="25858-126">Text1</span></span>|  
   
- <span data-ttu-id="801aa-127">L'elemento del documento, o elemento radice, dà come risultato una tabella inferita nel caso in cui a tale elemento siano associati attributi o elementi figlio che vengono inferiti come colonne.</span><span class="sxs-lookup"><span data-stu-id="801aa-127">The document, or root, element result in an inferred table if it has attributes or child elements that are inferred as columns.</span></span> <span data-ttu-id="801aa-128">Se l'elemento del documento dispone di alcun attributo e non gli elementi figlio da inferire come colonne, l'elemento viene inferito come un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="801aa-128">If the document element has no attributes and no child elements that would be inferred as columns, the element is inferred as a **DataSet**.</span></span> <span data-ttu-id="801aa-129">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="801aa-129">For example, consider the following XML:</span></span>  
+ <span data-ttu-id="25858-127">L'elemento del documento, o elemento radice, dà come risultato una tabella inferita nel caso in cui a tale elemento siano associati attributi o elementi figlio che vengono inferiti come colonne.</span><span class="sxs-lookup"><span data-stu-id="25858-127">The document, or root, element result in an inferred table if it has attributes or child elements that are inferred as columns.</span></span> <span data-ttu-id="25858-128">Se l'elemento del documento dispone di alcun attributo e non gli elementi figlio da inferire come colonne, l'elemento viene inferito come un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="25858-128">If the document element has no attributes and no child elements that would be inferred as columns, the element is inferred as a **DataSet**.</span></span> <span data-ttu-id="25858-129">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="25858-129">For example, consider the following XML:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -79,17 +80,17 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="801aa-130">Il processo di inferenza produce una tabella denominata "DocumentElement".</span><span class="sxs-lookup"><span data-stu-id="801aa-130">The inference process produces a table named "DocumentElement."</span></span>  
+ <span data-ttu-id="25858-130">Il processo di inferenza produce una tabella denominata "DocumentElement".</span><span class="sxs-lookup"><span data-stu-id="25858-130">The inference process produces a table named "DocumentElement."</span></span>  
   
- <span data-ttu-id="801aa-131">**Set di dati:** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="801aa-131">**DataSet:** NewDataSet</span></span>  
+ <span data-ttu-id="25858-131">**Set di dati:** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="25858-131">**DataSet:** NewDataSet</span></span>  
   
- <span data-ttu-id="801aa-132">**Tabella:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="801aa-132">**Table:** DocumentElement</span></span>  
+ <span data-ttu-id="25858-132">**Tabella:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="25858-132">**Table:** DocumentElement</span></span>  
   
-|<span data-ttu-id="801aa-133">Element1</span><span class="sxs-lookup"><span data-stu-id="801aa-133">Element1</span></span>|<span data-ttu-id="801aa-134">Element2</span><span class="sxs-lookup"><span data-stu-id="801aa-134">Element2</span></span>|  
+|<span data-ttu-id="25858-133">Element1</span><span class="sxs-lookup"><span data-stu-id="25858-133">Element1</span></span>|<span data-ttu-id="25858-134">Element2</span><span class="sxs-lookup"><span data-stu-id="25858-134">Element2</span></span>|  
 |--------------|--------------|  
-|<span data-ttu-id="801aa-135">Text1</span><span class="sxs-lookup"><span data-stu-id="801aa-135">Text1</span></span>|<span data-ttu-id="801aa-136">Text2</span><span class="sxs-lookup"><span data-stu-id="801aa-136">Text2</span></span>|  
+|<span data-ttu-id="25858-135">Text1</span><span class="sxs-lookup"><span data-stu-id="25858-135">Text1</span></span>|<span data-ttu-id="25858-136">Text2</span><span class="sxs-lookup"><span data-stu-id="25858-136">Text2</span></span>|  
   
- <span data-ttu-id="801aa-137">Si consideri in alternativa il seguente elemento XML:</span><span class="sxs-lookup"><span data-stu-id="801aa-137">Alternatively, consider the following XML:</span></span>  
+ <span data-ttu-id="25858-137">Si consideri in alternativa il seguente elemento XML:</span><span class="sxs-lookup"><span data-stu-id="25858-137">Alternatively, consider the following XML:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -97,18 +98,18 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="801aa-138">Il processo di inferenza produce una **DataSet** denominato "DocumentElement" contenente una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="801aa-138">The inference process produces a **DataSet** named "DocumentElement" that contains a table named "Element1."</span></span>  
+ <span data-ttu-id="25858-138">Il processo di inferenza produce una **DataSet** denominato "DocumentElement" contenente una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="25858-138">The inference process produces a **DataSet** named "DocumentElement" that contains a table named "Element1."</span></span>  
   
- <span data-ttu-id="801aa-139">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="801aa-139">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="25858-139">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="25858-139">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="801aa-140">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="801aa-140">**Table:** Element1</span></span>  
+ <span data-ttu-id="25858-140">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="25858-140">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="801aa-141">attr1</span><span class="sxs-lookup"><span data-stu-id="801aa-141">attr1</span></span>|<span data-ttu-id="801aa-142">attr2</span><span class="sxs-lookup"><span data-stu-id="801aa-142">attr2</span></span>|  
+|<span data-ttu-id="25858-141">attr1</span><span class="sxs-lookup"><span data-stu-id="25858-141">attr1</span></span>|<span data-ttu-id="25858-142">attr2</span><span class="sxs-lookup"><span data-stu-id="25858-142">attr2</span></span>|  
 |-----------|-----------|  
-|<span data-ttu-id="801aa-143">value1</span><span class="sxs-lookup"><span data-stu-id="801aa-143">value1</span></span>|<span data-ttu-id="801aa-144">value2</span><span class="sxs-lookup"><span data-stu-id="801aa-144">value2</span></span>|  
+|<span data-ttu-id="25858-143">value1</span><span class="sxs-lookup"><span data-stu-id="25858-143">value1</span></span>|<span data-ttu-id="25858-144">value2</span><span class="sxs-lookup"><span data-stu-id="25858-144">value2</span></span>|  
   
-## <a name="repeating-elements"></a><span data-ttu-id="801aa-145">Elementi ripetuti</span><span class="sxs-lookup"><span data-stu-id="801aa-145">Repeating Elements</span></span>  
- <span data-ttu-id="801aa-146">Gli elementi ripetuti danno come risultato una singola tabella inferita.</span><span class="sxs-lookup"><span data-stu-id="801aa-146">Elements that repeat result in a single inferred table.</span></span> <span data-ttu-id="801aa-147">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="801aa-147">For example, consider the following XML:</span></span>  
+## <a name="repeating-elements"></a><span data-ttu-id="25858-145">Elementi ripetuti</span><span class="sxs-lookup"><span data-stu-id="25858-145">Repeating Elements</span></span>  
+ <span data-ttu-id="25858-146">Gli elementi ripetuti danno come risultato una singola tabella inferita.</span><span class="sxs-lookup"><span data-stu-id="25858-146">Elements that repeat result in a single inferred table.</span></span> <span data-ttu-id="25858-147">Ad esempio, si consideri il seguente codice XML:</span><span class="sxs-lookup"><span data-stu-id="25858-147">For example, consider the following XML:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -117,21 +118,21 @@ ms.lasthandoff: 11/21/2017
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="801aa-148">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="801aa-148">The inference process produces a table named "Element1."</span></span>  
+ <span data-ttu-id="25858-148">Il processo di inferenza produce una tabella denominata "Element1".</span><span class="sxs-lookup"><span data-stu-id="25858-148">The inference process produces a table named "Element1."</span></span>  
   
- <span data-ttu-id="801aa-149">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="801aa-149">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="25858-149">**Set di dati:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="25858-149">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="801aa-150">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="801aa-150">**Table:** Element1</span></span>  
+ <span data-ttu-id="25858-150">**Tabella:** Element1</span><span class="sxs-lookup"><span data-stu-id="25858-150">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="801aa-151">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="801aa-151">Element1_Text</span></span>|  
+|<span data-ttu-id="25858-151">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="25858-151">Element1_Text</span></span>|  
 |--------------------|  
-|<span data-ttu-id="801aa-152">Text1</span><span class="sxs-lookup"><span data-stu-id="801aa-152">Text1</span></span>|  
-|<span data-ttu-id="801aa-153">Text2</span><span class="sxs-lookup"><span data-stu-id="801aa-153">Text2</span></span>|  
+|<span data-ttu-id="25858-152">Text1</span><span class="sxs-lookup"><span data-stu-id="25858-152">Text1</span></span>|  
+|<span data-ttu-id="25858-153">Text2</span><span class="sxs-lookup"><span data-stu-id="25858-153">Text2</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="801aa-154">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="801aa-154">See Also</span></span>  
- [<span data-ttu-id="801aa-155">Inferenza della struttura relazionale di DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="801aa-155">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [<span data-ttu-id="801aa-156">Caricamento di un DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="801aa-156">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [<span data-ttu-id="801aa-157">Il caricamento delle informazioni dello Schema di DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="801aa-157">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [<span data-ttu-id="801aa-158">Uso di XML in un set di dati</span><span class="sxs-lookup"><span data-stu-id="801aa-158">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [<span data-ttu-id="801aa-159">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="801aa-159">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="801aa-160">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="801aa-160">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="25858-154">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="25858-154">See Also</span></span>  
+ [<span data-ttu-id="25858-155">Deduzione della struttura relazionale di DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="25858-155">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="25858-156">Caricamento di un oggetto DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="25858-156">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="25858-157">Caricamento delle informazioni dello schema DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="25858-157">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="25858-158">Uso di XML in un set di dati</span><span class="sxs-lookup"><span data-stu-id="25858-158">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="25858-159">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="25858-159">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="25858-160">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="25858-160">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
