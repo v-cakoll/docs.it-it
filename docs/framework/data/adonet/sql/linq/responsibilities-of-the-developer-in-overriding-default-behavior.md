@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilità dello sviluppatore nell'override del comportamento predefinito
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]non impone i requisiti seguenti, ma il comportamento sarà indefinito se tali requisiti non vengono soddisfatti.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Infine, il metodo di override dovrebbe eseguire l'operazione specificata. La semantica di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operazioni, ad esempio il caricamento posticipato durante il caricamento, e <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) richiedono le sostituzioni per fornire il servizio specificato. Ad esempio, un override di caricamento che restituisce solo una raccolta vuota, senza controllare il contenuto nel database, causerà probabilmente la restituzione di dati incoerenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzazione di inserimento, aggiornamento ed eliminazione di operazioni](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

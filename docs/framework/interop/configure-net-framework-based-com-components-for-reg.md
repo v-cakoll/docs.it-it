@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -115,9 +116,9 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
     |Attributo|Descrizione|Obbligatorio|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identificatore che specifica la classe da attivare.|Sì|  
+    |`clsid`|Identificatore che specifica la classe da attivare.|Yes|  
     |`description`|Stringa contenente informazioni sul componente. Il valore predefinito è una stringa vuota.|No|  
-    |`name`|Stringa che rappresenta la classe gestita.|Sì|  
+    |`name`|Stringa che rappresenta la classe gestita.|Yes|  
     |`progid`|Identificatore da usare per l'attivazione con associazione tardiva.|No|  
     |`threadingModel`|Modello di threading COM. "Both" è il valore predefinito.|No|  
     |`runtimeVersion`|Specifica la versione di Common Language Runtime (CLR) da usare. Se questo attributo non viene specificato e CLR non è ancora stato caricato, il componente viene caricato con l'ultimo CLR installato prima della versione 4. Se si specifica v1.0.3705, v1.1.4322 o v2.0.50727, la versione esegue automaticamente il roll forward all'ultima versione di CLR installata prima della versione 4 (di solito v2.0.50727). Se è già stata caricata un'altra versione di CLR ed è possibile caricare la versione specificata side-by-side in-process, la versione specificata viene caricata; in caso contrario, viene usato il CLR caricato. Ciò potrebbe causare un errore di caricamento.|No|  

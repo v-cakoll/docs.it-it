@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbf25ae866b338d2f1ac0ea11570e0d535e9137c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-authentication"></a>Autenticazione Internet
 Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione client, inclusi i metodi di autenticazione Internet standard come l'autenticazione di base, digest, di negoziazione, NTLM e Kerberos, nonché metodi personalizzati che è possibile creare.  
@@ -49,6 +50,6 @@ Le classi <xref:System.Net> supportano svariati meccanismi di autenticazione cli
  Alcuni schemi di autenticazione possono autenticare un utente senza prima eseguire la richiesta di una risorsa. Un'applicazione può risparmiare tempo tramite la preautenticazione dell'utente con la risorsa, eliminando in questo modo almeno un round trip al server. In alternativa, l'applicazione può eseguire l'autenticazione durante l'avvio del programma per rispondere più rapidamente all'utente in seguito. Gli schemi di autenticazione che possono usare la preautenticazione impostano la proprietà <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> su **true**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Base e l'autenticazione Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Autenticazione di base e del digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [Autenticazione NTLM e Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)

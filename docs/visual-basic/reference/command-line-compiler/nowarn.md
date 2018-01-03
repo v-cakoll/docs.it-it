@@ -14,11 +14,11 @@ ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8da27ea2f9f0a4d370928d70cda1a796b822d97c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1eafe8d7ccd6f2c71b754dadc343518948e7146
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nowarn"></a>/nowarn
 Inibisce la capacità del compilatore di generare avvisi.  
@@ -33,7 +33,7 @@ Inibisce la capacità del compilatore di generare avvisi.
   
 |Termine|Definizione|  
 |---|---|  
-|`numberList`|Parametro facoltativo. Elenco delimitato da virgole dei numeri di ID di avviso che il compilatore deve eliminare. Se non viene specificato l'ID di avviso, tutti gli avvisi vengono soppressi.|  
+|`numberList`|Facoltativo. Elenco delimitato da virgole dei numeri di ID di avviso che il compilatore deve eliminare. Se non viene specificato l'ID di avviso, tutti gli avvisi vengono soppressi.|  
   
 ## <a name="remarks"></a>Note  
  Il `/nowarn` opzione, il compilatore di non generare avvisi. Per eliminare un singolo avviso, specificare l'ID di avviso per il `/nowarn` opzione dopo la virgola. Separare più numeri di avviso con virgole.  
@@ -44,7 +44,7 @@ Inibisce la capacità del compilatore di generare avvisi.
   
 |Per impostare /nowarn in Visual Studio ambiente di sviluppo integrato.|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Fare clic sulla scheda **Compila**.<br />3.  Selezionare il **Disabilita tutti gli avvisi** casella di controllo per disabilitare tutti gli avvisi.<br />     -oppure-<br />     Per disabilitare un avviso specifico, fare clic su **Nessuno** dall'elenco a discesa adiacente all'avviso.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Selezionare il **Disabilita tutti gli avvisi** casella di controllo per disabilitare tutti gli avvisi.<br />     -oppure-<br />     Per disabilitare un avviso specifico, fare clic su **Nessuno** dall'elenco a discesa adiacente all'avviso.|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e non vengono visualizzati tutti gli avvisi.  

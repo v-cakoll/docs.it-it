@@ -13,20 +13,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 98d21c38dde3e6dc7109bd331922bacab30529f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5204ceaf99d280ae1d26a896e5a66bfbf4de96dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-the-database"></a>Esecuzione di query sul database
 In questo gruppo di argomenti viene descritto come sviluppare ed eseguire query nei progetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: eseguire Query per informazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Procedura: eseguire una query per ottenere informazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
  Viene illustrato brevemente che le query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] corrispondono fondamentalmente alle query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] in generale.  
   
- [Procedura: recuperare le informazioni in sola lettura](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
+ [Procedura: recuperare informazioni in sola lettura](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
  Viene descritto come migliorare le prestazioni di esecuzione delle query quando non sono pianificate modifiche dei dati.  
   
  [Procedura: controllare la quantità di dati correlati recuperata](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)  
@@ -41,16 +42,16 @@ In questo gruppo di argomenti viene descritto come sviluppare ed eseguire query 
  [Procedura: eseguire direttamente query SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
  Viene descritto come inviare query usando il linguaggio SQL.  
   
- [Procedura: archiviare e riutilizzare le query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
+ [Procedura: archiviare e riutilizzare query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
  Viene descritto come compilare una query una volta e usarla quindi più volte con parametri diversi.  
   
- [Procedura: gestire le chiavi Composite nelle query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
+ [Procedura: gestire le chiavi composite nelle query](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
  Viene descritto come includere più di una colonna in una query in cui l'operatore accetta un solo argomento.  
   
  [Procedura: recuperare molti oggetti contemporaneamente](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-many-objects-at-once.md)  
  Viene descritto come usare <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
   
- [Procedura: filtro a livello di DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
+ [Procedura: filtrare a livello di DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
  Viene descritto un diverso utilizzo di <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
   
  [Esempi di query](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>Guida rapida (WCF Data Services)
 Questa Guida introduttiva per acquisire familiarità con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] attraverso una serie di attività che supportano gli argomenti di [Introduzione](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
@@ -41,10 +42,10 @@ Questa Guida introduttiva per acquisire familiarità con [!INCLUDE[ssAstoria](..
  [Creazione del servizio dati](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
  Definire l'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , definire il modello di dati, creare il servizio dati e abilitare l'accesso alle risorse.  
   
- [Accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Accesso al servizio da un Web browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
  Avviare il servizio da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e accedervi inviando richieste GET HTTP attraverso un browser al feed esposto.  
   
- [Creazione dell'applicazione Client di .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [Creazione dell'applicazione client .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
  Creare un'applicazione client [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] per usare il feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , associare dati a controlli Windows, modificare dati nei controlli associati e restituire quindi le modifiche al servizio dati.  
   
 > [!NOTE]

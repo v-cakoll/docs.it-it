@@ -14,16 +14,16 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
 Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. In questa sezione vengono illustrati alcuni dei problemi associati alla creazione e all'uso degli oggetti COM con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Offre una panoramica dell'interoperabilità COM.  
   
@@ -55,7 +55,7 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  Spiega come usare gli oggetti COM esistenti come base per i nuovi oggetti.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Interoperabilità con codice non gestito](../../../../docs/framework/interop/index.md)  
+ [Interoperabilità con codice non gestito](../../../framework/interop/index.md)  
  Descrive i servizi di interoperabilità forniti da Common Language Runtime.  
   
  [Esposizione di componenti COM a .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  [Esposizione di componenti .NET Framework a COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Descrive la preparazione e l'uso dei tipi gestiti da COM.  
   
- [Applicazione di attributi di interoperabilità](../../../../docs/framework/interop/applying-interop-attributes.md)  
+ [Applicazione di attributi di interoperabilità](../../../framework/interop/applying-interop-attributes.md)  
  Descrive gli attributi che è possibile usare quando si lavora con codice non gestito.

@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 95bf64ce56b9e70317b2a51e3abf77ea6dbd7bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9bd06e056a70e3cb97967a03604baf5dc9b4ff5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="samples"></a>Esempi
 In questo argomento vengono forniti i collegamenti alle soluzioni [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] e C# che contengono codice di esempio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Versione [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] della soluzione SampleQueries  
  [Query di esempio (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   

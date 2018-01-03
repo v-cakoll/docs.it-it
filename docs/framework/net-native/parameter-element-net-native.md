@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f603f795682c7ea1f48e5d9356af6e0477246da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 820c36abda104bbf748e5b3a7838f3c7715048e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltparametergt-element-net-native"></a>Elemento &lt;Parameter&gt; (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
@@ -84,5 +85,5 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
 ## <a name="see-also"></a>Vedere anche  
  [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
  [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)  
+ [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

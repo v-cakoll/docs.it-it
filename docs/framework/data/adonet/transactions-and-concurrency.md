@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>Transazioni e concorrenza
 Una transazione è costituita da un singolo comando o da un gruppo di comandi che vengono eseguiti come un pacchetto. Le transazioni consentono di combinare più operazioni in un'unica unità di lavoro. Se si verifica un problema in un determinato punto della transazione, sarà possibile annullare tutti gli aggiornamenti ripristinando la condizione antecedente all'inizio della transazione.  
@@ -31,14 +32,14 @@ Una transazione è costituita da un singolo comando o da un gruppo di comandi ch
   
  Per le transazioni che implicano l'uso di gestori di risorse diversi, ad esempio una transazione tra [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] e Oracle, è necessaria una transazione distribuita.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Transazioni locali](../../../../docs/framework/data/adonet/local-transactions.md)  
  Viene illustrato come eseguire transazioni su un database.  
   
  [Transazioni distribuite](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  Viene descritto come eseguire transazioni distribuite in ADO.NET.  
   
- [Integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integrazione di System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  Viene descritta l'integrazione di <xref:System.Transactions> con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] per l'uso di transazioni distribuite.  
   
  [Concorrenza ottimistica](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  

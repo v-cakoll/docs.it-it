@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Istruzione Try...Catch...Finally (Visual Basic)
 Fornisce un modo per gestire alcuni o tutti i possibili errori che possono verificarsi in un determinato blocco di codice, codice in esecuzione.  
@@ -55,16 +55,16 @@ End Try
   
 |Termine|Definizione|  
 |---|---|  
-|`tryStatements`|Parametro facoltativo. Istruzioni in cui può verificarsi un errore. Può essere un'istruzione composta.|  
-|`Catch`|Parametro facoltativo. Più `Catch` blocchi consentiti. Se si verifica un'eccezione durante l'elaborazione di `Try` blocco, ogni `Catch` istruzione viene esaminata in ordine testuale per stabilire se gestisce l'eccezione, con `exception` che rappresenta l'eccezione che è stata generata.|  
-|`exception`|Parametro facoltativo. Qualsiasi nome di variabile. Il valore iniziale di `exception` corrisponde al valore dell'errore generato. Utilizzato con `Catch` per specificare l'errore rilevato. Se omesso, il `Catch` istruzione genera un'eccezione.|  
-|`type`|Parametro facoltativo. Specifica il tipo di filtro di classe. Se il valore di `exception` è di tipo specificato dal `type` o di un tipo derivato, l'identificatore viene associato all'oggetto eccezione.|  
-|`When`|Parametro facoltativo. Oggetto `Catch` istruzione con un `When` clausola intercetta le eccezioni solo quando `expression` restituisce `True`. Oggetto `When` clausola viene applicata solo dopo il tipo di eccezione, il controllo e `expression` possono fare riferimento a un identificatore che rappresenta l'eccezione.|  
-|`expression`|Parametro facoltativo. Deve essere convertibile in modo implicito in `Boolean`. Qualsiasi espressione che descrive un filtro generico. In genere utilizzato per filtrare in base al numero di errore. Utilizzato con `When` (parola chiave) per specificare le circostanze in cui viene rilevato l'errore.|  
-|`catchStatements`|Parametro facoltativo. Le istruzioni per gestire gli errori che si verificano in associato `Try` blocco. Può essere un'istruzione composta.|  
-|`Exit Try`|Parametro facoltativo. Parola chiave che viene interrotta la `Try...Catch...Finally` struttura. Riprende l'esecuzione con il codice che segue immediatamente il `End Try` istruzione. Il `Finally` verrà eseguita l'istruzione. Non è consentito in `Finally` blocchi.|  
-|`Finally`|Parametro facoltativo. Oggetto `Finally` blocco viene eseguito quando l'esecuzione lascia qualsiasi parte di `Try...Catch` istruzione.|  
-|`finallyStatements`|Parametro facoltativo. Istruzioni che vengono eseguite dopo ogni altra elaborazione errore si è verificato.|  
+|`tryStatements`|Facoltativo. Istruzioni in cui può verificarsi un errore. Può essere un'istruzione composta.|  
+|`Catch`|Facoltativo. Più `Catch` blocchi consentiti. Se si verifica un'eccezione durante l'elaborazione di `Try` blocco, ogni `Catch` istruzione viene esaminata in ordine testuale per stabilire se gestisce l'eccezione, con `exception` che rappresenta l'eccezione che è stata generata.|  
+|`exception`|Facoltativo. Qualsiasi nome di variabile. Il valore iniziale di `exception` corrisponde al valore dell'errore generato. Utilizzato con `Catch` per specificare l'errore rilevato. Se omesso, il `Catch` istruzione genera un'eccezione.|  
+|`type`|Facoltativo. Specifica il tipo di filtro di classe. Se il valore di `exception` è di tipo specificato dal `type` o di un tipo derivato, l'identificatore viene associato all'oggetto eccezione.|  
+|`When`|Facoltativo. Oggetto `Catch` istruzione con un `When` clausola intercetta le eccezioni solo quando `expression` restituisce `True`. Oggetto `When` clausola viene applicata solo dopo il tipo di eccezione, il controllo e `expression` possono fare riferimento a un identificatore che rappresenta l'eccezione.|  
+|`expression`|Facoltativo. Deve essere convertibile in modo implicito in `Boolean`. Qualsiasi espressione che descrive un filtro generico. In genere utilizzato per filtrare in base al numero di errore. Utilizzato con `When` (parola chiave) per specificare le circostanze in cui viene rilevato l'errore.|  
+|`catchStatements`|Facoltativo. Le istruzioni per gestire gli errori che si verificano in associato `Try` blocco. Può essere un'istruzione composta.|  
+|`Exit Try`|Facoltativo. Parola chiave che viene interrotta la `Try...Catch...Finally` struttura. Riprende l'esecuzione con il codice che segue immediatamente il `End Try` istruzione. Il `Finally` verrà eseguita l'istruzione. Non è consentito in `Finally` blocchi.|  
+|`Finally`|Facoltativo. Oggetto `Finally` blocco viene eseguito quando l'esecuzione lascia qualsiasi parte di `Try...Catch` istruzione.|  
+|`finallyStatements`|Facoltativo. Istruzioni che vengono eseguite dopo ogni altra elaborazione errore si è verificato.|  
 |`End Try`|Termina il `Try...Catch...Finally` struttura.|  
   
 ## <a name="remarks"></a>Note  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>Iteratori  
  Una funzione iterator o `Get` della funzione di accesso esegue un'iterazione personalizzata su una raccolta. Un iteratore Usa un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta. Per chiamare una funzione iterator un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- Oggetto `Yield` istruzione può essere presenti in un `Try` blocco. Oggetto `Try` blocco che contiene un `Yield` istruzione possono essere presenti `Catch` blocchi e può avere un `Finally` blocco. Vedere la sezione "provare a blocchi in Visual Basic" [iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) per un esempio.  
+ Oggetto `Yield` istruzione può essere presenti in un `Try` blocco. Oggetto `Try` blocco che contiene un `Yield` istruzione possono essere presenti `Catch` blocchi e può avere un `Finally` blocco. Vedere la sezione "provare a blocchi in Visual Basic" [iteratori](../../programming-guide/concepts/iterators.md) per un esempio.  
   
  Oggetto `Yield` istruzione non può essere all'interno di un `Catch` blocco o un `Finally` blocco.  
   
@@ -194,5 +194,5 @@ End Try
  [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [Istruzione On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Procedure consigliate per l'uso dei frammenti di codice](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Gestione delle eccezioni](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [Gestione delle eccezioni](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Istruzione Throw](../../../visual-basic/language-reference/statements/throw-statement.md)

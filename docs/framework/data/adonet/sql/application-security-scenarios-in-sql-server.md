@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenari di sicurezza delle applicazioni in SQL Server
 Non esiste un singolo modo corretto per creare un'applicazione client SQL Server protetta. Ogni applicazione è univoca in termini di requisiti, ambiente di distribuzione e popolazione di utenti. Anche se un'applicazione può essere ragionevolmente protetta quando viene distribuita inizialmente, può diventare meno sicura nel corso del tempo. È impossibile prevedere con accuratezza quali minacce possano emergere nel futuro.  
@@ -44,14 +45,14 @@ Non esiste un singolo modo corretto per creare un'applicazione client SQL Server
   
  Assegnare sempre una password complessa all'account `sa`, anche quando si usa l'autenticazione di Windows.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Gestione delle autorizzazioni con Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Viene descritto come usare le stored procedure per gestire le autorizzazioni e controllare l'accesso ai dati. L'utilizzo di stored procedure è un sistema efficace per rispondere a molte minacce per la sicurezza.  
   
  [Scrittura dinamica sicura in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Vengono descritte le tecniche per scrivere istruzioni SQL dinamiche sicure tramite le stored procedure.  
   
- [Firma di Stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [Firma di stored procedure in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  Viene descritto come firmare una stored procedure con un certificato per consentire agli utenti l'uso di dati cui non possono accedere direttamente. In questo modo le stored procedure possono eseguire operazioni che il chiamante non può eseguire direttamente in quanto non dispone delle autorizzazioni appropriate.  
   
  [Personalizzazione delle autorizzazioni con rappresentazione in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
@@ -63,11 +64,11 @@ Non esiste un singolo modo corretto per creare un'applicazione client SQL Server
  [Creazione di ruoli applicazione in SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Vengono descritte le funzionalità dei ruoli applicazione.  
   
- [Abilitazione dell'accesso tra Database in SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [Abilitazione dell'accesso tra database in SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Viene descritto come consentire l'accesso tra database senza compromettere la sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza di SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Panoramica della sicurezza SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

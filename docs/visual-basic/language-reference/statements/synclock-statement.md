@@ -17,11 +17,11 @@ ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c0c826e1ba592dfc4f2899a26102466d2e7df54f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclock-statement"></a>Istruzione SyncLock
 Acquisisce un blocco esclusivo per un blocco di istruzioni prima di eseguire il blocco.  
@@ -39,7 +39,7 @@ End SyncLock
  Obbligatorio. Espressione che restituisce un riferimento all'oggetto.  
   
  `block`  
- Parametro facoltativo. Blocco di istruzioni da eseguire quando viene acquisito il blocco.  
+ Facoltativo. Blocco di istruzioni da eseguire quando viene acquisito il blocco.  
   
  `End SyncLock`  
  Termina un `SyncLock` blocco.  
@@ -101,5 +101,5 @@ End SyncLock
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading>  
  <xref:System.Threading.Monitor>  
- [Sincronizzazione di thread](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)  
- [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)
+ [Sincronizzazione di thread](../../programming-guide/concepts/threading/thread-synchronization.md)  
+ [Threading](../../programming-guide/concepts/threading/index.md)

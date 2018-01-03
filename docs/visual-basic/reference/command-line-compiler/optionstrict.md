@@ -15,11 +15,11 @@ ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f783cc5b20c4fe6d7812a05a66cbc4cdfc0b9395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 692681b21c243432ec8e7160bcc1eaa4e718d64d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optionstrict"></a>/optionstrict
 Applica la semantica dei tipi rigorosa per limitare le conversioni implicite.  
@@ -33,7 +33,7 @@ Applica la semantica dei tipi rigorosa per limitare le conversioni implicite.
   
 ## <a name="arguments"></a>Argomenti  
  `+` &#124; `-`  
- Parametro facoltativo. Il `/optionstrict+` limita l'opzione di conversione implicita del tipo. Il valore predefinito per questa opzione è `/optionstrict-`. Il `/optionstrict+` opzione equivale `/optionstrict`. È possibile utilizzare entrambe le opzioni per la semantica dei tipi permissiva.  
+ Facoltativo. Il `/optionstrict+` limita l'opzione di conversione implicita del tipo. Il valore predefinito per questa opzione è `/optionstrict-`. Il `/optionstrict+` opzione equivale `/optionstrict`. È possibile utilizzare entrambe le opzioni per la semantica dei tipi permissiva.  
   
  `custom`  
  Obbligatorio. Avvisa quando non viene rispettata la semantica del linguaggio rigorosa.  
@@ -45,7 +45,7 @@ Applica la semantica dei tipi rigorosa per limitare le conversioni implicite.
   
 ### <a name="to-set-optionstrict-in-the-visual-studio-ide"></a>Per impostare /optionstrict nell'IDE di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Nel **progetto** menu, fare clic su **proprietà.** Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Selezionare un progetto in **Esplora soluzioni**. Nel **progetto** menu, fare clic su **proprietà.**   
   
 2.  Fare clic sulla scheda **Compila**.  
   

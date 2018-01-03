@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>Funzioni canoniche
 Contenuto della sezione vengono illustrate le funzioni canoniche supportate da tutti i provider di dati e che possono essere usate da tutte le tecnologie di query. Le funzioni canoniche non possono essere estese da un provider.  
@@ -35,8 +36,8 @@ Contenuto della sezione vengono illustrate le funzioni canoniche supportate da t
 ## <a name="canonical-functions-namespace"></a>Spazio dei nomi delle funzioni canoniche  
  Lo spazio dei nomi per le funzioni canoniche è <xref:System.Data.Metadata.Edm>. Lo spazio dei nomi <xref:System.Data.Metadata.Edm> viene incluso automaticamente in tutte le query. Se tuttavia viene importato un altro spazio dei nomi contenente una funzione con lo stesso nome di una funzione canonica (nello spazio dei nomi <xref:System.Data.Metadata.Edm>), è necessario specificare lo spazio dei nomi.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Funzioni canoniche di aggregazione](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Funzioni di aggregazione canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Vengono illustrate le funzioni canoniche [!INCLUDE[esql](../../../../../../includes/esql-md.md)] di aggregazione.  
   
  [Funzioni matematiche canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
@@ -48,7 +49,7 @@ Contenuto della sezione vengono illustrate le funzioni canoniche supportate da t
  [Funzioni data e ora canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  Vengono illustrate le funzioni canoniche [!INCLUDE[esql](../../../../../../includes/esql-md.md)] di data e ora.  
   
- [Bit per bit funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Funzioni bit per bit canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  Vengono illustrate le funzioni canoniche [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bit per bit.  
   
  [Funzioni spaziali](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
@@ -60,5 +61,5 @@ Contenuto della sezione vengono illustrate le funzioni canoniche supportate da t
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Modello concettuale canonico per i Mapping delle funzioni di SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Mapping di funzioni canoniche del modello concettuale a funzioni SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
  [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

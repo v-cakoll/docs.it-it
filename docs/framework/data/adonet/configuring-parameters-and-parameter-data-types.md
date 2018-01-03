@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati dei parametri
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.  
@@ -71,17 +72,17 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Numero|  
 |<xref:System.Object>|Oggetto|Variante|Variante|L'inferenza di un oggetto OdbcType da Object non è supportata.|Blob|  
 |<xref:System.String>|String|NVarChar. La conversione implicita non riesce se la stringa ha una dimensione superiore a quella massima di NVarChar, che è di 4000 caratteri. Per le stringhe maggiori di 4000 caratteri, impostare in modo esplicito <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
-|<xref:System.TimeSpan>|Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Ora|DateTime|  
+|<xref:System.TimeSpan>|Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|  
 |<xref:System.UInt16>|UInt16|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt16 non è supportata.|UnsignedSmallInt|Int|UInt16|  
 |<xref:System.UInt32>|UInt32|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt32 non è supportata.|UnsignedInt|BigInt|UInt32|  
 |<xref:System.UInt64>|UInt64|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt64 non è supportata.|UnsignedBigInt|Numerico|Numero|  
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|  
 ||AnsiStringFixedLength|Char|Char|Char|Char|  
 |``|Valuta|Money|Valuta|L'inferenza di un oggetto `OdbcType` da `Currency` non è supportata.|Numero|  
-|``|Data|Date in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Date non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBDate|Data|DateTime|  
+|``|Data|Date in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Date non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBDate|Date|DateTime|  
 |``|SByte|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da SByte non è supportata.|TinyInt|L'inferenza di un oggetto `OdbcType` da SByte non è supportata.|SByte|  
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
-||Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Time non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Ora|DateTime|  
+||Time|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Time non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|  
 ||VarNumeric|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da VarNumeric non è supportata.|VarNumeric|L'inferenza di un oggetto `OdbcType` da VarNumeric non è supportata.|Numero|  
 |Tipo di oggetto definito dall'utente (oggetto con <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Object o String, a seconda del provider (SqlClient restituisce sempre Object, ODBC restituisce sempre String e il provider di dati gestito OleDb può vedere entrambi|SqlDbType.Udt se <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> è in caso contrario, altrimenti Variant|OleDbType.VarWChar (se il valore è null) in caso contrario OleDbType.Variant.|OdbcType.NVarChar|Non supportato|  
   

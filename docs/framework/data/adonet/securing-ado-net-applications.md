@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o distruggere dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -26,20 +27,20 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
   
  Il codice protetto non difende dai problemi di sicurezza che si possono verificare quando si usano risorse non gestite quali i database. La maggior parte dei database di server, ad esempio SQL Server, dispone di sistemi di sicurezza interni, che aumentano la protezione se correttamente implementati. Tuttavia, anche un'origine dati con un sistema di sicurezza efficace può subire danni da un attacco se non è configurata in modo appropriato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/data/adonet/security-overview.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Panoramica della sicurezza](../../../../docs/framework/data/adonet/security-overview.md)  
  Vengono forniti consigli per la progettazione di applicazioni ADO.NET protette.  
   
- [Proteggere l'accesso ai dati](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Accesso sicuro ai dati](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Viene descritto come usare i dati di un'origine dati protetta.  
   
- [Proteggere le applicazioni Client](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Applicazioni client sicure](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Vengono riportate alcune considerazioni sulla sicurezza per le applicazioni client.  
   
- [Sicurezza dall'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Viene descritto come usare la sicurezza dall'accesso di codice per migliorare la protezione del codice ADO.NET. Viene inoltre illustrato come operare in un contesto di attendibilità parziale.  
   
- [Privacy e protezione dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Privacy e sicurezza dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  Vengono descritte le opzioni di crittografia disponibili per le applicazioni ADO.NET.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

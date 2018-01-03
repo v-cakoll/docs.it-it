@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Commit di una transazione in monofase e multifase
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse (in seguito indicato con la sigla GR), le cui azioni vengono coordinate dalla gestione transazioni (in seguito indicato con la sigla GT). Il [l'integrazione di risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) argomento viene illustrato come una risorsa (o più risorse) possono essere integrate in una transazione. Questo argomento descrive invece come coordinare il commit di una transazione fra le risorse integrate.  
@@ -119,5 +120,5 @@ public void InDoubt (Enlistment enlistment)
  Il protocollo di commit monofase è più efficiente in fase di esecuzione, poiché tutti gli aggiornamenti vengono eseguiti senza alcuna coordinazione esplicita. Per ulteriori informazioni su questo protocollo, vedere [ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [L'integrazione di risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+ [Ottimizzazione mediante commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

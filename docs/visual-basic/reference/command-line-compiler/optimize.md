@@ -15,11 +15,11 @@ ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dead17435cd147bdcdf91bdc5b8e0aa651e9e9fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e157fb0e1fcdb3899440eed02a42b16f75541989
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize"></a>/optimize
 Abilita o disabilita le ottimizzazioni del compilatore.  
@@ -34,10 +34,10 @@ Abilita o disabilita le ottimizzazioni del compilatore.
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Parametro facoltativo. Il `/optimize-` opzione Disabilita le ottimizzazioni del compilatore. Il `/optimize+` opzione consente di abilitarle. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
+|`+` &#124; `-`|Facoltativo. Il `/optimize-` opzione Disabilita le ottimizzazioni del compilatore. Il `/optimize+` opzione consente di abilitarle. Per impostazione predefinita, le ottimizzazioni sono disabilitate.|  
   
 ## <a name="remarks"></a>Note  
- Le ottimizzazioni del compilatore verificare il file di output più piccoli, più veloce e più efficiente. Tuttavia, poiché le ottimizzazioni comportano una riorganizzazione del codice nel file di output, `/optimize+` può rendere difficile il debug.  
+ Le ottimizzazioni del compilatore consentono di ridurre le dimensioni del file di output rendendolo più veloce ed efficiente. Tuttavia, poiché le ottimizzazioni comportano una riorganizzazione del codice nel file di output, `/optimize+` può rendere difficile il debug.  
   
  Tutti i moduli generati con `/target:module` per un assembly deve utilizzare lo stesso `/optimize` le impostazioni dell'assembly. Per ulteriori informazioni, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
@@ -45,7 +45,7 @@ Abilita o disabilita le ottimizzazioni del compilatore.
   
 |Per impostare /optimize nell'ambiente di sviluppo integrato di Visual Studio|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il **abilitare le ottimizzazioni** casella di controllo.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.<br />     <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Fare clic su **Avanzate** .<br />4.  Modificare il **abilitare le ottimizzazioni** casella di controllo.|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e abilita le ottimizzazioni del compilatore.  

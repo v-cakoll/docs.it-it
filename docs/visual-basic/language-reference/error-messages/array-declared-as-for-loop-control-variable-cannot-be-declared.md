@@ -13,11 +13,11 @@ ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0635e1b18b24a241fabad6d67da34f8dde9530db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef36f14d5323a4592afe59573e249d8cfb218df9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>La matrice dichiarata come variabile per il controllo del ciclo non può essere dichiarata con dimensione iniziale
 Oggetto `For Each` ciclo utilizza una matrice come relativo *elemento* variabile di iterazione l'inizializzazione di matrice.  
@@ -41,4 +41,4 @@ For Each listElement(1) As Integer In arrayList
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [Raccolte](../../../standard/collections/index.md)

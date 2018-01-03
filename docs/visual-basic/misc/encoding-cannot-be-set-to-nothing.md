@@ -8,11 +8,11 @@ ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: daa3567e47f170c64b45cbb9e49d7fa0026b8903
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 42baef6e0634849004290dce3db32e47f103282d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>La codifica non può essere impostata su Nothing
 Un tentativo di leggere o scrivere in un file non è riuscito perché il parametro `encoding` è stato impostato su `Nothing` ma richiede un valore valido.  
@@ -27,5 +27,5 @@ Un tentativo di leggere o scrivere in un file non è riuscito perché il paramet
  [Codifiche dei file](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  [Lettura da file](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  [Scrittura su file](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [Metodo ReadAllText](http://msdn.microsoft.com/en-us/3a7ac8be-fb1d-4087-bc65-167d6754d57f)  
- [WriteAllText (metodo)](http://msdn.microsoft.com/en-us/f507460c-87d9-4504-b74f-3ff825c7d5c4)
+ [ReadAllText](xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A)  
+ [WriteAllText](xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A)

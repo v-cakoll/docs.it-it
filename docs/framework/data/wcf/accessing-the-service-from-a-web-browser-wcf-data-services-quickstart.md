@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
 In questa attività si avvierà [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e, in modo facoltativo, verrà disabilitata la lettura dei feed nel browser. Si verrà quindi recuperare il documento di definizione del servizio, nonché accedere alle risorse del servizio dati inviando richieste GET HTTP attraverso un browser Web alle risorse esposte.  
@@ -81,7 +82,7 @@ In questa attività si avvierà [!INCLUDE[ssAstoria](../../../../includes/ssasto
 ## <a name="next-steps"></a>Passaggi successivi  
  L'accesso a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da un browser è stato eseguito correttamente, con il browser che invia richieste GET HTTP alle risorse specificate. L'utilizzo di un browser consente di sperimentare il funzionamento della sintassi di indirizzamento delle richieste e visualizzare i risultati. L'accesso a un servizio dati di produzione non viene in genere eseguito mediante questo metodo. Di norma, le applicazioni interagiscono con il servizio dati tramite linguaggi di codice delle applicazioni o di script. Si creerà quindi un'applicazione client che utilizza librerie client per accedere alle risorse del servizio dati come se fossero oggetti CLR (Common Language Runtime):  
   
- [Creazione dell'applicazione Client di .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [Creazione dell'applicazione client .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso alle risorse del servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+ [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

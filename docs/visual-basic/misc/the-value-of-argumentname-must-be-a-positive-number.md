@@ -9,11 +9,11 @@ ms.assetid: 597c412c-499e-49d2-b656-af2d90c292a5
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e60aeca56a9a8de1c28dbe2190f412a7977b79d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ba1b2d19389f4be5eaecaad41fd4443e8c73940
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a>Il valore di &lt;NomeArgomento&gt; deve essere un numero positivo
 Il valore della proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> deve essere maggiore di zero.  
@@ -26,5 +26,5 @@ Il valore della proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListe
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
- [Oggetto My.Application.Log](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [Oggetto My.Log](../../visual-basic/language-reference/objects/my-log-object.md)
+ [My](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

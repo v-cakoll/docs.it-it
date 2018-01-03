@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>Oggetto My.Forms
 Fornisce proprietà per l'accesso a un'istanza di ogni Windows form dichiarato nel progetto corrente.  
   
 ## <a name="remarks"></a>Note  
- Il `My.Forms` oggetto fornisce un'istanza di ciascun form nel progetto corrente. Il nome della proprietà è identico al nome del modulo a cui accede la proprietà. Per informazioni sull'aggiunta di form a un progetto, vedere [procedura: aggiungere Windows Form a un progetto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Il `My.Forms` oggetto fornisce un'istanza di ciascun form nel progetto corrente. Il nome della proprietà è identico al nome del modulo a cui accede la proprietà.   
   
  È possibile accedere ai form forniti il `My.Forms` oggetto utilizzando il nome del modulo, senza qualifica. Poiché il nome della proprietà è lo stesso nome di tipo del form, questo consente di accedere a un modulo come se disponesse di un'istanza predefinita. Ad esempio, `My.Forms.Form1.Show` equivale a `Form1.Show`.  
   
@@ -53,7 +53,7 @@ Fornisce proprietà per l'accesso a un'istanza di ogni Windows form dichiarato n
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- Per eseguire questo esempio, il progetto deve disporre di un form denominato `SidebarMenu`. Per ulteriori informazioni, vedere [procedura: aggiungere Windows Form a un progetto](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Per eseguire questo esempio, il progetto deve disporre di un form denominato `SidebarMenu`.  
   
  Il codice funziona solo in un progetto applicazione Windows.  
   
@@ -76,7 +76,6 @@ Fornisce proprietà per l'accesso a un'istanza di ogni Windows form dichiarato n
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [Oggetti](../../../visual-basic/language-reference/objects/index.md)  
- [Procedura: aggiungere un progetto Windows Form](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Operatore Is](../../../visual-basic/language-reference/operators/is-operator.md)  
  [Operatore IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [Accesso ai form di un'applicazione](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 151a36eed22323c32fed93a88d8270bdbfd99061
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9e92e99b978d12c32cc46b9133621875f35af634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-native-general-troubleshooting"></a>Risoluzione dei problemi generale per .NET Native
 In questo argomento viene descritto come risolvere i problemi che potrebbero verificarsi durante lo sviluppo di app con [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -51,4 +52,4 @@ In questo argomento viene descritto come risolvere i problemi che potrebbero ver
      Per altre informazioni, vedere [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native)
+ [Migrazione dell'app di Windows Store a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

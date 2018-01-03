@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 74752600dc5d673bd18715232ee4f6cda01ca1ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 32b994c7ccf09377973d78f6f198fd1aea322889
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-entity-framework"></a>Introduzione (Entity Framework)
 Il [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta servizi e applicazioni incentrate sui dati e offre una piattaforma per la programmazione dati che innalza il livello di astrazione dal livello relazionale logico al livello concettuale. Consentendo agli sviluppatori di utilizzare i dati con un livello di astrazione maggiore, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta codice indipendente da qualsiasi motore di archiviazione dati o schema relazionale specifico. Per ulteriori informazioni, vedere [Panoramica di Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  

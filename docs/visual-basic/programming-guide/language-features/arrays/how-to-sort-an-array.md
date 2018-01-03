@@ -15,11 +15,11 @@ ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 310c2dacb384de49c80073840c6c58d37f3937d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f24c0625058dbd960411d5981b4e98e0e9422b99
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Procedura: ordinare una matrice in Visual Basic
 In questo esempio dichiara una matrice di `String` gli oggetti denominati `zooAnimals`, viene compilata e quindi la Ordina alfabeticamente.  
@@ -54,5 +54,5 @@ End Sub
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
  [Array](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Raccolte](../../concepts/collections.md)  
  [Istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

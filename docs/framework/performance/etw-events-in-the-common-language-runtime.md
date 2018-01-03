@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8313a6b06387f6fd0a5f95191ea57bdf034c372
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 6ad262c2c813b5baa9dbde475e40cd445bd06701
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventi ETW in Common Language Runtime
 Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Event Tracing for Windows) tramite svariati eventi di debug e profilatura. Gli eventi ETW di CLR sfruttano il sistema di traccia Windows ETW per migliorare il supporto esistente per la profilatura e il debug offerto da Common Language Runtime.  
@@ -30,7 +31,7 @@ Common Language Runtime (CLR) fornisce utili informazioni di diagnostica ETW (Ev
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versioni successive è richiesto per tutti gli eventi descritti in questi argomenti. Il sistema operativo Windows Vista è il client minimo supportato e Windows Server 2008 è il server minimo supportato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Controllo della registrazione di .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  Descrive gli strumenti e i comandi per acquisire e visualizzare gli eventi ETW.  
   

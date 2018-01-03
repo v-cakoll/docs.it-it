@@ -1,5 +1,5 @@
 ---
-title: Riferimento
+title: Riferimenti
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,22 +13,23 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reference"></a>Riferimento
+# <a name="reference"></a>Riferimenti
 Questa sezione descrive informazioni di riferimento per gli sviluppatori che usano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Vengono inoltre fornite informazioni utili per cercare i problemi specifici di Microsoft Docs e in particolare per partecipare il [forum su LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. È inoltre possibile studiare un white paper in cui viene descritta in dettaglio la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti esempi di codice Visual Basic e C#. Per ulteriori informazioni, vedere [LINQ to SQL: Language-Integrated Query per i dati relazionali](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Funzioni e tipi di dati](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Descrive come common language costrutti di runtime (CLR) abbiano espressioni corrispondenti in SQL solo se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ha fornita una conversione esplicita nel motore di conversione.  
   
- [Mapping basato sugli attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  Viene descritto il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] approccio basato su attributi per il mapping di un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti per un database di SQL Server.  
   
  [Generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
@@ -43,7 +44,7 @@ Questa sezione descrive informazioni di riferimento per gli sviluppatori che usa
  [SQL Server Compact e LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  Viene descritto come [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] si differenzia da [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Conversione dell'operatore di Query standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ [Conversione dell'operatore query standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Viene descritto come [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convertiti gli operatori di Query Standard in comandi SQL.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

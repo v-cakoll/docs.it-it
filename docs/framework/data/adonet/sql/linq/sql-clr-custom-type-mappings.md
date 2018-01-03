@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapping del tipo personalizzato SQL-CLR
 Il mapping dei tipi tra SQL Server e CLR (Common Language Runtime) viene specificato automaticamente quando si usa lo strumento da riga di comando SQLMetal o Progettazione relazionale oggetti.  
@@ -42,5 +43,5 @@ Il mapping dei tipi tra SQL Server e CLR (Common Language Runtime) viene specifi
  Quando il database viene modificato, è necessario aggiornare il file DBML per riflettere tali modifiche. Questo può essere effettuato creando un nuovo file DBML e quindi eseguendo di nuovo le personalizzazioni del mapping dei tipi. In alternativa, è possibile confrontare le differenze tra il nuovo file DBML e il file DBML personalizzato e aggiornare il file DBML personalizzato manualmente per riflettere le modifiche al database.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [Generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

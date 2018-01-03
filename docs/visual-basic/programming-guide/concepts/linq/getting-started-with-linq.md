@@ -18,16 +18,16 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 718eff92a2ba472661f0067e1766e63e0703178a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 In questa sezione contiene una panoramica, esempi e informazioni che consentono di comprendere e usare Visual Basic e Language-Integrated Query (LINQ).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Scrittura della prima query LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
  Vengono descritte le tre fasi principali nella scrittura di una query LINQ di base: ottenere l'origine dati, la scrittura di query e l'esecuzione della query.  
   
@@ -50,10 +50,10 @@ In questa sezione contiene una panoramica, esempi e informazioni che consentono 
  [Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  Viene descritto come Visual Basic supporta LINQ to XML.  
   
- [LINQ to DataSet Overview](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [Panoramica di LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  Fornisce una panoramica concettuale di LINQ to DataSet.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  Viene illustrato il LINQ per la tecnologia SQL e vengono forniti collegamenti ad argomenti che consentono l'utilizzo di LINQ to SQL.  
   
  [IDE di Visual Studio e supporto di strumenti per LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

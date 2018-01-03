@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc6f039ffbdeaef70e3bc4eb71aa5046105f4ee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce77ddab23063588e347073de4d4c25e5fbb5a01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementazione di una transazione esplicita utilizzando CommittableTransaction
 A differenza della classe <xref:System.Transactions.CommittableTransaction>, che consente di utilizzare le transazioni in modo implicito, la classe <xref:System.Transactions.TransactionScope> consente di utilizzare le transazioni in modo esplicito. Questa classe è utile nelle applicazioni che utilizzano la stessa transazione per più chiamate di funzione o di thread. A differenza della classe <xref:System.Transactions.TransactionScope>, il writer di applicazione deve chiamare in modo specifico i metodi <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A>, rispettivamente per interrompere la transazione o per eseguirne il commit.  
@@ -95,5 +96,5 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementazione di una transazione implicita con ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [Implementazione di una transazione implicita utilizzando l'ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
  [Elaborazione delle transazioni](../../../../docs/framework/data/transactions/index.md)

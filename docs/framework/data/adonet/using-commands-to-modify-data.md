@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 853f8e4e75df3fffad4a2d5ecd4f7ae21b5d674f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5c574a5e880dd838397b35df48138079cb58e2cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-commands-to-modify-data"></a>Utilizzo di comandi per modificare i dati
 Con un provider di dati .NET Framework è possibile eseguire stored procedure o istruzioni DDL (Data Definition Language), ad esempio CREATE TABLE e ALTER COLUMN, per modificare lo schema di un database o di un catalogo. Questi comandi non restituiscono righe come una query, pertanto la **comando** oggetto fornisce un **ExecuteNonQuery** per elaborarli.  
@@ -26,8 +27,8 @@ Con un provider di dati .NET Framework è possibile eseguire stored procedure o 
   
  Anche se le righe non vengono restituite dal **ExecuteNonQuery** parametri di metodo di input e output e valori restituiti possono essere passati e restituiti tramite il **parametri** insieme del **comando**  oggetto.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [L'aggiornamento dei dati in un'origine dati](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Aggiornamento di dati in un'origine dati](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
  Viene descritto come eseguire i comandi o le stored procedure che modificano i dati in un database.  
   
  [Esecuzione di operazioni di catalogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  

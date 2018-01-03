@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cc1907d5f6117307ebadd04641c9eddc48e77cec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c0709159207cfd9f32aa9b6243bb53b7c1ed0e3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt"></a>&lt;add&gt;
 Aggiunge il gestore di token di sicurezza specificato alla raccolta di gestori di token.  
@@ -49,7 +50,7 @@ Aggiunge il gestore di token di sicurezza specificato alla raccolta di gestori d
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|type|Il nome del tipo CLR il gestore dei token da aggiungere. Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).|  
+|tipo|Il nome del tipo CLR il gestore dei token da aggiungere. Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   

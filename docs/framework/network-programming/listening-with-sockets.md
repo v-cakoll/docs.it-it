@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>attesa con socket
 I socket listener o server aprono una porta in rete e quindi attendono che un client si connetta alla porta. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare un servizio remoto per una rete TCP/IP.  
@@ -69,8 +70,8 @@ listener.Listen(100);
  Il metodo **Listen** accetta un singolo parametro che specifica il numero di connessioni in sospeso consentito in **Socket** prima che venga restituito un errore di server occupato al client che si connette. In questo caso, vengono inseriti fino a 100 client nella coda di connessione prima che venga restituita una risposta di server occupato al client numero 101.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di un Socket Server sincroni](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Utilizzo di un Socket Server asincroni](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Utilizzo di socket Client](../../../docs/framework/network-programming/using-client-sockets.md)  
+ [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Uso di socket client](../../../docs/framework/network-programming/using-client-sockets.md)  
  [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Socket](../../../docs/framework/network-programming/sockets.md)

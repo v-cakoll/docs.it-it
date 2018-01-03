@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Istruzione For Each...Next (Visual Basic)
 Ripete un gruppo di istruzioni per ogni elemento in una raccolta.  
@@ -58,9 +58,9 @@ Next [ element ]
 |`element`|Obbligatorio nel `For Each` istruzione. Facoltativo nel `Next` istruzione. Variabile. Utilizzato per scorrere gli elementi della raccolta.|  
 |`datatype`|Obbligatorio se `element` non è già dichiarato. Tipo di dati di `element`.|  
 |`group`|Obbligatorio. Una variabile con un tipo che è un tipo di raccolta o un oggetto. Fa riferimento alla raccolta in cui il `statements` devono essere ripetute.|  
-|`statements`|Parametro facoltativo. Uno o più istruzioni tra `For Each` e `Next` eseguiti su ogni elemento `group`.|  
-|`Continue For`|Parametro facoltativo. Trasferisce il controllo all'inizio del `For Each` ciclo.|  
-|`Exit For`|Parametro facoltativo. Trasferisce il controllo fuori il `For Each` ciclo.|  
+|`statements`|Facoltativo. Uno o più istruzioni tra `For Each` e `Next` eseguiti su ogni elemento `group`.|  
+|`Continue For`|Facoltativo. Trasferisce il controllo all'inizio del `For Each` ciclo.|  
+|`Exit For`|Facoltativo. Trasferisce il controllo fuori il `For Each` ciclo.|  
 |`Next`|Obbligatorio. Termina la definizione di `For Each` ciclo.|  
   
 ## <a name="simple-example"></a>Esempio semplice  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Per ulteriori esempi, vedere [raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) e [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Per ulteriori esempi, vedere [raccolte](../../../standard/collections/index.md) e [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Nested Loops  
  È possibile annidare `For Each` cicli inserendo un ciclo all'interno di un altro.  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   Esiste un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva una condizione, è possibile utilizzare `Exit For` per interrompere il ciclo. Per ulteriori informazioni, vedere [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="iterators"></a>Iteratori  
+## <a name="iterators"></a>Iterators  
  Si utilizza un *iteratore* per eseguire un'iterazione personalizzata su una raccolta. Un iteratore può essere una funzione o un `Get` della funzione di accesso. Usa un `Yield` istruzione per restituire ogni elemento della raccolta uno alla volta.  
   
  Per chiamare un iteratore di un `For Each...Next` istruzione. Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando un `Yield` nell'iteratore, l'espressione viene raggiunta l'istruzione di `Yield` viene restituita l'istruzione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Per ulteriori informazioni, vedere [iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [istruzione Yield](../../../visual-basic/language-reference/statements/yield-statement.md), e [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Per ulteriori informazioni, vedere [iteratori](../../programming-guide/concepts/iterators.md), [istruzione Yield](../../../visual-basic/language-reference/statements/yield-statement.md), e [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Implementazione tecnica  
  Quando un `For Each`...`Next` istruzione viene eseguita, Visual Basic restituisce solo una volta, prima di avvia il ciclo di raccolta. Se il blocco di istruzioni `element` o `group`, queste modifiche non influiscono sull'iterazione del ciclo.  
@@ -180,7 +180,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Raccolte](../../../standard/collections/index.md)  
  [Istruzione For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [Istruzione While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

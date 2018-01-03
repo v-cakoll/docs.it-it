@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni implicite dei dati a conversioni di ampliamento solo, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -38,17 +38,17 @@ Option Strict { On | Off }
   
 |Termine|Definizione|  
 |---|---|  
-|`On`|Parametro facoltativo. Abilita `Option Strict` il controllo.|  
-|`Off`|Parametro facoltativo. Disabilita `Option Strict` il controllo.|  
+|`On`|Facoltativo. Abilita `Option Strict` il controllo.|  
+|`Off`|Facoltativo. Disabilita `Option Strict` il controllo.|  
   
 ## <a name="remarks"></a>Note  
  Quando `Option Strict On` o `Option Strict` viene visualizzato in un file, le condizioni seguenti generano un errore in fase di compilazione:  
   
--   Conversioni implicite verso un  
+-   Conversioni implicite verso un tipo di dati più piccolo  
   
 -   Associazione tardiva  
   
--   La tipizzazione implicita che comporta un `Object` tipo  
+-   Tipizzazione implicita che comporta un tipo `Object`  
   
 > [!NOTE]
 >  Nelle configurazioni di avviso che è possibile impostare per il [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), sono disponibili tre impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione. Per informazioni su come usare queste impostazioni, vedere [per impostare le configurazioni di avviso nell'IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) più avanti in questo argomento.  
@@ -66,7 +66,7 @@ Option Strict { On | Off }
 -   Consente di velocizzare l'esecuzione del codice. Un motivo è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic assegna il `Object` tipo. Il codice compilato potrebbe essere necessario convertire avanti e indietro tra `Object` e altri tipi di dati, riducendo le prestazioni.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Errori di conversione di Narrowing implicite  
- Quando è presente una conversione del tipo di dati implicita è una conversione di narrowing, si verificano errori di conversione di narrowing implicite.  
+ Questi errori si verificano in presenza di una conversione implicita verso un tipo di dati più piccolo.  
   
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]convertire molti tipi di dati in altri tipi di dati. Quando il valore di un tipo di dati viene convertito in un tipo di dati con precisione inferiore o una capacità inferiore, possono verificarsi perdite di dati. Se tale conversione non riesce, si verifica un errore di run-time. `Option Strict`garantisce la notifica in fase di compilazione di queste conversioni verso un in modo che possano essere evitate. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) e [conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
@@ -89,10 +89,10 @@ Option Strict { On | Off }
  Errori di conversione di narrowing implicite vengono soppressi in fase di compilazione per le conversioni dagli elementi in un `For Each…Next` insieme alla variabile di controllo del ciclo. Questo errore si verifica anche se `Option Strict` si trova in. Per ulteriori informazioni, vedere la sezione "Conversioni di restrizione" [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="late-binding-errors"></a>Errori di associazione tardiva  
- Un oggetto binding tardivo quando viene assegnato a una proprietà o metodo di una variabile dichiarata di tipo `Object`. Per ulteriori informazioni, vedere [anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Un oggetto è ad associazione tardiva quando viene assegnato a una proprietà o a un metodo di una variabile dichiarata di tipo `Object`. Per ulteriori informazioni, vedere [anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
 ## <a name="implicit-object-type-errors"></a>Errori di tipo di oggetto implicito  
- Si verificano errori di tipo di oggetto implicito quando non può essere un tipo appropriato per una variabile dichiarata, pertanto, un tipo dedotto di `Object` è dedotto. Questo errore si verifica principalmente quando si utilizza un `Dim` istruzione per dichiarare una variabile senza utilizzare un `As` clausola e `Option Infer` è disattivata. Per ulteriori informazioni, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [specifiche del linguaggio Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
+ Si verificano errori di tipo di oggetto implicito quando non è possibile dedurre un tipo appropriato per una variabile dichiarata, pertanto viene dedotto il tipo `Object`. Questo errore si verifica principalmente quando si usa un'istruzione `Dim` per dichiarare una variabile senza usare una clausola `As` e `Option Infer` è Off. Per ulteriori informazioni, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [specifiche del linguaggio Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
  Per i parametri di metodo, il `As` clausola è facoltativa se `Option Strict` è disattivata. Tuttavia, se un qualsiasi parametro utilizza un `As` clausola, essi deve essere utilizzata. Se `Option Strict` è abilitato, il `As` clausola è obbligatoria per ogni definizione di parametro.  
   
@@ -106,7 +106,7 @@ Option Strict { On | Off }
 |No|No|`Dim qty`|Se `Option Strict` è disabilitato (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |No|Sì|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Vedere [inferenza](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per ulteriori informazioni, vedere [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|Yes|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Quando non è presente un'istruzione Option Strict  
  Se il codice sorgente non contiene un `Option Strict` istruzione, il **Option strict** impostazione di [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) viene utilizzato. Il **pagina Compila** dispone di impostazioni che consentono di controllare le condizioni che generano un errore.  
@@ -116,27 +116,27 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Per impostare Option Strict nell'IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
 2.  Nel **compilare** scheda, impostare il valore **Option Strict** casella.  
   
 ###  <a name="conditions"></a>Per impostare le configurazioni di avviso nell'IDE  
- Quando si utilizza il [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo sulle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina Compila** ha impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Di seguito sono queste impostazioni:  
+ Quando si utilizza il [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo sulle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina Compila** ha impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Queste impostazioni sono le seguenti:  
   
 -   **Conversione implicita**  
   
--   **Associazione tardiva. chiamata potrebbe non riuscire in fase di esecuzione**  
+-   **Binding tardivo. La chiamata potrebbe non riuscire in fase di esecuzione.**  
   
--   **Tipo implicito. oggetto utilizzato**  
+-   **Tipo implicito. Verrà utilizzato oggetto.**  
   
- Quando si imposta **Option Strict** a **su**, tutte e tre queste impostazioni di configurazione di avviso sono impostati su **errore**. Quando si imposta **Option Strict** a **Off**, tutte le tre impostazioni sono impostate **Nessuno**.  
+ Quando si imposta **Option Strict** su **On**, tutte e tre queste impostazioni di configurazione degli avvisi vengono impostate su **Errore**. Quando si imposta **Option Strict** su **Off**, tutte e tre le impostazioni vengono impostate su **Nessuno**.  
   
- È possibile modificare singolarmente ogni avviso impostazione di configurazione per **Nessuno**, **avviso**, o **errore**. Se tutte le tre impostazioni di configurazione di avviso sono impostate su **errore**, `On` è presente il `Option strict` casella. Se tutte e tre sono impostati su **Nessuno**, `Off` viene visualizzato in questa casella. Per qualsiasi altra combinazione di queste impostazioni, **(personalizzato)** viene visualizzato.  
+ È possibile modificare singolarmente ogni impostazione di configurazione degli avvisi su **Nessuno**, **Avviso** o **Errore**. Se tutte e tre le impostazioni di configurazione degli avvisi vengono impostate su **Errore**, nella casella `Option strict` viene visualizzato `On`. Se tutte e tre sono impostate su **Nessuno**, nella casella viene visualizzato `Off`. Per qualsiasi altra combinazione di queste impostazioni, viene visualizzato **(personalizzato)**.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Per impostare l'impostazione Option Strict per nuovi progetti  
  Quando si crea un progetto, il **Option Strict** impostazione di **compilare** scheda è impostata sul **Option Strict** impostazione nel **opzioni** la finestra di dialogo.  
   
- Per impostare `Option Strict` in questa finestra di dialogo nel **strumenti** menu, fare clic su **opzioni**. Nel **opzioni** finestra di dialogo espandere **progetti e soluzioni**, quindi fare clic su **impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **impostazioni predefinite di Visual Basic** è `Off`.  
+ Per impostare `Option Strict` in questa finestra di dialogo nel **strumenti** menu, fare clic su **opzioni**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **impostazioni predefinite di Visual Basic** è `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Per impostare Option Strict nella riga di comando  
  Includere il [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) opzione del compilatore nella **vbc** comando.  

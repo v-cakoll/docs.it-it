@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Stati di oggetti e rilevamento di modifiche
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oggetti sempre associato uno *stato*. Ad esempio, quando in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato un nuovo oggetto, lo stato dell'oggetto è `Unchanged`. Un nuovo oggetto creato dall'utente è noto il <xref:System.Data.Linq.DataContext> e `Untracked` dello stato. Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, tutti gli oggetti riconosciuti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono nello stato `Unchanged`. La sola eccezione è rappresentata dagli oggetti eliminati dal database che sono nello stato `Deleted` e di conseguenza inutilizzabili in quell'istanza di <xref:System.Data.Linq.DataContext>.  
@@ -73,5 +74,5 @@ ms.lasthandoff: 11/21/2017
  Se si aggiornano sia il riferimento obbligatorio che la chiave esterna corrispondente, è necessario assicurarsi che corrispondano. Se non sono entrambi sincronizzati quando si chiama <xref:System.InvalidOperationException>, verrà generata un'eccezione <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Anche se le modifiche dei valori della chiave esterna sono sufficienti per interessare un aggiornamento della riga sottostante, è necessario modificare il riferimento per mantenere la connettività dell'oggetto grafico e la coerenza bidirezionale delle relazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni generali](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Inserimento, aggiornamento e le operazioni di eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Operazioni di inserimento, aggiornamento ed eliminazione](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

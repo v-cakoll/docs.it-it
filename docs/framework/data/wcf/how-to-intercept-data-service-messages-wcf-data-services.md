@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dad4272c78cf27cdfa86e9fe67e17f72bf619a90
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28f69bb7f584c8d9e7031d969dce0052b1541aad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Procedura: intercettare messaggi del servizio dati (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile intercettare i messaggi di richiesta per l'aggiunta di logica personalizzata a un'operazione. Per intercettare un messaggio, si usano metodi attribuiti in modo speciale nel servizio dati. Per ulteriori informazioni, vedere [intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
@@ -66,5 +67,5 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è possibile int
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: definire un'operazione del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ [Procedura: definire un operatore del servizio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
  [Definizione di WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

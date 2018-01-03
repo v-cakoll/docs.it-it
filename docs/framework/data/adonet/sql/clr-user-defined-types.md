@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e81cf54ed9dc516d88b8c7a97c8a5b33b8943d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b083dd7284789b1d0271bc688c08bbae591e160
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-user-defined-types"></a>Tipi definiti dall'utente CLR
 In Microsoft SQL Server viene fornito il supporto per i tipi definiti dall'utente implementati con CLR (Common Language Runtime) Microsoft .NET Framework. Il CLR è integrato in SQL Server e consente di estendere il sistema di tipi del database. Gli UDT forniscono l'estensibilità utenti nel sistema di tipi di dati di SQL Server e la capacità di definire tipi strutturati complessi.  
@@ -32,7 +33,7 @@ In Microsoft SQL Server viene fornito il supporto per i tipi definiti dall'utent
   
  **Documentazione online di SQL Server**  
   
-1.  [Tipi CLR definiti dall'utente](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Tipi definiti dall'utente CLR](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di oggetti di SQL Server 2005 nel codice gestito](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  

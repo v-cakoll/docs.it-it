@@ -14,11 +14,11 @@ ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4b847d6963f59cd7a5b418cde254e119a8e29cb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2de7d344f4ef4380c48c43fb918914989178614a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Errore durante la creazione di risorse Win32: &lt;messaggio di errore&gt;
 Il compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] chiama Assembly Linker (Al.exe, definito anche Alink) per generare un assembly con un manifesto. Il linker ha rilevato un errore nella creazione di una risorsa in memoria. Potrebbe trattarsi di un problema di ambiente o di memoria insufficiente nel computer.  
@@ -27,11 +27,11 @@ Il compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] chiama Assembly Linke
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Esaminare il messaggio di errore riportato e vedere l'argomento [Errori e avvisi di Al.exe](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) per spiegazioni e suggerimenti aggiuntivi.  
+1.  Esaminare il messaggio di errore tra virgolette e consultare l'argomento [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Per spiegazioni e suggerimenti aggiuntivi.  
   
 2.  Se l'errore persiste, raccogliere informazioni sulla situazione contingente e informare il Servizio Supporto Tecnico Clienti Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex)  
- [Lo strumento Al.exe errori e avvisi](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)  
- [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)
+ 
+ [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+ [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

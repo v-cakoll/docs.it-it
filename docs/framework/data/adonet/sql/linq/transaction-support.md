@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7c1d438a83f090795a158ade1dfdbb7d2b2df863
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79cd52f137347ec24e7cc9a646d0306d95fe53d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-support"></a>Supporto delle transazioni
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]supporta tre modelli di transazione distinti. Di seguito sono elencati tali modelli nell'ordine di esecuzione dei controlli.  
@@ -34,5 +35,5 @@ ms.lasthandoff: 11/21/2017
  Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] controlla se la chiamata si trova nell'ambito di un <xref:System.Transactions.Transaction> o se il `Transaction` proprietà (`IDbTransaction`) è impostato su una transazione locale avviata dall'utente. Se trovata alcuna transazione, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] avvia una transazione locale (`IDbTransaction`) e lo usa per eseguire i comandi SQL generati. Dopo aver completato correttamente l'esecuzione di tutti i comandi SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue il commit della transazione locale e lo restituisce.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni generali](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Procedura: racchiudere tra parentesi quadre gli invii di dati tramite transazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+ [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Procedura: racchiudere tra parentesi quadre gli invii di dati utilizzando transazioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

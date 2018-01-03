@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9a9765d8d8330c7ad2a6e8cb25166427cdd9414a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04a20a06cd8ed8785b37bdc604a817b475f93873
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Procedura: recuperare informazioni in sola lettura
 Quando non si prevede di modificare i dati, è possibile migliorare le prestazione delle query effettuando la ricerca di risultati di sola lettura.  
@@ -38,5 +39,5 @@ Quando non si prevede di modificare i dati, è possibile migliorare le prestazio
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Una query sul Database](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
+ [Esecuzione di query sul database](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
  [Caricamento posticipato e immediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)

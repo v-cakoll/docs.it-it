@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d5586e28e784c43488245db814abf32d863232fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68a28e25cf07ec3d84cc7bb12734594ca55e7e0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procedura: personalizzare classi di entità mediante l'Editor del codice
 Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] possono adoperare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per creare o personalizzare le classi di entità.  
@@ -26,28 +27,28 @@ Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../include
   
  Negli argomenti di questa sezione viene descritto come personalizzare il modello a oggetti.  
   
- [Procedura: specificare nomi di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [Procedura: specificare nomi di database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
  [Procedura: rappresentare tabelle come classi](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.TableAttribute>.  
   
- [Procedura: rappresentare colonne come membri di classe](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [Procedura: rappresentare colonne come membri di classi](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
  [Procedura: rappresentare le chiavi primarie](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
   
- [Procedura: eseguire il mapping di relazioni di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [Procedura: eseguire il mapping di relazioni tra database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  Vengono forniti esempi relativi all'utilizzo dell'attributo <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
- [Procedura: rappresentare colonne come generate dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [Procedura: rappresentare colonne come generate dal database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
- [Procedura: rappresentare colonne come Timestamp o colonne di versione](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [Procedura: rappresentare colonne come timestamp o versioni](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
- [Procedura: specificare i tipi di dati di Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [Procedura: specificare i tipi di dati del database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>.  
   
  [Procedura: rappresentare colonne calcolate](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
@@ -56,13 +57,13 @@ Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../include
  [Procedura: specificare campi di archiviazione privati](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
- [Procedura: rappresentare colonne come valori Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [Procedura: rappresentare colonne per l'accettazione di valori Null](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>.  
   
  [Procedura: eseguire il mapping di gerarchie di ereditarietà](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
  Vengono descritti i mapping necessari per specificare una gerarchia di ereditarietà.  
   
- [Procedura: specificare il controllo del conflitto di concorrenza](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [Procedura: specificare il controllo di conflitti di concorrenza](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
  Viene descritto come usare <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  

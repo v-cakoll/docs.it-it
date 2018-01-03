@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c2f03065ee6f1292f72a33a72b1d43b1fed0c8f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
 Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta di schemi comuni, supporta la raccolta di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco delle raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
@@ -258,13 +259,13 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |version_minor|Oggetto|Numero di versione secondario.|  
 |version_build|Oggetto|Numero di build.|  
 |version_revision|Oggetto|Numero di revisione.|  
-|culture_info|Oggetto|Informazioni sulle impostazioni cultura associate all'UDT.|  
-|public_key|Oggetto|La chiave pubblica usata dall'assembly.|  
+|culture_info|Object|Informazioni sulle impostazioni cultura associate all'UDT.|  
+|public_key|Object|La chiave pubblica usata dall'assembly.|  
 |is_fixed_length|Booleano|Specifica se la lunghezza del tipo è sempre uguale a max_length.|  
 |max_length|Int16|La lunghezza massima del tipo in byte.|  
 |Create_Date|DateTime|La data di creazione o di registrazione dell'assembly.|  
 |Permission_set_desc|Stringa|Il nome descrittivo del set di autorizzazioni o del livello di sicurezza dell'assembly.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Durante il recupero delle informazioni sullo Schema di Database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

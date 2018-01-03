@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a6dcd11d34f0b81d6d3982ef1c6ab211d94818b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c66e982715d0f7f97e7a4faa92c2de57f3b1471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-processing"></a>Elaborazione delle transazioni
 Quando si acquista un libro da una libreria online si offre denaro (tramite carta di credito) in cambio di un libro. Se la carta di credito è valida, una serie di operazioni correlate garantisce che l'acquirente riceva il libro e che la libreria riceva il denaro. Se tuttavia durante lo scambio si verifica un errore in una delle operazioni della serie, l'intero scambio ha esito negativo. L'acquirente non riceve il libro e la libreria non riceve il denaro.  
@@ -27,13 +28,13 @@ Quando si acquista un libro da una libreria online si offre denaro (tramite cart
   
  Questa sezione fornisce sia informazioni di carattere generale sull'elaborazione delle transazioni sia informazioni specifiche su come scrivere applicazioni transazionali e gestori di risorse tramite Microsoft .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Nozioni fondamentali sulle transazioni](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  Introduce i termini e in concetti fondamentali relativi all'elaborazione delle transazioni.  
   
  [Funzionalità offerte da System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
  Descrive come utilizzare le funzionalità di System.Transactions per scrivere un'applicazione transazionale personalizzata.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Transactions>  
  Fornisce le classi che consentono al codice di partecipare alle transazioni. Tali classi supportano le transazioni con più partecipanti distribuiti, le notifiche a fase multipla e le integrazioni durevoli.

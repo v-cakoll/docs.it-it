@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Procedura: Richiedere dati con la classe WebRequest
 La procedura seguente descrive i passaggi necessari per richiedere una risorsa da un server, ad esempio, una pagina Web o un file. La risorsa deve essere identificata da un URI.  
@@ -183,7 +184,7 @@ End Namespace
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di richieste Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [L'uso di flussi di rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)  
  [Procedura: Inviare dati con la classe WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

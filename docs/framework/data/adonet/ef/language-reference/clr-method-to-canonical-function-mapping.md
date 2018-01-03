@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metodo CLR per il mapping di funzioni canoniche
 In Entity Framework è disponibile un set di funzioni canoniche che implementano funzionalità comuni in numerosi sistemi di database, ad esempio modifica delle stringhe e funzioni matematiche. In questo modo gli sviluppatori possono scegliere come destinazione un'ampia gamma di sistemi di database. In caso di chiamata da una tecnologia di query, ad esempio LINQ to Entities, queste funzioni canoniche vengono convertite nella funzione di archivio corrispondente appropriata per il provider usato. Le chiamate alle funzioni possono pertanto essere espresse con una forma comune indipendentemente dall'origine dati, per offrire un'esperienza di query coerente in diverse origini dati. Anche gli operatori AND, OR, NOT e XOR bit per bit vengono mappati alle funzioni canoniche quando l'operando è un tipo numerico. Per gli operandi booleani, gli operatori AND, OR, NOT e XOR bit per bit calcolano le operazioni AND, OR, NOT e XOR dei relativi operandi. Per ulteriori informazioni, vedere [funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

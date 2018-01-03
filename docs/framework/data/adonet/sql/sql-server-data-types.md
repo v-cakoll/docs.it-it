@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Mapping dei tipi di dati SQL Server e ADO.NET
 SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono comportare una potenziale perdita di dati. Per mantenere l'integrità dei dati, il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce metodi delle funzioni di accesso tipizzate per l'uso dei dati SQL Server. È possibile usare le enumerazioni nelle classi <xref:System.Data.SqlDbType> per specificare i tipi di dati <xref:System.Data.SqlClient.SqlParameter>.  
@@ -32,26 +33,26 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
   
 1.  [Tipi di dati (motore di Database)](http://go.microsoft.com/fwlink/?LinkID=107468)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [SqlTypes e DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  Viene descritto il supporto dei tipi per `SqlTypes` in `DataSet`.  
   
- [Gestione dei valori Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Gestione dei valori null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Viene illustrato come usare i valori null e la logica a tre valori.  
   
  [Confronto tra GUID e valori uniqueidentifier](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  Viene illustrato come usare valori GUID e uniqueidentifier in SQL Server e in .NET Framework.  
   
- [Data e ora](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
+ [Dati relativi a data e ora](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  Viene descritto come usare i nuovi tipi di dati relativi a data e ora in SQL Server 2008.  
   
- [UDT di grandi dimensioni](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [Tipi di grandi dimensioni definiti dall'utente](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  Viene illustrato come recuperare i dati dai tipi UDT con valori di grandi dimensioni introdotti in SQL Server 2008.  
   
  [Dati XML in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  Viene descritto come usare i dati XML recuperati da SQL Server.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Data.DataSet>  
  Vengono descritti la classe `DataSet` e tutti i relativi membri.  
   
@@ -66,7 +67,7 @@ SQL Server e .NET Framework sono basati su sistemi di tipi diversi che possono c
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Configurazione di parametri e tipi di dati di parametro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Parametri con valori di tabella](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
+ [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Parametri valutati a livello di tabella](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [Dati binari e con valori elevati SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

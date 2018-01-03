@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>DataView
 Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazioni dei dati archiviati in un oggetto <xref:System.Data.DataTable>. Questa funzionalità è usata spesso nelle applicazioni di associazione dati. Utilizzando un **DataView**, è possibile esporre i dati in una tabella con diversi tipi di ordinamento ed è possibile filtrare i dati dello stato o in base a un'espressione di filtro di riga.  
@@ -28,11 +29,11 @@ Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazion
   
  È possibile utilizzare un <xref:System.Data.DataView.DataViewManager%2A> per gestire le impostazioni di visualizzazione per tutte le tabelle in un **DataSet**. Il **DataViewManager** offre un modo pratico per gestire le impostazioni di visualizzazione predefinito per ogni tabella. Quando si associa un controllo a più di una tabella di un **DataSet**, associazione a un **DataViewManager** è la scelta ideale.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione di un oggetto DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Viene descritto come creare un **DataView** per un **DataTable**.  
   
- [Ordinamento e filtro dei dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [Ordinamento e applicazione di filtri ai dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  Viene descritto come impostare le proprietà di un **DataView** per restituire subset di righe di dati che soddisfano i criteri di filtro specifici o per restituire dati in un particolare tipo di ordinamento.  
   
  [Oggetti DataRow e DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
@@ -47,7 +48,7 @@ Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazion
  [Modifica di oggetti DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  Viene descritto come modificare i dati nell'oggetto sottostante **DataTable** tramite il **DataView**, inclusa l'abilitazione o disabilitazione degli aggiornamenti.  
   
- [Gestione degli eventi DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [Gestione di eventi DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  Viene descritto come utilizzare il **ListChanged** eventi per ricevere notifiche quando il contenuto o l'ordine di un **DataView** viene aggiornata.  
   
  [Gestione di oggetti DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  

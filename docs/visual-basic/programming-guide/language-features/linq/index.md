@@ -12,16 +12,16 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b0e558e50f75b10a77834a6e94ccb7aadc55fdcb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: acec0a067ef318d34c033529415afb5c321e19a2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>LINQ in Visual Basic
 Questa sezione contiene panoramiche, esempi e informazioni di base utili per comprendere e usare Visual Basic e [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  Viene fornita un'introduzione a provider, operatori, struttura delle query e funzionalità di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
@@ -55,5 +55,5 @@ Questa sezione contiene panoramiche, esempi e informazioni di base utili per com
 ## <a name="see-also"></a>Vedere anche  
  [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ to DataSet Overview](../../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [Panoramica di LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

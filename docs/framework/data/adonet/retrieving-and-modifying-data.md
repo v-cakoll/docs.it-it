@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ea157cd52bf92dace924baaa40f5b1bba6f13a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e di recuperare i dati utilizzando un **DataReader** o **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  Viene descritto come stabilire una connessione a un'origine dati e come usare gli eventi di connessione.  
   
  [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
  Sono inclusi argomenti in cui vengono descritti diversi aspetti relativi all'utilizzo delle stringhe di connessione, quali le parole chiave, le informazioni di sicurezza e l'archiviazione e il recupero delle stringhe di connessione.  
   
- [Il pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
  Vengono descritti i pool di connessioni per i provider di dati .NET Framework.  
   
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
@@ -41,16 +42,16 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  Sono inclusi argomenti in cui viene descritto come eseguire transazioni locali e transazioni distribuite e come usare concorrenza ottimistica.  
   
- [Recupero di identità o valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [Recupero di identità o di valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  Fornisce un esempio di mapping i valori generati per un **identità** colonna in un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tabella o per un **contatore** campo in una tabella di Microsoft Access, a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
   
  [Recupero di dati binari](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni utilizzando `CommandBehavior`.`SequentialAccess` Per modificare il comportamento predefinito di un `DataReader`.  
   
- [Modifica dei dati con le Stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
   
- [Durante il recupero delle informazioni sullo Schema di Database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  Viene descritto come ottenere da un'origine dati database o cataloghi disponibili, tabelle e visualizzazioni in un database, vincoli esistenti per tabelle e altre informazioni relative allo schema.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
@@ -65,7 +66,7 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Programmazione asincrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Viene descritto il supporto di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] per la programmazione asincrona.  
   
- [Supporto del flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
+ [Supporto per flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Viene illustrato come scrivere applicazioni che trasmettono i dati da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] senza doverli caricare completamente in memoria.  
   
 ## <a name="see-also"></a>Vedere anche  

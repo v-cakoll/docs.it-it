@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 740ba87fd247e05b1bc32e3732819514ba2806ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d6e5ab22ff2fe382fa2a266e3180cb34f970cc48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="composition-analysis-tool-mefx"></a>Strumento di analisi composizione (Mefx)
 Lo strumento di analisi composizione (Mefx) è un'applicazione della riga di comando che analizza i file di libreria (DLL) e di applicazione (EXE) che contengono le parti MEF (Managed Extensibility Framework). Lo scopo principale di Mefx è fornire agli sviluppatori un modo per diagnosticare gli errori di composizione nelle relative applicazioni MEF senza la necessità di aggiungere codice di analisi complesso all'applicazione stessa. Può essere utile anche per comprendere le parti di una libreria fornita da terze parti. Questo argomento descrive come usare Mefx e fornisce un riferimento per la relativa sintassi.  
@@ -38,7 +39,7 @@ Lo strumento di analisi composizione (Mefx) è un'applicazione della riga di com
 mefx [files and directories] [action] [options]  
 ```  
   
- Il primo set di argomenti specifica i file e le directory da cui caricare le parti per l'analisi. Specificare un file con l'opzione `/file:` e una directory con l'opzione `/directory:`. È possibile specificare più file e directory, come illustrato nell'esempio seguente.  
+ Il primo set di argomenti specifica i file e le directory da cui caricare le parti per l'analisi. Specificare un file con l'opzione `/file:` e una directory con l'opzione `/directory:` . È possibile specificare più file e directory, come illustrato nell'esempio seguente.  
   
 ```  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
@@ -59,7 +60,7 @@ MyAddIn.AddIn
 MyAddIn.MemberPart  
 ```  
   
- Per altre informazioni sulle parti, usare l'opzione `/verbose`. Verranno restituite altre informazioni per tutte le parti disponibili. Per ottenere altre informazioni su una singola parte, usare l'azione `/type` invece di `/parts`.  
+ Per altre informazioni sulle parti, usare l'opzione `/verbose` . Verranno restituite altre informazioni per tutte le parti disponibili. Per ottenere altre informazioni su una singola parte, usare l'azione `/type` invece di `/parts`.  
   
 ```  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
@@ -69,20 +70,20 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
   
 <a name="listing_imports_and_exports"></a>   
 ## <a name="listing-imports-and-exports"></a>Elenco delle importazioni e delle esportazioni  
- Le azioni `/imports` e `/exports` elencheranno rispettivamente tutte le parti importate e tutte le parti esportate. È anche possibile elencare le parti che importano o esportano un tipo specifico usando le azioni `/importers` o `/exporters`.  
+ Le azioni `/imports` e `/exports` elencheranno rispettivamente tutte le parti importate e tutte le parti esportate. È anche possibile elencare le parti che importano o esportano un tipo specifico usando le azioni `/importers` o `/exporters` .  
   
 ```  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
   
- A queste azioni è anche possibile applicare l'opzione `/verbose`.  
+ A queste azioni è anche possibile applicare l'opzione `/verbose` .  
   
 <a name="finding_rejected_parts"></a>   
 ## <a name="finding-rejected-parts"></a>Individuazione delle parti rifiutate  
  Una volta caricate le parti disponibili, Mefx usa il motore di composizione MEF per comporle. Le parti che non possono essere composte correttamente vengono definite *rifiutate*. Per elencare tutte le parti rifiutate, usare l'azione `/rejected` .  
   
- È possibile usare l'opzione `/verbose` con l'azione `/rejected` per stampare le informazioni dettagliate relative alle parti rifiutate. Nell'esempio seguente la DLL `ClassLibrary1` contiene la parte `AddIn` che importa le parti `MemberPart` e `ChainOne`. `ChainOne` importa `ChainTwo`, ma `ChainTwo` non esiste. Ciò significa che `ChainOne` viene rifiutato causando il rifiuto di `AddIn`.  
+ È possibile usare l'opzione `/verbose` con l'azione `/rejected` per stampare le informazioni dettagliate relative alle parti rifiutate. Nell'esempio seguente la DLL `ClassLibrary1` contiene la parte `AddIn` che importa le parti `MemberPart` e `ChainOne` . `ChainOne` importa `ChainTwo`, ma `ChainTwo` non esiste. Ciò significa che `ChainOne` viene rifiutato causando il rifiuto di `AddIn` .  
   
 ```  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
@@ -113,20 +114,20 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
    at Microsoft.ComponentModel.Composition.Diagnostics.CompositionInfo.AnalyzeImportDefinition(ExportProvider host, IEnumerable`1 availableParts, ImportDefinition id)  
 ```  
   
- Le informazioni interessanti sono contenute nei risultati `[Exception]` e `[Unsuitable]`. Il risultato `[Exception]` fornisce informazioni sul motivo per cui una parte è stata rifiutata. Il risultato `[Unsuitable]` indica il motivo per cui non è possibile usare una parte con una diversa corrispondenza per soddisfare un'importazione. In questo caso il motivo è dovuto al fatto che la parte stessa è stata rifiutata a causa di importazioni mancanti.  
+ Le informazioni interessanti sono contenute nei risultati `[Exception]` e `[Unsuitable]` . Il risultato `[Exception]` fornisce informazioni sul motivo per cui una parte è stata rifiutata. Il risultato `[Unsuitable]` indica il motivo per cui non è possibile usare una parte con una diversa corrispondenza per soddisfare un'importazione. In questo caso il motivo è dovuto al fatto che la parte stessa è stata rifiutata a causa di importazioni mancanti.  
   
 <a name="analyzing_primary_causes"></a>   
 ## <a name="analyzing-primary-causes"></a>Analisi delle cause principali  
- Se alcune parti sono collegate in una lunga catena di dipendenza, un problema che riguarda la parte finale può causare il rifiuto dell'intera catena. La diagnosi di questi problemi può essere difficile perché la causa radice dell'errore non è sempre ovvia. Per risolvere il problema, è possibile usare l'azione `/causes`, che tenta di individuare la causa radice di qualsiasi rifiuto a cascata.  
+ Se alcune parti sono collegate in una lunga catena di dipendenza, un problema che riguarda la parte finale può causare il rifiuto dell'intera catena. La diagnosi di questi problemi può essere difficile perché la causa radice dell'errore non è sempre ovvia. Per risolvere il problema, è possibile usare l'azione `/causes` , che tenta di individuare la causa radice di qualsiasi rifiuto a cascata.  
   
- Se si usa l'azione `/causes` dell'esempio precedente, vengono elencate solo le informazioni relative a `ChainOne`, la cui importazione non soddisfatta rappresenta la causa radice del rifiuto di `AddIn`. L'azione `/causes` può essere usata sia con l'opzione normale che con l'opzione `/verbose`.  
+ Se si usa l'azione `/causes` dell'esempio precedente, vengono elencate solo le informazioni relative a `ChainOne`, la cui importazione non soddisfatta rappresenta la causa radice del rifiuto di `AddIn`. L'azione `/causes` può essere usata sia con l'opzione normale che con l'opzione `/verbose` .  
   
 > [!NOTE]
->  Nella maggior parte dei casi, Mefx sarà in grado di diagnosticare la causa radice di un errore a cascata. Tuttavia, nei casi in cui le parti vengono aggiunte a un contenitore a livello di codice, nei casi che riguardano contenitori gerarchici o nei casi che riguardano implementazioni personalizzate di `ExportProvider`, Mefx non sarà in grado di diagnosticare la causa. In generale, i casi descritti precedentemente devono essere evitati laddove possibile, poiché la diagnosi degli errori è generalmente complessa.  
+>  Nella maggior parte dei casi, Mefx sarà in grado di diagnosticare la causa radice di un errore a cascata. Tuttavia, nei casi in cui le parti vengono aggiunte a un contenitore a livello di codice, nei casi che riguardano contenitori gerarchici o nei casi che riguardano implementazioni personalizzate di `ExportProvider` , Mefx non sarà in grado di diagnosticare la causa. In generale, i casi descritti precedentemente devono essere evitati laddove possibile, poiché la diagnosi degli errori è generalmente complessa.  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>Elenchi degli elementi consentiti  
- L'opzione `/whitelist` consente di specificare un file di testo che elenca le parti di cui è previsto il rifiuto. I rifiuti imprevisti verranno quindi contrassegnati. Ciò può essere utile quando si analizza una libreria incompleta o una sottolibreria in cui mancano alcune dipendenze. L'opzione `/whitelist` può essere applicata alle azioni `/rejected` o `/causes`.  
+ L'opzione `/whitelist` consente di specificare un file di testo che elenca le parti di cui è previsto il rifiuto. I rifiuti imprevisti verranno quindi contrassegnati. Ciò può essere utile quando si analizza una libreria incompleta o una sottolibreria in cui mancano alcune dipendenze. L'opzione `/whitelist` può essere applicata alle azioni `/rejected` o `/causes` .  
   
  Si consideri un file denominato test.txt che contiene il testo "ClassLibrary1.ChainOne". Se si esegue l'azione `/rejected` con l'opzione `/whitelist` dell'esempio precedente, verrà generato l'output seguente:  
   

@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>Istruzione RaiseEvent
 I trigger di un evento dichiarato a livello di modulo all'interno di una classe, modulo o documento.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
  Obbligatorio. Nome dell'evento da attivare.  
   
  `argumentlist`  
- Parametro facoltativo. Elenco delimitato da virgole di variabili, matrici o espressioni. Il `argumentlist` argomento deve essere racchiuso tra parentesi. Se non sono presenti argomenti, è necessario omettere le parentesi.  
+ Facoltativo. Elenco delimitato da virgole di variabili, matrici o espressioni. Il `argumentlist` argomento deve essere racchiuso tra parentesi. Se non sono presenti argomenti, è necessario omettere le parentesi.  
   
 ## <a name="remarks"></a>Note  
  Obbligatorio `eventname` è il nome di un evento dichiarato all'interno del modulo. Segue le convenzioni di denominazione variabile Visual Basic.  
@@ -80,7 +80,7 @@ RaiseEvent eventname[( argumentlist )]
  Premere F5 per eseguire l'esempio precedente, quindi fare clic sul pulsante con etichettato **avviare**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".  
   
 > [!NOTE]
->  Il `My.Application.DoEvents` metodo elabora gli eventi esattamente nello stesso modo del form. Per consentire al modulo di gestione degli eventi direttamente, è possibile utilizzare il multithreading. Per ulteriori informazioni, vedere [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  Il `My.Application.DoEvents` metodo elabora gli eventi esattamente nello stesso modo del form. Per consentire al modulo di gestione degli eventi direttamente, è possibile utilizzare il multithreading. Per ulteriori informazioni, vedere [Threading](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)  

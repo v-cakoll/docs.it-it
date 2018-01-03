@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e87fe5b49a7d939a350d5d0bcb31f79eaaf333c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 16657c62d66db1570ad379ff5d42a75aaf3ea2a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getalinkmessagedll-function"></a>Funzione GetALinkMessageDll
 Trova e carica la DLL dei messaggi. Restituisce 0 se la DLL dei messaggi non è stato disponibile o non caricato. La DLL dei messaggi deve essere in una sottodirectory il cui nome è un ID di lingua o nella directory corrente.  

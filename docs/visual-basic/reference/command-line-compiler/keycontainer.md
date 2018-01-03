@@ -14,11 +14,11 @@ ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f7c5ffa255ba9ac2f062ea52eb3471659e0192b
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b91025fb44164c03c43a3b5ed7341ab009f352e9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keycontainer"></a>/keycontainer
 Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scopo di assegnare a un assembly un nome sicuro.  
@@ -36,7 +36,7 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
 |`container`|Obbligatorio. File contenitore che contiene la chiave. Racchiudere il nome del file tra virgolette ("") se il nome contiene uno spazio.|  
   
 ## <a name="remarks"></a>Note  
- Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e la firma l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k``file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+ Il compilatore crea il componente condivisibile inserendo una chiave pubblica nel manifesto dell'assembly e la firma l'assembly finale con la chiave privata. Per generare un file di chiave, digitare `sn -k``file` nella riga di comando. Il `-i` opzione installa la coppia di chiavi in un contenitore. Per ulteriori informazioni, vedere [Sn.exe (strumento nome sicuro)][Sn.exe (strumento nome sicuro)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Se si compila con `/target:module`, il nome del file di chiave verrà conservato nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly con [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -44,7 +44,7 @@ Specifica il nome di un contenitore di chiavi per una coppia di chiavi allo scop
   
  È possibile passare al compilatore le informazioni di crittografia anche tramite [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Usare [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) se si vuole che l'assembly abbia una firma parziale.  
   
- Vedere [creazione e uso degli assembly](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) per ulteriori informazioni su come firmare un assembly.  
+ Vedere [creazione e uso degli assembly](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) per ulteriori informazioni su come firmare un assembly.  
   
 > [!NOTE]
 >  Il `/keycontainer` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  

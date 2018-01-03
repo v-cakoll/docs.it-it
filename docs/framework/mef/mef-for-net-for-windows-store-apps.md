@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f427656f9b385214db5b3bd26c4addb1122b35a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8436bff3b6ca1061621a67eb45bdc8aedea33f2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF per .NET per applicazioni Windows Store
 <xref:System.Composition?displayProperty=nameWithType>e i relativi spazi dei nomi figlio contengono i tipi per lo sviluppo estendibili [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] applicazioni con Managed Extensibility Framework (MEF). Questi spazi dei nomi fanno parte di [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subset per il [!INCLUDE[win8](../../../includes/win8-md.md)] del sistema operativo.  

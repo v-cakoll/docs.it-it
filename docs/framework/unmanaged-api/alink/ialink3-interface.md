@@ -15,21 +15,22 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b2f38283e4944c4f24668fa243d628e80daeac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4c4e8222acaf290ea9298a59d2ae77b81d2c913
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink3-interface"></a>Interfaccia IALink3
 Fornisce un singolo metodo `SetManifestFile`, che consente di specificare o reimpostare il file manifesto, il linker userà quando viene creato un assembly.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Metodo SetManifestFile](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
  Consente di specificare o reimpostare il file manifesto che il linker userà durante la creazione dell'assembly.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [ALink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)  
  Supporta la creazione di moduli non associati e assembly .NET Framework.  
   
  [Interfaccia IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  

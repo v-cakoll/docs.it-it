@@ -13,23 +13,24 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 14be34b5d988a51a4785defbfcec95a4a073cc2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 907761184256b7cf51c7c0f20fa43ee603e0ab12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-concepts"></a>Concetti relatici alle query
 Contenuto della sezione vengono descritti i concetti fondamentali per la progettazione di query [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Query LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Query [LINQ to SQL]](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
  Viene fatto riferimento agli argomenti generali di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] e vengono descritti gli elementi specifici di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Eseguire query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
+ [Esecuzione di query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
  Viene spiegato come usare le associazioni nel modello a oggetti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Esecuzione remota. Esecuzione locale](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
+ [Esecuzione remota e locale](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
  Viene descritto come specificare la posizione in cui verrà eseguita la query.  
   
  [Caricamento posticipato e immediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
@@ -39,7 +40,7 @@ Contenuto della sezione vengono descritti i concetti fondamentali per la progett
  [Guida per programmatori](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Vengono forniti collegamenti ad argomenti che illustrano la tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Identità dell'oggetto](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [Identità degli oggetti](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Viene descritto il concetto di identità dell'oggetto in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  

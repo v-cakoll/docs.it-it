@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Istruzione Function (Visual Basic)
 Dichiara il nome, parametri e il codice che definiscono un `Function` stored procedure.  
@@ -59,11 +59,11 @@ End Function
   
 -   `attributelist`  
   
-     Parametro facoltativo. Vedere [elenco attributi](attribute-list.md).  
+     Facoltativo. Vedere [elenco attributi](attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -79,7 +79,7 @@ End Function
   
 -   `proceduremodifiers`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -97,19 +97,19 @@ End Function
   
 -   `Shared`  
   
-     Parametro facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Async`  
   
-     Parametro facoltativo. Vedere [Async](../../../visual-basic/language-reference/modifiers/async.md).  
+     Facoltativo. Vedere [Async](../../../visual-basic/language-reference/modifiers/async.md).  
   
 -   `Iterator`  
   
-     Parametro facoltativo. Vedere [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Facoltativo. Vedere [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
@@ -117,11 +117,11 @@ End Function
   
 -   `typeparamlist`  
   
-     Parametro facoltativo. Elenco di parametri di tipo per una routine generica. Vedere [digitare elenco](type-list.md).  
+     Facoltativo. Elenco di parametri di tipo per una routine generica. Vedere [digitare elenco](type-list.md).  
   
 -   `parameterlist`  
   
-     Parametro facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Vedere [elenco parametri](parameter-list.md).  
+     Facoltativo. Elenco di nomi di variabili locali che rappresentano i parametri di questa procedura. Vedere [elenco parametri](parameter-list.md).  
   
 -   `returntype`  
   
@@ -129,7 +129,7 @@ End Function
   
 -   `Implements`  
   
-     Parametro facoltativo. Indica che questa procedura consente di implementare una o più `Function` procedure, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa procedura. Vedere [implementa istruzione](implements-statement.md).  
+     Facoltativo. Indica che questa procedura consente di implementare una o più `Function` procedure, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa procedura. Vedere [implementa istruzione](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -148,7 +148,7 @@ End Function
   
 -   `Handles`  
   
-     Parametro facoltativo. Indica che questa procedura è possibile gestire uno o più eventi specifici. Vedere [gestisce](handles-clause.md).  
+     Facoltativo. Indica che questa procedura è possibile gestire uno o più eventi specifici. Vedere [gestisce](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -167,7 +167,7 @@ End Function
   
 -   `statements`  
   
-     Parametro facoltativo. Blocco di istruzioni da eseguire all'interno di questa procedura.  
+     Facoltativo. Blocco di istruzioni da eseguire all'interno di questa procedura.  
   
 -   `End Function`  
   
@@ -239,7 +239,7 @@ End Function
   
  Può essere il tipo restituito di una funzione iterator <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Per altre informazioni, vedere [Iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Per altre informazioni, vedere [Iteratori](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Function` istruzione per dichiarare il nome, parametri e il codice che formano il corpo di un `Function` stored procedure. Il `ParamArray` modificatore consente alla funzione di accettare un numero variabile di argomenti.  

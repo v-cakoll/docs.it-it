@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3705db8b9d359ce83c6c47bef58de327745bed44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de415a6282b1d27d803d448bd3225355c08e011b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrazione di Common Language Runtime di SQL Server
 In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET Framework per Microsoft Windows. Questo significa che è possibile scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente, aggregati definiti dall'utente e funzioni con valori di tabella di flusso usando qualsiasi linguaggio di .NET Framework, inclusi Microsoft Visual Basic .NET e Microsoft Visual C#. Lo spazio dei nomi <xref:Microsoft.SqlServer.Server> contiene un set di nuove API (Application Programming Interface) che consente l'interazione del codice gestito con l'ambiente Microsoft SQL Server.  
@@ -30,14 +31,14 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
   
 1.  [Concetti della programmazione di integrazione Common Language Runtime (CLR)](http://go.microsoft.com/fwlink/?LinkId=115240)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Introduzione all'integrazione CLR di SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Introduzione all'integrazione CLR in SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  Viene fornita un'introduzione all'integrazione CLR di SQL Server. Vengono forniti collegamenti ad argomenti aggiuntivi.  
   
- [Funzioni CLR definite dall'utente](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [Funzioni definite dall'utente CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
  Viene descritto come implementare e usare i diversi tipi di funzioni CLR, ovvero le funzioni con valori di tabella, le funzioni scalari e le funzioni di aggregazione definite dall'utente.  
   
- [Tipi CLR definiti dall'utente](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [Tipi definiti dall'utente CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
  Viene descritto come implementare e usare i tipi CLR definiti dall'utente. Vengono forniti collegamenti ad argomenti aggiuntivi.  
   
  [Stored procedure CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
@@ -46,10 +47,10 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
  [Trigger CLR](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
  Viene descritto come implementare e usare i trigger CLR. Vengono forniti collegamenti ad argomenti aggiuntivi.  
   
- [La connessione di contesto](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [Connessione di contesto](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
  Viene descritta la connessione di contesto.  
   
- [Comportamento specifico nel processo SQL Server di ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [Comportamento specifico in-process SQL Server di ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  Vengono descritte le estensioni specifiche in-process di SQL Server per ADO.NET e la connessione di contesto. Vengono forniti collegamenti ad argomenti aggiuntivi.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f996cf730acc355f3bf13287b79581d23e4e6a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90de9dd6bd32eb2142dceb98c142f3c50a0a5691
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 È possibile utilizzare Traccia eventi per Windows (ETW) per registrare eventi CLR (Common Language Runtime). Tramite i seguenti strumenti si possono creare e visualizzare tracce:  
@@ -52,7 +53,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Per acquisire eventi ETW CLR tramite Logman  
   
-1.  Al prompt dei comandi digitare:  
+1.  Al prompt dei comandi, digitare:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -76,7 +77,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>Per acquisire eventi ETW CLR tramite Xperf  
   
-1.  Al prompt dei comandi digitare:  
+1.  Al prompt dei comandi, digitare:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
@@ -93,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Per visualizzare gli eventi ETW CLR tramite Tracerpt  
   
--   Al prompt dei comandi digitare:  
+-   Al prompt dei comandi, digitare:  
   
      `tracerpt clrevents.etl`  
   
@@ -101,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Per visualizzare gli eventi ETW CLR tramite Xperf  
   
--   Al prompt dei comandi digitare:  
+-   Al prompt dei comandi, digitare:  
   
      `xperf clrevents.etl`  
   
@@ -109,7 +110,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Per convertire il file con estensione etl in un file con valori delimitati da virgole  
   
--   Al prompt dei comandi digitare:  
+-   Al prompt dei comandi, digitare:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
@@ -34,7 +34,7 @@ Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni d
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Parametro facoltativo. Specificare `/optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `/optioninfer-` per bloccarla. L'opzione `/optioninfer`, senza alcun valore specificato, equivale a `/optioninfer+`. Il valore predefinito, quando l'opzione `/optioninfer` non è presente, è anche `/optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
+|`+` &#124; `-`|Facoltativo. Specificare `/optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `/optioninfer-` per bloccarla. L'opzione `/optioninfer`, senza alcun valore specificato, equivale a `/optioninfer+`. Il valore predefinito, quando l'opzione `/optioninfer` non è presente, è anche `/optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
   
 > [!NOTE]
 >  È possibile usare l'opzione `/noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp. Il valore predefinito del compilatore per questa opzione è `/optioninfer-`.  
@@ -44,7 +44,7 @@ Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni d
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Per impostare /optioninfer nell'IDE di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora**. Scegliere **Proprietà** dal menu **Progetto**. Per ulteriori informazioni, vedere [NIB: gestione di proprietà del progetto con la finestra di progettazione del progetto](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  Selezionare un progetto in **Esplora**. Scegliere **Proprietà** dal menu **Progetto**.  
   
 2.  Nel **compilare** scheda, modificare il valore di **Option infer** casella.  
   

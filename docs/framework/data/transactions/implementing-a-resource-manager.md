@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Implementazione della gestione risorse
 Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse, le cui azioni vengono coordinate dalla gestione transazioni. I gestori di risorse collaborano con la gestione transazioni allo scopo di garantire atomicità e isolamento all'applicazione. Alcuni esempi di gestori di risorse sono le code di messaggi durevoli, le tabelle hash in memoria e Microsoft SQL Server.  
@@ -41,14 +42,14 @@ Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse,
   
  La classe <xref:System.Transactions.Transaction> fornisce inoltre il metodo <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> per eseguire l'integrazione PSPE (Promotable Single Phase Enlistment). Grazie a questo meccanismo, un gestore di risorse durevoli può ospitare e "possedere" una transazione di cui in seguito può eseguire l'escalation in modo che venga gestita dal gestore MSDTC, se necessario. Per ulteriori informazioni, vedere [ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  I passaggi che in genere vengono eseguiti dai gestori di risorse sono descritti negli argomenti seguenti.  
   
- [L'integrazione di risorse come partecipanti in una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Integrazione di risorse come partecipanti a una transazione](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Descrive come una risorsa durevole o volatile può integrarsi in una transazione.  
   
- [Commit di una transazione in fase e in più fasi](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Commit di una transazione in monofase e multifase](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Descrive come un gestore di risorse risponde a una notifica di commit ed esegue la procedura di preparazione.  
   
@@ -56,10 +57,10 @@ Ogni risorsa utilizzata in una transazione viene gestita dalla gestione risorse,
   
  Descrive la procedura di ripristino eseguita da un gestore di risorse in caso di errore.  
   
- [Livelli di attendibilità sicurezza l'accesso alle risorse](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Restrizioni di accesso alle risorse in base ai livelli di attendibilità di sicurezza](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  Descrive come i tre livelli di attendibilità di System.Transactions limitano l'accesso ai tipi di risorse esposte dallo spazio dei nomi <xref:System.Transactions>.  
   
- [Ottimizzazione utilizzando il Commit a fase singola e Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Ottimizzazione mediante commit monofase e notifica monofase promuovibile](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Descrive alcune metodologie di ottimizzazione delle implementazioni dei gestori di risorse.

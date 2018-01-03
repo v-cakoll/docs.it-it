@@ -14,11 +14,11 @@ ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04b79b3d14a9c4a9f9721860cd1ed44032dfa5d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="warnaserror-visual-basic"></a>/warnaserror (Visual Basic)
 Indica al compilatore di considerare la prima occorrenza di un avviso come errore.  
@@ -33,8 +33,8 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
   
 |Termine|Definizione|  
 |---|---|  
-|+ &#124; -|Parametro facoltativo. Per impostazione predefinita, `/warnaserror-` è attivo; gli avvisi non impedire al compilatore che produce un file di output. Il `/warnaserror` opzione, ovvero lo stesso come `/warnaserror+`, gli avvisi vengono considerati come errori.|  
-|`numberList`|Parametro facoltativo. Elenco delimitato da virgole di ID di avviso di numeri a cui il `/warnaserror` opzione si applica. Se viene specificato alcun ID di avviso, il `/warnaserror` opzione si applica a tutti gli avvisi.|  
+|+ &#124; -|Facoltativo. Per impostazione predefinita, `/warnaserror-` è attivo; gli avvisi non impedire al compilatore che produce un file di output. Il `/warnaserror` opzione, ovvero lo stesso come `/warnaserror+`, gli avvisi vengono considerati come errori.|  
+|`numberList`|Facoltativo. Elenco delimitato da virgole di ID di avviso di numeri a cui il `/warnaserror` opzione si applica. Se viene specificato alcun ID di avviso, il `/warnaserror` opzione si applica a tutti gli avvisi.|  
   
 ## <a name="remarks"></a>Note  
  Il `/warnaserror` opzione Considera tutti gli avvisi come errori. Tutti i messaggi che verranno in genere segnalati come avvisi vengono invece segnalati come errori. Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.  
@@ -48,7 +48,7 @@ Indica al compilatore di considerare la prima occorrenza di un avviso come error
   
 |Per impostare /warnaserror considerare tutti gli avvisi come errori nell'IDE di Visual Studio|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Fare clic sulla scheda **Compila**.<br />3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.<br />4.  Controllare il **considera tutti gli avvisi come errori** casella di controllo.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.<br />4.  Controllare il **considera tutti gli avvisi come errori** casella di controllo.|  
   
 |Per impostare /warnaserror a considera avvisi specifici come errori nell'IDE di Visual Studio|  
 |---|  

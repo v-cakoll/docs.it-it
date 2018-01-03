@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Istruzione Event
 Dichiara un evento definito dall'utente.  
@@ -65,16 +65,16 @@ End Event
   
 |Parte|Descrizione|  
 |---|---|  
-|`attrlist`|Parametro facoltativo. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").|  
-|`accessmodifier`|Parametro facoltativo. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md): può accedere qualsiasi codice che è possibile accedere all'elemento che lo dichiara.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md): solo codice nella relativa classe o una classe derivata può accedere.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo può accedere il codice nello stesso assembly.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md): può accedere solo il codice nell'elemento che lo dichiara.<br /><br /> Si può specificare `Protected Friend` per abilitare l'accesso dal codice incluso nella classe dell'evento, in una classe derivata o nello stesso assembly.|  
-|`Shared`|Parametro facoltativo. Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.|  
-|`Shadows`|Parametro facoltativo. Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.|  
+|`attrlist`|Facoltativo. Elenco degli attributi applicabili all'evento. Gli attributi sono separati da una virgola. È necessario racchiudere il [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md) tra parentesi quadre ("`<`"e"`>`").|  
+|`accessmodifier`|Facoltativo. Specifica il tipo di codice che può accedere all'evento. Può essere uno dei seguenti:<br /><br /> -   [Pubblica](../../../visual-basic/language-reference/modifiers/public.md): può accedere qualsiasi codice che è possibile accedere all'elemento che lo dichiara.<br />-   [Protetto](../../../visual-basic/language-reference/modifiers/protected.md): solo codice nella relativa classe o una classe derivata può accedere.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo può accedere il codice nello stesso assembly.<br />-   [Privato](../../../visual-basic/language-reference/modifiers/private.md): può accedere solo il codice nell'elemento che lo dichiara.<br /><br /> Si può specificare `Protected Friend` per abilitare l'accesso dal codice incluso nella classe dell'evento, in una classe derivata o nello stesso assembly.|  
+|`Shared`|Facoltativo. Specifica che l'evento non è associato a una specifica istanza di una classe o di una struttura.|  
+|`Shadows`|Facoltativo. Indica che l'evento ridichiara e nasconde un elemento di programmazione omonimo o un insieme di elementi in overload di una classe base. È possibile nascondere qualsiasi tipo di elemento dichiarato con qualsiasi altro tipo.<br /><br /> Un elemento nascosto non è disponibile all'interno della classe derivata che lo nasconde, a meno che l'elemento di shadowing sia inaccessibile. Ad esempio, se un elemento `Private` nasconde un elemento della classe base, il codice che non dispone dell'autorizzazione per accedere all'elemento `Private` accede invece all'elemento della classe base.|  
 |`eventname`|Obbligatorio. Nome dell'evento, conforme alle convenzioni di denominazione standard delle variabili.|  
-|`parameterlist`|Parametro facoltativo. Elenco di variabili locali che rappresentano i parametri dell'evento. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`Implements`|Parametro facoltativo. Indica che l'evento implementa un evento di un'interfaccia.|  
+|`parameterlist`|Facoltativo. Elenco di variabili locali che rappresentano i parametri dell'evento. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
+|`Implements`|Facoltativo. Indica che l'evento implementa un evento di un'interfaccia.|  
 |`implementslist`|Necessario se si fornisce `Implements`. Elenco delle routine `Sub` implementate. Nel caso di più routine, è possibile separarle mediante virgole.<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Ogni `implementedprocedure` presenta la sintassi e le parti seguenti:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Obbligatorio. Nome di un'interfaccia implementata dalla classe o dalla struttura che contiene la routine.<br />-   `Definedname`-Obbligatorio. Nome mediante il quale la routine viene definita in `interface`. Non è necessario che questo nome corrisponda al nome usato dalla routine per implementare la routine definita, ossia `name`.|  
 |`Custom`|Obbligatorio. È necessario che gli eventi dichiarati come `Custom` definiscano funzioni di accesso `AddHandler`, `RemoveHandler` e `RaiseEvent` personalizzate.|  
-|`delegatename`|Parametro facoltativo. Nome del delegato che specifica la firma del gestore eventi.|  
+|`delegatename`|Facoltativo. Nome del delegato che specifica la firma del gestore eventi.|  
 |`AddHandler`|Obbligatorio. Dichiara una funzione di accesso `AddHandler` che specifica le istruzioni da eseguire quando viene aggiunto un gestore eventi, sia in modo esplicito mediante l'istruzione `AddHandler` che in modo implicito mediante la clausola `Handles`|  
 |`End AddHandler`|Obbligatorio. Termina il blocco `AddHandler`.|  
 |`value`|Obbligatorio. Nome parametro.|  
@@ -83,7 +83,7 @@ End Event
 |`RaiseEvent`|Obbligatorio. Dichiara una funzione di accesso `RaiseEvent`, che specifica le istruzioni da eseguire quando l'evento viene generato mediante l'istruzione `RaiseEvent`. In genere, viene richiamato un elenco di delegati gestito dalle funzioni di accesso `AddHandler` e `RemoveHandler`.|  
 |`End RaiseEvent`|Obbligatorio. Termina il blocco `RaiseEvent`.|  
 |`delegatesignature`|Obbligatorio. Elenco di parametri che corrisponde ai parametri richiesti dal delegato `delegatename`. È necessario racchiudere il [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md) tra parentesi.|  
-|`statements`|Parametro facoltativo. Istruzioni che includono i corpi dei metodi `AddHandler`, `RemoveHandler` e `RaiseEvent`.|  
+|`statements`|Facoltativo. Istruzioni che includono i corpi dei metodi `AddHandler`, `RemoveHandler` e `RaiseEvent`.|  
 |`End Event`|Obbligatorio. Termina il blocco `Event`.|  
   
 ## <a name="remarks"></a>Note  
@@ -122,7 +122,7 @@ End Event
  Premere F5 per eseguire l'esempio precedente, quindi fare clic sul pulsante con etichettato **avviare**. Nella prima casella di testo viene avviato il conto alla rovescia dei secondi. Al termine dei 10 secondi, nella prima casella di testo viene visualizzato "Done".  
   
 > [!NOTE]
->  Il metodo `My.Application.DoEvents` non elabora gli eventi allo stesso modo del form. Per consentire al form di gestire direttamente gli eventi, si può ricorrere al multithreading. Per ulteriori informazioni, vedere [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  Il metodo `My.Application.DoEvents` non elabora gli eventi allo stesso modo del form. Per consentire al form di gestire direttamente gli eventi, si può ricorrere al multithreading. Per ulteriori informazioni, vedere [Threading](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9718876e43c56c81f0a772670f187f6dd95f139
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interceptors-wcf-data-services"></a>Intercettori (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]consente a un'applicazione intercettare i messaggi di richiesta in modo che è possibile aggiungere la logica personalizzata a un'operazione. È possibile utilizzare questa logica personalizzata per convalidare i dati nei messaggi in arrivo. È inoltre possibile usarla per limitare ulteriormente l'ambito di una richiesta di query, inserendo ad esempio criteri di autorizzazione personalizzati per le singole richieste.  
@@ -59,4 +60,4 @@ ms.lasthandoff: 12/02/2017
  Per ulteriori informazioni, vedere [procedura: intercettare messaggi del servizio dati](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operazioni del servizio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+ [Operazioni di servizio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

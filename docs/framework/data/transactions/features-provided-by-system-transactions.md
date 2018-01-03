@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d615d4e1da86ef2a23563f25f6976099daedf10e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1170adc2fb2ede41e9e111e9d7dd6612f06676a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="features-provided-by-systemtransactions"></a>Funzionalità offerte da System.Transactions
 Questa sezione descrive come utilizzare le funzionalità fornite dallo spazio dei nomi <xref:System.Transactions> per scrivere applicazioni transazionali e gestori di risorse personalizzati. In particolare, questa sezione descrive come creare una transazione (locale o distribuita) e come integrarvi una o più risorse.  
@@ -34,7 +35,7 @@ Questa sezione descrive come utilizzare le funzionalità fornite dallo spazio de
   
  Lo spazio dei nomi <xref:System.Transactions> definisce tre livelli di attendibilità per restringere l'accesso ai tipi di risorse che espone: AllowPartiallyTrustedCallers, DistributedTransactionPermission e FullTrust. Per ulteriori informazioni sui diversi livelli di attendibilità, vedere [dei livelli di attendibilità di sicurezza di accesso alle risorse](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 ### <a name="writing-a-transactional-application"></a>Scrittura di un'applicazione transazionale  
  Lo spazio dei nomi <xref:System.Transactions> offre due modelli per creare le applicazioni di transazione. [Implementazione di una transazione implicita con ambito di transazione](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) viene descritto come <xref:System.Transactions> dello spazio dei nomi supporta la creazione di transazioni implicite utilizzando la <xref:System.Transactions.TransactionScope> classe.  

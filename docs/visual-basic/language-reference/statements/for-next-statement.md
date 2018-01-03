@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
 Ripete un gruppo di istruzioni di un numero di volte specificato.  
@@ -57,13 +57,13 @@ Next [ counter ]
 |Parte|Descrizione|  
 |----------|-----------------|  
 |`counter`|Obbligatorio nel `For` istruzione. Variabile numerica. La variabile di controllo per il ciclo. Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.|  
-|`datatype`|Parametro facoltativo. Tipo di dati di `counter`. Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.|  
+|`datatype`|Facoltativo. Tipo di dati di `counter`. Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.|  
 |`start`|Obbligatorio. Espressione numerica. Il valore iniziale di `counter`.|  
 |`end`|Obbligatorio. Espressione numerica. Il valore finale di `counter`.|  
-|`step`|Parametro facoltativo. Espressione numerica. Quantità in base alla quale `counter` viene incrementato ogni volta che il ciclo.|  
-|`statements`|Parametro facoltativo. Uno o più istruzioni tra `For` e `Next` che eseguono il numero di volte specificato.|  
-|`Continue For`|Parametro facoltativo. Trasferisce il controllo per l'iterazione del ciclo successivo.|  
-|`Exit For`|Parametro facoltativo. Trasferisce il controllo fuori il `For` ciclo.|  
+|`step`|Facoltativo. Espressione numerica. Quantità in base alla quale `counter` viene incrementato ogni volta che il ciclo.|  
+|`statements`|Facoltativo. Uno o più istruzioni tra `For` e `Next` che eseguono il numero di volte specificato.|  
+|`Continue For`|Facoltativo. Trasferisce il controllo per l'iterazione del ciclo successivo.|  
+|`Exit For`|Facoltativo. Trasferisce il controllo fuori il `For` ciclo.|  
 |`Next`|Obbligatorio. Termina la definizione di `For` ciclo.|  
   
 > [!NOTE]
@@ -137,10 +137,10 @@ Next [ counter ]
   
 |È `datatype` presente?|È `counter` già definito?|Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For...Next` ciclo)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|No|Sì|No, in quanto `counter` è già definito. Se l'ambito di `counter` non è locale per la procedura, viene generato un avviso in fase di compilazione.|  
+|No|Yes|No, in quanto `counter` è già definito. Se l'ambito di `counter` non è locale per la procedura, viene generato un avviso in fase di compilazione.|  
 |No|No|Sì. Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni. Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [locale l'inferenza del tipo](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Sì|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.|  
-|Sì|No|Sì.|  
+|Yes|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.|  
+|Yes|No|Sì.|  
   
  Il tipo di dati `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:  
   
@@ -186,4 +186,4 @@ Next [ counter ]
  [Istruzione Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [Raccolte](../../programming-guide/concepts/collections.md)

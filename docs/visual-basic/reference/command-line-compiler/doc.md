@@ -14,11 +14,11 @@ ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2490529b951ef6e583e3bfa54afced89c823e874
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f9d4f584f217e6996a499614b97f184b28664f8
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="doc"></a>/doc
 Elabora commenti sulla documentazione in un file XML.  
@@ -35,7 +35,7 @@ Elabora commenti sulla documentazione in un file XML.
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Parametro facoltativo. Specificando +, o semplicemente `/doc`, indica al compilatore di generare informazioni relative alla documentazione e inserirle in un file XML. Specifica di `-` è l'equivalente della specifica di non `/doc`, non causando alcuna informazione di documentazione da creare.|  
+|`+` &#124; `-`|Facoltativo. Specificando +, o semplicemente `/doc`, indica al compilatore di generare informazioni relative alla documentazione e inserirle in un file XML. Specifica di `-` è l'equivalente della specifica di non `/doc`, non causando alcuna informazione di documentazione da creare.|  
 |`file`|Richiesto se è usato `/doc:`. Specifica il file XML di output, che viene popolato con i commenti dai file di codice sorgente della compilazione. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
 ## <a name="remarks"></a>Note  
@@ -55,7 +55,7 @@ Elabora commenti sulla documentazione in un file XML.
   
 |Per impostare l'opzione /doc in Visual Studio ambiente di sviluppo integrato.|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. Per altre informazioni, vedere [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Fare clic sulla scheda **Compila**.<br />3.  Impostare il valore di **file di documentazione XML generare** casella.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Impostare il valore di **file di documentazione XML generare** casella.|  
   
 ## <a name="example"></a>Esempio  
  Vedere [documentare il codice con XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) per un esempio.  

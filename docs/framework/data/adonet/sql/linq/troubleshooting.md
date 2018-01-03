@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c4674acd6d097eb1cb03d5dd07b0c686404d1145
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aba9aca61497b9b3efd1419d0565bdcfcd7ee7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting"></a>Risoluzione dei problemi
 Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile incontrare nelle applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e vengono forniti suggerimenti per evitare o altrimenti ridurre l'effetto di questi problemi.  
@@ -80,5 +81,5 @@ Nelle informazioni seguenti vengono illustrati alcuni problemi che è possibile 
  Il metodo `OnCreated()` generato viene chiamato ogni volta che viene chiamato il costruttore dell'oggetto, incluso lo scenario in cui [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chiama il costruttore per creare una copia dei valori originali. Tenere conto di questo comportamento se si implementa il metodo `OnCreated()` nella classe parziale personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto del debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
+ [Supporto per il debug](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
  [Domande frequenti](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

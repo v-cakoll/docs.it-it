@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è una funzionalità che consente l'esecuzione di più batch in un'unica connessione. Nelle versioni precedenti era possibile eseguire un batch alla volta su una singola connessione. L'esecuzione di più batch con MARS non implica l'esecuzione simultanea delle operazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Abilitazione Multiple Active Result Set](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Abilitazione di MARS (Multiple Active Result Set)](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  Viene descritto come usare MARS con SQL Server.  
   
- [La modifica dei dati](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ [Manipolazione di dati](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
  Vengono forniti esempi della codifica di applicazioni MARS.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

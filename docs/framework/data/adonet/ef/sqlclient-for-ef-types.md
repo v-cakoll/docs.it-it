@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c8a3a3e794941c2713af0e5b098bd7f8d783eb4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient per tipi Entity Framework
 Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient) include l'elenco dei tipi primitivi del provider, facet per ogni tipo, mapping tra i tipi primitivi del modello concettuale e del modello di archiviazione e regole di promozione e conversione tra i tipi primitivi del modello concettuale e del modello di archiviazione.  
@@ -33,31 +34,31 @@ Il file manifesto del provider di dati .NET Framework per SQL Server (SqlClient)
 |`bigint`|n/d|`Edm.Int64`|n/d|  
 |`float`|n/d|`Edm.Double`|n/d|  
 |`real`|n/d|`Edm.Double`|n/d|  
-|`decimal`|n/d|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scala:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
-|`numeric`|n/d|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scala:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
-|`smallmoney`|n/d|`Edm.Decimal`|Precisione:<br /><br /> -Il valore predefinito: 10<br /><br /> -Costante: True<br /><br /> Scala:<br /><br /> -Il valore predefinito: 4<br /><br /> -Costante: True|  
-|`money`|n/d|`Edm.Decimal`|Precisione:<br /><br /> -Il valore predefinito: 19<br /><br /> -Costante: True<br /><br /> Scala:<br /><br /> -Il valore predefinito: 4<br /><br /> -Costante: True|  
-|`binary`|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
-|`varbinary`|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`varbinary(max)`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 214748364780<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`image`|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 2147483647<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`timestamp`|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 8<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
-|`rowversion`|n/d|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 8<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
-|`smalldatetime`|n/d|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: True|  
-|`datetime`|n/d|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 3<br /><br /> -Costante: True|  
-|`date`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|n/d|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
-|`time`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|n/d|`Edm.Time`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
-|`datetime2`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|n/d|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
-|`datetimeoffset`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|n/d|`Edm.DateTimeOffset`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
-|`nvarchar`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|n/d|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 4000<br /><br /> -Il valore predefinito: 4000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`varchar`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|n/d|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`char`|n/d|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
-|`nchar`|n/d|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 4000<br /><br /> -Il valore predefinito: 4000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
-|`varchar`(`max`)|n/d|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 2147483647<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`nvarchar`(`max`)|n/d|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 1073741823<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`decimal`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scala:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
+|`numeric`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 18<br /><br /> -Costante: False<br /><br /> Scala:<br /><br /> -Minimo: 0<br /><br /> -Massimo: 38<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
+|`smallmoney`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Il valore predefinito: 10<br /><br /> -Costante: True<br /><br /> Scala:<br /><br /> -Il valore predefinito: 4<br /><br /> -Costante: True|  
+|`money`|N/D|`Edm.Decimal`|Precisione:<br /><br /> -Il valore predefinito: 19<br /><br /> -Costante: True<br /><br /> Scala:<br /><br /> -Il valore predefinito: 4<br /><br /> -Costante: True|  
+|`binary`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
+|`varbinary`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`varbinary(max)`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 214748364780<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`image`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 2147483647<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`timestamp`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 8<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
+|`rowversion`|N/D|`Edm.Binary`|MaxLength:<br /><br /> -Il valore predefinito: 8<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
+|`smalldatetime`|N/D|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: True|  
+|`datetime`|N/D|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 3<br /><br /> -Costante: True|  
+|`date`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|N/D|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 0<br /><br /> -Costante: False|  
+|`time`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|N/D|`Edm.Time`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
+|`datetime2`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|N/D|`Edm.DateTime`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
+|`datetimeoffset`<br /><br /> Nota: Questo tipo non è supportato in SQL Server 2005 e SQL Server 2000.|N/D|`Edm.DateTimeOffset`|Precisione:<br /><br /> -Il valore predefinito: 7<br /><br /> -Costante: False|  
+|`nvarchar`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|N/D|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 4000<br /><br /> -Il valore predefinito: 4000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`varchar`<br /><br /> Nota: Questo tipo non supportato [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|N/D|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`char`|N/D|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 8000<br /><br /> -Il valore predefinito: 8000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
+|`nchar`|N/D|`Edm.String`|MaxLength:<br /><br /> -Minimo: 1<br /><br /> -Massimo: 4000<br /><br /> -Il valore predefinito: 4000<br /><br /> -Costante: False<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True|  
+|`varchar`(`max`)|N/D|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 2147483647<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
+|`nvarchar`(`max`)|N/D|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 1073741823<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
 |`ntext`|Uguale confrontabili: False<br /><br /> Confrontabile: False|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 1073741823<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
 |`text`|Uguale confrontabili: False<br /><br /> Confrontabile: False|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 2147483647<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
-|`Unique`<br /><br /> `identifier`|Uguale confrontabili: True<br /><br /> Confrontabile: True|`Edm.Guid`|n/d|  
+|`Unique`<br /><br /> `identifier`|Uguale confrontabili: True<br /><br /> Confrontabile: True|`Edm.Guid`|N/D|  
 |`xml`|Uguale confrontabili: False<br /><br /> Confrontabile: False|`Edm.String`|MaxLength:<br /><br /> -Il valore predefinito: 1073741823<br /><br /> -Costante: True<br /><br /> Unicode:<br /><br /> -Il valore predefinito: True<br /><br /> -Costante: True<br /><br /> Stringa:<br /><br /> -Il valore predefinito: False<br /><br /> -Costante: True|  
   
 ## <a name="see-also"></a>Vedere anche  

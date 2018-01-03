@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
 Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di sicurezza disponibili nell'archivio dati o nel database sottostante. Considerare inoltre le implicazioni di sicurezza di altre funzionalità o componenti che potrebbero essere inclusi nell'applicazione.  
@@ -36,7 +37,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |[Protezione delle informazioni di connessione](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Vengono descritte le procedure consigliate e le tecniche in materia di sicurezza per la protezione delle informazioni di connessione, ad esempio l'uso della configurazione protetta per crittografare le stringhe di connessione.|  
 |[Indicazioni per strategie di accesso ai dati](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
 |[Generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md)|Viene descritto come compilare stringhe di esecuzione dall'input dell'utente in fase di esecuzione.|  
-|[Panoramica della sicurezza SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Viene descritta l'architettura di sicurezza di SQL Server.|  
+|[Cenni preliminari sulla sicurezza in SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Viene descritta l'architettura di sicurezza di SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Comandi con parametri e SQL injection  
  L'uso di comandi con parametri consente di salvaguardarsi da attacchi SQL injection, un cui un utente non autorizzato inserisce in un'istruzione SQL un comando che compromette la sicurezza del server. I comandi con parametri consentono di evitare attacchi SQL injection garantendo che i valori ricevuti da un'origine esterna verranno passati come semplici valori e non come parte di un'istruzione Transact-SQL. Pertanto, i comandi Transact-SQL inseriti in un valore non verranno eseguiti sull'origine dati. Verranno invece valutati unicamente come un valore del parametro. Oltre ai vantaggi in termini di sicurezza, i comandi con parametri rappresentano un metodo pratico per organizzare i valori passati con un'istruzione Transact-SQL o a una stored procedure.  
@@ -46,8 +47,8 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Parametri DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Viene descritto come usare parametri con `DataAdapter`.|  
-|[Modifica dei dati con le Stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Viene descritto come specificare i parametri e ottenere un valore restituito.|  
-|[Gestione delle autorizzazioni con Stored procedure in SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Viene descritto come usare le stored procedure di SQL Server per incapsulare l'accesso ai dati.|  
+|[Modifica di dati con stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Viene descritto come specificare i parametri e ottenere un valore restituito.|  
+|[Gestione delle autorizzazioni con stored procedure in SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Viene descritto come usare le stored procedure di SQL Server per incapsulare l'accesso ai dati.|  
   
 ## <a name="script-exploits"></a>Attacchi tramite script  
  Gli attacchi tramite script sono un altro tipo di intrusione in cui vengono inseriti caratteri dannosi in una pagina Web. I caratteri inseriti non vengono convalidati nel browser e verranno elaborati come parte della pagina.  

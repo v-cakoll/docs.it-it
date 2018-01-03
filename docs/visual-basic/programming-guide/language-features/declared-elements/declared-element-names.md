@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Nomi di elementi dichiarati (Visual Basic)
 Ogni elemento dichiarato è un nome, detto anche un *identificatore*, il codice utilizzato per farvi riferimento.  
@@ -71,7 +71,7 @@ Ogni elemento dichiarato è un nome, detto anche un *identificatore*, il codice 
  `xyz$wv`  
   
 > [!CAUTION]
->  I nomi degli elementi a partire da un carattere di sottolineatura (`_`) non fanno parte di [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), pertanto il codice conforme a CLS non è possibile utilizzare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
+>  I nomi degli elementi a partire da un carattere di sottolineatura (`_`) non fanno parte di [indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md) (CLS), pertanto il codice conforme a CLS non è possibile utilizzare un componente che definisce tali nomi. Tuttavia, un carattere di sottolineatura in qualsiasi altra posizione nel nome di un elemento è conforme a CLS.  
   
 ### <a name="name-length-guidelines"></a>Linee guida di lunghezza nome  
  In pratica, il nome deve essere il più breve possibile identificando chiaramente la natura dell'elemento. Questo migliora la leggibilità del codice e ridurre la dimensione del file di origine e di lunghezza riga.  

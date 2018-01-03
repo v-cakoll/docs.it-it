@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Metodi parziali (Visual Basic)
 Metodi parziali consentono agli sviluppatori di inserire la logica personalizzata nel codice. In genere, il codice è parte di una classe generato da progettazione. Metodi parziali sono definiti in una classe parziale che viene creata da un generatore di codice e vengono utilizzati frequentemente per fornire la notifica che un elemento è stato modificato. Consentono allo sviluppatore di specificare un comportamento personalizzato in risposta alla modifica.  
@@ -58,7 +58,7 @@ End Sub
   
  La firma nella dichiarazione consente di duplicare esattamente l'esempio precedente, ma sono possibili variazioni. In particolare, è possano aggiungere altri modificatori, ad esempio `Overloads` o `Overrides`. Un solo `Overrides` modificatore è consentito. Per ulteriori informazioni sui modificatori di metodo, vedere [istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="use"></a>Uso  
+## <a name="use"></a>Usa  
  Si chiama un metodo parziale procedendo come per qualsiasi altro `Sub` stored procedure. Se è stato implementato il metodo, gli argomenti vengono valutati e viene eseguito il corpo del metodo. Tuttavia, tenere presente che l'implementazione di un metodo parziale è facoltativa. Se non è stato implementato il metodo, una chiamata non ha alcun effetto e non vengono valutate le espressioni passate come argomenti al metodo.  
   
 ## <a name="example"></a>Esempio  
@@ -83,5 +83,5 @@ End Sub
  [Routine Sub](./sub-procedures.md)  
  [Parametri facoltativi](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Generazione di codice in LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [Aggiunta di logica di Business mediante metodi parziali](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [Generazione di codice in LINQ to SQL](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Aggiunta di logica di business mediante metodi parziali](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

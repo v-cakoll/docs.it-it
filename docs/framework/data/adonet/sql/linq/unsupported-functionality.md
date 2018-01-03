@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6dd8ccebd278fdc36c536c49f7f1d4262b2de8c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 244d9ee7accd3686729542d0f0a15966bcde7b78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-functionality"></a>Funzionalità non supportata
 In LINQ to SQL non è possibile esporre la funzionalità SQL seguente tramite la conversione di costrutti CLR (Common Language Runtime) e .NET Framework esistenti:  
@@ -37,4 +38,4 @@ In LINQ to SQL non è possibile esporre la funzionalità SQL seguente tramite la
      LINQ to SQL dispone di un supporto limitato per `ROUND`. Per ulteriori informazioni, vedere [metodi System. Math](system-math-methods.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e tipi di dati](data-types-and-functions.md)
+ [Tipi di dati e funzioni](data-types-and-functions.md)

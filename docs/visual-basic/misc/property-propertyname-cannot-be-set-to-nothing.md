@@ -9,11 +9,11 @@ ms.assetid: 074014b4-5070-4c2f-9496-cbbbe9393dd6
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41c01549b4109df82cc2160be514b557f8533f20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3808fc25055496fcc98d74f70835f653016fc18
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-nothing"></a>Proprietà &lt;propertyname&gt; non può essere impostata su Nothing
 La proprietà richiede un valore diverso da `Nothing`. È possibile che il valore non sia stato calcolato correttamente.  
@@ -25,4 +25,4 @@ La proprietà richiede un valore diverso da `Nothing`. È possibile che il valor
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)  
  [Nothing](../../visual-basic/language-reference/nothing.md)  
- [Risoluzione dei problemi relativi ad eccezioni: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+ <xref:System.NullReferenceException>

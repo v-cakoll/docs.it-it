@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  
@@ -171,9 +172,9 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
   
 -   `XmlSerializer`. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.  
   
--   `MarshalObject`. Criteri di controlli per il marshalling dei tipi di riferimento per WinRT e COM.  
+-   `MarshalObject`. Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.  
   
--   `MarshalDelegate`. Controlla i criteri per il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.  
+-   `MarshalDelegate`. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.  
   
 -   `MarshalStructure` . Controlla i criteri per il marshalling delle strutture al codice nativo.  
   
