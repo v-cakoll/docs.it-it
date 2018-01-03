@@ -19,16 +19,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3f7bd3991fa57f11674b7ef0b9b62d12376fa765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9cc61d0bc32545b486f4472904b17ed0b59526e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="exporttype-method"></a><span data-ttu-id="3c85e-102">Metodo ExportType</span><span class="sxs-lookup"><span data-stu-id="3c85e-102">ExportType Method</span></span>
-<span data-ttu-id="3c85e-103">Specifica che un tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="3c85e-103">Specifies that a type is exportable.</span></span>  
+# <a name="exporttype-method"></a><span data-ttu-id="ec135-102">Metodo ExportType</span><span class="sxs-lookup"><span data-stu-id="ec135-102">ExportType Method</span></span>
+<span data-ttu-id="ec135-103">Specifica che un tipo può essere esportato.</span><span class="sxs-lookup"><span data-stu-id="ec135-103">Specifies that a type is exportable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c85e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3c85e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec135-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ec135-104">Syntax</span></span>  
   
 ```  
 HRESULT ExportType(  
@@ -41,32 +42,32 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3c85e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="3c85e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ec135-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ec135-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="3c85e-106">ID dell'assembly da cui esportare.</span><span class="sxs-lookup"><span data-stu-id="3c85e-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="ec135-106">ID dell'assembly da cui esportare.</span><span class="sxs-lookup"><span data-stu-id="ec135-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="3c85e-107">Token o assembly ID del file che definisce il tipo esportabile.</span><span class="sxs-lookup"><span data-stu-id="3c85e-107">File token or assembly ID of file that defines the exportable type.</span></span>  
+ <span data-ttu-id="ec135-107">Token o assembly ID del file che definisce il tipo esportabile.</span><span class="sxs-lookup"><span data-stu-id="ec135-107">File token or assembly ID of file that defines the exportable type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="3c85e-108">Token di tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="3c85e-108">Token of type to be made exportable.</span></span>  
+ <span data-ttu-id="ec135-108">Token di tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="ec135-108">Token of type to be made exportable.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="3c85e-109">Nome completo del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="3c85e-109">Fully qualified type name to be made exportable.</span></span>  
+ <span data-ttu-id="ec135-109">Nome completo del tipo da rendere esportabile.</span><span class="sxs-lookup"><span data-stu-id="ec135-109">Fully qualified type name to be made exportable.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="3c85e-110">`ComType`flag come `tdPublic` o `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="3c85e-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="3c85e-111">Questo parametro può essere passato a [DefineExportedType (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="3c85e-111">This parameter may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="ec135-110">`ComType`flag come `tdPublic` o `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="ec135-110">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="ec135-111">Questo parametro può essere passato a [DefineExportedType (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="ec135-111">This parameter may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="3c85e-112">Riceve il token del tipo esportato.</span><span class="sxs-lookup"><span data-stu-id="3c85e-112">Receives token for exported type.</span></span>  
+ <span data-ttu-id="ec135-112">Riceve il token del tipo esportato.</span><span class="sxs-lookup"><span data-stu-id="ec135-112">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3c85e-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3c85e-113">Return Value</span></span>  
- <span data-ttu-id="3c85e-114">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="3c85e-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ec135-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ec135-113">Return Value</span></span>  
+ <span data-ttu-id="ec135-114">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="ec135-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c85e-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3c85e-115">Requirements</span></span>  
- <span data-ttu-id="3c85e-116">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="3c85e-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec135-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ec135-115">Requirements</span></span>  
+ <span data-ttu-id="ec135-116">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="ec135-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c85e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c85e-117">See Also</span></span>  
- [<span data-ttu-id="3c85e-118">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="3c85e-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="3c85e-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="3c85e-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="3c85e-120">ALink (API)</span><span class="sxs-lookup"><span data-stu-id="3c85e-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="ec135-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ec135-117">See Also</span></span>  
+ [<span data-ttu-id="ec135-118">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="ec135-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="ec135-119">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="ec135-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="ec135-120">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="ec135-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

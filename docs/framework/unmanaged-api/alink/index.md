@@ -15,35 +15,36 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2f8646fbb1c878e850d9bcda4e7117111dc825f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92c4d7c6693e3a2a011cb4ac39b42a1d96985a36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="alink-api-unmanaged-api-reference"></a><span data-ttu-id="00099-102">API ALink (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="00099-102">ALink API (Unmanaged API Reference)</span></span>
-<span data-ttu-id="00099-103">Supporta la creazione di moduli non associati e assembly .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="00099-103">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
+# <a name="alink-api-unmanaged-api-reference"></a><span data-ttu-id="23728-102">API ALink (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="23728-102">ALink API (Unmanaged API Reference)</span></span>
+<span data-ttu-id="23728-103">Supporta la creazione di moduli non associati e assembly .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="23728-103">Supports creating .NET Framework assemblies and unbound modules.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="00099-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="00099-104">In This Section</span></span>  
- [<span data-ttu-id="00099-105">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="00099-105">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
+## <a name="in-this-section"></a><span data-ttu-id="23728-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="23728-104">In This Section</span></span>  
+ [<span data-ttu-id="23728-105">AssemblyAttributesGoHere</span><span class="sxs-lookup"><span data-stu-id="23728-105">AssemblyAttributesGoHere</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
   
- [<span data-ttu-id="00099-106">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="00099-106">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
+ [<span data-ttu-id="23728-106">AssemblyAttributesGoHereM</span><span class="sxs-lookup"><span data-stu-id="23728-106">AssemblyAttributesGoHereM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
   
- [<span data-ttu-id="00099-107">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="00099-107">AssemblyAttributesGoHereS</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)  
+ [<span data-ttu-id="23728-107">AssemblyAttributesGoHereS</span><span class="sxs-lookup"><span data-stu-id="23728-107">AssemblyAttributesGoHereS</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)  
   
- [<span data-ttu-id="00099-108">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="00099-108">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
+ [<span data-ttu-id="23728-108">AssemblyAttributesGoHereSM</span><span class="sxs-lookup"><span data-stu-id="23728-108">AssemblyAttributesGoHereSM</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
   
- [<span data-ttu-id="00099-109">AssemblyOptions (enumerazione)</span><span class="sxs-lookup"><span data-stu-id="00099-109">AssemblyOptions Enumeration</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
+ [<span data-ttu-id="23728-109">Enumerazione AssemblyOptions</span><span class="sxs-lookup"><span data-stu-id="23728-109">AssemblyOptions Enumeration</span></span>](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
   
- [<span data-ttu-id="00099-110">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="00099-110">CreateALink Function</span></span>](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
+ [<span data-ttu-id="23728-110">Funzione CreateALink</span><span class="sxs-lookup"><span data-stu-id="23728-110">CreateALink Function</span></span>](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
   
- [<span data-ttu-id="00099-111">Funzione GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="00099-111">GetALinkMessageDll Function</span></span>](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
+ [<span data-ttu-id="23728-111">Funzione GetALinkMessageDll</span><span class="sxs-lookup"><span data-stu-id="23728-111">GetALinkMessageDll Function</span></span>](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
   
- [<span data-ttu-id="00099-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="00099-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="23728-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="23728-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
   
- [<span data-ttu-id="00099-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="00099-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="23728-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="23728-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
   
- [<span data-ttu-id="00099-114">Interfaccia IALink3</span><span class="sxs-lookup"><span data-stu-id="00099-114">IALink3 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
+ [<span data-ttu-id="23728-114">Interfaccia IALink3</span><span class="sxs-lookup"><span data-stu-id="23728-114">IALink3 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
-## <a name="see-also"></a><span data-ttu-id="00099-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="00099-115">See Also</span></span>  
- [<span data-ttu-id="00099-116">Riferimenti alle API non gestite</span><span class="sxs-lookup"><span data-stu-id="00099-116">Unmanaged API Reference</span></span>](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="23728-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23728-115">See Also</span></span>  
+ [<span data-ttu-id="23728-116">Riferimenti alle API non gestite</span><span class="sxs-lookup"><span data-stu-id="23728-116">Unmanaged API Reference</span></span>](../../../../docs/framework/unmanaged-api/index.md)

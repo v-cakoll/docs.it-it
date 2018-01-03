@@ -21,16 +21,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6ade939969069fb35221d83f8c7e4e380e903a00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f5b7069af0bfdfd732ed1ab4935771a565a20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="b9667-102">Metodo CloseEnum</span><span class="sxs-lookup"><span data-stu-id="b9667-102">CloseEnum Method</span></span>
-<span data-ttu-id="b9667-103">Chiude l'enumerazione indicata e libera le risorse associate.</span><span class="sxs-lookup"><span data-stu-id="b9667-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="abf4d-102">Metodo CloseEnum</span><span class="sxs-lookup"><span data-stu-id="abf4d-102">CloseEnum Method</span></span>
+<span data-ttu-id="abf4d-103">Chiude l'enumerazione indicata e libera le risorse associate.</span><span class="sxs-lookup"><span data-stu-id="abf4d-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9667-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b9667-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abf4d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="abf4d-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseEnum(  
@@ -38,17 +39,17 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b9667-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b9667-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="abf4d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="abf4d-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="b9667-106">Handle di enumerazione per essere chiuso.</span><span class="sxs-lookup"><span data-stu-id="b9667-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="abf4d-106">Handle di enumerazione per essere chiuso.</span><span class="sxs-lookup"><span data-stu-id="abf4d-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b9667-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b9667-107">Return Value</span></span>  
- <span data-ttu-id="b9667-108">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="b9667-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="abf4d-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="abf4d-107">Return Value</span></span>  
+ <span data-ttu-id="abf4d-108">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="abf4d-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9667-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b9667-109">Requirements</span></span>  
- <span data-ttu-id="b9667-110">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="b9667-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abf4d-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="abf4d-109">Requirements</span></span>  
+ <span data-ttu-id="abf4d-110">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="abf4d-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9667-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b9667-111">See Also</span></span>  
- [<span data-ttu-id="b9667-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="b9667-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="b9667-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="b9667-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="b9667-114">ALink (API)</span><span class="sxs-lookup"><span data-stu-id="b9667-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="abf4d-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="abf4d-111">See Also</span></span>  
+ [<span data-ttu-id="abf4d-112">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="abf4d-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="abf4d-113">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="abf4d-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="abf4d-114">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="abf4d-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cd0e55cab6f0fdb7f971d7cf06e5703340e32307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d8827821deaeda311a42855737ecf53ab635a02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="addimport-method1"></a><span data-ttu-id="d461b-102">AddImport Method1</span><span class="sxs-lookup"><span data-stu-id="d461b-102">AddImport Method1</span></span>
-<span data-ttu-id="d461b-103">Aggiunge le importazioni all'assembly.</span><span class="sxs-lookup"><span data-stu-id="d461b-103">Adds imports to the assembly.</span></span>  
+# <a name="addimport-method1"></a><span data-ttu-id="df416-102">AddImport Method1</span><span class="sxs-lookup"><span data-stu-id="df416-102">AddImport Method1</span></span>
+<span data-ttu-id="df416-103">Aggiunge le importazioni all'assembly.</span><span class="sxs-lookup"><span data-stu-id="df416-103">Adds imports to the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d461b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d461b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df416-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="df416-104">Syntax</span></span>  
   
 ```  
 HRESULT AddImport(  
@@ -41,26 +42,26 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d461b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="d461b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="df416-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="df416-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="d461b-106">ID univoco dell'assembly da ampliare.</span><span class="sxs-lookup"><span data-stu-id="d461b-106">Unique ID of assembly to be augmented.</span></span>  
+ <span data-ttu-id="df416-106">ID univoco dell'assembly da ampliare.</span><span class="sxs-lookup"><span data-stu-id="df416-106">Unique ID of assembly to be augmented.</span></span>  
   
  `ImportToken`  
- <span data-ttu-id="d461b-107">ID univoco, recuperato dal [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), del file da importare.</span><span class="sxs-lookup"><span data-stu-id="d461b-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
+ <span data-ttu-id="df416-107">ID univoco, recuperato dal [metodo ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), del file da importare.</span><span class="sxs-lookup"><span data-stu-id="df416-107">Unique ID, retrieved from [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), of file to be imported.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="d461b-108">Flag COM+ FileDef quali `ffContainsNoMetaData` e `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="d461b-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="d461b-109">`dwFlags`viene passato a [metodo DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="d461b-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="df416-108">Flag COM+ FileDef quali `ffContainsNoMetaData` e `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="df416-108">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="df416-109">`dwFlags`viene passato a [metodo DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="df416-109">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="d461b-110">Puntatore al token che riceve l'ID per il file risultante.</span><span class="sxs-lookup"><span data-stu-id="d461b-110">Pointer to token that receives the ID for the resulting file.</span></span>  
+ <span data-ttu-id="df416-110">Puntatore al token che riceve l'ID per il file risultante.</span><span class="sxs-lookup"><span data-stu-id="df416-110">Pointer to token that receives the ID for the resulting file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d461b-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="d461b-111">Return Value</span></span>  
- <span data-ttu-id="d461b-112">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="d461b-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="df416-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="df416-111">Return Value</span></span>  
+ <span data-ttu-id="df416-112">Se il metodo ha esito positivo, restituisce S_OK.</span><span class="sxs-lookup"><span data-stu-id="df416-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d461b-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d461b-113">Requirements</span></span>  
- <span data-ttu-id="d461b-114">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="d461b-114">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df416-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="df416-113">Requirements</span></span>  
+ <span data-ttu-id="df416-114">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="df416-114">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d461b-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d461b-115">See Also</span></span>  
- [<span data-ttu-id="d461b-116">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="d461b-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="d461b-117">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="d461b-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="d461b-118">ALink (API)</span><span class="sxs-lookup"><span data-stu-id="d461b-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="df416-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df416-115">See Also</span></span>  
+ [<span data-ttu-id="df416-116">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="df416-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="df416-117">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="df416-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="df416-118">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="df416-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
