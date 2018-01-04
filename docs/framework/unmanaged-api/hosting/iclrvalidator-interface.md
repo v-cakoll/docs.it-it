@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0057be1457ad369b84f311008180dc7c4a3c323d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 434111cc5955c5145bf7cd6fff4d76f138aeda7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrvalidator-interface"></a>Interfaccia ICLRValidator
 Fornisce metodi per la convalida (PE) immagini di tipo PE e la segnalazione degli errori di convalida.  
@@ -32,8 +33,8 @@ Fornisce metodi per la convalida (PE) immagini di tipo PE e la segnalazione degl
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[FormatEventInfo (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Ottiene un messaggio dettagliato sull'errore di convalida specificato.|  
-|[Validate (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Convalida il file eseguibile portabile o Microsoft intermediate language (MSIL) nel file specificato.|  
+|[Metodo FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Ottiene un messaggio dettagliato sull'errore di convalida specificato.|  
+|[Metodo Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Convalida il file eseguibile portabile o Microsoft intermediate language (MSIL) nel file specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,6 +46,6 @@ Fornisce metodi per la convalida (PE) immagini di tipo PE e la segnalazione degl
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICLRErrorReportingManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
+ [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Coclasse CLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

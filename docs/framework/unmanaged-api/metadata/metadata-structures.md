@@ -17,20 +17,21 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 555f9a216c8e28f7f4fcd79babce77f929ecc072
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 18a5257dbc0272aedb8fe5c7ddec601b999c609b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-structures"></a>Strutture di metadati
 Questa sezione descrive le strutture non gestite usate dall'API dei metadati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  ASSEMBLYMETADATA  
  Archivia i metadati dell'assembly per un uso successivo.  
   
- [COR_FIELD_OFFSET (struttura)](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ [Struttura COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
  Archivia l'offset del campo specificato all'interno di una classe.  
   
  [Struttura COR_NATIVE_LINK](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
@@ -39,7 +40,7 @@ Questa sezione descrive le strutture non gestite usate dall'API dei metadati.
  [Struttura CVStruct](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
  Contiene informazioni usate durante l'installazione di un modulo o un'immagine composita.  
   
- [OSINFO (struttura)](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
+ [Struttura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
  Contiene informazioni sul sistema operativo.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

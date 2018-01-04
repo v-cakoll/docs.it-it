@@ -17,21 +17,22 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4b9b37e89ce364a814142c20a403064cfc0bff10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c60d70013e79360c05062a497d1f9f060e187ce9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Archivio dei simboli di diagnostica (riferimenti alle API non gestite)
 L'API dell'archivio di simboli di diagnostica consente a un compilatore di generare informazioni sui simboli per l'uso da un debugger.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
  Descrive le interfacce non gestite utilizzate dall'API dell'archivio di simboli di diagnostica.  
   
- [Enumerazioni dell'archivio di simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [Enumerazioni dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
  Descrive le enumerazioni non gestite utilizzate dall'API dell'archivio di simboli di diagnostica.  
   
- [Strutture di archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Strutture dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
  Descrive le strutture non gestite usate dall'API dell'archivio di simboli di diagnostica.

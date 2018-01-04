@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b47ed129b1d4859b744c32fe4cea763ea27e66a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dd26760d105b1bf11ee411464fd0507ce8a6b480
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-unions"></a>Unioni di metadati
 Questa sezione descrive le unioni non gestite usate dall'API dei metadati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Unione CeeSectionRelocExtra](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
  Rappresenta un offset di indirizzo che viene utilizzato il [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaccia per rilocare una sezione  
   

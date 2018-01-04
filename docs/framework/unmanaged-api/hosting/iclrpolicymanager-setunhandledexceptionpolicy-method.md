@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 59ff5cfd93d8077388694ee2e155133a88319c47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ad287fedbc06768dd683c254292e0c28760d59a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>Metodo ICLRPolicyManager::SetUnhandledExceptionPolicy
 Specifica il comportamento di common language runtime (CLR) quando si verifica un'eccezione non gestita.  
@@ -66,7 +67,7 @@ HRESULT SetUnhandledExceptionPolicy (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [EClrUnhandledException (enumerazione)](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
- [ICLRControl (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRPolicyManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [IHostPolicyManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+ [Enumerazione EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
+ [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Interfaccia ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
+ [Interfaccia IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

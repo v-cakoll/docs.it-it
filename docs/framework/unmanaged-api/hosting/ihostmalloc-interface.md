@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f788456065a5508441b9fec38ad4a7f531f9f303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1690f5fe8f1417e6547ed94db8c71f079ebf5e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmalloc-interface"></a>Interfaccia IHostMalloc
 Fornisce metodi che consentono a common language runtime (CLR) per richiedere di allocare dall'heap tramite l'host.  
@@ -32,9 +33,9 @@ Fornisce metodi che consentono a common language runtime (CLR) per richiedere di
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Alloc (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Richieste all'host di allocare la quantità di memoria richiesta dall'heap.|  
-|[DebugAlloc (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Richiede che l'host di alloca la quantità di memoria richiesta dall'heap e inoltre tenere traccia in cui è stata allocata la memoria.|  
-|[Free (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libera la memoria allocata tramite il `Alloc` metodo.|  
+|[Metodo Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Richieste all'host di allocare la quantità di memoria richiesta dall'heap.|  
+|[Metodo DebugAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Richiede che l'host di alloca la quantità di memoria richiesta dall'heap e inoltre tenere traccia in cui è stata allocata la memoria.|  
+|[Metodo Free](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Libera la memoria allocata tramite il `Alloc` metodo.|  
   
 ## <a name="remarks"></a>Note  
  CLR ottiene un puntatore a interfaccia a un `IHostMalloc` istanza chiamando il [IHostMemoryManager::](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) metodo.  
@@ -49,5 +50,5 @@ Fornisce metodi che consentono a common language runtime (CLR) per richiedere di
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [IHostMemoryManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+ [Interfaccia IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

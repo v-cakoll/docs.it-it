@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 35c6152836adf02d541bacd149ed9ac053765ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9696687f292d7dcaa3d430c1e269f0fedb05e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ireferenceidentity-interface"></a>Interfaccia IReferenceIdentity
 Rappresenta un riferimento alla firma univoca di un oggetto di codice.  
@@ -45,5 +46,5 @@ Rappresenta un riferimento alla firma univoca di un oggetto di codice.
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Fusion (interfacce)](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IEnumIDENTITY_ATTRIBUTE (interfaccia)](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+ [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

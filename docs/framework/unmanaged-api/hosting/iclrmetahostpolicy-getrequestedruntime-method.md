@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57e5efc604568aea0a6edef5cc57f83fb99eb561
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0501e104b2ed74656de125e668b7234efcbc9997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>Metodo ICLRMetaHostPolicy::GetRequestedRuntime
 Fornisce un'interfaccia a una versione preferita di Common Language Runtime (CLR) in base a criteri di hosting, un assembly gestito, una stringa di versione e un flusso di configurazione. Questo metodo non è effettivamente caricare o attivare CLR, ma restituisce semplicemente il [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaccia che rappresenta il risultato dei criteri. Questo metodo sostituisce il [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), e [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) metodi.  
@@ -48,7 +49,7 @@ HRESULT GetRequestedRuntime(
   
 #### <a name="parameters"></a>Parametri  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |`dwPolicyFlags`|[in] Obbligatorio. Specifica un membro del [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumerazione, che rappresenta un criterio di associazione e qualsiasi numero di modificatori. Gli unici criteri attualmente disponibili sono [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> I modificatori includono [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), e [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|  
 |`pwzBinary`|[in] Facoltativo. Specifica il percorso del file di assembly.|  
@@ -78,9 +79,9 @@ HRESULT GetRequestedRuntime(
 |HRESULT|Descrizione|  
 |-------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_POINTER|`pwzVersion` non è null e `pcchVersion` è null.<br /><br /> -oppure-<br /><br /> `pwzImageVersion` non è null e `pcchImageVersion` è null.|  
+|E_POINTER|`pwzVersion` non è null e `pcchVersion` è null.<br /><br /> oppure<br /><br /> `pwzImageVersion` non è null e `pcchImageVersion` è null.|  
 |E_INVALIDARG|`dwPolicyFlags` non specifica `METAHOST_POLICY_HIGHCOMPAT`.|  
-|ERROR_INSUFFICIENT_BUFFER|La memoria allocata a `pwzVerison` è inadeguata.<br /><br /> -oppure-<br /><br /> La memoria allocata a `pwzImageVerison` è inadeguata.|  
+|ERROR_INSUFFICIENT_BUFFER|La memoria allocata a `pwzVerison` è inadeguata.<br /><br /> oppure<br /><br /> La memoria allocata a `pwzImageVerison` è inadeguata.|  
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` include METAHOST_POLICY_APPLY_UPGRADE_POLICY e `pwzVersion` e `pcchVersion` sono null.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -93,7 +94,7 @@ HRESULT GetRequestedRuntime(
  **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICLRMetaHostPolicy (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- [Interfacce di Hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [Interfaccia ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
+ [Interfacce di hosting CLR aggiunte in .NET Framework 4 e 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b8c3148cdb417d627afd9ba007fb9892b47dcef3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f4243840ac64a14b4f4e6c86787fdf238507635
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>Metodo IMetaDataEmit2::SaveDeltaToMemory
 Salva le modifiche dalla sessione corrente di modifica e continuazione in memoria.  
@@ -57,4 +58,4 @@ HRESULT SaveDeltaToMemory (
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+ [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

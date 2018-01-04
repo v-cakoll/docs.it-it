@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a30de0ca9554d93e000a07af80b34bcd10814dfb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d4b83817883879c253fee4718e60a593a337314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatavalidate-interface"></a>Interfaccia IMetaDataValidate
 Fornisce metodi per convalidare le firme dei metadati.  
@@ -32,8 +33,8 @@ Fornisce metodi per convalidare le firme dei metadati.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ValidateMetaData (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Convalida le firme dei metadati degli oggetti nell'ambito dei metadati corrente.|  
-|[ValidatorInit (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Imposta un flag che specifica il tipo del modulo nell'ambito dei metadati corrente e registra il metodo di callback specificato per gli errori di convalida.|  
+|[Metodo ValidateMetaData](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Convalida le firme dei metadati degli oggetti nell'ambito dei metadati corrente.|  
+|[Metodo ValidatorInit](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Imposta un flag che specifica il tipo del modulo nell'ambito dei metadati corrente e registra il metodo di callback specificato per gli errori di convalida.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

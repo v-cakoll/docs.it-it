@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 059ab01d3cc05bac84bb1a4cd8fffc7fc259ed60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 709ef121294a92353b21363ae12919e8e147efab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>Metodo ICLRErrorReportingManager::EndCustomDump
 Rimuove la configurazione di dump dello stack personalizzati che è stata specificata in una chiamata precedente al [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) metodo.  
@@ -63,6 +64,6 @@ HRESULT EndCustomDump ();
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [CustomDumpItem (struttura)](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- [ECustomDumpFlavor (enumerazione)](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
- [ICLRErrorReportingManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+ [Struttura CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
+ [Enumerazione ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
+ [Interfaccia ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

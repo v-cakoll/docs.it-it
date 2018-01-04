@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c19125d96d5f4a9e91fc083d53f36ebebd2c569
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d55500efbe808b2fce16e869422e727b8ed0b93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmanualevent-interface"></a>Interfaccia IHostManualEvent
 Fornisce l'implementazione dell'host di una rappresentazione di un evento di reimpostazione manuale.  
@@ -32,9 +33,9 @@ Fornisce l'implementazione dell'host di una rappresentazione di un evento di rei
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Reset (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Reimposta corrente `IHostManualEvent` istanza da uno stato non segnalato.|  
-|[Set (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Imposta l'oggetto corrente `IHostManualEvent` istanza sullo stato segnalato.|  
-|[Wait (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Fa sì che l'oggetto corrente `IHostManualEvent` in attesa fino a quando non è di proprietà istanza o un determinato periodo di tempo specificato.|  
+|[Metodo Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Reimposta corrente `IHostManualEvent` istanza da uno stato non segnalato.|  
+|[Metodo Set](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Imposta l'oggetto corrente `IHostManualEvent` istanza sullo stato segnalato.|  
+|[Metodo Wait](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Fa sì che l'oggetto corrente `IHostManualEvent` in attesa fino a quando non è di proprietà istanza o un determinato periodo di tempo specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,8 +47,8 @@ Fornisce l'implementazione dell'host di una rappresentazione di un evento di rei
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICLRSyncManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostAutoEvent (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [IHostSemaphore (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- [IHostSyncManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+ [Interfaccia ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
+ [Interfaccia IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
+ [Interfaccia IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
+ [Interfaccia IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

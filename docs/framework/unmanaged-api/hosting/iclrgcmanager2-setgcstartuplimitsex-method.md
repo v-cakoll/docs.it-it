@@ -21,11 +21,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 73f5678008354b312964f0cb32d768d36a641fd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 371d6d32b3f9f5da0411234438972a8d2df4cc3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Metodo ICLRGCManager2::SetGCStartupLimitsEx
 Imposta le dimensioni di un segmento di garbage collection e la dimensione massima della generazione del sistema di garbage collection 0.  
@@ -78,5 +79,5 @@ HRESULT SetGCStartupLimitsEx (
 ## <a name="see-also"></a>Vedere anche  
  [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)  
  [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)  
- [ICLRControl (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRGCManager2 (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
+ [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Interfaccia ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

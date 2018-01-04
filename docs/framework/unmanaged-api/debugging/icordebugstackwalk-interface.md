@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c8a4421b716614081368755388bd2ab8d8fe22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 018ed69e52efd21ca25029284c70f1c8493d877f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstackwalk-interface"></a>Interfaccia ICorDebugStackWalk
 Fornisce metodi per ottenere i metodi gestiti oppure i frame nello stack di un thread.  
@@ -32,10 +33,10 @@ Fornisce metodi per ottenere i metodi gestiti oppure i frame nello stack di un t
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Restituisce il contesto per il fotogramma corrente il `ICorDebugStackWalk` oggetto.|  
-|[SetContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Imposta il `ICorDebugStackWalk` contesto corrente dell'oggetto a un contesto valido per il thread.|  
+|[Metodo GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Restituisce il contesto per il fotogramma corrente il `ICorDebugStackWalk` oggetto.|  
+|[Metodo SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Imposta il `ICorDebugStackWalk` contesto corrente dell'oggetto a un contesto valido per il thread.|  
 |[Metodo Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Sposta il `ICorDebugStackWalk` oggetto al frame successivo.|  
-|[GetFrame (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Ottiene il frame corrente `ICorDebugStackWalk` oggetto.|  
+|[Metodo GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Ottiene il frame corrente `ICorDebugStackWalk` oggetto.|  
   
 ## <a name="remarks"></a>Note  
   

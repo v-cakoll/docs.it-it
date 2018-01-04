@@ -21,11 +21,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1e80548470754f64e87d7aa6512f139c52ec8847
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c0080e5a01c8e856c2862182ba06096fdc9385c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corbindtoruntimeex-function"></a>Funzione CorBindToRuntimeEx
 Consente l'host non gestiti di caricare common language runtime (CLR) in un processo. Il [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) e `CorBindToRuntimeEx` funzioni eseguono la stessa operazione, ma la `CorBindToRuntimeEx` funzione consente di impostare flag per specificare il comportamento di CLR.  
@@ -76,7 +77,7 @@ HRESULT CorBindToRuntimeEx (
  Se `pwszBuildFlavor` è impostato su null, viene caricata la build per workstation. Quando si esegue in un computer a processore singolo, la compilazione della workstation viene sempre caricata, anche se `pwszBuildFlavor` è impostato su `svr`. Tuttavia, se `pwszBuildFlavor` è impostato su `svr` e garbage collection simultanea è specificata (vedere la descrizione del `startupFlags` parametro), verrà caricata la build del server.  
   
  `startupFlags`  
- [in] Una combinazione di valori del [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione. Questi flag controllano garbage collection simultanea, il codice indipendente dal dominio e il comportamento del `pwszVersion` parametro. Se non è impostato alcun flag, il valore predefinito è singolo dominio. Di seguito vengono illustrati i valori validi.  
+ [in] Una combinazione di valori del [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumerazione. Questi flag controllano garbage collection simultanea, il codice indipendente dal dominio e il comportamento del `pwszVersion` parametro. Se non è impostato alcun flag, il valore predefinito è singolo dominio. I valori validi sono i seguenti:  
   
 -   `STARTUP_CONCURRENT_GC`  
   
@@ -143,9 +144,9 @@ HRESULT CorBindToRuntimeEx (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [CorBindToCurrentRuntime (funzione)](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
- [CorBindToRuntime (funzione)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
- [CorBindToRuntimeByCfg (funzione)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
- [CorBindToRuntimeHost (funzione)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
- [ICorRuntimeHost (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
- [Funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+ [Funzione CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
+ [Funzione CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
+ [Funzione CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
+ [Funzione CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
+ [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

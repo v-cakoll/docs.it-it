@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ea738414c21536377705260646e0f0684442492d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 42c9abc3c255f7ddda5e7934c495b073a7b1f6fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Metodo ICorProfilerCallback::Shutdown
 Notifica al profiler che l'applicazione è in fase di chiusura.  
@@ -54,4 +55,4 @@ HRESULT Shutdown();
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Initialize (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+ [Metodo Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

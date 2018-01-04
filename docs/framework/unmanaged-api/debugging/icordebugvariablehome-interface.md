@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ea8f4033a6b0878288c49d6f6d964eb40675162d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a561360e7ea43945a3e12a73daba5063b3ad02f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablehome-interface"></a>Interfaccia ICorDebugVariableHome
 Rappresenta una variabile locale o un argomento di una funzione.  
@@ -34,10 +35,10 @@ Rappresenta una variabile locale o un argomento di una funzione.
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[Metodo GetArgumentIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Ottiene l'indice di un argomento di funzione.|  
-|[GetCode (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Ottiene l'istanza "ICorDebugCode" che contiene questo `ICorDebugVariableHome` oggetto.|  
+|[Metodo GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Ottiene l'istanza "ICorDebugCode" che contiene questo `ICorDebugVariableHome` oggetto.|  
 |[Metodo GetLiveRange](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Ottiene l'intervallo nativo su cui questa variabile è in tempo reale.|  
 |[Metodo GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Ottiene il tipo di posizione nativo della variabile.|  
-|[GetOffset (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Ottiene l'offset del Registro di base per una variabile.|  
+|[Metodo GetOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Ottiene l'offset del Registro di base per una variabile.|  
 |[Metodo GetRegister](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Ottiene il registro contenente una variabile con un tipo di posizione di `VLT_REGISTER`e la registrazione di base per una variabile con un tipo di posizione di `VLT_REGISTER_RELATIVE`.|  
 |[Metodo GetSlotIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Ottiene l'indice dello slot gestito di una variabile locale.|  
   

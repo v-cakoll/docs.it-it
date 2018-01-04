@@ -17,66 +17,67 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38462833e3b0ccd56265b02d9a1bc9f37ac12f5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 126edd5f25b56a069a87cd1bd50cce955334a342
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-global-static-functions"></a>Funzioni statiche globali Fusion
 In questa sezione vengono descritte le funzioni statiche globali non gestite utilizzate dall'API Fusion.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [ClearDownloadCache (funzione)](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Funzione ClearDownloadCache](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
  Cancella la cache di assembly globale degli assembly scaricato.  
   
- [CompareAssemblyIdentity (funzione)](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
+ [Funzione CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
  Confronta due identità di assembly per determinare se sono equivalenti.  
   
- [CreateApplicationContext (funzione)](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
+ [Funzione CreateApplicationContext](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
  Solo per uso interno. (Questa funzione supporta l'infrastruttura .NET Framework e non deve essere utilizzato direttamente dal codice).  
   
- [CreateAssemblyCache (funzione)](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
+ [Funzione CreateAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
  Ottiene un puntatore a un nuovo [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) istanza che rappresenta la global assembly cache.  
   
- [CreateAssemblyEnum (funzione)](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
+ [Funzione CreateAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
  Ottiene un puntatore a un [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) istanza che rappresenta un elenco di oggetti presenti nell'assembly specificato.  
   
- [CreateAssemblyNameObject (funzione)](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
+ [Funzione CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
  Ottiene un puntatore a un [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) istanza che rappresenta l'identità univoca dell'assembly con il nome specificato.  
   
- [CreateHistoryReader (funzione)](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
+ [Funzione CreateHistoryReader](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
  Crea un lettore di cronologia per il file specificato.  
   
  [Funzione CreateInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
  Ottiene un puntatore a un [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) istanza che rappresenta un elenco di riferimenti di un'applicazione per l'assembly specificato.  
   
- [GetAppIdAuthority (funzione)](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
+ [Funzione GetAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
  Ottiene un puntatore a un [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) che gestisce le chiavi per le identità delle applicazioni e i riferimenti.  
   
- [GetAssemblyIdentityFromFile (funzione)](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
+ [Funzione GetAssemblyIdentityFromFile](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
  Ottiene un puntatore a un `IUnknown` oggetto con l'oggetto specificato `IID` nell'assembly nel percorso del file specificato.  
   
- [GetCachePath (funzione)](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
+ [Funzione GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
  Ottiene il percorso all'assembly memorizzati nella cache, utilizzando i flag specificati.  
   
- [GetHistoryFileDirectory (funzione)](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
+ [Funzione GetHistoryFileDirectory](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
  Recupera il percorso della directory della cronologia dell'applicazione.  
   
- [GetIdentityAuthority (funzione)](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
+ [Funzione GetIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
  Ottiene un puntatore a un [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) che gestisce le chiavi per gli oggetti di codice.  
   
- [IsFrameworkAssembly (funzione)](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
+ [Funzione IsFrameworkAssembly](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
  Ottiene un valore che indica se l'assembly specificato è stato gestito.  
   
- [NukeDownloadedCache (funzione)](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
+ [Funzione NukeDownloadedCache](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
  Elimina la download cache common language runtime.  
   
- [PreBindAssemblyEx (funzione)](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
+ [Funzione PreBindAssemblyEx](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
  Ottiene il nome visualizzato di post-criteri per un assembly.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Fusion (interfacce)](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
   
  [Enumerazioni Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
   

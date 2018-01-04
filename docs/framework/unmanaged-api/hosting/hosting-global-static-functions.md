@@ -17,20 +17,21 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 105ba4dd213542e6dd441bb774ebb76123366304
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d4955da9abe91d10af70934a24e4d2bda954b487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-global-static-functions"></a>Funzioni statiche globali di hosting
 Questa sezione descrive le funzioni di hosting non gestite usate dall'API di hosting di .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [.NET framework 4 funzioni globali di Hosting statiche](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Funzioni statiche globali di hosting di .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
  Descrive le funzioni introdotte in .NET Framework 4.  
   
- [Funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
  Vengono descritte le funzioni introdotte in .NET Framework 1.1 e 2.0, che sono deprecati nel [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="related-sections"></a>Sezioni correlate  

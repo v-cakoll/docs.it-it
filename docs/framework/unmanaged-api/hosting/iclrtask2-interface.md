@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5f2312d193031eae556f55b061a36259531d013b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8701cff3400e46660fac90486cf5648d29aa9972
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtask2-interface"></a>Interfaccia ICLRTask2
 Fornisce tutte le funzionalità del [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interfaccia; inoltre, fornisce metodi che consentono l'interruzione di thread per ritardare il thread corrente.  
@@ -32,8 +33,8 @@ Fornisce tutte le funzionalità del [ICLRTask](../../../../docs/framework/unmana
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[BeginPreventAsyncAbort (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Ritardi nuove richieste di interruzione sul thread corrente.|  
-|[EndPreventAsyncAbort (metodo)](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Consente di nuovo o richieste di interruzione del thread restituiscono di thread in sospeso interrompe il thread corrente.|  
+|[Metodo BeginPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Ritardi nuove richieste di interruzione sul thread corrente.|  
+|[Metodo EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Consente di nuovo o richieste di interruzione del thread restituiscono di thread in sospeso interrompe il thread corrente.|  
   
 ## <a name="remarks"></a>Note  
  Il `ICLRTask2` interfaccia eredita il `ICLRTask` l'interfaccia e aggiunge i metodi che consentono all'host di ritardo interruzioni del thread, per proteggere un'area di codice che non deve avere esito negativo. La chiamata `BeginPreventAsyncAbort` incrementa il contatore di ritardo di interruzione per il thread corrente e la chiamata `EndPreventAsyncAbort` decrementa il. Le chiamate a `BeginPreventAsyncAbort` e `EndPreventAsyncAbort` possono essere annidati. Fino a quando il contatore è maggiore di zero, vengono posticipate interruzioni del thread per il thread corrente.  
@@ -56,8 +57,8 @@ Fornisce tutte le funzionalità del [ICLRTask](../../../../docs/framework/unmana
  **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICLRTask (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+ [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
+ [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
+ [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
+ [Interfaccia IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

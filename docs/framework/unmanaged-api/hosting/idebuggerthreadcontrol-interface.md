@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e3f8d04a47607958ff5d439b501a6de9bbc5b02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 297a66f9466b00dec4d32f7d8a6e2bd13b6e5655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>Interfaccia IDebuggerThreadControl
 Fornisce metodi per notificare all'host di blocco e sblocco dei thread per i servizi di debug.  
@@ -32,9 +33,9 @@ Fornisce metodi per notificare all'host di blocco e sblocco dei thread per i ser
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ThreadIsBlockingForDebugger (metodo)](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Notifica all'host che il thread che ha inviato questo callback sta per bloccare nei servizi di debug.|  
-|[ReleaseAllRuntimeThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Notifica all'host che i servizi di debug stanno per rilasciare tutti i thread sono bloccati.|  
-|[StartBlockingForDebugger (metodo)](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|Notifica all'host che i servizi di debug stanno per avviare il blocco di tutti i thread.|  
+|[Metodo ThreadIsBlockingForDebugger](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-threadisblockingfordebugger-method.md)|Notifica all'host che il thread che ha inviato questo callback sta per bloccare nei servizi di debug.|  
+|[Metodo ReleaseAllRuntimeThreads](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-releaseallruntimethreads-method.md)|Notifica all'host che i servizi di debug stanno per rilasciare tutti i thread sono bloccati.|  
+|[Metodo StartBlockingForDebugger](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-startblockingfordebugger-method.md)|Notifica all'host che i servizi di debug stanno per avviare il blocco di tutti i thread.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

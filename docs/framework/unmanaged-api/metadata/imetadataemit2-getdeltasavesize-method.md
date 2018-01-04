@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0a1b3aec06d6593257c82d6e3c08d6a8e2430691
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 562b7be418a4a4e335350adf5131178e406b5a07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>Metodo IMetaDataEmit2::GetDeltaSaveSize
 Ottiene un valore che indica modifiche nelle dimensioni dei metadati che risulta dalla sessione corrente di modifica e continuazione.  
@@ -57,4 +58,4 @@ HRESULT GetDeltaSaveSize (
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+ [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

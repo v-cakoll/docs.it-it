@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0eec8d5cfb09df66b6ba739c7cd5087434986fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0692e0b952a031c628d8aa4ff8730a96e358cfca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrprofiling-interface"></a>Interfaccia ICLRProfiling
 Fornisce il [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodo, che consente a un profiler di connettersi a un processo in esecuzione.  
@@ -32,7 +33,7 @@ Fornisce il [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanage
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[AttachProfiler (metodo)](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Connette il profiler specificato al processo specificato.|  
+|[Metodo AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Connette il profiler specificato al processo specificato.|  
   
 ## <a name="remarks"></a>Note  
   

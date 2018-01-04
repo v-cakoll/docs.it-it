@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca09788ea403e2a60d6de0cb6834fdc90261b770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e15f40402b222037f7ed8b23be3df36acafc73c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>Metodo ICorRuntimeHost::CreateDomainSetup
 Ottiene un puntatore a interfaccia di tipo IAppDomainSetup a un <xref:System.AppDomainSetup?displayProperty=nameWithType> istanza. `IAppDomainSetup`fornisce metodi per configurare gli aspetti di un dominio applicazione prima che venga creato.  
@@ -68,4 +69,4 @@ HRESULT CreateDomainSetup (
  <xref:System.AppDomain>  
  <xref:System.AppDomainSetup>  
  <xref:System.IAppDomainSetup?displayProperty=nameWithType>  
- [ICorRuntimeHost (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+ [Interfaccia ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

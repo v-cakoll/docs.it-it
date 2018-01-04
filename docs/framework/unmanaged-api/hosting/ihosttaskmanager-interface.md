@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a5086f3349b3756e507855a87bd724d2618212f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihosttaskmanager-interface"></a>Interfaccia IHostTaskManager
 Fornisce metodi che consentono a common language runtime (CLR) per gestire le attività tramite l'host anziché utilizzare le funzioni fiber o thread del sistema operativo standard.  
@@ -32,24 +33,24 @@ Fornisce metodi che consentono a common language runtime (CLR) per gestire le at
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[BeginDelayAbort (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere interrotta.|  
-|[BeginThreadAffinity (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere spostata a un altro thread del sistema operativo.|  
-|[CallNeedsHostHook (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Consente all'host di specificare se common language runtime può rendere inline la chiamata a una funzione non gestita specificata.|  
-|[CreateTask (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Richieste che l'host crea una nuova attività.|  
-|[EndDelayAbort (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Notifica all'host che il codice gestito sta uscendo dalla fase in cui l'attività corrente non deve essere interrotta, dopo una chiamata precedente a `BeginDelayAbort`.|  
-|[EndThreadAffinity (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Notifica all'host che il codice gestito sta uscendo dalla fase in cui l'attività corrente non deve essere spostata a un altro thread del sistema operativo, dopo una chiamata precedente a `BeginThreadAffinity`.|  
-|[EnterRuntime (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Notifica all'host che una chiamata a un metodo non gestito, ad esempio un platform invoke (metodo), restituisce il controllo dell'esecuzione a CLR.|  
-|[GetCurrentTask (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Ottiene un puntatore a interfaccia per l'attività attualmente in esecuzione sul thread del sistema operativo da cui viene effettuata la chiamata.|  
-|[GetStackGuarantee (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Ottiene la quantità di spazio dello stack è garantito che siano disponibili dopo il completamento di un'operazione di stack, ma prima della chiusura di un processo.|  
-|[LeaveRuntime (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Notifica all'host che il codice gestito sta per effettuare una chiamata a una funzione non gestita.|  
-|[ReverseEnterRuntime (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Notifica all'host che è in corso una chiamata a common language runtime (CLR) dal codice non gestito.|  
-|[ReverseLeaveRuntime (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Notifica all'host controllo CLR lasciando che sia una funzione non gestita, a sua volta, chiamato dal codice gestito.|  
-|[SetCLRTaskManager (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Fornisce all'host con un puntatore a interfaccia a un [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) istanza implementata da CLR.|  
-|[SetLocale (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|Notifica all'host che Common Language Runtime è stato modificato le impostazioni locali per l'attività corrente.|  
-|[SetStackGuarantee (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|Riservato esclusivamente per uso interno.|  
-|[SetUILocale (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Notifica all'host che le impostazioni locali dell'interfaccia utente sono stata modificata per l'attività corrente.|  
-|[Sleep (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|Notifica all'host che l'attività corrente verrà sospeso.|  
-|[SwitchToTask (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica all'host che deve essere disattivata l'attività corrente.|  
+|[Metodo BeginDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere interrotta.|  
+|[Metodo BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|Notifica all'host che il codice gestito sta entrando in un periodo in cui l'attività corrente non deve essere spostata a un altro thread del sistema operativo.|  
+|[Metodo CallNeedsHostHook](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|Consente all'host di specificare se common language runtime può rendere inline la chiamata a una funzione non gestita specificata.|  
+|[Metodo CreateTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|Richieste che l'host crea una nuova attività.|  
+|[Metodo EndDelayAbort](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|Notifica all'host che il codice gestito sta uscendo dalla fase in cui l'attività corrente non deve essere interrotta, dopo una chiamata precedente a `BeginDelayAbort`.|  
+|[Metodo EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|Notifica all'host che il codice gestito sta uscendo dalla fase in cui l'attività corrente non deve essere spostata a un altro thread del sistema operativo, dopo una chiamata precedente a `BeginThreadAffinity`.|  
+|[Metodo EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|Notifica all'host che una chiamata a un metodo non gestito, ad esempio un platform invoke (metodo), restituisce il controllo dell'esecuzione a CLR.|  
+|[Metodo GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|Ottiene un puntatore a interfaccia per l'attività attualmente in esecuzione sul thread del sistema operativo da cui viene effettuata la chiamata.|  
+|[Metodo GetStackGuarantee](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|Ottiene la quantità di spazio dello stack è garantito che siano disponibili dopo il completamento di un'operazione di stack, ma prima della chiusura di un processo.|  
+|[Metodo LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|Notifica all'host che il codice gestito sta per effettuare una chiamata a una funzione non gestita.|  
+|[Metodo ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|Notifica all'host che è in corso una chiamata a common language runtime (CLR) dal codice non gestito.|  
+|[Metodo ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|Notifica all'host controllo CLR lasciando che sia una funzione non gestita, a sua volta, chiamato dal codice gestito.|  
+|[Metodo SetCLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Fornisce all'host con un puntatore a interfaccia a un [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) istanza implementata da CLR.|  
+|[Metodo SetLocale](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|Notifica all'host che Common Language Runtime è stato modificato le impostazioni locali per l'attività corrente.|  
+|[Metodo SetStackGuarantee](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|Riservato esclusivamente per uso interno.|  
+|[Metodo SetUILocale](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|Notifica all'host che le impostazioni locali dell'interfaccia utente sono stata modificata per l'attività corrente.|  
+|[Metodo Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|Notifica all'host che l'attività corrente verrà sospeso.|  
+|[Metodo SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica all'host che deve essere disattivata l'attività corrente.|  
   
 ## <a name="remarks"></a>Note  
  `IHostTaskManager`consente a CLR di creare e gestire attività, per fornire hook per l'host di eseguire un'azione quando il controllo viene trasferito da gestito a codice non gestito e viceversa e per specificare le azioni l'host può e non può accettare durante l'esecuzione di codice.  
@@ -64,7 +65,7 @@ Fornisce metodi che consentono a common language runtime (CLR) per gestire le at
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICLRTask (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
+ [Interfaccia ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
+ [Interfaccia ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
+ [Interfaccia IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

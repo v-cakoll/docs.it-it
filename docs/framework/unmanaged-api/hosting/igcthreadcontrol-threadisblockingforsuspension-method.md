@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 815ed06cb5772e7d04002f9d0d31bd971f2d345a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0cb7cfbab18334f1892c24225311160179920f81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>Metodo IGCThreadControl::ThreadIsBlockingForSuspension
 Notifica all'host che il thread che effettua la chiamata sta per bloccare, ad esempio per un'operazione di garbage collection o un'altra sospensione.  
@@ -49,4 +50,4 @@ HRESULT ThreadIsBlockingForSuspension ( );
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [IGCThreadControl (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+ [Interfaccia IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

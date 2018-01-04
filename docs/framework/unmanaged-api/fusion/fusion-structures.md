@@ -17,30 +17,31 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eca1cba0f91805baf2277f3d3bc5e793d9e2ba1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c2d463ac5baf2067be8b5454407467c0e594e790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-structures"></a>Strutture Fusion
 In questa sezione descrive le strutture non gestite utilizzate dall'API Fusion.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [ASSEMBLY_INFO (struttura)](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Struttura ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
  Contiene informazioni relative a un assembly registrato nella global assembly cache.  
   
- [FUSION_INSTALL_REFERENCE (struttura)](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
+ [Struttura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
  Rappresenta un riferimento da un'applicazione a un assembly che l'applicazione è installata nella global assembly cache.  
   
- [IDENTITY_ATTRIBUTE (struttura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
+ [Struttura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
  Contiene informazioni sugli attributi di metadati su un [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) istanza.  
   
- [IDENTITY_ATTRIBUTE_BLOB (struttura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
+ [Struttura IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  Contiene le informazioni sugli offset per un oggetto associato [IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struttura.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Fusion (interfacce)](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Interfacce Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
   
  [Funzioni statiche globali Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
   

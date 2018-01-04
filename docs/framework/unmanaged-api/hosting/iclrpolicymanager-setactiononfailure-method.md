@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5dc8e27ed1a5701886c3583a7515e4212f490208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4440b36485ed900b5e64adcead2525dbb7d5206e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>Metodo ICLRPolicyManager::SetActionOnFailure
 Specifica l'azione di criteri che Common language runtime (CLR) deve intraprendere quando si verifica l'errore specificato.  
@@ -63,16 +64,16 @@ HRESULT SetActionOnFailure (
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||N/D||  
-|eThrowException|X|X||||N/D||  
-|`eAbortThread`|X|X||||N/D|X|  
-|`eRudeAbortThread`|X|X||||N/D|X|  
-|`eUnloadAppDomain`|X|X||X||N/D|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|N/D|X|  
-|`eExitProcess`|X|X||X|X|N/D|X|  
-|eFastExitProcess|X|X||X|X|N/D||  
-|`eRudeExitProcess`|X|X|X|X|X|N/D||  
-|`eDisableRuntime`|X|X|X|X|X|N/D||  
+|`eNoAction`|x|x||||N/D||  
+|eThrowException|x|x||||N/D||  
+|`eAbortThread`|x|x||||N/D|x|  
+|`eRudeAbortThread`|X|x||||N/D|x|  
+|`eUnloadAppDomain`|X|X||x||N/D|x|  
+|`eRudeUnloadAppDomain`|X|X||X|x|N/D|x|  
+|`eExitProcess`|X|X||X|x|N/D|x|  
+|eFastExitProcess|x|X||X|x|N/D||  
+|`eRudeExitProcess`|x|X|X|X|x|N/D||  
+|`eDisableRuntime`|x|X|X|X|x|N/D||  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -84,7 +85,7 @@ HRESULT SetActionOnFailure (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [EClrFailure (enumerazione)](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [EPolicyAction (enumerazione)](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [ICLRControl (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLRPolicyManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+ [Enumerazione EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
+ [Enumerazione EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
+ [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Interfaccia ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

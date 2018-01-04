@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7b91c11482a1314bc86b464715dcba68f2a67724
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 023965489530e70deb7dc9460418ef0d56654081
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishenumgetcount-method"></a>Metodo ICorPublishEnum::GetCount
 Ottiene il numero di elementi nell'enumerazione.  
@@ -52,4 +53,4 @@ HRESULT GetCount (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICorPublishEnum (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+ [Interfaccia ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

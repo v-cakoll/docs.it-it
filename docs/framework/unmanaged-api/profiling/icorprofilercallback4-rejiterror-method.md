@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c8b1f3c5b206b2e6a108e784a206d597b69fd662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c746d0f7a6be96f95f1a051e22de0ad1bd2d2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Metodo ICorProfilerCallback4::ReJITError
 Notifica al profiler che il compilatore di just-in-time (JIT) ha rilevato un errore nel processo di ricompilazione.  
@@ -65,7 +66,7 @@ HRESULT ReJITError(
 |CORPROF_E_MODULE_IS_DYNAMIC|Il modulo specificato è stato generato dinamicamente (ad esempio, da `Reflection.Emit`) e pertanto non è supportato da questo metodo.|  
 |CORPROF_E_FUNCTION_IS_COLLECTIBLE|Il metodo viene creata un'istanza in un assembly ritirabile e pertanto non è in grado di essere ricompilata. Si noti che i tipi e funzioni definite in un contesto di reflection non (ad esempio, `List<MyCollectibleStruct>`) può essere creata un'istanza in un assembly ritirabile.|  
 |E_OUTOFMEMORY|CLR ha esaurito la memoria durante il tentativo di contrassegnare il metodo specificato per la ricompilazione JIT.|  
-|Altri|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Ad esempio, se una chiamata di sistema per modificare la protezione di accesso di una pagina di memoria non riesce, viene visualizzato l'errore del sistema operativo.|  
+|Altro|Il sistema operativo ha restituito un errore esterno al controllo di CLR. Ad esempio, se una chiamata di sistema per modificare la protezione di accesso di una pagina di memoria non riesce, viene visualizzato l'errore del sistema operativo.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -78,4 +79,4 @@ HRESULT ReJITError(
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback4 (interfaccia)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+ [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

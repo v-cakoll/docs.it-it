@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83e9f6acf870e120a0fabd164ea099aff68a24e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c08dc8ea9af83e15b6736564eca5d376c6264387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatables2-interface"></a>Interfaccia IMetaDataTables2
 Estende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) per includere i metodi per l'utilizzo di flussi di metadati.  
@@ -32,8 +33,8 @@ Estende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imet
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetMetaDataStorage (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Ottiene le dimensioni e il contenuto dei metadati archiviati nella sezione specificata.|  
-|[GetMetaDataStreamInfo (metodo)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Ottiene il nome, dimensioni e contenuto del flusso di metadati in corrispondenza dell'indice specificato.|  
+|[Metodo GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Ottiene le dimensioni e il contenuto dei metadati archiviati nella sezione specificata.|  
+|[Metodo GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Ottiene il nome, dimensioni e contenuto del flusso di metadati in corrispondenza dell'indice specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,5 +46,5 @@ Estende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imet
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [IMetaDataTables (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
  [Interfacce di metadati](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

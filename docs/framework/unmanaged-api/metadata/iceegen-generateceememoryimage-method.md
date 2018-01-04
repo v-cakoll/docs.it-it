@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d79d1e59994dbe13c2124646e943161392846fc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 753240d4223948630a95ff9e103abfc13b435131
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>Metodo ICeeGen::GenerateCeeMemoryImage
 Genera un'immagine in memoria per la base di codice.  
@@ -54,4 +55,4 @@ HRESULT GenerateCeeMemoryImage (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [ICeeGen (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+ [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2773042c695320ab1e90d4c5d341e2df5f0f778f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1cd58c53deec0a895ae6f67cccf26d2c8c2530be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>Interfaccia IHostThreadPoolManager
 Fornisce metodi che consentono di common language runtime (CLR) per configurare il pool di thread e per accodare gli elementi di lavoro al pool di thread.  
@@ -32,12 +33,12 @@ Fornisce metodi che consentono di common language runtime (CLR) per configurare 
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetAvailableThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|Ottiene il numero di thread nel pool di thread che non stanno elaborando gli elementi di lavoro.|  
-|[GetMaxThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|Ottiene il numero massimo di thread gestiti dall'host contemporaneamente nel pool di thread.|  
-|[GetMinThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|Ottiene il numero minimo di thread inattivi gestiti dall'host prima di richieste.|  
-|[QueueUserWorkItem (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Accoda una funzione per l'esecuzione e fornisce un oggetto contenente dati da utilizzare per la funzione.|  
-|[SetMaxThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|Imposta il numero massimo di thread che l'host può mantenere nel pool di thread.|  
-|[SetMinThreads (metodo)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|Imposta il numero minimo di thread inattivi che l'host devono essere conservati in previsione delle richieste.|  
+|[Metodo GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md)|Ottiene il numero di thread nel pool di thread che non stanno elaborando gli elementi di lavoro.|  
+|[Metodo GetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)|Ottiene il numero massimo di thread gestiti dall'host contemporaneamente nel pool di thread.|  
+|[Metodo GetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)|Ottiene il numero minimo di thread inattivi gestiti dall'host prima di richieste.|  
+|[Metodo QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)|Accoda una funzione per l'esecuzione e fornisce un oggetto contenente dati da utilizzare per la funzione.|  
+|[Metodo SetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)|Imposta il numero massimo di thread che l'host può mantenere nel pool di thread.|  
+|[Metodo SetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)|Imposta il numero minimo di thread inattivi che l'host devono essere conservati in previsione delle richieste.|  
   
 ## <a name="remarks"></a>Note  
  L'host non è necessario configurare il pool di thread utilizzando i valori specificati in chiamate al `SetMaxThreads` e `SetMinThreads` metodi. In questo caso, l'host deve restituire un valore HRESULT di E_NOTIMPL da questi metodi.  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 446967cc157962a1ec4a87193bbf84b1a356efa6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfstatictype-enumeration"></a>Enumerazione COR_PRF_STATIC_TYPE
 Indica se un campo è statico e, in tal caso, la qualità statica che si applica al campo. Questi valori possono essere combinati utilizzando l'operatore OR bit per indicare che il campo ha più qualità statiche diverse.  

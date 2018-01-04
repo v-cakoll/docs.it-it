@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ee526a79d89a9e4e3483daa07a512b6b7f920e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6fa95d17e7ff6f857765ea2dd48f61b047a47b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
 Rappresenta un processo che esegue codice gestito. Questa interfaccia è una sottoclasse di ICorDebugController.  
@@ -32,23 +33,23 @@ Rappresenta un processo che esegue codice gestito. Questa interfaccia è una sot
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ClearCurrentException (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|Cancella l'eccezione non gestita corrente sul thread specificato.|  
-|[EnableLogMessages (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|Abilita e disabilita l'invio di messaggi di log al debugger.|  
-|[EnumerateAppDomains (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|Enumera tutti i domini applicazione nel processo.|  
-|[EnumerateObjects (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|Non implementato.|  
-|[GetHandle (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|Ottiene un handle per il processo.|  
-|[GetHelperThreadID (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Ottiene l'ID di thread del sistema operativo (sistema operativo) per il thread di supporto interno del debugger.|  
-|[GetID (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Ottiene l'ID del sistema operativo () del processo.|  
-|[GetObject (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Non implementato.|  
-|[GetThread (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Ottiene l'ID istanza ICorDebugThread che contiene il thread del sistema operativo specificato.|  
-|[GetThreadContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Ottiene il contesto per il thread specificato.|  
-|[IsOSSuspended (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Determina se il thread è stata sospesa a causa del debugger arrestando il processo.|  
-|[IsTransitionStub (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Determina se un indirizzo è all'interno di uno stub che causerà una transizione da codice gestito.|  
-|[ModifyLogSwitch (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|Imposta il livello di gravità dell'opzione di log specificato.|  
-|[ReadMemory (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|Legge memoria dal processo.|  
-|[SetThreadContext (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|Imposta il contesto per il thread specificato.|  
-|[ThreadForFiberCookie (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|Deprecato.|  
-|[WriteMemory (metodo)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|Scrive dati in un'area di memoria del processo.|  
+|[Metodo ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|Cancella l'eccezione non gestita corrente sul thread specificato.|  
+|[Metodo EnableLogMessages](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|Abilita e disabilita l'invio di messaggi di log al debugger.|  
+|[Metodo EnumerateAppDomains](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|Enumera tutti i domini applicazione nel processo.|  
+|[Metodo EnumerateObjects](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|Non implementato.|  
+|[Metodo GetHandle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|Ottiene un handle per il processo.|  
+|[Metodo GetHelperThreadID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Ottiene l'ID di thread del sistema operativo (sistema operativo) per il thread di supporto interno del debugger.|  
+|[Metodo GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Ottiene l'ID del sistema operativo () del processo.|  
+|[Metodo GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Non implementato.|  
+|[Metodo GetThread](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Ottiene l'ID istanza ICorDebugThread che contiene il thread del sistema operativo specificato.|  
+|[Metodo GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Ottiene il contesto per il thread specificato.|  
+|[Metodo IsOSSuspended](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Determina se il thread è stata sospesa a causa del debugger arrestando il processo.|  
+|[Metodo IsTransitionStub](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|Determina se un indirizzo è all'interno di uno stub che causerà una transizione da codice gestito.|  
+|[Metodo ModifyLogSwitch](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|Imposta il livello di gravità dell'opzione di log specificato.|  
+|[Metodo ReadMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|Legge memoria dal processo.|  
+|[Metodo SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|Imposta il contesto per il thread specificato.|  
+|[Metodo ThreadForFiberCookie](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|Deprecato.|  
+|[Metodo WriteMemory](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|Scrive dati in un'area di memoria del processo.|  
   
 ## <a name="remarks"></a>Note  
   

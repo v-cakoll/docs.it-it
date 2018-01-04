@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e02c1b9499bc2972f88c9045d3f59423edb6cb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3a6f26c8337f89d829f42e00a9e5e79731a15156
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iappdomainbinding-interface"></a>Interfaccia IAppDomainBinding
 Fornisce un metodo che viene chiamato da common language runtime (CLR) per notificare all'applicazione host che è stato creato un dominio applicazione.  
@@ -32,7 +33,7 @@ Fornisce un metodo che viene chiamato da common language runtime (CLR) per notif
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[OnAppDomain (metodo)](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio applicazione.|  
+|[Metodo OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio applicazione.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

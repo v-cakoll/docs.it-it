@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 74f44d366ec4f3848f7c8436e208dcaee3466fe1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f974230dc5ddf2a663f05fc06850f49f1de6e773
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Metodo IMetaDataInfo::GetFileMapping
 Ottiene l'area di memoria del file mappato e il tipo di mapping.  
@@ -77,5 +78,5 @@ HRESULT GetFileMapping (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [IMetaDataInfo (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- [CorFileMapping (enumerazione)](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)
+ [Interfaccia IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
+ [Enumerazione CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

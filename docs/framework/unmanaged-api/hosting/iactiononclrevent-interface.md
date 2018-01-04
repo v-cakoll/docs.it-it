@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eecc04fea993de3c502d1a203f0023c81c3b7909
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b51784f07a90faa9eeb29c18a784d4fbc2c4654
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iactiononclrevent-interface"></a>Interfaccia IActionOnCLREvent
 Fornisce il [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metodo, che esegue callback su eventi registrati tramite una chiamata al [ICLROnEventManager::](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) metodo.  
@@ -32,7 +33,7 @@ Fornisce il [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-a
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[OnEvent (metodo)](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Esegue un callback per un evento registrato.|  
+|[Metodo OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Esegue un callback per un evento registrato.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,6 +46,6 @@ Fornisce il [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-a
   
 ## <a name="see-also"></a>Vedere anche  
  [Enumerazione EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- [ICLRControl (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [ICLROnEventManager (interfaccia)](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
+ [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Interfaccia ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
  [Interfacce di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

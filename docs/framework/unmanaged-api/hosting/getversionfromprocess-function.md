@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c73d12731a5c72b8c0e724f74ee0aa9ebddeee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getversionfromprocess-function"></a>Funzione GetVersionFromProcess
 Ottiene il numero di versione di common language runtime (CLR) che è associato l'handle del processo specificato.  
@@ -62,7 +63,7 @@ HRESULT GetVersionFromProcess (
 |Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |S_OK|Metodo completato correttamente.|  
-|E_INVALIDARG|`pVersion`è null e `cchBuffer` non è null, o viceversa.<br /><br /> -oppure-<br /><br /> `hProcess`non è un handle a un processo valido.<br /><br /> -oppure-<br /><br /> CLR non è caricato.|  
+|E_INVALIDARG|`pVersion`è null e `cchBuffer` non è null, o viceversa.<br /><br /> oppure<br /><br /> `hProcess`non è un handle a un processo valido.<br /><br /> oppure<br /><br /> CLR non è caricato.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer`è null o inferiore alla lunghezza della stringa di versione.|  
 |E_NOTIMPL|Questo metodo non è disponibile nel sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Windows Millennium Edition di Microsoft.|  
   
@@ -76,6 +77,6 @@ HRESULT GetVersionFromProcess (
  **Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [GetRequestedRuntimeInfo (funzione)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetRequestedRuntimeVersion (funzione)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- [Funzioni di Hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+ [Funzione GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+ [Funzione GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+ [Funzioni di hosting CLR deprecate](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
