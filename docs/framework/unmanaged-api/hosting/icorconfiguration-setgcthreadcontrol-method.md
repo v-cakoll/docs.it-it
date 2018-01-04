@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1dfcff8a12f808c75a9e69486f802f8b886c468b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6b6b28b67f924df4d7f587d0364bce2a853f60b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="6ab7f-102">Metodo ICorConfiguration::SetGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="6ab7f-102">ICorConfiguration::SetGCThreadControl Method</span></span>
-<span data-ttu-id="6ab7f-103">Imposta l'interfaccia di callback per la pianificazione di thread per l'attività non è una fase di esecuzione che altrimenti sarebbero bloccati per una garbage collection.</span><span class="sxs-lookup"><span data-stu-id="6ab7f-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
+# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="5e40f-102">Metodo ICorConfiguration::SetGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="5e40f-102">ICorConfiguration::SetGCThreadControl Method</span></span>
+<span data-ttu-id="5e40f-103">Imposta l'interfaccia di callback per la pianificazione di thread per l'attività non è una fase di esecuzione che altrimenti sarebbero bloccati per una garbage collection.</span><span class="sxs-lookup"><span data-stu-id="5e40f-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ab7f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6ab7f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e40f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5e40f-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCThreadControl (  
@@ -38,21 +39,21 @@ HRESULT SetGCThreadControl (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6ab7f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6ab7f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5e40f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5e40f-105">Parameters</span></span>  
  `pGCThreadControl`  
- <span data-ttu-id="6ab7f-106">[in] Un puntatore a un [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) oggetto notifica all'host la sospensione di thread per l'attività non di runtime.</span><span class="sxs-lookup"><span data-stu-id="6ab7f-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
+ <span data-ttu-id="5e40f-106">[in] Un puntatore a un [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) oggetto notifica all'host la sospensione di thread per l'attività non di runtime.</span><span class="sxs-lookup"><span data-stu-id="5e40f-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ab7f-107">Note</span><span class="sxs-lookup"><span data-stu-id="6ab7f-107">Remarks</span></span>  
- <span data-ttu-id="6ab7f-108">L'host può scegliere all'interno di [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback se ripianificare un thread.</span><span class="sxs-lookup"><span data-stu-id="6ab7f-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e40f-107">Note</span><span class="sxs-lookup"><span data-stu-id="5e40f-107">Remarks</span></span>  
+ <span data-ttu-id="5e40f-108">L'host può scegliere all'interno di [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback se ripianificare un thread.</span><span class="sxs-lookup"><span data-stu-id="5e40f-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ab7f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6ab7f-109">Requirements</span></span>  
- <span data-ttu-id="6ab7f-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ab7f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e40f-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5e40f-109">Requirements</span></span>  
+ <span data-ttu-id="5e40f-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e40f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ab7f-111">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="6ab7f-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5e40f-111">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="5e40f-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6ab7f-112">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6ab7f-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5e40f-112">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5e40f-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6ab7f-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ab7f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5e40f-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e40f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ab7f-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6ab7f-114">See Also</span></span>  
- [<span data-ttu-id="6ab7f-115">ICorConfiguration (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="6ab7f-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5e40f-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e40f-114">See Also</span></span>  
+ [<span data-ttu-id="5e40f-115">Interfaccia ICorConfiguration</span><span class="sxs-lookup"><span data-stu-id="5e40f-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

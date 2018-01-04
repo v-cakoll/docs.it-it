@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f85533edd8d9882ae107675ceee0c3317817f701
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 31f0da123408a814bdbb48b4315641191e52295d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1424---securitysessionratio"></a><span data-ttu-id="23bc4-102">1424 - SecuritySessionRatio</span><span class="sxs-lookup"><span data-stu-id="23bc4-102">1424 - SecuritySessionRatio</span></span>
-## <a name="properties"></a><span data-ttu-id="23bc4-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="23bc4-103">Properties</span></span>  
+# <a name="1424---securitysessionratio"></a><span data-ttu-id="f5fc7-102">1424 - SecuritySessionRatio</span><span class="sxs-lookup"><span data-stu-id="f5fc7-102">1424 - SecuritySessionRatio</span></span>
+## <a name="properties"></a><span data-ttu-id="f5fc7-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="f5fc7-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="23bc4-104">ID</span><span class="sxs-lookup"><span data-stu-id="23bc4-104">ID</span></span>|<span data-ttu-id="23bc4-105">1424</span><span class="sxs-lookup"><span data-stu-id="23bc4-105">1424</span></span>|  
-|<span data-ttu-id="23bc4-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="23bc4-106">Keywords</span></span>|<span data-ttu-id="23bc4-107">Quota</span><span class="sxs-lookup"><span data-stu-id="23bc4-107">Quota</span></span>|  
-|<span data-ttu-id="23bc4-108">Livello</span><span class="sxs-lookup"><span data-stu-id="23bc4-108">Level</span></span>|<span data-ttu-id="23bc4-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="23bc4-109">Verbose</span></span>|  
-|<span data-ttu-id="23bc4-110">Canale</span><span class="sxs-lookup"><span data-stu-id="23bc4-110">Channel</span></span>|<span data-ttu-id="23bc4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="23bc4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f5fc7-104">ID</span><span class="sxs-lookup"><span data-stu-id="f5fc7-104">ID</span></span>|<span data-ttu-id="f5fc7-105">1424</span><span class="sxs-lookup"><span data-stu-id="f5fc7-105">1424</span></span>|  
+|<span data-ttu-id="f5fc7-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="f5fc7-106">Keywords</span></span>|<span data-ttu-id="f5fc7-107">Quota</span><span class="sxs-lookup"><span data-stu-id="f5fc7-107">Quota</span></span>|  
+|<span data-ttu-id="f5fc7-108">Livello</span><span class="sxs-lookup"><span data-stu-id="f5fc7-108">Level</span></span>|<span data-ttu-id="f5fc7-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="f5fc7-109">Verbose</span></span>|  
+|<span data-ttu-id="f5fc7-110">Canale</span><span class="sxs-lookup"><span data-stu-id="f5fc7-110">Channel</span></span>|<span data-ttu-id="f5fc7-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="f5fc7-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="23bc4-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="23bc4-112">Description</span></span>  
- <span data-ttu-id="23bc4-113">Questo evento viene generato per fornire le informazioni sulla percentuale delle sessioni di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="23bc4-113">This event is emitted to provide the security session ratio information.</span></span>  
+## <a name="description"></a><span data-ttu-id="f5fc7-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f5fc7-112">Description</span></span>  
+ <span data-ttu-id="f5fc7-113">Questo evento viene generato per fornire le informazioni sulla percentuale delle sessioni di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="f5fc7-113">This event is emitted to provide the security session ratio information.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="23bc4-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="23bc4-114">Message</span></span>  
- <span data-ttu-id="23bc4-115">Percentuale sessioni di sicurezza: %1/%2</span><span class="sxs-lookup"><span data-stu-id="23bc4-115">Security session ratio: %1/%2</span></span>  
+## <a name="message"></a><span data-ttu-id="f5fc7-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="f5fc7-114">Message</span></span>  
+ <span data-ttu-id="f5fc7-115">Percentuale sessioni di sicurezza: %1/%2</span><span class="sxs-lookup"><span data-stu-id="f5fc7-115">Security session ratio: %1/%2</span></span>  
   
-## <a name="details"></a><span data-ttu-id="23bc4-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="23bc4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f5fc7-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="f5fc7-116">Details</span></span>

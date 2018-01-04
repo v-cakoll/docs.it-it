@@ -21,18 +21,19 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 82fa031e4842d81f7ddec3e7eeb64c9d7b02e566
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7875d78415d06a55c11a6b42476ff806a5cadc78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="16176-102">Metodo ICorRuntimeHost::LocksHeldByLogicalThread</span><span class="sxs-lookup"><span data-stu-id="16176-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
-<span data-ttu-id="16176-103">Recupera il numero di blocchi che contiene il thread corrente.</span><span class="sxs-lookup"><span data-stu-id="16176-103">Retrieves the number of locks that current thread holds.</span></span>  
+# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="9d692-102">Metodo ICorRuntimeHost::LocksHeldByLogicalThread</span><span class="sxs-lookup"><span data-stu-id="9d692-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
+<span data-ttu-id="9d692-103">Recupera il numero di blocchi che contiene il thread corrente.</span><span class="sxs-lookup"><span data-stu-id="9d692-103">Retrieves the number of locks that current thread holds.</span></span>  
   
- <span data-ttu-id="16176-104">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="16176-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="9d692-104">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="9d692-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16176-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16176-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d692-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9d692-105">Syntax</span></span>  
   
 ```  
 HRESULT LocksHeldByLogicalThread(  
@@ -40,18 +41,18 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="16176-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="16176-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9d692-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="9d692-106">Parameters</span></span>  
  `pCount`  
- <span data-ttu-id="16176-107">[out] Puntatore al numero di blocchi che contiene il thread corrente.</span><span class="sxs-lookup"><span data-stu-id="16176-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
+ <span data-ttu-id="9d692-107">[out] Puntatore al numero di blocchi che contiene il thread corrente.</span><span class="sxs-lookup"><span data-stu-id="9d692-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16176-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="16176-108">Requirements</span></span>  
- <span data-ttu-id="16176-109">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16176-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d692-108">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9d692-108">Requirements</span></span>  
+ <span data-ttu-id="9d692-109">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d692-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16176-110">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="16176-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9d692-110">**Intestazione:** Mscoree. H</span><span class="sxs-lookup"><span data-stu-id="9d692-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="16176-111">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="16176-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9d692-111">**Libreria:** inclusa come risorsa in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9d692-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="16176-112">**Versioni di .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="16176-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="9d692-112">**Versioni di .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="9d692-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16176-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16176-113">See Also</span></span>  
- [<span data-ttu-id="16176-114">ICorRuntimeHost (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="16176-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9d692-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d692-113">See Also</span></span>  
+ [<span data-ttu-id="9d692-114">Interfaccia ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="9d692-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

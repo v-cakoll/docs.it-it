@@ -21,35 +21,36 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3fc6d1708a6a2daea0d0a9dc815bc07736644b49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d410d6ef47dfb0ad33c2a6a03f80d05810182a3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a><span data-ttu-id="57461-102">Metodo ICorProfilerCallback::ExceptionSearchFunctionEnter</span><span class="sxs-lookup"><span data-stu-id="57461-102">ICorProfilerCallback::ExceptionSearchFunctionEnter Method</span></span>
-<span data-ttu-id="57461-103">Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha iniziato la ricerca di una funzione per trovare un gestore per l'eccezione corrente.</span><span class="sxs-lookup"><span data-stu-id="57461-103">Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a><span data-ttu-id="543ca-102">Metodo ICorProfilerCallback::ExceptionSearchFunctionEnter</span><span class="sxs-lookup"><span data-stu-id="543ca-102">ICorProfilerCallback::ExceptionSearchFunctionEnter Method</span></span>
+<span data-ttu-id="543ca-103">Notifica al profiler che la fase di ricerca di gestione delle eccezioni ha iniziato la ricerca di una funzione per trovare un gestore per l'eccezione corrente.</span><span class="sxs-lookup"><span data-stu-id="543ca-103">Notifies the profiler that the search phase of exception handling has begun searching a function to find a handler for the current exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57461-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="57461-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="543ca-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="543ca-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFunctionEnter(  
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="57461-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="57461-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="543ca-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="543ca-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="57461-106">[in] L'ID della funzione che è stata immessa.</span><span class="sxs-lookup"><span data-stu-id="57461-106">[in] The ID of the function that has been entered.</span></span>  
+ <span data-ttu-id="543ca-106">[in] L'ID della funzione che è stata immessa.</span><span class="sxs-lookup"><span data-stu-id="543ca-106">[in] The ID of the function that has been entered.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57461-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="57461-107">Requirements</span></span>  
- <span data-ttu-id="57461-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57461-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="543ca-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="543ca-107">Requirements</span></span>  
+ <span data-ttu-id="543ca-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="543ca-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57461-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="57461-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="543ca-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="543ca-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="57461-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57461-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="543ca-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="543ca-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57461-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57461-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="543ca-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="543ca-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57461-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="57461-112">See Also</span></span>  
- [<span data-ttu-id="57461-113">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="57461-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="57461-114">ExceptionSearchFunctionLeave (metodo)</span><span class="sxs-lookup"><span data-stu-id="57461-114">ExceptionSearchFunctionLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="543ca-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="543ca-112">See Also</span></span>  
+ [<span data-ttu-id="543ca-113">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="543ca-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="543ca-114">Metodo ExceptionSearchFunctionLeave</span><span class="sxs-lookup"><span data-stu-id="543ca-114">ExceptionSearchFunctionLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)

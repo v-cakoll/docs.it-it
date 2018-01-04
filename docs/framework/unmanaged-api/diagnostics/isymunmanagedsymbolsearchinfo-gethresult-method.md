@@ -21,31 +21,32 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42f2e0053a83d4ef7414791626ec204671429a3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c4987aeff8a5006bad93db72a04c4195b40ab1a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="e15ab-102">Metodo ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="e15ab-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
-<span data-ttu-id="e15ab-103">Ottiene il valore HRESULT.</span><span class="sxs-lookup"><span data-stu-id="e15ab-103">Gets the HRESULT.</span></span>  
+# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="303f7-102">Metodo ISymUnmanagedSymbolSearchInfo::GetHRESULT</span><span class="sxs-lookup"><span data-stu-id="303f7-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
+<span data-ttu-id="303f7-103">Ottiene il valore HRESULT.</span><span class="sxs-lookup"><span data-stu-id="303f7-103">Gets the HRESULT.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e15ab-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e15ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="303f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="303f7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHRESULT(  
     [out] HRESULT *phr);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e15ab-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e15ab-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="303f7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="303f7-105">Parameters</span></span>  
  `phr`  
- <span data-ttu-id="e15ab-106">[out] Puntatore al valore HRESULT.</span><span class="sxs-lookup"><span data-stu-id="e15ab-106">[out] A pointer to the HRESULT.</span></span>  
+ <span data-ttu-id="303f7-106">[out] Puntatore al valore HRESULT.</span><span class="sxs-lookup"><span data-stu-id="303f7-106">[out] A pointer to the HRESULT.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e15ab-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e15ab-107">Return Value</span></span>  
- <span data-ttu-id="e15ab-108">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="e15ab-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="303f7-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="303f7-107">Return Value</span></span>  
+ <span data-ttu-id="303f7-108">S_OK se il metodo ha esito positivo. in caso contrario, E_FAIL o un altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="303f7-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e15ab-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e15ab-109">Requirements</span></span>  
- <span data-ttu-id="e15ab-110">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e15ab-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="303f7-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="303f7-109">Requirements</span></span>  
+ <span data-ttu-id="303f7-110">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="303f7-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e15ab-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e15ab-111">See Also</span></span>  
- [<span data-ttu-id="e15ab-112">ISymUnmanagedSymbolSearchInfo (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="e15ab-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="303f7-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="303f7-111">See Also</span></span>  
+ [<span data-ttu-id="303f7-112">Interfaccia ISymUnmanagedSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="303f7-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)

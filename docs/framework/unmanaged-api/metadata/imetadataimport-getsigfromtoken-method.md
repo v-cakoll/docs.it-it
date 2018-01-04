@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab7df32641d4fcd093f1ed31eb9ed7c7954e6bf8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6328e112aa948ecc2f0f5d816c4fd77673e06244
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="122d3-102">Metodo IMetaDataImport::GetSigFromToken</span><span class="sxs-lookup"><span data-stu-id="122d3-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="122d3-103">Ottiene la firma binaria dei metadati associata al token specificato.</span><span class="sxs-lookup"><span data-stu-id="122d3-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="80c03-102">Metodo IMetaDataImport::GetSigFromToken</span><span class="sxs-lookup"><span data-stu-id="80c03-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="80c03-103">Ottiene la firma binaria dei metadati associata al token specificato.</span><span class="sxs-lookup"><span data-stu-id="80c03-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="122d3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="122d3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80c03-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="80c03-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSigFromToken (   
@@ -40,25 +41,25 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="122d3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="122d3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="80c03-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="80c03-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="122d3-106">[in] Il token da restituire la firma binaria dei metadati.</span><span class="sxs-lookup"><span data-stu-id="122d3-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="80c03-106">[in] Il token da restituire la firma binaria dei metadati.</span><span class="sxs-lookup"><span data-stu-id="80c03-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="122d3-107">[out] Puntatore alla firma dei metadati restituiti.</span><span class="sxs-lookup"><span data-stu-id="122d3-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="80c03-107">[out] Puntatore alla firma dei metadati restituiti.</span><span class="sxs-lookup"><span data-stu-id="80c03-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="122d3-108">[out] Le dimensioni in byte della firma binaria dei metadati.</span><span class="sxs-lookup"><span data-stu-id="122d3-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="80c03-108">[out] Le dimensioni in byte della firma binaria dei metadati.</span><span class="sxs-lookup"><span data-stu-id="80c03-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="122d3-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="122d3-109">Requirements</span></span>  
- <span data-ttu-id="122d3-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="122d3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80c03-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="80c03-109">Requirements</span></span>  
+ <span data-ttu-id="80c03-110">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80c03-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="122d3-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="122d3-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80c03-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="80c03-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="122d3-112">**Libreria:** inclusa come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="122d3-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80c03-112">**Libreria:** inclusa come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80c03-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="122d3-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="122d3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="80c03-113">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80c03-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="122d3-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="122d3-114">See Also</span></span>  
- [<span data-ttu-id="122d3-115">IMetaDataImport (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="122d3-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="122d3-116">IMetaDataImport2 (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="122d3-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="80c03-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80c03-114">See Also</span></span>  
+ [<span data-ttu-id="80c03-115">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="80c03-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [<span data-ttu-id="80c03-116">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="80c03-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

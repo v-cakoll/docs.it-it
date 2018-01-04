@@ -21,32 +21,33 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 120f5013a21ee56e527ea0e1ed7d5aa9d0955357
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fe741bc7e0dbfeae17f648b493ac00e0ea830d28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadatafilterunmarkall-method"></a><span data-ttu-id="09ce4-102">Metodo IMetaDataFilter::UnmarkAll</span><span class="sxs-lookup"><span data-stu-id="09ce4-102">IMetaDataFilter::UnmarkAll Method</span></span>
-<span data-ttu-id="09ce4-103">Rimuove gli indicatori di elaborazione da tutti i token nell'ambito dei metadati corrente.</span><span class="sxs-lookup"><span data-stu-id="09ce4-103">Removes the processing marks from all the tokens in the current metadata scope.</span></span>  
+# <a name="imetadatafilterunmarkall-method"></a><span data-ttu-id="52f08-102">Metodo IMetaDataFilter::UnmarkAll</span><span class="sxs-lookup"><span data-stu-id="52f08-102">IMetaDataFilter::UnmarkAll Method</span></span>
+<span data-ttu-id="52f08-103">Rimuove gli indicatori di elaborazione da tutti i token nell'ambito dei metadati corrente.</span><span class="sxs-lookup"><span data-stu-id="52f08-103">Removes the processing marks from all the tokens in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09ce4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="09ce4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52f08-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="52f08-104">Syntax</span></span>  
   
 ```  
 HRESULT UnmarkAll ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="09ce4-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="09ce4-105">Parameters</span></span>  
- <span data-ttu-id="09ce4-106">`UnmarkAll`non accetta parametri.</span><span class="sxs-lookup"><span data-stu-id="09ce4-106">`UnmarkAll` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="52f08-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="52f08-105">Parameters</span></span>  
+ <span data-ttu-id="52f08-106">`UnmarkAll`non accetta parametri.</span><span class="sxs-lookup"><span data-stu-id="52f08-106">`UnmarkAll` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09ce4-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="09ce4-107">Requirements</span></span>  
- <span data-ttu-id="09ce4-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09ce4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52f08-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="52f08-107">Requirements</span></span>  
+ <span data-ttu-id="52f08-108">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52f08-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09ce4-109">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="09ce4-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="52f08-109">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="52f08-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="09ce4-110">**Libreria:** usata come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="09ce4-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="52f08-110">**Libreria:** usata come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="52f08-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="09ce4-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09ce4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="52f08-111">**Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52f08-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09ce4-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09ce4-112">See Also</span></span>  
- [<span data-ttu-id="09ce4-113">IMetaDataFilter (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="09ce4-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="52f08-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="52f08-112">See Also</span></span>  
+ [<span data-ttu-id="52f08-113">Interfaccia IMetaDataFilter</span><span class="sxs-lookup"><span data-stu-id="52f08-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
