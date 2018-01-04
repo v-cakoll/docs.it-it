@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7a0f80785ee923874379a206b344db6a8c80055
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Procedura: stampare con un controllo WebBrowser
 Esempio di codice riportato di seguito viene illustrato come utilizzare il <xref:System.Windows.Forms.WebBrowser> controllo per stampare una pagina Web senza visualizzarla.  

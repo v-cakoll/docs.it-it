@@ -22,16 +22,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56c0991bfbe8c190c06a7907cf04fa4576435864
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: eef312d7e7883e86bcbaa4dfb9733d567139fad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifyicon-component-windows-forms"></a>Componente NotifyIcon (Windows Form)
 Windows Form `NotifyIcon` componente consente di visualizzare le icone nell'area di notifica dello stato della barra delle applicazioni per i processi che vengono eseguiti in background e che non dispongono di interfacce utente. Un esempio può essere rappresentato da un programma di protezione dai virus, al quale è possibile accedere facendo clic su un'icona riportata nell'area di notifica dello stato della barra delle applicazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi il `NotifyIcon` componente, che consente agli utenti di visualizzare le icone per i processi in esecuzione in background che non contengono un'interfaccia utente.  
   
@@ -41,7 +42,7 @@ Windows Form `NotifyIcon` componente consente di visualizzare le icone nell'area
  [Procedura: Associare un menu di scelta rapida a un componente NotifyIcon di Windows Form](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
  Viene descritta la procedura per l'aggiunta di un menu di scelta rapida per un `NotifyIcon` componente.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.NotifyIcon>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   

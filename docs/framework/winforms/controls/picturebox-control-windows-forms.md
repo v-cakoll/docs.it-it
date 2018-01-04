@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0438ff11577e74d7de0b0ca30abab74fcab953e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20c45ec8aa172edeb0c7babcb45c013330b9179b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="picturebox-control-windows-forms"></a>Controllo PictureBox (Windows Form)
 Windows Form `PictureBox` controllo viene utilizzato per visualizzare immagini in formato bitmap, GIF, JPEG, metafile o icona.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -39,7 +40,7 @@ Windows Form `PictureBox` controllo viene utilizzato per visualizzare immagini i
  [Procedura: Caricare un'immagine usando la finestra di progettazione](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
  Viene descritto come caricare e visualizzare un'immagine in un form in fase di progettazione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.PictureBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

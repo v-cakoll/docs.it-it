@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 193562b5dd00950ec483da94e2ea6ea059e88805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Visualizzazione di dati nel controllo DataGridView Windows Form
 Il `DataGridView` controllo viene utilizzato per visualizzare i dati da un'ampia gamma di origini dati esterne. In alternativa, è possibile aggiungere righe e colonne al controllo e popolare manualmente i dati.  
@@ -31,7 +32,7 @@ Il `DataGridView` controllo viene utilizzato per visualizzare i dati da un'ampia
   
  Inoltre, è possibile visualizzare i dati utilizzando i formati standard (ad esempio, il formato di valuta) oppure è possibile personalizzare il formato di visualizzazione per presentare i dati, tuttavia è necessario (ad esempio la modifica del colore di sfondo per i numeri negativi o sostituendo i valori stringa con immagini) corrispondente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Vengono descritte le opzioni per popolare il controllo con i dati.  
   
@@ -68,7 +69,7 @@ Il `DataGridView` controllo viene utilizzato per visualizzare i dati da un'ampia
  [Procedura: Formattare dati personalizzati in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come gestire il <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> evento per modificare l'aspetto delle celle in base ai relativi valori.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

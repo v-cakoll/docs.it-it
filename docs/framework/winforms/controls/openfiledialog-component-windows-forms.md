@@ -16,23 +16,24 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d7e9540c933a53bd4692aa09850a96977bfb6b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee8666ca70d12e1198e34a11dcd429568e07201e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="openfiledialog-component-windows-forms"></a>Componente OpenFileDialog (Windows Form)
 Il componente di Windows Form <xref:System.Windows.Forms.OpenFileDialog> è una finestra di dialogo preconfigurata. Ha lo stesso **Apri** la finestra di dialogo esposta dal sistema operativo Windows. Il componente eredita dalla classe <xref:System.Windows.Forms.CommonDialog>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi al componente<xref:System.Windows.Forms.OpenFileDialog>, che consente di visualizzare una finestra di dialogo preconfigurata tramite la quale gli utenti possono aprire i file.  
   
  [Procedura: Aprire file con il componente OpenFileDialog](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
  Illustra come aprire un file mediante un'istanza del componente <xref:System.Windows.Forms.OpenFileDialog> in fase di esecuzione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.OpenFileDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.OpenFileDialog> e sui relativi membri.  
   

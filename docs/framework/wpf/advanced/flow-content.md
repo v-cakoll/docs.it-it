@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>Contenuto del flusso
 Gli elementi di contenuto di flusso forniscono i blocchi predefiniti per la creazione di contenuto di flusso appropriato per l'hosting in un <xref:System.Windows.Documents.FlowDocument>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [Panoramica sul modello di contenuto TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Cenni preliminari sull'elemento Table](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  

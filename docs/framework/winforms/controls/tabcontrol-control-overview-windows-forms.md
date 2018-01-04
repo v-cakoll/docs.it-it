@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Cenni preliminari sul controllo TabControl (Windows Form)
 Il controllo <xref:System.Windows.Forms.TabControl> di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio. Le schede possono contenere immagini e altri controlli. Per generare il tipo di più pagine finestra di dialogo visualizzata da molte posizioni nel sistema operativo Windows, ad esempio le proprietà di visualizzazione del Pannello di controllo, è possibile utilizzare il controllo struttura a schede. Inoltre, il <xref:System.Windows.Forms.TabControl> può essere utilizzato per creare pagine delle proprietà, vengono utilizzate per impostare un gruppo di proprietà correlate.  

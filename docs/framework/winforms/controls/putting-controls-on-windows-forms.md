@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eccefd35e34ec2909cee81561576f8792e50e4e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a78c7a76c907e4b6d49963c76cfe98c099a391d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putting-controls-on-windows-forms"></a>Inserimento di controlli in Windows Form
 Sono disponibili un'ampia gamma di controlli che è possibile inserire in Windows Form, a seconda delle esigenze dell'applicazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Aggiungere controlli a un Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  Vengono fornite indicazioni per l'associazione di controlli al form.  
   

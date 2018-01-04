@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Cenni preliminari sul controllo ToolStripProgressBar
 Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento verticale/orizzontale e le funzionalità di rendering di tutti <xref:System.Windows.Forms.ToolStrip> controlli con le funzionalità di rilevamento di processo tipico. Oggetto <xref:System.Windows.Forms.ToolStripProgressBar> generalmente è ospitato da <xref:System.Windows.Forms.StatusStrip>e meno frequentemente in un <xref:System.Windows.Forms.ToolStrip>.  
@@ -31,7 +32,7 @@ Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento ve
   
 ### <a name="important-toolstripprogressbar-members"></a>Membri importanti di ToolStripProgressBar  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Ottiene o imposta un valore che rappresenta il ritardo tra ogni <xref:System.Windows.Forms.ProgressBarStyle.Marquee> visualizzare l'aggiornamento, in millisecondi.|  
 |<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Ottiene o imposta il limite superiore dell'intervallo definito per questo <xref:System.Windows.Forms.ToolStripProgressBar>.|  

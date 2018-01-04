@@ -15,18 +15,19 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5379da3361a8a4b2115f46d0d2db80a565f6bfc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soundplayer-class"></a>Classe SoundPlayer
 La classe `SoundPlayer` consente di includere facilmente suoni nelle applicazioni.  
   
  È anche possibile usare la classe<xref:System.Media.SystemSounds> per riprodurre suoni del sistema comuni, compresi i segnali acustici.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Introduce la classe e le proprietà, i metodi e gli eventi correlati usati più comunemente.  
   
@@ -48,7 +49,7 @@ La classe `SoundPlayer` consente di includere facilmente suoni nelle applicazion
  [Procedura: Riprodurre un suono ripetutamente in un Windows Form](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Fornisce il codice che riproduce un suono ripetutamente.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Media.SoundPlayer>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

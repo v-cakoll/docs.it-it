@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedura: effettuare chiamate thread-safe a controlli di Windows Form
 Se si usa il multithreading per migliorare le prestazioni delle applicazioni Windows Forms, è necessario assicurarsi che sia possibile effettuare chiamate ai controlli in modo thread-safe.  
@@ -1049,7 +1050,7 @@ int main()
 }  
 ```  
   
- Quando si esegue l'applicazione e si fa clic sul pulsante **Unsafe Call** , viene immediatamente visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, quando viene tentata la chiamata non sicura, il debugger di Visual Studio indica che si è verificata un'eccezione. Il debugger si arresta alla riga nel thread in background che ha provato a scrivere direttamente nella casella di testo. Sarà necessario riavviare l'applicazione per testare gli altri due pulsanti. Quando si fa clic sul pulsante **Safe Call** , viene visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, la casella di testo viene impostata su "Written by the background thread (Invoke)", che indica che è stato chiamato il metodo <xref:System.Windows.Forms.Control.Invoke%2A> . Quando si fa clic sul pulsante **Safe BW Call** , viene visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, la casella di testo viene impostata su "Written by the main thread after the background thread completed", a indicare che è stato chiamato il gestore per l'evento <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> di <xref:System.ComponentModel.BackgroundWorker> .  
+ Quando si esegue l'applicazione e si fa clic sul pulsante **Unsafe Call** , viene immediatamente visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, quando viene tentata la chiamata non sicura, il debugger di Visual Studio indica che si è verificata un'eccezione. Il debugger si arresta alla riga nel thread in background che ha provato a scrivere direttamente nella casella di testo. Sarà necessario riavviare l'applicazione per testare gli altri due pulsanti. Quando si fa clic sul pulsante **Safe Call** , viene visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, la casella di testo viene impostata su "Written by the background thread (Invoke)", che indica che è stato chiamato il metodo <xref:System.Windows.Forms.Control.Invoke%2A> . Quando si fa clic sul pulsante **Safe BW Call**, viene visualizzato "Written by the main thread" nella casella di testo. Due secondi dopo, la casella di testo viene impostata su "Written by the main thread after the background thread completed", a indicare che è stato chiamato il gestore per l'evento <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> di <xref:System.ComponentModel.BackgroundWorker> .  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   

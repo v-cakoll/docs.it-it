@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1936426b44ed667d03e4881e66a081d5097a2880
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b2d02e1513a0d8a3c31e4a13c9599666a4122a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a>Procedura: regolare la spaziatura tra paragrafi
 In questo esempio viene illustrato come modificare o eliminare la spaziatura tra i paragrafi nel contenuto del flusso.  

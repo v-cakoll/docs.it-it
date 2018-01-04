@@ -16,16 +16,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4800b06b5d0bbc5ce51d7cf00798ca98ef8bf656
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d606140a5be2b1770bc5a16159e96e20b0fccdd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-windows-forms"></a>Controllo TextBox (Windows Form)
 Caselle di testo di Windows Form vengono utilizzate per ottenere l'input dell'utente o per visualizzare il testo. Il `TextBox` controllo viene in genere utilizzato per il testo modificabile, anche se può inoltre essere resa di sola lettura. Caselle di testo possono visualizzare più righe, a capo automatico per le dimensioni del controllo e aggiungere la formattazione di base. Il `TextBox` controllo consente a un singolo formato per il testo visualizzato o inserito nel controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -47,7 +48,7 @@ Caselle di testo di Windows Form vengono utilizzate per ottenere l'input dell'ut
  [Procedura: Visualizzare più righe nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  Viene descritto come creare una casella di testo scorrevole.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TextBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

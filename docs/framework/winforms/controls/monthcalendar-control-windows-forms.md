@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4823b7d7411b7896e723683b70021292dd989aa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ed5ccd46a6563ced2cf5946304a36d0c204a00a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-windows-forms"></a>Controllo MonthCalendar (Windows Form)
 Windows Form `MonthCalendar` controllo fornisce un'interfaccia grafica intuitiva per gli utenti di visualizzare e impostare le informazioni sulla data. Il controllo Visualizza una griglia contenente i giorni del mese, distribuiti in colonne sotto i giorni della settimana numerati. È possibile selezionare un altro mese facendo clic sui pulsanti freccia su entrambi i lati della didascalia del mese. A differenza dell'analoga <xref:System.Windows.Forms.DateTimePicker> (controllo), è possibile selezionare un intervallo di date a questo controllo; tuttavia, il <xref:System.Windows.Forms.DateTimePicker> controllo consente di impostare i tempi di nonché le date.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi il `MonthCalendar` controllo, che consente agli utenti di visualizzare e impostare le informazioni di data per un'applicazione.  
   
@@ -43,7 +44,7 @@ Windows Form `MonthCalendar` controllo fornisce un'interfaccia grafica intuitiva
  [Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
  Viene illustrato come selezionare a livello di codice un intervallo di date per il `MonthCalendar` controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MonthCalendar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   

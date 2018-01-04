@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66eb0e8fc630696c86c8b85c85b67023bd568dc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Controllo SplitContainer (Windows Form)
 Il controllo `SplitContainer` Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
@@ -30,7 +31,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
   
  Il controllo `SplitContainer` consente di creare complesse interfacce utente, in cui l'elemento selezionato in un pannello determina in genere gli oggetti visualizzati nell'altro. Questa disposizione è particolarmente efficace per la visualizzazione e la ricerca di informazioni. Grazie alla presenza dei due pannelli è possibile aggregare le informazioni in aree, mentre la barra di divisione consente di ridimensionare i pannelli.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Introduce il controllo `SplitContainer` e descrive le proprietà, i metodi e gli eventi correlati usati più comunemente.  
   
@@ -45,7 +46,7 @@ Il controllo `SplitContainer` Windows Form può essere considerato un oggetto co
   
  Vedere anche [come: dividere una finestra orizzontalmente utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [procedura: creare un'interfaccia di tipo Esplora risorse di Windows in un Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [procedura: creare un'interfaccia utente con Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.SplitContainer>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

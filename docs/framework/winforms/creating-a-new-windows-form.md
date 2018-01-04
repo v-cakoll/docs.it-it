@@ -16,23 +16,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.workload: dotnet
+ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Creazione di un nuovo Windows Form
 Questo argomento contiene collegamenti ad argomenti che spiegano come creare la prima applicazione Windows Forms. Gli argomenti di questa sezione introducono anche alcuni termini di base e le linee guida che è opportuno conoscere quando si inizia a creare un'applicazione Windows Forms. Per ulteriori informazioni sulle applicazioni Windows Form, i controlli utilizzabili su di essi, eventi e gestione degli eventi e come gestire l'input dell'utente, vedere l'elenco di argomenti correlati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Coordinate di Windows Form](../../../docs/framework/winforms/windows-forms-coordinates.md).  
  Descrive le coordinate client e dello schermo.  
   
  [Procedura: Creare una Windows Forms Application dalla riga di comando](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
  Descrive come creare un Windows Form di base e come compilarlo dalla riga di comando.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Form>  
  Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
   

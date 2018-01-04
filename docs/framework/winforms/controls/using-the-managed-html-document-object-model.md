@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff1004248e709b4b4913b90eb81f0726ab390c54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Utilizzare il Document Object Model HTML gestito
 Il modello a oggetti documento (DOM) HTML gestito fornisce un wrapper basato sul [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per le classi HTML esposte da Internet Explorer. Usare queste classi per modificare pagine HTML ospitate nel <xref:System.Windows.Forms.WebBrowser> (controllo), o per creare nuove pagine dall'inizio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Accedere al Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
  Viene descritto come ottenere un'istanza valida di <xref:System.Windows.Forms.HtmlDocument> da un'applicazione di Windows Form o un <xref:System.Windows.Forms.UserControl> ospitata in Internet Explorer.  
   
@@ -39,7 +40,7 @@ Il modello a oggetti documento (DOM) HTML gestito fornisce un wrapper basato sul
  [Accesso ai membri non esposti del Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
  Viene descritto come accedere ai membri del DOM sottostante che non possiedono un equivalente gestito.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.HtmlDocument>  
   
  <xref:System.Windows.Forms.HtmlElement>  

@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9d0c50fe8f99df471376d31a2258912c870dd37
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Input da tastiera in un'applicazione Windows Forms
 Windows Form include eventi di tastiera standard che consentono di rispondere alle specifiche pressioni dei tasti e fornisce anche metodi per intercettare, modificare e utilizzare tali pressioni a livello di applicazione, form e livello di controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Funzionamento dell'input da tastiera](../../../docs/framework/winforms/how-keyboard-input-works.md)  
  Viene descritto come i messaggi della tastiera vengono elaborati e trasformati in eventi della tastiera.  
   
