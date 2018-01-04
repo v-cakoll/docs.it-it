@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5b52f9f06e2a4adf401367e337be81684f661e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: creazione di un'applicazione Windows ad Accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  

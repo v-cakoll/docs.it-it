@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f48027e413f9573158cfa2c3748fc93408b3f83
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Immagini, bitmap e metafile
 La classe `Image` è una classe base astratta che fornisce i metodi per eseguire operazioni con immagini raster (bitmap) e immagini vettoriali (metafile). La classe `Bitmap` e la classe <xref:System.Drawing.Imaging.Metafile> ereditano entrambe dalla classe `Image`. La classe `Bitmap` espande le funzionalità della classe `Image` grazie a metodi aggiuntivi per il caricamento, il salvataggio e la modifica di immagini raster. La classe <xref:System.Drawing.Imaging.Metafile> espande le funzionalità della classe `Image` grazie a metodi aggiuntivi per la registrazione e l'esame di immagini vettoriali.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Tipi di bitmap](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
  Illustra i vari formati immagini.  
   
@@ -40,7 +41,7 @@ La classe `Image` è una classe base astratta che fornisce i metodi per eseguire
  [Ritaglio e ridimensionamento di immagini in GDI+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
  Illustra i metodi per il ritaglio e il ridimensionamento di immagini vettoriali e raster con codice gestito.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Image>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

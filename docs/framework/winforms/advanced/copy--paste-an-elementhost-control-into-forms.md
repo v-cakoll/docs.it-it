@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65882925c6fbe3e9b393b139a937bc9a1f95ed04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 579bce312296d9799f9f7c739f740e2c9111ccff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>Procedura dettagliata: copiare e incollare un controllo ElementHost in Windows Form separati
 Questa procedura dettagliata mostra come copiare un controllo Windows Presentation Foundation (WPF) da un Windows Form a un altro.  

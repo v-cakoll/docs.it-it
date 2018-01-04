@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbff4023a51687539472ac3e040b125f2f92fc28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Disegno, posizionamento e clonazione delle immagini in GDI+
 È possibile utilizzare il <xref:System.Drawing.Bitmap> classe per caricare e visualizzare le immagini raster e si può utilizzare il <xref:System.Drawing.Imaging.Metafile> classe per caricare e visualizzare immagini vettoriali. Il <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> le classi ereditano dalla <xref:System.Drawing.Image> classe. Per visualizzare un'immagine vettoriale, sono necessari un'istanza di <xref:System.Drawing.Graphics> classe e un <xref:System.Drawing.Imaging.Metafile>. Per visualizzare un'immagine raster, sono necessari un'istanza di <xref:System.Drawing.Graphics> classe e un <xref:System.Drawing.Bitmap>. L'istanza del <xref:System.Drawing.Graphics> classe fornisce il <xref:System.Drawing.Graphics.DrawImage%2A> metodo che riceve il <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> come argomento.  

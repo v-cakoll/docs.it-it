@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfb1d09fc8bc52a03576054197488dff0aacf841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90083692c2415ed6c1117185474d6bbaa9d1963b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: creare i riquadri Casella degli strumenti e PropertyGrid
 In questa attività si creerà il **della casella degli strumenti** e **PropertyGrid** riquadri e li aggiunge riallocato [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  

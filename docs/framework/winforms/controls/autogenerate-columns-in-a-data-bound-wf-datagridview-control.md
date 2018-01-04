@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d6a790f8a43f4ea2f9d3ad2cdb282186554da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18d54da2c24d592b6fb6b53be10824c85682f9db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Procedura: generare automaticamente le colonne in un controllo DataGridView associato ai dati di Windows Form
 Esempio di codice riportato di seguito viene illustrato come visualizzare le colonne da un'origine dati associata in un <xref:System.Windows.Forms.DataGridView> controllo. Quando il <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> valore della proprietà è `true` (impostazione predefinita), un <xref:System.Windows.Forms.DataGridViewColumn> viene creato per ogni colonna nella tabella di origine dati.  

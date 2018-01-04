@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44a51c1bc9bd17cab7e3ba59ad36aa6700f82f71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] si verifica tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -93,6 +94,6 @@ Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indi
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.EndpointAddress>  
- [L'autenticazione e identità del servizio](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Hosting](../../../docs/framework/wcf/feature-details/hosting.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24bcc7377cad408d2cfe4c9e0f3fb60fe4b0327b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15e2a70b89c3ea42442262cc41c03e78de596ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-workflows"></a>Progettazione di flussi di lavoro
 Negli argomenti di questa sezione vengono descritti i paradigmi di controllo del flusso usati nello sviluppo del flusso di lavoro.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Flussi di lavoro del diagramma di flusso](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
  Viene illustrato come creare flussi di lavoro usando il paradigma del diagramma di flusso comune.  
   

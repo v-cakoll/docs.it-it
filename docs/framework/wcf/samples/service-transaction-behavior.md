@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4777136c80f7dba368c85fac7d7dd1db9c945c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4c7c9c78b821f7457f193d24bae031d49b301ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma viene esteso per mantenere un registro del server delle operazioni eseguite in una tabella di database e un con stato di esecuzione totale per le operazioni di calcolo. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.  

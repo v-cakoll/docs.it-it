@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0cb01c0fc5503a5bf16e1f191d87ae90907ec816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73bbd04b9ef5d2d0c5457dafb794435b3a4db380
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Cenni preliminari sul controllo LinkLabel (Windows Form)
 Windows Form <xref:System.Windows.Forms.LinkLabel> controllo consente di aggiungere collegamenti ipertestuali alle applicazioni Windows Form. È possibile utilizzare il <xref:System.Windows.Forms.LinkLabel> controllo per tutti gli elementi che è possibile utilizzare il <xref:System.Windows.Forms.Label> controllare per; è inoltre possibile impostare una parte del testo come un collegamento a un file, una cartella o una pagina Web.  

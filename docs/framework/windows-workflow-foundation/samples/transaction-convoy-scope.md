@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9f05e59f0df6326fe3ba68e35d83e3eda880ee8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 854e04c53bf438c3356072d762f129b7f21b7dd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-convoy-scope"></a>Ambito di istruzioni della transazione
 In questo esempio viene illustrato come creare un modello di attività di messaggistica di una serie di istruzioni parallele insieme a un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> per modellare un protocollo in cui possono verificarsi diverse operazioni in qualsiasi ordine, tutte nella stessa transazione. In questo esempio viene inoltre illustrato in che modo <xref:System.ServiceModel.Activities.TransactedReceiveScope> crea automaticamente una nuova transazione quando non ne viene propagata una al server, in modo che il client non utilizzi alcuna transazione.  

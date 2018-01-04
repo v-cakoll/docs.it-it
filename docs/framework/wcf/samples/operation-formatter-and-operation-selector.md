@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formattatore e selettore dell'operazione
 In questo esempio viene illustrato come utilizzare i punti di estensibilità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per consentire l'uso di dati del messaggio in un formato diverso da quello previsto da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per impostazione predefinita, i formattatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevedono che i parametri del metodo siano inclusi nell'elemento `soap:body`. In realtà, nell'esempio viene illustrato come implementare un formattatore dell'operazione personalizzato che analizza i dati dei parametri da una stringa di query HTTP GET e richiama i metodi utilizzando tali dati.  
@@ -70,7 +71,7 @@ In questo esempio viene illustrato come utilizzare i punti di estensibilità di 
   
  La proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> è impostata sull'implementazione di <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.  
   
- Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza un filtro dell'indirizzo Corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. Utilizza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> per questo scopo.  
+ Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza un filtro dell'indirizzo Corrispondenza esatta. L'URI del messaggio in ingresso contiene un suffisso del nome dell'operazione seguito da una stringa di query che contiene i dati dei parametri, pertanto il comportamento dell'endpoint modifica anche il filtro dell'indirizzo in modo da renderlo un filtro Prefisso corrispondente. Usa il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> a questo scopo.  
   
 ### <a name="installing-operation-formatters"></a>Installazione di formattatori dell'operazione  
  I comportamenti dell'operazione che specificano i formattatori sono univoci. Un comportamento di questo tipo viene sempre implementato per impostazione predefinita per ogni operazione allo scopo di creare il formattatore dell'operazione necessario. Tuttavia, questi comportamenti hanno lo stesso aspetto degli altri comportamenti dell'operazione e non possono essere identificati da qualsiasi altro attributo. Per installare un comportamento sostitutivo, l'implementazione deve cercare specifici comportamenti del formattatore installati dal caricatore dei tipi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per impostazione predefinita e sostituirli o aggiungere un comportamento compatibile da eseguire dopo il comportamento predefinito.  

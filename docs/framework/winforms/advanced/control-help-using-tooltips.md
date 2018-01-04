@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb0bffe79c7b00e42708f58a035d983802b53d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cdc1447bcb601e18b8b625a890003453e9e7da8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-help-using-tooltips"></a>Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi
 È possibile utilizzare il <xref:System.Windows.Forms.ToolTip> specializzato di componente per visualizzare una breve descrizione dei singoli controlli Windows Form. Il <xref:System.Windows.Forms.ToolTip> componente fornisce una proprietà che specifica il testo visualizzato per ogni controllo nel form. Per ulteriori informazioni sull'utilizzo di <xref:System.Windows.Forms.ToolTip> componente in questo modo, vedere [come: impostare ToolTip per i controlli in un Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Inoltre, è possibile configurare il <xref:System.Windows.Forms.ToolTip> componente in modo che si verifica un ritardo prima che venga visualizzato. Per ulteriori informazioni, vedere [procedura: modificare il ritardo del componente ToolTip di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

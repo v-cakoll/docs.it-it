@@ -15,16 +15,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fded7335c616bdc4b98074f2734948a9ad000e9a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 Contenuto della sezione vengono descritti il modello di programmazione, gli esempi e gli strumenti di [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Guida alla documentazione dei flussi di lavoro di Windows](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
  Set di argomenti consigliati per la consultazione, a seconda della familiarità (da principianti a utenti esperti) e dei requisiti.  
   

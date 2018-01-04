@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35f89bb5d87ef58c5ecda7be4cb9fb41da08e8a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-shear-colors"></a>Procedura: variare le componenti cromatiche
 Inclinazione aumenta o diminuisce di un componente di colore in modo proporzionale a un altro componente di colore. Si consideri ad esempio la trasformazione in cui il componente rosso viene aumentato la metà il valore del componente blu. In una trasformazione, il colore (0,2, 0,5, 1) diventa (0,7, 0,5, 1). Il nuovo componente rosso è 0,2 + (1/2)(1) = 0,7.  
@@ -48,7 +49,7 @@ Inclinazione aumenta o diminuisce di un componente di colore in modo proporziona
  [!code-vb[System.Drawing.Misc3#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire `ColorBars.bmp` con un nome dell'immagine e un percorso valido per il sistema.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire `ColorBars.bmp` con un nome dell'immagine e un percorso valido per il sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Drawing.Imaging.ColorMatrix>  

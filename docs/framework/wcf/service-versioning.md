@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. In questo argomento viene illustrato come controllare la versione in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -101,7 +102,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
 >  <xref:System.Xml.Serialization.XmlSerializer> utilizza gli attributi <xref:System.Xml.Serialization.XmlAnyElementAttribute> e <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> per supportare sequenze di andata e ritorno di dati sconosciuti.  
   
 ## <a name="message-contract-versioning"></a>Controllo delle versioni dei contratti di messaggio  
- Le linee guida per il controllo delle versioni dei contratti di messaggio sono molto simili al controllo delle versioni dei contratti dati. Se è richiesto il controllo rigoroso delle versioni, non modificare il corpo del messaggio, ma creare un nuovo contratto di messaggio con un nome completo univoco. Se si sa che è possibile utilizzare il controllo lax delle versioni, è possibile aggiungere nuove parti al corpo del messaggio ma non modificare o rimuove quelle esistenti. Questa indicazione si applica sia ai contratti di messaggio bare che a quelli wrapped.  
+ Le linee guida per il controllo delle versioni dei contratti di messaggio sono molto simili al controllo delle versioni dei contratti dati. Se è richiesto il controllo rigoroso delle versioni, non modificare il corpo del messaggio, ma creare un nuovo contratto di messaggio con un nome completo univoco. Se si sa che è possibile utilizzare il controllo lax delle versioni, è possibile aggiungere nuove parti al corpo del messaggio ma non modificare o rimuove quelle esistenti. Questo materiale sussidiario si applica sia ai contratti di messaggio bare che a quelli wrapped.  
   
  È sempre possibile aggiungere intestazioni messaggio, anche se è utilizzato il controllo strict delle versioni. Il flag MustUnderstand può influire sul controllo delle versioni. In genere, il modello di controllo delle versioni per le intestazioni in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è quello descritto nella specifica SOAP.  
   
@@ -196,5 +197,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Equivalenza dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Equivalenza dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

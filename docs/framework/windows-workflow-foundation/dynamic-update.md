@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bd320b9875f7ed2d5acb124feb4b7d3bb82d62e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-update"></a>Aggiornamento dinamico
 L'aggiornamento dinamico fornisce agli sviluppatori di applicazioni del flusso di lavoro un meccanismo per aggiornare la definizione del flusso di lavoro di un'istanza persistente del flusso di lavoro. Può servire a implementare una correzione di bug, nuovi requisiti o per implementare modifiche impreviste. In questo argomento viene fornita una panoramica sulla funzionalità di aggiornamento dinamico introdotta in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

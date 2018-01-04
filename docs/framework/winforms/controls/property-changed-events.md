@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7685891e99f1dcb2ca9e515c7dc6d7730ff0b2e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad22d77043f00ab0caaa6d8b08b6b0a9eef1fed5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-changed-events"></a>Eventi per proprietà modificate
 Se si desidera che il controllo per inviare notifiche quando una proprietà denominata *PropertyName* , definire un evento denominato *PropertyName* `Changed` e un metodo denominato `On` *PropertyName* `Changed` che genera l'evento. La convenzione di denominazione in Windows Form consiste nell'aggiungere la parola *Changed* per il nome della proprietà. Il tipo del delegato di evento associata per gli eventi di modifica della proprietà è <xref:System.EventHandler>, e il tipo di dati di evento è <xref:System.EventArgs>. La classe di base <xref:System.Windows.Forms.Control> definisce molti eventi di modifica della proprietà, ad esempio <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>e altri. Per informazioni generali sugli eventi, vedere [eventi](../../../../docs/standard/events/index.md) e [eventi nei controlli Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).  

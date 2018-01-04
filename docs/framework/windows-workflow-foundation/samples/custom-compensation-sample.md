@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ace7d38a456bb9d7f5dd59776b9ae5843b7b651
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2bc76267cf4b3fe5f4e792ee185733e51185872f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-compensation-sample"></a>Esempio di compensazione personalizzata
 In questo esempio viene illustrato come usare <xref:System.Activities.Statements.CompensableActivity> e il relativo gestore di compensazione per definire la logica di compensazione personalizzata. Lo scenario modellato in questo esempio è una Agenzia di noleggio furgoni.  

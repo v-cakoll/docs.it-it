@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilizzo di un pennello a sfumatura per il riempimento di forme
 È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore gradualmente. Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con colore che cambia gradualmente man mano che si sposta dal bordo sinistro della forma al bordo destro. Si supponga di un rettangolo con un bordo sinistro di colore nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto margine (rappresentato da 255, 0, 0). Se il rettangolo è 256 pixel in larghezza, il componente rosso di un determinato pixel sarà una maggiore il componente rosso di pixel alla sua sinistra. Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel è (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino a ottenere il pixel più a destra, che include componenti di colore (255, 0, 0). Questi valori di colore interpolata è costituiscono la sfumatura di colore.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
   
  ![Sfumatura](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare una sfumatura lineare](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
  Viene illustrato come creare una sfumatura lineare utilizzando la <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/22/2017
  [Procedura: Applicare la correzione gamma a una sfumatura](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
  Viene illustrato come utilizzare la correzione gamma con un pennello sfumato.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
  Contiene una descrizione di questa classe e include collegamenti a tutti i relativi membri.  
   

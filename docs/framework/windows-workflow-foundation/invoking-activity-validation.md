@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invoking-activity-validation"></a>Richiamo della convalida di attività
 La convalida delle attività offre un metodo per identificare e segnalare errori nella configurazione di qualsiasi attività prima della relativa esecuzione. Viene eseguita quando un flusso di lavoro viene modificato nell'utilità di progettazione del flusso di lavoro e gli eventuali errori o avvisi di convalida vengono visualizzati in tale utilità. La convalida avviene anche in fase di esecuzione quando un flusso di lavoro viene richiamato e, se si verificano errori di convalida, viene generata un'eccezione <xref:System.Activities.InvalidWorkflowException> dalla logica di convalida predefinita. [!INCLUDE[wf](../../../includes/wf-md.md)] fornisce la classe <xref:System.Activities.Validation.ActivityValidationServices> che può essere usata dagli sviluppatori di applicazioni e strumenti flusso di lavoro per convalidare in modo esplicito un'attività. In questo argomento viene descritto come usare l'oggetto <xref:System.Activities.Validation.ActivityValidationServices> per eseguire la convalida delle attività.  

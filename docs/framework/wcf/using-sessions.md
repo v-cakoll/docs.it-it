@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82fab5b5d7c702bc9f5e595572b8eba821159cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-sessions"></a>Uso di sessioni
 Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] una *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono differenti dall'oggetto sessione disponibile nelle applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento vengono descritte le funzionalità che vengono attivate dalle sessioni nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative modalità di utilizzo.  
@@ -41,7 +42,7 @@ Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] una *ses
   
  Se si ha familiarità con la classe <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> in applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] e con la funzionalità fornita, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]:  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
+-   Le sessioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
   
 -   Le sessioni[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
   

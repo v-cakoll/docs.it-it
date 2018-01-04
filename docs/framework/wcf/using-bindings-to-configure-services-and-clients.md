@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3e63a11ce87c95a5afc8e7f60c8e262da5c6bd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In questo esempio vengono illustrati l'uso e la configurazione delle proprietà promosse nell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare il relativo stato e caricarlo da e verso un database SQL Server o SQL Server Express. La funzionalità di estensibilità dell'archivio consente all'utente di definire le proprietà che vengono archiviate nell'archivio di istanze. Queste proprietà vengono riportate in una visualizzazione di proprietà promosse che consente all'utente di eseguire query relative alle stesse.  

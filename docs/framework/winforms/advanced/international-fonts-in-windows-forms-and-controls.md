@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7b6574e452faf4f0396f7633ba7f21519948262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Caratteri internazionali nei controlli e in Windows Form
 Applicazioni internazionali il metodo consigliato per la selezione del carattere consiste nell'utilizzare il fallback ove possibile. Per fallback si intende che il sistema determina quali il carattere di script a cui appartiene.  

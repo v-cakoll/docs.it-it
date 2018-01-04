@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d1ab49b6596c6feaa2ead5bbb92525f0ddb356d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Procedura: specificare una bitmap nella casella degli strumenti per un controllo
 Se si desidera disporre è visualizzata un'icona speciale per il controllo di **della casella degli strumenti**, è possibile specificare una particolare immagine utilizzando il <xref:System.Drawing.ToolboxBitmapAttribute>. Questa classe è un *attributo*, un tipo speciale di classe che è possibile allegare ad altre classi. Per altre informazioni sugli attributi, vedere [NOT IN BUILD: Panoramica sugli attributi in Visual Basic](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] e [Attributi](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) per [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  

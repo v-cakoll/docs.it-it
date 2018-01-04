@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 248af9c669687d0ab4d41f0ac93985d0d9a17678
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation"></a>Compensazione
 La compensazione in [!INCLUDE[wf](../../../includes/wf-md.md)] è il meccanismo mediante il quale il lavoro completato in precedenza può essere annullato o compensato (seguendo la logica definita dall'applicazione) in seguito a un errore. Contenuto della sezione viene illustrato come usare la compensazione nei flussi di lavoro.  
@@ -336,4 +337,4 @@ Activity wf = new Sequence()
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  
  <xref:System.Activities.Statements.CompensationToken>  
- [Attività compensabile](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)
+ [Compensable Activity](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)

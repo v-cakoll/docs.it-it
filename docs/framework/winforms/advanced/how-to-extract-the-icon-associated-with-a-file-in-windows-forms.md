@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Procedura: estrarre l'icona associata a un file in Windows Form
 Numero di file è incorporati icone che forniscono una rappresentazione visiva del tipo di file associato. Ad esempio, documenti di Microsoft Word contengono un'icona che li identifica come documenti di Word. Quando si visualizzano i file in un controllo elenco o tabella, si desidera visualizzare l'icona che rappresenta il tipo di file accanto a ogni nome di file. È possibile farlo facilmente tramite il <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> metodo.  

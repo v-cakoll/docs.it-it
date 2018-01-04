@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 612b983f53f147102ddf7bab03d4ec6783dc4026
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2dabc20c3cd3a97ed86dc45436eaad5e7a07c91a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-log-information-about-services"></a>Procedura: registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  

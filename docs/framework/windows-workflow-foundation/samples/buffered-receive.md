@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 974c053c3d5aae517e6acbd0e61e1bb96340ee65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="buffered-receive"></a>Ricezione memorizzata nel buffer
 In questo esempio viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in [!INCLUDE[wf](../../../../includes/wf-md.md)]. La ricezione memorizzata nel buffer consente a un autore di creare un flusso di lavoro senza dover preoccuparsi dell'ordine con cui vengono ricevuti i messaggi. La funzionalità di ricezione memorizzata nel buffer memorizza localmente nel buffer i messaggi e li recapita quando il flusso di lavoro è pronto per riceverli.  

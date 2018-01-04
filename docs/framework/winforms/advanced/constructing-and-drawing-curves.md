@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 801af10f7b9e5e7998fc061537977c5bced6bdb3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 62e9b9e0e1aa432578b7173cd58f88dd44957f84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-curves"></a>Costruzione e creazione di curve
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]supporta diversi tipi di curve: ellissi, archi, spline di tipo cardinal e spline di Bézier. Un'ellisse è definita dal rettangolo di delimitazione; un arco è una parte di un'ellisse definita da un angolo iniziale e un angolo di apertura. Spline di tipo cardinal è definita da una matrice di punti e un parametro di tensione, ovvero la curva passa per ogni punto della matrice e il parametro di tensione influenza il modo di curvatura. Una spline di Bézier è definita da due endpoint e due punti di controllo che della curva non passano attraverso i punti di controllo, ma i punti di controllo influenzano la direzione e piegatura come la curva passa da un endpoint a altro.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Disegnare spline di tipo Cardinal](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
  Viene descritto come disegnare li e spline cardinali.  
   

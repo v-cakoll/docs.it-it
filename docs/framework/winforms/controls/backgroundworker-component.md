@@ -22,16 +22,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d83ff69053a71626d0bf9a844d9e94235080d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="backgroundworker-component"></a>Componente BackgroundWorker
 Il `BackgroundWorker` componente consente a un form o controllo per eseguire un'operazione in modo asincrono.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
  Viene descritto il `BackgroundWorker` componente, che offre la possibilità di eseguire operazioni lunghe ed elaborate in modo asincrono (in background"), su un thread diverso dal thread dell'interfaccia utente principale dell'applicazione.  
   
@@ -50,7 +51,7 @@ Il `BackgroundWorker` componente consente a un form o controllo per eseguire un'
  [Procedura: Scaricare file in background](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
  Viene illustrato come utilizzare il `BackgroundWorker` componente per scaricare un file in un thread separato.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ComponentModel.BackgroundWorker>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

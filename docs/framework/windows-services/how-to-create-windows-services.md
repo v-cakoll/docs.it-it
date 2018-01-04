@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-windows-services"></a>Procedura: creare servizi Windows
 Quando si crea un servizio, è possibile utilizzare un modello di progetto di Visual Studio denominato **servizio Windows**. Questo modello esegue automaticamente una buona parte del lavoro facendo riferimento alle classi e agli spazi dei nomi appropriati, impostando l'ereditarietà dalla classe di base per i servizi ed eseguendo l'override di molti metodi, quando occorre.  
@@ -84,4 +85,4 @@ Quando si crea un servizio, è possibile utilizzare un modello di progetto di Vi
  [Procedura: avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)  
  [Procedura: specificare il contesto di sicurezza per i servizi](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
  [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

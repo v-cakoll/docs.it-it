@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 912694eb07a5f95b42f3a0f0cf39f25db1313e69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modellazione del comportamento di annullamento nei flussi di lavoro
 Le attività possono essere annullate all'interno di un flusso di lavoro, ad esempio da un'attività <xref:System.Activities.Statements.Parallel> che annulla i rami incompleti quando la proprietà <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> restituisce `true` oppure all'esterno del flusso di lavoro, se l'host chiama il metodo <xref:System.Activities.WorkflowApplication.Cancel%2A>. Per assicurare la gestione dell'annullamento, gli autori del flusso di lavoro possono usare le attività <xref:System.Activities.Statements.CancellationScope> e <xref:System.Activities.Statements.CompensableActivity> o creare attività personalizzate che forniscono la logica di annullamento. In questo argomento viene fornita una panoramica sull'annullamento nei flussi di lavoro.  

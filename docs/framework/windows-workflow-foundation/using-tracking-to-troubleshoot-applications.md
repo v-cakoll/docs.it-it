@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Utilizzo del rilevamento per la risoluzione dei problemi relativi alle applicazioni
 [!INCLUDE[wf](../../../includes/wf-md.md)] consente di rilevare informazioni correlate al flusso di lavoro per fornire dettagli nell'esecuzione di un'applicazione o un servizio di [!INCLUDE[wf2](../../../includes/wf2-md.md)]. Gli host [!INCLUDE[wf2](../../../includes/wf2-md.md)] possono acquisire gli eventi del flusso di lavoro durante l'esecuzione di un'istanza del flusso di lavoro. Se il flusso di lavoro genera errori o eccezioni, è possibile usare i dettagli di rilevamento di [!INCLUDE[wf2](../../../includes/wf2-md.md)] per risolvere i problemi relativi all'elaborazione.  

@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>Associazioni fornite dal sistema
 Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Un'associazione contiene gli elementi seguenti:  
@@ -64,21 +65,21 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
   
 |Binding|Interoperabilità|Sicurezza (predefinita)|Sessione<br /><br /> (Predefinito)|Transazioni|Duplex|Codifica (predefinita)|Flusso<br /><br /> (Predefinito)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Sì<br /><br /> (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|n/d|(Text), MTOM|No|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), None|(Sessione affidabile), sessione di sicurezza|(None), sì|Sì|(Text), MTOM|No|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Yes<br /><br /> (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|N/D|(Text), MTOM|No|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), None|(Sessione affidabile), sessione di sicurezza|(None), sì|Yes|(Text), MTOM|No|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), misto, None|(None), sessione affidabile, sessione di sicurezza|(None), sì|No|(Text), MTOM|No|  
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|Vedere la nota più avanti|None|Vedere la nota più avanti|(Binary), Text,MTOM|Sì (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Vedere la nota più avanti|None|Vedere la nota più avanti|(Binary), Text,MTOM|Sì (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), Message, None, misto|(Transport), sessione affidabile, sessione di sicurezza|(None), sì|Sì|Binario|Sì<br /><br /> (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), None|None, (Transport)|(None), sì|Sì|Binario|Sì<br /><br /> (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|Vedere la nota più avanti|nessuno|Vedere la nota più avanti|(Binary), Text,MTOM|Sì (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Vedere la nota più avanti|nessuno|Vedere la nota più avanti|(Binary), Text,MTOM|Sì (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), Message, None, misto|(Transport), sessione affidabile, sessione di sicurezza|(None), sì|Yes|Binario|Yes<br /><br /> (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), None|None, (Transport)|(None), sì|Yes|Binario|Yes<br /><br /> (memorizzato nel buffer)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), None|(None), Transport|None, (sì)|No|Binario|No|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Nessuno)|(Nessuno)|Sì||No|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Nessuno)|None, (sì)|n/d|n/d|No|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Sì<br /><br /> (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Message, None, misto|(Transport), sessione affidabile, sessione di sicurezza|(None), sì|Sì|Binario|Sì<br /><br /> (memorizzato nel buffer)|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|n/d|Text, (MTOM)|No|  
-|<xref:System.ServiceModel.UdpBinding>|.NET **Nota:** l'interoperabilità può essere ottenuta implementando la specifica SOAP-over-UDP standard che implementa questa associazione.|(Nessuno)|(Nessuno)|(Nessuno)|n/d|(Text)|No|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|(Transport)|(Nessuno)|(Nessuno)|Yes||No|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|(Transport)|(Nessuno)|None, (sì)|N/D|N/D|No|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(None), Transport, Message, misto|(Nessuno)|(Nessuno)|n/d|Text, (MTOM)|Yes<br /><br /> (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Message, None, misto|(Transport), sessione affidabile, sessione di sicurezza|(None), sì|Yes|Binario|Yes<br /><br /> (memorizzato nel buffer)|  
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Message), misto|(None), sessione affidabile, sessione di sicurezza|(None), sì|N/D|Text, (MTOM)|No|  
+|<xref:System.ServiceModel.UdpBinding>|.NET **Nota:** l'interoperabilità può essere ottenuta implementando la specifica SOAP-over-UDP standard che implementa questa associazione.|(Nessuno)|(Nessuno)|(Nessuno)|N/D|(Text)|No|  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita. L'oggetto <xref:System.ServiceModel.NetHttpBinding> rileverà se viene utilizzato con un contratto request/reply o un contratto duplex e modificherà il comportamento di conseguenza. Utilizzerà HTTP per i contratti request/reply e WebSockets per i contratti duplex. Questo comportamento può essere sottoposto a override utilizzando il <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>--> `System.ServiceModel.NetHttpBinding.WebSocketTransportUsage` impostazioni dell'associazione: consentiti - questo è il valore predefinito e si comporta come descritto in precedenza. NotAllowed - questo impedisce il WebSocket. Il tentativo di utilizzare un contratto duplex con questa impostazione genererà un'eccezione. Obbligatorio - forza l'uso di WebSockets per essere utilizzato anche per i contratti request / reply. In modalità HTTP sia la modalità WebSocket, NetHttpBinding supporta sessioni affidabili. Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.  

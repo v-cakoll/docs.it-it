@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f590080d1a3898e84df30f0fb690c3d18905f8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Disposizione di controlli in Windows Form
 Inserendo e manipolando i controlli nei form in diversi modi, è possibile creare interfacce utente intuitive e funzionali per gli utenti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Allineare più controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
  Fornisce indicazioni per allineare in alto la posizione di più controlli in Windows Form.  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c942cb5f005177b74dd25a9725b4990553adbb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5fcc2ccc240752c8c54c28fe2358d3ef49cbf3b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Procedura: acquisire l'input dell'utente da un elemento PrintDialog in fase di esecuzione
 Sebbene sia possibile impostare le opzioni relative alla stampa in fase di progettazione, si potrebbe desiderare di modificare queste opzioni in fase di esecuzione, probabilmente a causa delle scelte effettuate dall'utente. È possibile acquisire l'input dell'utente per la stampa di un documento usando il <xref:System.Windows.Forms.PrintDialog> e <xref:System.Drawing.Printing.PrintDocument> componenti.  

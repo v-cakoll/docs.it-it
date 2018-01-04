@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0525e7b58353909d41e5367aa52a17aa56bcd77c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d3805c2d67f5241425ef72d3802aba996d33cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regions-in-gdi"></a>Regioni in GDI+
 Un'area è una parte dell'area di visualizzazione di un dispositivo di output. Aree possono essere semplice (un rettangolo singolo) o complesso (una combinazione di poligoni e curve chiuse). La figura seguente mostra due aree: una creata da un rettangolo e l'altro costruito da un percorso.  

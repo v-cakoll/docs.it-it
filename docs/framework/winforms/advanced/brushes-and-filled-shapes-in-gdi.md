@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pennelli e forme con riempimento in GDI+
 Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una struttura e una parte interna. La struttura viene disegnata con una penna e l'interno viene riempito con un pennello. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fornisce diverse classi di pennelli per il riempimento di forme chiuse: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Tutte queste classi di ereditare il <xref:System.Drawing.Brush> classe. Nella figura seguente viene illustrato un rettangolo riempito con un pennello tinta unita e un'ellisse riempita con un pennello di tratteggio.  

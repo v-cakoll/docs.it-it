@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba7a016c96556f2719d4a247c93df7ac698b24fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5dde9417782e4404237a995364d65058f023c3e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Procedura: utilizzare una matrice di colori per impostare i valori alfa nelle immagini
 Il <xref:System.Drawing.Bitmap> classe (che eredita dalla classe di <xref:System.Drawing.Image> classe) e <xref:System.Drawing.Imaging.ImageAttributes> classe fornisce la funzionalità per ottenere e impostare i valori pixel. È possibile utilizzare il <xref:System.Drawing.Imaging.ImageAttributes> i valori di classe per modificare il canale alfa per un'intera immagine, oppure è possibile chiamare il <xref:System.Drawing.Bitmap.SetPixel%2A> metodo la <xref:System.Drawing.Bitmap> classe per modificare i valori dei singoli pixel.  
@@ -43,7 +44,7 @@ Il <xref:System.Drawing.Bitmap> classe (che eredita dalla classe di <xref:System
  [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  

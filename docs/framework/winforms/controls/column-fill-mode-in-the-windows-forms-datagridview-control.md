@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a15f5a95510e7a1ffc4dfcdce00243f205c03eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76ab083e8697d53f84a7c6e5ff4a91d6ceaebe1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modalità di riempimento di colonna nel controllo DataGridView Windows Form
 In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.DataGridView> ridimensiona automaticamente le proprie colonne in modo da occupare tutta la larghezza dell'area di visualizzazione disponibile. Il controllo non visualizza la barra di scorrimento orizzontale se non quando è necessario per mantenere la larghezza di ogni colonna uguale o maggiore al relativo valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -70,7 +71,7 @@ In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.D
   
 -   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Forms completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.DataGridView>  

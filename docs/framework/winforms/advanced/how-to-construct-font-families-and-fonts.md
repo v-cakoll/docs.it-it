@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e152c525550554082d7d6c38a972ccc150adabb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedura: creare caratteri e gruppi di caratteri
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]i caratteri con lo stesso carattere tipografico ma stili diversi in famiglie di caratteri. Ad esempio, la famiglia contiene i caratteri seguenti:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  

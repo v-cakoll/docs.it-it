@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti
 Questo articolo illustra come creare una semplice applicazione del servizio Windows in Visual Studio che scrive messaggi in un log eventi. I passaggi di base da eseguire per la creazione e l'uso del servizio includono:  
@@ -96,7 +97,7 @@ Questo articolo illustra come creare una semplice applicazione del servizio Wind
      [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
      [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]  
   
-     Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio nel sistema. Il monitoraggio viene impostato nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , tuttavia, non esegue effettivamente il monitoraggio. Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve rispondere al sistema operativo dopo l'avvio del servizio, poiché Non deve entrare in un ciclo o bloccarsi. Per impostare un semplice meccanismo di polling, è possibile usare il componente <xref:System.Timers.Timer?displayProperty=nameWithType>. Nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> impostare i parametri del componente e la proprietà <xref:System.Timers.Timer.Enabled%2A> su `true`. Il timer genera degli eventi nel codice periodicamente e, a quel punto, il servizio può svolgere la propria funzione di monitoraggio. A tale scopo, è possibile usare il codice seguente:  
+     Poiché le applicazioni di servizio sono progettate per un'esecuzione di lunga durata, generalmente eseguono operazioni di polling o di monitoraggio nel sistema. Il monitoraggio viene impostato nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , tuttavia, non esegue effettivamente il monitoraggio. Il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve rispondere al sistema operativo dopo l'avvio del servizio, poiché non può scorrere in ciclo all'infinito o bloccarsi. Per impostare un semplice meccanismo di polling, è possibile usare il componente <xref:System.Timers.Timer?displayProperty=nameWithType>. Nel metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> impostare i parametri del componente e la proprietà <xref:System.Timers.Timer.Enabled%2A> su `true`. Il timer genera degli eventi nel codice periodicamente e, a quel punto, il servizio può svolgere la propria funzione di monitoraggio. A tale scopo, è possibile usare il codice seguente:  
   
     ```csharp  
     // Set up a timer to trigger every minute.  
@@ -490,5 +491,5 @@ Questo codice modifica la chiave del Registro di sistema **ImagePath** , che in 
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni di servizi Windows](../../../docs/framework/windows-services/index.md)  
  [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Procedura: eseguire il Debug di applicazioni di servizio Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Procedura: eseguire il debug di applicazioni di servizio per Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Servizi (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

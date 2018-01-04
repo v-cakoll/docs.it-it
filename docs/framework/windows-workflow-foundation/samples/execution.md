@@ -12,20 +12,21 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0849f1e086a99539978e2c3c978807d2f83ae7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution"></a>Esecuzione
 Contenuto della sezione sono inclusi esempi che illustrano l'esecuzione dei flussi di lavoro in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Esempio di Endpoint di gestione del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Esempio di endpoint di gestione del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
  Viene illustrato come un endpoint di controllo del flusso di lavoro può essere usato per creare ed eseguire flussi di lavoro sia in modalità locale sia in modalità remota.  
   
- [Utilizzo della classe WorkflowInvoker](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
+ [Uso della classe WorkflowInvoker](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
  Viene illustrato come usare la classe <xref:System.Activities.WorkflowInvoker> per richiamare un'attività come se fosse un metodo.  
   
  [Host ReadLine di WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
@@ -37,5 +38,5 @@ Contenuto della sezione sono inclusi esempi che illustrano l'esecuzione dei flus
  [Segnalibro di ripresa WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
  Viene illustrato come usare l'oggetto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> con l'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> per creare istanze del flusso di lavoro.  
   
- [Risolver di segnalibri per WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
+ [Resolver di segnalibri per WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
  Viene illustrato come usare l'oggetto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> con l'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> per riprendere i segnalibro personalizzati nelle istanze del flusso di lavoro.

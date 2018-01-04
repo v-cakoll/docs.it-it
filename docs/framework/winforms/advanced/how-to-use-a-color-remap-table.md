@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c4399e98504a675cfbf63462b8dc964c677488e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e208aa9c98c1ca19baee83760cfd0f75972ecfa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Procedura: utilizzare una tabella di riassociazione cromatica
 Modifica del mapping è il processo di conversione dei colori in un'immagine in base a una tabella di modifica del mapping dei colori. La tabella è una matrice di <xref:System.Drawing.Imaging.ColorMap> oggetti. Ogni <xref:System.Drawing.Imaging.ColorMap> oggetto nella matrice è un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> proprietà e un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> proprietà.  
@@ -44,7 +45,7 @@ Modifica del mapping è il processo di conversione dei colori in un'immagine in 
  [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)  

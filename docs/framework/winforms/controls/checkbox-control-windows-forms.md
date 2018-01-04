@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f635ecbce5095ff70ae66a78d24310bfb8249a51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkbox-control-windows-forms"></a>Controllo CheckBox (Windows Form)
 Il controllo di Windows Form `CheckBox` indica se una determinata condizione è attiva o disattivata. Viene usato comunemente per presentare all'utente la selezione di valori Sì/No o True/False. È possibile usare i controlli della casella di controllo in gruppi, per visualizzare e consentire all'utente la selezione di una o più opzioni. Il controllo è simile al controllo <xref:System.Windows.Forms.RadioButton>, ma è possibile selezionare qualsiasi numero di controlli `CheckBox` raggruppati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -39,7 +40,7 @@ Il controllo di Windows Form `CheckBox` indica se una determinata condizione è 
  [Procedura: Impostare opzioni con i controlli CheckBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
  Descrive come usare una casella di controllo per impostare opzioni quali le proprietà di un oggetto.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.CheckBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

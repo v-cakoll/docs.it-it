@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>Procedura: convalidare le impostazioni applicazione
 In questo argomento viene illustrato come convalidare le impostazioni dell'applicazione prima dell'operazione che le rende persistenti.  
@@ -33,7 +34,7 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
  L'evento da usare dipende da quando è necessario convalidare le impostazioni, come descritto nella tabella seguente.  
   
-|Evento|Occorrenza e uso|  
+|event|Occorrenza e uso|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Si verifica dopo il caricamento iniziale di un gruppo di proprietà delle impostazioni.<br /><br /> Usare questo evento per convalidare i valori iniziali per l'intero gruppo di proprietà prima che vengano usati all'interno dell'applicazione.|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Si verifica prima che venga modificato il valore di una singola proprietà delle impostazioni.<br /><br /> Usare questo evento per convalidare una singola proprietà prima che venga modificata. Può offrire un feedback immediato agli utenti in relazione alle loro azioni e scelte.|  
@@ -68,11 +69,11 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
         MySettings.Default   
         ```  
   
-         -oppure-  
+         oppure  
   
     -   Se si è uno sviluppatore di Visual Basic e si sono create le impostazioni dell'applicazione tramite Creazione progetti, è possibile recuperare le impostazioni usando [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         -oppure-  
+         oppure  
   
     -   Se le impostazioni è stato creato mediante la derivazione da <xref:System.Configuration.ApplicationSettingsBase> direttamente, è necessario creare manualmente un'istanza della classe.  
   
@@ -90,7 +91,7 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 1.  Se si è uno sviluppatore in c#, nel form o del controllo `Load` evento, aggiungere un gestore eventi per il <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> evento.  
   
-     -oppure-  
+     oppure  
   
      Se si è uno sviluppatore di Visual Basic, è necessario dichiarare la variabile `Settings` usando la parola chiave `WithEvents`.  
   

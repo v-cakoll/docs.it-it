@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vector-graphics-overview"></a>Cenni preliminari sulla grafica vettoriale
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Consente di disegnare linee, rettangoli e altre forme in un sistema di coordinate. È possibile scegliere tra un'ampia gamma di sistemi di coordinate, ma il sistema di coordinate è l'origine nell'angolo superiore sinistro con l'asse x a destra e l'asse y rivolta verso il basso. L'unità di misura nel sistema di coordinate predefinito è il pixel.  

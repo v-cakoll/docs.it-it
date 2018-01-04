@@ -12,16 +12,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9064f56dab2c7a2b36394f6f77ded77edc0b387b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Utilizzo di finestre di progettazione e modelli di attività personalizzati
 Contenuto della sezione sono contenuti argomenti che descrivono come creare ActivityDesigner personalizzati e modelli di attività personalizzati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare una finestra di progettazione di attività personalizzata](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
  Viene descritto come creare un ActivityDesigner personalizzato quando le finestre di progettazione fornite dal flusso di lavoro non sono appropriate alle attività di progettazione.  
   
@@ -34,7 +35,7 @@ Contenuto della sezione sono contenuti argomenti che descrivono come creare Acti
  [Associazione di una proprietà di attività personalizzata a un controllo di progettazione](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
  Viene descritto come associare un controllo ListView a una proprietà dell'attività nella finestra di progettazione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Activities.Presentation.ActivityDesigner>  
   
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  

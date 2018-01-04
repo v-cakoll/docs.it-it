@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c3c0122eceab8b59bed15391e076863c5a2f144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-windows-forms"></a>Componente ContextMenu (Windows Form)
 > [!NOTE]
@@ -33,14 +34,14 @@ ms.lasthandoff: 11/21/2017
   
  Windows Form `ContextMenu` componente viene utilizzato per fornire agli utenti con un menu di scelta rapida facilmente accessibile di comandi utilizzati frequentemente vengono associati all'oggetto selezionato. Gli elementi in un menu di scelta rapida sono spesso un sottoinsieme degli elementi dei menu principali vengono visualizzati in un' posizione nell'applicazione. Menu di scelta rapida sono in genere disponibili facendo clic con il mouse. In Windows Form sono associati ad altri controlli.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi il `ContextMenu` componente, che consente agli utenti di creare i menu dei comandi utilizzati frequentemente associati a un oggetto selezionato.  
   
  [Procedura: Aggiungere e rimuovere voci di menu tramite il componente ContextMenu di Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Viene illustrato come aggiungere e rimuovere voci di menu di scelta rapida in Windows Form.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.ContextMenu>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ContextMenu> e sui relativi membri.  
   

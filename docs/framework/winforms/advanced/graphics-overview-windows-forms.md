@@ -19,16 +19,17 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ded27d60bdfcd9b9b1de4ba719c2f5b6018df1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c066b3c6c84d89a74b18e90ac3a6aa80c63a9b0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-overview-windows-forms"></a>Cenni preliminari sulla grafica (Windows Form)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]è un'interfaccia di dispositivo di grafica che consente ai programmatori di scrivere applicazioni indipendenti dal dispositivo. I servizi di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono esposti tramite un set di classi gestite.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulla grafica](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
  Fornisce un'introduzione generale a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/22/2017
  [Struttura dell'interfaccia grafica](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
  Descrive l'interfaccia di classe gestita di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing>  
  Fornisce accesso alle funzionalità grafiche di base di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   

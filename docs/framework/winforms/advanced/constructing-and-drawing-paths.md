@@ -19,18 +19,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6cec2356159b59e58ac6785a2988df7b2fac0e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-paths"></a>Costruzione e creazione di percorsi
 Un percorso è una sequenza di primitive grafiche (linee, rettangoli, curve, testo e così via) che può essere modificato e visualizzato come una singola unità. Un percorso può essere suddiviso in *figure* che sono aperti o chiusi. Una figura può contenere diverse primitive.  
   
  È possibile disegnare un tracciato chiamando il <xref:System.Drawing.Graphics.DrawPath%2A> metodo il <xref:System.Drawing.Graphics> classe ed è possibile compilare un percorso chiamando il <xref:System.Drawing.Graphics.FillPath%2A> metodo il <xref:System.Drawing.Graphics> classe.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare figure da linee, curve e forme](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
  Viene illustrato come utilizzare un <xref:System.Drawing.Drawing2D.GraphicsPath> per creare figure.  
   
@@ -40,6 +41,6 @@ Un percorso è una sequenza di primitive grafiche (linee, rettangoli, curve, tes
  [Procedura: Trasformare un percorso curvo in una linea](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
  Viene illustrato come convertire un <xref:System.Drawing.Drawing2D.GraphicsPath>.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
  Descrive la classe e contiene collegamenti a tutti i relativi membri.

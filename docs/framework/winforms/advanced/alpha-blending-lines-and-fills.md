@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b3c0ee3ec82d4d8447c43b7dc9b275591ebe890
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Linee e riempimenti con fusione alfa
 In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un colore è un valore a 32 bit con 8 bit per ciascun alfa, rosso, verde e blu. Il valore alfa indica la trasparenza del colore, ovvero l'entità a cui il colore viene sfumato con il colore di sfondo. I valori alfa compresi tra 0 e 255, dove 0 rappresenta un colore completamente trasparente, e 255 rappresenta un colore completamente opaco.  
@@ -39,7 +40,7 @@ In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un color
   
  150 × 200 / 255 + 100 × (255 – 200) / 255 = 139  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Disegnare linee opache e semitrasparenti](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)  
  Viene illustrato come disegnare linee con fusione alfa.  
   

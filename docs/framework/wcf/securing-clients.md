@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>Protezione di client
 In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. [!INCLUDE[crabout](../../../includes/crabout-md.md)]creazione di un servizio protetto, vedere [protezione servizi](../../../docs/framework/wcf/securing-services.md).  

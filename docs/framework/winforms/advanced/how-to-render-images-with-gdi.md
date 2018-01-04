@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c0b4c128667cab04ca8ed015b44dae60d11b474
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a6edc48c93f83611bdc2be5b7398ab0abe843407
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procedura: eseguire il rendering delle immagini con GDI+
 È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Farlo creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (ad esempio <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno che si desidera utilizzare e la chiamata il <xref:System.Drawing.Graphics.DrawImage%2A> metodo il <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'editor di immagini per creare e modificare i file di immagine in fase di progettazione ed eseguire su di loro il rendering con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  

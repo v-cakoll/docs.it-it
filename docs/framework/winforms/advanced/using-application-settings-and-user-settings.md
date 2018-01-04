@@ -16,18 +16,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizzo delle impostazioni applicazione e delle impostazioni utente
 A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che sono persistenti tra le sessioni di esecuzione dell'applicazione. Questi valori sono denominati *impostazioni*. Le impostazioni possono rappresentare le preferenze dell'utente o informazioni importanti, l'applicazione devono utilizzare. Ad esempio, è possibile creare una serie di impostazioni per archiviare le preferenze utente per la combinazione di colori di un'applicazione. Oppure è possibile archiviare la stringa di connessione che specifica un database che utilizza l'applicazione. Impostazioni consentono di mantenere le informazioni essenziali per l'applicazione all'esterno del codice e creare i profili che archiviano le preferenze di singoli utenti.  
   
  Negli argomenti di questa sezione viene descritto come utilizzare le impostazioni in fase di progettazione e di esecuzione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare una nuova impostazione in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
  Viene illustrato come utilizzare Visual Studio per creare una nuova impostazione per un'applicazione.  

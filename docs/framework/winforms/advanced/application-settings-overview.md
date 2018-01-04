@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d617ce5b4e7222b60ce711e2e081e0bf3cb8065d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f74595ce672079db69fd36fb2b2eb982bc90b448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
 Questo argomento descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
@@ -40,7 +41,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
   
  Le impostazioni vengono archiviate come frammenti XML nei file di configurazione. Le impostazioni con ambito di applicazione sono rappresentate dall'elemento `<application.Settings>` e di solito sono inserite in *app*.exe.config, dove *app* è il nome del file eseguibile principale. Le impostazioni con ambito di utente sono rappresentate dall'elemento `<userSettings>` e inserite in *utente*.config, dove *utente* è il nome dell'utente che esegue l'applicazione in quel momento. È necessario distribuire il file *app*.exe.config con l'applicazione. L'architettura delle impostazioni creerà i file *utente*.config su richiesta la prima volta che nell'applicazione verranno salvate le impostazioni per tale utente. È anche possibile definire un blocco `<userSettings>` in *app*.exe.config per fornire valori predefiniti per le impostazioni con ambito di utente.  
   
- Anche per i controlli personalizzati è possibile salvare le impostazioni implementando l'interfaccia <xref:System.Configuration.IPersistComponentSettings> , che espone il metodo <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Il controllo <xref:System.Windows.Forms.ToolStrip> di Windows Form implementa questa interfaccia per salvare la posizione delle barre degli strumenti e dei relativi elementi tra le sessioni di un'applicazione. Per altre informazioni sui controlli personalizzati e le impostazioni dell'applicazione, vedere [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md).  
+ Anche per i controlli personalizzati è possibile salvare le impostazioni implementando l'interfaccia <xref:System.Configuration.IPersistComponentSettings> , che espone il metodo <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . Il controllo <xref:System.Windows.Forms.ToolStrip> di Windows Form implementa questa interfaccia per salvare la posizione delle barre degli strumenti e dei relativi elementi tra le sessioni di un'applicazione. Per altre informazioni sui controlli personalizzati e le impostazioni dell'applicazione, vedere [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md) (Impostazioni delle applicazioni per i controlli personalizzati).  
   
 ## <a name="limitations-of-application-settings"></a>Limitazioni della funzionalità Impostazioni applicazione  
  Non è possibile usare questa funzionalità in un'applicazione non gestita basata su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le impostazioni non funzioneranno correttamente in ambienti come i componenti aggiuntivi di Visual Studio, C++ per Microsoft Office, i controlli contenuti in Internet Explorer o i componenti aggiuntivi e i progetti di Microsoft Outlook.  
@@ -52,7 +53,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
 ## <a name="getting-started-with-application-settings"></a>Guida introduttiva alle impostazioni dell'applicazione  
  Se si usa Visual Studio, per definire le impostazioni in Progettazione Windows Form usare la proprietà **(ApplicationSettings)** nella finestra **Proprietà** . Quando si definiscono le impostazioni in questo modo, viene creata automaticamente una classe wrapper gestita personalizzata che stabilisce un'associazione tra ogni impostazione e una proprietà di classe. Visual Studio stabilisce inoltre l'associazione tra l'impostazione e una proprietà su un form o controllo, in modo che le impostazioni del controllo vengano ripristinate automaticamente alla visualizzazione del form e salvate automaticamente alla chiusura.  
   
- Se si desidera un controllo maggiore sulle impostazioni, è possibile definire una classe wrapper personalizzata per le impostazioni dell'applicazione. Questa operazione viene eseguita derivando una classe da <xref:System.Configuration.ApplicationSettingsBase>, aggiungendo una proprietà corrispondente a ogni impostazione e applicando attributi speciali alle proprietà. Per informazioni dettagliate sulla creazione di classi wrapper, vedere [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Se si desidera un controllo maggiore sulle impostazioni, è possibile definire una classe wrapper personalizzata per le impostazioni dell'applicazione. Questa operazione viene eseguita derivando una classe da <xref:System.Configuration.ApplicationSettingsBase>, aggiungendo una proprietà corrispondente a ogni impostazione e applicando attributi speciali alle proprietà. Per informazioni sulla creazione di classi wrapper, vedere [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md) (Architettura Impostazioni applicazione).  
   
  È anche possibile usare la classe <xref:System.Windows.Forms.Binding> per associare le impostazioni alle proprietà a livello di codice su form e controlli.  
   

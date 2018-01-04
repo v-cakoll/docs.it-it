@@ -16,16 +16,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd42299a217cef6125f348d47e0a5216f9e8205f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-programming"></a>Programmazione di Windows Workflow Foundation
 Contenuto della sezione è contenuto un set di nozioni di base necessarie per diventare programmatori [!INCLUDE[wf](../../../includes/wf-md.md)] qualificati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Progettazione di flussi di lavoro](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  Argomenti nei quali vengono descritti i paradigmi di controllo del flusso usati nello sviluppo del flusso di lavoro.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8bb78a6f02dd593635c47b8c39a87f40566be1a7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 090aeda13081dc87b37cf0a18955cbd239720870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="non-generic-foreach"></a>ForEach non generica
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Nella casella degli strumenti è disponibile un set di attività flusso di controllo, tra cui <xref:System.Activities.Statements.ForEach%601>, che consente di scorrere <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` raccolte.  

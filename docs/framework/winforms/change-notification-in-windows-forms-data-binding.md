@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notifica delle modifiche nel data binding dei Windows Form
 Uno dei principali concetti di data binding in Windows Form è *notifica di modifica*. Per garantire che l'origine dati e i controlli con associazione dispongano sempre dei dati più recenti, è necessario aggiungere la notifica di modifica per l'associazione dati. In particolare, si desidera garantire che i controlli con associazione vengono visualizzata una notifica delle modifiche apportate all'origine dati e l'origine dati viene informato delle modifiche apportate alle proprietà di un controllo associata.  

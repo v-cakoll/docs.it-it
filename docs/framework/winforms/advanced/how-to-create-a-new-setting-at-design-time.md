@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: creare una nuova impostazione in fase di progettazione
 È possibile creare una nuova impostazione in fase di progettazione tramite Progettazione impostazioni. Progettazione impostazioni è un'interfaccia di stile di griglia che consente di creare nuove impostazioni e specificare le proprietà per tali impostazioni. È necessario specificare nome, valore, tipo e ambito per le nuove impostazioni. Dopo aver creata un'impostazione, è accessibile nel codice.  

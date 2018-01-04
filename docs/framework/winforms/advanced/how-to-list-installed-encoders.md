@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70f913acb2620b5c01e1aec1f1eb98b041b82a59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec3ce7d2d933226162664826764c818eacf97afc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-list-installed-encoders"></a>Procedura: elencare i codificatori installati
 È consigliabile elencare i codificatori disponibili in un computer, per determinare se l'applicazione è possibile salvare in un formato di file di immagine specifico. Il <xref:System.Drawing.Imaging.ImageCodecInfo> classe fornisce il <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> metodi statici in modo che è possibile determinare quali codificatori sono disponibili. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>Restituisce una matrice di <xref:System.Drawing.Imaging.ImageCodecInfo> oggetti.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Applicazione Windows Form.  
+-   Applicazione Windows Forms.  
   
 -   Oggetto <xref:System.Windows.Forms.PaintEventArgs>, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   

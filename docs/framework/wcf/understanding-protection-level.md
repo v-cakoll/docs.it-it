@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Informazioni sul livello di protezione
 La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esempio nelle classi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute>. Tale proprietà controlla la modalità di protezione di una parte del messaggio o dell'intero messaggio. In questo argomento ne viene illustrata la funzionalità in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] e il funzionamento.  
@@ -115,4 +116,4 @@ La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esemp
  [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)  
  [Procedura: Impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Utilizzo dei contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Uso di contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

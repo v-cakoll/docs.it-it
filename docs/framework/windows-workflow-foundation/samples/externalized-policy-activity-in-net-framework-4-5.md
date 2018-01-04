@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468d0ca5f4afa4e84b69f58887672ffcf1a14fa6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Attività ExternalizedPolicy in .NET Framework 4.5
 Questo esempio viene illustrato come l'attività ExternalizedPolicy4 consenta l'esecuzione esistente [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> oggetti [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) direttamente tramite il motore regole di business che viene fornito in WF 3.5. Usando questa attività, è possibile aprire ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> esistente di WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 motore regole di business inclusi come parte di Windows Workflow Foundation, vedere [Introduzione al motore regole di Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]migrazione di regole per [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], leggere le indicazioni migrazione [materiale sussidiario sulla migrazione](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

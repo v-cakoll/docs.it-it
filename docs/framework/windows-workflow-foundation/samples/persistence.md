@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb1a20df4217177d1742f46df16ebae0a84424
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence"></a>Persistenza
 Contenuto della sezione sono inclusi esempi che illustrano il salvataggio in modo permanente dei flussi di lavoro su un supporto durevole in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Persistenza di un'applicazione flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
  Viene illustrato come eseguire un oggetto <xref:System.Activities.WorkflowApplication>, scaricarlo quando diventa inattivo, quindi ricaricarlo per continuare l'esecuzione.  
   

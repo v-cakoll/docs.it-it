@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0e0542e46a17cffef629bc9b916d7b5929e878
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c36bfdd69cb4a3e7827302a7bde5139675a30429
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: modificare l'ordine delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
 Quando si associa un controllo Windows Form <xref:System.Windows.Forms.DataGridView> controllo a un'origine dati, l'ordine di visualizzazione delle colonne generate automaticamente dipende dall'origine dati. Se non si preferisce, è possibile modificare l'ordine delle colonne utilizzando la finestra di progettazione. È anche possibile aggiungere colonne non associate al controllo e modificare l'ordine di visualizzazione. Per informazioni su come modificare l'ordine delle colonne a livello di codice, vedere [procedura: modificare l'ordine delle colonne nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anti-aliasing con linee e curve
 Quando si utilizza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per disegnare una linea, si forniscono i punti iniziale e finale della riga, ma non è necessario fornire le informazioni sui singoli pixel della riga. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funziona in combinazione con il software dei driver di visualizzazione per determinare i pixel verranno attivati per visualizzare la riga in un particolare dispositivo di visualizzazione.  

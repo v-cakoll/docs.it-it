@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procedura: eseguire il debug di applicazioni di servizio per Windows
 Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione controllo servizi e non dall'interno di Visual Studio, il debug di un servizio non è semplice come quello di altri tipi di applicazioni di Visual Studio. Per eseguire il debug di un servizio, è necessario avviare il servizio e connettere un debugger al processo in cui viene eseguito. È quindi possibile eseguire il debug dell'applicazione tramite tutte le funzionalità di debug standard di Visual Studio.  

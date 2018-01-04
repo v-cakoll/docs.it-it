@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 109b6e8e2bc678aa9f238840b7634bc20a2eb01b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. Questo esempio è basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  

@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a37c7b01d4ef40727c02e0782422776086b5297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Esecuzione degli esempi di Windows Communication Foundation
 Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere eseguiti in un singolo computer o su una configurazione che prevede più computer. Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer. In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio. Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer. Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti. La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
@@ -90,6 +91,6 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
 -   Se il servizio è ospitato su IIS, per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
  [Suggerimenti di risoluzione dei problemi](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

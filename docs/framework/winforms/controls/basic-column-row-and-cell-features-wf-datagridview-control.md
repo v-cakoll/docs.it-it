@@ -18,16 +18,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c70e1a88384041a2a1d958e48c672a961752202b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form
 Molti comportamenti di base `DataGridView` celle, righe e colonne possono essere modificate impostando singole proprietà. Negli argomenti di questa sezione vengono descritti molti dei più comunemente utilizzate queste funzionalità.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Nascondere le colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come impedire la visualizzazione nel controllo colonne specifiche.  
   
@@ -52,7 +53,7 @@ Molti comportamenti di base `DataGridView` celle, righe e colonne possono essere
  [Procedura: visualizzare immagini in celle del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Viene descritto come creare una colonna di immagine che viene visualizzata un'icona in ogni cella.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo.  
   

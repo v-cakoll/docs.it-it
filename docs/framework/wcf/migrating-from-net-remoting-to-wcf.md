@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrazione da .NET Remoting a WCF
 In questo articolo viene descritto come eseguire la migrazione di un'applicazione che usa Servizi remoti .NET per l'uso di Windows Communication Foundation (WCF). Vengono confrontati concetti simili tra questi prodotti e quindi viene descritto come realizzare diversi scenari comuni di Servizi remoti .NET in WCF.  
@@ -222,7 +223,7 @@ public class WCFCustomer
   
  Quando WCF invia un oggetto tra i livelli, serializza solo i valori e crea una nuova istanza dell'oggetto nell'altro livello. Tutte le interazioni con i valori dell'oggetto avvengono solo in locale: non comunicano con l'altro livello come nel caso degli oggetti in base al riferimento di Servizi remoti .NET. Per altre informazioni, vedere i seguenti argomenti:  
   
--   [La serializzazione e deserializzazione](./feature-details/serialization-and-deserialization.md)  
+-   [Serializzazione e deserializzazione](./feature-details/serialization-and-deserialization.md)  
   
 -   [Serializzazione in Windows Communication Foundation](http://msdn.microsoft.com/magazine/cc163569.aspx)  
   

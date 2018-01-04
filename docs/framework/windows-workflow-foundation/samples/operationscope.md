@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 242a9e32063deda0593552b70bf91dec3af7c346
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationscope"></a>OperationScope
 In questo esempio viene illustrato come è possibile usare le attività di messaggistica, <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> per esporre un'attività personalizzata esistente come operazione in un servizio flusso di lavoro. Questo esempio include una nuova attività personalizzata chiamata `OperationScope`. È destinata a facilitare lo sviluppo di un servizio flusso di lavoro consentendo agli utenti di creare separatamente il corpo delle operazioni come attività personalizzate ed esponendole quindi facilmente come operazioni del servizio tramite l'attività `OperationScope`. Ad esempio, un'attività `Add` personalizzata che accetta due argomenti `in` e restituisce un argomento `out` potrebbe essere esposta come un'operazione `Add` nel servizio flusso di lavoro rilasciandolo in `OperationScope`.  

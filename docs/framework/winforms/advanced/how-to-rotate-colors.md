@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-colors"></a>Procedura: ruotare i colori
 Rotazione in uno spazio colore quadridimensionale è difficile da visualizzare. È possibile rendere più semplice per visualizzare la rotazione, supponendo di mantenere uno dei componenti di colore predefiniti. Si supponga di mantenere il componente alfa pari a 1 (completamente opaco). È quindi possibile visualizzare uno spazio tridimensionale colore degli assi del rosso, verde e blu come illustrato nella figura seguente.  
@@ -55,7 +56,7 @@ Rotazione in uno spazio colore quadridimensionale è difficile da visualizzare. 
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs>`e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Sostituire `RotationInput.bmp` con un nome di file di immagine e un percorso valido per il sistema.  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro del <xref:System.Windows.Forms.Control.Paint> gestore dell'evento. Sostituire `RotationInput.bmp` con un nome di file di immagine e un percorso valido per il sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Drawing.Imaging.ColorMatrix>  

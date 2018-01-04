@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d40fe3601cb8ad7c4f77cf50825da1deace5644e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Creazione di un'attività in fase di esecuzione con DynamicActivity
 <xref:System.Activities.DynamicActivity> è una classe sealed concreta con costruttore pubblico. <xref:System.Activities.DynamicActivity> può essere usata per assemblare la funzionalità di attività in fase di esecuzione tramite un unico DOM di attività.  
@@ -107,4 +108,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [DynamicActivityCreation](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+ [Creazione DynamicActivity](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)

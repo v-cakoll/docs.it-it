@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb8454d3e1e679154bc016e37b83c3ac4ff6768
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>Attività personalizzata SendMail
 In questo esempio viene illustrato come creare un'attività personalizzata che deriva da <xref:System.Activities.AsyncCodeActivity> per inviare messaggi di posta elettronica tramite il protocollo SMTP da usare in un'applicazione flusso di lavoro. Nell'attività personalizzata vengono usate le funzionalità di <xref:System.Net.Mail.SmtpClient> per inviare messaggi di posta elettronica in modo asincrono e con autenticazione. Nell'attività sono inoltre disponibili funzionalità per l'utente finale, ad esempio la modalità test, la sostituzione dei token, i modelli di file e il percorso di destinazione di prova.  
@@ -31,7 +32,7 @@ In questo esempio viene illustrato come creare un'attività personalizzata che d
 |UserName|String|Nome utente per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
 |Password|String|Password per configurare le credenziali per l'autenticazione della proprietà <xref:System.Net.Mail.SmtpClient.Credentials%2A> del mittente.|  
 |Oggetto|<xref:System.Activities.InArgument%601>\<stringa >|Oggetto del messaggio.|  
-|Corpo|<xref:System.Activities.InArgument%601>\<stringa >|Corpo del messaggio.|  
+|Body|<xref:System.Activities.InArgument%601>\<stringa >|Corpo del messaggio.|  
 |Allegati|<xref:System.Activities.InArgument%601>\<stringa >|Raccolta di allegati usati per memorizzare i dati allegati al messaggio di posta elettronica.|  
 |From|<xref:System.Net.Mail.MailAddress>|Indirizzo del mittente per il messaggio di posta elettronica.|  
 |A|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Raccolta di indirizzi contenente i destinatari del messaggio di posta elettronica.|  

@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b58456fe99331a47871fbf4b1ad86cd43c53c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-architecture"></a>Architettura del flusso di lavoro di Windows
 [!INCLUDE[wf](../../../includes/wf-md.md)] genera il livello di astrazione per lo sviluppo di applicazioni interattive con esecuzione prolungata. Le unità di lavoro vengono incapsulate come attività. Le attività vengono eseguite in un ambiente che fornisce funzionalità per il controllo del flusso, gestione delle eccezioni, propagazione degli errori, persistenza dei dati relativi allo stato, caricamento e scaricamento di flussi di lavoro in corso dalla memoria, rilevamento e flusso della transazione.  

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6136aca5af6a5da7d7ac468e07c81047352d9be2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c541ebf83babcbdbda86c5b6f3862727d49d8679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-execution-properties"></a>Proprietà di esecuzione del flusso di lavoro
 Tramite l'archiviazione thread-local (TLS), CLR gestisce un contesto di esecuzione per ogni thread. Questo contesto di esecuzione determina le proprietà note dei thread quali l'identità del thread, la transazione di ambiente e il set di autorizzazioni corrente oltre alle proprietà del thread definite dall'utente come gli slot denominati.  

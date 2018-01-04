@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 582f8815bd121199e564af7d1806f2e76f4595cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96e03aac921cfeb69811a0c51ad2151b7e70cd93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-arguments"></a>Argomenti dinamici
 In questo esempio viene illustrato come implementare un'attività per la quale gli argomenti sono definiti dal consumer dell'attività anziché dall'autore dell'attività. Questa operazione viene eseguita tramite l'override del modo in cui i metadati dell'attività vengono costruiti dal runtime.  

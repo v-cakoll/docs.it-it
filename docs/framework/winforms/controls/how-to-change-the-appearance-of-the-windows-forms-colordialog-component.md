@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11edb1019b8fedde368d712ab27dd0954a2de50a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedura: modificare l'aspetto del componente ColorDialog di Windows Form
 È possibile configurare l'aspetto di Windows Form <xref:System.Windows.Forms.ColorDialog> componente con un numero di proprietà. Nella finestra di dialogo include due sezioni, ovvero uno che mostra i colori di base e uno che consente all'utente di definire colori personalizzati.  

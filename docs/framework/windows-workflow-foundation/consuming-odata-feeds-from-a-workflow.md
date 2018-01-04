@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c538ead434a7e5abe85f0d28ac7bf7edae98cbb8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Utilizzo di feed OData da un flusso di lavoro
 WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] che consente di creare servizi che usano Open Data Protocol (OData) per esporre e usare dati sul Web o su rete Intranet tramite la semantica REST (Representational State Transfer). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Un'applicazione può interagire con un servizio dati basato su OData quando è in grado di inviare una richiesta HTTP e di elaborare il feed OData restituito da un servizio dati. In WCF Data Services sono inoltre disponibili librerie client che consentono di programmare in modo più completo quando si usano feed OData da applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . In questo argomento viene fornita una panoramica sull'uso di un feed OData in un flusso di lavoro con e senza librerie client.  
@@ -96,9 +97,9 @@ WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/d
  **Calling WCF Data Services...**  
 **Alfreds Futterkiste, Contact: Maria Anders**   
 **Ana Trujillo Emparedados y helados, Contact: Ana Trujillo**   
-**Antonio Moreno Taquería, Contact: Antonio Moreno**   
+**Antonio Moreno Taquería, contattare: Antonio Moreno**   
 **Around the Horn, Contact: Thomas Hardy**   
-**Berglunds snabbköp, Contact: Christina Berglund**   
+**Berglunds snabbköp, contattare: Christina Berglund**   
 **...**    
 ## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>Uso di un feed OData senza le librerie client  
  In OData i dati vengono esposti come risorse indirizzabili tramite URI. Tali URI vengono creati automaticamente quando si usano le librerie client, sebbene queste ultime non siano sempre necessarie. È infatti possibile accedere direttamente ai servizi OData senza usare le librerie client. In questo caso il percorso del servizio e i dati desiderati vengono specificati dagli URI e i risultati vengono restituiti nella risposta alla richiesta HTTP. Tali dati possono quindi essere elaborati o modificati nel modo desiderato. Per recuperare i risultati di una query OData, è possibile usare la classe <xref:System.Net.WebClient> . In questo esempio viene recuperato il nome del contatto per il cliente rappresentato dalla chiave ALFKI.  

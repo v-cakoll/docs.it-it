@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ed3b7b370ed6b1d9a900579ff0e6f1b0a22290c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
 In questo esempio viene descritto come usare la traccia analitica in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per generare eventi in Traccia eventi per Windows (ETW). Le tracce analitiche sono eventi generati in corrispondenza di punti chiave nello stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che consentono risolvere i problemi relativi ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un ambiente di produzione.  

@@ -12,17 +12,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669e94dbc7434074d705fd05de0ece6729c31c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b32ab84a3585fc7c1a4638851f5f78eebd41358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation-samples"></a>Compensazione (esempi)
 Contenuto della sezione sono contenuti esempi correlati alla compensazione in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Attività compensabile](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Compensable Activity](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
  Viene illustrato come usare l'attività <xref:System.Activities.Statements.CompensableActivity> per definire il lavoro da eseguire per un'azione specificata durante la normale esecuzione e il lavoro che è necessario eseguire per compensare tale azione, se necessario in un secondo tempo.  
   
  [Compensazione personalizzata](../../../../docs/framework/windows-workflow-foundation/samples/custom-compensation-sample.md)  

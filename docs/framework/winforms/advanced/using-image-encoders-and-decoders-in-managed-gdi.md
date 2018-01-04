@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 64384e3c283b6596e36d5b2bd583a304faf080b4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 084e8ff21e308cc20b633719dd31809b96b3c79a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI+
 Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini. Utilizzando i codificatori in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile scrivere le immagini dalla memoria su disco. Utilizzando i decodificatori di immagini in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile caricare immagini dal disco nella memoria. Un decodificatore converte i dati in un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> oggetto in un formato di file di disco designato. Un decodificatore converte i dati in un file su disco per il formato richiesto dal <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> oggetti.  
@@ -47,7 +48,7 @@ Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image>
   
  Gli argomenti seguenti descrivono i codificatori e decodificatori in modo più dettagliato:  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Elencare i codificatori installati](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
  Viene descritto come elencare i codificatori disponibili in un computer.  
   
@@ -63,7 +64,7 @@ Il <xref:System.Drawing> spazio dei nomi fornisce il <xref:System.Drawing.Image>
  [Procedura: Impostare il livello di compressione JPEG](../../../../docs/framework/winforms/advanced/how-to-set-jpeg-compression-level.md)  
  Viene descritto come modificare il livello di qualità di un'immagine.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Image>  
   
  <xref:System.Drawing.Bitmap>  

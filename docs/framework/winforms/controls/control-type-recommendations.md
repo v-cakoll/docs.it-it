@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a5996c398e4f864da4b505020974307b0e0e316
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-type-recommendations"></a>Consigli sui tipi di controlli
 .NET Framework offre funzionalità per sviluppare e implementare nuovi controlli. Oltre al tradizionale controllo utente, ora è possibile scrivere controlli personalizzati che eseguono il proprio disegno e possono anche estendere le funzionalità dei controlli esistenti tramite l'ereditarietà. Decidere quale tipo di controllo creare può generare confusione. Questa sezione evidenzia le differenze tra i vari tipi di controlli che offrono opzioni di ereditarietà e fornisce considerazioni sul tipo da scegliere per il progetto.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Procedura: Creare un controllo di Windows Form che sfrutta le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Procedura: Creare un controllo di Windows Form che sfrutta le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Procedura: Creare un controllo Windows Form che utilizza le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Sviluppare un controllo di Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

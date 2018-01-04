@@ -20,16 +20,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Utilizzo di immagini, bitmap, icone e metafile
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce la classe `Bitmap` per usare immagini raster e la classe `Metafile` per usare immagini vettoriali. Le classi `Bitmap` e `Metafile` ereditano entrambe dalla classe `Image`.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Disegnare una bitmap esistente sullo schermo](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  Descrive come caricare e disegnare bitmap.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/22/2017
  [Procedura: Estrarre l'icona associata a un file in Windows Form](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
  Descrive come estrarre un'icona che è una risorsa incorporata di un file.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Image>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

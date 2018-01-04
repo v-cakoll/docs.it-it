@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Procedura: Impostare il livello di compressione JPEG
 Può essere opportuno modificare i parametri di un'immagine quando questa viene salvata sul disco per ridurre le dimensioni del file o migliorarne la qualità. È possibile regolare la qualità di un'immagine JPEG modificandone il livello di compressione. Per specificare il livello di compressione quando si salva un'immagine JPEG, è necessario creare un <xref:System.Drawing.Imaging.EncoderParameters> dell'oggetto e passarlo al <xref:System.Drawing.Image.Save%2A> metodo la <xref:System.Drawing.Image> classe. Inizializzare il <xref:System.Drawing.Imaging.EncoderParameters> oggetto in modo che abbia una matrice che è costituita da uno <xref:System.Drawing.Imaging.EncoderParameter>. Quando si crea il <xref:System.Drawing.Imaging.EncoderParameter>, specificare il <xref:System.Drawing.Imaging.Encoder.Quality> codificatore e il livello di compressione desiderato.  
@@ -133,7 +134,7 @@ End Function
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Applicazione Windows Form.  
+-   Applicazione Windows Forms.  
   
 -   Oggetto <xref:System.Windows.Forms.PaintEventArgs>, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   

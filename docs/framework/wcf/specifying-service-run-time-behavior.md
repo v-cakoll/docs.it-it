@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
 Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. [!INCLUDE[crabout](../../../includes/crabout-md.md)] lla configurazione dell'applicazione del servizio, vedere [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
@@ -132,4 +133,4 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- [Procedura: creazione di istanze di servizio di controllo](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+ [Procedura: Controllare le istanze del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

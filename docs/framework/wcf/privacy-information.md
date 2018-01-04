@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versione 3.0, è possibile che questa abbia un impatto sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] non invia informazioni a Microsoft dall'applicazione a meno che non sia lo sviluppatore o l'utente finale a determinarne l'invio.  

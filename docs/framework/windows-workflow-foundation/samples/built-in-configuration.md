@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 054b1f57ff091b21ccb709ff8890c663f2d607fb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-configuration"></a>Configurazione predefinita
 In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare e caricare il proprio stato da e verso un database SQL Server o SQL Server Express.  

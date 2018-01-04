@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ebc79fa582a32ccc252e6c22b9b223870da7e44
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da326969e622a51f6a93b9faf5f81da079ea4003
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="external-activity-validation"></a>Convalida di attività esterna
 In questo esempio viene illustrato come aggiungere la logica di convalida a un'attività incorporata di cui l'utente non è l'autore. La logica di convalida consiste nell'imporre che tutte le attività <xref:System.Activities.Statements.If> presenti nel flusso di lavoro dispongano d un proprio set di proprietà <xref:System.Activities.Statements.If.Then%2A> o <xref:System.Activities.Statements.If.Else%2A>. La logica di convalida include inoltre la verifica che tutte le attività <xref:System.Activities.Statements.Pick> presenti nel flusso di lavoro dispongano di più di un ramo e, in caso contrario, che venga generato un avviso.  

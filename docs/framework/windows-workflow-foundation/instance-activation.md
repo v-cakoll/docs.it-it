@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d33e809a0db0b812cf7311d7b5686d9125e80976
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-activation"></a>Attivazione di istanze
 L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che attiva e rileva periodicamente istanze del flusso di lavoro eseguibili o attivabili nel database di persistenza. Se rileva un'istanza del flusso di lavoro eseguibile, notifica all'host del flusso di lavoro la possibilità di attivare l'istanza. Se l'archivio di istanze rileva un'istanza del flusso di lavoro attivabile, invia una notifica a un host generico che attiva un host del flusso di lavoro il quale, a sua volta, esegue l'istanza del flusso di lavoro. Nelle sezioni seguenti di questo argomento viene illustrato dettagliatamente il processo di attivazione delle istanze.  

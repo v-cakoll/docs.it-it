@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Procedura: aggiungere icone alla barra delle applicazioni mediante il componente NotifyIcon Windows Form
 Windows Form <xref:System.Windows.Forms.NotifyIcon> componente consente di visualizzare una singola icona nell'area di notifica dello stato della barra delle applicazioni. Per visualizzare le icone più nell'area di stato, è necessario disporre di più <xref:System.Windows.Forms.NotifyIcon> componenti nel form. Per impostare l'icona visualizzata per un controllo, utilizzare il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. È anche possibile scrivere codice nel <xref:System.Windows.Forms.NotifyIcon.DoubleClick> gestore dell'evento in modo che si verifica un evento quando l'utente fa doppio clic sull'icona. Ad esempio, è possibile apportare a una finestra di dialogo vengono visualizzati all'utente di configurare il processo in background rappresentato dall'icona.  

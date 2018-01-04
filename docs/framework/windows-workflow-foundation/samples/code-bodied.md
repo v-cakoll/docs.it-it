@@ -12,20 +12,21 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41d0b2ccd126416a625e37e6bfdca8f4fd96faf2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-bodied"></a>Attività Code-Bodied
 Contenuto della sezione sono contenuti esempi di attività personalizzati creati in modo dichiarativo nel codice.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Segnalibri](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
  In questo esempio viene illustrato come scrivere un'attività personalizzata che crea un segnalibro per ricevere input esterno.  
   
- [Attività composta personalizzata tramite l'oggetto Nativeactivity](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
+ [Attività composta personalizzata tramite l'oggetto NativeActivity](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
  In questo esempio viene illustrato come scrivere un oggetto <xref:System.Activities.NativeActivity> che pianifica altri oggetti <xref:System.Activities.Activity> per controllare il flusso dell'esecuzione di un flusso di lavoro.  
   
  [Proprietà di esecuzione](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e4f93da8a2a5be00d798d64caba0f54bfd71ceb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-services"></a>Procedura: avviare servizi
 Dopo l'installazione di un servizio, è necessario avviarlo. Avvio delle chiamate di <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodo nella classe del servizio. In genere, il <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodo definisce le operazioni che il servizio eseguirà. Dopo l'avvio di un servizio rimane attivo fino a quando non è sospeso o interrotto manualmente.  

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec541a8f83990eec79226be7fb4880ef8dda639d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d9bd7d0721aae8691fdbca4d7b934f820666536
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: aggiungere più set di impostazioni all'applicazione in C# #
 In alcuni casi, è possibile disporre di più set di impostazioni in un'applicazione. Ad esempio, se si sviluppa un'applicazione in un determinato gruppo di impostazioni deve modificati di frequente, potrebbe essere opportuno separare tutti in un singolo file in modo che il file può essere sostituito a livello globale, lasciando immutati altre impostazioni. Visual Studio consente di aggiungere più set di impostazioni per il progetto. Altri set di impostazioni sono accessibili tramite l'oggetto Properties. Settings.  

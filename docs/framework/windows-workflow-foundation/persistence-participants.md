@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-participants"></a>Partecipanti di persistenza
 Un partecipante di persistenza può far parte di un'operazione di persistenza (Save o Load) attivata da un'applicazione host. Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] sono disponibili due classi astratte, **PersistenceParticipant** e **PersistenceIOParticipant**, che è possibile utilizzare per creare un partecipante di persistenza. Un partecipante di persistenza deriva da una di queste classi, implementa i metodi di interesse, quindi aggiunge un'istanza della classe alla raccolta <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'applicazione host può cercare tali estensioni del flusso di lavoro quando rende persistente un'istanza del flusso di lavoro e richiamare metodi appropriati sui partecipanti di persistenza in momenti appropriati.  
@@ -65,7 +66,7 @@ Un partecipante di persistenza può far parte di un'operazione di persistenza (S
   
  Il valore di timeout del blocco predefinito è 5 minuti; è possibile specificare un valore di timeout diverso quando viene chiamato il metodo <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Procedura: Creare un partecipante di persistenza personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   

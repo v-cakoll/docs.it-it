@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72b026e06fde1b7acebf1e069f4386377236e02b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mainmenu-component-windows-forms"></a>Componente MainMenu (Windows Form)
 > [!NOTE]
@@ -26,11 +27,11 @@ ms.lasthandoff: 11/21/2017
   
  Windows Form `MainMenu` componente consente di visualizzare un menu in fase di esecuzione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente MainMenu](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
  Spiega che cos'è il componente e la relativa funzionalità chiave e proprietà.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MainMenu>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

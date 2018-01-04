@@ -8,11 +8,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806e31f3d5c0998e7a30dfbb9d1fdec9a1a50269
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 193f8ce60d8675832955b0e153af7f61b28d2707
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-wf-samples"></a>Esempi di flussi di lavoro di Windows (WF)
 In questi esempi vengono fornite istruzioni su vari aspetti di [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -22,7 +23,7 @@ In questi esempi vengono fornite istruzioni su vari aspetti di [!INCLUDE[wf](../
 > [!NOTE]
 >  Questi esempi sono stati creati con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], ma sono compatibili con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] e [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Esempi aggiuntivi per [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] sono disponibili in [Code MSDN](http://aka.ms/WF45Samples).
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Applicazione](../../../../docs/framework/windows-workflow-foundation/samples/application.md)  
  Vengono forniti esempi correlati alle applicazioni flusso di lavoro.  
   

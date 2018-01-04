@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de37cc2a366d4a69130c68b09de78caa58cf67fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  

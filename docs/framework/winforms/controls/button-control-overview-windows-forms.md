@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff98eb39113a2fa8117d091645ac04526e2983c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e04b99c9d85ae92ad4d013abc01c5b16914fe1c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-control-overview-windows-forms"></a>Cenni preliminari sul controllo Button (Windows Form)
 Il controllo <xref:System.Windows.Forms.Button> Windows Form consente all'utente di eseguire le operazioni desiderate facendo clic su di esso. Una volta scelto, il pulsante viene visualizzato come se fosse stato effettivamente premuto e poi rilasciato. Ogni volta che l'utente fa clic su un pulsante, il <xref:System.Windows.Forms.Control.Click> viene richiamato il gestore di evento. Inserire il codice nel <xref:System.Windows.Forms.Control.Click> gestore eventi per eseguire qualsiasi operazione.  

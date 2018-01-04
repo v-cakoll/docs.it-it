@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02bcf434baee0c27ca2674817df0e4033effb125
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 666cade349220e9975a5770328e03db0e948d7d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedura: aggiungere e rimuovere schede con il controllo TabControl Windows Form mediante la finestra di progettazione
 Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form, contiene due schede per impostazione predefinita. È possibile aggiungere o rimuovere schede, utilizzando la finestra di progettazione.  
@@ -37,7 +38,7 @@ Quando si inserisce un <xref:System.Windows.Forms.TabControl> controllo sul form
   
 -   Nello smart tag del controllo, fare clic su **Aggiungi scheda** o **Rimuovi scheda**  
   
-     -oppure-  
+     oppure  
   
      Nel **proprietà** finestra, fare clic su di **i puntini di sospensione** pulsante (![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto a il <xref:System.Windows.Forms.TabControl.TabPages%2A> proprietà per aprire la **Editor della raccolta TabPage**. Fare clic su di **Aggiungi** o **rimuovere** pulsante.  
   

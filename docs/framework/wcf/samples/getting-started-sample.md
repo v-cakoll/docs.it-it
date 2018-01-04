@@ -17,11 +17,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5ff6af234fabf278c84a3487b9f65217d84f6e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-sample"></a>Esempio della guida introduttiva
 Nell'esempio della guida introduttiva viene illustrato come implementare un servizio tipico e un client tipico utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
@@ -47,7 +48,7 @@ Nell'esempio della guida introduttiva viene illustrato come implementare un serv
 > [!NOTE]
 >  Se si preferisce iniziare con un esempio che ospita il servizio in un'applicazione console invece di IIS, vedere il [indipendente](../../../../docs/framework/wcf/samples/self-host.md) esempio.  
   
- Il servizio e il client specificano i dettagli di accesso nelle impostazioni del file di configurazione, dettagli che forniscono flessibilità al momento della distribuzione. Questi dettagli comprendono una definizione dell'endpoint che specifica un indirizzo, un associazione e un contratto. L'associazione specifica i dettagli di trasporto e di sicurezza per la modalità di accesso al servizio.  
+ Il servizio e il client specificano i dettagli di accesso nelle impostazioni del file di configurazione, dettagli che forniscono flessibilità al momento della distribuzione. Questi dettagli comprendono una definizione dell'endpoint che specifica un indirizzo, un'associazione e un contratto. L'associazione specifica i dettagli di trasporto e di sicurezza per la modalità di accesso al servizio.  
   
  Il servizio configura un comportamento in fase di esecuzione per pubblicare i metadati.  
   

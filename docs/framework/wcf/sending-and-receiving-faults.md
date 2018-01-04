@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
 Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per ulteriori informazioni, vedere [definizione e gli errori specifica](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applicazioni, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -118,4 +119,4 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
  [Eccezioni previste](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [Evitare i problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+ [Prevenzione dei problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

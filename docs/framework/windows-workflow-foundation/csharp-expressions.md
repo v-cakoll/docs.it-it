@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f220ffdf04102a110124e7331a53ae5ee70316a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fffceba415bbdfdb15647ab67b01031b99e48b2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-expressions"></a>Espressioni C#
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], le espressioni C# sono supportate in [!INCLUDE[wf](../../../includes/wf-md.md)]. I nuovi progetti di flusso di lavoro C# creati in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] e destinati a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usano le espressioni C# mentre i progetti di flusso di lavoro di Visual Basic usano le espressioni Visual Basic. I progetti di flusso di lavoro [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] esistenti che usano espressioni Visual Basic possono essere migrati a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], indipendentemente dal linguaggio del progetto, e sono supportati. In questo argomento viene fornita una panoramica sulle espressioni C# in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

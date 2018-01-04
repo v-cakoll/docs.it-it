@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Formattazione e stile di base nel controllo DataGridView Windows Form
 Il `DataGridView` controllo rende più semplice definire l'aspetto delle celle di base e la formattazione di valori di cella. È possibile definire l'aspetto e la formattazione di stili per le singole celle, per le celle in colonne e righe specifiche o per tutte le celle nel controllo impostando le proprietà del `DataGridViewCellStyle` accessibili tramite diversi oggetti `DataGridView` le proprietà del controllo. Inoltre, è possibile modificare gli stili in modo dinamico in base a fattori, ad esempio il valore di cella gestendo il `CellFormatting` evento.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
  Viene descritto come impostare `DataGridView` le proprietà che definiscono l'aspetto del bordo del controllo e linee di separazione tra le celle.  
   
@@ -47,7 +48,7 @@ Il `DataGridView` controllo rende più semplice definire l'aspetto delle celle d
  [Procedura: Usare il modello di riga per personalizzare le righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Viene descritto come utilizzare il `RowTemplate` proprietà per impostare le proprietà di riga che verranno utilizzate per tutte le righe nel controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

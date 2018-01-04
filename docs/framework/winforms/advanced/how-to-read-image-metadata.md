@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-image-metadata"></a>Procedura: leggere i metadati delle immagini
 Alcuni file di immagine contengono metadati che è possibile leggere per determinare le caratteristiche dell'immagine. Ad esempio, una foto digitale potrebbe contenere metadati che è possibile leggere per determinare la marca e modello della fotocamera utilizzata per acquisire l'immagine. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è possibile leggere i metadati esistenti e ai file di immagine, è anche possibile scrivere nuovi metadati.  
@@ -56,7 +57,7 @@ Alcuni file di immagine contengono metadati che è possibile leggere per determi
 |4|Intero a 32 bit|  
 |5|Una matrice di due `Byte` gli oggetti che rappresentano un numero razionale|  
 |6|Non utilizzato|  
-|7|Non definito|  
+|7|Undefined|  
 |8|Non utilizzato|  
 |9|`SLong`|  
 |10|`SRational`|  

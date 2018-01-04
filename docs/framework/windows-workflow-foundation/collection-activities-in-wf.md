@@ -12,14 +12,15 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9d044ab9b95eb4144770a90367028b5b513a69c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
-Le attività di raccolta vengono usate per operare con gli oggetti Collection in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
+Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection`e `RemoveFromCollection` hanno un <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
   
 > [!IMPORTANT]
 >  Se un'attività di raccolta viene eseguita prima di impostare l'oggetto Collection sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  

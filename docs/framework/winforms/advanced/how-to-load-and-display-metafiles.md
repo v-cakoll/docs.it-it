@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 722b6d36801c69e500535a32e952ef8f45634d03
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d7d0f2f15fc9e1dce77b9d8183e2e17b7c35b928
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-and-display-metafiles"></a>Procedura: caricare e visualizzare metafile
 Il <xref:System.Drawing.Imaging.Metafile> classe che eredita la <xref:System.Drawing.Image> classe, fornisce metodi per la registrazione, la visualizzazione e l'esame di immagini vettoriali.  

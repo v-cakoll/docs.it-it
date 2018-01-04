@@ -12,26 +12,27 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2cee42de74609cbfc793822471655d88b32d9ce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Servizi
 Contenuto della sezione sono inclusi i collegamenti agli esempi che illustrano la funzionalità del servizio [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Ritardo assoluto](../../../../docs/framework/windows-workflow-foundation/samples/absolute-delay.md)  
  Viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
   
  [Ritardo durevole](../../../../docs/framework/windows-workflow-foundation/samples/durable-delay.md)  
  Viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
   
- [L'invio e la gestione degli errori](../../../../docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md)  
+ [Invio e gestione di errori](../../../../docs/framework/windows-workflow-foundation/samples/sending-and-handling-faults.md)  
  Viene illustrato come usare le attività di messaggistica <xref:System.ServiceModel.Activities.SendReply> e <xref:System.ServiceModel.Activities.ReceiveReply> per inviare e ricevere errori previsti e imprevisti.  
   
- [Utilizzo di base dell'attività SendParameters e ReceiveParameters](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
+ [Uso di base delle attività SendParameters e ReceiveParameters](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
  Viene illustrato l'utilizzo di <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` e <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` le attività.
   
  [Servizio solo XAML di base](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
@@ -46,13 +47,13 @@ Contenuto della sezione sono inclusi i collegamenti agli esempi che illustrano l
  [Correlazione basata sul contenuto](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  Viene illustrato come è possibile usare le attività di messaggistica (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>e <xref:System.ServiceModel.Activities.ReceiveReply>) con una e con più correlazioni basate sul contenuto.  
   
- [La memorizzazione nella cache con l'invio di canale](../../../../docs/framework/windows-workflow-foundation/samples/channel-caching-with-send.md)  
+ [Memorizzazione nella cache dei canali con l'attività Send](../../../../docs/framework/windows-workflow-foundation/samples/channel-caching-with-send.md)  
  Viene illustrato come usare <xref:System.ServiceModel.Activities.SendMessageChannelCache>.  
   
  [Ritardo durevole in XAMLX](../../../../docs/framework/windows-workflow-foundation/samples/durable-delay-in-xamlx.md)  
  Viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
   
- [Buffer di ricezione](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
+ [Ricezione memorizzata nel buffer](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
  Viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
  [Attivazione XAML](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd73776aebb571fad732f554d6a96c1611506e8c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 516733490dba459f452727d29320a366208b55fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constraint-types"></a>Tipi di vincoli
 In questo esempio vengono illustrate due modalità diverse per applicare vincoli a un flusso di lavoro: uno dall'interno dell'attività (compilazione) e un altro dall'esterno (criteri). In questo scenario, un autore di attività (di una società di software di terze parti) desidera convalidare la relazione tra due argomenti. In questo caso, il costo deve essere minore o uguale al prezzo. Si tratta di un vincolo di compilazione di convalida generale.  

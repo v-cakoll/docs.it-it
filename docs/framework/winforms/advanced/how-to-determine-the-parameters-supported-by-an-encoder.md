@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3304adc9ab22d12905bd2a6c3739d909387d82cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Procedura: determinare i parametri supportati da un codificatore
 È possibile modificare i parametri di immagine, ad esempio livello di qualità e la compressione, ma è necessario conoscere quali parametri sono supportati da un codificatore di immagini specificato. Il <xref:System.Drawing.Image> classe fornisce il <xref:System.Drawing.Image.GetEncoderParameterList%2A> metodo in modo che è possibile determinare quali parametri di immagini sono supportate per un codificatore particolare. Specificare il codificatore con un GUID. Il <xref:System.Drawing.Image.GetEncoderParameterList%2A> il metodo restituisce una matrice di <xref:System.Drawing.Imaging.EncoderParameter> oggetti.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Applicazione Windows Form.  
+-   Applicazione Windows Forms.  
   
 -   Oggetto <xref:System.Windows.Forms.PaintEventArgs>, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   

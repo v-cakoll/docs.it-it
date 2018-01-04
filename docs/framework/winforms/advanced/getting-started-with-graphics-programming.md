@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-graphics-programming"></a>Guida introduttiva alla programmazione grafica
 In questa sezione viene illustrato come iniziare a usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in un'applicazione Windows Form. Gli argomenti seguenti viene illustrato come completare diverse [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] attività quali disegno e il riempimento di forme e testo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  Viene illustrato come creare un <xref:System.Drawing.Graphics> oggetto per il disegno.  
   
@@ -67,7 +68,7 @@ In questa sezione viene illustrato come iniziare a usare [!INCLUDE[ndptecgdiplus
  [Procedura: Copiare i pixel per ridurre lo sfarfallio in Windows Form](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
  Viene illustrato come copiare i pixel da un'area a un'altra.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing>  
  Viene descritto questo spazio dei nomi e include collegamenti a tutti i relativi membri.  
   

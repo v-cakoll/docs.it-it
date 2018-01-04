@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b804064a2b7a7bb0f587ae1dc2014769ca6e058
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Esempio di serializzazione JSON con tipizzazione debole
 Quando si serializza un tipo definito dall'utente in un formato di trasmissione specificato o si deserializza un formato di trasmissione in un tipo definito dall'utente, il tipo definito dall'utente specificato deve essere disponibile sia nel servizio che nel client. Per eseguire questa operazione, in genere l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato ai tipi definiti dall'utente e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> viene applicato ai relativi membri. Questo meccanismo viene applicato anche quando si usano oggetti JSON (JavaScript Object Notation), come descritto nell'argomento [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

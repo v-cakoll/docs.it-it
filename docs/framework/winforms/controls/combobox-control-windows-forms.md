@@ -21,23 +21,24 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-windows-forms"></a>Controllo ComboBox (Windows Form)
 Windows Form `ComboBox` controllo viene utilizzato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il `ComboBox` verrà visualizzato un controllo in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che consente di visualizzare un elenco di elementi da cui l'utente può selezionare uno.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Creare testo di dimensioni variabili in un controllo ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Viene illustrato il disegno personalizzato di testo in un `ComboBox` controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ComboBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

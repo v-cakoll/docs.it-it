@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5d94c64c25f1b50601888eccbe8b4522d7b618c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argomenti obbligatori e gruppi di overload
 Le attività possono essere configurate in modo che venga richiesta l'associazione di determinati argomenti affinché l'attività risulti valida per l'esecuzione. L'attributo `RequiredArgument` viene usato per indicare che determinati argomenti di un'attività sono obbligatori mentre l'attributo `OverloadGroup` viene usato per raggruppare insieme categorie di argomenti obbligatori. Tramite gli attributi, gli autori dell'attività possono fornire configurazioni di convalida di attività semplici o complesse.  

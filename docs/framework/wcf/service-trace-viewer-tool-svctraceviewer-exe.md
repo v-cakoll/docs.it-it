@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente di analizzare le tracce di diagnostica create da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il Visualizzatore di tracce dei servizi offre funzionalità per unire, visualizzare e filtrare facilmente i messaggi di traccia nel log che consentono di diagnosticare, risolvere e controllare i problemi relativi ai servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -53,7 +54,7 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
 |Livello di traccia|Descrizione|  
 |-----------------|-----------------|  
 |Critico|-Registra le voci di Log di eventi e Fail-Fast e informazioni di correlazione di traccia. Di seguito sono indicati alcuni esempi di quando è possibile utilizzare il livello Critico:<br />-AppDomain non disponibile a causa di un'eccezione non gestita.<br />-L'applicazione non verrà avviato.<br />-Il messaggio che ha causato l'errore ha originata nel processo MyApp.exe.|  
-|Errore|-Registra tutte le eccezioni. È possibile utilizzare il Livello di errore nei casi seguenti:<br />-Il codice di arresto anomalo a causa di un'eccezione di Cast non valido.<br />-Un'eccezione "Impossibile creare l'endpoint" causa un errore all'avvio dell'applicazione.|  
+|Error|-Registra tutte le eccezioni. È possibile utilizzare il Livello di errore nei casi seguenti:<br />-Il codice di arresto anomalo a causa di un'eccezione di Cast non valido.<br />-Un'eccezione "Impossibile creare l'endpoint" causa un errore all'avvio dell'applicazione.|  
 |Avviso|-Una condizione esistente che può produrre un errore critico. È possibile utilizzare questo livello nei casi seguenti:<br />-L'applicazione riceve più richieste rispetto a quelle consentite dalle impostazioni di limitazione.<br />-La coda di ricezione ha raggiunto il 98 percento della capacità massima configurata.|  
 |Informazioni|-Vengono generati messaggi utili per il monitoraggio e la diagnosi dello stato di sistema, la misurazione delle prestazioni o il profiling. È possibile utilizzare queste informazioni durante la pianificazione delle capacità e la gestione delle prestazioni. È possibile utilizzare questo livello nei casi seguenti:<br />-Errore dopo che il messaggio ha raggiunto l'AppDomain ed è stato deserializzato.<br />-Errore durante la creazione dell'associazione HTTP.|  
 |Dettagliato|Debug-livello di traccia per codice utente e di manutenzione. Impostare questo livello quando:<br />-Non si è certi che nel codice è stato chiamato quando si è verificato l'errore.<br />-È configurato un endpoint errato e il servizio non è stato possibile avviare la voce nell'archivio prenotazioni è bloccata.|  
@@ -461,5 +462,5 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Configurazione della traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configurazione delle funzionalità di traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Traccia di attività e della propagazione per la correlazione di traccia End-To-End](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>Pubblicazione servizio WCF
 Pubblicazione servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] assiste l'utente nel passaggio dall'ambiente di sviluppo iniziale fornito da Host servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fino all'effettiva distribuzione dell'applicazione in un ambiente di produzione a scopo di test. Prima di impegnarsi in un piano di distribuzione finale, è possibile usare Pubblicazione servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] per verificare che il servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] venga eseguito correttamente e sia pronto per la pubblicazione. È inoltre possibile scegliere di distribuire le librerie dei servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in diverse posizioni di destinazione per il test.  

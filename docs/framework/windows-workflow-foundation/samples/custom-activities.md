@@ -12,23 +12,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acd8d5925e1aea82f53d222daf9ccc8063ae7841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activities"></a>Attività personalizzate
 Contenuto della sezione sono contenuti esempi che illustrano come creare attività personalizzate in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attività Code-Bodied](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  Sono contenuti esempi di attività personalizzati creati in modo dichiarativo nel codice.  
   
  [Composito](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
  Sono contenuti esempi di attività personalizzati creati delle altre attività.  
   
- [Gli ActivityDesigner personalizzati](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
+ [ActivityDesigner personalizzati](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
  Sono contenuti esempi di attività in cui vengono usate finestre di progettazione personalizzate da visualizzare nella progettazione flussi di lavoro.  
   
  [Convalida](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  

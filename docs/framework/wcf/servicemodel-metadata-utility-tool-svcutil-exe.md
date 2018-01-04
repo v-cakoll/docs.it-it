@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il codice del modello di servizi da documenti di metadati e documenti di metadati dal codice di modello di servizi.  
@@ -35,11 +36,11 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Consente di generare codice dai servizi in esecuzione o dai documenti di metadati statici.|[Generazione di un Client WCF dai metadati del servizio](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|Consente di esportare documenti di metadati da codice compilato.|[Procedura: usare Svcutil.exe per esportare i metadati dal codice del servizio compilato](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|Consente di convalidare codice di servizio compilato.|[Procedura: usare Svcutil.exe per convalidare il codice del servizio compilato](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|Consente di scaricare documenti di metadati dai servizi in esecuzione.|[Procedura: usare Svcutil.exe per scaricare documenti di metadati](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|Consente di generare codice di serializzazione.|[Procedura: migliorare l'avvio del tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|Consente di generare codice dai servizi in esecuzione o dai documenti di metadati statici.|[Generazione di un client WCF dai metadati del servizio](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|Consente di esportare documenti di metadati da codice compilato.|[Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|Consente di convalidare codice di servizio compilato.|[Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|Consente di scaricare documenti di metadati dai servizi in esecuzione.|[Procedura: Usare Svcutil.exe per scaricare documenti di metadati](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|Consente di generare codice di serializzazione.|[Procedura: Migliorare il tempo di avvio di applicazioni client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Lo strumento Svcutil sovrascriverà i file esistenti su un disco se i nomi forniti come parametri sono identici. Tali risorse possono includere file di codice, di configurazione o di metadati. Per evitare questo problema durante la generazione di file di codice e di configurazione, utilizzare il commutatore `/mergeConfig`.  
@@ -50,7 +51,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
  Lo strumento ha un timeout di 5 minuti nel recupero di metadati.  Questo timeout si applica solo al recupero di metadati sulla rete. Non si applica a qualsiasi elaborazione dei metadati.  
   
 ### <a name="multi-targetting"></a>Multitargeting  
- Lo strumento non supporta il multitargeting. Se si desidera generare un elemento .NET 4 da svcutil.exe, è necessario utilizzare il file svcutil.exe presente nell'SDK di .NET 4. Per generare un elemento .NET 3.5, utilizzare l'eseguibile nell'SDK di .NET 3.5.  
+ Lo strumento non supporta il multitargeting. Se si desidera generare un artefatto .NET 4 da svcutil.exe, è necessario utilizzare il file svcutil.exe presente nell'SDK di .NET 4. Per generare un artefatto .NET 3.5, utilizzare l'eseguibile nell'SDK di .NET 3.5.  
   
 ### <a name="accessing-wsdl-documents"></a>Accesso ai documenti WSDL  
  Quando si utilizza Svcutil per accedere a un documento WSDL che presenti un riferimento al servizio token di sicurezza (STS), Svcutil effettua una chiamata di WS-MetadataExchange a STS. Tuttavia, il servizio può esporre il proprio documento WSDL utilizzando sia WS-MetadataExchange, sia HTTP GET. Pertanto, se STS ha solamente esposto il documento WSDL utilizzando HTTP GET, un client scritto in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] avrà esito negativo. Per i client scritti in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil tenterà di utilizzare sia WS-MetadataExchange che HTTP GET per ottenere il documento WSDL di STS.  
@@ -132,7 +133,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 |/excludeType:\<tipo >|Specifica il nome completo o il nome completo dell’assembly del tipo da escludere dall’esportazione. Questa opzione può essere utilizzata quando si esportano metadati per un servizio o un set di contratti di servizio per escludere tipi dall'esportazione. Non è possibile utilizzare questa opzione con l'opzione `/dconly`.<br /><br /> Quando si ha un solo assembly contenente più servizi che utilizzano classi separate con lo nome XSD, è necessario specificare il nome del servizio anziché il nome della classe XSD per questo commutatore.<br /><br /> Non vengono supportati tipi XSD o tipi di contratto dati.<br /><br /> Forma abbreviata: `/et`|  
   
 ### <a name="service-validation"></a>Convalida del servizio  
- È possibile utilizzare la convalida  per rilevare errori in implementazioni del servizio senza ospitare il servizio. È necessario utilizzare l'opzione `/serviceName` per indicare il servizio che si desidera convalidare.  
+ È possibile utilizzare la convalida per rilevare errori in implementazioni del servizio senza ospitare il servizio. È necessario utilizzare l'opzione `/serviceName` per indicare il servizio che si desidera convalidare.  
   
  `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`  
   

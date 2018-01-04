@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f545cf4689a2c8058e77f4b4721788ffb0e7247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Procedura: gestire manualmente le immagini memorizzate nel buffer
 Per scenari di buffering doppio più avanzati, è possibile utilizzare il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classi per implementare la logica del doppio buffer. La classe responsabile per l'allocazione e gestione dei singoli buffer grafici è la <xref:System.Drawing.BufferedGraphicsContext> classe. Ogni applicazione dispone di un proprio oggetto predefinito <xref:System.Drawing.BufferedGraphicsContext> che gestisce tutto il buffering doppio predefinito per tale applicazione. È possibile recuperare un riferimento a questa istanza chiamando il <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  

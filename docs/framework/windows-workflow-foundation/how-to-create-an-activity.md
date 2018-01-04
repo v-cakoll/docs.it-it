@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26385d91b4201820a5f6ba77b512e7bcfd5372c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>Procedura: creare un'attività
 Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La logica di esecuzione di un'attività può essere implementata nel codice gestito oppure tramite altre attività. In questo argomento viene illustrato come creare due attività. La prima è un'attività semplice che usa il codice per implementare la propria logica di esecuzione. L'implementazione della seconda attività viene definita tramite altre attività. Queste attività vengono usate nei seguenti passaggi dell'esercitazione.  
@@ -121,4 +122,4 @@ Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../
  [Progettazione e implementazione di attività personalizzate](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
  [Procedura: Creare un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

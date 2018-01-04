@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="power-management-in-windows-forms"></a>Risparmio energia in Windows Form
 Le applicazioni Windows Forms possono sfruttare le funzionalità di risparmio energia nel sistema operativo Windows. Le applicazioni possono monitorare lo stato di alimentazione di un computer e intraprendere l'azione quando si verifica un cambiamento di stato. Ad esempio, se l'applicazione è in esecuzione su un computer portatile, è consigliabile disabilitare determinate funzionalità dell'applicazione quando scende di carica della batteria del computer in un determinato livello.  

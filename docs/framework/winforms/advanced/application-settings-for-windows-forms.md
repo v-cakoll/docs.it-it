@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-windows-forms"></a>Impostazioni delle applicazioni per Windows Form
 La funzionalità Impostazioni applicazione di Windows Form semplifica le operazioni di creazione, archiviazione e gestione delle preferenze personalizzate a livello di applicazione e utente nel computer client. Impostazioni applicazione consente non solo di archiviare dati relativi all'applicazione, quali stringhe di connessione a database, ma anche dati specifici dell'utente, quali le posizioni delle barre degli strumenti e gli elenchi usati di recente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulle impostazioni delle applicazioni](~/docs/framework/winforms/advanced/application-settings-overview.md)  
  Descrive come creare e archiviare i dati delle impostazioni per conto dell'applicazione e degli utenti.  
   

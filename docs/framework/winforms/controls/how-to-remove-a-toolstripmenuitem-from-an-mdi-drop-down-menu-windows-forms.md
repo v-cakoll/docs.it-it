@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ef6927c56e18f74e04648c541f8cff4d29167cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Procedura: rimuovere un ToolStripMenuItem da un menu a discesa MDI (Windows Form)
 In alcune applicazioni, il tipo di una finestra figlio di interfaccia a documenti multipli (MDI, Multiple Document Interface) può essere diverso dalla finestra padre MDI. Ad esempio, il padre MDI potrebbe essere un foglio di calcolo, mentre il figlio MDI potrebbe essere un grafico. In tal caso, è consigliabile aggiornare il contenuto del menu del padre MDI con il contenuto del menu del figlio MDI in quanto vengono attivate finestre figlio MDI di tipi diversi.  
@@ -56,7 +57,7 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
     |---------------------|-----------------------|----------------------|  
     |File|MatchOnly|-1|  
     |Importare da|MatchOnly|-1|  
-    |Parola|Rimuovi|-1|  
+    |Word|Rimuovi|-1|  
   
 10. In `Form1`, creare un gestore eventi per il <xref:System.Windows.Forms.Control.Click> evento del `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   

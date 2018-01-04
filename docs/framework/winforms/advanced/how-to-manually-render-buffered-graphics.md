@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fd742e7fa2b7870b8988e889a0df2b18a240bd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Procedura: eseguire il rendering manuale di grafica memorizzata nel buffer
 Se si sta gestendo direttamente grafica memorizzata nel buffer, sarà necessario essere in grado di creare ed eseguire il rendering dei buffer grafici. È possibile creare istanze della classe <xref:System.Drawing.BufferedGraphics> associata alle aree di disegno sullo schermo chiamando il metodo <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Il metodo crea un'istanza di <xref:System.Drawing.BufferedGraphics> associata a una particolare area di rendering, ad esempio un form o controllo. Una volta creata un'istanza di <xref:System.Drawing.BufferedGraphics>, è possibile disegnare la grafica nel buffer da essa rappresentato tramite la proprietà <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Una volta eseguite tutte le operazioni grafiche, è possibile copiare il contenuto del buffer sullo schermo chiamando il metodo <xref:System.Drawing.BufferedGraphics.Render%2A>.   

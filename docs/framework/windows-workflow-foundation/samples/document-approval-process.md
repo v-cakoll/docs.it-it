@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 345fb44bed207d5d5e2c30bf4dd6e6ace27d7511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b46597e16156db3d36fef97040104d8497294ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-approval-process"></a>Processo di approvazione dei documenti
 In questo esempio viene illustrato l'uso simultaneo di molte funzionalità di [!INCLUDE[wf](../../../../includes/wf-md.md)] e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Insieme implementano uno scenario del processo di approvazione dei documenti. Un'applicazione client può inviare documenti da sottoporre ad approvazione e approvare documenti. Un'applicazione di gestione delle approvazioni è utile per semplificare le comunicazioni tra i client e per applicare le regole del processo di approvazione che consiste in un flusso di lavoro che può eseguire molti tipi di approvazione. Le attività servono per ottenere un processo di approvazione singola, di approvazione a quorum (una percentuale del gruppo di responsabili approvazione) e di approvazione complessa costituito da un'approvazione a quorum e una singola in sequenza.  
