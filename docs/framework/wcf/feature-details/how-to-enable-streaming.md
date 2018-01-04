@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-streaming"></a>Procedura: attivare il flusso
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è in grado di inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
@@ -85,5 +86,5 @@ ms.lasthandoff: 12/02/2017
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati di grandi dimensioni e il flusso](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [Stream](../../../../docs/framework/wcf/samples/stream.md)

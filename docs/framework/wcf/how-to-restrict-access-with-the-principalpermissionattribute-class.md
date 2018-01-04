@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ddfb7b343bf4eb551b5029c538d29f104698adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedura: limitare l'accesso tramite la classe PrincipalPermissionAttribute
 Il controllo dell'accesso alle risorse di un computer appartenente a un dominio Windows è un'attività di sicurezza di base. Ad esempio, solo determinati utenti devono essere in grado di visualizzare i dati riservati, ad esempio le informazioni sulle retribuzioni dei dipendenti. In questo argomento viene descritto come consentire l'accesso a un metodo specifico esclusivamente agli utenti che appartengono a un determinato gruppo. Per un esempio funzionante, vedere [autorizzare l'accesso alle operazioni del servizio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -100,5 +101,5 @@ Il controllo dell'accesso alle risorse di un computer appartenente a un dominio 
  <xref:System.Security.Permissions.SecurityAction.Demand>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
  [Autorizzazione dell'accesso alle operazioni del servizio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Implementazione dei contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md)

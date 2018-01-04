@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
 Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]messaggi di individuazione, vedere il [specifica WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -76,7 +77,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Utilizzo del canale Client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Individuazione con ambiti](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [Ricerca asincrona](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Funzionalità di base](../../../../docs/framework/wcf/samples/basic-sample.md)

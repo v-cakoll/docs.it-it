@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3f9834e99fb7fa98e2f986a1ce5460aa387143f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>Contatori delle prestazioni di WCF
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione.  
@@ -83,7 +84,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>Tipi di contatori delle prestazioni  
  I contatori delle prestazioni vengono applicati a tre livelli differenti: servizio, endpoint e operazione.  
   
- Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Di seguito è riportato un esempio:  
+ Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Ad esempio,  
   
 -   Nome dell'istanza del contatore servizio può essere ottenuto tramite WMI [servizio](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) proprietà "CounterInstanceName" dell'istanza.  
   

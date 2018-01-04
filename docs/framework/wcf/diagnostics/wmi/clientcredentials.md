@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55f7ef12f67bd719f72f158a1fca6f120b4f448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6fba00dc98f6b5525e1cb9588ed52bc483a665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -86,14 +87,14 @@ class ClientCredentials : Behavior
   
  Valore booleano che specifica se la credenziale supporta negoziazioni interattive.  
   
-### <a name="username"></a>Nomeutente  
+### <a name="username"></a>UserName  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Nome utente e password utilizzati dal client per l'autenticazione per il servizio.  
   
-### <a name="windows"></a>Windows  
+### <a name="windows"></a>WINDOWS  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Scelta di un modello di scambio dei messaggi
 Il primo passaggio nella scrittura di un trasporto personalizzato è necessario stabilire quali *modelli di scambio dei messaggi* (o MEP) sono necessari per il canale a cui si sta sviluppando. In questo argomento vengono descritte le opzioni disponibili e vengono illustrati i vari requisiti. Questa è la prima attività nell'elenco di attività di sviluppo channel descritto in [sviluppo canali](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -103,4 +104,4 @@ I tre modelli di scambio dei messaggi di base. Dall'alto verso il basso: datagra
 -   Quando sul canale viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, terminare immediatamente la sessione senza eseguire l'I/O. Anche in questo caso, tale operazione può non comportare nulla o implicare l'interruzione di una connessione di rete o di un'altra risorsa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sul modello di canale](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+ [Panoramica sul modello dei canali](../../../../docs/framework/wcf/extending/channel-model-overview.md)

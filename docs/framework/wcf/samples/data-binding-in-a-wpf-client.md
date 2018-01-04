@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7306c58f04483d0e4230b39b05cbebc3de857736
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Data binding in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un data binding in un client Windows Presentation Foundation (WPF). L'esempio usa un servizio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] che genera casualmente una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio vengono associate automaticamente all'interfaccia utente fornita dal client [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  

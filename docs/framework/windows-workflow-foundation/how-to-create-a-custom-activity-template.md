@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ae81b96a348712af58c5e8527f0f04a59689368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Procedura: Creare un modello di attività personalizzato
 I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni. Questi modelli personalizzati possono essere resi disponibili nel **della casella degli strumenti** sul [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]viene fornito con ottimi esempi di tali modelli: il [Progettazione modelli SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [progettazione del modello ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nel [progettazioni delle attività di messaggistica](/visualstudio/workflow-designer/messaging-activity-designers) categoria.  

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Protezione dei messaggi con un client anonimo
 Nello scenario seguente vengono illustrati un client e un servizio protetti tramite la protezione dei messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Tra gli obiettivi di progettazione c'è quello di usare la sicurezza dei messaggi invece che la sicurezza del trasporto, così che in futuro sia possibile supportare un modello basato su attestazioni più avanzate. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzo esteso per le attestazioni per l'autorizzazione, vedere [gestione attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -142,8 +143,8 @@ Nello scenario seguente vengono illustrati un client e un servizio protetti tram
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Sicurezza dei messaggi anonima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [L'autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 261d6e41ca79ca245b104513a92306ab8833c905
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-schema-reference"></a>Riferimento allo schema del contratto dati
 In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utilizzato da <xref:System.Runtime.Serialization.DataContractSerializer> per descrivere i tipi di Common Language Runtime (CLR) per la serializzazione XML.  
@@ -61,16 +62,16 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xsschema-contents"></a>\<xs: schema >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
-|`include`|Supportata. `DataContractSerializer` supporta xs:include e xs:import. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
+|`include`|Supportato. `DataContractSerializer` supporta xs:include e xs:import. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
 |`redefine`|Non consentito. L'utilizzo di `xs:redefine` non è consentito da `DataContractSerializer` per motivi di sicurezza: `x:redefine` rende necessario seguire `schemaLocation` . In alcune circostanze, Svcutil.exe che utilizza DataContract restringe l'utilizzo di `schemaLocation`.|  
-|`import`|Supportata. `DataContractSerializer` supporta `xs:include` e `xs:import`. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
-|`simpleType`|Supportata. Vedere la sezione `xs:simpleType` .|  
+|`import`|Supportato. `DataContractSerializer` supporta `xs:include` e `xs:import`. Tuttavia, Svcutil.exe restringe i seguenti riferimenti `xs:include/@schemaLocation` e `xs:import/@location` quando i metadati vengono caricati da un file locale. In questo caso, l'elenco dei file di schema deve essere passato tramite un meccanismo fuori banda e non tramite `include` ; i documenti dello schema `include`vengono ignorati.|  
+|`simpleType`|Supportato. Vedere la sezione `xs:simpleType` .|  
 |`complexType`|Supportato, esegue il mapping ai contratti dati. Vedere la sezione `xs:complexType` .|  
 |`group`|Ignorato. `DataContractSerializer` non supporta l'utilizzo di `xs:group`, `xs:attributeGroup`e `xs:attribute`. Queste dichiarazioni vengono ignorate come elementi figlio di `xs:schema`, ma non è possibile fare riferimento a esse da `complexType` o da altri costrutti supportati.|  
 |`attributeGroup`|Ignorato. `DataContractSerializer` non supporta l'utilizzo di `xs:group`, `xs:attributeGroup`e `xs:attribute`. Queste dichiarazioni vengono ignorate come elementi figlio di `xs:schema`, ma non è possibile fare riferimento a esse da `complexType` o da altri costrutti supportati.|  
-|`element`|Supportata. Vedere Dichiarazione di elemento globale (GED, Global Element Declaration).|  
+|`element`|Supportato. Vedere Dichiarazione di elemento globale (GED, Global Element Declaration).|  
 |`attribute`|Ignorato. `DataContractSerializer` non supporta l'utilizzo di `xs:group`, `xs:attributeGroup`e `xs:attribute`. Queste dichiarazioni vengono ignorate come elementi figlio di `xs:schema`, ma non è possibile fare riferimento a esse da `complexType` o da altri costrutti supportati.|  
 |`notation`|Ignorato.|  
   
@@ -92,10 +93,10 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xscomplextype-contents"></a>\<xs: complexType >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`simpleContent`|Non sono consentite estensioni.<br /><br /> Sono consentite restrizioni solo da `anySimpleType`.|  
-|`complexContent`|Supportata. Vedere "Ereditarietà".|  
+|`complexContent`|Supportato. Vedere "Ereditarietà".|  
 |`group`|Non consentito.|  
 |`all`|Non consentito.|  
 |`choice`|Non consentito|  
@@ -115,7 +116,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xssequence-in-a-complex-type-contents"></a>\<xs: sequence > in un tipo complesso: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`element`|Ogni istanza esegue il mapping a un membro dati.|  
 |`group`|Non consentito.|  
@@ -193,21 +194,21 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |`final`|Deve essere false per le dichiarazioni di elementi globali associate.|  
 |`fixed`|Non consentito nelle dichiarazioni di elementi globali associate.|  
 |`id`|Ignorato.|  
-|`name`|Supportata. Vedere la definizione di dichiarazione di elemento globale associata.|  
+|`name`|Supportato. Vedere la definizione di dichiarazione di elemento globale associata.|  
 |`nillable`|Deve essere true per le dichiarazioni di elementi globali associate.|  
 |`substitutionGroup`|Non consentito nelle dichiarazioni di elementi globali associate.|  
 |`type`|Supportato e deve corrispondere al tipo associato per le dichiarazioni di elementi globali associate (a meno che l'elemento non contenga un tipo anonimo).|  
   
 ### <a name="xselement-contents"></a>\<xs: element >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`simpleType`|Supportato.*|  
 |`complexType`|Supportato.*|  
 |`unique`|Ignorato.|  
 |`key`|Ignorato.|  
 |`keyref`|Ignorato.|  
-|(vuoto)|Supportata.|  
+|(vuoto)|Supportato.|  
   
  \*Quando si utilizza il `simpleType` e `complexType,` mapping per i tipi anonimi è uguale a quello dei tipi non anonimi, ad eccezione del fatto che non esiste alcun contratto dati anonimo e quindi viene creato un contratto dati denominato, con un nome generato derivato dal nome dell'elemento. Le regole per i tipi anonimi sono riportate nell'elenco seguente:  
   
@@ -229,10 +230,10 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xssimpletype-contents"></a>\<simpleType >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
-|`restriction`|Supportata. Esegue il mapping a contratti dati di enumerazione. Questo attributo viene ignorato se non corrisponde al modello di enumerazione. Vedere la sezione sulle restrizioni `xs:simpleType` .|  
-|`list`|Supportata. Esegue il mapping a contratti dati di enumerazione flag. Vedere la sezione sugli elenchi `xs:simpleType` .|  
+|`restriction`|Supportato. Esegue il mapping a contratti dati di enumerazione. Questo attributo viene ignorato se non corrisponde al modello di enumerazione. Vedere la sezione sulle restrizioni `xs:simpleType` .|  
+|`list`|Supportato. Esegue il mapping a contratti dati di enumerazione flag. Vedere la sezione sugli elenchi `xs:simpleType` .|  
 |`union`|Non consentito.|  
   
 ### <a name="xsrestriction"></a>\<xs: restriction >  
@@ -252,7 +253,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs: restriction > per tutti gli altri casi: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`simpleType`|Se presente, deve essere derivato da un tipo primitivo supportato.|  
 |`minExclusive`|Ignorato.|  
@@ -267,7 +268,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |`enumeration`|Ignorato.|  
 |`whiteSpace`|Ignorato.|  
 |`pattern`|Ignorato.|  
-|(vuoto)|Supportata.|  
+|(vuoto)|Supportato.|  
   
 ## <a name="enumeration"></a>Enumerazione  
   
@@ -280,7 +281,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
   
 ### <a name="xsrestriction-for-enumerations-contents"></a>\<xs: restriction > per enumerazioni: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`simpleType`|Se presente, deve essere una restrizione di enumerazione supportata dal contratto dati (questa sezione).|  
 |`minExclusive`|Ignorato.|  
@@ -292,7 +293,7 @@ In questo argomento viene descritto il sottoinsieme dell'XML Schema (XSD) utiliz
 |`length`|Non consentito.|  
 |`minLength`|Non consentito.|  
 |`maxLength`|Non consentito.|  
-|`enumeration`|Supportata. L'"id" dell'enumerazione viene ignorato e il "valore" esegue il mapping al nome del valore nel contratto dati di enumerazione.|  
+|`enumeration`|Supportato. L'"id" dell'enumerazione viene ignorato e il "valore" esegue il mapping al nome del valore nel contratto dati di enumerazione.|  
 |`whiteSpace`|Non consentito.|  
 |`pattern`|Non consentito.|  
 |(vuoto)|Supportato, esegue il mapping al tipo di enumerazione vuoto.|  
@@ -350,7 +351,7 @@ public enum MyEnum
   
 ### <a name="xslist-contents"></a>\<xs: List >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`simpleType`|Deve essere una restrizione da `xs:string` con utilizzo del facet `xs:enumeration` .|  
   
@@ -455,17 +456,17 @@ public class Employee : Person
   
 ### <a name="xscomplexcontent-contents"></a>\<complexContent >: contenuto  
   
-|Contenuto|Schema|  
+|Sommario|Schema|  
 |--------------|------------|  
 |`restriction`|Non consentito, tranne quando base = "`xs:anyType`". L'ultima opzione equivale a posizionare il contenuto di `xs:restriction` direttamente sotto il contenitore di `xs:complexContent`.|  
-|`extension`|Supportata. Esegue il mapping all'ereditarietà del contratto dati.|  
+|`extension`|Supportato. Esegue il mapping all'ereditarietà del contratto dati.|  
   
 ### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: extension > in \<complexContent >: attributi  
   
 |Attributo|Schema|  
 |---------------|------------|  
 |`id`|Ignorato.|  
-|`base`|Supportata. Esegue il mapping al tipo di contratto dati di base da cui questo tipo eredita.|  
+|`base`|Supportato. Esegue il mapping al tipo di contratto dati di base da cui questo tipo eredita.|  
   
 ### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: extension > in \<complexContent >: contenuto  
  Le regole sono le stesse del contenuto `<xs:complexType>` .  
@@ -696,4 +697,4 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

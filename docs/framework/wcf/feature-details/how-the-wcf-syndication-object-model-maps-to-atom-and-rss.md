@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS
 Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vengono creati feed ed elementi utilizzando le classi seguenti:  
@@ -408,8 +409,8 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
  `</content>`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Architettura di diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Procedura: creare un Feed RSS di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Procedura: creare un Feed Atom di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Procedura: esporre un Feed come Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Architettura della diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Procedura: Creare un feed RSS di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Procedura: Creare un feed Atom di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Procedura: Esporre un feed come Atom ed RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

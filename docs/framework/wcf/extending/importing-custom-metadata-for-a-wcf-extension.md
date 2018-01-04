@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importazione di metadati personalizzati per un'estensione WCF
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] l'importazione dei metadati consiste nella generazione di una rappresentazione astratta di un servizio o dei relativi componenti a partire dai metadati del servizio. Ad esempio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può importare istanze della classe <xref:System.ServiceModel.Description.ServiceEndpoint>, della classe <xref:System.ServiceModel.Channels.Binding> o della classe <xref:System.ServiceModel.Description.ContractDescription> da un documento WSDL di un servizio. Per importare i metadati di un servizio in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è necessario utilizzare un'implementazione della classe astratta <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. I tipi che derivano dalla classe <xref:System.ServiceModel.Description.MetadataImporter> implementano il supporto per l'importazione dei formati di metadati che si basano sulla logica di importazione di WS-Policy di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -59,6 +60,6 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] l'importazione dei me
 >  È possibile che all'unità di importazione vengano passati metadati non validi o inappropriati. È pertanto necessario garantire che le unità di importazione personalizzate siano in grado di gestire qualsiasi formato XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [Procedura: importare asserzioni di criteri personalizzati](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [Procedura: scrivere un'estensione per ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+ [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
+ [Procedura: Importare asserzioni di criteri personalizzati](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [Procedura: Scrivere un'estensione per ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

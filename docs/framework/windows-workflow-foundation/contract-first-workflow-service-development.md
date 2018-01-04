@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3d22c83f5fbc1144d139c9e7ba6a43137f6d144
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract-first-workflow-service-development"></a>Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] offre una maggiore integrazione tra i servizi Web e i flussi di lavoro sotto forma di sviluppo di flussi di lavoro con priorità al contratto. Lo strumento di sviluppo di flussi di lavoro con priorità al contratto consente di progettare il contratto innanzitutto nel codice. Lo strumento consente di generare automaticamente un modello di attività nella casella degli strumenti per le operazioni nel contratto. In questo argomento viene fornita una panoramica del mapping di attività e proprietà di un servizio del flusso di lavoro agli attributi di un contratto di servizio. Per un esempio dettagliato di creazione di un servizio flusso di lavoro priorità al contratto, vedere [procedura: creare un servizio flusso di lavoro che utilizza un contratto di servizio esistente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
@@ -61,8 +62,8 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf]
 |CallbackContract|No|Ottiene o imposta il tipo di contratto di callback quando il contratto è duplex.|(N/D)|  
 |ConfigurationName|No|Consente di ottenere o impostare il nome usato per individuare il servizio in un file di configurazione dell'applicazione.|(N/D)|  
 |HasProtectionLevel|Sì|Ottiene un valore che indica se al membro è stato assegnato un livello di protezione.|Receive.ProtectionLevel non deve essere null.|  
-|Nome|Sì|Ottiene o imposta il nome per il \<portType > elemento Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName deve corrispondere.|  
-|Spazio dei nomi|Sì|Ottiene o imposta lo spazio dei nomi di \<portType > elemento Web Services Description Language (WSDL).|Receive.ServiceContractName.NameSpace deve corrispondere.|  
+|Nome|Yes|Ottiene o imposta il nome per il \<portType > elemento Web Services Description Language (WSDL).|Receive.ServiceContractName.LocalName deve corrispondere.|  
+|Spazio dei nomi|Yes|Ottiene o imposta lo spazio dei nomi di \<portType > elemento Web Services Description Language (WSDL).|Receive.ServiceContractName.NameSpace deve corrispondere.|  
 |ProtectionLevel|Sì|Specifica se l'associazione del contratto deve supportare il valore della proprietà ProtectionLevel.|Receive.ProtectionLevel deve corrispondere.|  
 |SessionMode|No|Consente di ottenere o impostare un valore che stabilisce se le sessioni sono consentite, non consentite oppure obbligatorie.|(N/D)|  
 |TypeId|No|Se implementato in una classe derivata, ottiene un identificatore univoco per l'attributo (ereditato dall'attributo).|(N/D)|  

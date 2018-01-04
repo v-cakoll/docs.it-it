@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizzo della rappresentazione con la protezione del trasporto
 *Rappresentazione* è la possibilità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene illustrato l'utilizzo della sicurezza del trasporto in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la funzionalità della rappresentazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]rappresentazione con la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -27,11 +28,11 @@ ms.lasthandoff: 11/21/2017
   
 |Livello di rappresentazione|Descrizione|  
 |-------------------------|-----------------|  
-|None|L'applicazione server non tenta di rappresentare il client.|  
+|nessuno|L'applicazione server non tenta di rappresentare il client.|  
 |Anonymous|L'applicazione server è in grado di eseguire controlli di accesso a fronte delle credenziali client, ma non riceve alcuna informazione sull'identità del client. Questo livello di rappresentazione è significativo solo per comunicazioni su computer, ad esempio le named pipe. L'utilizzo di `Anonymous` con una connessione remota innalza il livello di rappresentazione a Identify.|  
 |Identify|L'applicazione conosce l'identità del client ed è in grado di eseguire la convalida dell'accesso a fronte delle credenziali client, ma non è in grado di rappresentare il client. Identify è il livello di rappresentazione predefinito utilizzato con le credenziali SSPI in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a meno che il provider di token non fornisca un livello di rappresentazione diverso.|  
 |Impersonate|Oltre a eseguire controlli di accesso, l'applicazione server è in grado di accedere alle risorse nel server come client. L'applicazione server non è in grado di accedere alle risorse su computer remoti tramite l'identità del client poiché il token rappresentato non dispone di credenziali di rete.|  
-|Delegato|Oltre ad avere le stesse funzionalità di `Impersonate`, il livello di rappresentazione Delegate consente all'applicazione server l'accesso a risorse in computer remoti utilizzando l'identità del client e il passaggio dell'identità ad altre applicazioni.<br /><br /> **Importante** l'account di dominio server deve essere contrassegnato come attendibile per la delega nel controller di dominio per utilizzare queste funzionalità aggiuntive. È impossibile utilizzare questo livello di rappresentazione con account di dominio client contrassegnati come riservati.|  
+|delegato|Oltre ad avere le stesse funzionalità di `Impersonate`, il livello di rappresentazione Delegate consente all'applicazione server l'accesso a risorse in computer remoti utilizzando l'identità del client e il passaggio dell'identità ad altre applicazioni.<br /><br /> **Importante** l'account di dominio server deve essere contrassegnato come attendibile per la delega nel controller di dominio per utilizzare queste funzionalità aggiuntive. È impossibile utilizzare questo livello di rappresentazione con account di dominio client contrassegnati come riservati.|  
   
  I livelli utilizzati più comunemente con la sicurezza del trasporto sono `Identify` e `Impersonate`. I livelli `None` e `Anonymous` non sono consigliati per un utilizzo tipico. Molti trasporti inoltre non supportano l'utilizzo di tali livelli con l'autenticazione. Il livello `Delegate` è una funzionalità potente che deve essere utilizzata con cautela. Solo ad applicazioni server attendibili deve essere fornita l'autorizzazione per delegare credenziali.  
   

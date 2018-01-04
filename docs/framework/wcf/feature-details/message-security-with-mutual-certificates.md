@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d5e598fea118eb340b965d605f5fdeb9c479a4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
 Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetti tramite la protezione a livello di messaggio. Il client e il servizio sono autenticati mediante certificati.  
@@ -169,6 +170,6 @@ Nello scenario seguente sono illustrati un client e un servizio [!INCLUDE[indigo
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
  [Procedura: creare e installare i certificati temporanei in WCF per la sicurezza del trasporto durante lo sviluppo](http://go.microsoft.com/fwlink/?LinkId=244264)

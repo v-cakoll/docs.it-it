@@ -13,17 +13,18 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 229e2ff6e630527e3735e3c48f698f582b0b60f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b0b21e9d75c0145c9bd3fa5edf13913cf43f461
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asynchronous-find-sample"></a>Esempio di ricerca asincrona
 In questo esempio viene illustrato come utilizzare l'operazione di ricerca asincrona da un'applicazione client.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- Il vantaggio di attenersi a questo modello di progettazione è che il client riceve una notifica in modo asincrono relativa agli endpoint individuati come risultato della richiesta di ricerca. Per visualizzare il funzionamento dell'esempio, aprire il file Client.cs. Si noti che l'oggetto <xref:System.ServiceModel.Discovery.DiscoveryClient> dispone di due delegati allegati ai gestori eventi. Un delegato viene chiamato quando viene generato un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted>, mentre l'altro viene chiamato ogni volta che viene generato un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged>. L'esempio mostra come è possibile utilizzare questo modello nell'applicazione.  
+ Il vantaggio di attenersi a questo modello di progettazione è che il client riceve una notifica in modo asincrono relativa agli endpoint individuati come risultato della richiesta di ricerca. Per visualizzare il funzionamento dell'esempio, aprire il file Client.cs. Si noti che l'oggetto <xref:System.ServiceModel.Discovery.DiscoveryClient> dispone di due delegati allegati ai gestori eventi. Un delegato viene chiamato quando viene generato un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindCompleted>, mentre l'altro viene chiamato ogni volta che viene generato un evento <xref:System.ServiceModel.Discovery.DiscoveryClient.FindProgressChanged>. L'esempio mostra come è possibile usare questo modello nell'applicazione.  
   
 > [!NOTE]
 >  L'esempio utilizza endpoint HTTP e, per eseguirlo, è necessario aggiungere ACL URL appropriati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurazione di HTTP e HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile sostituire dominio e nome utente per gli argomenti seguenti se il comando non funziona in modo corretto. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  

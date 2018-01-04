@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>Panoramica sul modello dei canali
 Lo stack dei canali di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è uno stack di comunicazione su più livelli con uno o più canali che elaborano i messaggi. Nella parte inferiore dello stack è presente un canale di trasporto che è responsabile dell'adattamento dello stack dei canali al trasporto sottostante (ad esempio TCP, HTTP, SMTP e altri tipi di trasporto.). I canali forniscono un modello di programmazione di basso livello per l'invio e la ricezione di messaggi. Questo modello di programmazione si basa su varie interfacce e altri tipi noti collettivamente come modello dei canali [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In questo argomento vengono illustrate le forme del canale, la costruzione di un listener del canale di base (sul servizio) e di una channel factory (sul client).  
@@ -81,9 +82,9 @@ Lo stack dei canali di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] �
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Servizio: Listener del canale e canali](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Descrive i listener di canale in ascolto di canali in ingresso in un'applicazione di servizio.|  
-|[Client: Channel factory e canali](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Descrive le channel factory che creano canali per la connessione a un'applicazione di servizio.|  
-|[Informazioni sullo stato di modifica](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Descrive come l'interfaccia <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> modella le modifiche dello stato nei canali.|  
+|[Servizio: listener di canale e canali](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|Descrive i listener di canale in ascolto di canali in ingresso in un'applicazione di servizio.|  
+|[Client: factory canale e canali](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|Descrive le channel factory che creano canali per la connessione a un'applicazione di servizio.|  
+|[Informazioni sui cambiamenti di stato](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Descrive come l'interfaccia <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> modella le modifiche dello stato nei canali.|  
 |[Scelta di un modello di scambio di messaggi](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Descrive i sei modelli base di scambio dei messaggi supportati dai canali.|  
 |[Gestione di eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Descrive come gestire errori ed eccezioni nei canali personalizzati.|  
-|[Configurazione e supporto dei metadati](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Descrive come supportare l'utilizzo di canali personalizzati dal modello dell'applicazione e come esportare e importare metadati utilizzando associazioni ed elementi di associazione.|
+|[Supporto di configurazione e metadati](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Descrive come supportare l'utilizzo di canali personalizzati dal modello dell'applicazione e come esportare e importare metadati utilizzando associazioni ed elementi di associazione.|

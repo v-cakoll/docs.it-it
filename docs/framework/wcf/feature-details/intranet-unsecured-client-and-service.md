@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a3faa27d54f2aa67cd974bc1827d71163e411b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Client e servizio Intranet non protetti
 La figura seguente illustra un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] di base sviluppato per fornire informazioni su una rete privata protetta a un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La protezione non è necessaria perché i dati sono di scarsa importanza, la rete è considerata naturalmente protetta o la protezione viene fornita da un livello sottostante l'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -124,5 +125,5 @@ La figura seguente illustra un servizio [!INCLUDE[indigo1](../../../../includes/
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.NetTcpBinding>  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

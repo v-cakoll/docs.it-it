@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce allo sviluppatore di codice gestito un ambiente completo per la creazione di applicazioni connesse. Se tuttavia si dispone di una grande quantità di codice non gestito basato su COM e non si desidera eseguirne la migrazione, è comunque possibile integrare i servizi Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] direttamente nel codice esistente utilizzando il moniker del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il moniker servizio può essere usato da un'ampia gamma di ambienti di sviluppo basati su COM, ad esempio Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
@@ -75,4 +76,4 @@ ms.lasthandoff: 12/02/2017
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: registrare e configurare un Moniker di servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Procedura: Registrare e configurare un moniker servizio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

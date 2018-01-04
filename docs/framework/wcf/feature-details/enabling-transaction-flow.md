@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b5d0b90ed28928e734089265cb8c58839b6d0cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-transaction-flow"></a>Attivazione del flusso delle transazioni
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili opzioni estremamente flessibili per il controllo del flusso delle transazioni. Le impostazioni del flusso delle transazioni di un servizio possono essere espresse con una determinata combinazione di attributi e configurazione.  
@@ -40,14 +41,14 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili opzi
   
  Nella tabella seguente sono mostrati i tipi diversi di flussi delle transazioni che possono essere generati utilizzando queste varie combinazioni.  
   
-|TransactionFlow<br /><br /> associazione|Proprietà di associazione TransactionFlow|Proprietà di associazione TransactionFlowProtocol|Tipo del flusso delle transazioni|  
+|TransactionFlow<br /><br /> binding|Proprietà di associazione TransactionFlow|Proprietà di associazione TransactionFlowProtocol|Tipo del flusso delle transazioni|  
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |Obbligatorio|true|WS-AT|La transazione deve essere propagata nel formato WS-AT interoperativo.|  
 |Obbligatorio|true|OleTransactions|La transazione deve essere propagata nel formato OleTransactions di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
-|Obbligatorio|false|Non applicabile|Non applicabile perché questa configurazione non è valida.|  
+|Obbligatorio|False|Non applicabile|Non applicabile perché questa configurazione non è valida.|  
 |Allowed|true|WS-AT|La transazione può essere propagata nel formato WS-AT interoperativo.|  
 |Allowed|true|OleTransactions|La transazione può essere propagata nel formato OleTransactions di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
-|Allowed|false|Qualsiasi valore|Una transazione non è propagata.|  
+|Allowed|False|Qualsiasi valore|Una transazione non è propagata.|  
 |NotAllowed|Qualsiasi valore|Qualsiasi valore|Una transazione non è propagata.|  
   
  Nella tabella seguente viene fornito un riepilogo del risultato di elaborazione dei messaggi.  
@@ -59,7 +60,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili opzi
 |La transazione non corrisponde al formato previsto del protocollo|Allowed|`MustUnderstand` è uguale a `false`.|Rifiutato perché l'intestazione non è compresa|  
 |Transazione che utilizza qualsiasi formato di protocollo|NotAllowed|`MustUnderstand` è uguale a `false`.|Rifiutato perché l'intestazione non è compresa|  
 |Nessuna transazione|Obbligatorio|N/D|Rifiutato perché una transazione è obbligatoria|  
-|Nessuna transazione|Allowed|N/D|Processo|  
+|Nessuna transazione|Allowed|N/D|Process|  
 |Nessuna transazione|NotAllowed|N/D|Processo|  
   
  Mentre ogni metodo di un contratto può disporre di requisiti diversi per il flusso delle transazioni, l'impostazione del protocollo relativo al flusso delle transazioni è limitato all'ambito del livello dell'associazione. Tutti i metodi che condividono lo stesso endpoint, e di conseguenza la stessa associazione, condividono inoltre lo stesso criterio che ammette o richiede un flusso di transazioni, nonché, se opportuno, lo stesso protocollo di transazione.  

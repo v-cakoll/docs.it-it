@@ -18,11 +18,12 @@ caps.latest.revision: "42"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-security"></a>Associazioni e protezione
 Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offrono un modo rapido per programmare applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  
@@ -200,14 +201,14 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
 |Binding|Supporto modalità trasporto|Supporto modalità messaggio|Supporto TransportWithMessageCredential|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
-|`BasicHttpBinding`|Sì|Sì|Sì|  
+|`BasicHttpBinding`|Yes|Sì|Sì|  
 |`WSHttpBinding`|Sì|Sì|Sì|  
 |`WSDualHttpBinding`|No|Sì|No|  
 |`NetTcpBinding`|Sì|Sì|Sì|  
 |`NetNamedPipeBinding`|Sì|No|No|  
 |`NetMsmqBinding`|Sì|Sì|No|  
 |`MsmqIntegrationBinding`|Sì|No|No|  
-|`wsFederationHttpBinding`|No|Sì|Sì|  
+|`wsFederationHttpBinding`|No|Sì|Yes|  
   
 ## <a name="transport-credentials-in-bindings"></a>Credenziali di trasporto nelle associazioni  
  Nella tabella seguente vengono elencati i tipi di credenziali client disponibili quando si utilizza `BasicHttpBinding` o `WSHttpBinding` nella modalità di sicurezza del trasporto.  
@@ -218,7 +219,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
 |Basic|Autenticazione di base. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic e autenticazione del Digest, disponibile all'indirizzo [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |Digest|Autenticazione digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic e autenticazione del Digest, disponibile all'indirizzo [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Autenticazione NT LAN Manager (NTLM).|  
-|Windows|Autenticazione Windows.|  
+|WINDOWS|Autenticazione Windows.|  
 |Certificato|Autenticazione eseguita mediante un certificato.|  
 |IssuedToken|Consente al servizio di richiedere l'autenticazione del client tramite un token emesso da un servizio token di sicurezza o da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
@@ -227,14 +228,14 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
 |Tipo|Descrizione|  
 |----------|-----------------|  
-|None|Consente al servizio di interagire con client anonimi.|  
-|Windows|Consente gli scambi di messaggi SOAP nel contesto autenticato di una credenziale di Windows.|  
-|Nomeutente|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'invio di un digest delle password, né la derivazione delle chiavi basata su password e neppure l'utilizzo di tali chiavi per implementare la modalità di sicurezza dei messaggi. Di conseguenza, quando si utilizzano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il trasporto sia protetto.|  
+|nessuno|Consente al servizio di interagire con client anonimi.|  
+|WINDOWS|Consente gli scambi di messaggi SOAP nel contesto autenticato di una credenziale di Windows.|  
+|UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'invio di un digest delle password, né la derivazione delle chiavi basata su password e neppure l'utilizzo di tali chiavi per implementare la modalità di sicurezza dei messaggi. Di conseguenza, quando si utilizzano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il trasporto sia protetto.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  
 |IssuedToken|Consente al servizio di utilizzare un servizio token di sicurezza per fornire un token personalizzato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  

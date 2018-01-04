@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: configurare una porta con un certificato SSL
 Quando si crea un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] indipendente con la classe <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto, è necessario configurare anche una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

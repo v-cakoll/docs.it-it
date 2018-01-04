@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08c722ad9256f16ead8947e793e64cef9763c512
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>Scenario
 Contenuto della sezione sono inclusi esempi che descrivono scenari di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Scenari di associazione dati](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Scenari di data binding](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
  Vengono illustrati scenari di associazioni di dati di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Esempio di sicurezza di individuazione](../../../../docs/framework/wcf/samples/discovery-security-sample.md)  
@@ -38,5 +39,5 @@ Contenuto della sezione sono inclusi esempi che descrivono scenari di [!INCLUDE[
  [Servizio facciata attendibile](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
  Viene illustrato come propagare le informazioni di identità del chiamante da un servizio a un'altro utilizzando un'infrastruttura di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Modelli di progettazione: Basato su elenchi di pubblicazione-sottoscrizione](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
+ [Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
  Viene illustrato il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].

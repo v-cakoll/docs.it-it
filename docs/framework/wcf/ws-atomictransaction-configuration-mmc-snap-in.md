@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66e6114b5fca84188f69be8d16782d5fdc1588cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Snap-in MMC di configurazione di WS-AtomicTransaction
 Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per configurare una parte delle impostazioni WS-AtomicTransaction su computer locali e remoti.  
@@ -39,7 +40,7 @@ Lo Snap-in MMC di Configurazione di WS-AtomicTransaction è utilizzato per confi
 regasm.exe /codebase WsatUI.dll  
 ```  
   
- È possibile utilizzare questo strumento per modificare le impostazioni di base WS-AtomicTransaction. Ad esempio, è possibile abilitare e disabilitare il supporto del protocollo WS-AtomicTransaction, configurare le porte HTTP per WS-AT, associare un Certificato SSL alla porta HTTP, configurare certificati specificando nomi dell’oggetto del certificato, selezionare la modalità Analisi e impostare i timeout massimi e predefiniti.  
+ È possibile utilizzare questo strumento per modificare le impostazioni di base WS-AtomicTransaction. Ad esempio, è possibile abilitare e disabilitare il supporto del protocollo WS-AtomicTransaction, configurare le porte HTTP per WS-AT, associare un certificato SSL alla porta HTTP, configurare certificati specificando nomi dell'oggetto del certificato, selezionare la modalità Analisi e impostare i timeout massimi e predefiniti.  
   
  Se è necessario configurare il supporto di WS-AtomicTransaction solo sul computer locale, è possibile utilizzare la versione da riga di comando di questo strumento. [!INCLUDE[crabout](../../../includes/crabout-md.md)]lo strumento da riga di comando, vedere il [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) argomento.  
   
@@ -97,6 +98,6 @@ regasm.exe /codebase WsatUI.dll
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]la registrazione, vedere [amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione del supporto WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
+ [Configurazione del supporto di transazioni WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
  [Utilità di configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [Amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md)

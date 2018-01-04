@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
 Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizio avviene tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -76,7 +77,7 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
 ## <a name="defining-endpoints"></a>Definizione di endpoint  
  È possibile specificare l'endpoint di un servizio in modo imperativo, tramite codice, o in modo dichiarativo, tramite la configurazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) e [procedura: creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Contenuto della sezione viene illustrato lo scopo di associazioni, endpoint e indirizzi; viene descritto come configurare un'associazione e un endpoint e viene dimostrato come utilizzare il comportamento `ClientVia` e la proprietà `ListenUri`.  
   
  [Indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
@@ -88,13 +89,13 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../../includes/indigo1-md
  [Contratti](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Viene descritto in che modo i contratti definiscono i metodi di un servizio.  
   
- [Procedura: creare un Endpoint del servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Procedura: Creare un endpoint di servizio nella configurazione](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Viene descritto come creare un endpoint del servizio nella configurazione.  
   
- [Procedura: creare un Endpoint del servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Procedura: Creare un endpoint di servizio nel codice](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Viene descritto come creare un endpoint del servizio nel codice.  
   
- [Procedura: usare Svcutil.exe per convalidare il codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Viene descritto come individuare gli errori nelle configurazioni e le implementazioni del servizio senza ospitare il servizio utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Vedere anche  

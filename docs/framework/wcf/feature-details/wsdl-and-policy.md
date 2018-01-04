@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL e criteri
 In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1.1, WS-Policy e WS-PolicyAttachment di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], nonché ulteriori asserzioni WS-Policy e le estensioni WSDL 1.1 introdotte da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -84,5 +85,5 @@ In questo argomento vengono illustrati i dettagli dell'implementazione di WSDL 1
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione WSDL personalizzata](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Procedura: esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Procedura: importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Procedura: Esportare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedura: autenticare con un nome utente e una password
 In questo argomento viene illustrato come abilitare l'autenticazione di un client con un nome utente e una password di dominio Windows in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Si presuppone che l'utente disponga di un servizio WCF self-hosted funzionante. Per un esempio di creazione di base vedere servizio WCF self-hosted, [esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md). In questo argomento si presuppone che il servizio sia configurato tramite codice. Se si desidera vedere un esempio di configurazione di un servizio simile utilizzando un file di configurazione vedere [nome utente di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
@@ -99,6 +100,6 @@ In questo argomento viene illustrato come abilitare l'autenticazione di un clien
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
  <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
- [Sicurezza del trasporto con l'autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- [Protezione delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Sicurezza del trasporto con autenticazione di base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Sicurezza delle applicazioni distribuite](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

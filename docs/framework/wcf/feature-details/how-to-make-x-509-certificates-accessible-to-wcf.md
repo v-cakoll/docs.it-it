@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e03a38e2a93dd866bc3da65527d5410b09009e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: rendere accessibili a WCF i certificati X.509
 Per rendere accessibile un certificato X.509 a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario che il codice dell'applicazione specifichi nome e percorso dell'archivio certificati. In alcuni casi l'identità del processo deve avere accesso al file contenente la chiave privata associata al certificato X.509. Per ottenere la chiave privata associata a un certificato X.509 contenuto in un archivio certificati, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] deve ricevere apposita autorizzazione. Per impostazione predefinita solo il proprietario e l'account di sistema possono accedere alla chiave privata di un certificato.  
@@ -39,10 +40,10 @@ Per rendere accessibile un certificato X.509 a [!INCLUDE[indigo1](../../../../in
   
         |Utilizzo di certificati X.509|Chiave privata|  
         |---------------------------|-----------------|  
-        |Firma digitale di un messaggio SOAP in uscita.|Sì|  
+        |Firma digitale di un messaggio SOAP in uscita.|Yes|  
         |Verifica della firma di un messaggio SOAP in arrivo.|No|  
         |Crittografia di un messaggio SOAP in uscita.|No|  
-        |Decrittografia di un messaggio SOAP in arrivo.|Sì|  
+        |Decrittografia di un messaggio SOAP in arrivo.|Yes|  
   
     2.  Determinare il percorso e il nome dell'archivio certificati in cui è archiviato il certificato.  
   
@@ -82,5 +83,5 @@ Per rendere accessibile un certificato X.509 a [!INCLUDE[indigo1](../../../../in
   
 ## <a name="see-also"></a>Vedere anche  
  [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [Procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Procedura: Recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+ [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

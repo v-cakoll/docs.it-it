@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c3b478d88eff022d8cb28f4123291f4662644ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-list"></a>Elenco delle attività
 In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -28,7 +29,7 @@ In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indig
 ## <a name="servicemodel-activities"></a>Attività ServiceModel  
  Nella tabella seguente sono elencate tutte le attività relative ai principali scenari di utilizzo.  
   
-|Etichetta|Nome attività|Tipo di attività|Descrizione|  
+|Label|Nome attività|Tipo attività:|Descrizione|  
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Attività di ambiente|N/D (non controllata da ServiceModel)|Attività il cui ID viene impostato in TLS prima che venga effettuata qualsiasi chiamata al codice di ServiceModel, sia esso lato client o lato server.<br /><br /> Esempio: un'attività in cui viene chiamata l'attività di apertura del client [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] oppure dove viene chiamata l'attività serviceHost.open.|  
 |B|Costrutto<br /><br /> ChannelFactory. ContractType : "[tipo]".|Costrutto||  
@@ -46,14 +47,14 @@ In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indig
 ## <a name="security-activities"></a>Attività di sicurezza  
  Nella tabella seguente sono elencate tutte le attività riferite alla sicurezza.  
   
-|Nome attività|Tipo di attività|Descrizione|  
+|Nome attività|Tipo attività:|Descrizione|  
 |-------------------|-------------------|-----------------|  
 |Impostazione sessione protetta|SetupSecurity|Esiste soltanto sul lato client. Contiene tutti gli scambi RST*/SCT per eseguire l'autenticazione e l'impostazione del contesto di sicurezza. Se `propagateActivity` = `true`, questa attività viene unita con corrispondente processo azione RST del servizio\*attività /SCT.|  
 |Chiusura sessione protetta|SetupSecurity|Esiste sul lato client. Contiene lo scambio di messaggi di annullamento per eseguire la chiusura della sessione protetta. Se `propagateActivity` = `true`, questa attività viene unita con l'azione di processo "Cancel" dal servizio.|  
   
  Nella tabella seguente sono elencate tutte le attività riferite a COM+.  
   
-|Nome attività|Tipo di attività|Descrizione|  
+|Nome attività|Tipo attività:|Descrizione|  
 |-------------------|-------------------|-----------------|  
 |Creazione istanza COM+|TransferToCOMPlus|È possibile creare una sola istanza di attività per ogni chiamata COM+ tramite codice [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]|  
 |Eseguire COM+ \<operazione >|TransferToCOMPlus|È possibile creare una sola istanza di attività per ogni chiamata COM+ tramite codice [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]|  
@@ -61,7 +62,7 @@ In questo argomento sono elencate tutte le attività definite in [!INCLUDE[indig
 ## <a name="wmi-activities"></a>Attività WMI  
  Nella tabella seguente sono elencate tutte le attività riferite a WMI.  
   
-|Nome attività|Tipo di attività|Descrizione|  
+|Nome attività|Tipo attività:|Descrizione|  
 |-------------------|-------------------|-----------------|  
 |Ottenimento WMI|WMIGetObject|Questa attività prevede il recupero di dati da WMI da parte dell'utente.|  
 |Inserimento WMI|WmiPutInstance|Questa attività prevede l'aggiornamento dei dati tramite WMI da parte dell'utente|

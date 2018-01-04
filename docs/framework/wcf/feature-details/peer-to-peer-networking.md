@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-networking"></a>Rete peer-to-peer
 Il canale peer è una tecnologia di comunicazione peer-to-peer (P2P) a più parti disponibile in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Fornisce un canale di comunicazione P2P basato su messaggi sicuro e scalabile per gli sviluppatori di applicazioni. Un esempio comune di applicazione a più parti che può trarre vantaggio da un canale peer è rappresentato da un'applicazione collaborativa, ad esempio una chat, in cui un gruppo di persone comunica l'una con l'altra mediante un sistema peer-to-peer senza server. Il canale peer consente la collaborazione P2P, la distribuzione di contenuti, il bilanciamento del carico e l'elaborazione distribuita per scenari aziendali e relativi a utenti.  
@@ -26,7 +27,7 @@ Il canale peer è una tecnologia di comunicazione peer-to-peer (P2P) a più part
   
  Nelle sezioni seguenti vengono fornite informazioni sulla rete peer-to-peer e sull'utilizzo delle classi del canale peer per creare applicazioni di rete abilitate al peer.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Scenari relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): descrive gli scenari di sviluppo supportati dalle API del canale Peer, ad esempio la messaggistica, collaborazione, pubblicazione/sottoscrizione elaborazione distribuita e gioco.  
   
  [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): descrive le reti Peer, i nodi Peer, sicurezza del canale Peer e i resolver del Peer.  

@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>Panoramica sulla sicurezza del trasporto
 I meccanismi di sicurezza del trasporto di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dipendono dall'associazione e dal trasporto utilizzati. Ad esempio, quando si utilizza la classe <xref:System.ServiceModel.WSHttpBinding>, il trasporto è HTTP e il meccanismo principale per la sicurezza del trasporto è SSL (Secure Sockets Layer) su HTTP, comunemente noto come HTTP. In questo argomento vengono illustrati i principali meccanismi di sicurezza del trasporto utilizzati nelle associazioni fornite dal sistema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -65,7 +66,7 @@ I meccanismi di sicurezza del trasporto di [!INCLUDE[indigo1](../../../../includ
 #### <a name="digest"></a>Digest  
  L'autenticazione digest è simile all'autenticazione di base, ma offre il vantaggio di inviare le credenziali come un hash, anziché in testo non crittografato. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [l'autenticazione del Digest in IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurare l'autenticazione del Digest](http://go.microsoft.com/fwlink/?LinkId=88596).  
   
-#### <a name="windows"></a>Windows  
+#### <a name="windows"></a>WINDOWS  
  Questo tipo corrisponde al metodo di autenticazione integrata di Windows di IIS. In caso di impostazione su questo valore, si prevede inoltre che il server sia in un dominio Windows che utilizza il protocollo Kerberos come controller di dominio. Se il server non è in un dominio con supporto Kerberos o se il sistema Kerberos ha esito negativo, è possibile utilizzare il valore NTLM (NT LAN Manager) descritto nella sezione successiva. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [autenticazione integrata di Windows in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
@@ -131,4 +132,4 @@ I meccanismi di sicurezza del trasporto di [!INCLUDE[indigo1](../../../../includ
  Per una descrizione completa del trasporto protezione con Accodamento messaggi (precedentemente chiamato MSMQ), vedere [protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione della sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+ [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

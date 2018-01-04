@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
 I client [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], come i servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], possono essere configurati per modificare il proprio comportamento in fase di esecuzione e adattarlo alle esigenze dell'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Specifica del comportamento in fase di esecuzione servizio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  

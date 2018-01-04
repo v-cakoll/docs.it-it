@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4488fc641fdb2d9af378ae087506acd6feb3829
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b70cd20b4daea80db6094e5d570ef59a0556cdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 Un messaggio è stato ricevuto da PeerNode, ma non è stato propagato agli elementi adiacenti.  
@@ -30,5 +31,5 @@ Un messaggio è stato ricevuto da PeerNode, ma non è stato propagato agli eleme
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

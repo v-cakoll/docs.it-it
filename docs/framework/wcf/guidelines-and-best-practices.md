@@ -19,16 +19,17 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12599c0bdf249271e8cd28e5a7591c130b1fd920
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-and-best-practices"></a>Linee guida e suggerimenti
 Contenuto della sezione sono contenuti argomenti che forniscono le linee guida per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedure consigliate: Controllo delle versioni del contratto di dati](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Viene illustrato come e quando creare contratti dati che non determinano interruzioni quando vengono create versioni successive.  
   
@@ -44,7 +45,7 @@ Contenuto della sezione sono contenuti argomenti che forniscono le linee guida p
  [Distribuzione di applicazioni WCF con ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
  Descrive le considerazioni da fare in caso di utilizzo della funzionalità ClickOnce.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  

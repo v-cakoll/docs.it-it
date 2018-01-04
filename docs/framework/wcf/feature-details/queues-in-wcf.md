@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00f8847e64e30b42490f319ea3e1df5e5a1850d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Code in Windows Communication Foundation
 Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per le code. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce il supporto per l'accodamento basato sul sistema di Accodamento messaggi Microsoft (precedentemente noto come MSMQ) come trasporto e consente gli scenari seguenti:  
@@ -33,44 +34,44 @@ Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1]
   
  Per utilizzare la funzionalità delle code in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile utilizzare una delle associazioni standard o crearne una personalizzata se una di quelle standard non soddisfa i requisiti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associazioni standard rilevanti e sulla scelta di uno, vedere [come: messaggi di Exchange con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Panoramica dei concetti di accodamento dei messaggi.  
   
- [Accodamento messaggi in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Panoramica del supporto della coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Procedura: scambiare messaggi con endpoint WCF in coda](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Spiega come utilizzare la classe <xref:System.ServiceModel.NetMsmqBinding> per la comunicazione tra un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Spiega come utilizzare <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> per la comunicazione tra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e le applicazioni di Accodamento messaggi.  
   
- [Raggruppamento dei messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Spiega come raggruppare messaggi in una coda per agevolare l'elaborazione di messaggi correlati da parte di un'unica applicazione ricevente.  
   
- [Raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [Invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  Spiega come raggruppare messaggi in una transazione.  
   
- [Utilizzo delle code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  Spiega come gestire il trasferimento dei messaggi e gli errori di recapito utilizzando le code di messaggi non recapitabili. Spiega inoltre come elaborare messaggi dalla coda di messaggi non recapitabili.  
   
  [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  Spiega come gestire messaggi non elaborabili, ovvero messaggi che hanno superato il numero massimo di tentativi di recapito all'applicazione ricevente.  
   
- [Differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  Riepiloga le differenze nella funzionalità di accodamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
- [Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Descrive come utilizzare la protezione del trasporto per proteggere messaggi in coda.  
   
  [Protezione dei messaggi mediante la sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
  Descrive come utilizzare la protezione dei messaggi per proteggere messaggi in coda.  
   
- [Risoluzione dei problemi di messaggistica in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ [Risoluzione dei problemi relativi ai messaggi in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
  Spiega come risolvere problemi di accodamento comuni.  
   
- [Procedure consigliate per la comunicazione in coda](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ [Procedure consigliate per le comunicazioni in coda](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Spiega le procedure consigliate per l'utilizzo delle comunicazioni in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

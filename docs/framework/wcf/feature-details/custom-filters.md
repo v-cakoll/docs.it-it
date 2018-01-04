@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: c9d0c81d715b2e876fe8144d4cff198f3321a22e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d24e517a8fd63a3363d080ebbabf2c1e3306b76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-filters"></a>Filtri personalizzati
 I filtri personalizzati consentono di definire la logica corrispondente che non è possibile conseguire utilizzando i filtri messaggi forniti dal sistema. È ad esempio possibile creare un filtro personalizzato che esegue l'hash di un particolare elemento del messaggio, quindi esamina il valore per determinare se il filtro debba restituire True o False.  

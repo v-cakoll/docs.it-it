@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guida di interoperabilità dei protocolli di servizi Web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa una serie di protocolli di servizi Web. Molti di questi protocolli includono diverse opzioni e punti estendibilità lasciati alla discrezione dell'implementatore. In questo argomento viene fornito un elenco di protocolli di servizi Web implementati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Altri argomenti di questa sezione forniscono dettagli di implementazione per ogni protocollo supportato.  
@@ -111,10 +112,10 @@ ms.lasthandoff: 12/02/2017
 -   [Sicurezza di base del profilo di 1.0 lavoro bozza](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protocolli supportati da associazioni di interoperabilità fornite dal sistema dei servizi Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Protocolli di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Criteri e WSDL](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [WSDL e criteri](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [Protocolli di sicurezza](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
  [Protocollo Reliable Messaging versione 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
  [Protocollo Reliable Messaging versione 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  

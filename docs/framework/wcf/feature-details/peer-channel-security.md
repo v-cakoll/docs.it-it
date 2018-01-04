@@ -13,14 +13,15 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>Protezione del canale peer
-Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da messaggistica a più parti. Ne è un esempio la distribuzione di contenuto Internet, in cui un'origine attendibile distribuisce il contenuto (ad esempio aggiornamenti di supporti o software), un gruppo di amici si scambiano musica e foto o un gruppo di colleghi lavora in modo collaborativo a un documento. Ognuno di questi scenari richiede un modello di sicurezza univoco. Il modello di sicurezza del canale peer ha lo scopo di affrontare tali scenari e offrire un modello sicuro per le rispettive esigenze di diversi modelli di identità, autenticazione e autorizzazione.  
+Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da messaggistica a più parti. Ne è un esempio la distribuzione di contenuto Internet, in cui un'origine attendibile distribuisce il contenuto (ad esempio aggiornamenti di supporti o software), un gruppo di amici si scambiano musica e foto o un team di colleghi lavora in modo collaborativo a un documento. Ognuno di questi scenari richiede un modello di sicurezza univoco. Il modello di sicurezza del canale peer ha lo scopo di affrontare tali scenari e offrire un modello sicuro per le rispettive esigenze di diversi modelli di identità, autenticazione e autorizzazione.  
   
 ## <a name="security-scenarios"></a>Scenari di sicurezza  
  Uno scenario di distribuzione del contenuto richiede che ogni destinatario del contenuto identifichi l'origine del contenuto. A causa della natura distribuita dello scenario, non è sempre possibile conoscere e considerare attendibili gli intermediari che elaborano o intercettano i messaggi. Per contrastare con efficacia il rischio che un intermediario non attendibile manometta i messaggi, è possibile proteggerli tramite le applicazioni presso il mittente al fine di rilevare facilmente qualsiasi tentativo di manomissione. In tal caso, a seconda della riservatezza del contenuto, può essere necessaria la crittografia.  
@@ -44,6 +45,6 @@ Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da 
  Il canale peer non richiede un modello di identità specifico a condizione che l'applicazione scelga uno dei tipi di token supportati. Le applicazioni detengono la proprietà completa del ciclo di vita di queste identità e delle decisioni di autenticazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protezione delle applicazioni del canale Peer](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [Protezione di applicazioni del canale peer](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Concetti relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Creazione di un'applicazione del canale Peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

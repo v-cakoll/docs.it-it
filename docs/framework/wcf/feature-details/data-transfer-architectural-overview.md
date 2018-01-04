@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Panoramica dell'architettura di trasferimento dei dati
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere considerato un'infrastruttura di messaggistica. Può ricevere messaggi, elaborarli e inviarli a codice utente per ulteriori azioni, oppure può costruire messaggi dai dati forniti dal codice utente e recapitarli a una destinazione. In questo argomento, rivolto agli sviluppatori avanzati, viene illustrata l'architettura per la gestione dei messaggi e dei dati in essi contenuti. Per informazioni più semplici e orientate alle attività su come inviare e ricevere dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -282,4 +283,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> e <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> sono i comportamenti dell'operazione responsabili del collegamento dei formattatori dei messaggi rispettivamente per `DataContractSerializer` e `XmlSerializer`. Il comportamento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> può di fatto operare con qualsiasi serializzatore che deriva da <xref:System.Runtime.Serialization.XmlObjectSerializer>, compreso <xref:System.Runtime.Serialization.NetDataContractSerializer> (descritto in dettaglio nella sezione sull'utilizzo della serializzazione autonoma). Il comportamento chiama uno degli overload del metodo virtuale `CreateSerializer` per ottenere il serializzatore. Per collegare un serializzatore diverso, creare una nuova sottoclasse <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ed eseguire l'override di entrambi gli overload `CreateSerializer` .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Definizione del trasferimento dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

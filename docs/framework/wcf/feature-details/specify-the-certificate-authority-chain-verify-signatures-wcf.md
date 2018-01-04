@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Procedura: specificare la catena di certificati di autorità di certificazione usata per verificare le firme (WCF)
 Per impostazione predefinita, quando riceve un messaggio SOAP firmato mediante un certificato X.509, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verifica che quest'ultimo venga emesso da un'autorità di certificazione attendibile. A tale scopo viene eseguita una ricerca in un archivio certificati per determinare se il certificato di tale autorità di certificazione è stato riconosciuto come attendibile. Affinché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia in grado di svolgere questa ricerca è necessario che la catena di certificati dell'autorità di certificazione sia installata nell'archivio certificati corretto.  
@@ -44,4 +45,4 @@ Per impostazione predefinita, quando riceve un messaggio SOAP firmato mediante u
          [!INCLUDE[crabout](../../../../includes/crabout-md.md)]con lo snap-in MMC, vedere [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

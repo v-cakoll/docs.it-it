@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Serializzazione JSON autonoma
 JSON (JavaScript Object Notation) è un formato dati progettato specificatamente per essere utilizzato dal codice JavaScript in esecuzione su pagine Web all'interno del browser. JSON è il formato dati predefinito utilizzato dai servizi ASP.NET AJAX creati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -37,12 +38,12 @@ JSON (JavaScript Object Notation) è un formato dati progettato specificatamente
 |<xref:System.Enum>|Number|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|  
 |<xref:System.Boolean>|Booleano|--|  
 |<xref:System.String>, <xref:System.Char>|Stringa|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|Il formato di questi tipi in JSON è lo stesso che in XML (fondamentalmente TimeSpan nel formato durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella sua forma di stringa naturale, ad esempio "http://www.example.com") Per informazioni dettagliate, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Stringa|Il formato di questi tipi in JSON è lo stesso che in XML (fondamentalmente TimeSpan nel formato durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella sua forma di stringa naturale, ad esempio "http://www.example.com") Per informazioni dettagliate, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
 |<xref:System.Xml.XmlQualifiedName>|Stringa|Il formato è "nome:spazio dei nomi" (tutto ciò che si trova prima del primo segno di due punti è il nome). Il nome o lo spazio dei nomi potrebbero non essere presenti. Se non esiste alcuno spazio dei nomi, è possibile omettere anche i due punti.|  
 |<xref:System.Array>di tipo<xref:System.Byte>|Matrice di numeri|Ogni numero rappresenta il valore di un byte.|  
 |<xref:System.DateTime>|DateTime o String|Vedere Date/Ore e JSON più avanti in questo argomento.|  
 |<xref:System.DateTimeOffset>|Tipo complesso|Vedere Date/Ore e JSON più avanti in questo argomento.|  
-|Tipi XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrici di <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Vedere la sezione relativa ai tipi XML e a JSON in questo argomento.|  
+|Tipi XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrici di <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Stringa|Vedere la sezione relativa ai tipi XML e a JSON in questo argomento.|  
 |<xref:System.DBNull>|Tipo complesso vuoto|--|  
 |Raccolte, dizionari e matrici|Matrice|Vedere la sezione relativa alle raccolte, ai dizionari e alle matrici in questo argomento.|  
 |Tipi complessi (con applicazione dell'attributo <xref:System.Runtime.Serialization.DataContractAttribute> o <xref:System.SerializableAttribute>)|Tipo complesso|I membri dati diventano membri del tipo complesso JavaScript.|  
@@ -197,7 +198,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- Sia i nomi troncati (#MyApp.Shapes) che quelli completi () vengono riconosciuti durante la deserializzazione.  
+ Sia i nomi troncati (#MyApp.Shapes) che quelli completi (http://schemas.datacontract.org/2004/07/MyApp.Shapes) vengono riconosciuti durante la deserializzazione.  
   
 #### <a name="type-hint-position-in-json-objects"></a>Posizione del suggerimento relativo ai tipi negli oggetti JSON  
  Il suggerimento relativo ai tipi deve essere visualizzato innanzitutto nella rappresentazione JSON. Questo è il solo caso in cui l'ordine delle coppie chiave/valore è importante nell'elaborazione di JSON. Di seguito viene riportato un esempio di modalità non valida per specificare un suggerimento relativo ai tipi.  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Il serializzatore XML codifica i nomi delle chiavi che non sono nomi XML validi. Ad esempio, un membro dati con il nome "123" avrebbe un nome codificato come "_x0031\__x0032\__x0033\_" perché "123" è un nome di elemento XML non valido (inizia con un numero). Una situazione simile può presentarsi con alcuni set di caratteri internazioni non validi per i nomi XML. Per una spiegazione di questo effetto di XML nell'elaborazione JSON, vedere [Mapping tra JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto per JSON e altri dati formati di trasferimento](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Supporto per JSON e altri formati di trasferimento dati](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

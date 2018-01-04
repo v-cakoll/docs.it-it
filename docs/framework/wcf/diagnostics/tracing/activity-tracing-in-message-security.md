@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 60156e284c55d765de417fe891185d1aba720816
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: db9b05217bbbf91bfc3cd315801b4e511f82d04c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-tracing-in-message-security"></a>Traccia attività relative alla protezione dei messaggi
 Questo argomento descrive la traccia attività per l'elaborazione delle operazioni di sicurezza, che si articola nelle tre fasi seguenti.  
@@ -37,7 +38,7 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
   
  Nella tabella seguente sono elencate le attività e le tracce relative allo scambio negoziazione/SCT.  
   
-||Contesto in cui si verifica lo scambio negoziazione/SCT|Activities|Tracce|  
+||Contesto in cui si verifica lo scambio negoziazione/SCT|Attività|Tracce|  
 |-|-------------------------------------------------|----------------|------------|  
 |Protezione a livello di trasporto<br /><br /> (HTTPS, SSL)|Alla ricezione del primo messaggio.|Le tracce vengono generate nell'attività di ambiente.|-Scambio di tracce<br />-Canale sicuro stabilito<br />-Condividere l'ottenimento dei segreti.|  
 |Protezione a livello di messaggio<br /><br /> (WSHTTP)|Alla ricezione del primo messaggio.|Nel client:<br /><br /> -"Il programma di installazione sessione protetta" da "Elaborazione azione" di questo primo messaggio per ogni request/reply degli scambi RST/RSTR/SCT.<br />-"Chiudi sessione protetta" per lo scambio di annullamento, all'esterno di "attività di chiusura del Proxy." Questa attività può essere causata da un'altra attività di ambiente, a seconda del momento di chiusura della sessione protetta.<br /><br /> Nel server:<br /><br /> -L'attività "Elaborazione azione" uno per ogni request/reply degli scambi RST/SCT/Cancel nel server. Se `propagateActivity` = `true`, le attività RST/RSTR/SCT vengono unite con "Set della sessione di sicurezza" e l'annullamento viene unita con l'attività "Chiudere" dal client.<br /><br /> L'attività di impostazione della sessione di sicurezza si articola in due fasi:<br /><br /> 1.  Negoziazione dell'autenticazione: questa fase è facoltativa se il client già dispone delle credenziali corrette. Questa fase può essere eseguita tramite un trasporto protetto o lo scambio di messaggi. Nel secondo caso è possibile che si verifichino 1 o 2 scambi RST/RSTR. Per questi scambi il sistema genera tracce in nuove attività di request/reply, come descritto in precedenza.<br />2.  Creazione di una sessione protetta: in tale fase si verifica un unico scambio RST/RSTR avente le stesse attività di ambiente descritte in precedenza.|-Scambio di tracce<br />-Canale sicuro stabilito<br />-Condividere l'ottenimento dei segreti.|  
@@ -51,7 +52,7 @@ Questo argomento descrive la traccia attività per l'elaborazione delle operazio
 ||Protezione a livello di trasporto<br /><br /> (HTTPS, SSL) e del livello di messaggio<br /><br /> (WSHTTP)|  
 |-|---------------------------------------------------------------------------------|  
 |Momento in cui si verificano la crittografia/decrittografia dei messaggi e l'autenticazione della firma|Alla ricezione del messaggio|  
-|Activities|Le tracce vengono generate nell'attività ProcessAction nel client e nel server.|  
+|Attività|Le tracce vengono generate nell'attività ProcessAction nel client e nel server.|  
 |Tracce|-sendSecurityHeader (mittente):<br />-Firma messaggio<br />-Crittografare i dati di richiesta<br />-receiveSecurityHeader (destinatario):<br />-Verificare la firma<br />-Decrittografare i dati di risposta<br />-Autenticazione|  
   
 > [!NOTE]

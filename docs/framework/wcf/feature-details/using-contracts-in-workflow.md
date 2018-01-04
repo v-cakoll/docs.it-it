@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c13da32e304e54d1826c6dd4ad83d5fbb17702a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1ff40241bd48a4355738ca93ef2c80ceec55db11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-contracts-in-workflow"></a>Uso di contratti nel flusso di lavoro
 In caso di implementazione di un servizio, viene definito un numero di contratti che descrivono il servizio e i dati inviati e ricevuti. I dati vengono rappresentati come contratti dati e contratti di messaggio; sia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia i servizi flusso di lavoro utilizzano definizioni del contratto dati e del contratto messaggio nell'ambito delle descrizioni del servizio. Il servizio stesso espone metadati (nel formato WSDL) per descrivere le operazioni del servizio. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i contratti di servizio e contratti di operazione definiscono il servizio e le operazioni supportate. Tuttavia, in un servizio flusso di lavoro, questi contratti costituiscono parte del processo aziendale stesso e vengono esposti nei metadati da un processo denominato inferenza del contratto.  
@@ -44,5 +45,5 @@ In caso di implementazione di un servizio, viene definito un numero di contratti
 ## <a name="see-also"></a>Vedere anche  
  [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
- [Procedura: creare un servizio flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Procedura: Creare un servizio flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  [Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

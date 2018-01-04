@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc8355e15b4b8ae783ec02b1931554c11c54b02d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b482d0a8a3b45e00d8e1faaa9e4a5c561595126
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-process-activation"></a>Attivazione dei processi di Windows
 Contenuto della sezione sono inclusi esempi che illustrano l'attivazione del servizio tramite protocolli di rete.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attivazione di NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
  Viene descritto l'hosting di un servizio che utilizza i servizi di attivazione dei processi Windows (WAS) per attivare un servizio che comunica su named pipe.  
   

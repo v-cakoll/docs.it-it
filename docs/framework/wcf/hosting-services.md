@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>Servizi host
 Per diventare attivo, un servizio deve essere ospitato all'interno di un ambiente di runtime che lo crea e ne controlla il contesto e la durata. I servizi[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] sono progettati per essere eseguiti in qualsiasi processo di Windows che supporta codice gestito.  
@@ -64,9 +65,9 @@ Per diventare attivo, un servizio deve essere ospitato all'interno di un ambient
 |-------------------------|---------------------------|--------------------------|-------------------------------------|  
 |Applicazioni gestite ("indipendenti")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|  
 |Servizi Windows (precedentemente noti come servizi NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|  
-|IIS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Sì|  
-|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Sì|  
-|Servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Sì|  
+|IIS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Yes|  
+|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Yes|  
+|Servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Yes|  
   
  È importante notare che l'esecuzione di un servizio o di una qualsiasi estensione da un host non attendibile compromette la sicurezza. Si noti inoltre che quando si apre un <xref:System.ServiceModel.ServiceHost> in caso di utilizzo della rappresentazione, un'applicazione deve controllare che l'utente non si sia disconnesso, ad esempio memorizzando nella cache l'elemento <xref:System.Security.Principal.WindowsIdentity> dell'utente.  
   
@@ -76,5 +77,5 @@ Per diventare attivo, un servizio deve essere ospitato all'interno di un ambient
  [Implementazione dei contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [Procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [Procedura: ospitare un servizio WCF in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Procedura: ospitare un servizio WCF in un servizio Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Procedura: Ospitare un servizio WCF in un servizio di Windows gestito](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [Procedura: Ospitare un servizio WCF in un'applicazione gestita](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]è necessario considerare varie di categorie di minacce. Nella tabella seguente sono elencate le più importanti categorie di minacce correlate all'elaborazione dati. In[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono forniti gli strumenti per mitigare queste minacce.  
@@ -202,7 +203,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  Nelle sezioni seguenti vengono ulteriormente descritte queste categorie di minacce.  
   
 ## <a name="datacontractserializer"></a>DataContractSerializer  
- (Per informazioni sulla protezione della classe <xref:System.Xml.Serialization.XmlSerializer> vedere la relativa documentazione). Il modello di sicurezza di <xref:System.Xml.Serialization.XmlSerializer> è simile a quello della classe  <xref:System.Runtime.Serialization.DataContractSerializer> e differisce soprattutto per i dettagli. L'attributo <xref:System.Xml.Serialization.XmlIncludeAttribute>, ad esempio, viene utilizzato per l'inclusione del tipo in luogo dell'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute>. Alcune minacce univoche della classe <xref:System.Xml.Serialization.XmlSerializer> verranno tuttavia discusse più avanti in questo argomento.  
+ (Per informazioni sulla protezione della classe <xref:System.Xml.Serialization.XmlSerializer> vedere la relativa documentazione). Il modello di sicurezza di <xref:System.Xml.Serialization.XmlSerializer> è simile a quello della classe  <xref:System.Runtime.Serialization.DataContractSerializer> e differisce soprattutto per i dettagli. L'attributo <xref:System.Xml.Serialization.XmlIncludeAttribute> , ad esempio, viene utilizzato per l'inclusione del tipo in luogo dell'attributo <xref:System.Runtime.Serialization.KnownTypeAttribute> . Alcune minacce univoche della classe <xref:System.Xml.Serialization.XmlSerializer> verranno tuttavia discusse più avanti in questo argomento.  
   
 ### <a name="preventing-unintended-types-from-being-loaded"></a>Prevenzione del caricamento di tipi imprevisti  
  Il caricamento di tipi imprevisti può avere conseguenze significative, sia che il tipo sia dannoso sia che abbia solo effetti secondari dipendenti dalla protezione. Un tipo può contenere vulnerabilità di sicurezza sfruttabili, eseguire azioni dipendenti dalla protezione nel relativo costruttore o costruttore della classe, disporre di un footprint di memoria di grandi dimensioni che facilita gli attacchi Denial of Service o generare eccezioni irreversibili. I tipi possono disporre di costruttori della classe che vengono eseguiti appena viene caricato il tipo e prima che vengano create istanze. Per queste ragioni, è importante controllare il set dei tipi caricabili dal deserializzatore.  
@@ -264,7 +265,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   Fare attenzione quando si utilizzano tipi legacy contrassegnati con l'attributo <xref:System.SerializableAttribute> . Molti di essi sono progettati per essere utilizzati con la comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per l'utilizzo esclusivamente con dati attendibili. I tipi esistenti contrassegnati con questo attributo possono non essere stati progettati tenendo presente la sicurezza dello stato.  
   
--   Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero`o `invalid`.  
+-   Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero` o `invalid`.  
   
 -   Non considerare mai attendibile un oggetto grafico deserializzato da un'origine dati non attendibile senza prima convalidarlo. Ogni singolo oggetto può essere in uno stato coerente, ma l'oggetto grafico nell'insieme potrebbe non esserlo, inoltre, anche se la modalità di mantenimento è disattivata, se l'oggetto grafico viene deserializzato può contenere più riferimenti allo stesso oggetto o riferimenti circolari. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][La serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
@@ -367,4 +368,4 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

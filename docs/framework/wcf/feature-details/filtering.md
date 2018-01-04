@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>Filtro
 Il sistema di filtraggio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è in grado di utilizzare filtri dichiarativi per individuare messaggi e prendere decisioni operative. È possibile utilizzare filtri per determinare come comportarsi con un messaggio, esaminando parte di esso. Un processo di accodamento, ad esempio, può utilizzare una query XPath 1.0 per controllare l'elemento prioritario di un'intestazione nota e determinare se spostare un messaggio all'inizio della coda.  
@@ -94,4 +95,4 @@ Il sistema di filtraggio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
 -   Il resto dei parametri dell'endpoint in `EndpointAddress` come specificato in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasferimento dei dati e serializzazione](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+ [Trasferimento e serializzazione dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

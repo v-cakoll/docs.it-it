@@ -1,5 +1,5 @@
 ---
-title: Extensibility
+title: "Estendibilità"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="extensibility"></a>Extensibility
+# <a name="extensibility"></a>Estendibilità
 Contenuto della sezione sono inclusi esempi relativi all'estensibilità personalizzata e ad altre funzionalità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Estensibilità dei canali](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Vengono illustrati i canali personalizzati.  
   
@@ -59,17 +60,17 @@ Contenuto della sezione sono inclusi esempi relativi all'estensibilità personal
  [Filtro messaggi personalizzato](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
  Viene illustrato come sostituire i filtri dei messaggi usati da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per distribuire messaggi agli endpoint.  
   
- [Host del servizio personalizzato](../../../../docs/framework/wcf/samples/custom-service-host.md)  
+ [Host di servizi personalizzati](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Viene illustrato come usare un derivato personalizzato della classe <xref:System.ServiceModel.ServiceHost> per modificare il comportamento di runtime di un servizio.  
   
  [Surrogato di DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Viene illustrato in che modo i processi, quali la serializzazione, la deserializzazione, l'esportazione e l'importazione dello schema, possono essere personalizzati usando una classe surrogata del contratto dati.  
   
- [Estensione del controllo sulla gestione degli errori e Reporting](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Estensione del controllo sulla gestione e sulla segnalazione degli errori](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Viene illustrato come estendere il controllo sulla gestione degli errori e sulla segnalazione errori in un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Viene illustrato come implementare e configurare i controlli messaggi del client e del servizio.  
   
- [Proprietà WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
+ [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
  Viene illustrato come eseguire il mapping di nuovi tipi di contenuto ai formati del corpo del messaggio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].

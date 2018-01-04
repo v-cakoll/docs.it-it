@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedura: esporre un contratto a client SOAP e Web
 Per impostazione predefinita, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] rende disponibili endpoint solo ai client SOAP. In [procedura: creare un servizio HTTP Web di WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un endpoint diventa disponibile per i client non SOAP. Possono verificarsi casi in cui si desidera rendere lo stesso contratto disponibile in entrambi i modi, come endpoint Web e come endpoint SOAP. In questo argomento viene illustrato un esempio di come ottenere tale risultato.  
@@ -116,4 +117,4 @@ Per impostazione predefinita, [!INCLUDE[indigo1](../../../../includes/indigo1-md
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.ChannelFactory>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

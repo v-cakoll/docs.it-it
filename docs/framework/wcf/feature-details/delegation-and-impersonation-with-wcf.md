@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -102,10 +103,10 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obbligatorio|n/d|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante|  
-|Allowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
+|Obbligatorio|N/D|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante|  
+|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
 |Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante|  
-|NotAllowed|false|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
+|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non rappresenta il chiamante|  
 |NotAllowed|true|Non consentita (verrà generata un'eccezione <xref:System.InvalidOperationException> ).|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali di Windows e con un token memorizzato nella cache  
@@ -123,31 +124,31 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
   
 |Valore di`AllowedImpersonationLevel` |Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonymous|Sì|n/d|rappresentazione|  
-|Anonymous|No|n/d|Identification|  
-|Identification|n/d|n/d|Identification|  
-|rappresentazione|Sì|n/d|rappresentazione|  
-|rappresentazione|No|n/d|Identification|  
-|Delegation|Sì|Sì|Delegation|  
-|Delegation|Sì|No|rappresentazione|  
-|Delegation|No|n/d|Identification|  
+|Anonymous|Yes|N/D|Rappresentazione|  
+|Anonymous|No|N/D|Identification|  
+|Identification|N/D|N/D|Identification|  
+|Rappresentazione|Yes|N/D|Rappresentazione|  
+|Rappresentazione|No|N/D|Identification|  
+|Delegation|Yes|Yes|Delegation|  
+|Delegation|Yes|No|rappresentazione|  
+|Delegation|No|N/D|Identification|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione con credenziali basate sul nome utente e con un token memorizzato nella cache  
  Passando al servizio il nome utente e la password, un client consente a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di accedere come tale utente, il che equivale a impostare la proprietà `AllowedImpersonationLevel` su <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> (la proprietà `AllowedImpersonationLevel` è disponibile sulle classi <xref:System.ServiceModel.Security.WindowsClientCredential> e <xref:System.ServiceModel.Security.HttpDigestClientCredential>). Nella tabella seguente viene indicato il livello di rappresentazione ottenuto quando il servizio riceve credenziali basate sul nome utente.  
   
 |`AllowedImpersonationLevel`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Sì|Sì|Delegation|  
-|n/d|Sì|No|rappresentazione|  
-|n/d|No|n/d|Identification|  
+|N/D|Yes|Yes|Delegation|  
+|N/D|Yes|No|Rappresentazione|  
+|N/D|No|N/D|Identification|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Livello di rappresentazione ottenuto dalla rappresentazione basata su S4U  
   
-|Il servizio dispone di `SeTcbPrivilege`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel`|  
+|Il servizio dispone di `SeTcbPrivilege`|Il servizio dispone di `SeImpersonatePrivilege`|Servizio e client con funzionalità di delega|`ImpersonationLevel` con token memorizzato nella cache|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Sì|Sì|n/d|rappresentazione|  
-|Sì|No|n/d|Identification|  
-|No|n/d|n/d|Identification|  
+|Yes|Yes|N/D|Rappresentazione|  
+|Yes|No|N/D|Identification|  
+|No|N/D|N/D|Identification|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Mapping di un certificato client a un account di Windows  
  È possibile effettuare l'autenticazione di un client a un servizio tramite un certificato e fare in modo che il servizio esegua il mapping del client a un account esistente tramite Active Directory. Nel codice XML seguente viene illustrato come configurare il servizio affinché esegua il mapping del certificato.  
@@ -191,7 +192,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|No|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Sì|No|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sì|Sì|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Sì|Yes|  
   
  Nell'esempio di codice riportato di seguito viene illustrato come utilizzare la delega.  
   
@@ -229,7 +230,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ChannelFactory%601>  
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Utilizzo della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [Rappresentazione del Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Uso della rappresentazione con la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Rappresentazione del client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  [Procedura: Rappresentare un client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
  [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

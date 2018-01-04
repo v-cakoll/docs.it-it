@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Associazioni di Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa il modo in cui il software per un'applicazione viene scritto dal modo in cui comunica con altro software. Le associazioni vengono utilizzate per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le associazioni per generare la rappresentazione della rete sottostante dell'endpoint, pertanto la maggior parte dei dettagli di associazione deve essere concordata dalle parti coinvolte nella comunicazione. Il modo più semplice per conseguire questo risultato consiste nel fare in modo che i client di un servizio utilizzino la stessa associazione utilizzata dall'endpoint del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire questa operazione, vedere [utilizzando associazioni ai client e configurare i servizi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
   
  Se risulta necessario una raccolta di elementi di associazione non disponibili tra queste associazioni fornite dal sistema, è possibile creare un'associazione personalizzata costituita dalla raccolta di elementi di associazione necessari. Le associazioni personalizzate sono di facile creazione e non richiedono una nuova classe ma non forniscono proprietà per il controllo degli elementi di associazione o delle relative impostazioni. È possibile accedere agli elementi di associazione e modificarne le impostazioni tramite la raccolta che li contiene. Per informazioni dettagliate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Configurazione di associazioni fornite dal sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Viene descritto come utilizzare e modificare le associazioni che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce a supporto di scenari comuni.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
  [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)  
  Viene descritto l'elemento <xref:System.ServiceModel.Channels.CustomBinding> e la circostanza in cui è utilizzato.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Channels.Binding>  
   
  <xref:System.ServiceModel.Channels.BindingElement>  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 445a7c5e9b0665fcf57138144c8cf3445f2d15f2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Accesso a OperationContext da un servizio flusso di lavoro
 Per accedere a <xref:System.ServiceModel.OperationContext> in un servizio di flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Eseguire l'override del metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> passato come riferimento a <xref:System.ServiceModel.OperationContext>. In questo argomento viene descritta l'implementazione della proprietà di esecuzione per recuperare un'intestazione personalizzata e un'attività personalizzata che esporrà tale proprietà a <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e <xref:System.ServiceModel.OperationContext> verranno recuperate le informazioni.  Nell'argomento viene inoltre illustrato come accedere a <xref:System.ServiceModel.OperationContext> sul lato client per aggiungere intestazioni in uscita tramite l'interfaccia <xref:System.ServiceModel.Activities.ISendMessageCallback>.  

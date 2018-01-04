@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 312a4b854cb527e63d6866247d4147720ce0710c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: usare certificati X.509 separati per la firma e la crittografia
 In questo argomento viene illustrato come configurare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per utilizzare certificati diversi per la firma e la crittografia dei messaggi sul client e nel servizio.  
@@ -105,4 +106,4 @@ In questo argomento viene illustrato come configurare [!INCLUDE[indigo1](../../.
  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Procedura dettagliata: Creazione di Client personalizzate e le credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+ [Procedura dettagliata: creazione di credenziali client e del servizio personalizzate](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

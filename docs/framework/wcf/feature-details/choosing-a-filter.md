@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.  
@@ -146,5 +147,5 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]progettazione di query XPath, vedere [sintassi XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Procedura: Utilizzare i filtri](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [Procedura: Usare filtri](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

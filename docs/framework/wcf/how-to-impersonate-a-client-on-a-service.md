@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Procedura: rappresentare un client in un servizio
 La rappresentazione di un client in un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente a quest'ultimo di eseguire azioni per conto del client. Per le azioni soggette ai controlli dell'elenco di controllo di accesso (ACL), ad esempio l'accesso a directory e file in un computer o l'accesso a un database SQL Server, il controllo ACL si basa sull'account utente del client. In questo argomento vengono illustrati i passaggi di base necessari che consentono a un client in un dominio Windows di impostare un livello di rappresentazione di client. Per un esempio pratico, vedere [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]la rappresentazione del client, vedere [delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -58,5 +59,5 @@ La rappresentazione di un client in un servizio [!INCLUDE[indigo1](../../../incl
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.OperationBehaviorAttribute>  
  <xref:System.Security.Principal.TokenImpersonationLevel>  
- [Rappresentazione del Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Rappresentazione del client](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  [Delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

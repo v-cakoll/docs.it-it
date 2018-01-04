@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>Panoramica delle code
 Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive verrà illustrato in dettaglio come i concetti dell'accodamento descritti in questa sezione si applicano a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -83,13 +84,13 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
  Quando un messaggio raggiunge la coda di destinazione, è possibile che il servizio non riesca ripetutamente a elaborare il messaggio. Ad esempio, un'applicazione legge un messaggio dalla coda in una transazione e dopo aver aggiornato un database può scoprire che è stato disconnesso temporaneamente. In questo caso, viene eseguito il rollback della transazione, viene creata una transazione e il messaggio viene letto nuovamente dalla coda. Un secondo tentativo può riuscire o meno. In alcuni casi, a seconda della causa dell'errore, il recapito del messaggio all'applicazione può non riuscire ripetutamente. In questo caso, il messaggio viene considerato "non elaborabile" e viene spostato in una coda non elaborabile che può essere letta da un'applicazione che gestisce i messaggi non elaborabili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accodamento messaggi in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Accodamento messaggi in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Code e sessioni](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+ [Code di messaggi non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  [Comunicazione volatile in coda](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Accodamento messaggi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Sicurezza del messaggio su Accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -13,17 +13,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c47d1408bde53fb006fe6a5392ac1f0c86afe1f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd73af407b6cac238f8a22b13c7598aa0d27b1c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 Le considerazioni sulle prestazioni sono sempre importanti in caso di generazione di applicazioni. Contenuto della sezione sono contenute voci relative a prestazioni e protezione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Gestione attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  Viene descritto il meccanismo più veloce per trovare attestazioni in una raccolta di attestazioni.  
   
  [Crittografia di firme digitali](../../../../docs/framework/wcf/feature-details/encryption-of-digital-signatures.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fb471a0d91c350bf5df320b8f2ea3b32e74d9ab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41dfc85df1b706028fd95465596a980c040d512
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a>Procedura: creare una channel factory e usarla per la creazione e la gestione di canali
 La classe <xref:System.ServiceModel.DuplexChannelFactory%601> fornisce i mezzi per creare e gestire canali duplex di diversi tipi utilizzati dai client per scambiare messaggi con gli endpoint di servizio.  

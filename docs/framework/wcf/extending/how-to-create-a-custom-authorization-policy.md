@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Procedura: creare un criterio di autorizzazione personalizzato
 L'infrastruttura del modello di identità di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta un modello di autorizzazione basato sulle attestazioni. Le attestazioni vengono estratte dai token, elaborate facoltativamente dal criterio di autorizzazione personalizzato e poi collocate nella classe <xref:System.IdentityModel.Policy.AuthorizationContext> che può quindi essere esaminata per prendere decisioni in merito alle autorizzazioni. È possibile utilizzare un criterio personalizzato per trasformare le attestazioni ottenute dai token in ingresso in attestazioni previste dall'applicazione. In questo modo, il livello dell'applicazione può essere isolato dai dettagli relativi alle differenti attestazioni fornite dai diversi tipi di token supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In questo argomento viene illustrato come implementare un criterio di autorizzazione personalizzato e come aggiungerlo alla raccolta di criteri utilizzati da un servizio.  
@@ -87,6 +88,6 @@ L'infrastruttura del modello di identità di [!INCLUDE[indigo1](../../../../incl
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Procedura: confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Procedura: creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Criteri di autorizzazione](../../../../docs/framework/wcf/samples/authorization-policy.md)

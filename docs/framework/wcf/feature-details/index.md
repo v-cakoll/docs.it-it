@@ -17,26 +17,27 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Dettagli delle funzionalità di WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di esercitare un controllo esteso sulle funzioni di messaggistica di un'applicazione. Negli argomenti contenuti in questa sezione vengono descritte in dettaglio le funzionalità disponibili. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vedere programmazione, base [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Viene illustrato come creare e configurare servizi flusso di lavoro.  
   
- [Endpoint: Indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Viene descritto come controllare più aspetti del servizio.  
   
- [Trasferimento dei dati e serializzazione](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
+ [Trasferimento e serializzazione dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Viene spiegato come la serializzazione dei dati possa essere adattata per l'interoperatività o la compatibilità futura.  
   
- [Le sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [Sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  Vengono descritte la modalità di creazione di istanze e la modalità di sessione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e viene spiegato come selezionare la modalità appropriata per l'applicazione.  
   
  [Trasporti](../../../../docs/framework/wcf/feature-details/transports.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
  [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)  
  Viene descritto come la sicurezza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consenta di creare applicazioni che garantiscono riservatezza e integrità. Sono inoltre disponibili autenticazione e autorizzazione, nonché funzionalità di controllo.  
   
- [Rete peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Reti peer-to-peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Viene spiegato dettagliatamente come creare servizi e client peer.  
   
  [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)  
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/02/2017
  [Interoperabilità e integrazione](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  Viene descritto come utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere la logica esistente anziché riscriverla, nel caso in cui si disponga di una grande quantità di logica di applicazione basata sul componente in COM+.  
   
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  Viene descritto il modello di programmazione Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che consente agli sviluppatori di esporre operazioni del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agli endpoint non-SOAP.  
   
  [Diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/02/2017
  [Routing](../../../../docs/framework/wcf/feature-details/routing.md)  
  Viene descritto il servizio di routing.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  

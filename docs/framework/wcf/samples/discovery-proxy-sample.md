@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 515f91baf48f68ba0c1cb32e00152bf025fe7323
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-proxy-sample"></a>Esempio relativo al proxy di individuazione
 Questo esempio mostra come creare un'implementazione di un proxy di individuazione per archiviare informazioni sui servizi esistenti e come i client possono eseguire una query su tale proxy per ricevere informazioni. L'esempio è costituito da tre progetti:  
@@ -47,7 +48,7 @@ Questo esempio mostra come creare un'implementazione di un proxy di individuazio
   
  Il file è diviso in due aree, metodi della cache del proxy e implementazione del proxy di individuazione. L'area dei metodi della cache del proxy contiene metodi utilizzati per aggiornare <xref:System.Collections.Generic.Dictionary%602>, eseguire query su <xref:System.Collections.Generic.Dictionary%602> e stampare dati per gli utenti. L'area di implementazione del proxy di individuazione contiene i metodi ignorati richiesti per la funzionalità di annuncio e probe. Tali metodi definiscono le azioni intraprese da un proxy dopo avere ricevuto un annuncio online, un annuncio offline o un messaggio del probe.  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Nel file Program.cs nel progetto Service, lo stesso URI viene utilizzato per l'endpoint dell'annuncio come proxy di individuazione. Ciò si verifica perché il servizio utilizza l'endpoint per l'invio degli annunci, mentre il proxy lo utilizza per riceverli. Il servizio utilizza <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> e aggiunge un endpoint relativo agli annunci.  
   
 ## <a name="client"></a>Client  

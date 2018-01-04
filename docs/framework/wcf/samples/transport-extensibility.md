@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b46e3659f2311f5f049d4bfd04b1731bb9b4ae7d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8390bd5199394c25c42a1d35f2be21017942478
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-extensibility"></a>Estensibilità del trasporto
 Contenuto della sezione sono inclusi esempi che descrivono i trasporti personalizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attivazione UDP](../../../../docs/framework/wcf/samples/udp-activation.md)  
  Viene illustrato come estendere il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio per supportare l'attivazione del processo mediante il servizio di attivazione processo Windows (WAS).  
   
- [Trasporto: Transazioni personalizzate nell'esempio UDP](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)  
+ [Trasporto: transazioni personalizzate nell'esempio UDP](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)  
  Viene descritto come estendere l'esempio Trasporto UDP per supportare flussi di transazioni personalizzate e viene illustrato l'utilizzo della proprietà <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
  [Trasporto: Interoperabilità WSE 3.0 TCP](../../../../docs/framework/wcf/samples/transport-wse-3-0-tcp-interoperability.md)  

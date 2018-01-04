@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26b638b81f6402748b261e0766c18a6e9b3489d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -90,9 +91,9 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Attacchi di riproduzione](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Manomissione](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

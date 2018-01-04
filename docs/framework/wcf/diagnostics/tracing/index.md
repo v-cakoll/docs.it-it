@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>Traccia
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] fornisce strumenti applicativi e dati diagnostici per il monitoraggio e l'analisi degli errori. Al posto di un debugger, è possibile utilizzare la traccia per capire il comportamento o le cause di errori di un'applicazione. È anche possibile correlare errori e processi attraverso i componenti per fornire un'esperienza end-to-end.  
@@ -28,16 +29,16 @@ ms.lasthandoff: 12/02/2017
   
 -   Eventi di errore di Windows quando la funzionalità di traccia non viene eseguita correttamente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Configurazione della traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
  In questo argomento viene illustrato come è possibile configurare la traccia a livelli diversi per rispondere a requisiti specifici.  
   
- [Traccia end-to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
  Contenuto della sezione viene illustrato come utilizzare la traccia e propagazione di attività per la correlazione end-to-end per agevolare il debug.  
   
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  Contenuto della sezione viene illustrato come utilizzare la traccia per eseguire il debug dell'applicazione.  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>Panoramica sulla diffusione WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce il supporto per l'esposizione di feed di diffusione da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La diffusione è un meccanismo di integrazione delle applicazioni in cui un server espone alcuni dati dell'applicazione in un formato interoperativo noto come feed. Un feed è una raccolta di dati dell'applicazione costituito da alcuni metadati a livello feed (titolo, autore, URL e altri metadati) e da una serie di elementi feed. All'interno del feed, gli elementi feed sono di solito organizzati in ordine cronologico inverso. Un elemento feed è costituito da un set standard di metadati di livello feed (titolo, URL, data di creazione, categoria e altri metadati di livello elemento) e da una quantità arbitraria di dati specifici dell'applicazione. I due tipi più comuni di feed di diffusione sono RSS (Really Simple Syndication) 2.0 e Atom 1.0, entrambi supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -32,4 +33,4 @@ ms.lasthandoff: 12/02/2017
  La piattaforma di diffusione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta RSS 2.0 e Atom 1.0.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

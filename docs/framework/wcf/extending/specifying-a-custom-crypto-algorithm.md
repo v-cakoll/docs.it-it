@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abdb48822de8c08c23adc641a93ac7615bcc2eea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Specifica di un algoritmo di crittografia personalizzato
 WCF consente di specificare un algoritmo di crittografia personalizzato da usare per crittografare i dati o calcolare le firme digitali. A tale scopo, attenersi alla procedura seguente:  
@@ -138,5 +139,5 @@ WSHttpBinding binding = new WSHttpBinding();
 ## <a name="see-also"></a>Vedere anche  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)

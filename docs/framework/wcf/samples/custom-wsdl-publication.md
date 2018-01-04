@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07c4b4c24d6a5e075f342b186a8123a3e0f19119
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-wsdl-publication"></a>Pubblicazione WSDL personalizzata
 Nell'esempio viene illustrato come eseguire le seguenti operazioni:  
@@ -33,7 +34,7 @@ Nell'esempio viene illustrato come eseguire le seguenti operazioni:
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il servizio in questo esempio è contrassegnato con due attributi personalizzati. Il primo, `WsdlDocumentationAttribute`, accetta una stringa nel costruttore e può essere applicato per fornire un'interfaccia o un'operazione del contratto con una stringa che ne descrive l'utilizzo. Il secondo, `WsdlParamOrReturnDocumentationAttribute`, può essere applicato ai valori o parametri restituiti per descrivere tali valori nell'operazione. Nell'esempio seguente viene illustrato un contratto di servizio, `ICalculator`, descritto mediante tali attributi.  
   
 ```  

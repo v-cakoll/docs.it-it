@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 275499a2373bfd1a1713d0b9c7291a117faa9671
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-metadata"></a>Pubblicazione di metadati
 I servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pubblicano metadati tramite la pubblicazione di uno o più endpoint dei metadati. La pubblicazione di metadati del servizio rende disponibili i metadati utilizzando protocolli standard, ad esempio le richieste WS-MetadataExchange (MEX) e HTTP/GET. Gli endpoint dei metadati sono simili ad altri endpoint del servizio per indirizzo, associazione e contratto e possono essere aggiunti a un host del servizio tramite configurazione o codice imperativo.  
@@ -36,14 +37,14 @@ I servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pubblicano met
 ### <a name="http-get-metadata-endpoints"></a>Endpoint dei metadati HTTP GET  
  Per aggiungere un endpoint dei metadati al servizio che risponda alle richieste HTTP/GET, impostare la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> in <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> su `true`. È inoltre possibile configurare un endpoint dei metadati che utilizza HTTPS impostando la proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> in <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> su `true`.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: pubblicare metadati per un servizio utilizzando un File di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  Illustra come configurare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per pubblicare metadati in modo che i client possano recuperare i metadati utilizzando una richiesta WS-MetadataExchange o HTTP/GET tramite la stringa di query `?wsdl`.  
   
- [Procedura: pubblicare metadati per un servizio utilizzando il codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Procedura: Pubblicare metadati per un servizio usando il codice](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  Illustra come consentire la pubblicazione di metadati per un servizio nel codice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in modo che i client possano recuperare i metadati utilizzando una richiesta WS-MetadataExchange o HTTP/GET tramite la stringa di query `?wsdl`.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
   
  <xref:System.ServiceModel.Description.IMetadataExchange>  

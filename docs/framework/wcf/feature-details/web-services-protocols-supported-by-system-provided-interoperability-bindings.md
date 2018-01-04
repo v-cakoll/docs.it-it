@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è realizzato per interoperare con servizi Web che supportano un set di specifiche note come specifiche dei servizi Web. Per semplificare la configurazione del servizio per le procedure consigliate di interoperabilità, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono state introdotte tre associazioni interoperative fornite dal sistema: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Per l'interoperabilità con gli standard OASIS (Organization for the Advancement of Structured Information Standards), in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è inclusa un'associazione interoperativa fornita dal sistema: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Per la pubblicazione dei metadati, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include due associazioni interoperative fornita dal sistema: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). In questo argomento vengono elencate le specifiche supportate dalle associazioni interoperative fornite dal sistema.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  Per informazioni sulle associazioni utilizzate per pubblicare metadati, vedere la sezione "Associazioni di metadati fornite dal sistema", più avanti in questo argomento.  
   
-|Categoria|Protocollo|Specifica e utilizzo|  
+|Category|Protocollo|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` e `WS2007HttpBinding` utilizzano i trasporti HTTP e HTTPS.|  
 |Messaggistica|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding` e `ws2007HttpBinding` supportano Message Transmission Optimization Mechanism (MTOM). Non utilizzato per impostazione predefinita. Per utilizzare MTOM, impostare l'attributo `messageEncoding` su `"Mtom"`.<br /><br /> Esempio:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
-|Categoria|Protocollo|Specifica e utilizzo|  
+|Category|Protocollo|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Messaggistica|SOAP 1,1|[SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> In conformità con Basic Profile 1.1, l'elemento `basicHttpBinding` implementa il protocollo di messaggi SOAP 1.1.|  
 |Sicurezza|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1,0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> In conformità con Basic Security Profile, l'elemento `basicHttpBinding` implementa la specifica Web Services Security (WSS) SOAP Message Security 1.0 per protezione basata su nome utente/password e X.509.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding, e wsDualHttpBinding  
   
-|Categoria|Protocollo|Specifica e utilizzo|  
+|Category|Protocollo|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Messaggistica|SOAP 1.2|[Nozioni di base](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Componenti aggiuntivi (incluso l'associazione HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Messaggistica|WS-Addressing 2005/08|[1.0 - Core indirizzamento dei servizi Web](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Indirizzamento 1.0 - SOAP servizi Web](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding` e `wsDualHttpBinding` implementano la raccomandazione WS-Addressing del World Wide Web Consortium (W3C) per abilitare la messaggistica asincrona, la correlazione dei messaggi e i meccanismi di indirizzamento indipendenti dal trasporto.<br /><br /> WCF non supporta la crittografia delle intestazioni WS-Addressing, sebbene sia consentita dalle specifiche WS-*.|  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
  Il [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) associazione supporta i seguenti protocolli. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]con questa associazione, vedere [pubblicazione dei metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Categoria|Protocollo|Specifica e utilizzo|  
+|Category|Protocollo|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |Messaggistica|SOAP 1.2|[Nozioni di base](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Componenti aggiuntivi (incluso l'associazione HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) supporta i seguenti protocolli. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]con questa associazione, vedere [pubblicazione dei metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Categoria|Protocollo|Specifica e utilizzo|  
+|Category|Protocollo|Specifica e utilizzo|  
 |--------------|--------------|-----------------------------|  
 |Trasporto|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> La protezione del trasporto è attivata.|  
 |Messaggistica|SOAP 1.2|[Nozioni di base](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Framework di messaggistica](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Componenti aggiuntivi (incluso l'associazione HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  

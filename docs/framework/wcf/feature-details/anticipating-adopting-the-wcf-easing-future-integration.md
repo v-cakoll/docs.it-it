@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitare l'integrazione futura
 Se si sta utilizzando ASP.NET ma si prevede di passare a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in futuro, in questo argomento vengono fornite indicazioni per assicurare il corretto funzionamento dei nuovi servizi Web ASP.NET con le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -54,4 +55,4 @@ public interface IEcho
  Evitare di utilizzare le opzioni di autenticazione fornite in Internet Information Services (IIS), poiché i client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non le supportano. Se occorre proteggere un servizio, utilizzare le opzioni fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Queste opzioni sono infatti più affidabili e sono basate su protocolli standard.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Preparazione all'adozione di Windows Communication Foundation: semplificazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

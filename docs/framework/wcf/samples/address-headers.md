@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d46dac29157455f736e30515f4bc6b277b63694
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="address-headers"></a>Intestazioni di indirizzo
 Nell'esempio delle intestazioni di indirizzo viene illustrato come i client possano passare parametri di riferimento a un servizio utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +30,7 @@ Nell'esempio delle intestazioni di indirizzo viene illustrato come i client poss
   
  Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri di riferimento che aggiungono informazioni di identificazione aggiuntive. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], questi parametri di riferimento vengono modellati come istanze della classe `AddressHeader`.  
   
- In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro di riferimento e ne utilizza il valore nella logica dell'operazione del servizio "Hello".  
+ In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro per riferimento e ne usa il valore nella logica dell'operazione del servizio "Hello".  
   
 ## <a name="client"></a>Client  
  Il client deve aggiungere un `AddressHeader` al `EndpointAddress` del `ServiceEndpoint` per inviare un parametro di riferimento. Poiché la classe `EndpointAddress` è immutabile, è necessario modificare l'indirizzo endpoint utilizzando la classe `EndpointAddressBuilder`. Nel codice seguente il client viene inizializzato per inviare un parametro di riferimento come parte del messaggio.  
@@ -76,7 +77,7 @@ OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);
 return "Hello, " + id;  
 ```  
   
- Il codice scorre tutte le intestazioni nel messaggio in arrivo, cercando intestazioni che sono parametri di riferimento dotati del nome particolare. Una volta individuato il parametro, il codice legge il valore del parametro e lo archivia nella variabile "id".  
+ Il codice scorre tutte le intestazioni nel messaggio in arrivo, cercando intestazioni che sono parametri per riferimento dotati del nome particolare. Una volta individuato il parametro, il codice legge il valore del parametro e lo archivia nella variabile "id".  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

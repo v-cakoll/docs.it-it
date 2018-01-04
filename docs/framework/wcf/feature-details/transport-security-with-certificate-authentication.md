@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 632d4cc19c19342363228a1e86b1ba6445d14ac9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sicurezza del trasporto con autenticazione del certificato
 In questo argomento viene illustrato l'utilizzo dei certificati X.509 per l'autenticazione del server e del client con la sicurezza del trasporto. Per ulteriori informazioni su x. 509 certificati vedere [certificati x. 509 a chiave pubblica](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). I certificati devono essere emesso da un'autorità di certificazione, è spesso un emittente di certificati di terze parti. Nei domini Windows Server è possibile utilizzare Servizi certificati Active Directory per rilasciare certificati ai computer client del dominio. Per ulteriori informazioni vedere [Servizi certificati di Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). In questo scenario, il servizio è ospitato in Internet Information Services (IIS) configurato con Secure Sockets Layer (SSL). Il servizio è configurato con un certificato SSL (X.509) per consentire ai client di verificare l'identità del server. Anche il client è configurato con un certificato X.509 per consentire al servizio di verificare l'identità del client. Il certificato del server deve essere ritenuto attendibile dal client e il certificato del client deve essere ritenuto attendibile dal server. Il meccanismo per cui effettivamente il servizio e il client verificano le reciproche identità non rientra nell'ambito di questo argomento. Per ulteriori informazioni vedere [firma digitale su Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -34,8 +35,8 @@ In questo argomento viene illustrato l'utilizzo dei certificati X.509 per l'aute
 |Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con servizi e client di servizi Web esistenti.|  
 |Autenticazione (server)<br /><br /> Autenticazione (client)|Sì (utilizzando un certificato SSL)<br /><br /> sì (utilizzando un certificato X.509)|  
-|Integrità dei dati|Sì|  
-|Riservatezza dei dati|Sì|  
+|Integrità dei dati|Yes|  
+|Riservatezza dei dati|Yes|  
 |Trasporto|HTTPS|  
 |Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -147,5 +148,5 @@ cc.Close();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

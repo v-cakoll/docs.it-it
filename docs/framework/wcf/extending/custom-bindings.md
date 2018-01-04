@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45945fb07f7d1807674453296f7c5e62c829a401
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d51e6e5b72deea417b7313d88a4d58610b401244
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-bindings"></a>Associazioni personalizzate
 Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del servizio è possibile utilizzare la classe <xref:System.ServiceModel.Channels.CustomBinding>. Tutte le associazioni sono costruite a partire da un set ordinato di elementi di associazione. Le associazioni personalizzate possono essere compilate a partire da un set di elementi di associazione forniti dal sistema oppure possono includere elementi di associazione personalizzati definiti dall'utente. È ad esempio possibile utilizzare elementi di associazione personalizzati per consentire l'utilizzo di nuovi trasporti o codificatori presso un endpoint di servizio. Per esempi di utilizzo, vedere [esempi di associazione personalizzate](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -77,8 +78,8 @@ Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del s
 |Transazioni|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|  
 |Affidabilità|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|  
 |Sicurezza|<xref:System.ServiceModel.Channels.SecurityBindingElement>|No|  
-|Codifica|Testo, binario, MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi), personalizzato|Sì|  
-|Trasporto|TCP, HTTP, HTTPS, pipe con nome (anche noto come IPC), Peer-to-peer (P2P), sistema di accodamento dei messaggi (anche noto come MSMQ), personalizzato|Sì|  
+|Codifica|Testo, binario, MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi), personalizzato|Yes|  
+|Trasporto|TCP, HTTP, HTTPS, pipe con nome (anche noto come IPC), Peer-to-peer (P2P), sistema di accodamento dei messaggi (anche noto come MSMQ), personalizzato|Yes|  
   
  È inoltre possibile definire elementi di associazione personalizzati e inserirli tra i livelli appena elencati.  
   
@@ -86,6 +87,6 @@ Quando una delle associazioni fornite dal sistema non soddisfa i requisiti del s
  [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Uso di associazioni per configurare servizi e client](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Procedura: personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
+ [Procedura: Personalizzare un'associazione specificata dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
  [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Associazione personalizzata](../../../../docs/framework/wcf/samples/custom-binding.md)

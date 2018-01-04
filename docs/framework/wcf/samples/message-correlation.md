@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef105626d2427f0ea6dd49f696b78ffac4834f92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-correlation"></a>Correlazione dei messaggi
 In questo esempio viene illustrato come un'applicazione di accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e come i messaggi possono essere correlati tra applicazioni mittenti e riceventi, in uno scenario di richiesta/risposta. In questo esempio viene utilizzata l'associazione msmqIntegrationBinding. Il servizio in questo caso è un'applicazione console self-hosted che consente di osservare il servizio che riceve i messaggi in coda. k  
@@ -323,5 +324,5 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accodamento messaggi in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Accodamento messaggi](http://go.microsoft.com/fwlink/?LinkId=94968)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c74b1826ca280ba05420449758cdbb84dac3e93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-models"></a>Modelli di transazione
 In questo argomento viene descritta la relazione tra i modelli di programmazione della transazione e i componenti dell'infrastruttura forniti da Microsoft.  
@@ -26,7 +27,7 @@ In questo argomento viene descritta la relazione tra i modelli di programmazione
   
  Nelle sezioni seguenti vengono descritti i tre componenti primari della transazione.  
   
-## <a name="windows-communication-foundation-transactions"></a>Transazioni Windows Communication Foundation  
+## <a name="windows-communication-foundation-transactions"></a>Transazioni di Windows Communication Foundation  
  Il supporto delle transazioni in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di scrivere servizi transazionali. Le applicazioni inoltre, con il supporto per il protocollo WS-AtomicTransaction (WS-AT), possono propagare transazioni a servizi Web generati tramite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o tecnologia di terze parti.  
   
  In un servizio o in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le funzionalità delle transazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] forniscono attributi e configurazione per specificare in modo dichiarativo come e quando l'infrastruttura deve creare, propagare e sincronizzare transazioni.  

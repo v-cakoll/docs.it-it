@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrazione di componenti transazionali di Enterprise Services
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]fornisce un meccanismo automatico per l'integrazione di Enterprise Services (vedere [l'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Può tuttavia essere necessario disporre della flessibilità di sviluppare servizi che utilizzano internamente componenti transazionali ospitati all'interno di Enterprise Services. Poiché il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funzionalità delle transazioni si basa sul <xref:System.Transactions> infrastruttura, il processo per l'integrazione di Enterprise Services con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è identico a quello per la specifica di interoperabilità tra <xref:System.Transactions> ed Enterprise Servizi, come descritto [interoperabilità con servizi aziendali e le transazioni COM+](http://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -103,5 +104,5 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

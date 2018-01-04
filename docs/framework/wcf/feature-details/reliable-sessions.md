@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53bb63fbbcf92650085514118a5e9464ab2dea30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions"></a>Sessioni affidabili
 
@@ -34,7 +35,7 @@ La sessione affidabile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] f
 
 Per utilizzare una sessione affidabile con un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilizzare una delle associazioni fornite dal sistema in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che supporta una sessione affidabile per impostazione predefinita o come opzione, oppure creare un'associazione personalizzata che supporti la sessione.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
 [Panoramica delle sessioni affidabili](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
 Descrive le sessioni affidabili, quando utilizzarle, le diverse associazioni che supportano sessioni affidabili e come funzionano.
@@ -51,11 +52,11 @@ Descrive come creare una sessione affidabile su HTTPS.
 [Procedure consigliate per le sessioni affidabili](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)   
 Descrive alcune delle procedure consigliate associate all'utilizzo di una sessione affidabile.
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Riferimenti
 
 <xref:System.ServiceModel.ReliableSession>
 
 ## <a name="see-also"></a>Vedere anche
 
 [Code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)   
-[Le sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+[Sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)

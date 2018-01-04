@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>Considerazioni sulla sicurezza con metadati
 Quando si usano le funzionalità dei metadati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], considerare le implicazioni di sicurezza della pubblicazione, del recupero e dell'utilizzo dei metadati del servizio.  
@@ -49,5 +50,5 @@ Quando si usano le funzionalità dei metadati in [!INCLUDE[indigo1](../../../../
  Il file di configurazione dell'applicazione di un servizio può controllare come e se i metadati vengono pubblicati. È buona norma proteggere il file di configurazione dell'applicazione con elenchi di controllo di accesso (ACL) appropriati, per assicurare che l'autore di un attacco non possa modificare tali impostazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: proteggere endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+ [Procedura: Proteggere gli endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)

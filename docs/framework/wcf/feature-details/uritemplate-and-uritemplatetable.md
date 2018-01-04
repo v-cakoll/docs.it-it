@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
 Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono state aggiunte due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> rappresentano in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gli elementi fondamentali del motore di invio basato su URI. Queste classi possono inoltre essere utilizzate autonomamente, in modo da consentire agli sviluppatori di sfruttare i modelli e il meccanismo di mapping degli URI senza dover implementare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -343,8 +344,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 >  I caratteri á e Á sono considerati caratteri diversi quando sono contenuti in un percorso URI o in un valore letterale di un segmento di percorso <xref:System.UriTemplate>. I caratteri a e A sono invece considerati uguali. I caratteri á e Á sono considerati caratteri uguali quando sono contenuti in un elemento {nomeVariabile} del modello <xref:System.UriTemplate> o in una stringa di query. Anche in questo caso i caratteri a e A sono considerati uguali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Modello a oggetti di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

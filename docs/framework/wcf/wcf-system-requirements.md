@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-system-requirements"></a>Requisiti di sistema per WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazione usata per creare applicazioni distribuite. Di seguito vengono elencati i requisiti che consentono di eseguire [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilizzo del canale client di individuazione
 In fase di scrittura di un'applicazione client WCF è necessario conoscere l'indirizzo endpoint del servizio che si sta chiamando. In molti casi l'indirizzo endpoint di un servizio non è noto in anticipo o l'indirizzo del servizio cambia con il tempo. Il canale client di individuazione consente di scrivere un'applicazione client WCF, descrivere il servizio che si desidera chiamare e il canale client invia automaticamente una richiesta del probe. Quando un servizio risponde, il canale client di individuazione recupera l'indirizzo endpoint per il servizio dalla risposta del probe e lo utilizza per chiamare il servizio.  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinazione di protocolli trust in scenari federati
 In alcuni scenari i client federati comunicano con un servizio e con un servizio token di sicurezza che non hanno la stessa versione Trust. Il WSDL del servizio può contenere un'asserzione `RequestSecurityTokenTemplate` con elementi WS-Trust di versioni diverse rispetto al servizio token di sicurezza. In tali casi, un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] converte gli elementi WS-Trust ricevuti da `RequestSecurityTokenTemplate` affinché corrispondano alla versione Trust del servizio token di sicurezza. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le versioni Trust non corrispondenti vengono gestite solo per le associazioni standard. Tutti i parametri dell'algoritmo standard riconosciuti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fanno parte del binding standard. In questo argomento viene descritto il comportamento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con le varie impostazioni di trust tra il servizio e il servizio token di sicurezza.  

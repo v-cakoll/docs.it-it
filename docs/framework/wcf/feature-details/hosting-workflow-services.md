@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services"></a>Hosting di servizi flusso di lavoro
 Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e sono quindi ospitati in modi analoghi. Come i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o nel servizio Attivazione processo Windows (WAS). I servizi flusso di lavoro possono inoltre essere ospitati in Windows Server AppFabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Vedere Windows Server AppFabric [documentazione di Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [funzionalità di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), e [concetti di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]i vari modi per host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  
@@ -64,5 +65,5 @@ Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve es
  Lo strumento Distribuzione Web è stato creato per agevolare il processo di distribuzione. Lo strumento consente di eseguire la migrazione delle applicazioni tra IIS 6.0 e IIS 7.0, sincronizzare server farm e inserire in pacchetti, archiviare e distribuire applicazioni Web. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Strumento di distribuzione MS](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elementi interni dell'Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
+ [Elementi interni dell'host dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
  [Configurazione di WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)

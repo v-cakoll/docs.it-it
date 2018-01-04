@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 In questo documento viene fornita una panoramica dettagliata dell'architettura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione di quella più semplice di un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio e client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per informazioni su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di programmazione, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -84,7 +85,7 @@ In questo documento viene fornita una panoramica dettagliata dell'architettura [
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService  
 ```  
   
- associazione  
+ binding  
  Definisce le modalità di comunicazione tra un endpoint e gli elementi rimanenti. È costituita da un set di componenti denominati elementi di associazione "impilati" uno sopra l'altro per creare l'infrastruttura di comunicazione. Un'associazione definisce almeno il trasporto (ad esempio HTTP o TCP) e la codifica (ad esempio testo o binaria) utilizzati. Un'associazione può contenere elementi di associazione che specificano dettagli come i meccanismi di sicurezza utilizzati per proteggere i messaggi o il modello del messaggio utilizzato da un endpoint. Per ulteriori informazioni, vedere [configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md).  
   
  elemento di associazione  
@@ -147,7 +148,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
   
  Se abilitati, i metadati per il servizio vengono generati automaticamente da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite il controllo del servizio e dei relativi endpoint. Per pubblicare metadati da un servizio, è necessario abilitare esplicitamente il comportamento dei metadati.  
   
- sicurezza  
+ sicurity  
  In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] include la riservatezza (crittografia dei messaggi per impedire l'intercettazione), integrità (mezzi per il rilevamento di manomissioni del messaggio), autenticazione (mezzi per la convalida di server e client) e autorizzazione (controllo di accesso alle risorse). Queste funzioni vengono fornite basandosi sui meccanismi di sicurezza esistenti, ad esempio TLS su HTTP (anche noto come HTTPS) o implementando una o più delle varie specifiche di sicurezza WS-*.  
   
  modalità di sicurezza del trasporto  

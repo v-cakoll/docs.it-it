@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -163,7 +164,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Disattivato|N/D|N/D|Non vengono create tracce.|N/D|  
 |Critico|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.||Vengono registrate eccezioni non gestite comprese le seguenti:<br /><br /> -OutOfMemoryException<br />-Eccezione ThreadAbortException (il CLR richiama qualsiasi ThreadAbortExceptionHandler)<br />-StackOverflowException (non intercettabile)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errori di avvio applicazione<br />-Eventi Failfast<br />-Blocchi di sistema<br />-Messaggi non elaborabili: tracce di messaggi che l'applicazione avrà esito negativo.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
-|Errore|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.|Si è verificata un'elaborazione imprevista. L'applicazione non è stata in grado di eseguire un'attività come previsto. L'applicazione, tuttavia, è ancora in esecuzione.|Vengono registrate tutte le eccezioni.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
+|Error|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.|Si è verificata un'elaborazione imprevista. L'applicazione non è stata in grado di eseguire un'attività come previsto. L'applicazione, tuttavia, è ancora in esecuzione.|Vengono registrate tutte le eccezioni.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
 |Avviso|Eventi "negativi": eventi che indicano un'elaborazione imprevista o una condizione di errore.|Un possibile problema si è verificato o potrebbe verificarsi, ma l'applicazione funziona ancora correttamente. Tuttavia, potrebbe smettere di farlo.|-L'applicazione riceve più richieste superiore a quello consentiranno dalle impostazioni di limitazione.<br />-La coda di ricezione è prossimo alla capacità massima configurata.<br />-Tempo scaduto.<br />-Le credenziali sono rifiutate.|Amministratori<br /><br /> Sviluppatori di applicazioni|  
 |Informazioni|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente|Attività cardine importanti e corrette di esecuzione dell'applicazione, indipendentemente dal funzionamento corretto o non corretto dell'applicazione.|In generale il sistema genera messaggi informativi utili per il monitoraggio e la diagnosi dello stato di sistema, la valutazione delle prestazioni o il profiling. È possibile utilizzare queste informazioni per la pianificazione della capacità e la gestione delle prestazioni:<br /><br /> -Vengono creati canali.<br />-Listener endpoint vengono creati.<br />-Messaggio entra o abbandona il trasporto.<br />Token di sicurezza viene recuperato.<br />-Impostazione di configurazione viene letto.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  
 |Dettagliato|Eventi "Positivi": eventi che contrassegnano attività cardine eseguite correttamente.|Vengono generati eventi di basso livello per codice utente e manutenzione.|In genere è possibile utilizzare questo livello per il debug o l'ottimizzazione dell'applicazione.<br /><br /> -Intestazione del messaggio riconosciuta.|Amministratori<br /><br /> Sviluppatori di applicazioni<br /><br /> Sviluppatori di prodotti|  

@@ -13,30 +13,31 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>Analisi end-to-end
 La traccia end-to-end (e2e) consente agli sviluppatori di seguire l'esecuzione del codice nell'infrastruttura [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] per analizzare il motivo per cui un percorso di codice ha dato esito negativo o per fornire una traccia dettagliata per la pianificazione della capacità e per l'analisi delle prestazioni. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] offre tre meccanismi di correlazione per consentire la diagnosi della causa di un errore: attività, trasferimenti e propagazione.  
   
  Vedere [gli scenari di traccia End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) per un elenco di scenari di traccia end-to-end e le loro rispettive attività e la traccia di progettazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): descrive le tracce di attività nel [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modello di traccia.  
   
  [Trasferimento](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): viene descritto il trasferimento nel [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modello di traccia e l'uso di trasferimento per correlare le attività all'interno di endpoint.  
   
  [Propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): descrive la propagazione di attività nel [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modello di traccia e l'utilizzo di propagazione per correlare attività attraverso gli endpoint.  
   
- [Riepilogo del tipo di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
+ [Riepilogo dei tipi di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   
  Fornisce un riepilogo di tutti i tipi di analisi di attività  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione della traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Scenari di traccia end-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

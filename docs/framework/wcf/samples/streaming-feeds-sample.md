@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f2789c6756d8e22dae9eb3189dfb616d162ad906
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-feeds-sample"></a>Esempio trasmissione feed
 Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel server, l'esempio illustra come rimandare la creazione di oggetti <xref:System.ServiceModel.Syndication.SyndicationItem> singoli all'interno del feed fino a immediatamente prima della scrittura dell'elemento nel flusso della rete.  
@@ -28,7 +29,7 @@ Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel 
   
  La dimostrazione si avvalgono di [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] iteratori (utilizzando la `yield``return` costrutto parola chiave). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli iteratori, vedere l'argomento relativo all'utilizzo degli iteratori su MSDN.  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il servizio implementa un contratto <xref:System.ServiceModel.Web.WebGetAttribute> di base che è costituito da un'operazione, come mostra il codice seguente.  
   
 ```  

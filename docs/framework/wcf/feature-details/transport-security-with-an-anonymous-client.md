@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Protezione del trasporto con un client anonimo
 In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata la protezione del trasporto (HTTPS) per garantirne la riservatezza e l'integrità. È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server. Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
@@ -35,7 +36,7 @@ In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene
 |--------------------|-----------------|  
 |Modalità di sicurezza|Trasporto|  
 |Interoperabilità|Con i servizi Web e i client esistenti|  
-|Autenticazione (server)<br /><br /> Autenticazione (client)|Sì<br /><br /> A livello di applicazione (nessun supporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] )|  
+|Autenticazione (server)<br /><br /> Autenticazione (client)|Yes<br /><br /> A livello di applicazione (nessun supporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] )|  
 |Integrità|Sì|  
 |Riservatezza|Sì|  
 |Trasporto|HTTPS|  
@@ -125,7 +126,7 @@ In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Sicurezza del trasporto WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

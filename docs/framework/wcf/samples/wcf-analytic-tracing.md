@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>Traccia analitica WCF
 In questo esempio viene descritto come aggiungere eventi di traccia nel flusso di tracce analitiche scritte da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Le tracce analitiche hanno lo scopo di semplificare la visibilità all'interno dei servizi senza un'elevata riduzione delle prestazioni. Questo esempio mostra come utilizzare le API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> per scrivere eventi che si integrano con i servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -45,7 +46,7 @@ In questo esempio viene descritto come aggiungere eventi di traccia nel flusso d
 ## <a name="custom-event-details"></a>Informazioni dettagliate su eventi personalizzati  
  Il manifesto del provider di eventi ETW di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definisce tre eventi progettati per essere generati dagli autori del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dall'interno del codice del servizio. Nella tabella riportata di seguito viene illustrata una suddivisione dei tre eventi.  
   
-|Evento|Descrizione|ID evento|  
+|event|Descrizione|ID evento|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Generare questo evento quando nel servizio si verifica un evento degno di nota che non è tuttavia un problema. Ad esempio, è possibile generare un evento dopo avere effettuato correttamente una chiamata a un database.|301|  
 |UserDefinedWarningOccurred|Generare questo evento quando si verifica un problema che potrebbe comportare un errore in futuro. Ad esempio, è possibile generare un evento di avviso quando una chiamata a un database non riesce ma è comunque possibile recuperarla eseguendo il fallback a un archivio dati ridondante.|302|  

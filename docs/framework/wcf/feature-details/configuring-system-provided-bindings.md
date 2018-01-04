@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>Configurazione di associazioni fornite dal sistema
 Le associazioni specificano il meccanismo di comunicazione da utilizzare durante la comunicazione con un endpoint e indicano come collegarsi a un endpoint. Le associazioni sono costituite da elementi che definiscono come sono sovrapposti i canali [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per fornire le funzionalità di comunicazione richieste. Un'associazione contiene tre tipi di elementi:  
@@ -63,17 +64,17 @@ Le associazioni specificano il meccanismo di comunicazione da utilizzare durante
   
 |Binding|Interoperabilità|Modalità di sicurezza (impostazione predefinita)|Sessione<br /><br /> (Predefinito)|Transazioni|Duplex|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|None, (None)|(Nessuno)|n/d|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Message), misto|(None), Transport, sessione affidabile|(None), sì|n/d|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Message), misto|(None), Transport, sessione affidabile|(None), sì|n/d|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|None, (Message)|(Sessione affidabile)|(None), sì|Sì|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(None), Transport, Message, misto|None, (None)|(Nessuno)|N/D|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Message), misto|(None), Transport, sessione affidabile|(None), sì|N/D|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Message), misto|(None), Transport, sessione affidabile|(None), sì|N/D|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|None, (Message)|(Sessione affidabile)|(None), sì|Yes|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|None, (Message), misto|(None), sessione affidabile|(None), sì|No|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|None, (Message), misto|(None), sessione affidabile|(None), sì|No|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|None, (Transport), Message,<br /><br /> Mixed|Sessione affidabile, (Transport)|(None), sì|Sì|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), sì|Sì|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|None, (Transport), Message,<br /><br /> Mixed|Sessione affidabile, (Transport)|(None), sì|Yes|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), sì|Yes|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(Nessuno)|(None), sì|No|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), misto|(Nessuno)|(Nessuno)|Sì|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(Nessuno)|(None), sì|n/d|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), misto|(Nessuno)|(Nessuno)|Yes|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(Nessuno)|(None), sì|N/D|  
   
  Nella tabella seguente sono spiegate le funzionalità elencate nella tabella precedente.  
   

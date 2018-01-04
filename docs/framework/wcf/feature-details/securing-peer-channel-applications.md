@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 377c2425ff1647c43687aa0a5d9584930cb6b1c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7358852ffc50576f892c70fa2b212a8102d8ab85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-peer-channel-applications"></a>Protezione di applicazioni del canale peer
 Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ha la protezione attivata per impostazione predefinita e offre la protezione basata sul trasporto e/o sui messaggi. In questo argomento vengono illustrati questi due tipi di sicurezza. Il tipo di sicurezza viene specificato dal tag della modalità di sicurezza nella specifica dell'associazione (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode` ).  
@@ -52,5 +53,5 @@ Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includ
  [Scenari relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protezione del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Creazione di un'applicazione del canale Peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Sicurezza del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

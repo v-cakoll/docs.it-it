@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 156960a6594f5475e339b36e5dabf46f26d13d62
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestione degli errori HTTP Web WCF
 La gestione degli errori HTTP Web di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di restituire errori da servizi HTTP Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che specificano un codice di stato HTTP e restituiscono dettagli dell'errore utilizzando lo stesso formato dell'operazione (ad esempio, XML o JSON).  
@@ -60,8 +61,8 @@ Public string Operation2()
  <xref:System.ServiceModel.Web.WebFaultException> è un'eccezione <xref:System.ServiceModel.FaultException> e pertanto può essere utilizzata come modello di programmazione di eccezione dell'errore per i servizi che espongono endpoint SOAP e HTTP Web.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Formattazione di HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Formattazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
  [Definizione e specifica degli errori](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
  [Gestione di eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
  [Invio e ricezione degli errori](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

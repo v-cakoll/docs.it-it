@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è una piattaforma di programmazione distribuita basata su messaggi SOAP. La protezione dei messaggi tra i client e i servizi è pertanto essenziale per garantire la protezione dei dati. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basato sull'infrastruttura di sicurezza esistente e sugli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -111,15 +112,15 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)  
  [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Il controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Guida alla protezione e le procedure consigliate](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Configurazione dei servizi tramite file di configurazione](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

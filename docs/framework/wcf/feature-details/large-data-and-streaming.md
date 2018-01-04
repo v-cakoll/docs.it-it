@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
@@ -249,4 +250,4 @@ public class UploadStreamMessage
 >  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione o ai server proxy e agli altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per un servizio, è necessario modificare il file di configurazione per impostare la modalità di trasferimento per i servizi che si intende utilizzare con i flussi. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

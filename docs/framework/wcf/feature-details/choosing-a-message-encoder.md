@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>Scelta di un codificatore di messaggi
 In questo argomento vengono illustrati criteri per scegliere tra i codificatori di messaggi inclusi in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: binario, testo e MTOM (Message Transmission Optimization Mechanism).  
@@ -44,10 +45,10 @@ In questo argomento vengono illustrati criteri per scegliere tra i codificatori 
 |------------|-----------------|---------------------------------------|  
 |Set di caratteri supportati|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>e <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> supporta solo il Unicode UTF8 e UTF16 (*big-endian* e *little-endian*) codifiche. Se sono richieste altre codifiche, ad esempio UTF7 o ASCII, deve essere utilizzato un codificatore personalizzato. Per un codificatore personalizzato di esempio, vedere [codificatore di messaggi personalizzato](http://go.microsoft.com/fwlink/?LinkId=119857).|Testo|  
 |Ispezione|L'ispezione è la capacità di esaminare i messaggi durante la trasmissione. Le codifiche di testo, con o senza l'utilizzo di SOAP, consentono a numerose applicazioni di ispezionare e analizzare i messaggi senza utilizzare strumenti specializzati. Si noti che l'utilizzo della sicurezza del trasferimento, a livello di messaggio o di trasporto, influisce sulla capacità di ispezionare i messaggi. La riservatezza evita che un messaggio venga esaminato, mentre l'integrità lo protegge dalle modifiche.|Testo|  
-|Affidabilità|L'affidabilità è la flessibilità di un codificatore nei confronti degli errori di trasmissione. L'affidabilità può essere fornita anche a livello di messaggio, trasporto o applicazione. Tutti i codificatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard presumono che un altro livello stia fornendo l'affidabilità. Il codificatore non ha grandi capacità di recupero da un errore di trasmissione.|None|  
+|Affidabilità|L'affidabilità è la flessibilità di un codificatore nei confronti degli errori di trasmissione. L'affidabilità può essere fornita anche a livello di messaggio, trasporto o applicazione. Tutti i codificatori [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard presumono che un altro livello stia fornendo l'affidabilità. Il codificatore non ha grandi capacità di recupero da un errore di trasmissione.|nessuno|  
 |Semplicità|La semplicità rappresenta la facilità con cui è possibile creare codificatori e decodificatori per una specifica di codifica. Le codifiche di testo sono particolarmente vantaggiose per la semplicità. La codifica di testo POX, inoltre, ha anche il vantaggio che non richiede supporto per l'elaborazione di SOAP.|Testo (POX)|  
 |Dimensioni|La codifica determina la quantità di sovraccarico imposto sul contenuto. La dimensione dei messaggi codificati è direttamente correlata alla velocità effettiva massima delle operazioni del servizio. Le codifiche binarie in genere sono più compatte di quelle di testo. Quando la dimensione del messaggio è importante, prendere in considerazione anche la compressione del contenuto del messaggio durante la codifica. La compressione aumenta tuttavia gli oneri di elaborazione sia per il mittente che per il destinatario del messaggio.|Binario|  
-|Flusso|Il flusso consente alle applicazioni di iniziare a elaborare un messaggio prima che sia arrivato tutto. Per utilizzare in modo efficiente un flusso, è necessario che i dati importanti di un messaggio siano disponibili all'inizio del messaggio, affinché l'applicazione ricevente non debba attenderne l'arrivo. Le applicazioni che utilizzano il trasferimento tramite flussi, inoltre, devono organizzare i dati nel messaggio in modo incrementale affinché il contenuto non abbia dipendenze in avanti. In molti casi, è necessario trovare un compromesso tra l'utilizzo di un flusso e la riduzione massima delle dimensioni di trasferimento di quel contenuto.|None|  
+|Flusso|Il flusso consente alle applicazioni di iniziare a elaborare un messaggio prima che sia arrivato tutto. Per utilizzare in modo efficiente un flusso, è necessario che i dati importanti di un messaggio siano disponibili all'inizio del messaggio, affinché l'applicazione ricevente non debba attenderne l'arrivo. Le applicazioni che utilizzano il trasferimento tramite flussi, inoltre, devono organizzare i dati nel messaggio in modo incrementale affinché il contenuto non abbia dipendenze in avanti. In molti casi, è necessario trovare un compromesso tra l'utilizzo di un flusso e la riduzione massima delle dimensioni di trasferimento di quel contenuto.|nessuno|  
 |Supporto di strumenti di terze parti|Le aree di supporto per una codifica comprendono sviluppo e diagnosi. Gli sviluppatori di terze parti hanno investito massicciamente in librerie e toolkit per la gestione dei messaggi codificati nel formato POX.|Testo (POX)|  
 |Interoperabilità|Questo fattore si riferisce alla capacità di un codificatore [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di interoperare con servizi non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|Testo<br /><br /> MTOM (parziale)|  
   

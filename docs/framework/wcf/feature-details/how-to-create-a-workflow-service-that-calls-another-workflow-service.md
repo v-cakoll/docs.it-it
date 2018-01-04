@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54c1ffcef9946d2be174f92545cdba3181b0d8ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procedura: creare un servizio flusso di lavoro che chiama un altro servizio flusso di lavoro
 Per un servizio di flusso di lavoro è talvolta necessario ottenere informazioni da un altro servizio analogo.  In questo argomento viene illustrato come eseguire chiamate tra servizi di flusso di lavoro. Verranno creati due servizi di flusso di lavoro: uno che dispone di un metodo che inverte la stringa di input e l'altro che converte la stringa di input in caratteri maiuscoli dopo aver invertito la stringa utilizzata dal primo servizio.  

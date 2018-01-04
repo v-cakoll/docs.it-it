@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, l'illustrazione seguente mostra la distribuzione standard delle applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in coda.  
@@ -115,4 +116,4 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
  Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché l'associazione `MsmqIntegrationBinding` supporta l'indirizzamento del nome di formato MSMQ in formato libero, è possibile utilizzare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza questa associazione per utilizzare le funzionalità di multicast e di lista di distribuzione di MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

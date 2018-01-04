@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Creazione di tracce di codice utente
 Oltre ad attivare le funzionalità di traccia nella configurazione allo scopo di raccogliere dati di strumentazione generati da [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], è possibile creare tracce nel codice utente a livello di programmazione. In questo modo è possibile creare attivamente dati di strumentazione che possono essere successivamente usati a scopo diagnostico. In questo argomento viene illustrata la procedura da seguire.  
@@ -151,4 +152,4 @@ Visualizzazione grafica della correlazione tra errori
  La definizione delle attività e la propagazione dell'ID attività consentono di eseguire la correlazione diretta degli errori sui vari endpoint. In questo modo è possibile individuare più rapidamente la causa radice di un errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensione delle funzionalità di traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+ [Estensione della funzionalità di traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md)

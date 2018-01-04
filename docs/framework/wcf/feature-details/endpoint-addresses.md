@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
@@ -149,4 +150,4 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 ## <a name="see-also"></a>Vedere anche  
  [Specifica di un indirizzo dell'endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [L'autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

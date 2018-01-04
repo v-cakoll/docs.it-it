@@ -13,17 +13,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33de75838c7a8df895fe385f2c7e18f31a22f774
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 69c7201e7d8f4778173bed0313e667dbd4bd4d81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-interoperability"></a>Interoperabilità dei servizi
 Questa sezione include esempi che illustrano l'interazione tra [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e altre tecnologie del servizio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Utilizzo del Moniker WCF con i client COM](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Uso del moniker WCF con i client COM](../../../../docs/framework/wcf/samples/using-the-wcf-moniker-with-com-clients.md)  
  Viene illustrato come utilizzare il moniker del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per integrare servizi Web in ambienti di sviluppo basati su COM, ad esempio Microsoft Office Visual Basic for Applications (Office VBA) o Visual Basic 6.0.  
   
  [Client ASMX con un servizio WCF](../../../../docs/framework/wcf/samples/asmx-client-with-a-wcf-service.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>Amministrazione e diagnostica
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce numerose funzionalità che possono aiutare a monitorare le varie fasi della vita di un'applicazione. È ad esempio possibile utilizzare la configurazione per impostare servizi e client in fase di distribuzione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone inoltre dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. In caso di errore dell'applicazione o di comportamento non corretto, è possibile utilizzare il Registro eventi per controllare se si è verificato qualcosa di grave. È inoltre possibile utilizzare la registrazione messaggi e le tracce per controllare gli eventi end-to-end in corso nell'applicazione. Queste funzionalità aiutano sia gli sviluppatori che i professionisti IT a identificare e risolvere i problemi di un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quando non si comporta correttamente.  
@@ -53,12 +54,12 @@ ms.lasthandoff: 12/02/2017
  [Configurazione dell'applicazione](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
  [Distribuzione di servizi](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
  [Riferimenti per le eccezioni](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
- [Registrazione degli eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Registrazione eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [Strumento di registrazione ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
  [Traccia](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [Uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
  [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
  [Strumenti Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

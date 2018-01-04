@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 In questo esempio viene descritto come ospitare un servizio REST di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizzando route ASP.NET. Il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio viene illustrata una versione indipendente di questo scenario e ne illustra l'implementazione del servizio in modo approfondito. Questo argomento descrive la funzionalità di integrazione ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] routing ASP.NET, vedere <xref:System.Web.Routing>.  
@@ -35,13 +36,13 @@ In questo esempio viene descritto come ospitare un servizio REST di [!INCLUDE[in
   
  L'esempio è costituito da 3 progetti:  
   
- Servizio  
+ Service  
  Progetto di applicazione Web che include un servizio WCF HTTP ospitato in ASP.NET.  
   
  Client  
  Progetto di applicazione console che effettua chiamate al servizio.  
   
- Comuni  
+ Common  
  Libreria condivisa che contiene il tipo `Customer` utilizzato dal client e dal servizio. Quando viene eseguita l'applicazione console client, il client effettua richieste al servizio e scrive le informazioni pertinenti dalle risposte nella finestra della console.  
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  

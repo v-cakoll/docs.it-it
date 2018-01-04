@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f38d09ef9b1ee2e620b42082a05c6832eec7c746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>Eccezioni IdentityModel
 In questo argomento vengono elencate tutte le eccezioni generate da IdentityModel.  
@@ -204,7 +205,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|Elementi necessari "NameIdentifier" e "ConfirmationMethod" non trovati per SamlSubject in lettura.|  
 |TraceCodeSecurityAuditWrittenFailure|Errore durante la scrittura nel registro di controllo di sicurezza.|  
 |UnsupportedCryptoAlgorithm|L'algoritmo di crittografia specificato non è supportato in questo contesto.|  
-|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|Il token di firma non ha chiavi che supportino la suite di algoritmi specificata.|  
+|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|Il token di firma non ha chiavi che supportino il gruppo di algoritmi specificato.|  
 |SAMLNameIdentifierMissingIdentifierValueOnRead|Stringa "Identifier" mancante per SamlNameIdentifier in lettura.|  
 |SAMLSubjectStatementRequiresSubject|SAMLSubjectStatement richiede che venga specificato un SAMLSubject.|  
 |TraceCodeSslClientCertMissing|Il client remoto SSL non è riuscito a fornire un certificato obbligatorio.|  
@@ -217,7 +218,7 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |KeyIdentifierCannotCreateKey|SecurityKeyIdentifier è privo di clausole che consentano la creazione di una chiave.|  
 |X509IsInUntrustedStore|Il certificato X.509 specificato proviene da un archivio certificati non disponibile nell'elenco locale.|  
 |UnexpectedXmlChildNode|Il nodo figlio XML specificato del tipo specificato non è previsto per l'elemento specificato.|  
-|TokenDoesNotMeetKeySizeRequirements|I requisiti di dimensione della chiave per la suite di algoritmi specificata non sono soddisfatti dal token specificato.|  
+|TokenDoesNotMeetKeySizeRequirements|I requisiti di dimensione della chiave per il gruppo di algoritmi specificato non sono soddisfatti dal token specificato.|  
 |TraceCodeSecuritySessionRequestorStartOperation|L'operazione sessione di sicurezza è stata avviata nel client.|  
 |InvalidHexString|Formato stringa esadecimale non valido.|  
 |SamlAttributeClaimResourceShouldBeAString|Per questo costruttore SamlAttribute la risorsa dell'attestazione deve essere di tipo "string".|  
@@ -304,5 +305,5 @@ In questo argomento vengono elencate tutte le eccezioni generate da IdentityMode
 |UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|Impossibile creare un keyedHashAlgorithm per l'algoritmo specificato dalla crittografia simmetrica specificata.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethod|L'attributo "AuthenticationMethod" specificato per un SamlAuthenticationStatement non può essere Null o di lunghezza 0.|  
 |TraceCodeSecurityImpersonationFailure|Rappresentazione protezione non riuscita nel server.|  
-|Predefinito|(Predefinito)|  
+|Impostazione predefinita|(Predefinito)|  
 |UnsupportedNodeTypeInReader|Il tipo di nodo specificato con il nome specificato non è supportato.|

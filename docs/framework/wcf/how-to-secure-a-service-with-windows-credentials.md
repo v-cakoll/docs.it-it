@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: proteggere un servizio con credenziali di Windows
 Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio che si trova in un dominio di Windows e viene chiamato dai client nello stesso dominio. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Questo scenario, vedere [sicurezza del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
@@ -161,4 +162,4 @@ Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [
  [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)  
- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
+ [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)

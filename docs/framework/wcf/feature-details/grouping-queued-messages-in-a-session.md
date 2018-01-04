@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Raggruppamento di messaggi in coda in una sessione
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce una sessione che consente di raggruppare un set di messaggi correlati affinché vengano elaborati da un'unica applicazione ricevente. I messaggi appartenenti a una sessione devono appartenere alla stessa transazione. Poiché tutti i messaggi appartengono alla stessa transazione, se l'elaborazione di un messaggio non riesce viene eseguito il rollback dell'intera sessione. Le sessioni presentano comportamenti simili relativamente alle code di messaggi non recapitabili e alle code di messaggi non elaborabili. La proprietà di durata (TTL, Time To Live) impostata in un'associazione in coda configurata per una determinata sessione viene applicata all'intera sessione. Se allo scadere del TTL è stata inviata solo una parte dei messaggi, l'intera sessione viene inserita nella coda di messaggi non recapitabili. Analogamente, quando risulta impossibile inviare a un'applicazione alcuni messaggi di una sessione contenuti nella coda dell'applicazione, l'intera sessione viene inserita nella coda di messaggi non elaborabili (se disponibile).  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implementare il contratto di servizio e specificare la modalità `InstanceContextMode` `PerSession`. Ciò comporta la creazione di un'unica istanza del servizio per ogni sessione.  
+3.  Implementare il contratto di servizio e specificare la modalità `InstanceContextMode``PerSession`. Ciò comporta la creazione di un'unica istanza del servizio per ogni sessione.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -95,5 +96,5 @@ ms.lasthandoff: 12/02/2017
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Code e sessioni](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+ [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0e688e1f24171494b4adaae964ac1fc2be2309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eb632712a4f7855c16593ac313221f588040d0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxfailedtonegotiateoletx"></a>System.ServiceModel.TxFailedToNegotiateOleTx
 È impossibile completare la negoziazione del protocollo OleTransactions per il contesto di coordinamento specificato.  
@@ -30,5 +31,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

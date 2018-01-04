@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 Contenuto della sezione viene descritto come usare la comunicazione in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -115,9 +116,9 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
 ### <a name="sample-code"></a>Codice di esempio  
  Per istruzioni dettagliate su come scrivere servizi WCF che usano MSMQ, vedere gli argomenti seguenti:  
   
--   [Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Procedura: scambiare messaggi con endpoint WCF in coda](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Per un esempio di codice completo in cui viene illustrato l'uso di MSMQ in WCF, vedere gli argomenti seguenti:  
   
@@ -125,18 +126,18 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
 -   [Comunicazione volatile in coda](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Code di messaggi non recapitabili](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [Code e sessioni](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+-   [Sessioni e code](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
 -   [Comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
--   [Batch transazionale.](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [Batch transazionale](../../../../docs/framework/wcf/samples/transacted-batching.md)  
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Sicurezza del messaggio su Accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli endpoint del servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
+ [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

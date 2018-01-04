@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>Protezione dei messaggi in WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ha due modalità principali per garantire la protezione (`Transport` e `Message`) e una terza modalità (`TransportWithMessageCredential`) che rappresenta una combinazione delle due. In questo argomento viene illustrata la sicurezza dei messaggi e i motivi per cui è consigliabile utilizzarla.  
@@ -71,5 +72,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Vedere anche  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Procedura: utilizzare la sicurezza del trasporto e le credenziali del messaggio](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Procedura: Usare le funzionalità di sicurezza del trasporto e le credenziali a livello di messaggio](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Microsoft Patterns and Practices, capitolo 3: implementazione di trasporto e messaggio di sicurezza di livello](http://go.microsoft.com/fwlink/?LinkId=88897)

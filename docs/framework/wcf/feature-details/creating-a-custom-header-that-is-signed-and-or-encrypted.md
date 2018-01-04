@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d637dfaa4b3639d1e47280c423489735844a2a47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b0faa62d75c506fd93c17c6a67aaecdd22bc8c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creazione di un'intestazione personalizzata che viene firmata e- o crittografati
 Quando si chiama un servizio non WCF tramite un client WCF, è talvolta necessario usare intestazioni SOAP personalizzate. In WCF è presente un bug di canonizzazione che impedisce l'uso di intestazioni personalizzate firmate e crittografate con un servizio non WCF. Il problema è causato dalla canonizzazione errata degli spazi dei nomi XML predefiniti ed è significativo solo in caso di chiamata di servizi non WCF con intestazioni personalizzate firmate e/o crittografate.  Quando il servizio riceve il messaggio che contiene l'intestazione firmata e/o crittografata non è in grado di verificare la firma. Questa soluzione evita il bug di canonizzazione, consente l'interoperabilità con i servizi non WCF, ma non impedisce l'interoperabilità con i servizi WCF.  
@@ -67,6 +68,6 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contratto di messaggio predefinita](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [Impostazione predefinita dei contratti di messaggio](../../../../docs/framework/wcf/samples/default-message-contract.md)  
  [Contratti di messaggio](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Utilizzo dei contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Uso di contratti di messaggio](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

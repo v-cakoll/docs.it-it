@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
 Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in caso di utilizzo di <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -53,7 +54,7 @@ Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[in
   
  Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
-### <a name="windows"></a>Windows  
+### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
   
  Il protocollo Kerberos è un meccanismo di sicurezza che esegue l'autenticazione degli utenti in un dominio e consente agli utenti autenticati di stabilire una connessione protetta con le altre entità del dominio.  
@@ -74,7 +75,7 @@ Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[in
  In caso di utilizzo della protezione del trasporto e della protezione del messaggio, il certificato utilizzato per proteggere il messaggio sia a livello di trasporto che a livello di messaggio SOAP deve essere lo stesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Sicurezza del messaggio su Accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [Concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acbe1fc52cec011863dea8f3ae81492e3661cd97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-data-contracts"></a>Uso di contratti dati
 Un *contratto dati* è un accordo formale tra un servizio e un client che descrive astrattamente i dati da scambiare. Per comunicare, non è necessario che il client e il servizio condividano gli stessi tipi, ma solo gli stessi contratti dati. Un contratto dati definisce con precisione, per ogni parametro o tipo restituito, i dati serializzati (trasformati in XML) che verranno scambiati.  
@@ -80,13 +81,13 @@ Un *contratto dati* è un accordo formale tra un servizio e un client che descri
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Nomi di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [Equivalenza dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [Ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Controllo delle versioni del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Controllo delle versioni dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [Callback di serializzazione a tolleranza di versione](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Valori predefiniti dei membri di dati](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Procedura: creare un contratto dati di base per una classe o struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [Valori predefiniti dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
+ [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [Procedura: Creare un contratto di dati di base per una classe o una struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

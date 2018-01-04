@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] include un'opzione della modalità compatibilità ASP.NET che consente alle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di essere programmate e configurate come servizi Web ASP.NET e riprodurne il comportamento. Nelle sezioni seguenti viene eseguito un confronto tra servizi Web ASP.NET e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basato sugli elementi necessari per lo sviluppo di applicazioni usando entrambe le tecnologie.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  Anche lo sviluppo di applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inizia in genere con la definizione di tipi complessi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere configurato per usare gli stessi tipi .NET Framework dei servizi Web ASP.NET.  
   
- Le classi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> possono essere aggiunte a tipi .NET Framework per indicare che le istanze del tipo devono essere serializzate in XML e quali campi o proprietà specifiche del tipo devono essere serializzate, come illustrato nel codice di esempio seguente.  
+ Il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> possono essere aggiunti ai tipi di .NET Framework per indicare che le istanze del tipo devono essere serializzate in XML e quali campi o proprietà specifiche del tipo devono essere serializzate, come illustrato nell'esempio seguente codice.  
   
 ```  
 //Example One:   
@@ -761,4 +762,4 @@ public void Receive(Message input)
  Il linguaggio di configurazione di ASP.NET consente di specificare le impostazioni cultura per i singoli servizi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta questa impostazione di configurazione, eccetto in modalità di compatibilità ASP.NET. Per individuare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che non usa la modalità compatibilità ASP.NET, compilare il tipo di servizio in assembly specifici delle impostazioni cultura e disporre endpoint specifici per ogni assembly specifico delle impostazioni cultura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Confronto tra servizi Web ASP.NET e WCF basato sullo scopo e gli standard utilizzati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [Confronto tra i servizi Web ASP.NET e WCF in base a scopo e standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

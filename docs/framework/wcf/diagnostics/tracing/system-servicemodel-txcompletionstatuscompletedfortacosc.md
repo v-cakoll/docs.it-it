@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9863b0c6fa5a1625d1f4e5326403e1bc1029bae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9bc76a1931c42e9faea5519f708db6213ebe1ec4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a>System.ServiceModel.TxCompletionStatusCompletedForTACOSC
 La transazione specifica è stata completata al momento della chiusura della sessione.  
@@ -27,5 +28,5 @@ La transazione specifica è stata completata al momento della chiusura della ses
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
 In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuovo motore di serializzazione, ovvero <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> esegue la conversione tra oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
@@ -213,7 +214,7 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
 >  L'utilizzo della serializzazione dettagliata può comportare un XML di schema non valido.  
   
 ## <a name="deserialization"></a>Deserializzazione  
- Le informazioni seguenti si applicano a qualsiasi classe che eredita da <xref:System.Runtime.Serialization.XmlObjectSerializer>, incluse le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer> .  
+ Le informazioni seguenti si applicano a qualsiasi classe che eredita da <xref:System.Runtime.Serialization.XmlObjectSerializer>, incluse le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer>.  
   
  La modalità più elementare per deserializzare un oggetto consiste nel chiamare uno degli overload del metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Esistono tre overload, rispettivamente per la lettura con un <xref:System.Xml.XmlDictionaryReader>, un `XmlReader`o un `Stream`. Si noti che l'overload `Stream` crea un <xref:System.Xml.XmlDictionaryReader> testuale che non è protetto da nessuna quota e deve essere utilizzato solo per leggere dati attendibili.  
   
@@ -275,4 +276,4 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
  <xref:System.Runtime.Serialization.XmlObjectSerializer>  
  [Serializzazione binaria](../../../../docs/standard/serialization/binary-serialization.md)  
- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

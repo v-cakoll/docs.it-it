@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>Programmazione delle funzionalità di sicurezza di WCF
 Questo argomento descrive le attività di programmazione fondamentali utilizzate per creare un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protetta. In questo argomento riguarda solo l'autenticazione, riservatezza e integrità, complessivamente note come *sicurezza del trasferimento*. Questo argomento vengono illustrati autorizzazione (controllo di accesso alle risorse o servizi); Per informazioni sulle autorizzazioni, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

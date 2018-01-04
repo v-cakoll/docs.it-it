@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -39,7 +40,7 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Se si ha familiarità con la classe <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> in applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e con la funzionalità fornita, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
+-   Le sessioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
   
 -   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
   
@@ -47,7 +48,7 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Le applicazioni client e le applicazioni di servizio interagiscono con le sessioni in modi diversi. Le applicazioni client avviano sessioni e quindi ricevono ed elaborano i messaggi inviati all'interno della sessione. Le applicazioni di servizio possono utilizzare le sessioni come punto di estensibilità per aggiungere comportamenti. Ciò si ottiene utilizzando direttamente <xref:System.ServiceModel.InstanceContext> o implementando un provider di contesto dell'istanza personalizzato.  
   
-## <a name="instancing"></a>creazione di istanze  
+## <a name="instancing"></a>Istanze  
  Il comportamento delle istanze (impostato tramite la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> ) consente di controllare come viene creato <xref:System.ServiceModel.InstanceContext> in risposta ai messaggi in ingresso. Per impostazione predefinita, ogni <xref:System.ServiceModel.InstanceContext> viene associato a uno oggetto servizio definito dall'utente. In questo modo l'impostazione (nel caso predefinito) della proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> consente di controllare anche le istanze di oggetti servizio definiti dall'utente. L'enumerazione <xref:System.ServiceModel.InstanceContextMode> definisce le modalità di istanza.  
   
  Sono disponibili le modalità di istanza seguenti:  
@@ -119,8 +120,8 @@ public class CalculatorService : ICalculatorConcurrency
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di sessioni](../../../../docs/framework/wcf/using-sessions.md)  
- [Procedura: creare un servizio che richiede le sessioni](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Procedura: creazione di istanze di servizio di controllo](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Procedura: Creare un servizio che richiede sessioni](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [Procedura: Controllare le istanze del servizio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md)  
  [Creazione di istanze](../../../../docs/framework/wcf/samples/instancing.md)  
  [Sessione](../../../../docs/framework/wcf/samples/session.md)

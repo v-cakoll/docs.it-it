@@ -13,14 +13,15 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>Diffusione di informazioni
-La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono forniti consigli per ridurne la pericolosità.  
+La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono fornite mitigazioni.  
   
 ## <a name="message-security-and-http"></a>Protezione dei messaggi e HTTP  
  Se si sta utilizzando la protezione a livello di messaggio su un livello di trasporto HTTP, è necessario sapere che questo tipo di sicurezza non protegge le intestazioni HTTP. L'unico modo per proteggerle è utilizzare il trasporto HTTPS anziché HTTP. L'utilizzo del trasporto HTTPS comporta la crittografia dell'intero messaggio, incluse le intestazioni HTTP, tramite il protocollo Secure Sockets Layer (SSL).  
@@ -69,7 +70,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manomissione](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Attacchi di riproduzione](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

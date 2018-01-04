@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Nomi di contratto dati
 Talvolta un client e un servizio non condividono gli stessi tipi. Possono comunque passarsi dati a condizione che i contratti dati siano equivalenti su entrambi i lati. [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) è basato sul contratto dati e i nomi dei membri di dati, e pertanto in cui viene fornito un meccanismo per eseguire il mapping di tipi e membri di tali nomi. In questo argomento vengono illustrate le regole per denominare i contratti dati, nonché il comportamento predefinito dell'infrastruttura [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] quando si creano nomi.  
@@ -84,7 +85,7 @@ Talvolta un client e un servizio non condividono gli stessi tipi. Possono comunq
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Controllo delle versioni del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+ [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Equivalenza dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Nomi di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [Controllo delle versioni dei contratti di dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

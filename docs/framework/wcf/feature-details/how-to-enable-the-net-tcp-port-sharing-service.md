@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a64c72a8f69abc220a311c2a204074ea83d0f58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedura: attivare il servizio di condivisione delle porte Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa un servizio di Windows denominato Servizio di condivisione porte Net.TCP per facilitare la condivisione delle porte TCP tra più processi. Il servizio viene installato come parte di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ma, per motivi di sicurezza, non viene attivato per impostazione predefinita e deve quindi essere attivato manualmente al primo utilizzo. In questo argomento viene illustrato come configurare il servizio di condivisione delle porte Net TCP usando lo snap-in MMC (Microsoft Management Console).  
@@ -44,5 +45,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="example"></a>Esempio  
   
 ## <a name="see-also"></a>Vedere anche  
- [Condivisione porta Net. TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- [Configurare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+ [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Configurazione del servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

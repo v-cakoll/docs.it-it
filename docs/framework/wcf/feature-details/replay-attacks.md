@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>Attacchi di tipo replay
 Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene respinto, i computer colpiti elaborano il flusso come se i messaggi fossero legittimi. Ciò determina una serie di conseguenze negative, ad esempio la creazione di ordini ridondanti di un articolo.  
@@ -48,8 +49,8 @@ Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato co
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manomissione](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

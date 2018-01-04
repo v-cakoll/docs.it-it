@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedura: scrivere servizi a livello di codice
 Se si sceglie di non utilizzare il modello di progetto di servizio Windows, è possibile scrivere i propri servizi impostando l'ereditarietà e altri elementi dell'infrastruttura manualmente. Quando si crea un servizio a livello di codice, è necessario eseguire diversi passaggi gestiti automaticamente il modello:  
@@ -84,4 +85,4 @@ Se si sceglie di non utilizzare il modello di progetto di servizio Windows, è p
  [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Procedura: registrare informazioni sui servizi](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [Procedura dettagliata: creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

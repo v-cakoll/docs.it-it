@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
 I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportano due modalità di trasferimento dei messaggi:  
@@ -57,4 +58,4 @@ I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportan
  Il passaggio dalla modalità di trasferimento con memorizzazione nel buffer alla modalità di trasferimento con flusso comporta la modifica della forma del canale nativo dei trasporti TCP e pipe con nome. Per i trasferimenti con memorizzazione nel buffer, la forma del canale nativo è <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Per i trasferimenti con flusso, i canali nativi sono <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. La modifica della modalità di trasferimento di un'applicazione esistente che utilizza questi trasporti in modo diretto (ovvero non tramite un contratto di servizio) richiede la modifica della forma del canale previsto di channel factory e listener.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

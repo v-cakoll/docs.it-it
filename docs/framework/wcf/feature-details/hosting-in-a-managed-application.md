@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting in un'applicazione gestita
 I servizi[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere ospitati in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Il self-hosting dei servizi è l'opzione di hosting più flessibile, poiché richiede la distribuzione di un'infrastruttura minima. Si tratta però dell'opzione meno solida, poiché le applicazioni gestite non forniscono le avanzate funzionalità di gestione e hosting di altre opzioni di hosting disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], quali Internet Information Services (IIS) e i servizi di Windows.  

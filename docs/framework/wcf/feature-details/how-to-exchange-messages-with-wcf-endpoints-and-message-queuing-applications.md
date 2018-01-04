@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi
 Per integrare le applicazioni esistenti del sistema di accodamento dei messaggi (MSMQ) con le applicazioni di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è possibile utilizzare l'associazione di integrazione con MSMQ per convertire i messaggi MSMQ in messaggi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e viceversa. Ciò consente di chiamare applicazioni MSMQ riceventi tramite un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nonché chiamare servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tramite applicazioni MSMQ mittenti.  
@@ -74,8 +75,8 @@ Per integrare le applicazioni esistenti del sistema di accodamento dei messaggi 
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Procedura: scambiare messaggi con endpoint WCF in coda](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Accodamento messaggi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Sicurezza del messaggio su Accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -13,21 +13,22 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizzo degli strumenti di sviluppo WCF
-Contenuto della sezione vengono descritti gli strumenti di sviluppo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)][!INCLUDE[indigo1](../../../includes/indigo1-md.md)] che possono fornire assistenza nello sviluppo del servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Questa sezione viene descritto il [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] gli strumenti di sviluppo che possono fornire assistenza nello sviluppo del [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]servizio.  
   
- È possibile utilizzare i modelli di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] come base per compilare rapidamente un servizio specifico, quindi utilizzare Host automatico servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e Client di test di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per eseguire il debug e testare il servizio. Questi strumenti forniscono funzioni di debug e test veloci e trasparenti e precludono la necessità di eseguire il commit a un modello di hosting in fase iniziale.  
+ È possibile utilizzare il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelli come base per compilare rapidamente il proprio servizio, quindi utilizzare [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automatico servizio e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di Test per eseguire il debug e testare il servizio. Questi strumenti forniscono funzioni di debug e test veloci e trasparenti e precludono la necessità di eseguire il commit a un modello di hosting in fase iniziale.  
   
 ## <a name="the-wcf-developer-tools"></a>Strumenti dello sviluppatore WCF  
  [Modelli di Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
- È possibile utilizzare il progetto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] predefinito e i modelli di elemento disponibili in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per compilare rapidamente i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative applicazioni.  
+ È possibile utilizzare predefiniti [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] modelli di progetto e di elemento in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per compilare rapidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizi e le relative applicazioni.  
   
  [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   

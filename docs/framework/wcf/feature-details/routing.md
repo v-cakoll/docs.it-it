@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing"></a>Routing
 Negli argomenti di questa sezione viene illustrato il servizio di routing. Il servizio di routing è un intermediario SOAP generico configurabile che consente di configurare il routing basato sul contenuto, impostare il bridging del protocollo, gestire errori delle comunicazioni e aggiornare in modo dinamico la logica di routing in fase di esecuzione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Servizio di routing](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Viene fornita una panoramica delle funzionalità del servizio di routing.  
   
@@ -39,7 +40,7 @@ Negli argomenti di questa sezione viene illustrato il servizio di routing. Il se
  [Contratti di routing](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  Vengono descritti i modelli di messaggio che possono essere elaborati dal servizio di routing.  
   
- [Filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  Viene illustrato come usare i filtri messaggi per il routing basato sul contenuto.  
   
  [Scenari di routing](../../../../docs/framework/wcf/feature-details/routing-scenarios.md)  

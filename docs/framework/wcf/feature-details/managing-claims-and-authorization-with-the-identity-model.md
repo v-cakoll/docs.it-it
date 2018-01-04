@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
 L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono supportati due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni, noto come il *modello di identità*. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene utilizzato il modello di identità per creare attestazioni dai messaggi in ingresso; le classi di tale modello possono essere estese per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  
@@ -76,7 +77,7 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
  Risorsa protetta  
  Risorsa presente nel sistema di cui è possibile l'accesso, l'utilizzo o la manipolazione solo se vengono prima soddisfatti determinati requisiti.  
   
- Destra  
+ A destra  
  Funzionalità su una risorsa. I diritti definiti dall'API del modello di identità sono proprietà della classe <xref:System.IdentityModel.Claims.Rights>. Esempi di diritti forniti dal sistema sono <xref:System.IdentityModel.Claims.Rights.Identity%2A> e <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
   
  Valore  
@@ -163,7 +164,7 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
 ### <a name="significant-members"></a>Membri significativi  
  Per creare nuovi tipi di attestazione vengono comunemente utilizzati i membri seguenti.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Questo metodo viene implementato dalle classi derivate per eseguire controlli di accesso basati sulle attestazioni prima dell'esecuzione delle operazioni di un servizio. Tutte le informazioni contenute nell'oggetto <xref:System.ServiceModel.OperationContext> fornito o altrove possono essere esaminate per le decisioni relative al controllo di accesso. Se <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> restituisce `true`, l'accesso viene concesso e l'operazione può essere eseguita. Se `CheckAccessCore` restituisce `false`, l'accesso viene negato e l'operazione non viene eseguita. Per un esempio, vedere [procedura: creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Restituisce la classe <xref:System.ServiceModel.ServiceAuthorizationManager> per il servizio. <xref:System.ServiceModel.ServiceAuthorizationManager> è responsabile delle decisioni di autorizzazione.|  
@@ -181,11 +182,11 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
  [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Le attestazioni e negare l'accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [Attestazioni e negazione dell'accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Procedura: creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Procedura: confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Procedura: creare un criterio di autorizzazione personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Procedura: creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Procedura: Creare criteri di autorizzazione personalizzati](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

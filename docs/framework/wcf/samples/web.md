@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Web
 Contenuto della sezione sono inclusi esempi ospitati sul Web.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Selezione avanzata del formato](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  Viene descritto come estendere il modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per supportare i nuovi formati di risposte in uscita.  
   
@@ -44,13 +45,13 @@ Contenuto della sezione sono inclusi esempi ospitati sul Web.
  [Endpoint SOAP e HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
  Viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) tramite il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione HTTP Web.  
   
- [Integrazione di memorizzazione nella cache di ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
+ [Integrazione della memorizzazione nella cache di ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
  Viene descritto come utilizzare la cache di output ASP.NET con il modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Vengono illustrati i concetti chiave relativi a <xref:System.UriTemplate>.  
   
- [Tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  Viene descritto come la classe <xref:System.UriTemplateTable> fornisce una struttura con tabella associativa simile a un dizionario per lavorare con un set di istanze <xref:System.UriTemplate>.  
   
  [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  

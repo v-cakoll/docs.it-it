@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d6418f1f6af544669cf63b48db736d3e144a595
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
@@ -65,7 +66,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |------------|-----------------|  
 |**/namespace:\<string, string >**|Specifica un mapping da un WSDL o XML Schema `targetNamespace` a uno spazio dei nomi Common Language Runtime (CLR). L’utilizzo di un carattere jolly (*) per `targetNamespace` consente di eseguire il mapping di tutti i `targetNamespaces` senza un mapping esplicito a quello spazio dei nomi CLR.<br /><br /> Per assicurarsi che il nome del contratto di messaggio non entri in conflitto con il nome dell'operazione, è necessario qualificare il riferimento al tipo con doppi due punti (`::`) o verificare che i nomi siano univoci.<br /><br /> Impostazione predefinita: derivata dallo spazio dei nomi di destinazione del documento dello schema per `DataContracts`. Lo spazio dei nomi predefinito viene utilizzato per tutti gli altri tipi generati.<br /><br /> Forma abbreviata: `/n`|  
   
-## <a name="choosing-a-data-binding"></a>Scelta di un'associazione dati  
+## <a name="choosing-a-data-binding"></a>Scelta di un data binding  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
@@ -80,5 +81,5 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/noConfig**|Non genera file di configurazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

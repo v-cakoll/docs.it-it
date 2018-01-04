@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8860749430d1c6ec1f9b89c1a9740b836ff28ae9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Più endpoint su un solo ListenUri
 In questo esempio viene descritto un servizio che ospita più endpoint in un solo `ListenUri`. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -29,7 +30,7 @@ In questo esempio viene descritto un servizio che ospita più endpoint in un sol
   
  `EndpointAddress` è l'indirizzo logico del servizio. È l'indirizzo cui vengono inviati i messaggi SOAP. `ListenUri` è l'indirizzo fisico del servizio. Ha una porta e indirizza le informazioni laddove l'endpoint del servizio effettivamente è in ascolto per i messaggi sul computer corrente. Nella maggior parte dei casi, non è necessario che questi indirizzi siano differenti; quando un `ListenUri` non è specificato in modo esplicito, imposta come valore predefinito l'URI dell'`EndpointAddress` dell'endpoint. In alcuni casi, è utile per distinguerli, ad esempio durante la configurazione di un router che potrebbe accettare messaggi indirizzati a vari servizi diversi.  
   
-## <a name="service"></a>Servizio  
+## <a name="service"></a>Service  
  Il servizio in questo esempio ha due contratti, `ICalculator` e `IEcho`. Oltre all'endpoint `IMetadataExchange` consueto, sono tre gli endpoint dell'applicazione, come mostra il codice seguente.  
   
 ```xml  

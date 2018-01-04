@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 413adbc25e2f92ae2e989290685db6dfeaf58368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-formatters"></a>Formattatori dei messaggi personalizzati
 Il contenuto di un messaggio è spesso nel formato XML, che in genere non è un formato pratico per un'applicazione. Le applicazioni modificano gli oggetti, ottenendo e impostando le relative proprietà. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Usa il *contratto dati* per convertire un <xref:System.ServiceModel.Channels.Message> oggetto in un oggetto facilmente gestito da un'applicazione. Questi processi sono definiti serializzazione e deserializzazione. Questi stessi termini vengono usati per descrivere la serializzazione e la deserializzazione eseguita dal livello del trasporto verso e dal formato di trasmissione del messaggio, che sono processi non correlati.  
@@ -45,4 +46,4 @@ Il contenuto di un messaggio è spesso nel formato XML, che in genere non è un 
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
- [La configurazione e l'estensione del Runtime dei comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [Configurazione ed estensione del runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

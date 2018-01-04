@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Scenari di routing
 Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare difficile progettare una logica di routing efficiente quando si crea una nuova configurazione da zero.  Esistono tuttavia diversi scenari comuni seguiti dalla maggior parte delle configurazioni dei servizi di routing. Tali scenari possono non essere direttamente applicabili a una configurazione specifica, tuttavia comprendere le modalità di configurazione del servizio di routing per tali scenari consente di acquisire familiarità con le potenzialità del servizio stesso.  
@@ -76,10 +77,10 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
   
  Per i passaggi necessari per configurare la gestione degli errori, vedere [How To: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Per un esempio di implementazione della gestione degli errori, vedere il [Bridging e gestione degli errori](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) e [avanzate di gestione degli errori](../../../../docs/framework/wcf/samples/advanced-error-handling.md) esempi.  
   
-### <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: Controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+### <a name="in-this-section"></a>In questa sezione  
+ [Procedura: Controllo delle versioni dei servizi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Procedura: Partizionamento dei dati del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Procedura: Partizionamento dei dati dei servizi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [Procedura: Aggiornamento dinamico](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   

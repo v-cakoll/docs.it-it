@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>Associazione di base
 Contenuto della sezione sono inclusi esempi di base che illustrano l'utilizzo dell'attributo di associazione di un elemento dell'endpoint.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Esempio di sicurezza messaggio](../../../../docs/framework/wcf/samples/message-security-sample.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Esempio sulla sicurezza dei messaggi](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  Viene descritto come implementare un'applicazione che utilizza `basicHttpBinding` e sicurezza dei messaggi.  
   
  [BasicBinding con sicurezza del trasporto](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  

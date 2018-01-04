@@ -14,16 +14,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 692e51fc6276fbee0c1764c0040a251fe32b2c9f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d0be5e799137d24c2d6e53f4b6846007f3a2a79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-bindings"></a>Estensione delle associazioni
 Le associazioni specificano il trasporto, la codifica e il protocollo necessari per connettersi a un endpoint. Le estensioni di associazione e le associazioni personalizzate implementano le funzionalità personalizzate di comunicazione necessarie per supportare le funzionalità dell'applicazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -31,9 +32,9 @@ Le associazioni specificano il trasporto, la codifica e il protocollo necessari 
 |[Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)|Descrive come utilizzare la classe <xref:System.ServiceModel.Channels.CustomBinding> per creare associazioni personalizzate tramite elementi di associazione definiti dal sistema e di terze parti.|  
 |[Creazione di associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|Descrive come creare associazioni ed elementi di associazione utilizzabili da terzi.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Creazione di una classe BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
+ [Creazione di un oggetto BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
   
- [Configurazione e supporto dei metadati](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [Supporto di configurazione e metadati](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)

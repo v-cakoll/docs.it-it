@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 544e505dd182d331179d9a6d3da4815b849fdd95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolli di transazione versione 1.0
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] versione 1 implementa la versione 1.0 dei protocolli WS-Atomic Transaction e WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]versione 1.1, vedere [protocolli di transazione](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
  I messaggi dell'applicazione non sono vincolati a queste associazioni e vengono descritti più avanti.  
   
 ### <a name="transaction-manager-https-binding"></a>Associazione HTTP dei gestori transazioni  
- L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente-destinatario nella struttura della transazione.  
+ L'associazione HTTPS dei gestori transazioni si basa unicamente sulla protezione del trasporto per ottenere la protezione e stabilire relazioni di trust tra ogni coppia mittente-destinatario nell'albero delle transazioni.  
   
 #### <a name="https-transport-configuration"></a>Configurazione di trasporto HTTPS  
  I certificati X.509 sono utilizzati per stabilire l'identità del gestore transazioni. L'autenticazione client/server è obbligatoria, mentre l'autorizzazione client/server viene lasciata come dettaglio di implementazione:  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/02/2017
 #### <a name="activation-and-registration-binding-configuration"></a>Attivazione e configurazione dell'associazione di registrazione  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede un'associazione duplex request/reply con correlazione su HTTPS. Per ulteriori informazioni sulla correlazione e descrizioni dei modelli di scambio dei messaggi request/reply, vedere WS-Atomic Transaction, Sezione 8.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>Configurazione del binding del protocollo 2PC  
+#### <a name="2pc-protocol-binding-configuration"></a>Configurazione dell'associazione del protocollo 2PC  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta messaggi unidirezionali (datagramma) su HTTPS. La correlazione tra i messaggi viene lasciata come dettaglio di implementazione.  
   
  B2131: Le implementazioni devono supportare `wsa:ReferenceParameters` come descritto in WS-Addressing per ottenere la correlazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del messaggi 2PC.  

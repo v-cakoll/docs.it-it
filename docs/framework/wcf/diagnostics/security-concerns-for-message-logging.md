@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemi di sicurezza per la registrazione dei messaggi
 In questo argomento viene illustrato come evitare che i dati riservati vengano esposti nei log dei messaggi e come proteggere gli eventi generati dalla registrazione dei messaggi.  
@@ -120,5 +121,5 @@ In questo argomento viene illustrato come evitare che i dati riservati vengano e
  Questi eventi possono essere visualizzati nello strumento Visualizzatore eventi in dotazione con Windows. Per ulteriori informazioni, vedere [registrazione degli eventi](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Problemi di sicurezza e suggerimenti utili per la traccia](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

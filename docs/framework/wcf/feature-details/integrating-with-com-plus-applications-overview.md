@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Panoramica sull'integrazione con applicazioni COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un ambiente completo per la creazione di applicazioni distribuite. Se si sta già usando la logica dell'applicazione basata su componenti ospitata in COM+, è possibile usare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere la logica esistente senza doverla riscrivere. Uno degli scenari più comuni si verifica quando si desidera esporre la regola business COM+ o Enterprise Services esistente tramite servizi Web.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  Le funzionalità di riciclo dei processi COM+ non possono essere usate su applicazioni integrate. Se l'applicazione è configurata per l'uso del riciclo dei processi e i componenti sono in esecuzione in un processo ospitato su COM+, non sarà possibile avviare il servizio. Questo requisito non include i servizi che usano la modalità di host Web in corso, poiché non vengono applicate le impostazioni di riciclo dei processi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'integrazione con panoramica delle applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Panoramica dell'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

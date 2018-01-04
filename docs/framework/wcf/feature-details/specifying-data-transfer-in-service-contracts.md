@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be6262714ad2753d3a6f62a2956a31529641a246
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Specifica del trasferimento di dati nei contratti di servizio
 La piattaforma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere considerata un'infrastruttura di messaggistica. Le operazioni di servizio possono ricevere, elaborare e inviare messaggi. I messaggi vengono descritti tramite contratti di operazione. Si consideri ad esempio il contratto seguente:  
@@ -61,7 +62,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- È inoltre possibile utilizzare i parametri referenziati di modo che un parametro appartenga sia al messaggio di richiesta sia al messaggio di risposta. Il tipo dei parametri deve essere serializzabile, ovvero convertibile in XML. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire questa conversione. Il sistema supporta la maggior parte dei tipi primitivi, ad esempio `int`, `string`, `float` e `DateTime`. I tipi definiti dall'utente in genere devono presentare un contratto di dati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tramite contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ È inoltre possibile usare i parametri per riferimento di modo che un parametro appartenga sia al messaggio di richiesta sia al messaggio di risposta. Il tipo dei parametri deve essere serializzabile, ovvero convertibile in XML. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire questa conversione. Il sistema supporta la maggior parte dei tipi primitivi, ad esempio `int`, `string`, `float` e `DateTime`. I tipi definiti dall'utente in genere devono presentare un contratto di dati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tramite contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -328,7 +329,7 @@ Sub LogMessage(m As Message)
  Si tratta di uno scenario avanzato, come descritto in dettaglio in [utilizzando la classe messaggio](../../../../docs/framework/wcf/feature-details/using-the-message-class.md).  
   
 ## <a name="describing-fault-messages"></a>Descrizione dei messaggi di errore  
- Oltre ai messaggi descritti in base al valore restituito e ai parametri referenziati o di output, qualsiasi operazione non unidirezionale può restituire almeno due messaggi: il messaggio di risposta normale e un messaggio di errore. Si consideri il contratto di operazione seguente.  
+ Oltre ai messaggi descritti in base al valore restituito e ai parametri per riferimento o di output, qualsiasi operazione non unidirezionale può restituire almeno due messaggi: il messaggio di risposta normale e un messaggio di errore. Si consideri il contratto di operazione seguente.  
   
 ```csharp  
 [OperationContract]  
@@ -584,6 +585,6 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]serializzazione concetti avanzati relativi, vedere [la serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- [Procedura: abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
- [Procedura: creare un contratto dati di base per una classe o struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [Uso della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [Procedura: Abilitare lo streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
+ [Procedura: Creare un contratto di dati di base per una classe o una struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

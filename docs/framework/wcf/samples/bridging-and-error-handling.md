@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc809b75a965107594f7b2aa8a78d412bf284d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bridging-and-error-handling"></a>Bridging e gestione degli errori
 In questo esempio viene descritto come il servizio di routing di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato per il collegamento delle comunicazioni tra un client e un servizio che impiegano associazioni diverse. L'esempio mostra inoltre come utilizzare un servizio di backup per scenari di failover. Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto. In questo esempio viene adattato l'esempio relativo alla calcolatrice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard per comunicare tramite il servizio di routing.  

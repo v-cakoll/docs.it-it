@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Uso di Windows Communication Foundation
 È possibile scegliere di utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per lo sviluppo di nuove applicazioni, continuando a mantenere le applicazioni esistenti sviluppate tramite ASP.NET. Poiché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene proposto come la scelta più adatta per agevolare la comunicazione con applicazioni generate con .NET Framework in qualsiasi scenario, a differenza di ASP.NET, può essere utilizzato come strumento standard per la risoluzione di un'ampia gamma di problemi di comunicazione software.  
@@ -28,13 +29,13 @@ ms.lasthandoff: 12/02/2017
   
  I client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] possono utilizzare i servizi Web ASP.NET. I servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurati con <xref:System.ServiceModel.BasicHttpBinding> possono essere utilizzati dai client di servizi Web ASP.NET. I servizi Web ASP.NET possono coesistere con le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può anche essere utilizzato per aggiungere funzionalità ai servizi Web ASP.NET esistenti. Date le numerose possibilità di utilizzo congiunto di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e dei servizi Web ASP.NET, è consigliabile eseguire la migrazione di servizi Web ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo se sono richieste funzionalità fornite da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e non da servizi Web ASP.NET.  
   
- Anche nei rari casi in cui si renda necessaria, valutare attentamente la migrazione di codice da una tecnologia a un'altra poiché questo approccio raramente si rivela corretto. L'utilizzo della nuova tecnologia è volto a soddisfare requisiti nuovi che non possono essere soddisfatti dalla precedente tecnologia e in tal caso la cosa corretta da fare è progettare una nuova soluzione in grado di soddisfare il nuovo set di requisiti. La nuova progettazione si avvale dell'esperienza maturata con il sistema esistente e delle conoscenze acquisite nel frattempo. La nuova progettazione può inoltre utilizzare le funzionalità complete delle nuove tecnologie anziché riprodurre nella nuova piattaforma la progettazione precedente. Dopo aver creato gli elementi principali della nuova progettazione, diviene più semplice riutilizzare all'interno del nuovo sistema un codice proveniente dal sistema esistente.  
+ Anche nei rari casi in cui si renda necessaria, valutare attentamente la migrazione di codice da una tecnologia a un'altra poiché questo approccio raramente si rivela corretto. L'utilizzo della nuova tecnologia è volto a soddisfare requisiti nuovi che non possono essere soddisfatti dalla precedente tecnologia e in tal caso la cosa corretta da fare è progettare una nuova soluzione in grado di soddisfare il nuovo set espanso di requisiti. La nuova progettazione si avvale dell'esperienza maturata con il sistema esistente e delle conoscenze acquisite nel frattempo. La nuova progettazione può inoltre utilizzare le funzionalità complete delle nuove tecnologie anziché riprodurre nella nuova piattaforma la progettazione precedente. Dopo aver creato gli elementi principali della nuova progettazione, diviene più semplice riutilizzare all'interno del nuovo sistema un codice proveniente dal sistema esistente.  
   
  Nella sezione seguente vengono forniti consigli sul trasferimento dai servizi Web ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], da utilizzare solo nei rari casi in cui tale trasferimento si riveli la soluzione corretta. Vengono forniti suggerimenti per l'esecuzione della migrazione di servizi e di client.  
   
  Per un'analisi completa su come eseguire la migrazione di servizi Web ASP.NET esistenti a WCF, vedere [servizi Web ASP.NET e Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkID=71761). Contenuto della sezione viene descritto come implementare un servizio conforme a WCF dai metadati per servizi Web ASP.NET e come eseguire la migrazione di servizi Web e del codice client ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: recuperare i metadati e implementare un servizio conforme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- [Procedura: eseguire la migrazione di codice del servizio Web ASP.NET a Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
- [Procedura: eseguire la migrazione di codice Client del servizio Web ASP.NET a Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Procedura: Recuperare metadati e implementare un servizio conforme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Procedura: Eseguire la migrazione del codice dei servizi Web ASP.NET in Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
+ [Procedura: Eseguire la migrazione del codice client dei servizi Web ASP.NET in Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

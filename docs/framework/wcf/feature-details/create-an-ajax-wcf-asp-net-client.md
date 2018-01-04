@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b136565730c1b3175abff8b057a69acc6609a44d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio
 In questo argomento viene illustrato come utilizzare Visual Studio 2008 per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile con AJAX e un client ASP.NET che accede a tale servizio. Il codice per il servizio e per il client viene fornito nella sezione Esempio dopo la descrizione dei passaggi necessari per la creazione del servizio e del client della sezione Procedure.  

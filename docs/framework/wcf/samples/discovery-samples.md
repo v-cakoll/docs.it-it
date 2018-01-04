@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b759580a93f6b0ab0e3d84295b7ab8a0c48a7bb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a29ceb6dd90645bc34c440117bafcd8afd774422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-samples"></a>Individuazione (esempi)
 Contenuto della sezione sono inclusi esempi correlati alla funzionalità di individuazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Annunci](../../../../docs/framework/wcf/samples/announcements-sample.md)  
  Viene descritto come utilizzare annunci con la funzionalità di individuazione.  
   
@@ -38,10 +39,10 @@ Contenuto della sezione sono inclusi esempi correlati alla funzionalità di indi
  [Esempio di elemento di associazione di individuazione](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
  Viene descritto come aggiungere un elemento di associazione di individuazione in un'associazione personalizzata. Ciò consente ai client di individuare un servizio quando viene aperto un canale.  
   
- [Esempio di Proxy di individuazione](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
+ [Esempio relativo al proxy di individuazione](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  Viene descritto come creare un'implementazione di un proxy di individuazione per archiviare informazioni sui servizi esistenti e come i client possono eseguire una query su tale proxy per ricevere informazioni.  
   
- [Individuare un servizio con l'esempio di modalità Uri di ascolto univoco](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ [Esempio Individuare un servizio con modalità Uri di ascolto univoco](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
  Viene descritto come individuare un servizio che dispone della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> impostata su <xref:System.ServiceModel.Description.ListenUriMode.Unique>.  
   
  [Individuazione con ambiti](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
@@ -50,8 +51,8 @@ Contenuto della sezione sono inclusi esempi correlati alla funzionalità di indi
  [Criteri di ricerca personalizzati](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
  Viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato.  
   
- [Esempio di flusso di lavoro di individuazione](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
+ [Esempio di individuazione del flusso di lavoro](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
  Viene illustrato come rendere individuabile un servizio del flusso di lavoro e come creare un'attività di codice personalizzata in grado di effettuare la ricerca di un servizio specifico.  
   
- [Servizio Router di individuazione](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
+ [Servizio router di individuazione](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
  Viene illustrato come inoltrare messaggi di individuazione a un altro endpoint.

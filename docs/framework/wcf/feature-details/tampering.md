@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>Manomissioni
 *Manomissione* è l'azione di modifica di un messaggio o il recapito di un messaggio e utilizza il messaggio modificato a fini diversi da quelli per cui è stato creato.  
@@ -31,8 +32,8 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Attacchi di riproduzione](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

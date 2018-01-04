@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>Bilanciamento del carico
 Per aumentare la capacità delle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è possibile applicare ad esse una scalabilità orizzontale distribuendole in una server farm con carico bilanciato. Nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] il bilanciamento del carico può essere realizzato utilizzando tecniche standard, tra cui servizi di bilanciamento del carico come Bilanciamento carico di rete di Windows, nonché appositi dispositivi basati su hardware.  
@@ -101,4 +102,4 @@ Per aumentare la capacità delle applicazioni [!INCLUDE[indigo1](../../../includ
  Per migliorare le prestazioni in scenari con carico bilanciato, considerare l'utilizzo di <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> o <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Hosting di procedure consigliate di Internet Information Services](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+ [Procedure consigliate per l'hosting in Internet Information Services (IIS)](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

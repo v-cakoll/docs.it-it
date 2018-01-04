@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d6ed443d2b645687d59a3d795c706f303616cfb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Procedura: eseguire la migrazione del codice di un servizio Web ASP.NET a Windows Communication Foundation
 Nella procedura seguente viene descritto come eseguire la migrazione di un servizio Web ASP.NET a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -224,4 +225,4 @@ Nella procedura seguente viene descritto come eseguire la migrazione di un servi
 19. Eseguire il set di test per assicurarsi che tutte le modifiche funzionino.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: eseguire la migrazione di codice Client del servizio Web ASP.NET a Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Procedura: Eseguire la migrazione del codice client dei servizi Web ASP.NET in Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b356fd413ab61990b685d3104b9f1bc00dfbd71c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility-samples"></a>Esempi di estendibilità della diffusione
 Contenuto della sezione sono inclusi esempi che descrivono la diffusione personalizzata di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Estensioni fortemente tipizzate](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
  Viene illustrato come implementare un elemento dell'estensione definito nella specifica RFC relativa alle estensioni dei thread Atom proposta.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 180367920eb6f900fbb6b234b94f3b3a2c7fe52f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per comunicare con i servizi. Il [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md) argomento viene fornita una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  
@@ -105,9 +106,9 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizi duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [Procedura: accedere ai servizi con unidirezionale e contratti Request / Reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Procedura: accedere ai servizi con un contratto Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Procedura: accedere a WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Procedura: usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [Procedura: chiamare operazioni del servizio in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Applicazioni Client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+ [Procedura: Accedere ai servizi con un contratto unidirezionale o request/reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Procedura: Accedere ai servizi con un contratto duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Procedura: Accedere a un servizio WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Procedura: Usare ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
+ [Procedura: Chiamare operazioni del servizio in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Applicazioni client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

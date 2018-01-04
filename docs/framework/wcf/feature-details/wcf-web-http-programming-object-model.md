@@ -13,11 +13,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5300f22ba1cb44016fee64be4e85120da45a3edf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d71a373d3410c90f405a37e104e7d1b440a7aa14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modello a oggetti per la programmazione HTTP Web di WCF
 Il modello di programmazione HTTP Web di WCF consente agli sviluppatori di esporre servizi Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite richieste HTTP di base, senza la necessità di usare SOAP. Il modello di programmazione HTTP Web di WCF è basato sul modello di estensibilità [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esistente. Definisce le classi seguenti:  
@@ -115,4 +116,4 @@ Il modello di programmazione HTTP Web di WCF consente agli sviluppatori di espor
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Cenni preliminari sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+ [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

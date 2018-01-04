@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>Riferimento alle classi WMI
 Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -25,7 +26,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
 ## <a name="accessing-wmi-instances"></a>Accesso alle istanze WMI  
  Di tutte le classi elencate nel riferimento agli oggetti WMI non è possibile creare direttamente un'istanza, ad eccezione di Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation e Endpoint. Per accedere alle altre istanze, è possibile accedere alle proprietà delle classi del livello superiore precedentemente menzionate. Ad esempio, è possibile accedere all'istanza di TransportBindingElement dall'istanza di Endpoint -> Binding -> BindingElements.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
   
  [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)  
@@ -38,13 +39,13 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
- [Associazione](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
+ [Binding](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
- [Classe BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
+ [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
  [CallbackBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
   
- [Classe Channel](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
+ [Channel class](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
   
  [ChannelPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
   
@@ -56,7 +57,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [Contratto](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Contract](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
@@ -112,7 +113,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [Servizio](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
@@ -146,7 +147,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [TextMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/textmessageencodingbindingelement.md)  
   
- [Listener di traccia](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
+ [TraceListener](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistener.md)  
   
  [TraceListenerArgument](../../../../../docs/framework/wcf/diagnostics/wmi/tracelistenerargument.md)  
   
@@ -164,7 +165,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [WindowsStreamSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/windowsstreamsecuritybindingelement.md)  
   
- [Wsat_tracevent](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
+ [WSAT_TraceEvent](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceevent.md)  
   
  [WSAT_TraceProvider](../../../../../docs/framework/wcf/diagnostics/wmi/wsat-traceprovider.md)  
   

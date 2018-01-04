@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>Framework dei servizi
 In questo argomento vengono elencate tutte le eccezioni generate dai dati del framework dei servizi.  
@@ -169,6 +170,6 @@ In questo argomento vengono elencate tutte le eccezioni generate dai dati del fr
 |SFxUserCodeThrewException|L'operazione utente specificata ha generato un'eccezione non gestita nel codice utente. Se si tratta di un problema ricorrente, potrebbe indicare un errore nell'implementazione del metodo specificato.|  
 |SfxUseTypedMessageForCustomAttributes|Impossibile eseguire il mapping del parametro specificato al parametro dell'operazione poiché quest'ultimo richiede attributi aggiuntivi.|  
 |SFxVersionMismatchInOperationContextAndMessage2|Impossibile aggiungere intestazioni in uscita al messaggio in quanto l'elemento MessageVersion del contesto OperationContext.Current non corrisponde alla versione dell'intestazione del messaggio in fase di elaborazione.|  
-|SFxWellKnownNonSingleton0|Per poter utilizzare uno dei costruttori ServiceHost che accettano un'istanza del servizio, l'elemento InstanceContextMode del servizio deve essere impostato su InstanceContextMode.Single. È possibile configurarlo tramite ServiceBehaviorAttribute. In alternativa, è consigliabile utilizzare i costruttori ServiceHost che accettano un argomento Type.|  
+|SFxWellKnownNonSingleton0|Per poter utilizzare uno dei costruttori ServiceHost che accettano un'istanza del servizio, l'elemento InstanceContextMode del servizio deve essere impostato su InstanceContextMode.Single. È possibile configurarlo tramite ServiceBehaviorAttribute. In alternativa, è consigliabile usare i costruttori ServiceHost che accettano un argomento Type.|  
 |SFxWrapperTypeHasMultipleNamespaces|Impossibile proiettare il tipo wrapper per il messaggio specificato come tipo di contratto dati in quanto presenta più spazi dei nomi. Utilizzare XmlSerializer.|  
 |UriMustBeAbsolute|L'URI deve essere assoluto.|

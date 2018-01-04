@@ -13,20 +13,21 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 172928af99f625de0d01d074493c39cfdcec0037
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0559920a78003fa5b77ef7e966aeed0cd553444f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-binding"></a>Associazione Net
 Contenuto della sezione sono inclusi esempi che illustrano l'utilizzo di attributi di associazione di rete di un elemento dell'endpoint.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Associazione NET MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Associazione Net MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
  Viene descritto l'utilizzo degli attributi di associazione MSMQ di un elemento dell'endpoint.  
   
- [Integrazione di Accodamento messaggi](../../../../docs/framework/wcf/samples/message-queueing-integration.md)  
+ [Integrazione dell'accodamento di messaggi](../../../../docs/framework/wcf/samples/message-queueing-integration.md)  
  Viene descritta l'integrazione tra accodamento dei messaggi e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [NetTCPBinding](../../../../docs/framework/wcf/samples/nettcpbinding.md)  

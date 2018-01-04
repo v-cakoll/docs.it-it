@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c44b09f512a7625360ca5036316d03a4602c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7c36ac73ced510c1ba3b7e16c71f764c46d6c8f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: usare un moniker di servizio con i contratti WSDL
 In alcune situazioni può essere necessario disporre di un client per l'interoperabilità COM completamente autonomo. Il servizio che si desidera chiamare può non esporre un endpoint MEX e la DLL del client WCF può non essere registrata per l'interoperabilità COM. In questi casi è possibile creare un file WSDL che descriva il servizio e lo passi nel moniker del servizio WCF. In questo argomento viene illustrato come chiamare l'esempio WCF della Guida introduttiva utilizzando un moniker WSDL WCF.  
@@ -68,4 +69,4 @@ In alcune situazioni può essere necessario disporre di un client per l'interope
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [L'integrazione con panoramica delle applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Panoramica dell'integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

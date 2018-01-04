@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretazione dei codici errore restituiti da wsatConfig.exe
 Questo argomento elenca tutti i codici errore generati dall'utilità di configurazione WS-AtomicTransaction (wsatConfig.exe) e azioni consigliate da intraprendere.  
@@ -26,7 +27,7 @@ Questo argomento elenca tutti i codici errore generati dall'utilità di configur
   
 |Codice di errore|Descrizione|Azione consigliata da intraprendere|  
 |----------------|-----------------|------------------------------------|  
-|0|L'operazione è stata completata|None|  
+|0|L'operazione è stata completata|nessuno|  
 |1|Errore imprevisto|Contattare Microsoft|  
 |2|Si è verificato un errore imprevisto durante il tentativo di contattare MSDTC per recuperare le impostazioni di sicurezza.|Assicurarsi che il servizio MSDTC non sia disabilitato e risolvere tutti i problemi elencati nell’Eccezione restituita.|  
 |3|L'account nel quale è stato eseguito WsatConfig.exe non dispone delle autorizzazioni necessarie per leggere le impostazioni di sicurezza di rete.|Eseguire WsatConfig.exe in un account utente dell'Amministratore.|  

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Endpoint di Windows Communication Foundation
 Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio avviene tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -39,23 +40,23 @@ Tutte le comunicazioni con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md
   
 -   [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  Viene descritta la struttura di un endpoint e viene illustrato come definire un endpoint nella configurazione e nel codice, nonché come usare gli endpoint, le associazioni e i comportamenti predefiniti forniti dal runtime.  
   
  [Specifica di un indirizzo dell'endpoint](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Viene descritto come si verifica la comunicazione con un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite gli endpoint.  
   
- [Procedura: creare un Endpoint del servizio nella configurazione](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Procedura: Creare un endpoint di servizio nella configurazione](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Viene illustrato come creare un endpoint del servizio nella configurazione.  
   
- [Procedura: creare un Endpoint del servizio nel codice](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Procedura: Creare un endpoint di servizio nel codice](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Viene illustrato come creare un endpoint del servizio nel codice.  
   
  [Pubblicazione di endpoint dei metadati](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
  Viene illustrato come pubblicare metadati mediante la pubblicazione degli endpoint dei metadati nella configurazione e nel codice.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.EndpointAddress>  
   
 ## <a name="related-sections"></a>Sezioni correlate  

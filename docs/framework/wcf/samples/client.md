@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def4536fb40820372bf473d1752bb73d525db2e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11a02fc857fa3c03b11b549013550e557933820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client"></a>Client
 Contenuto della sezione sono inclusi esempi che illustrano l'uso di applicazioni client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Interoperabilità client](../../../../docs/framework/wcf/samples/client-interoperability.md)  
  Viene descritta l'interoperabilità tra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e altre tecnologie.  
   
@@ -35,10 +36,10 @@ Contenuto della sezione sono inclusi esempi che illustrano l'uso di applicazioni
  [Eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
  In questo esempio viene illustrato come rilevare le eccezioni previste quando si usa un client tipizzato.  
   
- [Recuperare i metadati](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Recupero di metadati](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  L'esempio illustra come implementare un client che recupera dinamicamente metadati da un servizio per scegliere un endpoint con il quale comunicare.  
   
- [Evitare i problemi con l'istruzione Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+ [Prevenzione dei problemi con l'istruzione Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
  Viene spiegato perché è consigliabile non usare l'istruzione "using" di C# per pulire automaticamente le risorse quando si usa un client tipizzato.  
   
  [Client tipizzati](../../../../docs/framework/wcf/samples/typed-client.md)  

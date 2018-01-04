@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Tipi XML e ADO.NET nei contratti dati
 Il modello di contratto dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta alcuni tipi che rappresentano direttamente il formato XML. Quando questi tipi vengono serializzati in XML, il serializzatore scrive il contenuto XML di questi tipi senza ulteriore elaborazione. I tipi supportati sono <xref:System.Xml.XmlElement>, matrici di <xref:System.Xml.XmlNode> (ma non il tipo `XmlNode` stesso) e tipi che implementano <xref:System.Xml.Serialization.IXmlSerializable>. I tipi <xref:System.Data.DataSet> e <xref:System.Data.DataTable>, nonché i dataset tipizzati, vengono comunemente usati nella programmazione dei database. Questi tipi implementano l'interfaccia `IXmlSerializable` e sono pertanto serializzabili nel modello del contratto dati. Alcune considerazioni speciali per questi tipi sono elencate alla fine di questo argomento.  
@@ -215,5 +216,5 @@ Il modello di contratto dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.IXmlSerializable>  
- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

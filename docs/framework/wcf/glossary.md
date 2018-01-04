@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Glossario di Windows Communication Foundation per .NET Framework 4.5
 Di seguito sono elencate le definizioni dei termini usati nella documentazione di Windows Communication Foundation.  

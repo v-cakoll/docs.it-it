@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipi supportati dal serializzatore dei contratti dati
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza <xref:System.Runtime.Serialization.DataContractSerializer> come motore di serializzazione predefinito per convertire i dati in XML e convertire di nuovo XML in dati. <xref:System.Runtime.Serialization.DataContractSerializer> è progettato per serializzare tipi di *contratto dati* . Supporta tuttavia molti altri tipi che possono essere considerati come tipi dotati di un contratto dati implicito. Nell'elenco seguente sono riportati tutti i tipi serializzabili:  
@@ -77,8 +78,8 @@ ms.lasthandoff: 12/02/2017
 -   Il tipo <xref:System.DBNull> viene trattato in modo speciale. È un tipo singleton e sulla deserializzazione il deserializzatore rispetta il vincolo singleton e punta tutti i riferimenti `DBNull` all'istanza singleton. Dato che `DBNull` è un tipo serializzabile, richiede l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Tipi XML e ADO.NET nei contratti di dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
+ [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [Tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+ [Tipi di raccolta nei contratti di dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
+ [Tipi di enumerazione nei contratti di dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

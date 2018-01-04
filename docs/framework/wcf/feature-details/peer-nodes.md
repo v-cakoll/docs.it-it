@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15c018dfe3afdee05cc3d6ae1e605090d970536f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a79503b8f0d56402b2e32b4f54e7f7b143a1f92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-nodes"></a>Nodi peer
 Un PeerNode è un endpoint singolo in una rete del canale peer. Un'applicazione può avere anche più nodi peer che partecipano a reti diverse. Ad esempio, un'applicazione di chat peer-to-peer può fare parte di due reti separate: una per conversare con gli amici e l'altra per conversare con i colleghi.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.PeerNode>  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-service-contracts"></a>Implementazione dei contratti di servizio
 Un servizio è una classe che espone le funzionalità disponibili per i client a uno o più endpoint. Per creare un servizio, scrivere una classe che implementi un contratto [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Questa operazione può essere eseguita in due modi. È possibile definire il contratto separatamente come un'interfaccia e quindi creare una classe che implementi tale interfaccia. In alternativa, è possibile creare direttamente la classe e il contratto posizionando l'attributo <xref:System.ServiceModel.ServiceContractAttribute> sulla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> sui metodi disponibili per i client del servizio.  
@@ -68,6 +69,6 @@ class MathService
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Procedura: creare un servizio con una classe del contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
- [Procedura: creare un servizio con un'interfaccia del contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
+ [Procedura: Creare un servizio con una classe di contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
+ [Procedura: Creare un servizio con un'interfaccia di contratto](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
  [Specifica del comportamento in fase di esecuzione del servizio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

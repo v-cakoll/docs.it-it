@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e9c16f2e603a3ce9bbc59be4e01aa492239d2c63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-application-programming-architecture"></a>Architettura di programmazione delle applicazioni di servizio
 Le applicazioni di servizio Windows sono basate su una classe che eredita dalla <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> classe. Eseguire l'override di metodi da questa classe e definire le funzionalità per utilizzarli per determinare il comportamento del servizio.  
@@ -58,7 +59,7 @@ Le applicazioni di servizio Windows sono basate su una classe che eredita dalla 
 > [!NOTE]
 >  Questi metodi rappresentano gli Stati che il servizio viene convogliato attraverso il ciclo di vita; le transizioni del servizio da uno stato al successivo. Ad esempio, non si otterranno mai il servizio per rispondere a un <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> comando prima di <xref:System.ServiceProcess.ServiceBase.OnStart%2A> è stato chiamato.  
   
- Esistono diverse altre proprietà e metodi di interesse. tra cui:  
+ Esistono diverse altre proprietà e metodi di interesse. Sono inclusi:  
   
 -   Il <xref:System.ServiceProcess.ServiceBase.Run%2A> metodo la <xref:System.ServiceProcess.ServiceBase> classe. Questo è il punto di ingresso principale per il servizio. Quando si crea un servizio utilizzando il modello di servizio Windows, il codice viene inserito all'interno dell'applicazione `Main` metodo per eseguire il servizio. Questo codice simile al seguente:  
   

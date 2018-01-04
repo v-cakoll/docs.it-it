@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 174459c23bd6ecd336394146b6d91e265cb820d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>Strumenti
 In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -55,7 +56,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |WrnNoServiceContractTypes|È impossibile generare tipi XmlSerializer per l'assembly specificato. Nessun tipo di contratto di servizio trovato.|  
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|Si è verificato un errore durante il caricamento di tipi in un assembly caricato dal percorso specificato. Alcuni tipi contenuti nell'assembly non sono stati caricati e non sono disponibli per lo strumento.|  
 |ErrDirectoryPointsToAFile|Il valore non valido specificato è stato passato all'opzione specificata. Il valore specificato è un percorso a un file.|  
-|Errore|Errore:|  
+|Error|Errore:|  
 |ErrDuplicateReferenceValues|L'assembly specificato è stato caricato due volte utilizzando l'opzione indicata. Un assembly può essere usato come riferimento solo una volta.|  
 |WrnNoXmlSerializerOperationBehavior|È impossibile generare XmlSerializer per l'assembly specificato. Nessun contratto di servizio nell'assembly dispone di un'operazione con XmlSerializerOperationBehavior.|  
 |ErrCannotCreateDirectory|È impossibile creare la directory specificata.|  
@@ -86,7 +87,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrDuplicateValuePassedToTypeArg|Il valore specificato è stato passato più volte all'opzione indicata. Ogni tipo può essere specificato una sola volta.|  
 |ErrInputEPRFileParseError|È impossibile leggere il riferimento all'endpoint dall'elemento specificato. Verificare che il formato del file XML sia corretto e valido.|  
 |ErrCouldNotCreateCodeProvider|È impossibile creare un provider di codice per il valore specificato, passato all'argomento /{1}. Verificare che il provider di codice sia installato e configurato correttamente.|  
-|ErrPathTooLongDirOnly|Il percorso risultante specificato è troppo lungo. Controllare l'argomento specificato.|  
+|ErrPathTooLongDirOnly|Il percorso risultante specificato è troppo lungo. Consultare l'argomento specificato.|  
 |HelpDataContractSerializer|Generare tipi di dati che utilizzano DataContract Serializer per la serializzazione e la deserializzazione.|  
 |ErrUnableToExportEndpoint|Si è verificato un errore durante l'esportazione del nome dell'endpoint specificato nello spazio dei nomi indicato nel tipo di servizio specificato trovato nel file di configurazione caricato per l'assembly.|  
 |HelpUsage1|Visualizza l'utilizzo della Guida.|  
@@ -120,7 +121,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrCannotDisambiguateSpecifiedTypes|Più di un tipo con lo stesso nome esiste nel set di assembly di riferimento. Utilizzare nomi completi di assembly per distinguere tra i tipi specificati per l'opzione indicata.|  
 |RetreivingMetadataWithMexOnly|Tentativo di download dei metadati dalla posizione specificata utilizzando WS-Metadati Exchange. L'URL non supporta DISCO.|  
 |ErrInvalidTarget|La destinazione indicata è non valida se specificata con l'opzione indicata. Le destinazioni supportate sono specificate.|  
-|ErrPathTooLong|Il percorso risultante è troppo lungo. Rivedere gli argomenti specificati.|  
+|ErrPathTooLong|Il percorso risultante è troppo lungo. Consultare gli argomenti specificati.|  
 |HelpCommonOptionsCategory|- = OPZIONI COMUNI = -|  
 |ParametersServiceName|\<serviceConfigName >|  
 |ErrNoValidInputFilesSpecified|Non è stato specificato alcun file di input valido. Specificare documenti di metadati o file di assembly.|  
@@ -130,7 +131,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |WrnUnableToLoadContractForValidation|Si è verificato un errore durante il caricamento di un tipo di contratto. Il tipo e i dettagli sono specificati.|  
 |WrnAttributeReflectionErrors|La riflessione dell'attributo non è riuscita per alcuni tipi contenuti nell'assembly caricato dalla posizione specificata. Verificare che l'assembly possa essere caricato da questo percorso con i privilegi di sicurezza corretti.|  
 |HelpMetadataExportCategory|- = ESPORTAZIONE DEI METADATI = -|  
-|HelpValidationCategory|- = CONVALIDA DEL SERVIZIO = -|  
+|HelpValidationCategory|-= CONVALIDA DEL SERVIZIO =-|  
 |ValidationError|Errore di convalida:|  
 |GeneratingFiles|Generazione di file in corso.|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Un valore non valido è stato passato all'opzione specificata. Non è possibile mappare lo spazio dei nomi di destinazione specificato a più spazi dei nomi CLR come indicato.|  

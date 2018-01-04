@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89de6bcbb44ca70592697ccf891099446b230ce6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Esempio di feed di diagnostica autonomo
 Questo esempio dimostra come creare un feed in formato RSS o ATOM di diffusione con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Si tratta di un programma "Hello World" di base che illustra le funzionalità di base del modello a oggetti e descrive come configurarlo in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -104,5 +105,5 @@ foreach (SyndicationItem i in feed.Items)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

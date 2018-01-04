@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Esportazione e importazione di metadati
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], l'esportazione dei metadati è il processo utilizzato per descrivere gli endpoint di un servizio e quindi proiettarli in una rappresentazione parallela standardizzata che i client possono utilizzare allo scopo di comprendere come utilizzare il servizio. L'importazione dei metadati del servizio è il processo di generazione di istanze o parti di <xref:System.ServiceModel.Description.ServiceEndpoint> dai metadati del servizio.  
@@ -56,23 +57,23 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], l'esportazione dei m
   
  Il tipo <xref:System.ServiceModel.Description.WsdlExporter> esegue il rethrow di qualsiasi eccezione intercettata durante il processo di esportazione. Queste eccezioni non vengono acquisite come errori nella proprietà `Errors`. Quando <xref:System.ServiceModel.Description.WsdlExporter> genera un'eccezione, si trova in uno stato di errore e non può essere riutilizzato. <xref:System.ServiceModel.Description.WsdlExporter> aggiunge avvisi alla sua proprietà `Errors` quando non è possibile esportare un'operazione perché utilizza azioni con caratteri jolly e quando vengono riscontrati nomi di associazioni duplicati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: importare metadati negli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Procedura: Importare metadati negli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Descrive come importare i metadati scaricati in oggetti di descrizione.  
   
- [Procedura: esportare metadati dagli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Procedura: Esportare metadati dagli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Descrive come esportare oggetti di descrizione in metadati.  
   
- [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [Informazioni di riferimento su ServiceDescription e WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Descrive il mapping tra gli oggetti di descrizione e WSDL.  
   
- [Procedura: usare Svcutil.exe per esportare i metadati dal codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Descrive l'utilizzo di Svcutil.exe per esportare metadati per servizi, contratti e tipi di dati in assembly compilati:  
   
- [Riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  Descrive il sottoinsieme dell'XML Schema (XSD) utilizzato da <xref:System.Runtime.Serialization.DataContractSerializer> per descrivere i tipi Common Language Runtime (CLR) per la serializzazione XML.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Description.WsdlExporter>  
   
  <xref:System.ServiceModel.Description.WsdlImporter>  

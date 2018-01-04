@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc7f90ed679abc55a62ca5ab6028af4c86bd52a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a45fc606ac962b4dc7aac8b49ed9a3c6c421ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contracts"></a>Contratti
 Questa sezione illustra come definire e implementare contratti [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
@@ -76,6 +77,6 @@ Questa sezione illustra come definire e implementare contratti [!INCLUDE[indigo1
  Questo processo relativo ai requisiti aggiuntivi è importante da tener presente quando si progetta, implementa, configura e ospita l'applicazione del servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il contratto può, ad esempio, specificare che deve essere supportata una sessione. In questo caso sarà quindi necessario configurare le associazioni per supportare il requisito contrattuale o l'implementazione del servizio non funzionerà. Se il servizio richiede invece l'Autenticazione integrata di Windows ed è ospitato in Internet Information Services (IIS), nell'applicazione Web in cui risiede il servizio deve essere attivata l'Autenticazione integrata di Windows e disattivato il supporto di utenti anonimi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le funzionalità e l'impatto dei tipi di applicazione di servizio diversi host, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Endpoint: Indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [Progettazione dei contratti di servizio](../../../../docs/framework/wcf/designing-service-contracts.md)  
  [Implementazione dei contratti di servizio](../../../../docs/framework/wcf/implementing-service-contracts.md)

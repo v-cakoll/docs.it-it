@@ -13,16 +13,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d1350cc5a348bf320f0719043bbefcd2b0dd083
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dffdadf9b6896e61dfa23c17ef4d17180be99259
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Modello di dati di Windows Workflow Foundation
 Il modello di dati di Windows Workflow Foundation è costituito da tre concetti: variabili, argomenti ed espressioni. Le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività. Gli argomenti vengono associati (una volta assegnato un valore) usando espressioni che possono fare riferimento alle variabili.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Variabili e argomenti](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
  Vengono descritti i concetti riguardanti variabili e argomenti e la relativa modalità di utilizzo.  
   
