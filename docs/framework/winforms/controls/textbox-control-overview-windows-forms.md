@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8c75392f12b87c7495b1fcdf5419f2463067161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d7312246c43157ca9cd6c7b41d2b110586721c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo TextBox (Windows Form)
 Caselle di testo di Windows Form vengono utilizzate per ottenere l'input dell'utente o per visualizzare il testo. Il <xref:System.Windows.Forms.TextBox> controllo viene in genere utilizzato per il testo modificabile, anche se può inoltre essere resa di sola lettura. Caselle di testo possono visualizzare più righe, a capo automatico per le dimensioni del controllo e aggiungere la formattazione di base. Il <xref:System.Windows.Forms.TextBox> controllo fornisce un unico stile di formattazione per il testo visualizzato o immesso nel controllo. Per visualizzare più tipi di testo formattato, utilizzare il <xref:System.Windows.Forms.RichTextBox> controllo. Per ulteriori informazioni, vedere [Cenni preliminari sul controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  

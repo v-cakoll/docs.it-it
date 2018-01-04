@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 154c60112e74371f0d4d9afb2fbb38aaa32221c7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e78ce6b61ed1c6755072729b08a76d402e021b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timer-component-windows-forms"></a>Componente Timer (Windows Form)
 Il componente <xref:System.Windows.Forms.Timer> di Windows Form genera un evento a intervalli regolari. Questo componente è progettato per l'ambiente Windows Form.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul componente Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi al componente <xref:System.Windows.Forms.Timer>, che consente di impostare l'applicazione in modo da rispondere a eventi periodici.  
   
@@ -36,7 +37,7 @@ Il componente <xref:System.Windows.Forms.Timer> di Windows Form genera un evento
  [Procedura: Eseguire routine a intervalli predefiniti con il componente Timer di Windows Form](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Descrive le modalità di risposta agli intervalli prestabiliti nelle applicazioni basate su Windows.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>  
  Fornisce informazioni di riferimento sulla classe, usata per i timer di Windows Form, e sui relativi membri.  
   

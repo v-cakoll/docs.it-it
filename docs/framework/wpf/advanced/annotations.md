@@ -17,20 +17,21 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations"></a>Annotazioni
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornisce controlli che supportano l'annotazione del contenuto dei documenti di visualizzazione del documento.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulle annotazioni](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
   [Schema annotazioni](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Annotations.Annotation>  
   <xref:System.Windows.Annotations.AnnotationService>  
   <xref:System.Windows.Controls.DocumentViewer>  

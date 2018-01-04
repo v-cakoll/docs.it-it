@@ -16,16 +16,17 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Sviluppo di controlli Windows Form personalizzati con .NET Framework
 I controlli Windows Form sono componenti riutilizzabili che incapsulano funzionalità dell'interfaccia utente e vengono usati nelle applicazioni basate su Windows sul lato client. Windows Form fornisce numerosi controlli pronti per l'uso, nonché l'infrastruttura per lo sviluppo di controlli personalizzati. È possibile combinare ed estendere i controlli esistenti oppure creare controlli personalizzati. Questa sezione fornisce informazioni complementari ed esempi per lo sviluppo di controlli Windows Form.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sull'utilizzo di controlli in Windows Form](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  Evidenzia gli elementi essenziali dell'uso di controlli nelle applicazioni Windows Forms.  
   
@@ -41,7 +42,7 @@ I controlli Windows Form sono componenti riutilizzabili che incapsulano funziona
  [Eventi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
  Mostra come gestire e definire gli eventi nei controlli Windows Form.  
   
- [Attributi nei controlli Windows Form](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Attributi nei controlli Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Descrive gli attributi che è possibile applicare alle proprietà o ad altri membri e componenti dei controlli personalizzati.  
   
  [Disegno e rendering di controlli personalizzati](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
@@ -53,7 +54,7 @@ I controlli Windows Form sono componenti riutilizzabili che incapsulano funziona
  [Multithreading nei controlli Windows Form](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
  Mostra come implementare i controlli con multithreading.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

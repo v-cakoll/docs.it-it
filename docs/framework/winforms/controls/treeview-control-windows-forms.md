@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6660cf0c7de11058aeb70c7f61cd3239dd7f0f04
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-windows-forms"></a>Controllo TreeView (Windows Form)
 Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i file e le cartelle visualizzati nel riquadro sinistro della funzionalità Esplora risorse nei sistemi operativi Windows.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
@@ -51,7 +52,7 @@ Il controllo `TreeView` Windows Form visualizza una gerarchia di nodi, come i fi
   
  Vedere anche [procedura: aggiungere e rimuovere nodi con il controllo Windows Form TreeView usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [procedura: associare un Menu di scelta rapida a un TreeNode usando la finestra di progettazione](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TreeView>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

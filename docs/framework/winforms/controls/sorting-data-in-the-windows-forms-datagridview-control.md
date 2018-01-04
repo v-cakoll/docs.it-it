@@ -17,16 +17,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Ordinamento dati nel controllo DataGridView Windows Form
 Per impostazione predefinita, gli utenti possono ordinare i dati in un `DataGridView` controllo facendo clic sull'intestazione di colonna di una casella di testo. È possibile modificare il `SortMode` proprietà di colonne specifiche per consentire agli utenti di ordinare gli altri tipi di colonna quando è consigliabile eseguire questa operazione. È inoltre possibile ordinare i dati a livello di codice da qualsiasi colonna o da più colonne.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
  Vengono descritte le opzioni per l'ordinamento dei dati nel controllo.  
   
@@ -36,7 +37,7 @@ Per impostazione predefinita, gli utenti possono ordinare i dati in un `DataGrid
  [Procedura: Personalizzare l'ordinamento nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
  Viene descritto come ordinare i dati a livello di programmazione e come personalizzare l'ordinamento utilizzando il <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> evento o implementando il <xref:System.Collections.IComparer> interfaccia.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   
