@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1afed1aefbdd8a2733697c342fcf7aafabd8f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7927d3b4d41731c9b69154fa8895a8f698f53e31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback2-interface"></a>Interfaccia ICorProfilerCallback2
 Fornisce i metodi utilizzati da common language runtime (CLR) per notificare a un code profiler quando si verificano gli eventi a cui ha effettuato la sottoscrizione. Il `ICorProfilerCallback2` interfaccia è un'estensione del [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfaccia. In altri termini, fornisce nuovi callback introdotto in .NET Framework versione 2.0.  
@@ -35,14 +36,14 @@ Fornisce i metodi utilizzati da common language runtime (CLR) per notificare a u
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Notifica al profiler di codice che un oggetto con un finalizzatore è stato accodato per il thread del finalizzatore per l'esecuzione del relativo `Finalize` metodo.|  
-|[GarbageCollectionFinished (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Notifica al profiler che è stata completata un'operazione di garbage collection e rilasciati per tale tutti i callback di garbage collection.|  
-|[GarbageCollectionStarted (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Notifica al profiler di codice che ha avviato un'operazione di garbage collection.|  
-|[HandleCreated (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Notifica al profiler di codice che è stato creato l'handle di garbage collection.|  
-|[HandleDestroyed (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Notifica al profiler di codice che è stato eliminato un handle di garbage collection.|  
-|[RootReferences2 (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Notifica al profiler sui riferimenti principali dopo un'operazione di garbage collection. Questo metodo è un'estensione del [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metodo.|  
-|[SurvivingReferences (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Notifica al profiler sui riferimenti a oggetti rimasti dopo un'operazione di garbage collection.|  
-|[ThreadNameChanged (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Notifica al profiler di codice che il nome di un thread è stato modificato.|  
+|[Metodo FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Notifica al profiler di codice che un oggetto con un finalizzatore è stato accodato per il thread del finalizzatore per l'esecuzione del relativo `Finalize` metodo.|  
+|[Metodo GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Notifica al profiler che è stata completata un'operazione di garbage collection e rilasciati per tale tutti i callback di garbage collection.|  
+|[Metodo GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Notifica al profiler di codice che ha avviato un'operazione di garbage collection.|  
+|[Metodo HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Notifica al profiler di codice che è stato creato l'handle di garbage collection.|  
+|[Metodo HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Notifica al profiler di codice che è stato eliminato un handle di garbage collection.|  
+|[Metodo RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Notifica al profiler sui riferimenti principali dopo un'operazione di garbage collection. Questo metodo è un'estensione del [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metodo.|  
+|[Metodo SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Notifica al profiler sui riferimenti a oggetti rimasti dopo un'operazione di garbage collection.|  
+|[Metodo ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Notifica al profiler di codice che il nome di un thread è stato modificato.|  
   
 ## <a name="remarks"></a>Note  
  CLR chiama un metodo di `ICorProfilerCallback` (o `ICorProfilerCallback2`) interfaccia per notificare al profiler di eventi, a cui il profiler ha eseguito la sottoscrizione, si verifica. Si tratta dell'interfaccia di callback da CLR per comunicare con il profiler di codice.  
@@ -66,5 +67,5 @@ Fornisce i metodi utilizzati da common language runtime (CLR) per notificare a u
 ## <a name="see-also"></a>Vedere anche  
  [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [Interfaccia ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback3 (interfaccia)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
- [ICorProfilerCallback4 (interfaccia)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+ [Interfaccia ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
+ [Interfaccia ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

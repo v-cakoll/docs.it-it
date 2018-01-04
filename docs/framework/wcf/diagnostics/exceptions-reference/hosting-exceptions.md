@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfbe5fa9944b97704f153e9b38229ddfd28a9c5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b296578efb6eb9b1e6372dbad647fdea22dbaddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-exceptions"></a>Eccezioni host
 In questo argomento vengono elencate tutte le eccezioni generate dall'host.  
@@ -26,5 +27,5 @@ In questo argomento vengono elencate tutte le eccezioni generate dall'host.
   
 |Codice risorsa|Stringa di risorsa|  
 |-------------------|---------------------|  
-|Hosting_AddressIsAbsoluteUri|Non è consentito l'URI completo. Gli URI completi non sono consentiti per l'API ServiceHostingEnvironment.EnsureServiceAvailable. Utilizzare un percorso virtuale per il servizio corrispondente.|  
+|Hosting_AddressIsAbsoluteUri|Non è consentito l'URI completo. Gli URI completi non sono consentiti per l'API ServiceHostingEnvironment.EnsureServiceAvailable. Usare un percorso virtuale per il servizio corrispondente.|  
 |Hosting_BuildProviderCouldNotCreateType|Impossibile caricare il tipo CLR specificato durante la compilazione del servizio. Verificare che questo tipo viene definito in un file di origine all'interno dell'applicazione \\directory \App_Code, contenuti in un assembly compilato l'applicazione \\\bin directory o presenti in un assembly installato di Global Assembly Cache. Al nome del tipo viene applicata la distinzione tra maiuscole e minuscole. Le directory, ad esempio \\\App_Code e \\\bin deve trovarsi nella directory radice dell'applicazione. Il \\\App_Code e \\directory \bin non possono essere annidate nelle sottodirectory.|

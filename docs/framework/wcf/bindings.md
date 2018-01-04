@@ -14,16 +14,17 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Associazioni di Windows Communication Foundation
 Le associazioni specificano il modo in cui un endpoint di servizio di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] comunica con altri endpoint. In parole semplici, un'associazione deve specificare il trasporto (ad esempio HTTP o TCP) da utilizzare. Le associazioni consentono inoltre di impostare altre caratteristiche, ad esempio la protezione e il supporto delle transazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica delle associazioni WCF](../../../docs/framework/wcf/bindings-overview.md)  
  Cenni preliminari sul funzionamento delle associazioni di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], sulle associazioni fornite dal sistema e su come sia possibile definirle o modificarle.  
   
@@ -36,11 +37,11 @@ Le associazioni specificano il modo in cui un endpoint di servizio di [!INCLUDE[
  [Configurazione delle associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  La configurazione consente ad amministratori e programmi di installazione di personalizzare le associazioni per gli endpoint del servizio.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Endpoint: Indirizzi, associazioni e contratti](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Endpoint: indirizzi, associazioni e contratti](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Associazioni](../../../docs/framework/wcf/feature-details/bindings.md)  
   

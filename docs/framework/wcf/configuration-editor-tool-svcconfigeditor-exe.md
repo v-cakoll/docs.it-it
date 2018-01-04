@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione per i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite un'interfaccia utente grafica. Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza la necessità di modificare direttamente i file di configurazione XML.  
@@ -60,7 +61,7 @@ L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo
   
  L'interfaccia utente dell'Editor di configurazione dei servizi è suddivisa nelle aree seguenti:  
   
--   Il riquadro di visualizzazione albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra. Per eseguire operazioni sulla struttura è possibile fare clic con il pulsante destro del mouse sui nodi.  
+-   Il riquadro di visualizzazione albero, in cui gli elementi di configurazione sono visualizzati in una struttura ad albero a sinistra. Per eseguire operazioni sull'albero è possibile fare clic con il pulsante destro del mouse sui nodi.  
   
 -   Il riquadro attività, in cui le attività comuni degli elementi correnti sono visualizzate nell'angolo inferiore sinistro della finestra.  
   
@@ -74,7 +75,7 @@ L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo
   
 3.  Nel **aprire** finestra di dialogo casella, passare al file specifico che si desidera gestire e fare doppio clic.  
   
- Il visualizzatore segue automaticamente il percorso dell'unione delle configurazioni e crea una visualizzazione della configurazione unita. Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine.config e App.config. Le modifiche vengono apportate al file attivo nell'editor SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di unione delle configurazioni, è necessario aprirlo direttamente.  
+ Il visualizzatore segue automaticamente il percorso del merge delle configurazioni e crea una visualizzazione della configurazione unita. Ad esempio, la configurazione effettiva di un servizio non ospitato è una combinazione di Machine.config e App.config. Le modifiche vengono apportate al file attivo nell'editor SvcConfigEditor. Se si desidera modificare un file specifico all'interno del percorso di unione delle configurazioni, è necessario aprirlo direttamente.  
   
 > [!NOTE]
 >  L'Editor di configurazione ricarica il file di configurazione attualmente aperto quando quest’ultimo è stato modificato fuori dell'Editor. Quando si verifica questa condizione, tutte le modifiche che non sono state salvate in modo durevole nell'Editor verranno perse. Se il nuovo caricamento si verifica costantemente, la causa più probabile è un servizio che accede continuamente al file di configurazione, ad esempio un software antivirus in esecuzione in background. Per risolvere questo problema, assicurarsi che l'Editor di configurazione sia l’unico processo solo che può accedere al file quando è aperto.  

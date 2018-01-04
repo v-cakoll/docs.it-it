@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33f576b177ddb66d6145e0b1a5d0d104346640ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4980beca761a4c49c39e92c6c73a7bc1a5038b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Scenari di analisi end-to-end
 Questa sezione contiene argomenti che descrivono scenari diversi per l'uso della funzione di analisi.  
@@ -32,22 +33,22 @@ Questa sezione contiene argomenti che descrivono scenari diversi per l'uso della
   
 -   Propagazione dell'ID attività dell'utente  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
--   [Elenco attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+-   [Elenco delle attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
   
--   [Propagazione dell'ID attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+-   [Propagazione di ID attività](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
--   [Scenari sincroni con HTTP, TCP o Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [Scenari sincroni con HTTP, TCP o pipe con nome](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [Scenari asincroni con HTTP, TCP o Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [Scenari asincroni con HTTP, TCP o pipe con nome](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [Traccia attività relative alla sicurezza dei messaggi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+-   [Traccia delle attività relative alla protezione dei messaggi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
   
--   [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+-   [Microsoft Message Queuing](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
   
 -   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Traccia end-to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

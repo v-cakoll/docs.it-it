@@ -13,18 +13,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5526c39d8947a578174dd4d58685249b4952e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e1b4e3aab6a6a7f94bfb3783c9e32f83557db19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|ID|217|  
+|Id|217|  
 |Parole chiave|Troubleshooting, ServiceModel|  
 |Livello|Informazioni|  
 |Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
 |--------------------|--------------------|-----------------|  
-|Azione|`xs:string`|Intestazione dell'azione SOAP del messaggio in uscita.|  
+|Operazione|`xs:string`|Intestazione dell'azione SOAP del messaggio in uscita.|  
 |Nome contratto|`xs:string`|Nome del contratto. Esempio: ICalculator.|  
 |Destinazione|`xs:string`|Indirizzo dell'endpoint servizio a cui viene inviato il messaggio.|  
 |HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web. Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; ServiceName'. Esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  

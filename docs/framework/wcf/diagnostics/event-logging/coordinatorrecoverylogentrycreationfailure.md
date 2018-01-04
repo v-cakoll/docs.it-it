@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd311267ff3640412d9a749ba72ec16398220a79
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a6d39f66f18038677165eb8b73e5cef895dc70cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a>CoordinatorRecoveryLogEntryCreationFailure
 ID: 140  
@@ -30,5 +31,5 @@ ID: 140
  Impossibile generare una voce del registro di ripristino per l'integrazione di un coordinatore. La transazione sarà interrotta. Vengono indicati l'ID della transazione, la motivazione, l'eccezione, il nome e l'ID del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

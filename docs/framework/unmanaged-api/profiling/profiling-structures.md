@@ -17,26 +17,27 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42762812c9d27073fac34b20df5011b386f05740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b29c63ea9dfbd69863aad1afa712444405be763e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-structures"></a>Strutture di profilatura
 Questa sezione descrive le strutture non gestite usate dall'API di profilatura.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Struttura COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  Fornisce a Common Language Runtime le informazioni su un assembly di riferimento che deve considerare quando esegue un percorso di chiusura del riferimento ad assembly.  
   
- [COR_PRF_CODE_INFO (struttura)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
+ [Struttura COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
  Rappresenta un blocco contiguo di codice nativo archiviato in memoria.  
   
  [Struttura COR_PRF_EX_CLAUSE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
  Archivia le informazioni su un'istanza di una clausola di eccezione specifica e il relativo frame associato.  
   
- [COR_PRF_FUNCTION (struttura)](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
+ [Struttura COR_PRF_FUNCTION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
  Fornisce una rappresentazione univoca di una funzione combinando il relativo ID con l'ID della versione ricompilata.  
   
  [Struttura COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  

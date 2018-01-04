@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: controllo delle versioni del contratto dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]contratti dati, vedere gli argomenti di [utilizzando i contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -110,8 +111,8 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Controllo delle versioni del contratto dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Contratti dati compatibili con versioni](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Controllo delle versioni dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [Nomi di contratto di dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

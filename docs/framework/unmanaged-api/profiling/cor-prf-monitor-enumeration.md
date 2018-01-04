@@ -19,11 +19,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c0e2f774bd178676494f24364c7b8890665c3810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6dc135681d11a496dbc27553d46a5d101b6d7b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmonitor-enumeration"></a>Enumerazione COR_PRF_MONITOR
 Contiene i valori usati per specificare il comportamento, le funzionalità o gli eventi ai quali il profiler intende effettuare la sottoscrizione.  
@@ -117,14 +118,14 @@ typedef enum {
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Nessun flag impostato  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_NONE`|Nessun flag impostato.|  
   
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Flag di callback  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Abilita tutti gli eventi di callback.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Controlli di `AppDomainCreation*` e `AppDomainShutdown*` callback di [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfaccia.|  
@@ -150,7 +151,7 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>Flag di abilitazione delle funzionalità  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|Consente il recupero di un valore esatto `ClassID` per una funzione generica chiamando il [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metodo con un `COR_PRF_FRAME_INFO` valore restituito dal [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) callback.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Abilita traccia degli argomenti mediante il [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) callback o [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) callback e [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) metodo.|  
@@ -164,7 +165,7 @@ typedef enum {
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>Flag di configurazione  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Impedisce il caricamento di tutte le immagini native, comprese le immagini ottimizzate per il profiler.  Se vengono specificati sia questo flag che il flag `COR_PRF_USE_PROFILE_IMAGES`, verrà usato il flag `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_DISABLE_INLINING`|Disabilita tutte le funzionalità inline.|  
@@ -175,7 +176,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>Flag composti  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Rappresenta tutti i valori del flag `COR_PRF_MONITOR`.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Rappresenta tutti i flag `COR_PRF_MONITOR` che possono essere impostati dopo la connessione del profiler a un'applicazione in esecuzione. La sezione sintassi indica i singoli flag presenti in questa maschera di bit.|  
@@ -197,5 +198,5 @@ typedef enum {
   
 ## <a name="see-also"></a>Vedere anche  
  [Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- [GetEventMask (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
- [SetEventMask (metodo)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)
+ [Metodo GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
+ [Metodo SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

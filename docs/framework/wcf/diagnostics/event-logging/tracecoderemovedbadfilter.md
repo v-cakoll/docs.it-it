@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7c609c98ae2d8d1e58c5334eed50c23a7a00ad9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f04623e691b02bdda01adcec93891809d725524c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracecoderemovedbadfilter"></a>TraceCodeRemovedBadFilter
 ID: 114  
@@ -30,5 +31,5 @@ ID: 114
  Questo evento indica che è stato rimosso un filtro di registrazione dei messaggi non valido che stava accedendo al corpo del messaggio. L'elenco comprende XPath, nome e ID del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

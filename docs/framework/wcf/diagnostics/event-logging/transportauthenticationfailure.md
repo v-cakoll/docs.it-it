@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d20e9f0b337ea4cd3b310e41694ddea350ddee5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e7aa191d643fb421fb0fbf896c9560437f61e1a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
 ID: 174  
@@ -30,5 +31,5 @@ ID: 174
  Questo evento indica che l'autenticazione del trasporto non è riuscita ed elenca l'identità del client e l'ID attività.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

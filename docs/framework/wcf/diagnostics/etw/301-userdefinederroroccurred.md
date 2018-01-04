@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cfe60c221062e3ad7ae1b8cbdc9b135e6fa2e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d54930a29a24dab97ce403c2808fb74b8cbfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|ID|301|  
+|Id|301|  
 |Parole chiave|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Livello|Errore|  
 |Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -39,6 +40,6 @@ ms.lasthandoff: 12/02/2017
   
 |Nome elemento dati|Tipo elemento dati|Descrizione|  
 |--------------------|--------------------|-----------------|  
-|Nome|`xs:string`|Nome dell'evento definito dall'utente.|  
+|nome|`xs:string`|Nome dell'evento definito dall'utente.|  
 |HostReference|`xs:string`|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web. Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; ServiceName'. Esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'.|  
 |Payload|`xs:string`|Payload dell'evento definito dall'utente.|

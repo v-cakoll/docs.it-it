@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>Progettazione dei contratti di servizio
 In questo argomento vengono descritti i contratti di servizio, la relativa modalità di definizione, le operazioni disponibili (e le implicazioni per gli scambi di messaggi sottostanti), i tipi di dati utilizzati e altri temi che consentono di progettare operazioni in linea con i requisiti del proprio scenario.  
@@ -279,10 +280,10 @@ End Interface
  Se i nomi e gli spazi dei nomi non vengono impostati in modo esplicito, una delle conseguenze sarà che l'utilizzo dell'offuscamento IL sull'assembly determinerà la modifica dei nomi e degli spazi dei nomi del tipo di contratto e genererà WSDL modificato e scambi di rete che in genere hanno esito negativo. Se i nomi e gli spazi dei nomi del contratto non vengono impostati in modo esplicito, ma si intende utilizzare l'offuscamento, utilizzare gli attributi <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> per impedire la modifica dei nomi e degli spazi dei nomi del tipo di contratto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: creare un contratto Request / Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [Procedura: creare un contratto unidirezionale](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [Procedura: creare un contratto Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Trasferimento dati specificando nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Procedura: Creare un contratto Request/Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [Procedura: Creare un contratto unidirezionale](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [Procedura: Creare un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Definizione del trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [Uso di sessioni](../../../docs/framework/wcf/using-sessions.md)  
  [Operazioni sincrone e asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  

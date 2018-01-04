@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c30c4317bebfc3261889fa69c52f98bf0b46746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 17a580f47049701bd9a7410cb11d81a90686d4a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unknownlisteneradaptererror"></a>UnknownListenerAdapterError
 Id: 161  
@@ -30,5 +31,5 @@ Id: 161
  Questo evento indica che si è verificato un errore imprevisto nell'adattatore del listener durante la gestione di una notifica WAS. Il processo viene chiuso. Nell'evento vengono indicati il protocollo, l'eccezione, nonché il nome e l'ID del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

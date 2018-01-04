@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f163851dd0baf374817c202c1370fff9cc64d0d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb53fd68d0b62bdc86831b62f6b38329467c0c27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolrecoverycompletefailure"></a>ProtocolRecoveryCompleteFailure
 ID: 145  
@@ -30,5 +31,5 @@ ID: 145
  Questo evento indica che è stato impossibile completare l'avvio e il recupero del servizio del protocollo WS-AtomicTransaction. La funzionalità WS-Atomic Transaction viene pertanto disattivata. Vengono indicati l'ID e il nome del protocollo, l'eccezione, il nome e l'ID del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registrazione degli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Registrazione eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [Riferimenti generali sugli eventi](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

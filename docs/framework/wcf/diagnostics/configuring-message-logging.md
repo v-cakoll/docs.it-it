@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e42b4007d438fbabaf497981b654415ca7eeb415
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-logging"></a>Configurazione della registrazione dei messaggi
 In questo argomento viene illustrato come configurare la registrazione dei messaggi per scenari differenti.  
@@ -113,14 +114,14 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
   
 ||Invio richiesta|Ricezione richiesta|Invio risposta|Ricezione risposta|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Livello del modello di servizio|Servizio<br /><br /> Livello<br /><br /> Invia<br /><br /> Richiesta|Servizio<br /><br /> Livello<br /><br /> Receive<br /><br /> Richiesta|Servizio<br /><br /> Livello<br /><br /> Invia<br /><br /> Reply|Servizio<br /><br /> Livello<br /><br /> Receive<br /><br /> Reply|  
+|Livello del modello di servizio|Service<br /><br /> Livello<br /><br /> Invia<br /><br /> Richiesta|Service<br /><br /> Livello<br /><br /> Receive<br /><br /> Richiesta|Service<br /><br /> Livello<br /><br /> Invia<br /><br /> Reply|Service<br /><br /> Livello<br /><br /> Receive<br /><br /> Reply|  
 |Livello di trasporto|Trasporto<br /><br /> Invia|Trasporto<br /><br /> Receive|Trasporto<br /><br /> Invia|Trasporto<br /><br /> Receive|  
   
  Per richiesta unidirezionale  
   
 ||Invio richiesta|Ricezione richiesta|  
 |-|------------------|---------------------|  
-|Livello del modello di servizio|Servizio<br /><br /> Livello<br /><br /> Invia<br /><br /> Datagram|Servizio<br /><br /> Livello<br /><br /> Receive<br /><br /> Datagram|  
+|Livello del modello di servizio|Service<br /><br /> Livello<br /><br /> Invia<br /><br /> Datagram|Service<br /><br /> Livello<br /><br /> Receive<br /><br /> Datagram|  
 |Livello di trasporto|Trasporto<br /><br /> Invia|Trasporto<br /><br /> Receive|  
   
 ## <a name="message-filters"></a>Filtri messaggi  
@@ -174,5 +175,5 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
   
 ## <a name="see-also"></a>Vedere anche  
  [\<registrazione messaggi >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [Registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+ [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Impostazioni consigliate per la traccia e la registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

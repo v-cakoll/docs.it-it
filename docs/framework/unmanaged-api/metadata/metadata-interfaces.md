@@ -17,20 +17,21 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 638727dae1f0f32e5c92c0da7513719bd11ae8d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-interfaces"></a>Interfacce di metadati
 Questa sezione descrive le interfacce non gestite che forniscono l'accesso ai metadati esposti dai tipi di .NET Framework, metodi, campi e così via.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [ICeeGen (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Interfaccia ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  Fornisce metodi per la compilazione dinamica del codice.  
   
- [IHostFilter (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
+ [Interfaccia IHostFilter](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
  Fornisce un metodo per l'host di runtime per contrassegnare i token di metadati per l'elaborazione.  
   
  [Interfaccia IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)  
@@ -39,46 +40,46 @@ Questa sezione descrive le interfacce non gestite che forniscono l'accesso ai me
  [Interfaccia IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
  Fornisce metodi che supportano il modello autodescrittivo usato da Common Language Runtime (CLR) per risolvere e usare le risorse.  
   
- [IMetaDataAssemblyImport (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
+ [Interfaccia IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
  Fornisce metodi per accedere ed esaminare il contenuto di un manifesto dell'assembly.  
   
- [IMetaDataConverter (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)  
+ [Interfaccia IMetaDataConverter](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)  
  Fornisce metodi per eseguire il mapping delle librerie dei tipi alle relative firme di metadati e per eseguire la conversione da una all'altra.  
   
- [IMetaDataDispenser (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
+ [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
  `IMetaDataDispenser` è obsoleto. In alternativa, usare `IMetaDataDispenserEx`.  
   
- [IMetaDataDispenserEx (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
+ [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  Fornisce metodi che eseguono il mapping di aree di memoria per la creazione o modifica dei metadati.  
   
- [IMetaDataEmit (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [Interfaccia IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
  Fornisce metodi per creare, modificare e archiviare i metadati sull'assembly nell'ambito attualmente definito.  
   
  [Interfaccia IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
  Fornisce metodi per la definizione e la modifica delle firme di metadati dei metodi e costruttori con parametri di tipo <xref:System.Type?displayProperty=nameWithType>.  
   
- [IMetaDataError (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
+ [Interfaccia IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
  Fornisce un meccanismo di callback per la segnalazione di errori durante la risoluzione della firma dei metadati per un assembly.  
   
- [IMetaDataFilter (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)  
+ [Interfaccia IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)  
  Fornisce metodi per contrassegnare e filtrare i token di metadati per evitare la ripetizione di azioni che sono già state eseguite.  
   
- [IMetaDataImport (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [Interfaccia IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  Fornisce metodi per l'importazione e la modifica di tipi da altri assembly.  
   
- [IMetaDataImport2 (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
+ [Interfaccia IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
  Estende `IMetaDataImport` per consentire l'uso dei tipi generici.  
   
- [IMetaDataInfo (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
+ [Interfaccia IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
  Fornisce un metodo che ottiene informazioni sul mapping dei metadati da un file su disco in memoria.  
   
- [IMetaDataTables (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [Interfaccia IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
  Fornisce metodi per l'archiviazione e il recupero dei metadati nelle tabelle.  
   
- [IMetaDataTables2 (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
+ [Interfaccia IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
  Estende `IMetaDataTables` per includere i metodi per l'uso di flussi di metadati.  
   
- [IMetaDataValidate (interfaccia)](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
+ [Interfaccia IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
  Fornisce i metodi da usare per la convalida delle firme di metadati.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

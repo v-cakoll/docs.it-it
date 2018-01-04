@@ -19,16 +19,17 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>Programmazione WCF di base
 Contenuto della sezione vengono illustrati i principi per la creazione di applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  Descrive il ciclo di vita relativo alla progettazione, generazione e distribuzione di applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
@@ -53,7 +54,7 @@ Contenuto della sezione vengono illustrati i principi per la creazione di applic
  [API Web ASP.NET e WCF](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  Vengono illustrate le due tecnologie, come interagiscono tra loro e quando utilizzarle.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -75,6 +76,6 @@ Contenuto della sezione vengono illustrati i principi per la creazione di applic
   
  [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [Hosting IIS mediante il codice Inline](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Hosting IIS mediante il codice inline](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
  [Servizio indipendente](../../../docs/framework/wcf/samples/self-host.md)

@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>Cenni preliminari sulla profilatura
 <a name="top"></a>Un profiler è uno strumento che consente di monitorare l'esecuzione di un'altra applicazione. Un profiler CLR (Common Language Runtime) è una DLL costituita da funzioni che ricevono e inviano messaggi a CLR usando l'API di profilatura. La DLL del profiler viene caricata in fase di esecuzione da CLR.  
@@ -237,7 +238,7 @@ Architettura di profilatura
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Impostazione di un ambiente di profilatura](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Illustra come inizializzare un profiler, impostare le notifiche degli eventi e profilare un servizio di Windows.|  
+|[Configurazione di un ambiente di profilatura](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Illustra come inizializzare un profiler, impostare le notifiche degli eventi e profilare un servizio di Windows.|  
 |[Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Descrive le interfacce non gestite usate dall'API di profilatura.|  
 |[Funzioni statiche globali di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Descrive le funzioni statiche globali non gestite usate dall'API di profilatura.|  
 |[Enumerazioni di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Descrive le enumerazioni non gestite usate dall'API di profilatura.|  
