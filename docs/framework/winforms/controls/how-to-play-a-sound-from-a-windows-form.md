@@ -22,16 +22,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ed5335108e010ed61d8a96e3169353133e9ddd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31c9495e22af0e06869d54f02d4ce0e866e28dbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a><span data-ttu-id="17903-102">Procedura: Riprodurre un suono da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="17903-102">How to: Play a Sound from a Windows Form</span></span>
-<span data-ttu-id="17903-103">In questo esempio viene riprodotto un suono in un percorso specificato in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="17903-103">This example plays a sound at a given path at run time.</span></span>  
+# <a name="how-to-play-a-sound-from-a-windows-form"></a><span data-ttu-id="ef79a-102">Procedura: Riprodurre un suono da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="ef79a-102">How to: Play a Sound from a Windows Form</span></span>
+<span data-ttu-id="ef79a-103">In questo esempio viene riprodotto un suono in un percorso specificato in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ef79a-103">This example plays a sound at a given path at run time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17903-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="17903-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ef79a-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="ef79a-104">Example</span></span>  
   
 ```vb  
 Sub PlaySimpleSound()  
@@ -47,34 +48,34 @@ private void playSimpleSound()
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="17903-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="17903-105">Compiling the Code</span></span>  
- <span data-ttu-id="17903-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="17903-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ef79a-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="ef79a-105">Compiling the Code</span></span>  
+ <span data-ttu-id="ef79a-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="ef79a-106">This example requires:</span></span>  
   
--   <span data-ttu-id="17903-107">Sostituzione del nome del file `"c:\Windows\Media\chimes.wav"` con un nome file valido.</span><span class="sxs-lookup"><span data-stu-id="17903-107">That you replace the file name `"c:\Windows\Media\chimes.wav"` with a valid file name.</span></span>  
+-   <span data-ttu-id="ef79a-107">Sostituzione del nome del file `"c:\Windows\Media\chimes.wav"` con un nome file valido.</span><span class="sxs-lookup"><span data-stu-id="ef79a-107">That you replace the file name `"c:\Windows\Media\chimes.wav"` with a valid file name.</span></span>  
   
--   <span data-ttu-id="17903-108">(C#) Un riferimento di <xref:System.Media?displayProperty=nameWithType> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="17903-108">(C#) A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+-   <span data-ttu-id="ef79a-108">(C#) Un riferimento di <xref:System.Media?displayProperty=nameWithType> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="ef79a-108">(C#) A reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="17903-109">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="17903-109">Robust Programming</span></span>  
- <span data-ttu-id="17903-110">Le operazioni sui file devono essere racchiuse tra blocchi appropriati di gestione strutturata delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="17903-110">File operations should be enclosed within appropriate structured exception handling blocks.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="ef79a-109">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="ef79a-109">Robust Programming</span></span>  
+ <span data-ttu-id="ef79a-110">Le operazioni sui file devono essere racchiuse tra blocchi appropriati di gestione strutturata delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="ef79a-110">File operations should be enclosed within appropriate structured exception handling blocks.</span></span>  
   
- <span data-ttu-id="17903-111">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="17903-111">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="ef79a-111">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="ef79a-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="17903-112">Il nome del percorso non è valido.</span><span class="sxs-lookup"><span data-stu-id="17903-112">The path name is malformed.</span></span> <span data-ttu-id="17903-113">Ad esempio, contiene caratteri non validi o è costituito solo da spazi (classe <xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="17903-113">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException> class).</span></span>  
+-   <span data-ttu-id="ef79a-112">Il nome del percorso non è valido.</span><span class="sxs-lookup"><span data-stu-id="ef79a-112">The path name is malformed.</span></span> <span data-ttu-id="ef79a-113">Ad esempio, contiene caratteri non validi o è costituito solo da spazi (classe <xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="ef79a-113">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException> class).</span></span>  
   
--   <span data-ttu-id="17903-114">Il percorso è di sola lettura (classe <xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="17903-114">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
+-   <span data-ttu-id="ef79a-114">Il percorso è di sola lettura (classe <xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="ef79a-114">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
   
--   <span data-ttu-id="17903-115">Il nome del percorso è `null` (classe <xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="17903-115">The path name is `null` (<xref:System.ArgumentNullException> class).</span></span>  
+-   <span data-ttu-id="ef79a-115">Il nome del percorso è `null` (classe <xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="ef79a-115">The path name is `null` (<xref:System.ArgumentNullException> class).</span></span>  
   
--   <span data-ttu-id="17903-116">Il nome del percorso è troppo lungo (classe <xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="17903-116">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
+-   <span data-ttu-id="ef79a-116">Il nome del percorso è troppo lungo (classe <xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="ef79a-116">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
   
--   <span data-ttu-id="17903-117">Il percorso non è valido (classe <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="17903-117">The path is invalid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
+-   <span data-ttu-id="ef79a-117">Il percorso non è valido (classe <xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="ef79a-117">The path is invalid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
   
--   <span data-ttu-id="17903-118">Il percorso contiene solo due punti, ":" (<xref:System.NotSupportedException> classe).</span><span class="sxs-lookup"><span data-stu-id="17903-118">The path is only a colon, ":" (<xref:System.NotSupportedException> class).</span></span>  
+-   <span data-ttu-id="ef79a-118">Il percorso contiene solo due punti, ":" (<xref:System.NotSupportedException> classe).</span><span class="sxs-lookup"><span data-stu-id="ef79a-118">The path is only a colon, ":" (<xref:System.NotSupportedException> class).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="17903-119">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="17903-119">.NET Framework Security</span></span>  
- <span data-ttu-id="17903-120">Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="17903-120">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="17903-121">È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="17903-121">For example, the file `Form1.vb` may not be a Visual Basic source file.</span></span> <span data-ttu-id="17903-122">Prima di usare i dati nell'applicazione verificare tutti gli input.</span><span class="sxs-lookup"><span data-stu-id="17903-122">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="ef79a-119">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ef79a-119">.NET Framework Security</span></span>  
+ <span data-ttu-id="ef79a-120">Non basarsi sul nome del file per prendere decisioni in merito al relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="ef79a-120">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="ef79a-121">È possibile ad esempio che il file `Form1.vb` non sia un file di origine di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ef79a-121">For example, the file `Form1.vb` may not be a Visual Basic source file.</span></span> <span data-ttu-id="ef79a-122">Prima di usare i dati nell'applicazione verificare tutti gli input.</span><span class="sxs-lookup"><span data-stu-id="ef79a-122">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17903-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="17903-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ef79a-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ef79a-123">See Also</span></span>  
  <xref:System.Media.SoundPlayer>  
- [<span data-ttu-id="17903-124">Procedura: Caricare in modo asincrono un suono in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="17903-124">How to: Load a Sound Asynchronously within a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ [<span data-ttu-id="ef79a-124">Procedura: Caricare in modo asincrono un suono in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="ef79a-124">How to: Load a Sound Asynchronously within a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  

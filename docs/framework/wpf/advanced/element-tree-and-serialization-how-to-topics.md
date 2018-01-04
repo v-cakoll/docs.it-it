@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86f812c233a161764836c54817dc616577a4bb5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 84020af84822ca4a8815e516a882fb15100b22e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="a78dd-102">Procedure relative alla struttura ad albero e alla serializzazione degli elementi</span><span class="sxs-lookup"><span data-stu-id="a78dd-102">Element Tree and Serialization How-to Topics</span></span>
-<span data-ttu-id="a78dd-103">Negli argomenti di questa sezione viene descritto come utilizzare l'albero degli elementi WPF.</span><span class="sxs-lookup"><span data-stu-id="a78dd-103">The topics in this section describe how to use the WPF element tree.</span></span>  
+# <a name="element-tree-and-serialization-how-to-topics"></a><span data-ttu-id="d14e1-102">Procedure relative alla struttura ad albero e alla serializzazione degli elementi</span><span class="sxs-lookup"><span data-stu-id="d14e1-102">Element Tree and Serialization How-to Topics</span></span>
+<span data-ttu-id="d14e1-103">Negli argomenti di questa sezione viene descritto come utilizzare l'albero degli elementi WPF.</span><span class="sxs-lookup"><span data-stu-id="d14e1-103">The topics in this section describe how to use the WPF element tree.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a78dd-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="a78dd-104">In This Section</span></span>  
- [<span data-ttu-id="a78dd-105">Trovare un elemento in base al nome</span><span class="sxs-lookup"><span data-stu-id="a78dd-105">Find an Element by Its Name</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [<span data-ttu-id="a78dd-106">Eseguire l'override dell'albero logico</span><span class="sxs-lookup"><span data-stu-id="a78dd-106">Override the Logical Tree</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d14e1-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d14e1-104">In This Section</span></span>  
+ [<span data-ttu-id="d14e1-105">Trovare un elemento in base al nome</span><span class="sxs-lookup"><span data-stu-id="d14e1-105">Find an Element by Its Name</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
+ [<span data-ttu-id="d14e1-106">Eseguire l'override dell'albero logico</span><span class="sxs-lookup"><span data-stu-id="d14e1-106">Override the Logical Tree</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
   
-## <a name="reference"></a><span data-ttu-id="a78dd-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="a78dd-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d14e1-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d14e1-107">Reference</span></span>  
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
  <xref:System.Windows.Markup>  
   
-## <a name="related-sections"></a><span data-ttu-id="a78dd-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a78dd-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d14e1-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="d14e1-108">Related Sections</span></span>

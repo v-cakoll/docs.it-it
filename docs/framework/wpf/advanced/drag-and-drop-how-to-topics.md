@@ -15,22 +15,23 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="1819f-102">Procedure relative al trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="1819f-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="1819f-103">Gli esempi seguenti illustrano come eseguire attività comuni utilizzando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="1819f-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="a3069-102">Procedure relative al trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="a3069-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="a3069-103">Gli esempi seguenti illustrano come eseguire attività comuni utilizzando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="a3069-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1819f-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="1819f-104">In This Section</span></span>  
- [<span data-ttu-id="1819f-105">Aprire un file rilasciato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="1819f-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="1819f-106">Creare un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="1819f-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [<span data-ttu-id="1819f-107">Determinare se un formato di dati è presente in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="1819f-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="1819f-108">Elencare i formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="1819f-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="1819f-109">Recuperare dati in un formato dati particolare</span><span class="sxs-lookup"><span data-stu-id="1819f-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="1819f-110">Archiviare più formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="1819f-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a3069-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a3069-104">In This Section</span></span>  
+ [<span data-ttu-id="a3069-105">Aprire un file rilasciato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="a3069-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="a3069-106">Creare un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a3069-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
+ [<span data-ttu-id="a3069-107">Determinare se un formato di dati è presente in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a3069-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="a3069-108">Elencare i formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a3069-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="a3069-109">Recuperare dati in un formato dati particolare</span><span class="sxs-lookup"><span data-stu-id="a3069-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="a3069-110">Archiviare più formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a3069-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1819f-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1819f-111">See Also</span></span>  
- [<span data-ttu-id="1819f-112">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="1819f-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a3069-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a3069-111">See Also</span></span>  
+ [<span data-ttu-id="a3069-112">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="a3069-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

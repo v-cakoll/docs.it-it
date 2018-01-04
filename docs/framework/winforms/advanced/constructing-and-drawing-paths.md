@@ -19,27 +19,28 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6cec2356159b59e58ac6785a2988df7b2fac0e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="constructing-and-drawing-paths"></a><span data-ttu-id="5bf81-102">Costruzione e creazione di percorsi</span><span class="sxs-lookup"><span data-stu-id="5bf81-102">Constructing and Drawing Paths</span></span>
-<span data-ttu-id="5bf81-103">Un percorso è una sequenza di primitive grafiche (linee, rettangoli, curve, testo e così via) che può essere modificato e visualizzato come una singola unità.</span><span class="sxs-lookup"><span data-stu-id="5bf81-103">A path is a sequence of graphics primitives (lines, rectangles, curves, text, and the like) that can be manipulated and drawn as a single unit.</span></span> <span data-ttu-id="5bf81-104">Un percorso può essere suddiviso in *figure* che sono aperti o chiusi.</span><span class="sxs-lookup"><span data-stu-id="5bf81-104">A path can be divided into *figures* that are either open or closed.</span></span> <span data-ttu-id="5bf81-105">Una figura può contenere diverse primitive.</span><span class="sxs-lookup"><span data-stu-id="5bf81-105">A figure can contain several primitives.</span></span>  
+# <a name="constructing-and-drawing-paths"></a><span data-ttu-id="4d2db-102">Costruzione e creazione di percorsi</span><span class="sxs-lookup"><span data-stu-id="4d2db-102">Constructing and Drawing Paths</span></span>
+<span data-ttu-id="4d2db-103">Un percorso è una sequenza di primitive grafiche (linee, rettangoli, curve, testo e così via) che può essere modificato e visualizzato come una singola unità.</span><span class="sxs-lookup"><span data-stu-id="4d2db-103">A path is a sequence of graphics primitives (lines, rectangles, curves, text, and the like) that can be manipulated and drawn as a single unit.</span></span> <span data-ttu-id="4d2db-104">Un percorso può essere suddiviso in *figure* che sono aperti o chiusi.</span><span class="sxs-lookup"><span data-stu-id="4d2db-104">A path can be divided into *figures* that are either open or closed.</span></span> <span data-ttu-id="4d2db-105">Una figura può contenere diverse primitive.</span><span class="sxs-lookup"><span data-stu-id="4d2db-105">A figure can contain several primitives.</span></span>  
   
- <span data-ttu-id="5bf81-106">È possibile disegnare un tracciato chiamando il <xref:System.Drawing.Graphics.DrawPath%2A> metodo il <xref:System.Drawing.Graphics> classe ed è possibile compilare un percorso chiamando il <xref:System.Drawing.Graphics.FillPath%2A> metodo il <xref:System.Drawing.Graphics> classe.</span><span class="sxs-lookup"><span data-stu-id="5bf81-106">You can draw a path by calling the <xref:System.Drawing.Graphics.DrawPath%2A> method of the <xref:System.Drawing.Graphics> class, and you can fill a path by calling the <xref:System.Drawing.Graphics.FillPath%2A> method of the <xref:System.Drawing.Graphics> class.</span></span>  
+ <span data-ttu-id="4d2db-106">È possibile disegnare un tracciato chiamando il <xref:System.Drawing.Graphics.DrawPath%2A> metodo il <xref:System.Drawing.Graphics> classe ed è possibile compilare un percorso chiamando il <xref:System.Drawing.Graphics.FillPath%2A> metodo il <xref:System.Drawing.Graphics> classe.</span><span class="sxs-lookup"><span data-stu-id="4d2db-106">You can draw a path by calling the <xref:System.Drawing.Graphics.DrawPath%2A> method of the <xref:System.Drawing.Graphics> class, and you can fill a path by calling the <xref:System.Drawing.Graphics.FillPath%2A> method of the <xref:System.Drawing.Graphics> class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5bf81-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="5bf81-107">In This Section</span></span>  
- [<span data-ttu-id="5bf81-108">Procedura: Creare figure da linee, curve e forme</span><span class="sxs-lookup"><span data-stu-id="5bf81-108">How to: Create Figures from Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
- <span data-ttu-id="5bf81-109">Viene illustrato come utilizzare un <xref:System.Drawing.Drawing2D.GraphicsPath> per creare figure.</span><span class="sxs-lookup"><span data-stu-id="5bf81-109">Shows how to use a <xref:System.Drawing.Drawing2D.GraphicsPath> to create figures.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4d2db-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="4d2db-107">In This Section</span></span>  
+ [<span data-ttu-id="4d2db-108">Procedura: Creare figure da linee, curve e forme</span><span class="sxs-lookup"><span data-stu-id="4d2db-108">How to: Create Figures from Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
+ <span data-ttu-id="4d2db-109">Viene illustrato come utilizzare un <xref:System.Drawing.Drawing2D.GraphicsPath> per creare figure.</span><span class="sxs-lookup"><span data-stu-id="4d2db-109">Shows how to use a <xref:System.Drawing.Drawing2D.GraphicsPath> to create figures.</span></span>  
   
- [<span data-ttu-id="5bf81-110">Procedura: Riempire figure aperte</span><span class="sxs-lookup"><span data-stu-id="5bf81-110">How to: Fill Open Figures</span></span>](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
- <span data-ttu-id="5bf81-111">Viene illustrato come compilare un <xref:System.Drawing.Drawing2D.GraphicsPath>.</span><span class="sxs-lookup"><span data-stu-id="5bf81-111">Explains how to fill a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
+ [<span data-ttu-id="4d2db-110">Procedura: Riempire figure aperte</span><span class="sxs-lookup"><span data-stu-id="4d2db-110">How to: Fill Open Figures</span></span>](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
+ <span data-ttu-id="4d2db-111">Viene illustrato come compilare un <xref:System.Drawing.Drawing2D.GraphicsPath>.</span><span class="sxs-lookup"><span data-stu-id="4d2db-111">Explains how to fill a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
   
- [<span data-ttu-id="5bf81-112">Procedura: Trasformare un percorso curvo in una linea</span><span class="sxs-lookup"><span data-stu-id="5bf81-112">How to: Flatten a Curved Path into a Line</span></span>](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
- <span data-ttu-id="5bf81-113">Viene illustrato come convertire un <xref:System.Drawing.Drawing2D.GraphicsPath>.</span><span class="sxs-lookup"><span data-stu-id="5bf81-113">Shows how to flatten a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
+ [<span data-ttu-id="4d2db-112">Procedura: Trasformare un percorso curvo in una linea</span><span class="sxs-lookup"><span data-stu-id="4d2db-112">How to: Flatten a Curved Path into a Line</span></span>](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
+ <span data-ttu-id="4d2db-113">Viene illustrato come convertire un <xref:System.Drawing.Drawing2D.GraphicsPath>.</span><span class="sxs-lookup"><span data-stu-id="4d2db-113">Shows how to flatten a <xref:System.Drawing.Drawing2D.GraphicsPath>.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="5bf81-114">Riferimento</span><span class="sxs-lookup"><span data-stu-id="5bf81-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4d2db-114">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="4d2db-114">Reference</span></span>  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
- <span data-ttu-id="5bf81-115">Descrive la classe e contiene collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="5bf81-115">Describes this class and contains links to all of its members.</span></span>
+ <span data-ttu-id="4d2db-115">Descrive la classe e contiene collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="4d2db-115">Describes this class and contains links to all of its members.</span></span>

@@ -23,30 +23,31 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6382efab8dc5dde00c9debd408d70b0ad0e8e11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0db83277be1dcecc2463c45481671c2ee1ee737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="05745-102">Procedura: aggiungere pulsanti a un controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="05745-102">How to: Add Buttons to a ToolBar Control</span></span>
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="99dd8-102">Procedura: aggiungere pulsanti a un controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="99dd8-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="05745-103">Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="05745-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="99dd8-103">Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="99dd8-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="05745-104">Parte integrante di <xref:System.Windows.Forms.ToolBar> i pulsanti e aggiungervi è.</span><span class="sxs-lookup"><span data-stu-id="05745-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="05745-105">Possono essere usati per fornire facile accesso ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.</span><span class="sxs-lookup"><span data-stu-id="05745-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
+ <span data-ttu-id="99dd8-104">Parte integrante di <xref:System.Windows.Forms.ToolBar> i pulsanti e aggiungervi è.</span><span class="sxs-lookup"><span data-stu-id="99dd8-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="99dd8-105">Possono essere usati per fornire facile accesso ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.</span><span class="sxs-lookup"><span data-stu-id="99dd8-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- <span data-ttu-id="05745-106">Negli esempi seguenti si presuppone che un <xref:System.Windows.Forms.ToolBar> controllo è stato aggiunto a un Windows Form (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="05745-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
+ <span data-ttu-id="99dd8-106">Negli esempi seguenti si presuppone che un <xref:System.Windows.Forms.ToolBar> controllo è stato aggiunto a un Windows Form (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="99dd8-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
   
-### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="05745-107">Per aggiungere pulsanti a livello di codice</span><span class="sxs-lookup"><span data-stu-id="05745-107">To add buttons programmatically</span></span>  
+### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="99dd8-107">Per aggiungere pulsanti a livello di codice</span><span class="sxs-lookup"><span data-stu-id="99dd8-107">To add buttons programmatically</span></span>  
   
-1.  <span data-ttu-id="05745-108">In una routine, creare i pulsanti della barra degli strumenti aggiungendoli al file il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> insieme.</span><span class="sxs-lookup"><span data-stu-id="05745-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
+1.  <span data-ttu-id="99dd8-108">In una routine, creare i pulsanti della barra degli strumenti aggiungendoli al file il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> insieme.</span><span class="sxs-lookup"><span data-stu-id="99dd8-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
   
-2.  <span data-ttu-id="05745-109">Specificare le impostazioni di proprietà per un singolo pulsante passando l'indice del pulsante tramite il <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="05745-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
+2.  <span data-ttu-id="99dd8-109">Specificare le impostazioni di proprietà per un singolo pulsante passando l'indice del pulsante tramite il <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="99dd8-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
   
-     <span data-ttu-id="05745-110">Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.ToolBar> controllo già aggiunto.</span><span class="sxs-lookup"><span data-stu-id="05745-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
+     <span data-ttu-id="99dd8-110">Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.ToolBar> controllo già aggiunto.</span><span class="sxs-lookup"><span data-stu-id="99dd8-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="05745-111">Il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> è un insieme in base zero, il codice deve procedere di conseguenza.</span><span class="sxs-lookup"><span data-stu-id="05745-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
+    >  <span data-ttu-id="99dd8-111">Il <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> è un insieme in base zero, il codice deve procedere di conseguenza.</span><span class="sxs-lookup"><span data-stu-id="99dd8-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -158,9 +159,9 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="05745-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="05745-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="99dd8-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99dd8-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolBar>  
- [<span data-ttu-id="05745-113">Procedura: Definire un'icona per un pulsante ToolBar</span><span class="sxs-lookup"><span data-stu-id="05745-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [<span data-ttu-id="05745-114">Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti</span><span class="sxs-lookup"><span data-stu-id="05745-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [<span data-ttu-id="05745-115">Panoramica sul controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="05745-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [<span data-ttu-id="05745-116">Controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="05745-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+ [<span data-ttu-id="99dd8-113">Procedura: Definire un'icona per un pulsante ToolBar</span><span class="sxs-lookup"><span data-stu-id="99dd8-113">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [<span data-ttu-id="99dd8-114">Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti</span><span class="sxs-lookup"><span data-stu-id="99dd8-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [<span data-ttu-id="99dd8-115">Panoramica sul controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="99dd8-115">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [<span data-ttu-id="99dd8-116">Controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="99dd8-116">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

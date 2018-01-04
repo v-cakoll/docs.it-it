@@ -17,39 +17,40 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 722c37645d95009ce03bbbf813bc9f9fb2418e60
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 27ba3e94e28a1e26d370fa6daf7c93019d1e2428
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="6727e-102">Supporto delle operazioni di trascinamento della selezione e degli Appunti</span><span class="sxs-lookup"><span data-stu-id="6727e-102">Drag-and-Drop Operations and Clipboard Support</span></span>
-<span data-ttu-id="6727e-103">È possibile abilitare le operazioni di trascinamento all'interno di applicazioni per Windows mediante la gestione di una serie di eventi, in particolare gli eventi <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> e <xref:System.Windows.Forms.Control.DragDrop>.</span><span class="sxs-lookup"><span data-stu-id="6727e-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
+# <a name="drag-and-drop-operations-and-clipboard-support"></a><span data-ttu-id="c91c0-102">Supporto delle operazioni di trascinamento della selezione e degli Appunti</span><span class="sxs-lookup"><span data-stu-id="c91c0-102">Drag-and-Drop Operations and Clipboard Support</span></span>
+<span data-ttu-id="c91c0-103">È possibile abilitare le operazioni di trascinamento all'interno di applicazioni per Windows mediante la gestione di una serie di eventi, in particolare gli eventi <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> e <xref:System.Windows.Forms.Control.DragDrop>.</span><span class="sxs-lookup"><span data-stu-id="c91c0-103">You can enable user drag-and-drop operations within a Windows-based application by handling a series of events, most notably the <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, and <xref:System.Windows.Forms.Control.DragDrop> events.</span></span>  
   
- <span data-ttu-id="6727e-104">È anche possibile implementare il supporto per operazioni di taglia/copia/incolla e il trasferimento di dati dell'utente negli Appunti all'interno delle applicazioni basate su Windows usando semplici chiamate al metodo.</span><span class="sxs-lookup"><span data-stu-id="6727e-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
+ <span data-ttu-id="c91c0-104">È anche possibile implementare il supporto per operazioni di taglia/copia/incolla e il trasferimento di dati dell'utente negli Appunti all'interno delle applicazioni basate su Windows usando semplici chiamate al metodo.</span><span class="sxs-lookup"><span data-stu-id="c91c0-104">You can also implement user cut/copy/paste support and user data transfer to the Clipboard within your Windows-based applications by using simple method calls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6727e-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="6727e-105">In This Section</span></span>  
- [<span data-ttu-id="6727e-106">Procedura dettagliata: esecuzione di un'operazione di trascinamento in Windows Form</span><span class="sxs-lookup"><span data-stu-id="6727e-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
- <span data-ttu-id="6727e-107">Illustra come avviare un'operazione di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="6727e-107">Explains how to start a drag-and-drop operation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c91c0-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="c91c0-105">In This Section</span></span>  
+ [<span data-ttu-id="c91c0-106">Procedura dettagliata: esecuzione di un'operazione di trascinamento in Windows Form</span><span class="sxs-lookup"><span data-stu-id="c91c0-106">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ <span data-ttu-id="c91c0-107">Illustra come avviare un'operazione di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="c91c0-107">Explains how to start a drag-and-drop operation.</span></span>  
   
- [<span data-ttu-id="6727e-108">Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni</span><span class="sxs-lookup"><span data-stu-id="6727e-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
- <span data-ttu-id="6727e-109">Illustra come eseguire le operazioni di trascinamento e rilascio tra le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="6727e-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
+ [<span data-ttu-id="c91c0-108">Procedura: Eseguire operazioni di trascinamento e rilascio tra applicazioni</span><span class="sxs-lookup"><span data-stu-id="c91c0-108">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ <span data-ttu-id="c91c0-109">Illustra come eseguire le operazioni di trascinamento e rilascio tra le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="c91c0-109">Illustrates how to accomplish drag-and-drop operations across applications.</span></span>  
   
- [<span data-ttu-id="6727e-110">Procedura: Aggiungere dati agli Appunti</span><span class="sxs-lookup"><span data-stu-id="6727e-110">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- <span data-ttu-id="6727e-111">Descrive un modo per inserire informazioni negli Appunti a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="6727e-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
+ [<span data-ttu-id="c91c0-110">Procedura: Aggiungere dati agli Appunti</span><span class="sxs-lookup"><span data-stu-id="c91c0-110">How to: Add Data to the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ <span data-ttu-id="c91c0-111">Descrive un modo per inserire informazioni negli Appunti a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="c91c0-111">Describes a way to programmatically insert information on the Clipboard.</span></span>  
   
- [<span data-ttu-id="6727e-112">Procedura: Recuperare dati dagli Appunti</span><span class="sxs-lookup"><span data-stu-id="6727e-112">How to: Retrieve Data from the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- <span data-ttu-id="6727e-113">Descrive come accedere ai dati archiviati negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="6727e-113">Describes how to access the data stored on the Clipboard.</span></span>  
+ [<span data-ttu-id="c91c0-112">Procedura: Recuperare dati dagli Appunti</span><span class="sxs-lookup"><span data-stu-id="c91c0-112">How to: Retrieve Data from the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ <span data-ttu-id="c91c0-113">Descrive come accedere ai dati archiviati negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="c91c0-113">Describes how to access the data stored on the Clipboard.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6727e-114">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="6727e-114">Related Sections</span></span>  
- [<span data-ttu-id="6727e-115">Funzionalità di trascinamento della selezione in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6727e-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
- <span data-ttu-id="6727e-116">Descrive i metodi, gli eventi e le classi usate per implementare il comportamento di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="6727e-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="c91c0-114">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="c91c0-114">Related Sections</span></span>  
+ [<span data-ttu-id="c91c0-115">Funzionalità di trascinamento della selezione in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c91c0-115">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)  
+ <span data-ttu-id="c91c0-116">Descrive i metodi, gli eventi e le classi usate per implementare il comportamento di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="c91c0-116">Describes the methods, events, and classes used to implement drag-and-drop behavior.</span></span>  
   
  <xref:System.Windows.Forms.Control.QueryContinueDrag>  
- <span data-ttu-id="6727e-117">Descrive gli aspetti complessi relativi all'evento che richiede l'autorizzazione per proseguire con l'operazione di trascinamento.</span><span class="sxs-lookup"><span data-stu-id="6727e-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
+ <span data-ttu-id="c91c0-117">Descrive gli aspetti complessi relativi all'evento che richiede l'autorizzazione per proseguire con l'operazione di trascinamento.</span><span class="sxs-lookup"><span data-stu-id="c91c0-117">Describes the intricacies of the event that asks permission to continue the drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Control.DoDragDrop%2A>  
- <span data-ttu-id="6727e-118">Descrive gli aspetti complessi relativi al metodo fondamentale per l'inizio dell'operazione di trascinamento.</span><span class="sxs-lookup"><span data-stu-id="6727e-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
+ <span data-ttu-id="c91c0-118">Descrive gli aspetti complessi relativi al metodo fondamentale per l'inizio dell'operazione di trascinamento.</span><span class="sxs-lookup"><span data-stu-id="c91c0-118">Describes the intricacies of the method that is central to beginning a drag operation.</span></span>  
   
  <xref:System.Windows.Forms.Clipboard>  
- <span data-ttu-id="6727e-119">Vedere anche [procedura: inviare dati al figlio MDI attivo](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="6727e-119">Also see [How to: Send Data to the Active MDI Child](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span></span>
+ <span data-ttu-id="c91c0-119">Vedere anche [procedura: inviare dati al figlio MDI attivo](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="c91c0-119">Also see [How to: Send Data to the Active MDI Child](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).</span></span>
