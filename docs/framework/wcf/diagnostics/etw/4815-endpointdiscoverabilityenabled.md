@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 111f19d9052b329f380a7ccd782837f3664c99db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1fda87aadaad25407a33a6c2e0f844cf8ba34d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4815---endpointdiscoverabilityenabled"></a><span data-ttu-id="412e6-102">4815 - EndpointDiscoverabilityEnabled</span><span class="sxs-lookup"><span data-stu-id="412e6-102">4815 - EndpointDiscoverabilityEnabled</span></span>
-## <a name="properties"></a><span data-ttu-id="412e6-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="412e6-103">Properties</span></span>  
+# <a name="4815---endpointdiscoverabilityenabled"></a><span data-ttu-id="a75cf-102">4815 - EndpointDiscoverabilityEnabled</span><span class="sxs-lookup"><span data-stu-id="a75cf-102">4815 - EndpointDiscoverabilityEnabled</span></span>
+## <a name="properties"></a><span data-ttu-id="a75cf-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a75cf-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="412e6-104">ID</span><span class="sxs-lookup"><span data-stu-id="412e6-104">ID</span></span>|<span data-ttu-id="412e6-105">4815</span><span class="sxs-lookup"><span data-stu-id="412e6-105">4815</span></span>|  
-|<span data-ttu-id="412e6-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="412e6-106">Keywords</span></span>|<span data-ttu-id="412e6-107">Individuazione</span><span class="sxs-lookup"><span data-stu-id="412e6-107">Discovery</span></span>|  
-|<span data-ttu-id="412e6-108">Livello</span><span class="sxs-lookup"><span data-stu-id="412e6-108">Level</span></span>|<span data-ttu-id="412e6-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="412e6-109">Information</span></span>|  
-|<span data-ttu-id="412e6-110">Canale</span><span class="sxs-lookup"><span data-stu-id="412e6-110">Channel</span></span>|<span data-ttu-id="412e6-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="412e6-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="a75cf-104">ID</span><span class="sxs-lookup"><span data-stu-id="a75cf-104">ID</span></span>|<span data-ttu-id="a75cf-105">4815</span><span class="sxs-lookup"><span data-stu-id="a75cf-105">4815</span></span>|  
+|<span data-ttu-id="a75cf-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="a75cf-106">Keywords</span></span>|<span data-ttu-id="a75cf-107">Individuazione</span><span class="sxs-lookup"><span data-stu-id="a75cf-107">Discovery</span></span>|  
+|<span data-ttu-id="a75cf-108">Livello</span><span class="sxs-lookup"><span data-stu-id="a75cf-108">Level</span></span>|<span data-ttu-id="a75cf-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="a75cf-109">Information</span></span>|  
+|<span data-ttu-id="a75cf-110">Canale</span><span class="sxs-lookup"><span data-stu-id="a75cf-110">Channel</span></span>|<span data-ttu-id="a75cf-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a75cf-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="412e6-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="412e6-112">Description</span></span>  
- <span data-ttu-id="412e6-113">Questo evento viene generato quando l'individuabilità dell'endpoint è stata abilitata.</span><span class="sxs-lookup"><span data-stu-id="412e6-113">This event is emitted when the discoverability of endpoint has been enabled.</span></span>  
+## <a name="description"></a><span data-ttu-id="a75cf-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a75cf-112">Description</span></span>  
+ <span data-ttu-id="a75cf-113">Questo evento viene generato quando l'individuabilità dell'endpoint è stata abilitata.</span><span class="sxs-lookup"><span data-stu-id="a75cf-113">This event is emitted when the discoverability of endpoint has been enabled.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="412e6-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="412e6-114">Message</span></span>  
- <span data-ttu-id="412e6-115">L'individuabilità dell'endpoint con EndpointAddress='%1' e ListenUri='%2' è stata abilitata.</span><span class="sxs-lookup"><span data-stu-id="412e6-115">The discoverability of endpoint with EndpointAddress='%1' and ListenUri='%2' has been enabled.</span></span>  
+## <a name="message"></a><span data-ttu-id="a75cf-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="a75cf-114">Message</span></span>  
+ <span data-ttu-id="a75cf-115">L'individuabilità dell'endpoint con EndpointAddress='%1' e ListenUri='%2' è stata abilitata.</span><span class="sxs-lookup"><span data-stu-id="a75cf-115">The discoverability of endpoint with EndpointAddress='%1' and ListenUri='%2' has been enabled.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="412e6-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="412e6-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a75cf-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="a75cf-116">Details</span></span>

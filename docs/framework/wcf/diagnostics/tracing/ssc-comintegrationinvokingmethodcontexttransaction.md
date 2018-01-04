@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 773644df36767281d168628783fa2da7f49215f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3c7661339a7a1645de30dcd0b1f9fad54dac5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a><span data-ttu-id="e92da-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="e92da-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>
-<span data-ttu-id="e92da-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="e92da-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a><span data-ttu-id="31f0c-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="31f0c-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>
+<span data-ttu-id="31f0c-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="31f0c-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e92da-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e92da-104">Description</span></span>  
- <span data-ttu-id="e92da-105">ComPlus: richiamo metodo con transazione in contesto COM+.</span><span class="sxs-lookup"><span data-stu-id="e92da-105">Complus: Invoking method with the transaction in COM+ context.</span></span>  
+## <a name="description"></a><span data-ttu-id="31f0c-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="31f0c-104">Description</span></span>  
+ <span data-ttu-id="31f0c-105">ComPlus: richiamo metodo con transazione in contesto COM+.</span><span class="sxs-lookup"><span data-stu-id="31f0c-105">Complus: Invoking method with the transaction in COM+ context.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e92da-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e92da-106">See Also</span></span>  
- [<span data-ttu-id="e92da-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="e92da-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e92da-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="e92da-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e92da-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="e92da-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="31f0c-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="31f0c-106">See Also</span></span>  
+ [<span data-ttu-id="31f0c-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="31f0c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="31f0c-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="31f0c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="31f0c-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="31f0c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

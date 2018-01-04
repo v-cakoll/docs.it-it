@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73707c7b1867aa71991d1031a30999a94dd3a2b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8193d79a31bb9cafc7a3de69c129ecbd78619962
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemruntimeserializationxsdimportbegin"></a><span data-ttu-id="ab4d1-102">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="ab4d1-102">System.Runtime.Serialization.XsdImportBegin</span></span>
-<span data-ttu-id="ab4d1-103">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="ab4d1-103">System.Runtime.Serialization.XsdImportBegin</span></span>  
+# <a name="systemruntimeserializationxsdimportbegin"></a><span data-ttu-id="aa8e8-102">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="aa8e8-102">System.Runtime.Serialization.XsdImportBegin</span></span>
+<span data-ttu-id="aa8e8-103">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="aa8e8-103">System.Runtime.Serialization.XsdImportBegin</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ab4d1-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ab4d1-104">Description</span></span>  
- <span data-ttu-id="ab4d1-105">Avvio dell'importazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="ab4d1-105">Starting schema import.</span></span>  
+## <a name="description"></a><span data-ttu-id="aa8e8-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="aa8e8-104">Description</span></span>  
+ <span data-ttu-id="aa8e8-105">Avvio dell'importazione dello schema.</span><span class="sxs-lookup"><span data-stu-id="aa8e8-105">Starting schema import.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab4d1-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab4d1-106">See Also</span></span>  
- [<span data-ttu-id="ab4d1-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ab4d1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ab4d1-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="ab4d1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ab4d1-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ab4d1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="aa8e8-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa8e8-106">See Also</span></span>  
+ [<span data-ttu-id="aa8e8-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="aa8e8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="aa8e8-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="aa8e8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="aa8e8-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="aa8e8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,17 +13,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daae4da05e2c1d68147f23256d868a6124479417
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f37f3befba7a3dfdce50869aaea0033ed74aca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-calls-faulted"></a><span data-ttu-id="6f7ab-102">Servizio: chiamate con errori</span><span class="sxs-lookup"><span data-stu-id="6f7ab-102">Service: Calls Faulted</span></span>
-<span data-ttu-id="6f7ab-103">Nome contatore: chiamate con errori</span><span class="sxs-lookup"><span data-stu-id="6f7ab-103">Counter Name: Calls Faulted.</span></span>  
+# <a name="service-calls-faulted"></a><span data-ttu-id="e13e4-102">Servizio: chiamate con errori</span><span class="sxs-lookup"><span data-stu-id="e13e4-102">Service: Calls Faulted</span></span>
+<span data-ttu-id="e13e4-103">Nome contatore: chiamate con errori</span><span class="sxs-lookup"><span data-stu-id="e13e4-103">Counter Name: Calls Faulted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6f7ab-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="6f7ab-104">Description</span></span>  
- <span data-ttu-id="6f7ab-105">Numero di chiamate a questo servizio che hanno restituito errori.</span><span class="sxs-lookup"><span data-stu-id="6f7ab-105">Number of calls to this service that have returned faults.</span></span> <span data-ttu-id="6f7ab-106">Nelle applicazioni [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], le informazioni sugli errori di elaborazione vengono comunicate dai metodi di servizio tramite messaggi di errore SOAP.</span><span class="sxs-lookup"><span data-stu-id="6f7ab-106">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="6f7ab-107">Gli errori SOAP sono tipi di messaggio inclusi nei metadati per un'operazione del servizio e pertanto creano un contratto di errore che i client possono usare per rendere l'esecuzione più affidabile o interattiva.</span><span class="sxs-lookup"><span data-stu-id="6f7ab-107">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="6f7ab-108">Dato che gli errori SOAP sono espressi ai client in formato XML, sono estremamente interoperativi.</span><span class="sxs-lookup"><span data-stu-id="6f7ab-108">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
+## <a name="description"></a><span data-ttu-id="e13e4-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e13e4-104">Description</span></span>  
+ <span data-ttu-id="e13e4-105">Numero di chiamate a questo servizio che hanno restituito errori.</span><span class="sxs-lookup"><span data-stu-id="e13e4-105">Number of calls to this service that have returned faults.</span></span> <span data-ttu-id="e13e4-106">Nelle applicazioni [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], le informazioni sugli errori di elaborazione vengono comunicate dai metodi di servizio tramite messaggi di errore SOAP.</span><span class="sxs-lookup"><span data-stu-id="e13e4-106">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="e13e4-107">Gli errori SOAP sono tipi di messaggio inclusi nei metadati per un'operazione del servizio e pertanto creano un contratto di errore che i client possono usare per rendere l'esecuzione più affidabile o interattiva.</span><span class="sxs-lookup"><span data-stu-id="e13e4-107">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="e13e4-108">Dato che gli errori SOAP sono espressi ai client in formato XML, sono estremamente interoperativi.</span><span class="sxs-lookup"><span data-stu-id="e13e4-108">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f7ab-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6f7ab-109">See Also</span></span>  
- [<span data-ttu-id="6f7ab-110">Specifica e gestione degli errori in contratti e servizi</span><span class="sxs-lookup"><span data-stu-id="6f7ab-110">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="e13e4-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e13e4-109">See Also</span></span>  
+ [<span data-ttu-id="e13e4-110">Specifica e gestione degli errori in contratti e servizi</span><span class="sxs-lookup"><span data-stu-id="e13e4-110">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

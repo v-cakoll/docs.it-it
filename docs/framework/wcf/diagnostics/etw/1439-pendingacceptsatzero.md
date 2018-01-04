@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ebc1001e15d80728f6154017952ee316cdda185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f1cc3dc275e634ccfd1c9c9020d9fdfe039677f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="27a02-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="27a02-102">1439 - PendingAcceptsAtZero</span></span>
-## <a name="properties"></a><span data-ttu-id="27a02-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="27a02-103">Properties</span></span>  
+# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="bc570-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="bc570-102">1439 - PendingAcceptsAtZero</span></span>
+## <a name="properties"></a><span data-ttu-id="bc570-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="bc570-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="27a02-104">ID</span><span class="sxs-lookup"><span data-stu-id="27a02-104">ID</span></span>|<span data-ttu-id="27a02-105">1439</span><span class="sxs-lookup"><span data-stu-id="27a02-105">1439</span></span>|  
-|<span data-ttu-id="27a02-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="27a02-106">Keywords</span></span>|<span data-ttu-id="27a02-107">Quota</span><span class="sxs-lookup"><span data-stu-id="27a02-107">Quota</span></span>|  
-|<span data-ttu-id="27a02-108">Livello</span><span class="sxs-lookup"><span data-stu-id="27a02-108">Level</span></span>|<span data-ttu-id="27a02-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="27a02-109">Information</span></span>|  
-|<span data-ttu-id="27a02-110">Canale</span><span class="sxs-lookup"><span data-stu-id="27a02-110">Channel</span></span>|<span data-ttu-id="27a02-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="27a02-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="bc570-104">ID</span><span class="sxs-lookup"><span data-stu-id="bc570-104">ID</span></span>|<span data-ttu-id="bc570-105">1439</span><span class="sxs-lookup"><span data-stu-id="bc570-105">1439</span></span>|  
+|<span data-ttu-id="bc570-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="bc570-106">Keywords</span></span>|<span data-ttu-id="bc570-107">Quota</span><span class="sxs-lookup"><span data-stu-id="bc570-107">Quota</span></span>|  
+|<span data-ttu-id="bc570-108">Livello</span><span class="sxs-lookup"><span data-stu-id="bc570-108">Level</span></span>|<span data-ttu-id="bc570-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="bc570-109">Information</span></span>|  
+|<span data-ttu-id="bc570-110">Canale</span><span class="sxs-lookup"><span data-stu-id="bc570-110">Channel</span></span>|<span data-ttu-id="bc570-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="bc570-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="27a02-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="27a02-112">Description</span></span>  
- <span data-ttu-id="27a02-113">Questo evento viene generato in assenza di accettazioni in sospeso.</span><span class="sxs-lookup"><span data-stu-id="27a02-113">This event is emitted with pending accepts at zero.</span></span>  
+## <a name="description"></a><span data-ttu-id="bc570-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bc570-112">Description</span></span>  
+ <span data-ttu-id="bc570-113">Questo evento viene generato in assenza di accettazioni in sospeso.</span><span class="sxs-lookup"><span data-stu-id="bc570-113">This event is emitted with pending accepts at zero.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="27a02-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="27a02-114">Message</span></span>  
- <span data-ttu-id="27a02-115">Zero accettazioni in sospeso rimaste</span><span class="sxs-lookup"><span data-stu-id="27a02-115">Zero pending accepts left</span></span>  
+## <a name="message"></a><span data-ttu-id="bc570-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="bc570-114">Message</span></span>  
+ <span data-ttu-id="bc570-115">Zero accettazioni in sospeso rimaste</span><span class="sxs-lookup"><span data-stu-id="bc570-115">Zero pending accepts left</span></span>  
   
-## <a name="details"></a><span data-ttu-id="27a02-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="27a02-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="bc570-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="bc570-116">Details</span></span>

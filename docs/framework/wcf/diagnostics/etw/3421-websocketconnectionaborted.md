@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd56bf4b8d95898e45cae6f2de83a52a26be13f7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62e1ad263a93f0806fc252da59416a1edb05cb86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3421---websocketconnectionaborted"></a><span data-ttu-id="61ab9-102">3421 - WebSocketConnectionAborted</span><span class="sxs-lookup"><span data-stu-id="61ab9-102">3421 - WebSocketConnectionAborted</span></span>
-## <a name="properties"></a><span data-ttu-id="61ab9-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="61ab9-103">Properties</span></span>  
+# <a name="3421---websocketconnectionaborted"></a><span data-ttu-id="d2cbf-102">3421 - WebSocketConnectionAborted</span><span class="sxs-lookup"><span data-stu-id="d2cbf-102">3421 - WebSocketConnectionAborted</span></span>
+## <a name="properties"></a><span data-ttu-id="d2cbf-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="d2cbf-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="61ab9-104">ID</span><span class="sxs-lookup"><span data-stu-id="61ab9-104">ID</span></span>|<span data-ttu-id="61ab9-105">3421</span><span class="sxs-lookup"><span data-stu-id="61ab9-105">3421</span></span>|  
-|<span data-ttu-id="61ab9-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="61ab9-106">Keywords</span></span>|<span data-ttu-id="61ab9-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="61ab9-107">HTTP</span></span>|  
-|<span data-ttu-id="61ab9-108">Livello</span><span class="sxs-lookup"><span data-stu-id="61ab9-108">Level</span></span>|<span data-ttu-id="61ab9-109">Errore</span><span class="sxs-lookup"><span data-stu-id="61ab9-109">Error</span></span>|  
-|<span data-ttu-id="61ab9-110">Canale</span><span class="sxs-lookup"><span data-stu-id="61ab9-110">Channel</span></span>|<span data-ttu-id="61ab9-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="61ab9-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="d2cbf-104">ID</span><span class="sxs-lookup"><span data-stu-id="d2cbf-104">ID</span></span>|<span data-ttu-id="d2cbf-105">3421</span><span class="sxs-lookup"><span data-stu-id="d2cbf-105">3421</span></span>|  
+|<span data-ttu-id="d2cbf-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="d2cbf-106">Keywords</span></span>|<span data-ttu-id="d2cbf-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="d2cbf-107">HTTP</span></span>|  
+|<span data-ttu-id="d2cbf-108">Livello</span><span class="sxs-lookup"><span data-stu-id="d2cbf-108">Level</span></span>|<span data-ttu-id="d2cbf-109">Errore</span><span class="sxs-lookup"><span data-stu-id="d2cbf-109">Error</span></span>|  
+|<span data-ttu-id="d2cbf-110">Canale</span><span class="sxs-lookup"><span data-stu-id="d2cbf-110">Channel</span></span>|<span data-ttu-id="d2cbf-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="d2cbf-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="61ab9-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="61ab9-112">Description</span></span>  
- <span data-ttu-id="61ab9-113">Questo evento viene generato all'interruzione della connessione WebSocket.</span><span class="sxs-lookup"><span data-stu-id="61ab9-113">This event is emitted when WebSocket connection is aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="d2cbf-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d2cbf-112">Description</span></span>  
+ <span data-ttu-id="d2cbf-113">Questo evento viene generato all'interruzione della connessione WebSocket.</span><span class="sxs-lookup"><span data-stu-id="d2cbf-113">This event is emitted when WebSocket connection is aborted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="61ab9-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="61ab9-114">Message</span></span>  
- <span data-ttu-id="61ab9-115">WebSocketId: %1 connessione interrotta.</span><span class="sxs-lookup"><span data-stu-id="61ab9-115">WebSocketId:%1 connection is aborted.</span></span>  
+## <a name="message"></a><span data-ttu-id="d2cbf-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="d2cbf-114">Message</span></span>  
+ <span data-ttu-id="d2cbf-115">WebSocketId: %1 connessione interrotta.</span><span class="sxs-lookup"><span data-stu-id="d2cbf-115">WebSocketId:%1 connection is aborted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="61ab9-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="61ab9-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d2cbf-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="d2cbf-116">Details</span></span>

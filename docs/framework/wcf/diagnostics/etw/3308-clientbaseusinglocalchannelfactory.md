@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15549f36be0373c89cb23230d11899a0385b0c70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c9b93c2bf31ad0b9655a08c72ac546eeacb007c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="855ec-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="855ec-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
-## <a name="properties"></a><span data-ttu-id="855ec-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="855ec-103">Properties</span></span>  
+# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="7a60d-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="7a60d-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
+## <a name="properties"></a><span data-ttu-id="7a60d-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="7a60d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="855ec-104">ID</span><span class="sxs-lookup"><span data-stu-id="855ec-104">ID</span></span>|<span data-ttu-id="855ec-105">3308</span><span class="sxs-lookup"><span data-stu-id="855ec-105">3308</span></span>|  
-|<span data-ttu-id="855ec-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="855ec-106">Keywords</span></span>|<span data-ttu-id="855ec-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="855ec-107">ServiceModel</span></span>|  
-|<span data-ttu-id="855ec-108">Livello</span><span class="sxs-lookup"><span data-stu-id="855ec-108">Level</span></span>|<span data-ttu-id="855ec-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="855ec-109">Information</span></span>|  
-|<span data-ttu-id="855ec-110">Canale</span><span class="sxs-lookup"><span data-stu-id="855ec-110">Channel</span></span>|<span data-ttu-id="855ec-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="855ec-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="7a60d-104">ID</span><span class="sxs-lookup"><span data-stu-id="7a60d-104">ID</span></span>|<span data-ttu-id="7a60d-105">3308</span><span class="sxs-lookup"><span data-stu-id="7a60d-105">3308</span></span>|  
+|<span data-ttu-id="7a60d-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="7a60d-106">Keywords</span></span>|<span data-ttu-id="7a60d-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7a60d-107">ServiceModel</span></span>|  
+|<span data-ttu-id="7a60d-108">Livello</span><span class="sxs-lookup"><span data-stu-id="7a60d-108">Level</span></span>|<span data-ttu-id="7a60d-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="7a60d-109">Information</span></span>|  
+|<span data-ttu-id="7a60d-110">Canale</span><span class="sxs-lookup"><span data-stu-id="7a60d-110">Channel</span></span>|<span data-ttu-id="7a60d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="7a60d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="855ec-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="855ec-112">Description</span></span>  
- <span data-ttu-id="855ec-113">Questo evento viene generato quando non viene usata la channel factory dalla cache.</span><span class="sxs-lookup"><span data-stu-id="855ec-113">This event is emitted when not using channel factory from cache.</span></span>  
+## <a name="description"></a><span data-ttu-id="7a60d-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7a60d-112">Description</span></span>  
+ <span data-ttu-id="7a60d-113">Questo evento viene generato quando non viene usata la channel factory dalla cache.</span><span class="sxs-lookup"><span data-stu-id="7a60d-113">This event is emitted when not using channel factory from cache.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="855ec-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="855ec-114">Message</span></span>  
- <span data-ttu-id="855ec-115">Channel factory non utilizzata dalla cache, ad esempio la memorizzazione nella cache disattivata.</span><span class="sxs-lookup"><span data-stu-id="855ec-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
+## <a name="message"></a><span data-ttu-id="7a60d-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="7a60d-114">Message</span></span>  
+ <span data-ttu-id="7a60d-115">Channel factory non utilizzata dalla cache, ad esempio la memorizzazione nella cache disattivata.</span><span class="sxs-lookup"><span data-stu-id="7a60d-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="855ec-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="855ec-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="7a60d-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="7a60d-116">Details</span></span>

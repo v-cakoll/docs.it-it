@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d84ce36ee987f7fdd02f32ad2515ba1fff7bc44f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1d541ce3df4781f8944062d41bfddb8f9548aaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3328---clientformatterdeserializereplystart"></a><span data-ttu-id="75352-102">3328 - ClientFormatterDeserializeReplyStart</span><span class="sxs-lookup"><span data-stu-id="75352-102">3328 - ClientFormatterDeserializeReplyStart</span></span>
-## <a name="properties"></a><span data-ttu-id="75352-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="75352-103">Properties</span></span>  
+# <a name="3328---clientformatterdeserializereplystart"></a><span data-ttu-id="e555a-102">3328 - ClientFormatterDeserializeReplyStart</span><span class="sxs-lookup"><span data-stu-id="e555a-102">3328 - ClientFormatterDeserializeReplyStart</span></span>
+## <a name="properties"></a><span data-ttu-id="e555a-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="e555a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="75352-104">ID</span><span class="sxs-lookup"><span data-stu-id="75352-104">ID</span></span>|<span data-ttu-id="75352-105">3328</span><span class="sxs-lookup"><span data-stu-id="75352-105">3328</span></span>|  
-|<span data-ttu-id="75352-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="75352-106">Keywords</span></span>|<span data-ttu-id="75352-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="75352-107">ServiceModel</span></span>|  
-|<span data-ttu-id="75352-108">Livello</span><span class="sxs-lookup"><span data-stu-id="75352-108">Level</span></span>|<span data-ttu-id="75352-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="75352-109">Verbose</span></span>|  
-|<span data-ttu-id="75352-110">Canale</span><span class="sxs-lookup"><span data-stu-id="75352-110">Channel</span></span>|<span data-ttu-id="75352-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="75352-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="e555a-104">ID</span><span class="sxs-lookup"><span data-stu-id="e555a-104">ID</span></span>|<span data-ttu-id="e555a-105">3328</span><span class="sxs-lookup"><span data-stu-id="e555a-105">3328</span></span>|  
+|<span data-ttu-id="e555a-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="e555a-106">Keywords</span></span>|<span data-ttu-id="e555a-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="e555a-107">ServiceModel</span></span>|  
+|<span data-ttu-id="e555a-108">Livello</span><span class="sxs-lookup"><span data-stu-id="e555a-108">Level</span></span>|<span data-ttu-id="e555a-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="e555a-109">Verbose</span></span>|  
+|<span data-ttu-id="e555a-110">Canale</span><span class="sxs-lookup"><span data-stu-id="e555a-110">Channel</span></span>|<span data-ttu-id="e555a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="e555a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="75352-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="75352-112">Description</span></span>  
- <span data-ttu-id="75352-113">Questo evento viene generato quando il client avvia la deserializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="75352-113">This event is emitted when the client started deserializing of the reply message.</span></span>  
+## <a name="description"></a><span data-ttu-id="e555a-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e555a-112">Description</span></span>  
+ <span data-ttu-id="e555a-113">Questo evento viene generato quando il client avvia la deserializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="e555a-113">This event is emitted when the client started deserializing of the reply message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="75352-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="75352-114">Message</span></span>  
- <span data-ttu-id="75352-115">Il client ha avviato la deserializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="75352-115">Client started deserializing the reply message.</span></span>  
+## <a name="message"></a><span data-ttu-id="e555a-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="e555a-114">Message</span></span>  
+ <span data-ttu-id="e555a-115">Il client ha avviato la deserializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="e555a-115">Client started deserializing the reply message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="75352-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="75352-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="e555a-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="e555a-116">Details</span></span>

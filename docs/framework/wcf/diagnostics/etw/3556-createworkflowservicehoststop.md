@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c65f545920248257f940dd55267a825ead35a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7e72a8eb8bb3d3d7e62e84c3196ed14c05a57924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3556---createworkflowservicehoststop"></a><span data-ttu-id="47163-102">3556 - CreateWorkflowServiceHostStop</span><span class="sxs-lookup"><span data-stu-id="47163-102">3556 - CreateWorkflowServiceHostStop</span></span>
-## <a name="properties"></a><span data-ttu-id="47163-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="47163-103">Properties</span></span>  
+# <a name="3556---createworkflowservicehoststop"></a><span data-ttu-id="03bf4-102">3556 - CreateWorkflowServiceHostStop</span><span class="sxs-lookup"><span data-stu-id="03bf4-102">3556 - CreateWorkflowServiceHostStop</span></span>
+## <a name="properties"></a><span data-ttu-id="03bf4-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="03bf4-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="47163-104">ID</span><span class="sxs-lookup"><span data-stu-id="47163-104">ID</span></span>|<span data-ttu-id="47163-105">3556</span><span class="sxs-lookup"><span data-stu-id="47163-105">3556</span></span>|  
-|<span data-ttu-id="47163-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="47163-106">Keywords</span></span>|<span data-ttu-id="47163-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="47163-107">WebHost</span></span>|  
-|<span data-ttu-id="47163-108">Livello</span><span class="sxs-lookup"><span data-stu-id="47163-108">Level</span></span>|<span data-ttu-id="47163-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="47163-109">Information</span></span>|  
-|<span data-ttu-id="47163-110">Canale</span><span class="sxs-lookup"><span data-stu-id="47163-110">Channel</span></span>|<span data-ttu-id="47163-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="47163-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="03bf4-104">ID</span><span class="sxs-lookup"><span data-stu-id="03bf4-104">ID</span></span>|<span data-ttu-id="03bf4-105">3556</span><span class="sxs-lookup"><span data-stu-id="03bf4-105">3556</span></span>|  
+|<span data-ttu-id="03bf4-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="03bf4-106">Keywords</span></span>|<span data-ttu-id="03bf4-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="03bf4-107">WebHost</span></span>|  
+|<span data-ttu-id="03bf4-108">Livello</span><span class="sxs-lookup"><span data-stu-id="03bf4-108">Level</span></span>|<span data-ttu-id="03bf4-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="03bf4-109">Information</span></span>|  
+|<span data-ttu-id="03bf4-110">Canale</span><span class="sxs-lookup"><span data-stu-id="03bf4-110">Channel</span></span>|<span data-ttu-id="03bf4-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="03bf4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="47163-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="47163-112">Description</span></span>  
- <span data-ttu-id="47163-113">Questo evento viene generato all'arresto di CreateWorkflowServiceHost.</span><span class="sxs-lookup"><span data-stu-id="47163-113">This event is emitted on CreateWorkflowServiceHost stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="03bf4-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="03bf4-112">Description</span></span>  
+ <span data-ttu-id="03bf4-113">Questo evento viene generato all'arresto di CreateWorkflowServiceHost.</span><span class="sxs-lookup"><span data-stu-id="03bf4-113">This event is emitted on CreateWorkflowServiceHost stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="47163-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="47163-114">Message</span></span>  
- <span data-ttu-id="47163-115">Arresto di CreateWorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="47163-115">CreateWorkflowServiceHost Stop</span></span>  
+## <a name="message"></a><span data-ttu-id="03bf4-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="03bf4-114">Message</span></span>  
+ <span data-ttu-id="03bf4-115">Arresto di CreateWorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="03bf4-115">CreateWorkflowServiceHost Stop</span></span>  
   
-## <a name="details"></a><span data-ttu-id="47163-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="47163-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="03bf4-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="03bf4-116">Details</span></span>

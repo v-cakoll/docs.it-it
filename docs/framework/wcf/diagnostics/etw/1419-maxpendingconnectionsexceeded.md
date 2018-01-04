@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfd98d87469f6e5f4c3f8ed587ffe626e60fbb38
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6d2da359074bf2b60e9b1d27c0bd9c6853cfa5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1419---maxpendingconnectionsexceeded"></a><span data-ttu-id="cd4ad-102">1419 - MaxPendingConnectionsExceeded</span><span class="sxs-lookup"><span data-stu-id="cd4ad-102">1419 - MaxPendingConnectionsExceeded</span></span>
-## <a name="properties"></a><span data-ttu-id="cd4ad-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="cd4ad-103">Properties</span></span>  
+# <a name="1419---maxpendingconnectionsexceeded"></a><span data-ttu-id="d2499-102">1419 - MaxPendingConnectionsExceeded</span><span class="sxs-lookup"><span data-stu-id="d2499-102">1419 - MaxPendingConnectionsExceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="d2499-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="d2499-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="cd4ad-104">ID</span><span class="sxs-lookup"><span data-stu-id="cd4ad-104">ID</span></span>|<span data-ttu-id="cd4ad-105">1419</span><span class="sxs-lookup"><span data-stu-id="cd4ad-105">1419</span></span>|  
-|<span data-ttu-id="cd4ad-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="cd4ad-106">Keywords</span></span>|<span data-ttu-id="cd4ad-107">Quota</span><span class="sxs-lookup"><span data-stu-id="cd4ad-107">Quota</span></span>|  
-|<span data-ttu-id="cd4ad-108">Livello</span><span class="sxs-lookup"><span data-stu-id="cd4ad-108">Level</span></span>|<span data-ttu-id="cd4ad-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="cd4ad-109">Information</span></span>|  
-|<span data-ttu-id="cd4ad-110">Canale</span><span class="sxs-lookup"><span data-stu-id="cd4ad-110">Channel</span></span>|<span data-ttu-id="cd4ad-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="cd4ad-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d2499-104">ID</span><span class="sxs-lookup"><span data-stu-id="d2499-104">ID</span></span>|<span data-ttu-id="d2499-105">1419</span><span class="sxs-lookup"><span data-stu-id="d2499-105">1419</span></span>|  
+|<span data-ttu-id="d2499-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="d2499-106">Keywords</span></span>|<span data-ttu-id="d2499-107">Quota</span><span class="sxs-lookup"><span data-stu-id="d2499-107">Quota</span></span>|  
+|<span data-ttu-id="d2499-108">Livello</span><span class="sxs-lookup"><span data-stu-id="d2499-108">Level</span></span>|<span data-ttu-id="d2499-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="d2499-109">Information</span></span>|  
+|<span data-ttu-id="d2499-110">Canale</span><span class="sxs-lookup"><span data-stu-id="d2499-110">Channel</span></span>|<span data-ttu-id="d2499-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d2499-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="cd4ad-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cd4ad-112">Description</span></span>  
- <span data-ttu-id="cd4ad-113">Questo evento viene generato quando viene superato il numero massimo di connessioni in sospeso.</span><span class="sxs-lookup"><span data-stu-id="cd4ad-113">This event is emitted when maximum pending connections are exceeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="d2499-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d2499-112">Description</span></span>  
+ <span data-ttu-id="d2499-113">Questo evento viene generato quando viene superato il numero massimo di connessioni in sospeso.</span><span class="sxs-lookup"><span data-stu-id="d2499-113">This event is emitted when maximum pending connections are exceeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="cd4ad-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="cd4ad-114">Message</span></span>  
- <span data-ttu-id="cd4ad-115">1%</span><span class="sxs-lookup"><span data-stu-id="cd4ad-115">1%</span></span>  
+## <a name="message"></a><span data-ttu-id="d2499-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="d2499-114">Message</span></span>  
+ <span data-ttu-id="d2499-115">1%</span><span class="sxs-lookup"><span data-stu-id="d2499-115">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="cd4ad-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="cd4ad-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d2499-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="d2499-116">Details</span></span>

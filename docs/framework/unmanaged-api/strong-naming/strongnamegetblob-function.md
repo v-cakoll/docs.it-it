@@ -19,18 +19,19 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0a88131e4a764c963d24a698935ebb12e0daa96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1948a0d8a8536ebe9b0531eecaf3df446252b0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="strongnamegetblob-function"></a><span data-ttu-id="b62d6-102">Funzione StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="b62d6-102">StrongNameGetBlob Function</span></span>
-<span data-ttu-id="b62d6-103">Riempie il buffer specificato con la rappresentazione binaria del file eseguibile all'indirizzo specificato.</span><span class="sxs-lookup"><span data-stu-id="b62d6-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="strongnamegetblob-function"></a><span data-ttu-id="212ca-102">Funzione StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="212ca-102">StrongNameGetBlob Function</span></span>
+<span data-ttu-id="212ca-103">Riempie il buffer specificato con la rappresentazione binaria del file eseguibile all'indirizzo specificato.</span><span class="sxs-lookup"><span data-stu-id="212ca-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
- <span data-ttu-id="b62d6-104">Questa funzione è stata deprecata.</span><span class="sxs-lookup"><span data-stu-id="b62d6-104">This function has been deprecated.</span></span> <span data-ttu-id="b62d6-105">Utilizzare il [:: StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) metodo invece.</span><span class="sxs-lookup"><span data-stu-id="b62d6-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
+ <span data-ttu-id="212ca-104">Questa funzione è stata deprecata.</span><span class="sxs-lookup"><span data-stu-id="212ca-104">This function has been deprecated.</span></span> <span data-ttu-id="212ca-105">Utilizzare il [:: StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) metodo invece.</span><span class="sxs-lookup"><span data-stu-id="212ca-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b62d6-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b62d6-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="212ca-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="212ca-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameGetBlob (  
@@ -40,32 +41,32 @@ BOOLEAN StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b62d6-107">Parametri</span><span class="sxs-lookup"><span data-stu-id="b62d6-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="212ca-107">Parametri</span><span class="sxs-lookup"><span data-stu-id="212ca-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="b62d6-108">[in] Un percorso valido per il file eseguibile da caricare.</span><span class="sxs-lookup"><span data-stu-id="b62d6-108">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="212ca-108">[in] Un percorso valido per il file eseguibile da caricare.</span><span class="sxs-lookup"><span data-stu-id="212ca-108">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="b62d6-109">[in] Buffer in cui caricare il file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="b62d6-109">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="212ca-109">[in] Buffer in cui caricare il file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="212ca-109">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="b62d6-110">[in, out] La richiesta di dimensione massima, in byte, di `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="b62d6-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="b62d6-111">Al momento della restituzione, le dimensioni effettive, in byte, di `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="b62d6-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="212ca-110">[in, out] La richiesta di dimensione massima, in byte, di `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="212ca-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="212ca-111">Al momento della restituzione, le dimensioni effettive, in byte, di `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="212ca-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b62d6-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b62d6-112">Return Value</span></span>  
- <span data-ttu-id="b62d6-113">`true`al termine dell'esecuzione; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="b62d6-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="212ca-112">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="212ca-112">Return Value</span></span>  
+ <span data-ttu-id="212ca-113">`true`al termine dell'esecuzione; in caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="212ca-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b62d6-114">Note</span><span class="sxs-lookup"><span data-stu-id="b62d6-114">Remarks</span></span>  
- <span data-ttu-id="b62d6-115">Se il `StrongNameGetBlob` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.</span><span class="sxs-lookup"><span data-stu-id="b62d6-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="212ca-114">Note</span><span class="sxs-lookup"><span data-stu-id="212ca-114">Remarks</span></span>  
+ <span data-ttu-id="212ca-115">Se il `StrongNameGetBlob` funzione non viene completata correttamente, chiamare il [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) per recuperare l'ultimo errore generato.</span><span class="sxs-lookup"><span data-stu-id="212ca-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b62d6-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b62d6-116">Requirements</span></span>  
- <span data-ttu-id="b62d6-117">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b62d6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="212ca-116">Requisiti</span><span class="sxs-lookup"><span data-stu-id="212ca-116">Requirements</span></span>  
+ <span data-ttu-id="212ca-117">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="212ca-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b62d6-118">**Intestazione:** StrongName. H</span><span class="sxs-lookup"><span data-stu-id="b62d6-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="212ca-118">**Intestazione:** StrongName. H</span><span class="sxs-lookup"><span data-stu-id="212ca-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="b62d6-119">**Libreria:** inclusa come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b62d6-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="212ca-119">**Libreria:** inclusa come risorsa in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="212ca-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b62d6-120">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b62d6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="212ca-120">**Versioni di .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="212ca-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b62d6-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b62d6-121">See Also</span></span>  
- [<span data-ttu-id="b62d6-122">StrongNameGetBlob (metodo)</span><span class="sxs-lookup"><span data-stu-id="b62d6-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [<span data-ttu-id="b62d6-123">StrongNameGetBlobFromImage (metodo)</span><span class="sxs-lookup"><span data-stu-id="b62d6-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [<span data-ttu-id="b62d6-124">ICLRStrongName (interfaccia)</span><span class="sxs-lookup"><span data-stu-id="b62d6-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="212ca-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="212ca-121">See Also</span></span>  
+ [<span data-ttu-id="212ca-122">Metodo StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="212ca-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
+ [<span data-ttu-id="212ca-123">Metodo StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="212ca-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
+ [<span data-ttu-id="212ca-124">Interfaccia ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="212ca-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

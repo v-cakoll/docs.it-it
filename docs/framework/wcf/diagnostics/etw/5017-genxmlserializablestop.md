@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d09c9070f2025e358291894d40bb8f8c46a58dbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e86ad1b7a7594f6b8940f52bf8b7409ef87eb9aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5017---genxmlserializablestop"></a><span data-ttu-id="ef651-102">5017 - GenXmlSerializableStop</span><span class="sxs-lookup"><span data-stu-id="ef651-102">5017 - GenXmlSerializableStop</span></span>
-## <a name="properties"></a><span data-ttu-id="ef651-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="ef651-103">Properties</span></span>  
+# <a name="5017---genxmlserializablestop"></a><span data-ttu-id="20938-102">5017 - GenXmlSerializableStop</span><span class="sxs-lookup"><span data-stu-id="20938-102">5017 - GenXmlSerializableStop</span></span>
+## <a name="properties"></a><span data-ttu-id="20938-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="20938-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ef651-104">ID</span><span class="sxs-lookup"><span data-stu-id="ef651-104">ID</span></span>|<span data-ttu-id="ef651-105">5017</span><span class="sxs-lookup"><span data-stu-id="ef651-105">5017</span></span>|  
-|<span data-ttu-id="ef651-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="ef651-106">Keywords</span></span>|<span data-ttu-id="ef651-107">Serializzazione</span><span class="sxs-lookup"><span data-stu-id="ef651-107">Serialization</span></span>|  
-|<span data-ttu-id="ef651-108">Livello</span><span class="sxs-lookup"><span data-stu-id="ef651-108">Level</span></span>|<span data-ttu-id="ef651-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="ef651-109">Verbose</span></span>|  
-|<span data-ttu-id="ef651-110">Canale</span><span class="sxs-lookup"><span data-stu-id="ef651-110">Channel</span></span>|<span data-ttu-id="ef651-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ef651-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="20938-104">ID</span><span class="sxs-lookup"><span data-stu-id="20938-104">ID</span></span>|<span data-ttu-id="20938-105">5017</span><span class="sxs-lookup"><span data-stu-id="20938-105">5017</span></span>|  
+|<span data-ttu-id="20938-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="20938-106">Keywords</span></span>|<span data-ttu-id="20938-107">Serializzazione</span><span class="sxs-lookup"><span data-stu-id="20938-107">Serialization</span></span>|  
+|<span data-ttu-id="20938-108">Livello</span><span class="sxs-lookup"><span data-stu-id="20938-108">Level</span></span>|<span data-ttu-id="20938-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="20938-109">Verbose</span></span>|  
+|<span data-ttu-id="20938-110">Canale</span><span class="sxs-lookup"><span data-stu-id="20938-110">Channel</span></span>|<span data-ttu-id="20938-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="20938-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ef651-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ef651-112">Description</span></span>  
- <span data-ttu-id="ef651-113">Questo evento viene generato all'arresto della generazione del codice XML serializzabile.</span><span class="sxs-lookup"><span data-stu-id="ef651-113">This event is emitted when the generate Xml serializable stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="20938-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="20938-112">Description</span></span>  
+ <span data-ttu-id="20938-113">Questo evento viene generato all'arresto della generazione del codice XML serializzabile.</span><span class="sxs-lookup"><span data-stu-id="20938-113">This event is emitted when the generate Xml serializable stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ef651-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="ef651-114">Message</span></span>  
- <span data-ttu-id="ef651-115">Arresto generazione di XML serializzabile.</span><span class="sxs-lookup"><span data-stu-id="ef651-115">Generate Xml serializable stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="20938-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="20938-114">Message</span></span>  
+ <span data-ttu-id="20938-115">Arresto generazione di XML serializzabile.</span><span class="sxs-lookup"><span data-stu-id="20938-115">Generate Xml serializable stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ef651-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="ef651-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="20938-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="20938-116">Details</span></span>

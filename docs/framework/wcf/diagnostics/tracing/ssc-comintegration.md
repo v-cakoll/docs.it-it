@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f78d2947884f5173d5022f5600f9df71a2b2028
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26d49a7c1dccab2d8c3712a3592c778d814292cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservicedetails"></a><span data-ttu-id="3e605-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="3e605-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>
-<span data-ttu-id="3e605-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="3e605-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservicedetails"></a><span data-ttu-id="ee6b2-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="ee6b2-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>
+<span data-ttu-id="ee6b2-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span><span class="sxs-lookup"><span data-stu-id="ee6b2-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedServiceDetails</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3e605-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3e605-104">Description</span></span>  
- <span data-ttu-id="3e605-105">ComPlus: servizio avviato: dettagli.</span><span class="sxs-lookup"><span data-stu-id="3e605-105">ComPlus: Started service: details.</span></span>  
+## <a name="description"></a><span data-ttu-id="ee6b2-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ee6b2-104">Description</span></span>  
+ <span data-ttu-id="ee6b2-105">ComPlus: servizio avviato: dettagli.</span><span class="sxs-lookup"><span data-stu-id="ee6b2-105">ComPlus: Started service: details.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e605-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e605-106">See Also</span></span>  
- [<span data-ttu-id="3e605-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="3e605-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3e605-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="3e605-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3e605-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="3e605-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ee6b2-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ee6b2-106">See Also</span></span>  
+ [<span data-ttu-id="ee6b2-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ee6b2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ee6b2-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="ee6b2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ee6b2-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ee6b2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

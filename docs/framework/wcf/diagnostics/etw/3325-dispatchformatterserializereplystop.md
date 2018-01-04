@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3527863f22c27fda5485e0df7c1e0617e29952dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40261faf317e67d58eba20644da3c1a69c2fa76c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="98cbf-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="98cbf-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
-## <a name="properties"></a><span data-ttu-id="98cbf-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="98cbf-103">Properties</span></span>  
+# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="a9e0b-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="a9e0b-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
+## <a name="properties"></a><span data-ttu-id="a9e0b-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a9e0b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="98cbf-104">ID</span><span class="sxs-lookup"><span data-stu-id="98cbf-104">ID</span></span>|<span data-ttu-id="98cbf-105">3325</span><span class="sxs-lookup"><span data-stu-id="98cbf-105">3325</span></span>|  
-|<span data-ttu-id="98cbf-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="98cbf-106">Keywords</span></span>|<span data-ttu-id="98cbf-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="98cbf-107">ServiceModel</span></span>|  
-|<span data-ttu-id="98cbf-108">Livello</span><span class="sxs-lookup"><span data-stu-id="98cbf-108">Level</span></span>|<span data-ttu-id="98cbf-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="98cbf-109">Verbose</span></span>|  
-|<span data-ttu-id="98cbf-110">Canale</span><span class="sxs-lookup"><span data-stu-id="98cbf-110">Channel</span></span>|<span data-ttu-id="98cbf-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="98cbf-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="a9e0b-104">ID</span><span class="sxs-lookup"><span data-stu-id="a9e0b-104">ID</span></span>|<span data-ttu-id="a9e0b-105">3325</span><span class="sxs-lookup"><span data-stu-id="a9e0b-105">3325</span></span>|  
+|<span data-ttu-id="a9e0b-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="a9e0b-106">Keywords</span></span>|<span data-ttu-id="a9e0b-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a9e0b-107">ServiceModel</span></span>|  
+|<span data-ttu-id="a9e0b-108">Livello</span><span class="sxs-lookup"><span data-stu-id="a9e0b-108">Level</span></span>|<span data-ttu-id="a9e0b-109">Dettagliato</span><span class="sxs-lookup"><span data-stu-id="a9e0b-109">Verbose</span></span>|  
+|<span data-ttu-id="a9e0b-110">Canale</span><span class="sxs-lookup"><span data-stu-id="a9e0b-110">Channel</span></span>|<span data-ttu-id="a9e0b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a9e0b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="98cbf-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="98cbf-112">Description</span></span>  
- <span data-ttu-id="98cbf-113">Questo evento viene generato quando il dispatcher completa la serializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="98cbf-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
+## <a name="description"></a><span data-ttu-id="a9e0b-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a9e0b-112">Description</span></span>  
+ <span data-ttu-id="a9e0b-113">Questo evento viene generato quando il dispatcher completa la serializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="a9e0b-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="98cbf-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="98cbf-114">Message</span></span>  
- <span data-ttu-id="98cbf-115">Il dispatcher ha completato la serializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="98cbf-115">Dispatcher completed serialization of the reply message.</span></span>  
+## <a name="message"></a><span data-ttu-id="a9e0b-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="a9e0b-114">Message</span></span>  
+ <span data-ttu-id="a9e0b-115">Il dispatcher ha completato la serializzazione del messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="a9e0b-115">Dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="98cbf-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="98cbf-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a9e0b-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="a9e0b-116">Details</span></span>
