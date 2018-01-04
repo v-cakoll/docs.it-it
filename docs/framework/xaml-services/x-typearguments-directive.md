@@ -21,16 +21,17 @@ caps.latest.revision: "18"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
 Passa vincoli di tipo generico per il costruttore del tipo generico.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```xaml  
 <object x:TypeArguments="typeString" .../>  

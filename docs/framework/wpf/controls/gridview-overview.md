@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>Cenni preliminari su GridView
 <xref:System.Windows.Controls.GridView>modalità di visualizzazione è una delle modalità di visualizzazione per un <xref:System.Windows.Controls.ListView> controllo. La <xref:System.Windows.Controls.GridView> classe e le relative classi di supporto consentono agli utenti di visualizzare raccolte di elementi in una tabella che utilizza in genere i pulsanti come intestazioni di colonna interattive. Questo argomento vengono presentate le <xref:System.Windows.Controls.GridView> classe e viene illustrato l'utilizzo.  
@@ -148,4 +149,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ViewBase>  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Ordinare una colonna GridView quando si fa clic su un'intestazione](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

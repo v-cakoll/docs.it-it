@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92621e7e62750ae5ad73158232ccdabfb22287a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a751025470b566ef1e735e4ddd192cfd8fc354ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedura: eseguire l'associazione di una raccolta e visualizzare informazioni in base alla selezione effettuata
 In un semplice scenario master-Details, è necessario un controllo con associazione a dati <xref:System.Windows.Controls.ItemsControl> , ad esempio un <xref:System.Windows.Controls.ListBox>. In base alla selezione utente, visualizzare ulteriori informazioni sull'elemento selezionato. In questo esempio viene illustrato come implementare questo scenario.  
@@ -58,6 +59,6 @@ In un semplice scenario master-Details, è necessario un controllo con associazi
 ## <a name="see-also"></a>Vedere anche  
  [Usare il modello Master-Details con dati gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
  [Usare il modello Master-Details con dati XML gerarchici](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

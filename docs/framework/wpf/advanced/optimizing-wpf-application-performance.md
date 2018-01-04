@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ea154bc7c7a20bcdd57e1f271a4010f50646de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-wpf-application-performance"></a>Ottimizzazione delle prestazioni di applicazioni WPF
 Questa sezione è destinata come riferimento per [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gli sviluppatori di applicazioni che desiderano modi migliorare le prestazioni delle applicazioni. Se si è uno sviluppatore che è una novità per il [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], è consigliabile acquisire familiarità con entrambe le piattaforme. In questa sezione presuppone una conoscenza di entrambi e viene scritto per i programmatori che già conoscono sufficiente per ottenere le applicazioni in esecuzione.  
@@ -30,7 +31,7 @@ Questa sezione è destinata come riferimento per [!INCLUDE[TLA#tla_winclient](..
 > [!NOTE]
 >  I dati sulle prestazioni disponibili in questa sezione si basano [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni in esecuzione in un PC a 2,8 GHz con 512 RAM e un ATI Radeon 9700 scheda grafica.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
   
  [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
@@ -43,7 +44,7 @@ Questa sezione è destinata come riferimento per [!INCLUDE[TLA#tla_winclient](..
   
  [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
   
- [Testo](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
   
  [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
@@ -68,7 +69,7 @@ Questa sezione è destinata come riferimento per [!INCLUDE[TLA#tla_winclient](..
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Disegno di testo formattato](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
  [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
  [Suggerimenti sulle animazioni](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)  
  [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

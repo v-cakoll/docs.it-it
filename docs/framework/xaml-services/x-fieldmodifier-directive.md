@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ed50dd2aff1702543789f06939f7c2bc4b3dd83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfieldmodifier-directive"></a>Direttiva x:FieldModifier
 È possibile modificare il comportamento di compilazione XAML in modo che i campi per riferimenti a oggetti denominati definiti con <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> accesso anziché il <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> il comportamento predefinito.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```xaml  
 <object x:FieldModifier="Public".../>  

@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8f86b66e92ea250fbe20e8bcb27e6706302db4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-in-net"></a>Serializzazione in .NET
 La serializzazione è il processo di conversione dello stato di un oggetto in un form che può essere mantenuto o trasportato. Il complemento della serializzazione è la deserializzazione, che converte un flusso in un oggetto. Insieme, questi processi consentono di archiviare e trasferire i dati in modo semplice.  
@@ -33,7 +36,7 @@ La serializzazione è il processo di conversione dello stato di un oggetto in un
   
 -   La serializzazione XML serializza solo i campi e le proprietà pubbliche e non mantiene la fedeltà dei tipi. Ciò risulta utile se si vuole fornire o utilizzare dati senza limitare l'applicazione che utilizza i dati. Poiché XML è uno standard aperto, questa rappresenta una scelta interessante ai fini della condivisione di dati attraverso il Web. Analogamente, SOAP è uno standard aperto che rappresenta una scelta altrettanto interessante.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
 [Argomenti sulle procedure relative alla serializzazione](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 Vengono riportati collegamenti alle procedure contenute in questa sezione.
   
@@ -49,7 +52,7 @@ Questi strumenti consentono di sviluppare codice di serializzazione.
 [Esempi di serializzazione](../../../docs/standard/serialization/serialization-samples.md)  
 Negli esempi viene illustrato come eseguire la serializzazione.
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Riferimenti
 <xref:System.Runtime.Serialization> Contiene classi che possono essere usate per la serializzazione e la deserializzazione di oggetti.
   
 <xref:System.Xml.Serialization>  

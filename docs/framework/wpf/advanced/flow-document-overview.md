@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>Cenni preliminari sui documenti dinamici
 I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leggibilità. Anziché essere impostati su un layout predefinito, questi documenti consentono di adattare e ridisporre il contenuto in modo dinamico in base alle variabili in fase di esecuzione, ad esempio, le dimensioni della finestra, la risoluzione del dispositivo e le preferenze facoltative dell'utente. Questi documenti offrono anche funzionalità avanzate del documento, quali paginazione e colonne. Questo argomento offre una panoramica dei documenti dinamici e di come crearli.  
@@ -68,7 +69,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
 ## <a name="flow-document-types"></a>Tipi di documenti dinamici  
  La visualizzazione del contenuto del documento dinamico e la modalità di visualizzazione corrispondente dipendono dall'oggetto usato per ospitare il contenuto del flusso. Esistono quattro controlli che supportano la visualizzazione del contenuto di flusso: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, e <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Questi controlli vengono descritti brevemente di seguito.  
   
- **Nota:** <xref:System.Windows.Documents.FlowDocument> è necessaria per ospitare direttamente il contenuto del flusso, in modo che tutti i controlli di visualizzazione utilizzi un <xref:System.Windows.Documents.FlowDocument> per abilitare l'hosting del contenuto di flusso.  
+ **Nota:** <xref:System.Windows.Documents.FlowDocument> è necessaria per ospitare direttamente il contenuto del flusso, in modo che tutti i controlli di visualizzazione utilizzi un <xref:System.Windows.Documents.FlowDocument> per abilitare l'hosting del contenuto di flusso.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>include funzionalità che consentono all'utente di scegliere dinamicamente tra le varie modalità di visualizzazione, inclusa una pagina singola (una pagina-ora), un due-pagina-in-a-time (formato lettura libro) visualizzazione modalità e una modalità di visualizzazione (infinito) di scorrimento continuo. Per ulteriori informazioni sulle modalità di visualizzazione, vedere <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Se non è necessario il possibilità di passare in modo dinamico da diverse modalità di visualizzazione, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> forniscono flusso leggera visualizzatori di contenuto che vengono risolti in una particolare modalità di visualizzazione.  
@@ -361,7 +362,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
 ## <a name="see-also"></a>Vedere anche  
  [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [Panoramica sul modello di contenuto TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [Cenni preliminari sul controllo RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

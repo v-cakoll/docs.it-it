@@ -17,43 +17,44 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9275f1812111365ed6b0fb3be6957cd9ca883fdf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Trasporti in Windows Communication Foundation
 Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali utilizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono HTTP, Https, TCP e named pipe. Negli argomenti di questa sezione vengono fornite informazioni sulla scelta fra questi trasporti, la configurazione del trasporto e l'impostazione delle proprietà di ottimizzazione.  
   
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono inclusi trasporti aggiuntivi. Per informazioni sul trasporto di Accodamento messaggi (noto anche come MSMQ), vedere [code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Per informazioni sul trasporto peer-to-peer, vedere [rete Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  Descrive i tre trasporti principali con gli aspetti da considerare in fase di selezione.  
   
  [Scelta di un codificatore di messaggi](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
  Descrive i fattori da considerare nella scelta di un elemento di associazione di codifica dei messaggi.  
   
- [Trasferimento dei messaggi di flusso](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
+ [Trasferimento di messaggi di flusso](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
  Descrive come configurare il livello del trasporto per l'esecuzione del flusso.  
   
  [Configurazione di HTTP e HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
  Descrive come configurare gli elementi di associazione del trasporto HTTP e HTTPS.  
   
- [Procedura: sostituire la prenotazione URL WCF con una prenotazione limitata](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  Descrive come utilizzare le prenotazioni limitate URL di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Quote del trasporto](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
+ [Quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Vengono fornite considerazioni per l'impostazione delle quote disponibili nel livello di trasporto.  
   
- [Utilizzo di NAT e firewall](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
+ [Uso di NAT e firewall](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
  Descrive come configurare il livello di trasporto quando i messaggi vengono inviati o ricevuti attraverso un firewall o quando si utilizza la conversione degli indirizzi di rete (NAT).  
   
- [Condivisione porta Net. TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  Descrive come utilizzare il componente di condivisione porte Net.TCP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  

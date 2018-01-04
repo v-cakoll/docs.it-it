@@ -17,16 +17,17 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 06e59e7686004f8fd44473bd9572ed07a0118d1f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03b63cb40e57223d5c66c03fb60780689cd6c925
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xreference-markup-extension"></a>estensione di markup x:Reference
 Fa riferimento a un'istanza che è dichiarata in un' posizione nel markup XAML. Il riferimento si riferisce a un elemento `x:Name`.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```xaml  
 <object property="{x:Reference instancexName}" .../>  

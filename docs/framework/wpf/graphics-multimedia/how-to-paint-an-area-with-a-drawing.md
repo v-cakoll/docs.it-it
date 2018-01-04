@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1db788ae0fabdfd27cf215bfcf466c41df19c637
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: fbb7c4aff56fae9b4cc0346f8086bc490269ec8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Procedura: inserire un disegno in un'area
 Questo esempio spiega come inserire un disegno in un'area. Per disegnare un'area con un disegno, si utilizza un <xref:System.Windows.Media.DrawingBrush> e uno o più <xref:System.Windows.Media.Drawing> oggetti.   Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.DrawingBrush> per disegnare un oggetto con un disegno di due ellissi.  

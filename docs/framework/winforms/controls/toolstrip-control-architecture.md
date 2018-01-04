@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b112cb1e383b092c1bcc4403e04938b3b83c5ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-architecture"></a>Architettura del controllo ToolStrip
 Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> classi forniscono un sistema flessibile ed estendibile per la visualizzazione di elementi della barra degli strumenti, stato e menu. Queste classi sono contenute nel <xref:System.Windows.Forms> dello spazio dei nomi e sono tutti in genere denominati con il prefisso "ToolStrip" (ad esempio <xref:System.Windows.Forms.ToolStripOverflow>) o con il suffisso "Strip" (ad esempio <xref:System.Windows.Forms.MenuStrip>).  
@@ -131,7 +132,7 @@ Modello a oggetti ToolStrip
 #### <a name="toolstripcontainer-support-of-inheritance"></a>Supporto di ToolStripContainer dell'ereditarietà  
  Il <xref:System.Windows.Forms.ToolStripContainer> controllo supporta scenari di ereditarietà limitati, simili all'esempio seguente:  
   
-1.  Creare una nuova applicazione Windows Form.  
+1.  Creare una nuova applicazione Windows Forms.  
   
 2.  Aggiungere un tipo <xref:System.Windows.Forms.ToolStripContainer> al form.  
   
@@ -274,7 +275,7 @@ Modello a oggetti ToolStripItem
   
 |Elemento di contenuto|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|Sì|No|No|No|Sì|  
+|<xref:System.Windows.Forms.ToolStripButton>|Yes|No|No|No|Sì|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|Sì|Sì|Sì|No|Sì|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Sì|No|No|Sì|Sì|  
 |<xref:System.Windows.Forms.ToolStripLabel>|Sì|No|No|Sì|Sì|  
@@ -284,7 +285,7 @@ Modello a oggetti ToolStripItem
 |<xref:System.Windows.Forms.ToolStripMenuItem>|No|Sì|Sì|No|No|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|No|No|No|Sì|No|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Sì|No|No|Sì|No|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|Sì|Sì|No|Sì|Sì|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|Sì|Sì|No|Sì|Yes|  
   
 ### <a name="toolstripbutton"></a>ToolStripButton  
  <xref:System.Windows.Forms.ToolStripButton>è l'elemento del pulsante per <xref:System.Windows.Forms.ToolStrip>. È possibile visualizzarlo con vari stili del bordo e usarlo per rappresentare e attivare gli stati operativi. È inoltre possibile definire in modo da avere lo stato attivo per impostazione predefinita.  

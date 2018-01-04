@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: debe65ef1587171dc2f324a19da4b43e7274c438
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d24a5154607bf535cbf995705332092bb86ca02e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Procedura: controllare in modo interattivo un oggetto Clock
 Oggetto <xref:System.Windows.Media.Animation.Clock> dell'oggetto <xref:System.Windows.Media.Animation.ClockController> proprietà consente di in modo interattivo avviare, sospendere, riprendere, ricerca, spostare l'orologio al periodo di riempimento e arrestare l'orologio. È possibile controllare in modo interattivo solo il clock radice di un struttura ad albero di temporizzazione.  

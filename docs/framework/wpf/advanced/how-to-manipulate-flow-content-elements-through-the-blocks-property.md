@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d995e9a3a50e733a87a203f94b97a937560a0141
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Procedura: modificare elementi di contenuto del flusso tramite la proprietà Blocks
 Questi esempi vengono illustrate alcune delle operazioni più comuni che possono essere eseguite su elementi di contenuto di flusso tramite il **blocchi** proprietà. Questa proprietà viene utilizzata per aggiungere e rimuovere elementi da <xref:System.Windows.Documents.BlockCollection>. Gli elementi di contenuto del flusso che presentano un **blocchi** proprietà includono:  

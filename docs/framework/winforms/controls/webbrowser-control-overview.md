@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>Cenni preliminari sul controllo WebBrowser
 Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito per il controllo WebBrowser ActiveX. Il wrapper gestito consente di visualizzare le pagine Web in applicazioni client Windows Form. È possibile utilizzare il <xref:System.Windows.Forms.WebBrowser> controllo per duplicare la funzionalità di esplorazione Web di Internet Explorer nell'applicazione oppure è possibile disabilitare funzionalità predefinite di Internet Explorer e utilizzare il controllo come visualizzatore di documenti HTML semplice. È inoltre possibile utilizzare il controllo per aggiungere al form di elementi dell'interfaccia utente basati su DHTML e nascondere il fatto che sono ospitati nel <xref:System.Windows.Forms.WebBrowser> controllo. Questo approccio consente di combinare facilmente controlli Web e i controlli Windows Form in una singola applicazione.  
@@ -33,7 +34,7 @@ Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito 
   
  Il `Document` proprietà consente inoltre di chiamare i metodi implementati nella pagina Web dal codice dell'applicazione client il codice di script. Per accedere a codice dell'applicazione client dal codice di script, impostare il `ObjectForScripting` proprietà. L'oggetto specificato è possibile accedere al codice di script come il `window.external` oggetto.  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |Proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A>|Ottiene un oggetto che fornisce l'accesso gestito al modello di oggetto di documento (DOM) HTML della pagina Web corrente.|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>evento|Si verifica quando una pagina Web al termine del caricamento.|  

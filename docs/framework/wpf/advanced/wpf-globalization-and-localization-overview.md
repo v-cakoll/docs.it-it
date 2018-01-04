@@ -16,11 +16,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 791b1b134717859a0e90914bf118fcf1dc3e1e4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
 Quando si limita la disponibilità del prodotto a una sola lingua, si riduce la potenziale base clienti a una frazione della popolazione mondiale di 6,5 miliardi di persone. Se si vuole che le applicazioni raggiungano un pubblico globale, la localizzazione economica del prodotto è uno dei modi migliori e più economici per raggiungere un ampio pubblico di clienti.  
@@ -181,9 +182,9 @@ Quando si limita la disponibilità del prodotto a una sola lingua, si riduce la 
   
 |Chiave di risorsa|Categoria di localizzazione|Valore|  
 |-|-|-| 
-|Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|  
-|Button_2:System.Windows.Controls.Button.$Content|Pulsante|Annulla|  
-|Button_3:System.Windows.Controls.Button.$Content|Pulsante|Sfoglia...|  
+|Button_1:System.Windows.Controls.Button.$Content|Button|OK|  
+|Button_2:System.Windows.Controls.Button.$Content|Button|Annulla|  
+|Button_3:System.Windows.Controls.Button.$Content|Button|Sfoglia...|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Digitare il nome del programma, della cartella, del documento o della risorsa Internet da aprire.|  
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Apri:|  
@@ -193,9 +194,9 @@ Quando si limita la disponibilità del prodotto a una sola lingua, si riduce la 
   
 |Chiave di risorsa|Categoria di localizzazione|Valore|  
 |-|-|-| 
-|Button_1:System.Windows.Controls.Button.$Content|Pulsante|OK|  
+|Button_1:System.Windows.Controls.Button.$Content|Button|OK|  
 |Button_2:System.Windows.Controls.Button.$Content|Pulsante|Abbrechen|  
-|Button_3:System.Windows.Controls.Button.$Content|Pulsante|Durchsuchen…|  
+|Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen…|  
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|Geben Sie den Namen eines Programms Ordners, Dokuments o einer Internetresource un.|  
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Testo|Öffnen:|  
@@ -266,9 +267,9 @@ Quando si limita la disponibilità del prodotto a una sola lingua, si riduce la 
   
  Questo commento viene associato al contenuto di TextBlock_1 e nel caso dello strumento LocBaml (vedere [localizzazione di un'applicazione](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)), può essere visualizzato nella colonna 6 della riga TextBlock_1 nel file CSV di output:  
   
-|Chiave di risorsa|Categoria|Leggibile|Modificabile|Commento|Valore|  
+|Chiave di risorsa|Category|Leggibile|Modificabile|Commento|Valore|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|TRUE|TRUE|Questo carattere viene usato come regola decorativa.|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|true|true|Questo carattere viene usato come regola decorativa.|&#124;|  
   
  I commenti possono essere inseriti nel contenuto o nella proprietà di qualsiasi elemento usando la sintassi seguente:  
   

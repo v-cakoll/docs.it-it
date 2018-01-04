@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Convalida dell'input utente in Windows Form
 Quando gli utenti immettono i dati nell'applicazione, si desidera verificare che i dati siano validi prima di essere utilizzati nell'applicazione. Potrebbe essere necessario che alcuni campi di testo non sia di lunghezza zero, che un campo formattato come un numero di telefono o altro tipo di dati in formato corretto o che una stringa non contenga caratteri non sicuri che può essere usati per compromettere la sicurezza di un database. Windows Form sono disponibili diversi metodi per convalidare l'input dell'applicazione.  
@@ -77,7 +78,7 @@ Quando gli utenti immettono i dati nell'applicazione, si desidera verificare che
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Controlli di convalida implicita predefinita per Windows Form  
  Diversi controlli Windows Form dispongono di valori predefiniti diversi per i relativi <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> proprietà. Nella tabella seguente mostra i controlli più comuni e sui valori predefiniti.  
   
-|Controllo|Comportamento predefinito della convalida|  
+|Control|Comportamento predefinito della convalida|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  

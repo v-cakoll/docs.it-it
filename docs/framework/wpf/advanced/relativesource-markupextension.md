@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="relativesource-markupextension"></a>Estensione del markup RelativeSource
 Specifica le proprietà di un <xref:System.Windows.Data.RelativeSource> origine dell'associazione da utilizzare all'interno di un [estensione di Markup di associazione](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), o quando si imposta la <xref:System.Windows.Data.Binding.RelativeSource%2A> proprietà di un <xref:System.Windows.Data.Binding> elemento in XAML.  
@@ -117,6 +118,6 @@ Specifica le proprietà di un <xref:System.Windows.Data.RelativeSource> origine 
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Estensioni di markup e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Panoramica sulle dichiarazioni di associazione](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
  [Estensione di markup x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

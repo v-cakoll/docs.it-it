@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d1ababcb7a00496b59005b5e90f875511fefc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebb74e1db2e63269f70a13ef8520ab1383ecae08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Procedura: ottenere la visualizzazione predefinita di una raccolta dati
 Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, a seconda di ordinamento, filtro o i criteri di raggruppamento. Ogni raccolta dispone di una visualizzazione predefinita condivisa, che viene utilizzata come origine di associazione effettiva quando un'associazione specifica una raccolta come origine. In questo esempio viene illustrato come ottenere la visualizzazione predefinita di una raccolta.  
@@ -44,4 +45,4 @@ Le viste consentono la stessa raccolta di dati da visualizzare in modi diversi, 
   
 ## <a name="see-also"></a>Vedere anche  
  [Ordinare e raggruppare dati con una visualizzazione in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

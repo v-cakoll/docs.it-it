@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Informazioni su strutture e concetti del flusso del nodo XAML
 I reader XAML e i writer XAML implementati nei servizi XAML di .NET Framework sono basati sul concetto di progettazione di un flusso di nodi XAML. Il flusso di nodi XAML è una concettualizzazione di un set di nodi XAML. In questa concettualizzazione, un processore XAML attraversa la struttura delle relazioni tra i nodi in XAML, una alla volta. In qualsiasi momento, in un flusso di nodi XAML aperto è presente solo un record o una posizione corrente e molti aspetti dell'API segnalano unicamente le informazioni disponibili da tale posizione. Il nodo corrente in un flusso di nodi XAML può essere descritto come un oggetto, un membro o un valore. Trattando XAML come flusso di nodi XAML, i reader XAML possono comunicare con i writer XAML e consentire a un programma di visualizzare, interagire con o modificare i contenuti di un flusso di nodi XAML durante un'operazione relativa a un percorso di salvataggio o di caricamento che usa XAML. La progettazione delle API di reader e writer XAML e il concetto di flusso di nodi XAML sono analoghi a concetti e progettazioni di reader e writer correlati precedenti, come [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e le classi <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> . Questo argomento illustra i concetti correlati al flusso di nodi XAML e descrive come scrivere routine che interagiscono con rappresentazioni XAML a livello di nodi XAML.  
@@ -74,7 +75,7 @@ while (xxr.Read()) {
 }  
 ```  
   
- Questo esempio di base di un ciclo di nodi XAML del percorso di caricamento connette in modo trasparente il reader XAML e il writer XAML, in modo analogo a quanto avviene usando <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Ma questa struttura di base viene quindi espansa per essere applicata allo scenario di lettura o scrittura. Ecco alcuni degli scenari possibili:  
+ Questo esempio di base di un ciclo di nodi XAML del percorso di caricamento connette in modo trasparente il reader XAML e il writer XAML, in modo analogo a quanto avviene usando <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>. Ma questa struttura di base viene quindi espansa per essere applicata allo scenario di lettura o scrittura. Ecco alcuni degli scenari possibili:   
   
 -   Attivare <xref:System.Xaml.XamlXmlReader.NodeType%2A>. Eseguire azioni diverse a seconda del tipo di nodo letto.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 069ab4e417d639a36a9168fa950f4b4f6df4c2c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6c62436adc974df4b74cf1548abc09ac1f396fc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Procedura: applicare EmissiveMaterial a un oggetto 3D
 Nell'esempio seguente viene illustrato come utilizzare <xref:System.Windows.Media.Media3D.EmissiveMaterial> per aggiungere a un oggetto Material uguale al colore del pennello di EmissiveMaterial esistente. Il codice seguente viene illustrato <xref:System.Windows.Media.Media3D.DiffuseMaterial> e <xref:System.Windows.Media.Media3D.EmissiveMaterial> applicati in combinazione per aggiungere blu all'aspetto dell'oggetto DiffuseMaterial.  

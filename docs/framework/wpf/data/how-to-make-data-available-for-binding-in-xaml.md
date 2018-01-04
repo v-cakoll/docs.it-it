@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d734a7f17f8843ff284ac0854ac41d4a5b9f5584
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Procedura: rendere i dati disponibili per l'associazione in XAML
 In questo argomento vengono illustrati i diversi modi, è possibile rendere disponibili dati per l'associazione in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], a seconda delle esigenze dell'applicazione.  
@@ -58,5 +59,5 @@ In questo argomento vengono illustrati i diversi modi, è possibile rendere disp
  Per informazioni sulle diverse modalità con cui è possibile specificare i dati che si desidera associare a, vedere [specificare l'origine di associazione](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Per informazioni sui tipi di dati è possibile associare o come implementare la propria [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] degli oggetti per l'associazione, vedere [Cenni preliminari sulle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 246c144a18d7c1014096a6e37ad09b6eec5ad932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Procedura: utilizzare i modelli per applicare uno stile a un ListView che utilizza una GridView
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.DataTemplate> e <xref:System.Windows.Style> gli oggetti per specificare l'aspetto di un <xref:System.Windows.Controls.ListView> controllo che utilizza un <xref:System.Windows.Controls.GridView> modalità di visualizzazione.  
@@ -48,5 +49,5 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.DataT
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)

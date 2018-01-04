@@ -18,18 +18,19 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3b256b36affb310be3a59bbe1d058a3ff3a57b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ac7bb57f06f0d7021f3c060005033d25ec448b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-ink-handling"></a>Gestione avanzata dell'input penna
 Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene fornito con il <xref:System.Windows.Controls.InkCanvas>, e un elemento è possibile inserire nell'applicazione per avviare subito la raccolta e visualizzare input penna. Tuttavia, se il <xref:System.Windows.Controls.InkCanvas> controllo non fornisce un livello sufficiente di controllo, è possibile mantenere il controllo a un livello superiore personalizzando la propria raccolta di input penna e classi per il rendering di input penna utilizzando <xref:System.Windows.Input.StylusPlugIns>.  
   
  Il <xref:System.Windows.Input.StylusPlugIns> classi forniscono un meccanismo per l'implementazione di controllo di basso livello su <xref:System.Windows.Input.Stylus> di input e di input penna per il rendering dinamico. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare un comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali. Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, un tipo specializzato <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, consente di personalizzare in modo dinamico i dati di input penna per il rendering in tempo reale che significa che il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> disegna input penna immediatamente come <xref:System.Windows.Input.StylusPoint> di generazione dei dati, in modo che sembrino "flusso" dallo stilo dispositivo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Personalizzare il rendering dell'input penna](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
   [Intercettazione dell'input dello stilo](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
   [Creazione di un controllo di input penna](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  

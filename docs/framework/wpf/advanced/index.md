@@ -19,16 +19,17 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Aree avanzate (Windows Presentation Foundation)
 Questa sezione descrive alcune delle aree avanzate in WPF.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Architettura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
  [Elementi di base](../../../../docs/framework/wpf/advanced/base-elements.md)  
  [Albero degli elementi e serializzazione](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  

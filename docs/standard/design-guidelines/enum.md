@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7e1686dca2b96e339917b6dd4861f0f43d20d66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enum-design"></a>Progettazione di enum
 Le enumerazioni sono un tipo speciale di tipo di valore. Esistono due tipi di enumerazioni: enumerazioni semplici di enumerazioni e flag.  
@@ -105,5 +108,5 @@ Le enumerazioni sono un tipo speciale di tipo di valore. Esistono due tipi di en
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida di progettazione di tipo](../../../docs/standard/design-guidelines/type.md)  
+ [Linee guida per la progettazione di tipi](../../../docs/standard/design-guidelines/type.md)  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

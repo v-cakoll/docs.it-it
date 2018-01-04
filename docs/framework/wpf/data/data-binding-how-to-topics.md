@@ -17,16 +17,17 @@ caps.latest.revision: "81"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01966709941d9aa1f4d430e8eac4a5c6787e315b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5980673372e52255808bb1d04c804e86f2116100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-how-to-topics"></a>Procedure relative all'associazione dati
 Negli argomenti di questa sezione viene descritto come utilizzare l'associazione dati per associare elementi ai dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creare un'associazione semplice](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
  [Specificare l'origine di associazione](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
@@ -63,7 +64,7 @@ Negli argomenti di questa sezione viene descritto come utilizzare l'associazione
  [Eseguire l'associazione a un servizio Web](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
  [Eseguire l'associazione dei risultati di una query LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  

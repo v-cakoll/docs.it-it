@@ -17,21 +17,22 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2770f1a0c965dc956e837c5c362e5767d0c9cea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5256c0ffffb219776a8705dfee0409ebde07a7ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridsplitter-how-to-topics"></a>Procedure relative al controllo GridSplitter
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.GridSplitter> controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Ridimensionare le righe con un GridSplitter](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
  [Ridimensionare le colonne con un GridSplitter](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
  [Assicurarsi che GridSplitter sia visibile](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.GridSplitter>  
   
  <xref:System.Windows.Controls.Grid>  

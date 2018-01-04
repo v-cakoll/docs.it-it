@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Panoramica su allineamento, margini e spaziatura interna
 La <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che consentono di posizionare con precisione gli elementi figlio. Questo argomento vengono illustrate quattro delle proprietà più importante: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. È fondamentale comprendere gli effetti di queste proprietà, perché forniscono la base per controllare la posizione degli elementi nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -61,7 +62,7 @@ La <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che c
 ### <a name="horizontalalignment-property"></a>Proprietà HorizontalAlignment  
  Il <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà dichiara le caratteristiche di allineamento orizzontale da applicare a elementi figlio. La tabella seguente mostra i valori possibili del <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Windows.HorizontalAlignment.Left>|Gli elementi figlio sono allineati a sinistra dello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Gli elementi figlio sono allineati al centro dello spazio di layout allocato dell'elemento padre.|  
@@ -81,7 +82,7 @@ La <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che c
 ### <a name="verticalalignment-property"></a>Proprietà VerticalAlignment  
  Il <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> proprietà descrive le caratteristiche di allineamento da applicare a elementi figlio. La tabella seguente mostra i valori possibili per il <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> proprietà.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |<xref:System.Windows.VerticalAlignment.Top>|Gli elementi figlio sono allineati in alto nello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Gli elementi figlio sono allineati al centro dello spazio di layout allocato dell'elemento padre.|  

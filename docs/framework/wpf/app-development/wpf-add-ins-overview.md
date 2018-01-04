@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari le applicazioni devono anche visualizzare [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornite dai componenti aggiuntivi. Questo argomento mostra in che modo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integra il modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per consentire questi scenari e illustra l'architettura che sta alla base, i suoi vantaggi e le sue limitazioni.  
@@ -298,4 +299,4 @@ ms.lasthandoff: 11/21/2017
  [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)  
  [Panoramica di servizi remoti .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Rendere utilizzabile in remoto gli oggetti](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
- [Procedure relative](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)

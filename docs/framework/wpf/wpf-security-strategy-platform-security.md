@@ -28,11 +28,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc8914f4bc891aefa191ba5cf2b659afda0f905b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Oltre a fornire molteplici servizi di sicurezza, [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] sfrutta le funzionalità di sicurezza della piattaforma sottostante, ovvero del sistema operativo, di [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] e di [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
@@ -138,7 +139,7 @@ Oltre a fornire molteplici servizi di sicurezza, [!INCLUDE[TLA#tla_wpf](../../..
   
 -   **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
   
- Per ognuna di queste zone, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] fornisce un set di autorizzazioni predefinito che include le autorizzazioni corrispondenti al livello di attendibilità associato a ognuna, tra cui:  
+ Per ognuna di queste zone, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] fornisce un set di autorizzazioni predefinito che include le autorizzazioni corrispondenti al livello di attendibilità associato a ognuna, Sono inclusi:  
   
 -   **FullTrust**. Per le applicazioni avviate dal **risorse del Computer** zona. Sono concesse tutte le autorizzazioni possibili.  
   

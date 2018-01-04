@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>Linee guida di utilizzo
 In questa sezione contiene linee guida per l'utilizzo di tipi comuni nelle API accessibile pubblicamente. Occupa dell'utilizzo diretto dei tipi (ad esempio, gli attributi di serializzazione) incorporati e overload degli operatori comuni.  
@@ -28,12 +31,12 @@ In questa sezione contiene linee guida per l'utilizzo di tipi comuni nelle API a
 > [!NOTE]
 >  Per linee guida e ulteriori informazioni su altri tipi predefiniti di .NET Framework, vedere gli argomenti di riferimento per gli elementi seguenti: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Array](../../../docs/standard/design-guidelines/arrays.md)  
  [Attributi](../../../docs/standard/design-guidelines/attributes.md)  
  [Raccolte](/cpp/mfc/collections)  
  [Serializzazione](../../../docs/standard/design-guidelines/serialization.md)  
- [Utilizzo di System. Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [Uso di System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
  [Operatori di uguaglianza](../../../docs/standard/design-guidelines/equality-operators.md)  
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

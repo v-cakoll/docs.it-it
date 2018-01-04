@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Sviluppo multipiattaforma con la libreria di classi portabile
 Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Studio consente di creare in modo semplice e veloce app e librerie compatibili con più piattaforme per le piattaforme Microsoft.  
@@ -37,7 +40,7 @@ Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Stu
 > [!WARNING]
 >  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) include gli aggiornamenti per i modelli di libreria di classi portabile. Se si dispone di una versione precedente di Visual Studio e Visual Studio 2013 installato nello stesso computer, e si installa l'Update 2, le modifiche di **Framework di destinazione** scelte verranno applicate a entrambe le versioni di Visual Studio.  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
  [Supporto di Visual Studio](#vs_support)  
  [Creazione di un progetto libreria di classi portabile](#create_pcl)  
@@ -227,8 +230,8 @@ Esempio di informazioni sulla versione
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della libreria di classi portabile con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [Risorse App per librerie destinate a piattaforme Multiple](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [Uso della libreria di classi portabile con MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [Risorse app per librerie destinate a più piattaforme](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) (Supporto di .NET Framework per le app di Windows Store e Windows Runtime)  
  [Distribuzione](../../../docs/framework/deployment/net-framework-applications.md)

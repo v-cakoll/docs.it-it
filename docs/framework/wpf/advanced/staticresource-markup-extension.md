@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 821cd152ccb7a02dda5338d6a3ec44d6625c0097
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="staticresource-markup-extension"></a>Estensione del markup StaticResource
 Fornisce un valore per uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributo di proprietà per la ricerca di un riferimento a una risorsa già definita. Il comportamento di ricerca per tale risorsa è analogo alla ricerca in fase di caricamento, che cercherà le risorse che sono state caricate in precedenza dal markup corrente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pagina nonché altre origini di applicazione e genererà il valore di risorsa come il valore della proprietà degli oggetti in fase di esecuzione.  
@@ -48,7 +49,7 @@ Fornisce un valore per uno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sha
   
 |||  
 |-|-|  
-|`key`|La chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dal [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) se una risorsa è stata creata nel markup o è stata fornita come il `key` parametro quando si chiama <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se la risorsa è stata creata nel codice.|  
+|`key`|Chiave per la risorsa richiesta. Questa chiave è stata inizialmente assegnata dal [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) se una risorsa è stata creata nel markup o è stata fornita come il `key` parametro quando si chiama <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se la risorsa è stata creata nel codice.|  
   
 ## <a name="remarks"></a>Note  
   

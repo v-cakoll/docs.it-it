@@ -18,19 +18,20 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f2d82be5dc5a5c78b19a6ac5326cbecf9918092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c79cd6b9c4b1f4f7227a08a1a719e147e41055fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canvas"></a>Canvas
 <xref:System.Windows.Controls.Canvas>è un controllo layout che consente il posizionamento assoluto degli elementi figlio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedure relative](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ccb89b67b222c11695131a1aa8423b89df1c9a70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contesto dello schema XAML predefinito e contesto dello schema XAML WPF
 Un contesto dello schema XAML è un'entità concettuale che qualifica come una produzione XAML che usa un determinato vocabolario XAML interagisce con l'oggetto di scrittura del comportamento, incluso come risolvere, mapping dei tipi come assembly vengono caricati, come determinato reader e writer le impostazioni vengono interpretate. In questo argomento vengono descritte le funzionalità di servizi XAML di .NET Framework e il contesto dello schema XAML predefinito associato, basato sul sistema di tipi CLR. Questo argomento descrive anche il contesto dello schema XAML che viene utilizzato per WPF.  

@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtuale nel controllo DataGridView di Windows Form
 La modalità virtuale, è possibile gestire l'interazione tra il <xref:System.Windows.Forms.DataGridView> controllo e una cache di dati personalizzati. Per implementare la modalità virtuale, impostare il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> proprietà `true` e gestire uno o più eventi descritti in questo argomento. In genere si gestisce almeno il `CellValueNeeded` evento, che consente il controllo di cercare i valori nella cache dei dati.  
@@ -49,7 +50,7 @@ La modalità virtuale, è possibile gestire l'interazione tra il <xref:System.Wi
   
  Gli eventi seguenti si verificano solo quando il <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> è impostata su `true`.  
   
-|Evento|Descrizione|  
+|event|Descrizione|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Utilizzato dal controllo per recuperare un valore di cella nella cache dei dati per la visualizzazione. Questo evento si verifica solo per le celle nelle colonne non associate.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Utilizzato dal controllo per salvare l'input dell'utente per una cella per la cache dei dati. Questo evento si verifica solo per le celle nelle colonne non associate.<br /><br /> Chiamare il <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> metodo quando si modifica un valore memorizzato nella cache di fuori di un <xref:System.Windows.Forms.DataGridView.CellValuePushed> gestore eventi per verificare che il valore corrente viene visualizzato nel controllo e applicare le modalità di ridimensionamento automatico attualmente attive.|  

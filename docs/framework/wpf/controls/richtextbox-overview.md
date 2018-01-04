@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-overview"></a>Cenni generali sul controllo RichTextBox
 Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare o modificare il contenuto di flusso inclusi paragrafi, immagini, tabelle e altro ancora. Questo argomento vengono presentate le <xref:System.Windows.Controls.TextBox> classe e fornisce esempi di come utilizzarla in entrambi [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -33,10 +34,10 @@ Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare
 ## <a name="textbox-or-richtextbox"></a>Differenza tra un controllo TextBox e un controllo RichTextBox  
  Entrambi <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> consentire agli utenti di modificare il testo, tuttavia, i due controlli vengono utilizzati in scenari diversi. Oggetto <xref:System.Windows.Controls.RichTextBox> è una scelta migliore quando è necessario che all'utente di modificare il testo formattato, immagini, tabelle o altro contenuto complesso. Ad esempio, la modifica di un documento, un articolo o blog che richiede una formattazione, immagini, e così via è più opportuno utilizzare un <xref:System.Windows.Controls.RichTextBox>. Oggetto <xref:System.Windows.Controls.TextBox> richiede meno risorse di sistema un <xref:System.Windows.Controls.RichTextBox> ed è la scelta ideale solo testo normale deve essere modificato (ad esempio di utilizzo in form). Vedere [Cenni preliminari sul controllo TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md) per ulteriori informazioni su <xref:System.Windows.Controls.TextBox>. Nella tabella seguente sono riepilogate le principali funzionalità di <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>.  
   
-|Controllo|Controllo ortografico in tempo reale|Menu di scelta rapida|Comandi di formattazione quale <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>contenuto, ad esempio immagini, paragrafi, tabelle e così via.|  
+|Control|Controllo ortografico in tempo reale|Menu di scelta rapida|Comandi di formattazione quale <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>contenuto, ad esempio immagini, paragrafi, tabelle e così via.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|Sì|Sì|No|No.|  
-|<xref:System.Windows.Controls.RichTextBox>|Sì|Sì|Sì|Sì|  
+|<xref:System.Windows.Controls.TextBox>|Yes|Sì|No|No.|  
+|<xref:System.Windows.Controls.RichTextBox>|Yes|Sì|Sì|Yes|  
   
  **Nota:** Sebbene <xref:System.Windows.Controls.TextBox> non supporta la formattazione di comandi correlati come <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B), molti comandi di base sono supportati da entrambi i controlli, ad esempio <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
   
@@ -105,5 +106,5 @@ Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
  [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)

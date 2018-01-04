@@ -17,11 +17,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu"></a>Menu
 Oggetto <xref:System.Windows.Controls.Menu> è un controllo che consente l'organizzazione gerarchica degli elementi associati a comandi e gestori eventi. Ogni <xref:System.Windows.Controls.Menu> può contenere più <xref:System.Windows.Controls.MenuItem> controlli. Ogni <xref:System.Windows.Controls.MenuItem> può richiamare un comando o richiamare un `Click` gestore dell'evento. Oggetto <xref:System.Windows.Controls.MenuItem> può anche avere più <xref:System.Windows.Controls.MenuItem> gli elementi figlio, creando un sottomenu.  
@@ -31,10 +32,10 @@ Oggetto <xref:System.Windows.Controls.Menu> è un controllo che consente l'organ
  ![Stati dei menu](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
 Menu in stati diversi  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulla classe Menu](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Menu>  
   <xref:System.Windows.Controls.MenuItem>  
   <xref:System.Windows.Controls.Primitives.MenuBase>  

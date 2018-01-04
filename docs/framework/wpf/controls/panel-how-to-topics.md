@@ -17,23 +17,24 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 877367098baf6e50b18ecfba2e6b20cdbe29313d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-how-to-topics"></a>Procedure relative all'elemento Panel
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.Panel> elemento correlato [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: applicare un LayoutTransform a un elemento](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Creare un elemento Panel personalizzato](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Eseguire l'override del metodo Panel OnRender](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Impostare le proprietà di altezza di un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
  [Impostare le proprietà di larghezza di un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23f49481806d386bece1ad0634dd635c9eaf51f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bac1fa1576e684a4b10f00310c08e4e7101a5df0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-application-resources"></a>Procedura: Usare le risorse delle applicazioni
 In questo esempio viene illustrato come usare le risorse delle applicazioni.  
@@ -38,4 +39,4 @@ In questo esempio viene illustrato come usare le risorse delle applicazioni.
 ## <a name="see-also"></a>Vedere anche  
  [Risorse XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Cenni preliminari sulla gestione di applicazioni](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

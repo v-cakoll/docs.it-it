@@ -17,16 +17,17 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-customization"></a>Personalizzazione dei controlli
 Questa categoria vengono illustrate le varie classi di base, interfacce e altri elementi e concetti utilizzati nella creazione completamente funzionale [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulla modifica di controlli](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
  [Linee guida per la progettazione di controlli a cui è possibile applicare degli stili](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
  [Strumenti decorativi](../../../../docs/framework/wpf/controls/adorners.md)  

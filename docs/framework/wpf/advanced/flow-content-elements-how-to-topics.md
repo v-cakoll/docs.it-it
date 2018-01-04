@@ -17,16 +17,17 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e58fbb6a577354f862d4b4d79e947e7618bd75a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 472bb286f57701342be82d4a981714236e147932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Argomenti sulle procedure relative a elementi di contenuto del flusso
 Negli argomenti di questa sezione viene descritto come eseguire attività comuni utilizzando i vari elementi del flusso di contenuto e le funzionalità correlate.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Regolare la spaziatura tra paragrafi](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
  [Compilare oggetti Table a livello di codice](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
  [Modificare l'oggetto FlowDirection del contenuto a livello di codice](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
@@ -43,7 +44,7 @@ Negli argomenti di questa sezione viene descritto come eseguire attività comuni
  [Usare elementi di contenuto dinamico](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
  [Usare gli attributi di separazione delle colonne di un oggetto FlowDocument](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.Inline>  

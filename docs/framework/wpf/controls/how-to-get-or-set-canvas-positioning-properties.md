@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Procedura: ottenere o impostare le proprietà di posizionamento delle aree di disegno
 In questo esempio viene illustrato come utilizzare i metodi di posizionamento di <xref:System.Windows.Controls.Canvas> elemento per posizionare il contenuto figlio. Questo esempio viene utilizzato il contenuto in un <xref:System.Windows.Controls.ListBoxItem> per rappresentare i valori di posizionamento e converte i valori in istanze di <xref:System.Double>, che è un argomento obbligatorio per il posizionamento. I valori vengono convertiti in stringhe e visualizzati come testo in un <xref:System.Windows.Controls.TextBlock> elemento utilizzando il <xref:System.Windows.Controls.Canvas.GetLeft%2A> metodo.  

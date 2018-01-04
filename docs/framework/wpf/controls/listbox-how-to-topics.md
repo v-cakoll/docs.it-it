@@ -17,22 +17,23 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8991a8f839520196addc235c4731246e448dcfa8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-how-to-topics"></a>Procedure relative a ListBox
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.ListBox> controllo per visualizzare elenchi di elementi selezionabili.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Associare un controllo ListBox ai dati](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [Ottenere un oggetto ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
  [Procedura: aggiungere dati a un oggetto ItemsControl](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [Migliorare le prestazioni di scorrimento di un controllo ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  

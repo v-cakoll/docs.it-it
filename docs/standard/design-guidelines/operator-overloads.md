@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffd472a7c410bd541ea0382f05f7ed92acb0e688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1d17aa00ce551d951b0e178304632572abf592b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="operator-overloads"></a>Overload dell'operatore
 Overload degli operatori consente ai tipi di framework di vengono visualizzati come se fossero primitive di linguaggio predefinito.  
@@ -121,5 +124,5 @@ Overload degli operatori consente ai tipi di framework di vengono visualizzati c
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida di progettazione di membro](../../../docs/standard/design-guidelines/member.md)  
+ [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

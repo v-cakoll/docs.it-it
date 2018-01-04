@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità di <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -60,7 +61,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 |Ottenere e impostare proprietà con ambito di applicazione|Usare la proprietà <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>.|  
 |Ottenere e salvare lo stato di un'applicazione|Vedere [persistente e ripristinare le proprietà dell'ambito di applicazione tra le sessioni dell'applicazione](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
 |Gestire file di dati non di codice, tra cui file di risorse, file di contenuto e file del sito di origine.|Vedere [risorse dell'applicazione WPF, contenuto e i file di dati](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Gestire le finestre in applicazioni autonome|Vedere [Cenni preliminari su Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
+|Gestire le finestre in applicazioni autonome|Vedere [Cenni preliminari sulle finestre WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
 |Verificare e gestire la navigazione|Vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   

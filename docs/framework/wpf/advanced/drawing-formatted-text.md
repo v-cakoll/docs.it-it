@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad79f26a48f3f5e905b2f2ac7de9191dd8539f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-formatted-text"></a>Disegno di testo formattato
 In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Media.FormattedText> oggetto. che offre un controllo di basso livello per il disegno di testo nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -111,26 +112,26 @@ Video visualizzato nella geometria del percorso del testo
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.Height%2A> proprietà per calcolare una [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] posizione DrawText 'y'.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.Height%2A> e <xref:System.Windows.Media.FormattedText.Width%2A> proprietà per calcolare il rettangolo di output.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.TextAlignment%2A> proprietà con il valore impostato su <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|Nessuno|Non richiesto La larghezza dello spazio e il rendering dell'ultima riga sono uguali a quelli del controllo di modifica del framework.|  
+|DT_EDITCONTROL|nessuno|Non richiesto La larghezza dello spazio e il rendering dell'ultima riga sono uguali a quelli del controllo di modifica del framework.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.Trimming%2A> proprietà con il valore <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Utilizzare <xref:System.Windows.TextTrimming.WordEllipsis> ottenere [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS e terminano con puntini di sospensione, in questo caso, i puntini di sospensione carattere si verifica solo su parole che non rientrano in una singola riga.|  
-|DT_EXPAND_TABS|Nessuno|Non richiesto Le tabulazioni vengono espanse automaticamente per interrompersi ogni 4 em, all'incirca a una larghezza di 8 caratteri indipendenti dalla lingua.|  
-|DT_EXTERNALLEADING|Nessuno|Non richiesto L'interlinea esterna è sempre inclusa nell'interlinea. Utilizzare il <xref:System.Windows.Media.FormattedText.LineHeight%2A> proprietà per creare l'interlinea definita dall'utente.|  
-|DT_HIDEPREFIX|Nessuno|Non supportato. Rimuovere '&' dalla stringa prima di costruire il <xref:System.Windows.Media.FormattedText> oggetto.|  
+|DT_EXPAND_TABS|nessuno|Non richiesto Le tabulazioni vengono espanse automaticamente per interrompersi ogni 4 em, all'incirca a una larghezza di 8 caratteri indipendenti dalla lingua.|  
+|DT_EXTERNALLEADING|nessuno|Non richiesto L'interlinea esterna è sempre inclusa nell'interlinea. Utilizzare il <xref:System.Windows.Media.FormattedText.LineHeight%2A> proprietà per creare l'interlinea definita dall'utente.|  
+|DT_HIDEPREFIX|nessuno|Non supportato. Rimuovere '&' dalla stringa prima di costruire il <xref:System.Windows.Media.FormattedText> oggetto.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Impostazione predefinita per l'allineamento del testo. Utilizzare il <xref:System.Windows.Media.FormattedText.TextAlignment%2A> proprietà con il valore impostato su <xref:System.Windows.TextAlignment.Left>. (solo WPF).|  
-|DT_MODIFYSTRING|Nessuno|Non supportata.|  
+|DT_MODIFYSTRING|nessuno|Non supportato.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Il ritaglio non viene eseguito automaticamente. Se si desidera ritagliare il testo, utilizzare il <xref:System.Windows.Media.Visual.VisualClip%2A> proprietà.|  
-|DT_NOFULLWIDTHCHARBREAK|Nessuno|Non supportata.|  
-|DT_NOPREFIX|Nessuno|Non richiesto Il carattere "&" nelle stringhe viene sempre considerato un carattere normale.|  
-|DT_PATHELLIPSIS|Nessuno|Utilizzare il <xref:System.Windows.Media.FormattedText.Trimming%2A> proprietà con il valore <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Nessuno|Non supportato. Se si desidera utilizzare caratteri di sottolineatura per il testo, ad esempio un tasto di scelta rapida o un collegamento, usare il <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> metodo.|  
-|DT_PREFIXONLY|Nessuno|Non supportata.|  
+|DT_NOFULLWIDTHCHARBREAK|nessuno|Non supportato.|  
+|DT_NOPREFIX|nessuno|Non richiesto Il carattere "&" nelle stringhe viene sempre considerato un carattere normale.|  
+|DT_PATHELLIPSIS|nessuno|Utilizzare il <xref:System.Windows.Media.FormattedText.Trimming%2A> proprietà con il valore <xref:System.Windows.TextTrimming.WordEllipsis>.|  
+|DT_PREFIX|nessuno|Non supportato. Se si desidera utilizzare caratteri di sottolineatura per il testo, ad esempio un tasto di scelta rapida o un collegamento, usare il <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> metodo.|  
+|DT_PREFIXONLY|nessuno|Non supportato.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.TextAlignment%2A> proprietà con il valore impostato su <xref:System.Windows.TextAlignment.Right>. (solo WPF).|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Impostare la proprietà <xref:System.Windows.Media.FormattedText.FlowDirection%2A> su <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|Nessuno|Non richiesto <xref:System.Windows.Media.FormattedText>gli oggetti si comportano come un controllo a riga singola, a meno che entrambi i <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> proprietà è impostata o il testo contiene un ritorno a capo/avanzamento riga (CR/LF).|  
-|DT_TABSTOP|Nessuno|Nessun supporto per le posizioni delle tabulazioni definite dall'utente.|  
+|DT_SINGLELINE|nessuno|Non richiesto <xref:System.Windows.Media.FormattedText>gli oggetti si comportano come un controllo a riga singola, a meno che entrambi i <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> proprietà è impostata o il testo contiene un ritorno a capo/avanzamento riga (CR/LF).|  
+|DT_TABSTOP|nessuno|Nessun supporto per le posizioni delle tabulazioni definite dall'utente.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Non richiesto Il testo è giustificato nella parte superiore per impostazione predefinita. Gli altri valori di posizionamento verticale possono essere definiti tramite il <xref:System.Windows.Media.FormattedText.Height%2A> proprietà per calcolare una [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] posizione DrawText 'y'.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.Height%2A> proprietà per calcolare una [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] posizione DrawText 'y'.|  
-|DT_WORDBREAK|Nessuno|Non richiesto Le parole vengono interrotte automaticamente con <xref:System.Windows.Media.FormattedText> oggetti. Non è possibile disabilitare questa impostazione.|  
+|DT_WORDBREAK|nessuno|Non richiesto Le parole vengono interrotte automaticamente con <xref:System.Windows.Media.FormattedText> oggetti. Non è possibile disabilitare questa impostazione.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Utilizzare il <xref:System.Windows.Media.FormattedText.Trimming%2A> proprietà con il valore <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
 ## <a name="see-also"></a>Vedere anche  

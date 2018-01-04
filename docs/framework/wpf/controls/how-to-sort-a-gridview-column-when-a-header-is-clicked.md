@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f24be0ce97071905ce53610e5b44db8f92f24e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedura: ordinare una colonna GridView quando si fa clic su un'intestazione
 In questo esempio viene illustrato come creare un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> consente di visualizzare la modalità e ordina il contenuto quando un utente fa clic su un'intestazione di colonna.  
@@ -233,4 +234,4 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
  <xref:System.Windows.Controls.GridView>  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Procedura: raggruppare, ordinare e filtrare dati nel controllo DataGrid
 È spesso utile visualizzare i dati in un <xref:System.Windows.Controls.DataGrid> in modi diversi per il raggruppamento, ordinamento e filtro dei dati. Per raggruppare, ordinare e filtrare i dati in un <xref:System.Windows.Controls.DataGrid>, è necessario associarli a un <xref:System.Windows.Data.CollectionView> che supporti queste funzioni. È quindi possibile utilizzare i dati di <xref:System.Windows.Data.CollectionView> senza modificare l'origine dati sottostante. Le modifiche nella visualizzazione raccolta vengono riflesse nel <xref:System.Windows.Controls.DataGrid> interfaccia utente (UI).  
@@ -162,7 +163,7 @@ Dati raggruppati in un controllo DataGrid
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Creare ed eseguire l'associazione a una classe ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
  [Filtrare i dati di una visualizzazione](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
  [Ordinare i dati in una visualizzazione](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  

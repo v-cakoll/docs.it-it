@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b54a99ab88e4cfa0569b2095a0be3750c91f244
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c84d70fb8c05dc295fc807c9a59085c47d0f455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-overloading"></a>Overload dei membri
 Overload dei membri prevede la creazione di due o più membri sullo stesso tipo che hanno lo stesso nome ma che differiscono solo per il numero o il tipo dei parametri. Ad esempio, di seguito, il `WriteLine` viene eseguito l'overload di metodo:  
@@ -66,5 +69,5 @@ public static class Console {
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida di progettazione di membro](../../../docs/standard/design-guidelines/member.md)  
+ [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

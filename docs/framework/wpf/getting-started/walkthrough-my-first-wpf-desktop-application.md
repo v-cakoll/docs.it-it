@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: La prima applicazione desktop WPF
 Questa procedura dettagliata viene fornita un'introduzione allo sviluppo di un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applicazione che include gli elementi che sono comuni alla maggior parte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] markup, codice, le definizioni di applicazioni, controlli, layout, Data binding e stili. 
@@ -445,7 +446,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 -   [Cenni preliminari su XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
   
--   [Cenni preliminari sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+-   [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
   
 -   [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
   
@@ -455,7 +456,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 -   [Controlli](../../../../docs/framework/wpf/controls/index.md)  
   
--   [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+-   [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
   
 -   [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   

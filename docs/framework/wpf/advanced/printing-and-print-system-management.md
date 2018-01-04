@@ -16,20 +16,21 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077b98eb63559a0a4bb691b4b35949aa98d0592c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-and-print-system-management"></a>Stampa e gestione di sistemi di stampa
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]e [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] viene introdotto un nuovo percorso di stampato, ovvero un'alternativa al [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] stampa e un vasto set di gestione di sistema di stampa [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  Una descrizione del nuovo percorso di stampa e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
- [Procedure relative](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  Un set di articoli in cui viene illustrato come utilizzare il nuovo percorso di stampa e [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

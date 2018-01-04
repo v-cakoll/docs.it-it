@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9eea60dafef508748df53e23c211f5778250e7f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="guidelines-for-collections"></a>Linee guida per le raccolte
 Qualsiasi tipo progettato specificamente per la modifica di un gruppo di oggetti con alcune caratteristiche comuni può essere considerato come una raccolta. È quasi sempre appropriato per questi tipi implementare <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, pertanto in questa sezione vengono considerate solo i tipi che implementano una o entrambe le interfacce di raccolte.  
@@ -138,4 +141,4 @@ Qualsiasi tipo progettato specificamente per la modifica di un gruppo di oggetti
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Linee guida di utilizzo](../../../docs/standard/design-guidelines/usage-guidelines.md)
+ [Linee guida per l'uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

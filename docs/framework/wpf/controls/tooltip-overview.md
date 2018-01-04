@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-overview"></a>Panoramica sul controllo ToolTip
 Una descrizione comandi è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio un <xref:System.Windows.Controls.Button>. L'argomento introduce la descrizione comando e illustra come creare e personalizzare il relativo contenuto.  
@@ -90,4 +91,4 @@ Una descrizione comandi è una piccola finestra popup che viene visualizzato qua
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipEventArgs>  
  <xref:System.Windows.Controls.ToolTipEventHandler>  
- [Procedure relative](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

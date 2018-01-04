@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un'animazione
 Come suggerisce il nome, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] è ideale per offrire un'esperienza di presentazione avanzata per i clienti. Queste procedure viene illustrato come personalizzare l'aspetto e comportamento di un pulsante (animazioni incluse). Questa personalizzazione viene eseguita utilizzando uno stile e il modello in modo che è possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. Nella figura seguente mostra il pulsante personalizzato che verrà creato.  
@@ -30,7 +31,7 @@ Come suggerisce il nome, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla
   
  La grafica vettoriale che costituiscono l'aspetto del pulsante viene creata utilizzando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]è simile a HTML, ma è più potente ed estendibile. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]possono essere digitati manualmente utilizzando Microsoft Visual Studio o blocco note oppure è possibile utilizzare uno strumento di progettazione visiva quale Microsoft Expression Blend. Expression Blend funziona creando sottostante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice, pertanto entrambi i metodi creano la grafica stesso.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creare un pulsante usando Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  Viene illustrato come creare i pulsanti con un comportamento personalizzato utilizzando le funzionalità della finestra di progettazione di Expression Blend.  
   

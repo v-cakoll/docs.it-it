@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView
 Questa panoramica illustra l'ordine di precedenza per le proprietà che consentono di personalizzare in un'intestazione di colonna il <xref:System.Windows.Controls.GridView> modalità di visualizzazione di un <xref:System.Windows.Controls.ListView> controllo.  
@@ -46,6 +47,6 @@ Questa panoramica illustra l'ordine di precedenza per le proprietà che consento
  <sup>1</sup>per **proprietà modello di intestazione**, se si imposta sia il modello e proprietà del selettore di modello, la proprietà di modello ha la precedenza. Ad esempio, se si impostano entrambe le <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> proprietà, il <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> proprietà ha la precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

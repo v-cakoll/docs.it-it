@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid-how-to-topics"></a>Procedure relative all'elemento Grid
 Negli argomenti di questa sezione viene descritto come posizionare gli elementi mediante il <xref:System.Windows.Controls.Grid> elemento.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Compilare una finestra di dialogo dell'interfaccia utente standard usando l'elemento Grid](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
  [Creare una griglia complessa](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
  [Creare un elemento griglia](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
@@ -35,7 +36,7 @@ Negli argomenti di questa sezione viene descritto come posizionare gli elementi 
  [Posizionare gli elementi figlio di una griglia](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
  [Condividere le proprietà di ridimensionamento tra griglie](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  

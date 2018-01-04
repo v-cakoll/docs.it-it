@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c51f6cc5c35200267aa84960655fd734a937a7c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e37d70fe1cb6aefb1404424c1a8f5339e0badf7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Procedura: applicare uno stile a una riga in un ListView che implementa una GridView
 In questo esempio viene illustrato come disegnare una riga in un <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modalità.  
@@ -46,6 +47,6 @@ In questo esempio viene illustrato come disegnare una riga in un <xref:System.Wi
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)

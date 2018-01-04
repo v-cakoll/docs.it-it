@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Tipo XAML intrinseco x:XData
 Consente il posizionamento di isole di dati XML all'interno di una produzione XAML. Elementi XML all'interno di `x:XData` non devono essere considerati dai processori XAML come se facessero parte dello spazio dei nomi XAML predefinito attivo o qualsiasi altro spazio dei nomi XAML. `x:XData`può contenere XML ben formato arbitrario.  
@@ -45,7 +46,7 @@ Consente il posizionamento di isole di dati XML all'interno di una produzione XA
 |||  
 |-|-|  
 |`elementDataRoot`|Il singolo elemento radice dell'isola di dati. Per la maggior parte dei consumer finali, XML che non dispone di un solo nodo radice è considerato non valido. In particolare, è necessario un solo nodo radice se il `x:XData` un'origine dati XML è destinato ad WPF o molte altre tecnologie che utilizzano origini XML per l'associazione dati.|  
-|`[elementData]`|Parametro facoltativo. File XML che rappresenta i dati XML. Qualsiasi numero di elementi può essere contenuto i dati dell'elemento e gli elementi nidificati possono essere contenuti in altri elementi. Tuttavia, si applicano le regole generali di XML.|  
+|`[elementData]`|Facoltativo. File XML che rappresenta i dati XML. Qualsiasi numero di elementi può essere contenuto i dati dell'elemento e gli elementi nidificati possono essere contenuti in altri elementi. Tuttavia, si applicano le regole generali di XML.|  
   
 ## <a name="remarks"></a>Note  
  Gli elementi XML all'interno di un `x:XData` oggetto può dichiarare nuovamente tutti i possibili spazi dei nomi e i prefissi del XMLDOM all'interno dei dati.  
@@ -61,5 +62,5 @@ Consente il posizionamento di isole di dati XML all'interno di una produzione XA
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Data.XmlDataProvider>  
- [Cenni preliminari sull'associazione dati](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Estensione di markup Binding](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilazione e distribuzione di applicazioni WPF
 Il modello di compilazione e distribuzione offre la possibilità di compilare e distribuire applicazioni in locale e in modalità remota, tra cui:  
@@ -33,12 +34,12 @@ Il modello di compilazione e distribuzione offre la possibilità di compilare e 
   
 -   Distribuzione ClickOnce: pubblicazione e distribuzione sistema .NET.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Compilazione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [Distribuzione di un'applicazione WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Procedure relative](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  MSBuild  
   
 ## <a name="related-sections"></a>Sezioni correlate  

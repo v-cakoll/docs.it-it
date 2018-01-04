@@ -17,18 +17,19 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad3fd6a1bdecf9d6187f3592fe4771bbb0b0e98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 214fdff11b5b64c78b2719e66813b5210884e318
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-how-to-topics"></a>Argomenti sulle procedure relative alle descrizioni comando
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Posizionare un oggetto ToolTip](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
   [Usare la proprietà BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ToolTip>  
   
  <xref:System.Windows.Controls.ToolTipService>  
@@ -38,4 +39,4 @@ ms.lasthandoff: 10/22/2017
 ## <a name="related-sections"></a>Sezioni correlate  
  [Panoramica sul controllo Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
   
- [Procedure relative](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

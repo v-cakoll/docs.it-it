@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Linee guida di progettazione dei tipi
 Dal punto di vista di Common Language Runtime, sono disponibili solo due categorie di tipi, tipi di riferimento e tipi di valore, ma ai fini della discussione sulla progettazione di framework, i tipi di verrà diviso in gruppi logici, ognuno con il proprio regole specifiche di progettazione.  
@@ -41,11 +44,11 @@ Dal punto di vista di Common Language Runtime, sono disponibili solo due categor
   
  **✓ SI** assicurarsi che ogni tipo è un set ben definito di membri correlati, non solo un insieme casuale delle funzionalità correlate.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Scelta tra classi e Struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Scelta tra classi e struct](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [Progettazione di classi astratte](../../../docs/standard/design-guidelines/abstract-class.md)  
  [Progettazione di classi statiche](../../../docs/standard/design-guidelines/static-class.md)  
- [Progettazione dell'interfaccia](../../../docs/standard/design-guidelines/interface.md)  
+ [Progettazione di interfacce](../../../docs/standard/design-guidelines/interface.md)  
  [Progettazione di struct](../../../docs/standard/design-guidelines/struct.md)  
  [Progettazione di enum](../../../docs/standard/design-guidelines/enum.md)  
  [Tipi annidati](../../../docs/standard/design-guidelines/nested-types.md)  

@@ -21,16 +21,17 @@ caps.latest.revision: "22"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a4918e23a915ee07eace388ea2cea512c2e479d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclassmodifier-directive"></a>Direttiva x:ClassModifier
 Modifica il comportamento di compilazione XAML quando `x:Class` viene inoltre fornita. In particolare, anziché creare un elemento parziale `class` che ha un `Public` (impostazione predefinita), livello di accesso fornito `x:Class` viene creato con un `NotPublic` livello di accesso. Questo comportamento influenza il livello di accesso per la classe nell'assembly generati.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```  
 <object x:Class="namespace.classname" x:ClassModifier="NotPublic">  

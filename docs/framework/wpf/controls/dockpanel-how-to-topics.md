@@ -17,21 +17,22 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dockpanel-how-to-topics"></a>Procedure relative all'elemento DockPanel
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.DockPanel> elemento per posizionare gli elementi figlio lungo il bordo di un contenitore di layout.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Ottenere o impostare un valore Dock](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
  [Creare un DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
  [Partizionare lo spazio usando l'elemento DockPanel](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  

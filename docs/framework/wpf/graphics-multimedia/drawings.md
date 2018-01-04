@@ -23,18 +23,19 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e37c830e8f5290584db8320b041e05ac74839b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45207de8b2e98dd1bd13879f8bbee1fdaf80aa24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawings"></a>Oggetti Drawing
 <xref:System.Windows.Media.Drawing>gli oggetti vengono utilizzati per creare in modo efficace le forme, immagini o testo. Disegni vengono utilizzati quando si disegna con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+  [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Media.Drawing>  

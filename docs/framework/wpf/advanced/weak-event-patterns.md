@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini eventi verranno eliminati, in coordinamento con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicata per eventi specifici e implementando un'interfaccia nei listener di tale evento. Questo modello di progettazione è noto come il *modello di eventi deboli*.  
@@ -143,4 +144,4 @@ Nelle applicazioni, è possibile che i gestori associati alle origini eventi ver
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
  [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)

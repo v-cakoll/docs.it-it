@@ -21,16 +21,17 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
 Fa riferimento a qualsiasi entità del codice statico in base al valore definito in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modalità conforme. Per fornire il valore di una proprietà in XAML, è possibile utilizzare la proprietà statica a cui fa riferimento.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```xaml  
 <object property="{x:Static prefix:typeName.staticMemberName}" .../>  
@@ -40,7 +41,7 @@ Fa riferimento a qualsiasi entità del codice statico in base al valore definito
   
 |||  
 |-|-|  
-|`prefix`|Parametro facoltativo. Un prefisso che fa riferimento a uno spazio dei nomi XAML con mapping non predefinito. `prefix`viene visualizzato in modo esplicito nell'utilizzo perché è raramente fare riferimento a proprietà statiche che provengono da uno spazio dei nomi XAML predefinito. Vedere la sezione Osservazioni.|  
+|`prefix`|Facoltativo. Un prefisso che fa riferimento a uno spazio dei nomi XAML con mapping non predefinito. `prefix`viene visualizzato in modo esplicito nell'utilizzo perché è raramente fare riferimento a proprietà statiche che provengono da uno spazio dei nomi XAML predefinito. Vedere la sezione Osservazioni.|  
 |`typeName`|Obbligatorio. Il nome del tipo che definisce il membro statico desiderato.|  
 |`staticMemberName`|Obbligatorio. Il nome del membro valore statico desiderato (una costante, una proprietà statica, un campo o un valore di enumerazione).|  
   

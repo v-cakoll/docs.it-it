@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4fc0cb9183fde33887a3e84bb30cc3f79892586e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc298ad41884bfda84771a729990ebb4e6f776b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-namespaces"></a>Nomi di spazi dei nomi
 Come con altre linee guida di denominazione, l'obiettivo per la denominazione degli spazi dei nomi consiste nel creare chiarezza sufficiente per il programmatore utilizzando il framework di sapere immediatamente che cos'è probabilmente il contenuto dello spazio dei nomi. Il modello seguente specifica la regola generale per la denominazione degli spazi dei nomi:  

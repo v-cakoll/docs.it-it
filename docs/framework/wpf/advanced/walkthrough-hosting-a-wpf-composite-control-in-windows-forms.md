@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace estendere esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] un'applicazione con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla, da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno del [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] dell'applicazione. Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [controllo personalizzazione](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -238,7 +239,7 @@ Controllo composito WPF ospitato in un'applicazione Windows Forms
   
 4.  Aggiungere il seguente <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controlli al form.  
   
-    |Nome|Testo|  
+    |nome|Testo|  
     |----------|----------|  
     |groupBox1|Colore di sfondo|  
     |groupBox2|Colore primo piano|  
@@ -250,7 +251,7 @@ Controllo composito WPF ospitato in un'applicazione Windows Forms
   
 5.  Aggiungere il seguente <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> controlli per il <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controlli.  
   
-    |GroupBox|Nome|Testo|  
+    |GroupBox|nome|Testo|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Originale|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -271,7 +272,7 @@ Controllo composito WPF ospitato in un'applicazione Windows Forms
   
 6.  Aggiungere il seguente <xref:System.Windows.Forms.Label?displayProperty=nameWithType> controlla all'ultimo <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Questi controlli visualizzano i dati restituiti dal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito.  
   
-    |GroupBox|Nome|Testo|  
+    |GroupBox|nome|Testo|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Nome:|  
     |groupBox7|lblAddress|Indirizzo:|  

@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Ottimizzazione delle prestazioni: controlli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include molti dei componenti dell'interfaccia utente comuni alla maggior parte delle applicazioni Windows. Questo argomento illustra le tecniche da adottare per migliorare le prestazioni dell'interfaccia utente.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Impostazione <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> a `false`.  
   
--   Impostazione <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` a `false`.    
+-   Impostazione <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` a `false`.  
   
  Un aspetto importante di cui tener conto quando si virtualizzano contenitori di elementi è la disponibilità di informazioni aggiuntive sullo stato associate a un contenitore di elementi appartenente all'elemento. Nel caso in cui queste informazioni siano disponibili, è necessario salvare lo stato aggiuntivo. Ad esempio, potrebbe essere un elemento contenuto in un <xref:System.Windows.Controls.Expander> controllo e <xref:System.Windows.Controls.Expander.IsExpanded%2A> lo stato è associato al contenitore dell'elemento e non all'elemento stesso. Quando il contenitore viene riutilizzato per un nuovo elemento, il valore corrente di <xref:System.Windows.Controls.Expander.IsExpanded%2A> viene utilizzato per il nuovo elemento. Inoltre, l'elemento precedente perde corrette <xref:System.Windows.Controls.Expander.IsExpanded%2A> valore.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="controls-that-implement-performance-features"></a>Controlli che implementano le funzioni relative alle prestazioni  
  La tabella seguente elenca i controlli comuni per la visualizzazione dei dati e ne indica il tipo di supporto per le funzionalità relative alle prestazioni.  Vedere le sezioni precedenti per informazioni su come abilitare queste funzionalità.  
   
-|Controllo|Virtualizzazione|Riciclo del contenitore|Scorrimento posticipato|  
+|Control|Virtualizzazione|Riciclo del contenitore|Scorrimento posticipato|  
 |-------------|--------------------|-------------------------|------------------------|  
 |<xref:System.Windows.Controls.ComboBox>|Può essere abilitato|Può essere abilitato|Può essere abilitato|  
 |<xref:System.Windows.Controls.ContextMenu>|Può essere abilitato|Può essere abilitato|Può essere abilitato|  

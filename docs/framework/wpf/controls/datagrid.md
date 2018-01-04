@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid"></a>DataGrid
 Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e modificare i dati da molte origini diverse, ad esempio da un database SQL, query LINQ o qualsiasi altra origine dati associabili. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
@@ -69,7 +70,7 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e 
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.DataGrid>  
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [Controlli](../../../../docs/framework/wpf/controls/index.md)  
  [Modello di contenuto WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)

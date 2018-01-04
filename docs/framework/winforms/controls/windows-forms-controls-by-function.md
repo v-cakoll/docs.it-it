@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>Controlli Windows Form per funzione
 Windows Form offre i controlli e componenti che eseguono una serie di funzioni. Nella tabella seguente sono elencati i controlli Windows Form e i componenti in base alla funzione generale. Inoltre, in cui sono presenti più controlli che svolgono la stessa funzione, il controllo consigliato viene elencato con una nota relativa al controllo sostituiva. In una tabella successiva, sono elencati i controlli sostituiti con sostitutivi consigliati.  
@@ -31,7 +32,7 @@ Windows Form offre i controlli e componenti che eseguono una serie di funzioni. 
   
 ## <a name="recommended-controls-and-components-by-function"></a>Controlli e componenti dalla funzione consigliati  
   
-|Funzione|Controllo|Descrizione|  
+|Funzione|Control|Descrizione|  
 |--------------|-------------|-----------------|  
 |Visualizzazione dei dati|Controllo <xref:System.Windows.Forms.DataGridView>|Il <xref:System.Windows.Forms.DataGridView> controllo fornisce una tabella personalizzabile per la visualizzazione dei dati. La <xref:System.Windows.Forms.DataGridView> classe consente la personalizzazione di celle, righe, colonne e i bordi. **Nota:** il <xref:System.Windows.Forms.DataGridView> controllo fornisce diverse funzionalità di base e avanzate che non sono presenti nel <xref:System.Windows.Forms.DataGrid> controllo. Per ulteriori informazioni, vedere [differenze tra il Windows Form controlli DataGridView e DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Spostamento e l'associazione dati|<xref:System.Windows.Forms.BindingSource>componente|Semplifica l'associazione dei controlli in un form ai dati, fornendo la gestione delle valute, la notifica delle modifiche e altri servizi.|  

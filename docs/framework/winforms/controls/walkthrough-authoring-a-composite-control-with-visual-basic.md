@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c31e76e9f190990f0a3dddab359ef9523783d955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procedura dettagliata: modifica di un controllo composito con Visual Basic
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
@@ -69,8 +70,8 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Modificare in|  
     |--------------|---------------|  
-    |**Nome**|`lblDisplay`|  
-    |**Testo**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**per**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -254,8 +255,8 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
     |Proprietà|Impostazione|  
     |--------------|-------------|  
-    |**Nome**|`lblAlarm`|  
-    |**Testo**|**Allarme!**|  
+    |**Name**|`lblAlarm`|  
+    |**per**|**Allarme!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`False`|  
   
@@ -366,11 +367,11 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 11. Impostare le proprietà dei controlli come indicato di seguito.  
   
-    |Controllo|Proprietà|Valore|  
+    |Control|Proprietà|Valore|  
     |-------------|--------------|-----------|  
-    |`label1`|**Testo**|`(blank space)`|  
-    ||**Nome**|`lblTest`|  
-    |`dateTimePicker1`|**Nome**|`dtpTest`|  
+    |`label1`|**per**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. Nella finestra di progettazione fare doppio clic su **dtpTest**.  

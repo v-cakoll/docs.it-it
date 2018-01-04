@@ -17,21 +17,22 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>Finestre delle applicazioni WPF
 Gli utenti interagiscono con le applicazioni di windows. La funzione principale di una finestra consiste nell'ospitare e visualizzare il contenuto. Il tipo di contenuto che un host della finestra dipende dal tipo di dati utilizzati nell'applicazione, che può includere supporti, pagine di Extensible Application Markup Language (XAML), pagine Web, documenti, le tabelle del database e i record e informazioni di sistema.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulle finestre WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [Panoramica sulle finestre di dialogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  

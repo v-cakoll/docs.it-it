@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1e85fc8eac25cc6fdfb8cb3aaa77318019695c51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 47681f129c428cdae2be5e493fc6ac31719cab28
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dates-times-and-time-zones"></a>Date, ore e fusi orari
 
@@ -81,6 +84,6 @@ Questa sezione della documentazione include le informazioni necessarie per usare
 
 [Procedura: Consentire agli utenti di risolvere orari ambigui](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) Descrive come consentire agli utenti di determinare il mapping tra un'ora locale ambigua e l'ora UTC.
 
-## <a name="reference"></a>Riferimento
+## <a name="reference"></a>Riferimenti
 
 <xref:System.TimeZoneInfo?displayProperty=nameWithType>

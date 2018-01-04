@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: garantire la sincronizzazione di più controlli associati alla stessa origine dati
 Quando si utilizza l'associazione dati in Windows Form, spesso più controlli associati alla stessa origine dati. In alcuni casi, potrebbe essere necessario effettuare altre azioni per assicurarsi che le proprietà dei controlli associate rimangano sincronizzate tra loro e l'origine dati. Questi passaggi sono necessari in due situazioni:  

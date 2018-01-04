@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8ae76c100cdf448bd0e9625e6b3378b6b9e25324
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="binary-serialization"></a>Serializzazione binaria
 
@@ -337,7 +340,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 
-## <a name="in-this-section"></a>In questa sezione
+## <a name="in-this-section"></a>Contenuto della sezione
 
  [Concetti relativi alla serializzazione](../../../docs/standard/serialization/serialization-concepts.md)  
  Vengono illustrati due scenari in cui la serializzazione risulta utile: quando si conservano i dati da archiviare e quando si trasferiscono oggetti tra più domini dell'applicazione.  
@@ -360,7 +363,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
  [Linee guida relative alla serializzazione](../../../docs/standard/serialization/serialization-guidelines.md)  
  Fornisce alcune linee guida generali che consentono di decidere quando serializzare un oggetto.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Runtime.Serialization>  
  Contiene classi utilizzabili per la serializzazione e la deserializzazione di oggetti.  
   

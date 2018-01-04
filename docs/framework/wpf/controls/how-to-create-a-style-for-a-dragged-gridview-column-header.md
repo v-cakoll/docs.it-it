@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 503683de875b8853e219139800eef2a5417a1574
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Procedura: creare uno stile per un'intestazione di colonna GridView trascinata
 In questo esempio viene illustrato come modificare l'aspetto di un elemento trascinato <xref:System.Windows.Controls.GridViewColumnHeader> quando l'utente modifica la posizione di una colonna.  
@@ -44,6 +45,6 @@ In questo esempio viene illustrato come modificare l'aspetto di un elemento tras
  <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Procedure relative](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [Panoramica sul controllo ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Cenni preliminari su GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)

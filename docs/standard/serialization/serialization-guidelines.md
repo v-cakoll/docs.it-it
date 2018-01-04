@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a695e10ae9b074f0f9dc913d2f687c82e00475dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
 In questo documento vengono elencate le linee guida da tenere presenti quando si progetta un'API da serializzare.  
@@ -144,9 +147,9 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [Tipi supportati dal serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [Tipi supportati dal serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
  [Serializzazione binaria](binary-serialization.md)  
  [Oggetti remoti](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  [Serializzazione SOAP e XML](xml-and-soap-serialization.md)  

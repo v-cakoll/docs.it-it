@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entità carattere XML e XAML
 XAML usa entità carattere definite in XML per i caratteri speciali. Questo argomento descrive alcune entità carattere specifiche e fornisce considerazioni generali sugli altri concetti XML in XAML.  
@@ -56,11 +57,11 @@ XAML usa entità carattere definite in XML per i caratteri speciali. Questo argo
   
 |Carattere|Entità|Note|  
 |---------------|------------|-----------|  
-|& (e commerciale)|&amp;|Deve essere usato per i valori di attributo e per il contenuto di un elemento.|  
-|> (carattere maggiore di)|&gt;|Deve essere usato per un valore di attributo, ma > è accettabile come contenuto di un elemento a condizione che non sia preceduto da <.|  
-|< (carattere minore di)|&lt;|Deve essere utilizzato per un valore di attributo, ma \< è accettabile come contenuto di un elemento, purché > non è conforme.|  
-|'' (virgolette)|&quot;|Deve essere usato per un valore di attributo, ma le virgolette (") sono accettabili come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
-|' (virgoletta singola)|&apos;|Deve essere usato per un valore di attributo, ma la virgoletta singola (') è accettabile come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
+|& (e commerciale)|\&amp;|Deve essere usato per i valori di attributo e per il contenuto di un elemento.|  
+|> (carattere maggiore di)|\&gt;|Deve essere usato per un valore di attributo, ma > è accettabile come contenuto di un elemento a condizione che non sia preceduto da <.|  
+|< (carattere minore di)|\&lt;|Deve essere utilizzato per un valore di attributo, ma \< è accettabile come contenuto di un elemento, purché > non è conforme.|  
+|'' (virgolette)|\&quot;|Deve essere usato per un valore di attributo, ma le virgolette (") sono accettabili come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
+|' (virgoletta singola)|\&apos;|Deve essere usato per un valore di attributo, ma la virgoletta singola (') è accettabile come contenuto di un elemento. Si noti che gli stessi valori di attributo possono essere racchiusi tra virgolette singole (') o doppie ("); il carattere usato per primo definisce quale tipo di virgolette racchiude il valore di attributo e le altre virgolette potranno quindi essere usate come valore letterale all'interno del valore.|  
 |(mapping dei caratteri numerici)|&#*[intero]* ; o & #x*[esadecimale]*;|XAML supporta i mapping dei caratteri numerici nella codifica attiva.|  
 |(spazio unificatore)|&\#160; (presupponendo che la codifica UTF-8)|Per elementi di documenti dinamici o elementi che accettano testo, come ad esempio gli oggetti <xref:System.Windows.Controls.TextBox> di WPF, gli spazi unificatori non vengono normalizzati all'esterno del markup e questo vale anche per `xml:space="default"`. (Per ulteriori informazioni, vedere [elaborazione degli spazi vuoti in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   

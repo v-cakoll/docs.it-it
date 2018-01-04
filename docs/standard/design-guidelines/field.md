@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc3249518dd1e1c751de08c22d1c5eb4fa28dc6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ccced2c9e816122d770f43056c36ab4a6d510fde
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="field-design"></a>Progettazione di campi
 Il principio di incapsulamento è uno delle nozioni fondamentali nella progettazione orientata agli oggetti. Questo principio indica che i dati archiviati all'interno di un oggetto devono essere accessibili solo a tale oggetto.  
@@ -51,5 +54,5 @@ Il principio di incapsulamento è uno delle nozioni fondamentali nella progettaz
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida di progettazione di membro](../../../docs/standard/design-guidelines/member.md)  
+ [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a>Quando si sviluppano [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autonome e le applicazioni ospitate da browser, è necessario considerare il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** set di autorizzazioni), se distribuite mediante Windows Installer (MSI), XCopy o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host di attendibilità totale può creare una relazione di trust parziale <xref:System.AppDomain> utilizzando il modello di componente aggiuntivo di .NET Framework. Per ulteriori informazioni, vedere [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 |Risorsa|I file che vengono aggiunti a un progetto con un tipo di compilazione **risorse**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|I file che vengono aggiunti a un progetto con un tipo di compilazione **contenuto**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Sito di origine|I file che vengono aggiunti a un progetto con un tipo di compilazione **Nessuno**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Codice dell'applicazione|Risorse XAML che dispongono di code-behind compilato.<br /><br /> -oppure-<br /><br /> File XAML che vengono aggiunti a un progetto con un tipo di compilazione **pagina**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Codice dell'applicazione|Risorse XAML che dispongono di code-behind compilato.<br /><br /> oppure<br /><br /> File XAML che vengono aggiunti a un progetto con un tipo di compilazione **pagina**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Per ulteriori informazioni sui file di dati applicazione e pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], vedere [risorse dell'applicazione WPF, contenuto e i file di dati](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: db227b5c7915b6ce0b0fe8400a8545256ea6d6b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Tipi migrati da WPF a System.Xaml
 In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] e [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], sia [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] che [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] disponevano di un'implementazione del linguaggio XAML. Molti dei tipi pubblici che fornivano l'estensibilità per l'implementazione XAML di WPF erano inclusi negli assembly WindowsBase, PresentationCore e PresentationFramework. In modo analogo, i tipi pubblici che fornivano l'estensibilità di XAML per [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] erano inclusi nell'assembly System.Workflow.ComponentModel. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]è stata eseguita la migrazione di alcuni tipi correlati a XAML nell'assembly System.Xaml. Un'implementazione .NET Framework comune dei servizi del linguaggio XAML apre molti scenari di estensibilità XAML che sono stati definiti in origine dall'implementazione XAML di un framework specifico che ora fanno parte del supporto del linguaggio XAML di [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] complessivo. In questo argomento sono elencati i tipi di cui è stata eseguita la migrazione e vengono illustrati i problemi correlati alla migrazione.  

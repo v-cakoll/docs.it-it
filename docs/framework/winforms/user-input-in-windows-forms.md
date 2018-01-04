@@ -18,16 +18,17 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c65fdca99bb12cccf70273194e3294c71a2f5a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7a9face3d38f7f64e3bda9d5dbe9ecfb7f730ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-windows-forms"></a>Input dell'utente in Windows Form
 Windows Form include un modello di input dell'utente basato sugli eventi generati durante l'elaborazione di messaggi di Windows correlati. Negli argomenti di questa sezione vengono fornite informazioni sugli input dell'utente eseguiti mediante il mouse e la tastiera, con esempi di codice che illustrano come eseguire attività specifiche.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Input dell'utente in una Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
  Fornisce una panoramica degli eventi di input dell'utente e sui metodi per l'elaborazione dei messaggi di Windows.  
   
@@ -35,7 +36,7 @@ Windows Form include un modello di input dell'utente basato sugli eventi generat
  Fornisce informazioni sulla gestione dei messaggi della tastiera, sui diversi tipi di tasti e sugli eventi della tastiera.  
   
  [Input del mouse in un'applicazione Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- Fornisce informazioni sugli eventi del mouse e altre funzioni collegate al mouse, come i cursori e il mouse capture.  
+ Fornisce informazioni sugli eventi del mouse e altre funzionalità collegate al mouse, come i cursori e il mouse capture.  
   
  [Procedura: Simulare eventi di mouse e tastiera nel codice](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Illustra modi diversi di simulazione dell'input mediante mouse o tastiera a livello di codice.  

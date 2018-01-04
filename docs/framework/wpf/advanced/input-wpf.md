@@ -17,25 +17,26 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>Input (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]include il supporto per diversi tipi di input. Questo input include testo tocco, mouse, comandi, lo stato attivo, tocco, trascinamento e rilascio e input penna. In questa sezione vengono descritti argomenti relativi a WPF di input.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Panoramica sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Panoramica sullo stato attivo](../../../../docs/framework/wpf/advanced/focus-overview.md)  
  [Applicazione di stili per lo stato attivo nei controlli e FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [Procedura dettagliata: Creazione della prima applicazione a tocco](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
  [Input penna](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  

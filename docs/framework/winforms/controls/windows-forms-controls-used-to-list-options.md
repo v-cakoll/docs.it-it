@@ -16,16 +16,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Controlli Windows Form usati per elencare opzioni
 Se si desidera fornire agli utenti un elenco di opzioni tra cui scegliere, è possibile aggiungere un'ampia gamma di controlli a un Windows Form. A seconda della quantità si desidera limitare gli utenti di input, è possibile aggiungere un <xref:System.Windows.Forms.ListBox> (controllo), un <xref:System.Windows.Forms.ComboBox> (controllo), o un <xref:System.Windows.Forms.CheckedListBox> controllo. Utilizzare i collegamenti seguenti per determinare quale controllo più adatto alle proprie esigenze.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Quando usare un controllo ComboBox Windows Form anziché un controllo ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  Si consiglia un controllo basato su elenchi appropriato a seconda delle esigenze e le restrizioni di Windows Form.  
   
@@ -44,7 +45,7 @@ Se si desidera fornire agli utenti un elenco di opzioni tra cui scegliere, è po
  [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  Viene illustrato come ordinare i dati elenco nell'origine dati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.CheckedListBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

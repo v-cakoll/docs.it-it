@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13763e0487314fdbe7ab6fcb8b7b8711715e7a6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df87170b05f830916ef2f77fd4cb5a4abab42faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Ottimizzazione delle prestazioni: layout e progettazione
 La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti. La costruzione di oggetti, soprattutto in fase di runtime, può influire sulle caratteristiche di prestazioni dell'applicazione.  
@@ -86,7 +87,7 @@ La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../inc
  [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [Risorse di applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Testo](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [per](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Data binding](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
  [Layout](../../../../docs/framework/wpf/advanced/layout.md)

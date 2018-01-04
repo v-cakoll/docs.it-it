@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f51505a2b532da47591f2be4d767247c519aec40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f5f3bb1856a83309483119ded600396218b81fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-styles-and-templates"></a>Stili e modelli di Control
 Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. È possibile modificare la struttura e l'aspetto di un controllo modificando il <xref:System.Windows.Controls.ControlTemplate> del controllo. Non è possibile sostituire solo in parte la struttura ad albero visuale di un controllo. Per modificare la struttura ad albero visuale di un controllo è necessario impostare il <xref:System.Windows.Controls.Control.Template%2A> proprietà del controllo per il nuovo e completo <xref:System.Windows.Controls.ControlTemplate>.  
@@ -42,7 +43,7 @@ Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Co
 |Royale.NormalColor.xaml|Tema predefinito nel sistema operativo Windows XP Media Center Edition.|  
 |Aero.NormalColor.xaml|Tema predefinito nel sistema operativo Windows Vista.|  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Stili e modelli di Button](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
  [Stili e modelli di Calendar](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
  [Stili e modelli di CheckBox](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
@@ -76,7 +77,7 @@ Controlli Windows Presentation Foundation (WPF) hanno un <xref:System.Windows.Co
  [Stili e modelli di TreeView](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
  [Stili e modelli di Window](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

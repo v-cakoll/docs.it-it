@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 149f293616cfc2aa7b68377964c14a7cfa9e3edf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertitori di tipi ed estensioni di markup per XAML
 I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sistemi di tipi XAML e writer XAML per generare componenti dell'oggetto grafico. Anche se condividono alcune caratteristiche, i convertitori di tipi e le estensioni di markup sono rappresentati in modo diverso in un flusso del nodo XAML. In questo set di documentazione, i convertitori di tipi, le estensioni di markup e costrutti simili talvolta vengono detti collettivamente convertitori di valori.  
@@ -59,7 +60,7 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Serializzatori di valori  
- Un oggetto <xref:System.Windows.Markup.ValueSerializer> è un convertitore di tipi specializzato ottimizzato per la conversione di un oggetto in una stringa. È possibile che un oggetto <xref:System.Windows.Markup.ValueSerializer> per XAML non implementi affatto il metodo `ConvertFrom` . Con un'implementazione di <xref:System.Windows.Markup.ValueSerializer> si ottengono servizi in un modo simile a quello di un'implementazione di <xref:System.ComponentModel.TypeConverter> . I metodi virtuali forniscono un parametro di input `context` . Il parametro `context` è di tipo <xref:System.Windows.Markup.IValueSerializerContext>, che eredita dall'interfaccia di <xref:System.IServiceProvider> e dispone di un metodo <xref:System.IServiceProvider.GetService%2A> .  
+ Un oggetto <xref:System.Windows.Markup.ValueSerializer> è un convertitore di tipi specializzato ottimizzato per la conversione di un oggetto in una stringa. È possibile che un oggetto <xref:System.Windows.Markup.ValueSerializer> per XAML non implementi affatto il metodo `ConvertFrom` . Con un'implementazione di <xref:System.Windows.Markup.ValueSerializer> si ottengono servizi in un modo simile a quello di un'implementazione di <xref:System.ComponentModel.TypeConverter> . I metodi virtuali forniscono un parametro di input `context`. Il parametro `context` è di tipo <xref:System.Windows.Markup.IValueSerializerContext>, che eredita dall'interfaccia di <xref:System.IServiceProvider> e dispone di un metodo <xref:System.IServiceProvider.GetService%2A> .  
   
  Nel sistema di tipi XAML e per le implementazioni del writer XAML che usano l'elaborazione del ciclo del nodo XAML per la serializzazione, un convertitore di valori associato a un tipo o a un membro viene segnalato dalla relativa proprietà <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>. Il significato per i writer XAML che eseguono la serializzazione è che, in presenza di <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> e <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>, il convertitore di tipi deve essere usato per il percorso di caricamento e il serializzatore di valori deve essere usato per il percorso di salvataggio. Se <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> esiste ma <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> è `null`, il convertitore di tipi viene usato anche per il percorso di salvataggio.  
   

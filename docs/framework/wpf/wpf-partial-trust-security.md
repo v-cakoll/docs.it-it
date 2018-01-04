@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
 <a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting sul lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] applicazioni ospitate da browser possono essere avviate dal browser, devono essere conformi a una serie di restrizioni. Per attivare queste limitazioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza di WPF - sicurezza della piattaforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
@@ -138,25 +139,25 @@ ms.lasthandoff: 11/21/2017
   
  Tabella 3: Autorizzazioni LocalIntranet e Internet  
   
-|Autorizzazione|Attributo|LocalIntranet|Internet|  
+|Autorizzazioni|Attributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Accesso ai server DNS|Sì|No|  
-|Variabili di ambiente|Lettura|Sì|No|  
-|Finestre di dialogo file|Apri|Sì|Sì|  
-|Finestre di dialogo file|Senza restrizioni|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Sì|No|  
-|Spazio di memorizzazione isolato|Isolamento sconosciuto|Sì|Sì|  
-|Spazio di memorizzazione isolato|Quota utenti illimitata|Sì|No|  
-|Supporti|Audio, video e immagini sicuri|Sì|Sì|  
-|Stampa|Stampa predefinita|Sì|No|  
-|Stampa|Stampa sicura|Sì|Sì|  
-|Reflection|Emissione|Sì|No|  
-|Sicurezza|Esecuzione del codice gestito|Sì|Sì|  
-|Sicurezza|Asserzione autorizzazioni concesse|Sì|No|  
-|Interfaccia utente|Senza restrizioni|Sì|No|  
-|Interfaccia utente|Finestre di primo livello sicure|Sì|Sì|  
-|Interfaccia utente|Appunti personali|Sì|Sì|  
-|Web browser|Navigazione sicura dei frame in HTML|Sì|Sì|  
+|DNS|Accesso ai server DNS|Yes|No|  
+|Variabili di ambiente|Lettura|Yes|No|  
+|Finestre di dialogo file|Apri|Yes|Yes|  
+|Finestre di dialogo file|Senza restrizioni|Yes|No|  
+|Spazio di memorizzazione isolato|Isolamento assembly in base all'utente|Yes|No|  
+|Spazio di memorizzazione isolato|Isolamento sconosciuto|Yes|Yes|  
+|Spazio di memorizzazione isolato|Quota utenti illimitata|Yes|No|  
+|Supporti|Audio, video e immagini sicuri|Yes|Yes|  
+|Stampa|Stampa predefinita|Yes|No|  
+|Stampa|Stampa sicura|Yes|Yes|  
+|Reflection|Emissione|Yes|No|  
+|Sicurezza|Esecuzione del codice gestito|Yes|Yes|  
+|Sicurezza|Asserzione autorizzazioni concesse|Yes|No|  
+|Interfaccia utente|Senza restrizioni|Yes|No|  
+|Interfaccia utente|Finestre di primo livello sicure|Yes|Yes|  
+|Interfaccia utente|Appunti personali|Yes|Yes|  
+|Web browser|Navigazione sicura dei frame in HTML|Yes|Yes|  
   
 > [!NOTE]
 >  L'operazione di taglia e incolla, se avviata dall'utente, è consentita solo con l'attendibilità parziale.  

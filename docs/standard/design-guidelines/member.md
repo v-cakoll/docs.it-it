@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>Linee guida di progettazione dei membri
 Metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come membri. Infine, i membri sono i mezzi mediante il quale framework funzionalità esposta agli utenti finali di un framework.  
@@ -31,14 +34,14 @@ Metodi, proprietà, eventi, costruttori e i campi vengono collettivamente come m
   
  In questo capitolo offre linee guida di base da seguire quando si progettano i membri di qualsiasi tipo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Overload dei membri](../../../docs/standard/design-guidelines/member-overloading.md)  
  [Progettazione di proprietà](../../../docs/standard/design-guidelines/property.md)  
- [Progettazione di costruttore](../../../docs/standard/design-guidelines/constructor.md)  
+ [Progettazione di costruttori](../../../docs/standard/design-guidelines/constructor.md)  
  [Progettazione di eventi](../../../docs/standard/design-guidelines/event.md)  
  [Progettazione di campi](../../../docs/standard/design-guidelines/field.md)  
  [Metodi di estensione](../../../docs/standard/design-guidelines/extension-methods.md)  
- [Overload degli operatori](../../../docs/standard/design-guidelines/operator-overloads.md)  
+ [Overload dell'operatore](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Progettazione di parametri](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   

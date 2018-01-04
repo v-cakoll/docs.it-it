@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fbc03ad16bcc0d63a75df5478f7da8abbf19193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procedura dettagliata: creazione di un controllo ToolStrip professionale
 È possibile assegnare l'applicazione <xref:System.Windows.Forms.ToolStrip> controlla l'aspetto professionale e un comportamento, scrivere la propria classe derivata dal <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
     |Proprietà|Valore|  
     |--------------|-----------|  
-    |Nome|`stackStrip`|  
+    |nome|`stackStrip`|  
     |CanOverflow|`false`|  
     |Dock|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Tipo di carattere|`Tahoma, 10pt, style=Bold`|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
     |Proprietà|Valore|  
     |--------------|-----------|  
-    |Nome|`mailStackButton`|  
+    |nome|`mailStackButton`|  
     |CheckOnClick|true|  
     |Oggetto CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  

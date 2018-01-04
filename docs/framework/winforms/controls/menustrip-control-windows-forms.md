@@ -16,16 +16,17 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 570ddd3981593922fecd90700cdaf19bf7eff2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: efa19aa185dac2d3eb821d2d7c29b02cbb0d1a65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menustrip-control-windows-forms"></a>Controllo MenuStrip (Windows Form)
 Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente accessibili.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  Spiega che cos'è il controllo e quali sono le funzionalità e le proprietà chiave.  
   
@@ -79,7 +80,7 @@ Questo controllo raggruppa i comandi dell'applicazione e li rende facilmente acc
   
 -   [Finestra di dialogo attività di MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MenuStrip>  
  Descrive le funzionalità della classe <xref:System.Windows.Forms.MenuStrip>, che fornisce un sistema di menu per un form.  
   

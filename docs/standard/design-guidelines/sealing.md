@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sealing"></a>sealed
 Una delle funzionalità del Framework orientata a oggetti è che gli sviluppatori possono estendere e personalizzarli in modi imprevisti per le finestre di progettazione di framework. Questa è la potenza e pericolo di progettazione estensibile. Quando si progetta il framework, è pertanto molto importante per progettare con attenzione per l'estensibilità quando si desidera e per limitare l'estendibilità quando è pericoloso.  
@@ -57,5 +60,5 @@ Una delle funzionalità del Framework orientata a oggetti è che gli sviluppator
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Progettazione di estendibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  [Classi non sealed](../../../docs/standard/design-guidelines/unsealed-classes.md)

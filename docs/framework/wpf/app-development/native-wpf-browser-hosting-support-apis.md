@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff548f490d76215305d2e22878bc35a54e3bd009
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 87b7b8491fe07f5ab1f93ba332e50333a366f109
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API native WPF per il supporto dell'hosting del browser
 Hosting di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] applicazioni nei browser Web mediante un server di documenti attivi (anche noto come DocObject) registrato l'Host di WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]direttamente può attivare e integrare con un documento attivo. Per l'hosting di XBAP e documenti XAML separati nei browser Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornisce un plug-in NPAPI, che fornisce un ambiente di hosting simile di [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] server documenti attivi come [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Tuttavia, il modo più semplice pratico per ospitare XBAP e XAML dei documenti in altri browser e applicazioni autonome tramite il controllo Web Browser di Internet Explorer. Il controllo Web Browser fornisce l'ambiente di hosting server documenti attivi complesso, ma include anche un host separato personalizzare, estendere tale ambiente e comunicare direttamente con l'oggetto documento attivo corrente.  
@@ -40,6 +41,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO indica a spostare lo stato attivo per il primo o l'ultimo elemento attivabile del relativo contenuto, a seconda dello stato del tasto MAIUSC.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
  [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

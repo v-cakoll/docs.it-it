@@ -26,18 +26,19 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b960e52d8d7dca590411f1c5f096a6942e1ade9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipi incorporati per primitive del linguaggio XAML comuni
 XAML 2009 introduce il supporto del livello di linguaggio XAML per diversi tipi di dati che sono primitive di uso frequente in Common Language Runtime (CLR) e in altri linguaggi di programmazione. XAML 2009 aggiunge il supporto per queste primitive: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`e `x:Array`  
   
 <a name="previous_techniques_for_language_primitives_in_xaml_markup"></a>   
 ## <a name="previous-techniques-for-language-primitives-in-xaml-markup"></a>Tecniche precedenti per le primitive di linguaggio nel markup XAML  
- In XAML per le versioni di WPF precedenti era possibile fare riferimento alle primitive del linguaggio CLR eseguendo il mapping dell'assembly e dello spazio dei nomi che contenevano una classe di definizione della primitiva CLR per .NET Framework. La maggior parte di queste si trovano nell'assembly mscorlib e nello spazio dei nomi <xref:System>. Ad esempio, per usare <xref:System.Int32> era possibile dichiarare il mapping seguente (con un esempio di utilizzo come illustrato di seguito):  
+ In XAML per le versioni di WPF precedenti era possibile fare riferimento alle primitive del linguaggio CLR eseguendo il mapping dell'assembly e dello spazio dei nomi che contenevano una classe di definizione della primitiva CLR per .NET Framework. La maggior parte di queste si trovano nell'assembly mscorlib e nello spazio dei nomi <xref:System> . Ad esempio, per usare <xref:System.Int32>era possibile dichiarare il mapping seguente (con un esempio di utilizzo come illustrato di seguito):  
   
 ```  
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
@@ -51,7 +52,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
 <a name="xaml_2009_language_primitives"></a>   
 ## <a name="xaml-2009-language-primitives"></a>Primitive del linguaggio XAML 2009  
- Per convenzione, le primitive di linguaggio per XAML e tutti gli altri elementi del linguaggio XAML vengono mostrati con il prefisso `x:`. Questo è il modo in cui gli elementi del linguaggio XAML vengono in genere usati nel markup reale. Questa convenzione viene seguita nella documentazione concettuale per XAML in WPF e anche nelle specifiche XAML.  
+ Per convenzione, le primitive di linguaggio per XAML e tutti gli altri elementi del linguaggio XAML vengono mostrati con il prefisso `x:` . Questo è il modo in cui gli elementi del linguaggio XAML vengono in genere usati nel markup reale. Questa convenzione viene seguita nella documentazione concettuale per XAML in WPF e anche nelle specifiche XAML.  
   
 ### <a name="xobject"></a>x:Object  
  Per il supporto CLR, la primitiva `x:Object` corrisponde a <xref:System.Object>.  
@@ -76,7 +77,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdecimal"></a>x:Decimal  
  Per il supporto CLR, la primitiva `x:Decimal` corrisponde a <xref:System.Decimal>.  
   
- Si noti che l'analisi XAML viene eseguita intrinsecamente con le impostazioni cultura `en-US`. Con le impostazioni cultura `en-US`, il separatore corretto per i componenti di un numero decimale è sempre un punto (`.`) indipendentemente dalle impostazioni cultura dell'ambiente di sviluppo o dell'eventuale destinazione client in cui XAML viene caricato in fase di esecuzione.  
+ Si noti che l'analisi XAML viene eseguita intrinsecamente con le impostazioni cultura `en-US`. Con le impostazioni cultura `en-US` , il separatore corretto per i componenti di un numero decimale è sempre un punto (`.`) indipendentemente dalle impostazioni cultura dell'ambiente di sviluppo o dell'eventuale destinazione client in cui XAML viene caricato in fase di esecuzione.  
   
  Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.14 e 5.4.8 del documento](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -116,7 +117,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xtimespan"></a>x:TimeSpan  
  Per il supporto CLR, la primitiva `x:TimeSpan` corrisponde a <xref:System.TimeSpan>.  
   
- Si noti che l'analisi XAML per il formato di ora/data viene eseguita intrinsecamente con le impostazioni cultura `en-US`.  
+ Si noti che l'analisi XAML per il formato di ora/data viene eseguita intrinsecamente con le impostazioni cultura `en-US` .  
   
  Per la definizione delle specifiche del linguaggio XAML, vedere [ \[MS-XAML\] sezioni 5.2.16 e 5.4.10 del documento](http://go.microsoft.com/fwlink/?LinkId=114525).  
   

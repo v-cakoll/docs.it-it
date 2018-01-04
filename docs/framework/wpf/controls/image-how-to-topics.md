@@ -17,22 +17,23 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Procedure relative alle immagini
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.Image> elemento.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Usare l'elemento di immagine](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
   [Convertire un'immagine in scala di grigi](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
   [Ritagliare un'immagine](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
   [Ruotare un'immagine](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -41,4 +42,4 @@ Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:Syst
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

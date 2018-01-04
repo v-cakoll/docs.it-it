@@ -1,5 +1,5 @@
 ---
-title: Associazione ai dati di Windows Form
+title: Data binding di Windows Form
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,16 +18,17 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60a9f66fec64ceda71dd5b70211b897c84113429
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 77f01bc462be67c3b613b8ab102a359a80d74140
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="windows-forms-data-binding"></a>Associazione ai dati di Windows Form
+# <a name="windows-forms-data-binding"></a>Data binding di Windows Form
 Data binding in Windows Form consente di visualizzare e modificare le informazioni da un'origine dati nei controlli del form. È possibile effettuare associazioni alle origini dati tradizionali e a quasi ogni struttura che contiene dati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Data binding e Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  Fornisce una panoramica del data binding in Windows Form.  
   
@@ -63,7 +64,7 @@ Data binding in Windows Form consente di visualizzare e modificare le informazio
   
  Vedere anche [interfacce correlate all'associazione di dati](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [procedura: passare dati in Windows Form](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [procedura: creare un controllo con associazione semplice in un Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  Descrive la classe che rappresenta l'associazione tra un componente associabile e un'origine dati.  
   

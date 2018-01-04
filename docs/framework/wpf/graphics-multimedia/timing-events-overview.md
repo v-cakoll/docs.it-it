@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Cenni preliminari sugli eventi di tempo
 In questo argomento viene descritto come utilizzare i cinque eventi di temporizzazione disponibili in <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> oggetti.  
@@ -64,7 +65,7 @@ In questo argomento viene descritto come utilizzare i cinque eventi di temporizz
 ## <a name="public-events"></a>Eventi pubblici  
  Il <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> classi forniscono entrambe cinque eventi di temporizzazione. Nella tabella seguente sono elencati questi eventi e le condizioni che li attivano.  
   
-|Evento|Operazione interattiva di attivazione|Altri trigger|  
+|event|Operazione interattiva di attivazione|Altri trigger|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|Passaggio al riempimento|L'orologio viene completato.|  
 |**CurrentGlobalSpeedInvalidated**|Sospensione, ripresa, ricerca, impostazione di frequenza velocità, passaggio al riempimento, interruzione|L'orologio viene invertito, accelerato, avviato o interrotto.|  

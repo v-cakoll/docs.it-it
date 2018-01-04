@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7735e721917c5f78b791a200a670599fe3cff310
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-windows-forms"></a>Guida introduttiva a Windows Form
 Con Windows Form, è possibile creare potenti applicazioni basate su Windows. Gli argomenti seguenti descrivono approfondita come sfruttare la potenza di Windows Form per visualizzare i dati, l'input dell'utente di gestire e distribuire facilmente le applicazioni con sicurezza avanzata.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sui Windows Form](../../../docs/framework/winforms/windows-forms-overview.md)  
  Contiene una panoramica di Windows Form e applicazioni client intelligenti.  
   

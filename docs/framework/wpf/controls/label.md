@@ -17,11 +17,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c271d1c90d36832e36d042a83a0fdbcc6c79a14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label"></a>Label
 <xref:System.Windows.Controls.Label>i controlli in genere forniscono informazioni nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  In passato, un <xref:System.Windows.Controls.Label> conteneva solo testo, tuttavia, poiché il <xref:System.Windows.Controls.Label> fornito con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è un <xref:System.Windows.Controls.ContentControl>, può contenere una stringa di testo o un <xref:System.Windows.UIElement>.  
@@ -32,8 +33,8 @@ ms.lasthandoff: 10/18/2017
   
  ![Proprietà di visualizzazione etichettate in base all'utilizzo](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: impostare la proprietà di destinazione di un controllo Label](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Label>

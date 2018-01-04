@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>Controllo WebBrowser (Windows Form)
 Windows Form `WebBrowser` controllo ospita le pagine Web e fornisce all'applicazione funzionalità di esplorazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -51,7 +52,7 @@ Windows Form `WebBrowser` controllo ospita le pagine Web e fornisce all'applicaz
  [Utilizzare il Document Object Model HTML gestito](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
  Fornisce argomenti che descrivono come modificare o creare pagine HTML ospitate dal <xref:System.Windows.Forms.WebBrowser> controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.WebBrowser>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

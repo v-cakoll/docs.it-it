@@ -17,16 +17,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80621a12a4ccd5008a0331af005629d45f60abdf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4325fd3eb2e3d7179ddb5270d073c7ba5f0f383f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-windows-forms"></a>Controllo RichTextBox (Windows Form)
 Windows Form `RichTextBox` controllo viene utilizzato per la visualizzazione, l'immissione e la modifica del testo con formattazione. Il `RichTextBox` controllo esegue tutto il <xref:System.Windows.Forms.TextBox> dal controllo, ma può anche visualizzare i tipi di carattere, colori e collegamenti; caricare testo e immagini incorporate da un file; rollback e rollforward; operazioni di modifica e trovare i caratteri specificati. Il `RichTextBox` controllo viene in genere utilizzato per fornire funzionalità simili alle applicazioni di elaborazione di testi, ad esempio Microsoft Word di visualizzazione e modifica di testo. Come il <xref:System.Windows.Forms.TextBox> (controllo), il `RichTextBox` controllo può visualizzare le barre di scorrimento; ma a differenza di <xref:System.Windows.Forms.TextBox> (controllo), Visualizza le barre di scorrimento orizzontali e verticali per impostazione predefinita e quali fornisce impostazioni aggiuntive.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi il `RichTextBox` controllo, che consente agli utenti di immettere, visualizzare e modificare il testo con le opzioni di formattazione.  
   
@@ -54,7 +55,7 @@ Windows Form `RichTextBox` controllo viene utilizzato per la visualizzazione, l'
  [Procedura: Impostare rientri, rientri sporgenti e paragrafi puntati con il controllo RichTextBox di Windows Form](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
  Viene descritto come formattare i paragrafi di `RichTextBox` controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.RichTextBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

@@ -17,16 +17,17 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>Grafica
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]offre supporto integrato per elementi multimediali, grafica vettoriale, animazione e composizione di contenuto, rendendo più semplice per gli sviluppatori di compilare interfacce utente e contenuto interessanti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [Pennelli](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [Disegni](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [Forme](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
  [Trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
  [Impostazioni del Registro di sistema per il rendering della grafica](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Shapes.Shape>  

@@ -21,16 +21,17 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>Direttiva x:Subclass
 Modifica il comportamento di compilazione markup XAML quando `x:Class` viene inoltre fornita. Anziché creare una classe parziale che si basa sul `x:Class`, forniti `x:Class` viene creata come una classe intermedia, e quindi la classe derivata è previsto che sia basata su `x:Class`.  
   
-## <a name="xaml-attribute-usage"></a>Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a>Uso della sintassi XAML per gli attributi  
   
 ```  
 <object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
@@ -42,9 +43,9 @@ Modifica il comportamento di compilazione markup XAML quando `x:Class` viene ino
   
 |||  
 |-|-|  
-|`namespace`|Parametro facoltativo. Specifica uno spazio dei nomi CLR che contiene `classname`. Se `namespace` è specificato, un punto (.) separa `namespace` e `classname`.|  
+|`namespace`|Facoltativo. Specifica uno spazio dei nomi CLR che contiene `classname`. Se `namespace` è specificato, un punto (.) separa `namespace` e `classname`.|  
 |`classname`|Obbligatorio. Specifica il nome CLR della classe parziale che connette il codice XAML caricato e il code-behind per tale codice XAML. Vedere la sezione Osservazioni.|  
-|`subclassNamespace`|Parametro facoltativo. Può essere diverso da `namespace` se ogni spazio dei nomi è possibile risolvere l'altro. Specifica uno spazio dei nomi CLR che contiene `subclassName`. Se `subclassName` è specificato, un punto (.) separa `subclassNamespace` e `subclassName`.|  
+|`subclassNamespace`|Facoltativo. Può essere diverso da `namespace` se ogni spazio dei nomi è possibile risolvere l'altro. Specifica uno spazio dei nomi CLR che contiene `subclassName`. Se `subclassName` è specificato, un punto (.) separa `subclassNamespace` e `subclassName`.|  
 |`subclassName`|Obbligatorio. Specifica il nome CLR della sottoclasse.|  
   
 ## <a name="dependencies"></a>Dipendenze  

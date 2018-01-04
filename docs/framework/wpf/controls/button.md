@@ -17,21 +17,22 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 551813a2e5209d1c0ed9fdd124586f98508a0f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 65243113b0d186d6f391b2e39d776141ffa9922f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="button"></a>Pulsante
+# <a name="button"></a>Button
 Oggetto <xref:System.Windows.Controls.Button> controllo reagisce all'input dell'utente da un mouse, tastiera, stilo o altro dispositivo di input e genera un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Oggetto <xref:System.Windows.Controls.Button> un Basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] componente che può contenere un contenuto semplice, ad esempio testo e può anche contenere contenuto complesso, ad esempio immagini e <xref:System.Windows.Controls.Panel> controlli.  
   
  ![Pulsante stati](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creare un pulsante con un'immagine](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Controls.Primitives.ButtonBase>  
  <xref:System.Windows.Controls.RadioButton>  

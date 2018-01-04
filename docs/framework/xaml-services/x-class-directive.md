@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>Direttiva x:Class
 Consente di configurare la compilazione del markup XAML per l'aggiunta di classi parziali tra markup e code-behind. La classe parziale del codice è definita in un file di codice in un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, mentre la classe parziale di markup viene in genere creata dalla generazione del codice durante la compilazione XAML.  
@@ -42,7 +43,7 @@ Consente di configurare la compilazione del markup XAML per l'aggiunta di classi
   
 |||  
 |-|-|  
-|`namespace`|Parametro facoltativo. Specifica un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] dello spazio dei nomi che contiene la classe parziale identificata da `classname`. Se `namespace` è specificato, un punto (.) separa `namespace` e `classname`. Vedere la sezione Osservazioni.|  
+|`namespace`|Facoltativo. Specifica un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] dello spazio dei nomi che contiene la classe parziale identificata da `classname`. Se `namespace` è specificato, un punto (.) separa `namespace` e `classname`. Vedere la sezione Osservazioni.|  
 |`classname`|Obbligatorio. Specifica il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nome della classe parziale che connette il codice XAML caricato e il code-behind per tale codice XAML.|  
   
 ## <a name="dependencies"></a>Dipendenze  

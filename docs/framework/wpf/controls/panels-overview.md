@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>Cenni preliminari sugli elementi Panel
 <xref:System.Windows.Controls.Panel>gli elementi sono componenti che controllano il rendering degli elementi, ovvero le dimensioni e le dimensioni, la posizione e la disposizione del contenuto figlio. Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce una serie di predefiniti <xref:System.Windows.Controls.Panel> elementi, nonché la possibilità di costruire personalizzato <xref:System.Windows.Controls.Panel> elementi.  
@@ -74,16 +75,16 @@ ms.lasthandoff: 11/21/2017
   
 |Nome elemento|Elemento Panel dell'interfaccia utente?|Descrizione|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|Sì|Definisce un'area all'interno del quale è possibile posizionare in modo esplicito gli elementi figlio utilizzando coordinate relative la <xref:System.Windows.Controls.Canvas> area.|  
-|<xref:System.Windows.Controls.DockPanel>|Sì|Definisce un'area all'interno della quale è possibile disporre elementi figlio in orizzontale o in verticale, l'uno rispetto all'altro.|  
-|<xref:System.Windows.Controls.Grid>|Sì|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati in modo preciso utilizzando il <xref:System.Windows.FrameworkElement.Margin%2A> proprietà.|  
-|<xref:System.Windows.Controls.StackPanel>|Sì|Dispone gli elementi figlio su una sola riga che può essere orientata orizzontalmente o verticalmente.|  
+|<xref:System.Windows.Controls.Canvas>|Yes|Definisce un'area all'interno del quale è possibile posizionare in modo esplicito gli elementi figlio utilizzando coordinate relative la <xref:System.Windows.Controls.Canvas> area.|  
+|<xref:System.Windows.Controls.DockPanel>|Yes|Definisce un'area all'interno della quale è possibile disporre elementi figlio in orizzontale o in verticale, l'uno rispetto all'altro.|  
+|<xref:System.Windows.Controls.Grid>|Yes|Definisce un'area flessibile della griglia costituita da righe e colonne. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati in modo preciso utilizzando il <xref:System.Windows.FrameworkElement.Margin%2A> proprietà.|  
+|<xref:System.Windows.Controls.StackPanel>|Yes|Dispone gli elementi figlio su una sola riga che può essere orientata orizzontalmente o verticalmente.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|No|Gestisce il layout dei pulsanti in un <xref:System.Windows.Controls.TabControl>.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|No|Dispone il contenuto all'interno di un <xref:System.Windows.Controls.ToolBar> controllo.|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|No|<xref:System.Windows.Controls.Primitives.UniformGrid>viene utilizzato per disporre gli elementi figlio in una griglia con tutte le celle di uguali dimensioni.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|No|Implementa una classe di base per i pannelli in grado di virtualizzare la raccolta di elementi figlio relativa.|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|Sì|Dispone e virtualizza il contenuto su una singola riga orientato orizzontalmente o verticalmente.|  
-|<xref:System.Windows.Controls.WrapPanel>|Sì|<xref:System.Windows.Controls.WrapPanel>Posiziona gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva sul bordo della casella contenitore. Ordinamento successivo avviene in modo sequenziale dall'alto verso il basso o da destra a sinistra, a seconda del valore del <xref:System.Windows.Controls.WrapPanel.Orientation%2A> proprietà.|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|Yes|Dispone e virtualizza il contenuto su una singola riga orientato orizzontalmente o verticalmente.|  
+|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel>Posiziona gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva sul bordo della casella contenitore. Ordinamento successivo avviene in modo sequenziale dall'alto verso il basso o da destra a sinistra, a seconda del valore del <xref:System.Windows.Controls.WrapPanel.Orientation%2A> proprietà.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>Elementi Panel dell'interfaccia utente  

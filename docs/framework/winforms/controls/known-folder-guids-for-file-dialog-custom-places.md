@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.
 Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] cartella nota quando si aggiungono cartelle di un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> insieme. Nota GUID della cartella non tra maiuscole e minuscole e vengono definiti nel file KnownFolders il [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
@@ -272,7 +273,7 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
   
- Sistema  
+ System  
  1AC14E77-02E7-4E5D-B744-2EB1AE5198B7  
   
  SystemX86  
@@ -293,7 +294,7 @@ Si utilizza un <xref:System.Guid> per specificare un [!INCLUDE[wiprlhext](../../
  Video  
  18989B1D-99B5-455B-841C-AB7C74E4DDFC  
   
- Windows  
+ WINDOWS  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>Vedere anche  

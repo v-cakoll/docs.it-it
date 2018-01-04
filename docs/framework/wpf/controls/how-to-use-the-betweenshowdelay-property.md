@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dca6dc7c6238ef4accc921818090237d17ce1cbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfd4bb4c9e26361e5b8f573d06449b090497acd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Procedura: utilizzare la proprietà BetweenShowDelay
 In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà temporale in modo che le descrizioni comandi visualizzate rapidamente, quasi alcun ritardo, ovvero quando si sposta il puntatore del mouse da una descrizione comandi direttamente a un altro.  
@@ -40,5 +41,5 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Contr
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipService>  
- [Procedure relative](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [Panoramica sul controllo ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md)

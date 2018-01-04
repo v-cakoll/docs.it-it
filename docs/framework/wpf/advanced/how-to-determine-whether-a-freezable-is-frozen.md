@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eed85f982687bfc90f53e57ab1ec3949820097e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Procedura: determinare se un oggetto Freezable è bloccato
 In questo esempio viene illustrato come determinare se un <xref:System.Windows.Freezable> oggetto è bloccato. Se si tenta di modificare un oggetto bloccato <xref:System.Windows.Freezable> dell'oggetto, genera un <xref:System.InvalidOperationException>. Per evitare la generazione di questa eccezione, utilizzare il <xref:System.Windows.Freezable.IsFrozen%2A> proprietà del <xref:System.Windows.Freezable> oggetto per determinare se è bloccato.  
@@ -38,4 +39,4 @@ In questo esempio viene illustrato come determinare se un <xref:System.Windows.F
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.IsFrozen%2A>  
  [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

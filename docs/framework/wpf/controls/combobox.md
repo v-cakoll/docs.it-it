@@ -17,11 +17,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 628dd919ccb03b39a198f00ed092f24048ad9f5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox"></a>ComboBox
 Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti con un elenco di opzioni. L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa. Nello stato predefinito, l'elenco è compressa, la visualizzazione sola opzione. L'utente sceglie un pulsante per visualizzare l'elenco completo delle opzioni.  
@@ -31,8 +32,8 @@ Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti c
  ![Combinata caselle predefinito e premuto](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Comprimere ed espandere  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: ottenere un oggetto ComboBoxItem](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ComboBox>

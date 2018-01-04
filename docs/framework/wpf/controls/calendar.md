@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04d602161a20e56395e978dfeeb7ec5e756af7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calendar"></a>Calendar
 Un calendario consente a un utente di selezionare una data mediante una rappresentazione visiva del calendario.  
@@ -45,7 +46,7 @@ Controlli del calendario
   
  Il <xref:System.Windows.Controls.Calendar> controllo fornisce le operazioni di base con il mouse o tastiera. Nella tabella seguente sono riepilogate navigazione tramite tastiera.  
   
-|Combinazione di tasti|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Azione|  
+|Combinazione di tasti|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Operazione|  
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
 |FRECCIA|<xref:System.Windows.Controls.CalendarMode.Month>|Modifiche di <xref:System.Windows.Controls.Calendar.SelectedDate%2A> proprietà se il <xref:System.Windows.Controls.Calendar.SelectionMode%2A> proprietà non è impostata su <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
 |FRECCIA|<xref:System.Windows.Controls.CalendarMode.Year>|Imposta il mese del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> proprietà. Si noti che il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  

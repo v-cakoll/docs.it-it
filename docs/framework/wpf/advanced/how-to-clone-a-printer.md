@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 303cb9c1c5b6521839987a56cdc008eac0559cf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-clone-a-printer"></a>Procedura: duplicare una stampante
 A un certo punto, la maggior parte delle aziende acquisterà più stampanti dello stesso modello. In genere, questi vengono installati con le impostazioni di configurazione praticamente identico. Installazione di ogni stampante può richiedere molto tempo e soggetta a errori. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposta con [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] consente di installare immediatamente qualsiasi numero di code di stampa aggiuntive che vengono clonati da una coda di stampa esistente.  

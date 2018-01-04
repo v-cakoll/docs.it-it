@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40da7449c88eaaba92e34374c002c7e175b2ef16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 713a11f822dd30e77e6442c0bb082a40755b1832
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-guidelines"></a>Convenzioni di denominazione
 Segue un set di convenzioni di denominazione per lo sviluppo di un framework coerente possibile contribuito a livello di usabilità del framework. Consente al framework di utilizzabile da molti sviluppatori su progetti separati ampiamente. Oltre la coerenza del modulo, nomi degli elementi di framework devono essere facilmente comprensibili e devono indicare la funzione di ogni elemento.  
@@ -34,15 +37,15 @@ Segue un set di convenzioni di denominazione per lo sviluppo di un framework coe
   
  Sebbene adottare le convenzioni di denominazione come linee guida sullo sviluppo di codice generale comporta la denominazione più coerente in tutto il codice, è necessario solo per applicarli alle API che vengono esposte pubblicamente (pubblici o protetti di tipi e membri, e in modo esplicito le interfacce implementate).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Convenzioni di lettere maiuscole/minuscole](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
- [Convenzioni di denominazione generale](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
- [Nomi degli assembly e DLL](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
- [Nomi degli spazi dei nomi](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
- [Nomi delle classi, strutture e interfacce](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
- [Nomi dei membri dei tipi](../../../docs/standard/design-guidelines/names-of-type-members.md)  
- [Denominazione dei parametri](../../../docs/standard/design-guidelines/naming-parameters.md)  
- [Nomi delle risorse](../../../docs/standard/design-guidelines/naming-resources.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Convenzioni per l'uso di maiuscole e minuscole](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
+ [Convenzioni di denominazione generali](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
+ [Nomi di assembly e DLL](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
+ [Nomi di spazi dei nomi](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
+ [Nomi di classi, struct e interfacce](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
+ [Nomi di membri dei tipi](../../../docs/standard/design-guidelines/names-of-type-members.md)  
+ [Denominazione di parametri](../../../docs/standard/design-guidelines/naming-parameters.md)  
+ [Denominazione di risorse](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  

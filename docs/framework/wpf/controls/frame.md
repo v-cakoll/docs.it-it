@@ -19,16 +19,17 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4337cdf95324289ba5245812a22b444f538c2f31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: daf8875801f9b20fe214e40364e6e367b8965938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="frame"></a>Frame
 Il <xref:System.Windows.Controls.Frame> controllo supporta la navigazione all'interno del contenuto. <xref:System.Windows.Controls.Frame>può essere ospitata da un elemento radice come <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o come un'isola all'interno di un albero del contenuto che appartiene a un elemento radice.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Frame>  
   
 ## <a name="related-sections"></a>Sezioni correlate  

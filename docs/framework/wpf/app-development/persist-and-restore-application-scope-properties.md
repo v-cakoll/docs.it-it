@@ -23,11 +23,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 815efbe0a4adcacddeb4c1a70cc3c1fef21fed05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Procedura: salvare in modo permanente e ripristinare le proprietà con ambito applicazione tra le sessioni di un'applicazione
 In questo esempio viene illustrato come rendere persistenti le proprietà dell'ambito di applicazione quando un'applicazione viene arrestato e come ripristinare le proprietà dell'ambito di applicazione quando un'applicazione è successiva avvio.  

@@ -17,21 +17,22 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79797aad6c26975dd2f4fa1b087d525fbaebb253
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c832a091f7c6fec185c657d104437c42a7ae4d33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollviewer-how-to-topics"></a>Procedure relative all'elemento ScrollViewer
 Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.ScrollViewer> elemento per creare aree scorrevoli nelle applicazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Gestire l'evento ScrollChanged](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
  [Scorrere il contenuto usando l'interfaccia IScrollInfo](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
  [Usare i metodi di scorrimento del contenuto di ScrollViewer](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  

@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="role-based-security"></a>Sicurezza basata sui ruoli
 I ruoli vengono spesso usati nelle applicazioni finanziarie o aziendali per l'applicazione dei criteri di sicurezza. Ad esempio, è possibile che un'applicazione imponga limiti alle dimensioni della transazione in corso di elaborazione in funzione del ruolo rivestito dall'utente che effettua la richiesta. Gli impiegati potrebbero essere autorizzati a elaborare unicamente transazioni inferiori a una determinata soglia, mentre per i supervisori il limite potrebbe essere superiore e per i vicepresidenti ancora più alto (o addirittura assente). La sicurezza basata sui ruoli può anche essere usata quando un'applicazione richiede più approvazioni per completare un'operazione. È questo ad esempio il caso di un sistema di acquisto in cui qualsiasi dipendente può generare una richiesta di acquisto, ma solo un agente di acquisto può convertire la richiesta in un ordine di acquisto da inviare a un fornitore.  
@@ -45,5 +48,5 @@ I ruoli vengono spesso usati nelle applicazioni finanziarie o aziendali per l'ap
 |[Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)|Illustra come configurare e gestire identità e principali sia Windows che generici.|  
 |[Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)|Introduce i concetti fondamentali che è necessario comprendere prima di affrontare il tema della sicurezza di NET Framework.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

@@ -17,16 +17,17 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-and-commands-how-to-topics"></a>Procedure relative all'input e ai comandi
 Negli argomenti di questa sezione viene descritto come utilizzare l'infrastruttura di input e di comando in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attivare un comando](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
  [Modificare il tipo di cursore](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
  [Modificare il colore di un elemento usando eventi di stato attivo](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
@@ -39,7 +40,7 @@ Negli argomenti di questa sezione viene descritto come utilizzare l'infrastruttu
  [Associare un comando a un controllo senza supporto del comando](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
  [Associare un comando a un controllo con supporto dei comandi](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  

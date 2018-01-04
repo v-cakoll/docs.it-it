@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a46bf111b76ef6d07fa99cc3b19684a0726b7062
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66a297ed035f5afde06913b89f1f92dee5745f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="constructor-design"></a>Progettazione di costruttori
 Esistono due tipi di costruttori: tipo di costruttori e dei costruttori di istanza.  
@@ -87,5 +90,5 @@ Esistono due tipi di costruttori: tipo di costruttori e dei costruttori di istan
  *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida di progettazione di membro](../../../docs/standard/design-guidelines/member.md)  
+ [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)

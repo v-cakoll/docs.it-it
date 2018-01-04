@@ -18,16 +18,19 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-in-the-net-framework"></a>Sicurezza in .NET Framework
 Common Language Runtime e .NET Framework forniscono numerosi servizi e classi utili che consentono agli sviluppatori di scrivere in modo semplice codice sicuro e consentono agli amministratori di sistema di personalizzare le autorizzazioni concesse al codice per l'accesso alle risorse protette. In Common Language Runtime e .NET Framework sono inoltre disponibili servizi e classi che semplificano l'uso della crittografia e della protezione basata sui ruoli.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)  
  Descrive importanti modifiche al sistema di sicurezza di .NET Framework.  
   

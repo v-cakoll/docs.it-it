@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb39ddefb1bc22d4349ad1ced68bd471452b43b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aa15e8a61dee8a542798f4adbd4904a7c07882
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding"></a>Binding
 Contenuto della sezione sono inclusi esempi di base che illustrano l'utilizzo dell'attributo di associazione di un elemento dell'endpoint.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Codificatore ByteStream](../../../../docs/framework/wcf/samples/bytestream-encoder.md)  
  Viene descritto come creare una `ByteStreamHttpBinding`, una <xref:System.ServiceModel.Channels.Binding> che dimostra la funzionalità del codificatore del flusso di byte.  
   
@@ -32,7 +33,7 @@ Contenuto della sezione sono inclusi esempi di base che illustrano l'utilizzo de
  [Associazione personalizzata](../../../../docs/framework/wcf/samples/custom-binding.md)  
  Viene descritta l'associazione personalizzata in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Associazione NET](../../../../docs/framework/wcf/samples/net-binding.md)  
+ [Associazione Net](../../../../docs/framework/wcf/samples/net-binding.md)  
  Viene descritta l'associazione di rete in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Associazione WS](../../../../docs/framework/wcf/samples/ws-binding.md)  

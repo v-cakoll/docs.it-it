@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: applicare trasformazioni al testo'
+title: 'Procedura: Applicare trasformazioni al testo'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,13 +26,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ed10a00d3d62f7eae91e5932a917be692de868b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9c1e26b31907e7794492b88ea3a696d3db4d37d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Procedura: applicare trasformazioni al testo
+# <a name="how-to-apply-transforms-to-text"></a>Procedura: Applicare trasformazioni al testo
 Le trasformazioni possono modificare la visualizzazione del testo nell'applicazione. Negli esempi seguenti utilizzano tipi diversi di trasformazioni di rendering per modificare la visualizzazione di testo in un <xref:System.Windows.Controls.TextBlock> controllo.  
   
 ## <a name="example"></a>Esempio  

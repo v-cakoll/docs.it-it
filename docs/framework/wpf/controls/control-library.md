@@ -17,16 +17,17 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d1ea41597f0bba7aed61854119ee33136ed07d5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: bc2186c4b1acaf06ec7c6adf0d5ef8460957869b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-library"></a>Libreria di controlli
 La libreria di controlli [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] contiene informazioni sui controlli forniti da [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], elencati in ordine alfabetico.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Bordo](../../../../docs/framework/wpf/controls/border.md)  
  [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
  [Pulsante](../../../../docs/framework/wpf/controls/button.md)  
@@ -76,7 +77,7 @@ La libreria di controlli [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla
  [WrapPanel](../../../../docs/framework/wpf/controls/wrappanel.md)  
  [Viewbox](../../../../docs/framework/wpf/controls/viewbox.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.Primitives>  
