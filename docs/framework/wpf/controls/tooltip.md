@@ -18,30 +18,31 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29123dc5de6390d18aaccbb064e53748499d61e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 79ef4306d193bdb6f55aec467074c8b5b2f374b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tooltip"></a><span data-ttu-id="f6e06-102">Descrizione comando</span><span class="sxs-lookup"><span data-stu-id="f6e06-102">ToolTip</span></span>
-<span data-ttu-id="f6e06-103">Una descrizione comandi è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="f6e06-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="8d6ff-102">Descrizione comando</span><span class="sxs-lookup"><span data-stu-id="8d6ff-102">ToolTip</span></span>
+<span data-ttu-id="8d6ff-103">Una descrizione comandi è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="8d6ff-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="f6e06-104">La figura seguente mostra un puntatore che punta al **Chiudi**<xref:System.Windows.Controls.Button>, che quindi Visualizza relativa identificazione <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="f6e06-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="8d6ff-104">La figura seguente mostra un puntatore che punta al **Chiudi**<xref:System.Windows.Controls.Button>, che quindi Visualizza relativa identificazione <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="8d6ff-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="f6e06-105">Pulsante Chiudi con la descrizione comando visualizzata</span><span class="sxs-lookup"><span data-stu-id="f6e06-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="8d6ff-105">Pulsante Chiudi con la descrizione comando visualizzata</span><span class="sxs-lookup"><span data-stu-id="8d6ff-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="f6e06-106">![Schermata ToolTip](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="f6e06-106">![ToolTip screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="8d6ff-106">![Schermata ToolTip](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="8d6ff-106">![ToolTip screen shot](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f6e06-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="f6e06-107">In This Section</span></span>  
- [<span data-ttu-id="f6e06-108">Panoramica sul controllo ToolTip</span><span class="sxs-lookup"><span data-stu-id="f6e06-108">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [<span data-ttu-id="f6e06-109">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="f6e06-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8d6ff-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8d6ff-107">In This Section</span></span>  
+ [<span data-ttu-id="8d6ff-108">Panoramica sul controllo ToolTip</span><span class="sxs-lookup"><span data-stu-id="8d6ff-108">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
+  [<span data-ttu-id="8d6ff-109">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="8d6ff-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f6e06-110">Riferimento</span><span class="sxs-lookup"><span data-stu-id="f6e06-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8d6ff-110">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="8d6ff-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="f6e06-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f6e06-111">Related Sections</span></span>  
- [<span data-ttu-id="f6e06-112">Panoramica sul controllo Popup</span><span class="sxs-lookup"><span data-stu-id="f6e06-112">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [<span data-ttu-id="f6e06-113">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="f6e06-113">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="8d6ff-111">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="8d6ff-111">Related Sections</span></span>  
+ [<span data-ttu-id="8d6ff-112">Panoramica sul controllo Popup</span><span class="sxs-lookup"><span data-stu-id="8d6ff-112">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)  
+  [<span data-ttu-id="8d6ff-113">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="8d6ff-113">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

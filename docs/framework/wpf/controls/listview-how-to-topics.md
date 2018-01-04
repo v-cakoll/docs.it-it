@@ -17,35 +17,36 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98b0d38ab78bb36337461495cc6e8e782160617a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1f937232119281f4e94dcee9013546a56a67265
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-how-to-topics"></a><span data-ttu-id="57770-102">Procedure relative al controllo ListView</span><span class="sxs-lookup"><span data-stu-id="57770-102">ListView How-to Topics</span></span>
-<span data-ttu-id="57770-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.ListView> controllo per visualizzare un set di elementi di dati.</span><span class="sxs-lookup"><span data-stu-id="57770-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
+# <a name="listview-how-to-topics"></a><span data-ttu-id="491fb-102">Procedure relative al controllo ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-102">ListView How-to Topics</span></span>
+<span data-ttu-id="491fb-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.ListView> controllo per visualizzare un set di elementi di dati.</span><span class="sxs-lookup"><span data-stu-id="491fb-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="57770-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="57770-104">In This Section</span></span>  
- [<span data-ttu-id="57770-105">Ordinare una colonna GridView quando si fa clic su un'intestazione</span><span class="sxs-lookup"><span data-stu-id="57770-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [<span data-ttu-id="57770-106">Creare una modalità di visualizzazione personalizzata per un oggetto ListView</span><span class="sxs-lookup"><span data-stu-id="57770-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [<span data-ttu-id="57770-107">Usare i modelli per applicare uno stile a un ListView che usa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="57770-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [<span data-ttu-id="57770-108">Creare uno stile per un'intestazione di colonna GridView trascinata</span><span class="sxs-lookup"><span data-stu-id="57770-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [<span data-ttu-id="57770-109">Visualizzare il contenuto dell'oggetto ListView usando un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="57770-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [<span data-ttu-id="57770-110">Usare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView</span><span class="sxs-lookup"><span data-stu-id="57770-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [<span data-ttu-id="57770-111">Creare ListViewItems con un CheckBox</span><span class="sxs-lookup"><span data-stu-id="57770-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [<span data-ttu-id="57770-112">Visualizzare i dati usando GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="57770-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [<span data-ttu-id="57770-113">Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="57770-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="57770-114">Applicare uno stile a una riga in un ListView che implementa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="57770-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="57770-115">Modificare l'allineamento orizzontale di una colonna in ListView</span><span class="sxs-lookup"><span data-stu-id="57770-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [<span data-ttu-id="57770-116">Gestire l'evento MouseDoubleClick per ciascun elemento di ListView</span><span class="sxs-lookup"><span data-stu-id="57770-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="491fb-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="491fb-104">In This Section</span></span>  
+ [<span data-ttu-id="491fb-105">Ordinare una colonna GridView quando si fa clic su un'intestazione</span><span class="sxs-lookup"><span data-stu-id="491fb-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [<span data-ttu-id="491fb-106">Creare una modalità di visualizzazione personalizzata per un oggetto ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [<span data-ttu-id="491fb-107">Usare i modelli per applicare uno stile a un ListView che usa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="491fb-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [<span data-ttu-id="491fb-108">Creare uno stile per un'intestazione di colonna GridView trascinata</span><span class="sxs-lookup"><span data-stu-id="491fb-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [<span data-ttu-id="491fb-109">Visualizzare il contenuto dell'oggetto ListView usando un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="491fb-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
+ [<span data-ttu-id="491fb-110">Usare i trigger per applicare uno stile agli elementi selezionati in un controllo ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [<span data-ttu-id="491fb-111">Creare ListViewItems con un CheckBox</span><span class="sxs-lookup"><span data-stu-id="491fb-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
+ [<span data-ttu-id="491fb-112">Visualizzare i dati usando GridViewRowPresenter</span><span class="sxs-lookup"><span data-stu-id="491fb-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [<span data-ttu-id="491fb-113">Raggruppare gli elementi di un controllo ListView che implementa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="491fb-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="491fb-114">Applicare uno stile a una riga in un ListView che implementa un oggetto GridView</span><span class="sxs-lookup"><span data-stu-id="491fb-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="491fb-115">Modificare l'allineamento orizzontale di una colonna in ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [<span data-ttu-id="491fb-116">Gestire l'evento MouseDoubleClick per ciascun elemento di ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
-## <a name="reference"></a><span data-ttu-id="57770-117">Riferimento</span><span class="sxs-lookup"><span data-stu-id="57770-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="491fb-117">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="491fb-117">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.ListViewItem>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="57770-118">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="57770-118">Related Sections</span></span>  
- [<span data-ttu-id="57770-119">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="57770-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="491fb-118">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="491fb-118">Related Sections</span></span>  
+ [<span data-ttu-id="491fb-119">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="491fb-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

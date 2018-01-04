@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6853b915cb133b2ea1cbc0579f3eb59e1e956f5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: dfe53e4782fda95142a9eaa8ab10227f5353612b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="38601-102">Procedure relative ai popup</span><span class="sxs-lookup"><span data-stu-id="38601-102">Popup How-to Topics</span></span>
-<span data-ttu-id="38601-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.Primitives.Popup> controllo per visualizzare il contenuto in una finestra separata che può essere spostata rispetto alla finestra dell'applicazione corrente.</span><span class="sxs-lookup"><span data-stu-id="38601-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="535ed-102">Procedure relative ai popup</span><span class="sxs-lookup"><span data-stu-id="535ed-102">Popup How-to Topics</span></span>
+<span data-ttu-id="535ed-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.Primitives.Popup> controllo per visualizzare il contenuto in una finestra separata che può essere spostata rispetto alla finestra dell'applicazione corrente.</span><span class="sxs-lookup"><span data-stu-id="535ed-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="38601-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="38601-104">In This Section</span></span>  
- [<span data-ttu-id="38601-105">Animare un controllo Popup</span><span class="sxs-lookup"><span data-stu-id="38601-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [<span data-ttu-id="38601-106">Specificare un posizione personalizzata per un controllo Popup</span><span class="sxs-lookup"><span data-stu-id="38601-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="535ed-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="535ed-104">In This Section</span></span>  
+ [<span data-ttu-id="535ed-105">Animare un controllo Popup</span><span class="sxs-lookup"><span data-stu-id="535ed-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
+ [<span data-ttu-id="535ed-106">Specificare un posizione personalizzata per un controllo Popup</span><span class="sxs-lookup"><span data-stu-id="535ed-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="38601-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="38601-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="535ed-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="535ed-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="38601-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="38601-108">Related Sections</span></span>  
- [<span data-ttu-id="38601-109">Panoramica sul controllo Popup</span><span class="sxs-lookup"><span data-stu-id="38601-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="535ed-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="535ed-108">Related Sections</span></span>  
+ [<span data-ttu-id="535ed-109">Panoramica sul controllo Popup</span><span class="sxs-lookup"><span data-stu-id="535ed-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)

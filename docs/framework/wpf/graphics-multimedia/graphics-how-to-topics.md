@@ -18,24 +18,25 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8717e4e1e54e07109d2e00d9bbf13dbd9d8dde8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03caea0247c387c7787838080cd473ccf2b49b4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="81665-102">Procedure relative alle funzionalità grafiche</span><span class="sxs-lookup"><span data-stu-id="81665-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="81665-103">Gli argomenti seguenti viene illustrato come utilizzare le funzionalità grafiche del [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="81665-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="982e0-102">Procedure relative alle funzionalità grafiche</span><span class="sxs-lookup"><span data-stu-id="982e0-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="982e0-103">Gli argomenti seguenti viene illustrato come utilizzare le funzionalità grafiche del [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="982e0-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="81665-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="81665-104">In This Section</span></span>  
- [<span data-ttu-id="81665-105">Animare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="81665-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="81665-106">Animare la posizione di un oggetto usando PointAnimation</span><span class="sxs-lookup"><span data-stu-id="81665-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="81665-107">Trasformare punti e vettori</span><span class="sxs-lookup"><span data-stu-id="81665-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="81665-108">Estendere l'effetto cristallo a un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="81665-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="81665-109">Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento</span><span class="sxs-lookup"><span data-stu-id="81665-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="81665-110">Procedura: Usare un elemento memorizzato nella cache come pennello</span><span class="sxs-lookup"><span data-stu-id="81665-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="982e0-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="982e0-104">In This Section</span></span>  
+ [<span data-ttu-id="982e0-105">Animare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="982e0-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="982e0-106">Animare la posizione di un oggetto usando PointAnimation</span><span class="sxs-lookup"><span data-stu-id="982e0-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="982e0-107">Trasformare punti e vettori</span><span class="sxs-lookup"><span data-stu-id="982e0-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="982e0-108">Estendere l'effetto cristallo a un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="982e0-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="982e0-109">Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento</span><span class="sxs-lookup"><span data-stu-id="982e0-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="982e0-110">Procedura: Usare un elemento memorizzato nella cache come pennello</span><span class="sxs-lookup"><span data-stu-id="982e0-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="81665-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81665-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="982e0-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="982e0-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="81665-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="81665-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="81665-113">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="81665-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="982e0-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="982e0-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="982e0-113">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="982e0-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

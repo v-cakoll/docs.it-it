@@ -15,28 +15,29 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d99817976d37d4da4429d79032e66fb2908b6c99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 512fdb59998961013a3412c3c85820d1cff2eab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="base-elements-how-to-topics"></a><span data-ttu-id="247a0-102">Procedure relative agli elementi di base</span><span class="sxs-lookup"><span data-stu-id="247a0-102">Base Elements How-to Topics</span></span>
-<span data-ttu-id="247a0-103">Negli argomenti di questa sezione viene descritto come utilizzare i quattro elementi di base di WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>.</span><span class="sxs-lookup"><span data-stu-id="247a0-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
+# <a name="base-elements-how-to-topics"></a><span data-ttu-id="59148-102">Procedure relative agli elementi di base</span><span class="sxs-lookup"><span data-stu-id="59148-102">Base Elements How-to Topics</span></span>
+<span data-ttu-id="59148-103">Negli argomenti di questa sezione viene descritto come utilizzare i quattro elementi di base di WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>.</span><span class="sxs-lookup"><span data-stu-id="59148-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="247a0-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="247a0-104">In This Section</span></span>  
- [<span data-ttu-id="247a0-105">Rendere trasparente o semitrasparente un oggetto UIElement</span><span class="sxs-lookup"><span data-stu-id="247a0-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [<span data-ttu-id="247a0-106">Aggiungere un'animazione alle dimensioni di un oggetto FrameworkElement</span><span class="sxs-lookup"><span data-stu-id="247a0-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [<span data-ttu-id="247a0-107">Determinare se un oggetto Freezable è bloccato</span><span class="sxs-lookup"><span data-stu-id="247a0-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [<span data-ttu-id="247a0-108">Gestire un evento caricato</span><span class="sxs-lookup"><span data-stu-id="247a0-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [<span data-ttu-id="247a0-109">Impostare i margini di elementi e controlli</span><span class="sxs-lookup"><span data-stu-id="247a0-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [<span data-ttu-id="247a0-110">Impostare la proprietà di sola lettura per un oggetto Freezable</span><span class="sxs-lookup"><span data-stu-id="247a0-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [<span data-ttu-id="247a0-111">Ottenere una copia scrivibile di un oggetto Freezable di sola lettura</span><span class="sxs-lookup"><span data-stu-id="247a0-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [<span data-ttu-id="247a0-112">Capovolgere un oggetto UIElement orizzontalmente o verticalmente</span><span class="sxs-lookup"><span data-stu-id="247a0-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [<span data-ttu-id="247a0-113">Usare un oggetto ThicknessConverter</span><span class="sxs-lookup"><span data-stu-id="247a0-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [<span data-ttu-id="247a0-114">Gestire l'evento ContextMenuOpening</span><span class="sxs-lookup"><span data-stu-id="247a0-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="59148-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="59148-104">In This Section</span></span>  
+ [<span data-ttu-id="59148-105">Rendere trasparente o semitrasparente un oggetto UIElement</span><span class="sxs-lookup"><span data-stu-id="59148-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [<span data-ttu-id="59148-106">Aggiungere un'animazione alle dimensioni di un oggetto FrameworkElement</span><span class="sxs-lookup"><span data-stu-id="59148-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
+ [<span data-ttu-id="59148-107">Determinare se un oggetto Freezable è bloccato</span><span class="sxs-lookup"><span data-stu-id="59148-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
+ [<span data-ttu-id="59148-108">Gestire un evento caricato</span><span class="sxs-lookup"><span data-stu-id="59148-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
+ [<span data-ttu-id="59148-109">Impostare i margini di elementi e controlli</span><span class="sxs-lookup"><span data-stu-id="59148-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
+ [<span data-ttu-id="59148-110">Impostare la proprietà di sola lettura per un oggetto Freezable</span><span class="sxs-lookup"><span data-stu-id="59148-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
+ [<span data-ttu-id="59148-111">Ottenere una copia scrivibile di un oggetto Freezable di sola lettura</span><span class="sxs-lookup"><span data-stu-id="59148-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [<span data-ttu-id="59148-112">Capovolgere un oggetto UIElement orizzontalmente o verticalmente</span><span class="sxs-lookup"><span data-stu-id="59148-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [<span data-ttu-id="59148-113">Usare un oggetto ThicknessConverter</span><span class="sxs-lookup"><span data-stu-id="59148-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
+ [<span data-ttu-id="59148-114">Gestire l'evento ContextMenuOpening</span><span class="sxs-lookup"><span data-stu-id="59148-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="247a0-115">Riferimento</span><span class="sxs-lookup"><span data-stu-id="247a0-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="59148-115">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="59148-115">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="247a0-116">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="247a0-116">Related Sections</span></span>  
- [<span data-ttu-id="247a0-117">Elementi di base</span><span class="sxs-lookup"><span data-stu-id="247a0-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)
+## <a name="related-sections"></a><span data-ttu-id="59148-116">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="59148-116">Related Sections</span></span>  
+ [<span data-ttu-id="59148-117">Elementi di base</span><span class="sxs-lookup"><span data-stu-id="59148-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)

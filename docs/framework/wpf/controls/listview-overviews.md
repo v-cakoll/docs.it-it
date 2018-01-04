@@ -17,24 +17,25 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="b63a1-102">Cenni preliminari sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="b63a1-102">ListView Overviews</span></span>
-<span data-ttu-id="b63a1-103">Negli argomenti di questa sezione viene illustrato come utilizzare un <xref:System.Windows.Controls.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="b63a1-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="72be2-102">Cenni preliminari sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="72be2-102">ListView Overviews</span></span>
+<span data-ttu-id="72be2-103">Negli argomenti di questa sezione viene illustrato come utilizzare un <xref:System.Windows.Controls.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="72be2-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b63a1-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b63a1-104">In This Section</span></span>  
- [<span data-ttu-id="b63a1-105">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="b63a1-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="b63a1-106">Cenni preliminari su GridView</span><span class="sxs-lookup"><span data-stu-id="b63a1-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="b63a1-107">Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView</span><span class="sxs-lookup"><span data-stu-id="b63a1-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="72be2-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="72be2-104">In This Section</span></span>  
+ [<span data-ttu-id="72be2-105">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="72be2-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="72be2-106">Cenni preliminari su GridView</span><span class="sxs-lookup"><span data-stu-id="72be2-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="72be2-107">Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView</span><span class="sxs-lookup"><span data-stu-id="72be2-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="b63a1-108">Riferimento</span><span class="sxs-lookup"><span data-stu-id="b63a1-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="72be2-108">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="72be2-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="b63a1-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b63a1-109">Related Sections</span></span>  
- [<span data-ttu-id="b63a1-110">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="b63a1-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="72be2-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="72be2-109">Related Sections</span></span>  
+ [<span data-ttu-id="72be2-110">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="72be2-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

@@ -18,18 +18,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d0238c2c1606358a8cc2374e209a8f385c4d0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd43baee7ed7ab75a85775a4abecf38aa41faf93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="fbe39-102">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="fbe39-102">How-to Topics</span></span>
-<span data-ttu-id="fbe39-103">Gli argomenti seguenti viene illustrato come creare [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="fbe39-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="23766-102">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="23766-102">How-to Topics</span></span>
+<span data-ttu-id="23766-103">Gli argomenti seguenti viene illustrato come creare [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="23766-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="fbe39-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="fbe39-104">In This Section</span></span>  
- [<span data-ttu-id="fbe39-105">Creare un componente aggiuntivo che restituisca un'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="fbe39-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="fbe39-106">Creare un componente aggiuntivo che costituisca un'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="fbe39-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="23766-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="23766-104">In This Section</span></span>  
+ [<span data-ttu-id="23766-105">Creare un componente aggiuntivo che restituisca un'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="23766-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="23766-106">Creare un componente aggiuntivo che costituisca un'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="23766-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="fbe39-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="fbe39-107">Related Sections</span></span>  
- [<span data-ttu-id="fbe39-108">Cenni preliminari sui componenti aggiuntivi di WPF</span><span class="sxs-lookup"><span data-stu-id="fbe39-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="23766-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="23766-107">Related Sections</span></span>  
+ [<span data-ttu-id="23766-108">Cenni preliminari sui componenti aggiuntivi di WPF</span><span class="sxs-lookup"><span data-stu-id="23766-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

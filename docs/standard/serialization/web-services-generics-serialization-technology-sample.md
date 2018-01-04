@@ -12,69 +12,72 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0ec4f05fd68c523bcffcb9173de7e66d0dcc9a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="web-services-generics-serialization-technology-sample"></a><span data-ttu-id="59734-102">Esempio di tecnologia per la serializzazione di generics dei servizi Web</span><span class="sxs-lookup"><span data-stu-id="59734-102">Web Services Generics Serialization Technology Sample</span></span>
-[<span data-ttu-id="59734-103">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="59734-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+# <a name="web-services-generics-serialization-technology-sample"></a><span data-ttu-id="59225-102">Esempio di tecnologia per la serializzazione di generics dei servizi Web</span><span class="sxs-lookup"><span data-stu-id="59225-102">Web Services Generics Serialization Technology Sample</span></span>
+[<span data-ttu-id="59225-103">Scaricare l'esempio</span><span class="sxs-lookup"><span data-stu-id="59225-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
- <span data-ttu-id="59734-104">In questo esempio viene illustrato come utilizzare e controllare la serializzazione di generics nei servizi Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="59734-104">This sample shows how to use and control the serialization of generics in ASP.NET Web Services.</span></span>  
+ <span data-ttu-id="59225-104">In questo esempio viene illustrato come utilizzare e controllare la serializzazione di generics nei servizi Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="59225-104">This sample shows how to use and control the serialization of generics in ASP.NET Web Services.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="59734-105">Per compilare l'esempio utilizzando Visual Studio</span><span class="sxs-lookup"><span data-stu-id="59734-105">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="59225-105">Per compilare l'esempio utilizzando Visual Studio</span><span class="sxs-lookup"><span data-stu-id="59225-105">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="59734-106">Aprire Visual Studio e scegliere **Nuovo sito Web** dal menu **File**.</span><span class="sxs-lookup"><span data-stu-id="59734-106">Open Visual Studio and select **New Web Site** from the **File** menu.</span></span>  
+1.  <span data-ttu-id="59225-106">Aprire Visual Studio e scegliere **Nuovo sito Web** dal menu **File**.</span><span class="sxs-lookup"><span data-stu-id="59225-106">Open Visual Studio and select **New Web Site** from the **File** menu.</span></span>  
   
-2.  <span data-ttu-id="59734-107">Nel riquadro sinistro della finestra di dialogo **Nuovo sito Web** scegliere il linguaggio di programmazione desiderato e quindi nel riquadro destro selezionare **Servizio Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="59734-107">In the **New Web Site** dialog, select from the left pane your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
+2.  <span data-ttu-id="59225-107">Nel riquadro sinistro della finestra di dialogo **Nuovo sito Web** scegliere il linguaggio di programmazione desiderato e quindi nel riquadro destro selezionare **Servizio Web ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="59225-107">In the **New Web Site** dialog, select from the left pane your desired programming language, then from the right pane, select **ASP.NET Web Service**.</span></span>  
   
-3.  <span data-ttu-id="59734-108">Fare clic su **Sfoglia** e passare alla sottodirectory \CS\GenericsService.</span><span class="sxs-lookup"><span data-stu-id="59734-108">Click **Browse** and navigate to the \CS\GenericsService subdirectory.</span></span>  
+3.  <span data-ttu-id="59225-108">Fare clic su **Sfoglia** e passare alla sottodirectory \CS\GenericsService.</span><span class="sxs-lookup"><span data-stu-id="59225-108">Click **Browse** and navigate to the \CS\GenericsService subdirectory.</span></span>  
   
-4.  <span data-ttu-id="59734-109">Selezionare il file Service.asmx per aprirlo in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="59734-109">Select Service.asmx to open the file in Visual Studio.</span></span>  
+4.  <span data-ttu-id="59225-109">Selezionare il file Service.asmx per aprirlo in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="59225-109">Select Service.asmx to open the file in Visual Studio.</span></span>  
   
-5.  <span data-ttu-id="59734-110">Scegliere **Compila soluzione** dal menu **Compila**.</span><span class="sxs-lookup"><span data-stu-id="59734-110">On the **Build** menu, click **Build Solution**.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="59734-111">I primi cinque passaggi di questo elenco sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="59734-111">The first five steps in this list are optional.</span></span> <span data-ttu-id="59734-112">Il runtime di .NET Framework genererà automaticamente il servizio Web la prima volta che verrà richiesto.</span><span class="sxs-lookup"><span data-stu-id="59734-112">The .NET Framework runtime will automatically generate the Web service the first time the service is requested.</span></span>  
+5.  <span data-ttu-id="59225-110">Scegliere **Compila soluzione** dal menu **Compila**.</span><span class="sxs-lookup"><span data-stu-id="59225-110">On the **Build** menu, click **Build Solution**.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="59734-113">Di seguito sono indicati i passaggi necessari per compilare l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59734-113">The following steps are required to build the sample.</span></span>  
+>  <span data-ttu-id="59225-111">I primi cinque passaggi di questo elenco sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="59225-111">The first five steps in this list are optional.</span></span> <span data-ttu-id="59225-112">Il runtime di .NET Framework genererà automaticamente il servizio Web la prima volta che verrà richiesto.</span><span class="sxs-lookup"><span data-stu-id="59225-112">The .NET Framework runtime will automatically generate the Web service the first time the service is requested.</span></span>  
   
-1.  <span data-ttu-id="59734-114">Aprire [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], quindi spostarsi nella sottodirectory \CS.</span><span class="sxs-lookup"><span data-stu-id="59734-114">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the \CS subdirectory.</span></span>  
+> [!NOTE]
+>  <span data-ttu-id="59225-113">Di seguito sono indicati i passaggi necessari per compilare l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59225-113">The following steps are required to build the sample.</span></span>  
   
-2.  <span data-ttu-id="59734-115">Fare clic con il pulsante destro del mouse sull'icona della sottodirectory GenericsService e quindi scegliere **Condivisione e sicurezza**.</span><span class="sxs-lookup"><span data-stu-id="59734-115">Right-click the icon for the GenericsService subdirectory, and select **Sharing and Security**.</span></span>  
+1.  <span data-ttu-id="59225-114">Aprire [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], quindi spostarsi nella sottodirectory \CS.</span><span class="sxs-lookup"><span data-stu-id="59225-114">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to the \CS subdirectory.</span></span>  
   
-3.  <span data-ttu-id="59734-116">Nella scheda **Condivisione Web** selezionare **Condividi questa cartella**.</span><span class="sxs-lookup"><span data-stu-id="59734-116">In the **Web Sharing** tab, select **Share this Folder**.</span></span>  
+2.  <span data-ttu-id="59225-115">Fare clic con il pulsante destro del mouse sull'icona della sottodirectory GenericsService e quindi scegliere **Condivisione e sicurezza**.</span><span class="sxs-lookup"><span data-stu-id="59225-115">Right-click the icon for the GenericsService subdirectory, and select **Sharing and Security**.</span></span>  
   
-> [!IMPORTANT]
->  <span data-ttu-id="59734-117">Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59734-117">Take note of the virtual directory name that is listed in the **Aliases** pane, because you will need it to run the sample.</span></span>  
-  
-### <a name="to-build-the-sample-using-internet-information-services"></a><span data-ttu-id="59734-118">Per compilare l'esempio utilizzando Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="59734-118">To build the sample using Internet Information Services</span></span>  
-  
-1.  <span data-ttu-id="59734-119">Aprire lo snap-in di gestione **Internet Information Services** ed espandere **Siti Web**.</span><span class="sxs-lookup"><span data-stu-id="59734-119">Open the **Internet Information Services** management snap-in and expand **Web Sites**.</span></span>  
-  
-2.  <span data-ttu-id="59734-120">Fare clic su **Sito Web predefinito**, selezionare **Nuovo** e quindi selezionare **Directory virtuale** per avviare la **Creazione guidata Directory virtuale**.</span><span class="sxs-lookup"><span data-stu-id="59734-120">Left-click **Default Web Site**, select **New**, and then select **Virtual Directory?** to create the **Virtual Directory Creation Wizard**.</span></span>  
-  
-3.  <span data-ttu-id="59734-121">Fare clic su **Avanti**, immettere l'alias pubblico per la directory virtuale e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="59734-121">Click **Next**, enter the public alias for your virtual directory, and click **Next**.</span></span>  
-  
-4.  <span data-ttu-id="59734-122">Immettere il percorso della directory in cui è stato salvato l'esempio (generalmente la sottodirectory \CS\GenericsService) e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="59734-122">Enter the path to the directory where you saved the sample (normally the \CS\GenericsService subdirectory) and click **Next**.</span></span> <span data-ttu-id="59734-123">Fare clic su **Avanti** per terminare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="59734-123">Click **Next** to finish the wizard.</span></span>  
+3.  <span data-ttu-id="59225-116">Nella scheda **Condivisione Web** selezionare **Condividi questa cartella**.</span><span class="sxs-lookup"><span data-stu-id="59225-116">In the **Web Sharing** tab, select **Share this Folder**.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="59734-124">Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59734-124">Take note of the virtual directory name that is listed in the **Alias** pane, because you will need it to run the sample.</span></span>  
+>  <span data-ttu-id="59225-117">Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59225-117">Take note of the virtual directory name that is listed in the **Aliases** pane, because you will need it to run the sample.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="59734-125">Per eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="59734-125">To run the sample</span></span>  
+### <a name="to-build-the-sample-using-internet-information-services"></a><span data-ttu-id="59225-118">Per compilare l'esempio utilizzando Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="59225-118">To build the sample using Internet Information Services</span></span>  
   
-1.  <span data-ttu-id="59734-126">Aprire una finestra del browser, quindi fare clic sulla barra degli indirizzi.</span><span class="sxs-lookup"><span data-stu-id="59734-126">Open a browser window and select its address bar.</span></span>  
+1.  <span data-ttu-id="59225-119">Aprire lo snap-in di gestione **Internet Information Services** ed espandere **Siti Web**.</span><span class="sxs-lookup"><span data-stu-id="59225-119">Open the **Internet Information Services** management snap-in and expand **Web Sites**.</span></span>  
   
-2.  <span data-ttu-id="59734-127">Digitare **http://localhost/[directory virtuale]/Service.asmx**, dove [directory virtuale] rappresenta la directory virtuale creata al momento della compilazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="59734-127">Type **http://localhost/[virtual directory]/Service.asmx**, where [virtual directory] represents the virtual directory you created when you built the sample.</span></span>  
+2.  <span data-ttu-id="59225-120">Fare clic su **Sito Web predefinito**, selezionare **Nuovo** e quindi selezionare **Directory virtuale** per avviare la **Creazione guidata Directory virtuale**.</span><span class="sxs-lookup"><span data-stu-id="59225-120">Left-click **Default Web Site**, select **New**, and then select **Virtual Directory?** to create the **Virtual Directory Creation Wizard**.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59734-128">Note</span><span class="sxs-lookup"><span data-stu-id="59734-128">Remarks</span></span>  
- <span data-ttu-id="59734-129">Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web.</span><span class="sxs-lookup"><span data-stu-id="59734-129">The sample displays a default ASP.NET page that contains links to the definition of the Web Service.</span></span> <span data-ttu-id="59734-130">Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="59734-130">You can customize the display in addition to modifying the source code for the Web service.</span></span> <span data-ttu-id="59734-131">Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c).</span><span class="sxs-lookup"><span data-stu-id="59734-131">For more information, see [Building XML Web Service Clients](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c).</span></span>  
+3.  <span data-ttu-id="59225-121">Fare clic su **Avanti**, immettere l'alias pubblico per la directory virtuale e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="59225-121">Click **Next**, enter the public alias for your virtual directory, and click **Next**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59734-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="59734-132">See Also</span></span>  
+4.  <span data-ttu-id="59225-122">Immettere il percorso della directory in cui è stato salvato l'esempio (generalmente la sottodirectory \CS\GenericsService) e fare clic su **Avanti**.</span><span class="sxs-lookup"><span data-stu-id="59225-122">Enter the path to the directory where you saved the sample (normally the \CS\GenericsService subdirectory) and click **Next**.</span></span> <span data-ttu-id="59225-123">Fare clic su **Avanti** per terminare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="59225-123">Click **Next** to finish the wizard.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="59225-124">Prendere nota del nome della directory virtuale indicato nel riquadro **Alias** in quanto servirà per eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="59225-124">Take note of the virtual directory name that is listed in the **Alias** pane, because you will need it to run the sample.</span></span>  
+  
+### <a name="to-run-the-sample"></a><span data-ttu-id="59225-125">Per eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="59225-125">To run the sample</span></span>  
+  
+1.  <span data-ttu-id="59225-126">Aprire una finestra del browser, quindi fare clic sulla barra degli indirizzi.</span><span class="sxs-lookup"><span data-stu-id="59225-126">Open a browser window and select its address bar.</span></span>  
+  
+2.  <span data-ttu-id="59225-127">Digitare **http://localhost/[directory virtuale]/Service.asmx**, dove [directory virtuale] rappresenta la directory virtuale creata al momento della compilazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="59225-127">Type **http://localhost/[virtual directory]/Service.asmx**, where [virtual directory] represents the virtual directory you created when you built the sample.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="59225-128">Note</span><span class="sxs-lookup"><span data-stu-id="59225-128">Remarks</span></span>  
+ <span data-ttu-id="59225-129">Nell'esempio viene visualizzata una pagina ASP.NET predefinita che contiene collegamenti alla definizione del servizio Web.</span><span class="sxs-lookup"><span data-stu-id="59225-129">The sample displays a default ASP.NET page that contains links to the definition of the Web Service.</span></span> <span data-ttu-id="59225-130">Oltre a modificare il codice sorgente per il servizio Web, è possibile personalizzare la visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="59225-130">You can customize the display in addition to modifying the source code for the Web service.</span></span> <span data-ttu-id="59225-131">Per altre informazioni, vedere [Compilazione di client dei servizi Web XML](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c).</span><span class="sxs-lookup"><span data-stu-id="59225-131">For more information, see [Building XML Web Service Clients](http://msdn.microsoft.com/en-us/c606f3cb-4111-45b4-ae42-9300420fa16c).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="59225-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="59225-132">See Also</span></span>  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
- [<span data-ttu-id="59734-133">Serializzazione</span><span class="sxs-lookup"><span data-stu-id="59734-133">Serialization</span></span>](../../../docs/standard/serialization/index.md)  
- [<span data-ttu-id="59734-134">Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML</span><span class="sxs-lookup"><span data-stu-id="59734-134">XML Web Services Created Using ASP.NET and XML Web Service Clients</span></span>](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)
+ [<span data-ttu-id="59225-133">Serializzazione</span><span class="sxs-lookup"><span data-stu-id="59225-133">Serialization</span></span>](../../../docs/standard/serialization/index.md)  
+ [<span data-ttu-id="59225-134">Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML</span><span class="sxs-lookup"><span data-stu-id="59225-134">XML Web Services Created Using ASP.NET and XML Web Service Clients</span></span>](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)

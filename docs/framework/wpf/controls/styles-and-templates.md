@@ -17,25 +17,26 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="17234-102">Stili e modelli</span><span class="sxs-lookup"><span data-stu-id="17234-102">Styles and Templates</span></span>
-<span data-ttu-id="17234-103">Lo stile di Windows Presentation Foundation (WPF) e i modelli fa riferimento a un gruppo di funzionalità (stili, modelli, trigger e storyboard) che consente a un'applicazione, documento o finestra di progettazione dell'interfaccia utente di creare applicazioni visivamente accattivanti e per standardizzare un aspetto particolare per il prodotto.</span><span class="sxs-lookup"><span data-stu-id="17234-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="3ac8a-102">Stili e modelli</span><span class="sxs-lookup"><span data-stu-id="3ac8a-102">Styles and Templates</span></span>
+<span data-ttu-id="3ac8a-103">Lo stile di Windows Presentation Foundation (WPF) e i modelli fa riferimento a un gruppo di funzionalità (stili, modelli, trigger e storyboard) che consente a un'applicazione, documento o finestra di progettazione dell'interfaccia utente di creare applicazioni visivamente accattivanti e per standardizzare un aspetto particolare per il prodotto.</span><span class="sxs-lookup"><span data-stu-id="3ac8a-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="17234-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="17234-104">In This Section</span></span>  
- [<span data-ttu-id="17234-105">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="17234-105">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="17234-106">Procedura: trovare elementi generati da un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="17234-106">How to: Find ControlTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3ac8a-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="3ac8a-104">In This Section</span></span>  
+ [<span data-ttu-id="3ac8a-105">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="3ac8a-105">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [<span data-ttu-id="3ac8a-106">Procedura: trovare elementi generati da un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="3ac8a-106">How to: Find ControlTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="17234-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="17234-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3ac8a-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="3ac8a-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="17234-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="17234-108">Related Sections</span></span>  
- [<span data-ttu-id="17234-109">Avanzate</span><span class="sxs-lookup"><span data-stu-id="17234-109">Advanced</span></span>](../../../../docs/framework/wpf/advanced/index.md)  
-  [<span data-ttu-id="17234-110">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="17234-110">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [<span data-ttu-id="17234-111">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="17234-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="3ac8a-108">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="3ac8a-108">Related Sections</span></span>  
+ [<span data-ttu-id="3ac8a-109">Avanzate</span><span class="sxs-lookup"><span data-stu-id="3ac8a-109">Advanced</span></span>](../../../../docs/framework/wpf/advanced/index.md)  
+  [<span data-ttu-id="3ac8a-110">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="3ac8a-110">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+  [<span data-ttu-id="3ac8a-111">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="3ac8a-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Immagine
+title: Image
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,25 +17,26 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769c40434ecb0ac1bbae63f1697e5005c0de875b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 096773fd8cb303cc504bc956d500e8f1e55cda00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="image"></a><span data-ttu-id="21cf5-102">Immagine</span><span class="sxs-lookup"><span data-stu-id="21cf5-102">Image</span></span>
-<span data-ttu-id="21cf5-103">Il <xref:System.Windows.Controls.Image> elemento viene usato per visualizzare le immagini bitmap in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="21cf5-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="08630-102">Image</span><span class="sxs-lookup"><span data-stu-id="08630-102">Image</span></span>
+<span data-ttu-id="08630-103">Il <xref:System.Windows.Controls.Image> elemento viene usato per visualizzare le immagini bitmap in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="08630-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="21cf5-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="21cf5-104">In This Section</span></span>  
- [<span data-ttu-id="21cf5-105">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="21cf5-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="08630-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="08630-104">In This Section</span></span>  
+ [<span data-ttu-id="08630-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="08630-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="21cf5-106">Riferimento</span><span class="sxs-lookup"><span data-stu-id="21cf5-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="08630-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="08630-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="21cf5-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="21cf5-107">See Also</span></span>  
- [<span data-ttu-id="21cf5-108">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="21cf5-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="21cf5-109">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="21cf5-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="08630-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08630-107">See Also</span></span>  
+ [<span data-ttu-id="08630-108">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="08630-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="08630-109">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="08630-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

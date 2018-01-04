@@ -16,21 +16,24 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd2d78e675ebc67cc2e49f5bc7141558d462a3e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5b2c25728903e4a193a15e6586fffe528ecb7c7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="common-design-patterns"></a><span data-ttu-id="b8293-102">Modelli di progettazione comuni</span><span class="sxs-lookup"><span data-stu-id="b8293-102">Common Design Patterns</span></span>
-<span data-ttu-id="b8293-103">Sono disponibili numerose pubblicazioni su modelli di software, lingue di modello e antipatterns che consentono di risolvere l'oggetto molto ampia di modelli.</span><span class="sxs-lookup"><span data-stu-id="b8293-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="b8293-104">Di conseguenza, questo capitolo vengono fornite linee guida e informazioni correlate a un set molto limitato di modelli utilizzati di frequente nella progettazione delle API .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b8293-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
+# <a name="common-design-patterns"></a><span data-ttu-id="e0068-102">Modelli di progettazione comuni</span><span class="sxs-lookup"><span data-stu-id="e0068-102">Common Design Patterns</span></span>
+<span data-ttu-id="e0068-103">Sono disponibili numerose pubblicazioni su modelli di software, lingue di modello e antipatterns che consentono di risolvere l'oggetto molto ampia di modelli.</span><span class="sxs-lookup"><span data-stu-id="e0068-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="e0068-104">Di conseguenza, questo capitolo vengono fornite linee guida e informazioni correlate a un set molto limitato di modelli utilizzati di frequente nella progettazione delle API .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e0068-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b8293-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b8293-105">In This Section</span></span>  
- [<span data-ttu-id="b8293-106">Proprietà di dipendenza</span><span class="sxs-lookup"><span data-stu-id="b8293-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [<span data-ttu-id="b8293-107">Modello Dispose</span><span class="sxs-lookup"><span data-stu-id="b8293-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
- <span data-ttu-id="b8293-108">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="b8293-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e0068-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="e0068-105">In This Section</span></span>  
+ [<span data-ttu-id="e0068-106">Proprietà di dipendenza</span><span class="sxs-lookup"><span data-stu-id="e0068-106">Dependency Properties</span></span>](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [<span data-ttu-id="e0068-107">Criterio Dispose</span><span class="sxs-lookup"><span data-stu-id="e0068-107">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)  
+ <span data-ttu-id="e0068-108">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="e0068-108">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="b8293-109">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="b8293-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="e0068-109">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="e0068-109">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8293-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8293-110">See Also</span></span>  
- [<span data-ttu-id="b8293-111">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="b8293-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0068-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e0068-110">See Also</span></span>  
+ [<span data-ttu-id="e0068-111">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="e0068-111">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

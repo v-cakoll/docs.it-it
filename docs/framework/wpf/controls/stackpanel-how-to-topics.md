@@ -17,21 +17,22 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d010e83b0bc5a3e69f8a0c205247681d2bb3d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a947e1e7ccfe31ffcb638f8e09aae5cdd594b449
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="9d43d-102">Procedure relative all'elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="9d43d-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="9d43d-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.StackPanel> elemento dello stack contenuto orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="9d43d-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="8c3c9-102">Procedure relative all'elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="8c3c9-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="8c3c9-103">Negli argomenti di questa sezione viene illustrato come utilizzare il <xref:System.Windows.Controls.StackPanel> elemento dello stack contenuto orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="8c3c9-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d43d-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="9d43d-104">In This Section</span></span>  
- [<span data-ttu-id="9d43d-105">Scegliere tra StackPanel e DockPanel</span><span class="sxs-lookup"><span data-stu-id="9d43d-105">Choose Between StackPanel and DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="9d43d-106">Creare uno StackPanel</span><span class="sxs-lookup"><span data-stu-id="9d43d-106">Create a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="9d43d-107">Allineare orizzontalmente o verticalmente il contenuto in un elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="9d43d-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8c3c9-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8c3c9-104">In This Section</span></span>  
+ [<span data-ttu-id="8c3c9-105">Scegliere tra StackPanel e DockPanel</span><span class="sxs-lookup"><span data-stu-id="8c3c9-105">Choose Between StackPanel and DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="8c3c9-106">Creare uno StackPanel</span><span class="sxs-lookup"><span data-stu-id="8c3c9-106">Create a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="8c3c9-107">Allineare orizzontalmente o verticalmente il contenuto in un elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="8c3c9-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="9d43d-108">Riferimento</span><span class="sxs-lookup"><span data-stu-id="9d43d-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8c3c9-108">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="8c3c9-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -46,9 +47,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="9d43d-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="9d43d-109">Related Sections</span></span>  
- [<span data-ttu-id="9d43d-110">Layout</span><span class="sxs-lookup"><span data-stu-id="9d43d-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="8c3c9-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="8c3c9-109">Related Sections</span></span>  
+ [<span data-ttu-id="8c3c9-110">Layout</span><span class="sxs-lookup"><span data-stu-id="8c3c9-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="9d43d-111">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="9d43d-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="8c3c9-111">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="8c3c9-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="9d43d-112">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="9d43d-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="8c3c9-112">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="8c3c9-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -19,23 +19,24 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="45de2-102">Procedure relative agli oggetti Shape</span><span class="sxs-lookup"><span data-stu-id="45de2-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="45de2-103">Negli argomenti di questa sezione viene illustrato come utilizzare <xref:System.Windows.Shapes.Shape> oggetti per disegnare forme di base sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="45de2-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="d1cdf-102">Procedure relative agli oggetti Shape</span><span class="sxs-lookup"><span data-stu-id="d1cdf-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="d1cdf-103">Negli argomenti di questa sezione viene illustrato come utilizzare <xref:System.Windows.Shapes.Shape> oggetti per disegnare forme di base sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="d1cdf-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="45de2-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="45de2-104">In This Section</span></span>  
- [<span data-ttu-id="45de2-105">Disegnare una forma chiusa usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="45de2-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="45de2-106">Disegnare un'ellisse o un cerchio</span><span class="sxs-lookup"><span data-stu-id="45de2-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="45de2-107">Disegnare una linea</span><span class="sxs-lookup"><span data-stu-id="45de2-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [<span data-ttu-id="45de2-108">Disegnare una polilinea usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="45de2-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="45de2-109">Disegnare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="45de2-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="45de2-110">Modificare il delimitatore alla fine di una linea o di un segmento</span><span class="sxs-lookup"><span data-stu-id="45de2-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d1cdf-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d1cdf-104">In This Section</span></span>  
+ [<span data-ttu-id="d1cdf-105">Disegnare una forma chiusa usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="d1cdf-105">Draw a Closed Shape by Using the Polygon Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="d1cdf-106">Disegnare un'ellisse o un cerchio</span><span class="sxs-lookup"><span data-stu-id="d1cdf-106">Draw an Ellipse or a Circle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="d1cdf-107">Disegnare una linea</span><span class="sxs-lookup"><span data-stu-id="d1cdf-107">Draw a Line</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [<span data-ttu-id="d1cdf-108">Disegnare una polilinea usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="d1cdf-108">Draw a Polyline by Using the Polyline Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="d1cdf-109">Disegnare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="d1cdf-109">Draw a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="d1cdf-110">Modificare il delimitatore alla fine di una linea o di un segmento</span><span class="sxs-lookup"><span data-stu-id="d1cdf-110">Modify the Cap at the End of a Line or Segment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="45de2-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="45de2-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d1cdf-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d1cdf-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="45de2-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="45de2-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="d1cdf-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d1cdf-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

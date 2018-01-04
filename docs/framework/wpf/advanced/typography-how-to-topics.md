@@ -15,27 +15,28 @@ caps.latest.revision: "90"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecb85c1cb6bca654433ccddfb895bc361a4e2b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd866c67a5885a378dace6e14e280b5efe630695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="b66ae-102">Procedure relative alla tipografia</span><span class="sxs-lookup"><span data-stu-id="b66ae-102">Typography How-to Topics</span></span>
-<span data-ttu-id="b66ae-103">Negli argomenti di questa sezione viene illustrato come utilizzare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] il supporto per la presentazione avanzata del testo nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="b66ae-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="0b805-102">Procedure relative alla tipografia</span><span class="sxs-lookup"><span data-stu-id="0b805-102">Typography How-to Topics</span></span>
+<span data-ttu-id="0b805-103">Negli argomenti di questa sezione viene illustrato come utilizzare [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] il supporto per la presentazione avanzata del testo nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="0b805-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b66ae-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b66ae-104">In This Section</span></span>  
- [<span data-ttu-id="b66ae-105">Creare un effetto di testo</span><span class="sxs-lookup"><span data-stu-id="b66ae-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="b66ae-106">Specificare se un collegamento ipertestuale è sottolineato</span><span class="sxs-lookup"><span data-stu-id="b66ae-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="b66ae-107">Applicare trasformazioni al testo</span><span class="sxs-lookup"><span data-stu-id="b66ae-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="b66ae-108">Applicare animazioni al testo</span><span class="sxs-lookup"><span data-stu-id="b66ae-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="b66ae-109">Creare un testo con un'ombreggiatura</span><span class="sxs-lookup"><span data-stu-id="b66ae-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="b66ae-110">Creare testo con contorni</span><span class="sxs-lookup"><span data-stu-id="b66ae-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [<span data-ttu-id="b66ae-111">Disegnare un testo sullo sfondo di un controllo</span><span class="sxs-lookup"><span data-stu-id="b66ae-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="b66ae-112">Disegnare testo in un oggetto Visual</span><span class="sxs-lookup"><span data-stu-id="b66ae-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="b66ae-113">Usare caratteri speciali in XAML</span><span class="sxs-lookup"><span data-stu-id="b66ae-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0b805-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="0b805-104">In This Section</span></span>  
+ [<span data-ttu-id="0b805-105">Creare un effetto di testo</span><span class="sxs-lookup"><span data-stu-id="0b805-105">Create a Text Decoration</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="0b805-106">Specificare se un collegamento ipertestuale è sottolineato</span><span class="sxs-lookup"><span data-stu-id="0b805-106">Specify Whether a Hyperlink is Underlined</span></span>](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="0b805-107">Applicare trasformazioni al testo</span><span class="sxs-lookup"><span data-stu-id="0b805-107">Apply Transforms to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="0b805-108">Applicare animazioni al testo</span><span class="sxs-lookup"><span data-stu-id="0b805-108">Apply Animations to Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="0b805-109">Creare un testo con un'ombreggiatura</span><span class="sxs-lookup"><span data-stu-id="0b805-109">Create Text with a Shadow</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="0b805-110">Creare testo con contorni</span><span class="sxs-lookup"><span data-stu-id="0b805-110">Create Outlined Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [<span data-ttu-id="0b805-111">Disegnare un testo sullo sfondo di un controllo</span><span class="sxs-lookup"><span data-stu-id="0b805-111">Draw Text to a Control's Background</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="0b805-112">Disegnare testo in un oggetto Visual</span><span class="sxs-lookup"><span data-stu-id="0b805-112">Draw Text to a Visual</span></span>](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="0b805-113">Usare caratteri speciali in XAML</span><span class="sxs-lookup"><span data-stu-id="0b805-113">Use Special Characters in XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b66ae-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b66ae-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0b805-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0b805-114">See Also</span></span>  
  <xref:System.Windows.Documents.Typography>  
- [<span data-ttu-id="b66ae-115">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="b66ae-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="b66ae-116">Funzionalità dei tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="b66ae-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+ [<span data-ttu-id="0b805-115">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="0b805-115">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="0b805-116">Funzionalità dei tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="0b805-116">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

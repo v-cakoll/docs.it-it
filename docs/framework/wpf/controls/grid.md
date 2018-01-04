@@ -18,19 +18,20 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58d4bb7974da8f68d7711ec27c914ecac2bb4f93
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e380f239b85eaa743ceec998c866fdfe07e7c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="grid"></a><span data-ttu-id="29153-102">Grid</span><span class="sxs-lookup"><span data-stu-id="29153-102">Grid</span></span>
-<span data-ttu-id="29153-103">Il <xref:System.Windows.Controls.Grid> elemento viene usato per posizionare con precisione il contenuto in righe e colonne.</span><span class="sxs-lookup"><span data-stu-id="29153-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="741f8-102">Grid</span><span class="sxs-lookup"><span data-stu-id="741f8-102">Grid</span></span>
+<span data-ttu-id="741f8-103">Il <xref:System.Windows.Controls.Grid> elemento viene usato per posizionare con precisione il contenuto in righe e colonne.</span><span class="sxs-lookup"><span data-stu-id="741f8-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="29153-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="29153-104">In This Section</span></span>  
- [<span data-ttu-id="29153-105">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="29153-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="741f8-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="741f8-104">In This Section</span></span>  
+ [<span data-ttu-id="741f8-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="741f8-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="29153-106">Riferimento</span><span class="sxs-lookup"><span data-stu-id="29153-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="741f8-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="741f8-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -45,9 +46,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="29153-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="29153-107">Related Sections</span></span>  
- [<span data-ttu-id="29153-108">Layout</span><span class="sxs-lookup"><span data-stu-id="29153-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="741f8-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="741f8-107">Related Sections</span></span>  
+ [<span data-ttu-id="741f8-108">Layout</span><span class="sxs-lookup"><span data-stu-id="741f8-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="29153-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="29153-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="741f8-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="741f8-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="29153-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="29153-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="741f8-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="741f8-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

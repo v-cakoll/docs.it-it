@@ -23,22 +23,23 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e37c830e8f5290584db8320b041e05ac74839b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45207de8b2e98dd1bd13879f8bbee1fdaf80aa24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drawings"></a><span data-ttu-id="dad1f-102">Oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="dad1f-102">Drawings</span></span>
-<span data-ttu-id="dad1f-103"><xref:System.Windows.Media.Drawing>gli oggetti vengono utilizzati per creare in modo efficace le forme, immagini o testo.</span><span class="sxs-lookup"><span data-stu-id="dad1f-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="dad1f-104">Disegni vengono utilizzati quando si disegna con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.</span><span class="sxs-lookup"><span data-stu-id="dad1f-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="743c8-102">Oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="743c8-102">Drawings</span></span>
+<span data-ttu-id="743c8-103"><xref:System.Windows.Media.Drawing>gli oggetti vengono utilizzati per creare in modo efficace le forme, immagini o testo.</span><span class="sxs-lookup"><span data-stu-id="743c8-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="743c8-104">Disegni vengono utilizzati quando si disegna con un <xref:System.Windows.Media.DrawingBrush> o di programmazione con <xref:System.Windows.Media.Visual> oggetti.</span><span class="sxs-lookup"><span data-stu-id="743c8-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dad1f-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="dad1f-105">In This Section</span></span>  
- [<span data-ttu-id="dad1f-106">Cenni preliminari sugli oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="dad1f-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [<span data-ttu-id="dad1f-107">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="dad1f-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="743c8-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="743c8-105">In This Section</span></span>  
+ [<span data-ttu-id="743c8-106">Cenni preliminari sugli oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="743c8-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+  [<span data-ttu-id="743c8-107">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="743c8-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="dad1f-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dad1f-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="743c8-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="743c8-108">See Also</span></span>  
  <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="dad1f-109">Grafica bidimensionale e creazione di immagini</span><span class="sxs-lookup"><span data-stu-id="dad1f-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="dad1f-110">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="dad1f-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="dad1f-111">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="dad1f-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="dad1f-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="dad1f-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="743c8-109">Grafica bidimensionale e creazione di immagini</span><span class="sxs-lookup"><span data-stu-id="743c8-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="743c8-110">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="743c8-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="743c8-111">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="743c8-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="743c8-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="743c8-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

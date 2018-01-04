@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa8d4fba67227e9ca1e3971ea9dc983a5054e08e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6a46884b056b5ba3bc768deb0725f96386fea84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="documentviewer"></a><span data-ttu-id="e882e-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="e882e-102">DocumentViewer</span></span>
-<span data-ttu-id="e882e-103">Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FixedDocument> contenuto (ad esempio [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documenti) in un formato impaginato.</span><span class="sxs-lookup"><span data-stu-id="e882e-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="a4243-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="a4243-102">DocumentViewer</span></span>
+<span data-ttu-id="a4243-103">Il <xref:System.Windows.Controls.DocumentViewer> controllo consente di visualizzare <xref:System.Windows.Documents.FixedDocument> contenuto (ad esempio [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documenti) in un formato impaginato.</span><span class="sxs-lookup"><span data-stu-id="a4243-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e882e-104">Riferimento</span><span class="sxs-lookup"><span data-stu-id="e882e-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a4243-104">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="a4243-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="e882e-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e882e-105">See Also</span></span>  
- [<span data-ttu-id="e882e-106">Documenti</span><span class="sxs-lookup"><span data-stu-id="e882e-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="e882e-107">Serializzazione e archiviazione di documenti</span><span class="sxs-lookup"><span data-stu-id="e882e-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="e882e-108">Panoramica della stampa</span><span class="sxs-lookup"><span data-stu-id="e882e-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a4243-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4243-105">See Also</span></span>  
+ [<span data-ttu-id="a4243-106">Documenti</span><span class="sxs-lookup"><span data-stu-id="a4243-106">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
+ [<span data-ttu-id="a4243-107">Serializzazione e archiviazione di documenti</span><span class="sxs-lookup"><span data-stu-id="a4243-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [<span data-ttu-id="a4243-108">Panoramica della stampa</span><span class="sxs-lookup"><span data-stu-id="a4243-108">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

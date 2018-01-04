@@ -17,28 +17,29 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36a751f9aac69119b539bd1008c6478f6ce71688
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f6a24cbabcad7ff534a2b3d66b2f17959c959c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview"></a><span data-ttu-id="cb1a0-102">ListView</span><span class="sxs-lookup"><span data-stu-id="cb1a0-102">ListView</span></span>
-<span data-ttu-id="cb1a0-103">Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura per visualizzare un set di elementi di dati nel layout o visualizzazioni diverse.</span><span class="sxs-lookup"><span data-stu-id="cb1a0-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="b46c3-102">ListView</span><span class="sxs-lookup"><span data-stu-id="b46c3-102">ListView</span></span>
+<span data-ttu-id="b46c3-103">Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura per visualizzare un set di elementi di dati nel layout o visualizzazioni diverse.</span><span class="sxs-lookup"><span data-stu-id="b46c3-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="cb1a0-104">La figura seguente mostra un <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="cb1a0-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="b46c3-104">La figura seguente mostra un <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="b46c3-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
- <span data-ttu-id="cb1a0-105">![ListView con output GridView ](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="cb1a0-105">![ListView with GridView output](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span></span>  
+ <span data-ttu-id="b46c3-105">![ListView con output GridView ](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="b46c3-105">![ListView with GridView output](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cb1a0-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cb1a0-106">In This Section</span></span>  
- [<span data-ttu-id="cb1a0-107">Panoramiche</span><span class="sxs-lookup"><span data-stu-id="cb1a0-107">Overviews</span></span>](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [<span data-ttu-id="cb1a0-108">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="cb1a0-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b46c3-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b46c3-106">In This Section</span></span>  
+ [<span data-ttu-id="b46c3-107">Panoramiche</span><span class="sxs-lookup"><span data-stu-id="b46c3-107">Overviews</span></span>](../../../../docs/framework/wpf/controls/listview-overviews.md)  
+ [<span data-ttu-id="b46c3-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="b46c3-108">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="cb1a0-109">Riferimento</span><span class="sxs-lookup"><span data-stu-id="cb1a0-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b46c3-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="b46c3-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="cb1a0-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="cb1a0-110">Related Sections</span></span>  
- [<span data-ttu-id="cb1a0-111">Cenni preliminari sull'associazione dati</span><span class="sxs-lookup"><span data-stu-id="cb1a0-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [<span data-ttu-id="cb1a0-112">Panoramica sui modelli di dati</span><span class="sxs-lookup"><span data-stu-id="cb1a0-112">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="b46c3-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="b46c3-110">Related Sections</span></span>  
+ [<span data-ttu-id="b46c3-111">Panoramica sul data binding</span><span class="sxs-lookup"><span data-stu-id="b46c3-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+  [<span data-ttu-id="b46c3-112">Panoramica sui modelli di dati</span><span class="sxs-lookup"><span data-stu-id="b46c3-112">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)
