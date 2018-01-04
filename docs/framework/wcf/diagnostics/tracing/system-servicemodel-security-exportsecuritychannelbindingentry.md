@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d3c18f029514aa5ba1d585f65e963e5d8c9a99c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc44d107a5f1f3ed02e5d0e09f5d6becbd3cbffa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingentry"></a><span data-ttu-id="ca2e5-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="ca2e5-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>
-<span data-ttu-id="ca2e5-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="ca2e5-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>  
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingentry"></a><span data-ttu-id="bc22a-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="bc22a-102">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>
+<span data-ttu-id="bc22a-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="bc22a-103">System.ServiceModel.Security.ExportSecurityChannelBindingEntry</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ca2e5-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ca2e5-104">Description</span></span>  
- <span data-ttu-id="ca2e5-105">Avvio di ExportChannelBinding di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="ca2e5-105">Starting the Security ExportChannelBinding.</span></span>  
+## <a name="description"></a><span data-ttu-id="bc22a-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="bc22a-104">Description</span></span>  
+ <span data-ttu-id="bc22a-105">Avvio di ExportChannelBinding di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="bc22a-105">Starting the Security ExportChannelBinding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca2e5-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ca2e5-106">See Also</span></span>  
- [<span data-ttu-id="ca2e5-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ca2e5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ca2e5-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="ca2e5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ca2e5-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ca2e5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="bc22a-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc22a-106">See Also</span></span>  
+ [<span data-ttu-id="bc22a-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="bc22a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="bc22a-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="bc22a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="bc22a-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="bc22a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

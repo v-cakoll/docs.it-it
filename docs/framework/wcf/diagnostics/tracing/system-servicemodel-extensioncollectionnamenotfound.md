@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99780f40a11a61786b7af5beaae365b797fb8e52
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 985456a7a62c1720a38f3defdb715f3dfcea3de6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelextensioncollectionnamenotfound"></a><span data-ttu-id="4cf40-102">System.ServiceModel.ExtensionCollectionNameNotFound</span><span class="sxs-lookup"><span data-stu-id="4cf40-102">System.ServiceModel.ExtensionCollectionNameNotFound</span></span>
-<span data-ttu-id="4cf40-103">System.ServiceModel.ExtensionCollectionNameNotFound</span><span class="sxs-lookup"><span data-stu-id="4cf40-103">System.ServiceModel.ExtensionCollectionNameNotFound</span></span>  
+# <a name="systemservicemodelextensioncollectionnamenotfound"></a><span data-ttu-id="12a60-102">System.ServiceModel.ExtensionCollectionNameNotFound</span><span class="sxs-lookup"><span data-stu-id="12a60-102">System.ServiceModel.ExtensionCollectionNameNotFound</span></span>
+<span data-ttu-id="12a60-103">System.ServiceModel.ExtensionCollectionNameNotFound</span><span class="sxs-lookup"><span data-stu-id="12a60-103">System.ServiceModel.ExtensionCollectionNameNotFound</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4cf40-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4cf40-104">Description</span></span>  
- <span data-ttu-id="4cf40-105">L'elemento di estensione non è associato a una raccolta di estensioni.</span><span class="sxs-lookup"><span data-stu-id="4cf40-105">The extension element is not associated with an extension collection.</span></span>  
+## <a name="description"></a><span data-ttu-id="12a60-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="12a60-104">Description</span></span>  
+ <span data-ttu-id="12a60-105">L'elemento di estensione non è associato a una raccolta di estensioni.</span><span class="sxs-lookup"><span data-stu-id="12a60-105">The extension element is not associated with an extension collection.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cf40-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4cf40-106">See Also</span></span>  
- [<span data-ttu-id="4cf40-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="4cf40-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4cf40-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="4cf40-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4cf40-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="4cf40-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="12a60-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="12a60-106">See Also</span></span>  
+ [<span data-ttu-id="12a60-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="12a60-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="12a60-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="12a60-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="12a60-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="12a60-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

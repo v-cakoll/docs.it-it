@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0aa921206819c54ff0c27b267d3bf42b1552c495
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e099ae79c4051f7af6b73c045263f3a2744cd361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcannotbeimportedincurrentformat"></a><span data-ttu-id="1d7a5-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="1d7a5-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>
-<span data-ttu-id="1d7a5-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="1d7a5-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>  
+# <a name="systemservicemodelcannotbeimportedincurrentformat"></a><span data-ttu-id="ff3cd-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="ff3cd-102">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>
+<span data-ttu-id="ff3cd-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span><span class="sxs-lookup"><span data-stu-id="ff3cd-103">System.ServiceModel.CannotBeImportedInCurrentFormat</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1d7a5-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1d7a5-104">Description</span></span>  
- <span data-ttu-id="1d7a5-105">Impossibile importare lo schema dato in questo formato.</span><span class="sxs-lookup"><span data-stu-id="1d7a5-105">The given schema cannot be imported in this format.</span></span>  
+## <a name="description"></a><span data-ttu-id="ff3cd-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ff3cd-104">Description</span></span>  
+ <span data-ttu-id="ff3cd-105">Impossibile importare lo schema dato in questo formato.</span><span class="sxs-lookup"><span data-stu-id="ff3cd-105">The given schema cannot be imported in this format.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d7a5-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1d7a5-106">See Also</span></span>  
- [<span data-ttu-id="1d7a5-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="1d7a5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1d7a5-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="1d7a5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1d7a5-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="1d7a5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff3cd-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff3cd-106">See Also</span></span>  
+ [<span data-ttu-id="ff3cd-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ff3cd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ff3cd-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="ff3cd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ff3cd-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ff3cd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edd832277ef27ee8f09b514d4d50a281efa8b1f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40c7164a0370865f6cfc79446e00a7393f626410
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsstreamsecurityupgradeaccepted"></a><span data-ttu-id="34aaa-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="34aaa-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>
-<span data-ttu-id="34aaa-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="34aaa-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>  
+# <a name="systemservicemodelchannelsstreamsecurityupgradeaccepted"></a><span data-ttu-id="64b1e-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="64b1e-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>
+<span data-ttu-id="64b1e-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="64b1e-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="34aaa-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="34aaa-104">Description</span></span>  
- <span data-ttu-id="34aaa-105">L'aggiornamento della protezione di flusso è stato accettato.</span><span class="sxs-lookup"><span data-stu-id="34aaa-105">The stream security upgrade was accepted successfully.</span></span>  
+## <a name="description"></a><span data-ttu-id="64b1e-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="64b1e-104">Description</span></span>  
+ <span data-ttu-id="64b1e-105">L'aggiornamento della protezione di flusso è stato accettato.</span><span class="sxs-lookup"><span data-stu-id="64b1e-105">The stream security upgrade was accepted successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34aaa-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34aaa-106">See Also</span></span>  
- [<span data-ttu-id="34aaa-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="34aaa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="34aaa-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="34aaa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="34aaa-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="34aaa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="64b1e-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="64b1e-106">See Also</span></span>  
+ [<span data-ttu-id="64b1e-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="64b1e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="64b1e-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="64b1e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="64b1e-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="64b1e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

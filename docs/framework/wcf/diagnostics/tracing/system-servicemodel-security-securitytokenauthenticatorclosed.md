@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d5628c5e618205d15cec60fa74ed681db78f5410
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ffd9bb57fbbcc29eeb452adf8a6cd37b4037287
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritytokenauthenticatorclosed"></a><span data-ttu-id="d9d51-102">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span><span class="sxs-lookup"><span data-stu-id="d9d51-102">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span></span>
-<span data-ttu-id="d9d51-103">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span><span class="sxs-lookup"><span data-stu-id="d9d51-103">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span></span>  
+# <a name="systemservicemodelsecuritysecuritytokenauthenticatorclosed"></a><span data-ttu-id="de452-102">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span><span class="sxs-lookup"><span data-stu-id="de452-102">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span></span>
+<span data-ttu-id="de452-103">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span><span class="sxs-lookup"><span data-stu-id="de452-103">System.ServiceModel.Security.SecurityTokenAuthenticatorClosed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d9d51-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d9d51-104">Description</span></span>  
- <span data-ttu-id="d9d51-105">Autenticatore del token di sicurezza chiuso.</span><span class="sxs-lookup"><span data-stu-id="d9d51-105">A security token authenticator was closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="de452-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="de452-104">Description</span></span>  
+ <span data-ttu-id="de452-105">Autenticatore del token di sicurezza chiuso.</span><span class="sxs-lookup"><span data-stu-id="de452-105">A security token authenticator was closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9d51-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d9d51-106">See Also</span></span>  
- [<span data-ttu-id="d9d51-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="d9d51-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d9d51-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="d9d51-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d9d51-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="d9d51-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="de452-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="de452-106">See Also</span></span>  
+ [<span data-ttu-id="de452-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="de452-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="de452-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="de452-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="de452-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="de452-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

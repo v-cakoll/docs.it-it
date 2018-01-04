@@ -13,21 +13,22 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48d9a170254f927f7d2438dedc3fe576de4b5ebd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9cb985577bb6f77d1baa68a105b23ae2d1292354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicethrottlelimitreached"></a><span data-ttu-id="4cabb-102">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="4cabb-102">System.ServiceModel.ServiceThrottleLimitReached</span></span>
-<span data-ttu-id="4cabb-103">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="4cabb-103">System.ServiceModel.ServiceThrottleLimitReached</span></span>  
+# <a name="systemservicemodelservicethrottlelimitreached"></a><span data-ttu-id="f760a-102">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="f760a-102">System.ServiceModel.ServiceThrottleLimitReached</span></span>
+<span data-ttu-id="f760a-103">System.ServiceModel.ServiceThrottleLimitReached</span><span class="sxs-lookup"><span data-stu-id="f760a-103">System.ServiceModel.ServiceThrottleLimitReached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4cabb-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4cabb-104">Description</span></span>  
- <span data-ttu-id="4cabb-105">È stata raggiunta una delle limitazioni MaxConcurrentCalls/Instances/Sessions e un messaggio verrà accodato.</span><span class="sxs-lookup"><span data-stu-id="4cabb-105">One of the MaxConcurrentCalls/Instances/Sessions throttle was reached and a message is being queued.</span></span>  
+## <a name="description"></a><span data-ttu-id="f760a-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f760a-104">Description</span></span>  
+ <span data-ttu-id="f760a-105">È stata raggiunta una delle limitazioni MaxConcurrentCalls/Instances/Sessions e un messaggio verrà accodato.</span><span class="sxs-lookup"><span data-stu-id="f760a-105">One of the MaxConcurrentCalls/Instances/Sessions throttle was reached and a message is being queued.</span></span>  
   
- <span data-ttu-id="4cabb-106">È possibile usare questa traccia per regolare i valori relativi alla limitazione delle richieste in base al carico di produzione previsto ed effettivo.</span><span class="sxs-lookup"><span data-stu-id="4cabb-106">You can use this trace to adjust the throttle values based on expected and actual production load.</span></span>  
+ <span data-ttu-id="f760a-106">È possibile usare questa traccia per regolare i valori relativi alla limitazione delle richieste in base al carico di produzione previsto ed effettivo.</span><span class="sxs-lookup"><span data-stu-id="f760a-106">You can use this trace to adjust the throttle values based on expected and actual production load.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cabb-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4cabb-107">See Also</span></span>  
- [<span data-ttu-id="4cabb-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="4cabb-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4cabb-109">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="4cabb-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4cabb-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="4cabb-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f760a-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f760a-107">See Also</span></span>  
+ [<span data-ttu-id="f760a-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="f760a-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f760a-109">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="f760a-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f760a-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="f760a-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

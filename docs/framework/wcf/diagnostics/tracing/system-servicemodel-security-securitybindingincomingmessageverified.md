@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0f0f55c7c2c4e05a27bf6094dec98378d756cd8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b9fd62955bfd3f34d1600167ee2e94adc446245
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a><span data-ttu-id="dedb2-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="dedb2-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>
-<span data-ttu-id="dedb2-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="dedb2-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>  
+# <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a><span data-ttu-id="f15c8-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="f15c8-102">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>
+<span data-ttu-id="f15c8-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span><span class="sxs-lookup"><span data-stu-id="f15c8-103">System.ServiceModel.Security.SecurityBindingIncomingMessageVerified</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dedb2-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dedb2-104">Description</span></span>  
- <span data-ttu-id="dedb2-105">Il protocollo di sicurezza ha verificato il messaggio in ingresso.</span><span class="sxs-lookup"><span data-stu-id="dedb2-105">The security protocol verified the incoming message.</span></span>  
+## <a name="description"></a><span data-ttu-id="f15c8-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f15c8-104">Description</span></span>  
+ <span data-ttu-id="f15c8-105">Il protocollo di sicurezza ha verificato il messaggio in ingresso.</span><span class="sxs-lookup"><span data-stu-id="f15c8-105">The security protocol verified the incoming message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dedb2-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dedb2-106">See Also</span></span>  
- [<span data-ttu-id="dedb2-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="dedb2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="dedb2-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="dedb2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="dedb2-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="dedb2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f15c8-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f15c8-106">See Also</span></span>  
+ [<span data-ttu-id="f15c8-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="f15c8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f15c8-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="f15c8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f15c8-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="f15c8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

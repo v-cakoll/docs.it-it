@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd9836a5e4e5113a48eec5df64b1b14c54e89034
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e011eb0e4095ee71c93441b4e0f8c385f65d1f7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="messageencodingbindingelement"></a><span data-ttu-id="a81e4-102">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="a81e4-102">MessageEncodingBindingElement</span></span>
-<span data-ttu-id="a81e4-103">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="a81e4-103">MessageEncodingBindingElement</span></span>  
+# <a name="messageencodingbindingelement"></a><span data-ttu-id="b021c-102">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="b021c-102">MessageEncodingBindingElement</span></span>
+<span data-ttu-id="b021c-103">MessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="b021c-103">MessageEncodingBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a81e4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a81e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b021c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b021c-104">Syntax</span></span>  
  `class MessageEncodingBindingElement : BindingElement`  
   
  `{`  
@@ -31,24 +32,24 @@ ms.lasthandoff: 12/02/2017
   
  `};`  
   
-## <a name="methods"></a><span data-ttu-id="a81e4-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="a81e4-105">Methods</span></span>  
- <span data-ttu-id="a81e4-106">La classe MessageEncodingBindingElement non definisce metodi.</span><span class="sxs-lookup"><span data-stu-id="a81e4-106">The MessageEncodingBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="b021c-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="b021c-105">Methods</span></span>  
+ <span data-ttu-id="b021c-106">La classe MessageEncodingBindingElement non definisce metodi.</span><span class="sxs-lookup"><span data-stu-id="b021c-106">The MessageEncodingBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="a81e4-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="a81e4-107">Properties</span></span>  
- <span data-ttu-id="a81e4-108">La classe MessageEncodingBindingElement dispone della proprietà seguente:</span><span class="sxs-lookup"><span data-stu-id="a81e4-108">The MessageEncodingBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="b021c-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="b021c-107">Properties</span></span>  
+ <span data-ttu-id="b021c-108">La classe MessageEncodingBindingElement dispone della proprietà seguente:</span><span class="sxs-lookup"><span data-stu-id="b021c-108">The MessageEncodingBindingElement class has the following property:</span></span>  
   
-### <a name="messageversion"></a><span data-ttu-id="a81e4-109">MessageVersion</span><span class="sxs-lookup"><span data-stu-id="a81e4-109">MessageVersion</span></span>  
- <span data-ttu-id="a81e4-110">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="a81e4-110">Data type: string</span></span>  
+### <a name="messageversion"></a><span data-ttu-id="b021c-109">MessageVersion</span><span class="sxs-lookup"><span data-stu-id="b021c-109">MessageVersion</span></span>  
+ <span data-ttu-id="b021c-110">Tipo di dati: stringa</span><span class="sxs-lookup"><span data-stu-id="b021c-110">Data type: string</span></span>  
   
- <span data-ttu-id="a81e4-111">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="a81e4-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="b021c-111">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="b021c-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="a81e4-112">Versione SOAP dei messaggi inviati utilizzando l'associazione.</span><span class="sxs-lookup"><span data-stu-id="a81e4-112">The SOAP version of the messages sent using the binding.</span></span>  
+ <span data-ttu-id="b021c-112">Versione SOAP dei messaggi inviati utilizzando l'associazione.</span><span class="sxs-lookup"><span data-stu-id="b021c-112">The SOAP version of the messages sent using the binding.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a81e4-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a81e4-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b021c-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b021c-113">Requirements</span></span>  
   
-|<span data-ttu-id="a81e4-114">MOF</span><span class="sxs-lookup"><span data-stu-id="a81e4-114">MOF</span></span>|<span data-ttu-id="a81e4-115">Dichiarato in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="a81e4-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="b021c-114">MOF</span><span class="sxs-lookup"><span data-stu-id="b021c-114">MOF</span></span>|<span data-ttu-id="b021c-115">Dichiarato in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="b021c-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="a81e4-116">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="a81e4-116">Namespace</span></span>|<span data-ttu-id="a81e4-117">Definito in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a81e4-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="b021c-116">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="b021c-116">Namespace</span></span>|<span data-ttu-id="b021c-117">Definito in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="b021c-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a81e4-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a81e4-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b021c-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b021c-118">See Also</span></span>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

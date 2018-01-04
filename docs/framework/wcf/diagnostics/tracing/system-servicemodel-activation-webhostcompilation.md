@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 681cc27e1b4b3821260d013525b5190dedbef43b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f6d782fb78730fcbb82eeded8c9e556e29dce9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationwebhostcompilation"></a><span data-ttu-id="8e154-102">System.ServiceModel.Activation.WebHostCompilation</span><span class="sxs-lookup"><span data-stu-id="8e154-102">System.ServiceModel.Activation.WebHostCompilation</span></span>
-<span data-ttu-id="8e154-103">System.ServiceModel.Activation.WebHostCompilation</span><span class="sxs-lookup"><span data-stu-id="8e154-103">System.ServiceModel.Activation.WebHostCompilation</span></span>  
+# <a name="systemservicemodelactivationwebhostcompilation"></a><span data-ttu-id="b2b37-102">System.ServiceModel.Activation.WebHostCompilation</span><span class="sxs-lookup"><span data-stu-id="b2b37-102">System.ServiceModel.Activation.WebHostCompilation</span></span>
+<span data-ttu-id="b2b37-103">System.ServiceModel.Activation.WebHostCompilation</span><span class="sxs-lookup"><span data-stu-id="b2b37-103">System.ServiceModel.Activation.WebHostCompilation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8e154-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8e154-104">Description</span></span>  
- <span data-ttu-id="8e154-105">Si verifica quando un servizio ospitato da Internet Information Service (IIS) o da Windows Process Activation Service (WAS) viene compilato da codice inline presente nel file con estensione svc.</span><span class="sxs-lookup"><span data-stu-id="8e154-105">Occurs when an Internet Information Service (IIS) or Windows Process Activation Service (WAS) hosted service is compiled from inline code that is present in the .svc file.</span></span>  
+## <a name="description"></a><span data-ttu-id="b2b37-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2b37-104">Description</span></span>  
+ <span data-ttu-id="b2b37-105">Si verifica quando un servizio ospitato da Internet Information Service (IIS) o da Windows Process Activation Service (WAS) viene compilato da codice inline presente nel file con estensione svc.</span><span class="sxs-lookup"><span data-stu-id="b2b37-105">Occurs when an Internet Information Service (IIS) or Windows Process Activation Service (WAS) hosted service is compiled from inline code that is present in the .svc file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e154-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8e154-106">See Also</span></span>  
- [<span data-ttu-id="8e154-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="8e154-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8e154-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="8e154-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8e154-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="8e154-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b2b37-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2b37-106">See Also</span></span>  
+ [<span data-ttu-id="b2b37-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="b2b37-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b2b37-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="b2b37-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b2b37-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="b2b37-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

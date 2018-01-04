@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: feaf5d06bf70a8433d1ef0d6a0e0aa38a14f0ec2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 782500f08ae21e88ad40a7757bb12a929301e376
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartingservice"></a><span data-ttu-id="eb69a-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span><span class="sxs-lookup"><span data-stu-id="eb69a-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span></span>
-<span data-ttu-id="eb69a-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span><span class="sxs-lookup"><span data-stu-id="eb69a-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationservicehoststartingservice"></a><span data-ttu-id="79314-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span><span class="sxs-lookup"><span data-stu-id="79314-102">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span></span>
+<span data-ttu-id="79314-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span><span class="sxs-lookup"><span data-stu-id="79314-103">System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartingService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="eb69a-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="eb69a-104">Description</span></span>  
- <span data-ttu-id="eb69a-105">ComPlus: avvio servizio.</span><span class="sxs-lookup"><span data-stu-id="eb69a-105">ComPlus: Starting service.</span></span>  
+## <a name="description"></a><span data-ttu-id="79314-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="79314-104">Description</span></span>  
+ <span data-ttu-id="79314-105">ComPlus: avvio servizio.</span><span class="sxs-lookup"><span data-stu-id="79314-105">ComPlus: Starting service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb69a-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eb69a-106">See Also</span></span>  
- [<span data-ttu-id="eb69a-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="eb69a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="eb69a-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="eb69a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="eb69a-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="eb69a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="79314-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79314-106">See Also</span></span>  
+ [<span data-ttu-id="79314-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="79314-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="79314-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="79314-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="79314-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="79314-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

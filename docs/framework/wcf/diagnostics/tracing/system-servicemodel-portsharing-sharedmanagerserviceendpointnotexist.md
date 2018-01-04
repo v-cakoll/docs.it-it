@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86d0a2bbe1c881f371b0f2200d0195a1216beb52
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8996572c8941c3045d643353a7b081f8e74a4b62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="a3a23-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="a3a23-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
-<span data-ttu-id="a3a23-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="a3a23-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
+# <a name="systemservicemodelportsharingsharedmanagerserviceendpointnotexist"></a><span data-ttu-id="c0737-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="c0737-102">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>
+<span data-ttu-id="c0737-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span><span class="sxs-lookup"><span data-stu-id="c0737-103">System.ServiceModel.PortSharing.SharedManagerServiceEndpointNotExist</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a3a23-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a3a23-104">Description</span></span>  
- <span data-ttu-id="a3a23-105">La memoria condivisa per l'endpoint del servizio specificato non esiste.</span><span class="sxs-lookup"><span data-stu-id="a3a23-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="a3a23-106">Il servizio potrebbe non essere stato avviato.</span><span class="sxs-lookup"><span data-stu-id="a3a23-106">The service may not be started.</span></span>  
+## <a name="description"></a><span data-ttu-id="c0737-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c0737-104">Description</span></span>  
+ <span data-ttu-id="c0737-105">La memoria condivisa per l'endpoint del servizio specificato non esiste.</span><span class="sxs-lookup"><span data-stu-id="c0737-105">The shared memory for the endpoint of the specified service does not exist.</span></span> <span data-ttu-id="c0737-106">Il servizio potrebbe non essere stato avviato.</span><span class="sxs-lookup"><span data-stu-id="c0737-106">The service may not be started.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3a23-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a3a23-107">See Also</span></span>  
- [<span data-ttu-id="a3a23-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="a3a23-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a3a23-109">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="a3a23-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a3a23-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="a3a23-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c0737-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c0737-107">See Also</span></span>  
+ [<span data-ttu-id="c0737-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="c0737-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="c0737-109">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="c0737-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="c0737-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="c0737-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

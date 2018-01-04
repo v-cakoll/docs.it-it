@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c61ed70af791518ef5e03a0683842ae259d0c77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0eaf28e0472399d8526ec624bd5cb91d6512b37c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a><span data-ttu-id="23ffe-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span><span class="sxs-lookup"><span data-stu-id="23ffe-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span></span>
-<span data-ttu-id="23ffe-103">Handshake di sicurezza non eseguito entro il limite di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="23ffe-103">The security handshake did not succeed within the specified time limit.</span></span>  
+# <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a><span data-ttu-id="b3579-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span><span class="sxs-lookup"><span data-stu-id="b3579-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span></span>
+<span data-ttu-id="b3579-103">Handshake di sicurezza non eseguito entro il limite di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="b3579-103">The security handshake did not succeed within the specified time limit.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="23ffe-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="23ffe-104">Description</span></span>  
- <span data-ttu-id="23ffe-105">Questa traccia si verifica quando si tenta di stabilire una connessione protetta con un router adiacente.</span><span class="sxs-lookup"><span data-stu-id="23ffe-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span>  
+## <a name="description"></a><span data-ttu-id="b3579-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b3579-104">Description</span></span>  
+ <span data-ttu-id="b3579-105">Questa traccia si verifica quando si tenta di stabilire una connessione protetta con un router adiacente.</span><span class="sxs-lookup"><span data-stu-id="b3579-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="23ffe-106">Risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="23ffe-106">Troubleshooting</span></span>  
- <span data-ttu-id="23ffe-107">Verificare che tutti i router adiacenti dispongano delle credenziali di sicurezza appropriate e che rispondano a tutti i messaggi in meno di 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="23ffe-107">Ensure that all neighbors have the appropriate security credentials and respond to all messages in less than 1 minute.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="b3579-106">Risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="b3579-106">Troubleshooting</span></span>  
+ <span data-ttu-id="b3579-107">Verificare che tutti i router adiacenti dispongano delle credenziali di sicurezza appropriate e che rispondano a tutti i messaggi in meno di 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="b3579-107">Ensure that all neighbors have the appropriate security credentials and respond to all messages in less than 1 minute.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23ffe-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23ffe-108">See Also</span></span>  
- [<span data-ttu-id="23ffe-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="23ffe-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="23ffe-110">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="23ffe-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="23ffe-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="23ffe-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3579-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b3579-108">See Also</span></span>  
+ [<span data-ttu-id="b3579-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="b3579-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b3579-110">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="b3579-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b3579-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="b3579-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

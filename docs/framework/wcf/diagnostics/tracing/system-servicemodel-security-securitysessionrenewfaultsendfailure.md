@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2c4bbd8e001f22f1ac319bc81c8ea32505887f77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53e38e9cb9d202b19407e9ed4339a687d840a5df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionrenewfaultsendfailure"></a><span data-ttu-id="c4a20-102">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="c4a20-102">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span></span>
-<span data-ttu-id="c4a20-103">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="c4a20-103">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionrenewfaultsendfailure"></a><span data-ttu-id="07e67-102">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="07e67-102">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span></span>
+<span data-ttu-id="07e67-103">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span><span class="sxs-lookup"><span data-stu-id="07e67-103">System.ServiceModel.Security.SecuritySessionRenewFaultSendFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c4a20-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c4a20-104">Description</span></span>  
- <span data-ttu-id="c4a20-105">Errore durante l'invio al client di un errore di rinnovo della chiave della sessione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="c4a20-105">A failure occurred when sending a renewal fault on the security session key to the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="07e67-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="07e67-104">Description</span></span>  
+ <span data-ttu-id="07e67-105">Errore durante l'invio al client di un errore di rinnovo della chiave della sessione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="07e67-105">A failure occurred when sending a renewal fault on the security session key to the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4a20-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c4a20-106">See Also</span></span>  
- [<span data-ttu-id="c4a20-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="c4a20-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c4a20-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="c4a20-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c4a20-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="c4a20-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="07e67-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07e67-106">See Also</span></span>  
+ [<span data-ttu-id="07e67-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="07e67-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="07e67-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="07e67-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="07e67-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="07e67-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

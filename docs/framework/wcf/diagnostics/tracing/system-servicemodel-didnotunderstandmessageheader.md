@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6c0f1851e69191252d636c464d1985b611df352
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0200567b47e6f7d3baf3e25aa296052e2497dd8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeldidnotunderstandmessageheader"></a><span data-ttu-id="756d2-102">System.ServiceModel.DidNotUnderstandMessageHeader</span><span class="sxs-lookup"><span data-stu-id="756d2-102">System.ServiceModel.DidNotUnderstandMessageHeader</span></span>
-<span data-ttu-id="756d2-103">System.ServiceModel.DidNotUnderstandMessageHeader</span><span class="sxs-lookup"><span data-stu-id="756d2-103">System.ServiceModel.DidNotUnderstandMessageHeader</span></span>  
+# <a name="systemservicemodeldidnotunderstandmessageheader"></a><span data-ttu-id="f8235-102">System.ServiceModel.DidNotUnderstandMessageHeader</span><span class="sxs-lookup"><span data-stu-id="f8235-102">System.ServiceModel.DidNotUnderstandMessageHeader</span></span>
+<span data-ttu-id="f8235-103">System.ServiceModel.DidNotUnderstandMessageHeader</span><span class="sxs-lookup"><span data-stu-id="f8235-103">System.ServiceModel.DidNotUnderstandMessageHeader</span></span>  
   
-## <a name="description"></a><span data-ttu-id="756d2-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="756d2-104">Description</span></span>  
- <span data-ttu-id="756d2-105">L'intestazione del messaggio non è stata compresa.</span><span class="sxs-lookup"><span data-stu-id="756d2-105">Did not understand the message header.</span></span>  
+## <a name="description"></a><span data-ttu-id="f8235-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f8235-104">Description</span></span>  
+ <span data-ttu-id="f8235-105">L'intestazione del messaggio non è stata compresa.</span><span class="sxs-lookup"><span data-stu-id="f8235-105">Did not understand the message header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="756d2-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="756d2-106">See Also</span></span>  
- [<span data-ttu-id="756d2-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="756d2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="756d2-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="756d2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="756d2-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="756d2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f8235-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f8235-106">See Also</span></span>  
+ [<span data-ttu-id="f8235-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="f8235-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f8235-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="f8235-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f8235-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="f8235-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

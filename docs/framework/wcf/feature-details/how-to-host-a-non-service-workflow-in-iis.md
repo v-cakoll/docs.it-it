@@ -13,42 +13,43 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="0acc4-102">Procedura: ospitare un flusso di lavoro non di servizio in IIS</span><span class="sxs-lookup"><span data-stu-id="0acc4-102">How to: Host a non-service workflow in IIS</span></span>
-<span data-ttu-id="0acc4-103">I flussi di lavoro che non sono servizi flusso di lavoro possono essere ospitati in IIS/WAS.</span><span class="sxs-lookup"><span data-stu-id="0acc4-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="0acc4-104">Tale possibilità si rivela utile quando è necessario ospitare un flusso di lavoro scritto da un altro utente,</span><span class="sxs-lookup"><span data-stu-id="0acc4-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="0acc4-105">ad esempio se si ospita di nuovo Progettazione flussi di lavoro e si consente agli utenti di creare flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="0acc4-106">L'host di flussi di lavoro non di servizio in IIS fornisce supporto per caratteristiche quali il riciclo dei processi, la chiusura per inattività, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi.</span><span class="sxs-lookup"><span data-stu-id="0acc4-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="0acc4-107">I servizi flusso di lavoro ospitati in IIS includono le attività <xref:System.ServiceModel.Activities.Receive> e vengono attivati quando un messaggio viene ricevuto da IIS.</span><span class="sxs-lookup"><span data-stu-id="0acc4-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="0acc4-108">Nei flussi di lavoro non di servizio non sono contenute attività di messaggistica e, per impostazione predefinita, non possono essere attivati inviando un messaggio.</span><span class="sxs-lookup"><span data-stu-id="0acc4-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="0acc4-109">È necessario derivare una classe dall'oggetto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definire un contratto di servizio contenente le operazioni per creare un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="0acc4-110">Questo argomento viene descritta la creazione di un flusso di lavoro semplice, definendo un contratto di servizio, un client può utilizzare per attivare il flusso di lavoro e derivando una classe dal <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> che utilizza il contratto di servizio in ascolto di richieste di creazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="c022e-102">Procedura: ospitare un flusso di lavoro non di servizio in IIS</span><span class="sxs-lookup"><span data-stu-id="c022e-102">How to: Host a non-service workflow in IIS</span></span>
+<span data-ttu-id="c022e-103">I flussi di lavoro che non sono servizi flusso di lavoro possono essere ospitati in IIS/WAS.</span><span class="sxs-lookup"><span data-stu-id="c022e-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="c022e-104">Tale possibilità si rivela utile quando è necessario ospitare un flusso di lavoro scritto da un altro utente,</span><span class="sxs-lookup"><span data-stu-id="c022e-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="c022e-105">ad esempio se si ospita di nuovo Progettazione flussi di lavoro e si consente agli utenti di creare flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="c022e-106">L'host di flussi di lavoro non di servizio in IIS fornisce supporto per caratteristiche quali il riciclo dei processi, la chiusura per inattività, il monitoraggio dell'integrità dei processi e l'attivazione basata su messaggi.</span><span class="sxs-lookup"><span data-stu-id="c022e-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="c022e-107">I servizi flusso di lavoro ospitati in IIS includono le attività <xref:System.ServiceModel.Activities.Receive> e vengono attivati quando un messaggio viene ricevuto da IIS.</span><span class="sxs-lookup"><span data-stu-id="c022e-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="c022e-108">Nei flussi di lavoro non di servizio non sono contenute attività di messaggistica e, per impostazione predefinita, non possono essere attivati inviando un messaggio.</span><span class="sxs-lookup"><span data-stu-id="c022e-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="c022e-109">È necessario derivare una classe dall'oggetto <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> e definire un contratto di servizio contenente le operazioni per creare un'istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="c022e-110">Questo argomento viene descritta la creazione di un flusso di lavoro semplice, definendo un contratto di servizio, un client può utilizzare per attivare il flusso di lavoro e derivando una classe dal <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> che utilizza il contratto di servizio in ascolto di richieste di creazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
   
-### <a name="create-a-simple-workflow"></a><span data-ttu-id="0acc4-111">Creare un flusso di lavoro semplice</span><span class="sxs-lookup"><span data-stu-id="0acc4-111">Create a simple workflow</span></span>  
+### <a name="create-a-simple-workflow"></a><span data-ttu-id="c022e-111">Creare un flusso di lavoro semplice</span><span class="sxs-lookup"><span data-stu-id="c022e-111">Create a simple workflow</span></span>  
   
-1.  <span data-ttu-id="0acc4-112">Creare una nuova soluzione [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota chiamata `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
+1.  <span data-ttu-id="c022e-112">Creare una nuova soluzione [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota chiamata `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="c022e-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
   
-2.  <span data-ttu-id="0acc4-113">Aggiungere un nuovo progetto Applicazione di servizi flusso di lavoro WCF denominato `SimpleWorkflow` alla soluzione.</span><span class="sxs-lookup"><span data-stu-id="0acc4-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="0acc4-114">Verrà aperta Progettazione flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-114">The workflow designer will open.</span></span>  
+2.  <span data-ttu-id="c022e-113">Aggiungere un nuovo progetto Applicazione di servizi flusso di lavoro WCF denominato `SimpleWorkflow` alla soluzione.</span><span class="sxs-lookup"><span data-stu-id="c022e-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="c022e-114">Verrà aperta Progettazione flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-114">The workflow designer will open.</span></span>  
   
-3.  <span data-ttu-id="0acc4-115">Eliminare le attività ReceiveRequest e SendResponse.</span><span class="sxs-lookup"><span data-stu-id="0acc4-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="0acc4-116">Un flusso di lavoro diventa un servizio flusso di lavoro grazie a queste attività.</span><span class="sxs-lookup"><span data-stu-id="0acc4-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="0acc4-117">Poiché in questo momento non si intende usare un servizio flusso di lavoro, tali attività non sono più necessarie.</span><span class="sxs-lookup"><span data-stu-id="0acc4-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
+3.  <span data-ttu-id="c022e-115">Eliminare le attività ReceiveRequest e SendResponse.</span><span class="sxs-lookup"><span data-stu-id="c022e-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="c022e-116">Un flusso di lavoro diventa un servizio flusso di lavoro grazie a queste attività.</span><span class="sxs-lookup"><span data-stu-id="c022e-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="c022e-117">Poiché in questo momento non si intende usare un servizio flusso di lavoro, tali attività non sono più necessarie.</span><span class="sxs-lookup"><span data-stu-id="c022e-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
   
-4.  <span data-ttu-id="0acc4-118">Impostare DisplayName per l'attività sequence su "Flusso di lavoro sequenziale".</span><span class="sxs-lookup"><span data-stu-id="0acc4-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
+4.  <span data-ttu-id="c022e-118">Impostare DisplayName per l'attività sequence su "Flusso di lavoro sequenziale".</span><span class="sxs-lookup"><span data-stu-id="c022e-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
   
-5.  <span data-ttu-id="0acc4-119">Rinominare Service1.xamlx con Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0acc4-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
+5.  <span data-ttu-id="c022e-119">Rinominare Service1.xamlx con Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="c022e-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
   
-6.  <span data-ttu-id="0acc4-120">Fare clic sulla finestra di progettazione all'esterno di attività sequence e impostare le proprietà Name e ConfigurationName su "Workflow1"</span><span class="sxs-lookup"><span data-stu-id="0acc4-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
+6.  <span data-ttu-id="c022e-120">Fare clic sulla finestra di progettazione all'esterno di attività sequence e impostare le proprietà Name e ConfigurationName su "Workflow1"</span><span class="sxs-lookup"><span data-stu-id="c022e-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
   
-7.  <span data-ttu-id="0acc4-121">Trascinare un'attività <xref:System.Activities.Statements.WriteLine> nell'oggetto <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="0acc4-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="0acc4-122">Il <xref:System.Activities.Statements.WriteLine> attività, vedere il **primitive** sezione della casella degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="0acc4-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="0acc4-123">Impostare il <xref:System.Activities.Statements.WriteLine.Text%2A> proprietà del <xref:System.Activities.Statements.WriteLine> attività "Hello, world".</span><span class="sxs-lookup"><span data-stu-id="0acc4-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
+7.  <span data-ttu-id="c022e-121">Trascinare un'attività <xref:System.Activities.Statements.WriteLine> nell'oggetto <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="c022e-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="c022e-122">Il <xref:System.Activities.Statements.WriteLine> attività, vedere il **primitive** sezione della casella degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="c022e-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="c022e-123">Impostare il <xref:System.Activities.Statements.WriteLine.Text%2A> proprietà del <xref:System.Activities.Statements.WriteLine> attività "Hello, world".</span><span class="sxs-lookup"><span data-stu-id="c022e-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
   
-     <span data-ttu-id="0acc4-124">A questo punto, l'aspetto del flusso di lavoro deve essere simile al diagramma seguente.</span><span class="sxs-lookup"><span data-stu-id="0acc4-124">The workflow should now look like the following diagram.</span></span>  
+     <span data-ttu-id="c022e-124">A questo punto, l'aspetto del flusso di lavoro deve essere simile al diagramma seguente.</span><span class="sxs-lookup"><span data-stu-id="c022e-124">The workflow should now look like the following diagram.</span></span>  
   
-     <span data-ttu-id="0acc4-125">![Un semplice flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="0acc4-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
+     <span data-ttu-id="c022e-125">![Un semplice flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="c022e-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
   
-### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="0acc4-126">Creare un contratto di servizio di creazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="0acc4-126">Create the workflow creation service contract</span></span>  
+### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="c022e-126">Creare un contratto di servizio di creazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="c022e-126">Create the workflow creation service contract</span></span>  
   
-1.  <span data-ttu-id="0acc4-127">Aggiungere un nuovo progetto Libreria di classi denominato `Shared` alla soluzione `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="c022e-127">Aggiungere un nuovo progetto Libreria di classi denominato `Shared` alla soluzione `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="c022e-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="0acc4-128">Aggiungere un riferimento a System.ServiceModel.dll, System.Configuration e System.ServiceModel.Activities al progetto `Shared`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
+2.  <span data-ttu-id="c022e-128">Aggiungere un riferimento a System.ServiceModel.dll, System.Configuration e System.ServiceModel.Activities al progetto `Shared`.</span><span class="sxs-lookup"><span data-stu-id="c022e-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="0acc4-129">Rinominare il file Class1.cs con IWorkflowCreation.cs e il codice seguente in base al file.</span><span class="sxs-lookup"><span data-stu-id="0acc4-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
+3.  <span data-ttu-id="c022e-129">Rinominare il file Class1.cs con IWorkflowCreation.cs e il codice seguente in base al file.</span><span class="sxs-lookup"><span data-stu-id="c022e-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
   
     ```  
     using System;  
@@ -72,11 +73,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-     <span data-ttu-id="0acc4-130">Questo contratto consente di definire due operazioni che permettono entrambe di creare una nuova istanza del flusso di lavoro non di servizio appena creato.</span><span class="sxs-lookup"><span data-stu-id="0acc4-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="0acc4-131">Una consente di creare una nuova istanza con un ID istanza generato e l'altra di specificare l'ID istanza per la nuova istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="0acc4-132">Entrambi i metodi consentono di passare parametri alla nuova istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="0acc4-133">Questo contratto verrà esposto dal <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per consentire ai client di creare nuove istanze del flusso di lavoro non di servizio.</span><span class="sxs-lookup"><span data-stu-id="0acc4-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
+     <span data-ttu-id="c022e-130">Questo contratto consente di definire due operazioni che permettono entrambe di creare una nuova istanza del flusso di lavoro non di servizio appena creato.</span><span class="sxs-lookup"><span data-stu-id="c022e-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="c022e-131">Una consente di creare una nuova istanza con un ID istanza generato e l'altra di specificare l'ID istanza per la nuova istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="c022e-132">Entrambi i metodi consentono di passare parametri alla nuova istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="c022e-133">Questo contratto verrà esposto dal <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per consentire ai client di creare nuove istanze del flusso di lavoro non di servizio.</span><span class="sxs-lookup"><span data-stu-id="c022e-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
   
-### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="0acc4-134">Derivare una classe da WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="0acc4-134">Derive a class from WorkflowHostingEndpoint</span></span>  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="c022e-134">Derivare una classe da WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="c022e-134">Derive a class from WorkflowHostingEndpoint</span></span>  
   
-1.  <span data-ttu-id="0acc4-135">Aggiungere una nuova classe denominata `CreationEndpoint` derivato da <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per il `Shared` progetto.</span><span class="sxs-lookup"><span data-stu-id="0acc4-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
+1.  <span data-ttu-id="c022e-135">Aggiungere una nuova classe denominata `CreationEndpoint` derivato da <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per il `Shared` progetto.</span><span class="sxs-lookup"><span data-stu-id="c022e-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
   
     ```  
     using System;  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-2.  <span data-ttu-id="0acc4-136">Aggiungere una variabile locale statica <xref:System.Uri> denominata `defaultBaseUri` alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
+2.  <span data-ttu-id="c022e-136">Aggiungere una variabile locale statica <xref:System.Uri> denominata `defaultBaseUri` alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-3.  <span data-ttu-id="0acc4-137">Aggiungere il costruttore seguente alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="0acc4-138">Si noti che il contratto di servizio `IWorkflowCreation` viene specificato nella chiamata al costruttore base.</span><span class="sxs-lookup"><span data-stu-id="0acc4-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
+3.  <span data-ttu-id="c022e-137">Aggiungere il costruttore seguente alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="c022e-138">Si noti che il contratto di servizio `IWorkflowCreation` viene specificato nella chiamata al costruttore base.</span><span class="sxs-lookup"><span data-stu-id="c022e-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-4.  <span data-ttu-id="0acc4-139">Aggiungere il seguente costruttore predefinito alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
+4.  <span data-ttu-id="c022e-139">Aggiungere il seguente costruttore predefinito alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public CreationEndpoint()  
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-5.  <span data-ttu-id="0acc4-140">Aggiungere una proprietà statica `DefaultBaseUri` alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="0acc4-141">Questa proprietà sarà usata per includere un URI di base predefinito, se non ne viene fornito uno.</span><span class="sxs-lookup"><span data-stu-id="0acc4-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
+5.  <span data-ttu-id="c022e-140">Aggiungere una proprietà statica `DefaultBaseUri` alla classe `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="c022e-141">Questa proprietà sarà usata per includere un URI di base predefinito, se non ne viene fornito uno.</span><span class="sxs-lookup"><span data-stu-id="c022e-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
   
     ```  
     static Uri DefaultBaseUri  
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/02/2017
      }  
     ```  
   
-6.  <span data-ttu-id="0acc4-142">Creare il metodo seguente per ottenere il binding predefinito da usare per l'endpoint di creazione.</span><span class="sxs-lookup"><span data-stu-id="0acc4-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
+6.  <span data-ttu-id="c022e-142">Creare il metodo seguente per ottenere il binding predefinito da usare per l'endpoint di creazione.</span><span class="sxs-lookup"><span data-stu-id="c022e-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
   
     ```  
     //defaults to NetNamedPipeBinding  
@@ -151,7 +152,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="0acc4-143">Eseguire l'override del metodo <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> per restituire l'ID istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0acc4-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="0acc4-144">Se il `Action` intestazione termina con "Create" restituisce un GUID vuoto, se il `Action` intestazione termina con "createwithinstanceid, viene" restituito il GUID passato al metodo.</span><span class="sxs-lookup"><span data-stu-id="0acc4-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="0acc4-145">In caso contrario, viene generata un'eccezione <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="0acc4-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="0acc4-146">Queste intestazioni `Action` corrispondono alle due operazioni definite nel contratto di servizio `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
+7.  <span data-ttu-id="c022e-143">Eseguire l'override del metodo <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> per restituire l'ID istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="c022e-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="c022e-144">Se il `Action` intestazione termina con "Create" restituisce un GUID vuoto, se il `Action` intestazione termina con "createwithinstanceid, viene" restituito il GUID passato al metodo.</span><span class="sxs-lookup"><span data-stu-id="c022e-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="c022e-145">In caso contrario, viene generata un'eccezione <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="c022e-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="c022e-146">Queste intestazioni `Action` corrispondono alle due operazioni definite nel contratto di servizio `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="c022e-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -173,7 +174,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-8.  <span data-ttu-id="0acc4-147">Eseguire l'override del metodo <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> per creare un oggetto <xref:System.ServiceModel.Activities.WorkflowCreationContext>, aggiungere qualsiasi argomento per il flusso di lavoro, inviare l'ID istanza al client e restituire l'oggetto <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span><span class="sxs-lookup"><span data-stu-id="0acc4-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
+8.  <span data-ttu-id="c022e-147">Eseguire l'override del metodo <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> per creare un oggetto <xref:System.ServiceModel.Activities.WorkflowCreationContext>, aggiungere qualsiasi argomento per il flusso di lavoro, inviare l'ID istanza al client e restituire l'oggetto <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span><span class="sxs-lookup"><span data-stu-id="c022e-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -201,11 +202,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="0acc4-148">Creare un elemento endpoint standard per consentire la configurazione di WorkflowCreationEndpoint</span><span class="sxs-lookup"><span data-stu-id="0acc4-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="c022e-148">Creare un elemento endpoint standard per consentire la configurazione di WorkflowCreationEndpoint</span><span class="sxs-lookup"><span data-stu-id="c022e-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
   
-1.  <span data-ttu-id="0acc4-149">Aggiungere un riferimento a Shared nel progetto `CreationEndpoint`</span><span class="sxs-lookup"><span data-stu-id="0acc4-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
+1.  <span data-ttu-id="c022e-149">Aggiungere un riferimento a Shared nel progetto `CreationEndpoint`</span><span class="sxs-lookup"><span data-stu-id="c022e-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
   
-2.  <span data-ttu-id="0acc4-150">Aggiungere una nuova classe denominata `CreationEndpointElement`, derivata dall'oggetto <xref:System.ServiceModel.Configuration.StandardEndpointElement> al progetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="0acc4-151">Questa classe rappresenterà un oggetto `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="0acc4-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
+2.  <span data-ttu-id="c022e-150">Aggiungere una nuova classe denominata `CreationEndpointElement`, derivata dall'oggetto <xref:System.ServiceModel.Configuration.StandardEndpointElement> al progetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="c022e-151">Questa classe rappresenterà un oggetto `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="c022e-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
   
     ```  
     using System;  
@@ -223,7 +224,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-3.  <span data-ttu-id="0acc4-152">Aggiungere una proprietà denominata `EndpointType` per restituire il tipo di endpoint.</span><span class="sxs-lookup"><span data-stu-id="0acc4-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
+3.  <span data-ttu-id="c022e-152">Aggiungere una proprietà denominata `EndpointType` per restituire il tipo di endpoint.</span><span class="sxs-lookup"><span data-stu-id="c022e-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
   
     ```  
     protected override Type EndpointType  
@@ -232,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="0acc4-153">Eseguire l'override del metodo <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> e restituire un nuovo oggetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
+4.  <span data-ttu-id="c022e-153">Eseguire l'override del metodo <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> e restituire un nuovo oggetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
@@ -241,7 +242,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-5.  <span data-ttu-id="0acc4-154">Eseguire l'overload dei metodi <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> e <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.</span><span class="sxs-lookup"><span data-stu-id="0acc4-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="0acc4-155">Questi metodi devono solo essere definiti; non è necessario aggiungervi alcun codice.</span><span class="sxs-lookup"><span data-stu-id="0acc4-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
+5.  <span data-ttu-id="c022e-154">Eseguire l'overload dei metodi <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> e <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.</span><span class="sxs-lookup"><span data-stu-id="c022e-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="c022e-155">Questi metodi devono solo essere definiti; non è necessario aggiungervi alcun codice.</span><span class="sxs-lookup"><span data-stu-id="c022e-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -261,7 +262,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-6.  <span data-ttu-id="0acc4-156">Aggiungere la classe di raccolta per `CreationEndpoint` al file CreationEndpointElement.cs nel progetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="0acc4-157">Questa classe viene usata dalla configurazione per mantenere un numero di istanze `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="0acc4-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
+6.  <span data-ttu-id="c022e-156">Aggiungere la classe di raccolta per `CreationEndpoint` al file CreationEndpointElement.cs nel progetto `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="c022e-157">Questa classe viene usata dalla configurazione per mantenere un numero di istanze `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="c022e-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,17 +270,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="0acc4-158">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="0acc4-158">Build the solution.</span></span>  
+7.  <span data-ttu-id="c022e-158">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="c022e-158">Build the solution.</span></span>  
   
-### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="0acc4-159">Ospitare il flusso di lavoro in IIS</span><span class="sxs-lookup"><span data-stu-id="0acc4-159">Host the workflow in IIS</span></span>  
+### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="c022e-159">Ospitare il flusso di lavoro in IIS</span><span class="sxs-lookup"><span data-stu-id="c022e-159">Host the workflow in IIS</span></span>  
   
-1.  <span data-ttu-id="0acc4-160">Creare una nuova applicazione denominata `MyCreationEndpoint` in IIS.</span><span class="sxs-lookup"><span data-stu-id="0acc4-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
+1.  <span data-ttu-id="c022e-160">Creare una nuova applicazione denominata `MyCreationEndpoint` in IIS.</span><span class="sxs-lookup"><span data-stu-id="c022e-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
   
-2.  <span data-ttu-id="0acc4-161">Copiare il file workflow1.xaml generato da Progettazione flussi di lavoro nella directory dell'applicazione e rinominarlo workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0acc4-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
+2.  <span data-ttu-id="c022e-161">Copiare il file workflow1.xaml generato da Progettazione flussi di lavoro nella directory dell'applicazione e rinominarlo workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="c022e-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
   
-3.  <span data-ttu-id="0acc4-162">Copiare i file shared.dll e CreationEndpoint.dll nella directory bin dell'applicazione; se non è presente è necessario crearla.</span><span class="sxs-lookup"><span data-stu-id="0acc4-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
+3.  <span data-ttu-id="c022e-162">Copiare i file shared.dll e CreationEndpoint.dll nella directory bin dell'applicazione; se non è presente è necessario crearla.</span><span class="sxs-lookup"><span data-stu-id="c022e-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
   
-4.  <span data-ttu-id="0acc4-163">Sostituire il contenuto del file Web.config nel progetto `CreationEndpoint` con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="0acc4-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
+4.  <span data-ttu-id="c022e-163">Sostituire il contenuto del file Web.config nel progetto `CreationEndpoint` con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="c022e-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -290,7 +291,7 @@ ms.lasthandoff: 12/02/2017
     </configuration>  
     ```  
   
-5.  <span data-ttu-id="0acc4-164">Dopo l'elemento `<system.web>`, registrare `CreationEndpoint` aggiungendo il codice di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="0acc4-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
+5.  <span data-ttu-id="c022e-164">Dopo l'elemento `<system.web>`, registrare `CreationEndpoint` aggiungendo il codice di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="c022e-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -304,9 +305,9 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-     <span data-ttu-id="0acc4-165">Questa operazione consente di registrare la classe `CreationEndpointCollection` affinché sia possibile configurare un oggetto `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="0acc4-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
+     <span data-ttu-id="c022e-165">Questa operazione consente di registrare la classe `CreationEndpointCollection` affinché sia possibile configurare un oggetto `CreationEndpoint` in un file web.config.</span><span class="sxs-lookup"><span data-stu-id="c022e-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
   
-6.  <span data-ttu-id="0acc4-166">Aggiungere un `<service>` elemento (dopo il \</extensions > tag) con un `CreationEndpoint` che sarà in ascolto dei messaggi in arrivo.</span><span class="sxs-lookup"><span data-stu-id="0acc4-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
+6.  <span data-ttu-id="c022e-166">Aggiungere un `<service>` elemento (dopo il \</extensions > tag) con un `CreationEndpoint` che sarà in ascolto dei messaggi in arrivo.</span><span class="sxs-lookup"><span data-stu-id="c022e-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
   
     ```xml  
     <services>  
@@ -317,7 +318,7 @@ ms.lasthandoff: 12/02/2017
         </services>  
     ```  
   
-7.  <span data-ttu-id="0acc4-167">Aggiungere un \<comportamenti > elemento (dopo il  \< /services > tag) per abilitare i metadati del servizio.</span><span class="sxs-lookup"><span data-stu-id="0acc4-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
+7.  <span data-ttu-id="c022e-167">Aggiungere un \<comportamenti > elemento (dopo il  \< /services > tag) per abilitare i metadati del servizio.</span><span class="sxs-lookup"><span data-stu-id="c022e-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -329,19 +330,19 @@ ms.lasthandoff: 12/02/2017
         </behaviors>  
     ```  
   
-8.  <span data-ttu-id="0acc4-168">Copiare il file web.config nella directory dell'applicazione IIS.</span><span class="sxs-lookup"><span data-stu-id="0acc4-168">Copy the web.config to your IIS application directory.</span></span>  
+8.  <span data-ttu-id="c022e-168">Copiare il file web.config nella directory dell'applicazione IIS.</span><span class="sxs-lookup"><span data-stu-id="c022e-168">Copy the web.config to your IIS application directory.</span></span>  
   
-9. <span data-ttu-id="0acc4-169">Verificare se l'endpoint di creazione funziona correttamente aprendo Internet Explorer e immettendo l'indirizzo http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0acc4-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="0acc4-170">In Internet Explorer deve essere visualizzata la schermata seguente:</span><span class="sxs-lookup"><span data-stu-id="0acc4-170">Internet Explorer should display the following screen:</span></span>  
+9. <span data-ttu-id="c022e-169">Verificare se l'endpoint di creazione funziona correttamente aprendo Internet Explorer e immettendo l'indirizzo http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="c022e-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="c022e-170">In Internet Explorer deve essere visualizzata la schermata seguente:</span><span class="sxs-lookup"><span data-stu-id="c022e-170">Internet Explorer should display the following screen:</span></span>  
   
-     <span data-ttu-id="0acc4-171">![Test del servizio](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="0acc4-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
+     <span data-ttu-id="c022e-171">![Test del servizio](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="c022e-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
   
-### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="0acc4-172">Creare un client che consentirà di chiamare CreationEndpoint.</span><span class="sxs-lookup"><span data-stu-id="0acc4-172">Create a client that will call the CreationEndpoint.</span></span>  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="c022e-172">Creare un client che consentirà di chiamare CreationEndpoint.</span><span class="sxs-lookup"><span data-stu-id="c022e-172">Create a client that will call the CreationEndpoint.</span></span>  
   
-1.  <span data-ttu-id="0acc4-173">Aggiungere una nuova applicazione console alla soluzione `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="c022e-173">Aggiungere una nuova applicazione console alla soluzione `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="c022e-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="0acc4-174">Aggiungere riferimenti a System.ServiceModel.dll e System.ServiceModel.Activities e il progetto `Shared`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
+2.  <span data-ttu-id="c022e-174">Aggiungere riferimenti a System.ServiceModel.dll e System.ServiceModel.Activities e il progetto `Shared`.</span><span class="sxs-lookup"><span data-stu-id="c022e-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="0acc4-175">Nel `Main` metodo crea un <xref:System.ServiceModel.ChannelFactory%601> di tipo `IWorkflowCreation` e chiamare <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span><span class="sxs-lookup"><span data-stu-id="0acc4-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="0acc4-176">Questa operazione consentirà la restituzione di un proxy.</span><span class="sxs-lookup"><span data-stu-id="0acc4-176">This will return a proxy.</span></span> <span data-ttu-id="0acc4-177">Successivamente è possibile chiamare `Create` su tale proxy per creare l'istanza del flusso di lavoro ospitata in IIS:</span><span class="sxs-lookup"><span data-stu-id="0acc4-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
+3.  <span data-ttu-id="c022e-175">Nel `Main` metodo crea un <xref:System.ServiceModel.ChannelFactory%601> di tipo `IWorkflowCreation` e chiamare <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span><span class="sxs-lookup"><span data-stu-id="c022e-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="c022e-176">Questa operazione consentirà la restituzione di un proxy.</span><span class="sxs-lookup"><span data-stu-id="c022e-176">This will return a proxy.</span></span> <span data-ttu-id="c022e-177">Successivamente è possibile chiamare `Create` su tale proxy per creare l'istanza del flusso di lavoro ospitata in IIS:</span><span class="sxs-lookup"><span data-stu-id="c022e-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
   
     ```  
     using System.Text;  
@@ -373,17 +374,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="0acc4-178">Eseguire CreationEndpointClient.</span><span class="sxs-lookup"><span data-stu-id="0acc4-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="0acc4-179">L'output dovrebbe essere simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="0acc4-179">The output should look like the following:</span></span>  
+4.  <span data-ttu-id="c022e-178">Eseguire CreationEndpointClient.</span><span class="sxs-lookup"><span data-stu-id="c022e-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="c022e-179">L'output dovrebbe essere simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="c022e-179">The output should look like the following:</span></span>  
   
     ```Output  
     Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="0acc4-180">L'output del flusso di lavoro non sarà visualizzato poiché è in esecuzione in IIS, il quale non dispone di alcun output di console.</span><span class="sxs-lookup"><span data-stu-id="0acc4-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
+    >  <span data-ttu-id="c022e-180">L'output del flusso di lavoro non sarà visualizzato poiché è in esecuzione in IIS, il quale non dispone di alcun output di console.</span><span class="sxs-lookup"><span data-stu-id="c022e-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0acc4-181">Esempio</span><span class="sxs-lookup"><span data-stu-id="0acc4-181">Example</span></span>  
- <span data-ttu-id="0acc4-182">Di seguito è riportato il codice completo per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="0acc4-182">The following is the complete code for this sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="c022e-181">Esempio</span><span class="sxs-lookup"><span data-stu-id="c022e-181">Example</span></span>  
+ <span data-ttu-id="c022e-182">Di seguito è riportato il codice completo per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="c022e-182">The following is the complete code for this sample.</span></span>  
   
 ```xaml  
 <!-— workflow1.xamlx -->  
@@ -680,14 +681,14 @@ namespace CreationClient
 }  
 ```  
   
- <span data-ttu-id="0acc4-183">Questo esempio può sembrare un elemento di confusione poiché non si implementa mai un servizio che consente di implementare `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="0acc4-184">Il motivo è rappresentato dal fatto che l'implementazione viene effettuata da `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0acc4-184">This is because the `CreationEndpoint` does this for you.</span></span>  
+ <span data-ttu-id="c022e-183">Questo esempio può sembrare un elemento di confusione poiché non si implementa mai un servizio che consente di implementare `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="c022e-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="c022e-184">Il motivo è rappresentato dal fatto che l'implementazione viene effettuata da `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c022e-184">This is because the `CreationEndpoint` does this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0acc4-185">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0acc4-185">See Also</span></span>  
- [<span data-ttu-id="0acc4-186">Servizi flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="0acc4-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="0acc4-187">Hosting in Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="0acc4-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="0acc4-188">Hosting di procedure consigliate di Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="0acc4-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [<span data-ttu-id="0acc4-189">Istruzioni di Hosting Internet Information Service</span><span class="sxs-lookup"><span data-stu-id="0acc4-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [<span data-ttu-id="0acc4-190">Architettura del flusso di lavoro di Windows</span><span class="sxs-lookup"><span data-stu-id="0acc4-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [<span data-ttu-id="0acc4-191">Segnalibro di ripresa WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="0acc4-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [<span data-ttu-id="0acc4-192">Riallocazione di Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="0acc4-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="0acc4-193">Panoramica del flusso di lavoro di Windows</span><span class="sxs-lookup"><span data-stu-id="0acc4-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)
+## <a name="see-also"></a><span data-ttu-id="c022e-185">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c022e-185">See Also</span></span>  
+ [<span data-ttu-id="c022e-186">Servizi flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="c022e-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="c022e-187">Hosting in Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="c022e-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="c022e-188">Procedure consigliate per l'hosting in Internet Information Services (IIS)</span><span class="sxs-lookup"><span data-stu-id="c022e-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="c022e-189">Istruzioni per l'hosting su Internet Information Services</span><span class="sxs-lookup"><span data-stu-id="c022e-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="c022e-190">Architettura del flusso di lavoro di Windows</span><span class="sxs-lookup"><span data-stu-id="c022e-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [<span data-ttu-id="c022e-191">Segnalibro di ripresa WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="c022e-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [<span data-ttu-id="c022e-192">Riallocazione di Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="c022e-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="c022e-193">Panoramica del flusso di lavoro di Windows</span><span class="sxs-lookup"><span data-stu-id="c022e-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)

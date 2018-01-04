@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efd628c9b3d9bd1411363401b0dd6d6a87daa9e0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824f26dd1b0a8deb2e9b6a4bdef65e433dde141e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmessageclosed"></a><span data-ttu-id="34e72-102">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="34e72-102">System.ServiceModel.MessageClosed</span></span>
-<span data-ttu-id="34e72-103">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="34e72-103">System.ServiceModel.MessageClosed</span></span>  
+# <a name="systemservicemodelmessageclosed"></a><span data-ttu-id="d4fa9-102">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="d4fa9-102">System.ServiceModel.MessageClosed</span></span>
+<span data-ttu-id="d4fa9-103">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="d4fa9-103">System.ServiceModel.MessageClosed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="34e72-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="34e72-104">Description</span></span>  
- <span data-ttu-id="34e72-105">Un messaggio è stato chiuso.</span><span class="sxs-lookup"><span data-stu-id="34e72-105">A message was closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="d4fa9-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d4fa9-104">Description</span></span>  
+ <span data-ttu-id="d4fa9-105">Un messaggio è stato chiuso.</span><span class="sxs-lookup"><span data-stu-id="d4fa9-105">A message was closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34e72-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34e72-106">See Also</span></span>  
- [<span data-ttu-id="34e72-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="34e72-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="34e72-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="34e72-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="34e72-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="34e72-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d4fa9-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d4fa9-106">See Also</span></span>  
+ [<span data-ttu-id="d4fa9-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="d4fa9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d4fa9-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="d4fa9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d4fa9-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="d4fa9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

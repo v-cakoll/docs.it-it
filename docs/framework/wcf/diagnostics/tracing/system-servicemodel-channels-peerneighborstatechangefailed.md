@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8bcaf08f1a67c0a4cc597b4df69f27c4d01b9dfb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24cef211bfc13769b54a69458b31d825afa86567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a><span data-ttu-id="78ad0-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span><span class="sxs-lookup"><span data-stu-id="78ad0-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span></span>
-<span data-ttu-id="78ad0-103">Lo stato di un router adiacente è stato danneggiato.</span><span class="sxs-lookup"><span data-stu-id="78ad0-103">A neighbor's state was corrupted.</span></span>  
+# <a name="systemservicemodelchannelspeerneighborstatechangefailed"></a><span data-ttu-id="37dc2-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span><span class="sxs-lookup"><span data-stu-id="37dc2-102">System.ServiceModel.Channels.PeerNeighborStateChangeFailed</span></span>
+<span data-ttu-id="37dc2-103">Lo stato di un router adiacente è stato danneggiato.</span><span class="sxs-lookup"><span data-stu-id="37dc2-103">A neighbor's state was corrupted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="78ad0-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="78ad0-104">Description</span></span>  
- <span data-ttu-id="78ad0-105">Questa traccia si verifica in occasione di un tentativo non riuscito di modifica dello stato di un router adiacente.</span><span class="sxs-lookup"><span data-stu-id="78ad0-105">This trace occurs upon a failed attempt to change a neighbor's state.</span></span> <span data-ttu-id="78ad0-106">Indica un errore interno imprevisto o la presenza di memoria danneggiata.</span><span class="sxs-lookup"><span data-stu-id="78ad0-106">This indicates an unexpected internal error, or corrupted memory.</span></span>  
+## <a name="description"></a><span data-ttu-id="37dc2-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="37dc2-104">Description</span></span>  
+ <span data-ttu-id="37dc2-105">Questa traccia si verifica in occasione di un tentativo non riuscito di modifica dello stato di un router adiacente.</span><span class="sxs-lookup"><span data-stu-id="37dc2-105">This trace occurs upon a failed attempt to change a neighbor's state.</span></span> <span data-ttu-id="37dc2-106">Indica un errore interno imprevisto o la presenza di memoria danneggiata.</span><span class="sxs-lookup"><span data-stu-id="37dc2-106">This indicates an unexpected internal error, or corrupted memory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78ad0-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="78ad0-107">See Also</span></span>  
- [<span data-ttu-id="78ad0-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="78ad0-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="78ad0-109">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="78ad0-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="78ad0-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="78ad0-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="37dc2-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37dc2-107">See Also</span></span>  
+ [<span data-ttu-id="37dc2-108">Traccia</span><span class="sxs-lookup"><span data-stu-id="37dc2-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="37dc2-109">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="37dc2-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="37dc2-110">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="37dc2-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

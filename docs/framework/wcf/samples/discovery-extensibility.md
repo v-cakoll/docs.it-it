@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bdbcd6d3f0389b8c5f1fdbac522d80a4f80cd23
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2d771bcf0c19a60195e14fea1d97745cf64a80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="discovery-extensibility"></a><span data-ttu-id="1e7da-102">Estensibilità dell'individuazione</span><span class="sxs-lookup"><span data-stu-id="1e7da-102">Discovery Extensibility</span></span>
-<span data-ttu-id="1e7da-103">L'esempio in questa sezione mostra come estendere la funzionalità di individuazione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1e7da-103">The sample in this section show how to extend the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] discovery feature.</span></span>  
+# <a name="discovery-extensibility"></a><span data-ttu-id="bc6bc-102">Estensibilità dell'individuazione</span><span class="sxs-lookup"><span data-stu-id="bc6bc-102">Discovery Extensibility</span></span>
+<span data-ttu-id="bc6bc-103">L'esempio in questa sezione mostra come estendere la funzionalità di individuazione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc6bc-103">The sample in this section show how to extend the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] discovery feature.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1e7da-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="1e7da-104">In This Section</span></span>  
- [<span data-ttu-id="1e7da-105">CustomDiscoveryMetadata</span><span class="sxs-lookup"><span data-stu-id="1e7da-105">CustomDiscoveryMetadata</span></span>](../../../../docs/framework/wcf/samples/customdiscoverymetadata.md)  
- <span data-ttu-id="1e7da-106">Viene illustrato come inserire metadati XML personalizzati nei metadati di individuazione per un endpoint individuabile esposto da un servizio.</span><span class="sxs-lookup"><span data-stu-id="1e7da-106">Shows how to insert custom XML metadata into the discovery metadata for a discoverable endpoint exposed by a service.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="bc6bc-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="bc6bc-104">In This Section</span></span>  
+ [<span data-ttu-id="bc6bc-105">CustomDiscoveryMetadata</span><span class="sxs-lookup"><span data-stu-id="bc6bc-105">CustomDiscoveryMetadata</span></span>](../../../../docs/framework/wcf/samples/customdiscoverymetadata.md)  
+ <span data-ttu-id="bc6bc-106">Viene illustrato come inserire metadati XML personalizzati nei metadati di individuazione per un endpoint individuabile esposto da un servizio.</span><span class="sxs-lookup"><span data-stu-id="bc6bc-106">Shows how to insert custom XML metadata into the discovery metadata for a discoverable endpoint exposed by a service.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="1e7da-107">Riferimento</span><span class="sxs-lookup"><span data-stu-id="1e7da-107">Reference</span></span>  
- <span data-ttu-id="1e7da-108"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> <xref:System.ServiceModel.Discovery.DiscoveryClient> <xref:System.ServiceModel.Discovery.FindResponse></span><span class="sxs-lookup"><span data-stu-id="1e7da-108"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> <xref:System.ServiceModel.Discovery.DiscoveryClient> <xref:System.ServiceModel.Discovery.FindResponse></span></span>  
+## <a name="reference"></a><span data-ttu-id="bc6bc-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="bc6bc-107">Reference</span></span>  
+ <span data-ttu-id="bc6bc-108"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> <xref:System.ServiceModel.Discovery.DiscoveryClient> <xref:System.ServiceModel.Discovery.FindResponse></span><span class="sxs-lookup"><span data-stu-id="bc6bc-108"><xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> <xref:System.ServiceModel.Discovery.DiscoveryClient> <xref:System.ServiceModel.Discovery.FindResponse></span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="1e7da-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="1e7da-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="bc6bc-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="bc6bc-109">Related Sections</span></span>
