@@ -24,23 +24,24 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e672c0bf6eddaef7bd0b2103fdde75ae2554dedd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>Controllo CheckedListBox (Windows Form)
 Windows Form `CheckedListBox` controllo Visualizza un elenco di elementi, ad esempio il <xref:System.Windows.Forms.ListBox> controllo e può inoltre contenere un segno di spunta accanto agli elementi nell'elenco.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
  [Procedura: Rilevare gli elementi selezionati nel controllo CheckedListBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Viene descritto come scorrere un elenco per determinare quali elementi sono selezionati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.CheckedListBox>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

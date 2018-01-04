@@ -29,11 +29,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4209866f63931fb3d80f35e211bd5f9b35ed48bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d9cc6568813af866acaf20696b870bedc3099be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGridView (Windows Form)
 > [!NOTE]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  Il <xref:System.Windows.Forms.DataGridView> controllo è particolarmente configurabile ed estendibile e fornisce molte proprietà, metodi ed eventi per personalizzare l'aspetto e comportamento. Quando si desidera che l'applicazione Windows Form per visualizzare i dati tabulari, è consigliabile utilizzare il <xref:System.Windows.Forms.DataGridView> controllo prima di altre (ad esempio, <xref:System.Windows.Forms.DataGrid>). Se si intende visualizzare una griglia di piccole dimensioni dei valori di sola lettura o se si sta abilitando un utente di modificare una tabella con milioni di record, il <xref:System.Windows.Forms.DataGridView> controllo offre una soluzione facilmente programmabile e utilizzo efficiente della memoria.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Riepilogo della tecnologia del controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
  Riepiloga <xref:System.Windows.Forms.DataGridView> controllare i concetti e l'utilizzo di classi correlate.  
   

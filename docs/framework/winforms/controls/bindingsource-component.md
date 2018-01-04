@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 08b55bc2bd5af78eb6c3d0f5adce3ec39d288a9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component"></a>Componente BindingSource
 Incapsula un'origine dati per l'associazione ai controlli.  
@@ -30,14 +31,14 @@ Incapsula un'origine dati per l'associazione ai controlli.
   
  In secondo luogo, il componente <xref:System.Windows.Forms.BindingSource> può fungere da origine dati fortemente tipizzata. Aggiungendo un tipo al componente <xref:System.Windows.Forms.BindingSource> con il metodo <xref:System.Windows.Forms.BindingSource.Add%2A>, viene creato un elenco di tale tipo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
  Introduce i concetti generali del componente <xref:System.Windows.Forms.BindingSource>, che consente di associare un'origine dati a un controllo.  
   
  [Procedura: associare controlli Windows Form a valori di database DBNull](../../../../docs/framework/winforms/controls/how-to-bind-windows-forms-controls-to-dbnull-database-values.md)  
  Mostra come gestire un valore <xref:System.DBNull> dell'origine dati con il componente <xref:System.Windows.Forms.BindingSource>.  
   
- [Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
+ [Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
  Illustra l'uso del componente <xref:System.Windows.Forms.BindingSource> per applicare criteri di ordinamento e filtri ai dati visualizzati.  
   
  [Procedura: eseguire l'associazione a un servizio Web utilizzando il BindingSource Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
@@ -67,7 +68,7 @@ Incapsula un'origine dati per l'associazione ai controlli.
  [Procedura: condividere dati associati tra form tramite il componente BindingSource](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
  Mostra come usare <xref:System.Windows.Forms.BindingSource> per associare più form alla stessa origine dati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.BindingSource>  
  Fornisce la documentazione di riferimento per il componente <xref:System.Windows.Forms.BindingSource>.  
   

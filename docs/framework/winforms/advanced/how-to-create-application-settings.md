@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d0ede88d8f9b4c15cd3e0f141870b9a5e747aa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-application-settings"></a>Procedura: creare le impostazioni dell'applicazione
 Usando il codice gestito, è possibile creare nuove impostazioni dell'applicazione e associarle alle proprietà nel form o nei controlli del form, in modo che queste impostazioni vengano caricate e salvate automaticamente in fase di esecuzione.  

@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d87d1968b2a605a45f9cb0a918e6345679aa9c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 514f4e4835a047c8c340c0026aa5b59f6f3f7822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-windows-forms"></a>Controllo DateTimePicker (Windows Form)
 Windows Form `DateTimePicker` controllo consente all'utente di selezionare un singolo elemento da un elenco di date o ore. Quando utilizzato per rappresentare una data, viene visualizzato in due parti: un elenco a discesa con una data rappresentata in testo e una griglia in cui viene visualizzata quando si fa clic su freccia in giù accanto all'elenco.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi il `DateTimePicker` controllo, che consente agli utenti di selezionare un singolo elemento da un elenco di date o ore.  
   
@@ -40,7 +41,7 @@ Windows Form `DateTimePicker` controllo consente all'utente di selezionare un si
  [Procedura: Visualizzare l'ora con il controllo DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md)  
  Vengono illustrati i passaggi per un `DateTimePicker` visualizzare solo le ore.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DateTimePicker>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

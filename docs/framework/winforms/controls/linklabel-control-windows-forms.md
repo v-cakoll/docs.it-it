@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9627634f30ebdabe75ccfc7ff0ffa8fdd50655b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5231813096413b66272b87aabd9adf0643c6e26d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linklabel-control-windows-forms"></a>Controllo LinkLabel (Windows Form)
 Windows Form `LinkLabel` controllo consente di aggiungere collegamenti ipertestuali alle applicazioni Windows Form. È possibile utilizzare il `LinkLabel` controllo per tutti gli elementi che è possibile utilizzare il <xref:System.Windows.Forms.Label> controllare per; è inoltre possibile impostare una parte del testo come un collegamento a un oggetto o una pagina Web.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -41,7 +42,7 @@ Windows Form `LinkLabel` controllo consente di aggiungere collegamenti ipertestu
  [Procedura: Visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  Viene illustrato come visualizzare una pagina Web nel browser predefinito quando un utente fa clic su un Windows Form `LinkLabel` controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.LinkLabel>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

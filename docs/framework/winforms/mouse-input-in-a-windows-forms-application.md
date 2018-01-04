@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb45f22a037b459556f6de2e8cda0e025b621686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 56b267222f8e22d9d411d744f67d93cde6ba17a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Input del mouse in un'applicazione Windows Forms
 Windows Forms include una serie di eventi del mouse e supporto aggiuntivo per i cursori personalizzati del mouse, il mouse capture e il comportamento di trascinamento della selezione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Funzionamento dell'input del mouse in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)  
  Offre informazioni sugli eventi del mouse e su come ottenere le informazioni e le impostazioni di sistema aggiornate per il mouse.  
   

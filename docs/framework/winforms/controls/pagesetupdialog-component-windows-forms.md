@@ -30,23 +30,24 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1eb071b4bf3248deaa171ad473d1867d2edb46ab
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f8b1f61d88b5c27c2bf07ca3ac1ef81d470a3518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>Componente PageSetupDialog (Windows Form)
 Windows Form <xref:System.Windows.Forms.PageSetupDialog> componente è una finestra di dialogo preconfigurata che consentono di impostare i dettagli della pagina per la stampa nelle applicazioni basate su Windows. Utilizzarlo all'interno dell'applicazione basate su Windows come una soluzione semplice per gli utenti per impostare preferenze della pagina anziché configurare la propria finestra di dialogo. È possibile abilitare l'impostazione del bordo e la modifica di margini, intestazioni e piè di pagina e orientamento verticale od orizzontale. Basandosi sulle finestre di dialogo standard di Windows è quindi possibile creare applicazioni le cui funzionalità di base sono immediatamente familiari agli utenti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
  Introduce i concetti generali relativi il <xref:System.Windows.Forms.PageSetupDialog> componente, è possibile utilizzare per visualizzare una finestra di dialogo preconfigurata nella quale gli utenti possono modificare le impostazioni della pagina.  
   
  [Procedura: Definire le proprietà della pagina con il componente PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
  Viene illustrato come impostare le proprietà di pagina utilizzando un'istanza di <xref:System.Windows.Forms.PageSetupDialog> componente in fase di esecuzione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.PageSetupDialog>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   

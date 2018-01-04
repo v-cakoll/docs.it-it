@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenari del controllo DataGridView (Windows Form)
 Con il <xref:System.Windows.Forms.DataGridView> (controllo), è possibile visualizzare dati tabulari forniti da un'ampia gamma di origini dati. Per le operazioni semplici, è possibile inserire manualmente un <xref:System.Windows.Forms.DataGridView> e modificare i dati direttamente tramite il controllo. In genere, tuttavia, si verrà archiviano i dati in un'origine dati esterna e associare il controllo a esso tramite un <xref:System.Windows.Forms.BindingSource> componente.  

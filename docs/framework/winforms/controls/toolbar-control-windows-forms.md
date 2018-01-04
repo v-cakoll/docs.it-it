@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18fc87d4ebccd101bec47abd39805746d0b9ef81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 204c4229852d4e91d2af7a27163c7418b9a1e9b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-control-windows-forms"></a>Controllo ToolBar (Windows Form)
 > [!NOTE]
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  La proprietà <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> del controllo `ToolBar` accetta un'istanza della classe <xref:System.Windows.Forms.ContextMenu> come riferimento. Prestare particolare attenzione al riferimento che viene passato quando si implementa questo tipo di pulsanti sulle barre degli strumenti dell'applicazione, poiché la proprietà accetterà qualsiasi oggetto che eredita dalla classe <xref:System.Windows.Forms.Menu>.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi al controllo `ToolBar`, che consente di creare barre degli strumenti personalizzate che possono essere usate dagli utenti.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
   
  Vedere anche [procedura: definire un'icona per un pulsante della barra degli strumenti utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [procedura: aggiungere pulsanti a un controllo barra degli strumenti utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.ToolBar>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   

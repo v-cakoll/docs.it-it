@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d951d45232437026cc41d8e40284207ea1c64ab9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c909537bd4c52a546faeb83c6e9291c4de76d76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>Cenni preliminari sul componente NotifyIcon (Windows Form)
 Il componente <xref:System.Windows.Forms.NotifyIcon> di Windows Form viene in genere usato per la visualizzazione di icone per i processi eseguiti in background e, per la maggior parte del tempo, non presenta alcuna interfaccia utente. Un esempio può essere rappresentato da un programma di protezione dai virus, al quale è possibile accedere facendo clic su un'icona riportata nell'area di notifica dello stato della barra delle applicazioni.  

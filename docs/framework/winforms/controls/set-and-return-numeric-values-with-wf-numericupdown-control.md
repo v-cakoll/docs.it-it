@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Procedura: impostare e restituire valori numerici con il controllo NumericUpDown Windows Form
 Il valore numerico di Windows Form <xref:System.Windows.Forms.NumericUpDown> controllo è determinato dal relativo <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà. Come con qualsiasi altra proprietà, è possibile scrivere un test condizionale per il valore del controllo. Una volta il <xref:System.Windows.Forms.NumericUpDown.Value%2A> proprietà è impostata, è possibile modificare direttamente scrivendo il codice per eseguire operazioni su di esso oppure è possibile chiamare il <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metodi.  
@@ -47,7 +48,7 @@ Il valore numerico di Windows Form <xref:System.Windows.Forms.NumericUpDown> con
     numericUpDown1->Value = 55;  
     ```  
   
-     -oppure-  
+     oppure  
   
 2.  Chiamare il <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> o <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metodo per aumentare o diminuire il valore di quello specificato nel <xref:System.Windows.Forms.NumericUpDown.Increment%2A> proprietà.  
   

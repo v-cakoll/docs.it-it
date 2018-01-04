@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f6f432742c966e3f17a7b7fa84628f24109d08e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recoloring-images"></a>Ricolorazione di immagini
 Nuova colorazione è il processo di modificare i colori delle immagini. Alcuni esempi di ricolorazione modifica un colore a un altro, intensità del colore un relativo a un altro colore, la modifica della luminosità o contrasto di tutti i colori e la conversione dei colori in gradazioni di grigio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Usare una matrice di colori per trasformare un singolo colore](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
  Viene illustrato l'utilizzo di una matrice di colori per trasformare un colore.  
   
@@ -45,7 +46,7 @@ Nuova colorazione è il processo di modificare i colori delle immagini. Alcuni e
  [Procedura: Usare una tabella di riassociazione cromatica](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
  Definisce i mapping e viene illustrato come utilizzare una tabella di modifica del mapping dei colori.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  Descrive la classe e contiene collegamenti a tutti i relativi membri.  
   

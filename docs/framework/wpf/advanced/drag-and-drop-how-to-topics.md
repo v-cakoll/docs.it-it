@@ -15,16 +15,17 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Procedure relative al trascinamento della selezione
 Gli esempi seguenti illustrano come eseguire attività comuni utilizzando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Aprire un file rilasciato in un controllo RichTextBox](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
  [Creare un oggetto dati](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
  [Determinare se un formato di dati è presente in un oggetto dati](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-windows-forms"></a>Controllo DomainUpDown (Windows Form)
 Windows Form <xref:System.Windows.Forms.DomainUpDown> controllo simile a una combinazione di una casella di testo e una coppia di pulsanti per spostarsi verso l'alto o verso il basso all'interno di un elenco. Il controllo Visualizza e imposta una stringa di testo da un elenco di scelte. L'utente può selezionare la stringa facendo clic su e giù per spostarsi in un elenco, premendo i tasti freccia su e giù o digitando una stringa che corrisponde a un elemento nell'elenco. Un possibile utilizzo di questo controllo è per la selezione di elementi da un elenco in ordine alfabetico dei nomi. (Per ordinare l'elenco, impostare il <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> proprietà `true`.) La funzione di questo controllo è molto simile alla casella di riepilogo o casella combinata, ma richiede poco spazio.  
@@ -32,7 +33,7 @@ Windows Form <xref:System.Windows.Forms.DomainUpDown> controllo simile a una com
   
  Questo controllo consente di visualizzare solo le stringhe di testo. Se si desidera un controllo che visualizza i valori numerici, utilizzare il <xref:System.Windows.Forms.NumericUpDown> controllo. Per ulteriori informazioni, vedere [controllo NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi il <xref:System.Windows.Forms.DomainUpDown> controllo, che consente agli utenti di esplorare e selezionare da un elenco di stringhe di testo.  
   
@@ -42,7 +43,7 @@ Windows Form <xref:System.Windows.Forms.DomainUpDown> controllo simile a una com
  [Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Form](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Viene descritto come eliminare gli elementi di <xref:System.Windows.Forms.DomainUpDown> nel codice.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DomainUpDown>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47858af6d4e3dc5f29632c5a74f2431a2cc200b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 452dfc5a9645e8f43ab583099deec60faa2d1b4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Procedura: aggiungere dati agli Appunti
 La <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile utilizzare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni utilizzano negli Appunti come archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Sono utili per il trasferimento di dati da un'applicazione a altra anche negli Appunti.  

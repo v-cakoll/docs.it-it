@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55b3879b894658c9a649004348a198d004040af3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento
 L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  
@@ -59,7 +60,7 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
  La tabella seguente elenca membri aggiuntivi definiti dalla proprietà `FlashTrackBar:`: l'evento proprietà modificata e il metodo che genera tale evento.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`ValueChanged`|L'evento generato quando viene modificata la proprietà `Value` della barra di avanzamento.|  
 |`OnValueChanged`|Il metodo che genera l'evento `ValueChanged`.|  

@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45772035a7f2229ca0e0320ee9b65eb128c4fc32
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c34c6207c29f008606cc4ace83aa4f94c41f6851
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedura: modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid Windows Form
 > [!NOTE]
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di dati ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  [Procedura: Eliminare o nascondere colonne nel controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  [Procedura: Associare il controllo DataGrid Windows Form a un'origine dati](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

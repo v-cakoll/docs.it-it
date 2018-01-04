@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1764b55232d1883516c2cc8684e3ee1b0cb5c05b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Procedura: individuare le modifiche degli attributi di formattazione nel controllo RichTextBox Windows Form
 Un utilizzo comune di Windows Form <xref:System.Windows.Forms.RichTextBox> controllo formattazione del testo con attributi, ad esempio le opzioni di tipo di carattere o gli stili dei paragrafi. L'applicazione potrebbe essere necessario tenere traccia delle modifiche per la visualizzazione di una barra degli strumenti, come in molte applicazioni di elaborazione testi di formattazione del testo.  

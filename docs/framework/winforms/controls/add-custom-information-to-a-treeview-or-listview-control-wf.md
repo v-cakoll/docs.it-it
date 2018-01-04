@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64e51a8911e27a612500ba222df7e3637cd24a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)
 È possibile creare un nodo derivato in un Windows Form <xref:System.Windows.Forms.TreeView> controllo o un elemento derivato in una <xref:System.Windows.Forms.ListView> controllo. La derivazione consente di aggiungere eventuali campi necessari, nonché metodi personalizzati e costruttori per gestirli. Un utilizzo di questa funzionalità consiste nel collegare un oggetto Customer a ogni nodo di una struttura ad albero o voce di elenco. Negli esempi seguenti sono per un <xref:System.Windows.Forms.TreeView> il controllo, ma lo stesso approccio può essere utilizzato per un <xref:System.Windows.Forms.ListView> controllo.  

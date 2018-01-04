@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 001cc32aa9e1f31695f3b349480b6dd5154b31a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Procedura: impostare il formato per il controllo NumericUpDown Windows Form
 È possibile configurare la modalità di visualizzazione dei valori in Windows Form <xref:System.Windows.Forms.NumericUpDown> controllo. Il <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> proprietà determina il numero di cifre visualizzate dopo il separatore decimale; il valore predefinito è 0. Il <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> proprietà determina se inserire un separatore tra ogni tre cifre decimali, il valore predefinito è `false`. Se il controllo può visualizzare i valori in formato decimale, esadecimale anziché il <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> è impostata su `true`; il valore predefinito è `false`.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     -oppure-  
+     oppure  
   
 -   Visualizzare un valore esadecimale impostando il <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> proprietà `true`.  
   

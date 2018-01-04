@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4f9680bb64339f2f232793beb9c47a36c07aa4a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9910aa1849ed9288eca7003408c0afc39c641dbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Sviluppo di controlli Windows Form in fase di progettazione
 .NET Framework offre agli autori di controlli numerose tecnologie di creazione dei controlli. Gli autori non devono più limitarsi alla progettazione di controlli compositi che fungono da raccolta dei controlli preesistenti. Grazie all'ereditarietà, è possibile creare i propri controlli da controlli compositi preesistenti o da controlli Windows Form preesistenti. È anche possibile progettare propri controlli che implementano il disegno personalizzato. Queste opzioni offrono una grande flessibilità per la progettazione e la funzionalità dell'interfaccia visiva. Per sfruttare queste funzionalità, è preferibile avere familiarità con i concetti della programmazione basata su oggetti.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/22/2017
   
  Per creare controlli personalizzati da usare nei Web Form, vedere [Sviluppo di controlli server ASP.NET personalizzati](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura dettagliata: Modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  Illustra come creare un controllo composito semplice in Visual Basic.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/22/2017
  [Risoluzione dei problemi relativi alla modifica di controlli e componenti](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Illustra come diagnosticare e correggere gli errori comuni che possono verificarsi quando si crea un componente o un controllo personalizzato.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

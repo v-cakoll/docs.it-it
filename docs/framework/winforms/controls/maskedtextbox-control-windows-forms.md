@@ -19,23 +19,24 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>Controllo MaskedTextBox (Windows Form)
 In questo argomento vengono forniti collegamenti ad altri utenti relative la `MaskedTextBox` controllo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura dettagliata: Utilizzo del controllo MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
  Illustra le funzionalità principali del `MaskedTextBox` controllo.  
   
  [Procedura: Associare dati al controllo MaskedTextBox](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
  Viene illustrato come riformattare i dati quando i dati nel database non corrispondano al formato previsto dalla definizione della maschera.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.MaskedTextBox>  
  La classe primaria per l'implementazione del controllo casella di testo mascherata.  
   

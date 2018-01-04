@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdeb5011e5f44eb45d553045c2f89b97f9e4d100
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Controllo TabControl (Windows Form)
 Il controllo `TabControl` di Windows Form consente di visualizzare più schede, come i divisori di un raccoglitore o le etichette di una serie di cartelle da archivio. Le schede possono contenere immagini e altri controlli. Il controllo `TabControl` può essere usato per creare pagine delle proprietà.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica del controllo TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -48,7 +49,7 @@ Il controllo `TabControl` di Windows Form consente di visualizzare più schede, 
   
  Vedere anche [procedura: aggiungere e rimuovere schede con Windows Form TabControl usando la finestra di progettazione](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  Classe <xref:System.Windows.Forms.TabControl>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0ad5ba4bdd283e411c746906adfed53282c55b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-windows-forms"></a>Controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  Quando è impostato su un'origine dati valida, il controllo `DataGrid` viene popolato automaticamente, creando righe e colonne in base alla forma dei dati. Il controllo `DataGrid` può essere usato per visualizzare una singola tabella o le relazioni gerarchiche tra un set di tabelle.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  Descrive le funzionalità di base del controllo `DataGrid`.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
  [Procedura: Convalidare l'input con il controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Descrive come convalidare l'input nel set di dati associato al controllo `DataGrid`.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGrid>  
  Viene fornita una panoramica di <xref:System.Windows.Forms.DataGrid> classe.  
   

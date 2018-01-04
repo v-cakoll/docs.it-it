@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmazione con celle, righe e colonne nel controllo DataGridView di Windows Form
 In questa sezione vengono forniti argomenti che illustrano diverse attività di programmazione che include oggetti di colonna, riga e cella.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Aggiungere descrizioni comandi a singole celle in un controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Viene descritto come gestire il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento per fornire diverse descrizioni comandi per le singole celle.  
   
@@ -47,7 +48,7 @@ In questa sezione vengono forniti argomenti che illustrano diverse attività di 
  [Procedura: Usare le colonne di immagini nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  Descrive come programmare con il `DataGridViewImageColumn` classe.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

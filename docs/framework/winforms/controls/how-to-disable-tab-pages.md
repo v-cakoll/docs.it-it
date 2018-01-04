@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2db19d402f32bd43bb7053403428e8055755d017
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-tab-pages"></a>Procedura: disabilitare le schede
 In alcuni casi, è possibile limitare l'accesso ai dati disponibili all'interno dell'applicazione Windows Form. Un esempio potrebbe essere quando si dispone di dati visualizzati nelle pagine di un controllo scheda. gli amministratori potrebbe avere informazioni su una scheda che si desidera impedire agli utenti di livello inferiore o di guest.  

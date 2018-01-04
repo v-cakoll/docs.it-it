@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e568dd7fadea8af399a63aa95347f368b4e13a54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dba74214fe439e09d1855f7ab248c075bd8257c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-in-windows-forms-controls"></a>Eventi nei controlli di Windows Form
 Un controllo Windows Form eredita più di 60 eventi da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Queste includono la <xref:System.Windows.Forms.Control.Paint> evento che determina un controllo da disegnare, eventi correlati alla visualizzazione di una finestra, ad esempio il <xref:System.Windows.Forms.Control.Resize> e <xref:System.Windows.Forms.Control.Layout> eventi ed eventi di mouse e tastiera basso livello. Alcuni eventi di basso livello sono sintetizzati da <xref:System.Windows.Forms.Control> nella semantici eventi, ad esempio <xref:System.Windows.Forms.Control.Click> e <xref:System.Windows.Forms.Control.DoubleClick>. Per informazioni dettagliate sugli eventi ereditati, vedere <xref:System.Windows.Forms.Control>.  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-attributes"></a>Attributi delle impostazioni delle applicazioni
 L'architettura Impostazioni applicazione fornisce numerosi attributi che è possono applicare la classe wrapper di impostazioni o alle singole proprietà. Questi attributi vengono esaminati in fase di esecuzione dall'infrastruttura di impostazioni applicazione, spesso in modo specifico il provider di impostazioni, per personalizzare il funzionamento alle esigenze dichiarate del wrapper personalizzato.  

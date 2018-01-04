@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32aa83e69d1159b2afa376a7155c40e2a36d7684
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5e64a2a858b9506ec08beff728e23da0f817f170
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida
 I controlli aggiunti a Windows Form hanno proprietà e metodi usati per personalizzare ancora di più l'esperienza utente. Per le applicazioni Windows ben progettate è estremamente importante personalizzare l'interfaccia per soddisfare le esigenze dell'utente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Impostare il testo visualizzato da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
  Descrive come assegnare un'etichetta di testo a un controllo.  
   

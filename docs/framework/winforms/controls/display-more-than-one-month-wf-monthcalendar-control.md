@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63cf236f93fa3352e536c71000f6bb110abf02fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c29ac094fb5149b4146701315f1458884a2701c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Procedura: visualizzare più mesi nel controllo MonthCalendar Windows Form
 Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare fino a dodici mesi contemporaneamente. Per impostazione predefinita, il controllo Visualizza un solo mese, ma è possibile specificare il numero di mesi viene visualizzato e la modalità di disposizione all'interno del controllo. Quando si modificano le dimensioni del calendario, il controllo viene ridimensionato, è necessario che vi sia spazio sufficiente nel form per le nuove dimensioni.  

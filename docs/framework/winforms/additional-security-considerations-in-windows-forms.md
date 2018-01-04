@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8b693f7faf9abb71d214ca755fc9587a1dcc0ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerazioni aggiuntive sulla sicurezza in Windows Form
 Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla capacità di chiamare l'API Microsoft Win32 o altre API non verificabili dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  
@@ -84,7 +85,7 @@ Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdns
   
  Alcuni membri di Windows Form forniscono l'accesso non gestita che richiede il <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> autorizzazione. Nella tabella seguente sono elencati i membri di <xref:System.Windows.Forms> dello spazio dei nomi che richiedono tale autorizzazione. Per altre informazioni sulle autorizzazioni necessarie per un membro, vedere la documentazione della libreria di classi .NET Framework.  
   
-|Componente|Membro|  
+|Componente|Member|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|-    Metodo <xref:System.Windows.Forms.Application.AddMessageFilter%2A><br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A>proprietà<br />-    Metodo `Exit`<br />-    Metodo <xref:System.Windows.Forms.Application.ExitThread%2A><br />-   <xref:System.Windows.Forms.Application.ThreadException>evento|  
 |<xref:System.Windows.Forms.CommonDialog>|-    Metodo <xref:System.Windows.Forms.CommonDialog.HookProc%2A><br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ (metodo)<br />-    Metodo <xref:System.Windows.Forms.CommonDialog.Reset%2A><br />-    Metodo <xref:System.Windows.Forms.CommonDialog.RunDialog%2A>|  

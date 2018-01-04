@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1ae6fb9a0aa6552459b2847243047244d0806db2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo GroupBox (Windows Form)
 Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati per fornire un raggruppamento identificabile per altri controlli. In genere, utilizzare le caselle di gruppo per suddividere un form dalla funzione. Ad esempio, potrebbe essere un modulo d'ordine che specifica le opzioni di spedizione, ad esempio quali notturno vettore da usare. Raggruppamento di tutte le opzioni in una casella di gruppo fornisce all'utente un'indicazione visiva logica e in fase di progettazione di spostare facilmente, quando si sposta il singolo <xref:System.Windows.Forms.GroupBox> controllare tutti i controlli in esso contenuti, troppo spostano.  

@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08a0cc15cff39bb936a78db95c73568aa643d0b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 51f6765e5960ddadd27a476f7229a76fbfe985e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-windows-forms"></a>Controllo DataGridView (Windows Form)
 Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visualizzare i dati in formato tabulare. È possibile usare il controllo `DataGridView` per mostrare le visualizzazioni di sola lettura di una piccola quantità di dati oppure ridimensionarlo per mostrare le visualizzazioni modificabili di set di dati di dimensioni molto estese.  
@@ -37,7 +38,7 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
  Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità `DataGridView` nelle applicazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  Fornisce argomenti che descrivono l'architettura e i concetti principali del controllo `DataGridView` Windows Form.  
   
@@ -85,7 +86,7 @@ Il controllo `DataGridView` fornisce un sistema efficiente e flessibile per visu
   
  Vedere anche [utilizzando la finestra di progettazione con il controllo DataGridView Windows Form](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

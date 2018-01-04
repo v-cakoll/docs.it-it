@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Procedura: agganciare i controlli in Windows Form
 Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i controlli sul form devono ridimensionare e riposizionare correttamente. Per ridimensionare i controlli in modo dinamico con il modulo, è possibile utilizzare il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà dei controlli Windows Form. Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà definisce una posizione di ancoraggio per il controllo. Quando un controllo viene ancorato a un modulo e il form viene ridimensionato, il controllo mantiene la distanza tra il controllo e la posizione di ancoraggio. Ad esempio, se dispone di un <xref:System.Windows.Forms.TextBox> controllo è ancorato il sinistro, destro e inferiore del form, come il form viene ridimensionato, il <xref:System.Windows.Forms.TextBox> controllo viene ridimensionato orizzontalmente in modo che mantiene la stessa distanza i lati destro e sinistro del form. Inoltre, il controllo si posizionerà verticalmente in modo che il percorso è sempre la stessa distanza dal bordo inferiore del form. Se un controllo non è ancorato e viene ridimensionato il form, la posizione del controllo in relazione i bordi del form viene modificata.  

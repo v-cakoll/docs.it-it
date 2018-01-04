@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedura: inserire virgolette in una stringa (Windows Form)
 In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di testo. Ad esempio:  
@@ -58,7 +59,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
        }  
     ```  
   
-     -oppure-  
+     oppure  
   
 2.  Inserire il carattere ASCII o Unicode per una virgoletta. In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], usare il carattere ASCII (34). In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], usare il carattere Unicode (\u0022).  
   
@@ -77,7 +78,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
     > [!NOTE]
     >  In questo esempio, non è possibile usare \u0022 perché non è possibile usare un nome di carattere universale che indica un carattere nel set di caratteri di base. In caso contrario, si otterrebbe C3851. Per altre informazioni, vedere l'[L'errore del compilatore C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     -oppure-  
+     oppure  
   
 3.  È anche possibile definire una costante per il carattere e usarlo se necessario.  
   

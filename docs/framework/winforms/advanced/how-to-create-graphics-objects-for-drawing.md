@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: creare oggetti Graphics per disegnare
 Prima di poter creare linee e forme, il rendering del testo, visualizzare e modificare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene utilizzato per creare immagini grafiche.  
@@ -43,11 +44,11 @@ Prima di poter creare linee e forme, il rendering del testo, visualizzare e modi
   
 -   Ricevere un riferimento a un oggetto grafico come parte di <xref:System.Windows.Forms.PaintEventArgs> nel <xref:System.Windows.Forms.Control.Paint> evento di un form o controllo. Si tratta in genere come ottenere un riferimento a un oggetto grafico durante la creazione di codice di disegno di un controllo. Analogamente, è possibile ottenere un oggetto graphics come proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestisce il <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento per un <xref:System.Drawing.Printing.PrintDocument>.  
   
-     -oppure-  
+     oppure  
   
 -   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o un form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta l'area di disegno di tale controllo o un form. Utilizzare questo metodo se si desidera disegnare su un form o controllo che esiste già.  
   
-     -oppure-  
+     oppure  
   
 -   Creare un <xref:System.Drawing.Graphics> oggetto da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>. Questo approccio è utile quando si desidera modificare un'immagine già esistente.  
   

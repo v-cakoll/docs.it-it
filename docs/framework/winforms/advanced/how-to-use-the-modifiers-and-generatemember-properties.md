@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f524bab55527bf9d3c744cb6f50d1df1fc9a2302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procedura: utilizzare modificatori e proprietà GenerateMember
 Quando si inserisce un componente in un Windows Form, due proprietà sono fornite dall'ambiente di progettazione: `GenerateMember` e `Modifiers`. Il `GenerateMember` proprietà consente di specificare quando la finestra di progettazione Windows Form genera una variabile membro per un componente. Il `Modifiers` proprietà è il modificatore di accesso assegnato a tale variabile membro. Se il valore della `GenerateMember` proprietà `false`, il valore della `Modifiers` proprietà non ha alcun effetto.  

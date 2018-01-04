@@ -18,16 +18,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3dbf95e54cbb2b6a729265ab39e99332d1cc1871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controlli e componenti della finestra di dialogo (Windows Form)
 I controlli e i componenti Windows Form riportati di seguito determinano la visualizzazione di finestre di dialogo standard. Per altre informazioni sulle funzioni disponibili in ogni finestra di dialogo, usare i relativi collegamenti.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.ColorDialog>  
  Fornisce informazioni di riferimento sulla classe <xref:System.Windows.Forms.ColorDialog> e sui relativi membri.  
   

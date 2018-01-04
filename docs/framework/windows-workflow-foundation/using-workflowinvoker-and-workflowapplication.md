@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1e4bb05f1b5f14554ff5183b42bbc8884cb114f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 669e1bd1daeb8f2569a851e21d10f250d1bc2204
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Utilizzo di WorkflowInvoker e WorkflowApplication
 In [!INCLUDE[wf](../../../includes/wf-md.md)] sono disponibili diversi metodi per l'hosting dei flussi di lavoro. <xref:System.Activities.WorkflowInvoker> offre un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata a un metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica degli eventi del ciclo di vita, il controllo di esecuzione, la ripresa del segnalibro e la persistenza. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce il supporto per le attività di messaggistica e viene principalmente usato con i servizi flusso di lavoro. In questo argomento viene illustrato l'hosting del flusso di lavoro con <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Hosting di flussi di lavoro con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, vedere [servizi flussi di lavoro](../../../docs/framework/wcf/feature-details/workflow-services.md) e [Panoramica di servizi di Hosting del flusso di lavoro](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

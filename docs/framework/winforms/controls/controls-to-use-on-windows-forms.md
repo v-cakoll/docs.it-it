@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controlli da usare in Windows Form
 Il seguente è un elenco alfabetico di controlli e componenti che possono essere usati in Windows Form. Oltre ai controlli Windows Form illustrati in questa sezione, è possibile aggiungere controlli ActiveX e personalizzati a Windows Form. Se il controllo necessario non è elencato qui, è possibile crearlo. Per informazioni dettagliate, vedere [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Per altre informazioni sulla scelta del controllo necessario, vedere [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -28,7 +29,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
 > [!NOTE]
 >  I controlli [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] si basano sulle classi fornite da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
  Elenca e descrive i controlli Windows Form basati su [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   

@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f901377af4faf907a9640c6931d10fc1710aa71a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d038790f47ab405504faed7fb8a1bc7948c9ea82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Controllo FlowLayoutPanel (Windows Form)
 Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso orizzontale o verticale. Il contenuto può andare a capo da una riga a quella successiva o da una colonna a quella successiva. In alternativa, è possibile troncare il contenuto invece di usare il ritorno a capo.  
   
  Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità `FlowLayoutPanel` nelle applicazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica del controllo FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
  Introduce i concetti generali relativi al controllo `FlowLayoutPanel`, che consente di creare un layout con un flusso orizzontale o verticale.  
   
@@ -37,6 +38,6 @@ Il controllo `FlowLayoutPanel` dispone i contenuti in una direzione di flusso or
   
  Vedere anche [procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.FlowLayoutPanel>.

@@ -14,16 +14,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432b9935113a700160f89ad427ebf5cade6d0e99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 40c304ba3af28b20dfe158a40ef9cf2e7dd5b083
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filedialog-class"></a>Classe FileDialog
 Windows Form <xref:System.Windows.Forms.FileDialog> classe è la classe di base comune per il <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> componenti. È possibile apportare modifiche per la <xref:System.Windows.Forms.FileDialog> classe che influiscono sull'aspetto e il comportamento di queste finestre di dialogo, a seconda della versione di Windows è in esecuzione l'applicazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Rifiutare esplicitamente l'aggiornamento automatico della finestra di dialogo File](../../../../docs/framework/winforms/controls/how-to-opt-out-of-file-dialog-box-automatic-upgrade.md)  
  Viene descritto come rifiutare un aggiornamento automatico di stile a una finestra di dialogo.  
   
@@ -33,7 +34,7 @@ Windows Form <xref:System.Windows.Forms.FileDialog> classe è la classe di base 
  [GUID di cartella nota per percorsi personalizzati della finestra di dialogo File](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)  
  Elencare i nomi delle cartelle e i relativi GUID associati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.OpenFileDialog>  
   
  <xref:System.Windows.Forms.SaveFileDialog>  

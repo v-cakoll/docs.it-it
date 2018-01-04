@@ -17,16 +17,17 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a34e2726182c194882d94fe4b8d1164993d8284
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-managed-graphics-classes"></a>Utilizzo di classi grafiche gestite
 Gli argomenti seguenti descrivono come utilizzare il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API nel framework di classi gestite.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  Viene descritto come eseguire attività di base con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   

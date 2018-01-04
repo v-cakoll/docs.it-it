@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procedura: creare tasti di scelta con i controlli Label di Windows Form
 Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizzati per definire le chiavi di accesso per altri controlli. Quando si definisce una chiave di accesso in un controllo etichetta, l'utente può premere il tasto ALT più il carattere di spostare lo stato attivo al controllo successivo nell'ordine di tabulazione. Poiché le etichette non possono ricevere lo stato attivo, lo stato attivo si sposta automaticamente al controllo successivo nell'ordine di tabulazione. Utilizzare questa tecnica per assegnare le chiavi di accesso per le caselle di testo, caselle combinate, caselle di riepilogo e griglie dei dati.  
@@ -41,7 +42,7 @@ Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizza
   
 1.  Creare prima l'etichetta e quindi trascinare il controllo di altri.  
   
-     -oppure-  
+     oppure  
   
      Creare i controlli in qualsiasi ordine e impostare il <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà dell'etichetta e l'altro controllo meno uno.  
   

@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>Tipi di sistemi di coordinate
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utilizza tre spazi di coordinate: world, pagina e dispositivo. Coordinate sono le coordinate usate per modellare un particolare ambiente grafico e le coordinate passate ai metodi in .NET Framework. Le coordinate di pagina può fare riferimento al sistema di coordinate utilizzato da un'area di disegno, ad esempio un form o controllo. Le coordinate di dispositivo vengono utilizzate dal dispositivo fisico da disegnare, ad esempio una schermata o un foglio di carta. Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, passati per i punti di <xref:System.Drawing.Graphics.DrawLine%2A> metodo:`(0, 0)` e `(160, 80)`, sono nello spazio delle coordinate world. Prima di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile tracciare le linee sullo schermo, le coordinate passano attraverso una sequenza di trasformazioni. Una trasformazione, ossia la trasformazione globale, converte le coordinate complessive alle coordinate di pagina e un'altra trasformazione, ossia la trasformazione della pagina, converte le coordinate di pagina in coordinate dispositivo.  

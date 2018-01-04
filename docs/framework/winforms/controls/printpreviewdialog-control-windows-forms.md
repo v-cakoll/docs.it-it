@@ -18,23 +18,24 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07e173fce93266950be520880ced5e0e8be3fcbd
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f0e52a2a569d9b0787b5ba31c20fac176c5f6cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Controllo PrintPreviewDialog (Windows Form)
 Il controllo `PrintPreviewDialog` Windows Form è una finestra di dialogo preconfigurata che consente di visualizzare un documento così come verrà stampato e costituisce una semplice soluzione, utilizzabile nell'applicazione basata su Windows creata, per evitare di configurare una propria finestra di dialogo. Il controllo contiene pulsanti per la stampa, l'ingrandimento, la visualizzazione di una o più pagine e la chiusura della finestra di dialogo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sul controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
  Introduce i concetti generali relativi al controllo `PrintPreviewDialog`, che consente di visualizzare una finestra di dialogo preconfigurata nella quale gli utenti possono visualizzare una versione del documento così come verrà stampato.  
   
  [Procedura: Visualizzare l'anteprima di stampa nelle Windows Forms Application](../../../../docs/framework/winforms/controls/how-to-display-print-preview-in-windows-forms-applications.md)  
  Viene illustrato come visualizzare una pagina da stampare mediante un'istanza del controllo `PrintPreviewDialog` in fase di esecuzione.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.PrintPreviewDialog>  
  Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   

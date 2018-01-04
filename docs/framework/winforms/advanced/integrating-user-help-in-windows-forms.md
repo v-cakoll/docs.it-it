@@ -20,18 +20,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7ec4d32c5f025cb3e48b1403387273268d83fb8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9563ce0ca95a728cc1a9aaa219fbc9fea2cd7153
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrazione della Guida dell'utente in Windows Form
 Un aspetto fondamentale, ma spesso trascurato, di compilazione di applicazioni basate su Windows è il sistema di Guida in linea, che viene in cui gli utenti per assistenza nell'utilizzo. Windows Form supportano due diversi tipi di Guida, fornito dal [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Il primo prevede la visualizzazione di un file della Guida HTML o HTML Help 1. *x* o successiva. Il secondo può visualizzare breve "Che cos'è questa"-digitare Help sui singoli controlli; Ciò è particolarmente utile nelle finestre di dialogo. Entrambi i tipi di Guida utilizzabile nello stesso form.  
   
  Inoltre, il [componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) può essere usato per fornire una Guida per i controlli in Windows Form.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Visualizzare la Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
  Viene illustrato come utilizzare il `HelpProvider` componente per collegare i controlli per i file della Guida.  
   

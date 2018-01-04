@@ -21,24 +21,25 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-and-localization"></a>Globalizzazione e localizzazione
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fornisce un supporto completo per lo sviluppo di applicazioni world-ready.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica della globalizzazione e localizzazione WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
  [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [Cenni preliminari sull'utilizzo del layout automatico](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [Attributi e commenti di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
  [Panoramica sulle funzionalità bidirezionali di WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Procedure relative](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [Procedure relative alle proprietà](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  

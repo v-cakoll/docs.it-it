@@ -16,16 +16,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5efd63e971ea3ae2fa5cfd03a148fa453130c646
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77bd9884681c632f0faa9279f63aea6eabfe076e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-windows-forms-applications"></a>Miglioramento delle applicazioni Windows Form
 In Windows Form sono disponibili molte funzionalità che possono essere usate per migliorare le proprie applicazioni basate su Windows in modo da soddisfare le specifiche esigenze degli utenti. Gli argomenti riportati di seguito illustrano queste funzionalità e le relative modalità di uso.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  Contiene collegamenti ad argomenti che illustrano come usare l'interfaccia grafica in Windows Form.  
   

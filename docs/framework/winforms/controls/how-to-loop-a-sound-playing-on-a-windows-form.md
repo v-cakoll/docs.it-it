@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e61a15a7a249a90ce9eca035ebe6fd67275bb74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7ade624f57f58a5ec91a5d993375c73d1cc26fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedura: riprodurre un suono ripetutamente in un Windows Form
 Nell'esempio di codice seguente un suono viene riprodotto ripetutamente. Quando viene eseguito il codice nel gestore dell'evento `stopPlayingButton_Click`, l'eventuale riproduzione corrente di un suono viene interrotta. Se non è in corso di riproduzione alcun suono, non accadrà nulla.  

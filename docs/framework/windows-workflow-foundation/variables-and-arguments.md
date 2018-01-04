@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f231a4e43723ce3ea73831086ed54e9ee08c1a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
 In [!INCLUDE[wf](../../../includes/wf-md.md)] le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  

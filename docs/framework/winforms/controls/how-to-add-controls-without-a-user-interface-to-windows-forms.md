@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedura: aggiungere controlli senza interfaccia a un Windows Form
 Un controllo non visivo (o un componente) fornisce funzionalità per l'applicazione. A differenza di altri controlli, componenti non forniscono un'interfaccia utente per l'utente e pertanto non dovrà essere visualizzato nell'area di progettazione Windows Form. Quando un componente viene aggiunto a un form, Progettazione Windows Form visualizza un contenitore ridimensionabile nella parte inferiore del form vengono visualizzati tutti i componenti. Dopo aver aggiunto un controllo barra dei componenti, è possibile selezionare il componente e impostarne le proprietà come qualsiasi altro controllo nel form.  

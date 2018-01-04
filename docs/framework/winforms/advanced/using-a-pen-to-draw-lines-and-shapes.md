@@ -18,16 +18,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizzo di un oggetto Pen per creare linee e forme
 Utilizzare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` oggetti per creare segmenti di linea, curve e le strutture delle forme. In questa sezione, *riga* fa riferimento a uno di questi, salvo per indicare solo un segmento di linea. Impostare le proprietà di un oggetto pen per controllare il colore, larghezza, l'allineamento e stile delle linee disegnate con quella penna.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Usare un oggetto Pen per disegnare linee](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
  Viene descritto come creare linee.  
   
@@ -49,6 +50,6 @@ Utilizzare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `
  [Procedura: Disegnare una linea con riempimento a trama](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
  Viene illustrato come disegnare una linea di trama di riempimento.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Pen>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.

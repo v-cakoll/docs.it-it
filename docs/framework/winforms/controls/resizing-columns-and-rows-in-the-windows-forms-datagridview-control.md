@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Ridimensionamento di colonne e righe nel controllo DataGridView di Windows Form
 Il `DataGridView` controllo fornisce numerose opzioni per personalizzare il comportamento di ridimensionamento di colonne e righe. In genere, `DataGridView` celle non vengono ridimensionano in base al relativo contenuto. Al contrario, vengono tagliati qualsiasi valore di visualizzazione che è maggiore della cella. Se è possibile visualizzare il contenuto come stringa, viene inserito in una descrizione comando.  
@@ -30,7 +31,7 @@ Il `DataGridView` controllo fornisce numerose opzioni per personalizzare il comp
   
  Il `DataGridView` controllo fornisce proprietà, metodi ed eventi che consentono la personalizzazione o la disattivazione di tutti i comportamenti gestiti dall'utente. Inoltre, è possibile ridimensionare a livello di codice le righe, colonne e intestazioni in base al contenuto, oppure è possibile configurare in modo da ridimensionati automaticamente ogni volta che cambia il relativo contenuto. È inoltre possibile configurare le colonne per dividere automaticamente la larghezza disponibile del controllo in base alle proporzioni specificato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Opzioni di ridimensionamento nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
  Vengono descritte le opzioni per intestazioni, colonne e righe di ridimensionamento. Inoltre fornisce informazioni dettagliate sui metodi e proprietà correlate al ridimensionamento e vengono descritti scenari comuni di utilizzo.  
   
@@ -46,7 +47,7 @@ Il `DataGridView` controllo fornisce numerose opzioni per personalizzare il comp
  [Procedura: Ridimensionare automaticamente le celle alla modifica del contenuto del controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Fornisce il codice di esempio che consente di sperimentare le modalità di ridimensionamento automatico.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

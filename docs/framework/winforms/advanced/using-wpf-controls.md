@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6fe8fb972f8080bbffeed5db2063d8c0484aec4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-wpf-controls"></a>Utilizzo di controlli WPF
 È possibile utilizzare i controlli Windows Presentation Foundation (WPF) in applicazioni basate su Windows Form. Anche se si tratta di due tecnologie di visualizzazione diversa, si integrano perfettamente.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
   
  È anche possibile utilizzare i controlli Windows Form nelle applicazioni basate su WPF. Per ulteriori informazioni, vedere [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Copiare e incollare un controllo ElementHost in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Viene illustrato come copiare un controllo Windows Presentation Foundation in un Windows Form.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/22/2017
  [Procedura dettagliata: Applicazione di stili al contenuto WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
  Viene illustrato il flusso di lavoro tra Progettazione Windows Form e [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per l'applicazione di stili ai controlli Windows Presentation Foundation.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  Descrive una classe che è possibile utilizzare per ospitare i controlli Windows Presentation Foundation nelle applicazioni basate su Windows Form.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Sviluppo di un controllo Windows Form composto
 È possibile sviluppare un controllo Windows Form composito combinando altri controlli Windows Form. I controlli compositi che derivano da <xref:System.Web.UI.UserControl> sono denominati controlli utente. La classe base, <xref:System.Windows.Forms.UserControl>, fornisce il routing della tastiera per i controlli figlio, garantendo così che i controlli figlio possano ricevere lo stato attivo. Per un esempio di un controllo utente, vedere il <xref:System.Windows.Forms.UserControl> sample in [procedura: applicare attributi nei controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Procedura: Creare un controllo di Windows Form che sfrutta le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Procedura: Creare un controllo di Windows Form che sfrutta le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Procedura: Creare un controllo Windows Form che utilizza le funzionalità di progettazione](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Applicare attributi nei controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  

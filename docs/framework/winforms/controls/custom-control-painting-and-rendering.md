@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 355a5842348aa4395d1841d0343080ddef634456
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-control-painting-and-rendering"></a>Disegno e rendering di controlli personalizzati
 Disegno personalizzato di controlli è una delle molte attività complesse semplificata da .NET Framework. Durante la creazione di un controllo personalizzato, sono disponibili molte opzioni riguardanti l'aspetto grafico. Se si sta creando un controllo da cui eredita il `Control`, è necessario fornire codice che consente la rappresentazione grafica di eseguire il rendering del controllo. Se si sta creando un controllo utente ereditando dalla classe di `UserControl`, o da uno dei controlli Windows Form, è possibile eseguire l'override della rappresentazione grafica standard e fornire il proprio codice di grafica. Se si desidera fornire per il rendering personalizzate per i controlli costitutivi di un `UserControl` si esegue la creazione, le opzioni sono più limitate, ma consentono ancora un'ampia gamma di possibilità grafiche per i controlli e le applicazioni.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Rendering di un controllo di Windows Form](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  Viene illustrato come programmare la logica che viene visualizzato un controllo.  
   
@@ -45,7 +46,7 @@ Disegno personalizzato di controlli è una delle molte attività complesse sempl
  [Rendering dei controlli con stili visivi](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
  Viene illustrato come eseguire il rendering di controlli con stili visivi nei sistemi operativi che li supportano.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Control>  
  Descrive la classe e include collegamenti a tutti i relativi membri.  
   

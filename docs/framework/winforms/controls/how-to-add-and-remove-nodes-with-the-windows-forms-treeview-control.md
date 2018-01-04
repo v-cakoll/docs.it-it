@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41834f0bdfe800019c1f641d5b20147b10774221
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7632f0e89d21d3d82098b21cf17e34847ea3de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Procedura: aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Form
 Windows Form <xref:System.Windows.Forms.TreeView> controllo Archivia i nodi di livello principale nel relativo <xref:System.Windows.Forms.TreeView.Nodes%2A> insieme. Ogni <xref:System.Windows.Forms.TreeNode> dispone inoltre della <xref:System.Windows.Forms.TreeNode.Nodes%2A> raccolta in cui archiviare i relativi nodi figlio. Entrambe le proprietà di raccolta sono di tipo <xref:System.Windows.Forms.TreeNodeCollection>, che fornisce i membri della raccolta standard che consentono di aggiungere, rimuovere e ridisporre i nodi in un unico livello della gerarchia di nodi.  

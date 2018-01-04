@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Immissione di dati nel controllo DataGridView Windows Form
 Il `DataGridView` controllo fornisce diverse funzionalità che consentono modificare la modalità di aggiungere o modificare i dati nel controllo. Ad esempio, è possibile rendere immissione di dati più efficiente fornendo i valori predefiniti per le nuove righe e dagli avvisi agli utenti quando si verificano errori.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Specificare la modalità di modifica per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  Viene descritto come modificare il modo in cui gli utenti di avviare la modifica delle celle.  
   
@@ -42,7 +43,7 @@ Il `DataGridView` controllo fornisce diverse funzionalità che consentono modifi
  [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Viene descritto come gestire gli errori di immissione dati che derivano dall'origine dati quando l'utente tenta di eseguire il commit di un nuovo valore.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

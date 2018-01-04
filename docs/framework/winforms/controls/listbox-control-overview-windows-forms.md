@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0eadf9db9a952fdabe77100cb31501be1970e74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ListBox (Windows Form)
 Un Windows Form <xref:System.Windows.Forms.ListBox> controllo Visualizza un elenco da cui l'utente può selezionare uno o più elementi. Se il numero totale di elementi supera il numero che può essere visualizzato, una barra di scorrimento viene aggiunta automaticamente per il <xref:System.Windows.Forms.ListBox> controllo. Quando il <xref:System.Windows.Forms.ListBox.MultiColumn%2A> è impostata su `true`, la casella di riepilogo vengono visualizzati elementi in più colonne e viene visualizzata una barra di scorrimento orizzontale. Quando il <xref:System.Windows.Forms.ListBox.MultiColumn%2A> è impostata su `false`, la casella di riepilogo vengono visualizzati elementi in una singola colonna e viene visualizzata una barra di scorrimento verticale. Quando <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> è impostato su `true`, viene visualizzata la barra di scorrimento indipendentemente dal numero di elementi. Il <xref:System.Windows.Forms.ListBox.SelectionMode%2A> proprietà determina il numero di elementi di elenco può essere selezionato contemporaneamente.  

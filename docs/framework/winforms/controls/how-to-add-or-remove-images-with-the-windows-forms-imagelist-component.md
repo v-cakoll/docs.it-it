@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e09448cb834453a4c8fce4494ab9fbb53eb0dc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procedura: aggiungere o rimuovere immagini tramite il componente ImageList Windows Form
 Windows Form <xref:System.Windows.Forms.ImageList> componente in genere viene popolato con le immagini prima che venga associato al controllo. Tuttavia, è possibile aggiungere e rimuovere immagini dopo aver associato l'elenco di immagini a un controllo.  

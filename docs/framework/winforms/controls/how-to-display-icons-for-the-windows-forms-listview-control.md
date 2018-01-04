@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9a8bdc54f3f321b37bda897aac1f340f7a46aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3a19bdd7007a7e47fa1a8ad975112e53c1b6eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Procedura: visualizzare icone per il controllo ListView Windows Form
 Windows Form <xref:System.Windows.Forms.ListView> controllo può visualizzare le icone da tre elenchi di immagini. Le visualizzazioni elenco e dettagli SmallIcon visualizzano immagini dall'elenco di immagini specificato nella <xref:System.Windows.Forms.ListView.SmallImageList%2A> proprietà. La visualizzazione LargeIcon visualizza immagini dall'elenco di immagini specificato nella <xref:System.Windows.Forms.ListView.LargeImageList%2A> proprietà. Una visualizzazione elenco può anche visualizzare un altro set di icone, impostato nella <xref:System.Windows.Forms.ListView.StateImageList%2A> proprietà, accanto alle icone grandi o piccole. Per ulteriori informazioni sugli elenchi di immagini, vedere [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [procedura: aggiungere o rimuovere immagini con il componente ImageList di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

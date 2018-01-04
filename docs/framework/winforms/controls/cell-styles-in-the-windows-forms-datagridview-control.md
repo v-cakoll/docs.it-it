@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Stili della cella nel controllo DataGridView Windows Form
 Ogni cella all'interno di <xref:System.Windows.Forms.DataGridView> controllo può disporre di uno stile specifico, ad esempio il formato di testo, colore di sfondo, colore di primo piano e tipo di carattere. In genere, tuttavia, più celle condividono le caratteristiche di stile particolare.  

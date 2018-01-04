@@ -20,16 +20,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 888fb1cbd960c006dc2705a2b0bd66c038a926f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ceea4108f39619ccbcbf0286905a94b8236607cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Utilizzo della selezione e degli Appunti con il controllo DataGridView Windows Form
 Il `DataGridView` controllo fornisce un'ampia gamma di opzioni per la configurazione come gli utenti possono selezionare le celle, righe e colonne. Ad esempio, è possibile abilitare unica o più di selezione, selezione di intere righe o colonne quando gli utenti selezionano celle o selezione di intere righe o colonne solo quando gli utenti selezionano le relative intestazioni, che consente anche la selezione di celle. Se si desidera fornire un'interfaccia utente personalizzata per la selezione, è possibile disabilitare la selezione normale e gestire a livello di codice di tutta la selezione. Inoltre, è possibile abilitare gli utenti possono copiare i valori selezionati negli Appunti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Modalità di selezione nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)  
  Vengono descritte le opzioni per la selezione utente e a livello di codice nel controllo.  
   
@@ -42,7 +43,7 @@ Il `DataGridView` controllo fornisce un'ampia gamma di opzioni per la configuraz
  [Procedura: Consentire agli utenti di copiare più celle negli Appunti dal controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Viene descritto come abilitare il supporto degli Appunti nel controllo.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.DataGridView>  
  Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.DataGridView>.  
   

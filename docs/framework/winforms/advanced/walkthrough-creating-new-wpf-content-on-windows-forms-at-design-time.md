@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfbe9957fa8d18f839ae656ca721c4ee88475a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7731456cfcf35cd16b1df304fee4f4c138db84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione
 Questo argomento descrive come creare un controllo Windows Presentation Foundation (WPF) da usare nelle applicazioni basate su Windows Form.  

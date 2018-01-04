@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2bb7251b87356361844e075831c95885879476
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo CheckedListBox (Windows Form)
 Windows Form <xref:System.Windows.Forms.CheckedListBox> controllo si estende il <xref:System.Windows.Forms.ListBox> controllo. Fa quasi tutto ciò che una casella di riepilogo e può inoltre contenere un segno di spunta accanto agli elementi nell'elenco. Altre differenze tra i due controlli differiscono l'elenco caselle solo supporto <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; e che le caselle di riepilogo possono avere solo un elemento o nessuno selezionato. Si noti che un elemento selezionato viene evidenziato nel form e non è lo stesso come un elemento selezionato.  

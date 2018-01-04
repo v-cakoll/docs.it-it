@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d0e0c5b0ea05d1a0a9798e1b6f22ce06257f03b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a667c303cd1a98e0b027ca2026fe9c719e6baf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Procedura: creare ed eseguire un flusso di lavoro con esecuzione prolungata
 Una delle funzionalità principali di [!INCLUDE[wf](../../../includes/wf-md.md)] è la capacità del runtime di scaricare e rendere persistenti i flussi di lavoro inattivi in un database. I passaggi descritti in [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) illustrate le nozioni di base del flusso di lavoro con un'applicazione console che ospita. Sono stati mostrati esempi relativi all'avvio di flussi di lavoro, di gestori del ciclo di vita del flusso di lavoro e di ripresa dei segnalibri. Per illustrare la persistenza del flusso di lavoro in modo efficace, è necessario un host del flusso di lavoro più complesso che supporta l'avvio e la ripresa di più istanze del flusso di lavoro. In questo passaggio dell'esercitazione viene illustrato come creare un'applicazione host Windows Form che supporta l'avvio e la ripresa di più istanze del flusso di lavoro e la persistenza del flusso di lavoro e vengono fornite informazioni di base per le funzionalità avanzate, ad esempio il rilevamento e il controllo delle versioni illustrati nei passaggi successivi dell'esercitazione.  
@@ -101,7 +102,7 @@ Una delle funzionalità principali di [!INCLUDE[wf](../../../includes/wf-md.md)]
   
 4.  Aggiungere i controlli seguenti al form nell'ordine specificato e configurare le proprietà come indicato.  
   
-    |Controllo|Proprietà: valore|  
+    |Control|Proprietà: valore|  
     |-------------|---------------------|  
     |**Pulsante**|Nome: NewGame<br /><br /> Percorso: 13, 13<br /><br /> Dimensioni: 75, 23<br /><br /> Testo: Nuova partita|  
     |**Etichetta**|Percorso: 94, 18<br /><br /> Testo: Indovinare un numero compreso tra 1 e|  
@@ -114,7 +115,7 @@ Una delle funzionalità principali di [!INCLUDE[wf](../../../includes/wf-md.md)]
     > [!NOTE]
     >  Quando si aggiungono i controlli seguenti, inserirli in una casella di gruppo.  
   
-    |Controllo|Proprietà: valore|  
+    |Control|Proprietà: valore|  
     |-------------|---------------------|  
     |**Etichetta**|Percorso: 7, 20<br /><br /> Testo: ID dell'istanza del flusso di lavoro|  
     |**ComboBox**|Nome: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Percorso: 121, 17<br /><br /> Dimensioni: 227, 21|  

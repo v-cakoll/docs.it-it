@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-bitmaps"></a>Tipi di bitmap
 Una bitmap è una matrice di bit che specifica il colore di ogni pixel in una matrice rettangolare di pixel. Il numero di bit destinati a un singolo pixel determina il numero di colori che possono essere assegnati a tale pixel. Ad esempio, se ogni pixel è rappresentato da 4 bit, quindi un pixel specifico può essere assegnato uno dei 16 colori diversi (2 ^ 4 = 16). La tabella seguente illustra alcuni esempi del numero di colori che possono essere assegnati a un pixel rappresentato da un determinato numero di bit.  

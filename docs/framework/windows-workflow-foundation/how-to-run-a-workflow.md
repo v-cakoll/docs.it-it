@@ -15,11 +15,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3467b9319a883445d95978e0c167a5552211afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-a-workflow"></a>Procedura: eseguire un flusso di lavoro
 Questo argomento è una continuazione dell'esercitazione introduttiva di Windows Workflow Foundation e illustra come creare un host di flusso di lavoro ed eseguire il flusso di lavoro definito nell'argomento [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) precedente.  

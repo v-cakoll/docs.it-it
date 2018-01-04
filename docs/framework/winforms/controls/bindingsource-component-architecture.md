@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-architecture"></a>Architettura del componente BindingSource
 Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associare universalmente tutti i controlli Windows Form alle origini dati.  
@@ -127,7 +128,7 @@ Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
 ### <a name="bindingsource-as-an-ibindinglist"></a>BindingSource come un elemento IBindingList  
  Il <xref:System.Windows.Forms.BindingSource> componente fornisce membri per l'accesso e la manipolazione dei dati sottostanti come un <xref:System.ComponentModel.IBindingList>. Nella tabella seguente vengono descritti alcuni di questi membri.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |Proprietà <xref:System.Windows.Forms.BindingSource.List%2A>|Ottiene l'elenco risultante dalla valutazione del <xref:System.Windows.Forms.BindingSource.DataSource%2A> o <xref:System.Windows.Forms.BindingSource.DataMember%2A> proprietà.|  
 |Metodo <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Aggiunge un nuovo elemento all'elenco sottostante. Si applica a origini dati che implementano il <xref:System.ComponentModel.IBindingList> l'interfaccia e consentire l'aggiunta di elementi (vale a dire il <xref:System.Windows.Forms.BindingSource.AllowNew%2A> è impostata su `true`).|  
@@ -170,10 +171,10 @@ Con il <xref:System.Windows.Forms.BindingSource> componente, è possibile associ
   
  Nella tabella seguente vengono descritte le proprietà utilizzate per l'ordinamento e filtro.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |Proprietà <xref:System.Windows.Forms.BindingSource.Filter%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingListView>, ottiene o imposta l'espressione usata per filtrare le righe da visualizzare.|  
-|Proprietà <xref:System.Windows.Forms.BindingSource.Sort%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingList>, ottiene o imposta un nome di colonna usato per l'ordinamento e il criterio di ordinamento.<br /><br /> -oppure-<br /><br /> Se l'origine dati è un <xref:System.ComponentModel.IBindingListView> e supporta l'ordinamento avanzato, ottiene più nomi di colonna usati per l'ordinamento e di ordinamento|  
+|Proprietà <xref:System.Windows.Forms.BindingSource.Sort%2A>|Se l'origine dati è un <xref:System.ComponentModel.IBindingList>, ottiene o imposta un nome di colonna usato per l'ordinamento e il criterio di ordinamento.<br /><br /> oppure<br /><br /> Se l'origine dati è un <xref:System.ComponentModel.IBindingListView> e supporta l'ordinamento avanzato, ottiene più nomi di colonna usati per l'ordinamento e di ordinamento|  
   
 ### <a name="integration-with-bindingnavigator"></a>Integrazione con BindingNavigator  
  È possibile utilizzare il <xref:System.Windows.Forms.BindingSource> componente per associare qualsiasi controllo Windows Form a un'origine dati, ma la <xref:System.Windows.Forms.BindingNavigator> controllo è progettato specificamente per l'utilizzo di <xref:System.Windows.Forms.BindingSource> componente. Il <xref:System.Windows.Forms.BindingNavigator> controllo fornisce un'interfaccia utente per il controllo di <xref:System.Windows.Forms.BindingSource> elemento corrente del componente. Per impostazione predefinita, il <xref:System.Windows.Forms.BindingNavigator> controllo fornisce pulsanti che corrispondono ai metodi di navigazione nel <xref:System.Windows.Forms.BindingSource> componente. Per ulteriori informazioni, vedere [procedura: passare dati con il controllo BindingNavigator Windows Form](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  

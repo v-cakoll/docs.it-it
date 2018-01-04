@@ -17,16 +17,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5187d457e39993413ab6c281433ab604bc384fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eae4b64f2a632330b1b72f3ec5786884c272967c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-control-windows-forms"></a>Controllo Panel (Windows Form)
 Windows Form `Panel` controlli vengono utilizzati per fornire un raggruppamento identificabile per altri controlli. In genere, utilizzare i pannelli di suddividere un form dalla funzione. Il `Panel` è simile al controllo il <xref:System.Windows.Forms.GroupBox> controllo, tuttavia, solo il `Panel` controllo può contenere barre di scorrimento e solo il <xref:System.Windows.Forms.GroupBox> controllo Visualizza una didascalia.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sul controllo Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  Definisce il controllo e ne illustra le funzionalità chiave e le proprietà.  
   
@@ -39,7 +40,7 @@ Windows Form `Panel` controlli vengono utilizzati per fornire un raggruppamento 
  [Procedura: Impostare lo sfondo di un controllo Panel](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)  
  Viene descritto come visualizzare un colore di sfondo e un'immagine di sfondo in un pannello.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Forms.Panel>  
  Descrive la classe e fornisce i collegamenti a tutti i relativi membri.  
   

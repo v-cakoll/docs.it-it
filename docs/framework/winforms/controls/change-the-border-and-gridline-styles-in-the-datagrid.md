@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form
 Con il <xref:System.Windows.Forms.DataGridView> (controllo), è possibile personalizzare l'aspetto del bordo del controllo e la griglia per migliorare l'esperienza utente. È possibile modificare il colore della griglia e lo stile del bordo del controllo oltre gli stili dei bordi per le celle all'interno del controllo. È inoltre possibile applicare stili bordo della cella diversi per le celle normali, le celle di intestazione di riga e le celle di intestazione di colonna.  

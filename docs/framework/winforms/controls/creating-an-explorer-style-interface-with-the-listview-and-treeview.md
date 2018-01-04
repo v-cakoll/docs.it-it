@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4a16ee1ca39ffb0eb170e206467d612cb707e5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView utilizzando la finestra di progettazione
 Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente applicazioni di Windows Form di livello professionale della quantità di tempo. Uno scenario comune è la creazione di un'interfaccia utente (UI) con <xref:System.Windows.Forms.ListView> e <xref:System.Windows.Forms.TreeView> controlli simile alla funzionalità di Esplora risorse dei sistemi operativi Windows. In Esplora risorse consente di visualizzare una struttura gerarchica dei file e cartelle nel computer dell'utente.  

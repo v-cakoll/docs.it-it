@@ -17,16 +17,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Utilizzo di un oggetto Brush per il riempimento di forme
 Oggetto [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> oggetto viene utilizzato per riempire l'area interna di una forma chiusa. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]definisce vari stili: colore a tinta unita, motivo a tratteggio, trama dell'immagine e colore sfumato.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Riempire una forma con un colore a tinta unita](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
  Viene descritto come utilizzare un pennello tinta unita per il riempimento di forme.  
   
@@ -39,7 +40,7 @@ Oggetto [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xre
  [Procedura: Riempire una forma con immagini affiancate](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
  Viene descritto come un'immagine in una forma di riquadro.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Drawing.Brush?displayProperty=nameWithType>  
  Descrive la classe e contiene collegamenti a tutti i relativi membri  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d84f0c70619324bbbd38a2961914f88ac42671
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3985fc9916b3e95e650502ef1f8dc301363b1f90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-security"></a>Sicurezza dei controlli WebBrowser
 Il <xref:System.Windows.Forms.WebBrowser> controllo è progettato per funzionare con attendibilità totale. Il contenuto HTML visualizzato nel controllo può provenire da server Web esterno e può contenere codice non gestito sotto forma di controlli Web o script. Se si utilizza il <xref:System.Windows.Forms.WebBrowser> controllo in questo caso, il controllo è non meno sicuro rispetto a Internet Explorer, ma gestito <xref:System.Windows.Forms.WebBrowser> controllo non impedisce tale codice non gestito in esecuzione.  

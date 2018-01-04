@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9d53cf3e54e4a0a0de3207ea59a67f3493f5e88
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 177b3034e9afc71a8ecc899364cc4911ef42a1a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-visual-inheritance"></a>Ereditarietà visiva di Windows Form
 In alcuni casi è possibile impostare un progetto in modo che richiami un modulo simile a uno creato in un progetto precedente. In altri casi, può rivelarsi utile creare un modulo di base con impostazioni quali una filigrana o il layout di un determinato controllo da usare successivamente all'interno di un progetto, con modifiche al modello del modulo originale contenute in ogni iterazione. L'ereditarietà dei moduli consente di creare un modulo di base e di ereditare da tale modulo, quindi di apportare modifiche conservando le impostazioni originali necessarie.  
   
  È possibile creare moduli che derivano da classi a livello di codice oppure mediante la finestra di selezione dell'ereditarietà visiva.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: ereditare Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  Vengono fornite indicazioni per creare nel codice moduli ereditati.  
   

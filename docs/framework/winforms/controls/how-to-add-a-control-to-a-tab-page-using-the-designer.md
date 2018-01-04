@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5efe73f9d8ae2621cca075f77051cb9c7402e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5be65fc562d5b4d80a57ab068d97d66ccb17b6e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedura: aggiungere un controllo a una pagina della scheda mediante la finestra di progettazione
 L'utilizzo di Windows Form <xref:System.Windows.Forms.TabControl> prevede la visualizzazione di altri controlli in modo organizzato. È possibile utilizzare queste istruzioni per visualizzare un'immagine nella parte principale di una pagina della scheda. Per informazioni sull'aggiunta di un'icona all'etichetta della pagina di una scheda, vedere [procedura: modificare l'aspetto del controllo TabControl Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

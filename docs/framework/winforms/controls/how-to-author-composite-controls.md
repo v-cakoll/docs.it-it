@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72c68568f0178956d6154f0b3a070e69b6ff0502
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5cf68d4927daa79e160df42f94aff9cbcb611592
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-author-composite-controls"></a>Procedura: modificare controlli compositi
 I controlli compositi possono essere usati in molti modi. È possibile crearli come parte di un progetto applicazione desktop di Windows e usarli solo sui form del progetto. Oppure è possibile crearli in un progetto libreria di controlli Windows, compilare il progetto in un assembly e usare i controlli in altri progetti. È anche possibile ereditare da essi e usare l'ereditarietà visiva per personalizzarli rapidamente per scopi speciali.  

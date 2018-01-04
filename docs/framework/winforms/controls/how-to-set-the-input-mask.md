@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-input-mask"></a>Procedura: impostare la maschera di input
 Il controllo casella di testo mascherata è un controllo casella di testo avanzato che supporta una sintassi dichiarativa per accettare o rifiutare l'input dell'utente. Impostando la proprietà maschera, è possibile specificare l'input dell'utente consentito senza scrivere una logica di convalida personalizzato nell'applicazione. Per ulteriori informazioni, vedere la sezione Note della <xref:System.Windows.Forms.MaskedTextBox> classe.  

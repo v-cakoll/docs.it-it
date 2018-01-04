@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7bbb13e8a2b877d0f503e091b5bb8b1e7e89d00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1323ffbd59a14d19d1161e0718fad083bcc37a89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Procedura: visualizzare un controllo nella finestra di dialogo Scegli elementi della Casella degli strumenti
 Quando si sviluppano e si distribuiscono i controlli, si consiglia di tali controlli siano visibili nel **Scegli elementi della casella degli strumenti** nella finestra di dialogo viene visualizzata quando si fa clic su di **della casella degli strumenti** e selezionare  **Scegli elementi**. È possibile abilitare il controllo venga visualizzato nella finestra di dialogo mediante la procedura di registrazione AssemblyFoldersEx.  
@@ -32,7 +33,7 @@ Quando si sviluppano e si distribuiscono i controlli, si consiglia di tali contr
   
 -   Installare l'assembly di controllo per global assembly cache. Per ulteriori informazioni, vedere [procedura: installare un Assembly nella Global Assembly Cache](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
-     -oppure-  
+     oppure  
   
 -   Registrare il controllo e i relativi assembly in fase di progettazione associato utilizzando la procedura di registrazione AssemblyFoldersEx. AssemblyFoldersEx è un percorso del Registro di sistema in cui archiviare i percorsi per ogni versione di framework che supportano i fornitori di terze parti. Risoluzione in fase di progettazione è possibile esaminare in questo percorso del Registro di sistema per individuare gli assembly di riferimento. Lo script del Registro di sistema può specificare i controlli che si desidera visualizzare nella casella degli strumenti. Per ulteriori informazioni, vedere [la distribuzione di un controllo personalizzato e gli assembly in fase di progettazione (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb).  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d4f27c9dcdc1bc7e00b0c809c62889b6c61cd16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2c0cc5136aaed3f7465102e7e7b6d2d9c2fc920
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Procedura: modificare il tipo di una colonna DataGridView di Windows Form utilizzando la finestra di progettazione
 In alcuni casi è possibile modificare il tipo di una colonna che è già stato aggiunto a un Windows Form <xref:System.Windows.Forms.DataGridView> controllo. Potrebbe ad esempio, si desidera modificare i tipi di alcune delle colonne che vengono generate automaticamente quando si associa il controllo a un'origine dati. Ciò è utile quando la tabella visualizzata contiene le colonne che contengono chiavi esterne alle righe in una tabella correlata. In questo caso, è consigliabile sostituire le colonne della casella di testo che consentono di visualizzare le chiavi esterne con le colonne di casella combinata che visualizza valori più significativi della tabella correlata.  
