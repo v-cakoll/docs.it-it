@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b013366d05042981cfefde06bd11b9fd8aae6fe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bef01f05e673cd796732adbd06d6e2b57dfbb31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectioncreate"></a><span data-ttu-id="15570-102">System.ServiceModel.Channels.SocketConnectionCreate</span><span class="sxs-lookup"><span data-stu-id="15570-102">System.ServiceModel.Channels.SocketConnectionCreate</span></span>
-<span data-ttu-id="15570-103">System.ServiceModel.Channels.SocketConnectionCreate</span><span class="sxs-lookup"><span data-stu-id="15570-103">System.ServiceModel.Channels.SocketConnectionCreate</span></span>  
+# <a name="systemservicemodelchannelssocketconnectioncreate"></a><span data-ttu-id="773a6-102">System.ServiceModel.Channels.SocketConnectionCreate</span><span class="sxs-lookup"><span data-stu-id="773a6-102">System.ServiceModel.Channels.SocketConnectionCreate</span></span>
+<span data-ttu-id="773a6-103">System.ServiceModel.Channels.SocketConnectionCreate</span><span class="sxs-lookup"><span data-stu-id="773a6-103">System.ServiceModel.Channels.SocketConnectionCreate</span></span>  
   
-## <a name="description"></a><span data-ttu-id="15570-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="15570-104">Description</span></span>  
- <span data-ttu-id="15570-105">Questa traccia viene generata nella prima attività ProcessAction eseguita dal client e nell'attività ReceiveBytes del servizio.</span><span class="sxs-lookup"><span data-stu-id="15570-105">This trace is emitted in the first Process Action activity performed by the client, and in the Receive Bytes activity on the service.</span></span> <span data-ttu-id="15570-106">Fornisce gli indirizzi IP locali e remoti.</span><span class="sxs-lookup"><span data-stu-id="15570-106">It provides the local and remote IP addresses.</span></span> <span data-ttu-id="15570-107">Inoltre, viene generata al livello delle informazioni.</span><span class="sxs-lookup"><span data-stu-id="15570-107">It is emitted at Information level.</span></span>  
+## <a name="description"></a><span data-ttu-id="773a6-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="773a6-104">Description</span></span>  
+ <span data-ttu-id="773a6-105">Questa traccia viene generata nella prima attività ProcessAction eseguita dal client e nell'attività ReceiveBytes del servizio.</span><span class="sxs-lookup"><span data-stu-id="773a6-105">This trace is emitted in the first Process Action activity performed by the client, and in the Receive Bytes activity on the service.</span></span> <span data-ttu-id="773a6-106">Fornisce gli indirizzi IP locali e remoti.</span><span class="sxs-lookup"><span data-stu-id="773a6-106">It provides the local and remote IP addresses.</span></span> <span data-ttu-id="773a6-107">Inoltre, viene generata al livello delle informazioni.</span><span class="sxs-lookup"><span data-stu-id="773a6-107">It is emitted at Information level.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15570-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="15570-108">See Also</span></span>  
- [<span data-ttu-id="15570-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="15570-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="15570-110">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="15570-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="15570-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="15570-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="773a6-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="773a6-108">See Also</span></span>  
+ [<span data-ttu-id="773a6-109">Traccia</span><span class="sxs-lookup"><span data-stu-id="773a6-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="773a6-110">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="773a6-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="773a6-111">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="773a6-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

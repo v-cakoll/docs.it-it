@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1878c9083ed215918f4c539bf54b9bf5833ba33d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 965ba6d732c498c58c0071c01cfe333f85874379
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="3022b-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="3022b-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
-<span data-ttu-id="3022b-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="3022b-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
+# <a name="systemservicemodelchannelsnamedpipechannelmessagereceived"></a><span data-ttu-id="df851-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="df851-102">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>
+<span data-ttu-id="df851-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span><span class="sxs-lookup"><span data-stu-id="df851-103">System.ServiceModel.Channels.NamedPipeChannelMessageReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3022b-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3022b-104">Description</span></span>  
- <span data-ttu-id="3022b-105">Ricevuto un messaggio su un canale named pipe.</span><span class="sxs-lookup"><span data-stu-id="3022b-105">Received a message over a named pipe channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="df851-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="df851-104">Description</span></span>  
+ <span data-ttu-id="df851-105">Ricevuto un messaggio su un canale named pipe.</span><span class="sxs-lookup"><span data-stu-id="df851-105">Received a message over a named pipe channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3022b-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3022b-106">See Also</span></span>  
- [<span data-ttu-id="3022b-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="3022b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3022b-108">Utilizzo delle tracce per risolvere i problemi dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="3022b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3022b-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="3022b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="df851-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df851-106">See Also</span></span>  
+ [<span data-ttu-id="df851-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="df851-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="df851-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="df851-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="df851-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="df851-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
