@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eb62631b654dd2762a8220cdafacc9373564052
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30adea272d7b6b3fc99f9f3c66de51d934043569
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsincompatibleexistingtransportmanager"></a>System.ServiceModel.Channels.IncompatibleExistingTransportManager
 Trovato un gestore trasporto esistente non compatibile per l'URI specificato.  
@@ -27,5 +28,5 @@ Trovato un gestore trasporto esistente non compatibile per l'URI specificato.
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uso delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)
