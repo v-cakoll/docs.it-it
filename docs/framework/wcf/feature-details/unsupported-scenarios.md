@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
 Per varie ragioni, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non supporta alcuni scenari di sicurezza specifici. Ad esempio, i protocolli di autenticazione SSPI e Kerberos non sono implementati in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition. Pertanto, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] l'esecuzione dei servizi che utilizzano l'autenticazione di Windows su questa piattaforma non è supportata. Altri meccanismi di autenticazione, ad esempio l'autenticazione integrata basata su nome utente/password e HTTP/HTTPS, sono supportati se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene eseguito in Windows XP Home Edition.  
@@ -91,7 +92,7 @@ Per varie ragioni, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non s
   
 -   Viene utilizzata la protezione a livello di messaggio.  
   
- Per risolvere questo problema è sufficiente disattivare la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. In alternativa, se la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è obbligatoria, è possibile disattivare la funzionalità di rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e utilizzare invece la rappresentazione fornita in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Per risolvere questo problema è sufficiente disattivare la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. In alternativa, se la modalità di compatibilità con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è obbligatoria, è possibile disattivare la funzionalità di rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e utilizzare invece la rappresentazione fornita in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Errore di indirizzo letterale IPv6  
  Le richieste di sicurezza hanno esito negativo quando il client e il servizio si trovano nello stesso computer e gli indirizzi letterali Ipv6 vengono utilizzati per il servizio.   
@@ -114,14 +115,14 @@ Per varie ragioni, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] non s
  È possibile risolvere questo scenario collocando l'endpoint `issue_ticket` in un'altra posizione.  
   
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Gli attributi di importazione di WSDL possono andare persi  
- In WCF si perde traccia degli attributi in un elemento `<wst:Claims>`RST in un modello`RST` quando viene eseguita un'importazione WSDL. Questa situazione si verifica durante un'importazione WSDL se si specifica `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters direttamente in`WSFederationHttpBinding.Security.Message.TokenRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters o in`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` anziché utilizzare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.  
+ In WCF si perde traccia degli attributi in un elemento `<wst:Claims>`RST in un modello`RST` quando viene eseguita un'importazione WSDL. Questa situazione avviene durante un'importazione WSDL se si specifica `<Claims>` direttamente in `WSFederationHttpBinding.Security.Message.TokenRequestParameters` o `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` anziché usare direttamente le raccolte dei tipi di attestazione.  Poiché l'importazione perde gli attributi, l'associazione non esegue correttamente una sequenza di andata e ritorno attraverso WSDL e quindi risulta errata sul lato client.  
   
  Per risolvere il problema è necessario modificare l'associazione direttamente nel client dopo aver eseguito l'importazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial of Service](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manomissione](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Attacchi di riproduzione](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
