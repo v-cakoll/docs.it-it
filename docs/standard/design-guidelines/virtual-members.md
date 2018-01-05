@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="virtual-members"></a>Membri virtuali
 Membri virtuali possono essere sottoposto a override, modificandone il comportamento della sottoclasse. Sono molto simili ai callback in termini di estensibilità che forniscono, ma sono migliori in termini di prestazioni di esecuzione e il consumo di memoria. Inoltre, i membri virtuali sono più naturali in scenari che richiedono la creazione di un particolare tipo di un tipo esistente (specializzazione).  
@@ -48,4 +51,4 @@ Membri virtuali possono essere sottoposto a override, modificandone il comportam
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
- [Progettazione di estendibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+ [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -17,13 +17,13 @@
 ### [Microservizi .NET: Architettura per le applicazioni .NET incluse in contenitori](standard/microservices-architecture/)
 ## [Scelta di .NET Core o .NET Framework per le app server](standard/choosing-core-framework-server.md)
 ## [Informazioni sul codice gestito](standard/managed-code.md)
-### [Gestione automatica della memoria](standard/automatic-memory-management.md) 
+### [Gestione automatica della memoria](standard/automatic-memory-management.md)
 ## [Common Language Runtime (CLR)](standard/clr.md)
 ## [Indipendenza dal linguaggio](standard/language-independence.md)
 ### [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](standard/language-independence-and-language-independent-components.md)
 ## [Librerie del framework](standard/framework-libraries.md)
-### [Panoramica della libreria di classi](standard/class-library-overview.md)  
-### [Tipi di base](standard/base-types/)  
+### [Panoramica della libreria di classi](standard/class-library-overview.md)
+### [Tipi di base](standard/base-types/)
 ## [Librerie di classi .NET](standard/class-libraries.md)
 ## [Portability Analyzer](standard/portability-analyzer.md)
 ## [Gestione e generazione di eccezioni](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [Compilazione di immagini Docker per applicazioni .NET Core](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools per Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Testing unità](core/testing/index.md)
-### [Unit test con test dotnet e xUnit](core/testing/unit-testing-with-dotnet-test.md)
-### [Unit test con test dotnet e MSTest](core/testing/unit-testing-with-mstest.md)
-### [Testing unità in F# con test dotnet e xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [Testing unità in F# con test dotnet e MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Unit test C# con xUnit](core/testing/unit-testing-with-dotnet-test.md)
+### [Unit test C# con NUnit](core/testing/unit-testing-with-nunit.md)
+### [Unit test C# con MSTest](core/testing/unit-testing-with-mstest.md)
+### [Unit test F# con xUnit](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [Unit test F# con NUnit](core/testing/unit-testing-fsharp-with-nunit.md)
+### [Unit test F# con MSTest](core/testing/unit-testing-fsharp-with-mstest.md)
+### [Unit test VB con xUnit](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [Unit test VB con NUnit](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [Unit test VB con MSTest](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Esecuzione di unit test selettivi](core/testing/selective-unit-tests.md)
 ### [Output pubblicato degli unit test](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing di progetti .NET Core con Visual Studio](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [Panoramica di C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [Novità di C#6](csharp/whats-new/index.md) 
+## [Novità di C#6](csharp/whats-new/index.md)
 ### [Novità di C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [Novità di C# 7.1](csharp/whats-new/csharp-7-1.md)
 ### [Novità di C# 7](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [Cronologia delle versioni di C#](csharp/whats-new/csharp-version-history.md)
 ### [Relationships between language and framework](csharp/whats-new/relationships-between-language-and-library.md) (Relazioni tra lingua e framework)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## Concetti relativi a C#
 ### [Sistema di tipi C#](csharp/programming-guide/types/index.md)
 ### [Spazi dei nomi](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [Tuple](csharp/tuples.md)
 ### [Decostruzione di tuple e altri tipi](csharp/deconstruct.md)
 ### [Interfacce](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [Metodi](csharp/methods.md)
+#### [Metodi](csharp/methods.md)
 #### [Espressioni lambda](csharp/lambda-expressions.md)
 ### [Proprietà](csharp/properties.md)
 ### [Indicizzatori](csharp/indexers.md)
@@ -242,9 +244,8 @@
 #### [Distinzione di delegati ed eventi](csharp/distinguish-delegates-events.md)
 ### [LINQ (Language-Integrated Query)](csharp/linq/)
 ### [Programmazione asincrona](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Criteri di ricerca](csharp/pattern-matching.md)
-### [Semantica di riferimento con tipi valore](csharp/reference-semantics-with-value-types.md)
+### [Semantica di riferimento con i tipi valore](csharp/reference-semantics-with-value-types.md)
 ### [Alberi delle espressioni](csharp/expression-trees.md)
 #### [Nozioni di base sugli alberi delle espressioni](csharp/expression-trees-explained.md)
 #### [Tipi di framework che supportano alberi delle espressioni](csharp/expression-classes.md)
@@ -254,11 +255,10 @@
 #### [Conversione di espressioni](csharp/expression-trees-translating.md)
 #### [Riepilogo](csharp/expression-trees-summary.md)
 ### [Interoperabilità nativa](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Documentazione del codice](csharp/codedoc.md)
 ### [Controllo delle versioni](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [.NET Compiler Platform SDK (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guida per programmatori C#](csharp/programming-guide/)
 ## [Riferimenti per il linguaggio](csharp/language-reference/)
 ## [Procedure dettagliate](csharp/walkthroughs.md)
@@ -504,7 +504,7 @@
 ### [Limitazioni](visual-basic/programming-guide/program-structure/limitations.md)
 
 ## [Funzionalità del linguaggio](visual-basic/programming-guide/language-features/index.md)
-### [Matrici](visual-basic/programming-guide/language-features/arrays/index.md)
+### [Array](visual-basic/programming-guide/language-features/arrays/index.md)
 ### [Inizializzatori di raccolta](visual-basic/programming-guide/language-features/collection-initializers/index.md)
 ### [Costanti ed enumerazioni](visual-basic/programming-guide/language-features/constants-enums/index.md)
 ### [Flusso di controllo](visual-basic/programming-guide/language-features/control-flow/index.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd6dda1f26e44c4864d5afea1427b2580ac1ed10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 492a3652ca7cd304b953006bb1b18a1edb3dcf51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltdatetimeserializationgt-element"></a>Elemento &lt;dateTimeSerialization&gt;
 Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.  
@@ -43,7 +46,7 @@ Determina la modalità di serializzazione degli oggetti <xref:System.DateTime>.
   
 |Attributi|Descrizione|  
 |----------------|-----------------|  
-|`mode`|Parametro facoltativo. Specifica la modalità di serializzazione. Impostarlo a uno dei valori di <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. Il valore predefinito è **RoundTrip**.|  
+|`mode`|Facoltativo. Specifica la modalità di serializzazione. Impostarlo a uno dei valori di <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>. Il valore predefinito è **RoundTrip**.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ea06f1ce1d49b731a37d28a43626b05380a3718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-tools"></a>Strumenti per la serializzazione
 In questa sezione vengono fornite informazioni dettagliate sugli strumenti per la serializzazione. È possibile utilizzare tutti gli strumenti dalla riga di comando.  
@@ -24,7 +27,7 @@ In questa sezione vengono fornite informazioni dettagliate sugli strumenti per l
 > [!IMPORTANT]
 >  Perché gli strumenti di .NET Framework possano funzionare, è necessario impostare correttamente le variabili di ambiente Pah, Include e Lib attraverso l'esecuzione di SDKVars.bat, che si trova nella directory \<SDK>\v2.0\Bin. SDKVars.bat deve essere eseguito in ogni shell di comandi.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |Strumento|Descrizione|  
 |----------|-----------------|  

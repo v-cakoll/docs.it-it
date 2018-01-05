@@ -21,11 +21,14 @@ caps.latest.revision: "22"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e29b3c12fe89861574741506cb7cd018eb81b1d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e11e22d98954d9656357e11fbb4ca94ad673659
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="key-security-concepts"></a>Concetti principali sulla sicurezza
 Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i problemi di sicurezza relativi al codice mobile e per fornire un supporto che consenta di abilitare i componenti per determinare le operazioni per cui gli utenti dispongono di autorizzazioni.  
