@@ -16,11 +16,11 @@ ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cfdae490a7d78e44f230e22f8431d5ee91461c22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fbbe0ec007911460dc2bda8c681775da9a6cb91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Procedura: scrivere testo in file in Visual Basic
 Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> può essere usato per scrivere testo nei file. Se il file specificato non esiste, viene creato.  
@@ -60,7 +60,7 @@ Il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> può es
   
 -   Il disco è pieno e la chiamata a `WriteAllText` ha esito negativo (<xref:System.IO.IOException>).  
   
- Se eseguito in un contesto ad attendibilità parziale, il codice potrebbe generare un'eccezione a causa dell'insufficienza di privilegi. Per altre informazioni, vedere [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+ Se eseguito in un contesto ad attendibilità parziale, il codice potrebbe generare un'eccezione a causa dell'insufficienza di privilegi. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

@@ -24,11 +24,12 @@ caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Strumento Programma di installazione)
 Lo strumento Programma di installazione è un'utilità da riga di comando che consente di installare e disinstallare le risorse del server eseguendo i componenti del programma di installazione di assembly specificati. Questo strumento funziona insieme alle classi nello spazio dei nomi <xref:System.Configuration.Install>.  
@@ -54,8 +55,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|`/h[elp]`<br /><br /> -oppure-<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|`/help` *assembly*<br /><br /> -oppure-<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
+|`/h[elp]`<br /><br /> oppure<br /><br /> `/?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|`/help` *assembly*<br /><br /> oppure<br /><br /> `/?` *assembly*|Visualizza le opzioni aggiuntive riconosciute dai singoli programmi di installazione all'interno dell'assembly specificato, insieme alla sintassi e alle opzioni di comando di InstallUtil.exe. Questa opzione aggiunge il testo restituito dalla proprietà <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> di ogni componente del programma di installazione al testo della Guida di InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Specifica il nome sicuro di un assembly, che verrà registrato nella Global Assembly Cache. Il nome dell'assembly deve essere completo, con versione, impostazioni cultura e token di chiave pubblica. Il nome completo deve essere racchiuso tra virgolette.<br /><br /> Ad esempio, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" è un nome di assembly completo.|  
 |`/InstallStateDir=[` *directoryName* `]`|Specifica la directory del file con estensione InstallState contenente i dati utilizzati per la disinstallazione dell'assembly. La directory predefinita è quella che contiene l'assembly.|  
 |`/LogFile=`[*filename*]|Specifica il nome del file di log in cui è registrato lo stato dell'installazione. Per impostazione predefinita, se l'opzione `/LogFile` viene omessa, viene creato un file di log denominato *assemblyname*.InstallLog. Se *filename* viene omesso, non verrà generato alcun file di log.|  

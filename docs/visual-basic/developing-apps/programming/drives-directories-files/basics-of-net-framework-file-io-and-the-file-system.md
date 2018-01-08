@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)
 Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unità, file e directory.  
@@ -46,7 +46,7 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 -   **Ricerca**. È possibile eseguire una query e modificare la propria posizione nel flusso.  
   
- Per altre informazioni, vedere [Composing Streams](../../../../../docs/standard/io/composing-streams.md).  
+ Per altre informazioni, vedere [Composing Streams](../../../../standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Tipi di flussi  
  Nel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] un flusso è rappresentato dalla classe <xref:System.IO.Stream> che costituisce la classe astratta per tutti i flussi. Non è possibile creare direttamente un'istanza della classe <xref:System.IO.Stream> ma è necessario usare una delle classi che essa implementa.  
@@ -65,13 +65,13 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
 |Per|Vedere|
 |---|---|   
-|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
-|Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
-|Crittografare i dati|[Crittografia di dati](../../../../../docs/standard/security/encrypting-data.md)|  
-|Decrittografare i dati|[Decrittografia di dati](../../../../../docs/standard/security/decrypting-data.md)|  
+|Leggere e scrivere in un file di dati|[Procedura: Leggere e scrivere su un file di dati appena creato](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Leggere testo da un file|[Procedura: Leggere testo da un file](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Scrivere testo in un file|[Procedura: Scrivere un testo in un file](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Leggere caratteri da una stringa|[Procedura: Leggere caratteri da una stringa](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Scrivere caratteri in una stringa|[Procedura: Scrivere caratteri in una stringa](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Crittografare i dati|[Crittografia di dati](../../../../standard/security/encrypting-data.md)|  
+|Decrittografare i dati|[Decrittografia di dati](../../../../standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Accesso ai file e attributi  
  È possibile controllare come i file vengono creati, aperti e condivisi con le enumerazioni <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> e <xref:System.IO.FileShare>, che contengono i flag utilizzati dai costruttori della classe <xref:System.IO.FileStream>. Ad esempio, quando si apre o si crea un nuovo <xref:System.IO.FileStream>, l'enumerazione <xref:System.IO.FileMode> consente di specificare se il file viene aperto per operazioni di accodamento, se viene creato un nuovo file quando il file specificato non esiste, se il file viene sovrascritto e così via.  
@@ -80,34 +80,34 @@ Le classi dello spazio dei nomi <xref:System.IO> si usano per lavorare con unit�
   
  La tabella seguente elenca le attività che coinvolgono l'accesso ai file e gli attributi di file:  
   
-|Per|Vedere|  
+|A|Vedere|  
 |---|---|
-|Aprire e accodare testo in un file di log|[Procedura: Aprire e accodare un file di log](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Aprire e accodare testo in un file di log|[Procedura: Aprire e accodare un file di log](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Determinare gli attributi di un file|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Autorizzazioni di file  
- Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per altre informazioni, vedere [Autorizzazioni di sicurezza](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) e <xref:System.Security.Permissions.FileIOPermission>.  
+ Il controllo dell'accesso ai file e alle directory può essere eseguito con la classe <xref:System.Security.Permissions.FileIOPermission>. Questo può essere particolarmente importante per gli sviluppatori che lavorano con i Web Form che, per impostazione predefinita, vengono eseguiti nel contesto di un account utente locale speciale denominato ASPNET, che viene creato come parte delle installazioni di [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Quando una tale applicazione richiede l'accesso a una risorsa, l'account utente ASPNET dispone di autorizzazioni limitate, che potrebbero impedire all'utente di eseguire azioni quali la scrittura in un file da un'applicazione Web. Per altre informazioni, vedere <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Archiviazione di file isolati  
  Lo spazio di archiviazione isolato è un tentativo di risolvere i problemi creati durante l'uso dei file in cui l'utente o il codice non dispone delle autorizzazioni necessarie. Lo spazio di archiviazione isolato assegna a ciascun utente un raggruppamento di dati che può contenere uno o più archivi. Gli archivi possono essere isolati gli uni dagli altri per utente e per assembly. Solo l'utente e l'assembly che ha creato l'archivio può accedervi. Un archivio opera come un file system virtuale completo: all'interno di un archivio è possibile creare e modificare directory e file.  
   
  La tabella seguente elenca le attività comunemente associate all'archiviazione di file isolati.  
   
-|Per|Vedere|
+|A|Vedere|
 |---|---|  
-|Creare un spazio di memorizzazione isolato|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Enumerare gli spazi di memorizzazione isolati|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Leggere o scrivere su un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Creare un spazio di memorizzazione isolato|[Procedura: Recuperare archivi per lo spazio di memorizzazione isolato](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Enumerare gli spazi di memorizzazione isolati|[Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Eliminare un spazio di memorizzazione isolato|[Procedura: Eliminare gli archivi nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Creare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Creare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Trovare un file in un spazio di memorizzazione isolato|[Procedura: Trovare file e directory esistenti nello spazio di memorizzazione isolato](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Leggere o scrivere su un file in un spazio di memorizzazione isolato|[Procedura: Leggere e scrivere sui file nello spazio di memorizzazione isolato](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Eliminare un file o una directory in un spazio di memorizzazione isolato|[Procedura: Eliminare file e directory nello spazio di memorizzazione isolato](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Eventi di file  
  Il componente <xref:System.IO.FileSystemWatcher> consente di controllare le modifiche nei file e nelle directory del sistema o in qualsiasi computer a cui si ha accesso dalla rete. Ad esempio, se un file viene modificato, è consigliabile inviare all'utente un avviso che la modifica ha avuto luogo. Quando vengono apportate modifiche, vengono generati uno o più eventi, che vengono archiviati in un buffer e consegnati al componente <xref:System.IO.FileSystemWatcher> per l'elaborazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composizione dei flussi](../../../../../docs/standard/io/composing-streams.md)  
- [I/O di file e di flussi](https://msdn.microsoft.com/library/k3352a4t)  
- [I/O di file asincrono](https://msdn.microsoft.com/library/kztecsys)  
+ [Composizione dei flussi](../../../../standard/io/composing-streams.md)  
+ [I/O di file e di flussi](../../../../standard/io/index.md)  
+ [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)  
  [Classes Used in .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md) (Classi usate nel file system e nella funzionalità di I/O di file di .NET Framework (Visual Basic))

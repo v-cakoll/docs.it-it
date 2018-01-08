@@ -13,21 +13,22 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 45f36483477c9f6f670de0ac3f44a446f7ae4ee4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d8bcc561ec5bf35385ca48ffd78ccd7fda8a99eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulations-and-inertia"></a>Modifiche e inerzia
 Le classi dei processori di *modifiche* e *inerzia* consentono all'applicazione di spostare elementi dell'interfaccia utente in modo naturale e intuitivo. Le modifiche consentono agli utenti di spostare, ruotare e ridimensionare i componenti tramite modificatori, ad esempio un mouse, uno stilo o (in uno scenario abilitato per il tocco diretto) le dita. L'*inerzia* emula il comportamento reale per gli elementi dell'interfaccia utente in movimento simulando le forze di attrito sugli elementi. Ciò consente di rallentare gradualmente il movimento (lineare e angolare) degli elementi prima dell'arresto completo.  
   
  L'elaborazione di modifiche e inerzia può essere usata in diversi framework dell'interfaccia utente, ad esempio Microsoft Windows Presentation Foundation (WPF) o Microsoft XNA.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Informazioni generali sulle modifiche e sull'inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)  
   
  [Uso delle modifiche e dell'inerzia in un'applicazione XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Input.Manipulations>

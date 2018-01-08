@@ -16,16 +16,17 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af9bacb4ba64fb4e51b6e05b3636226274c28703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-net-framework-applications"></a>Distribuzione di applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework contiene informazioni essenziali per la distribuzione delle applicazioni .NET Framework, incluse le linee guida per il caricamento degli assembly, la risoluzione dei riferimenti all'assembly e il miglioramento delle prestazioni dell'applicazione con la generazione delle immagini native.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Descrive in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione.  
   

@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  

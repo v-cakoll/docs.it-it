@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eade3728c8a51785214cf3d8de53d8a64a668f1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-domains"></a>Uso dei domini dell'applicazione
 I domini dell'applicazione offrono un'unità di isolamento per Common Language Runtime. Vengono creati ed eseguiti all'interno di un processo. I domini dell'applicazione vengono solitamente creati da un host di runtime, che è un'applicazione responsabile del caricamento del runtime in un processo e dell'esecuzione di codice utente all'interno di un dominio dell'applicazione. L'host di runtime crea un processo e un dominio dell'applicazione predefinito ed esegue codice gestito all'interno di esso. Gli host di runtime includono ASP.NET, Microsoft Internet Explorer e la shell di Windows.  
   
  Per la maggior parte delle applicazioni, non è necessario creare il proprio dominio dell'applicazione. L'host di runtime crea tutti i domini dell'applicazione necessari. È tuttavia possibile creare e configurare domini dell'applicazione aggiuntivi se l'applicazione necessita di isolare il codice o di usare e scaricare DLL.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Creare un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  Viene descritto come creare a livello di codice un dominio dell'applicazione.  
   
@@ -56,7 +57,7 @@ I domini dell'applicazione offrono un'unità di isolamento per Common Language R
  [Risoluzione caricamenti assembly](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
  Vengono offerte indicazioni sull'uso dell'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per risolvere gli errori di caricamento di assembly.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.AppDomain>  
  Rappresenta un dominio dell'applicazione. Offre metodi per creare e controllare i domini dell'applicazione.  
   

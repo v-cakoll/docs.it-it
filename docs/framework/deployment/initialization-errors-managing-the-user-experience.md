@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errori di inizializzazione di .NET Framework: gestione dell'interfaccia utente
 Il sistema di attivazione di Common Language Runtime (CLR) determina la versione di CLR che verrà usata per eseguire il codice dell'applicazione gestita. In alcuni casi il sistema di attivazione potrebbe non riuscire a trovare una versione di CLR da caricare. In genere questa situazione si verifica quando un'applicazione richiede una versione di CLR che non è valida o non è installata in un determinato computer. Se la versione richiesta non viene trovata, il sistema di attivazione di CLR restituisce un codice di errore HRESULT dalla funzione o dall'interfaccia che è stata chiamata e visualizza un messaggio di errore all'utente che sta eseguendo l'applicazione. In questo articolo vengono elencati i codici HRESULT e viene illustrato come evitare che venga visualizzato il messaggio di errore.  

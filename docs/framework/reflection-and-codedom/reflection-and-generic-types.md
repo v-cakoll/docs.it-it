@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-generic-types"></a>Reflection e tipi generici
 <a name="top"></a> Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo generico perché quest'ultimo è associato a un insieme di parametri di tipo, se è una definizione di tipo generico, o a un insieme di argomenti di tipo, se è un tipo costruito. Un metodo generico si differenzia da un metodo ordinario esattamente nello stesso modo.  

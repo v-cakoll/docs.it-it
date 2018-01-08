@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generazione e compilazione di codice sorgente a partire da un grafo CodeDOM
 Lo spazio dei nomi <xref:System.CodeDom.Compiler> offre le interfacce per la generazione di codice sorgente da oggetti grafici CodeDOM e per la gestione della compilazione con i compilatori supportati. Un provider di codice può generare codice sorgente in un determinato linguaggio di programmazione in base a un grafo CodeDOM. Una classe che deriva da <xref:System.CodeDom.Compiler.CodeDomProvider> in genere consente l'uso di metodi per la generazione e la compilazione di codice per il linguaggio supportato dal provider.  

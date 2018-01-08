@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429a54340cef6d608692abd71311c012afe9a3d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77eec473b95720e432c94b79778fa518f3ecf1c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhanced-strong-naming"></a>Denominazione sicura avanzata
 Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'identificazione degli assembly. È una firma digitale a chiave pubblica che in genere si usa per verificare l'integrità dei dati passati da un autore (firmatario) a un destinatario (verificatore). Questa firma viene usata come identità univoca per un assembly e garantisce che i riferimenti all'assembly non siano ambigui. L'assembly è firmato come parte del processo di compilazione e quindi verificato quando viene caricato.  

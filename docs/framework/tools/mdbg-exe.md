@@ -16,11 +16,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4c4e06a5969aa6f7555a191f9950ddf64879e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debugger della riga di comando di .NET Framework)
 Il debugger della riga di comando di .NET Framework consente ai fornitori di strumenti e agli sviluppatori di applicazioni di individuare e correggere i bug nei programmi destinati a Common Language Runtime di .NET Framework. Questo strumento usa l'API di debug del runtime per offrire servizi di debug. È possibile usare MDbg.exe solo per eseguire il debug di codice gestito in quanto non esiste alcun supporto per il debug di codice non gestito.  
@@ -60,7 +61,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*AltroComando*]|Esegue un comando su tutti i thread. *AltroComando* è un comando valido eseguito su un solo thread; **foreach** *AltroComando* esegue lo stesso comando su tutti i thread.|  
 |**f**[**unceval**] [`-ad` *Numero*] *nomeFunzione* [*argomenti ...* ]|Esegue una valutazione della funzione sul thread attivo corrente specificata da *nomeFunzione*. Il nome della funzione deve essere completo e includere gli spazi dei nomi.<br /><br /> L'opzione `-ad` specifica il dominio applicazione da usare per risolvere la funzione. Se l'opzione `-ad` non viene specificata, per impostazione predefinita, il dominio applicazione per la risoluzione corrisponde a quello in cui è reperibile il thread usato per la valutazione della funzione.<br /><br /> Se la funzione da valutare non è statica, il primo parametro passato deve essere un puntatore `this`. La ricerca degli argomenti per la valutazione della funzione viene eseguita in tutti i domini applicazione.<br /><br /> Per richiedere un valore di un dominio applicazione, anteporre alla variabile il nome del modulo e del dominio applicazione, ad esempio `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Questo comando valuta la funzione `System.Object.ToString` nel dominio applicazione `0`. Dato che il metodo `ToString` è una funzione di istanza, il primo parametro deve essere un puntatore `this`.|  
 |**g**[**o**]|Determina la continuazione dell'esecuzione del programma fino a quando non viene rilevato un punto di interruzione, il programma non viene chiuso o un evento, ad esempio un'eccezione non gestita, non causa la chiusura del programma.|  
-|**h**[**elp**] [*comando*]<br /><br /> -oppure-<br /><br /> **?** [*comando*]|Visualizza una descrizione di tutti i comandi o una descrizione dettagliata di un comando specificato.|  
+|**h**[**elp**] [*comando*]<br /><br /> oppure<br /><br /> **?** [*comando*]|Visualizza una descrizione di tutti i comandi o una descrizione dettagliata di un comando specificato.|  
 |**ig**[**nore**] [*evento*]|Determina l'arresto del debugger solo in corrispondenza di eccezioni non gestite.|  
 |**int**[**ercept**] *NumeroFrame*|Esegue il rollback del debugger a un numero di frame specificato.<br /><br /> Se il debugger rileva un'eccezione, usare questo comando per eseguire il rollback del debugger al numero di frame specificato. È possibile modificare lo stato del programma tramite il comando **set** e usare il comando **go** per continuare.|  
 |**k**[**ill**]|Arresta il processo attivo.|  

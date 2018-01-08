@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (strumento Nome sicuro)
 Lo strumento Nome sicuro (Sn.exe) consente di firmare assembly con [nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md). Lo strumento offre diverse opzioni per la gestione delle chiavi e la generazione e la verifica delle firme.  

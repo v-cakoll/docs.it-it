@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25a5092da1526bc266c5cc483cc3cd81d2ac3385
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
 L'esecuzione side-by-side consente di eseguire più versioni di un'applicazione o di un componente sullo stesso computer. È possibile disporre contemporaneamente sullo stesso computer di più versioni di Common Language Runtime e di più versioni di applicazioni e componenti che usano una versione runtime.  
@@ -128,5 +129,5 @@ publicKeyToken=...,
 |[Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Viene fornita una panoramica sui concetti di base relativi agli assembly.|  
 |[Domini dell'applicazione](../../../docs/framework/app-domains/application-domains.md)|Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

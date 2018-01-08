@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7505f44524ae8476842599b9dc4643128dea4bf2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
 Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](http://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  

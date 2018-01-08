@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
 Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfacce](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipi di valori](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.  
@@ -91,7 +92,7 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
 |[How to: Hook Up a Delegate Using Reflection](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md) (Procedura: Associare un delegato tramite reflection)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Viene illustrato come generare assembly e metodi generici.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  

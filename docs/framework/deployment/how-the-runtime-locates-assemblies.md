@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -186,7 +187,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Il nome, ovvero il nome dell'assembly di riferimento.  
   
--   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomain.AppendPrivatePath%2A> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath` , seguita dal percorso specificato nel file di configurazione dell'applicazione.  
+-   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomain.AppendPrivatePath%2A> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Individuazione tramite probe delle directory Application Base e Culture  
  Il runtime avvia sempre l'individuazione tramite probe nella base dell'applicazione, che può essere un URL o la directory radice dell'applicazione in un computer. Se l'assembly di riferimento non viene trovato nella base dell'applicazione e non viene fornita alcuna informazione sulle impostazioni cultura, il runtime cerca il nome dell'assembly in tutte le sottodirectory. Le directory di cui viene eseguita l'individuazione tramite probe includono:  

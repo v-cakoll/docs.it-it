@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Procedura: configurare un'app per supportare .NET Framework 4 o 4.5
 Per tutte le app che ospitano Common Language Runtime (CLR) è necessario che venga avviato o *attivato* CLR per eseguire codice gestito. In genere, un'app .NET Framework viene eseguita sulla versione di CLR in cui è stata sviluppata, ma è possibile modificare questo comportamento per le app desktop tramite un file di configurazione (talvolta definito file app.config). Tuttavia, non è possibile modificare il comportamento di attivazione predefinito per le applicazioni Windows Store o Windows Phone tramite un file di configurazione specifico. In questo articolo viene illustrato come consentire l'esecuzione dell'app desktop in un'altra versione di .NET Framework e viene fornito un esempio per l'esecuzione nella versione 4 o 4.5.  
@@ -81,7 +82,7 @@ Per tutte le app che ospitano Common Language Runtime (CLR) è necessario che ve
   
 |Impostazione del file app.config|In un computer in cui è installata la versione 3.5.|In un computer in cui sono installate le versione 3.5 e 4 o 4.5.|In un computer in cui è installata la versione 4 o 4.5.|  
 |-|-|-|-|  
-|Nessuno|In esecuzione nella versione 3.5.|In esecuzione nella versione 3.5.|Viene visualizzato un messaggio di errore che richiede all'utente di installare la versione corretta*|  
+|nessuno|In esecuzione nella versione 3.5.|In esecuzione nella versione 3.5.|Viene visualizzato un messaggio di errore che richiede all'utente di installare la versione corretta*|  
 |`<supportedRuntime version="v2.0.50727"/>`|In esecuzione nella versione 3.5.|In esecuzione nella versione 3.5.|Viene visualizzato un messaggio di errore che richiede all'utente di installare la versione corretta*|  
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|In esecuzione nella versione 3.5.|In esecuzione nella versione 3.5.|In esecuzione nella versione 4 o 4.5.|  
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|In esecuzione nella versione 3.5.|In esecuzione nella versione 4 o 4.5.|In esecuzione nella versione 4 o 4.5.|  

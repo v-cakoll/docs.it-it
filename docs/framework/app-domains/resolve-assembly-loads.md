@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 33dc3bfd3c70d5ea1105fb47c283aa8cf1c827c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3eb975b7ee8fdbba8435937fcb6f976d464db932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolving-assembly-loads"></a>risoluzione caricamenti assembly
 .NET Framework offre l'evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> per le applicazioni che richiedono un maggiore controllo sul caricamento di assembly. Con questo evento, l'applicazione può caricare un assembly nel contesto di caricamento dall'esterno di percorsi di sondaggio normale, selezionare la versione di assembly da caricare, creare e restituire un assembly dinamico e così via. Questo argomento illustra il materiale sussidiario per la gestione dell'evento <xref:System.AppDomain.AssemblyResolve>.  

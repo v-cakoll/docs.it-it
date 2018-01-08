@@ -17,11 +17,11 @@ ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f88401f6daa7a2108522496c845521474c22cc30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4aa939d7b2d89bd878705ac67f2b6f37838f6ea2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Procedura: leggere un valore da una chiave del Registro di sistema in Visual Basic
 Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per leggere i valori nel Registro di sistema di Windows.  
@@ -58,7 +58,7 @@ Il metodo `GetValue` dell'oggetto `My.Computer.Registry` può essere usato per l
 -   Il nome della chiave supera il limite di 255 caratteri (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+ Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  

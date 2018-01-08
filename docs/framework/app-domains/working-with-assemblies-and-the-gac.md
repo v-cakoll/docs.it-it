@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f1ee4855745573a4b73b409279d70906191bfd8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Utilizzo di assembly e della Global Assembly Cache
 Se si vuole condividere un assembly tra diverse applicazioni, è possibile installarlo nella Global Assembly Cache. Tale cache di codice a livello di computer si trova su ogni computer in cui è installato Common Language Runtime. La Global Assembly Cache memorizza gli assembly specificamente designati per essere condivisi da più applicazioni sul computer. L'assembly deve avere un nome sicuro per essere installato nella Global Assembly Cache.  
@@ -53,7 +54,7 @@ Se si vuole condividere un assembly tra diverse applicazioni, è possibile insta
   
  Si noti che esistono scenari in cui si sceglie in modo esplicito di non installare un assembly nella Global Assembly Cache. Se si inserisce uno degli assembly che costituiscono un'applicazione nella Global Assembly Cache, non sarà più possibile replicare o installare l'applicazione usando il comando XCOPY per copiare la directory dell'applicazione. In questo caso è necessario anche spostare l'assembly nella Global Assembly Cache.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Installare un assembly nella Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Vengono descritte le modalità di installazione di un assembly nella Global Assembly Cache.  
   

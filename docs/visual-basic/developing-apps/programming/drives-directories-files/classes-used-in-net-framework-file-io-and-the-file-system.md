@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classi utilizzate nel file system e nella funzionalità di I/O di file di .Net Framework (Visual Basic)
 Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .NET Framework, suddivisi in classi I/O di file, classi usate per la creazione di flussi e classi usate per leggere e scrivere nei flussi.  
   
- Per un elenco più completo incluso nella documentazione di [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], vedere [Class Library Overview](../../../../../docs/standard/class-library-overview.md) (Panoramica della libreria di classi).  
+ Per un elenco più completo incluso nella documentazione di [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], vedere [Class Library Overview](../../../../standard/class-library-overview.md) (Panoramica della libreria di classi).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classi di I/O di base per file, unità e directory  
  La tabella seguente elenca e descrive le principali classi usate nell'I/O di file.  
@@ -64,7 +64,7 @@ Le tabelle seguenti elencano le classi comunemente usate per l'I/O di file di .N
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Scrive caratteri in una `String`. L'output può essere un flusso in qualsiasi codifica o una `String`.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composizione dei flussi](../../../../../docs/standard/io/composing-streams.md)  
- [I/O di file e di flussi](https://msdn.microsoft.com/library/k3352a4t)  
- [I/O di file asincrono](https://msdn.microsoft.com/library/kztecsys)  
+ [Composizione dei flussi](../../../../standard/io/composing-streams.md)  
+ [I/O di file e di flussi](../../../../standard/io/index.md)  
+ [I/O di file asincrono](../../../../standard/io/asynchronous-file-i-o.md)  
  [Nozioni fondamentali sul file system e sulla funzionalità di I/O di file di .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

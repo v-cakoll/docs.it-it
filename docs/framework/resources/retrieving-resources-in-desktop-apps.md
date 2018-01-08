@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recupero di risorse nelle applicazioni desktop
 Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , vedere [Creazione e recupero di risorse nelle app di Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674) nel Windows Dev Center.  

@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5f6051c3da274c6a8579516e073c0ea91a195d59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2b31c029eb18943c926dfd5ed5b0576e866067d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-type-information"></a>Visualizzazione delle informazioni sul tipo
 La classe <xref:System.Type?displayProperty=nameWithType> è fondamentale per la reflection. Quando la reflection lo richiede, Common Language Runtime crea l'oggetto **Type** relativo a un tipo caricato. Per ottenere informazioni sul tipo, è possibile usare metodi, campi, proprietà e classi nidificate dell'oggetto **Type**.  

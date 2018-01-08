@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f649c45420d111a1b94374f3025ef807eb3d8efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 <a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  

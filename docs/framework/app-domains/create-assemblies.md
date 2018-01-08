@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2168cbcd19437c1e275da7a01aa0c75ab47600eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-assemblies"></a>Creazione degli assembly
 È possibile creare assembly su uno o più file tramite un ambiente IDE, ad esempio [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o tramite i compilatori e gli strumenti forniti da [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. L'assembly più semplice è costituito da un unico file con un nome semplice, caricato in un unico dominio dell'applicazione. Altri assembly all'esterno della directory dell'applicazione non possono fare riferimento a questo assembly, che non può neanche essere sottoposto al controllo della versione. Per disinstallare l'applicazione costituita dall'assembly, è sufficiente eliminare la directory in cui si trova. Per molti sviluppatori un assembly con queste funzionalità è tutto ciò che serve per distribuire un'applicazione.  

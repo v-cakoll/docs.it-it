@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fa156c914d2a1bb2ff0601d9e06c9b87d4190754
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigazione: deserializzazione di oggetti tra domini app
 In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini applicazione con diverse basi di applicazione, il tentativo di deserializzare gli oggetti nel contesto di chiamata logico dei domini applicazione comporta la generazione di un'eccezione.  
@@ -45,7 +46,7 @@ In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini a
   
 6.  Poiché i tipi presenti nel contesto di chiamata logico non possono essere risolti nel dominio applicazione predefinito, viene generata un'eccezione.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Mitigazione  
  Per risolvere questo problema, effettuare le operazioni seguenti:  
   
 1.  Individuare la chiamata a `get_Evidence` nello stack di chiamate quando viene generata l'eccezione. L'eccezione può essere una qualsiasi di un subset di eccezioni, incluse <xref:System.IO.FileNotFoundException> e <xref:System.Runtime.Serialization.SerializationException>.  

@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a0d1f54b417a9752ae96e52f78d9df7d2d60cbec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Procedura: Creare una coppia di chiavi pubblica/privata
 Per firmare un assembly con un nome sicuro, è necessario disporre di una coppia di chiavi pubblica/privata. Questa coppia di chiavi crittografiche, pubblica e privata, viene usata durante la compilazione per creare un assembly con nome sicuro. È possibile creare una coppia di chiavi usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Ai file delle coppie di chiavi è in genere associata l'estensione snk.  

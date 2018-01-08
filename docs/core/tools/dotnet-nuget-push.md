@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: dc4250ab7417c9f19babdf37c556daf7c3bd6a81
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnetcore
+ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>nome
 
 `dotnet nuget push`: effettua il push di un pacchetto nel server e lo pubblica.
 
@@ -102,7 +103,3 @@ Effettua il push di tutti i file con estensione *nupkg* presenti nella directory
 Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita, specificando un file di configurazione personalizzato *./config/My.Config*:
 
 `dotnet nuget push *.nupkg --config-file ./config/My.Config`
-
-Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita con il massimo livello di dettaglio:
-
-`dotnet nuget push *.nupkg --verbosity detailed`

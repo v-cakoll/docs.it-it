@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (strumento di registrazione di assembly)
 Lo strumento di registrazione di assembly legge i metadati all'interno di un assembly e aggiunge al Registro di sistema le voci necessarie per consentire ai client COM di creare classi di .NET Framework in modo trasparente. Quando una classe è stata registrata, qualsiasi client COM può utilizzarla come se si trattasse di una classe COM. La classe viene registrata una sola volta, al momento dell'installazione dell'assembly. Non è possibile creare da COM istanze di classi nell'assembly finché tali classi non sono state effettivamente registrate.  

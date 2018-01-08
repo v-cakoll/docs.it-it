@@ -9,11 +9,12 @@ ms.prod: .net-core
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
 
@@ -56,7 +57,7 @@ Dopo aver creato una libreria di classi seguendo i passaggi riportati in [Creazi
 
 1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
 
-   ![Immagine](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Aprire la soluzione `ClassLibraryProjects` creata in [Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md). In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sulla soluzione **ClassLibraryProjects** e scegliere **Aggiungi** > **Nuovo progetto** dal menu di scelta rapida.
 
@@ -86,7 +87,7 @@ Dopo aver creato una libreria di classi seguendo i passaggi riportati in [Creazi
 
 1. Se necessario, modificare la barra degli strumenti per compilare la versione di **debug** del progetto `ShowCase`. Compilare ed eseguire il programma selezionando la freccia verde nel pulsante **ShowCase**.
 
-   ![Immagine](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
 ---
 
 È possibile eseguire il debug e pubblicare l'applicazione che usa questa libreria seguendo i passaggi illustrati in [Esecuzione del debug dell'applicazione C# Hello World con Visual Studio 2017](debugging-with-visual-studio.md) e [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](publishing-with-visual-studio.md).

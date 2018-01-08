@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>Domini applicazione
 I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di isolamento tra le applicazioni. Windows, ad esempio, usa i processi per isolare le applicazioni. L'isolamento è necessario per garantire che il codice in esecuzione in un'applicazione non interferisca con altre applicazioni non correlate.  
@@ -168,5 +169,5 @@ Value (to append) = COMPLUS_LoaderOptimization=1
 ```  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.MarshalByRefObject?displayProperty=nameWithType>

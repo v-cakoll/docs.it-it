@@ -1,5 +1,5 @@
 ---
-title: Iteratori
+title: Iterators
 description: Informazioni su come usare gli iteratori C# predefiniti e come creare metodi iteratori personalizzati.
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
-# <a name="iterators"></a>Iteratori
+# <a name="iterators"></a>Iterators
 
 Quasi tutti i programmi che vengono scritti avranno la necessità di eseguire un'iterazione in una raccolta. Si scriverà il codice che esamina ogni elemento in una raccolta. 
 
@@ -171,7 +171,7 @@ Esaminare i metodi descritti precedentemente. Il primo usa l'istruzione `return`
 
 ## <a name="deeper-dive-into-foreach"></a>Approfondimento di `foreach`
 
-L'istruzione `foreach` si espande in un termine standard che usa le interfacce `IEnumable<T>` e `IEnumerator<T>` per eseguire l'iterazione tra tutti gli elementi di una raccolta. Riduce al minimo gli errori commessi dagli sviluppatori a causa di una gestione non corretta delle risorse. 
+L'istruzione `foreach` si espande in un termine standard che usa le interfacce `IEnumerable<T>` e `IEnumerator<T>` per eseguire l'iterazione tra tutti gli elementi di una raccolta. Riduce al minimo gli errori commessi dagli sviluppatori a causa di una gestione non corretta delle risorse. 
 
 Il compilatore traduce il ciclo `foreach` illustrato nel primo esempio in un risultato simile a questo costrutto:
 

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: edae357dad95a363926afbacc8e52355a1bcbd65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-path-normalization"></a>Migrazione: Normalizzazione del percorso
 A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalizzazione del percorso in .NET Framework è stata modificata.  
@@ -53,7 +54,7 @@ A partire dalle applicazioni destinate a [!INCLUDE[net_v462](../../../includes/n
   
  Le applicazioni destinate a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versioni precedenti ma in esecuzione in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o versioni successive non sono interessate da questa modifica.  
   
-## <a name="mitigation"></a>Attenuazione  
+## <a name="mitigation"></a>Mitigazione  
  Le app destinate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o versioni successive possono rifiutare esplicitamente questa modifica e usare la normalizzazione legacy aggiungendo il codice seguente alla sezione [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del file di configurazione dell'applicazione:  
   
 ```xml  

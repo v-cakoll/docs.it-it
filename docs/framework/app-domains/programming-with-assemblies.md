@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 368021062a3ad49d2c63f92797c59b8c0f1cddfc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46cc7d1be867ff94ca25d0d6ffaaf46a6dc9514b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-assemblies"></a>Programmazione con gli assembly
 Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base per la distribuzione, il controllo della versione, il riutilizzo, la definizione dell'ambito di attivazione e le autorizzazioni di sicurezza. Un assembly offre a Common Language Runtime le informazioni necessarie per il riconoscimento delle implementazioni di tipi. È una raccolta di tipi e risorse creati per essere usati insieme e per formare un'unità logica di funzionalità. Per il runtime, un tipo non esiste all'esterno del contesto di un assembly.  
@@ -30,7 +31,7 @@ Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base
 > [!NOTE]
 >  A partire da .NET Framework versione 2.0 il runtime non caricherà un assembly compilato con una versione di .NET Framework con numero di versione superiore a quello del runtime attualmente caricato. Questo vale per la combinazione dei componenti numero principale e numero secondario del numero di versione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)  
  Offre una panoramica degli assembly a file singolo e su più file.  
   
@@ -73,7 +74,7 @@ Gli assembly sono i blocchi costitutivi di .NET Framework. Costituiscono la base
  [Inoltro dei tipi in Common Language Runtime](../../../docs/framework/app-domains/type-forwarding-in-the-common-language-runtime.md)  
  Descrive come usare l'inoltro del tipo per spostare un tipo in un assembly diverso senza compromettere il funzionamento delle applicazioni esistenti.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Reflection.Assembly>  
  Classe di .NET Framework che rappresenta un assembly.  
   

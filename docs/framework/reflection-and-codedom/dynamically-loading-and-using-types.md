@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>Caricamento e utilizzo dinamico dei tipi
 La reflection fornisce un'infrastruttura usata dai compilatori di linguaggi, ad esempio [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] e JScript, per implementare l'associazione tardiva implicita. L'associazione è il processo di individuazione della dichiarazione (ovvero l'implementazione) che corrisponde a un tipo specificato in modo univoco. Quando questo processo avviene in fase di esecuzione piuttosto che in fase di compilazione, esso viene chiamato associazione tardiva. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] consente di usare l'associazione tardiva implicita nel codice. Il compilatore Visual Basic chiama un metodo helper che usa la reflection per ottenere il tipo di oggetto. Gli argomenti passati al metodo helper determinano la chiamata, in fase di esecuzione, del metodo appropriato. Questi argomenti sono l'istanza (un oggetto) su cui richiamare il metodo, il nome del metodo richiamato (una stringa) e gli argomenti passati al metodo richiamato (una matrice di oggetti).  

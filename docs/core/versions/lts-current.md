@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 2fcb33c7c5a4a3c31960a683865b0e5e29269a8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-support"></a>Supporto di .NET Core
 
@@ -32,7 +33,7 @@ Le versioni Current sono
 * Supportate per tre mesi dopo la data di disponibilità generale di una versione Current successiva
 * E supportate per un anno dopo la data di disponibilità generale di una versione LTS successiva
 
-## <a name="versioning"></a>Versionamento
+## <a name="versioning"></a>Controllo delle versioni
 Le nuove versioni LTS sono contrassegnate tramite un incremento del numero di versione principale. Le versioni Current hanno lo stesso numero di versione principale del ramo LTS corrispondente e sono contrassegnate tramite un incremento del numero di versione secondario. Ad esempio, il numero di versione 1.0.3 per il ramo LTS e il numero 1.1.0 per Current. Gli aggiornamenti per correzioni di bug per entrambi i rami incrementano la versione di patch. Per altre informazioni sullo schema di controllo delle versioni, vedere [Versionamento di .NET Core](index.md).
 
 ## <a name="what-causes-updates-in-lts-and-current-trains"></a>Quali modifiche comportano aggiornamenti dei rami LTS e Current?

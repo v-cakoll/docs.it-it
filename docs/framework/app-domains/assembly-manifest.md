@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41dc27798e9d39d391e5958b86f691e3a0062582
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-manifest"></a>Manifesto dell'assembly
 Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.  
@@ -54,7 +55,7 @@ Tipi di assembly
 |-----------------|-----------------|  
 |Nome assembly|Una stringa di testo che specifica il nome dell'assembly.|  
 |Numero di versione|Un numero di versione principale e secondario e un numero di revisione e di build. Common Language Runtime utilizza tali numeri per assicurare l'applicazione dei criteri per la gestione delle versioni.|  
-|Impostazioni cultura|Informazioni sulla lingua o sulle impostazioni cultura supportate dall'assembly. Questa informazione deve essere utilizzata solo per designare un assembly come assembly satellite contenente informazioni specifiche della lingua o delle impostazioni cultura. Un assembly con informazioni relative alle impostazioni cultura viene automaticamente considerato come assembly satellite.|  
+|culture|Informazioni sulla lingua o sulle impostazioni cultura supportate dall'assembly. Questa informazione deve essere utilizzata solo per designare un assembly come assembly satellite contenente informazioni specifiche della lingua o delle impostazioni cultura. Un assembly con informazioni relative alle impostazioni cultura viene automaticamente considerato come assembly satellite.|  
 |Informazioni sul nome sicuro|La chiave pubblica rilasciata dall'editore se all'assembly è stato assegnato un nome sicuro.|  
 |Elenco di tutti i file dell'assembly|Un elenco di tutti i file contenuti nell'assembly e un nome di file. Si noti che tutti i file che compongono l'assembly devono essere contenuti nella stessa directory del file che contiene il manifesto dell'assembly.|  
 |Informazioni per il riferimento ai tipi|Informazioni utilizzate dal runtime per collegare il riferimento a un tipo al file che ne contiene la dichiarazione e l'implementazione. Vengono utilizzate per i tipi esportati dall'assembly.|  

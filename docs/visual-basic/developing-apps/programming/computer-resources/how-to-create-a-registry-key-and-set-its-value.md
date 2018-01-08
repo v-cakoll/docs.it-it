@@ -20,11 +20,11 @@ ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5f60dd4723e254b0af59a7794e251a082c9a40c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procedura: creare una chiave del Registro di sistema e impostarne il valore in Visual Basic
 Il metodo `CreateSubKey` dell'oggetto `My.Computer.Registry` consente di creare una chiave del Registro di sistema.  
@@ -76,11 +76,11 @@ Il metodo `CreateSubKey` dell'oggetto `My.Computer.Registry` consente di creare 
 -   La chiave del Registro di sistema è di sola lettura (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Nozioni di base sulla sicurezza dell'accesso di codice).  
+ Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
  [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Nozioni fondamentali sulla sicurezza per l’accesso al codice](https://msdn.microsoft.com/library/33tceax8)
+ [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../../framework/misc/code-access-security-basics.md)

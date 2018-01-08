@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
@@ -47,14 +48,14 @@ File e cartelle archiviati nel modello non sono limitati ai tipi di progetto .NE
 
 Il file *template.json* si trova in una cartella *.template.config* nella directory radice del modello. Il file fornisce informazioni di configurazione al motore del modello. Per la configurazione minima sono necessari i membri visualizzati nella tabella seguente, sufficiente per creare un modello funzionale.
 
-| Membro            | Tipo          | Descrizione |
+| Member            | Tipo          | Descrizione |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Lo schema JSON per il file *template.json*. Gli editor che supportano gli schemi JSON abilitano le funzionalità di modifica JSON quando viene specificato lo schema. Ad esempio, [Visual Studio Code](https://code.visualstudio.com/) richiede questo membro per abilitare IntelliSense. Usare un valore di `http://json.schemastore.org/template`. |
-| `author`          | string        | L'autore del modello. |
+| `author`          | stringa        | L'autore del modello. |
 | `classifications` | array(string) | Zero o più caratteristiche del modello che un utente può usare per individuare il modello durante la ricerca. Le classificazioni vengono visualizzate anche nella colonna *Tags* quando viene visualizzata in un elenco di modelli generati usando il comando <code>dotnet new -l&#124;--list</code>. |
-| `identity`        | string        | Un nome univoco per questo modello. |
-| `name`            | string        | Il nome per il modello che verrà visualizzato agli utenti. |
-| `shortName`       | string        | Una valore breve predefinito per la selezione del modello che si applica agli ambienti in cui il nome del modello viene specificato dall'utente e non selezionato tramite un'interfaccia utente grafica. Ad esempio, il nome breve è utile quando si usano i modelli da un prompt dei comandi con i comandi dell'interfaccia della riga di comando. |
+| `identity`        | stringa        | Un nome univoco per questo modello. |
+| `name`            | stringa        | Il nome per il modello che verrà visualizzato agli utenti. |
+| `shortName`       | stringa        | Una valore breve predefinito per la selezione del modello che si applica agli ambienti in cui il nome del modello viene specificato dall'utente e non selezionato tramite un'interfaccia utente grafica. Ad esempio, il nome breve è utile quando si usano i modelli da un prompt dei comandi con i comandi dell'interfaccia della riga di comando. |
 
 #### <a name="example"></a>Esempio:
 
@@ -87,11 +88,11 @@ Il contenuto della cartella del progetto e il relativo file *.template.config/te
 
 | Elemento            | Tipo   | Descrizione |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
-| **\<description>** | string | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
-| **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
-| **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
-| **\<version>**     | string | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto nell'argomento [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+| **\<authors>**     | stringa | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
+| **\<description>** | stringa | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
+| **\<id>**          | stringa | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
+| **\<packageType>** | stringa | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
+| **\<version>**     | stringa | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto nell'argomento [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
 Vedere il [riferimento a .nuspec](/nuget/schema/nuspec) per lo schema completo del file *nuspec*. Un file *nuspec* di esempio per un modello viene visualizzato nell'esercitazione [Creare un modello personalizzato per dotnet new](~/docs/core/tutorials/create-custom-template.md).
 

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46c00bc73e586c7bcfaca95d3998cbe100c6f3c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-resx-files-programmatically"></a>Uso dei file RESX a livello di codice
 Poiché i file di risorse XML (con estensione resx) devono essere costituiti da codice XML ben definito, comprensivo di un'intestazione che deve seguire uno schema specifico, seguita da dati in coppie nome/valore, la creazione manuale di questi file è soggetta a errori. In alternativa, è possibile creare file con estensione resx a livello di codice usando tipi e membri inclusi nella libreria di classi .NET Framework. La libreria di classi .NET Framework può essere usata anche per recuperare risorse archiviate in file con estensione resx. Questo argomento illustra come usare i tipi e i membri nello spazio dei nomi <xref:System.Resources> per i file RESX.  

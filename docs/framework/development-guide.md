@@ -14,16 +14,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aaac046a6f5022e4b903faacd609748092d2809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Concetti di base sulle applicazioni](../../docs/standard/application-essentials.md)  
  Vengono fornite informazioni sulle attività per lo sviluppo di app di base, quali programmazione con assembly e domini applicazione, uso di attributi, formattazione e tipi di base di analisi, uso di raccolte, gestione di eventi ed eccezioni, uso di file, flussi di dati e generics.  
   
@@ -75,7 +76,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Libreria di classi .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Vengono forniti sintassi, esempi di codice e informazioni sull'utilizzo per ogni classe contenuta negli spazi dei nomi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   

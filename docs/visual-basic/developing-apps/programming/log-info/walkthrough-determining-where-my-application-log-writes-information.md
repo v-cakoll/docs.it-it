@@ -18,11 +18,11 @@ ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener di log. I listener di log sono configurati dal file di configurazione del computer ed è possibile eseguirne l'override con il file di configurazione di un'applicazione. Questo argomento descrive le impostazioni predefinite e illustra come determinare le impostazioni dell'applicazione.  
@@ -62,7 +62,7 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
   
     -   Il listener <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> scrive le informazioni in un log file, come descritto nell'introduzione.  
   
-    -   Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`. Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`. Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).  
   
     -   I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> scrivono le informazioni nel file specificato nel parametro `initializeData`.  
   
@@ -82,5 +82,5 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
  [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
  [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [Eventi ETW in .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
+ [Eventi ETW in .NET Framework](../../../../framework/performance/etw-events.md)  
  [Risoluzione dei problemi: Listener di log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

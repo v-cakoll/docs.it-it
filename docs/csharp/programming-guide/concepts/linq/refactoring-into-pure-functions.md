@@ -8,11 +8,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36bb31975523055962fa9572109dab7e2ed47336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fe9a9250e0a87ecaa02258526b7cc796de8e387
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
 
@@ -35,21 +35,21 @@ Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire
  Negli esempi seguenti vengono confrontate due funzioni non pure e una funzione pura.  
   
 ### <a name="non-pure-function-that-changes-a-class-member"></a>Funzione non pura che modifica un membro di classe  
- Nel codice seguente la funzione `HypenatedConcat` non è una funzione pura perché modifica il membro dati `aMember` nella classe:  
+ Nel codice seguente la funzione `HyphenatedConcat` non è una funzione pura perché modifica il membro dati `aMember` nella classe:  
   
 ```csharp  
 public class Program  
 {  
     private static string aMember = "StringOne";  
   
-    public static void HypenatedConcat(string appendStr)  
+    public static void HyphenatedConcat(string appendStr)  
     {  
         aMember += '-' + appendStr;  
     }  
   
     public static void Main()  
     {  
-        HypenatedConcat("StringTwo");  
+        HyphenatedConcat("StringTwo");  
         Console.WriteLine(aMember);  
     }  
 }  
@@ -69,7 +69,7 @@ StringOne-StringTwo
 ```csharp  
 public class Program  
 {  
-    public static void HypenatedConcat(StringBuilder sb, String appendStr)  
+    public static void HyphenatedConcat(StringBuilder sb, String appendStr)  
     {  
         sb.Append('-' + appendStr);  
     }  
@@ -77,19 +77,19 @@ public class Program
     public static void Main()  
     {  
         StringBuilder sb1 = new StringBuilder("StringOne");  
-        HypenatedConcat(sb1, "StringTwo");  
+        HyphenatedConcat(sb1, "StringTwo");  
         Console.WriteLine(sb1);  
     }  
 }  
 ```  
   
- Questa versione del programma produce lo stesso output della prima versione, perché la funzione `HypenatedConcat` ha modificato il valore (stato) del primo parametro richiamando la funzione del membro <xref:System.Text.StringBuilder.Append%2A>. Si noti che questa modifica si verifica nonostante il fatto che `HypenatedConcat` usa il passaggio di parametri in base a chiamata per valore.  
+ Questa versione del programma produce lo stesso output della prima versione, perché la funzione `HyphenatedConcat` ha modificato il valore (stato) del primo parametro richiamando la funzione del membro <xref:System.Text.StringBuilder.Append%2A>. Si noti che questa modifica si verifica nonostante il fatto che `HyphenatedConcat` usa il passaggio di parametri in base a chiamata per valore.  
   
 > [!IMPORTANT]
 >  Per i tipi di riferimenti, se un parametro viene passato per valore, il risultato è una copia del riferimento a un oggetto passato. Questa copia è ancora associata agli stessi dati di istanza del riferimento originale, finché la variabile di riferimento non viene assegnata a un nuovo oggetto. La chiamata per riferimento non è necessariamente richiesta affinché una funzione modifichi un parametro.  
   
 ### <a name="pure-function"></a>Funzione pura  
-Nella versione successiva del programma viene illustrato come implementare la funzione `HypenatedConcat` come funzione pura.  
+Nella versione successiva del programma viene illustrato come implementare la funzione `HyphenatedConcat` come funzione pura.  
   
 ```csharp  
 class Program  

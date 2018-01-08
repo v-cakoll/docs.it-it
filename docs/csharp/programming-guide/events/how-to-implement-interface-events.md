@@ -11,11 +11,11 @@ ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a53c6ba29837ad8827d97ea745be0462451eb145
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Procedura: Implementare gli eventi di interfaccia (Guida per programmatori C#)
 Un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) consente di dichiarare un [evento](../../../csharp/language-reference/keywords/event.md). Nell'esempio seguente viene illustrato come implementare eventi di interfaccia in una classe. Le regole sono le stesse usate per l'implementazione di qualsiasi metodo di interfaccia o proprietà.  
@@ -24,7 +24,7 @@ Un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) conse
   
 -   Dichiarare l'evento nella classe e quindi richiamarlo nelle posizioni appropriate.  
   
-    ```  
+    ```csharp
     namespace ImplementInterfaceEvents  
     {  
         public interface IDrawingObject  

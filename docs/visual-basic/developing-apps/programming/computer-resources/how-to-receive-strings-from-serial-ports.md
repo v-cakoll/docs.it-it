@@ -15,11 +15,11 @@ ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6939dee58051e9a97fa704f063f35ff0ac440036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a58ce248404bfe4d6c55bba741b332acd7fcbf5c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: ricevere stringhe da porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe dalle porte seriali del computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -42,11 +42,11 @@ Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe d
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Usare il metodo <xref:System.IO.Ports.SerialPort.ReadLine%2A> per leggere la successiva riga di testo disponibile dalla porta seriale.  
+5.  Usare il metodo <xref:System.IO.Ports.SerialPort.ReadLine> per leggere la successiva riga di testo disponibile dalla porta seriale.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  Usare un'istruzione `If` per determinare se il metodo <xref:System.IO.Ports.SerialPort.ReadLine%2A> restituisce `Nothing`, il che significa che non è più disponibile testo. Se restituisce `Nothing`, uscire dal ciclo `Do`.  
+6.  Usare un'istruzione `If` per determinare se il metodo <xref:System.IO.Ports.SerialPort.ReadLine> restituisce `Nothing`, il che significa che non è più disponibile testo. Se restituisce `Nothing`, uscire dal ciclo `Do`.  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   

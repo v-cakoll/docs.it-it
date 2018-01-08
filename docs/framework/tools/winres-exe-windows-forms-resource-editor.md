@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (editor di risorse di Windows Form)
 Winres.exe, l'editor di risorse di Windows Form, è uno strumento di layout visivo appositamente studiato per facilitare la localizzazione delle risorse dell'interfaccia utente di Windows Form usate dai form. I file .resx o .resources usati come input per Winres.exe possono essere creati mediante un ambiente di progettazione visiva quale Microsoft Visual Studio. Per informazioni sulla distribuzione delle risorse in applicazioni .NET Framework, vedere [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md).  
@@ -116,7 +117,7 @@ winres /?
   
 2.  Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.  
   
-     -oppure-  
+     oppure  
   
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.  
   

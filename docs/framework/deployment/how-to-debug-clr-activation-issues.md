@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa8153fe680a8848ad19f32a2246d0f350c73c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Procedura: debug dei problemi di attivazione CLR
 Se si verificano problemi nell'eseguire l'applicazione con la versione corretta di Common Language Runtime (CLR), è possibile visualizzare ed eseguire il debug dei log di attivazione CLR. Questi log possono essere molto utili nell'individuazione della causa principale di un problema di attivazione quando l'applicazione carica una versione di CLR diversa da quella prevista o non carica CLR. In [Errori di inizializzazione di .NET Framework: gestione dell'esperienza utente](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) è descritto il caso in cui non viene trovato alcun CLR per un'applicazione.  

@@ -16,18 +16,18 @@ ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 018aff8dc130bfe7217c861a7d7bc8ae275ccc66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8225deaac92b4f375f57501875e13216b35a120d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Procedura: scrivere nel log eventi di un'applicazione (Visual Basic)
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per scrivere informazioni sugli eventi che si verificano nell'applicazione. L'esempio seguente mostra come configurare un listener di log eventi in modo che `My.Application.Log` scriva le informazioni di traccia nel log eventi dell'applicazione.  
   
  Non è possibile scrivere nel log di sicurezza. Per scrivere nel log di sistema, è necessario essere membro dell'account LocalSystem o Administrator.  
   
- Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+ Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).  
   
 > [!NOTE]
 >  I log eventi non sono supportati in Windows 95, Windows 98 o Windows Millennium Edition.  

@@ -16,16 +16,17 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni destinate agli sviluppatori che vogliono installare .NET Framework con le proprie applicazioni e agli amministratori che vogliono distribuire .NET Framework in una rete. Questa sezione tratta anche i problemi di attivazione e riavvio associati alla distribuzione e descrive come monitorare lo stato dell'installazione di .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.  
   

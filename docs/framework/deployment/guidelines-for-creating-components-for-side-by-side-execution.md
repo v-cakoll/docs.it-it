@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Linee guida per la creazione di componenti per l'esecuzione affiancata di più versioni
 Per creare applicazioni o componenti gestiti progettati per l'esecuzione affiancata, seguire le indicazioni generali riportate di seguito.  
@@ -71,5 +72,5 @@ Per creare applicazioni o componenti gestiti progettati per l'esecuzione affianc
  Lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) consente di sostituire un assembly solo quando il numero di versione del file è più recente. Windows Installer in genere non esegue l'installazione su un assembly a meno che il numero di versione dell'assembly non sia superiore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione side-by-Side](../../../docs/framework/deployment/side-by-side-execution.md)  
+ [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md)  
  [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
