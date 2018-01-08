@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: f4c4bd9901b053c96a260435c34ffa3ddd2c7283
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c25f0039f75ba1c736cff946dbaaff9252dc93e
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; elemento (impostazioni della Cache)
 Specifica una raccolta di impostazioni di configurazione per l'oggetto denominato <xref:System.Runtime.Caching.MemoryCache> istanze. Il <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> proprietà fa riferimento alla raccolta di impostazioni di configurazione da uno o più `namedCaches` elementi del file di configurazione.  
@@ -89,7 +89,7 @@ Specifica una raccolta di impostazioni di configurazione per l'oggetto denominat
       <namedCaches>  
           <add name="default"   
                cacheMemoryLimitMegabytes="0"   
-               physicalMemoryPercentage="0"  
+               physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
     </memoryCache>  

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
@@ -58,7 +58,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`.`|[Membri](../members/index.md)<br /><br />[Tipi primitivi](../primitive-types.md)|<ul><li>Accede a un membro e separa i singoli nomi in un nome completo.<br /></li><li>Consente di specificare un separatore decimale nei numeri a virgola mobile.<br /></li><ul/>|
 |`..`|[Cicli: espressione `for...in`](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo.<br /></li><ul/>|
 |`.. ..`|[Cicli: espressione `for...in`](../loops-for-in-expression.md)|<ul><li>Specifica un intervallo con un incremento.<br /></li><ul/>|
-|`.[...]`|[Matrici](../arrays.md)|<ul><li>Accede a un elemento di matrice.<br /></li><ul/>|
+|`.[...]`|[Array](../arrays.md)|<ul><li>Accede a un elemento di matrice.<br /></li><ul/>|
 |`/`|[Operatori aritmetici](arithmetic-operators.md)<br /><br />[Unità di misura](../units-of-measure.md)|<ul><li>Divide il lato sinistro (numeratore) per il lato destro (denominatore).<br /></li><li>Usato in unità di tipi di misura.<br /></li><ul/>|
 |`/?`|[Operatori nullable](nullable-operators.md)|<ul><li>Divide il lato sinistro dal lato destro, quando il lato destro è un tipo nullable.<br /></li><ul/>|
 |`//`||<ul><li>Indica l'inizio di un commento a riga singola.<br /></li><ul/>|
@@ -92,7 +92,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`>?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola l'operazione "maggiore di", quando la parte destra è un tipo nullable.<br /></li><ul/>|
 |`>>`|[Funzioni](../functions/index.md)|<ul><li>Compone due funzioni (operatore di composizione diretto).<br /></li><ul/>|
 |`>>>`|[Operatori bit per bit](bitwise-operators.md)|<ul><li>Sposta a destra i bit nella quantità sul lato sinistro indicata dal numero di posizioni specificato sul lato destro.<br /></li><ul/>|
-|`>=`|[Operatori aritmetici](arithmetic-operators.md)|<ul><li>Restituisce `true` se il lato destro è maggiore o uguale al lato sinistro; in caso contrario, restituisce `false`.<br /></li><ul/>|
+|`>=`|[Operatori aritmetici](arithmetic-operators.md)|<ul><li>Restituisce `true` se il lato sinistro è maggiore o uguale a quello destro; in caso contrario, restituisce `false`.<br /></li><ul/>|
 |`>=?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola l'operazione "maggiore o uguale a" quando la parte destra è un tipo nullable.<br /></li><ul/>|
 |`?`|[Parametri e argomenti](../parameters-and-arguments.md)|<ul><li>Specifica un argomento facoltativo.<br /></li><li>Usato come operatore per le chiamate di metodo e proprietà dinamiche. È necessario fornire un'implementazione personalizzata.<br /></li><ul/>|
 |`? ... <- ...`|Non sono disponibili altre informazioni.|<ul><li>Usato come operatore per l'impostazione delle proprietà dinamiche. È necessario fornire un'implementazione personalizzata.<br /></li><ul/>|
@@ -101,7 +101,7 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[Operatori nullable](nullable-operators.md)|<ul><li>Equivalente per i corrispondenti operatori non racchiusi da punti interrogativi, dove entrambi i lati sono tipi nullable.<br /></li><ul/>|
 |`@`|[Elenchi](../lists.md)<br /><br />[Stringhe](../strings.md)|<ul><li>Concatena due elenchi.<br /></li><li>Quando si trova prima di una stringa letterale, indica che la stringa deve essere interpretata alla lettera, senza interpretazione dei caratteri di escape.<br /></li><ul/>|
 |`[...]`|[Elenchi](../lists.md)|<ul><li>Delimita gli elementi di un elenco.<br /></li><ul/>|
-|<code>[&#124;...&#124;]</code>|[Matrici](../arrays.md)|<ul><li>Delimita gli elementi di una matrice.<br /></li><ul/>|
+|<code>[&#124;...&#124;]</code>|[Array](../arrays.md)|<ul><li>Delimita gli elementi di una matrice.<br /></li><ul/>|
 |`[<...>]`|[Attributi](../attributes.md)|<ul><li>Delimita un attributo.<br /></li><ul/>|
 |`\`|[Stringhe](../strings.md)|<ul><li>Effettua l'escape del carattere successivo. Usato nei valori letterali di stringa e carattere.<br /></li><ul/>|
 |`^`|[Parametri di tipo risolti staticamente](../generics/statically-resolved-type-parameters.md)<br /><br />[Stringhe](../strings.md)|<ul><li>Specifica i parametri di tipo che devono essere risolti in fase di compilazione, non in fase di esecuzione.<br /></li><li>Concatena le stringhe.<br /></li><ul/>|
@@ -126,7 +126,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |Operatore|Associazione|
 |--------|-------------|
 |`as`|A destra|
-|`when`|Destro|
+|`when`|A destra|
 |<code>&#124;</code>(barra verticale)|Sinistro|
 |`;`|A destra|
 |`let`|Non associativo|
@@ -137,20 +137,20 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`,`|Non associativo|
 |`or`, <code>&#124;&#124;</code>|Sinistro|
 |`&`, `&&`|Sinistro|
-|`:>`, `:?>`|Destro|
+|`:>`, `:?>`|A destra|
 |`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *Op*,`&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
-|`^`*op*<br /><br />(incluso `^^^`)|Destra|
-|`::`|Destra|
+|`^`*op*<br /><br />(incluso `^^^`)|A destra|
+|`::`|A destra|
 |`:?`|Non associativa|
 |`-`*op*, `+`*op*|Si applica agli usi infissi di questi simboli|
 |`*`*op*, `/`*op*, `%`*op*|Sinistra|
 |`**`*op*|Destra|
 |`f x` (applicazione di funzione)|Sinistro|
-|<code>&#124;</code>(criteri di ricerca)|Destro|
-|operatori di prefisso (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sinistra|
+|<code>&#124;</code>(criteri di ricerca)|A destra|
+|operatori di prefisso (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sinistro|
 |`.`|A sinistra|
-|`f(x)`|Sinistra|
-|`f<`*tipi*`>`|Sinistra|
+|`f(x)`|Sinistro|
+|`f<`*tipi*`>`|Sinistro|
 F# supporta l'overload degli operatori personalizzati. Ciò significa che è possibile definire operatori personalizzati. Nella tabella precedente, *op* può essere qualsiasi sequenza valida (possibilmente vuota) di caratteri dell'operatore, predefinita o definita dall'utente. In questo modo, è possibile usare questa tabella per determinare la sequenza di caratteri da usare in modo che un operatore personalizzato raggiunga il livello di priorità desiderato. I caratteri `.` iniziali vengono ignorati quando il compilatore determina la precedenza.
 
 ## <a name="see-also"></a>Vedere anche

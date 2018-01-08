@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Istruzione On Error (Visual Basic)
 Abilita una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. consente inoltre di disabilitare una routine di gestione degli errori.  
   
- Senza un `On Error` istruzione, qualsiasi errore di run-time che si verifica è irreversibile: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.  
+ Senza la gestione degli errori, qualsiasi errore di run-time che si verifica rappresenta un errore irreversibile: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.  
   
  Quando possibile, si consiglia di utilizzare nel codice, anziché utilizzare la gestione strutturata delle eccezioni strutturata e `On Error` istruzione. Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

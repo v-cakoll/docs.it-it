@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>Nozioni fondamentali sulle transazioni
 Le transazioni consentono di associare più attività fra loro. Ad esempio, si supponga che un'applicazione esegua due attività. La prima consiste nel creare una nuova tabella in un database. La seconda consiste nel chiamare un oggetto specifico per raccogliere, formattare e inserire dati nella nuova tabella. Queste due attività sono correlate e persino interdipendenti, nel senso che la creazione di una tabella deve avvenire esclusivamente quando sono disponibili dei dati con cui riempirla. L'esecuzione di entrambe le attività nell'ambito di un'unica transazione ne garantisce la correlazione. Se si verifica un errore nella seconda attività, il sistema esegue il rollback della prima attività a un punto precedente alla creazione della nuova tabella.  
@@ -30,7 +30,7 @@ Le transazioni consentono di associare più attività fra loro. Ad esempio, si s
   
  Quando si sviluppa un'applicazione transazionale utilizzando le classi fornite dallo spazio dei nomi <xref:System.Transactions> non è necessario gestire manualmente i tipi di transazione da utilizzare o determinare la gestione transazioni coinvolta, in quanto queste problematiche vengono gestite automaticamente dall'infrastruttura <xref:System.Transactions>.  
   
- Quando si crea una transazione è possibile specificarne il livello di isolamento. Il livello di isolamento, definito dalla classe <xref:System.Transactions.IsolationLevel>, determina il livello di accesso delle altre transazioni ai dati gestiti dalla transazione.  
+ Quando si crea una transazione è possibile specificarne il livello di isolamento. Il livello di isolamento, definito dal <xref:System.Transactions.IsolationLevel> enum, determina il livello di accesso alle altre transazioni sono ai dati interesserà da parte della transazione.  
   
  È possibile creare transazioni tramite ADO.NET, <xref:System.EnterpriseServices>, o il modello di programmazione transazionale fornito dal <xref:System.Transactions> dello spazio dei nomi. Il [le funzionalità fornite da System. Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) argomento vengono illustrate le funzionalità che è possibile utilizzare per scrivere un'applicazione transazionale utilizzando il <xref:System.Transactions> dello spazio dei nomi.  
   
