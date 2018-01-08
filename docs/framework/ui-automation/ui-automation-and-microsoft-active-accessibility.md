@@ -18,15 +18,16 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dd3adbeebc0cc2a9e201bbe6492eb311f18a711d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automazione interfaccia utente e Microsoft Active Accessibility
 > [!NOTE]
->  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] è la soluzione usata in precedenza per rendere accessibili le applicazioni. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è il nuovo modello di accessibilità per [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] , destinato a rispondere ai requisiti di prodotti di assistive technology e strumenti di test automatizzati. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] offre numerosi miglioramenti rispetto a [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)].  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/18/2017
 |ROLE_SYSTEM_CLIENT|Personalizzato|  
 |ROLE_SYSTEM_LIST|Griglia dei dati|  
 |ROLE_SYSTEM_LISTITEM|Elemento dei dati|  
-|ROLE_SYSTEM_DOCUMENT|Documento|  
+|ROLE_SYSTEM_DOCUMENT|Document|  
 |ROLE_SYSTEM_TEXT|Modifica|  
 |ROLE_SYSTEM_GROUPING|Raggruppa|  
 |ROLE_SYSTEM_LIST|Intestazione|  
@@ -236,7 +237,7 @@ ms.lasthandoff: 10/18/2017
 |EVENT_SYSTEM_MINIMIZESTART|Modifica della proprietà<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> |  
 |EVENT_SYSTEM_MOVESIZEEND|Modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
 |EVENT_SYSTEM_MOVESIZESTART|Modifica della proprietà<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> |  
-|EVENT_SYSTEM_SCROLLINGEND|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> |  
+|EVENT_SYSTEM_SCROLLINGEND|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
 |EVENT_SYSTEM_SCROLLINGSTART|Modifica della proprietà<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> o <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> |  
 |EVENT_SYSTEM_SOUND|Nessun equivalente|  
 |EVENT_SYSTEM_SWITCHEND|Nessun equivalente, ma un evento <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> segnala che una nuova applicazione ha ricevuto lo stato attivo|  
