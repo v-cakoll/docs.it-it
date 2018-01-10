@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 <a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Supporto per Suite B  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] supporta l'insieme di algoritmi di crittografia Suite B pubblicati da National Security Agency (NSA). Per altre informazioni su Suite B, vedere la pagina relativa alla [scheda descrittiva della crittografia Suite B dell'agenzia NSA](http://go.microsoft.com/fwlink/?LinkId=100111).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] supporta l'insieme di algoritmi di crittografia Suite B pubblicati da National Security Agency (NSA). Per ulteriori informazioni su Suite B, vedere il [B crittografia Suite fatti NSA](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Sono inclusi gli algoritmi seguenti:  
   

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: da1a05a6003d93727efd5749aac9a055c8c80d38
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc12a90025a1862fc6c588fe4425f3f8341da313
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilizzo della libreria di classi portabile con MVVM (Model-View-View Model)
 È possibile utilizzare .NET Framework [libreria di classi portabile](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) per implementare il modello Model-View-View MVVM (Model) e condividere gli assembly in più piattaforme.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
   
  ![Portabile con diagramma MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
   
- In questo argomento non fornisce informazioni generali sul modello MVVM. Fornisce solo informazioni su come usare [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] implementare MVVM. Per ulteriori informazioni su MVVM, vedere il [delle Guide rapide MVVM](http://go.microsoft.com/fwlink/?LinkId=234934).  
+ In questo argomento non fornisce informazioni generali sul modello MVVM. Fornisce solo informazioni su come usare [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] implementare MVVM. Per ulteriori informazioni su MVVM, vedere il [delle Guide rapide MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).  
   
 ## <a name="classes-that-support-mvvm"></a>Classi che supportano MVVM  
  Se la destinazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, o Windows Phone 7.5 per il [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] progetto, le classi seguenti sono disponibili per implementare il modello MVVM:  
