@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta numerosi scenari di sviluppo software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Questi scenari sono suddivisi in tre categorie:  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[Guida di orientamento per applicazioni Windows Store in c# o Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=242212)|Fornisce risorse chiave per iniziare a sviluppare applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] utilizzando C# o Visual Basic, inclusi molti argomenti della guida rapida, linee guida e procedure consigliate. In Dev Center di Windows.|  
 |[Sviluppo di applicazioni Windows Store (VB / c# o C++ e XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Fornisce risorse chiave per iniziare a sviluppare applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] utilizzando C# o Visual Basic, inclusi molti argomenti della guida rapida, linee guida e procedure consigliate. In Dev Center di Windows.|  
 |[Creazione di componenti Windows Runtime in c# e Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Viene illustrato come creare un componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzando .NET Framework, viene spiegato come utilizzarlo come parte di un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] compilata per Windows utilizzando JavaScript e viene descritto come eseguire il debug della combinazione con Visual Studio. In Dev Center di Windows.|  
-|[Riferimento di Windows Runtime](http://go.microsoft.com/fwlink/?LinkId=238319)|Documentazione di riferimento per [!INCLUDE[wrt](../../../includes/wrt-md.md)]. In Dev Center di Windows.|  
+|[Riferimento di Windows Runtime](/uwp/api/)|Documentazione di riferimento per [!INCLUDE[wrt](../../../includes/wrt-md.md)]. In Dev Center di Windows.|  
 |[Passaggio di un URI a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Viene descritto un problema che può verificarsi quando si passa un URI dal codice gestito a [!INCLUDE[wrt](../../../includes/wrt-md.md)] e come evitare questo inconveniente.|

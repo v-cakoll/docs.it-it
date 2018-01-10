@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Sviluppo multipiattaforma con la libreria di classi portabile
 Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Studio consente di creare in modo semplice e veloce app e librerie compatibili con più piattaforme per le piattaforme Microsoft.  
@@ -57,7 +57,7 @@ Il tipo di progetto Libreria di classi portabile di .NET Framework in Visual Stu
   
 |SKU di Visual Studio|Supporto per la creazione di un progetto Libreria di classi portabile|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010, Professional, Premium o Ultimate|Sì, quando si installa il [strumenti della libreria portabile](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Visual Studio 2010, Professional, Premium o Ultimate|Sì, quando si installa il [strumenti della libreria portabile](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Versioni di Visual Studio Express 2010|No.|  
 |Visual Studio 2012 Professional, Premium o Ultimate|Sì. Per il supporto telefonico, installare il [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Versioni di Visual Studio Express 2012|No.|  
@@ -171,7 +171,7 @@ Finestra di dialogo Modifica destinazioni in Visual Studio 2012
   
  Ad esempio, il progetto Libreria di classi portabile contiene tipi correlati all'interfaccia utente solo quando si scelgono come destinazione Windows 8.1 e Windows Phone 8.1. Possono inoltre esistere limitazioni se le piattaforme scelte come destinazione, ad esempio Xbox, .NET Framework 4 e Windows Phone 7, sono state rilasciate prima dell'introduzione di Libreria di classi portabile. .NET Framework rilascia tramite NuGet pacchetti che migliorano il supporto di Libreria di classi portabile per alcune di queste piattaforme precedenti. Per ulteriori informazioni e un elenco di pacchetti NuGet, vedere [.NET Framework e i rilasci fuori banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Se un membro è supportato in Libreria di classi portabile e per le destinazioni selezionate, verrà visualizzato nel progetto in IntelliSense. Inoltre, l'icona di libreria di classi portabile ![supportato da Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") presenti nelle tabelle dei membri, il [dilibreriadiclassidi.NETFramework](http://go.microsoft.com/fwlink/?LinkId=211358) accanto ai membri supportati. La tabella dei membri seguente, ad esempio, mostra che la proprietà <xref:System.String.Chars%2A> nella classe <xref:System.String> è supportata in Libreria di classi portabile:  
+ Se un membro è supportato in Libreria di classi portabile e per le destinazioni selezionate, verrà visualizzato nel progetto in IntelliSense. Inoltre, l'icona di libreria di classi portabile ![supportato da Portable Library](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") presenti nelle tabelle dei membri, il [dilibreriadiclassidi.NETFramework](https://msdn.microsoft.com/library/mt472912.aspx) accanto ai membri supportati. La tabella dei membri seguente, ad esempio, mostra che la proprietà <xref:System.String.Chars%2A> nella classe <xref:System.String> è supportata in Libreria di classi portabile:  
   
  ![Icona per un membro supportato](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Icona di Libreria di classi portabile  
