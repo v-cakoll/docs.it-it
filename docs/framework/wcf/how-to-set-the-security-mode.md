@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: impostare la modalità di sicurezza
 Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] presenta tre modalità di sicurezza in genere disponibili nella maggior parte delle associazioni predefinite: a livello di trasporto ("Transport"), a livello di messaggio ("Message") e "Trasporto con credenziale a livello di messaggio" ("TransportWithMessageCredential"). Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -88,7 +89,7 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 
   
 2.  Aggiungere un `<binding>` elemento e impostare il relativo `name` attributo su un valore appropriato.  
   
-3.  Aggiungere un elemento `<security>` e impostare l'attributo `mode` su `Message`, `Transport` oppure `TransportWithMessageCredential`.  
+3.  Aggiungere un `<security>` elemento e impostare il `mode` attributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
   
 4.  Se si imposta la modalità su `Transport`, aggiungere un elemento `<transport>` e impostare l'attributo `clientCredential` su un valore appropriato.  
   
@@ -124,11 +125,11 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Procedura: utilizzare la sicurezza del trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: configurare una porta con un certificato SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Procedura: utilizzare la sicurezza del trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Procedura: Configurare una porta con un certificato SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Procedura: Usare le funzionalità di sicurezza del trasporto e le credenziali a livello di messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md)  
  [Sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
  [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  

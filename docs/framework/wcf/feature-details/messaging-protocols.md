@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-protocols"></a>Protocolli di messaggistica
 Lo stack di canali di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza canali di codifica e di trasporto per trasformare le rappresentazioni interne dei messaggi nel relativo formato di trasmissione e quindi per inviare i dati così ottenuti mediante un trasporto specifico. Il trasporto più comunemente utilizzato per garantire l'interoperabilità dei servizi Web è il protocollo HTTP, mentre le codifiche utilizzate dai servizi Web sono in genere SOAP 1.1 basato su XML, SOAP 1.2 e il protocollo MTOM (Message Transmission Optimization Mechanism, meccanismo di ottimizzazione della trasmissione dei messaggi).  
@@ -51,7 +52,7 @@ W3C Web Services Addressing 1.0 - Metadata|http://www.w3.org/TR/ws-addr-metadata
 |-----------------------------|----------|  
 |XOP|http://www.w3.org/TR/xop10/|  
 |Associazione MTOM SOAP 1.2|http://www.w3.org/TR/soap12-mtom/|  
-|MTOM SOAP 1.1 Binding|http://www.w3.org/Submission/soap11mtom10/|  
+|Associazione MTOM SOAP 1.1|http://www.w3.org/Submission/soap11mtom10/|  
 |Asserzione di WS-Policy relativa a MTOM|http://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/.|  
   
  In questo argomento vengono utilizzati gli spazi dei nomi XML e i relativi prefissi associati seguenti.  
@@ -180,7 +181,7 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221: quando configurati per utilizzare la specifica WS-Addressing 2004/08, gli endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elaborano le proprietà dei riferimenti e i parametri dei riferimenti allo stesso modo.  
   
 ### <a name="message-exchange-patterns"></a>Modelli di scambio dei messaggi  
- La sequenza dei messaggi coinvolti nella chiamata all'operazione del servizio Web è detta il *MEP*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta i modelli di scambio dei messaggi request/reply, unidirezionale e duplex. Questa sezione descrive i requisiti della specifica WS-Addressing che definiscono il modo in cui il modello di scambio dei messaggi utilizzato influisce sull'elaborazione dei messaggi.  
+ La sequenza dei messaggi coinvolti nella chiamata all'operazione del servizio Web è detta il *MEP*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta i modelli di scambio dei messaggi request/reply, unidirezionale e duplex. Questa sezione descrive i requisiti della specifica WS-Addressing che definiscono il modo in cui il modello di scambio dei messaggi usato influisce sull'elaborazione dei messaggi.  
   
  Contenuto della sezione, il richiedente invia il primo messaggio e il risponditore riceve il primo messaggio.  
   
@@ -323,7 +324,7 @@ punto di distribuzione|http://schemas.microsoft.com/net/2006/06/duplex|
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Utilizzare il riferimento a endpoint nell'elemento wsdl:port  
  La sezione 4.1 di WS-ADDR10-WSDL estende l'elemento `wsdl:port` per includere l'elemento figlio `<wsa10:EndpointReference…/>` allo scopo di descrivere l'endpoint in termini di WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estende questa utilità in WS-Addressing 2004/08, consentendo di visualizzare `<wsa:EndpointReference…/>` come elemento figlio di `wsdl:port`.  
   
--   R3531: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsaw10:UsingAddressing/>`, l'elemento`wsdl:port` corrispondente può contenere un elemento figlio`<wsa10:EndpointReference …/>`.  
+-   R3531: se a un endpoint è associata un'alternativa criteri avente un'asserzione di criteri `<wsaw10:UsingAddressing/>`, l'elemento`wsdl:port`corrispondente può contenere un elemento figlio`<wsa10:EndpointReference …/>`.  
   
 -   R3532: Se un `wsdl:port` contiene un elemento figlio `<wsa10:EndpointReference …/>`, `wsa10:EndpointReference/wsa10:Address` valore dell'elemento figlio deve corrispondere al valore del `@address` attributo di pari livello `wsdl:port` / `wsdl:location` elemento.  
   
@@ -458,7 +459,7 @@ Content-Length: 0
   
 -   R4131: un'intestazione Content-Type HTTP deve contenere il valore multipart/related (che non fa distinzione fra maiuscole e minuscole) e i relativi parametri. Anche i nomi dei parametri non fanno distinzione tra maiuscole e minuscole. Inoltre, l'ordine dei parametri è irrilevante.  
   
--   Il formato BNF (Backus-Naur Form) completo dell'intestazione Content-Type dei messaggi MIME è riportato nella sezione 5.1 del documento RFC 2045.  
+-   La notazione BNF completa dell'intestazione Content-Type dei messaggi MIME è riportata nella sezione 5.1 del documento RFC 2045.  
   
 -   R4132: un'intestazione Content-Type HTTP deve contenere un parametro di tipo avente il valore `application/xop+xml` compreso fra virgolette doppie.  
   

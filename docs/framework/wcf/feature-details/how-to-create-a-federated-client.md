@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>Procedura: creare un client federato
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un client per un *servizio federato* è costituito da tre passaggi principali:  
@@ -68,7 +69,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un clie
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4.  Parametro facoltativo. Impostare <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> su una percentuale. Il valore predefinito è 60 (percento). La proprietà specifica una percentuale del periodo di validità del token. Se il token emesso è valido, ad esempio, per 10 ore e <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> è impostato su 80, il token verrà rinnovato dopo otto ore. Nell'esempio seguente il valore viene impostato su 80 percento.  
+4.  Facoltativo. Impostare <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> su una percentuale. Il valore predefinito è 60 (percento). La proprietà specifica una percentuale del periodo di validità del token. Se il token emesso è valido, ad esempio, per 10 ore e <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> è impostato su 80, il token verrà rinnovato dopo otto ore. Nell'esempio seguente il valore viene impostato su 80 percento.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
@@ -103,13 +104,13 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un clie
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
     ```  
   
-5.  Se una modalità entropia chiave diversa da `CombinedEntropy` è su un'associazione che non utilizza la protezione del messaggio o la protezione del trasporto con le credenziali del messaggio (ad esempio, l'associazione non ha un `SecurityBindingElement`), impostare l'attributo `defaultKeyEntropyMode` nell'elemento `<issuedToken>`ServerEntropy su `ServerEntropy`ClientEntropy o`ClientEntropy`, come richiesto.  
+5.  Se una modalità di entropia di chiavi diversa da `CombinedEntropy` si trova in un'associazione di sicurezza di non utilizzare la sicurezza dei messaggi o di trasporto con credenziali messaggio (ad esempio, l'associazione non ha un `SecurityBindingElement`), impostare il `defaultKeyEntropyMode` attributo la `<issuedToken>` elemento da un oggetto `ServerEntropy` o `ClientEntropy` come richiesto.  
   
     ```xml  
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6.  Parametro facoltativo. Configurare qualsiasi comportamento dell'endpoint emittente specifico creando un <`issuerChannelBehaviors`> come figlio dell'elemento di <`issuedToken`> elemento. Per ogni comportamento, creare un' <`add`> come figlio dell'elemento di <`issuerChannelBehaviors`> elemento. Specificare l'indirizzo dell'emittente del comportamento impostando la `issuerAddress` attributo di <`add`> elemento. Specificare il comportamento stesso impostando la `behaviorConfiguration` attributo di <`add`> elemento.  
+6.  Facoltativo. Configurare qualsiasi comportamento dell'endpoint emittente specifico creando un <`issuerChannelBehaviors`> come figlio dell'elemento di <`issuedToken`> elemento. Per ogni comportamento, creare un' <`add`> come figlio dell'elemento di <`issuerChannelBehaviors`> elemento. Specificare l'indirizzo dell'emittente del comportamento impostando la `issuerAddress` attributo di <`add`> elemento. Specificare il comportamento stesso impostando la `behaviorConfiguration` attributo di <`add`> elemento.  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -172,9 +173,9 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creazione di un clie
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Procedura: disattivare sessioni protette in una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Procedura: creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Procedura: configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Procedura: configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Procedura: proteggere endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+ [Procedura: Disabilitare sessioni sicure in un'associazione WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Procedura: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Procedura: Configurare le credenziali in un servizio federativo](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Procedura: Configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [Procedura: Proteggere gli endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

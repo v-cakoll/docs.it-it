@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Protezione dei servizi
 La protezione di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è costituita da due requisiti principali: protezione del trasferimento e autorizzazione. (Un terzo requisito, controllo degli eventi di sicurezza, viene descritto in [controllo](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In sintesi, la protezione del trasferimento include l'autenticazione (verifica dell'identità del servizio e del client), la riservatezza (crittografia del messaggio) e l'integrità (apposizione della firma digitale per il rilevamento di eventuali manomissioni). L'autorizzazione rappresenta il controllo dell'accesso alle risorse che consente la lettura di un file, ad esempio, solo a utenti autorizzati. Se si usano le funzionalità di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], i due requisiti principali vengono implementati facilmente.  
@@ -78,7 +79,7 @@ La protezione di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
  La modalità di sicurezza determina il modo in cui vengono protetti i messaggi e ogni scelta presenta vantaggi e svantaggi, come spiegato di seguito. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ll'impostazione della modalità di sicurezza, vedere [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 #### <a name="transport-mode"></a>modalità di sicurezza trasporto  
- Tra la rete e l'applicazione esistono più livelli. Uno di questi è il livello di *trasporto**,* che gestisce il trasferimento di messaggi tra endpoint. Ai fini del presente documento, è sufficiente comprendere che [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usa più protocolli di trasporto, ognuno dei quali in grado di proteggere il trasferimento di messaggi. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] trasporti, vedere [trasporti](../../../docs/framework/wcf/feature-details/transports.md).)  
+ Tra la rete e l'applicazione esistono più livelli. Uno di questi è il *livello* di trasporto*,* che gestisce il trasferimento di messaggi tra endpoint. Ai fini del presente documento, è sufficiente comprendere che [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usa più protocolli di trasporto, ognuno dei quali in grado di proteggere il trasferimento di messaggi. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] trasporti, vedere [trasporti](../../../docs/framework/wcf/feature-details/transports.md).)  
   
  Due protocolli comunemente usati sono HTTP e TCP. Ognuno di questi protocolli può proteggere il trasferimento di messaggi mediante un meccanismo (o meccanismi) specifico del protocollo. Ad esempio, il protocollo HTTP viene protetto usando SSL su HTTP, comunemente abbreviato "HTTPS". Pertanto, quando si seleziona la modalità di sicurezza trasporto si sceglie di usare il meccanismo dettato dal protocollo. Ad esempio, se si seleziona la classe <xref:System.ServiceModel.WSHttpBinding> e si imposta la relativa modalità di sicurezza su Trasporto, come meccanismo di sicurezza si sta selezionando SSL su HTTP (HTTPS). Il vantaggio della modalità trasporto è la maggiore efficienza rispetto alla modalità messaggio. Ciò dipende dal fatto che la protezione viene integrata a un livello relativamente basso. Quando si usa la modalità trasporto, il meccanismo di sicurezza deve essere implementato in base alla specifica per il trasporto. I messaggi possono quindi fluire in modo protetto solo da punto a punto sul trasporto.  
   
@@ -113,12 +114,12 @@ La protezione di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [L'autenticazione e identità del servizio](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Identità del servizio e autenticazione](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Informazioni sul livello di protezione](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Progettazione dei contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md)  
  [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)  
- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Procedura: Impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Procedura: Proteggere un servizio con credenziali di Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
  [Procedura: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
