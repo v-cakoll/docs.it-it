@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Gestione e generazione di eventi
 Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di delegato segue lo schema progettuale osservatore, che consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. Un mittente dell'evento esegue il push di una notifica di evento, mentre un ricevitore di eventi riceve la notifica e definisce una risposta. In questo articolo viene descritto come implementare gli eventi nel codice, come usare gli eventi nelle applicazioni e i componenti principali del modello di delegato.  
@@ -102,6 +102,6 @@ Gli eventi in .NET Framework si basano sul modello di delegato. Il modello di de
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Panoramica degli eventi e degli eventi indirizzati (app di Windows Store)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Panoramica degli eventi e degli eventi indirizzati (app UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [Eventi (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Eventi (Guida per programmatori C#)](../../csharp/programming-guide/events/index.md)

@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
-I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
+I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
   
  Un file è una raccolta ordinata e denominata di byte con archivio permanente. Quando si lavora con i file, si usano i percorsi di directory, l'archiviazione su disco e i nomi di file e directory. Al contrario, un flusso è una sequenza di byte che è possibile usare per leggere e scrivere in un archivio di backup, che può essere uno fra vari supporti di archiviazione (ad esempio, dischi o memoria). Così come esistono vari archivi di backup che non siano dischi, sono disponibili diversi tipi di flussi che non siano flussi di file, ad esempio la rete, la memoria e i flussi delle pipe.  
   
@@ -51,7 +51,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
   
  Oltre a usare queste classi, gli utenti di Visual Basic possono usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> per l'I/O di file.  
   
- Vedere [Procedura: copiare le directory](../../../docs/standard/io/how-to-copy-directories.md), [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Vedere [Procedura: copiare le directory](../../../docs/standard/io/how-to-copy-directories.md), [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Flussi  
  La classe di base astratta <xref:System.IO.Stream> supporta la lettura e la scrittura di byte. Tutte le classi che rappresentano flussi ereditano dalla classe <xref:System.IO.Stream>. La classe <xref:System.IO.Stream> e le relative classi derivate forniscono una rappresentazione comune degli archivi e delle origini dati, separando così il programmatore dai dettagli specifici del sistema operativo e dei dispositivi sottostanti.  
@@ -128,7 +128,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
 ## <a name="isolated-storage"></a>Spazio di memorizzazione isolato  
  L'archiviazione isolata è un meccanismo di archiviazione dati che offre isolamento e sicurezza definendo modi standardizzati di associare il codice ai dati salvati. L'archiviazione offre un file system virtuale che è isolato dall'utente, dall'assembly ed eventualmente dal dominio. Lo spazio di memorizzazione isolato è particolarmente utile quando l'applicazione non dispone delle autorizzazioni di accesso ai file dell'utente. È possibile salvare le impostazioni o i file per l'applicazione in modo tale che vengano controllati dai criteri di sicurezza del computer.  
   
- Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx). Per altre informazioni, vedere [Dati dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=229175) nel Centro per sviluppatori Windows.  
+ Lo spazio di memorizzazione isolato non è disponibile per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; usare invece le classi di dati nello spazio dei nomi [Windows.Storage](/uwp/api/Windows.Storage). Per altre informazioni, vedere [Dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) nel Centro per sviluppatori Windows.  
   
  Le classi seguenti vengono spesso usate nell'implementazione dello spazio di memorizzazione isolato:  
   
@@ -147,7 +147,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
   
 -   I tipi relativi specificamente alle operazioni su file, come <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, non sono inclusi in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Usare invece i tipi nello spazio dei nomi [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) di [!INCLUDE[wrt](../../../includes/wrt-md.md)], ad esempio [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) e [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=229175).  
+-   Lo spazio di memorizzazione isolato non è disponibile; usare invece i [dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Usare i metodi asincroni, ad esempio <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, per evitare il blocco del thread UI.  
   
@@ -160,7 +160,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
 ## <a name="io-and-security"></a>I/O e sicurezza  
  Quando si usano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=229175) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](/previous-versions/windows/apps/hh464917(v=win.10)) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  Un controllo di sicurezza viene eseguito solo quando il flusso viene costruito. Di conseguenza, non aprire un flusso per poi passarlo a codice o domini di applicazione meno attendibili.  
   
