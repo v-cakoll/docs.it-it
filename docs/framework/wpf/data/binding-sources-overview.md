@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
@@ -39,7 +39,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 |oggetti dinamici|È possibile associare le proprietà disponibili e gli indicizzatori di un oggetto che implementa il <xref:System.Dynamic.IDynamicMetaObjectProvider> interfaccia. Se è possibile accedere al membro nel codice, è possibile creare un'associazione a tale membro. Se ad esempio un oggetto dinamico consente di accedere a un membro nel codice tramite `someObjet.AProperty`, è possibile creare un'associazione al membro impostando il percorso di associazione su `AProperty`.|  
 |Oggetti [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|È possibile associare a [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] oggetti, ad esempio <xref:System.Data.DataTable>. Il [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> implementa il <xref:System.ComponentModel.IBindingList> interfaccia, che fornisce notifiche di modifica che attende il motore di associazione.|  
 |Oggetti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|È possibile associare a ed eseguire `XPath` esegue una query su un <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, o <xref:System.Xml.XmlElement>. Un modo pratico per accedere a [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati che rappresenta l'origine di associazione nel markup consiste nell'usare un <xref:System.Windows.Data.XmlDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione a dati XML tramite un oggetto XMLDataProvider e query XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> È anche possibile associare a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o il binding ai risultati delle query eseguite su oggetti di questi tipi con LINQ to XML. Un modo pratico per usare LINQ to XML per accedere ai dati XML che rappresenta l'origine di associazione nel markup consiste nell'utilizzare un <xref:System.Windows.Data.ObjectDataProvider> oggetto. Per altre informazioni, vedere [Procedura: Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ to XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|Oggetti <xref:System.Windows.DependencyObject>.|È possibile associare proprietà di dipendenza qualsiasi <xref:System.Windows.DependencyObject>. Per un esempio, vedere [Eseguire l'associazione delle proprietà di due controlli](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|Oggetti <xref:System.Windows.DependencyObject>.|È possibile associare alle proprietà di dipendenza di qualsiasi <xref:System.Windows.DependencyObject>. Per un esempio, vedere [Eseguire l'associazione delle proprietà di due controlli](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementazione di una classe come origine del binding  

@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>Conversione degli orari tra fusi orari
 
@@ -37,7 +37,7 @@ La gestione delle differenze tra fusi orari sta divenendo sempre più importante
 
 ## <a name="converting-to-coordinated-universal-time"></a>Conversione nel formato UTC
 
-UTC (Coordinated Universal Time) è uno standard di alta precisione basato sul tempo atomico. I fusi orari del mondo sono espressi come offset positivi o negativi dall'ora UTC. L'ora espressa in UTC è quindi indipendente dal fuso orario. L'uso dell'ora UTC è consigliato quando la portabilità di data e ora tra i computer è importante. (Per informazioni dettagliate e altre procedure consigliate sull'utilizzo di date e ore, vedere [utilizzando DateTime in .NET Framework di procedure consigliate di codifica](http://go.microsoft.com/fwlink/?LinkId=92342).) La conversione di singoli fusi orari in ore UTC semplifica i confronti tra gli orari.
+UTC (Coordinated Universal Time) è uno standard di alta precisione basato sul tempo atomico. I fusi orari del mondo sono espressi come offset positivi o negativi dall'ora UTC. L'ora espressa in UTC è quindi indipendente dal fuso orario. L'uso dell'ora UTC è consigliato quando la portabilità di data e ora tra i computer è importante. (Per informazioni dettagliate e altre procedure consigliate sull'utilizzo di date e ore, vedere [utilizzando DateTime in .NET Framework di procedure consigliate di codifica](https://msdn.microsoft.com/library/ms973825.aspx).) La conversione di singoli fusi orari in ore UTC semplifica i confronti tra gli orari.
 
 > [!NOTE]
 > È anche possibile serializzare un <xref:System.DateTimeOffset> struttura per rappresentare in modo non ambiguo un singolo punto nel tempo. Poiché <xref:System.DateTimeOffset> oggetti archiviano un valore di data e ora insieme all'offset dall'ora UTC, rappresentano sempre un determinato punto nel tempo in relazione all'ora UTC.
@@ -74,7 +74,7 @@ Tutti questi metodi accettano <xref:System.DateTime> valori come parametri e res
 
 Per convertire l'ora UTC in ora locale, vedere la sezione "conversione UTC nell'ora locale" che segue. Per convertire l'ora UTC per il tempo in qualsiasi fuso orario designato, chiamare il <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> metodo. Questo metodo accetta due parametri:
 
-* L'ora UTC da convertire. Questo valore deve essere un <xref:System.DateTime> il cui valore <xref:System.DateTime.Kind%2A> è impostata su <xref:System.DateTimeKind?displayProperty=nameWithType> o <xref:System.DateTimeKind?displayProperty=nameWithType>.
+* L'ora UTC da convertire. Questo valore deve essere un <xref:System.DateTime> il cui valore <xref:System.DateTime.Kind%2A> è impostata su `Unspecified` o `Utc`.
 
 * Il fuso orario nel quale convertire l'ora UTC.
 

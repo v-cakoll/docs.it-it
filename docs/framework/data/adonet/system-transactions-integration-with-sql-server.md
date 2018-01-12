@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integrazione di System.Transactions con SQL Server
 In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versione 2.0 è stato introdotto un framework per le transazioni, accessibile tramite lo spazio dei nomi <xref:System.Transactions> . Questo framework espone le transazioni in modo completamente integrato con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]e con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Oltre ai miglioramenti a livello di programmabilità, <xref:System.Transactions> e [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] possono essere usati insieme per coordinare le ottimizzazioni quando si usano le transazioni. Una transazione promuovibile è una transazione di tipo semplice (locale) che può essere promossa in modo automatico a una transazione completamente distribuita in base alle esigenze.  
   
- A partire da [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si usa [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono interventi da parte dello sviluppatore.  
+ A partire da [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> supporta le transazioni promuovibili quando si usa [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Le transazioni promuovibili sono automatiche e non richiedono alcun intervento da parte dello sviluppatore.  
   
  Le transazioni promuovibili sono disponibili solo se si usa il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per SQL Server (`SqlClient`) con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
