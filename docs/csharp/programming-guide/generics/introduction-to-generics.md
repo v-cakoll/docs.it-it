@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introduzione ai generics (Guida per programmatori C#)
 Le classi e i metodi generici sono riutilizzabili, indipendenti dai tipi e molto più efficaci delle rispettive controparti non generiche. I generics sono in genere usati con le raccolte e i metodi che operano su di essi. La versione 2.0 della libreria di classi .NET Framework offre un nuovo spazio dei nomi, <xref:System.Collections.Generic>, che contiene diverse nuove classi di raccolta generiche. È consigliabile che tutte le applicazioni destinate a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 e versioni successive usino le nuove classi di raccolte generiche anziché le controparti non generiche meno recenti, ad esempio <xref:System.Collections.ArrayList>. Per altre informazioni, vedere [Generics nella libreria di classi .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
@@ -22,9 +22,9 @@ Le classi e i metodi generici sono riutilizzabili, indipendenti dai tipi e molto
   
 -   Come tipo di un parametro del metodo nel metodo `AddHead`.  
   
--   Come tipo restituito del metodo pubblico `GetNext` e della proprietà `Data` nella classe `Node` annidata.  
+-   Come tipo restituito della proprietà `Data` nella classe `Node` annidata.  
   
--   Come tipo dei dati del membro privato della classe annidata.  
+-   Come tipo del membro privato `data` nella classe annidata.  
   
  Si noti che T è disponibile per la classe `Node` annidata. Quando si crea un'istanza di `GenericList<T>` con un tipo concreto, ad esempio `GenericList<int>`, ogni occorrenza di `T` verrà sostituita con `int`.  
   
