@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>Esecuzione di alberi delle espressioni
 
@@ -28,7 +28,7 @@ Il tipo di espressione `Expression<TDelegate>` è l'unico esempio concreto nelle
 
 Nella maggior parte dei casi, verrà creato un mapping semplice tra un'espressione e il delegato corrispondente. Ad esempio, un albero delle espressioni che è rappresentato da `Expression<Func<int>>` viene convertito in un delegato del tipo `Func<int>`. Per un'espressione lambda con qualsiasi tipo restituito e un elenco di argomenti, esiste un tipo delegato che rappresenta il tipo di destinazione per il codice eseguibile rappresentato dall'espressione lambda.
 
-Il tipo `LamdbaExpression` contiene i membri `Compile` e `CompileToMethod` usati per convertire un albero delle espressioni in codice eseguibile. Il metodo `Compile` crea un delegato. Il metodo `ConmpileToMethod` aggiorna un oggetto `MethodBuilder` con il linguaggio intermedio che rappresenta l'output compilato dell'albero delle espressioni. Si noti che `CompileToMethod` è disponibile solo nella versione desktop completa di Framework, non su .NET Core Framework.
+Il tipo `LamdbaExpression` contiene i membri `Compile` e `CompileToMethod` usati per convertire un albero delle espressioni in codice eseguibile. Il metodo `Compile` crea un delegato. Il metodo `CompileToMethod` aggiorna un oggetto `MethodBuilder` con il linguaggio intermedio che rappresenta l'output compilato dell'albero delle espressioni. Si noti che `CompileToMethod` è disponibile solo nella versione desktop completa di Framework, non su .NET Core Framework.
 
 Facoltativamente, è anche possibile specificare un `DebugInfoGenerator` che riceverà le informazioni di debug del simbolo per l'oggetto delegato generato. Ciò consente di convertire l'albero delle espressioni in un oggetto delegato e di avere informazioni di debug complete sul delegato generato.
 
