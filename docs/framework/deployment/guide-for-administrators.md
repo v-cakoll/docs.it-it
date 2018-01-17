@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -32,7 +33,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
- [Il processo di distribuzione](#the_deployment_process)  
+ [Processo di distribuzione](#the_deployment_process)  
  [Distribuzione di .NET Framework](#deploying_in_a_test_environment)  
  [Creare una raccolta](#creating_a_collection)  
  [Creare un pacchetto e un programma](#creating_a_package)  
@@ -138,7 +139,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 |**/norestart**|Impedisce il riavvio automatico del programma di installazione. Se si usa questa opzione, il riavvio del computer deve essere gestito da Configuration Manager.|  
 |**/chainingpackage** *NomePacchetto*|Specifica il nome del pacchetto che esegue il concatenamento. Questa informazione viene riportata insieme alle altre informazioni sulla sessione di installazione per coloro sono registrati in [Programma Analisi utilizzo software (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Applicazione di concatenamento"**.|  
   
- Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile all'utente, gli utenti non interagiscono con il processo di installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio; vedere [recupero di informazioni di stato di avanzamento da un pacchetto di installazione](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ Questi passaggi creano un pacchetto denominato .NET Framework 4.5. Viene distribuita automaticamente un'installazione invisibile all'utente di .NET Framework 4.5. In un'installazione invisibile, gli utenti non interagiscono con il processo d'installazione e l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio. Vedere [Getting Progress Information from an Installation Package](http://go.microsoft.com/fwlink/?LinkId=179606) (Ottenere informazioni di stato da un pacchetto di installazione).  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Selezionare un punto di distribuzione  

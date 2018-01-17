@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.workload: dotnetcore
+ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Distribuire app .NET Core con strumenti dell'interfaccia della riga di comando (CLI)
 
@@ -48,7 +49,7 @@ Una distribuzione dipendente dal framework senza dipendenze di terze parti richi
 
 1. Aggiornare le dipendenze e gli strumenti del progetto.
  
-   Eseguire il [ripristino dotnet](../tools/dotnet-restore.md) ([vedere la nota](#dotnet-restore-note)) comando per ripristinare le dipendenze specificate nel progetto.
+   Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) ([vedere la nota](#dotnet-restore-note)) per ripristinare le dipendenze specificate nel progetto.
 
 1. Creare una build di debug dell'app.
 
@@ -71,7 +72,7 @@ Oltre ai file binari dell'applicazione, il programma di installazione deve aggre
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Distribuzione dipendente dal framework con dipendenze di terze parti
 
-In una distribuzione dipendente dal framework con una o più dipendenze di terze parti, tali dipendenze devono essere disponibili per il progetto. Due sono ulteriori passaggi prima di poter eseguire il `dotnet restore` ([vedere la nota](#dotnet-restore-note)) comando:
+In una distribuzione dipendente dal framework con una o più dipendenze di terze parti, tali dipendenze devono essere disponibili per il progetto. Prima dell'esecuzione del comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) è necessario eseguire due passaggi aggiuntivi:
 
 1. Aggiungere riferimenti alle librerie di terze parti necessarie nella sezione `<ItemGroup>` del file *csproj*. La sezione `<ItemGroup>` seguente contiene una dipendenza da [Json.NET](http://www.newtonsoft.com/json) come libreria di terze parti:
 
@@ -81,7 +82,7 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
       </ItemGroup>
       ```
 
-1. Se non lo si è già fatto, scaricare il pacchetto NuGet contenente la dipendenza di terze parti. Per scaricare il pacchetto, eseguire il `dotnet restore` ([vedere la nota](#dotnet-restore-note)) comando dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
+1. Se non lo si è già fatto, scaricare il pacchetto NuGet contenente la dipendenza di terze parti. Per scaricare il pacchetto, eseguire il comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
 
 Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
 
@@ -119,7 +120,7 @@ Una distribuzione autonoma senza dipendenze di terze parti comporta la creazione
 
 1. Aggiornare le dipendenze e gli strumenti del progetto.
 
-   Eseguire il [ripristino dotnet](../tools/dotnet-restore.md) ([vedere la nota](#dotnet-restore-note)) comando per ripristinare le dipendenze specificate nel progetto.
+   Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) ([vedere la nota](#dotnet-restore-note)) per ripristinare le dipendenze specificate nel progetto.
 
 1. Creare una build di debug dell'app.
 
@@ -154,7 +155,7 @@ Di seguito è riportato il file *csproj* completo per questo progetto.
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Distribuzione autonoma con dipendenze di terze parti
 
-Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'aggiunta delle dipendenze. Due sono ulteriori passaggi prima di poter eseguire il `dotnet restore` ([vedere la nota](#dotnet-restore-note)) comando:
+Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'aggiunta delle dipendenze. Prima dell'esecuzione del comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) è necessario eseguire due passaggi aggiuntivi:
 
 1. Aggiungere i riferimenti alle eventuali librerie di terze parti alla sezione `<ItemGroup>` del file *csproj*. La sezione `<ItemGroup>` seguente usa Json.NET come libreria di terze parti.
 
@@ -164,7 +165,7 @@ Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'a
       </ItemGroup>
     ```
 
-1. Se non lo si è già fatto, scaricare nel sistema il pacchetto NuGet contenente la dipendenza di terze parti. Per rendere disponibili per l'app la dipendenza, eseguire il `dotnet restore` ([vedere la nota](#dotnet-restore-note)) comando dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
+1. Se non lo si è già fatto, scaricare nel sistema il pacchetto NuGet contenente la dipendenza di terze parti. Per rendere la dipendenza disponibile per l'app, eseguire il comando `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
 
 Di seguito è riportato il file *csproj* completo per questo progetto:
 

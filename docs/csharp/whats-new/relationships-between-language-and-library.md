@@ -1,40 +1,40 @@
 ---
-title: "La relazione tra le funzionalità del linguaggio e i tipi della libreria | Documenti Microsoft"
-description: "Funzionalità del linguaggio spesso si basano sui tipi di raccolta per l'implementazione. Comprendere la relazione."
-keywords: Progettazione del linguaggio c#, libreria standard
+title: "Relazione tra funzionalità del linguaggio e tipi di libreria | Microsoft Docs"
+description: "Le funzionalità del linguaggio spesso si basano sui tipi di libreria per l'implementazione. Comprendere la relazione."
+keywords: Progettazione del linguaggio C#, libreria standard
 author: billwagner
 ms.author: wiwagn
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 93fd26a72743fcf45df3904cb8d0c787d8a228a8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 01/05/2018
 ---
-# <a name="relationships-between-language-features-and-library-types"></a>Relazioni tra le funzionalità del linguaggio e i tipi di librerie
+# <a name="relationships-between-language-features-and-library-types"></a>Relazioni tra funzionalità del linguaggio e tipi di libreria
 
-La definizione del linguaggio c# richiede una libreria standard di determinati tipi e membri accessibili di tali tipi. Il compilatore genera codice che usa questi tipi richiesti e i membri per numerose funzionalità diverse. Quando necessario, sono disponibili i pacchetti NuGet che contengono i tipi necessari per le versioni più recenti del linguaggio durante la scrittura di codice per gli ambienti in cui tali tipi o membri non sono stati distribuiti ancora.
+La definizione del linguaggio C# richiede che una libreria standard includa determinati tipi e specifici membri accessibili per tali tipi. Il compilatore genera codice che usa questi tipi e membri richiesti per numerose funzionalità del linguaggio diverse. Quando necessario, sono disponibili pacchetti NuGet che contengono i tipi necessari per le versioni più recenti del linguaggio durante la scrittura di codice per gli ambienti in cui tali tipi o membri non sono ancora stati distribuiti.
 
-Questa dipendenza dalla funzionalità della libreria standard è stato incluso nel linguaggio c# fin dalla prima versione. In questa versione, inclusi esempi:
+Questa dipendenza dalla funzionalità della libreria standard fa parte del linguaggio C# fin dalla prima versione. Alcuni esempi in quella versione sono i seguenti:
 
-* <xref:System.Exception>-utilizzato per tutte le eccezioni generate dal compilatore.
-* <xref:System.String>-C# `string` tipo è un sinonimo per <xref:System.String>.
-* <xref:System.Int32>-sinonimo di `int`.
+* <xref:System.Exception> - usato per tutte le eccezioni generate dal compilatore.
+* <xref:System.String> - il tipo C# `string` è sinonimo di <xref:System.String>.
+* <xref:System.Int32> - sinonimo di `int`.
 
-La prima versione è semplice: il compilatore e la libreria standard fornita insieme e non c'è solo una versione di ogni.
+La prima versione era semplice: il compilatore e la libreria standard erano forniti assieme ed esisteva una sola versione di ognuno.
 
-Le versioni successive del linguaggio c# occasionalmente aggiunti nuovi tipi o membri per le dipendenze. Gli esempi includono: <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> e <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 questo continua mediante l'aggiunta di una dipendenza su <xref:System.ValueTuple> per implementare il [Tuple](../tuples.md) funzionalità del linguaggio.
+Nelle versioni successive del linguaggio C# sono stati aggiunti occasionalmente nuovi tipi o membri alle dipendenze. Alcuni esempi sono <xref:System.Runtime.CompilerServices.INotifyCompletion>, <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> o <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>. C# 7.0 continua in questa direzione aggiungendo una dipendenza per <xref:System.ValueTuple> per implementare la funzionalità del linguaggio [tuple](../tuples.md).
 
-Il team di progettazione del linguaggio funziona per ridurre al minimo la superficie dei tipi e membri necessari in una libreria standard di conformità. Tale obiettivo è bilanciato tra una progettazione in cui nuove funzionalità della libreria sono state incorporate senza problemi nel linguaggio. Esistere nuove funzionalità nelle versioni future di c# che richiedono nuovi tipi e membri in una libreria standard. È importante comprendere come gestire tali dipendenze il lavoro.
+Il team di progettazione del linguaggio si impegna per ridurre al minimo la superficie di tipi e membri richiesti in una libreria standard conforme. Tale obiettivo deve convivere con l'esigenza di realizzare una progettazione lineare che consenta il facile incorporamento delle nuove funzionalità della libreria nel linguaggio. Le versioni future di C# includeranno nuove funzionalità che richiedono nuovi tipi e membri in una libreria standard. È importante comprendere come gestire tali dipendenze nel lavoro di sviluppo.
 
-## <a name="managing-your-dependencies"></a>La gestione delle dipendenze
+## <a name="managing-your-dependencies"></a>Gestione delle dipendenze
 
-Strumenti del compilatore c# sono ora disaccoppiati dal ciclo di rilascio delle librerie .NET sulle piattaforme supportate. In effetti, diverse librerie .NET sono cicli di rilascio diversi: .NET Framework in Windows è relesed come un aggiornamento di Windows, .NET Core è disponibile su una pianificazione separata e le versioni di Xamarin di spedizione gli aggiornamenti di libreria con gli strumenti di Xamarin per ciascuna piattaforma di destinazione.
+Gli strumenti del compilatore C# sono ora separati dal ciclo di rilascio delle librerie .NET nelle piattaforme supportate. In effetti, le diverse librerie .NET hanno cicli di rilascio diversi: .NET Framework in Windows viene rilasciato come aggiornamento di Windows, .NET Core viene distribuito con una pianificazione separata e le versioni di Xamarin degli aggiornamenti delle librerie vengono forniti con gli strumenti di Xamarin per ogni piattaforma di destinazione.
 
-La maggior parte del tempo, non noterai queste modifiche. Quando si lavora con una versione più recente del linguaggio che richiede alcune funzionalità non ancora presenti le librerie .NET su questa piattaforma, tuttavia, sarà fanno riferimento i pacchetti NuGet per fornire i nuovi tipi.
-Come le piattaforme supporta le app viene aggiornato con le nuove installazioni di framework, è possibile rimuovere il riferimento aggiuntivo.
+Nella maggior parte dei casi, non si noteranno queste differenze. Quando si lavora con una versione più recente del linguaggio che richiede funzionalità non ancora presenti nelle librerie .NET nella piattaforma, tuttavia, sarà necessario fare riferimento ai pacchetti NuGet per fornire i nuovi tipi.
+Dato che le piattaforme supportate dall'app vengono aggiornate con le nuove installazioni dei framework, è possibile rimuovere il riferimento aggiuntivo.
 
-Questa separazione, significa che è possibile usare nuove funzionalità del linguaggio, anche quando si dispone di macchine che potrebbero non avere framework corrispondente.
+Questa separazione significa che è possibile usare le nuove funzionalità del linguaggio, anche quando i computer di destinazione potrebbero non disporre del framework corrispondente.

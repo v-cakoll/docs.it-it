@@ -1,5 +1,5 @@
 ---
-title: Introduzione a codice c# e Visual Studio - Guida per c#
+title: Introduzione a C# e Visual Studio Code - Guida a C#
 description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 keywords: C#, introduzione, acquisizione, installazione, Visual Studio Code, multipiattaforma
 author: kendrahavens
@@ -10,11 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -34,20 +35,20 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
 
     * Aprire Visual Studio Code.
     * Fare clic sull'icona Esplora nel menu a sinistra e quindi fare clic su **Apri cartella**.
-    * Selezionare **File** > **Apri cartella** dal menu principale per aprire la cartella si desidera il progetto c# e fare clic su **selezionare la cartella**. Per questo esempio, si sta creando una cartella per il progetto denominato *HelloWorld*.
+    * Selezionare **File** > **Apri cartella** dal menu principale per aprire la cartella in cui inserire il programma C# e fare clic su **Seleziona cartella**. Ai fini di questo esempio, viene creata una cartella per il progetto denominato *HelloWorld*.
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. Inizializzare un progetto C#:
-    * Aprire il terminale integrato dal codice di Visual Studio selezionando **vista** > **Terminal integrata** dal menu principale.
+    * Aprire il terminale integrato da Visual Studio Code scegliendo **Visualizza** > **Terminale integrato** dal menu principale.
     * Nella finestra del terminale digitare `dotnet new console`.
-    * Questo comando crea un `Program.cs` file nella cartella con un programma semplice "Hello World" già scritto, insieme a un file di progetto c# denominato `HelloWorld.csproj`.
+    * Questo comando crea un file `Program.cs` nella cartella con un semplice programma "Hello World" già scritto, oltre a un file di progetto C# denominato `HelloWorld.csproj`.
 
       ![Comando new di dotnet](media/with-visual-studio-code/dotnetnew.png)
 
 3. Risolvere le risorse di compilazione:
 
-    * Per **.NET Core 1. x**, tipo `dotnet restore`. L'esecuzione di `dotnet restore` consente di accedere ai pacchetti .NET Core necessari per la compilazione del progetto.
+    * Per **.NET Core 1.x** digitare `dotnet restore`. L'esecuzione di `dotnet restore` consente di accedere ai pacchetti .NET Core necessari per la compilazione del progetto.
 
       ![Comando restore di dotnet](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
 ## <a name="debug"></a>Debug
 
-1. Aprire il file *Program.cs* facendo clic su di esso. La prima volta che si apre un file c# in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) carica nell'editor.
+1. Aprire il file *Program.cs* facendo clic su di esso. La prima volta che si apre un file C# in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) viene caricato nell'editor.
 
     ![Aprire il file Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Codice di Visual Studio segnala la necessità di aggiungere le risorse mancante per compilare ed eseguire il debug dell'app. Selezionare **Sì**. 
+2. Visual Studio Code dovrebbe chiedere di aggiungere le risorse mancanti per compilare l'app ed eseguirne il debug. Selezionare **Sì**. 
 
     ![Richiesta delle risorse mancanti](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 
     ![Selezione di .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Aggiungere al progetto facendo clic su un punto di interruzione il **editor margine**, ovvero lo spazio a sinistra dei numeri di riga nell'editor, accanto a riga 9.
+5. Aggiungere un punto di interruzione al progetto facendo clic sul **margine dell'editor**, ovvero lo spazio a sinistra dei numeri riga nell'editor, accanto alla riga 9.
 
     ![Impostazione di un punto di interruzione](media/with-visual-studio-code/setbreakpoint.png)
 
-6. Per avviare il debug, selezionare <kbd>F5</kbd> o la freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
-    * Durante il debug, è possibile visualizzare le variabili locali nel riquadro superiore sinistro o utilizzare la console di debug.
+6. Per avviare il debug, premere <kbd>F5</kbd> o fare clic sulla freccia verde. Il debugger interrompe l'esecuzione del programma quando raggiunge il punto di interruzione impostato nel passaggio precedente.
+    * Durante il debug è possibile visualizzare le variabili locali nel riquadro superiore sinistro. In alternativa, usare la console di debug.
 
     ![Run e Debug](media/with-visual-studio-code/rundebug.png)
 

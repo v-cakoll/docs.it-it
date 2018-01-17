@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services"></a>Servizi applicazioni client
 I servizi delle applicazioni client semplificano la creazione di applicazioni basate su Windows che usano servizi dell'applicazione di accesso, ruoli e profilo di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] inclusi in Microsoft ASP.NET 2.0 AJAX Extensions. Questi servizi consentono a più applicazioni Web e applicazioni basate su Windows di condividere informazioni utente e funzionalità di gestione degli utenti da un singolo server. Ad esempio, è possibile usare questi servizi per eseguire le seguenti attività:  
@@ -47,11 +48,11 @@ I servizi delle applicazioni client semplificano la creazione di applicazioni ba
   
  Per altre informazioni sui servizi delle applicazioni di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere [Cenni preliminari sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  Vengono descritte le funzionalità disponibili tramite il provider di servizi delle applicazioni client.  
   
- [Procedura: configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  Viene descritto come usare Creazione progetti di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per abilitare e configurare i servizi delle applicazioni client. Vengono inoltre illustrate le modifiche corrispondenti apportate al file App.config.  
   
  [Procedura: implementare l'accesso utente con i servizi dell'applicazione client](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
@@ -60,7 +61,7 @@ I servizi delle applicazioni client semplificano la creazione di applicazioni ba
  [Procedura dettagliata: uso di servizi delle applicazioni client](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  Viene descritto come combinare tutte le funzionalità dei servizi delle applicazioni client in una singola applicazione. Questa procedura dettagliata contiene indicazioni end-to-end, ad esempio include istruzioni su come creare un'applicazione del servizio Web ASP.NET utilizzabile per testare i servizi delle applicazioni client.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  <xref:System.Web.ClientServices.ClientFormsIdentity>  
  <xref:System.Web.ClientServices.ClientRolePrincipal>  
  <xref:System.Web.ClientServices.ConnectivityStatus>  
@@ -74,10 +75,10 @@ I servizi delle applicazioni client semplificano la creazione di applicazioni ba
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Cenni preliminari sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [Uso dell'autenticazione basata su form con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Utilizzo di informazioni sui ruoli con Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Utilizzo di informazioni sul profilo con Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Uso delle informazioni sui ruoli con Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Uso delle informazioni sul profilo con Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [Autenticazione ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [Gestione delle autorizzazioni tramite ruoli](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [Cenni preliminari sulle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: c79326634a24ddcc9aed71fca018c69c36c94db0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework e rilascio fuori programma
 L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windows Phone e Windows Store, nonché app desktop e Web tradizionali, e consentirà di ottimizzare il riutilizzo del codice. Oltre ai regolari rilasci di .NET Framework, verranno rese disponibili nuove funzionalità fuori banda per migliorare lo sviluppo per più piattaforme o introdurre alcune novità. In questo argomento verrà illustrato l'orientamento futuro di .NET Framework e dei rilasci fuori banda.  
@@ -28,7 +29,7 @@ L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windo
  Se si usa una funzionalità fuori banda nell'app, gli utenti non devono installare la versione più recente di .NET Framework per eseguirla, poiché gli assembly fuori banda vengono distribuiti con il pacchetto dell'app.  
   
 ## <a name="how-oob-packages-are-distributed"></a>Modalità di distribuzione dei pacchetti fuori banda  
-I rilasci fuori banda per i componenti di base common language runtime (CLR) vengono forniti tramite il [NuGet](https://www.nuget.org/), che è una gestione pacchetti per .NET. NuGet consente di cercare e aggiungere facilmente librerie ai progetti .NET Framework da Esplora soluzioni in Visual Studio. NuGet è incluso in tutte le edizioni di Visual Studio a partire da Visual Studio 2012. Per verificare se NuGet è installato, individuare **Gestione pacchetti di librerie** dal menu **Strumenti** di Visual Studio. Se non è installato:  
+I rilasci fuori banda per i componenti principali di Common Language Runtime (CLR) vengono forniti tramite [NuGet](https://www.nuget.org/), ovvero uno strumento di gestione pacchetti per .NET. NuGet consente di cercare e aggiungere facilmente librerie ai progetti .NET Framework da Esplora soluzioni in Visual Studio. NuGet è incluso in tutte le edizioni di Visual Studio a partire da Visual Studio 2012. Per verificare se NuGet è installato, individuare **Gestione pacchetti di librerie** dal menu **Strumenti** di Visual Studio. Se non è installato:  
   
 1.  Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Estensioni e aggiornamenti** (in Visual Studio 2010, scegliere **Gestione estensioni**).  
   

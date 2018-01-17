@@ -1,63 +1,64 @@
 ---
-title: "Porting a .NET Core, utilizzando il pacchetto di compatibilità di Windows"
-description: "Informazioni sul pacchetto di compatibilità di Windows e come possibile utilizzarla per porting del codice .NET Framework esistente a .NET Core"
-keywords: ".NET, .NET core, Windows, compatibilità"
+title: Conversione per .NET Core - Uso di Windows Compatibility Pack
+description: "Informazioni su Windows Compatibility Pack e su come è possibile usarlo per la conversione di codice .NET Framework esistente per .NET Core"
+keywords: ".NET, .NET Core, Windows, compatibilità"
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 5094baee77aba4d1e148f807d842a4a2d3405cf7
-ms.sourcegitcommit: 86cf9b4c7104485a9870645705b9a1a4b6ca8e2b
+ms.workload: dotnetcore
+ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Tramite il pacchetto di compatibilità di Windows
+# <a name="using-the-windows-compatibility-pack"></a>Uso di Windows Compatibility Pack
 
-Uno dei problemi più comuni che gli sviluppatori devono affrontare durante il porting del codice esistente per .NET Core è che dipendono API e le tecnologie che esistono solo in .NET Framework. Il *Windows Compatibility Pack* è fornire molte di queste tecnologie in modo che la creazione di applicazioni .NET Core, nonché le librerie .NET Standard diventa molto più efficiente per il codice esistente.
+Uno dei problemi più comuni che si trovano ad affrontare gli sviluppatori durante la conversione del codice esistente per .NET Core è la dipendenza da API e tecnologie che esistono solo in .NET Framework. Scopo di *Windows Compatibility Pack* è fornire molte di queste tecnologie in modo che la creazione di applicazioni .NET Core, nonché di librerie .NET Standard, diventi molto più praticabile per il codice esistente.
 
-Questo pacchetto è logico [estensione di .NET 2.0 Standard](../whats-new/index.md#api-changes-and-library-support) che in modo significativo il set di API aumenta e il codice esistente viene compilato con quasi alcuna modifica. Ma per mantenere la promessa di .NET Standard ("è il set di API che forniscono tutte le implementazioni .NET"), tale opzione non include tecnologie che non funzionano con tutte le piattaforme, ad esempio del Registro di sistema, Strumentazione gestione Windows (WMI), o la reflection emit API.
+Questo pacchetto è un'[estensione logica di .NET 2.0 Standard](../whats-new/index.md#api-changes-and-library-support) che incrementa in modo significativo il set di API e consente la compilazione di codice esistente praticamente senza modifiche. Tuttavia, per rispettare i principi di .NET Standard ("è il set di API fornite da tutte le implementazioni .NET"), questo pacchetto non include tecnologie che non funzionano in tutte le piattaforme, ad esempio le API per Registro di sistema, Strumentazione gestione Windows (WMI) o reflection emit.
 
-Il *Windows Compatibility Pack* si trova nella parte superiore Standard .NET e fornisce l'accesso a tecnologie di Windows solo. È particolarmente utile per i clienti che si desidera spostare in .NET Core ma piano di rimanere in Windows come primo passaggio. In questo scenario, non è in grado di usare tecnologie di Windows è solo un ostacolo migrazione con zero vantaggi dell'architettura.
+*Windows Compatibility Pack* si sovrappone a .NET Standard e consente l'accesso a tecnologie solo Windows. È particolarmente utile per i clienti che vogliono passare a .NET Core ma prevedono di rimanere sulla piattaforma Windows come primo passo. In questo scenario, l'impossibilità di usare tecnologie solo Windows è solo un ostacolo per la migrazione senza alcun vantaggio a livello di architettura.
 
 ## <a name="package-contents"></a>Contenuto del pacchetto
 
-Il *Windows Compatibility Pack* viene fornito tramite il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) e può essere specificato da progetti destinati a .NET Core o .NET Standard.
+*Windows Compatibility Pack* viene fornito tramite il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) ed è possibile farvi riferimento dai progetti destinati a .NET Core o .NET Standard.
 
-Fornisce informazioni 20.000 API, incluse le API solo per Windows nonché multipiattaforma di aree tecnologiche seguenti:
+Include circa 20.000 API, incluse API solo per Windows e API multipiattaforma per le aree tecnologiche seguenti:
 
 * Tabelle codici
 * CodeDom
 * Configurazione
 * Servizi directory
-* disegno
+* Disegno
 * ODBC
 * Autorizzazioni
 * Porte
-* Elenchi di controllo di accesso (ACL) di Windows
+* Elenchi di controllo degli accessi (ACL) di Windows
 * Windows Communication Foundation (WCF)
 * Crittografia di Windows
 * Registro eventi di Windows
 * Strumentazione gestione Windows (WMI, Windows Management Instrumentation)
 * Contatori delle prestazioni di Windows
 * Registro di sistema di Windows
-* La memorizzazione nella cache di Windows Runtime
+* Memorizzazione nella cache di Windows Runtime
 * servizi Windows
 
-Per ulteriori informazioni, vedere il [specifiche del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
+Per altre informazioni, vedere le [specifiche del pacchetto di compatibilità](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Introduzione
 
-1. Prima di porting, assicurarsi di esaminare il [il processo di Porting](index.md).
+1. Prima di procedere alla conversione, assicurarsi di esaminare il [processo di conversione](index.md).
 
-2. Durante il porting del codice esistente .NET Core o .NET Standard, installare il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
+2. Per la conversione di codice esistente per .NET Core o .NET Standard, installare il pacchetto NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
 
-3. Se si desidera mantenere in Windows, disporre delle impostazioni.
+3. Se si desidera rimanere in ambiente Windows, questo è tutto.
 
-4. Se si desidera eseguire l'applicazione di .NET Core o di una libreria .NET Standard per Linux o Mac OS, utilizzare il [API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) per trovare l'utilizzo di API che non funzioneranno più piattaforme.
+4. Se si vuole eseguire l'applicazione .NET Core o la libreria .NET Standard in Linux o macOS, usare l'[analizzatore delle API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) per trovare informazioni sull'utilizzo delle API non supportato in tutte le piattaforme.
 
-5. Rimuovere gli utilizzi di tali API, sostituirli con alternative multipiattaforma o proteggerli con un controllo di piattaforma, ad esempio:
+5. Rimuovere questi utilizzi di tali API, sostituirli con alternative multipiattaforma o proteggerli con un controllo di piattaforma, ad esempio:
 
     ```csharp
     private static string GetLoggingPath()
@@ -79,5 +80,5 @@ Per ulteriori informazioni, vedere il [specifiche del pacchetto di compatibilit�
     }
     ```
 
-Per una demo, consultare il [video di Channel 9 del pacchetto di compatibilità Windows](https://channel9.msdn.com/Events/Connect/2017/T123).
+Per una demo, vedere il [video di Channel 9 dedicato a Windows Compatibility Pack](https://channel9.msdn.com/Events/Connect/2017/T123).
 

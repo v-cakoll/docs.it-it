@@ -12,11 +12,11 @@ ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
@@ -35,7 +35,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
      La riga di codice necessaria per sottoscrivere l'evento viene generata automaticamente nel metodo `InitializeComponent` nel file Form1.Designer.cs del progetto. La riga ha un aspetto simile a quanto riportato di seguito:  
   
-    ```  
+    ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
@@ -43,7 +43,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 1.  Definire un metodo del gestore eventi la cui firma corrisponda alla firma del delegato per l'evento. Se ad esempio l'evento è basato sul tipo di delegato <xref:System.EventHandler>, il codice riportato di seguito rappresenta lo stub del metodo:  
   
-    ```  
+    ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
     {  
        // Do something useful here.  
@@ -52,19 +52,19 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 2.  Usare l'operatore di assegnazione di addizione (`+=`) per associare il gestore eventi all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent`. Si noti che per la classe subscriber è necessario un riferimento alla classe publisher per sottoscrivere gli eventi corrispondenti.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
      Si noti che la sintassi precedente è nuova in C# 2.0. Equivale esattamente alla sintassi di C# 1.0, in cui è necessario creare in modo esplicito il delegato incapsulante tramite la parola chiave `new`:  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
      È possibile aggiungere un gestore eventi anche tramite un'espressione lambda:  
   
-    ```  
+    ```csharp
     public Form1()  
     {  
         InitializeComponent();  
@@ -80,7 +80,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 -   Se non è necessario annullare la sottoscrizione di un evento in un secondo momento, è possibile usare l'operatore di assegnazione di addizione (`+=`) per associare un metodo anonimo all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent` e che sia stata definita una classe `CustomEventArgs` con informazioni specializzate sull'evento. Si noti che per la classe subscriber è necessario un riferimento alla classe `publisher` per sottoscrivere gli eventi corrispondenti.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
     {  
       string s = o.ToString() + " " + e.ToString();  
@@ -97,7 +97,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 -   Usare l'operatore di assegnazione di sottrazione (`-=`):  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
@@ -107,5 +107,5 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
  [Eventi](../../../csharp/programming-guide/events/index.md)  
  [event](../../../csharp/language-reference/keywords/event.md)  
  [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [-= Operatore (riferimenti per c#)](../../language-reference/operators/subtraction-assignment-operator.md)  
+ [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
  [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

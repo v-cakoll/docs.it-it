@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Creazione e utilizzo di componenti in Visual Basic
 Un *componente* è una classe che implementa l'interfaccia <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o che deriva direttamente o indirettamente da una classe che implementa <xref:System.ComponentModel.IComponent>. Un componente di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è un oggetto riutilizzabile in grado di interagire con altri oggetti, che consente di controllare le risorse esterne e il supporto in fase di progettazione.  
@@ -32,8 +32,6 @@ Un *componente* è una classe che implementa l'interfaccia <xref:System.Componen
 -   Se il componente deve essere sottoposto a marshalling in base al valore, derivare la classe da <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 -   Se il componente non può derivare da una delle implementazioni di base a causa di un'ereditarietà singola, implementare <xref:System.ComponentModel.IComponent>.  
-  
- Per altre informazioni sul supporto in fase di progettazione, vedere [Attributi per componenti in fase di progettazione](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) e [Estensione del supporto in fase di progettazione](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Classi di componenti  
  Lo spazio dei nomi <xref:System.ComponentModel> offre classi usate per implementare il comportamento dei componenti e dei controlli in fase di progettazione e di esecuzione. Questo spazio dei nomi include le classi e le interfacce di base per l'implementazione di attributi e convertitori, l'associazione a origini dati e le licenze per i componenti.  
@@ -65,22 +63,9 @@ Un *componente* è una classe che implementa l'interfaccia <xref:System.Componen
 -   <xref:System.ComponentModel.PropertyDescriptor>. Include informazioni su una proprietà.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Confronto tra classe, componente e controllo](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Definisce *componenti* e *controlli*e spiega le differenze tra questi elementi e le classi.  
-  
- [Modifica di componenti](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Guida di orientamento per iniziare a usare i componenti.  
-  
- [Procedure dettagliate per la modifica di componenti](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Collegamenti ad argomenti che offrono istruzioni dettagliate per la programmazione dei componenti.  
-  
- [Classi di componenti](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Descrive che cosa fa di una classe un componente, i modi per esporre la funzionalità del componente, il controllo dell'accesso ai componenti e il controllo delle modalità di creazione delle istanze dei componenti.  
-  
  [Risoluzione dei problemi relativi alla modifica di controlli e componenti](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Viene illustrato come risolvere i problemi comuni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: accedere al supporto in fase di progettazione in Windows Form](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Procedura: estendere l'aspetto e comportamento dei controlli in modalità progettazione](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Procedura: Eseguire un'inizializzazione personalizzata per i controlli in modalità progettazione](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Procedura: Accedere al supporto in fase di progettazione in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

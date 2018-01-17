@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 023a8db1e34498c4c2cbe741225d218280c04e41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Esecuzione side-by-side in-process
 A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare l'hosting side-by-side in-process per eseguire più versioni di Common Language Runtime (CLR) in un unico processo. Per impostazione predefinita, i componenti COM gestiti vengono eseguiti con la versione di .NET Framework con cui sono stati compilati, indipendentemente dalla versione di .NET Framework che viene caricata per il processo.  
@@ -48,9 +49,9 @@ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è 
   
     |Versione di .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Non applicabile|No|Sì|  
-    |2.0 - 3.5|No|Non applicabile|Sì|  
-    |4|Sì|Sì|Non applicabile|  
+    |1.1|Non applicabile|No|Yes|  
+    |2.0 - 3.5|No|Non applicabile|Yes|  
+    |4|Yes|Yes|Non applicabile|  
   
 > [!NOTE]
 >  Le versioni di .NET framework 3.0 e 3.5 sono state compilate in modo incrementale dalla versione 2.0 e non necessitano dell'esecuzione side-by-side. Sono praticamente la stessa versione.  
@@ -182,5 +183,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<avvio > elemento](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+ [Elemento \<startup](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -21,14 +21,15 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eedb33042bd904340cc02526c3f1cf927c09bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
-Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache memorizza gli assembly specificamente designati per essere condivisi da più applicazioni sul computer.  
+Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache archivia gli assembly specificamente designati per essere condivisi da più applicazioni nel computer.  
   
  Per condividere gli assembly è opportuno installarli nella Global Assembly Cache solo quando è necessario. Come regola generale, mantenere le dipendenze degli assembly private e individuare gli assembly nella directory dell'applicazione, a meno che la condivisione di un assembly non venga richiesta in modo esplicito. Non è inoltre necessario installare gli assembly nella Global Assembly Cache per renderli accessibili al codice non gestito o all'interoperabilità COM.  
   
@@ -42,7 +43,7 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
 -   Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), disponibile con [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario utilizzare Windows Installer. Usare lo strumento Global Assembly Cache solo in scenari di sviluppo, poiché non prevede il conteggio dei riferimenti di assembly né altre funzionalità disponibili con il programma di installazione di Windows.  
+    >  Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario usare Windows Installer. Usare lo strumento Global Assembly Cache solo in scenari di sviluppo, poiché non prevede il conteggio dei riferimenti di assembly né altre funzionalità disponibili con il programma di installazione di Windows.  
   
  A partire da .NET Framework 4, il percorso predefinito della Global Assembly Cache è **%windir%\Microsoft.NET\assembly**. Nelle versioni precedenti di .NET Framework, il percorso predefinito è **%windir%\assembly**.  
   

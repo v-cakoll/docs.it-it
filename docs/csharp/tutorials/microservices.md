@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservizi ospitati in Docker
-
-## <a name="introduction"></a>Introduzione
 
 Questa esercitazione descrive nel dettaglio la procedura per creare e distribuire un microservizio ASP.NET Core in un contenitore Docker. Nel corso di questa esercitazione verranno illustrate le attività seguenti:
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-L'immagine viene compilata usando il comando build di Docker. Eseguire il comando seguente dalla directory contenente il codice.
+L'immagine viene compilata usando il comando `docker build`. Eseguire il comando seguente dalla directory contenente il codice.
 
 ```console
 docker build -t weather-microservice .
@@ -348,6 +346,6 @@ docker rmi weather-microservice
 
 In questa esercitazione è stato creato un microservizio ASP.NET Core e sono state aggiunte alcune semplici funzionalità.
 
-È stata compilata un'immagine Docker del contenitore e quest'ultimo è stato eseguito sul computer. È stata collegata una finestra del terminale al servizio e sono stati visualizzati i messaggi di diagnostica provenienti dal servizio stesso.
+È stata compilata un'immagine del contenitore Docker per il servizio e tale contenitore è stato eseguito nel computer in uso. È stata collegata una finestra del terminale al servizio e sono stati visualizzati i messaggi di diagnostica provenienti dal servizio stesso.
 
 Nel corso dell'esercitazione è stato possibile osservare diverse funzionalità del linguaggio C# in azione.

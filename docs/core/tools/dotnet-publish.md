@@ -7,17 +7,18 @@ ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>nome
 
 `dotnet publish`: inserisce l'applicazione e le relative dipendenze in una cartella per la distribuzione in un sistema host.
 
@@ -91,11 +92,11 @@ Non esegue un ripristino implicito quando si esegue il comando.
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
-Se viene fornito un percorso relativo, la directory di output generata è relativo al percorso del file di progetto, non alla directory di lavoro corrente.
+Se viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
 
 `--self-contained`
 
-Pubblica il runtime .NET Core con l'applicazione in modo che non sia necessario installare il runtime nel computer di destinazione. Se viene specificato un identificatore di runtime, il valore predefinito è `true`. Per ulteriori informazioni sui tipi di distribuzione diversi, vedere [la distribuzione di applicazioni .NET Core](../deploying/index.md).
+Pubblica il runtime .NET Core con l'applicazione in modo che non sia necessario installare il runtime nel computer di destinazione. Se viene specificato un identificatore di runtime, il valore predefinito è `true`. Per altre informazioni sui diversi tipi di distribuzione, vedere [Distribuzione di applicazioni .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -130,7 +131,7 @@ Specifica uno o più [manifesti di destinazione](../deploying/runtime-store.md) 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Specifica il percorso della directory di output. Se non specificato, il percorso predefinito sarà *./bin/[configuration]/[framework]/* per una distribuzione dipendente da framework o *./bin/[configuration]/[framework]/[runtime]* per una distribuzione indipendente.
-Se viene fornito un percorso relativo, la directory di output generata è relativo al percorso del file di progetto, non alla directory di lavoro corrente.
+Se viene specificato un percorso relativo, la directory di output generata è relativa al percorso del file di progetto e non alla directory di lavoro corrente.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

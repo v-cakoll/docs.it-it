@@ -24,16 +24,17 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Sviluppo di applicazioni client con .NET Framework
 Esistono diversi modi per sviluppare applicazioni basate su Windows con la versione di .NET Framework eseguita in locale nei computer o nei dispositivi degli utenti. Negli argomenti di questa sezione viene illustrato come creare applicazioni basate su Windows con Windows Presentation Foundation (WPF) o Windows Form. È comunque possibile creare applicazioni Web con .NET Framework e applicazioni client per computer o dispositivi da mettere a disposizione su Windows Store o Windows Phone Store.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
  Vengono fornite informazioni sullo sviluppo di applicazioni con WPF.  
   
@@ -63,5 +64,5 @@ Esistono diversi modi per sviluppare applicazioni basate su Windows con la versi
  [Libreria di classi portabile](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [Panoramica](../../docs/framework/get-started/overview.md)  
  [Guida di sviluppo](../../docs/framework/development-guide.md)  
- [Procedura: creare un'applicazione Desktop di Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
+ [Procedura: Creare un'applicazione desktop di Windows](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Applicazioni di servizi Windows](../../docs/framework/windows-services/index.md)

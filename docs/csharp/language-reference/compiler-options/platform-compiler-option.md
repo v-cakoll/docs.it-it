@@ -13,11 +13,11 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (opzioni del compilatore C#)
 Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'assembly.  
@@ -40,11 +40,11 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
   
 -   **ARM** compila l'assembly in modo da poter essere eseguito su un computer con processore Advanced RISC Machine (ARM).  
   
--   **x64** consente di compilare l'assembly in modo da poter essere eseguito con Common Language Runtime a 64 bit su un computer che supporta il set di istruzioni AMD64 o EM64T.  
+-   **x64** compila l'assembly in modo che possa essere eseguito da CLR a 64 bit in un computer che supporta il set di istruzioni AMD64 o EM64T.  
   
--   **x86** compila l'assembly in modo da poter essere eseguito dalla versione di Common Language Runtime a 32 bit compatibile con x86.  
+-   **x86** compila l'assembly in modo che possa essere eseguito da CLR a 32 bit, compatibile con x86.  
   
--   **Itanium** compila l'assembly in modo da poter essere eseguito dalla versione di Common Language Runtime a 64 bit su un computer con processore Itanium.  
+-   **Itanium** compila l'assembly in modo che possa essere eseguito da CLR a 64 bit in un computer dotato di processore Itanium.  
   
  In un sistema operativo Windows a 64 bit:  
   

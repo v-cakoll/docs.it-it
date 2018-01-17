@@ -8,26 +8,27 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.openlocfilehash: f79ae387b123527b3795a2e12a68bd153b308f81
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnet
+ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installare .NET Framework in Windows XP e Windows Server 2003
 
 > [!NOTE]
-> Windows XP non è più supportato da Microsoft. È consigliabile che eseguire l'aggiornamento a Windows 10, che è supportata e include la versione più recente di .NET Framework. Questo documento viene fornito esclusivamente come guida per la risoluzione dei problemi.
+> Windows XP non è più supportato da Microsoft. Si consiglia di eseguire l'aggiornamento a Windows 10, che è supportato e include la versione più recente di .NET Framework. Questo documento viene fornito esclusivamente come guida per la risoluzione dei problemi.
 
-È necessario .NET Framework per l'esecuzione di molte applicazioni in Windows. È possibile utilizzare le istruzioni seguenti per installarlo. Si potrebbe è arrivati a questa pagina dopo il tentativo di eseguire un'applicazione e visualizzare la finestra di dialogo seguente nel computer.
+.NET Framework è necessario per l'esecuzione di diverse applicazioni in Windows. È possibile usare le istruzioni seguenti per l'installazione. È possibile che si sia arrivati a questa pagina dopo avere provato a eseguire un'applicazione e avere visualizzato la finestra di dialogo seguente nel computer in uso.
 
 ![Impossibile avviare l'applicazione](./media/this-application-could-not-be-started.png)
 
-Queste istruzioni consentono di installare le versioni di .NET Framework, che è necessario. Il [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) è la versione più recente. Non è supportata in Windows XP e Windows Server 2003. È incluso con il [autunno creatori di aggiornamento di Windows 10](https://www.microsoft.com/software-download/windows10) e [1709 versione di Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Queste istruzioni saranno utili per installare le versioni di .NET Framework necessarie. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) è la versione più recente. Non è supportata in Windows XP e Windows Server 2003. È inclusa in [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) e [Windows Server 2016 versione 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-Il [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) è la versione più recente supportata .NET Framework in Windows XP e Windows Server 2003. .NET Framework 4.0.3 richiede l'installazione di [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834). Entrambe queste versioni di .NET Framework non sono più supportate da Microsoft.
+[.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) è la versione di .NET Framework supportata più recente in Windows XP e Windows Server 2003. .NET Framework 4.0.3 richiede l'installazione di [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834). Entrambe queste versioni di .NET Framework non sono più supportate da Microsoft.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 

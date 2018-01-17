@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
@@ -37,11 +38,11 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
 ### <a name="recommendations"></a>Suggerimenti
 Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` in modo implicito, ecco le procedure consigliate:
 
-* Quando la destinazione è .NET Core o .NET Standard, non hanno mai un riferimento esplicito al `Microsoft.NETCore.App` o `NetStandard.Library` metapackages tramite un `<PackageReference>` elemento nel file di progetto.
-* Se occorre una versione specifica del runtime quando la destinazione è .NET Core, è necessario utilizzare il `<RuntimeFrameworkVersion>` proprietà del progetto (ad esempio, `1.0.4`) anziché il metapackage di riferimento.
+* Quando la destinazione è .NET Core o .NET Standard, non fare mai riferimento in modo esplicito ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` tramite l'elemento `<PackageReference>` nel file di progetto.
+* Se occorre una versione specifica del runtime quando la destinazione è .NET Core, è necessario usare la proprietà `<RuntimeFrameworkVersion>` del progetto, ad esempio, `1.0.4`, anziché fare riferimento al metapacchetto.
     * Ciò può avvenire se si usano [distribuzioni autosufficienti](../deploying/index.md#self-contained-deployments-scd) e occorre una versione specifica, ad esempio, della patch del runtime 1.0.0 LTS.
-* Se occorre una versione specifica del `NetStandard.Library` metapackage quando la destinazione è .NET Standard, è possibile utilizzare il `<NetStandardImplicitPackageVersion>` proprietà e impostare la versione è necessario.
-* Non in modo esplicito di aggiungere o aggiornare i riferimenti a uno di `Microsoft.NETCore.App` o `NetStandard.Library` metapackage nei progetti di .NET Framework. Se qualsiasi versione di `NetStandard.Library` sono necessarie durante l'uso automaticamente un pacchetto NuGet basato su .NET Standard, NuGet consente di installare tale versione.
+* Se occorre una versione specifica del metapacchetto `NetStandard.Library` quando la destinazione è .NET Standard, è possibile usare la proprietà `<NetStandardImplicitPackageVersion>` e impostare la versione necessaria.
+* Non aggiungere o aggiornare in modo esplicito i riferimenti al metapacchetto `Microsoft.NETCore.App` o `NetStandard.Library` nei progetti .NET Framework. Se è necessaria qualsiasi versione di `NetStandard.Library` durante l'uso di un pacchetto NuGet basato su .NET Standard, NuGet installa automaticamente tale versione.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Dichiarazioni Include di compilazione predefinite nei progetti .NET Core
 Con il passaggio al formato *csproj* nelle ultime versioni dell'SDK, per gli elementi di compilazione e le risorse incorporate le dichiarazioni Include ed Exclude predefinite sono state spostate nei file delle proprietà dell'SDK. Ciò significa che non è più necessario specificare queste dichiarazioni nel file di progetto. 
@@ -54,7 +55,7 @@ La tabella seguente mostra gli elementi e i [GLOB](https://en.wikipedia.org/wiki
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (o altre estensioni del linguaggio) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                        |
-| Nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| nessuno              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 Se si tenta di compilare un progetto contenente GLOB con l'SDK più recente, viene visualizzato l'errore seguente:
 
@@ -71,9 +72,9 @@ Se si imposta questa proprietà su `false`, si esegue l'override dell'inclusione
 
 Questa modifica non influisce sulle funzioni principali delle altre dichiarazioni Include. Se tuttavia si vogliono specificare, ad esempio, alcuni file da pubblicare con l'app, è ancora possibile usare i meccanismi noti in *csproj*, ad esempio l'elemento `<Content>`.
 
-`<EnableDefaultCompileItems>`Disattiva solo `Compile` globs ma non influisce sugli altri globs, ad esempio l'operatore implicito `None` glob, che viene applicato anche a \*elementi cs. Per questo motivo, **Esplora** continuerà Mostra \*elementi cs come parte del progetto, incluso come `None` elementi. In modo analogo, è possibile utilizzare `<EnableDefaultNoneItems>` per disabilitare il flag implicito `None` glob.
+`<EnableDefaultCompileItems>` disabilita solo i glob `Compile` ma non influisce su altri glob, come il glob implicito `None`, che si applica anche agli elementi \*.cs. Per questo motivo, **Esplora soluzioni** continuerà a visualizzare elementi \*.cs come parte del progetto, inclusi come elementi `None`. In modo analogo, è possibile usare `<EnableDefaultNoneItems>` per disabilitare il glob implicito `None`.
 
-Per disabilitare **globs implicita tutti**, è possibile impostare il `<EnableDefaultItems>` proprietà `false` come nell'esempio seguente:
+Per disabilitare **tutti i glob impliciti**, è possibile impostare la proprietà `<EnableDefaultItems>` su `false` come nell'esempio seguente:
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>

@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -91,53 +92,53 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Usare invece <xref:System.StringComparer?displayProperty=nameWithType>.|  
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Usare invece <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>.|  
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La classe <xref:System.Configuration.Assemblies.AssemblyHash> è stata deprecata.|  
-|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5. Usare invece la classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> nello spazio dei nomi System.Runtime.CompilerServices.|  
+|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5. Usare invece la classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> nello spazio dei nomi System.Runtime.CompilerServices.|  
 |<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|È disponibile un'API alternativa: creare invece l'attributo personalizzato <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType>.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato e sarà rimosso nelle versioni future.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=nameWithType> è stato deprecato.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=nameWithType>|Questo attributo è stato deprecato. I domini applicazione non rispettano più i limiti del contesto di attivazione nelle chiamate a IDispatch.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> .|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> .|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|  
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0.|  
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0. In alternativa, usare <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|  
@@ -189,7 +190,7 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, usare <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> .|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Questa classe è stata deprecata. In alternativa, usare <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|  
 |<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=nameWithType>|Non è consigliabile usare questo tipo in quanto la modifica dei DataBindings viene avviata tramite un oggetto <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> anziché la griglia delle proprietà.|  
 |<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=nameWithType>|L'alternativa consigliata è <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=nameWithType> e <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=nameWithType>.|  
@@ -489,11 +490,11 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
   
  [Torna all'inizio](#introduction)  
   
@@ -502,16 +503,16 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel> fatta eccezione per <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Compiler> fatta eccezione per <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Design> fatta eccezione per <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel> fatta eccezione per <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Compiler> fatta eccezione per <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Design> fatta eccezione per <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
   
  [Torna all'inizio](#introduction)  
   
@@ -520,13 +521,13 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Messaggio|  
 |----------|-------------| 
-|<xref:System.Activities.Statements.Interop>|Deprecato inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>.\*.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Deprecato inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>.\*.|   
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Configuration>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.DebugEngine> fatta eccezione per <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Hosting> fatta eccezione per <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Tracking>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Activities.Statements.Interop>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|Deprecata inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>\*.|   
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Configuration>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.DebugEngine> fatta eccezione per <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Hosting> fatta eccezione per <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Tracking>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>\*.|  
   
  [Torna all'inizio](#introduction)  
   
@@ -535,27 +536,27 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> I tipi di WF 3 sono deprecati. Usare invece i nuovi tipi di WF 4 da <xref:System.Activities>\*.|  
   
  [Torna all'inizio](#introduction)  
   
@@ -638,7 +639,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="VBCompat"></a>   
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll  
-  Per informazioni sulla migrazione da Visual Basic 6, vedere [Centro risorse di Visual Basic 6.0](https://msdn.microsoft.com/library/windows/desktop/ms788229).
+  Per informazioni sulla migrazione da Visual Basic 6, vedere [Visual Basic 6.0 Resource Center](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Tipo|Messaggio|  
 |----------|-------------|  
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Questo membro è obsoleto.|  

@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Questi file consentono a un'applicazione di visualizzare stringhe, immagini e altri dati nella lingua dell'utente e con le impostazioni cultura di questo, fornendo anche dati alternativi per i casi in cui non siano disponibili risorse per la lingua o le impostazioni cultura dell'utente. Per individuare e recuperare risorse localizzate, .NET Framework usa un modello hub e spoke. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, usate quando non sono disponibili risorse localizzate. Per designare le impostazioni cultura predefinite dell'applicazione, si usa l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>. Ogni spoke si connette a un assembly satellite contenente le risorse relative a impostazioni cultura specifiche, ma non contiene codice. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile aggiornare o sostituire facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
@@ -108,7 +109,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
     -   Per supportare le impostazioni cultura fr-FR, cioè Francese (Francia), creare un file di risorse denominato Greeting.fr-FR.resx o Greeting.fr-FR.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Salut tout le monde!".  
   
-    -   Per supportare le impostazioni cultura ru-RU, cioè Russo (Russia), creare un file di risorse denominato Greeting.ru-RU.resx or Greeting.ru-RU.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Всем привет!".  
+    -   Per supportare le impostazioni cultura ru-RU, cioè Russo (Russia), creare un file di risorse denominato Greeting.ru-RU.resx o Greeting.ru-RU.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Всем привет!".  
   
 4.  Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione resx in file con estensione resources:  
   
@@ -250,7 +251,7 @@ gacutil /i:StringLibrary.resources.dll
 7.  Compilare il codice sorgente seguente per StringLibrary.vb o StringLibrary.cs con le risorse per le impostazioni cultura predefinite in un assembly con ritardo della firma denominato StringLibrary.dll:  
   
     > [!IMPORTANT]
-    >  Se si utilizza la riga di comando anziché Visual Studio per creare l'esempio, è necessario modificare la chiamata al <xref:System.Resources.ResourceManager> del costruttore della classe `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
+    >  Se per creare l'esempio si usa la riga di comando anziché Visual Studio, è necessario modificare la chiamata al costruttore della classe <xref:System.Resources.ResourceManager> in `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  

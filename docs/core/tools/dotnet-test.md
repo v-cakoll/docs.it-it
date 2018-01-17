@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>nome
 
 `dotnet test`: driver di test .NET usato per eseguire gli unit test.
 
@@ -189,7 +190,7 @@ Eseguire i test nel progetto `test1`:
 
 | Framework di test | Proprietà supportate                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>nome</li><li>ClassName</li><li>Priorità</li><li>TestCategory</li></ul> |
 | Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Tratti</li></ul>                                   |
 
 `<operator>` descrive la relazione tra la proprietà e il valore:
@@ -211,7 +212,7 @@ Le espressioni possono essere unite con operatori condizionali:
 | <code>&#124;</code>      | OR       |
 | `&`      | AND      |
 
-È possibile includere le espressioni tra parentesi quando si utilizza operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
+È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 

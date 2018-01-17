@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prerequisiti per .NET Core in Linux
 
@@ -62,14 +63,14 @@ Per l'elenco completo di sistemi operativi, supportati da .NET Core 1.x, le vers
 
 ## <a name="linux-distribution-dependencies"></a>Dipendenze delle distribuzioni Linux
 
-Di seguito è destinati a essere esempi. Le versioni esatte e nomi possono variare leggermente la distribuzione di Linux di scelta.
+Quelli che seguono sono esempi. Le versioni e i nomi esatti possono variare leggermente nella distribuzione di Linux scelta.
 
 ### <a name="ubuntu"></a>Ubuntu
 
 Le distribuzioni Ubuntu richiedono che siano installate le librerie seguenti:
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
@@ -84,11 +85,11 @@ Le distribuzioni Ubuntu richiedono che siano installate le librerie seguenti:
 Le distribuzioni CentOS richiedono che siano installate le librerie seguenti:
 
 * libunwind
-* lttng ust
+* lttng-ust
 * libcurl
-* librerie OpenSSL
+* openssl-libs
 * libuuid
-* krb5 librerie
+* krb5-libs
 * libicu
 * zlib
 
@@ -211,6 +212,12 @@ Per informazioni sulla registrazione dell'accesso al canale Red Hat .NET, vedere
 
 3. Impostare il feed di pacchetti host della versione desiderata.
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ Per informazioni sulla registrazione dell'accesso al canale Red Hat .NET, vedere
 4. Installare .NET Core.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. Eseguire il comando `dotnet --version` per provare se l'installazione ha avuto esito positivo.

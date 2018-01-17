@@ -15,11 +15,12 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: determinare le versioni di .NET Framework installate
 Gli utenti possono installare ed eseguire nel computer più versioni di .NET Framework. Quando si sviluppa o si distribuisce l'app, potrebbe essere necessario conoscere quali versioni di .NET Framework sono installate nel computer dell'utente. Si noti che .NET Framework è costituito da due componenti principali, le cui versioni sono definite separatamente:  
@@ -96,7 +97,7 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
     |Nei sistemi Windows 10 con aggiornamento di novembre: 394254<br /><br /> In tutte le altre versioni del sistema operativo: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |Nell'Aggiornamento dell'anniversario di Windows 10: 394802<br /><br /> In tutte le altre versioni del sistema operativo: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |In Windows 10 Creators Update: 460798<br/><br/> In tutte le altre versioni del sistema operativo: 460805 | .NET Framework 4.7 |
-    |In Windows 10 aggiornamento creatori di fallback: 461308<br/><br/> In tutte le altre versioni del sistema operativo: 461310 | .NET framework 4.7.1 |
+    |In Windows 10 Fall Creators Update: 461308<br/><br/> In tutte le altre versioni del sistema operativo: 461310 | .NET Framework 4.7.1 |
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Per trovare le versioni di .NET Framework eseguendo query sul Registro di sistema nel codice (.NET Framework 1-4)
 
@@ -134,16 +135,16 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
     |.NET Framework 4.5.1 installato con Windows 8.1|378675|
     |.NET Framework 4.5.1 installato in Windows 8, Windows 7 SP1 o Windows Vista SP2|378758|
     |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installato con Windows 10|393295|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installato in tutte le altre versioni del sistema operativo|393297|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installato in Windows 10|394254|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installato in tutte le altre versioni del sistema operativo|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installato nell'Aggiornamento dell'anniversario di Windows 10|394802|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installato in tutte le altre versioni del sistema operativo|394806|
+    |.NET Framework 4.6 installato con Windows 10|393295|
+    |.NET Framework 4.6 installato in tutte le altre versioni del sistema operativo Windows|393297|
+    |.NET Framework 4.6.1 installato in Windows 10|394254|
+    |.NET Framework 4.6.1 installato in tutte le altre versioni del sistema operativo Windows|394271|
+    |.NET Framework 4.6.2 installato nell'Aggiornamento dell'anniversario di Windows 10|394802|
+    |.NET Framework 4.6.2 installato in tutte le altre versioni del sistema operativo Windows|394806|
     |.NET Framework 4.7 installato in Windows 10 Creators Update|460798|
     |.NET Framework 4.7 installato in tutte le altre versioni del sistema operativo|460805|
-    |.NET framework installato in Windows 10 rientrano creatori Update 4.7.1|461308|
-    |.NET framework 4.7.1 installato in tutte le altre versioni del sistema operativo Windows|461310|
+    |.NET Framework 4.7.1 installato in Windows 10 Fall Creators Update|461308|
+    |.NET Framework 4.7.1 installato in tutte le altre versioni del sistema operativo Windows|461310|
 
      Nell'esempio seguente viene controllato il valore `Release` del Registro di sistema per determinare se è installato [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versione successiva di .NET Framework.
 
@@ -176,7 +177,7 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
     |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET Framework 4.7|460798|
-    |.NET framework 4.7.1|461308|
+    |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Per trovare la versione corrente del runtime con lo strumento Clrver
@@ -201,7 +202,7 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
      Per le versioni 4, 4.5, 4.5.1 e 4.5.2 di .NET Framework, la proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> restituisce un oggetto <xref:System.Version> la cui rappresentazione di stringa ha il formato `4.0.30319.xxxxx`. In .NET Framework 4.6 e versioni successive, ha il formato `4.0.30319.42000`.
 
     > [!IMPORTANT]
-    > Per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive, è sconsigliabile usare la proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> per rilevare la versione del runtime. Si consiglia invece di eseguire una query sul Registro di sistema, come descritto nella sezione [Per trovare le versioni di .NET Framework eseguendo query sul Registro di sistema nel codice (.NET Framework 4.5 e versioni successive)](#net_d) riportata in precedenza in questo articolo.
+    > Per [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive, è consigliabile usare la proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> per rilevare la versione del runtime. Si consiglia invece di eseguire una query sul Registro di sistema, come descritto nella sezione [Per trovare le versioni di .NET Framework eseguendo query sul Registro di sistema nel codice (.NET Framework 4.5 e versioni successive)](#net_d) riportata in precedenza in questo articolo.
 
      Di seguito è illustrato un esempio di esecuzione di query sulla proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> per informazioni sulla versione del runtime.
 

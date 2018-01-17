@@ -16,14 +16,15 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>Cenni preliminari sui servizi delle applicazioni client
-I servizi delle applicazioni client consentono l'accesso semplificato ai servizi di accesso, ruolo e profilo di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] da applicazioni di Windows Forms e Windows Presentation Foundation (WPF). I servizi delle applicazioni di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] sono inclusi in Microsoft ASP.NET 2.0 AJAX Extensions, a sua volta incluso in [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] e [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Questi servizi consentono a più applicazioni Web e applicazioni basate su Windows di condividere informazioni utente e funzionalità di gestione degli utenti da un singolo server.  
+I servizi delle applicazioni client offrono accesso semplificato a servizi di accesso, ruolo e profilo di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] da applicazioni Windows Forms e Windows Presentation Foundation (WPF). I servizi delle applicazioni di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] sono inclusi in Microsoft ASP.NET 2.0 AJAX Extensions, a sua volta incluso in [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] e [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Questi servizi consentono a più applicazioni Web e applicazioni basate su Windows di condividere informazioni utente e funzionalità di gestione degli utenti da un singolo server.  
   
  I servizi delle applicazioni client includono provider di servizi client che si collegano al modello di estendibilità dei servizi Web per abilitare le funzionalità seguenti per le applicazioni basate su Windows:  
   
@@ -35,7 +36,7 @@ I servizi delle applicazioni client consentono l'accesso semplificato ai servizi
   
 -   Integrazione con la finestra di progettazione delle impostazioni dell'applicazione [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Quando si aggiungono impostazioni al progetto in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], è possibile specificare quali impostazioni devono essere accessibili tramite il provider di servizi delle impostazioni client.  
   
- Le sezioni seguenti descrivono queste funzionalità in maggior dettaglio. Per altre informazioni sui servizi delle applicazioni di [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere [Cenni preliminari sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ Le sezioni seguenti descrivono queste funzionalità in maggior dettaglio. Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="authentication"></a>Autenticazione  
  È possibile usare i servizi delle applicazioni client per convalidare un utente tramite un servizio di autenticazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. È possibile convalidare un utente tramite l'autenticazione di Windows o l'autenticazione basata su form. L'autenticazione di Windows significa che l'identità dell'utente è quella fornita dal sistema operativo quando un utente accede a un dominio o computer. L'autenticazione di Windows in genere viene usata con un'applicazione distribuita in una rete Intranet aziendale. L'autenticazione basata su form significa che è necessario includere i controlli di accesso nell'applicazione e passare le credenziali acquisite al provider di autenticazione. L'autenticazione basata su moduli in genere viene usata con un'applicazione distribuita su Internet.  
@@ -88,14 +89,14 @@ I servizi delle applicazioni client consentono l'accesso semplificato ai servizi
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizi applicazioni client](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Procedura: configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [Procedura: implementare l'accesso utente con i servizi dell'applicazione client](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Procedura dettagliata: uso di servizi delle applicazioni client](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Cenni preliminari sulle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Cenni preliminari sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [Uso dell'autenticazione basata su form con Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Utilizzo di informazioni sui ruoli con Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Utilizzo di informazioni sul profilo con Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Uso delle informazioni sui ruoli con Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Uso delle informazioni sul profilo con Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [Autenticazione ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Gestione delle autorizzazioni con ruoli](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [Gestione delle autorizzazioni tramite ruoli](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
  [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

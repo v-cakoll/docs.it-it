@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
 
@@ -30,7 +31,7 @@ Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipe
 Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di ridurre il numero di riferimenti nel pacchetto.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
 
 1. Fare riferimento a `NETStandard.Library` versione `1.6.0` in una sezione `dependencies` di `project.json`.
-2. Ripristino dei pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
+2. Ripristinare i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)) dalla riga di comando.
 3. Esaminare il file `project.lock.json` e trovare la sezione `NETSTandard.Library`  in genere all'inizio del file.
 4. Copiare tutti i pacchetti elencati in `dependencies`.
 5. Rimuovere il riferimento `.NETStandard.Library` e sostituirlo con i pacchetti copiati.
@@ -60,7 +61,7 @@ Per ridurre questa libreria, iniziare con il file `project.json` e aggiungere un
 }
 ```
 
-Successivamente, si ripristinano i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)), controllare il `project.lock.json` file e individuare tutti i pacchetti ripristinati per `NETSTandard.Library`.
+Successivamente, si ripristinano i pacchetti con `dotnet restore` ([vedere la nota](#dotnet-restore-note)), si analizza il file `project.lock.json` e si trovano tutti i pacchetti ripristinati per `NETSTandard.Library`.
 
 Di seguito è presentata la specifica sezione del file `project.lock.json` quando punta a `netstandard1.0`:
 

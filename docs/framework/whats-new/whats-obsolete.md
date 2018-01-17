@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
 .NET Framework cambia nel corso del tempo. In ogni nuova versione vengono aggiunti nuovi tipi e membri dei tipi che forniscono nuove funzionalità. Anche i tipi esistenti e i relativi membri cambiano nel tempo. Alcuni tipi, ad esempio, perdono di importanza in quanto la tecnologia che supportano viene sostituita da una nuova tecnologia, e alcuni metodi vengono sostituiti da altri più nuovi che sono più adatti o più completi in termini di funzionalità.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Modificare il codice rimuovendo l'uso del tipo o membro, se possibile.  
   
-     -oppure-  
+     oppure  
   
 -   Rivedere la documentazione di quest'area tecnologica per stabilire come rispondere a questa deprecazione.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
 |Versione di .NET Framework|Stringa `version`|
 |-|-|  
-|4.7 (inclusi 4.7.1)|v4.0|  
+|4.7 (inclusa 4.7.1)|v4.0|  
 |4.6 (incluse 4.6.1 e 4.6.2)|v4.0|  
 |4.5 (incluse 4.5.1 e 4.5.2)|v4.0|  
 |4|v4.0|  

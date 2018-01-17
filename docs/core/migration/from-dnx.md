@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)
 
@@ -76,7 +77,7 @@ DNU integrava un concetto denominato "comandi globali". Si trattava essenzialmen
 L'interfaccia della riga di comando non supporta questo concetto. Supporta tuttavia l'aggiunta di comandi per progetto che è possibile richiamare usando la comune sintassi `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Installazione delle dipendenze
-A partire dalla versione 1, gli strumenti dell'interfaccia della riga di comando di .NET Core non dispongono di un comando `install` per l'installazione delle dipendenze. Per installare un pacchetto NuGet, è necessario aggiungerlo come dipendenza per il `project.json` file e quindi eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)). 
+A partire dalla versione 1, gli strumenti dell'interfaccia della riga di comando di .NET Core non dispongono di un comando `install` per l'installazione delle dipendenze. Per installare un pacchetto da NuGet, è necessario aggiungerlo come dipendenza al file `project.json` e quindi eseguire `dotnet restore` ([vedere la nota](#dotnet-restore-note)). 
 
 ### <a name="running-your-code"></a>Esecuzione del codice
 È possibile eseguire il codice in due modi: Dal sorgente, con `dotnet run`. A differenza di `dnx run`, questo comando non esegue alcuna compilazione in memoria, ma richiama `dotnet build` per compilare il codice e quindi eseguire il file binario compilato. 
@@ -129,7 +130,7 @@ Se si usano altre destinazioni `dnx`, ad esempio `dnx451`, sarà necessario modi
 
 Il file `project.json` è ora praticamente pronto. È necessario scorrere l'elenco delle dipendenze e aggiornarle alle versioni più recenti, in particolare se si usano dipendenze ASP.NET Core. Se si usano pacchetti separati per le API BCL, è possibile usare il pacchetto di runtime, come spiegato nel documento [Application portability type](../deploying/index.md) (Tipo di portabilità delle applicazioni). 
 
-Quando si è pronti, è possibile tentare il ripristino con `dotnet restore` ([vedere la nota](#dotnet-restore-note)). A seconda della versione delle dipendenze, si potrebbero verificare errori se NuGet non è in grado di risolvere le dipendenze stesse per uno dei framework di destinazione sopra indicati. Si tratta di un problema momentaneo: con il passare del tempo saranno sempre di più i pacchetti che includono il supporto per questi framework. Per ora, se si verifica questo problema, è possibile usare l'istruzione `imports` all'interno del nodo `framework` per indicare a NuGet che può ripristinare i pacchetti che hanno come destinazione il framework indicato nell'istruzione "imports". I messaggi di errore di ripristino visualizzati in questo caso dovrebbero fornire informazioni sufficienti per stabilire quali framework è necessario importare. In caso di dubbi o se si esegue questa operazione per la prima volta, come indicazione generale specificare `dnxcore50` e `portable-net45+win8` nell'istruzione `imports`. Il frammento JSON seguente mostra un esempio di questo scenario:
+Al termine, è possibile tentare il ripristino con `dotnet restore` ([vedere la nota](#dotnet-restore-note)). A seconda della versione delle dipendenze, si potrebbero verificare errori se NuGet non è in grado di risolvere le dipendenze stesse per uno dei framework di destinazione sopra indicati. Si tratta di un problema momentaneo: con il passare del tempo saranno sempre di più i pacchetti che includono il supporto per questi framework. Per ora, se si verifica questo problema, è possibile usare l'istruzione `imports` all'interno del nodo `framework` per indicare a NuGet che può ripristinare i pacchetti che hanno come destinazione il framework indicato nell'istruzione "imports". I messaggi di errore di ripristino visualizzati in questo caso dovrebbero fornire informazioni sufficienti per stabilire quali framework è necessario importare. In caso di dubbi o se si esegue questa operazione per la prima volta, come indicazione generale specificare `dnxcore50` e `portable-net45+win8` nell'istruzione `imports`. Il frammento JSON seguente mostra un esempio di questo scenario:
 
 ```json
     "frameworks": {
