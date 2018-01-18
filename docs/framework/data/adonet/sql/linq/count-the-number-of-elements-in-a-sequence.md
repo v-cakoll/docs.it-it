@@ -13,35 +13,35 @@ dev_langs:
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f6d1403384b8725720abbe9a81f98cbbfdb9c6e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2747167893e5c9bed76a118a528089fbe93a02
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="count-the-number-of-elements-in-a-sequence"></a><span data-ttu-id="efb66-102">Contare il numero di elementi in una sequenza</span><span class="sxs-lookup"><span data-stu-id="efb66-102">Count the Number of Elements in a Sequence</span></span>
-<span data-ttu-id="efb66-103">Usare l'operatore <xref:System.Linq.Enumerable.Count%2A> per conteggiare il numero di elementi in una sequenza.</span><span class="sxs-lookup"><span data-stu-id="efb66-103">Use the <xref:System.Linq.Enumerable.Count%2A> operator to count the number of elements in a sequence.</span></span>  
+# <a name="count-the-number-of-elements-in-a-sequence"></a><span data-ttu-id="b61b4-102">Contare il numero di elementi in una sequenza</span><span class="sxs-lookup"><span data-stu-id="b61b4-102">Count the Number of Elements in a Sequence</span></span>
+<span data-ttu-id="b61b4-103">Usare l'operatore <xref:System.Linq.Enumerable.Count%2A> per conteggiare il numero di elementi in una sequenza.</span><span class="sxs-lookup"><span data-stu-id="b61b4-103">Use the <xref:System.Linq.Enumerable.Count%2A> operator to count the number of elements in a sequence.</span></span>  
   
- <span data-ttu-id="efb66-104">L'esecuzione di questa query sul database di esempio Northwind produce un output pari a `91`.</span><span class="sxs-lookup"><span data-stu-id="efb66-104">Running this query against the Northwind sample database produces an output of `91`.</span></span>  
+ <span data-ttu-id="b61b4-104">L'esecuzione di questa query sul database di esempio Northwind produce un output pari a `91`.</span><span class="sxs-lookup"><span data-stu-id="b61b4-104">Running this query against the Northwind sample database produces an output of `91`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efb66-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="efb66-105">Example</span></span>  
- <span data-ttu-id="efb66-106">Nell'esempio riportato di seguito viene conteggiato il numero di `Customers` nel database.</span><span class="sxs-lookup"><span data-stu-id="efb66-106">The following example counts the number of `Customers` in the database.</span></span>  
+## <a name="example"></a><span data-ttu-id="b61b4-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="b61b4-105">Example</span></span>  
+ <span data-ttu-id="b61b4-106">Nell'esempio riportato di seguito viene conteggiato il numero di `Customers` nel database.</span><span class="sxs-lookup"><span data-stu-id="b61b4-106">The following example counts the number of `Customers` in the database.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#4)]
  [!code-vb[DLinqQueryExamples#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="efb66-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="efb66-107">Example</span></span>  
- <span data-ttu-id="efb66-108">Nell'esempio seguente viene conteggiato il numero di prodotti nel database che non sono stati rimossi.</span><span class="sxs-lookup"><span data-stu-id="efb66-108">The following example counts the number of products in the database that have not been discontinued.</span></span>  
+## <a name="example"></a><span data-ttu-id="b61b4-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="b61b4-107">Example</span></span>  
+ <span data-ttu-id="b61b4-108">Nell'esempio seguente viene conteggiato il numero di prodotti nel database che non sono stati rimossi.</span><span class="sxs-lookup"><span data-stu-id="b61b4-108">The following example counts the number of products in the database that have not been discontinued.</span></span>  
   
- <span data-ttu-id="efb66-109">L'esecuzione di questo esempio sul database di esempio Northwind produce un output pari a `69`.</span><span class="sxs-lookup"><span data-stu-id="efb66-109">Running this example against the Northwind sample database produces an output of `69`.</span></span>  
+ <span data-ttu-id="b61b4-109">L'esecuzione di questo esempio sul database di esempio Northwind produce un output pari a `69`.</span><span class="sxs-lookup"><span data-stu-id="b61b4-109">Running this example against the Northwind sample database produces an output of `69`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#5)]
  [!code-vb[DLinqQueryExamples#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="efb66-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="efb66-110">See Also</span></span>  
- [<span data-ttu-id="efb66-111">Query di aggregazione</span><span class="sxs-lookup"><span data-stu-id="efb66-111">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- [<span data-ttu-id="efb66-112">Download di database di esempio</span><span class="sxs-lookup"><span data-stu-id="efb66-112">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a><span data-ttu-id="b61b4-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b61b4-110">See Also</span></span>  
+ [<span data-ttu-id="b61b4-111">Query di aggregazione</span><span class="sxs-lookup"><span data-stu-id="b61b4-111">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ [<span data-ttu-id="b61b4-112">Download di database di esempio</span><span class="sxs-lookup"><span data-stu-id="b61b4-112">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
