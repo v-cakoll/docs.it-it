@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fcd149b34282ef6ae21593e4549478bab91e0189
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-tracing-in-adonet"></a>Traccia dati in ADO.NET
 In ADO.NET 2.0 è disponibile una funzionalità di analisi dei dati incorporata supportata dai provider di dati .NET per [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC, nonché dall'oggetto <xref:System.Data.DataSet>ADO.NET e dai protocolli di rete di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  

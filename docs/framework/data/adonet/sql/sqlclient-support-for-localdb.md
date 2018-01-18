@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99845420549393829582ade11f38b75e3ebff484
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>Supporto SqlClient per LocalDB
 A partire da [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] , nome in codice Denali, è disponibile una versione semplificata di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], chiamata LocalDB. In questo argomento viene illustrato come connettersi a un database di LocalDB.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per altre informazioni su LocalDB, ad esempio come installarlo e configurare l'istanza di LocalDB, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] .  
   
  Per riepilogare le operazioni che è possibile eseguire con LocalDB:  

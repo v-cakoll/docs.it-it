@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>Raccolte di schemi SQL Server
 Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta di schemi comuni, supporta la raccolta di schemi aggiuntivi. Le raccolte di schemi variano leggermente in base alla versione di SQL Server usata. Per determinare l'elenco delle raccolte di schemi supportati, chiamare il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate.  
@@ -28,7 +28,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
 |database_name|String|Nome del database.|  
-|DBID|Int16|Identificatore del database.|  
+|dbid|Int16|Identificatore del database.|  
 |create_date|DateTime|Data di creazione del database.|  
   
 ## <a name="foreign-keys"></a>Foreign Keys  
@@ -37,7 +37,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|Stringa|Catalogo a cui appartiene il vincolo.|  
 |CONSTRAINT_SCHEMA|Stringa|Schema contenente il vincolo.|  
-|CONSTRAINT_NAME|Stringa|Nome.|  
+|CONSTRAINT_NAME|Stringa|Il nome.|  
 |TABLE_CATALOG|Stringa|Nome della tabella contenente il vincolo.|  
 |TABLE_SCHEMA|Stringa|Schema contenente la tabella.|  
 |TABLE_NAME|Stringa|Nome tabella|  
@@ -62,7 +62,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|type_desc|String|I valori del tipo di indice sono i seguenti:<br /><br /> -HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-XML<br />-SPAZIALI|  
+|type_desc|String|I valori del tipo di indice sono i seguenti:<br /><br /> -   HEAP<br />-CLUSTER<br />-NON CLUSTER<br />-   XML<br />-SPAZIALI|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -223,7 +223,7 @@ Il provider di dati Microsoft .NET Framework per SQL Server, oltre alle raccolta
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
 |uid|Int16|Identificatore utente univoco nel database. 1 corrisponde al proprietario del database.|  
-|USER_NAME|Stringa|Il nome utente o il nome del gruppo, univoco nel database.|  
+|user_name|Stringa|Il nome utente o il nome del gruppo, univoco nel database.|  
 |createdate|DateTime|La data in cui è stato aggiunto l'account.|  
 |updatedate|DateTime|Data dell'ultima modifica dell'account.|  
   

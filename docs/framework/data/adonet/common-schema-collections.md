@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>Raccolte di schemi comuni
 Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun provider gestito .NET Framework. È possibile eseguire query di un provider gestito .NET Framework per determinare l'elenco delle raccolte di schemi supportati chiamando il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate. Tutte le colonne richieste vengono descritte in queste raccolte. I provider hanno la possibilità di aggiungere colonne, se necessario. Ad esempio, `SqlClient` e `OracleClient` aggiungono ParameterName alla raccolta delle restrizioni.  
@@ -32,7 +32,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|Il nome della raccolta da passare per il **GetSchema** metodo per restituire la raccolta.|  
+|CollectionName|stringa|Il nome della raccolta da passare per il **GetSchema** metodo per restituire la raccolta.|  
 |NumberOfRestrictions|int|Il numero di restrizioni che è possibile specificare per la raccolta.|  
 |NumberOfIdentifierParts|int|Il numero di parti nel nome dell'oggetto di database/identificatore composito. Ad esempio, in SQL Server 3 corrisponde alle tabelle e 4 alle colonne. In Oracle 2 corrisponde alle tabelle e 3 alle colonne.|  
   
@@ -85,7 +85,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
 |IsConcurrencyType|bool|true – Il tipo di dati viene aggiornato dal database ogni volta che la riga viene modificata e il valore della colonna è diverso da tutti i valori precedenti<br /><br /> false – Il tipo di dati non viene aggiornato dal database ogni volta che viene modificata la riga<br /><br /> DBNull.Value – il database non supporta questo tipo di dati|  
 |IsLiteralSupported|bool|true – Il tipo di dati può essere espresso come valore letterale<br /><br /> false – Il tipo di dati non può essere espresso come valore letterale|  
 |LiteralPrefix|string|Il prefisso applicato a un dato valore letterale.|  
-|LiteralSuffix|string|Il suffisso applicato a un dato valore letterale.|  
+|LiteralSuffix|stringa|Il suffisso applicato a un dato valore letterale.|  
 |NativeDataType|String|NativeDataType è una colonna specifica di OLE DB per l'esposizione del tipo di dati OLE DB.|  
   
 ## <a name="restrictions"></a>Restrizioni  
@@ -103,7 +103,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|ReservedWord|string|Parole riservate specifiche del provider.|  
+|ReservedWord|stringa|Parole riservate specifiche del provider.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

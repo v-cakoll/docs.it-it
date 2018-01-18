@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd760cf51aa0f3e89e49831b1aa165e62b321d20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2f6c60197b1d71feb13ca351ad19298e09ea56
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Aggiunta di vincoli esistenti a un dataset
 Il **riempimento** metodo il **DataAdapter** riempie una <xref:System.Data.DataSet> solo con le colonne della tabella e le righe da un'origine dati; tuttavia vincoli vengano in genere impostati dall'origine dati, il **riempimento** metodo non aggiunge queste informazioni sullo schema per il **DataSet** per impostazione predefinita. Per popolare un **DataSet** con informazioni di vincolo di chiave primaria esistente da un'origine dati, è possibile chiamare il **FillSchema** metodo il **DataAdapter**, o impostare il **MissingSchemaAction** proprietà del **DataAdapter** a **AddWithKey** prima di chiamare **riempimento**. In questo modo la chiave primaria vincoli di **DataSet** riflettano quelli nell'origine dati. Informazioni sul vincolo di chiave esterna non è incluse e deve essere create in modo esplicito, come illustrato nella [vincoli DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

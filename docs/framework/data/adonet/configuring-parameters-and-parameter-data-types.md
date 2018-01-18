@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati dei parametri
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.  
@@ -57,7 +57,7 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
   
 |Tipo .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
-|<xref:System.Boolean>|Booleano|Bit|Booleano|Bit|Byte|  
+|<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
 |byte[]|Binario|VarBinary`.` la conversione implicita non riesce se la matrice di byte è più grande rispetto alla dimensione massima di VarBinary, che è di 8000 byte. Per le matrici di byte maggiori di 8000 byte, impostare in modo esplicito il <xref:System.Data.SqlDbType>.|VarBinary|Binario|Raw|  
 |<xref:System.Char>|``|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da char non è supportata.|Char|Char|Byte|  
@@ -72,7 +72,7 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Numero|  
 |<xref:System.Object>|Oggetto|Variante|Variante|L'inferenza di un oggetto OdbcType da Object non è supportata.|Blob|  
 |<xref:System.String>|String|NVarChar. La conversione implicita non riesce se la stringa ha una dimensione superiore a quella massima di NVarChar, che è di 4000 caratteri. Per le stringhe maggiori di 4000 caratteri, impostare in modo esplicito <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
-|<xref:System.TimeSpan>|Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|  
+|<xref:System.TimeSpan>|Time|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|  
 |<xref:System.UInt16>|UInt16|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt16 non è supportata.|UnsignedSmallInt|Int|UInt16|  
 |<xref:System.UInt32>|UInt32|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt32 non è supportata.|UnsignedInt|BigInt|UInt32|  
 |<xref:System.UInt64>|UInt64|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt64 non è supportata.|UnsignedBigInt|Numerico|Numero|  

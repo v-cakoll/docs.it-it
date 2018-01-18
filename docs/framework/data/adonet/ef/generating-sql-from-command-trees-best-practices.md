@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 Gli alberi dei comandi di query di output sono molto simili alle query esprimibili in SQL. Per generare SQL da un albero dei comandi di output, tuttavia i writer del provider devono affrontare alcune difficoltà comuni. In questo argomento vengono illustrate tali difficoltà, mentre nell'argomento successivo il provider di esempio mostra come risolverle.  

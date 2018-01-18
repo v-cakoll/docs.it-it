@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>Generatore EDM (EdmGen.exe)
 EdmGen.exe è uno strumento da riga di comando per l'uso di file di modello e di mapping [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Lo strumento EdmGen.exe consente di effettuare le operazioni seguenti:  
@@ -54,26 +54,26 @@ EdmGen /mode:choice [options]
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|`/p[roject]:`\<stringa >|Consente di specificare il nome del progetto da usare. Il nome del progetto viene usato come impostazione predefinita per la configurazione dello spazio dei nomi, il nome dei file di modello e di mapping, il nome del file di origine degli oggetti e il nome del file di origine di generazione delle visualizzazioni. Il nome del contenitore di entità è impostata su \<progetto > contesto.|  
-|`/prov[ider]:`\<stringa >|Nome del provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] da usare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
+|`/p[roject]:`\<string>|Consente di specificare il nome del progetto da usare. Il nome del progetto viene usato come impostazione predefinita per la configurazione dello spazio dei nomi, il nome dei file di modello e di mapping, il nome del file di origine degli oggetti e il nome del file di origine di generazione delle visualizzazioni. Il nome del contenitore di entità è impostata su \<progetto > contesto.|  
+|`/prov[ider]:`\<string>|Nome del provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] da usare per generare il file del modello di archiviazione (con estensione ssdl). Il provider predefinito è il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
 |`/c[onnectionstring]:`\<stringa di connessione >|Consente di specificare la stringa usata per la connessione all'origine dati.|  
-|`/incsdl:`\<file >|Consente di specificare il file con estensione csdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione csdl. La specifica di più directory può essere utile per generare classi (`/mode:EntityClassGeneration`) o visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|  
-|`/refcsdl:`\<file >|Consente di specificare il file con estensione csdl aggiuntivo o i file usati per risolvere qualsiasi riferimento nel file con estensione csdl di origine. Il file con estensione csdl di origine è il file specificato dall'opzione `/incsdl`. Il file `/refcsdl` contiene i tipi da cui dipende il file con estensione csdl di origine. Questo argomento può essere specificato più volte.|  
-|`/inmsl:`\<file >|Consente di specificare il file con estensione msl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione msl. La specifica di più directory può essere utile per generare visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|  
-|`/inssdl:`\<file >|Consente di specificare il file con estensione ssdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione ssdl. Può risultare utile quando si desidera convalidare più modelli `(/mode:ValidateArtifacts)`.|  
-|`/outcsdl:`\<file >|Consente di specificare il nome del file con estensione csdl che verrà creato.|  
-|`/outmsl:`\<file >|Consente di specificare il nome del file con estensione msl che verrà creato.|  
-|`/outssdl:`\<file >|Consente di specificare il nome del file con estensione ssdl che verrà creato.|  
-|`/outobjectlayer:`\<file >|Consente di specificare il nome del file di codice sorgente contenente gli oggetti generati dal file con estensione csdl.|  
-|`/outviews:`\<file >|Consente di specificare il nome del file di codice sorgente contenente le visualizzazioni generate.|  
-|`/language:`[VB &#124; CSharp]|Consente di specificare il linguaggio per i file di codice sorgente generati. Il linguaggio predefinito è C#.|  
-|`/namespace:`\<stringa >|Consente di specificare lo spazio dei nomi del modello da usare. Lo spazio dei nomi viene impostato nel file con estensione csdl quando si esegue `/mode:FullGeneration` o `/mode:FromSSDLGeneration`. Lo spazio dei nomi non viene usato quando si esegue `/mode:EntityClassGeneration`.|  
-|`/entitycontainer:`\<stringa >|Consente di specificare il nome da applicare all'elemento `<EntityContainer>` nei file di modello e di mapping generati.|  
+|`/incsdl:`\<file>|Consente di specificare il file con estensione csdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione csdl. La specifica di più directory può essere utile per generare classi (`/mode:EntityClassGeneration`) o visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|  
+|`/refcsdl:`\<file>|Consente di specificare il file con estensione csdl aggiuntivo o i file usati per risolvere qualsiasi riferimento nel file con estensione csdl di origine. Il file con estensione csdl di origine è il file specificato dall'opzione `/incsdl`. Il file `/refcsdl` contiene i tipi da cui dipende il file con estensione csdl di origine. Questo argomento può essere specificato più volte.|  
+|`/inmsl:`\<file>|Consente di specificare il file con estensione msl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione msl. La specifica di più directory può essere utile per generare visualizzazioni (`/mode:ViewGeneration`) quando il modello concettuale è suddiviso in più file. Può inoltre risultare utile quando si desidera convalidare più modelli (`/mode:ValidateArtifacts`).|  
+|`/inssdl:`\<file>|Consente di specificare il file con estensione ssdl o una directory contenente i file con questa estensione. Questo argomento può essere specificato più volte in modo che sia possibile indicare più directory o file con estensione ssdl. Può risultare utile quando si desidera convalidare più modelli `(/mode:ValidateArtifacts)`.|  
+|`/outcsdl:`\<file>|Consente di specificare il nome del file con estensione csdl che verrà creato.|  
+|`/outmsl:`\<file>|Consente di specificare il nome del file con estensione msl che verrà creato.|  
+|`/outssdl:`\<file>|Consente di specificare il nome del file con estensione ssdl che verrà creato.|  
+|`/outobjectlayer:`\<file>|Consente di specificare il nome del file di codice sorgente contenente gli oggetti generati dal file con estensione csdl.|  
+|`/outviews:`\<file>|Consente di specificare il nome del file di codice sorgente contenente le visualizzazioni generate.|  
+|`/language:`[VB&#124;CSharp]|Consente di specificare il linguaggio per i file di codice sorgente generati. Il linguaggio predefinito è C#.|  
+|`/namespace:`\<string>|Consente di specificare lo spazio dei nomi del modello da usare. Lo spazio dei nomi viene impostato nel file con estensione csdl quando si esegue `/mode:FullGeneration` o `/mode:FromSSDLGeneration`. Lo spazio dei nomi non viene usato quando si esegue `/mode:EntityClassGeneration`.|  
+|`/entitycontainer:`\<string>|Consente di specificare il nome da applicare all'elemento `<EntityContainer>` nei file di modello e di mapping generati.|  
 |`/pl[uralize]`|Applica le regole della lingua inglese per i singolari e i plurali ai nomi `Entity`, `EntitySet` e `NavigationProperty` nel modello concettuale. Questa opzione eseguirà le azioni seguenti:<br /><br /> -Verificare tutti `EntityType` nomi singolare.<br />-Verificare tutti `EntitySet` nomi plurali.<br />-Per ciascuna `NavigationProperty` che restituisce al massimo un'entità, renderà singolare il nome.<br />-Per ciascuna `NavigationProperty` che restituisce più di un'entità, specificare un nome plurale.|  
 |`/SupressForeignKeyProperties or /nofk`|Impedisce l'esposizione di colonne di chiavi esterne come proprietà scalari sui tipi di entità nel modello concettuale.|  
 |`/help` o `?`|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |`/nologo`|Consente di disattivare la visualizzazione del messaggio di copyright.|  
-|`/targetversion:`\<stringa >|Versione di .NET Framework usata per compilare il codice generato. Le versioni supportate sono la 4 e la 4.5. Il valore predefinito è 4.|  
+|`/targetversion:` \<string>|Versione di .NET Framework usata per compilare il codice generato. Le versioni supportate sono la 4 e la 4.5. Il valore predefinito è 4.|  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Usare EdmGen.exe per generare i file di modello e di mapping](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

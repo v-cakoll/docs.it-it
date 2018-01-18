@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d3fd662ace71d77a185cd996c05960d026ef691
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e105080b6ef3bdd6ce20ad8291c57fc9180980d7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Rilevamento di modifiche con SqlDependency
 È possibile associare un oggetto <xref:System.Data.SqlClient.SqlDependency> a <xref:System.Data.SqlClient.SqlCommand> per rilevare quando i risultati della query differiscono da quelli recuperati in origine. È inoltre possibile assegnare un delegato all'evento `OnChange` che verrà generato in caso di modifica dei risultati per un comando associato. È necessario associare l'oggetto <xref:System.Data.SqlClient.SqlDependency> al comando prima di eseguire il comando stesso. È inoltre possibile usare la proprietà `HasChanges` di <xref:System.Data.SqlClient.SqlDependency> per determinare se i risultati della query sono stati modificati rispetto a quando i dati sono stati recuperati inizialmente.  

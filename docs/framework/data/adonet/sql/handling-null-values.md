@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Un valore null in un database relazionale viene usato quando il valore in una colonna è sconosciuto o mancante. Un valore null non è né una stringa vuota (per tipi di dati carattere o data-ora) né un valore zero (per tipi di dati numerici). Nella specifica ANSI SQL-92 si afferma che un valore null deve essere uguale per tutti i tipi di dati, in modo da gestire coerentemente tutti i valori null. Lo spazio dei nomi <xref:System.Data.SqlTypes> offre una semantica di tipo null tramite l'implementazione dell'interfaccia <xref:System.Data.SqlTypes.INullable>. Ciascun tipo di dati nello spazio dei nomi <xref:System.Data.SqlTypes> dispone di una proprietà `IsNull` e di un valore `Null` che può essere assegnato a un'istanza di quel tipo di dati.  
@@ -43,7 +43,7 @@ Un valore null in un database relazionale viene usato quando il valore in una co
 ## <a name="nulls-and-sqlboolean"></a>Valori null e SqlBoolean  
  Un confronto tra qualsiasi spazio dei nomi <xref:System.Data.SqlTypes> restituirà un tipo <xref:System.Data.SqlTypes.SqlBoolean>. La funzione `IsNull` per ogni `SqlType` restituisce un tipo <xref:System.Data.SqlTypes.SqlBoolean> e può essere usata per controllare eventuali valori null. Nelle seguenti tabelle reali viene mostrato come funzionano gli operatori AND, OR e NOT in presenza di un valore null. (T=true, F=false e U=sconosciuto [unknown] o null.)  
   
- ![Tabella Truth](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Nozioni di base sull'opzione ANSI_NULLS  
  Lo spazio dei nomi <xref:System.Data.SqlTypes> offre la stessa semantica dell'opzione ANSI_NULLS quando è attivata in SQL Server. Tutti gli operatori aritmetici (+, -, *, /, %), operatori bit per bit (~ &, &#124;), e la maggior parte delle funzioni restituiscono null se uno degli operandi o argomenti è null, ad eccezione della proprietà `IsNull`.  
@@ -129,7 +129,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Confronto di valori null con SqlTypes e tipi CLR  
- Quando si confrontano valori null, è importante comprendere la differenza tra il modo in cui il metodo `Equals` valuta i valori null nello spazio dei nomi <xref:System.Data.SqlTypes> rispetto al modo in cui funziona con i tipi CLR. Tutti i metodi <xref:System.Data.SqlTypes> di `Equals` usano la semantica del database per valutare valori null: se uno o entrambi i valori sono null, il confronto restituisce null. D'altra parte, se si usa il metodo CLR `Equals` su due spazi dei nomi <xref:System.Data.SqlTypes>, verrà restituito true se entrambi gli spazi dei nomi sono null. Questo riflette la differenza tra l'uso di un metodo di istanza come il metodo CLR `String.Equals` e l'uso del metodo statico/condiviso `SqlString.Equals`.  
+ Quando si confrontano valori null, è importante comprendere la differenza tra il modo in cui il metodo `Equals` valuta i valori null nello spazio dei nomi <xref:System.Data.SqlTypes> rispetto al modo in cui funziona con i tipi CLR. Tutti i <xref:System.Data.SqlTypes> `Equals` metodi usano la semantica del database per valutare valori null: se uno o entrambi i valori null, il confronto restituisce null. D'altra parte, se si usa il metodo CLR `Equals` su due spazi dei nomi <xref:System.Data.SqlTypes>, verrà restituito true se entrambi gli spazi dei nomi sono null. Questo riflette la differenza tra l'uso di un metodo di istanza come il metodo CLR `String.Equals` e l'uso del metodo statico/condiviso `SqlString.Equals`.  
   
  Nell'esempio seguente viene illustrata la differenza di risultato tra il metodo `SqlString.Equals` e il metodo `String.Equals` quando a ciascuno vengono passate una coppia di valori null e successivamente una coppia di stringhe vuote.  
   

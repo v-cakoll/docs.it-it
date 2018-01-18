@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -72,7 +72,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
 ## <a name="provider-manifest-discoverability"></a>Individuabilità del manifesto del provider  
  Il manifesto viene usato indirettamente da diversi tipi di componenti nei servizi di entità, ad esempio strumenti o query, ma più direttamente viene usato dai metadati tramite l'uso del caricatore di metadati dell'archivio dati.  
   
- ![dfb3d02b &#45; 7a8c &#45; 4D 51 &#45; ac5a &#45; a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  È tuttavia possibile che un provider specificato supporti archivi diversi o versioni diverse dello stesso archivio. È necessario pertanto che per ogni archivio dati supportato dal provider sia indicato un manifesto diverso.  
   
@@ -88,7 +88,7 @@ Questa sezione illustra come un provider dell'archivio dati può supportare i ti
 ## <a name="provider-manifest-programming-model"></a>Modello di programmazione del manifesto del provider  
  I provider derivano da <xref:System.Data.Common.DbXmlEnabledProviderManifest>, che consente loro di specificare in modo dichiarativo i propri manifesti. Nell'illustrazione seguente viene mostrata la gerarchia di classi di un provider:  
   
- ![Nessuna](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API di individuabilità  
  Il manifesto del provider viene caricato dal caricatore dei metadati dell'archivio (StoreItemCollection) tramite una connessione all'archivio dati o un token del manifesto del provider.  
@@ -275,7 +275,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |BuiltIn|Boolean|No|True|Restituisce True se la funzione è inclusa nell'archivio dati|  
 |StoreFunctionName|String|No|\<Nome >|Nome della funzione nell'archivio dati.  Consente di eseguire un determinato tipo di reindirizzamento dei nomi delle funzioni.|  
 |NiladicFunction|Boolean|No|False|Restituisce True se la funzione non richiede parametri e viene chiamata senza parametri|  
-|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversion|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semantics|ParameterSemantics|No|AllowImplicit<br /><br /> Conversion|Scelta della modalità con cui la pipeline della query gestisce la sostituzione del tipo di parametro:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
  **Nodo parametri**  
   
@@ -285,7 +285,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|String|Sì|n/d|Nome/identificatore del parametro.|  
 |Tipo|String|Sì|n/d|Tipo EDM del parametro.|  
-|Modalità|Parametro<br /><br /> Direzione|Sì|n/d|Direzione del parametro:<br /><br /> -in<br />-out<br />-inout|  
+|Modalità|Parametro<br /><br /> Direzione|Sì|n/d|Direzione del parametro:<br /><br /> -   in<br />-out<br />-   inout|  
   
 ##### <a name="namespace-attribute"></a>Attributo namespace  
  Ogni provider dell'archivio dati deve definire uno spazio dei nomi o un gruppo di spazi dei nomi per le informazioni definite nel manifesto. Tale spazio dei nomi può essere usato nelle query Entity SQL per risolvere nomi di funzioni e tipi. Ad esempio: SqlServer. Lo spazio dei nomi deve essere diverso dallo spazio dei nomi canonico, ovvero EDM, definito dai servizi di entità per funzioni standard che devono essere supportate dalle query Entity SQL.  

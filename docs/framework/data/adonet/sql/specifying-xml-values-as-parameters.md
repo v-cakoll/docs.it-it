@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5957dee03d7f3cd54b3fdacd0d38dead5bbc077d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
 Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. L'operazione è semplicissima in quanto le colonne XML in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] accettano valori di parametro esattamente come altri tipi di dati.  

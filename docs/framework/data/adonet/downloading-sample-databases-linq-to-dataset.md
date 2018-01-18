@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b984fdef7f7f43e266ec4ba42b04990aced159c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Download di database di esempio (LINQ to DataSet)
 Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentazione utilizzano il database di esempio AdventureWorks. È possibile scaricare gratuitamente questo prodotto dal sito di download Microsoft. Negli esempi e nelle procedure dettagliate riportate nella documentazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene utilizzato SQL Server come archivio dati. Anziché SQL Server è tuttavia possibile usare come archivio dati SQL Server Express Edition, disponibile gratuitamente.  

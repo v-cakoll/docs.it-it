@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d982964b596528b091f5367edd38e0cee5f923c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c622dde5e73c84c3b317ffc2652c79632be89e2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="getschema-and-schema-collections"></a>Raccolte di schemi e GetSchema
 Il **connessione** classi in ogni implementazione di provider gestiti di .NET Framework un **GetSchema** metodo utilizzato per recuperare informazioni sullo schema relative al database che è attualmente connesso e le informazioni sullo schema restituite dal **GetSchema** metodo disponibile sotto forma di un <xref:System.Data.DataTable>. Il **GetSchema** è un metodo di overload che fornisce parametri facoltativi per specificare la raccolta di schemi da restituire e per limitare la quantità di informazioni restituite.  

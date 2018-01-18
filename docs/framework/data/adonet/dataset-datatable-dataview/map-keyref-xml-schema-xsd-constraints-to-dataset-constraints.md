@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
 Il **keyref** elemento consente di stabilire collegamenti tra elementi all'interno di un documento. Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale. Se uno schema viene specificato il **keyref** elemento, l'elemento viene convertito durante il processo di mapping dello schema per un vincolo di chiave esterna corrispondente alle colonne nelle tabelle del <xref:System.Data.DataSet>. Per impostazione predefinita, il **keyref** elemento genera anche una relazione, con la **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** proprietà specificate per la relazione.  
@@ -27,8 +27,8 @@ Il **keyref** elemento consente di stabilire collegamenti tra elementi all'inter
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata: ConstraintOnly**|Se **ConstraintOnly = "true"** viene specificata per il **keyref** elemento nello schema, viene creato un vincolo, ma è stata creata alcuna relazione. Se questo attributo non è specificato (o è impostata su **False**), vengono creati sia il vincolo che la relazione nel **DataSet**.|  
-|**msdata: ConstraintName**|Se il **ConstraintName** attributo viene specificato, il relativo valore viene utilizzato come nome del vincolo. In caso contrario, il **nome** attributo del **keyref** elemento nello schema fornisce il nome del vincolo nel **DataSet**.|  
+|**msdata:ConstraintOnly**|Se **ConstraintOnly = "true"** viene specificata per il **keyref** elemento nello schema, viene creato un vincolo, ma è stata creata alcuna relazione. Se questo attributo non è specificato (o è impostata su **False**), vengono creati sia il vincolo che la relazione nel **DataSet**.|  
+|**msdata:ConstraintName**|Se il **ConstraintName** attributo viene specificato, il relativo valore viene utilizzato come nome del vincolo. In caso contrario, il **nome** attributo del **keyref** elemento nello schema fornisce il nome del vincolo nel **DataSet**.|  
 |**msdata:UpdateRule**|Se il **UpdateRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **UpdateRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **UpdateRule** è impostata su **Cascade**.|  
 |**msdata:DeleteRule**|Se il **DeleteRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **DeleteRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **DeleteRule** è impostata su **Cascade**.|  
 |**msdata:AcceptRejectRule**|Se il **AcceptRejectRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **AcceptRejectRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **AcceptRejectRule** è impostata su **Nessuno**.|  

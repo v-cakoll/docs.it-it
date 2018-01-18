@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>Cenni preliminari su LINQ to DataSet
 <xref:System.Data.DataSet> è uno dei componenti più utilizzati di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Rappresenta un elemento chiave del modello di programmazione disconnesso su cui si basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] e consente di memorizzare in modo esplicito nella cache dati di origini dati diverse. Per il livello della presentazione <xref:System.Data.DataSet> è strettamente integrato nei controlli GUI per l'associazione dati. Per il livello intermedio fornisce una cache che mantiene la forma relazionale dei dati e include servizi di navigazione all'interno della gerarchia e di query semplici e rapidi. Una tecnica comune utilizzata per ridurre il numero di richieste in un database consiste nell'utilizzare il <xref:System.Data.DataSet> per la memorizzazione nella cache di livello intermedio. Si consideri ad esempio basati sui dati [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web. Spesso, una parte significativa dei dati dell'applicazione non viene modificata frequentemente ed è comune a più sessioni o utenti. Tali dati possono essere mantenuti in memoria sul server Web, in modo da ridurre il numero di richieste al database e velocizzare le interazioni utente. Un altro aspetto utile del <xref:System.Data.DataSet> è che consente a un'applicazione per sottoinsiemi di dati da uno o più origini dati nello spazio dell'applicazione. L'applicazione può quindi modificare i dati in memoria, mantenendo comunque la propria forma relazionale.  

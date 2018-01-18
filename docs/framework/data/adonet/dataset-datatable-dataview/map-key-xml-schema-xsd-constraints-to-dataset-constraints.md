@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 249cb8419d4f032c37a922c9aa640f02f6efbd56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b999e6b1d6d73f107b7e1f4cb0d7e14c099a1f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset
 In uno schema, è possibile specificare un vincolo di chiave su un elemento o attributo mediante la **chiave** elemento. È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.  
@@ -29,8 +29,8 @@ In uno schema, è possibile specificare un vincolo di chiave su un elemento o at
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, il **nome** attributo fornisce il valore del nome del vincolo.|  
-|**msdata: PrimaryKey**|Se `PrimaryKey="true"` è presente, il **IsPrimaryKey** vincolo è impostata su **true**, rendendo così una chiave primaria. Il **AllowDBNull** colonna è impostata su **false**, perché le chiavi primarie non sono consentiti valori null.|  
+|**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, il **nome** attributo fornisce il valore del nome del vincolo.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente, il **IsPrimaryKey** vincolo è impostata su **true**, rendendo così una chiave primaria. Il **AllowDBNull** colonna è impostata su **false**, perché le chiavi primarie non sono consentiti valori null.|  
   
  Durante la conversione dello schema in cui è stato specificato un vincolo di chiave, il processo di mapping consente di creare un vincolo unique nella tabella con il **AllowDBNull** proprietà column impostata sulla **false** per ogni colonna di vincolo. Il **IsPrimaryKey** anche proprietà del vincolo unique è impostata su **false** a meno che non è stato specificato `msdata:PrimaryKey="true"` sul **chiave** elemento. Queste impostazioni sono identiche a quelle di un vincolo univoco nello schema in cui `PrimaryKey="true"`.  
   

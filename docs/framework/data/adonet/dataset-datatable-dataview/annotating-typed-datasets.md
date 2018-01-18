@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>Annotazione di dataset tipizzati
 Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.Data.DataSet> tipizzato senza modificare lo schema sottostante. Modifica i nomi degli elementi dello schema sottostante causerebbe l'oggetto tipizzato **DataSet** fare riferimento a oggetti che non esiste nell'origine dati, nonché perderebbe un riferimento per gli oggetti presenti nell'origine dati.  
@@ -67,7 +67,7 @@ Le annotazioni consentono di modificare i nomi degli elementi nel <xref:System.D
 |Valore nullValue|Descrizione|  
 |---------------------|-----------------|  
 |*Valore di sostituzione*|Specifica il valore da restituire. È necessario che il valore restituito corrisponda al tipo dell'elemento. Usare ad esempio `nullValue="0"` per restituire 0 per i campi integer null.|  
-|**throw**|Generazione di un'eccezione. Questa è l'impostazione predefinita.|  
+|**_throw**|Generazione di un'eccezione. Questa è l'impostazione predefinita.|  
 |**_null**|Consente di restituire un riferimento null o di generare un'eccezione se viene rilevato un tipo primitivo.|  
 |**_empty**|Per le stringhe, restituire **Empty**, in caso contrario, restituire un oggetto creato da un costruttore vuoto. Se viene rilevato un tipo primitivo, consente di generare un'eccezione.|  
   

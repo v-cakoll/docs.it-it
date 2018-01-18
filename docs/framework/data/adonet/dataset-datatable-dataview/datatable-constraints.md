@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>Vincoli DataTable
 I vincoli consentono di applicare restrizioni ai dati di una <xref:System.Data.DataTable>, in modo da garantire l'integrità di tali dati. Un vincolo è una regola automatica applicata a una colonna, o a colonne correlate, che consente di determinare le operazioni da eseguire in caso di modifica del valore di una riga. I vincoli vengono applicati quando la `System.Data.DataSet.EnforceConstraints` proprietà del <xref:System.Data.DataSet> è **true**. Per un esempio di codice che illustra come impostare la proprietà `EnforceConstraints`, vedere l'argomento relativo a <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -35,7 +35,7 @@ I vincoli consentono di applicare restrizioni ai dati di una <xref:System.Data.D
   
 |Impostazione della regola|Descrizione|  
 |------------------|-----------------|  
-|**CASCADE**|Elimina o aggiorna righe correlate.|  
+|**Cascade**|Elimina o aggiorna righe correlate.|  
 |**SetNull**|Impostare i valori nelle righe correlate **DBNull**.|  
 |**SetDefault**|Imposta i valori delle righe correlate sul valore predefinito.|  
 |**None**|Non viene eseguita alcuna operazione sulle righe correlate. Questa è l'impostazione predefinita.|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Impostazione della regola|Descrizione|  
 |------------------|-----------------|  
-|**CASCADE**|Consente di accettare o rifiutare le modifiche alle righe figlio.|  
+|**Cascade**|Consente di accettare o rifiutare le modifiche alle righe figlio.|  
 |**None**|Non viene eseguita alcuna operazione sulle righe figlio. Questa è l'impostazione predefinita.|  
   
 ### <a name="example"></a>Esempio  
