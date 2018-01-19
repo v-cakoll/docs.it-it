@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>Guida per programmatori C#
 Questa sezione include informazioni dettagliate sulle principali funzionalità del linguaggio C# e sulle funzionalità accessibili a C# tramite .NET Framework.  
@@ -73,7 +73,7 @@ Questa sezione include informazioni dettagliate sulle principali funzionalità d
  [Commenti relativi alla documentazione XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Sezioni relative alla piattaforma  
- [Domini applicazione (C# e Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Domini applicazione (C# e Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Assembly e Global Assembly Cache](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   

@@ -11,11 +11,11 @@ ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6649537238af38e073eeb8747487822d058b7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c78b06b23805082251db8bbd7b377ffd36c6ef03
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -46,11 +46,11 @@ Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
 -   In C# versione 2.0 sono stati introdotti i [metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) che consentono di passare blocchi di codice come parametri anziché un metodo definito separato. In C# 3.0 sono state introdotte le espressioni lambda per scrivere in modo più conciso i blocchi di codice in linea. I metodi anonimi e le espressioni lambda vengono compilati, in determinati contesti, in tipi delegati. Queste funzionalità sono ora note complessivamente come funzioni anonime. Per altre informazioni sulle espressioni lambda, vedere [Funzioni anonime](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Uso dei delegati](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Quando utilizzare i delegati anziché le interfacce (Guida per programmatori C#)](http://msdn.microsoft.com/en-us/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [Quando utilizzare i delegati anziché le interfacce (Guida per programmatori C#)](http://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
   
 -   [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
