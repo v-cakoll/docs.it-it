@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Connessione alle istanze utente di SQL Server Express
 In Microsoft SQL Server Express Edition (SQL Server Express) è supportata la funzionalità istanze utente, disponibile solo quando si usa il provider di dati .NET Framework per SQL Server (`SqlClient`). Un'istanza utente è un'istanza distinta del motore di database di SQL Server Express generata da un'istanza padre. Le istanze utente consentono agli utenti non amministratori di collegarsi e connettersi ai database SQL Server Express dai propri computer locali. Ogni istanza viene eseguita nel contesto di sicurezza del singolo utente, a livello di un'istanza per ogni utente.  
@@ -157,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   Qualsiasi applicazione in modalità utente singolo in cui non è necessario condividere dati.  
   
--   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per ulteriori informazioni, vedere [distribuzione ClickOnce per le applicazioni di Windows Form](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Distribuzione ClickOnce. Se .NET Framework 2.0 (o versione successiva) e SQL Server Express sono già installati nel computer di destinazione, il pacchetto di installazione scaricato come risultato di un'azione ClickOnce può essere installato e usato da utenti non amministratori. Si noti che un amministratore deve installare SQL Server Express se fa parte dell'installazione. Per ulteriori informazioni, vedere [distribuzione ClickOnce per le applicazioni di Windows Form](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   Hosting ASP.NET dedicato con autenticazione di Windows. Una Intranet può contenere una singola istanza di SQL Server Express. L'applicazione si connette usando l'account di Windows ASPNET, non tramite rappresentazione. Le istanze utente non devono essere usate per scenari di hosting di terze parti o condivisi in cui tutte le applicazioni condividerebbero la stessa istanza utente e non rimarrebbero più isolate una dall'altra.  
   

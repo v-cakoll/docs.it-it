@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procedura dettagliata: creazione di un controllo di Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione
 È possibile migliorare l'esperienza in fase di progettazione per un controllo personalizzato, è sufficiente creare una finestra di progettazione personalizzata associata.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  Per il listato di codice completo, vedere [procedura: creare Windows Form controllo che accetta vantaggio della fase di progettazione funzionalità](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, è necessario:  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
--   Creare un progetto di applicazione Windows Form denominato "MarqueeControlTest". Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Creare un progetto di applicazione Windows Form denominato "MarqueeControlTest". Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Windows Form](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Creazione di un progetto libreria di controlli  
  Il passaggio successivo consiste nel creare il progetto libreria di controlli. Si creerà un nuovo controllo personalizzato e la finestra di progettazione personalizzata corrispondente.  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  Aggiungere un progetto libreria di controlli Windows Form alla soluzione. Denominare il progetto "MarqueeControlLibrary".  
   
-2.  Utilizzando **Esplora**, eliminare il controllo del progetto predefinita eliminando il file di origine denominato "UserControl1. cs" o "UserControl1. vb", a seconda del linguaggio scelto. Per ulteriori informazioni, vedere [NIB: procedura: escludere elementi, eliminazione e Rimuovi](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Utilizzando **Esplora**, eliminare il controllo del progetto predefinita eliminando il file di origine denominato "UserControl1. cs" o "UserControl1. vb", a seconda del linguaggio scelto. Per ulteriori informazioni, vedere [NIB: procedura: escludere elementi, eliminazione e Rimuovi](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Aggiungere un nuovo <xref:System.Windows.Forms.UserControl> elemento il `MarqueeControlLibrary` progetto. Assegnare il nuovo file di origine di un nome di base di "MarqueeControl".  
   
-4.  Utilizzando **Esplora**, creare una nuova cartella nel `MarqueeControlLibrary` progetto. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Denominare la nuova cartella "Progettazione".  
+4.  Utilizzando **Esplora**, creare una nuova cartella nel `MarqueeControlLibrary` progetto. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Denominare la nuova cartella "Progettazione".  
   
 5.  Fare doppio clic su di **progettazione** cartella e aggiungere una nuova classe. Assegnare al file di origine di un nome di base di "MarqueeControlRootDesigner".  
   

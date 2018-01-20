@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 402568a78ccb2f56c6adb108536edfb121440642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Procedura: stampa di file XPS a livello di codice
 È possibile utilizzare uno degli overload del <xref:System.Printing.PrintQueue.AddJob%2A> metodo per la stampa [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file senza aprire un <xref:System.Windows.Controls.PrintDialog> o, in generale, qualsiasi [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] affatto.  
   
- È inoltre possibile stampare [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file utilizzando i diversi <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metodi di <xref:System.Windows.Xps.XpsDocumentWriter>. Per altre informazioni, vedere [Stampa di un documento XPS](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
+ È inoltre possibile stampare [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file utilizzando i diversi <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metodi di <xref:System.Windows.Xps.XpsDocumentWriter>. Per altre informazioni, vedere [Stampa di un documento XPS](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
   
  Un altro metodo di stampa [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] consiste nell'utilizzare il <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> o <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> metodi il <xref:System.Windows.Controls.PrintDialog> controllo. Vedere [Richiamare una finestra di dialogo Stampa](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
   
@@ -75,8 +75,8 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [Stampa un documento XPS](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [Threading gestito e non gestito](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [Stampa un documento XPS](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
+ [Threading gestito e non gestito](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [isXPS.exe (strumento di conformità isXPS)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)

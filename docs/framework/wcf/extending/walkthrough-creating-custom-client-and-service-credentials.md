@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procedura: creare credenziali client e del servizio personalizzate
 In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzare credenziali personalizzate dal codice dell'applicazione.  
@@ -35,7 +35,7 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
  Entrambe le classi <xref:System.ServiceModel.Description.ClientCredentials> e <xref:System.ServiceModel.Description.ServiceCredentials> ereditano dalla classe astratta <xref:System.ServiceModel.Security.SecurityCredentialsManager> che definisce il contratto per la restituzione di <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le classi di credenziali e l'integrazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architettura di sicurezza, vedere [architettura di sicurezza](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le classi di credenziali e l'integrazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architettura di sicurezza, vedere [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Le implementazioni predefinite fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supportano i tipi di credenziali forniti dal sistema e creano un gestore del token di sicurezza in grado di gestire quei tipi di credenziali.  
   

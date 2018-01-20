@@ -17,21 +17,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Specifica se gli assembly da origini remote devono essere concesso l'attendibilità totale.  
   
 > [!NOTE]
->  Se si viene indirizzati a questo argomento, a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, vedere [procedura: utilizzare un Assembly dal Web in Visual Studio](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Se si viene indirizzati a questo argomento, a causa di un messaggio di errore nell'elenco di errori di progetto Visual Studio o un errore di compilazione, vedere [procedura: utilizzare un Assembly dal Web in Visual Studio](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
-\<runtime >  
-\<loadFromRemoteSources >  
+\<runtime>  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Sintassi  
   

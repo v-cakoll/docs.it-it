@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità dei gruppi di disponibilità AlwaysOn è stata aggiunta in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -41,6 +41,9 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Impostazione `MultiSubnetFailover` a `true` non è necessario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) o versioni successive.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
  Specificare sempre `MultiSubnetFailover=True` quando si stabilisce la connessione a un listener gruppo di disponibilità di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 o all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. `MultiSubnetFailover` abilita il failover più veloce per tutti gruppi di disponibilità o per l'istanza del cluster di failover in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, riducendo notevolmente il tempo di failover per le topologie AlwaysOn con una o più subnet. Durante il failover di più subnet, il client tenterà di stabilire connessioni in parallelo. Durante il failover di una subnet, riproverà continuamente la connessione TCP.  

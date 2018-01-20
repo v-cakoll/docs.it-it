@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-sql-reference"></a>Riferimento a Entity SQL
 In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. In questo argomento sono riepilogati e raggruppati i [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori per categoria.  
@@ -73,7 +73,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |[! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
 |[&#124; &#124; (OR logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR logico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Valuta un set di espressioni booleane per determinare il risultato.|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Il risultato di un [quando](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) clausola quando restituisce true.|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Il risultato di un [quando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clausola quando restituisce true.|  
   
 ## <a name="query-operators"></a>Operatori di query  
  Gli operatori di query sono usati per definire espressioni di query che restituiscono dati dell'entità. Nella tabella seguente sono elencati gli operatori di query.  

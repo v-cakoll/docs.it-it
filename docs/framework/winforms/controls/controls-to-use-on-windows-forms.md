@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controlli da usare in Windows Form
 Il seguente è un elenco alfabetico di controlli e componenti che possono essere usati in Windows Form. Oltre ai controlli Windows Form illustrati in questa sezione, è possibile aggiungere controlli ActiveX e personalizzati a Windows Form. Se il controllo necessario non è elencato qui, è possibile crearlo. Per informazioni dettagliate, vedere [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Per altre informazioni sulla scelta del controllo necessario, vedere [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -239,7 +239,7 @@ Il seguente è un elenco alfabetico di controlli e componenti che possono essere
  [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Fornisce collegamenti ad argomenti dettagliati, suggerimenti sul tipo di controllo da creare e altre informazioni sulla creazione dei controlli.  
   
- [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Fornisce una tabella che associa i controlli di Visual Basic 6.0 ai controlli corrispondenti di [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Si noti che i controlli ora sono classi in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Procedura: Aggiungere i controlli ActiveX a Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

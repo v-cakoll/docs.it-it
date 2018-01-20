@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e768bf3014afa2c9205ea80fe1d101b93d36fbc3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d51f07da73834fe9b7983605b4e27f42b717e73
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 Specifica le impostazioni per un'associazione usata per lo scambio di messaggi WS-MetadataExchange (WS-MEX) tramite TCP.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<mexTcpBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<mexTcpBinding>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.MexTcpBindingElement>  
@@ -71,5 +71,5 @@ Specifica le impostazioni per un'associazione usata per lo scambio di messaggi W
  [Metadati](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

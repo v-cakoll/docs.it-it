@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: eaccace7a333903e236107a72dbc17e19dc8d48a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4ffb3071e9788ef4442127118c00e23c8a11530b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Provider EntityClient per Entity Framework
 EntityClient è un provider di dati usato dalle applicazioni Entity Framework per accedere a dati descritti in un modello concettuale. Per informazioni sui modelli concettuale, vedere [modellazione e Mapping](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient usa altri provider di dati .NET Framework per accedere all'origine dati, ad esempio il provider di dati .NET Framework per SQL Server (SqlClient) in caso di accesso a un database SQL Server. Per informazioni sul provider SqlClient, vedere [SqlClient per Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Il provider EntityClient viene implementato nello spazio dei nomi <xref:System.Data.EntityClient>.  
@@ -51,7 +51,7 @@ EntityClient è un provider di dati usato dalle applicazioni Entity Framework pe
 ## <a name="managing-transactions"></a>Gestione di transazioni  
  In Entity Framework è possibile usare le transazioni in modo esplicito e in modo automatico. Le transazioni automatiche usano lo spazio dei nomi <xref:System.Transactions> e le transazioni esplicite usano la classe <xref:System.Data.EntityClient.EntityTransaction>.  
   
- Per aggiornare i dati esposti tramite un modello concettuale. vedere [procedura: gestire le transazioni in Entity Framework](http://msdn.microsoft.com/en-us/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
+ Per aggiornare i dati esposti tramite un modello concettuale. vedere [procedura: gestire le transazioni in Entity Framework](http://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Compilare una stringa di connessione EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -75,6 +75,6 @@ EntityClient è un provider di dati usato dalle applicazioni Entity Framework pe
  [Procedura: Esplorare relazioni con l'operatore Navigate](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di connessioni e transazioni](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Gestione di connessioni e transazioni](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Riferimenti per il linguaggio](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

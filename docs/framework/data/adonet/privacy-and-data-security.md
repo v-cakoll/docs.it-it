@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>Privacy e sicurezza dei dati
 La salvaguardia e la gestione di informazioni sensibili nelle applicazioni ADO.NET dipendono dai prodotti e dalle tecnologie sottostanti usati per crearle. ADO.NET non fornisce direttamente servizi per la protezione o la crittografia dei dati.  
   
 ## <a name="cryptography-and-hash-codes"></a>Crittografia e codici hash  
- In .NET Framework le classi nello spazio dei nomi <xref:System.Security.Cryptography> possono essere usate dalle applicazioni ADO.NET per impedire che i dati vengano letti o modificati da terze parti non autorizzate. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Il [servizi di crittografia](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781) argomento viene fornita una panoramica della crittografia in .NET Framework, descrive la modalità di implementazione cryptograph e come eseguire specifiche attività di crittografia.  
+ In .NET Framework le classi nello spazio dei nomi <xref:System.Security.Cryptography> possono essere usate dalle applicazioni ADO.NET per impedire che i dati vengano letti o modificati da terze parti non autorizzate. In alcuni casi si tratta di wrapper presenti nelle CryptoAPI di Microsoft non gestite, in altri semplicemente di implementazioni gestite. Il [servizi di crittografia](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) argomento viene fornita una panoramica della crittografia in .NET Framework, descrive la modalità di implementazione cryptograph e come eseguire specifiche attività di crittografia.  
   
  Diversamente dalla crittografia, che consente di crittografare i dati e di decrittografarli in un secondo momento, l'hash dei dati è un processo irreversibile. Risulta utile quando si desidera impedire la manomissione dei dati verificando che non siano stati alterati. Con stringhe di input identiche, gli algoritmi di hash producono sempre valori di output brevi facilmente confrontabili. [Integrità dei dati con i codici Hash](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) viene descritto come generare e verificare i valori hash.  
   

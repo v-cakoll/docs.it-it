@@ -15,17 +15,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 59c1c6be1f02477c7ad2d4c90d09173f9296d1e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Definisce un'associazione che fornisce supporto per l'accodamento mediante il routing dei messaggi tramite MSMQ.  
   
- \<System. ServiceModel >  
-\<associazioni >  
+ \<system.ServiceModel>  
+\<bindings>  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>Sintassi  
@@ -96,13 +96,13 @@ msmqIntegrationBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<sicurezza >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di associazione può essere usato per consentire alle applicazioni di Windows Communication Foundation (WCF) inviare e ricevere messaggi da applicazioni MSMQ esistenti che utilizzano COM, API native MSMQ o i tipi definiti nel <xref:System.Messaging?displayProperty=nameWithType> dello spazio dei nomi è può utilizzare questo elemento di configurazione per specificare come indirizzare la coda, le garanzie di trasferimento, se i messaggi devono essere archiviati in modo durevole e come i messaggi devono essere protetti e autenticati. Per ulteriori informazioni, vedere [come: messaggi di Exchange con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -144,8 +144,8 @@ msmqIntegrationBinding
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente di analizzare le tracce di diagnostica create da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il Visualizzatore di tracce dei servizi offre funzionalità per unire, visualizzare e filtrare facilmente i messaggi di traccia nel log che consentono di diagnosticare, risolvere e controllare i problemi relativi ai servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -421,9 +421,9 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
 |![Traccia di arresto dell'attività](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Traccia di interruzione dell’attività: traccia che indica l’interruzione di un’attività, . contenente il nome dell’attività. I progettisti dell’applicazione e gli sviluppatori devono definire una traccia d’interruzione dell’attività per ogni ID attività per origine di traccia. Nessuna traccia derivante da una determinata origine di traccia viene visualizzata dopo che venga generata un’interruzione dell’attività da parte dell’origine di traccia, a meno che la granularità del tempo di traccia non sia sufficientemente piccola. In questo caso, durante la visualizzazione, può verificarsi un’esecuzione interleave di due tracce della stessa durata, comprendenti un’interruzione. Se l'ID attività viene propagato attraverso origini di traccia per la correlazione tra tracce, è possibile vedere più Interruzioni per lo stesso ID attività (una per ogni origine di traccia). La traccia di interruzione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
 |![Traccia di sospensione dell'attività](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Traccia di sospensione dell’attività: traccia che indica il tempo di sospensione di un’attività. Nessuna traccia è generata in un'attività sospesa finché l'attività non riprende. Un'attività sospesa indica che non si sta verificando nessuna elaborazione in quell'attività nell'ambito dell'origine della traccia. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di sospensione viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
 |![Traccia riprendere le attività](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Traccia di ripresa dell'attività: traccia che indica il momento di ripresa di un’attività dopo la sospensione. Le tracce possono essere generate nuovamente in quell'attività. Le tracce di Sospensione/Ripresa sono utili per il profiling. La traccia di ripresa viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Trasferimento](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Trasferimento: traccia generata quando il flusso di controllo logico viene trasferito da un’attività all’altra. L'attività originaria del trasferimento può continuare ad eseguire le operazioni in parallelo con l'attività che riceve il trasferimento. La traccia di trasferimento viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
-|![Trasferimento da](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: traccia che definisce il trasferimento da un’altra attività all’attività corrente.|  
-|![Trasferire](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: traccia che definisce il trasferimento di un flusso di controllo logico dall’attività corrente a un’altra attività.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Trasferimento: traccia generata quando il flusso di controllo logico viene trasferito da un’attività all’altra. L'attività originaria del trasferimento può continuare ad eseguire le operazioni in parallelo con l'attività che riceve il trasferimento. La traccia di trasferimento viene emessa se è abilitata la funzione ActivityTracing per l'origine di traccia.|  
+|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Trasferimento da: traccia che definisce il trasferimento da un’altra attività all’attività corrente.|  
+|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Trasferimento a: traccia che definisce il trasferimento di un flusso di controllo logico dall’attività corrente a un’altra attività.|  
   
 ### <a name="wcf-traces"></a>Tracce WCF  
   
@@ -437,7 +437,7 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
   
 |Icona|Descrizione|  
 |----------|-----------------|  
-|![Attività](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Attività: indica che l'attività corrente è un'attività generica.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Attività: indica che l'attività corrente è un'attività generica.|  
 |![Attività radice](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Attività radice: indica l'attività radice di un processo.|  
   
 ### <a name="wcf-activities"></a>Attività WCF  
@@ -463,4 +463,4 @@ Lo strumento Visualizzatore di tracce dei servizi [!INCLUDE[indigo1](../../../in
 ## <a name="see-also"></a>Vedere anche  
  [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Configurazione delle funzionalità di traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Traccia di attività e della propagazione per la correlazione di traccia End-To-End](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Traccia di attività e della propagazione per la correlazione di traccia End-To-End](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

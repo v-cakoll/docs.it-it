@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9f0c8f0d2f9ed2471fab2eda17c7d9f9be5b77c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Definisce un'associazione in coda adatta per la comunicazione fra computer.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<netMsmqBinding >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netMsmqBinding>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -98,14 +98,14 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<sicurezza >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definisce le impostazioni di sicurezza per l'associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  L'associazione `netMsmqBinding` fornisce il supporto per la gestione tramite coda basata sul sistema di accodamento dei messaggi MSMQ come trasporto. Tale associazione fornisce inoltre il supporto per le applicazioni a regime di controllo libero, per l'isolamento degli errori, per la distribuzione ottimale dei carichi e per le operazioni disconnesse. Per una discussione su queste funzionalità, vedere [code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
@@ -147,8 +147,8 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Code in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

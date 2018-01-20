@@ -14,20 +14,20 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 92b496833cebbefbb97dd576ef3549d15b489aae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f6bf63a1da5385b884d67c582cd7d6577a6b67
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;security&gt; di &lt;msmqIntegrationBinding&gt;
 Definisce le impostazioni di sicurezza del trasporto per il canale di integrazione del servizio di accodamento messaggi (MSMQ).  
   
- \<System. ServiceModel >  
-\<associazioni >  
+ \<system.ServiceModel>  
+\<bindings>  
 msmqIntegrationBinding  
-\<associazione >  
-\<sicurezza >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,13 +60,13 @@ msmqIntegrationBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per il trasporto di integrazione di Accodamento messaggi. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Definisce le impostazioni di sicurezza per il trasporto di integrazione di Accodamento messaggi. L'elemento è di tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazione >](../../../../../docs/framework/misc/binding.md)|L'elemento di associazione di [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|L'elemento di associazione di [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
@@ -77,6 +77,6 @@ msmqIntegrationBinding
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)  
- [\<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

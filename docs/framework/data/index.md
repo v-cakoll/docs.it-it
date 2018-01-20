@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dati e modellazione in .NET Framework
 In questa sezione vengono fornite informazioni su come accedere ai dati mediante ADO.NET, LINQ (Language Integrated Query), WCF Data Services e XML.  
@@ -31,7 +31,7 @@ In questa sezione vengono fornite informazioni su come accedere ai dati mediante
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Viene descritta l'architettura ADO.NET e viene illustrato come usare le classi ADO.NET per gestire i dati dell'applicazione e interagire con le origini dati, incluse Microsoft SQL Server, le origini dati OLE DB e XML.  
   
- [Portale LINQ](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [Portale LINQ](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Vengono forniti collegamenti alla documentazione relativa a LINQ (Language Integrated Query).  
   
  [Elaborazione delle transazioni](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ In questa sezione vengono fornite informazioni su come accedere ai dati mediante
  [Documenti e dati XML](../../../docs/standard/data/xml/index.md)  
  Viene descritto un set completo e integrato di classi che vengono usate con documenti e dati XML in .NET Framework.  
   
- [Riferimento agli standard XML](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Riferimento agli standard XML](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Vengono fornite informazioni di riferimento sugli standard XML supportati da Microsoft.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

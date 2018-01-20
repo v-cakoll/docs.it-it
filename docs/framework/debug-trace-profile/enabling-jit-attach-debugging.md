@@ -17,11 +17,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae0b692c99f6682c6854292c230490637ad45727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-jit-attach-debugging"></a>Attivazione dell'esecuzione del debug ad associazione JIT
 Il termine debug ad associazione JIT indica l'associazione di un debugger a un processo in caso di errori. Può anche essere attivato da specifici metodi o funzioni.  
@@ -47,4 +47,4 @@ Il termine debug ad associazione JIT indica l'associazione di un debugger a un p
 ## <a name="see-also"></a>Vedere anche  
  [Debug, traccia e profilatura](../../../docs/framework/debug-trace-profile/index.md)  
  [Semplificazione del debug di un'immagine](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [Abilitazione della funzione di profilatura](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Abilitazione della funzione di profilatura](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

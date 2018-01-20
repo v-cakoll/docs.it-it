@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Elemento di configurazione usato per specificare le impostazioni relative a Web Socket.  
   
-\<System. ServiceModel >  
-\<associazioni >  
-\<netHttpBinding >  
+\<system.ServiceModel>  
+\<bindings>  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,13 +69,13 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
 |Never|Non usare mai il protocollo Web Socket.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|\<netHttpBinding >|Specifica NetHttpBinding|  
+|\<netHttpBinding>|Specifica NetHttpBinding|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il \<webSocketSettings > elemento.  
@@ -103,5 +103,5 @@ Elemento di configurazione usato per specificare le impostazioni relative a Web 
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

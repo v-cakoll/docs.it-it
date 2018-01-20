@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Scrittura di app grandi e reattive in .NET Framework
 Questo articolo include suggerimenti per il miglioramento delle prestazioni delle app .NET Framework di grandi dimensioni o di app che elaborano una quantità elevata di dati, ad esempio file o database. Questi suggerimenti derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e l'articolo include diversi esempi concreti tratti dal compilatore C#.  
@@ -47,7 +47,7 @@ Questo articolo include suggerimenti per il miglioramento delle prestazioni dell
  È consigliabile definire obiettivi per le prestazioni relative a esperienze utente o scenari chiave dell'app e scrivere test per la misurazione delle prestazioni.  Esaminare i test che rilevano errori applicando un metodo scientifico: usare i profili come indicazione, definire ipotesi sulla natura del problema e testare le ipotesi tramite un esperimento o una modifica del codice.  Stabilire misure di base per le prestazioni nel tempo grazie a testing regolare, in modo da potere isolare le modifiche che provocano una regressione nelle prestazioni.  Un approccio rigoroso alle operazioni relative alle prestazioni permette di evitare di perdere tempo con aggiornamenti di codice superflui.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Considerazione 3: La qualità degli strumenti è essenziale  
- Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia.  Microsoft offre diversi strumenti relativi alle prestazioni, ad esempio il [profiler di Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), lo [strumenti di analisi di Windows Phone](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Gli strumenti efficaci permettono di individuare rapidamente i problemi principali a livello di prestazioni (CPU, memoria o disco) e semplificano l'individuazione del codice che provoca tali colli di bottiglia.  Microsoft offre diversi strumenti relativi alle prestazioni, ad esempio il [profiler di Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), lo [strumenti di analisi di Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView è uno strumento gratuito e straordinariamente efficace che permette di concentrarsi sui problemi essenziali, ad esempio I/O del disco, eventi GC e memoria.  È possibile acquisire eventi ETW ([Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md)) relativi alle prestazioni e visualizzare con facilità le informazioni specifiche per app, processi, stack e thread.  PerfView mostra la quantità e il tipo di memoria allocata dall'app e le quantità di memoria allocate da quali funzioni o stack di chiamata. Per informazioni dettagliate, vedere gli esaurienti argomenti, demo e video inclusi con lo strumento (ad esempio le [esercitazioni relative a PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) su Channel 9).  
   
@@ -286,7 +286,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Questa semplice strategia per la memorizzazione nella cache rispetta le indicazioni per una progettazione ottimale della cache, poiché prevede un limite per le dimensioni.  La quantità di codice, tuttavia, è superiore rispetto all'originale e ciò comporta maggiori costi di gestione.  È consigliabile adottare la strategia per la memorizzazione nella cache solo se si sono verificati problemi di prestazioni e se PerfView ha mostrato che le allocazioni di <xref:System.Text.StringBuilder> contribuiscono in modo significativo a questi problemi.  
   
 ### <a name="linq-and-lambdas"></a>LINQ ed espressioni lambda  
- L'uso di espressioni LINQ (Language Integrated Query) e lambda è un ottimo esempio di uso di funzionalità produttive che potrebbe essere necessario riscrivere in seguito se l'impatto del codice sulle prestazioni risulta significativo.  
+ L'uso di espressioni LINQ (Language Integrated Query) e di espressioni lambda è un ottimo esempio di uso di funzionalità produttive che potrebbe essere necessario riscrivere in seguito se l'impatto del codice sulle prestazioni risulta significativo.  
   
  **Esempio 5: Espressioni lambda, List\<T> e IEnumerable\<T>**  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0717e3b7f4dc72c2e5a75149b88f1f1d1285dad1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0969a9e88dee4a8d7e298ff4510211f49e8a6e35
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="combobox"></a>ComboBox
 Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti con un elenco di opzioni. L'elenco viene visualizzato e nascosto quando il controllo consente di espandere e compressa. Nello stato predefinito, l'elenco è compressa, la visualizzazione sola opzione. L'utente sceglie un pulsante per visualizzare l'elenco completo delle opzioni.  
@@ -33,7 +33,7 @@ Il <xref:System.Windows.Controls.ComboBox> consente di visualizzare gli utenti c
 Comprimere ed espandere  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: ottenere un oggetto ComboBoxItem](http://msdn.microsoft.com/en-us/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Procedura: ottenere un oggetto ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.ComboBox>

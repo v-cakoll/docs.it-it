@@ -1,5 +1,5 @@
 ---
-title: '&lt;NET. TCP&gt;'
+title: '&lt;net.tcp&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3d22b6feef80dbff8c7f20b130ce2b0f9702c9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltnettcpgt"></a>&lt;NET. TCP&gt;
+# <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Specifica le impostazioni di configurazione per il servizio di condivisione porte NET.TCP, che consente a più processi di condividere la stessa porta TCP.  
   
- \<system.serviceModel.activation >  
-\<NET >  
+ \<system.serviceModel.activation>  
+\<net.tcp>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +73,7 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Raccolta di elementi di configurazione che contiene un attributo `securityIdentifier` per specificare account utente per processi che ospitano servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e ai quali è concesso l'accesso al servizio di condivisione.|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Raccolta di elementi di configurazione che contiene un attributo `securityIdentifier` per specificare account utente per processi che ospitano servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e ai quali è concesso l'accesso al servizio di condivisione.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -82,9 +82,9 @@ Specifica le impostazioni di configurazione per il servizio di condivisione port
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla condivisione delle porte, vedere [condivisione porta Net. TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded). Per comprendere come configurare il servizio di condivisione delle porte, vedere [la configurazione del servizio di condivisione porta Net. TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Per ulteriori informazioni sulla condivisione delle porte, vedere [condivisione porta Net. TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Per comprendere come configurare il servizio di condivisione delle porte, vedere [la configurazione del servizio di condivisione porta Net. TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Condivisione delle porte Net.TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configurazione del servizio di condivisione delle porte Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Condivisione delle porte Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Configurazione del servizio di condivisione delle porte Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

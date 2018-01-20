@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd44502b5aa07e1421b6b226188155cac56d3473
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 60328d766a931abd7a1a3e9dc08c68928e01f2d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Recupero di dati tramite un oggetto DataReader
 Recupero di dati mediante un **DataReader** comporta la creazione di un'istanza del **comando** oggetto e quindi creando un **DataReader** chiamando  **Command. ExecuteReader** per recuperare righe da un'origine dati. Nell'esempio seguente viene illustrato l'utilizzo un **DataReader** in `reader` rappresenta un DataReader valido e `command` rappresenta un oggetto Command valido.  
@@ -260,7 +260,7 @@ adapter.Fill(ds);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di DataReader](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Utilizzo di DataReader](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Recupero di informazioni sullo schema del database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

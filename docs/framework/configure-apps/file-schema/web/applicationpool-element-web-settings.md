@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; elemento (impostazioni Web)
 Specifica le impostazioni di configurazione che sono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguita in modalità integrata in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versione successiva.  
@@ -72,7 +72,7 @@ Specifica le impostazioni di configurazione che sono utilizzate da ASP.NET per g
   
  Per il `maxConcurrentRequestsPerCPU` impostazione, l'impostazione predefinita "5000" il [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in modo efficace consente di disattivare la limitazione delle richieste controllata da ASP.NET, a meno che non effettivamente 5000 o più richieste per ogni CPU. L'impostazione predefinita dipende invece il pool di thread CLR per gestire automaticamente la concorrenza per CPU. L'aumento del limite predefinito in saranno vantaggioso per le applicazioni che usano ampiamente elaborazione asincrona della richiesta o che hanno un numero di richieste a esecuzione prolungata bloccate sui / o, rete di [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Impostazione `maxConcurrentRequestsPerCPU` su zero disattiva l'utilizzo di thread gestiti per l'elaborazione delle richieste ASP.NET. Quando un'applicazione viene eseguita in un pool di applicazioni IIS, le richieste restano nel thread dei / o IIS e pertanto la concorrenza è limitata dalle impostazioni di thread IIS.  
   
- Il `requestQueueLimit` impostazione funziona esattamente come il `requestQueueLimit` attributo del [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) elemento, che è impostato nel file Web. config per le applicazioni ASP.NET. Tuttavia, il `requestQueueLimit` esegue l'override di impostazione in un file Aspnet. config di `requestQueueLimit` impostazione in un file Web. config. In altre parole, se sono impostati entrambi gli attributi (per impostazione predefinita, questo è true), il `requestQueueLimit` impostazione nel file Aspnet. config ha la precedenza.  
+ Il `requestQueueLimit` impostazione funziona esattamente come il `requestQueueLimit` attributo del [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) elemento, che è impostato nel file Web. config per le applicazioni ASP.NET. Tuttavia, il `requestQueueLimit` esegue l'override di impostazione in un file Aspnet. config di `requestQueueLimit` impostazione in un file Web. config. In altre parole, se sono impostati entrambi gli attributi (per impostazione predefinita, questo è true), il `requestQueueLimit` impostazione nel file Aspnet. config ha la precedenza.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo ASP.NET nel file Aspnet. config nelle circostanze seguenti:  

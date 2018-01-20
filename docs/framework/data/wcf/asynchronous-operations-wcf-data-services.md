@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 18e8be0668fa13c43f31d5314cacf91165ba8519
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79112878141fd791c2fba183d2d1fec9f1b7044
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operazioni asincrone (WCF Data Services)
 Le applicazioni Web devono includere una latenza tra client e server superiore a quella delle applicazioni eseguite in reti interne. Per ottimizzare le prestazioni e l'esperienza utente dell'applicazione, si consiglia di usare i metodi asincroni delle classi <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> in caso di accesso ai server di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sul Web.  
@@ -45,7 +45,7 @@ Le applicazioni Web devono includere una latenza tra client e server superiore a
 |Salvataggio di modifiche nell'oggetto <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Considerazioni sul threading per operazioni asincrone  
- In un'applicazione a thread multipli, che viene registrato come un callback per l'operazione asincrona viene richiamato il delegato non necessariamente sullo stesso thread che è stato utilizzato per chiamare il *iniziare* metodo, che crea la richiesta iniziale. In un'applicazione in cui il callback deve essere richiamato su un thread specifico, è necessario effettuare il marshalling esplicito l'esecuzione del *fine* metodo che gestisce la risposta, al thread desiderato. Nelle applicazioni basate su Windows Presentation Foundation (WPF) e su Silverlight è ad esempio necessario che il marshalling della risposta venga effettuato di nuovo al thread dell'interfaccia utente usando il metodo <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> sull'oggetto <xref:System.Windows.Threading.Dispatcher>. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati (WCF Data Services/Silverlight)](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
+ In un'applicazione a thread multipli, che viene registrato come un callback per l'operazione asincrona viene richiamato il delegato non necessariamente sullo stesso thread che è stato utilizzato per chiamare il *iniziare* metodo, che crea la richiesta iniziale. In un'applicazione in cui il callback deve essere richiamato su un thread specifico, è necessario effettuare il marshalling esplicito l'esecuzione del *fine* metodo che gestisce la risposta, al thread desiderato. Nelle applicazioni basate su Windows Presentation Foundation (WPF) e su Silverlight è ad esempio necessario che il marshalling della risposta venga effettuato di nuovo al thread dell'interfaccia utente usando il metodo <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> sull'oggetto <xref:System.Windows.Threading.Dispatcher>. Per ulteriori informazioni, vedere [l'esecuzione di query del servizio dati (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] si verifica tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -49,7 +49,7 @@ Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indi
  Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][La distribuzione di un servizio WCF ospitato in servizi di Internet Information](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definizione degli indirizzi endpoint nella configurazione  
- Per definire un endpoint in un file di configurazione, utilizzare il [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+ Per definire un endpoint in un file di configurazione, utilizzare il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

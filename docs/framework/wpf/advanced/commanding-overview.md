@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commanding-overview"></a>Cenni preliminari sull'esecuzione di comandi
 <a name="introduction"></a> I comandi sono un meccanismo di input in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] che consente la gestione dell'input a un livello più semantico rispetto all'input dei dispositivi. Sono esempi di comandi le operazioni **Copia**, **Taglia** e **Incolla** disponibili in molte applicazioni.  
@@ -202,5 +202,5 @@ ms.lasthandoff: 12/22/2017
  [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Cenni preliminari sugli eventi indirizzati](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Implementare ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [How to: Add a Command to a MenuItem (Procedura: Aggiungere un comando a un MenuItem)](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
+ [How to: Add a Command to a MenuItem (Procedura: Aggiungere un comando a un MenuItem)](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [Create a Custom RoutedCommand Sample (Creare un esempio di oggetto RoutedCommand personalizzato)](http://go.microsoft.com/fwlink/?LinkID=159980)

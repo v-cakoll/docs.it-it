@@ -1,5 +1,5 @@
 ---
-title: '&lt;personalizzato&gt;'
+title: '&lt;custom&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bcab1e8361448abfe14db8ac38a924c656b9065
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ba9c8f6fa5bf574bdcaa9cb46b6c666e7117a9a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltcustomgt"></a>&lt;personalizzato&gt;
+# <a name="ltcustomgt"></a>&lt;custom&gt;
 Specifica le impostazioni di un servizio resolver peer personalizzato.  
   
-\<System. ServiceModel >  
-\<associazioni >  
-\<netPeerBinding >  
-\<associazione >  
-\<resolver >  
-\<personalizzate >  
+\<system.serviceModel>  
+\<bindings>  
+\<netPeerBinding>  
+\<binding>  
+\<resolver>  
+\<custom>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,17 +54,17 @@ Specifica le impostazioni di un servizio resolver peer personalizzato.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<identità >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità dei resolver peer personalizzati configurati per questo elemento. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
-|[\<intestazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Raccolta di intestazioni di indirizzo usate per i messaggi SOAP gestiti dal resolver peer personalizzato.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Specifica l'identità dei resolver peer personalizzati configurati per questo elemento. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Raccolta di intestazioni di indirizzo usate per i messaggi SOAP gestiti dal resolver peer personalizzato.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<resolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Resolver peer usato per risolvere un ID della rete di peer in un set di indirizzi di nodo peer che rappresenta alcuni nodi appartenenti alla rete.|  
+|[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Resolver peer usato per risolvere un ID della rete di peer in un set di indirizzi di nodo peer che rappresenta alcuni nodi appartenenti alla rete.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento definisce le impostazioni di base per un servizio resolver peer personalizzato, inclusi l'indirizzo dell'endpoint del peer che ospita il servizio e le impostazioni dell'associazione specifiche. Per ulteriori informazioni sulla creazione di un sistema di risoluzione personalizzato, vedere [aggiunta di un Resolver personalizzato a un'applicazione di PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419).  
+ Questo elemento definisce le impostazioni di base per un servizio resolver peer personalizzato, inclusi l'indirizzo dell'endpoint del peer che ospita il servizio e le impostazioni dell'associazione specifiche. Per ulteriori informazioni sulla creazione di un sistema di risoluzione personalizzato, vedere [aggiunta di un Resolver personalizzato a un'applicazione di PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -72,4 +72,4 @@ Specifica le impostazioni di un servizio resolver peer personalizzato.
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Aggiunta di un Resolver personalizzato a un'applicazione il canale peer](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Aggiunta di un Resolver personalizzato a un'applicazione il canale peer](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

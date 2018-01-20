@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, l'illustrazione seguente mostra la distribuzione standard delle applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in coda.  
@@ -57,7 +57,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  L'indirizzo della coda viene utilizzato dal listener come URI di ascolto da cui leggere i messaggi. In altre parole, l'indirizzo della coda è equivalente alla porta di ascolto del socket TCP.  
   
- Un endpoint che legge da una coda deve specificare l'indirizzo della coda utilizzando lo stesso schema specificato in precedenza per l'apertura di ServiceHost. Per esempi, vedere [di associazione Net MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) e [esempi associazione di integrazione di Accodamento messaggi messaggio](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Un endpoint che legge da una coda deve specificare l'indirizzo della coda utilizzando lo stesso schema specificato in precedenza per l'apertura di ServiceHost. Per esempi, vedere [di associazione Net MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) e [esempi associazione di integrazione di Accodamento messaggi messaggio](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Contratti multipli in una coda  
  I messaggi di una coda possono implementare più contratti. In questo caso, per leggere ed elaborare tutti i messaggi, è essenziale applicare uno degli approcci seguenti:  
@@ -83,9 +83,9 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
 |Indirizzo di coda basato sugli URI WCF|Impostazione della proprietà UseActiveDirectory|Impostazione della proprietà QueueTransferProtocol|Nomi di formato di MSMQ risultanti|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.MSMQ://\<nome computer >/private/abc|False (impost. predef.)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
-|Net.MSMQ://\<nome computer >/private/abc|False|SRMP|DIRECT=http://computer/msmq/private$/abc|  
-|Net.MSMQ://\<nome computer >/private/abc|True|Nativo|PUBLIC=guid (GUID della coda)|  
+|Net.msmq://\<machine-name>/private/abc|False (impost. predef.)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://computer/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|True|Nativo|PUBLIC=guid (GUID della coda)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lettura dei messaggi dalla coda dei messaggi non recapitabili o dalla coda dei messaggi non elaborabili  
  Per leggere i messaggi da una coda di messaggi non elaborabili che è una coda secondaria della coda di destinazione, aprire l'elemento `ServiceHost` con l'indirizzo della coda secondaria.  
@@ -105,7 +105,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>Associazione MsmqIntegrationBinding e indirizzamento del servizio  
  L'associazione `MsmqIntegrationBinding` viene utilizzata per comunicare con le applicazioni MSMQ tradizionali. Per facilitare l'interoperazione con le applicazioni MSMQ esistenti, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta solo l'indirizzamento del nome di formato. Di conseguenza, i messaggi inviati tramite questa associazione devono attenersi allo schema degli URI seguente:  
   
- MSMQ. FormatName:\<*nome di formato MSMQ*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  Il nome di formato MSMQ è nel formato specificato da MSMQ in [sull'accodamento](http://go.microsoft.com/fwlink/?LinkId=94837).  
   

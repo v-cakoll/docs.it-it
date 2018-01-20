@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>Enumerazione CorOpenFlags
 Contiene valori di flag che controllano il comportamento dei metadati all'apertura di file manifesto.  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Obsoleto. Questo flag viene ignorato.|  
 |`ofManifestMetadata`|Obsoleto. Questo flag viene ignorato.|  
 |`ofReadOnly`|Indica che il file deve essere aperto in lettura e che una chiamata a `QueryInterface` per un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) non può essere impostato.|  
-|`ofTakeOwnership`|Indica che la memoria allocata tramite una chiamata a [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) e verrà liberata dai metadati.|  
+|`ofTakeOwnership`|Indica che la memoria allocata tramite una chiamata a [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) e verrà liberata dai metadati.|  
 |`ofNoTypeLib`|Obsoleta. Questo flag viene ignorato.|  
 |`ofNoTransform`|Indica che le trasformazioni automatiche dei file con estensione winmd devono essere disabilitate. In altre parole, la proiezione di un tipo di Windows Runtime in un tipo di .NET Framework deve essere disabilitata. Per ulteriori informazioni, vedere [sottostante parte integrante di Windows Runtime e .NET](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Riservato per uso interno.|  

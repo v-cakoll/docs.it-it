@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>Considerazioni sullo sviluppo e sulla distribuzione
 Negli argomenti inclusi in questa sezione vengono affrontati problemi relativi allo sviluppo o alla distribuzione di un'applicazione basata su ADO.NET Entity Framework.  
@@ -36,4 +36,4 @@ Negli argomenti inclusi in questa sezione vengono affrontati problemi relativi a
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Panoramica di Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Introduzione](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [Strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

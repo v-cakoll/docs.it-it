@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 La protezione di un'applicazione è un processo costante. Lo sviluppatore non sarà mai in grado di garantire l'assoluta sicurezza di un'applicazione da tutti gli attacchi, in quanto non è possibile prevedere i tipi di attacchi che consentiranno di elaborare le nuove tecnologie. Al contrario, proprio perché nessuno ha ancora individuato (o pubblicato) i punti deboli nella sicurezza di un sistema, questo non implica che non ne esista nessuno. Durante la fase di progettazione del progetto è necessario pianificare la sicurezza nonché le procedure previste di manutenzione per l'intera durata dell'applicazione.  
@@ -78,7 +78,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
-|[Sicurezza dall'accesso di codice](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
+|[Sicurezza dall'accesso di codice](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
   
 ## <a name="database-security"></a>Sicurezza dei database  
  Il principio dei privilegi minimi si applica anche all'origine dati. Le linee guida generali per la sicurezza dei database includono:  
@@ -100,7 +100,7 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Viene fornita una panoramica delle funzionalità di sicurezza di SQL Server, nonché scenari per la creazione di applicazioni ADO.NET protette da usare con SQL Server.|  
-|[Indicazioni per strategie di accesso ai dati](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
+|[Indicazioni per strategie di accesso ai dati](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Vengono forniti suggerimenti per l'accesso ai dati e l'esecuzione di operazioni di database.|  
   
 ## <a name="security-policy-and-administration"></a>Amministrazione e criteri di sicurezza  
  Se i criteri di sicurezza dall'accesso di codice vengono amministrati in modo non corretto, possono verificarsi problemi di sicurezza. Una volta distribuita l'applicazione, è necessario usare tecniche per il monitoraggio della sicurezza e valutare i rischi quando emergono nuove minacce.  
@@ -109,11 +109,11 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[NIB: Gestione criteri di protezione](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
-|[NIB: Criteri le procedure consigliate](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
+|[NIB: Gestione criteri di protezione](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fornisce informazioni sulla creazione e sull'amministrazione dei criteri di sicurezza.|  
+|[NIB: Criteri le procedure consigliate](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Vengono forniti collegamenti ad argomenti in cui viene descritto come amministrare i criteri di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)  
+ [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE: Sicurezza nel codice nativo e .NET Framework)  
  [Sicurezza di SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

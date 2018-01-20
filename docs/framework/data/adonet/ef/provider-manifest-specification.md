@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="provider-manifest-specification"></a>Specifica del manifesto del provider
 Questa sezione illustra come un provider dell'archivio dati può supportare i tipi e le funzioni di tale archivio.  
@@ -102,7 +102,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Uso di un token del manifesto del provider  
- Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. il SSDL consente di specificare un ProviderManifestToken (vedere [elemento dello Schema (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222) per altre informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
+ Per lo scenario offline il token viene scelto dalla rappresentazione SSDL. il SSDL consente di specificare un ProviderManifestToken (vedere [elemento dello Schema (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) per altre informazioni). Se ad esempio non è possibile aprire una connessione, in SSDL è disponibile un token del manifesto del provider che specifica informazioni sul manifesto.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  

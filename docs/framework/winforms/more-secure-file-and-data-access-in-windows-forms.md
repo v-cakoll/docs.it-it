@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
@@ -362,7 +362,7 @@ public void Write()
 ## <a name="database-access"></a>Accesso a database  
  Le autorizzazioni necessarie per accedere a un database variano in base al provider del database. Tuttavia, solo le applicazioni in esecuzione con le autorizzazioni appropriate possono accedere a un database tramite una connessione dati. Per ulteriori informazioni sulle autorizzazioni necessarie per accedere a un database, vedere [sicurezza dall'accesso di codice e ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per ulteriori informazioni vedere [servizi Web in ASP.NET AJAX](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) o [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per ulteriori informazioni vedere [servizi Web in ASP.NET AJAX](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) o [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Accesso al Registro di sistema  
  La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di provare ad accedere al Registro di sistema. Non garantisce l'accesso, perché il sistema operativo continua ad applicare la sicurezza al Registro di sistema.  

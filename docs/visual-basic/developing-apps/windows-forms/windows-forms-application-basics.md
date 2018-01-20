@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Nozioni fondamentali relative alle applicazioni Windows Forms (Visual Basic)
 Una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è la possibilità di creare applicazioni Windows Form che vengono eseguite localmente nei computer degli utenti. È possibile utilizzare Visual Studio per creare l'applicazione e interfaccia utente tramite Windows Form. Un'applicazione Windows Forms è basata su classi di <xref:System.Windows.Forms> dello spazio dei nomi.  
@@ -50,9 +50,9 @@ Una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è la possib
   
  Per informazioni dettagliate sull'utilizzo di queste funzionalità, vedere gli argomenti della Guida seguente.  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
-|Creare una nuova applicazione Windows Form con[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Procedura dettagliata: Creazione di un Windows Form semplice](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Creare una nuova applicazione Windows Form con[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Procedura dettagliata: Creazione di un Windows Form semplice](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Utilizzare i controlli nel form|[Procedura: Aggiungere controlli a un Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Creare grafici con<xref:System.Drawing>|[Introduzione alla programmazione grafica](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Creare controlli personalizzati|[Procedura: Ereditare dalla classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -70,7 +70,7 @@ Una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è la possib
   
  Per informazioni dettagliate sull'utilizzo di queste funzionalità, vedere gli argomenti della Guida seguente.  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
 |Utilizzare il <xref:System.Windows.Forms.BindingSource> componente|[Procedura: associare controlli Windows Forms al componente BindingSource usando la finestra di progettazione](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |Lavorare con [!INCLUDE[vstecado](~/includes/vstecado-md.md)] origini dati|[Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
@@ -85,7 +85,7 @@ Una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è la possib
   
  Per un'introduzione completa a [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], vedere [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Per informazioni dettagliate sull'utilizzo di queste funzionalità, vedere gli argomenti della Guida seguenti:  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
 |Distribuire un'applicazione con[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Procedura: Pubblicare un'applicazione ClickOnce mediante la Pubblicazione guidata](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Aggiorna un [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] distribuzione|[Procedura: Gestire gli aggiornamenti per un'applicazione ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -96,7 +96,7 @@ Una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è la possib
   
  Per informazioni dettagliate sull'utilizzo di queste funzionalità, vedere gli argomenti della Guida seguenti:  
   
-|Per|Vedere|  
+|A|Vedere|  
 |--------|---------|  
 |Stampare il contenuto di un form|[Procedura: stampare grafica in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Procedura: stampare un file di testo con più pagine in Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Altre informazioni sulla sicurezza di Windows Form|[Panoramica della sicurezza in Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  

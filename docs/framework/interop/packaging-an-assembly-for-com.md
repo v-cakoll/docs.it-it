@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>Preparazione di un assembly per COM
 Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui tipi gestiti che prevedono di incorporare nella propria applicazione:  
@@ -47,7 +47,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
   
      Le classi gestite che implementano l'interfaccia di classe (interfaccia generata dall'interoperabilità COM) sono soggette a restrizioni di controllo delle versioni.  
   
-     Per istruzioni sull'uso dell'interfaccia della classe, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Per istruzioni sull'uso dell'interfaccia della classe, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 -   Istruzioni di distribuzione  
   
@@ -69,7 +69,7 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
   
      Indipendentemente dal meccanismo scelto, solo i tipi pubblici definiti nell'assembly specificato vengono inclusi nella libreria dei tipi generata.  
   
-     È possibile creare un pacchetto per una libreria dei tipi come file separato o incorporarlo come file di risorse Win32 all'interno di un'applicazione basata su NET. In Microsoft Visual Basic 6.0 questa operazione viene eseguita automaticamente. Tuttavia, quando si usa [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], è necessario incorporare manualmente la libreria dei tipi. Per istruzioni, vedere [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni basate su .NET](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     È possibile creare un pacchetto per una libreria dei tipi come file separato o incorporarlo come file di risorse Win32 all'interno di un'applicazione basata su NET. In Microsoft Visual Basic 6.0 questa operazione viene eseguita automaticamente. Tuttavia, quando si usa [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], è necessario incorporare manualmente la libreria dei tipi. Per istruzioni, vedere [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni basate su .NET](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Utilità di esportazione della libreria dei tipi  
@@ -94,8 +94,8 @@ Gli sviluppatori COM possono trarre vantaggio dalle informazioni seguenti sui ti
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Qualificazione di tipi .NET per l'interoperabilità](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Introduzione all'interfaccia di classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Introduzione all'interfaccia di classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Considerazioni sulla sicurezza degli assembly](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Registrazione di assembly presso COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Procedura: incorporare librerie dei tipi come risorse Win32 nelle applicazioni](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

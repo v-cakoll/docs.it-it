@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Esporre il contenuto di una tabella utilizzando l'automazione interfaccia utente
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Esempio di codice seguente viene illustrato come ottenere un <xref:System.Windows.Automation.AutomationElement> che rappresenta il contenuto di una cella della tabella; vengono inoltre ottenere le proprietà di cella, ad esempio gli indici di riga e colonna, riga e colonna intervalli e informazioni di intestazione di riga e colonna. In questo esempio viene utilizzato un gestore dell'evento cambia lo stato attivo per simulare l'attraversamento della tastiera di un controllo tabulare che implementa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informazioni per ogni elemento della tabella viene esposto in un evento di modifica dello stato attivo.  
   
 > [!NOTE]
->  Poiché le modifiche di stato attivo sono eventi globali del desktop, eventi di modifica dello stato attivo all'esterno della tabella devono essere filtrati. Vedere il [TrackFocus Sample](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) per un'implementazione correlata.  
+>  Poiché le modifiche di stato attivo sono eventi globali del desktop, eventi di modifica dello stato attivo all'esterno della tabella devono essere filtrati. Vedere il [TrackFocus Sample](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) per un'implementazione correlata.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

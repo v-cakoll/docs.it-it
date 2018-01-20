@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Informazioni su Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è un framework per la compilazione di applicazioni orientate ai servizi. Grazie a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]è possibile inviare dati come messaggi asincroni da un endpoint del servizio a un altro. Un endpoint del servizio può appartenere a un servizio disponibile in modo continuo ospitato da IIS oppure essere un servizio ospitato in un'applicazione. Un endpoint può essere un client di un servizio che richiede dati da un endpoint del servizio. Il messaggio può essere semplice come una parola o come un singolo carattere inviato in formato XML o complesso come un flusso di dati binari. Di seguito vengono indicati alcuni scenari di esempio:  
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [Esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Guida alla documentazione](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

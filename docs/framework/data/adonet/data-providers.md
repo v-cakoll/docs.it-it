@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-data-providers"></a>Provider di dati .NET Framework
 Un provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] consente di effettuare una connessione a un database, eseguire comandi e recuperare risultati. Tali risultati vengono elaborati direttamente, inseriti in un oggetto <xref:System.Data.DataSet> in modo da consentirne l'esposizione all'utente se necessario, combinati con dati provenienti da più origini o elaborati in modalità remota tra livelli. I provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] presentano una struttura semplice e creano un livello minimo tra l'origine dati e il codice, migliorando quindi le prestazioni senza compromettere le funzionalità.  
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]' Il Provider di dati per Oracle|Consigliato per applicazioni a un solo livello o a livello intermedio che usano origini dati Oracle.|  
   
 ## <a name="entityclient-provider"></a>Provider EntityClient  
- Il provider EntityClient è usato per l'accesso ai dati basati su Entity Data Model (EDM). A differenza degli altri provider di dati .NET Framework, non interagisce direttamente con un'origine dati, ma usa Entity SQL per comunicare con il provider di dati sottostante. Per altre informazioni, vedere [EntityClient and Entity SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Il provider EntityClient è usato per l'accesso ai dati basati su Entity Data Model (EDM). A differenza degli altri provider di dati .NET Framework, non interagisce direttamente con un'origine dati, ma usa Entity SQL per comunicare con il provider di dati sottostante. Per ulteriori informazioni, vedere [EntityClient ed Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  

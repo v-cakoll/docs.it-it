@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7698e280aeae29e11a7f1eba0137d83b3015d525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84811c70f2f3608c10d8886900169f804a8c9b62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; di &lt;netNamedPipeBinding&gt;
 Definisce le impostazioni di sicurezza del trasporto per una named pipe.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<netNamedPipeBinding >  
-\<associazione >  
-\<sicurezza >  
-\<trasporto >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netNamedPipeBinding>  
+\<binding>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,13 +52,13 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
 |protectionLevel|Definisce il livello di protezione della named pipe. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessuna protezione.<br />-Sign: I messaggi vengono firmati.<br />-EncryptAndSign: I messaggi vengono crittografati e firmati.<br /><br /> Il valore predefinito è EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<sicurezza >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definisce le impostazioni di sicurezza per un'associazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.NamedPipeTransportSecurity>  
@@ -68,5 +68,5 @@ Definisce le impostazioni di sicurezza del trasporto per una named pipe.
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

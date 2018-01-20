@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-to-peer-networking"></a>Rete peer-to-peer
 Il canale peer è una tecnologia di comunicazione peer-to-peer (P2P) a più parti disponibile in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Fornisce un canale di comunicazione P2P basato su messaggi sicuro e scalabile per gli sviluppatori di applicazioni. Un esempio comune di applicazione a più parti che può trarre vantaggio da un canale peer è rappresentato da un'applicazione collaborativa, ad esempio una chat, in cui un gruppo di persone comunica l'una con l'altra mediante un sistema peer-to-peer senza server. Il canale peer consente la collaborazione P2P, la distribuzione di contenuti, il bilanciamento del carico e l'elaborazione distribuita per scenari aziendali e relativi a utenti.  
@@ -35,7 +35,7 @@ Il canale peer è una tecnologia di comunicazione peer-to-peer (P2P) a più part
  [La creazione di un'applicazione del canale Peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md): vengono fornite informazioni aggiuntive sullo sviluppo di applicazioni del canale Peer.  
   
 ## <a name="peer-channel-code-examples"></a>Esempi di codice del canale peer  
- [Resolver Peer personalizzato del canale peer](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
+ [Resolver Peer personalizzato del canale peer](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Blog del team del canale peer  
  [Blog del Team del canale peer](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)

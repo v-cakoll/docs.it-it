@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1ada694ed8bdb8aea4551a24f423f896ba1bd61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalizzazione di feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Usa il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] per esporre i dati come feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]supporta i formati Atom e di JavaScript Object Notation (JSON) per i feed di dati. Quando si usa un feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] offre un metodo standard per serializzare i dati, ad esempio le entità e relazioni, in formato XML che può essere incluso nel corpo del messaggio HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definisce un mapping di proprietà di entità predefinito tra i dati contenuti in entità e gli elementi Atom. Per ulteriori informazioni, vedere [OData: formato Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  Per ulteriori informazioni, vedere [procedura: personalizzare i feed con il Provider di Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Poiché le estensioni al modello di dati non sono supportate da Entity Designer, è necessario modificare manualmente il file XML contenente il modello di dati. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il file con estensione edmx generato dal [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] strumenti, vedere [Cenni preliminari sui File edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Poiché le estensioni al modello di dati non sono supportate da Entity Designer, è necessario modificare manualmente il file XML contenente il modello di dati. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il file con estensione edmx generato dal [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] strumenti, vedere [Cenni preliminari sui File edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Attributi di feed personalizzati  
  Nella tabella seguente vengono elencati gli attributi XML per la personalizzazione di feed che è possibile aggiungere al file CSDL (Conceptual Schema Definition Language) che definisce il modello di dati. Questi attributi equivalgono alle proprietà dell'oggetto <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> usato con il provider di reflection.  

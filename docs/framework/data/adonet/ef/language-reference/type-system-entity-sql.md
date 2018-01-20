@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b68bce0e3f1139b48446200decca5beb0a1a1a71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-system-entity-sql"></a>Sistema di tipi (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]supporta una serie di tipi:  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Tipi anonimi non definiti esplicitamente nello schema: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> e <xref:System.Data.Metadata.Edm.RefType>.  
   
- Contenuto della sezione vengono descritti i tipi anonimi non definiti in modo esplicito nello schema ma supportati da [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Per informazioni sui tipi primitivi e nominale, vedere [tipi di modello concettuale (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+ Contenuto della sezione vengono descritti i tipi anonimi non definiti in modo esplicito nello schema ma supportati da [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Per informazioni sui tipi primitivi e nominale, vedere [tipi di modello concettuale (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Righe  
  La struttura di una riga dipende dalla sequenza di membri tipizzati e denominati di cui è composta la riga stessa. Un tipo di riga non dispone dell'identità e non può essere ereditato. Le istanze dello stesso tipo di riga sono equivalenti se i membri sono rispettivamente equivalenti. Le righe non hanno alcun comportamento al di là dell'equivalenza strutturale e non dispongono di equivalenti in Common Language Runtime. Le query possono produrre strutture contenenti righe o raccolte di righe. L'associazione API tra le query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e il linguaggio host definisce la realizzazione delle righe nella query che ha prodotto il risultato. Per informazioni su come costruire un'istanza di riga, vedere [la costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  

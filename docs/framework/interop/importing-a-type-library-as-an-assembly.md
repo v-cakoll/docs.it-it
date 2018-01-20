@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e2866ef2b8f1c869da7c5989e892c1e3a5dd19fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b7b0e6e93660dd49b670975112380420d7d8f0b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importazione di una libreria dei tipi come assembly
 In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al contrario, i compilatori conformi a CLS producono metadati dei tipi in un assembly. Le due origini delle informazioni sui tipi sono piuttosto diverse. Questo argomento descrive le tecniche per la generazione di metadati da una libreria dei tipi. L'assembly risultante è definito un assembly di interoperabilità e le informazioni sui tipi che contiene permettono alle applicazioni .NET Framework di usare tipi COM.  
@@ -40,7 +40,7 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
   
 -   Usare assembly di interoperabilità solo in fase di progettazione: a partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile indicare al compilatore di incorporare nell'eseguibile informazioni sui tipi dall'assembly di interoperabilità. Il compilatore incorpora solo le informazioni sui tipi usate dall'applicazione. Non è necessario distribuire l'assembly di interoperabilità con l'applicazione. Questa è la tecnica consigliata.  
   
--   Distribuire assembly di interoperabilità: è possibile creare un riferimento standard all'assembly di interoperabilità. In questo caso, l'assembly di interoperabilità deve essere distribuito con l'applicazione. Se si ricorre a questa tecnica e non si usa un componente COM privato, fare sempre riferimento all'assembly di interoperabilità primario pubblicato dall'autore del componente COM che si intende incorporare nel codice gestito. Per altre informazioni sulla creazione e sull'uso di assembly di interoperabilità primari, vedere [Primary Interop Assemblies](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080) (Assembly di interoperabilità primari).  
+-   Distribuire assembly di interoperabilità: è possibile creare un riferimento standard all'assembly di interoperabilità. In questo caso, l'assembly di interoperabilità deve essere distribuito con l'applicazione. Se si ricorre a questa tecnica e non si usa un componente COM privato, fare sempre riferimento all'assembly di interoperabilità primario pubblicato dall'autore del componente COM che si intende incorporare nel codice gestito. Per altre informazioni sulla creazione e sull'uso di assembly di interoperabilità primari, vedere [Primary Interop Assemblies](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080) (Assembly di interoperabilità primari).  
   
  Quando si usano assembly di interoperabilità solo in fase di progettazione, è possibile incorporare le informazioni sui tipi dall'assembly di interoperabilità primario pubblicato dall'autore del componente COM. Tuttavia, non è necessario distribuire l'assembly di interoperabilità primario con l'applicazione.  
   
@@ -75,17 +75,17 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
   
     -   Conoscenza delle regole di conversione da librerie dei tipi ad assembly.  
   
-     La scrittura di un wrapper personalizzato è una tecnica avanzata. Per altre informazioni su come generare un wrapper personalizzato, vedere [Personalizzazione di wrapper standard](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d).  
+     La scrittura di un wrapper personalizzato è una tecnica avanzata. Per altre informazioni su come generare un wrapper personalizzato, vedere [Personalizzazione di wrapper standard](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d).  
   
- Per altre informazioni sui processi di importazione di interoperabilità COM, vedere [Riepilogo della conversione da libreria dei tipi ad assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
+ Per altre informazioni sui processi di importazione di interoperabilità COM, vedere [Riepilogo della conversione da libreria dei tipi ad assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Riepilogo della conversione da libreria dei tipi ad assembly](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Riepilogo della conversione da libreria dei tipi ad assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Personalizzazione di wrapper Standard](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
- [Utilizzo di tipi COM nel codice gestito](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Personalizzazione di wrapper Standard](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [Utilizzo di tipi COM nel codice gestito](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Compilazione di un progetto di interoperabilità](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Distribuzione di una applicazione di interoperabilità](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Procedura: aggiungere riferimenti alle librerie dei tipi](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso persistente per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. È possibile creare un'istanza di questi elementi solo riproducendo una sequenza specifica di azioni dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] usando le proprietà, ad esempio AutomationID, i pattern di controllo e i listener di eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Vedere [Test Script Generator Sample](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) per un esempio che usa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per generare script di test basati sull'interazione dell'utente con l' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. È possibile creare un'istanza di questi elementi solo riproducendo una sequenza specifica di azioni dell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] usando le proprietà, ad esempio AutomationID, i pattern di controllo e i listener di eventi di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Vedere [Test Script Generator Sample](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) per un esempio che utilizza [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] per generare script di test basati sull'interazione dell'utente con il [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

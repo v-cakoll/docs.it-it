@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Componenti aggiuntivi ed estensibilità
 <a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>e <xref:System.AddIn.Contract> .  
@@ -81,7 +81,7 @@ Pipeline del componente aggiuntivo
 ### <a name="discovery-and-activation"></a>Individuazione e attivazione  
  È possibile attivare un componente aggiuntivo usando un token da una raccolta che rappresenta i componenti aggiuntivi trovati in un archivio di informazioni. Per trovare i componenti aggiuntivi, è necessario cercare il tipo che definisce la visualizzazione dell'host del componente aggiuntivo. È possibile trovare un componente aggiuntivo anche in base al tipo che lo definisce. L'archivio di informazioni è costituito da due file di cache: l'archivio della pipeline e l'archivio del componente aggiuntivo.  
   
- Per informazioni sull'aggiornamento e la ricompilazione dell'archivio di informazioni, vedere [Individuazione di componenti aggiuntivi](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421). Per informazioni sull'attivazione dei componenti aggiuntivi, vedere [Attivazione di componenti aggiuntivi](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [Procedura: attivare componenti aggiuntivi con isolamento e sicurezza diversi](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Per informazioni sull'aggiornamento e la ricompilazione dell'archivio informazioni, vedere [aggiuntivo individuazione](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Per informazioni sull'attivazione di componenti aggiuntivi, vedere [aggiuntivo attivazione](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) e [procedura: attivare componenti aggiuntivi con isolamento diverso e sicurezza](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Livelli di isolamento e processi esterni  
  Il modello dei componenti aggiuntivi supporta diversi livelli di isolamento tra il componente aggiuntivo e il relativo host o tra componenti aggiuntivi diversi. Partendo dal meno isolato, i livelli sono i seguenti:  
@@ -96,10 +96,10 @@ Pipeline del componente aggiuntivo
   
 -   Ogni componente aggiuntivo viene caricato in modo esclusivo nel proprio dominio applicazione in un processo esterno. Questo è lo scenario più isolato.  
   
- Per altre informazioni sull'uso di processi esterni, vedere [Procedura: attivare componenti aggiuntivi con isolamento e sicurezza diversi](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Per ulteriori informazioni sull'utilizzo di processi esterni, vedere [procedura: attivare componenti aggiuntivi con isolamento diverso e sicurezza](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Gestione della durata  
- Poiché il modello dei componenti aggiuntivi si estende oltre i limiti del dominio applicazione e del processo, Garbage Collection non è in sé sufficiente per rilasciare e recuperare oggetti. Il modello dei componenti aggiuntivi offre un meccanismo di gestione della durata che usa token e conteggio dei riferimenti e che in genere non richiede programmazione aggiuntiva. Per altre informazioni, vedere [Gestione della durata](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Poiché il modello dei componenti aggiuntivi si estende oltre i limiti del dominio applicazione e del processo, Garbage Collection non è in sé sufficiente per rilasciare e recuperare oggetti. Il modello dei componenti aggiuntivi offre un meccanismo di gestione della durata che usa token e conteggio dei riferimenti e che in genere non richiede programmazione aggiuntiva. Per ulteriori informazioni, vedere [la gestione della durata](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Torna all'inizio](#top)  
   
@@ -115,7 +115,7 @@ Pipeline del componente aggiuntivo
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Descrive la pipeline di comunicazione dei segmenti dall'applicazione host al componente aggiuntivo. Fornisce esempi di codice in argomenti con procedure dettagliate che descrivono come costruire la pipeline e implementare segmenti nella pipeline in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Domini applicazione e assembly](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Descrive la relazione tra domini applicazione, che forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, e assembly.|  
+|[Domini applicazione e assembly](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descrive la relazione tra domini applicazione, che forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, e assembly.|  
   
  [Torna all'inizio](#top)  
   

@@ -17,18 +17,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-wpf-controls"></a>Utilizzo di controlli WPF
 È possibile utilizzare i controlli Windows Presentation Foundation (WPF) in applicazioni basate su Windows Form. Anche se si tratta di due tecnologie di visualizzazione diversa, si integrano perfettamente.  
   
  Progettazione Windows Form fornisce un ambiente di progettazione visiva per l'hosting di controlli Windows Presentation Foundation. Un controllo WPF è ospitato da un controllo Windows Form speciale denominato <xref:System.Windows.Forms.Integration.ElementHost>. Questo controllo consente il controllo WPF a fanno parte del layout del form e di ricevere i messaggi di tastiera e mouse. In fase di progettazione, è possibile disporre di <xref:System.Windows.Forms.Integration.ElementHost> controllare esattamente come qualsiasi controllo Windows Form.  
   
- È anche possibile utilizzare i controlli Windows Form nelle applicazioni basate su WPF. Per ulteriori informazioni, vedere [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+ È anche possibile utilizzare i controlli Windows Form nelle applicazioni basate su WPF. Per ulteriori informazioni, vedere [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Copiare e incollare un controllo ElementHost in fase di progettazione](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -63,5 +63,5 @@ ms.lasthandoff: 12/22/2017
  [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  Viene descritta l'interazione tra le tecnologie di Windows Presentation Foundation e Windows Form.  
   
- [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  Viene descritto come progettare i controlli Windows Presentation Foundation in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].

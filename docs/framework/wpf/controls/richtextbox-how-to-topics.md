@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4375803ab51b139a66ac789f0670fce1e5f64682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="richtextbox-how-to-topics"></a>Procedure relative al controllo RichTextBox
 In questa sezione vengono forniti esempi che illustrano come eseguire attività comuni utilizzando il <xref:System.Windows.Controls.RichTextBox> controllo.  
@@ -32,7 +32,7 @@ In questa sezione vengono forniti esempi che illustrano come eseguire attività 
  [Modificare la selezione a livello di codice in un oggetto RichTextBox](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
  [Salvare, caricare e stampare il contenuto di RichTextBox](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
  [Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [Procedura: sostituire l'Host di contenuto predefinito per un controllo RichTextBox](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [Procedura: sostituire l'Host di contenuto predefinito per un controllo RichTextBox](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Controls.TextBox>  

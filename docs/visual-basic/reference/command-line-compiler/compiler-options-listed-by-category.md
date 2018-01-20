@@ -11,11 +11,11 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4ba86f15e51fdceb09c7e005e2af4fa0f9f592f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opzioni del compilatore Visual Basic elencate per categoria
 Il compilatore da riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce un'alternativa alla compilazione dei programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Di seguito è riportato un elenco delle opzioni del compilatore da riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ordinate in base alla categoria funzionale.  
@@ -129,6 +129,6 @@ Il compilatore da riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fo
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore Visual Basic in ordine alfabetico](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introduzione a Creazione progetti](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opzioni del compilatore C# elencate per categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Sviluppo e distribuzione di WCF Data Services
 In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribuzione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per informazioni di base su [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vedere [Introduzione](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) e [Panoramica](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -63,7 +63,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
     -   L'accesso al server può essere eseguito solo sul computer locale.  
   
-    -   Il server è in ascolto su `localhost` e su una porta specifica, non sulla porta 80 che è la porta predefinita per i messaggi HTTP. Per altre informazioni, vedere [Server Web in Visual Studio per progetti Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+    -   Il server è in ascolto su `localhost` e su una porta specifica, non sulla porta 80 che è la porta predefinita per i messaggi HTTP. Per altre informazioni, vedere [Server Web in Visual Studio per progetti Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
     -   Il server esegue il servizio dati nel contesto dell'account utente corrente. Se ad esempio l'utente corrente dispone di privilegi a livello di amministratore, un servizio dati eseguito in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server avrà i privilegi a livello di amministratore. È possibile che il servizio dati quindi sia in grado di accedere alle risorse che non ha diritto ad accedere se viene distribuito in un server IIS.  
   
@@ -89,7 +89,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
 -   Quando si esegue debug di un servizio dati, si potrebbe desiderare di ottenere altre informazioni su un errore dal servizio dati anziché durante l'operazione normale. È possibile ottenere altre informazioni sull'errore dal servizio dati impostando la proprietà <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> in <xref:System.Data.Services.DataServiceConfiguration> su `true` e impostando la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> dell'attributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> nella classe del servizio dati su `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] il post sul [debug di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). È possibile abilitare la traccia anche in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per visualizzare le eccezioni generate nel livello di messaggistica HTTP. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Un servizio dati viene generalmente sviluppato come progetto di applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , ma è possibile creare un servizio dati anche come progetto di sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per altre informazioni sulle differenze tra i due tipi di progetti, vedere [Confronto tra progetti di applicazione Web e progetti di sito Web in Visual Studio](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Un servizio dati viene generalmente sviluppato come progetto di applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , ma è possibile creare un servizio dati anche come progetto di sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per informazioni sulle differenze tra i due tipi di progetti, vedere [NIB: progetti di applicazione Web e progetti di sito Web in Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
 -   Quando si crea un servizio dati tramite la finestra di dialogo **Aggiungi nuovo elemento** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], il servizio dati è ospitato da [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e IIS costituiscono l'host predefinito di un servizio dati, tuttavia sono supportate altre opzioni host. Per ulteriori informazioni, vedere [ospita il servizio dati](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
@@ -102,9 +102,9 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
     -   **Tecnologie di distribuzione per applicazioni Web ASP.NET**  
   
-        -   [Pacchetto di distribuzione Web](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [Pacchetto di distribuzione Web](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [Pubblicazione con un clic](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [Pubblicazione con un clic](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **Tecnologie di distribuzione per siti Web ASP.NET**  
   
@@ -114,7 +114,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lle opzioni di distribuzione per un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , vedere [Panoramica della distribuzione di progetti di applicazione Web per Visual Studio e ASP.NET](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione, vedere [Panoramica della distribuzione Web per Visual Studio e ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
@@ -126,7 +126,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione  
  Quando si distribuisce un servizio dati è opportuno considerare quanto segue:  
   
--   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] è in grado di creare automaticamente script (file con estensione sql) per effettuare questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Per altre informazioni, vedere [Procedura: Distribuire un database con un progetto di applicazione Web](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , è possibile eseguire questa operazione usando **Database Publishing Wizard** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per altre informazioni, vedere [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] è in grado di creare automaticamente script (file con estensione sql) per effettuare questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Per ulteriori informazioni, vedere [NIB: procedura: distribuire un Database con un progetto di applicazione Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , è possibile eseguire questa operazione usando **Database Publishing Wizard** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per altre informazioni, vedere [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Poiché [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base, è possibile usare Windows Server AppFabric per il monitoraggio di un servizio dati distribuito a IIS che è in esecuzione su Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ll'uso di Windows Server AppFabric per monitorare un servizio dati, vedere il post sul [monitoraggio di WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

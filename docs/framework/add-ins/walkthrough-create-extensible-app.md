@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Procedura dettagliata: creazione di un'applicazione estendibile
 Questa procedura dettagliata viene descritto come creare una pipeline per un componente aggiuntivo che esegue funzioni calcolatrice semplice. Viene illustrato uno scenario reale; invece, vengono illustrate le funzionalità di base di una pipeline e un componente aggiuntivo può come fornire servizi per un host.  
@@ -52,11 +52,11 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
   
 -   Esecuzione dell'applicazione host.  
   
- Questa pipeline passa solo tipi serializzabili (<xref:System.Double> e <xref:System.String>), tra l'host e il componente aggiuntivo. Per un esempio che illustra come passare raccolte di tipi di dati complessi, vedere [procedura dettagliata: passaggio di raccolte tra host e Add-Ins](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Questa pipeline passa solo tipi serializzabili (<xref:System.Double> e <xref:System.String>), tra l'host e il componente aggiuntivo. Per un esempio che illustra come passare raccolte di tipi di dati complessi, vedere [procedura dettagliata: passaggio di raccolte tra host e Add-Ins](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Il contratto per la pipeline definisce un modello a oggetti di quattro operazioni aritmetiche: aggiungere, sottrarre, moltiplicare e dividere. L'host fornisce il componente aggiuntivo con un'equazione per calcolare, ad esempio 2 + 2 e il componente aggiuntivo restituisce il risultato all'host.  
   
- Versione 2 del componente aggiuntivo calcolatrice fornisce maggiori possibilità di calcolo e viene illustrato il controllo delle versioni. Viene descritto in [procedura dettagliata: abilitare la compatibilità come le modifiche di Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versione 2 del componente aggiuntivo calcolatrice fornisce maggiori possibilità di calcolo e viene illustrato il controllo delle versioni. Viene descritto in [procedura dettagliata: abilitare la compatibilità come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, sono necessari i seguenti elementi:  
@@ -73,7 +73,7 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
 2.  Denominare la soluzione `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Creazione della struttura di Directory della Pipeline  
- Il modello di componente aggiuntivo richiede gli assembly dei segmenti della pipeline si trovino in una struttura di directory specificato. Per ulteriori informazioni sulla struttura della pipeline, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Il modello di componente aggiuntivo richiede gli assembly dei segmenti della pipeline si trovino in una struttura di directory specificato. Per ulteriori informazioni sulla struttura della pipeline, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Per creare la struttura di directory della pipeline  
   
@@ -92,10 +92,10 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
       HostSideAdapters  
     ```  
   
-     Non è necessario inserire la struttura di cartelle della pipeline nella cartella dell'applicazione; viene eseguita qui solo per comodità. Nel passaggio appropriato, la procedura dettagliata viene illustrato come modificare il codice se la struttura di cartelle della pipeline si trova in un percorso diverso. Vedere la sezione requisiti della pipeline directory [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Non è necessario inserire la struttura di cartelle della pipeline nella cartella dell'applicazione; viene eseguita qui solo per comodità. Nel passaggio appropriato, la procedura dettagliata viene illustrato come modificare il codice se la struttura di cartelle della pipeline si trova in un percorso diverso. Vedere la sezione requisiti della pipeline directory [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  Il `CalcV2` cartella non viene usata in questa procedura dettagliata, è un segnaposto per [procedura dettagliata: abilitare la compatibilità come le modifiche di Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  Il `CalcV2` cartella non viene usata in questa procedura dettagliata, è un segnaposto per [procedura dettagliata: abilitare la compatibilità come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Creazione del contratto e viste  
  Definisce il segmento dei contratti per la pipeline di `ICalc1Contract` interfaccia che definisce i quattro metodi: `add`, `subtract`, `multiply`, e `divide`.  
@@ -204,7 +204,7 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
   
  Nella pipeline, il componente aggiuntivo fornisce un servizio per l'host e il flusso di tipi di componente aggiuntivo per l'host. Poiché non vengono passati tipi dall'host per il componente aggiuntivo, non è necessario includere un adattatore visualizzazione-contratto.  
   
- Per implementare la gestione della durata, utilizzare un <xref:System.AddIn.Pipeline.ContractHandle> oggetto per associare un token di durata per il contratto. È necessario mantenere un riferimento a questo punto di controllo affinché le operazioni di gestione della durata. Dopo il token viene applicato, alcuna programmazione aggiuntiva non è necessaria perché il sistema del componente aggiuntivo è possibile eliminare gli oggetti quando non è più in uso e renderli disponibili per l'operazione di garbage collection. Per altre informazioni, vedere [Gestione della durata](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Per implementare la gestione della durata, utilizzare un <xref:System.AddIn.Pipeline.ContractHandle> oggetto per associare un token di durata per il contratto. È necessario mantenere un riferimento a questo punto di controllo affinché le operazioni di gestione della durata. Dopo il token viene applicato, alcuna programmazione aggiuntiva non è necessaria perché il sistema del componente aggiuntivo è possibile eliminare gli oggetti quando non è più in uso e renderli disponibili per l'operazione di garbage collection. Per ulteriori informazioni, vedere [la gestione della durata](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Per creare l'adattatore sul lato host  
   
@@ -339,7 +339,7 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  Se si è deciso di inserire la struttura di cartelle della pipeline in un percorso diverso dalla cartella dell'applicazione, è necessario modificare di conseguenza i percorsi mostrati nella tabella. Vedere la sezione requisiti della pipeline directory [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Se si è deciso di inserire la struttura di cartelle della pipeline in un percorso diverso dalla cartella dell'applicazione, è necessario modificare di conseguenza i percorsi mostrati nella tabella. Vedere la sezione requisiti della pipeline directory [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Compilare la soluzione di Visual Studio.  
   
@@ -348,7 +348,7 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
     > [!NOTE]
     >  Se non è stato modificato **Copia localmente** a **False** per il `Calc1AddInView` riferimento nel progetto di `AddInCalcV1` progetto, problemi relativi al contesto del caricatore impedirà il componente aggiuntivo si trovano.  
   
-     Per informazioni su come distribuire la pipeline, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Per informazioni su come distribuire la pipeline, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Esecuzione dell'applicazione Host  
  A questo punto si è pronti eseguire l'host e interagire con il componente aggiuntivo.  
@@ -364,8 +364,8 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
 4.  Tipo **uscire** e premere il **invio** tasto per chiudere l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Procedura dettagliata: Passaggio di raccolte tra componenti aggiuntivi e host](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Requisiti di sviluppo pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Procedura dettagliata: Passaggio di raccolte tra componenti aggiuntivi e host](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Requisiti di sviluppo pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Sviluppo pipeline](../../../docs/framework/add-ins/pipeline-development.md)

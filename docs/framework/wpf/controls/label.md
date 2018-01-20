@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Label
 <xref:System.Windows.Controls.Label>i controlli in genere forniscono informazioni nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  In passato, un <xref:System.Windows.Controls.Label> conteneva solo testo, tuttavia, poiché il <xref:System.Windows.Controls.Label> fornito con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è un <xref:System.Windows.Controls.ContentControl>, può contenere una stringa di testo o un <xref:System.Windows.UIElement>.  
   
  Oggetto <xref:System.Windows.Controls.Label> fornisce il supporto funzionale e visivo per le chiavi di accesso. Viene spesso utilizzato per abilitare accesso rapido della tastiera per i controlli, ad esempio un <xref:System.Windows.Controls.TextBox>. Per assegnare un <xref:System.Windows.Controls.Label> per un <xref:System.Windows.Controls.Control>, impostare il <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> proprietà al controllo che deve ricevere lo stato attivo quando l'utente preme il tasto di scelta.  
   
- La figura seguente mostra un <xref:System.Windows.Controls.Label> "Temi" che ha come destinazione un <xref:System.Windows.Controls.ComboBox>.  Quando l'utente preme, il <xref:System.Windows.Controls.ComboBox> riceve lo stato attivo.  Per ulteriori informazioni, vedere [procedura: impostare la proprietà di destinazione di un'etichetta](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ La figura seguente mostra un <xref:System.Windows.Controls.Label> "Temi" che ha come destinazione un <xref:System.Windows.Controls.ComboBox>.  Quando l'utente preme, il <xref:System.Windows.Controls.ComboBox> riceve lo stato attivo.  Per ulteriori informazioni, vedere [procedura: impostare la proprietà di destinazione di un'etichetta](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Proprietà di visualizzazione etichettate in base all'utilizzo](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: impostare la proprietà di destinazione di un controllo Label](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Procedura: impostare la proprietà di destinazione di un controllo Label](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.Label>

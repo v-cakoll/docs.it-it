@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 19997c206e118353c4b712ac8c5650cd71ed3a58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aad7c24027b7b1d45d1042d1125ee24a87bf3c15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: ridimensionare i controlli di un Windows Form
 È possibile ridimensionare singoli controlli e per ridimensionare più controlli del tipo uguale o diverso, ad esempio <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controlli.  
@@ -49,4 +49,4 @@ ms.lasthandoff: 12/22/2017
  [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Procedura: ridimensionare Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/en-us/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+ [Procedura: ridimensionare Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

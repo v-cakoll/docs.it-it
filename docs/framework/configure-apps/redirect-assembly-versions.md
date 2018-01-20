@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 È possibile reindirizzare i riferimenti delle associazioni in fase di compilazione agli assembly di .NET Framework, di terze parti o specifici dell'app. È possibile reindirizzare l'app per l'uso di una diversa versione di un assembly in diversi modi: con i criteri editore, tramite un file di configurazione dell'app o mediante il file di configurazione del computer. In questo articolo viene illustrato il funzionamento dell'associazione di assembly in .NET Framework e come può essere configurato.  
@@ -170,7 +170,7 @@ ms.lasthandoff: 12/22/2017
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)  
- [Configurazione delle app .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Procedura: creare criteri editore](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

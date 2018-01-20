@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Origini dati supportate da Windows Form
 In genere, l'associazione dati è stato utilizzato all'interno delle applicazioni di sfruttare i dati archiviati nei database. Con l'associazione di dati di Windows Form, è possibile accedere ai dati dal database, nonché i dati in altre strutture, ad esempio matrici e raccolte, purché siano stati soddisfatti determinati requisiti minimi.  
@@ -48,7 +48,7 @@ In genere, l'associazione dati è stato utilizzato all'interno delle applicazion
  Windows Form supporta la proprietà del controllo di associazione dati a proprietà pubbliche nell'istanza di un oggetto utilizzando il <xref:System.Windows.Forms.Binding> tipo. Windows Form supporta anche controlli basati su elenchi di associazione, ad esempio un <xref:System.Windows.Forms.ListControl> a un oggetto istanza quando un <xref:System.Windows.Forms.BindingSource> viene utilizzato.  
   
  matrice o raccolta  
- Per funzionare come un'origine dati, è necessario implementare un elenco di <xref:System.Collections.IList> interfaccia, una esempio sarebbe una matrice che rappresenta un'istanza del <xref:System.Array> classe. Per ulteriori informazioni sulle matrici, vedere [procedura: creare una matrice di oggetti (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Per funzionare come un'origine dati, è necessario implementare un elenco di <xref:System.Collections.IList> interfaccia, una esempio sarebbe una matrice che rappresenta un'istanza del <xref:System.Array> classe. Per ulteriori informazioni sulle matrici, vedere [procedura: creare una matrice di oggetti (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  In generale, è necessario utilizzare <xref:System.ComponentModel.BindingList%601> quando si crea l'elenco di oggetti per l'associazione dati. <xref:System.ComponentModel.BindingList%601>è una versione generica del <xref:System.ComponentModel.IBindingList> interfaccia. Il <xref:System.ComponentModel.IBindingList> interfaccia estende il <xref:System.Collections.IList> interfaccia tramite l'aggiunta di proprietà, metodi ed eventi necessari per l'associazione dati bidirezionale.  
   

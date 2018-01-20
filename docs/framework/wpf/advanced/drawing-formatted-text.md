@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>Disegno di testo formattato
 In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Media.FormattedText> oggetto. che offre un controllo di basso livello per il disegno di testo nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -96,7 +96,7 @@ Esempio di un pennello immagine applicato al tratto ed evidenziazione
  ![Sfera che segue la geometria del percorso del testo](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Sfera che segue la geometria del percorso del testo  
   
- Per altre informazioni, vedere [Procedura: Creare animazioni PathGeometry per il testo](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Per altre informazioni, vedere [Procedura: Creare animazioni PathGeometry per il testo](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  È possibile creare altri utilizzi interessanti del testo formattato dopo che è stato convertito in un <xref:System.Windows.Media.PathGeometry> oggetto. Ad esempio, è possibile ritagliare video da visualizzare all'interno del testo.  
   
@@ -139,4 +139,4 @@ Video visualizzato nella geometria del percorso del testo
  [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Creare testo con contorni](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Procedura: Creare animazioni PathGeometry per il testo](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [Procedura: Creare animazioni PathGeometry per il testo](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

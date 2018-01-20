@@ -16,11 +16,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b0a6d6a2a8139127b46484f972eb797642b4ee53
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a05330a6834b4775e62b7b55aee03526b2a9bbda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualificazione di tipi .NET per l'interoperabilità
 Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tenere presenti i requisiti di interoperabilità COM in fase di progettazione. Rispettando le linee guida seguenti, è possibile ottenere una facile integrazione tra i tipi gestiti (classi, interfacce, strutture ed enumerazioni) e i tipi COM:  
@@ -54,6 +54,6 @@ Se si vuole esporre i tipi contenuti in un assembly alle applicazioni COM, tener
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Introduzione all'interfaccia di classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Introduzione all'interfaccia di classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Applicazione di attributi di interoperabilità](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Preparazione di un assembly per COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

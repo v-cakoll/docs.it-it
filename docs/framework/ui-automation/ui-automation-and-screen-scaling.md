@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Grazie a questa funzione, l'intero processo userà valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], pertanto tutte le finestre appartenenti al processo non verranno ridimensionate. In [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], non delle coordinate logiche. Se nell'esempio non venissero usati valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, con la conseguenza di un posizionamento errato in un ambiente non a 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Grazie a questa funzione, l'intero processo userà valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], pertanto tutte le finestre appartenenti al processo non verranno ridimensionate. Nel [Highlighter Sample](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), ad esempio, le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], non delle coordinate logiche. Se nell'esempio non venissero usati valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, con la conseguenza di un posizionamento errato in un ambiente non a 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Per ottenere coordinate del cursore, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Se nell'applicazione viene eseguita comunicazione tra processi diretta con applicazioni che non usano valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], può essere necessario convertire le coordinate logiche e fisiche usando le funzioni [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Esempio di evidenziatore](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concetti fondamentali di Windows Communication Foundation
 In questo documento viene fornita una panoramica dettagliata dell'architettura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Il documento è concepito per spiegare i concetti principali e le modalità di interazione. Per un'esercitazione sulla creazione di quella più semplice di un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servizio e client, vedere [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md). Per informazioni su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di programmazione, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -166,4 +166,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni su Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Architettura di Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Architettura di sicurezza](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

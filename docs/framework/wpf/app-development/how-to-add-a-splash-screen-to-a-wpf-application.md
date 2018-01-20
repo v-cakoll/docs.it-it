@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Procedura: aggiungere una schermata iniziale in un'applicazione WPF
 In questo argomento viene illustrato come aggiungere una finestra di avvio, o *schermata*, a un'applicazione Windows Presentation Foundation (WPF).  
@@ -32,7 +32,7 @@ In questo argomento viene illustrato come aggiungere una finestra di avvio, o *s
   
 1.  Creare o trovare un'immagine che si desidera utilizzare per la schermata iniziale. È possibile utilizzare qualsiasi formato di immagine supportato da Windows Imaging Component (WIC). Ad esempio, è possibile utilizzare il formato TIFF, GIF, JPEG, PNG o BMP.  
   
-2.  Aggiungere il file di immagine al progetto di applicazione WPF. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2.  Aggiungere il file di immagine al progetto di applicazione WPF. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 3.  In Esplora soluzioni, selezionare l'immagine.  
   
@@ -61,4 +61,4 @@ In questo argomento viene illustrato come aggiungere una finestra di avvio, o *s
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.SplashScreen>  
- [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

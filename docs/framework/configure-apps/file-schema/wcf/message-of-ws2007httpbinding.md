@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5048bc2980d7eb51efc1707cfc143f3a81ddf81d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; di &lt;ws2007HttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<ws2007HttpBinding >  
-\<associazione >  
-\<sicurezza >  
-\<messaggio >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<ws2007HttpBinding>  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,13 +94,13 @@ Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<ws2007H
 |`Windows`|Consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale `Windows`. Se l'attributo `negotiateServiceCredential` è impostato su `true`, esegue una negoziazione SSPI o Kerberos (un standard interoperabile).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<sicurezza >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza per un [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definisce le impostazioni di sicurezza per un [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
@@ -110,5 +110,5 @@ Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<ws2007H
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

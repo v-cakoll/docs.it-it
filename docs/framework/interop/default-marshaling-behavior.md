@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f4cd38d8e026b3cf4bb0bf224f81be9bdab23e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -33,7 +33,7 @@ Il marshalling di interoperabilità opera sulle regole che stabiliscono il compo
  Questa sezione identifica le caratteristiche predefinite del comportamento del servizio di marshalling di interoperabilità. Vengono fornite informazioni dettagliate sul marshalling di matrici, tipi booleani, tipi char, delegati, classi, oggetti, stringhe e strutture.  
   
 > [!NOTE]
->  Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  Il marshalling di tipi generici non è supportato. Per altre informazioni, vedere [Interoperabilità tramite tipi generici](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gestione della memoria con il marshalling di interoperabilità  
  Il gestore di marshalling di interoperabilità tenta sempre di liberare la memoria allocata dal codice gestito. Questo comportamento è conforme alle regole di gestione della memoria COM, ma differisce dalle regole che governano il codice C++ nativo.  
@@ -50,10 +50,10 @@ BSTR MethodOne (BSTR b) {
   
  Se, tuttavia, si definisce il metodo come prototipo di platform invoke, si sostituisce ogni tipo **BSTR** con un tipo <xref:System.String> e si chiama `MethodOne`, Common Language Runtime prova a liberare `b` due volte. È possibile modificare il comportamento di marshalling usando tipi <xref:System.IntPtr> invece di tipi **String**.  
   
- Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshalling predefinito per le classi  
- È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 ### <a name="passing-classes-to-com"></a>Passaggio di classi a COM  
  Quando una classe gestita viene passata a COM, il marshalling di interoperabilità esegue automaticamente il wrapping della classe con un proxy COM e passa l'interfaccia di classe creata dal proxy alla chiamata al metodo COM. Il proxy delega quindi tutte le chiamate sull'interfaccia di classe all'oggetto gestito. Il proxy espone anche altre interfacce non implementate in modo esplicito dalla classe. Il proxy implementa automaticamente interfacce come **IUnknown** e **IDispatch** per conto della classe.  

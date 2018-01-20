@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f98190b2d0f48e931129dcf95f63b2ff6b616ccc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2ad9f855f1051ad6c0afac6bc813eecf87f7d36
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Procedura: creare associazioni nel codice
 In questo esempio viene illustrato come creare e impostare un <xref:System.Windows.Data.Binding> nel codice.  
@@ -42,7 +42,7 @@ In questo esempio viene illustrato come creare e impostare un <xref:System.Windo
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- Per l'esempio di codice completo, vedere [solo codice di esempio di associazione](http://msdn.microsoft.com/en-us/764aaf0b-2216-4941-9548-9c98da18d1a6).  
+ Per l'esempio di codice completo, vedere [solo codice di esempio di associazione](http://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6).  
   
  Anziché chiamare <xref:System.Windows.FrameworkElement.SetBinding%2A>, è possibile utilizzare il <xref:System.Windows.Data.BindingOperations.SetBinding%2A> metodo statico del <xref:System.Windows.Data.BindingOperations> classe. Nell'esempio seguente, le chiamate <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> anziché <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> associare `myText` a `myDataProperty`.  
   

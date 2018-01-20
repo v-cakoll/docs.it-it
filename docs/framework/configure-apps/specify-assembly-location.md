@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>Specifica un Assembly &#39; s percorso
 Esistono due modi per specificare il percorso dell'assembly:  
@@ -31,7 +31,7 @@ Esistono due modi per specificare il percorso dell'assembly:
   
 -   Utilizzo di [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- È inoltre possibile utilizzare il [strumento .NET Framework Configuration (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o percorsi visualizzati per common language runtime verificare la presenza di assembly.  
+ È inoltre possibile utilizzare il [strumento .NET Framework Configuration (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) per specificare i percorsi degli assembly o percorsi visualizzati per common language runtime verificare la presenza di assembly.  
   
 ## <a name="using-the-codebase-element"></a>Utilizzo di \<codeBase > elemento  
  È possibile utilizzare il  **\<codeBase >** elemento solo nei computer server di pubblicazione o di configurazione file dei criteri che anche la versione dell'assembly di reindirizzamento. Quando il runtime determina la versione di assembly da usare, si applica l'impostazione di base del codice dal file che determina la versione. Se non viene specificata alcuna base di codice, il runtime verifica per l'assembly in modo normale. Per informazioni dettagliate, vedere [come il Runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -80,4 +80,4 @@ Esistono due modi per specificare il percorso dell'assembly:
  [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurazione delle app .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

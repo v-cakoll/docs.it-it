@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Cenni preliminari su Entity Framework
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è un set di tecnologie ADO.NET che supportano lo sviluppo di applicazioni software orientate ai dati. Gli architetti e gli sviluppatori di questo tipo di applicazioni si trovano nella difficile condizione di dover realizzare due obiettivi molto diversi tra loro, ovvero la modellazione delle entità, delle relazioni e della logica dei problemi aziendali che sono preposti a risolvere e al tempo stesso la gestione dei motori dei dati usati per archiviare e recuperare i dati stessi. Dal momento che i dati potrebbero essere distribuiti in più sistemi di archiviazione, ciascuno con i suoi protocolli, è necessario che nelle applicazioni che gestiscono un solo sistema di archiviazione venga rispettato l'equilibrio tra i requisiti del sistema di archiviazione e i requisiti di scrittura di codice dell'applicazione efficiente e gestibile.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  Per altre informazioni su [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], fare clic sui collegamenti seguenti.  
   
  [Introduzione](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Fornire informazioni su come iniziare a e l'esecuzione rapidamente utilizzando il [delle Guide rapide](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), che mostra come creare un semplice [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dell'applicazione.  
+ Fornire informazioni su come iniziare a e l'esecuzione rapidamente utilizzando il [delle Guide rapide](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), che mostra come creare un semplice [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dell'applicazione.  
   
  [Terminologia relativa a Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Definisce molti dei termini introdotti da Entity Data Model e [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e usati nella documentazione di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

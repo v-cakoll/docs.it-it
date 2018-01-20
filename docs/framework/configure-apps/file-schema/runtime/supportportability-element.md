@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.  
@@ -52,7 +52,7 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |true|Abilitare il supporto per la portabilità tra implementazioni dell'assembly .NET Framework specificato. Questa è l'impostazione predefinita.|  
-|false|Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. In questo modo l'applicazione di riferimenti a più implementazioni dell'assembly specificato.|  
+|False|Disabilitare il supporto per la portabilità tra le implementazioni dell'assembly .NET Framework specificato. In questo modo l'applicazione di riferimenti a più implementazioni dell'assembly specificato.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -89,4 +89,4 @@ Specifica che un'applicazione può fare riferimento allo stesso assembly in due 
   
 ## <a name="see-also"></a>Vedere anche  
  [/appconfig (opzioni del compilatore c#)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [Panoramica di unificazione degli Assembly di .NET framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [Panoramica di unificazione degli Assembly di .NET framework](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

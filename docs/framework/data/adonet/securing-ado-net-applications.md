@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 065a3bcd64500323de7bc37c5896b13acb459fb1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 75d78c505c81ce688e0ba0110c76712c71db1c4f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
 Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i problemi più comuni di codifica, ad esempio la mancata convalida dell'input dell'utente. Un'applicazione che consente di accedere ai dati può presentare molti punti di errore, che possono essere sfruttati da utenti non autorizzati per recuperare, modificare o distruggere dati sensibili. È pertanto importante considerare tutti gli aspetti della sicurezza, a partire dal processo di classificazione dei rischi durante la fase di progettazione dell'applicazione, fino all'eventuale distribuzione e alla manutenzione costante.  
@@ -53,10 +53,10 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Sicurezza](../../../../docs/standard/security/index.md)  
  Contiene collegamenti ad argomenti in cui vengono descritti tutti gli aspetti della sicurezza in .NET Framework.  
   
- [Strumenti di sicurezza](http://msdn.microsoft.com/en-us/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Strumenti di sicurezza](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Vengono fornite informazioni sugli strumenti di .NET Framework per la protezione e l'amministrazione dei criteri di sicurezza.  
   
- [Risorse per la creazione di applicazioni sicure](http://msdn.microsoft.com/en-us/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Risorse per la creazione di applicazioni sicure](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Vengono forniti collegamenti ad argomenti relativi alla creazione di applicazioni protette.  
   
  [Bibliografia sulla sicurezza](/visualstudio/ide/security-bibliography)  

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF
 Procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. Ciò le rende un ottimo strumento per iniziare a capire il funzionamento del prodotto o di una particolare area di funzionalità.  
@@ -32,11 +32,11 @@ Procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. Ciò
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedura dettagliata: Compilazione di un'applicazione WPF semplice con la finestra di progettazione WPF](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|Viene illustrato come compilare un'applicazione WPF semplice con la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[Procedura dettagliata: Creazione di un Layout dinamico](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Viene illustrato come creare un layout dinamico usando un <xref:System.Windows.Controls.Grid> Pannello di controllo.|  
-|[Procedura dettagliata: Creazione di un'applicazione ridimensionabile utilizzando la finestra di progettazione WPF](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Viene illustrato come creare layout di finestra che vengono ridimensionati dall'utente in fase di esecuzione.|  
-|[Procedura dettagliata: Creazione di un Data Binding mediante la finestra di progettazione WPF](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni di dati che si connettono a dati a un controllo.|  
-|[Procedura dettagliata: Utilizzo di DesignInstance per associare i dati nella finestra di progettazione](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni dati in fase di progettazione per un contesto dati che viene assegnato in fase di esecuzione.|  
+|[Procedura dettagliata: Compilazione di un'applicazione WPF semplice con la finestra di progettazione WPF](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|Viene illustrato come compilare un'applicazione WPF semplice con la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
+|[Procedura dettagliata: Creazione di un Layout dinamico](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Viene illustrato come creare un layout dinamico usando un <xref:System.Windows.Controls.Grid> Pannello di controllo.|  
+|[Procedura dettagliata: Creazione di un'applicazione ridimensionabile utilizzando la finestra di progettazione WPF](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Viene illustrato come creare layout di finestra che vengono ridimensionati dall'utente in fase di esecuzione.|  
+|[Procedura dettagliata: Creazione di un Data Binding mediante la finestra di progettazione WPF](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni di dati che si connettono a dati a un controllo.|  
+|[Procedura dettagliata: Utilizzo di DesignInstance per associare i dati nella finestra di progettazione](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|Viene illustrato come utilizzare il [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] per creare associazioni dati in fase di progettazione per un contesto dati che viene assegnato in fase di esecuzione.|  
   
 ## <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF  
   
@@ -61,4 +61,4 @@ Procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. Ciò
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Procedure dettagliate di Visual Studio](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Fornisce un elenco di procedure dettagliate per tutte le aree della programmazione in Visual Studio.|
+|[Procedure dettagliate di Visual Studio](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Fornisce un elenco di procedure dettagliate per tutte le aree della programmazione in Visual Studio.|

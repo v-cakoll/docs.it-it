@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 276dd3cc84c15c66adeab30f86583e6d9eec4144
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ba82242d0d3d42d4a2e3774186f2a282e279938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedura: implementare un'operazione del servizio asincrona
-Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], un'operazione del servizio può essere implementata in modo sincrono o asincrono senza imporre al client la modalità di chiamata. È possibile, ad esempio, che operazioni del servizio asincrone vengano chiamate in modo sincrono e che operazioni del servizio sincrone vengano chiamate in modo asincrono. Per un esempio che illustra come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]operazioni sincrone e asincrone, vedere [progettazione contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md) e [sincrono e alle operazioni asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo di lati client e servizio vedere [asincrono](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).  
+Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], un'operazione del servizio può essere implementata in modo sincrono o asincrono senza imporre al client la modalità di chiamata. È possibile, ad esempio, che operazioni del servizio asincrone vengano chiamate in modo sincrono e che operazioni del servizio sincrone vengano chiamate in modo asincrono. Per un esempio che illustra come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]operazioni sincrone e asincrone, vedere [progettazione contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md) e [sincrono e alle operazioni asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo di lati client e servizio vedere [asincrono](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementazione di un'operazione del servizio in modo asincrono  
   

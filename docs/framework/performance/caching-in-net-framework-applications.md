@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -64,7 +64,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
 >  Quando si sviluppano nuove applicazioni, è consigliabile usare la classe <xref:System.Runtime.Caching.MemoryCache>. L'API disponibile nello spazio dei nomi <xref:System.Runtime.Caching> è analoga a quella dello spazio dei nomi <xref:System.Web.Caching.Cache>. L'API risulterà quindi familiare se si è già usata la memorizzazione nella cache nelle versioni precedenti di ASP.NET. Per un esempio di come usare la memorizzazione nella cache in applicazioni ASP.NET, vedere [Procedura dettagliata: Memorizzazione nella cache dei dati applicazioni in ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Memorizzazione dell'output nella cache  
- Per memorizzare manualmente nella cache i dati delle applicazioni, è possibile usare la classe ASP.NET <xref:System.Runtime.Caching.MemoryCache>. ASP.NET supporta anche la memorizzazione dell'output nella cache, permettendo così di inserire in memoria l'output generato da pagine, controlli e risposte HTTP. È possibile configurare la memorizzazione dell'output nella cache in modo dichiarativo, in una pagina Web ASP.NET, oppure usando le impostazioni nel file Web.config. Per altre informazioni, vedere [Elemento outputCache per caching (schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Per memorizzare manualmente nella cache i dati delle applicazioni, è possibile usare la classe ASP.NET <xref:System.Runtime.Caching.MemoryCache>. ASP.NET supporta anche la memorizzazione dell'output nella cache, permettendo così di inserire in memoria l'output generato da pagine, controlli e risposte HTTP. È possibile configurare la memorizzazione dell'output nella cache in modo dichiarativo, in una pagina Web ASP.NET, oppure usando le impostazioni nel file Web.config. Per altre informazioni, vedere [Elemento outputCache per caching (schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  ASP.NET consente di estendere la memorizzazione dell'output nella cache creando provider di cache di output personalizzati. Mediante questi provider, è possibile archiviare il contenuto memorizzato nella cache usando altri dispositivi di archiviazione, come dischi, risorse di archiviazione cloud e motori di cache distribuiti. Per creare un provider di cache di output personalizzato, è necessario creare una classe che deriva dalla classe <xref:System.Web.Caching.OutputCacheProvider> e configurare l'applicazione per l'utilizzo del provider di cache di output personalizzato.  
   

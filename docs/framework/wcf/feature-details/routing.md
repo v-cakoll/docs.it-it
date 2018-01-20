@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>Routing
 Negli argomenti di questa sezione viene illustrato il servizio di routing. Il servizio di routing è un intermediario SOAP generico configurabile che consente di configurare il routing basato sul contenuto, impostare il bridging del protocollo, gestire errori delle comunicazioni e aggiornare in modo dinamico la logica di routing in fase di esecuzione.  
@@ -31,7 +31,7 @@ Negli argomenti di questa sezione viene illustrato il servizio di routing. Il se
  [Servizio di routing](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Viene fornita una panoramica delle funzionalità del servizio di routing.  
   
- [Servizio di routing](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Servizio di routing](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  Vengono descritte le funzionalità del servizio di routing.  
   
  [Introduzione al routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

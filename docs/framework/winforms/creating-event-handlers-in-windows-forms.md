@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a2fc73ee5e9f9e0a2f8351f8d38311801ebfb34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Creazione di gestori eventi in Windows Form
 Un gestore eventi è una procedura nel codice che determina le azioni da eseguire quando si verifica un evento, ad esempio quando l'utente fa clic su un pulsante o una coda di messaggi riceve un messaggio. Al momento della generazione di un evento, vengono eseguiti i gestori eventi che ricevono l'evento. Gli eventi possono essere assegnati a più gestori e i metodi che gestiscono determinati eventi possono essere modificati in modo dinamico. Per creare i gestori eventi è possibile anche usare Progettazione Windows Form.  
@@ -45,7 +45,7 @@ Un gestore eventi è una procedura nel codice che determina le azioni da eseguir
  [Ordine degli eventi in Windows Form](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Descrive l'ordine in cui gli eventi vengono generati nei controlli Windows Form.  
   
- [Procedura: creare le impostazioni delle applicazioni usando la finestra di progettazione](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Procedura: creare le impostazioni delle applicazioni usando la finestra di progettazione](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Descrive come usare Progettazione Windows Form per creare i gestori eventi.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

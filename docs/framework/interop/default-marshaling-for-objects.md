@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
@@ -153,7 +153,7 @@ struct ObjectHolder {
 ### <a name="marshaling-system-types-to-variant"></a>Marshalling di tipi di sistema alla variante  
  La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=nameWithType>.  
   
-|tipo Object|Tipo di variante COM|  
+|Tipo di oggetto|Tipo di variante COM|  
 |-----------------|----------------------|  
 |Riferimento all'oggetto null (**Nothing** in Visual Basic).|**VT_EMPTY**|  
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|  
@@ -330,17 +330,17 @@ Varianti passate per valore e per riferimento
   
  La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.  
   
-|Da|Per|Modifiche propagate|  
+|Da|A|Modifiche propagate|  
 |----------|--------|-----------------------------|  
 |**Variante**  *v*|**Oggetto**  *o*|Never|  
 |**Oggetto**  *o*|**Variante**  *v*|Never|  
-|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Always|  
-|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Always|  
+|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Sempre|  
+|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Sempre|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Never|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Attributi direzionali](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)

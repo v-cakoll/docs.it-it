@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6ba7ca9941dc148444a4c605fecc8aaf150e8601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub (funzione)
 Crea un oggetto sink di server d'inoltro per facilitare un client riceve le chiamate asincrone dalla gestione di Windows.
@@ -39,7 +39,7 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Parametri
 
 `pObject`  
-[in] Un puntatore all'implementazione in-process del client di [IWbemObjectSink](https://msdn.microsoft.com/en-us/library/aa391787(v=vs.85).aspx).
+[in] Un puntatore all'implementazione in-process del client di [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).
 
 `isLocal`  
 [in] Un flag che indica se l'evento è locale (`true`); in caso contrario, `false`.

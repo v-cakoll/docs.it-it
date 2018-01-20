@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Cenni preliminari sul controllo ListView (Windows Form)
 Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un elenco di elementi con icone. È possibile usare una visualizzazione elenco per creare un'interfaccia utente simile al riquadro destro di Esplora risorse. Il controllo dispone di quattro modalità di visualizzazione: LargeIcon, SmallIcon, elenco e dettagli.  
@@ -55,7 +55,7 @@ Il controllo <xref:System.Windows.Forms.ListView> di Windows Forms visualizza un
   
  Il <xref:System.Windows.Forms.ListView.Activation%2A> proprietà determina il tipo di operazione da effettuare per attivare un elemento nell'elenco: le opzioni sono <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, e <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>l'attivazione richiede un solo clic per attivare l'elemento. <xref:System.Windows.Forms.ItemActivation.TwoClick>attivazione richiede all'utente di fare doppio clic per attivare l'elemento. un solo clic modifica il colore del testo dell'elemento. <xref:System.Windows.Forms.ItemActivation.Standard>attivazione richiede all'utente di fare doppio clic per attivare un elemento, ma l'elemento non viene modificato l'aspetto.  
   
- Il <xref:System.Windows.Forms.ListView> controllo supporta inoltre gli stili e altre funzionalità disponibili nella piattaforma Windows XP, inclusi il raggruppamento, la visualizzazione affiancata e segni di inserimento. Per ulteriori informazioni, vedere [funzionalità di Windows XP e controlli Windows Form](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ Il <xref:System.Windows.Forms.ListView> controllo supporta inoltre gli stili e altre funzionalità disponibili nella piattaforma Windows XP, inclusi il raggruppamento, la visualizzazione affiancata e segni di inserimento. Per ulteriori informazioni, vedere [funzionalità di Windows XP e controlli Windows Form](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.ListView>  

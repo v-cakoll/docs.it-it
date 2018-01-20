@@ -28,11 +28,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2e49c9c3a8f2b133337ee3c153841a7daeff178
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="backgroundworker-component-overview"></a>Cenni preliminari sul componente BackgroundWorker
 Molte operazioni comuni hanno tempi di esecuzione particolarmente lunghi, ad esempio:  
@@ -71,5 +71,5 @@ Molte operazioni comuni hanno tempi di esecuzione particolarmente lunghi, ad ese
  Per ulteriori informazioni sull'utilizzo di <xref:System.ComponentModel.BackgroundWorker> classe, vedere [procedura: eseguire un'operazione in Background](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [NOT IN BUILD: Multithreading in Visual Basic](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [NOT IN BUILD: Multithreading in Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [Procedura: Implementare un form che esegue un'operazione in background](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

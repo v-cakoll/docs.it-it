@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati
-Se i componenti sono definiti da un progetto nella soluzione attualmente aperta, verrà automaticamente visualizzato nel **della casella degli strumenti**, senza interventi da parte dell'utente. È anche possibile inserire manualmente il **della casella degli strumenti** con componenti personalizzati usando il [Scegli elementi della finestra della casella (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), ma la **della casella degli strumenti** tiene conto elementi della soluzione di output con le seguenti caratteristiche di compilazione:  
+Se i componenti sono definiti da un progetto nella soluzione attualmente aperta, verrà automaticamente visualizzato nel **della casella degli strumenti**, senza interventi da parte dell'utente. È anche possibile inserire manualmente il **della casella degli strumenti** con componenti personalizzati usando il [Scegli elementi della finestra della casella (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ma la **della casella degli strumenti** tiene conto elementi della soluzione di output con le seguenti caratteristiche di compilazione:  
   
 -   Implementa <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Se i componenti sono definiti da un progetto nella soluzione attualmente aperta,
  Al termine, si noterà che il **della casella degli strumenti** viene popolato con un componente che è stato creato.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio indica come creare il progetto e impostare il modulo.  
@@ -58,11 +58,11 @@ Se i componenti sono definiti da un progetto nella soluzione attualmente aperta,
   
 1.  Creare un progetto di applicazione basata su Windows chiamato `ToolboxExample`.  
   
-     Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Windows Form](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Aggiungere un nuovo componente al progetto. Chiamarlo `DemoComponent`.  
   
-     Per ulteriori informazioni, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Per ulteriori informazioni, vedere [NIB: procedura: aggiungere nuovi elementi di progetto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Compilare il progetto.  
   
@@ -93,7 +93,7 @@ Se i componenti sono definiti da un progetto nella soluzione attualmente aperta,
   
 1.  Scaricare il progetto dalla soluzione.  
   
-     Per ulteriori informazioni sullo scaricamento dei progetti, vedere [NIB: procedura: scaricare e ricaricare i progetti](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b). Se viene chiesto di salvare, scegliere **Sì**.  
+     Per ulteriori informazioni sullo scaricamento dei progetti, vedere [NIB: procedura: scaricare e ricaricare i progetti](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Se viene chiesto di salvare, scegliere **Sì**.  
   
 2.  Aggiungere un nuovo **applicazione Windows** progetto alla soluzione. Aprire il form nel **progettazione**.  
   
@@ -107,7 +107,7 @@ Se i componenti sono definiti da un progetto nella soluzione attualmente aperta,
  Questa procedura dettagliata viene dimostrato che la **della casella degli strumenti** tiene conto dei componenti di un progetto, ma la **della casella degli strumenti** è anche dei controlli. Sperimentare controlli personalizzati aggiungendo e rimuovendo i progetti di controllo dalla soluzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generale, finestra di progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Procedura: modificare le schede della Casella degli strumenti](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Finestra di dialogo Scegli elementi della Casella degli strumenti (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [Generale, finestra di progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Procedura: modificare le schede della Casella degli strumenti](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Finestra di dialogo Scegli elementi della Casella degli strumenti (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

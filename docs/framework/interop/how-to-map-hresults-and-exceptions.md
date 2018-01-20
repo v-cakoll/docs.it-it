@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Procedura: eseguire il mapping di HRESULT ed eccezioni
 I metodi COM segnalano gli errori restituendo HRESULT, mentre i metodi .NET li segnalano generando eccezioni. Il runtime gestisce la transizione tra questi due approcci. Ogni classe di eccezione in .NET Framework viene mappata a un HRESULT.  
@@ -151,5 +151,5 @@ CMyClass::MethodThatThrows
  I campi di eccezione, ad esempio **Message**, **Source** e **StackTrace** non sono disponibili per **StackOverflowException**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Interoperabilità COM avanzata](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Eccezioni](../../../docs/standard/exceptions/index.md)

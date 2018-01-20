@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari le applicazioni devono anche visualizzare [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornite dai componenti aggiuntivi. Questo argomento mostra in che modo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integra il modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per consentire questi scenari e illustra l'architettura che sta alla base, i suoi vantaggi e le sue limitazioni.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   È il <xref:System.SerializableAttribute> attributo applicato.  
   
 > [!NOTE]
->  Per altre informazioni relative alla creazione di oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che possono essere usati in remoto, vedere [Impostazione degli oggetti per essere utilizzabili in remoto](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Per altre informazioni relative alla creazione di oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che possono essere usati in remoto, vedere [Impostazione degli oggetti per essere utilizzabili in remoto](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  I tipi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] non possono essere usati in remoto. Per risolvere il problema, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende il modello di componente aggiuntivo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per consentire la visualizzazione nelle applicazioni host dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] creata dai componenti aggiuntivi. Questo supporto viene fornito da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] da due tipi: il <xref:System.AddIn.Contract.INativeHandleContract> interfaccia e due metodi statici implementati dal <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A livello generale, questi tipi e metodi vengono usati nel modo seguente:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Componenti aggiuntivi ed estendibilità](../../../../docs/framework/add-ins/index.md)  
  [Domini dell'applicazione](../../../../docs/framework/app-domains/application-domains.md)  
- [Panoramica di servizi remoti .NET framework](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Rendere utilizzabile in remoto gli oggetti](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [Panoramica di servizi remoti .NET framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Rendere utilizzabile in remoto gli oggetti](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Procedure relative alle proprietà](../../../../docs/framework/wpf/app-development/how-to-topics.md)

@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 <a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alice invia il messaggio come testo normale e il messaggio con hash (firma digitale) a Bob. Bob riceve il messaggio, ne esegue l'hashing, quindi confronta il proprio valore hash con quello che ha ricevuto da Alice. Se i valori hash corrispondono, il messaggio non è stato alterato. Se invece i valori non corrispondono, il messaggio è stato alterato dopo essere stato scritto da Alice.  
   
-     Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Per altre informazioni, vedere l' [esempio di comunicazioni protette con Cryptography Next Generation (CNG) in NIB](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) .  
+     Purtroppo, questo metodo non consente di stabilire l'autenticità del mittente. Chiunque può rappresentare Alice e inviare un messaggio a Bob. Possono usare lo stesso algoritmo hash per firmare il messaggio e tutto ciò che Bob è in grado di determinare è che il messaggio corrisponde alla relativa firma. Si tratta di una forma di attacco di tipo man-in-the-middle. Vedere [NIB: esempio di comunicazioni protette Cryptography Next Generation (CNG)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) per ulteriori informazioni.  
   
 -   Alice invia il messaggio come testo normale a Bob tramite un canale pubblico non protetto. Invia il messaggio con hash a Bob su un canale privato protetto. Bob riceve il messaggio in testo normale, ne esegue l'hashing, quindi confronta il valore hash con quello scambiato privatamente. Se i valori corrispondono, Bob può accertare quanto segue:  
   

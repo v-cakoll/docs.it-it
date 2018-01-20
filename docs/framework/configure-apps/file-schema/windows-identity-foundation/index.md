@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 2000ae86f38ff2fd06dbe7424cbfdd74781c6c3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1345df57799f9c0959fd18fbbe41db149d0895a5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Schema di configurazione di Windows Identity Foundation
 Gli argomenti in questa sezione contengono informazioni sullo schema di configurazione di WIF (Windows Identity Foundation). È anche possibile configurare un'applicazione per usare WIF tramite classi esposte dal framework. Queste classi sono segnalate nelle sezioni dedicate agli elementi pertinenti nello schema. Di seguito viene illustrata la struttura di tag XML di base esposta dallo schema di configurazione di WIF. Gli attributi sono omessi. I commenti evidenziati indicano i principali componenti dello schema.  
@@ -122,4 +122,4 @@ Gli argomenti in questa sezione contengono informazioni sullo schema di configur
  [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Configurazione per la federazione passiva con WIF. Configura il modulo di autenticazione della sessione (SAM) e il modulo di autenticazione federata (WSFAM).  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Configurazione, amministrazione e gestione](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0) Viene descritto come configurare e gestire servizi e applicazioni WIF.
+ [Configurazione, amministrazione e gestione](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Viene descritto come configurare e gestire servizi e applicazioni WIF.

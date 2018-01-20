@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: creare criteri editore
 I fornitori di assembly è possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly con l'inclusione di un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni di base di codice e Usa lo stesso formato del file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito in global assembly cache.  
@@ -64,7 +64,7 @@ I fornitori di assembly è possono indicare che le applicazioni devono utilizzar
   
 1.  Digitare il comando seguente al prompt dei comandi:  
   
-     **/link al:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      In questo comando:  
   
@@ -72,7 +72,7 @@ I fornitori di assembly è possono indicare che le applicazioni devono utilizzar
   
     -   Il *publisherPolicyAssemblyFile* argomento è il nome dell'assembly dei criteri editore risultante da questo comando. Il nome del file di assembly deve seguire il formato:  
   
-         **criteri.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   Il *keyPairFile* argomento è il nome del file contenente la coppia di chiavi. È necessario firmare l'assembly e assembly dei criteri editore con la stessa coppia di chiavi.  
   
@@ -100,7 +100,7 @@ I fornitori di assembly è possono indicare che le applicazioni devono utilizzar
   
 1.  Digitare il comando seguente al prompt dei comandi:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Il seguente comando aggiunge `policy.1.0.myAssembly.dll` global assembly cache.  
   
@@ -115,7 +115,7 @@ I fornitori di assembly è possono indicare che le applicazioni devono utilizzar
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)  
- [Configurazione delle app .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Reindirizzamento delle versioni di assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -22,17 +22,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c08e324066b872abb8df8b8b780ab3e4644a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;compilatore&gt; elemento
 Specifica gli attributi di configurazione del compilatore per un provider del linguaggio.  
   
  \<Elemento di configurazione >  
-\<Elemento System. CodeDom >  
+\<system.codedom Element>  
 \<Elemento compilers >  
 \<compilatore > elemento  
   
@@ -72,7 +72,7 @@ Specifica gli attributi di configurazione del compilatore per un provider del li
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|[\<System. CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Specifica le impostazioni di configurazione del compilatore per i provider di linguaggi disponibili.|  
 |[\<i compilatori > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenitore per elementi di configurazione del compilatore. contiene zero o più `<compiler>` elementi.|  
   
 ## <a name="remarks"></a>Note  
@@ -112,4 +112,4 @@ Specifica gli attributi di configurazione del compilatore per un provider del li
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<i compilatori > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)  
- [compilatore elemento per i compilatori per compilation (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [compilatore elemento per i compilatori per compilation (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

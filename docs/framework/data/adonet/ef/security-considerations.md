@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Considerazioni sulla sicurezza (Entity Framework)
 In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che riguardano in modo particolare lo sviluppo, la distribuzione e l'esecuzione di applicazioni [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. È consigliabile inoltre seguire le raccomandazioni relative alla creazione di applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] protette. Per ulteriori informazioni, vedere [Cenni preliminari sulla sicurezza](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -109,7 +109,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
   
      Gli attacchi SQL injection possono essere eseguiti in [!INCLUDE[esql](../../../../../includes/esql-md.md)] attraverso l'inserimento di input dannoso nei valori usati in un predicato della query e nei nomi del parametro. Per evitare il rischio di SQL injection, è necessario non combinare mai l'input dell'utente con il testo dei comandi [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Le query [!INCLUDE[esql](../../../../../includes/esql-md.md)] accettano parametri ovunque vengano accettati i valori letterali. È opportuno utilizzare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno. È consigliabile utilizzare i metodi del generatore di query per costruire in modo sicuro [Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     Le query [!INCLUDE[esql](../../../../../includes/esql-md.md)] accettano parametri ovunque vengano accettati i valori letterali. È opportuno utilizzare query con parametri, anziché inserire valori letterali direttamente nella query tramite un agente esterno. È consigliabile utilizzare i metodi del generatore di query per costruire in modo sicuro [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Attacchi injection di [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -143,7 +143,7 @@ In questo argomento vengono illustrate alcune considerazioni sulla sicurezza che
  Le considerazioni sulla sicurezza illustrate di seguito sono valide in caso di generazione e utilizzo di tipi di entità.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Non condividere un oggetto ObjectContext tra domini dell'applicazione.  
- La condivisione di un oggetto <xref:System.Data.Objects.ObjectContext> con più di un dominio dell'applicazione potrebbe esporre le informazioni contenute nella stringa di connessione. Al contrario, è necessario trasferire oggetti serializzati o oggetti grafici all'altro dominio dell'applicazione e quindi allegarli a un <xref:System.Data.Objects.ObjectContext> nel dominio dell'applicazione. Per ulteriori informazioni, vedere [serializzazione di oggetti](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ La condivisione di un oggetto <xref:System.Data.Objects.ObjectContext> con più di un dominio dell'applicazione potrebbe esporre le informazioni contenute nella stringa di connessione. Al contrario, è necessario trasferire oggetti serializzati o oggetti grafici all'altro dominio dell'applicazione e quindi allegarli a un <xref:System.Data.Objects.ObjectContext> nel dominio dell'applicazione. Per ulteriori informazioni, vedere [serializzazione di oggetti](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Impedire violazioni dell'indipendenza dai tipi.  
  Se l'indipendenza dai tipi viene violata, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] non è in grado di garantire l'integrità dei dati negli oggetti. La violazione può verificarsi se si consente l'esecuzione di applicazioni non attendibili con la sicurezza dall'accesso di codice dall'attendibilità totale.  

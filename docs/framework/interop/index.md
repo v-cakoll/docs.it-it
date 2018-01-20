@@ -1,12 +1,8 @@
 ---
 title: "Interoperabilità con codice non gestito"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/17/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -17,47 +13,53 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38c569633304ed9e6f86e7a04ef7b0dfa79b6704
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperabilità con codice non gestito
-.NET Framework favorisce l'interazione con componenti COM, servizi COM+, librerie dei tipi esterne e molti servizi del sistema operativo. I tipi di dati, le firme dei metodi e i meccanismi di gestione degli errori variano tra modelli a oggetti gestiti e non gestiti. Per semplificare l'interoperabilità tra componenti .NET Framework e codice non gestito e agevolare il percorso di migrazione, Common Language Runtime nasconde ai client e ai server le differenze di questi modelli a oggetti.  
-  
- Il codice eseguito sotto il controllo del runtime viene definito codice gestito. Al contrario, il codice eseguito esternamente al runtime viene definito codice non gestito. Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Win32.  
-  
-## <a name="in-this-section"></a>In questa sezione  
- [Argomenti sulle procedure di interoperabilità con codice non gestito](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
- Fornisce i collegamenti a tutte le procedure contenute nella documentazione sui concetti relativi all'interoperabilità con codice non gestito.  
-  
- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- Descrive come usare componenti COM da applicazioni .NET Framework.  
-  
- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- Descrive come usare componenti .NET Framework da applicazioni COM.  
-  
- [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- Descrive come chiamare funzioni di DLL non gestite con platform invoke.  
-  
- [Considerazioni di progettazione per l'interoperabilità](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
- Fornisce suggerimenti per la scrittura di componenti COM integrati.  
-  
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)  
- Descrive il marshalling per l'interoperabilità COM e platform invoke.  
-  
- [Procedura: Eseguire il mapping di HRESULT ed eccezioni](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
- Descrive il mapping tra eccezioni e valori HRESULT.  
-  
- [Interoperabilità tramite tipi generici](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- Descrive il comportamento dei tipi generici quando vengono usati nell'interoperabilità COM.  
-  
-## <a name="related-sections"></a>Sezioni correlate  
- [Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.
+
+.NET Framework favorisce l'interazione con componenti COM, servizi COM+, librerie dei tipi esterne e molti servizi del sistema operativo. I tipi di dati, le firme dei metodi e i meccanismi di gestione degli errori variano tra modelli a oggetti gestiti e non gestiti. Per semplificare l'interoperabilità tra componenti .NET Framework e codice non gestito e agevolare il percorso di migrazione, Common Language Runtime nasconde ai client e ai server le differenze di questi modelli a oggetti.
+
+Il codice eseguito sotto il controllo del runtime viene definito codice gestito. Al contrario, il codice eseguito esternamente al runtime viene definito codice non gestito. Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Win32.
+
+## <a name="in-this-section"></a>Contenuto della sezione
+
+[Esposizione di componenti COM a .NET Framework](exposing-com-components.md)  
+Descrive come usare componenti COM da applicazioni .NET Framework.
+
+[Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
+Descrive come usare componenti .NET Framework da applicazioni COM.
+
+[Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)  
+Descrive come chiamare funzioni di DLL non gestite con platform invoke.
+
+[Marshalling di interoperabilità](interop-marshaling.md)  
+Descrive il marshalling per l'interoperabilità COM e platform invoke.
+
+[Procedura: Eseguire il mapping di HRESULT ed eccezioni](how-to-map-hresults-and-exceptions.md)  
+Descrive il mapping tra eccezioni e valori HRESULT.
+
+[Wrapper COM](com-wrappers.md)  
+Descrive i wrapper forniti dall'interoperabilità COM.
+
+[Equivalenza del tipo e tipi di interoperabilità incorporati](type-equivalence-and-embedded-interop-types.md)  
+Descrive come informazioni sui tipi COM sono incorporate nell'assembly e come common language runtime determina l'equivalenza dei tipi COM incorporati.
+
+[Procedura: generare assembly di interoperabilità tramite Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+Viene descritto come generare assembly di interoperabilità primario utilizzando *Tlbimp.exe* (tipo di libreria utilità di importazione).
+
+[Procedura: Registrare assembly di interoperabilità primari](how-to-register-primary-interop-assemblies.md)  
+Viene descritto come registrare assembly di interoperabilità primari prima di potervi fare riferimento nei progetti.
+
+[Interoperabilità COM senza registrazione](registration-free-com-interop.md)  
+Descrive la modalità di interoperabilità COM attivazione componenti senza utilizzare il Registro di sistema di Windows.
+
+[Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione](configure-net-framework-based-com-components-for-reg.md)  
+Viene descritto come creare un manifesto dell'applicazione e come creare e incorporare un manifesto del componente.

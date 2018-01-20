@@ -25,27 +25,27 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedura: aggiungere controlli senza interfaccia a un Windows Form
 Un controllo non visivo (o un componente) fornisce funzionalità per l'applicazione. A differenza di altri controlli, componenti non forniscono un'interfaccia utente per l'utente e pertanto non dovrà essere visualizzato nell'area di progettazione Windows Form. Quando un componente viene aggiunto a un form, Progettazione Windows Form visualizza un contenitore ridimensionabile nella parte inferiore del form vengono visualizzati tutti i componenti. Dopo aver aggiunto un controllo barra dei componenti, è possibile selezionare il componente e impostarne le proprietà come qualsiasi altro controllo nel form.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Per aggiungere un componente a un Windows Form  
   
-1.  Aprire il form. Per informazioni dettagliate, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per informazioni dettagliate, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Nel **della casella degli strumenti**, fare clic su un componente e trascinarla nel form.  
   
      Il componente verrà visualizzato nella barra dei componenti.  
   
- Inoltre, i componenti possono essere aggiunti a un form in fase di esecuzione. Si tratta di uno scenario comune, soprattutto perché i componenti non dispone di un'espressione visual, a differenza di controlli che hanno un'interfaccia utente. Nell'esempio seguente, un <xref:System.Windows.Forms.Timer> componente viene aggiunto in fase di esecuzione. (Si noti che [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contiene un numero di timer diversi; in questo caso, utilizzare un Windows Form <xref:System.Windows.Forms.Timer> componente. Per ulteriori informazioni sui diversi timer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], vedere [Introduzione ai timer basati su Server](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Inoltre, i componenti possono essere aggiunti a un form in fase di esecuzione. Si tratta di uno scenario comune, soprattutto perché i componenti non dispone di un'espressione visual, a differenza di controlli che hanno un'interfaccia utente. Nell'esempio seguente, un <xref:System.Windows.Forms.Timer> componente viene aggiunto in fase di esecuzione. (Si noti che [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contiene un numero di timer diversi; in questo caso, utilizzare un Windows Form <xref:System.Windows.Forms.Timer> componente. Per ulteriori informazioni sui diversi timer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], vedere [Introduzione ai timer basati su Server](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Componenti spesso presentano proprietà specifiche del controllo che deve essere impostata per il componente funzionare in modo efficace. In caso del <xref:System.Windows.Forms.Timer> componente, impostare il `Interval` proprietà. Assicurarsi che, quando si aggiunge componenti al progetto, impostare le proprietà necessarie per il componente.  

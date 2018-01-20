@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b990c0a6084f3d2866c16aed3a390fdf7717596
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-controls"></a>Controlli per Windows Form
 Durante la progettazione e la modifica dell'interfaccia utente delle Windows Forms Application, è necessario aggiungere, allineare e posizionare i controlli. I controlli sono gli oggetti contenuti all'interno di oggetti Form. Ogni tipo di controllo ha un proprio set di proprietà, metodi ed eventi che lo rendono appropriato per un particolare scopo. È possibile modificare i controlli nella finestra di progettazione e scrivere codice per aggiungere controlli in modo dinamico in fase di esecuzione.  
@@ -50,5 +50,5 @@ Durante la progettazione e la modifica dell'interfaccia utente delle Windows For
  [Applicazioni client](../../../../docs/framework/develop-client-apps.md)  
  Fornisce una panoramica sullo sviluppo di applicazioni basate su Windows.  
   
- [Procedure dettagliate su Windows Form](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Procedure dettagliate su Windows Form](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  Elenca gli argomenti delle procedure dettagliate su Windows Form e i controlli.

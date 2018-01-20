@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Semplificazione del debug di un'immagine
 Quando si compila codice non gestito, è possibile configurare un'immagine eseguibile per il debug impostando le opzioni dell'IDE o della riga di comando. Ad esempio, è possibile usare l'opzione della riga di comando /**Zi** in Visual C++ per richiedere di generare file di simboli di debug (file con estensione pdb). In modo analogo, l'opzione della riga di comando /**Od** indica al compilatore di disabilitare l'ottimizzazione. Il codice risultante viene eseguito più lentamente, ma è più semplice eseguirne il debug all'occorrenza.  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>Vedere anche  
  [Debug, traccia e profilatura](../../../docs/framework/debug-trace-profile/index.md)  
  [Abilitazione del debug ad associazione JIT](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [Abilitazione della funzione di profilatura](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Abilitazione della funzione di profilatura](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

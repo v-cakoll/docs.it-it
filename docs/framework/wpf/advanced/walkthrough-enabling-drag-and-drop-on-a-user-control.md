@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e413a7ddf7e256538e56876712a54f875392b59a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procedura dettagliata: abilitare il trascinamento della selezione in un controllo utente
 Questa procedura dettagliata illustra come creare un controllo utente personalizzato che possa partecipare al trasferimento di dati tramite trascinamento in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -51,7 +51,7 @@ Questa procedura dettagliata illustra come creare un controllo utente personaliz
   
 ### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `DragDropExample`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `DragDropExample`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Aprire MainWindow.xaml.  
   

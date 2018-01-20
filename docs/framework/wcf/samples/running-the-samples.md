@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Esecuzione degli esempi di Windows Communication Foundation
 Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere eseguiti in un singolo computer o su una configurazione che prevede più computer. Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer. In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio. Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer. Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti. La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
@@ -30,13 +30,13 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1.  Se il servizio è ospitato da IIS, verificare che sia possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc. In risposta, viene visualizzata un pagina di conferma. Se non viene visualizzata la pagina di conferma, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Se il servizio è ospitato da IIS, verificare che sia possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc. In risposta, viene visualizzata un pagina di conferma. Se non viene visualizzata la pagina di conferma, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Se il servizio è indipendente, eseguire Service.exe da \service\bin, dalla cartella specifica del linguaggio. L'attività del servizio viene visualizzata nella finestra della console del servizio.  
   
 3.  Eseguire Client.exe da \Client\Bin.\\, nella cartella della specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client.  
   
-4.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
@@ -92,5 +92,5 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
   
 ## <a name="see-also"></a>Vedere anche  
  [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
- [Suggerimenti di risoluzione dei problemi](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [Suggerimenti di risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

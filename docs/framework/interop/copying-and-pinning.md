@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 Durante il marshalling il gestore di marshalling di interoperabilità può copiare o bloccare i dati interessati. Tramite l'operazione di copia, una copia dei dati viene spostata da una posizione della memoria a un'altra. La figura seguente illustra le differenze esistenti tra la copia di un tipo valore e quella di un tipo passato per riferimento dalla memoria gestita a quella non gestita.  
@@ -57,7 +57,7 @@ Tipi riferimento passati per valore e per riferimento
   
 -   Se si impostano sia **InAttribute** che **OutAttribute**, sono richieste entrambe le copie. Se si omette uno degli attributi, il gestore di marshalling può ottimizzare il processo eliminando una delle copie.  
   
-## <a name="reference-types"></a>Tipi di riferimento  
+## <a name="reference-types"></a>Tipi riferimento  
  È possibile passare i tipi riferimento per valore o per riferimento. Quando sono passati per valore, sullo stack viene passato un puntatore al tipo. Quando sono passati per riferimento, sullo stack viene passato un puntatore a un puntatore al tipo.  
   
  Il comportamento dei tipi riferimento varia a seconda delle condizioni seguenti:  
@@ -88,6 +88,6 @@ Tipi riferimento passati per valore e per riferimento
   
 ## <a name="see-also"></a>Vedere anche  
  [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Gestione della memoria con il marshalling di interoperabilità](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Gestione della memoria con il marshalling di interoperabilità](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Attributi direzionali](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)

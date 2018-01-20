@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4811b3273ba829882dadffe95ff8c29fb8ee7400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f74b103092032e35cce47d893f9e3b6e9d7727b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementazione del pattern di controllo Value di automazione interfaccia utente
 > [!NOTE]
@@ -61,7 +61,7 @@ Esempio di mapping delle stringhe dei campioni colore
 |Membri obbligatori|Tipo di membro|Note|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Proprietà|nessuno|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|Nessuna|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Proprietà|nessuno|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Metodo|nessuno|  
   
 <a name="Exceptions"></a>   
@@ -78,6 +78,6 @@ Esempio di mapping delle stringhe dei campioni colore
  [Panoramica dei pattern di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Pattern di controllo di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
+ [TextPattern Insert Text Sample](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [Panoramica dell'albero di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

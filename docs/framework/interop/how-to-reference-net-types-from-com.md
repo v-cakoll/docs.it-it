@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c6427254aeec1a9e272579665fcd9893daa2316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b452dd686286ba0ddf648ee532e67a0c121f66eb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Procedura: fare riferimento a tipi .NET da COM
 Dal punto di vista del codice client e server, le differenze tra COM e .NET Framework sono in gran parte invisibili. I client di Microsoft Visual Basic possono visualizzare un oggetto .NET nel Visualizzatore oggetti, che espone i metodi e la sintassi, le proprietà e i campi dell'oggetto esattamente come se si trattasse di un normale oggetto COM.  
@@ -42,7 +42,7 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     -oppure-  
+     oppure  
   
 -   Includere una direttiva #import per Mscorlib.tlb. Ad esempio:  
   
@@ -54,5 +54,5 @@ Dal punto di vista del codice client e server, le differenze tra COM e .NET Fram
 ## <a name="see-also"></a>Vedere anche  
  [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Registrazione di assembly presso COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [La chiamata a un oggetto .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [Distribuzione di un'applicazione per l'accesso COM](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+ [La chiamata a un oggetto .NET](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [Distribuzione di un'applicazione per l'accesso COM](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)

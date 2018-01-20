@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Procedura dettagliata: aggiunta di dati di un database di SQL Server in un controllo DataGrid
 In questa procedura dettagliata, si recuperano dati da un database di SQL Server e visualizzarli in un <xref:System.Windows.Controls.DataGrid> controllo. Utilizzare ADO.NET Entity Framework per creare le classi di entità che rappresentano i dati e utilizzano LINQ per scrivere una query che recupera i dati specificati da una classe di entità.  
@@ -46,7 +46,7 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 3.  Nel riquadro dei modelli installati, selezionare **dati** e nell'elenco dei modelli, selezionare **ADO.NET Entity Data Model**l.  
   
-     ![Selezionare ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
+     ![Select ADO.NET Entity Data Model](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   
 4.  Nome del file `AdventureWorksModel.edmx` e quindi fare clic su **Aggiungi**.  
   
@@ -88,7 +88,7 @@ In questa procedura dettagliata, si recuperano dati da un database di SQL Server
   
 4.  Selezionare <xref:System.Windows.Window>.  
   
-5.  Utilizzando la finestra proprietà o un editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominato `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per ulteriori informazioni, vedere [procedura: creare un semplice gestore](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  Utilizzando la finestra proprietà o un editor XAML, creare un gestore eventi per il <xref:System.Windows.Window> denominato `Window_Loaded` per il <xref:System.Windows.FrameworkElement.Loaded> evento. Per ulteriori informazioni, vedere [procedura: creare un semplice gestore](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
      Di seguito viene illustrato il codice XAML per MainWindow. Xaml.  
   

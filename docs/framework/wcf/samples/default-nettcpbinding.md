@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 472bc9cc1ff18c7e199a1133a1d54994cea21055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: acaaee2a34fad776847f3f2a89d458b49d817d30
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-nettcpbinding"></a>Associazione NetTcpBinding predefinita
 Questo esempio dimostra l'uso dell'associazione <xref:System.ServiceModel.NetTcpBinding>. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il servizio è indipendente. Sia il client che il servizio sono applicazioni console.  
@@ -36,7 +36,7 @@ Questo esempio dimostra l'uso dell'associazione <xref:System.ServiceModel.NetTcp
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nella `binding` attributo del [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) come illustrato nell'esempio di configurazione seguente.  
+ L'associazione è specificata nei file di configurazione per il client e il servizio. Il tipo di associazione è specificato nella `binding` attributo del [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) come illustrato nell'esempio di configurazione seguente.  
   
 ```xml  
 <endpoint address=""  

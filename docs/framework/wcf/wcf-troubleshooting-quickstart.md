@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul visualizzatore dei file di traccia, vedere [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -113,7 +113,7 @@ public class MyServiceHost : ServiceHost
   
 -   Potrebbe essere necessario aprire la porta all'applicazione. Per informazioni dettagliate, vedere [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) negli esempi di SDK.  
   
--   Per altri possibili problemi, vedere l'argomento degli esempi [Running the Samples in a Workgroup and Across Machines](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113).  
+-   Per altri possibili problemi, vedere l'argomento di esempi [esecuzione degli esempi di in un gruppo di lavoro tra più computer](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   Se il client sta utilizzando le credenziali di Windows e l'eccezione è <xref:System.ServiceModel.Security.SecurityNegotiationException>, configurare Kerberos come descritto di seguito.  
   

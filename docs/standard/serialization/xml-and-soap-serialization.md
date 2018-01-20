@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>Serializzazione SOAP e XML
 La serializzazione XML converte (serializza) le proprietà e i campi pubblici di un oggetto, o i parametri e i valori restituiti dei metodi, in un flusso XML conforme a uno specifico documento in linguaggio XSD (XML Schema Definition). La serializzazione XML produce classi fortemente tipizzate con campi e proprietà pubbliche convertiti in un formato seriale (in questo caso XML) per l'archiviazione o il trasporto.  
@@ -93,10 +93,10 @@ La serializzazione XML converte (serializza) le proprietà e i campi pubblici di
  Aggiunge i tipi usati dalla classe <xref:System.Xml.Serialization.XmlSchemaImporter>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Advanced Development Technologies](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e) (Tecnologie di sviluppo avanzate)  
+ [Advanced Development Technologies](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e) (Tecnologie di sviluppo avanzate)  
  Sono riportati collegamenti per accedere a ulteriori informazioni sulle tecniche e sulle attività di sviluppo avanzate in .NET Framework.  
   
- [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Servizi Web XML creati mediante ASP.NET e tramite client di servizi Web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Fornisce gli argomenti che descrivono e spiegano come programmare i servizi Web XML con ASP.NET.  
   
 ## <a name="see-also"></a>Vedere anche  

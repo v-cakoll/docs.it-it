@@ -21,17 +21,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;avvio&gt; elemento
 Specifica informazioni di avvio di common language runtime.  
   
  \<configuration>  
-\<avvio >  
+\<startup>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ Specifica informazioni di avvio di common language runtime.
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|Attributo facoltativo.<br /><br /> Specifica se abilitare la [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] criteri di attivazione di runtime o utilizzare il [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] criteri di attivazione.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Attributo useLegacyV2RuntimeActivationPolicy  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
@@ -78,7 +78,7 @@ Specifica informazioni di avvio di common language runtime.
  Questo attributo è utile se l'applicazione utilizza i percorsi di attivazione legacy, ad esempio il [funzione CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), e si desidera attivare la versione 4 di CLR anziché una versione precedente, tali percorsi o se l'applicazione compilato con la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ma ha una dipendenza su un assembly in modalità mista compilato con una versione precedente di .NET Framework. In tali scenari, impostare l'attributo su `true`.  
   
 > [!NOTE]
->  Impostare l'attributo su `true` impedisce il caricamento nello stesso processo, in modo efficace la disabilitazione della funzionalità di side-by-side in-process CLR versione 1.1 o CLR versione 2.0 (vedere [esecuzione Side-by-Side per l'interoperabilità COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Impostare l'attributo su `true` impedisce il caricamento nello stesso processo, in modo efficace la disabilitazione della funzionalità di side-by-side in-process CLR versione 1.1 o CLR versione 2.0 (vedere [esecuzione Side-by-Side per l'interoperabilità COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come specificare la versione di runtime in un file di configurazione.  
@@ -102,6 +102,6 @@ Specifica informazioni di avvio di common language runtime.
 ## <a name="see-also"></a>Vedere anche  
  [Schema delle impostazioni di avvio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Specifica della versione di runtime da usare](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [Esecuzione side-by-Side per l'interoperabilità COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver> Specifica della versione di runtime da usare](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Esecuzione side-by-Side per l'interoperabilità COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [In-Process Side-by-Side Execution](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)

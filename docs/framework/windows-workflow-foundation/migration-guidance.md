@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 96a8b8321239e3f01b30bcbe0400930a292a8f41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migration-guidance"></a>Materiale sussidiario di migrazione
 In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] viene rilasciata la seconda versione principale di [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)] è stato rilasciato in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (inclusi i tipi nei namespace System.Workflow.*, ora definiti WF3) e migliorato in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 fa anche parte del [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ma è presente insieme alla nuova tecnologia del flusso di lavoro (i tipi System. Activities.\* gli spazi dei nomi; definiti WF4). Quando si considera di usare WF4, è importante innanzitutto tenere presente che si sta controllando il tempo.  
@@ -45,7 +45,7 @@ In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] viene rilasc
  [Linee guida per WF: Macchina a stati](http://go.microsoft.com/fwlink/?LinkId=153855)  
  Viene descritta la modellazione del flusso di controllo di WF4 in assenza di un'attività State-Machine.  
   
- Questo materiale sussidiario si applica solo ai progetti di flusso di lavoro destinati a .NET Framework 4. I flussi di lavoro di macchina a stati sono stati aggiunti in .NET 4.0.1 con la versione Platform Update 1 e sono inclusi come parte di .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)]flussi di lavoro stato macchina in .NET 4.0.1 - 4.0.3 e .NET Framework 4.5, vedere [aggiornamento 4.0.1 per Microsoft .NET Framework 4 funzionalità](http://msdn.microsoft.com/en-us/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) e [flussi di lavoro macchina stato](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Questo materiale sussidiario si applica solo ai progetti di flusso di lavoro destinati a .NET Framework 4. I flussi di lavoro di macchina a stati sono stati aggiunti in .NET 4.0.1 con la versione Platform Update 1 e sono inclusi come parte di .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)]flussi di lavoro stato macchina in .NET 4.0.1 - 4.0.3 e .NET Framework 4.5, vedere [aggiornamento 4.0.1 per Microsoft .NET Framework 4 funzionalità](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) e [flussi di lavoro macchina stato](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF migrazioni: Le attività personalizzate](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Vengono forniti esempi e istruzioni per riprogettare le attività personalizzate di WF3 in WF4.  

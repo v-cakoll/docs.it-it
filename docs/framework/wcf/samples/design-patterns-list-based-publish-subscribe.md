@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b54982439f621ea504c91c264dde002751ec9185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelli di progettazione: pubblicazione-sottoscrizione basata su elenchi
 In questo esempio viene illustrato il modello di pubblicazione-sottoscrizione basato su elenchi implementato come programma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -135,7 +135,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Eseguire Datasource.exe da \datasource\bin\\, nella cartella della specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
   
-4.  Se il client, l'origine dati e i programmi del servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client, l'origine dati e i programmi del servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   

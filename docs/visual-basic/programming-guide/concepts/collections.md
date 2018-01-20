@@ -11,11 +11,11 @@ ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-visual-basic"></a>Raccolte (Visual Basic)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -470,7 +470,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definizione di una raccolta personalizzata  
- È possibile definire una raccolta implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Per ulteriori informazioni, vedere [enumerando una raccolta di](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+ È possibile definire una raccolta implementando l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Per ulteriori informazioni, vedere [enumerando una raccolta di](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
  Sebbene sia possibile definire una raccolta personalizzata, in genere è preferibile usare le raccolte incluse in .NET Framework, descritte in [Tipi di raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) in precedenza in questo argomento.  
   
@@ -547,7 +547,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iteratori  
+##  <a name="iterators"></a>Iterators  
  Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore Usa un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta.  
   
  Per chiamare un iteratore di un [For Each... Avanti](../../../visual-basic/language-reference/statements/for-each-next-statement.md) istruzione. Ogni iterazione del ciclo `For Each` chiama l'iteratore. Quando si raggiunge un'istruzione `Yield` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  
@@ -585,7 +585,7 @@ End Function
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Raccolte e strutture di dati](../../../standard/collections/index.md)  
- [Creazione e modifica delle raccolte](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Creazione e modifica delle raccolte](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)  
  [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)

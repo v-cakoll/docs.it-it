@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedura: generare assembly di interoperabilità tramite Tlbimp.exe
 È possibile generare un assembly di interoperabilità primario in due modi:  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  Un assembly di interoperabilità primario dipendente con un numero di versione diverso da quello della libreria dei tipi originali non è rilevabile quando installato nella directory corrente. È necessario registrare l'assembly di interoperabilità primario dipendente nel Registro di sistema di Windows oppure usare l'opzione **/reference** per assicurarsi che Tlbimp.exe trovi il file DLL dipendente.  
   
- È anche possibile eseguire il wrapping di più versioni di una libreria dei tipi. Per istruzioni, vedere [Procedura: Eseguire il wrapping di più versioni delle librerie dei tipi](http://msdn.microsoft.com/en-us/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
+ È anche possibile eseguire il wrapping di più versioni di una libreria dei tipi. Per istruzioni, vedere [Procedura: Eseguire il wrapping di più versioni delle librerie dei tipi](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente importa la libreria dei tipi COM `LibUtil.tlb` e firma l'assembly `LibUtil.dll` con un nome sicuro usando il file di chiave `CompanyA.snk`. Omettendo un nome di spazio dei nomi specifico, questo esempio produce lo spazio dei nomi predefinito, `LibUtil`.  

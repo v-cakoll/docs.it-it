@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Procedura: creare un servizio dati tramite un'origine dati ADO.NET Entity Framework (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] espone i dati di entità come servizio dati. Tali dati vengono forniti da [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando l'origine dati è un database relazionale. In questo argomento viene illustrato come creare un modello di dati basato su [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] in un'applicazione Web [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] in base a un database esistente e come usarlo per creare un nuovo servizio dati.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] espone i dati di entità come servizio dati. Questi dati di entità viene eseguiti il [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] quando l'origine dati è un database relazionale. In questo argomento viene illustrato come creare un modello di dati basato su [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] in un'applicazione Web [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] in base a un database esistente e come usarlo per creare un nuovo servizio dati.  
   
  In [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] è disponibile inoltre uno strumento da riga di comando che può generare un modello di [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] all'esterno di un progetto [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per ulteriori informazioni, vedere [procedura: utilizzare EdmGen.exe per generare il modello e i file di Mapping](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. Fare clic su **fine** per completare la procedura guidata.  
   
-     Verrà creato un modello di dati predefinito in base al database specifico. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] consente di personalizzare il modello di dati. Per altre informazioni, vedere [Tasks](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb) (Attività).  
+     Verrà creato un modello di dati predefinito in base al database specifico. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] consente di personalizzare il modello di dati. Per altre informazioni, vedere [Tasks](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb) (Attività).  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Per creare il servizio dati usando il nuovo modello di dati  
   

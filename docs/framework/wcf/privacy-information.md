@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
 Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si compila un'applicazione usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versione 3.0, è possibile che questa abbia un impatto sulla privacy degli utenti finali. L'applicazione potrebbe, ad esempio, raccogliere in modo esplicito informazioni di contatto sugli utenti o richiedere o inviare informazioni in Internet al sito Web. Se si incorpora la tecnologia Microsoft nell'applicazione, è possibile che tale tecnologia abbia un proprio comportamento che potrebbe influire sulla privacy. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] non invia informazioni a Microsoft dall'applicazione a meno che non sia lo sviluppatore o l'utente finale a determinarne l'invio.  
@@ -174,15 +174,15 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  >  
   
- \<Le condizioni NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
  \<Gruppo di destinatari > [uri]\</Audience > +  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!-tipo di base astratta  
   
@@ -200,7 +200,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  [any]*  
   
- \</ Suggerimenti >?  
+ \</Advice>?  
   
  <\!-Tipi di base astratti  
   
@@ -222,17 +222,17 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
  \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [qualsiasi]\</SubjectConfirmationData >?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</ Soggetto >  
+ \</Subject>  
   
  \</ SubjectStatement > *  
   
@@ -266,7 +266,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
  \<AttributeStatement >  
   
@@ -290,13 +290,13 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  Resource="[uri]"  
   
- Decisione = "[autorizzazione &#124; Deny &#124; indeterminato]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<Azione Namespace = "[uri]" > [stringa]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Evidenza >  
   
@@ -306,9 +306,9 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
   
  \</ Evidenza >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ Asserzione >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informazioni rimosse dai corpi dei messaggi in caso di registrazione di messaggi decrittografati/non crittografati  
  Come descritto in precedenza, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rimuove chiavi e potenziali informazioni personali note dalle intestazioni dei messaggi registrati in forma decrittografata/non crittografata. Inoltre, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] rimuove chiavi e potenziali informazioni personali note dai corpi dei messaggi per gli elementi del corpo e le azioni riportati nell'elenco seguente, che descrivono messaggi di sicurezza coinvolti nello scambio di chiavi.  
@@ -413,5 +413,5 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
  Il linguaggio di descrizione dei servizi Web (WSDL, Web Services Description Language) contiene una definizione della porta. Ogni porta ha un indirizzo endpoint e un'associazione che rappresenta i servizi usati dall'applicazione. L'esposizione del codice WSDL può essere disattivata usando la configurazione. Nessuna informazioni viene conservata sul computer.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)

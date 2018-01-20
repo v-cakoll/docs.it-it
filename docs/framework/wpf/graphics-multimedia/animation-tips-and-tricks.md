@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>Suggerimenti sulle animazioni
 Quando si utilizzano le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], esistono una serie di suggerimenti e consigli che rendono le animazioni prestazioni migliori e risparmiare frustrazione.  
@@ -116,7 +116,7 @@ Quando si utilizzano le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includ
   
  Per rimuovere un'animazione, sono disponibili modi diversi. Le tecniche seguenti possono essere utilizzate per rimuovere le animazioni che appartengono a un <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Per rimuovere un <xref:System.Windows.Media.Animation.Storyboard> si inizia con un trigger di evento, vedere [procedura: rimuovere uno Storyboard](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Per rimuovere un <xref:System.Windows.Media.Animation.Storyboard> si inizia con un trigger di evento, vedere [procedura: rimuovere uno Storyboard](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
 -   Usare il codice per rimuovere un <xref:System.Windows.Media.Animation.Storyboard>, vedere il <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> metodo.  
   

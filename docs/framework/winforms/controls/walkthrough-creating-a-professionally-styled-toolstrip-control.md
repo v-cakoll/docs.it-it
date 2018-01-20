@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procedura dettagliata: creazione di un controllo ToolStrip professionale
 È possibile assegnare l'applicazione <xref:System.Windows.Forms.ToolStrip> controlla l'aspetto professionale e un comportamento, scrivere la propria classe derivata dal <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
  Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: creare un controllo ToolStrip professionale](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, è necessario:  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  In **Esplora**, eliminare il controllo del progetto predefinita eliminando il file di origine denominato "UserControl1. cs" o "UserControl1. vb", a seconda del linguaggio scelto.  
   
-     Per ulteriori informazioni, vedere [NIB: procedura: escludere elementi, eliminazione e Rimuovi](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Per ulteriori informazioni, vedere [NIB: procedura: escludere elementi, eliminazione e Rimuovi](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Aggiungere un nuovo <xref:System.Windows.Forms.UserControl> elemento il **StackViewLibrary** progetto. Assegnare il nuovo file di origine il nome di base di `StackView`.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/22/2017
     |--------------|-----------|  
     |nome|`mailStackButton`|  
     |CheckOnClick|true|  
-    |Oggetto CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
@@ -132,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  Rinominare il `mailStackButton_Click` gestore `stackButton_Click`.  
   
-     Per ulteriori informazioni, vedere [procedura: rinominare un identificatore (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Per ulteriori informazioni, vedere [procedura: rinominare un identificatore (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Inserire il codice seguente nel `stackButton_Click` gestore dell'evento.  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 12. Ripetere i passaggi 10 e 11 per il `contactsStackButton` e `tasksStackButton` controlli.  
   
 ## <a name="defining-icons"></a>Definizione delle icone  
- Ogni `StackView` pulsante è associata un'icona. Per comodità, ogni icona è rappresentato come una stringa con codifica Base64, che viene deserializzato prima di un <xref:System.Drawing.Bitmap> viene creato da esso. In un ambiente di produzione, vengono memorizzati i dati di bitmap come una risorsa, e le icone vengono visualizzate nella finestra di progettazione Windows Form. Per ulteriori informazioni, vedere [procedura: aggiungere immagini di sfondo a un Windows Form](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Ogni `StackView` pulsante è associata un'icona. Per comodità, ogni icona è rappresentato come una stringa con codifica Base64, che viene deserializzato prima di un <xref:System.Drawing.Bitmap> viene creato da esso. In un ambiente di produzione, vengono memorizzati i dati di bitmap come una risorsa, e le icone vengono visualizzate nella finestra di progettazione Windows Form. Per ulteriori informazioni, vedere [procedura: aggiungere immagini di sfondo a un Windows Form](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Per definire le icone  
   

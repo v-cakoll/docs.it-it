@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Cenni preliminari sul modello TextPattern di automazione interfaccia utente
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  L'esposizione del contenuto testuale di un controllo viene effettuata tramite l'uso del pattern di controllo <xref:System.Windows.Automation.TextPattern> , che rappresenta il contenuto di un contenitore di testo come flusso di testo. A sua volta, l'oggetto <xref:System.Windows.Automation.TextPattern> richiede il supporto della classe <xref:System.Windows.Automation.Text.TextPatternRange> per esporre attributi di stile e formato. <xref:System.Windows.Automation.Text.TextPatternRange> supporta <xref:System.Windows.Automation.TextPattern> rappresentando intervalli di testo contigui e non in un contenitore di testo con una raccolta di endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> r <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> supporta funzionalità, quali la selezione, il confronto, il recupero e l'attraversamento.  
   
 > [!NOTE]
->  Le classi <xref:System.Windows.Automation.TextPattern> non consentono di inserire o modificare testo. Tuttavia, a seconda del controllo, questa operazione può essere eseguita dal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o tramite input diretto della tastiera. Per un esempio, vedere [TextPattern Insert Text Sample](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) .  
+>  Le classi <xref:System.Windows.Automation.TextPattern> non consentono di inserire o modificare testo. Tuttavia, a seconda del controllo, questa operazione può essere eseguita dal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o tramite input diretto della tastiera. Vedere il [ValuePattern Insert Text Sample](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) per un esempio.  
   
  La funzionalità descritta in questa panoramica è fondamentale per i fornitori di tecnologie per l'accessibilità e per gli utenti finali. Le tecnologie per l'accessibilità possono usare [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per raccogliere informazioni complete sulla formattazione del testo per l'utente e fornire spostamento a livello di codice e selezione del testo dall'oggetto <xref:System.Windows.Automation.Text.TextUnit> (carattere, parola, riga o paragrafo).  
   

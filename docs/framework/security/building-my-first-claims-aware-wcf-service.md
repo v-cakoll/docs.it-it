@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: af39c3c5788db95eaee248ca8454534022cab659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 791c86b8f833c6b1a8acb6da3b03cfccdafca0e5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Creazione del primo servizio WCF che può riconoscere attestazioni
 ## <a name="applies-to"></a>Si applica a  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  AD FS 2.0 fa parte di Windows Server R2 e può essere utilizzato come servizio token di sicurezza in scenari locali. Azure Active Directory Access Control (detto anche Servizio di controllo di accesso o ACS) è un servizio cloud, fornito come parte di Microsoft Azure. Per fini di test e didattici, è inoltre possibile utilizzare altri servizi token di sicurezza per compilare applicazioni in grado di riconoscere attestazioni. È possibile, ad esempio, usare il servizio token di sicurezza di sviluppo locale che fa parte di [Identity and Access Tool for Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849), disponibile gratuitamente online.  
   
- Per compilare il primo servizio WCF in grado di riconoscere attestazioni mediante l'utilizzo di WIF, vedere [Procedura: Compilare un servizio WCF in grado di riconoscere attestazioni mediante WIF](http://msdn.microsoft.com/en-us/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
+ Per compilare il primo servizio WCF in grado di riconoscere attestazioni mediante l'utilizzo di WIF, vedere [Procedura: Compilare un servizio WCF in grado di riconoscere attestazioni mediante WIF](http://msdn.microsoft.com/library/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida introduttiva a WIF](../../../docs/framework/security/getting-started-with-wif.md)

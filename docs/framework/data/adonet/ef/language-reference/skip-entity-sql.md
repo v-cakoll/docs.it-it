@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1578a5817e43943d5b4257e76c7706155504fc86
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0dd0754158000642dd078f00033c9ddc2f78686d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 Il paging fisico può essere eseguito usando la sottoclausola SKIP nella clausola ORDER BY. Non è possibile usare SKIP separatamente dalla clausola ORDER BY.  
@@ -48,6 +48,6 @@ Il paging fisico può essere eseguito usando la sottoclausola SKIP nella clausol
   
 ## <a name="see-also"></a>Vedere anche  
  [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
- [Procedura: spostarsi tra Query i risultati](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Procedura: spostarsi tra Query i risultati](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
  [Paging](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
  [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

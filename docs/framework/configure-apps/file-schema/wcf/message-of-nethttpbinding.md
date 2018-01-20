@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b6c1519873ba4127b1619e0dd8387a0e2d40ddae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17a0043188c36a31dc4ee35e8f5889240b9b7407
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; di &lt;netHttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<netHttpBinding >  
-\<associazione >  
-\<sicurezza >  
-\<messaggio >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netHttpBinding>  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<basicHt
 |Certificato|Richiede che l'autenticazione del client sul server avvenga mediante un certificato. La credenziale client in questo caso deve essere specificata tramite <`clientCredentials`> e <`clientCertificate`>. Inoltre, quando si usa la modalità di sicurezza del messaggio, è necessario eseguire il provisioning del client con il certificato del servizio. La credenziale del servizio in questo caso deve essere specificata tramite <xref:System.ServiceModel.Description.ClientCredentials> classe o `ClientCredentials` elemento di comportamento e specificando il servizio certificati usando il \<serviceCertificate > dell'elemento di serviceCredentials.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -140,5 +140,5 @@ Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<basicHt
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

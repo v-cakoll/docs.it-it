@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a0bd0f8dcde95dcbb5ef8fcf398256b6931859c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f5cd70e71a4a8bc48a3240055117dadc1086a50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Procedura: bloccare i controlli di un Windows Form
 Quando si progetta l'interfaccia utente (UI) dell'applicazione Windows, è possibile bloccare i controlli di una volta posizionati correttamente, in modo che non vengano spostati o ridimensionati quando si impostano altre proprietà inavvertitamente.  
@@ -29,7 +29,7 @@ Quando si progetta l'interfaccia utente (UI) dell'applicazione Windows, è possi
  Inoltre, è possibile bloccare e sbloccare tutti i controlli del form in una sola volta, che è utile per i moduli con molti controlli, o è possibile sbloccare singoli controlli. Dopo aver posizionato tutti i controlli in cui si desidera utilizzarle sul form, bloccarle tutte per evitare lo spostamento errato.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-lock-a-control"></a>Per bloccare un controllo  
   

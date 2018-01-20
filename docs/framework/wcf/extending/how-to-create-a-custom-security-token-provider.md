@@ -18,11 +18,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: e776b04c626fac134e2fc9c1b9fd0ae63a50b5d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Procedura: creare un provider di token di sicurezza personalizzati
 In questo argomento viene illustrato come creare nuovi tipi di token con un provider di token di sicurezza personalizzati e come integrare il provider con un gestore di token di sicurezza personalizzati.  
@@ -34,7 +34,7 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
   
  Per ulteriori informazioni sulle credenziali personalizzate e gestore del token di sicurezza, vedere il [procedura dettagliata: creazione di Client personalizzato e credenziali del servizio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
- Per ulteriori informazioni sulle credenziali, token manager, provider e autenticatore classi di protezione, vedere il [architettura di sicurezza](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Per ulteriori informazioni sulle credenziali, token manager, provider e autenticatore classi di protezione, vedere il [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Per creare un provider di token di sicurezza personalizzati  
   
@@ -71,4 +71,4 @@ In questo argomento viene illustrato come creare nuovi tipi di token con un prov
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
  [Procedura dettagliata: creazione di credenziali client e del servizio personalizzate](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Procedura: Creare un autenticatore del token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Architettura di sicurezza](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

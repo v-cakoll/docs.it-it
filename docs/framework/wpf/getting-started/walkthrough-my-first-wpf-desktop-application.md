@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: La prima applicazione desktop WPF
 Questa procedura dettagliata viene fornita un'introduzione allo sviluppo di un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applicazione che include gli elementi che sono comuni alla maggior parte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] markup, codice, le definizioni di applicazioni, controlli, layout, Data binding e stili. 
@@ -56,7 +56,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
 ## <a name="creating-the-application-project"></a>Creazione del progetto di applicazione  
  In questa sezione si crea l'infrastruttura dell'applicazione che include una definizione dell'applicazione, due pagine e un'immagine. 
   
-1. Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `ExpenseIt`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `ExpenseIt`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  Questa procedura dettagliata Usa il <xref:System.Windows.Controls.DataGrid> controllo che è disponibile in .NET Framework 4. È possibile che il progetto è destinato a .NET Framework 4 o versione successiva. Per ulteriori informazioni, vedere[procedura: destinare una versione di .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -115,7 +115,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
 ## <a name="adding-files-to-the-application"></a>Aggiunta di file all'applicazione  
  In questa sezione si aggiungono due pagine e un'immagine all'applicazione. 
   
-1. Aggiungere una nuova pagina (WPF) al progetto denominato `ExpenseItHome.xaml`. Per ulteriori informazioni, vedere [procedura: aggiungere nuovi elementi a un progetto WPF](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Aggiungere una nuova pagina (WPF) al progetto denominato `ExpenseItHome.xaml`. Per ulteriori informazioni, vedere [procedura: aggiungere nuovi elementi a un progetto WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Questa è la prima pagina visualizzata quando viene avviata l'applicazione. Mostrerà un elenco di persone in cui l'utente può selezionare la persona desiderata per la visualizzazione della nota spese. 
   
@@ -171,7 +171,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Aggiungere al progetto un'immagine denominata watermark.png. È possibile creare un'immagine personalizzata oppure copiare il file dal codice di esempio. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Aggiungere al progetto un'immagine denominata watermark.png. È possibile creare un'immagine personalizzata oppure copiare il file dal codice di esempio. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Compilazione e l'esecuzione dell'applicazione  
  In questa sezione viene compilata ed eseguita l'applicazione. 
@@ -280,7 +280,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 1. Aprire ExpenseItHome.xaml. 
   
-2. Aggiungere un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore eventi per il <xref:System.Windows.Controls.Button> elemento. Per ulteriori informazioni, vedere [procedura: creare un semplice gestore](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Aggiungere un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore eventi per il <xref:System.Windows.Controls.Button> elemento. Per ulteriori informazioni, vedere [procedura: creare un semplice gestore](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

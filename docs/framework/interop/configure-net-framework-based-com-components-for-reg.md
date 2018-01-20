@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -183,6 +183,6 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 ## <a name="see-also"></a>Vedere anche  
  [Interoperabilità COM senza registrazione](../../../docs/framework/interop/registration-free-com-interop.md)  
- [Requisiti per l'interoperabilità COM senza registrazione](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [Configurazione di componenti COM per l'attivazione senza registrazione](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
+ [Requisiti per l'interoperabilità COM senza registrazione](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [Configurazione di componenti COM per l'attivazione senza registrazione](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [Registration-Free Activation of .NET-Based Components: A Walkthrough](http://go.microsoft.com/fwlink/?LinkId=158812) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)

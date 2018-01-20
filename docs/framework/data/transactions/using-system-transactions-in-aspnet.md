@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Uso di System.Transactions in ASP.NET
 Questo argomento descrive come usare correttamente <xref:System.Transactions> all'interno di un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
@@ -50,7 +50,7 @@ Questo argomento descrive come usare correttamente <xref:System.Transactions> al
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , vedere [Elemento securityPolicy (schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] criteri di sicurezza, vedere [elemento securityPolicy (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
   
 ## <a name="dynamic-compilation"></a>Compilazione dinamica  
  Se si vuole importare e usare <xref:System.Transactions> in un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] compilata dinamicamente all'accesso, è necessario inserire nel file di configurazione un riferimento all'assembly <xref:System.Transactions> . In particolare, il riferimento deve essere aggiunto nella sezione **compilation**/**assemblies** del file di configurazione **Web.config** radice predefinito oppure nel file di configurazione di un'applicazione Web specifica. Nell'esempio che segue viene illustrato quanto descritto.  
@@ -67,9 +67,9 @@ Questo argomento descrive come usare correttamente <xref:System.Transactions> al
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Elemento add per assembly per la compilazione (scheda delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][elemento add per assembly per la compilazione (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
 ## <a name="see-also"></a>Vedere anche  
  [File dei criteri e i livelli di attendibilità di ASP.NET](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [Elemento securityPolicy (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [Elemento securityPolicy (Schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [Escalation della gestione delle transazioni](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 975c5ea5d5b3ab81d37b713e84f273e4c2c1c0b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedura: scambiare messaggi in coda con endpoint WCF
 Le code garantiscono una messaggistica affidabile tra un client e un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], anche se il servizio non è disponibile al momento della comunicazione. Nelle procedure seguenti viene spiegato come assicurare una comunicazione durevole tra un client e un servizio utilizzando l'associazione in coda standard in caso di implementazione del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -52,7 +52,7 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurazione, vedere [la configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definire un oggetto <xref:System.ServiceModel.Description.ServiceEndpoint> nella configurazione che specifichi l'indirizzo del servizio e utilizzi l'associazione <xref:System.ServiceModel.NetMsmqBinding> standard. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurazione, vedere [la configurazione di applicazioni di Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -101,6 +101,6 @@ Le code garantiscono una messaggistica affidabile tra un client e un servizio [!
  [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

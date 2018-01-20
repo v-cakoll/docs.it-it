@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0db7b9677b5c8c415b6d0b3f49bd149c06843a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030183e77a141036416a3bcb8a4c4018df0a7e65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Procedura dettagliata: mapping delle proprietà tramite il controllo ElementHost
 Questa procedura dettagliata viene illustrato come utilizzare il <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> proprietà da mappare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] proprietà alle proprietà corrispondenti di hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento.  
@@ -52,7 +52,7 @@ Questa procedura dettagliata viene illustrato come utilizzare il <xref:System.Wi
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] progetto di applicazione denominato `PropertyMappingWithElementHost`. Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Creare un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] progetto di applicazione denominato `PropertyMappingWithElementHost`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione Windows Form](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  In Esplora soluzioni aggiungere riferimenti ai seguenti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly.  
   
@@ -71,7 +71,7 @@ Questa procedura dettagliata viene illustrato come utilizzare il <xref:System.Wi
   
 4.  Aprire `Form1` in Progettazione Windows Form. Fare doppio clic sul form per aggiungere un gestore eventi per il <xref:System.Windows.Forms.Form.Load> evento.  
   
-5.  Tornare a Progettazione Windows Form e aggiungere un gestore eventi per il modulo <xref:System.Windows.Forms.Control.Resize> evento. Per ulteriori informazioni, vedere [procedura: creare di gestori di eventi utilizzando la finestra di progettazione](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).  
+5.  Tornare a Progettazione Windows Form e aggiungere un gestore eventi per il modulo <xref:System.Windows.Forms.Control.Resize> evento. Per ulteriori informazioni, vedere [procedura: creare di gestori di eventi utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 6.  Dichiarare un <xref:System.Windows.Forms.Integration.ElementHost> campo la `Form1` classe.  
   
@@ -153,5 +153,5 @@ Questa procedura dettagliata viene illustrato come utilizzare il <xref:System.Wi
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [Procedura dettaglia: hosting di un controllo WPF composito in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

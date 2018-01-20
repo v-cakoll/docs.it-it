@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Associazioni di Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa il modo in cui il software per un'applicazione viene scritto dal modo in cui comunica con altro software. Le associazioni vengono utilizzate per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le associazioni per generare la rappresentazione della rete sottostante dell'endpoint, pertanto la maggior parte dei dettagli di associazione deve essere concordata dalle parti coinvolte nella comunicazione. Il modo più semplice per conseguire questo risultato consiste nel fare in modo che i client di un servizio utilizzino la stessa associazione utilizzata dall'endpoint del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire questa operazione, vedere [utilizzando associazioni ai client e configurare i servizi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa il modo in cui il software per un'applicazione viene scritto dal modo in cui comunica con altro software. Le associazioni vengono utilizzate per specificare i dettagli sul trasporto, la codifica e il protocollo necessari per consentire la comunicazione tra client e servizi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza le associazioni per generare la rappresentazione della rete sottostante dell'endpoint, pertanto la maggior parte dei dettagli di associazione deve essere concordata dalle parti coinvolte nella comunicazione. Il modo più semplice per conseguire questo risultato consiste nel fare in modo che i client di un servizio utilizzino la stessa associazione utilizzata dall'endpoint del servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire questa operazione, vedere [utilizzando associazioni ai client e configurare i servizi di Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Un'associazione è costituita da una raccolta di elementi di associazione. Ogni elemento descrive alcuni aspetti relativi alla modalità di comunicazione tra l'endpoint e i client. Un'associazione deve includere almeno un elemento di associazione di trasporto, almeno un elemento di associazione di codifica del messaggio (che può essere fornito per impostazione predefinita dall'elemento di associazione di trasporto) e un numero qualsiasi di altri elementi di associazione del protocollo. Il processo che genera una fase di esecuzione da questa descrizione consente a ogni elemento di associazione di fornire codice alla fase di esecuzione.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [Configurazione di associazioni fornite dal sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Viene descritto come utilizzare e modificare le associazioni che [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce a supporto di scenari comuni.  
   
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Viene descritto come definire associazioni di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per servizi e client in modo imperativo nel codice e in modo dichiarativo utilizzando la configurazione.  
   
  [Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)  

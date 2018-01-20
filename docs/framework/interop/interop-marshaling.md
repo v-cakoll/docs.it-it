@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -105,7 +105,7 @@ Chiamata su diversi apartment tra un client .NET e un oggetto COM
     > [!NOTE]
     >  Dopo avere impostato il thread di un client C# su STA, occorre effettuare il marshalling su diversi apartment per le chiamate ai componenti COM MTA.  
   
- Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Threading gestito e non gestito](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Threading gestito e non gestito](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
   
  [Torna all'inizio](#top)  
   
@@ -145,7 +145,7 @@ Passaggio dei riferimenti attraverso i limiti dell'host e del processo
  ![SOAP o TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel  
   
- È possibile incanalare tramite SOAP alcune chiamate non gestite, ad esempio quelle tra i [componenti serviti](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) e COM.  
+ È possibile incanalare tramite SOAP alcune chiamate non gestite, ad esempio quelle tra i [componenti serviti](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) e COM.  
   
  [Torna all'inizio](#top)  
   
@@ -159,10 +159,10 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
 |[Dati di marshalling con interoperabilità COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|  
 |[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|  
 |[Procedura: Eseguire il mapping di HRESULT ed eccezioni](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Descrive come mappare le eccezioni personalizzate agli oggetti HRESULT e illustra le relazioni di mapping tra ogni oggetto HRESULT e la classe di eccezioni corrispondente in .NET Framework.|  
-|[Interoperabilità tramite tipi generici](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
+|[Interoperabilità tramite tipi generici](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
 |[Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)|Descrive i servizi di interoperabilità forniti da Common Language Runtime.|  
-|[Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|  
-|[Considerazioni di progettazione per l'interoperabilità](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
+|[Interoperabilità COM avanzata](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|  
+|[Considerazioni di progettazione per l'interoperabilità](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
   
  [Torna all'inizio](#top)  
   

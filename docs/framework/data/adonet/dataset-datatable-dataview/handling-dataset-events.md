@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6c87e805bd710b49ce805af8223cddb5c7036c50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-dataset-events"></a>Gestione di eventi dataset
 L'oggetto <xref:System.Data.DataSet> fornisce tre eventi: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>e <xref:System.Data.DataSet.MergeFailed>.  
@@ -62,7 +62,7 @@ private static void DataSetMergeFailed(
  `DataSet` è derivato dalla classe <xref:System.ComponentModel.MarshalByValueComponent> , che espone il metodo <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> e l'evento <xref:System.ComponentModel.MarshalByValueComponent.Disposed> . Il <xref:System.ComponentModel.MarshalByValueComponent.Disposed> eventi aggiunge un gestore eventi per restare in attesa per l'evento disposed sul componente. È possibile utilizzare il <xref:System.ComponentModel.MarshalByValueComponent.Disposed> evento di un `DataSet` se si desidera eseguire il codice quando il <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metodo viene chiamato. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>Rilascia le risorse usate dal <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
->  Il `DataSet` e `DataTable` oggetti ereditano <xref:System.ComponentModel.MarshalByValueComponent> e supportano il <xref:System.Runtime.Serialization.ISerializable> interfaccia per la comunicazione remota. Si tratta degli unici oggetti ADO.NET che è possibile eseguire in remoto. Per altre informazioni, vedere [Remote Objects](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58).  
+>  Il `DataSet` e `DataTable` oggetti ereditano <xref:System.ComponentModel.MarshalByValueComponent> e supportano il <xref:System.Runtime.Serialization.ISerializable> interfaccia per la comunicazione remota. Si tratta degli unici oggetti ADO.NET che è possibile eseguire in remoto. Per ulteriori informazioni, vedere [oggetti remoti](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
   
  Per informazioni su altri eventi disponibili quando si lavora con un `DataSet`, vedere [gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) e [gestione di eventi DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   

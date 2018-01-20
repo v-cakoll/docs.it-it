@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c70b7df47cb3f367318fb388ceda2163f538cb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Procedura: accedere a WSE 3.0 Service con un client WCF
 I client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono compatibili a livello di rete con Web Services Enhancements (WSE) 3.0 per i servizi Microsoft .NET quando i client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono configurati per utilizzare la versione dell'agosto 2004 della specifica WS-Addressing. Tuttavia, servizi WSE 3.0 non supportano il protocollo di exchange (MEX) i metadati, pertanto quando si utilizza il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per creare un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] classe client, le impostazioni di sicurezza non vengono applicate a generato [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client. È quindi necessario specificare le impostazioni di sicurezza richieste dal servizio WSE 3.0 dopo la generazione del client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -38,7 +38,7 @@ I client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono compatibil
   
 2.  Creare una classe che rappresenta un'associazione che può comunicare con i servizi Web WSE 3.0.  
   
-     La classe seguente fa parte di [interagisce con WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41) esempio:  
+     La classe seguente fa parte di [interagisce con WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) esempio:  
   
     1.  Creare una classe che derivi dalla classe <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -75,4 +75,4 @@ I client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono compatibil
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.Binding>  
- [Interoperabilità con WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Interoperabilità con WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

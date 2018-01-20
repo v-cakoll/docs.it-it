@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
@@ -130,7 +130,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 -   Nel codice, creare intestazioni di indirizzo personalizzate utilizzando la classe <xref:System.ServiceModel.Channels.AddressHeader>, quindi utilizzarle nella costruzione di un oggetto <xref:System.ServiceModel.EndpointAddress>.  
   
--   In configurazione personalizzata [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) vengono specificati come elementi figlio del [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   In configurazione personalizzata [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) vengono specificati come elementi figlio del [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  La configurazione è in genere preferibile al codice, poiché consente di modificare le intestazioni dopo la distribuzione.  
   
@@ -141,7 +141,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 -   Nel codice, specificare un indirizzo di ascolto personalizzato aggiungendo una classe <xref:System.ServiceModel.Description.ClientViaBehavior> alla raccolta di comportamenti dell'endpoint.  
   
--   Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Nella configurazione, specificare un indirizzo di ascolto personalizzato con il `ListenUri` attributo del servizio [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro dell'indirizzo SOAP personalizzato  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> viene utilizzato insieme a una proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> per definire il filtro dell'indirizzo SOAP di un endpoint (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Per impostazione predefinita, questo filtro consente di verificare che un messaggio in arrivo disponga di un'intestazione del messaggio `To` che corrisponde all'URI dell'endpoint e che nel messaggio siano presenti tutte le intestazioni dell'endpoint richieste.  

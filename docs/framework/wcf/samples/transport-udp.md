@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>Trasporto UDP
 L'esempio Trasporto UDP illustra come implementare unicast e multicast UDP come trasporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizzato. L'esempio descrive la procedura consigliata per la creazione di un trasporto personalizzato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilizzando il framework del canale e le procedure consigliate di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che seguono. I passaggi per creare un trasporto personalizzato sono i seguenti:  
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP Test Service e client  
- Il codice di test per l'utilizzo di questo trasporto di esempio è disponibile nelle directory UdpTestService e UdpTestClient. Il codice servizio è costituito da due test. Il primo imposta associazioni ed endpoint tramite codice e l'altro lo fa tramite configurazione. Entrambi i test utilizzano due endpoint. Un endpoint utilizza il `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) impostato su `true`. L'altro endpoint utilizza un'associazione personalizzata con `UdpTransportBindingElement`. Ciò equivale all'utilizzo `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) impostato su `false`. Entrambi i test creano un servizio, aggiungono un endpoint per ogni associazione, aprono il servizio e quindi aspettano che l'utente prema INVIO prima di chiudere il servizio.  
+ Il codice di test per l'utilizzo di questo trasporto di esempio è disponibile nelle directory UdpTestService e UdpTestClient. Il codice servizio è costituito da due test. Il primo imposta associazioni ed endpoint tramite codice e l'altro lo fa tramite configurazione. Entrambi i test utilizzano due endpoint. Un endpoint utilizza il `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) impostato su `true`. L'altro endpoint utilizza un'associazione personalizzata con `UdpTransportBindingElement`. Ciò equivale all'utilizzo `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) impostato su `false`. Entrambi i test creano un servizio, aggiungono un endpoint per ogni associazione, aprono il servizio e quindi aspettano che l'utente prema INVIO prima di chiudere il servizio.  
   
  Quando si avvia l'applicazione per testare il servizio, l'output sarà come segue:  
   

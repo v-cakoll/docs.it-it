@@ -14,19 +14,19 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 15c2561487eecb44cf3542768de0a77d1dd6713d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb62bbe8b52032708dddd62dd895e61ba8c1c5e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori di token.  
   
- \<System. IdentityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
-\<rimuovere >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,16 +48,16 @@ Rimuove il gestore di token di sicurezza specificato dalla raccolta di gestori d
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|tipo|Il nome del tipo CLR il gestore dei token da rimuovere. Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obbligatorio.|  
+|tipo|Il nome del tipo CLR il gestore dei token da rimuovere. Per ulteriori informazioni su come specificare il `type` attributo, vedere [riferimenti al tipo personalizzato](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obbligatorio.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.|  
   
 ## <a name="example"></a>Esempio  
  Il codice XML seguente viene illustrato come utilizzare il `<add>` e `<remove>` elementi per sostituire il gestore di token di sessione predefinito con un gestore di token di sessione personalizzate. Il codice XML viene prelevato il `ClaimsAwareWebFarm` esempio.  

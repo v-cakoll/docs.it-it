@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Denominazione sicura (riferimenti alle API non gestite)
 L'API di denominazione sicura consente a un client di amministrare la firma degli assembly con nome sicuro.  
@@ -30,7 +30,7 @@ L'API di denominazione sicura consente a un client di amministrare la firma degl
  La firma di un assembly con un nome sicuro comporta l'aggiunta di una crittografia con chiave pubblica al file che contiene il manifesto dell'assembly. Firma con nome sicuro consente di verificare l'univocità dei nomi, impedisce l'utilizzo fraudolento e fornisce con un'identità univoca quando un riferimento viene risolto. Tuttavia, nessun livello di attendibilità è associata a un nome sicuro.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Funzioni statiche globali di denominazione sicura](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Funzioni statiche globali di denominazione sicura](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Descrive le funzioni statiche globali non gestite usate dall'API di denominazione sicuro.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ L'API di denominazione sicura consente a un client di amministrare la firma degl
  [Funzione StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Ottiene un token che rappresenta una chiave pubblica. Deprecate a partire dal [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Struttura di denominazione sicuro](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Struttura di denominazione sicuro](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Descrive la struttura non gestita che usa l'API di denominazione sicura per amministrare firma degli assembly con nome sicuro...  
   
  [Struttura PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

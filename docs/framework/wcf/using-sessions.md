@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Uso di sessioni
 Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] una *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sono differenti dall'oggetto sessione disponibile nelle applicazioni [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento vengono descritte le funzionalità che vengono attivate dalle sessioni nelle applicazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative modalità di utilizzo.  
@@ -147,7 +147,7 @@ Nelle applicazioni [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] una *ses
  Esiste un'interazione tra l'enumerazione <xref:System.ServiceModel.SessionMode> in un contratto e la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, che consente di controllare l'associazione tra canali e oggetti servizio specifici. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sessioni, istanze e concorrenza](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Condivisione di oggetti InstanceContext  
- È inoltre possibile controllare l'associazione tra canali basati sulla sessione o chiamate con sessione e oggetti <xref:System.ServiceModel.InstanceContext> eseguendo quell'associazione. Per un esempio completo, vedere [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ È inoltre possibile controllare l'associazione tra canali basati sulla sessione o chiamate con sessione e oggetti <xref:System.ServiceModel.InstanceContext> eseguendo quell'associazione. Per un esempio completo, vedere [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Sessioni e flusso  
  Quando è necessario trasferire una notevole quantità di dati, la modalità del trasferimento in flusso di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è un'alternativa possibile al comportamento predefinito di memorizzazione nel buffer ed elaborazione in memoria dei messaggi per intero. È possibile ricevere un comportamento imprevisto quando viene eseguito il flusso delle chiamate con un'associazione basata sulla sessione. Tutte le chiamate del flusso sono eseguite tramite un solo canale (il canale del datagramma) che non supporta sessioni anche se l'associazione utilizzata è configurata per utilizzare sessioni. Se più client effettuano un flusso di chiamate allo stesso oggetto servizio con un'associazione basata sulla sessione, la modalità di concorrenza dell'oggetto servizio è impostata su Single e la modalità di contesto dell'istanza è impostata su `PerSession`, tutte le chiamate devono transitare attraverso il canale del datagramma, pertanto viene elaborata una sola chiamata alla volta. Uno o più client possono quindi scadere. È possibile risolvere questo problema impostando `InstanceContextMode` dell'oggetto servizio su `PerCall` o Concurrency su Multiple.  

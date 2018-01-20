@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd8bc5e227bd68fc3c5c59d80549322ca742bcf9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando guide di allineamento
 Per molte applicazioni è estremamente importante la sistemazione precisa dei controlli nel form. Progettazione Windows Form offre diversi strumenti di layout a questo scopo. Uno dei più importanti è la <xref:System.Windows.Forms.Design.Behavior.SnapLine> funzionalità.  
@@ -59,14 +59,14 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
  Al termine, si avrà una migliore comprensione del ruolo del layout riprodotto di allineamento.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto di applicazione basata su Windows denominato "SnaplineExample". Per informazioni dettagliate, vedere [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Creare un progetto di applicazione basata su Windows denominato "SnaplineExample". Per informazioni dettagliate, vedere [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Selezionare il form in Progettazione form.  
   
@@ -233,7 +233,7 @@ Per molte applicazioni è estremamente importante la sistemazione precisa dei co
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Per disabilitare le guide di allineamento nell'ambiente di progettazione  
   
-1.  Dal **strumenti** menu, aprire il **opzioni** la finestra di dialogo. Aprire la finestra di dialogo Progettazione Windows Form. Per informazioni dettagliate, vedere [generale, Progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Dal **strumenti** menu, aprire il **opzioni** la finestra di dialogo. Aprire la finestra di dialogo Progettazione Windows Form. Per informazioni dettagliate, vedere [generale, Progettazione Windows Form, la finestra di dialogo Opzioni](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
   
 2.  Selezionare il **generale** nodo. Nel **modalità Layout** sezione, modificare la selezione da **le guide di allineamento** a **SnapToGrid**.  
   

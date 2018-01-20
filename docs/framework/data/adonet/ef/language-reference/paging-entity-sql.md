@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6398edb34a2389b113970444d98eec33f4833b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dfbd282eed19fdfa81a1dda5d06d41a80386feaa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="paging-entity-sql"></a>Paging (Entity SQL)
 Il paging fisico può essere eseguito tramite il [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) e [limite](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) sottoclausole nel [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clausola. Per eseguire il paging fisico in modo deterministico, è consigliabile usare SKIP e LIMIT. Se si desidera solo limitare il numero di righe nel risultato in modo non deterministico, è necessario utilizzare [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP e SKIP/LIMIT si escludono a vicenda.  
@@ -38,4 +38,4 @@ Il paging fisico può essere eseguito tramite il [SKIP](../../../../../../docs/f
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Procedura: spostarsi tra Query i risultati](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)
+ [Procedura: spostarsi tra Query i risultati](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)

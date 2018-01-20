@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>Sviluppo pipeline
 La pipeline del componente aggiuntivo è il percorso di segmenti della pipeline che l'applicazione host e il componente aggiuntivo deve utilizzare per comunicare tra loro.  
@@ -41,14 +41,14 @@ Pipeline del componente aggiuntivo
   
  Se si caricano l'host e il componente aggiuntivo in domini applicazione separati, è necessario un limite di isolamento che separa l'ambito dell'applicazione host dall'ambito del componente aggiuntivo. Il contratto è il solo assembly caricati in host e i domini applicazione. L'host e il componente aggiuntivo ogni fare riferimento solo alla visualizzazione dei metodi del contratto. Di conseguenza, saranno separati da un livello di astrazione dal contratto.  
   
- Per lo sviluppo di segmenti della pipeline, è necessario creare una struttura di directory che li contengono. Per ulteriori informazioni sui requisiti di sviluppo e linee guida di ambito, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Per lo sviluppo di segmenti della pipeline, è necessario creare una struttura di directory che li contengono. Per ulteriori informazioni sui requisiti di sviluppo e linee guida di ambito, vedere [requisiti di sviluppo Pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
  Nella figura seguente mostra i tipi che costituiscono i segmenti della pipeline. I nomi dei tipi illustrati nella figura sono arbitrari, ma tutti i tipi, ad eccezione dell'host e l'host consente di visualizzare gli attributi aggiuntivo richiesto in modo che possano essere individuate dai metodi che costruiscono un archivio di informazioni.  
   
  ![Aggiungi &#45; nel modello con gli attributi obbligatori per i tipi. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Pipeline del componente aggiuntivo con tipi  
   
- Nella tabella seguente vengono descritti i segmenti di pipeline per l'attivazione di un componente aggiuntivo. Per ulteriori informazioni su questi segmenti, vedere [contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ Nella tabella seguente vengono descritti i segmenti di pipeline per l'attivazione di un componente aggiuntivo. Per ulteriori informazioni su questi segmenti, vedere [contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segmento della pipeline|Descrizione|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ Percorso di attivazione dal componente aggiuntivo all'host
   
      Viene descritto un componente aggiuntivo di calcolatrice che esegue l'addizione, sottrazione, moltiplicazione e divisione calcoli per l'host.  
   
--   [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Viene descritto un componente aggiuntivo di calcolo con funzionalità di calcolo avanzate e come mantenere la compatibilità con il componente aggiuntivo prima di calcolatrice.  
   
--   [Procedura dettagliata: Passaggio di raccolte tra componenti aggiuntivi e host](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Procedura dettagliata: Passaggio di raccolte tra componenti aggiuntivi e host](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      Viene descritto come passare raccolte di dati attraverso la pipeline di uno scenario di archivio della Rubrica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere in scenari di Pipeline](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Aggiungere in scenari di Pipeline](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Componenti aggiuntivi ed estendibilità](../../../docs/framework/add-ins/index.md)

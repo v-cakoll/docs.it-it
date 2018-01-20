@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Protezione dei messaggi mediante protezione del trasporto
 Contenuto della sezione viene descritta la protezione del trasporto di Accodamento messaggi (MSMQ), che è possibile utilizzare per proteggere messaggi inviati a una coda.  
@@ -108,6 +108,6 @@ Contenuto della sezione viene descritta la protezione del trasporto di Accodamen
  Gli algoritmi supportati sono `MD5`, `SHA1`, `SHA256` e `SHA512`. Il valore predefinito è `SHA1`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accodamento messaggi](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Accodamento messaggi](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

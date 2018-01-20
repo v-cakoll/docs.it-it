@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-windows-service-applications"></a>Sviluppo di applicazioni di servizio Windows
 Utilizzando Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oppure Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, è possibile creare facilmente servizi creando un'applicazione che viene installata come un servizio. Questo tipo di applicazione viene chiamato un servizio Windows. Con le funzionalità di framework, è possibile creare servizi, installati, avviare, arrestare e controllarne il funzionamento.  
@@ -57,5 +57,5 @@ Utilizzando Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oppure 
  <xref:System.ServiceProcess.ServiceInstaller>  
  Vengono descritte le funzionalità del <xref:System.ServiceProcess.ServiceInstaller> (classe), che viene utilizzato insieme alla <xref:System.ServiceProcess.ServiceProcessInstaller> classe per installare e disinstallare il servizio.  
   
- [Creazione di progetti da modelli](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [Creazione di progetti da modelli](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Vengono descritti i progetti tipi utilizzati in questo capitolo e sulla scelta tra di essi.

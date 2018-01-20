@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-token"></a>Token personalizzato
 In questo esempio viene illustrato come aggiungere un'implementazione del token personalizzata in un'applicazione di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Nell'esempio viene usato un `CreditCardToken` per passare in modo protetto le informazioni sulle carte di credito del client al servizio. Il token viene passato nell'intestazione del messaggio WS-Security e viene firmato e crittografato usando l'elemento di associazione di sicurezza simmetrica, il corpo del messaggio e altre intestazioni del messaggio. Questa operazione è utile nei casi in cui i token incorporati non sono sufficienti In questo esempio viene illustrato come fornire un token di sicurezza personalizzato a un servizio, invece di usare uno dei token incorporati. Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -617,7 +617,7 @@ string GetCallerCreditCardNumber()
   
 1.  Avviare Client.exe dalla directory client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-2.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Per eseguire l'esempio tra più computer  
   
@@ -639,7 +639,7 @@ string GetCallerCreditCardNumber()
   
 9. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.  
   
-10. Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

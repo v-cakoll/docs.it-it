@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
 Gli argomenti contenuti in questa sezione intendono fornire una rapida descrizione dell'esperienza di programmazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Nel corso di questa esercitazione vengono fornite informazioni introduttive sui passaggi necessari per creare applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità viene fornita dal servizio ai propri client.  
@@ -36,7 +36,7 @@ Gli argomenti contenuti in questa sezione intendono fornire una rapida descrizio
 > [!NOTE]
 >  Se si esegue [!INCLUDE[wv](../../../includes/wv-md.md)] o versioni successive del sistema operativo Windows, è necessario avviare [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] selezionando il menu Start e facendo clic con il pulsante destro Visual Studio 2011 e poi **Esegui come amministratore**. Per avviare sempre Visual Studio 2011 come amministratore, è possibile creare un collegamento, fare clic con il pulsante destro scelta rapida, scegliere Proprietà, selezionare il **compatibilità** e selezionare il **Esegui questo programma come amministratore** casella di controllo. Quando si avvia Visual Studio 2011 con questo collegamento, verrà sempre eseguito con diritti di amministratore.  
   
- Per le applicazioni di esempio che possono essere scaricate sul disco rigido e l'esecuzione, vedere gli argomenti in [degli esempi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). In questo argomento, vedere, in particolare, il [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Per le applicazioni di esempio che possono essere scaricate sul disco rigido e l'esecuzione, vedere gli argomenti in [degli esempi di Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). In questo argomento, vedere, in particolare, il [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Per ulteriori informazioni sulla creazione di servizi e client, vedere [programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Gli argomenti contenuti in questa sezione intendono fornire una rapida descrizio
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Esempi di Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Ciclo di vita della programmazione di base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

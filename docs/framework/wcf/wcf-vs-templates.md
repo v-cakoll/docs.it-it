@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelli di Visual Studio WCF
 I modelli di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sono modelli di progetto e di elemento predefiniti che è possibile utilizzare in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per compilare rapidamente i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e le relative applicazioni.  
@@ -70,7 +70,7 @@ I modelli di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vspr
  Se il progetto esistente è un progetto Web viene creato anche un file del host del servizio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modello di elemento e progetto di servizio WF WCF.  
- Questi modelli creano servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che fungono da host di un servizio flusso di lavoro al quale è possibile accedere come servizio Web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per ulteriori informazioni su questi tipi di flusso di lavoro, vedere [Windows Workflow Foundation esercitazioni](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]creazione di progetti di flusso di lavoro, vedere [la creazione di progetti di flusso di lavoro Legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Questi modelli creano servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che fungono da host di un servizio flusso di lavoro al quale è possibile accedere come servizio Web. Sono disponibili modelli separati per XAML o modelli di programmazione imperativi. Mediante i modelli, è possibile creare un flusso di lavoro sequenziale o di macchina a stati. Per ulteriori informazioni su questi tipi di flusso di lavoro, vedere [Windows Workflow Foundation esercitazioni](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]creazione di progetti di flusso di lavoro, vedere [la creazione di progetti di flusso di lavoro Legacy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  La finestra di progettazione di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] garantisce una risposta migliore quando vengono utilizzati flussi di lavoro di tipo XOML invece di quelli basati sul codice. XOML è il tipo di flusso predefinito che viene creato.  
   

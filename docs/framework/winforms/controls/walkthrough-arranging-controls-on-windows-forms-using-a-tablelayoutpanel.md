@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27068808dcf45a2a210258d45faa894524bd883f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9636585fe9671b8822a6510d405eef5e6f23527e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel
 Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi automaticamente alle eventuali modifiche alle dimensioni del form o del contenuto del form. Per usare un layout dinamico senza gestire gli eventi <xref:System.Windows.Forms.Control.Layout> in modo esplicito nel codice è possibile usare un pannello di layout.  
@@ -33,7 +33,7 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
   
  Il <xref:System.Windows.Forms.TableLayoutPanel> dispone i contenuti in una griglia, fornendo funzionalità simili all'elemento \<tabella > elemento. Il <xref:System.Windows.Forms.TableLayoutPanel> controllo consente di inserire controlli in un layout di griglia senza dover specificare in modo preciso la posizione di ogni singolo controllo. Le celle vengono disposte in righe e colonne, e queste possono avere dimensioni diverse. Le celle possono essere unite in righe e colonne. Le celle possono contenere qualsiasi elemento di un modulo può contenere e il comportamento per molti altri aspetti come contenitori.  
   
- Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce inoltre una funzionalità di ridimensionamento proporzionale in fase di esecuzione, pertanto il layout può cambiare facilmente in base al ridimensionamento del form. In questo modo il <xref:System.Windows.Forms.TableLayoutPanel> controllo è particolarmente utile per scopi come form di immissione di dati e applicazioni localizzate. Per ulteriori informazioni, vedere [procedura dettagliata: creazione di un Windows Form ridimensionabile per immissione dati](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab) e [procedura dettagliata: creazione di un Form Windows localizzabile](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ Il <xref:System.Windows.Forms.TableLayoutPanel> controllo fornisce inoltre una funzionalità di ridimensionamento proporzionale in fase di esecuzione, pertanto il layout può cambiare facilmente in base al ridimensionamento del form. In questo modo il <xref:System.Windows.Forms.TableLayoutPanel> controllo è particolarmente utile per scopi come form di immissione di dati e applicazioni localizzate. Per ulteriori informazioni, vedere [procedura dettagliata: creazione di un Windows Form ridimensionabile per immissione dati](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) e [procedura dettagliata: creazione di un Form Windows localizzabile](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
   
  In generale, è consigliabile non utilizzare un <xref:System.Windows.Forms.TableLayoutPanel> controllo come contenitore per l'intero layout. Utilizzare <xref:System.Windows.Forms.TableLayoutPanel> controlli per fornire funzionalità di ridimensionamento proporzionale alle parti del layout.  
   
@@ -58,14 +58,14 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
  Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto di applicazione Windows denominato "TableLayoutPanelExample". Per ulteriori informazioni, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Creare un progetto di applicazione Windows denominato "TableLayoutPanelExample". Per ulteriori informazioni, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
   
 2.  Selezionare il form nel **Windows** **progettazione form**.  
   
@@ -195,8 +195,8 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
  [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Esperienza utente di Microsoft Windows, Linee guida ufficiali per analisti e sviluppatori dell'interfaccia utente). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [Procedura dettagliata: creazione di un Windows Form ridimensionabile per l'inserimento di dati](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [Procedura dettagliata: Creazione di un Form localizzabile Windows](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [Procedura dettagliata: creazione di un Windows Form ridimensionabile per l'inserimento di dati](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [Procedura dettagliata: Creazione di un Form localizzabile Windows](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
  [Procedure consigliate per il controllo TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
  [Panoramica sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [Procedura: Ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  

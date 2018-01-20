@@ -29,11 +29,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 24494ec700054f73e83e8cb8c33bd86eb265b8e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ef5698300d7d3cb333bc7d58a782c02823718d8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Tracciatura di rete in .NET Framework
 La funzionalità di traccia di rete in .NET Framework consente di accedere alle informazioni sulle chiamate ai metodi e sul traffico di rete generato da un'applicazione gestita. Questa funzionalità è utile per il debug delle applicazioni in fase di sviluppo, nonché per l'analisi delle applicazioni distribuite. È possibile personalizzare l'output generato dalla tracciatura della rete per supportare differenti scenari di utilizzo in fase di sviluppo e nell'ambiente di produzione.  
@@ -49,4 +49,4 @@ La funzionalità di traccia di rete in .NET Framework consente di accedere alle 
  [Abilitazione della traccia di rete](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Procedura: Configurare la traccia di rete](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [Interpretazione della traccia di rete](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Introduzione alla strumentazione e alla traccia](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Introduzione alla strumentazione e alla traccia](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
