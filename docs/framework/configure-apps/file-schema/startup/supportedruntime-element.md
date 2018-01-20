@@ -16,35 +16,35 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
+
 Specifica le versioni di Common Language Runtime supportate dall'applicazione. È necessario utilizzare questo elemento in tutte le applicazioni compilate con la versione 1.1 o successiva di .NET Framework.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Sintassi
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>Attributi  
+## <a name="attributes"></a>Attributi
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |**version**|Attributo facoltativo.<br /><br /> Valore stringa mediante il quale viene specificata la versione di Common Language Runtime (CLR) supportata da questa applicazione. Per i valori validi del `version` attributo, vedere il [valori "runtime version"](#version) sezione. **Nota:** tramite .NET Framework 3.5, il "*versione runtime*" valore assume la forma *principali*. *secondaria*. *Compilare*. A partire da [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], sono necessari solo i numeri delle versioni principale e secondaria (vale a dire, "v4.0" anziché "v4.0.30319"). È consigliabile la stringa più corta.|  
-|**SKU**|Attributo facoltativo.<br /><br /> Valore stringa che specifica il codice di riferimento del prodotto (SKU), che a sua volta specifica la versione di .NET Framework supportata dall'applicazione.<br /><br /> A partire da .NET Framework 4.0, l'utilizzo del `sku` consiglia di attributo.  Quando è presente, indica la versione di .NET Framework di destinazione dell'app.<br /><br /> Per i valori validi dell'attributo sku, vedere il [i valori di "sku id"](#sku) sezione.|  
+|**sku**|Attributo facoltativo.<br /><br /> Valore stringa che specifica il codice di riferimento del prodotto (SKU), che a sua volta specifica la versione di .NET Framework supportata dall'applicazione.<br /><br /> A partire da .NET Framework 4.0, l'utilizzo del `sku` consiglia di attributo.  Quando è presente, indica la versione di .NET Framework di destinazione dell'app.<br /><br /> Per i valori validi dell'attributo sku, vedere il [i valori di "sku id"](#sku) sezione.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Note
+
 Se il  **\<supportedRuntime >** elemento non è presente nel file di configurazione dell'applicazione, viene utilizzata la versione di CLR impiegata per compilare l'applicazione.  
 
 Il  **\<supportedRuntime >** elemento deve essere utilizzato da tutte le applicazioni compilate con la versione 1.1 o successiva del runtime. Nelle applicazioni compilate per supportare esclusivamente la versione 1.0 del runtime è necessario utilizzare il [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento.  
@@ -72,9 +72,9 @@ Il `runtime` attributo specifica la versione di Common Language Runtime (CLR) ch
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>Valori di "sku id"  
+## <a name="sku-id-values"></a>Valori di "sku id"
+
 Il `sku` attributo Usa un moniker del framework di destinazione (TFM) per indicare la versione di .NET Framework che l'app ha come destinazione e deve essere eseguito. Nella tabella seguente sono elencati i valori validi che sono supportati dal `sku` attributo, a partire da .NET Framework 4.
   
 |Versione di .NET Framework|Attributo `sku`|  
@@ -92,9 +92,9 @@ Il `sku` attributo Usa un moniker del framework di destinazione (TFM) per indica
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|". NETFramework, Version = v4.6.2 "|  
-|4.7|". NETFramework, Version = v 4.7 "|
-|4.7.1|". NETFramework, Version = 4.7.1"|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come specificare la versione di runtime in un file di configurazione. Il file di configurazione indica che l'app è destinata la 4.7 di .NET Framework.  
@@ -107,10 +107,12 @@ Il `sku` attributo Usa un moniker del framework di destinazione (TFM) per indica
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione.  
-  
-## <a name="see-also"></a>Vedere anche  
+## <a name="configuration-file"></a>File di configurazione
+
+L'elemento può essere utilizzato nel file di configurazione dell'applicazione.
+
+## <a name="see-also"></a>Vedere anche
+
  [Schema delle impostazioni di avvio](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [In-Process Side-by-Side Execution](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)
+ [In-Process Side-by-Side Execution](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)  
