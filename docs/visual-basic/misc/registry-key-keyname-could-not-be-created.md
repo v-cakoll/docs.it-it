@@ -9,19 +9,19 @@ ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f51ba41f39f16f3429796f15533a6fb2a0049d45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 151b7434ab38f9a17344f15f0f0abef83f78e8cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="1045a-102">Chiave del Registro di sistema &#39; &lt;keyname&gt;&#39; non è stato possibile creare.</span><span class="sxs-lookup"><span data-stu-id="1045a-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
-<span data-ttu-id="1045a-103">Non è stato possibile creare la chiave del Registro di sistema specificata probabilmente a causa di autorizzazioni di sicurezza insufficienti.</span><span class="sxs-lookup"><span data-stu-id="1045a-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="e8044-102">Chiave del Registro di sistema &#39; &lt;keyname&gt;&#39; non è stato possibile creare.</span><span class="sxs-lookup"><span data-stu-id="e8044-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
+<span data-ttu-id="e8044-103">Non è stato possibile creare la chiave del Registro di sistema specificata probabilmente a causa di autorizzazioni di sicurezza insufficienti.</span><span class="sxs-lookup"><span data-stu-id="e8044-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1045a-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="1045a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e8044-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="e8044-104">To correct this error</span></span>  
   
--   <span data-ttu-id="1045a-105">Assicurarsi di disporre di autorizzazioni di sicurezza sufficienti per accedere alla chiave.</span><span class="sxs-lookup"><span data-stu-id="1045a-105">Ensure that you have sufficient security permissions to access the key.</span></span>  
+-   <span data-ttu-id="e8044-105">Assicurarsi di disporre di autorizzazioni di sicurezza sufficienti per accedere alla chiave.</span><span class="sxs-lookup"><span data-stu-id="e8044-105">Ensure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1045a-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1045a-106">See Also</span></span>  
- [<span data-ttu-id="1045a-107">Riepilogo del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="1045a-107">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [<span data-ttu-id="1045a-108">Modifiche di accesso del Registro di sistema in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="1045a-108">Registry Access Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="e8044-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e8044-106">See Also</span></span>  
+ [<span data-ttu-id="e8044-107">Riepilogo del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="e8044-107">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="e8044-108">Modifiche di accesso del Registro di sistema in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="e8044-108">Registry Access Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

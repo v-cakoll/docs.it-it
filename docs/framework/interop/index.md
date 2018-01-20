@@ -1,12 +1,8 @@
 ---
 title: "Interoperabilità con codice non gestito"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/17/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -17,47 +13,53 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 38c569633304ed9e6f86e7a04ef7b0dfa79b6704
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="beaeb-102">Interoperabilità con codice non gestito</span><span class="sxs-lookup"><span data-stu-id="beaeb-102">Interoperating with Unmanaged Code</span></span>
-<span data-ttu-id="beaeb-103">.NET Framework favorisce l'interazione con componenti COM, servizi COM+, librerie dei tipi esterne e molti servizi del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="beaeb-103">The .NET Framework promotes interaction with COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="beaeb-104">I tipi di dati, le firme dei metodi e i meccanismi di gestione degli errori variano tra modelli a oggetti gestiti e non gestiti.</span><span class="sxs-lookup"><span data-stu-id="beaeb-104">Data types, method signatures, and error-handling mechanisms vary between managed and unmanaged object models.</span></span> <span data-ttu-id="beaeb-105">Per semplificare l'interoperabilità tra componenti .NET Framework e codice non gestito e agevolare il percorso di migrazione, Common Language Runtime nasconde ai client e ai server le differenze di questi modelli a oggetti.</span><span class="sxs-lookup"><span data-stu-id="beaeb-105">To simplify interoperation between .NET Framework components and unmanaged code and to ease the migration path, the common language runtime conceals from both clients and servers the differences in these object models.</span></span>  
-  
- <span data-ttu-id="beaeb-106">Il codice eseguito sotto il controllo del runtime viene definito codice gestito.</span><span class="sxs-lookup"><span data-stu-id="beaeb-106">Code that executes under the control of the runtime is called managed code.</span></span> <span data-ttu-id="beaeb-107">Al contrario, il codice eseguito esternamente al runtime viene definito codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="beaeb-107">Conversely, code that runs outside the runtime is called unmanaged code.</span></span> <span data-ttu-id="beaeb-108">Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Win32.</span><span class="sxs-lookup"><span data-stu-id="beaeb-108">COM components, ActiveX interfaces, and Win32 API functions are examples of unmanaged code.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="beaeb-109">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="beaeb-109">In This Section</span></span>  
- [<span data-ttu-id="beaeb-110">Argomenti sulle procedure di interoperabilità con codice non gestito</span><span class="sxs-lookup"><span data-stu-id="beaeb-110">Interoperating with Unmanaged Code How-to Topics</span></span>](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
- <span data-ttu-id="beaeb-111">Fornisce i collegamenti a tutte le procedure contenute nella documentazione sui concetti relativi all'interoperabilità con codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="beaeb-111">Provides links to all How-to topics found in the conceptual documentation for interoperating with unmanaged code.</span></span>  
-  
- [<span data-ttu-id="beaeb-112">Esposizione di componenti COM a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="beaeb-112">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)  
- <span data-ttu-id="beaeb-113">Descrive come usare componenti COM da applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="beaeb-113">Describes how to use COM components from .NET Framework applications.</span></span>  
-  
- [<span data-ttu-id="beaeb-114">Esposizione di componenti .NET Framework a COM</span><span class="sxs-lookup"><span data-stu-id="beaeb-114">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- <span data-ttu-id="beaeb-115">Descrive come usare componenti .NET Framework da applicazioni COM.</span><span class="sxs-lookup"><span data-stu-id="beaeb-115">Describes how to use .NET Framework components from COM applications.</span></span>  
-  
- [<span data-ttu-id="beaeb-116">Utilizzo di funzioni di DLL non gestite</span><span class="sxs-lookup"><span data-stu-id="beaeb-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- <span data-ttu-id="beaeb-117">Descrive come chiamare funzioni di DLL non gestite con platform invoke.</span><span class="sxs-lookup"><span data-stu-id="beaeb-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
-  
- [<span data-ttu-id="beaeb-118">Considerazioni di progettazione per l'interoperabilità</span><span class="sxs-lookup"><span data-stu-id="beaeb-118">Design Considerations for Interoperation</span></span>](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
- <span data-ttu-id="beaeb-119">Fornisce suggerimenti per la scrittura di componenti COM integrati.</span><span class="sxs-lookup"><span data-stu-id="beaeb-119">Provides tips for writing integrated COM components.</span></span>  
-  
- [<span data-ttu-id="beaeb-120">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="beaeb-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
- <span data-ttu-id="beaeb-121">Descrive il marshalling per l'interoperabilità COM e platform invoke.</span><span class="sxs-lookup"><span data-stu-id="beaeb-121">Describes marshaling for COM interop and platform invoke.</span></span>  
-  
- [<span data-ttu-id="beaeb-122">Procedura: Eseguire il mapping di HRESULT ed eccezioni</span><span class="sxs-lookup"><span data-stu-id="beaeb-122">How to: Map HRESULTs and Exceptions</span></span>](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
- <span data-ttu-id="beaeb-123">Descrive il mapping tra eccezioni e valori HRESULT.</span><span class="sxs-lookup"><span data-stu-id="beaeb-123">Describes the mapping between exceptions and HRESULTs.</span></span>  
-  
- [<span data-ttu-id="beaeb-124">Interoperabilità tramite tipi generici</span><span class="sxs-lookup"><span data-stu-id="beaeb-124">Interoperating Using Generic Types</span></span>](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  
- <span data-ttu-id="beaeb-125">Descrive il comportamento dei tipi generici quando vengono usati nell'interoperabilità COM.</span><span class="sxs-lookup"><span data-stu-id="beaeb-125">Describes the behavior of generic types when used in COM interop.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="beaeb-126">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="beaeb-126">Related Sections</span></span>  
- [<span data-ttu-id="beaeb-127">Interoperabilità COM avanzata</span><span class="sxs-lookup"><span data-stu-id="beaeb-127">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- <span data-ttu-id="beaeb-128">Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="beaeb-128">Provides links to more information about incorporating COM components into your .NET Framework application.</span></span>
+# <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="e375f-102">Interoperabilità con codice non gestito</span><span class="sxs-lookup"><span data-stu-id="e375f-102">Interoperating with unmanaged code</span></span>
+
+<span data-ttu-id="e375f-103">.NET Framework favorisce l'interazione con componenti COM, servizi COM+, librerie dei tipi esterne e molti servizi del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="e375f-103">The .NET Framework promotes interaction with COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="e375f-104">I tipi di dati, le firme dei metodi e i meccanismi di gestione degli errori variano tra modelli a oggetti gestiti e non gestiti.</span><span class="sxs-lookup"><span data-stu-id="e375f-104">Data types, method signatures, and error-handling mechanisms vary between managed and unmanaged object models.</span></span> <span data-ttu-id="e375f-105">Per semplificare l'interoperabilità tra componenti .NET Framework e codice non gestito e agevolare il percorso di migrazione, Common Language Runtime nasconde ai client e ai server le differenze di questi modelli a oggetti.</span><span class="sxs-lookup"><span data-stu-id="e375f-105">To simplify interoperation between .NET Framework components and unmanaged code and to ease the migration path, the common language runtime conceals from both clients and servers the differences in these object models.</span></span>
+
+<span data-ttu-id="e375f-106">Il codice eseguito sotto il controllo del runtime viene definito codice gestito.</span><span class="sxs-lookup"><span data-stu-id="e375f-106">Code that executes under the control of the runtime is called managed code.</span></span> <span data-ttu-id="e375f-107">Al contrario, il codice eseguito esternamente al runtime viene definito codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="e375f-107">Conversely, code that runs outside the runtime is called unmanaged code.</span></span> <span data-ttu-id="e375f-108">Esempi di codice non gestito sono i componenti COM, le interfacce ActiveX e le funzioni dell'API Win32.</span><span class="sxs-lookup"><span data-stu-id="e375f-108">COM components, ActiveX interfaces, and Win32 API functions are examples of unmanaged code.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="e375f-109">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="e375f-109">In this section</span></span>
+
+[<span data-ttu-id="e375f-110">Esposizione di componenti COM a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e375f-110">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)  
+<span data-ttu-id="e375f-111">Descrive come usare componenti COM da applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e375f-111">Describes how to use COM components from .NET Framework applications.</span></span>
+
+[<span data-ttu-id="e375f-112">Esposizione di componenti .NET Framework a COM</span><span class="sxs-lookup"><span data-stu-id="e375f-112">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)  
+<span data-ttu-id="e375f-113">Descrive come usare componenti .NET Framework da applicazioni COM.</span><span class="sxs-lookup"><span data-stu-id="e375f-113">Describes how to use .NET Framework components from COM applications.</span></span>
+
+[<span data-ttu-id="e375f-114">Utilizzo di funzioni di DLL non gestite</span><span class="sxs-lookup"><span data-stu-id="e375f-114">Consuming Unmanaged DLL Functions</span></span>](consuming-unmanaged-dll-functions.md)  
+<span data-ttu-id="e375f-115">Descrive come chiamare funzioni di DLL non gestite con platform invoke.</span><span class="sxs-lookup"><span data-stu-id="e375f-115">Describes how to call unmanaged DLL functions using platform invoke.</span></span>
+
+[<span data-ttu-id="e375f-116">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="e375f-116">Interop Marshaling</span></span>](interop-marshaling.md)  
+<span data-ttu-id="e375f-117">Descrive il marshalling per l'interoperabilità COM e platform invoke.</span><span class="sxs-lookup"><span data-stu-id="e375f-117">Describes marshaling for COM interop and platform invoke.</span></span>
+
+[<span data-ttu-id="e375f-118">Procedura: Eseguire il mapping di HRESULT ed eccezioni</span><span class="sxs-lookup"><span data-stu-id="e375f-118">How to: Map HRESULTs and Exceptions</span></span>](how-to-map-hresults-and-exceptions.md)  
+<span data-ttu-id="e375f-119">Descrive il mapping tra eccezioni e valori HRESULT.</span><span class="sxs-lookup"><span data-stu-id="e375f-119">Describes the mapping between exceptions and HRESULTs.</span></span>
+
+[<span data-ttu-id="e375f-120">Wrapper COM</span><span class="sxs-lookup"><span data-stu-id="e375f-120">COM Wrappers</span></span>](com-wrappers.md)  
+<span data-ttu-id="e375f-121">Descrive i wrapper forniti dall'interoperabilità COM.</span><span class="sxs-lookup"><span data-stu-id="e375f-121">Describes the wrappers provided by COM interop.</span></span>
+
+[<span data-ttu-id="e375f-122">Equivalenza del tipo e tipi di interoperabilità incorporati</span><span class="sxs-lookup"><span data-stu-id="e375f-122">Type Equivalence and Embedded Interop Types</span></span>](type-equivalence-and-embedded-interop-types.md)  
+<span data-ttu-id="e375f-123">Descrive come informazioni sui tipi COM sono incorporate nell'assembly e come common language runtime determina l'equivalenza dei tipi COM incorporati.</span><span class="sxs-lookup"><span data-stu-id="e375f-123">Describes how type information for COM types is embedded in assemblies, and how the common language runtime determines the equivalence of embedded COM types.</span></span>
+
+[<span data-ttu-id="e375f-124">Procedura: generare assembly di interoperabilità tramite Tlbimp.exe</span><span class="sxs-lookup"><span data-stu-id="e375f-124">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+<span data-ttu-id="e375f-125">Viene descritto come generare assembly di interoperabilità primario utilizzando *Tlbimp.exe* (tipo di libreria utilità di importazione).</span><span class="sxs-lookup"><span data-stu-id="e375f-125">Describes how to produce primary interop assemblies using *Tlbimp.exe* (Type Library Importer).</span></span>
+
+[<span data-ttu-id="e375f-126">Procedura: Registrare assembly di interoperabilità primari</span><span class="sxs-lookup"><span data-stu-id="e375f-126">How to: Register Primary Interop Assemblies</span></span>](how-to-register-primary-interop-assemblies.md)  
+<span data-ttu-id="e375f-127">Viene descritto come registrare assembly di interoperabilità primari prima di potervi fare riferimento nei progetti.</span><span class="sxs-lookup"><span data-stu-id="e375f-127">Describes how to register the primary interop assemblies before you can reference them in your projects.</span></span>
+
+[<span data-ttu-id="e375f-128">Interoperabilità COM senza registrazione</span><span class="sxs-lookup"><span data-stu-id="e375f-128">Registration-Free COM Interop</span></span>](registration-free-com-interop.md)  
+<span data-ttu-id="e375f-129">Descrive la modalità di interoperabilità COM attivazione componenti senza utilizzare il Registro di sistema di Windows.</span><span class="sxs-lookup"><span data-stu-id="e375f-129">Describes how COM interop can activate components without using the Windows registry.</span></span>
+
+[<span data-ttu-id="e375f-130">Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione</span><span class="sxs-lookup"><span data-stu-id="e375f-130">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>](configure-net-framework-based-com-components-for-reg.md)  
+<span data-ttu-id="e375f-131">Viene descritto come creare un manifesto dell'applicazione e come creare e incorporare un manifesto del componente.</span><span class="sxs-lookup"><span data-stu-id="e375f-131">Describes how to create an application manifest and how to create and embed a component manifest.</span></span>
