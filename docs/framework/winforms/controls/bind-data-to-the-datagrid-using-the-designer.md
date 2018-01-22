@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a31b407360467f37c2e60b1a3f4f4c72e80e13a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a3c7422bc83c7ee1f09bac05333799708cd2f2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: associare dati al controllo DataGridView di Windows Form utilizzando la finestra di progettazione
 È possibile utilizzare la finestra di progettazione per connettere un <xref:System.Windows.Forms.DataGridView> controllo alle origini dati di tipi diversi, tra cui database, oggetti business o i servizi Web. Quando si associa il controllo a un'origine dati tramite la finestra di progettazione, il controllo viene automaticamente associato a un <xref:System.Windows.Forms.BindingSource> componente che rappresenta l'origine dati. Inoltre vengono generate automaticamente colonne nel controllo, in modo corrispondente alle informazioni di schema fornite dall'origine dati.  
@@ -31,10 +31,10 @@ ms.lasthandoff: 12/22/2017
   
  È anche possibile associare più <xref:System.Windows.Forms.DataGridView> controlli alle tabelle correlate per creare relazioni master-details. In questa configurazione un controllo visualizza una tabella padre e un altro controllo visualizza solo le righe di una tabella figlio che sono correlate alla riga corrente nella tabella padre. Per altre informazioni, vedere [Procedura: Visualizzare dati correlati in un'applicazione Windows Forms](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
- La procedura seguente richiede un **applicazione Windows** progetto con un modulo che contiene un <xref:System.Windows.Forms.DataGridView> i due controlli per una relazione master-details. Per informazioni su come avviare un progetto di questo tipo, vedere [Procedura: Creare un progetto di applicazione Windows.](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procedura seguente richiede un **applicazione Windows** progetto con un modulo che contiene un <xref:System.Windows.Forms.DataGridView> i due controlli per una relazione master-details. Per informazioni su come avviare un progetto di questo tipo, vedere [Procedura: Creare un progetto di applicazione Windows.](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: Aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Per associare il controllo a un'origine dati  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
  [Procedura: Bloccare le colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
  [Procedura: Nascondere le colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)  
  [Procedura: Rendere le colonne di sola lettura nel controllo DataGridView di Windows Form usando la finestra di progettazione](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)  
- [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
  [Procedura: Aggiungere controlli a un Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Finestra Origini dati](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)  
  [Procedura: Visualizzare dati correlati in un'applicazione Windows Forms](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)

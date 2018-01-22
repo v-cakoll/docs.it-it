@@ -22,17 +22,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d514b20381b44102076c776d12181df3838e4eaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de52a4d7784eb4508d5cf5026b394b7b63ecc56e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procedura: impostare l'ordine di tabulazione in Windows Form
 Ordine di tabulazione è l'ordine in cui un utente si sposta lo stato attivo da un controllo a un altro premendo il tasto TAB. Ogni modulo contiene il proprio ordine di tabulazione. Per impostazione predefinita, l'ordine di tabulazione è lo stesso ordine in cui vengono creati i controlli. La numerazione dell'ordine di tabulazione inizia da zero.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Per impostare l'ordine di tabulazione, di un controllo  
   

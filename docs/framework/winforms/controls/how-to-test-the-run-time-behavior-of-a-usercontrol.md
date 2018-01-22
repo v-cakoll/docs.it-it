@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedura: eseguire il test del comportamento in fase di esecuzione di UserControl
 Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario testare il comportamento in fase di esecuzione. È possibile creare un progetto di applicazione separata basati su Windows e inserire il controllo in un form di test, ma questa procedura non è pratica. Un modo più veloce e più semplice consiste nell'usare il **UserControl Test Container** fornite da Visual Studio. Questo contenitore di test viene avviata direttamente dal progetto libreria di controllo di Windows.  
@@ -33,14 +33,14 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
 >  Per il contenitore di test caricare il <xref:System.Windows.Forms.UserControl>, il controllo deve avere almeno un costruttore pubblico.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 > [!NOTE]
 >  Non è possibile testare un controllo di Visual C++ tramite la **UserControl Test Container**.  
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Per testare il comportamento in fase di esecuzione di UserControl  
   
-1.  Creare un progetto libreria di controlli Windows denominato **EsempioTestContainer**. Per informazioni dettagliate, vedere [modello libreria di controlli Windows](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Creare un progetto libreria di controlli Windows denominato **EsempioTestContainer**. Per informazioni dettagliate, vedere [modello libreria di controlli Windows](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  Nel **Progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.Label> controllo il **della casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -52,7 +52,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
   
 6.  Chiudere il contenitore di test.  
   
-7.  Aggiungere un altro controllo utente per il **EsempioTestContainer** progetto. Per informazioni dettagliate, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Aggiungere un altro controllo utente per il **EsempioTestContainer** progetto. Per informazioni dettagliate, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  Nel **Progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -65,7 +65,7 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
   
 #### <a name="to-test-user-controls-from-another-project"></a>Per testare i controlli utente da un altro progetto  
   
-1.  Creare un progetto libreria di controlli Windows denominato **Esempiotestcontainer2**. Per informazioni dettagliate, vedere [modello libreria di controlli Windows](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Creare un progetto libreria di controlli Windows denominato **Esempiotestcontainer2**. Per informazioni dettagliate, vedere [modello libreria di controlli Windows](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  Nel **Progettazione Windows Form**, trascinare un <xref:System.Windows.Forms.RadioButton> controllo il **della casella degli strumenti** nell'area di progettazione del controllo.  
   
@@ -82,4 +82,4 @@ Quando si sviluppa un <xref:System.Windows.Forms.UserControl>, è necessario tes
  [Procedura: Modificare controlli compositi](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [Procedura dettagliata: modifica di un controllo composito con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [Procedura dettagliata: modifica di un controllo composito con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Finestra di progettazione controlli utente](http://msdn.microsoft.com/en-us/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+ [Finestra di progettazione controlli utente](http://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

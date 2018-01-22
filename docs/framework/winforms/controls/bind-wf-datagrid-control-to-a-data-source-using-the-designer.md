@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9e0bde96442e09ee33a63cecd56a4cd6e2cf19a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3913ffe046bb55e31d8be223061af61371a47418
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procedura: associare il controllo DataGrid Windows Form a un'origine dati mediante la finestra di progettazione
 > [!NOTE]
@@ -40,10 +40,10 @@ ms.lasthandoff: 12/22/2017
   
  È anche possibile associare la griglia a livello di codice in fase di esecuzione. Ciò è utile quando si desidera impostare un'origine dati in base alle informazioni ottenute in fase di esecuzione. Ad esempio, l'applicazione potrebbe consentire all'utente di specificare il nome di una tabella da visualizzare. È inoltre necessaria nelle situazioni in cui l'origine dati non esiste in fase di progettazione. Sono incluse origini dati, ad esempio matrici, raccolte, dataset non tipizzati e lettori di dati.  
   
- La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> controllo non sarà il **della casella degli strumenti** per impostazione predefinita. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0). Inoltre in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è possibile utilizzare il **origini dati** finestra per l'associazione dati in fase di progettazione. Per ulteriori informazioni vedere [associare i controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
+ La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGrid> controllo. Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> controllo non sarà il **della casella degli strumenti** per impostazione predefinita. Per informazioni su come aggiungerlo, vedere [procedura: aggiungere elementi alla casella degli strumenti](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Inoltre in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è possibile utilizzare il **origini dati** finestra per l'associazione dati in fase di progettazione. Per ulteriori informazioni vedere [associare i controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Per associare il controllo DataGrid a una singola tabella nella finestra di progettazione  
   

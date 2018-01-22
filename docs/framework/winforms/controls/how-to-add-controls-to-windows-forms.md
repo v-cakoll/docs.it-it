@@ -21,21 +21,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab92f7a56173ec71642d0cc09f3f81e9859533b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: aggiungere controlli a un Windows Form
 La maggior parte dei moduli sono progettati con l'aggiunta di controlli all'area del modulo per definire un'interfaccia utente (UI). Oggetto *controllo* è un componente in un form utilizzato per visualizzare informazioni o accettare l'input dell'utente. Per ulteriori informazioni sui controlli, vedere [controlli Windows Form](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-draw-a-control-on-a-form"></a>Per disegnare un controllo in un form  
   
-1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Nel **della casella degli strumenti**, fare clic sul controllo a cui si desidera aggiungere al form.  
   
@@ -48,7 +48,7 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli all'area
   
 ### <a name="to-drag-a-control-to-a-form"></a>Trascinare un controllo in un form  
   
-1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Aprire il form. Per ulteriori informazioni, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Nel **della casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
   

@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>Consigli sui tipi di controlli
 .NET Framework offre funzionalità per sviluppare e implementare nuovi controlli. Oltre al tradizionale controllo utente, ora è possibile scrivere controlli personalizzati che eseguono il proprio disegno e possono anche estendere le funzionalità dei controlli esistenti tramite l'ereditarietà. Decidere quale tipo di controllo creare può generare confusione. Questa sezione evidenzia le differenze tra i vari tipi di controlli che offrono opzioni di ereditarietà e fornisce considerazioni sul tipo da scegliere per il progetto.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Procedura dettagliata: serializzazione di raccolte di tipi standard tramite DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Procedura dettagliata: eredità da un controllo di Windows Form con Visual C#](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [Procedura dettagliata: eredità da un controllo di Windows Form con Visual C#](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Procedura: specificare una bitmap nella casella degli strumenti per un controllo](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Procedura dettagliata: modifica di un controllo composito con Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Procedura dettagliata: modifica di un controllo composito con Visual C#](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [Procedura dettagliata: modifica di un controllo composito con Visual C#](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [Procedura dettagliata: eredità da un controllo Windows Form con Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

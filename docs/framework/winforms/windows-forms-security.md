@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Sicurezza di Windows Form
 Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezza livelli sono impostati per il codice, indipendentemente dall'utente che esegue il codice). Si tratta di oltre agli schemi di sicurezza eventualmente già installati nel sistema. Sono inclusi quelli nel browser (ad esempio, la sicurezza basata sull'area in Internet Explorer) o il sistema operativo (ad esempio, la sicurezza basata su credenziali di Windows NT).  
@@ -44,10 +44,10 @@ Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezz
  Viene descritto finestre, mediante gli Appunti ed eseguire chiamate a codice non gestito in un ambiente parzialmente attendibile.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [NIB: Criteri di sicurezza predefinito](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB: Criteri di sicurezza predefinito](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  Elenca le autorizzazioni predefinite concesse nei set di autorizzazioni Internet, Intranet locale e l'attendibilità totale.  
   
- [NIB: Amministrazione di criteri di sicurezza generale](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB: Amministrazione di criteri di sicurezza generale](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  Vengono fornite informazioni sull'amministrazione di criteri di sicurezza di .NET Framework e sull'elevazione delle autorizzazioni.  
   
  [Autorizzazioni pericolose e amministrazione dei criteri](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezz
  [Linee guida per la generazione di codice sicuro](../../../docs/standard/security/secure-coding-guidelines.md)  
  Collegamenti ad argomenti che illustrano le procedure consigliate per la scrittura di codice in base a .NET Framework in modo sicuro.  
   
- [NIB: Richiesta di autorizzazioni](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB: Richiesta di autorizzazioni](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  Viene illustrato l'utilizzo di attributi per informare il runtime con le autorizzazioni è necessario eseguire codice.  
   
  [Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ Windows Form dispongono di un modello di sicurezza è basata su codice (sicurezz
  [Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)  
  Vengono illustrate le nozioni di base dell'utilizzo dei criteri di sicurezza del runtime di .NET Framework.  
   
- [NIB: Determinazione della necessità di modificare i criteri di sicurezza](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB: Determinazione della necessità di modificare i criteri di sicurezza](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  Viene illustrato come determinare quando le applicazioni devono far divergere dai criteri di sicurezza predefinito.  
   
- [NIB: Distribuzione di criteri di sicurezza](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB: Distribuzione di criteri di sicurezza](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  Viene illustrato il modo migliore per la distribuzione di criteri di protezione.

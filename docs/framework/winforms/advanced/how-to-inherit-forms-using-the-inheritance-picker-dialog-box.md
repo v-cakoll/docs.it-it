@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b330e84c14fa528fb84489e8fec16544144cf731
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -30,7 +30,7 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
 > [!NOTE]
 >  Per ereditare da un modulo con la finestra di dialogo **Selezione ereditarietà**, il progetto che contiene il form deve essere incorporato in un file eseguibile o in una DLL. Per compilare il progetto scegliere **Compila soluzione** dal menu **Compila**.  
 >   
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Per creare un Windows Form ereditato da un form esistente usando Selezione ereditarietà  
   

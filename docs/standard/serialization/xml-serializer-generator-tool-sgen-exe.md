@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 10914281632a6651b3872485b795d9a636dc6bd0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Strumento per la generazione di serializzatori XML (Sgen.exe)
 Lo strumento per la generazione di serializzatori XML (Sgen.exe) consente di creare un assembly di serializzazione XML per i tipi in un assembly specificato al fine di migliorare le prestazioni di avvio di un oggetto <xref:System.Xml.Serialization.XmlSerializer> quando serializza o deserializza oggetti dei tipi specificati.  
@@ -34,18 +34,18 @@ sgen [options]
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/a**[**ssembly**]**:***nomefile*|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
+|**/a**[**ssembly**]**:***filename*|Genera il codice di serializzazione per tutti i tipi contenuti nell'assembly o nell'eseguibile specificato da *nomefile*. È possibile indicare un solo nome file. Se questo argomento viene ripetuto, verrà utilizzato l'ultimo nome file.|  
 |**/c[ompiler]:** *opzioni*|Specifica l'opzione da passare al compilatore C#. Tutte le opzioni di csc.exe vengono supportate dopo essere state passate al compilatore. Questa opzione può essere utilizzata per specificare che l'assembly deve essere firmato e per indicare il file di chiave.|  
 |**/d**[**ebug**]|Genera un'immagine utilizzabile con un debugger.|  
 |**/f[orce]**|Impone la sovrascrittura di un assembly esistente con lo stesso nome. Il valore predefinito è **false**.|  
 |**/help o /?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
 |**/k**[**eep**]|Impedisce l'eliminazione dei file di origine generati e di altri file temporanei al termine della compilazione nell'assembly di serializzazione. Questa opzione può essere utilizzata per determinare se lo strumento genera codice di serializzazione per un determinato tipo.|  
 |**/n**[**ologo**]|Elimina la visualizzazione del messaggio di avvio Microsoft.|  
-|**/o**[**ut**]**:***percorso*|Specifica la directory in cui salvare l'assembly generato. **Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
+|**/o**[**ut**]**:***path*|Specifica la directory in cui salvare l'assembly generato. **Nota:** il nome dell'assembly generato è composto dal nome dell'assembly di input e da "xmlSerializers.dll".|  
 |**/p**[**roxytypes**]|Genera codice di serializzazione solo per i tipi proxy del servizio Web XML.|  
-|**/r**[**eference**]**:***fileassembly*|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
+|**/r**[**riferimento**] **: * * * assemblyfiles*|Specifica gli assembly a cui fanno riferimento i tipi che richiedono la serializzazione XML. Accetta più file di assembly separati da virgole.|  
 |**/s**[**ilent**]|Evita la visualizzazione dei messaggi di operazione riuscita.|  
-|**/t**[**ype**]**:***tipo*|Genera codice di serializzazione solo per il tipo specificato.|  
+|**/t**[**ype**]**:***type*|Genera codice di serializzazione solo per il tipo specificato.|  
 |**/v**[**erbose**]|Visualizza output dettagliato per il debug. Elenca i tipi dell'assembly di destinazione che non possono essere serializzati con <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
@@ -69,5 +69,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti](../../../docs/framework/tools/index.md)  
- [Panoramica dei servizi Web XML](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [Panoramica dei servizi Web XML](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

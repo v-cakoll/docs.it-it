@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procedura: implementare un oggetto PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funziona specificando un elenco di associazioni. L'elenco di associazioni è ordinato dalla priorità più alta alla priorità più bassa. Se l'associazione con la priorità più alta restituisce un valore correttamente quando viene elaborato è mai necessario elaborare altre associazioni nell'elenco. È possibile che l'associazione con la priorità più alta richiede molto tempo per essere valutata, verrà utilizzata la priorità più elevata successiva che restituisce un valore correttamente finché un'associazione di una priorità più alta restituisce un valore correttamente.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  La funzione di accesso get di `SlowestDP` attende 5 secondi prima di restituire il valore di `_slowestDP` (membro dati).  
   
 > [!NOTE]
->  Questo esempio è solo per scopi dimostrativi. Il [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] linee guida si consiglia di non definire le proprietà che gli ordini di grandezza più lente rispetto a un set di campi. Per ulteriori informazioni, vedere [NIB: scelta tra proprietà e metodi](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Questo esempio è solo per scopi dimostrativi. Il [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] linee guida si consiglia di non definire le proprietà che gli ordini di grandezza più lente rispetto a un set di campi. Per ulteriori informazioni, vedere [NIB: scelta tra proprietà e metodi](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

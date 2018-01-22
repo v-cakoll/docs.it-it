@@ -21,17 +21,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Procedura: utilizzare un dizionario risorse relativo all'ambito dell'applicazione
 Questo esempio illustra come definire e usare un dizionario risorse personalizzato dell'ambito di un'applicazione.  
   
 ## <a name="example"></a>Esempio  
- <xref:System.Windows.Application>espone un archivio di applicazione per le risorse condivise: <xref:System.Windows.Application.Resources%2A>. Per impostazione predefinita, il <xref:System.Windows.Application.Resources%2A> proprietà viene inizializzata con un'istanza di <xref:System.Windows.ResourceDictionary> tipo. Utilizzare questa istanza quando si ottengono e impostare le proprietà dell'ambito dell'applicazione utilizzando <xref:System.Windows.Application.Resources%2A>. Per ulteriori informazioni, vedere [procedura: ottenere e impostare una risorsa applicazione](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application>espone un archivio di applicazione per le risorse condivise: <xref:System.Windows.Application.Resources%2A>. Per impostazione predefinita, il <xref:System.Windows.Application.Resources%2A> proprietà viene inizializzata con un'istanza di <xref:System.Windows.ResourceDictionary> tipo. Utilizzare questa istanza quando si ottengono e impostare le proprietà dell'ambito dell'applicazione utilizzando <xref:System.Windows.Application.Resources%2A>. Per ulteriori informazioni, vedere [procedura: ottenere e impostare una risorsa applicazione](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Se si dispongono di più risorse impostate tramite la <xref:System.Windows.Application.Resources%2A>, è invece possibile utilizzare un dizionario risorse personalizzato per archiviare le risorse e impostare <xref:System.Windows.Application.Resources%2A> con esso invece. Di seguito viene illustrato come dichiarare un dizionario risorse personalizzato tramite XAML.
   

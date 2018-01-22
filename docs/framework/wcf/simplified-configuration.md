@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="simplified-configuration"></a>Configurazione semplificata
 La configurazione di servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] può risultare un'attività complessa. Esistono diverse opzioni e non è sempre semplice determinare quali impostazioni sono necessarie. Se da una parte i file di configurazione aumentano la flessibilità dei servizi di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], dall'altra rappresentano anche l'origine di molti problemi difficili da individuare. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] questi problemi vengono risolti e viene offerto un modo per ridurre la dimensione e la complessità della configurazione dei servizi.  
@@ -126,5 +126,5 @@ La configurazione di servizi [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
  [Configurazione delle associazioni per i servizi](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [Configurazione di associazioni fornite dal sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)  
- [Configurazione di applicazioni Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Configurazione di applicazioni Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [Configurazione dei servizi WCF nel codice](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

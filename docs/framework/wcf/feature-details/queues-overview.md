@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queues-overview"></a>Panoramica delle code
 Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive verrà illustrato in dettaglio come i concetti dell'accodamento descritti in questa sezione si applicano a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -91,6 +91,6 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
  [Comunicazione volatile in coda](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Da Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installazione accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Esempi di associazione di integrazione di Accodamento messaggi](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Accodamento messaggi in Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Sicurezza dei messaggi nell'accodamento messaggi](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

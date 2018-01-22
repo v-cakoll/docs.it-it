@@ -20,17 +20,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7cbca79cd3541df1db7ace3a7d5f67bf3f2b2ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bdc4a5c7f721fd350f5c604d4529f05afd62a42c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procedura: ereditare dalla classe Control
 Se si desidera creare un controllo completamente personalizzato da utilizzare in un Windows Form, è necessario ereditare la <xref:System.Windows.Forms.Control> classe. Durante l'eredità dalla <xref:System.Windows.Forms.Control> classe richiede che si esegue la pianificazione e implementazione più, vengono inoltre la più vasta gamma di opzioni. Quando si eredita da <xref:System.Windows.Forms.Control>, si eredita la funzionalità di base che consente di attivare i controlli. La funzionalità intrinseca di <xref:System.Windows.Forms.Control> classe gestisce l'input dell'utente tramite la tastiera e mouse, definire i limiti e dimensioni del controllo, fornisce un handle di windows e fornisce la gestione dei messaggi e la protezione. Non incorpora nessun disegno, che in questo caso è il rendering reale dell'interfaccia grafica del controllo, e non consente di incorporare alcuna funzionalità di interazione utente specifica. È necessario fornire tutti questi aspetti tramite codice personalizzato.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-custom-control"></a>Per creare un controllo personalizzato  
   

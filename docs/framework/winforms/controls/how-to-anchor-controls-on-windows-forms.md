@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Procedura: agganciare i controlli in Windows Form
 Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i controlli sul form devono ridimensionare e riposizionare correttamente. Per ridimensionare i controlli in modo dinamico con il modulo, è possibile utilizzare il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà dei controlli Windows Form. Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà definisce una posizione di ancoraggio per il controllo. Quando un controllo viene ancorato a un modulo e il form viene ridimensionato, il controllo mantiene la distanza tra il controllo e la posizione di ancoraggio. Ad esempio, se dispone di un <xref:System.Windows.Forms.TextBox> controllo è ancorato il sinistro, destro e inferiore del form, come il form viene ridimensionato, il <xref:System.Windows.Forms.TextBox> controllo viene ridimensionato orizzontalmente in modo che mantiene la stessa distanza i lati destro e sinistro del form. Inoltre, il controllo si posizionerà verticalmente in modo che il percorso è sempre la stessa distanza dal bordo inferiore del form. Se un controllo non è ancorato e viene ridimensionato il form, la posizione del controllo in relazione i bordi del form viene modificata.  
@@ -36,7 +36,7 @@ Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i
  Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà interagisce con il <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà. Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Per ancorare un controllo in un form  
   

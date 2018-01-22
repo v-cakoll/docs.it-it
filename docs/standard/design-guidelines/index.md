@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>Linee guida per la progettazione di Framework
 In questa sezione vengono fornite linee guida per la progettazione di librerie che estendono e interagiscono con .NET Framework. L'obiettivo è garantire agli sviluppatori di librerie coerenza API e la facilità di utilizzo fornendo un modello di programmazione unificato che sia indipendente dal linguaggio di programmazione utilizzato per lo sviluppo. È consigliabile seguire queste linee guida di progettazione durante lo sviluppo di classi e componenti che estendono .NET Framework. Progettazione di librerie incoerente può influire negativamente sulla produttività degli sviluppatori e sconsiglia adozione.  
@@ -61,5 +61,5 @@ In questa sezione vengono fornite linee guida per la progettazione di librerie c
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica](../../../docs/framework/get-started/overview.md)  
- [Guida di orientamento per .NET Framework](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [Guida di orientamento per .NET Framework](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [Guida di sviluppo](../../../docs/framework/development-guide.md)

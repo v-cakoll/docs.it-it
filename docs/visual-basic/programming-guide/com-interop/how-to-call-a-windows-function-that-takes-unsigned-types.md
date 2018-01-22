@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
 Se si utilizza una classe, modulo o una struttura con membri dei tipi di valore integer senza segno, è possibile accedere a questi membri con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -83,7 +83,7 @@ Se si utilizza una classe, modulo o una struttura con membri dei tipi di valore 
     >  Effettua una chiamata a codice non gestito, ad esempio l'interfaccia di programmazione dell'applicazione di Windows (API), espone il codice a potenziali rischi di sicurezza.  
   
     > [!IMPORTANT]
-    >  Chiama l'API di Windows è necessaria l'autorizzazione di codice non gestito, che può influire sulla relativa esecuzione in situazioni di attendibilità parziale. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Chiama l'API di Windows è necessaria l'autorizzazione di codice non gestito, che può influire sulla relativa esecuzione in situazioni di attendibilità parziale. Per ulteriori informazioni, vedere <xref:System.Security.Permissions.SecurityPermission> e [le autorizzazioni di accesso di codice](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

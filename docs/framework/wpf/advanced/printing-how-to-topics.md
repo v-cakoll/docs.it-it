@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
 Negli argomenti di questa sezione viene illustrato come utilizzare la stampa e le funzionalità di gestione del sistema di stampa incluse con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
@@ -42,7 +42,7 @@ Negli argomenti di questa sezione viene illustrato come utilizzare la stampa e l
  [Enumerare un sottoinsieme di code di stampa](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Istruzioni per la generazione di un elenco delle stampanti con determinate caratteristiche.  
   
- [NOTINBUILD: Procedura: estendere lo Schema di stampa e creare nuove classi di sistema di stampa](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Procedura: estendere lo Schema di stampa e creare nuove classi di sistema di stampa](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Analisi approfondita di illustrato il codice gestito i programmatori possono estendere lo Schema di stampa per i dispositivi di stampa speciali o le stampanti con le funzionalità nuove o non comuni.  
   
  [Ottenere le proprietà dell'oggetto del sistema di stampa senza reflection](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

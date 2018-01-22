@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Procedura: modificare il controllo MonthCalendar Windows Form &#39; s aspetto
 Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo consente di personalizzare l'aspetto del calendario in molti modi. Ad esempio, è possibile impostare la combinazione di colori e scegliere di visualizzare o nascondere i numeri di settimana e la data corrente.  
@@ -53,7 +53,7 @@ Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo consente di per
     ```  
   
     > [!NOTE]
-    >  A partire da Windows Vista e a seconda del tema, l'impostazione di alcune proprietà potrebbe non modificare l'aspetto del calendario. Ad esempio, se Windows è impostato per utilizzare il tema Aero, impostando il <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà non ha alcun effetto. In questo modo viene eseguito il rendering di una versione aggiornata del calendario con un aspetto derivato in fase di esecuzione dal tema del sistema operativo corrente. Se si desidera utilizzare queste proprietà e abilitare la versione precedente del calendario, è possibile disabilitare gli stili di visualizzazione per l'applicazione. La disabilitazione degli stili potrebbe influenzare l'aspetto e il comportamento di altri controlli nell'applicazione. Per disabilitare gli stili di visualizzazione in Visual Basic, aprire la finestra di progettazione del progetto e deselezionare il **gli stili visivi XP abilitare** casella di controllo. Per disabilitare gli stili di visualizzazione in c#, aprire Program.cs e impostare come commento `Application.EnableVisualStyles();`. Per ulteriori informazioni sugli stili, vedere [procedura: abilitare gli stili di visualizzazione di Windows XP](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  A partire da Windows Vista e a seconda del tema, l'impostazione di alcune proprietà potrebbe non modificare l'aspetto del calendario. Ad esempio, se Windows è impostato per utilizzare il tema Aero, impostando il <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> proprietà non ha alcun effetto. In questo modo viene eseguito il rendering di una versione aggiornata del calendario con un aspetto derivato in fase di esecuzione dal tema del sistema operativo corrente. Se si desidera utilizzare queste proprietà e abilitare la versione precedente del calendario, è possibile disabilitare gli stili di visualizzazione per l'applicazione. La disabilitazione degli stili potrebbe influenzare l'aspetto e il comportamento di altri controlli nell'applicazione. Per disabilitare gli stili di visualizzazione in Visual Basic, aprire la finestra di progettazione del progetto e deselezionare il **gli stili visivi XP abilitare** casella di controllo. Per disabilitare gli stili di visualizzazione in c#, aprire Program.cs e impostare come commento `Application.EnableVisualStyles();`. Per ulteriori informazioni sugli stili, vedere [procedura: abilitare gli stili di visualizzazione di Windows XP](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Per visualizzare la data corrente nella parte inferiore del controllo  
   

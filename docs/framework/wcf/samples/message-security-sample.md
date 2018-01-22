@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a26356346ca3dfea858f286dd32cb08b0e3b3591
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efad1940def2c27d57bb1e9da28e51362de5b237
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="message-security-sample"></a>Esempio sulla sicurezza dei messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza `basicHttpBinding` e la sicurezza del messaggio. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -137,7 +137,7 @@ Press <ENTER> to terminate client.
   
 3.  Eseguire l'applicazione client da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 5.  Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
   
 14. Sul computer client, avviare Client.exe da una finestra del prompt dei comandi.  
   
-    1.  Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Se il client e il servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   

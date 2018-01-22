@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>Panoramica sul controllo ToolTip
 Una descrizione comandi è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio un <xref:System.Windows.Controls.Button>. L'argomento introduce la descrizione comando e illustra come creare e personalizzare il relativo contenuto.  
@@ -78,7 +78,7 @@ Una descrizione comandi è una piccola finestra popup che viene visualizzato qua
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Uso delle proprietà di ToolTipService relative all'intervallo di tempo  
  Il <xref:System.Windows.Controls.ToolTipService> classe fornisce le proprietà seguenti per impostare una descrizione comando i tempi di visualizzazione: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Utilizzare il <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> le proprietà per specificare un ritardo, in genere breve, prima che un <xref:System.Windows.Controls.ToolTip> viene visualizzata e anche per specificare per quanto tempo un <xref:System.Windows.Controls.ToolTip> rimane visibile. Per altre informazioni, vedere [Procedura: ritardare la visualizzazione di un oggetto ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Utilizzare il <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> le proprietà per specificare un ritardo, in genere breve, prima che un <xref:System.Windows.Controls.ToolTip> viene visualizzata e anche per specificare per quanto tempo un <xref:System.Windows.Controls.ToolTip> rimane visibile. Per altre informazioni, vedere [Procedura: ritardare la visualizzazione di un oggetto ToolTip](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  Il <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà determina se le descrizioni comandi per controlli diversi senza un ritardo iniziale quando il puntatore del mouse si sposta rapidamente tra di essi. Per ulteriori informazioni sul <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà, vedere [utilizzare la proprietà BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

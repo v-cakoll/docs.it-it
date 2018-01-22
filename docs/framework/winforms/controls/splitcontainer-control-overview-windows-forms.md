@@ -16,11 +16,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Cenni preliminari sul controllo SplitContainer (Windows Form)
 Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
@@ -61,4 +61,4 @@ Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.SplitContainer>  
  [Controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Esempio di controllo SplitContainer](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)
+ [Esempio di controllo SplitContainer](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
