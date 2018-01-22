@@ -12,16 +12,16 @@ ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: fc3c0f6910238ba20582280426b4a40e68b95dd8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedura: utilizzare argomenti denominati e facoltativi nella programmazione di Office (Guida per programmatori C#)
 Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], migliorano la praticità, la flessibilità e la leggibilità nella programmazione C#. Queste funzionalità, poi, semplificano notevolmente l'accesso alle interfacce COM, quali le API di automazione di Microsoft Office.  
   
- Nell'esempio seguente, il metodo [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) dispone di sedici parametri che rappresentano le caratteristiche di una tabella, ad esempio il numero di colonne e di righe, la formattazione, i bordi, i tipi di carattere e i colori. I sedici parametri sono tutti facoltativi, perché nella maggior parte dei casi non si vogliono specificare particolari valori per tutti. Senza gli argomenti denominati e facoltativi, tuttavia, è necessario specificare un valore o un valore di segnaposto per ogni parametro. Con gli argomenti denominati e facoltativi si specificano valori solo per i parametri obbligatori per il progetto.  
+ Nell'esempio seguente, il metodo [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) dispone di sedici parametri che rappresentano le caratteristiche di una tabella, ad esempio il numero di colonne e di righe, la formattazione, i bordi, i tipi di carattere e i colori. I sedici parametri sono tutti facoltativi, perché nella maggior parte dei casi non si vogliono specificare particolari valori per tutti. Senza gli argomenti denominati e facoltativi, tuttavia, è necessario specificare un valore o un valore di segnaposto per ogni parametro. Con gli argomenti denominati e facoltativi si specificano valori solo per i parametri obbligatori per il progetto.  
   
  Per eseguire queste procedure, Microsoft Office Word deve essere installato.  
   
@@ -63,7 +63,7 @@ Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[cs
   
 ### <a name="to-display-text-in-a-word-document"></a>Per visualizzare il testo in un documento di Word  
   
-1.  Nella classe `Program` in Program.cs aggiungere il metodo seguente per creare un'applicazione di Word e un documento di Word. Il metodo [Add](http://go.microsoft.com/fwlink/?LinkId=145381) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.  
+1.  Nella classe `Program` in Program.cs aggiungere il metodo seguente per creare un'applicazione di Word e un documento di Word. Il metodo [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -102,7 +102,7 @@ Parametri di ConvertToTable
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Per specificare un formato predefinito per la tabella, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5. Il formato può corrispondere a qualsiasi costante [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382).  
+2.  Per specificare un formato predefinito per la tabella, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5. Il formato può corrispondere a qualsiasi costante [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   

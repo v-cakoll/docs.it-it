@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installare .NET Framework per sviluppatori
 
@@ -74,8 +74,6 @@ Il Developer Pack per .NET Framework 4.5.1 o 4.5.2, il Targeting Pack per [!INCL
 - [Microsoft .NET Framework 4.7.1 Dev Pack](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Microsoft .NET Framework 4.7 Dev Pack](http://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Microsoft .NET Framework 4.6.2 Dev Pack](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
 - [Microsoft .NET Framework 4.6.2 Dev Pack](http://go.microsoft.com/fwlink/?LinkId=780617)  
   

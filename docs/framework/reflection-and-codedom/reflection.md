@@ -33,14 +33,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b131b8b66315ffbb769eab059142f729cfaf2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
-Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfacce](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipi di valori](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.  
+Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System.Type?displayProperty=nameWithType>, consentono di ottenere informazioni sugli [assembly](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) caricati e sui tipi in essi definiti, ad esempio [classi](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfacce](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) e [tipi di valori](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). È anche possibile usare la reflection per creare istanze di tipi in fase di esecuzione, richiamarle e accedervi. Per argomenti su aspetti specifici di reflection, vedere [Argomenti correlati](#related_topics) al termine di questa panoramica.  
   
  Il caricatore di [Common Language Runtime](../../../docs/standard/clr.md) gestisce i [domini applicazioni](../../../docs/framework/app-domains/application-domains.md), che costituiscono limiti definiti intorno a oggetti con lo stesso ambito di applicazione. La gestione include il caricamento di ciascun assembly nel dominio applicazione appropriato e il controllo della disposizione in memoria della gerarchia dei tipi di ciascun assembly.  
   

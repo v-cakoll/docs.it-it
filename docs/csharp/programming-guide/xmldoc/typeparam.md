@@ -12,11 +12,11 @@ ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6b9b81883d6d8abb960eda54f5c435acab6310b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e1b8800e39b1ee5eeac8c5d3e4390ed3226b33a3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (Guida per programmatori C#)
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  Per altre informazioni, vedere [Generics](../../../csharp/programming-guide/generics/index.md).  
   
- Il testo del tag `<typeparam>` verrà visualizzato in IntelliSense, nella [finestra Visualizzatore oggetti](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) e nel report Web sui commenti del codice.  
+ Il testo del tag `<typeparam>` verrà visualizzato in IntelliSense, nella [finestra Visualizzatore oggetti](http://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) e nel report Web sui commenti del codice.  
   
  Compilare con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) per elaborare i commenti relativi alla documentazione in un file.  
   

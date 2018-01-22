@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 4c94e6cd2894959d64fe463c85b4460893f2bf96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metodi di estensione (Guida per programmatori C#)
 I metodi di estensione consentono di "aggiungere" metodi ai tipi esistenti senza creare un nuovo tipo derivato, ricompilare o modificare in altro modo il tipo originale. I metodi di estensione sono uno speciale tipo di metodo statico, ma vengono chiamati come se fossero metodi di istanza sul tipo esteso. Per il codice client scritto in C#, F# e Visual Basic non esistono differenze evidenti tra la chiamata a un metodo di estensione e ai metodi effettivamente definiti in un tipo.  
@@ -91,7 +91,7 @@ using System.Linq;
  [Esempi di programmazione parallela (sono inclusi molti metodi di estensione di esempio)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Cenni preliminari sugli operatori di query standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Regole di conversione per parametri Instance e relativo impatto](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Interoperabilità dei metodi di estensione tra linguaggi](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Metodi di estensione e delegati sottoposti a currying](http://go.microsoft.com/fwlink/?LinkId=112387)  
- [Associazione di metodi di estensione e segnalazione errori](http://go.microsoft.com/fwlink/?LinkId=112388)
+ [Regole di conversione per parametri Instance e relativo impatto](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+ [Interoperabilità dei metodi di estensione tra linguaggi](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+ [Metodi di estensione e delegati sottoposti a currying](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+ [Associazione di metodi di estensione e segnalazione errori](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

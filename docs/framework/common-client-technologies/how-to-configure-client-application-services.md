@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Procedura: configurare i servizi delle applicazioni client
 In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Creazione progetti** per attivare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includ
   
 2.  Selezionare o deselezionare **Salva hash della password localmente per consentire l'accesso offline**. Quando si seleziona questa opzione, verrà memorizzato localmente un modulo crittografato della password dell'utente. Ciò risulta utile se si implementa la modalità non in linea dell'applicazione. Con questa opzione selezionata è possibile convalidare gli utenti anche quando la proprietà <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> è impostata su `true`.  
   
-3.  Selezionare o deselezionare **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server**. Il cookie di autenticazione viene configurato nel servizio remoto e indica quanto tempo rimarrà attivo un accesso dell'utente. Per altre informazioni su come configurare il cookie, vedere l'attributo `timeout` in [Elemento moduli per autenticazione (schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Selezionare o deselezionare **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server**. Il cookie di autenticazione viene configurato nel servizio remoto e indica quanto tempo rimarrà attivo un accesso dell'utente. Per altre informazioni su come configurare il cookie, vedere l'attributo `timeout` in [Elemento moduli per autenticazione (schema delle impostazioni ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Se si seleziona questa opzione, il tentativo di accedere ai ruoli remoti o servizi di impostazioni Web dopo la scadenza del cookie di autenticazione genererà un <xref:System.Net.WebException>. È possibile gestire questa eccezione e visualizzare una finestra di dialogo di accesso per riconvalidare gli utenti. Per un esempio di questo comportamento, vedere [Procedura dettagliata: Uso dei servizi delle applicazioni client](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Questa opzione è utile per le applicazioni distribuite nei percorsi pubblici per assicurarsi che gli utenti che escono dall'applicazione non rimangano autenticati a tempo indeterminato.  
   

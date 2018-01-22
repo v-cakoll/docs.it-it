@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (strumento per i criteri di sicurezza dall'accesso di codice)
 Lo strumento Criteri di sicurezza dall'accesso di codice (Caspol.exe) consente a utenti e amministratori di modificare i criteri di sicurezza definiti a livello di computer, di utente e di azienda.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>Note  
  I criteri di sicurezza vengono espressi mediante tre livelli computer, utente e azienda. Il set di autorizzazioni che un assembly riceve è determinato dall'intersezione dei set di autorizzazioni consentiti da questi tre livelli di criteri. Ciascun livello di criteri è rappresentato da una struttura gerarchica di gruppi di codice. Ciascun gruppo di codice presenta una condizione di appartenenza che determina quale codice appartiene a tale gruppo. A ciascun gruppo di codice è inoltre associato un set di autorizzazioni denominato. Questo set di autorizzazioni specifica le autorizzazioni concesse dal runtime al codice che soddisfa la condizione di appartenenza. Una gerarchia dei gruppi di codice, insieme ai set di autorizzazioni denominati a essa associati, definisce e mantiene ciascun livello dei criteri di sicurezza. Per impostare il livello dei criteri di sicurezza, è possibile usare le opzioni **-user**, **-customuser**, **-machine** ed **-enterprise**.  
   
- Per altre informazioni sui criteri di sicurezza e sulle modalità con cui il runtime determina quali autorizzazioni concedere al codice, vedere [Gestione dei criteri di sicurezza](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Per altre informazioni sui criteri di sicurezza e sulle modalità con cui il runtime determina quali autorizzazioni concedere al codice, vedere [Gestione dei criteri di sicurezza](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Riferimenti a gruppi di codice e a set di autorizzazioni  
  Per facilitare i riferimenti ai gruppi di codice presenti in una gerarchia, l'opzione **-list** visualizza un elenco con rientri dei gruppi di codice insieme alle corrispondenti etichette numeriche (1, 1.1, 1.1.1 e così via). Anche le altre operazioni da riga di comando relative ai gruppi di codice utilizzano le etichette numeriche per far riferimento a gruppi di codice specifici.  

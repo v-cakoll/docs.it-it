@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>Controllo delle versioni in C# #
 
@@ -57,7 +57,7 @@ Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della
 
 ### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
 
-Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) nella maggior parte dei tipi di progetto.
+Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) nella maggior parte dei tipi di progetto.
 Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambieranno regolarmente vengano memorizzate nel file `app.config`. Quando le informazioni vengono aggiornate è sufficiente sostituire il file di configurazione delle versioni precedenti con il nuovo file senza dover ricompilare la libreria.
 
 ## <a name="consuming-libraries"></a>Elaborazione delle librerie
@@ -68,7 +68,7 @@ Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di 
 
 ### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
 
-È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
+È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
 
 ```xml
 <dependentAssembly>

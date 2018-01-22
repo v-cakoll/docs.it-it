@@ -9,11 +9,11 @@ ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8886f7601ce4d1de4a6b277a803ff87eb67bee78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac9b0ad47dc9608c3082167493caa7c4bc966497
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Struttura generale di un programma C# (Guida per programmatori C#)
 I programmi C# possono essere costituiti da uno o più file. Ciascun file può contenere zero o più spazi dei nomi. Uno spazio dei nomi può contenere tipi, quali classi, struct, interfacce, enumerazioni e delegati. Di seguito viene illustrata la struttura di base di un programma C# che contiene tutti questi elementi.  
@@ -40,4 +40,4 @@ I programmi C# possono essere costituiti da uno o più file. Ciascun file può c
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+ [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

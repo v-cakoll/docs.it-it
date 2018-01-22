@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)
 MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando Mage.exe, ma con un'interfaccia utente basata su Windows. Con questo strumento è possibile creare, modificare e firmare manifesti di distribuzione e di applicazione. I nuovi manifesti creati con MageUI.exe sono destinati a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. È necessario usare versioni precedenti di MageUI.exe per le versioni precedenti di .NET Framework. In caso di aggiunta o rimozione di assembly da un manifesto o di apposizione di una nuova firma a manifesti esistenti, MageUI.exe non aggiorna il manifesto per destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Per altre informazioni, vedere [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -138,7 +138,7 @@ MageUI.exe supporta le stesse funzionalità dello strumento da riga di comando M
   
 |Elemento dell'interfaccia utente|Descrizione|  
 |----------------|-----------------|  
-|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [NIB: Set di autorizzazioni denominati](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Tipo di set di autorizzazioni**|Il set di autorizzazioni minimo richiesto per eseguire l'applicazione nel client. Per una descrizione di questi set di autorizzazioni e delle autorizzazioni obbligatorie o facoltative, vedere [NIB: Set di autorizzazioni denominati](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Dettagli**|Il file XML creato per il manifesto dell'applicazione al fine di rappresentare il set di autorizzazioni. Se non si è esperti del formato XML del manifesto dell'applicazione, è consigliabile non modificare manualmente il file XML. Per altre informazioni, vedere [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Scheda Manifesto della distribuzione  
