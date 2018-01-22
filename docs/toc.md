@@ -258,6 +258,7 @@
 ### [Documentazione del codice](csharp/codedoc.md)
 ### [Controllo delle versioni](csharp/versioning.md)
 ## [Argomenti della Procedura di C#](csharp/how-to/index.md)
+### [Come analizzare le stringhe con `String.Split`](csharp/how-to/parse-strings-using-split.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guida per programmatori C#](csharp/programming-guide/)
