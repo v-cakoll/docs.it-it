@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -58,7 +58,7 @@ Le stringhe sono il tipo di dati di base usato per visualizzare o modificare il 
 - [Modificare il contenuto di una stringa](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Determinare se una stringa rappresenta un numero](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Usare `String.Split` per separare stringhe](parse-strings-using-split.md).
-- [Unire più stringhe in una](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
+- [Unire più stringhe in una](concatenate-multiple-strings.md).
 - [Eseguire la ricerca di testo in una stringa](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Eseguire la ricerca di stringhe tramite espressioni regolari](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
 
