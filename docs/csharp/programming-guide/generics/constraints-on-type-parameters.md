@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Vincoli sui parametri di tipo (Guida per programmatori C#)
 Quando si definisce una classe generica è possibile applicare restrizioni ai tipi che il codice client può usare per gli argomenti di tipo quando crea un'istanza della classe. Se il codice client tenta di creare un'istanza della classe con un tipo non consentito da un vincolo, viene restituito un errore in fase di compilazione. Queste restrizioni sono definite vincoli. I vincoli vengono specificati usando la parola chiave contestuale `where`. La tabella seguente elenca i sei tipi di vincoli:  
   
 |Vincolo|Descrizione|  
 |----------------|-----------------|  
-|where T: struct|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable>. Per altre informazioni, vedere [Utilizzo dei tipi nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
-|where T : class|L'argomento tipo deve essere un tipo riferimento, incluso qualsiasi tipo di classe, interfaccia, delegato o matrice.|  
-|where T : new()|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo.|  
-|where T : \<nome della classe di base>|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|  
-|where T : \<nome interfaccia>|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|  
-|where T : U|L'argomento tipo fornito per T deve corrispondere all'argomento fornito per U o derivare da esso.|  
+|`where T: struct`|L'argomento tipo deve essere un tipo valore. È possibile specificare qualsiasi tipo valore tranne <xref:System.Nullable>. Per altre informazioni, vedere [Utilizzo dei tipi nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
+|`where T : class`|L'argomento tipo deve essere un tipo riferimento, incluso qualsiasi tipo di classe, interfaccia, delegato o matrice.|  
+|`where T : new()`|L'argomento tipo deve avere un costruttore pubblico senza parametri. Quando il vincolo `new()` viene usato con altri vincoli, deve essere specificato per ultimo.|  
+|`where T : `*\<nome della classe di base>*|L'argomento tipo deve corrispondere alla classe di base specificata o derivare da essa.|  
+|`where T : `*\<nome dell'interfaccia>*|L'argomento tipo deve corrispondere all'interfaccia specificata o implementare tale interfaccia. È possibile specificare più vincoli di interfaccia. L'interfaccia vincolante può anche essere generica.|  
+|`where T : U`|L'argomento tipo fornito per T deve corrispondere all'argomento fornito per U o derivare da esso.|  
   
 ## <a name="why-use-constraints"></a>Motivi per cui usare i vincoli  
  Se si vuole esaminare un elemento di un elenco generico per stabilire se è valido oppure per confrontarlo con un altro elemento, è necessario garantire al compilatore che l'operatore o il metodo da chiamare sarà supportato da qualsiasi argomento tipo che può venire specificato dal codice client. A tale scopo è possibile applicare uno o più vincoli alla definizione di classe generica. Specificando il vincolo della classe di base, ad esempio, si indica al compilatore che verranno usati come argomenti tipo solo gli oggetti del tipo specificato o derivati da esso. In presenza di questa garanzia, il compilatore può consentire le chiamate ai metodi del tipo all'interno della classe generica. I vincoli vengono applicati usando la parola chiave contestuale `where`. L'esempio di codice seguente illustra la funzionalità che è possibile aggiungere alla classe `GenericList<T>` (in [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)) applicando un vincolo della classe di base.  

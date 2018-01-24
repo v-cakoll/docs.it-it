@@ -12,17 +12,17 @@ ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8fae5487d5daa5ada52d45919598d1abd217aee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d035319318a710ccee62a0c64ce5981767a21ca
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="operator-c-reference"></a>operator (Riferimenti per C#)
 Usare la parola chiave `operator` per eseguire l'overload di un operatore predefinito o specificare una conversione definita dall'utente in una classe o una dichiarazione di struttura.  
   
 ## <a name="example"></a>Esempio  
- La classe riportata di seguito è una classe estremamente semplificata per numeri frazionari. La classe esegue l'overload degli operatori + e * per eseguire addizioni e moltiplicazioni frazionarie e specifica un operatore di conversione che converte un tipo Fraction in un tipo double.  
+ La classe riportata di seguito è una classe estremamente semplificata per numeri frazionari. La classe esegue l'overload degli operatori `+` e `*` per eseguire addizioni e moltiplicazioni frazionarie e specifica un operatore di conversione che converte un tipo `Fraction` in un tipo `double`.  
   
  [!code-csharp[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   

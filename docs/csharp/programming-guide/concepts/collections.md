@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>Raccolte (C#)
 Per molte applicazioni è utile creare e gestire gruppi di oggetti correlati. È possibile raggruppare gli oggetti in due modi: creando matrici di oggetti e creando raccolte di oggetti.  
@@ -546,7 +546,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iteratori  
+##  <a name="iterators"></a>Iterators  
  Un *iteratore* viene usato per eseguire un'iterazione personalizzata in una raccolta. Un iteratore può essere un metodo o una funzione di accesso `get`. Un iteratore usa un'istruzione [yield return](../../../csharp/language-reference/keywords/yield.md) per restituire ogni elemento della raccolta, uno alla volta.  
   
  Per chiamare un iteratore usare un'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Ogni iterazione del ciclo `foreach` chiama l'iteratore. Quando si raggiunge un'istruzione `yield return` nell'iteratore, viene restituita un'espressione e viene mantenuta la posizione corrente nel codice. L'esecuzione viene ripresa a partire da quella posizione la volta successiva che viene chiamato l'iteratore.  
@@ -587,7 +587,7 @@ private static IEnumerable<int> EvenSequence(
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Raccolte e strutture di dati](../../../standard/collections/index.md)  
- [Creazione e modifica delle raccolte](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Creazione e modifica delle raccolte](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Selezione di una classe Collection](../../../standard/collections/selecting-a-collection-class.md)  
  [Confronti e ordinamenti all'interno delle raccolte](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quando utilizzare raccolte generiche](../../../standard/collections/when-to-use-generic-collections.md)  
