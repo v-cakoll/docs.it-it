@@ -13,19 +13,19 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (opzioni del compilatore C#)
-L'opzione **/lib** specifica la posizione degli assembly a cui si fa riferimento tramite l'opzione [/reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="-lib-c-compiler-options"></a>-lib (opzioni del compilatore C#)
+L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento tramite l'opzione [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -42,15 +42,15 @@ L'opzione **/lib** specifica la posizione degli assembly a cui si fa riferimento
   
 2.  Directory di sistema di Common Language Runtime.  
   
-3.  Directory specificate da **/lib**.  
+3.  Directory specificate da **-lib**.  
   
 4.  Directory specificate dalla variabile di ambiente LIB.  
   
- Per specificare un riferimento a un assembly, usare **/reference**.  
+ Per specificare un riferimento a un assembly, usare **-reference**.  
   
- L'opzione**/lib** è di tipo additivo: se viene specificata più volte, ogni nuovo valore verrà aggiunto a eventuali valori precedenti.  
+ L'opzione**-lib** è di tipo additivo: se viene specificata più volte, ogni nuovo valore verrà aggiunto a eventuali valori precedenti.  
   
- In alternativa a **/lib**, è possibile copiare nella directory di lavoro tutti gli assembly necessari. Sarà quindi sufficiente passare a **/reference** il nome dell'assembly. In seguito sarà possibile eliminare gli assembly dalla directory di lavoro. Dal momento che il percorso dell'assembly dipendente non è specificato nel manifesto dell'assembly, sarà possibile avviare l'applicazione sul computer di destinazione perché trovi e usi l'assembly nella Global Assembly Cache.  
+ In alternativa a **-lib**, è possibile copiare nella directory di lavoro tutti gli assembly necessari. Sarà quindi sufficiente passare a **-reference** il nome dell'assembly. In seguito sarà possibile eliminare gli assembly dalla directory di lavoro. Dal momento che il percorso dell'assembly dipendente non è specificato nel manifesto dell'assembly, sarà possibile avviare l'applicazione sul computer di destinazione perché trovi e usi l'assembly nella Global Assembly Cache.  
   
  Il fatto che nel compilatore sia possibile fare riferimento all'assembly non implica che Common Language Runtime sarà in grado di trovare e caricare l'assembly in fase di runtime. Per informazioni dettagliate sulla modalità di ricerca degli assembly a cui viene fatto riferimento in fase di esecuzione, vedere [Come il runtime individua gli assembly](../../../framework/deployment/how-the-runtime-locates-assemblies.md).  
   
@@ -68,7 +68,7 @@ L'opzione **/lib** specifica la posizione degli assembly a cui si fa riferimento
  Compilare t2.cs per creare un file con estensione exe. Verranno cercati i riferimenti agli assembly nella directory di lavoro e nella directory radice dell'unità C.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

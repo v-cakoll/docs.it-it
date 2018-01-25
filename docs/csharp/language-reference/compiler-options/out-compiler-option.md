@@ -13,19 +13,19 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out (opzioni del compilatore C#)
-L'opzione **/out** specifica il nome del file di output.  
+# <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
+L'opzione **-out** specifica il nome del file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,7 +33,7 @@ L'opzione **/out** specifica il nome del file di output.
  Il nome del file di output creato dal compilatore.  
   
 ## <a name="remarks"></a>Note  
- Nella riga di comando è possibile specificare più file di output per la compilazione. Dopo l'opzione **/out** è prevista la presenza di uno o più file di codice sorgente. Tutti i file di codice sorgente verranno quindi compilati nel file di output specificato con l'opzione **/out**.  
+ Nella riga di comando è possibile specificare più file di output per la compilazione. Dopo l'opzione **-out** è prevista la presenza di uno o più file di codice sorgente. Tutti i file di codice sorgente verranno quindi compilati nel file di output specificato con l'opzione **-out**.  
   
  Specificare il nome completo e l'estensione del file che si vuole creare.  
   
@@ -45,15 +45,15 @@ L'opzione **/out** specifica il nome del file di output.
   
  Non è possibile usare per la compilazione di un file di output un file di codice sorgente già usato per compilare un altro file di output nella stessa compilazione.  
   
- Quando si generano più file di output in una compilazione da riga di comando, tenere presente che solo uno dei file di output può essere un assembly e che solo il primo file di output specificato (in modo implicito o esplicito con l'opzione **/out**) può essere l'assembly.  
+ Quando si generano più file di output in una compilazione da riga di comando, tenere presente che solo uno dei file di output può essere un assembly e che l'assembly può essere solo il primo file di output specificato (in modo implicito o esplicito con l'opzione **-out**).  
   
  I moduli prodotti durante una compilazione diventano file associati a un assembly prodotto anch'esso in fase di compilazione. Per visualizzare il manifesto dell'assembly e i file associati, usare [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
- L'opzione del compilatore /out è necessaria affinché un file eseguibile sia la destinazione di un assembly Friend. Per altre informazioni, vedere [Assembly Friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ L'opzione del compilatore -out è necessaria perché un file eseguibile sia la destinazione di un assembly Friend. Per altre informazioni, vedere [Assembly Friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1.  Aprire la pagine **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -65,7 +65,7 @@ L'opzione **/out** specifica il nome del file di output.
  Per compilare `t.cs` e creare il file di output `t.exe`, nonché per generare `t2.cs` e creare il file di output del modulo `mymodule.netmodule`:  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

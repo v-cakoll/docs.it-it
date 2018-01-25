@@ -13,33 +13,33 @@ ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 242f8ada7cbffc4a6986339d28c4284b50afca25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library (opzioni del compilatore C#)
-L'opzione **/target:library** consente la creazione di una libreria DLL, anziché di un file eseguibile EXE.  
+# <a name="-targetlibrary-c-compiler-options"></a>-target:library (opzioni del compilatore C#)
+L'opzione **-target:library** consente la creazione da parte del compilatore di una libreria di collegamento dinamico (DLL), anziché di un file eseguibile (EXE).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/target:library  
+-target:library  
 ```  
   
 ## <a name="remarks"></a>Note  
  La libreria creata avrà estensione DLL.  
   
- Se non diversamente specificato mediante l'opzione [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del primo file di input.  
+ Se non diversamente specificato tramite l'opzione [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del primo file di input.  
   
- Quando specificato alla riga di comando, tutti i file fino alla successiva opzione **/out** o **/target:module** vengono usati per creare il file con estensione dll.  
+ Quando specificato alla riga di comando, tutti i file fino alla successiva opzione **-out** o **-target:module** vengono usati per creare il file con estensione dll.  
   
  Quando si compila un file con estensione dll, non è richiesto alcun metodo [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1.  Aprire la pagine **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -51,9 +51,9 @@ L'opzione **/target:library** consente la creazione di una libreria DLL, anzich�
  Compilare in `in.cs` creando in `in.dll`:  
   
 ```console  
-csc /target:library in.cs  
+csc -target:library in.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [/target (opzioni del compilatore c#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

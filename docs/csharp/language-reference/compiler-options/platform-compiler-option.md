@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (opzioni del compilatore C#)
+# <a name="-platform-c-compiler-options"></a>-platform (opzioni del compilatore C#)
 Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'assembly.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -48,13 +48,13 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
   
  In un sistema operativo Windows a 64 bit:  
   
--   Gli assembly compilati con **/platform:x86** vengono eseguiti dalla versione di Common Language Runtime a 32 bit in WOW64.  
+-   Gli assembly compilati con **-platform:x86** vengono eseguiti dalla versione di Common Language Runtime a 32 bit in WOW64.  
   
--   Una DLL compilata con l'opzione **/platform: anycpu** viene eseguita dallo stesso Common Language Runtime del processo in cui viene caricata.  
+-   Una DLL compilata con l'opzione **-platform:anycpu** viene eseguita dallo stesso Common Language Runtime del processo in cui viene caricata.  
   
--   Gli eseguibili compilati con **/platform:anycpu** vengono eseguiti dalla versione di Common Language Runtime a 64 bit.  
+-   Gli eseguibili compilati con **-platform:anycpu** vengono eseguiti dalla versione di Common Language Runtime a 64 bit.  
   
--   Gli eseguibili compilati con l'opzione **/platform:anycpu32bitpreferred** vengono eseguiti dalla versione di Common Language Runtime a 32 bit.  
+-   Gli eseguibili compilati con l'opzione **-platform:anycpu32bitpreferred** vengono eseguiti dalla versione di Common Language Runtime a 32 bit.  
   
  L'impostazione **anycpu32bitpreferred** è valida solo per file eseguibili (con estensione exe) e richiede .NET Framework 4.5.  
   
@@ -68,15 +68,15 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
   
 3.  Modificare la proprietà **Piattaforma di destinazione** e, per i progetti destinati a .NET Framework 4.5, selezionare o deselezionare la casella di controllo **Preferisci 32 bit**.  
   
- **Tenere presente che /platform** non è disponibile nell'ambiente di sviluppo di Visual C# Express.  
+ **Si noti che -platform** non è disponibile nell'ambiente di sviluppo di Visual C# Express.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come usare l'opzione **/platform** per specificare che l'applicazione deve essere eseguita dalla versione di Common Language Runtime a 64 bit su un sistema operativo Windows a 64 bit.  
+ L'esempio seguente illustra come usare l'opzione **-platform** per specificare che l'applicazione deve essere eseguita dalla versione di Common Language Runtime a 64 bit in un sistema operativo Windows a 64 bit.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

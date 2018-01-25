@@ -16,19 +16,19 @@ ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="define-c-compiler-options"></a>/define (opzioni del compilatore C#)
-L'opzione **/define** definisce `name` come simbolo in tutti i file del codice sorgente nel programma.  
+# <a name="-define-c-compiler-options"></a>-define (opzioni del compilatore C#)
+L'opzione **-define** definisce `name` come simbolo in tutti i file del codice sorgente nel programma.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/define:name[;name2]  
+-define:name[;name2]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -36,16 +36,16 @@ L'opzione **/define** definisce `name` come simbolo in tutti i file del codice s
  Nome di uno o più simboli che si vuole definire.  
   
 ## <a name="remarks"></a>Note  
- L'opzione **/define** ha lo stesso effetto dell'uso di una direttiva per il preprocessore [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), ad eccezione del fatto che l'opzione del compilatore è valida per tutti i file nel progetto. Un simbolo resta definito in un file del codice sorgente finché una direttiva [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) nel file non rimuove la definizione. Quando si usa l'opzione /define, una direttiva `#undef` in un file non ha effetto in altri file del codice sorgente nel progetto.  
+ L'opzione **-define** ha lo stesso effetto dell'uso di una direttiva [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) per il preprocessore, ad eccezione del fatto che l'opzione del compilatore è valida per tutti i file nel progetto. Un simbolo resta definito in un file del codice sorgente finché una direttiva [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) nel file non rimuove la definizione. Quando si usa l'opzione -define, una direttiva `#undef` in un file non ha effetto in altri file del codice sorgente nel progetto.  
   
  È possibile usare i simboli creati da questa opzione con [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) e [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) per la compilazione condizionale dei file del codice sorgente.  
   
- **/d** è la versione abbreviata di **/define**.  
+ **-d** è la versione abbreviata di **-define**.  
   
- È possibile definire più simboli con **/define** separando i nomi di simbolo con virgole o punti e virgola. Ad esempio:  
+ È possibile definire più simboli con **-define** separando i nomi di simbolo con virgole o punti e virgola. Ad esempio:  
   
 ```console  
-/define:DEBUG;TUESDAY  
+-define:DEBUG;TUESDAY  
 ```  
   
  Il compilatore C# stesso non definisce alcun simbolo o macro che è possibile usare nel codice sorgente. Tutte le definizioni dei simboli devono essere definite dall'utente.  
@@ -65,7 +65,7 @@ L'opzione **/define** definisce `name` come simbolo in tutti i file del codice s
   
 ```csharp  
 // preprocessor_define.cs  
-// compile with: /define:xx  
+// compile with: -define:xx  
 // or uncomment the next line  
 // #define xx  
 using System;  

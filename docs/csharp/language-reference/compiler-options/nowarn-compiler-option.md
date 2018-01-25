@@ -13,19 +13,19 @@ ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2784e63b7c1e67b32fc448b4b112ad0252b1abd9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn (opzioni del compilatore C#)
-L'opzione **/nowarn** impedisce al compilatore di visualizzare uno o più avvisi. Separare più numeri di avviso con una virgola.  
+# <a name="-nowarn-c-compiler-options"></a>-nowarn (opzioni del compilatore C#)
+L'opzione **-nowarn** impedisce al compilatore di visualizzare uno o più avvisi. Separare più numeri di avviso con una virgola.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/nowarn:number1[,number2,...]  
+-nowarn:number1[,number2,...]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,11 +33,11 @@ L'opzione **/nowarn** impedisce al compilatore di visualizzare uno o più avvisi
  Il numero o i numeri degli avvisi che il compilatore non deve visualizzare.  
   
 ## <a name="remarks"></a>Note  
- Specificare solo la parte numerica dell'identificatore dell'avviso. Ad esempio, per eliminare l'avviso CS0028 è possibile specificare `/nowarn:28`.  
+ Specificare solo la parte numerica dell'identificatore dell'avviso. Ad esempio, per eliminare l'avviso CS0028 è possibile specificare `-nowarn:28`.  
   
- Il compilatore ignorerà automaticamente i numeri di avviso passati a `/nowarn` validi nelle versioni precedenti ma rimossi dal compilatore. Ad esempio, CS0679 era valido nel compilatore in Visual Studio .NET 2002 ma è stato rimosso successivamente.  
+ Il compilatore ignorerà automaticamente i numeri di avviso passati a `-nowarn` validi nelle versioni precedenti ma rimossi dal compilatore. Ad esempio, CS0679 era valido nel compilatore in Visual Studio .NET 2002 ma è stato rimosso successivamente.  
   
- Gli avvisi seguenti non possono essere eliminati dall'opzione `/nowarn`:  
+ Gli avvisi seguenti non possono essere eliminati dall'opzione `-nowarn`:  
   
 -   Avviso del compilatore (livello 1) CS2002  
   

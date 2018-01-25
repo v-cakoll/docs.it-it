@@ -13,19 +13,19 @@ ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e17622256ca6a0344797ba16e007ba6feb8f873
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: c1181ef98ac5f335c9737771eda2b3bd9227cc9f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="codepage-c-compiler-options"></a>/codepage (opzioni del compilatore C#)
+# <a name="-codepage-c-compiler-options"></a>-codepage (opzioni del compilatore C#)
 Questa opzione specifica la tabella codici da usare durante la compilazione, se la pagina richiesta non è la tabella codici predefinita corrente per il sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/codepage:id  
+-codepage:id  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,9 +33,9 @@ Questa opzione specifica la tabella codici da usare durante la compilazione, se 
  ID della tabella codici da usare per tutti i file di codice sorgente nella compilazione.  
   
 ## <a name="remarks"></a>Note  
- Se si compilano uno o più file di codice sorgente che non sono stati creati per usare la tabella codici predefinita nel computer in uso, è possibile usare l'opzione **/codepage** per specificare la tabella codici da usare. **/codepage** si applica a tutti i file di codice sorgente nella compilazione.  
+ Se si compilano uno o più file di codice sorgente che non sono stati creati per usare la tabella codici predefinita nel computer in uso, è possibile usare l'opzione **-codepage** per specificare la tabella codici da usare. **-codepage** si applica a tutti i file di codice sorgente nella compilazione.  
   
- Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva nel computer in uso o se i file di codice sorgente sono stati creati con UNICODE o UTF-8, non sarà necessario usare **/codepage**.  
+ Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva nel computer in uso o se i file di codice sorgente sono stati creati con UNICODE o UTF-8, non sarà necessario usare **-codepage**.  
   
  Per informazioni su come individuare le tabelle codici supportate nel sistema, vedere [GetCPInfo](https://msdn.microsoft.com/library/dd318078(VS.85).aspx).  
   

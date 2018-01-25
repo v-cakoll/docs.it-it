@@ -13,19 +13,19 @@ ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef68b6a75d9f5bd65e7d549240dc061097f2d30c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (opzione del compilatore C#)
+# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opzione del compilatore C#)
 Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con estensione NETMODULE.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/moduleassemblyname:assembly_name  
+-moduleassemblyname:assembly_name  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,7 +33,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
  Nome dell'assembly i cui tipi non pubblici sono accessibili dal file con estensione netmodule.  
   
 ## <a name="remarks"></a>Note  
- **/moduleassemblyname** deve essere usato quando si compila un file con estensione netmodule e vengono soddisfatte le condizioni seguenti:  
+ È necessario usare **-moduleassemblyname** quando si compila un file con estensione netmodule, se sono soddisfatte le condizioni seguenti:  
   
 -   Tramite il file con estensione netmodule deve essere possibile accedere a tipi non pubblici in un assembly esistente.  
   
@@ -41,7 +41,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
   
 -   L'assembly esistente ha concesso l'accesso assembly Friend all'assembly in cui verrà compilato il file con estensione netmodule.  
   
- Per altre informazioni sulla compilazione di un file con estensione netmodule, vedere [/target:module (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Per altre informazioni sulla compilazione di un file con estensione netmodule, vedere [-target:module (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
  Per altre informazioni sugli assembly Friend, vedere [Assembly Friend ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
@@ -54,7 +54,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
   
 ```csharp  
 // moduleassemblyname_1.cs  
-// compile with: /target:library  
+// compile with: -target:library  
 using System;  
 using System.Runtime.CompilerServices;  
   
@@ -70,11 +70,11 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene compilato un file con estensione netmodule tramite cui si accede a un tipo non pubblico nel file moduleassemblyname_1.dll dell'assembly. Sapendo che questo file con estensione netmodule verrà compilato in un assembly denominato csman_an_assembly, è possibile specificare **/moduleassemblyname** per consentire al file con estensione netmodule di accedere a tipi non pubblici nell'assembly che ha concesso all'assembly Friend l'accesso a csman_an_assembly.  
+ In questo esempio viene compilato un file con estensione netmodule tramite cui si accede a un tipo non pubblico nel file moduleassemblyname_1.dll dell'assembly. Sapendo che questo file con estensione netmodule verrà compilato in un assembly denominato csman_an_assembly, è possibile specificare **-moduleassemblyname** per consentire al file con estensione netmodule di accedere a tipi non pubblici nell'assembly che ha concesso all'assembly Friend l'accesso a csman_an_assembly.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
-// compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
+// compile with: -moduleassemblyname:csman_an_assembly -target:module -reference:moduleassemblyname_1.dll  
 class B {  
     public void Test() {  
         An_Internal_Class x = new An_Internal_Class();  
@@ -88,7 +88,7 @@ class B {
   
 ```csharp  
 // csman_an_assembly.cs  
-// compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
+// compile with: -addmodule:moduleassemblyname_2.netmodule -reference:moduleassemblyname_1.dll  
 class A {  
     public static void Main() {  
         B bb = new B();  

@@ -9,14 +9,14 @@ ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7de999c53f02fcc2bde4a8ccf504ba2b1d032638
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedura: implementare e chiamare un metodo di estensione personalizzato (Guida per programmatori C#)
-In questo argomento viene illustrato come implementare i propri metodi di estensione per qualsiasi tipo all'interno della [libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856), o per qualsiasi altro tipo .NET che si voglia estendere. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../../csharp/language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
+Questo argomento illustra come implementare metodi di estensione personali per qualsiasi tipo .NET. Il codice client può usare i metodi di estensione aggiungendo un riferimento alla DLL che li contiene, e aggiungendo una direttiva [using](../../../csharp/language-reference/keywords/using-directive.md) che specifica lo spazio dei nomi in cui vengono definiti i metodi di estensione.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Per definire e chiamare il metodo di estensione  
   

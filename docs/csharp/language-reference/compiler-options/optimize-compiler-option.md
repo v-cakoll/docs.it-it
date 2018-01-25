@@ -17,31 +17,31 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a>/optimize (opzioni del compilatore C#)
-L'opzione **/optimize** abilita o disabilita le ottimizzazioni eseguite dal compilatore per ridurre le dimensioni del file di output e aumentarne la velocità e l'efficienza.  
+# <a name="-optimize-c-compiler-options"></a>-optimize (opzioni del compilatore C#)
+L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal compilatore per ridurre le dimensioni del file di output e aumentarne la velocità e l'efficienza.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/optimize[+ | -]  
+-optimize[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Note  
- **/optimize** comunica inoltre a Common Language Runtime di ottimizzare il codice in fase di esecuzione.  
+ **-optimize** comunica poi a Common Language Runtime di ottimizzare il codice in fase di esecuzione.  
   
- Per impostazione predefinita, le ottimizzazioni sono disabilitate. Per abilitarle, specificare **/optimize+**.  
+ Per impostazione predefinita, le ottimizzazioni sono disabilitate. Per abilitarle, specificare **-optimize+**.  
   
- Durante la compilazione di un modulo per l'utilizzo da parte di un assembly, specificare per **/optimize** le stesse impostazioni usate per l'assembly.  
+ Durante la compilazione di un modulo per l'uso da parte di un assembly, specificare per **-optimize** le stesse impostazioni usate per l'assembly.  
   
- **/o** è la versione abbreviata di **/optimize**.  
+ **-o** è la versione abbreviata di **-optimize**.  
   
- Le opzioni **/optimize** e [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) possono essere usate in modo combinato.  
+ Le opzioni **-optimize** e [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) possono essere usate in modo combinato.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
@@ -57,7 +57,7 @@ L'opzione **/optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
  Compilare `t2.cs` e abilitare le ottimizzazioni del compilatore:  
   
 ```console  
-csc t2.cs /optimize  
+csc t2.cs -optimize  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

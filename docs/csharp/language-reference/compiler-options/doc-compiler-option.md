@@ -18,19 +18,19 @@ ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ae3d6e1ffdaaa3245a51005070b16041c16dadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c668c79ca2c68d1a497521581857085e57c71f5c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="doc-c-compiler-options"></a>/doc (opzioni del compilatore C#)
-L'opzione **/doc** consente di inserire commenti per la documentazione in un file XML.  
+# <a name="-doc-c-compiler-options"></a>-doc (opzioni del compilatore C#)
+L'opzione **-doc** consente di inserire commenti per la documentazione in un file XML.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/doc:file  
+-doc:file  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -48,10 +48,10 @@ L'opzione **/doc** consente di inserire commenti per la documentazione in un fil
   
  Per usare il file XML generato con la funzionalità [IntelliSense](/visualstudio/ide/using-intellisense), assegnare al file XML lo stesso nome dell'assembly che si vuole supportare, quindi accertarsi che il file XML si trovi nella stessa directory dell'assembly. In questo modo, quando si farà riferimento all'assembly nel progetto Visual Studio, verrà trovato anche il file XML. Per altre informazioni, vedere [Inserimento di commenti al codice XML](/visualstudio/ide/supplying-xml-code-comments).  
   
- Se non si esegue la compilazione con [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), in `file` saranno inclusi i tag \<assembly>\</assembly> che specificano il nome del file contenente il manifesto assembly per il file di output della compilazione.  
+ A meno che non si esegua la compilazione con [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), in `file` saranno inclusi i tag \<assembly>\</assembly> che specificano il nome del file contenente il manifesto assembly per il file di output della compilazione.  
   
 > [!NOTE]
->  L'opzione /doc può essere usata per tutti i file di input o, se definita in Impostazioni progetto, per tutti i file di un progetto. Per disabilitare la visualizzazione degli avvisi relativi ai commenti di documentazione per una sezione di codice o un file specifico, usare [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
+>  L'opzione -doc può essere usata per tutti i file di input o, se definita in Impostazioni progetto, per tutti i file di un progetto. Per disabilitare la visualizzazione degli avvisi relativi ai commenti di documentazione per una sezione di codice o un file specifico, usare [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
   
  Per informazioni sulla generazione di documentazione da commenti presenti nel codice, vedere [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).  
   

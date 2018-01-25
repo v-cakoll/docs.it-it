@@ -13,25 +13,25 @@ ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad3ca7775512623de43c7fe6b7fe1cf481ccca87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dd9d2b6a4a9c774aa339e840ad0020ee39cb10d3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nostdlib-c-compiler-options"></a>/nostdlib (opzioni del compilatore C#)
-**/nostdlib** impedisce l'importazione di mscorlib.dll, che definisce l'intero spazio dei nomi System.  
+# <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opzioni del compilatore C#)
+**-nostdlib** impedisce l'importazione di mscorlib.dll, che definisce l'intero spazio dei nomi di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/nostdlib[+ | -]  
+-nostdlib[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Note  
  Usare questa opzione se si vuole definire o creare uno spazio dei nomi e oggetti System personalizzati.  
   
- Se non si specifica **/nostdlib**, mscorlib.dll verrà importata nel programma (equivale a specificare **/nostdlib-**). Specificare **/nostdlib** equivale a specificare **/nostdlib+**.  
+ Se non si specifica **-nostdlib**, mscorlib.dll verrà importata nel programma (equivale a specificare **-nostdlib-**). Specificare **-nostdlib** equivale a specificare **-nostdlib+**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   

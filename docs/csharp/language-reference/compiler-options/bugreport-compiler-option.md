@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport (opzioni del compilatore C#)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (opzioni del compilatore C#s)
 Specifica che le informazioni di debug devono essere inserite in un file per analisi successive.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,7 +33,7 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
  Nome del file in cui si vuole inserire il report sui bug.  
   
 ## <a name="remarks"></a>Note  
- L'opzione **/bugreport** specifica che le informazioni seguenti devono essere inserite in `file`:  
+ L'opzione **-bugreport** specifica che in `file` devono essere inserite le informazioni seguenti:  
   
 -   Una copia di tutti i file di codice sorgente nella compilazione.  
   
@@ -49,7 +49,7 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
   
 -   Una descrizione del modo in cui si può risolvere il problema, che verrà richiesta.  
   
- Se questa opzione viene usata con **/errorreport:prompt** o **/errorreport:send**, le informazioni nel file verranno inviate a Microsoft Corporation.  
+ Se questa opzione viene usata con **-errorreport:prompt** o **-errorreport:send**, le informazioni nel file verranno inviate a Microsoft Corporation.  
   
  Dato che una copia di tutti i file di codice sorgente verrà inserita in `file`, potrebbe essere utile riprodurre il sospetto difetto del codice nel programma più breve possibile.  
   
@@ -59,5 +59,5 @@ Specifica che le informazioni di debug devono essere inserite in un file per ana
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
- [/errorreport (opzioni del compilatore c#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [-errorreport (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
  [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)

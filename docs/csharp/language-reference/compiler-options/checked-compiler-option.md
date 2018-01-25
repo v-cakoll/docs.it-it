@@ -13,31 +13,31 @@ ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e02f82bb0dd2952bd2f192af7ff233194a045619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0a8cc66609fe542fc7db166cd208cfcedb204b8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="checked-c-compiler-options"></a>/checked (opzioni del compilatore C#)
-L'opzione **/checked** specifica se un'istruzione di calcolo di interi che risulta in un valore non incluso nell'intervallo dei tipi di dati e nell'ambito di una parola chiave [checked](../../../csharp/language-reference/keywords/checked.md) o [unchecked](../../../csharp/language-reference/keywords/unchecked.md) genera un'eccezione in fase di esecuzione.  
+# <a name="-checked-c-compiler-options"></a>-checked (opzioni del compilatore C#)
+L'opzione **-checked** specifica se un'istruzione di calcolo di interi che risulta in un valore non incluso nell'intervallo dei tipi di dati e nell'ambito di una parola chiave [checked](../../../csharp/language-reference/keywords/checked.md) o [unchecked](../../../csharp/language-reference/keywords/unchecked.md) genera un'eccezione in fase di esecuzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/checked[+ | -]  
+-checked[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Note  
- Un'istruzione di calcolo di interi inclusa nell'ambito di una parola chiave `checked` o `unchecked` non è soggetta all'effetto della opzione **/checked**.  
+ Un'istruzione di calcolo di interi inclusa nell'ambito di una parola chiave `checked` o `unchecked` non è soggetta all'opzione **-checked**.  
   
- Se un'istruzione di calcolo di interi che non è nell'ambito di una parola chiave `checked` o `unchecked` risulta in un valore non incluso nell'intervallo del tipo di dati e l'opzione **/checked+** (**/checked**) viene usata nella compilazione, tale istruzione genera un'eccezione in fase di esecuzione. Se l'opzione **/checked-** viene usata nella compilazione, tale istruzione non genera un'eccezione in fase di esecuzione.  
+ Se un'istruzione di calcolo di interi che non è compresa nell'ambito di una parola chiave `checked` o `unchecked` risulta in un valore non incluso nell'intervallo del tipo di dati e l'opzione **-checked+** (**-checked**) viene usata nella compilazione, tale istruzione genera un'eccezione in fase di esecuzione. Se l'opzione **-checked-** viene usata nella compilazione, tale istruzione non genera un'eccezione in fase di esecuzione.  
   
- Il valore predefinito per questa opzione è **/checked-**. Uno scenario per l'uso di **/checked -** è la compilazione di applicazioni di grandi dimensioni. Talvolta vengono usati strumenti automatizzati per compilare tali applicazioni e questi strumenti potrebbero impostare automaticamente **/checked** su +. È possibile eseguire l'override del valore predefinito globale dello strumento specificando **/checked-**.  
+ Il valore predefinito per questa opzione è **-checked-**. Uno scenario per l'uso di **-checked -** è la compilazione di applicazioni di grandi dimensioni. Talvolta vengono usati strumenti automatizzati per compilare tali applicazioni. Tali strumenti possono impostare automaticamente **-checked** su +. È possibile eseguire l'override del valore predefinito globale dello strumento specificando **-checked-**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 2.  Fare clic sulla pagina della proprietà **Compilazione**.  
   
@@ -48,10 +48,10 @@ L'opzione **/checked** specifica se un'istruzione di calcolo di interi che risul
  Per accedere all'opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Esempio  
- Il comando seguente compila `t2.cs`. L'uso di `/checked` nel comando specifica che l'istruzione di calcolo di interi nel file che non è nell'ambito della parola chiave `checked` o `unchecked` e che risulta in un valore non incluso nell'intervallo dei tipi di dati, genera un'eccezione in fase di esecuzione.  
+ Il comando seguente compila `t2.cs`. L'uso di `-checked` nel comando specifica che l'istruzione di calcolo di interi nel file che non è nell'ambito della parola chiave `checked` o `unchecked` e che risulta in un valore non incluso nell'intervallo dei tipi di dati, genera un'eccezione in fase di esecuzione.  
   
 ```console  
-csc t2.cs /checked  
+csc t2.cs -checked  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

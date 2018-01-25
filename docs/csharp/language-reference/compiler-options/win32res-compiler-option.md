@@ -14,19 +14,19 @@ ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4c24da8bb745847612d882d00eff7f03dbc60475
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32res-c-compiler-options"></a>/win32res (opzioni del compilatore C#)
-L'opzione **/win32res** inserisce una risorsa Win32 nel file di output.  
+# <a name="-win32res-c-compiler-options"></a>-win32res (opzioni del compilatore C#)
+L'opzione **-win32res** inserisce una risorsa Win32 nel file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/win32res:filename  
+-win32res:filename  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -36,13 +36,13 @@ L'opzione **/win32res** inserisce una risorsa Win32 nel file di output.
 ## <a name="remarks"></a>Note  
  Un file di risorse Win32 può essere creato con il [compilatore di risorse](../../language-reference/compiler-options/resource-compiler-option.md). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.  
   
- In una risorsa Win32 può essere contenute le informazioni sulla versione o sulla bitmap (icona) che consentono di identificare l'applicazione in Esplora file. Se non si specifica **/win32res**, il compilatore genererà le informazioni sulla versione in base alla versione dell'assembly.  
+ In una risorsa Win32 può essere contenute le informazioni sulla versione o sulla bitmap (icona) che consentono di identificare l'applicazione in Esplora file. Se non si specifica **-win32res**, il compilatore genererà le informazioni sulla versione in base alla versione dell'assembly.  
   
- Vedere [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo).  
+ Vedere [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o a [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1.  Aprire la pagine **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -52,7 +52,7 @@ L'opzione **/win32res** inserisce una risorsa Win32 nel file di output.
  Compilare `in.cs` e associare un file di risorse Win32 `rf.res` per produrre `in.exe`:  
   
 ```console  
-csc /win32res:rf.res in.cs  
+csc -win32res:rf.res in.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

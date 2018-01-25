@@ -8,22 +8,22 @@ ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3a6fee8f140a0c2e81f9904d5ceea7e290d48275
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (opzioni del compilatore C#)
+# <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opzioni del compilatore C#)
 Specifica la versione minima del sottosistema in cui è possibile eseguire il file eseguibile generato, determinando le versioni di Windows in cui è possibile eseguire il file eseguibile. In genere, questa opzione assicura che il file eseguibile possa sfruttare le funzionalità di protezione che non sono disponibili con le versioni precedenti di Windows.  
   
 > [!NOTE]
->  Per specificare il sottosistema stesso, usare l'opzione del compilatore [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
+>  Per specificare il sottosistema stesso, usare l'opzione del compilatore [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -46,7 +46,7 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Valori predefiniti  
- Il valore predefinito dell'opzione del compilatore **/subsystemversion** dipende dalle condizioni elencate di seguito:  
+ Il valore predefinito dell'opzione del compilatore **-subsystemversion** dipende dalle condizioni elencate di seguito:  
   
 -   Il valore predefinito è 6.02 se è impostata un'opzione del compilatore nell'elenco seguente:  
   
@@ -54,14 +54,14 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
   
     -   [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
 -   Il valore predefinito è 6.00 se si usa MSBuild, con destinazione [!INCLUDE[net_v45](~/includes/net-v45-md.md)], e non è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.  
   
 -   Il valore predefinito è 4.00 se nessuna di queste condizioni è vera.  
   
 ## <a name="setting-this-option"></a>Impostazione di questa opzione  
- Per impostare l'opzione del compilatore **/subsystemversion** in Visual Studio, è necessario aprire il file con estensione csproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).  
+ Per impostare l'opzione del compilatore **-subsystemversion** in Visual Studio, è necessario aprire il file con estensione csproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

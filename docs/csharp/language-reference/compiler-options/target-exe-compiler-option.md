@@ -13,35 +13,35 @@ ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b66ab51b30e17ab2f34f88158c3f6095e185468d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 515359b7a8a76e20896389b308df34db03f3798d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetexe-c-compiler-options"></a>/target:exe (opzioni del compilatore C#)
-L'opzione **/target:exe** indica al compilatore di creare un file eseguibile (con estensione EXE), applicazione console.  
+# <a name="-targetexe-c-compiler-options"></a>-target:exe (opzioni del compilatore C#)
+L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EXE), applicazione console.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/target:exe  
+-target:exe  
 ```  
   
 ## <a name="remarks"></a>Note  
- L'opzione **/target: exe** è attiva per impostazione predefinita. Il file eseguibile verrà creato con estensione .exe.  
+ L'opzione **-target:exe** è attiva per impostazione predefinita. Il file eseguibile verrà creato con estensione .exe.  
   
- Usare [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) per creare un eseguibile di un programma Windows.  
+ Usare [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) per creare l'eseguibile di un programma Windows.  
   
- A meno che diversamente specificato con l'opzione [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del file di input contenente il metodo [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ Se non diversamente specificato con l'opzione [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del file di input contenente il metodo [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Quando specificato nella riga di comando, tutti i file fino alla successiva opzione **/out** o **/target:module** vengono usati per creare il file con estensione .exe  
+ Se specificato dalla riga di comando, tutti i file fino alla successiva opzione **-out** o **-target:module** vengono usati per creare il file con estensione .exe  
   
- Un solo metodo **Main** è necessario nei file del codice sorgente che vengono compilati in un file con estensione exe. L'opzione del compilatore [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) consente di specificare la classe che contiene il **Main** metodo, nei casi in cui il codice ha più di una classe con un **Main** metodo.  
+ Un solo metodo **Main** è necessario nei file del codice sorgente che vengono compilati in un file con estensione exe. L'opzione del compilatore [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) consente di specificare la classe che contiene il metodo **Main**, nei casi in cui il codice ha più di una classe con un metodo **Main**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1.  Aprire la pagine **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
@@ -53,10 +53,10 @@ L'opzione **/target:exe** indica al compilatore di creare un file eseguibile (co
  Ciascuna delle righe di comando seguenti compilerà `in.cs`, creando `in.exe`:  
   
 ```console  
-csc /target:exe in.cs  
+csc -target:exe in.cs  
 csc in.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [/target (opzioni del compilatore c#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)

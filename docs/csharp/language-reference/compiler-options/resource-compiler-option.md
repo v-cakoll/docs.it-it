@@ -16,19 +16,19 @@ ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 726956275436e22723bc32b98b2b8b7c7df5fb12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="resource-c-compiler-options"></a>/resource (opzioni del compilatore C#)
+# <a name="-resource-c-compiler-options"></a>-resource (opzioni del compilatore C#)
 Incorpora la risorsa specificata nel file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/resource:filename[,identifier[,accessibility-modifier]]  
+-resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -46,9 +46,9 @@ Incorpora la risorsa specificata nel file di output.
   
  Per impostazione predefinita, le risorse sono pubbliche nell'assembly quando vengono create tramite il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentita alcuna accessibilità diversa da `public` o `private`.  
   
- Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, usare il `GetManifestResource` metodi di <xref:System.Reflection.Assembly> classe per accedere alla risorsa in fase di esecuzione.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, per accedere alla risorsa in fase di esecuzione usare i metodi `GetManifestResource` della classe <xref:System.Reflection.Assembly>.  
   
- **/res** rappresenta la versione abbreviata di **/resource**.  
+ **-res** rappresenta la versione abbreviata di **-resource**.  
   
  L'ordine delle risorse nel file di output è determinato dall'ordine specificato nella riga di comando.  
   
@@ -68,7 +68,7 @@ Incorpora la risorsa specificata nel file di output.
  Compilare `in.cs` e associare il file di risorse `rf.resource`:  
   
 ```console  
-csc /resource:rf.resource in.cs  
+csc -resource:rf.resource in.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

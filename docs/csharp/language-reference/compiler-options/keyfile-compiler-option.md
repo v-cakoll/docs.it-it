@@ -13,19 +13,19 @@ ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc80c1f6614cdfc8e2f56855d0a0315977316f4c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (opzioni del compilatore C#)
+# <a name="-keyfile-c-compiler-options"></a>-keyfile (opzioni del compilatore C#)
 Specifica il nome file contenente la chiave crittografica.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/keyfile:file  
+-keyfile:file  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -37,11 +37,11 @@ Specifica il nome file contenente la chiave crittografica.
 ## <a name="remarks"></a>Note  
  Se si usa questa opzione, il compilatore inserisce la chiave pubblica dal file specificato nel manifesto dell'assembly e quindi firma l'assembly finale con la chiave privata. Per generare un file di chiave, digitare sn -k `file` nella riga di comando.  
   
- Se si esegue la compilazione con **/target: module**, il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly creato quando si compila un assembly con [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Se si esegue la compilazione con **-target:module**, il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly creato quando si compila un assembly con [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
- È possibile passare al compilatore le informazioni di crittografia anche tramite [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Usare [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se si vuole che l'assembly abbia una firma parziale.  
+ È possibile passare al compilatore le informazioni di crittografia anche tramite [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Usare [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se si vuole un assembly con firma parziale.  
   
- Se nella stessa compilazione vengono specificate sia /keyfile che /keycontainer (tramite opzione della riga di comando o attributo personalizzato), verrà tentato prima il contenitore di chiavi. Se l'operazione riesce, l'assembly viene firmato con le informazioni incluse nel contenitore di chiavi. Se invece il compilatore non trova il contenitore di chiavi, effettua un tentativo con il file specificato in /keyfile. Se l'operazione riesce, l'assembly verrà firmato con le informazioni contenute nel file di chiave e le informazioni sulla chiave verranno installate nel contenitore di chiavi (in modo analogo a sn -i) in modo che nella compilazione successiva il contenitore di chiavi sia valido.  
+ Se nella stessa compilazione vengono specificate entrambe le opzioni -keyfile e -keycontainer (tramite opzione della riga di comando o attributo personalizzato), verrà tentato prima il contenitore di chiavi. Se l'operazione riesce, l'assembly viene firmato con le informazioni incluse nel contenitore di chiavi. Se invece il compilatore non trova il contenitore di chiavi, effettua un tentativo con il file specificato in -keyfile. Se l'operazione riesce, l'assembly verrà firmato con le informazioni contenute nel file di chiave e le informazioni sulla chiave verranno installate nel contenitore di chiavi (in modo analogo a sn -i) in modo che nella compilazione successiva il contenitore di chiavi sia valido.  
   
  Si noti che un file di chiave può contenere solo la chiave pubblica.  
   

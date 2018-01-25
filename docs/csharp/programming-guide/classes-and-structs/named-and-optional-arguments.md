@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
 In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati introdotti gli argomenti denominati e facoltativi. Gli *argomenti denominati* consentono di specificare un argomento per un particolare parametro associando l'argomento al nome del parametro anziché alla posizione del parametro nell'elenco di parametri. Gli *argomenti facoltativi* consentono di omettere gli argomenti per alcuni parametri. Entrambe le tecniche possono essere usate con i metodi, gli indicizzatori, i costruttori e i delegati.  
@@ -33,29 +33,29 @@ In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati 
  I parametri denominati e facoltativi, se usati insieme, consentono di specificare gli argomenti solo per alcuni parametri di un elenco di parametri facoltativi. Questa funzionalità semplifica considerevolmente le chiamate alle interfacce COM, ad esempio alle API di automazione di Microsoft Office.  
   
 ## <a name="named-arguments"></a>Argomenti denominati  
- Gli argomenti denominati evitano di dover ricordare o cercare l'ordine di parametri negli elenchi di parametri dei metodi chiamati. Il parametro per ogni argomento può essere specificato dal nome del parametro. Ad esempio, una funzione che visualizza i dettagli dell'ordine (ad esempio, il nome del venditore, nome prodotto & numero di ordine) può essere chiamato in modo standard inviando gli argomenti di posizione, nell'ordine definito dalla funzione.
+ Gli argomenti denominati evitano di dover ricordare o cercare l'ordine di parametri negli elenchi di parametri dei metodi chiamati. Il parametro per ogni argomento può essere specificato dal nome del parametro. Ad esempio, una funzione che stampa altri dettagli, ad esempio il nome del venditore, il numero dell'ordine e il nome del prodotto, può essere chiamata normalmente inviando gli argomenti relativi alla posizione, nell'ordine definito dalla funzione.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Se si conoscono i nomi non si ricorda l'ordine dei parametri, è possibile inviare gli argomenti in qualsiasi ordine.  
+ Se non si ricorda l'ordine dei parametri, ma se ne conoscono i nomi, è possibile inviare gli argomenti in qualsiasi ordine.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Gli argomenti denominati migliorano anche la leggibilità del codice identificando che cosa rappresenta ogni argomento. Nel metodo di esempio riportato di seguito, il `sellerName` non può essere null o spazi vuoti. Sia come `sellerName` e `productName` sono di tipi stringa, anziché inviare argomenti in base alla posizione, è opportuno utilizzare argomenti denominati per evitare ambiguità tra i due e ridurre la confusione per chiunque legga il codice.
+ Gli argomenti denominati migliorano anche la leggibilità del codice identificando che cosa rappresenta ogni argomento. Nel metodo di esempio riportato di seguito `sellerName` non può essere null o uno spazio vuoto. `sellerName` e `productName` sono di tipi stringa, quindi, anziché inviare argomenti in base alla posizione, è opportuno usare argomenti denominati per evitare ambiguità tra i due e semplificare la lettura del codice.
   
- Argomenti denominati, se usato con argomenti posizionali, sono validi, purché 
+ Se usati con argomenti posizionali, gli argomenti denominati sono validi se 
 
-- essi non è seguiti da tutti gli argomenti posizionali, o
+- non sono seguiti da argomenti posizionali, o
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _a partire da c# 7.2_, vengono utilizzati nella posizione corretta. Nell'esempio seguente, il parametro `orderNum` è nella posizione corretta, ma non è denominato in modo esplicito.
+- _iniziando con C# 7.2_, vengono usati nella posizione corretta. Nell'esempio seguente il parametro `orderNum` è nella posizione corretta, ma non è denominato in modo esplicito.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Tuttavia, in ordine di argomenti denominati non sono validi se si sta aggiungendo argomenti posizionali.
+ Gli argomenti denominati nell'ordine non corretto sono invece ritenuti non validi se seguiti da argomenti posizionali.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati 
  ```
   
 ## <a name="example"></a>Esempio  
- Il codice seguente implementa gli esempi di questa sezione con alcuni altri.  
+ Il codice seguente implementa gli esempi di questa e altre sezioni.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ Parametri facoltativi in ExampleMethod
 ## <a name="com-interfaces"></a>Interfacce COM  
  Gli argomenti denominati e facoltativi, insieme al supporto per gli oggetti dinamici e ad altri miglioramenti, aumentano considerevolmente l'interoperabilità con le API COM, quali le API di automazione di Office.  
   
- Ad esempio, il metodo [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) nell'interfaccia [Range](http://go.microsoft.com/fwlink/?LinkId=148196) di Microsoft Office Excel ha sette parametri facoltativi. Questi parametri sono illustrati nell'immagine seguente.  
+ Ad esempio, il metodo [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) nell'interfaccia [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) di Microsoft Office Excel ha sette parametri facoltativi. Questi parametri sono illustrati nell'immagine seguente.  
   
  ![Informazioni rapide di IntelliSense per il metodo AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Parametri di AutoFormat  

@@ -16,19 +16,19 @@ ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d478c42141288cc3a1478ecf43f50c961a9d2246
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7da5a55fa96c11d79f8c616cf0f1f4e0ed109bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="linkresource-c-compiler-options"></a>/linkresource (opzioni del compilatore C#)
-Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file di risorse non viene aggiunto al file di output. Questa opzione è diversa dall'opzione [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), che invece incorpora un file di risorse nel file di output.  
+# <a name="-linkresource-c-compiler-options"></a>-linkresource (opzioni del compilatore C#)
+Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file di risorse non viene aggiunto al file di output. Questa opzione è diversa dall'opzione [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), che invece incorpora un file di risorse nel file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/linkresource:filename[,identifier[,accessibility-modifier]]  
+-linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -44,13 +44,13 @@ Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, le risorse collegate sono pubbliche nell'assembly quando vengono create con il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentito alcun modificatore diverso da `public` o `private`.  
   
- Per **/linkresource** è necessaria un'opzione [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diversa da **/target:module**.  
+ Per **-linkresource** è necessaria un'opzione [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diversa da **-target:module**.  
   
- Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, usare il `GetManifestResource` metodi di <xref:System.Reflection.Assembly> classe per accedere alla risorsa in fase di esecuzione.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Per tutte le altre risorse, per accedere alla risorsa in fase di esecuzione usare i metodi `GetManifestResource` della classe <xref:System.Reflection.Assembly>.  
   
  Il file specificato in `filename` può avere qualsiasi formato. Può ad esempio risultare opportuno rendere una DLL nativa parte dell'assembly in modo che possa essere installata nella Global Assembly Cache e che sia possibile accedervi dal codice gestito nell'assembly. Nel secondo degli esempi seguenti viene illustrato come effettuare questa operazione. È possibile eseguire la stessa operazione in Assembly Linker. Nel terzo degli esempi seguenti viene illustrato come effettuare questa operazione. Per altre informazioni, vedere [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md) e [Uso di assembly e della Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
   
- **/linkres** rappresenta la versione abbreviata di **/linkresource**.  
+ **-linkres** rappresenta la versione abbreviata di **-linkresource**.  
   
  Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
   
@@ -58,14 +58,14 @@ Crea un collegamento a una risorsa di .NET Framework nel file di output. Il file
  Compilare `in.cs` e stabilire il collegamento al file di risorse `rf.resource`:  
   
 ```console  
-csc /linkresource:rf.resource in.cs  
+csc -linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Esempio  
  Compilare `A.cs` in una DLL, creare un collegamento a una DLL N.dll nativa e inserire l'output nella Global Assembly Cache. In questo esempio i file A.dll e N.dll verranno memorizzati entrambi nella Global Assembly Cache.  
   
 ```console  
-csc /linkresource:N.dll /t:library A.cs  
+csc -linkresource:N.dll -t:library A.cs  
 gacutil -i A.dll  
 ```  
   
@@ -73,8 +73,8 @@ gacutil -i A.dll
  In questo esempio viene eseguita la stessa operazione descritta in precedenza, ma vengono usate le opzioni di Assembly Linker.  
   
 ```console  
-csc /t:module A.cs  
-al /out:A.dll A.netmodule /link:N.dll   
+csc -t:module A.cs  
+al -out:A.dll A.netmodule -link:N.dll   
 gacutil -i A.dll  
 ```  
   

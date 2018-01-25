@@ -13,19 +13,19 @@ ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2652102682de9dff24c66180dde36f33b4b6bbfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="addmodule-c-compiler-options"></a>/addmodule (opzioni del compilatore C#)
+# <a name="-addmodule-c-compiler-options"></a>-addmodule (opzioni del compilatore C#)
 Questa opzione aggiunge un modulo creato con l'opzione target:module nella compilazione in corso.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/addmodule:file[;file2]  
+-addmodule:file[;file2]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -33,11 +33,11 @@ Questa opzione aggiunge un modulo creato con l'opzione target:module nella compi
  Un file di output che contiene i metadati. Il file non può contenere un manifesto dell'assembly. Per importare più di un file, separare i nomi dei file con una virgola o con un punto e virgola.  
   
 ## <a name="remarks"></a>Note  
- Tutti i moduli aggiunti con **/addmodule** devono essere nella stessa directory del file di output in fase di esecuzione. Ovvero, è possibile specificare un modulo in una directory in fase di compilazione, ma il modulo deve essere nella directory dell'applicazione in fase di esecuzione. Se il modulo non è nella directory dell'applicazione in fase di esecuzione, verrà restituita un'eccezione <xref:System.TypeLoadException>.  
+ In fase di esecuzione tutti i moduli aggiunti con **-addmodule** devono essere nella stessa directory del file di output. Ovvero, è possibile specificare un modulo in una directory in fase di compilazione, ma il modulo deve essere nella directory dell'applicazione in fase di esecuzione. Se il modulo non è nella directory dell'applicazione in fase di esecuzione, verrà restituita un'eccezione <xref:System.TypeLoadException>.  
   
- `file` non può contenere un assembly. Ad esempio, se il file di output è stato creato con [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), i relativi metadati possono essere importati con **/addmodule**.  
+ `file` non può contenere un assembly. Ad esempio, se il file di output è stato creato con [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), i relativi metadati possono essere importati con **-addmodule**.  
   
- Se il file di output è stato creato con un'opzione **/target** e non con un'opzione **/target:module**, i relativi metadati non possono essere importati con l'opzione **/addmodule**, ma con l'opzione [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ Se il file di output è stato creato con un'opzione **-target** diversa da **-target:module**, i relativi metadati non possono essere importati con l'opzione **-addmodule**, ma possono essere impostati con l'opzione [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
  L'opzione del compilatore non è disponibile in Visual Studio. Un progetto non può fare riferimento a un modulo. Inoltre, l'opzione del compilatore non può essere modificata a livello di codice.  
   
@@ -45,7 +45,7 @@ Questa opzione aggiunge un modulo creato con l'opzione target:module nella compi
  Compilare un file di origine `input.cs` e aggiungere i metadati da `metad1.netmodule` e `metad2.netmodule` per creare `out.exe`:  
   
 ```console  
-csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
+csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

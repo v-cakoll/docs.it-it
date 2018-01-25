@@ -13,13 +13,13 @@ ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc8720662fb4c91953e2d399f08613f5055b1158
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 6d2fcb3f0bf4491de23b70c8beebf7ae495b2aa0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="errorreport-c-compiler-options"></a>/errorreport (opzioni del compilatore C#)
+# <a name="-errorreport-c-compiler-options"></a>-errorreport (opzioni del compilatore C#)
 Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore del compilatore interno C#.  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
 ## <a name="syntax"></a>Sintassi  
   
 ```console  
-/errorreport:{ none | prompt | queue | send }  
+-errorreport:{ none | prompt | queue | send }  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -42,12 +42,12 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
  Accoda la segnalazione errori. Se si accede con credenziali amministrative, è possibile segnalare qualsiasi errore dall'ultima volta che è stato effettuato l'accesso. Non verrà richiesto di inviare report di errori più di una volta ogni tre giorni. **queue** è l'impostazione predefinita se si compila un'applicazione dalla riga di comando.  
   
  **send**  
- Invia automaticamente a Microsoft le segnalazioni di errori interni del compilatore. Per abilitare questa opzione, è necessario prima di tutto accettare i Criteri per la raccolta dati Microsoft. La prima volta che si specifica **/errorreport:send** con un computer, viene visualizzato un messaggio del compilatore che indirizza a un sito Web contenente questi criteri.  
+ Invia automaticamente a Microsoft le segnalazioni di errori interni del compilatore. Per abilitare questa opzione, è necessario prima di tutto accettare i Criteri per la raccolta dati Microsoft. La prima volta che si specifica **-errorreport:send** in un computer, viene visualizzato un messaggio del compilatore che indirizza a un sito Web contenente questi criteri.  
     
 ## <a name="remarks"></a>Note  
  Se il compilatore non è in grado di elaborare un file del codice sorgente, viene restituito un errore interno del compilatore (ICE, Internal Compiler Error). Quando si verifica un ICE, il compilatore non genera né un file di output né informazioni di diagnostica utili per correggere il codice.  
   
- Nelle versioni precedenti, quando si riceveva un ICE si riceveva anche l'invito a contattare il Servizio supporto tecnico Microsoft per segnalare il problema. Con **/errorreport** è possibile fornire informazioni sugli errori interni del compilatore al team Visual C#. Le segnalazioni degli errori consentono di migliorare le versioni future del compilatore.  
+ Nelle versioni precedenti, quando si riceveva un ICE si riceveva anche l'invito a contattare il Servizio supporto tecnico Microsoft per segnalare il problema. Con **-errorreport** è possibile offrire informazioni sugli errori interni del compilatore al team Visual C#. Le segnalazioni degli errori consentono di migliorare le versioni future del compilatore.  
   
  La capacità di un utente di inviare report dipende dalle autorizzazioni relative ai criteri utente e computer.  
   
@@ -55,7 +55,7 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 2.  Fare clic sulla pagina della proprietà **Compilazione**.  
   
