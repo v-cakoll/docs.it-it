@@ -13,25 +13,25 @@ ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 95630afcfcd2ae9ab64660eb0f022dd0733b4c4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3716445cb779e98f777a1677ff67e1ba603c5fa2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="utf8output-c-compiler-options"></a><span data-ttu-id="c5b46-102">/utf8output (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="c5b46-102">/utf8output (C# Compiler Options)</span></span>
-<span data-ttu-id="c5b46-103">L'opzione **/utf8output** visualizza l'output del compilatore usando la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="c5b46-103">The **/utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
+# <a name="-utf8output-c-compiler-options"></a><span data-ttu-id="2c28a-102">-utf8output (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="2c28a-102">-utf8output (C# Compiler Options)</span></span>
+<span data-ttu-id="2c28a-103">L'opzione **-utf8output** visualizza l'output del compilatore tramite la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="2c28a-103">The **-utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5b46-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c5b46-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c28a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2c28a-104">Syntax</span></span>  
   
 ```console  
-/utf8output  
+-utf8output  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c5b46-105">Note</span><span class="sxs-lookup"><span data-stu-id="c5b46-105">Remarks</span></span>  
- <span data-ttu-id="c5b46-106">In alcune configurazioni internazionali, l'output del compilatore non può essere visualizzato correttamente nella console.</span><span class="sxs-lookup"><span data-stu-id="c5b46-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="c5b46-107">In queste configurazioni, usare **/utf8output** e reindirizzare l'output del compilatore in un file.</span><span class="sxs-lookup"><span data-stu-id="c5b46-107">In these configurations, use **/utf8output** and redirect compiler output to a file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c28a-105">Note</span><span class="sxs-lookup"><span data-stu-id="2c28a-105">Remarks</span></span>  
+ <span data-ttu-id="2c28a-106">In alcune configurazioni internazionali, l'output del compilatore non può essere visualizzato correttamente nella console.</span><span class="sxs-lookup"><span data-stu-id="2c28a-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="2c28a-107">Con queste configurazioni usare **-utf8output** e reindirizzare l'output del compilatore in un file.</span><span class="sxs-lookup"><span data-stu-id="2c28a-107">In these configurations, use **-utf8output** and redirect compiler output to a file.</span></span>  
   
- <span data-ttu-id="c5b46-108">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="c5b46-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="2c28a-108">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="2c28a-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5b46-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5b46-109">See Also</span></span>  
- [<span data-ttu-id="c5b46-110">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="c5b46-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="2c28a-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2c28a-109">See Also</span></span>  
+ [<span data-ttu-id="2c28a-110">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="2c28a-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)

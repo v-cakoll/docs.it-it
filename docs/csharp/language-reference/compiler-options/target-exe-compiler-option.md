@@ -13,50 +13,50 @@ ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b66ab51b30e17ab2f34f88158c3f6095e185468d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 515359b7a8a76e20896389b308df34db03f3798d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetexe-c-compiler-options"></a><span data-ttu-id="1c506-102">/target:exe (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="1c506-102">/target:exe (C# Compiler Options)</span></span>
-<span data-ttu-id="1c506-103">L'opzione **/target:exe** indica al compilatore di creare un file eseguibile (con estensione EXE), applicazione console.</span><span class="sxs-lookup"><span data-stu-id="1c506-103">The **/target:exe** option causes the compiler to create an executable (EXE), console application.</span></span>  
+# <a name="-targetexe-c-compiler-options"></a><span data-ttu-id="03329-102">-target:exe (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="03329-102">-target:exe (C# Compiler Options)</span></span>
+<span data-ttu-id="03329-103">L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EXE), applicazione console.</span><span class="sxs-lookup"><span data-stu-id="03329-103">The **-target:exe** option causes the compiler to create an executable (EXE), console application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1c506-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1c506-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03329-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="03329-104">Syntax</span></span>  
   
 ```console  
-/target:exe  
+-target:exe  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1c506-105">Note</span><span class="sxs-lookup"><span data-stu-id="1c506-105">Remarks</span></span>  
- <span data-ttu-id="1c506-106">L'opzione **/target: exe** è attiva per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="1c506-106">The **/target:exe** option is in effect by default.</span></span> <span data-ttu-id="1c506-107">Il file eseguibile verrà creato con estensione .exe.</span><span class="sxs-lookup"><span data-stu-id="1c506-107">The executable file will be created with the .exe extension.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03329-105">Note</span><span class="sxs-lookup"><span data-stu-id="03329-105">Remarks</span></span>  
+ <span data-ttu-id="03329-106">L'opzione **-target:exe** è attiva per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="03329-106">The **-target:exe** option is in effect by default.</span></span> <span data-ttu-id="03329-107">Il file eseguibile verrà creato con estensione .exe.</span><span class="sxs-lookup"><span data-stu-id="03329-107">The executable file will be created with the .exe extension.</span></span>  
   
- <span data-ttu-id="1c506-108">Usare [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) per creare un eseguibile di un programma Windows.</span><span class="sxs-lookup"><span data-stu-id="1c506-108">Use [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) to create a Windows program executable.</span></span>  
+ <span data-ttu-id="03329-108">Usare [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) per creare l'eseguibile di un programma Windows.</span><span class="sxs-lookup"><span data-stu-id="03329-108">Use [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) to create a Windows program executable.</span></span>  
   
- <span data-ttu-id="1c506-109">A meno che diversamente specificato con l'opzione [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del file di input contenente il metodo [Main](../../../csharp/programming-guide/main-and-command-args/index.md).</span><span class="sxs-lookup"><span data-stu-id="1c506-109">Unless otherwise specified with the [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
+ <span data-ttu-id="03329-109">Se non diversamente specificato con l'opzione [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), il nome del file di output corrisponderà al nome del file di input contenente il metodo [Main](../../../csharp/programming-guide/main-and-command-args/index.md).</span><span class="sxs-lookup"><span data-stu-id="03329-109">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
   
- <span data-ttu-id="1c506-110">Quando specificato nella riga di comando, tutti i file fino alla successiva opzione **/out** o **/target:module** vengono usati per creare il file con estensione .exe</span><span class="sxs-lookup"><span data-stu-id="1c506-110">When specified at the command line, all files up to the next **/out** or **/target:module** option are used to create the .exe file</span></span>  
+ <span data-ttu-id="03329-110">Se specificato dalla riga di comando, tutti i file fino alla successiva opzione **-out** o **-target:module** vengono usati per creare il file con estensione .exe</span><span class="sxs-lookup"><span data-stu-id="03329-110">When specified at the command line, all files up to the next **-out** or **-target:module** option are used to create the .exe file</span></span>  
   
- <span data-ttu-id="1c506-111">Un solo metodo **Main** è necessario nei file del codice sorgente che vengono compilati in un file con estensione exe.</span><span class="sxs-lookup"><span data-stu-id="1c506-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="1c506-112">L'opzione del compilatore [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) consente di specificare la classe che contiene il **Main** metodo, nei casi in cui il codice ha più di una classe con un **Main** metodo.</span><span class="sxs-lookup"><span data-stu-id="1c506-112">The [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) compiler option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
+ <span data-ttu-id="03329-111">Un solo metodo **Main** è necessario nei file del codice sorgente che vengono compilati in un file con estensione exe.</span><span class="sxs-lookup"><span data-stu-id="03329-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="03329-112">L'opzione del compilatore [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) consente di specificare la classe che contiene il metodo **Main**, nei casi in cui il codice ha più di una classe con un metodo **Main**.</span><span class="sxs-lookup"><span data-stu-id="03329-112">The [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) compiler option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="1c506-113">Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1c506-113">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="03329-113">Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="03329-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="1c506-114">Aprire la pagina **Proprietà** del progetto.</span><span class="sxs-lookup"><span data-stu-id="1c506-114">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="03329-114">Aprire la pagine **Proprietà** del progetto.</span><span class="sxs-lookup"><span data-stu-id="03329-114">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="1c506-115">Fare clic sulla pagina delle proprietà **Applicazione**.</span><span class="sxs-lookup"><span data-stu-id="1c506-115">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="03329-115">Fare clic sulla pagina delle proprietà **Applicazione**.</span><span class="sxs-lookup"><span data-stu-id="03329-115">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="1c506-116">Modificare la proprietà **Tipo di output**.</span><span class="sxs-lookup"><span data-stu-id="1c506-116">Modify the **Output type** property.</span></span>  
+3.  <span data-ttu-id="03329-116">Modificare la proprietà **Tipo di output**.</span><span class="sxs-lookup"><span data-stu-id="03329-116">Modify the **Output type** property.</span></span>  
   
- <span data-ttu-id="1c506-117">Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="1c506-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="03329-117">Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="03329-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1c506-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="1c506-118">Example</span></span>  
- <span data-ttu-id="1c506-119">Ciascuna delle righe di comando seguenti compilerà `in.cs`, creando `in.exe`:</span><span class="sxs-lookup"><span data-stu-id="1c506-119">Each of the following command lines will compile `in.cs`, creating `in.exe`:</span></span>  
+## <a name="example"></a><span data-ttu-id="03329-118">Esempio</span><span class="sxs-lookup"><span data-stu-id="03329-118">Example</span></span>  
+ <span data-ttu-id="03329-119">Ciascuna delle righe di comando seguenti compilerà `in.cs`, creando `in.exe`:</span><span class="sxs-lookup"><span data-stu-id="03329-119">Each of the following command lines will compile `in.cs`, creating `in.exe`:</span></span>  
   
 ```console  
-csc /target:exe in.cs  
+csc -target:exe in.cs  
 csc in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1c506-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1c506-120">See Also</span></span>  
- [<span data-ttu-id="1c506-121">/target (opzioni del compilatore c#)</span><span class="sxs-lookup"><span data-stu-id="1c506-121">/target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [<span data-ttu-id="1c506-122">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="1c506-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="03329-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="03329-120">See Also</span></span>  
+ [<span data-ttu-id="03329-121">-target (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="03329-121">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [<span data-ttu-id="03329-122">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="03329-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
