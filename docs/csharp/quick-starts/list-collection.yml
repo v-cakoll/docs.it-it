@@ -4,200 +4,37 @@ metadata:
   title: Raccolte in C#. Imparare a usare sequenze e raccolte in C#.
   description: "In questa esercitazione si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser."
   audience: Developer
+  ms.topic: get-started-article
   ms.custom: mvc
   level: Beginner
   displayType: two-column
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: a27e81de92bbae58fc72e9033a20f46bbe296bbe
-  ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+  ms.openlocfilehash: 57cdf4e5c82c0e50de5422051df251db8ddb5d83
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/10/2018
+  ms.lasthandoff: 01/20/2018
 items:
 - durationInMinutes: 1
-  content: >
-    This quick start teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code. It contains a series of lessons that create, modify and explore collections and arrays.
+  content: "In questa guida introduttiva il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione è composta da una serie di lezioni che descrivono come creare, modificare ed esplorare raccolte e matrici.\n"
 - title: Creare elenchi
   durationInMinutes: 2
-  content: >
-    Run the following code in the interactive window. To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:
-
-
-    ```csharp
-
-    var names = new List<string> { "<name>", "Ana", "Felipe" };
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    You've just created a list of strings, added three names to that list, and printed out the names in all CAPS. You're using concepts
-
-    that you've learned in earlier quick starts to loop through the list.
-
-
-    The code to display names makes use of **interpolated strings**.  When you precede a `string` with the `$` character, you can embed C# code in the string declaration. The actual string replaces that C# code with the value it generates. In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.
-
-
-    Let's keep exploring.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva (sostituire \"<name>\" con il proprio nome) e fare clic sul pulsante **Esegui**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nQuesto codice consente di creare un elenco di stringhe, aggiungere tre nomi all'elenco e stampare i nomi in lettere maiuscole. Vengono usati i concetti appresi in guide introduttive precedenti per scorrere l'elenco in ciclo.\n\nIl codice per visualizzare i nomi usa **stringhe interpolate**.  Anteponendo il carattere `$` a `string`, è possibile incorporare il codice C# nella dichiarazione della stringa. La stringa effettiva sostituisce il codice C# con il valore generato. In questo esempio, `{name.ToUpper()}` viene sostituito con ogni nome, convertito in lettere maiuscole, perché è stato chiamato il metodo <xref:System.String.ToUpper%2A>.\n\nL'esplorazione continua nelle prossime lezioni.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Modificare il contenuto dell'elenco
   durationInMinutes: 3
-  content: >
-    The collection you created uses the <xref:System.Collections.Generic.List%601> type. This type stores sequences of elements. You specify the type of the elements between the angle brackets.
-
-
-    One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements. Add the following code below the code you've already written:
-
-
-    ```csharp
-
-    Console.WriteLine();
-
-    names.Add("Maria");
-
-    names.Add("Bill");
-
-    names.Remove("Ana");
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    You've added two more names to the end of the list. You've also removed one as well.
-
-
-    The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well. You access items using the `[` and `]` tokens. Add the following code below what you've already written and try it:
-
-
-    ```csharp
-
-    Console.WriteLine($"My name is {names[0]}.");
-
-    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
-
-    ```
-
-
-    You're not allowed to access past the end of the list. You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property. Add the following code to try it:
-
-
-    ```csharp
-
-    Console.WriteLine($"The list has {names.Count} people in it");
-
-    ```
-
-
-    Click **Run** again to see the results. In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "La raccolta creata usa il tipo <xref:System.Collections.Generic.List%601>. Questo tipo archivia sequenze di elementi. Il tipo degli elementi viene specificato tra parentesi uncinate.\n\nUn aspetto importante di questo tipo di <xref:System.Collections.Generic.List%601> è che supporta estensioni o riduzioni, consentendo l'aggiunta o la rimozione di elementi. Aggiungere il codice seguente sotto il codice già scritto:\n\n```csharp\nConsole.WriteLine();\nnames.Add(\"Maria\");\nnames.Add(\"Bill\");\nnames.Remove(\"Ana\");\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nSono stati aggiunti altri due nomi alla fine dell'elenco e ne è stato anche rimosso uno.\n\n<xref:System.Collections.Generic.List%601> consente di fare riferimento a singoli elementi anche in base all'**indice**. Per accedere agli elementi si usano i token `[` e `]`. Aggiungere il codice seguente sotto il codice già scritto e provarlo:\n\n```csharp\nConsole.WriteLine($\"My name is {names[0]}.\");\nConsole.WriteLine($\"I've added {names[2]} and {names[3]} to the list.\");\n```\n\nNon è consentito l'accesso oltre la fine dell'elenco. È possibile controllare la lunghezza dell'elenco tramite la proprietà <xref:System.Collections.Generic.List%601.Count%2A>. Aggiungere il codice seguente per provarlo:\n\n```csharp\nConsole.WriteLine($\"The list has {names.Count} people in it\");\n```\n\nFare clic su **Esegui** di nuovo per visualizzare i risultati. In C# gli indici iniziano da 0, pertanto l'indice massimo valido è minore di un'unità rispetto al numero di elementi nell'elenco.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Eseguire ricerche negli elenchi e ordinarli
   durationInMinutes: 5
-  content: >
-    Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands. To find elements in these larger collections, you need to search the list for different items. The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item. Try this to see how it works.  Add the following code below what you've written so far:
-
-
-    ```csharp
-
-    var index = names.IndexOf("Felipe");
-
-    if (index != -1)
-      Console.WriteLine($"The name {names[index]} is at index {index}");
-
-    var notFound = names.IndexOf("Not Found");
-      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
-    ```
-
-
-    You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>. If it is -1, the item was not found.
-
-
-    The items in your list can be sorted as well. The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings). Add this code and run again:
-
-
-    ```csharp
-
-    names.Sort();
-
-    foreach (var name in names)
-
-    {
-      Console.WriteLine($"Hello {name.ToUpper()}!");
-    }
-
-    ```
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "In questi esempi vengono usati elenchi relativamente piccoli, ma le applicazioni reali creano spesso elenchi con molti più elementi, a volte anche migliaia. Per trovare elementi in raccolte di tali dimensioni, è necessario avere la possibilità di eseguire ricerche nell'elenco. Il metodo <xref:System.Collections.Generic.List%601.IndexOf%2A> cerca un elemento e ne restituisce l'indice. Provare questo codice per verificarne il funzionamento.  Aggiungere il codice seguente sotto il codice già scritto finora:\n\n```csharp\nvar index = names.IndexOf(\"Felipe\");\nif (index != -1)\n  Console.WriteLine($\"The name {names[index]} is at index {index}\");\n\nvar notFound = names.IndexOf(\"Not Found\");\n  Console.WriteLine($\"When an item is not found, IndexOf returns {notFound}\");\n```\n\nSi potrebbe non sapere se un elemento è presente nell'elenco, quindi è consigliabile controllare sempre l'indice restituito da <xref:System.Collections.Generic.List%601.IndexOf%2A>. Se è 1, l'elemento non è stato trovato.\n\nGli elementi in un elenco possono anche essere ordinati. Il metodo <xref:System.Collections.Generic.List%601.Sort%2A> ordina tutti gli elementi nell'elenco in base all'ordine normale (alfabetico nel caso delle stringhe). Aggiungere questo codice ed eseguire di nuovo:\n\n```csharp\nnames.Sort();\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Elenchi di altri tipi
   durationInMinutes: 5
-  content: >
-    You've been using the `string` type in lists so far. Let's make a <xref:System.Collections.Generic.List%601> using a different type. Let's build a set of numbers. Delete the code you wrote so far, and replace it with this:
-
-
-    ```csharp
-
-    var fibonacciNumbers = new List<int> {1, 1};
-
-    ```
-
-
-    That creates a list of integers, and sets the first two integers to the value 1. These are the first two values of a *Fibonacci Sequence*, a sequence of numbers. Each next Fibonacci number is found by taking the sum of the previous two numbers. Add this code:
-
-
-    ```csharp
-
-    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
-
-    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
-
-
-    fibonacciNumbers.Add(previous + previous2);
-
-
-    foreach(var item in fibonacciNumbers)
-        Console.WriteLine(item);
-    ```
-
-
-    Press **Run** to see the results;
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "Finora è stato usato il tipo `string` negli elenchi. Di seguito verrà creato un <xref:System.Collections.Generic.List%601> con un tipo diverso. Per iniziare, creare un set di numeri. Eliminare il codice scritto finora e sostituirlo con questo:\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\nQuesto codice crea un elenco di interi e imposta i primi due interi sul valore 1. Questi sono i primi due valori di una *successione di Fibonacci*, ovvero una sequenza di numeri. Ogni numero della successione di Fibonacci viene ottenuto dalla somma dei due numeri precedenti. Aggiungere questo codice:\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nPremere **Esegui** per visualizzare i risultati.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Esercizio
   durationInMinutes: 10
-  content: >
-    See if you can put together some of the concepts from this and earlier lessons. Expand on what you've built so far with Fibonacci Numbers. Try and write the code to generate the first 20 numbers in the sequence. (As a hint, the 20th Fibonacci number is 6765.)
-
-
-    > [!NOTE]
-
-    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+  content: "È il momento di scoprire se è possibile mettere in pratica alcuni dei concetti appresi in questa lezione e in quelle precedenti. Applicare i concetti appresi finora in relazione ai numeri di Fibonacci. Provare a scrivere il codice per generare i primi 20 numeri nella successione. Tenere presente che il 20° numero di Fibonacci è 6765.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Completare l'esercizio
   durationInMinutes: 3
-  content: "Did you come up with something like this?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nWith each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list. The loop repeats until you've added 20 items to the list.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
-- content: "You've completed the list quick start. This quick start is the final interactive quick start. You can continue these quick starts on your own development environment. Learn the basics of [local development](local-environment.md) and then pick a quick start. You can try this same exercise, move directly to the next quick start, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.\n\nYou can learn more about working with the `List` type in the\n[.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md). You'll also learn about many other collection types.\0"
+  content: "I risultati ottenuti sono simili a questi?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nA ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+- content: "È stata completata la guida introduttiva dedicata agli elenchi. Questa guida introduttiva è la guida introduttiva interattiva finale. È possibile continuare con queste guide introduttive nel proprio ambiente di sviluppo. Dopo aver acquisito familiarità con gli elementi di base dello [sviluppo locale](local-environment.md), scegliere una guida introduttiva. È possibile provare questo stesso esercizio, passare direttamente alla guida introduttiva seguente o iniziare da capo con la guida introduttiva [Numeri in C#](numbers-in-csharp-local.md).\n\nAltre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.\0"

@@ -4,16 +4,16 @@ description: In questa guida introduttiva dedicata ai rami e ai cicli si scrive 
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>Rami e cicli
 
@@ -254,7 +254,7 @@ Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 
 
 È stata completata la guida introduttiva "Cicli e rami".
 
-È possibile continuare con la guida introduttiva [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
+È possibile continuare con la guida introduttiva [Stringhe interpolate](interpolated-strings-local.md) nel proprio ambiente di sviluppo.
 
 Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
 
