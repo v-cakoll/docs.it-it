@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurazione delle app tramite file di configurazione
 .NET Framework, tramite i file di configurazione, offre agli sviluppatori e agli amministratori controllo e flessibilità sulle modalità di esecuzione delle applicazioni. I file di configurazione sono file XML che è possibile modificare in base alle specifiche esigenze. Un amministratore è in grado di controllare le risorse protette alle quali può accedere un'applicazione, le versioni di assembly che verranno usate dall'applicazione e la posizione in cui risiedono applicazioni e oggetti remoti. Gli sviluppatori possono definire le impostazioni all'interno dei file di configurazione senza dover ricompilare un'applicazione dopo ogni modifica di un'impostazione. In questa sezione viene descritto cosa è possibile configurare e l'utilità della configurazione di un'applicazione.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  Questo argomento illustra la sintassi dei file di configurazione e fornisce informazioni sui tre tipi di file di configurazione: del computer, dell'applicazione e della sicurezza.  
   
 ## <a name="configuration-file-format"></a>Formato dei file di configurazione  
- I file di configurazione contengono elementi costituiti da strutture logiche di dati che definiscono le informazioni di configurazione. All'interno di un file di configurazione vengono usati tag per contrassegnare l'inizio o la fine di un elemento. L'elemento `<runtime>`, ad esempio, è costituito da `<runtime>`*elementi figlio*`</runtime>`. Un elemento vuoto viene scritto come `<runtime/>` o `<runtime>``</runtime>`.  
+ I file di configurazione contengono elementi costituiti da strutture logiche di dati che definiscono le informazioni di configurazione. All'interno di un file di configurazione vengono usati tag per contrassegnare l'inizio o la fine di un elemento. L'elemento `<runtime>`, ad esempio, è costituito da `<runtime>`*elementi figlio*`</runtime>`. Un elemento vuoto viene scritto come `<runtime/>` o `<runtime></runtime>`.  
   
  Come per tutti i file XML, nella sintassi dei file di configurazione viene fatta distinzione tra maiuscole e minuscole.  
   
