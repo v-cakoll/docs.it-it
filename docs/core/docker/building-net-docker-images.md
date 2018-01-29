@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
 
@@ -101,7 +102,7 @@ Usa la [funzionalità di compilazione in più fasi di Docker](https://docs.docke
 * Compilare l'esempio in un contenitore in base all'immagine di base Docker di compilazione per ASP.NET Core **più grande** 
 * Copia il risultato finale di compilazione in un'immagine Docker in base all'immagine di base di runtime Docker per ASP.NET Core **più piccola**
 
-> [!Note]
+> [!NOTE]
 > L'immagine di compilazione contiene gli strumenti necessari per compilare applicazioni, diversamente dall'immagine di runtime.
 
 ### <a name="prerequisites"></a>Prerequisiti
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] L'argomento `docker run` '-p' mappa la porta 5000 nel computer locale alla porta 80 nel contenitore (il formato per il mapping delle porte è `host:container`). Per altre informazioni, vedere le informazioni di riferimento su [docker run](https://docs.docker.com/engine/reference/commandline/exec/) per i parametri della riga di comando.
+> [!NOTE]
+> L'argomento `docker run` '-p' mappa la porta 5000 nel computer locale alla porta 80 nel contenitore (il formato per il mapping delle porte è `host:container`). Per altre informazioni, vedere le informazioni di riferimento su [docker run](https://docs.docker.com/engine/reference/commandline/exec/) per i parametri della riga di comando.
 
 Dopo l'avvio dell'applicazione, passare a **http://localhost:5000** nel Web browser.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Eseguire `docker exec aspnetcore_sample ipconfig`.
 * Copiare l'indirizzo IP del contenitore e incollarlo nel browser (ad esempio, 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Il comando docker exec supporta l'identificazione dei contenitori in base al nome o all'hash. In questo esempio, viene usato il nome (aspnetcore_sample).
 
 Vedere l'esempio seguente su come ottenere l'indirizzo IP di un contenitore Windows in esecuzione.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Il comando docker exec esegue un nuovo comando in un contenitore in esecuzione. Per altre informazioni, vedere le informazioni di riferimento su [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) per i parametri della riga di comando.
 
 È possibile creare un'applicazione pronta per la distribuzione nell'ambiente di produzione in locale usando il comando [dotnet publish](../tools/dotnet-publish.md).
@@ -224,7 +226,7 @@ Ethernet adapter Ethernet:
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > L'argomento - c Release compila l'applicazione in modalità di versione (l'impostazione predefinita è la modalità di debug). Per altre informazioni, vedere le informazioni di riferimento su [dotnet run](../tools/dotnet-run.md) per i parametri della riga di comando.
 
 È possibile eseguire l'applicazione in **Windows** usando il comando seguente.
@@ -265,5 +267,5 @@ Ecco alcuni dei possibili argomenti con cui proseguire:
 * [Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) (Informazioni su Visual Studio per Mac, contenitori e codice senza server nel cloud)
 * [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) (Lab introduttivo per Docker e Visual Studio per Mac)
 
-> [!Note]
+> [!NOTE]
 > Se non si ha una sottoscrizione di Azure, [iscriversi subito](https://azure.microsoft.com/free/?b=16.48) per ottenere un account gratuito di 30 giorni e 200 dollari in crediti di Azure per poter provare una combinazione dei servizi di Azure.

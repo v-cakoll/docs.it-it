@@ -1,8 +1,9 @@
 ---
 title: 'Procedura: Determinare le versioni di .NET Framework installate'
-ms.date: 10/17/2017
+ms.date: 01/24/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,12 +16,13 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: determinare le versioni di .NET Framework installate
 Gli utenti possono installare ed eseguire nel computer più versioni di .NET Framework. Quando si sviluppa o si distribuisce l'app, potrebbe essere necessario conoscere quali versioni di .NET Framework sono installate nel computer dell'utente. Si noti che .NET Framework è costituito da due componenti principali, le cui versioni sono definite separatamente:  
@@ -87,6 +89,8 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
 
      Il valore DWORD `Release` indica quale versione di .NET Framework è installata.
 
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
     |Valore DWORD di Release|Versione|
     |--------------------------------|-------------|
     |378389|.NET Framework 4.5|
@@ -128,6 +132,8 @@ Gli utenti possono installare ed eseguire nel computer più versioni di .NET Fra
 1. L'esistenza del valore DWORD `Release` indica che nel computer è stato installato .NET Framework 4.5 o versioni successive. Il valore di questa parola chiave indica la versione installata. Per controllare questa parola chiave, usare i metodi <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> e <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> della classe <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> per accedere alla sottochiave Software\Microsoft\NET Framework Setup\NDP\v4\Full in HKEY_LOCAL_MACHINE nel Registro di sistema di Windows.
 
 2. Verificare il valore della parola chiave `Release` per determinare la versione installata. Affinché sia compatibile con la versione attualmente installata, è possibile cercare un valore maggiore o uguale ai valori elencati nella tabella. Ecco le versioni di .NET Framework e le parole chiave `Release` associate.
+
+    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
     |Versione|Valore DWORD di Release|
     |-------------|--------------------------------|
