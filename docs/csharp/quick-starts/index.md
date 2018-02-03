@@ -1,32 +1,32 @@
 ---
-title: Guide introduttive - Guida a C#
+title: Esercitazioni interattive per C# - Guide introduttive per C#
 description: Imparare a usare C# nel browser e introduzione all'ambiente di sviluppo
 keywords: C#, Introduzione, Lezioni, Interattive
 author: billwagner
 ms.author: wiwagn
-ms.date: 09/18/2017
+ms.date: 01/30/2018
 ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 1218e8cf877ae102e927a591b38d4c0732e5288d
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3a76c28e4cc32ab883488ad84df90e6535b583d9
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-starts"></a>Guide introduttive per C# #
+# <a name="c-quickstarts"></a>Guide introduttive per C# #
 
 Queste guide introduttive per C# iniziano con lezioni interattive che è possibile eseguire nel browser.
 
-Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#. 
+Nella prima lezione vengono spiegati i concetti di C# usando piccoli frammenti di codice. Si apprenderanno le nozioni di base della sintassi di C# e si scoprirà come usare i tipi di dati come stringhe, numeri e valori booleani. Tutte le istruzioni sono interattive e si imparerà a scrivere codice in pochi minuti. Per queste prime lezioni non è richiesta alcuna conoscenza pregressa di programmazione o del linguaggio C#.
 
-Tutte le guide introduttive successive alla lezione relativa a Hello World sono disponibili tramite l'esperienza di browser online o nell'ambiente di sviluppo. Alla fine di ogni lezione, è possibile scegliere se continuare con la successiva guida introduttiva online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con la guida introduttiva successiva nel computer.
+Tutte le guide introduttive successive alla lezione relativa a Hello World sono disponibili tramite l'esperienza del browser online o nell'ambiente di sviluppo. Alla fine di ogni lezione, è possibile scegliere se continuare con la successiva guida introduttiva online o nel proprio computer. Sono disponibili collegamenti che aiutano a configurare l'ambiente e continuare con la guida introduttiva successiva nel computer.
 
 ## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
 
-Nella guida introduttiva relativa a [Hello World](hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo.
+Nella guida introduttiva [Hello World](hello-world.yml) verrà creato il programma C# più semplice. Si esaminerà il tipo `string` e verranno illustrate le procedure per lavorare con il testo.
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Numeri in C#](numbers-in-csharp.yml)
 
@@ -42,7 +42,7 @@ In questa lezione per principianti si presuppone che siano state completate le l
 
 ## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Stringhe interpolate](interpolated-strings.yml)
 
-La guida introduttiva sulle [stringhe interpolate](interpolated-strings.yml) illustra come inserire un'espressione in una stringa più grande. Si apprenderà come definire un'espressione interpolata, come creare una stringa di risultato da una stringa interpolata con una o più espressioni interpolate e come controllare la formattazione, la larghezza della colonna e l'allineamento delle espressioni incluse nella stringa di risultato. 
+La guida introduttiva [Stringhe interpolate](interpolated-strings.yml) illustra come inserire un'espressione in una stringa più grande. Si apprenderà come definire un'espressione interpolata, come creare una stringa di risultato da una stringa interpolata con una o più espressioni interpolate e come controllare la formattazione, la larghezza della colonna e l'allineamento delle espressioni incluse nella stringa di risultato. 
 
 In questa lezione per principianti si presuppone che siano state completate le lezioni [Hello World](hello-world.yml), [Numeri in C#](numbers-in-csharp.yml) e [Rami e cicli](branches-and-loops.yml).
 
