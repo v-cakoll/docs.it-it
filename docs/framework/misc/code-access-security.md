@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>Sicurezza per l'accesso al codice
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Gli attuali computer con connessione elevata sono spesso esposti a codice che deriva da origini svariate e magari sconosciute. Il codice può essere allegato a un messaggio di posta elettronica, contenuto in documenti o scaricato da Internet. Sfortunatamente, molti utenti hanno sperimentato in prima persona gli effetti dei codici mobili dannosi, tra cui virus e worm, che possono danneggiare o distruggere i dati e costare tempo e denaro.  
+ Gli attuali computer con connessione elevata sono spesso esposti a codice che deriva da origini svariate e magari sconosciute. Codice può essere collegato al messaggio di posta elettronica, contenuto nei documenti o scaricato da Internet. Sfortunatamente, molti utenti hanno sperimentato in prima persona gli effetti dei codici mobili dannosi, tra cui virus e worm, che possono danneggiare o eliminare definitivamente i dati e costare tempo e denaro.  
   
  La maggior parte dei comuni meccanismi di sicurezza concede agli utenti diritti basati sulle credenziali di accesso (in genere una password) e limita le risorse (spesso directory e file) a cui l'utente può accedere. Tuttavia, questo approccio non riesce a risolvere alcuni problemi: gli utenti ottengono il codice da molte origini, alcune delle quali potrebbero non essere affidabili, il codice può contenere bug o vulnerabilità che permettono ai malware di sfruttarlo e a volte il codice esegue operazioni di cui l'utente non è a conoscenza. Di conseguenza, quando utenti attenti e affidabili eseguono software dannoso o con errori, possono verificarsi danni al sistemi del computer e ai dati privati. La maggior parte dei meccanismi di sicurezza del sistema operativo richiede che ogni parte del codice da eseguire sia completamente attendibile, ad eccezione forse degli script di una pagina Web. Dunque esiste ancora la necessità di un meccanismo di sicurezza applicabile su vasta scala, che consenta di eseguire il codice derivante dal sistema di un computer in modo protetto su un altro sistema, anche quando non esiste alcuna relazione di trust tra i sistemi.  
   
@@ -77,7 +79,7 @@ Analisi dello stack di sicurezza
 |-----------|-----------------|  
 |[Nozioni fondamentali sulla sicurezza per l’accesso al codice](../../../docs/framework/misc/code-access-security-basics.md)|Descrive la sicurezza dall'accesso di codice e gli usi più comuni.|  
 |[Codice SecurityTransparent, livello 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Descrive il modello di trasparenza della sicurezza in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
-|[Utilizzo di librerie da codice parzialmente attendibile](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Descrive come abilitare le librerie per usarle con codice non gestito e come usare le librerie provenienti da codice non gestito.|  
+|[Uso di librerie da codice parzialmente attendibile](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Descrive come abilitare le librerie per usarle con codice non gestito e come usare le librerie provenienti da codice non gestito.|  
 |[Concetti chiave sulla sicurezza](../../../docs/standard/security/key-security-concepts.md)|Fornisce una panoramica di diversi termini e concetti chiave usati nel sistema di sicurezza di .NET Framework.|  
 |[Sicurezza basata sui ruoli](../../../docs/standard/security/role-based-security.md)|Descrive come incorporare la sicurezza basata sui ruoli.|  
 |[Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)|Descrive come incorporare la crittografia nelle applicazioni.|

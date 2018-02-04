@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia di sicurezza di WCF
 Alcuni termini utilizzati nelle descrizioni delle funzionalità di sicurezza possono risultare poco chiari. Questo argomento fornisce brevi spiegazioni di alcuni termini di sicurezza, senza tuttavia offrire una descrizione dettagliata per ognuno degli argomenti correlati.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]termini usati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentazione, vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] termini usati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentazione, vedere [concetti fondamentali di Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  elenco di controllo di accesso (ACL)  
  Elenco di protezioni applicate a un oggetto, che può essere un file, un processo, un evento o un qualsiasi altro elemento a cui è associato un descrittore di sicurezza. Una voce appartenente a un ACL è detta voce di controllo di accesso (ACE, Access Control Entry). Esistono due tipi di ACL: discrezionale e di sistema.  

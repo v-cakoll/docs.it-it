@@ -1,13 +1,15 @@
 ---
 title: Tipo di dati Short (Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-f1_keywords: vb.Short
+f1_keywords:
+- vb.Short
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -21,11 +23,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo di dati short (Visual Basic)
 Contiene valori integer a 16 bit (2 byte) in un intervallo compreso tra -32.768 e 32.767.  
@@ -50,10 +52,18 @@ A partire da Visual Basic 2017, è inoltre possibile utilizzare il carattere di 
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
+A partire da Visual Basic 15,5, è inoltre possibile utilizzare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre binarie, ottale o esadecimale. Ad esempio:
+
+```vb
+Dim number As Short = &H_3264
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Valori letterali numerici possono includere anche il `S` [carattere tipo](../../programming-guide\language-features\data-types/type-characters.md) per indicare il `Short` il tipo di dati, come illustrato nell'esempio seguente.
 
 ```vb
-Dim number = &H0326S
+Dim number = &H_3264S
 ```
 
 ## <a name="programming-tips"></a>Suggerimenti sulla programmazione

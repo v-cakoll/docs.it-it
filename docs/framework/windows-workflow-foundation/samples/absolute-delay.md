@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Ritardo assoluto
 Lo scenario principale di questo esempio è ritardare un flusso di lavoro fino a una <xref:System.DateTime> specificata usando timer durevoli in un'applicazione flusso di lavoro. Si tratta di uno scenario diverso rispetto all'utilizzo dell'attività <xref:System.Activities.Statements.Delay> incorporata in quanto in questo caso sarà possibile ritardare un flusso di lavoro solo per un determinato <xref:System.TimeSpan> (o numero di minuti/secondi).  
@@ -49,7 +50,7 @@ Lo scenario principale di questo esempio è ritardare un flusso di lavoro fino a
   
  Questo esempio dimostra inoltre come attivare la persistenza per una <xref:System.Activities.WorkflowApplication>. Per questo particolare esempio, verranno usati timer durevoli in cui i dati del flusso di lavoro verranno scaricati nel database di persistenza durante il tempo di inattività in attesa della scadenza del timer. Questa implementazione può essere usata anche per altre azioni di persistenza. Questo esempio mostra come configurare la stringa di connessione della persistenza con SQL Server e come creare l'archivio di istanze per rendere persistenti i dati delle istanze del flusso di lavoro. Viene fornita la logica per riprendere il flusso di lavoro una volta generato un evento che rende eseguibile l'istanza del flusso di lavoro.  
   
- Nel corso di questo esempio verrà mostrato il momento di inizio e fine del ritardo incorporato, che a sua volta determina l'invio di un messaggio di posta elettronica. A questo punto, l'attività AbsoluteDelay verrà interrotta fino a una determinata <xref:System.DateTime> (o 0 secondi se <xref:System.DateTime> è scaduta), che a sua volta invierà un messaggio di posta elettronica alla scadenza. In questo modo verranno mostrati i due diversi casi di utilizzo della funzionalità <xref:System.Activities.Statements.Delay> incorporata rispetto all'utilizzo di un'attività AbsoluteDelay.  
+ Mentre si esegue questo esempio, si noterà che il tempo in cui inizia il ritardo predefinito e viene completato, che a sua volta causerà un messaggio di posta elettronica da inviare. A questo punto, l'attività AbsoluteDelay verrà interrotta fino a una determinata <xref:System.DateTime> (o 0 secondi se <xref:System.DateTime> è scaduta), che a sua volta invierà un messaggio di posta elettronica alla scadenza. In questo modo verranno mostrati i due diversi casi di utilizzo della funzionalità <xref:System.Activities.Statements.Delay> incorporata rispetto all'utilizzo di un'attività AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

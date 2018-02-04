@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>servizi crittografici
 <a name="top"></a> Le reti pubbliche, ad esempio Internet, non offrono comunicazioni sicure tra entità. Le comunicazioni su tali reti possono essere lette o addirittura modificate da terze parti non autorizzate. La crittografia aiuta a proteggere i dati dalla visualizzazione, offre modalità per rilevare se i dati sono stati modificati e aiuta a offrire una modalità di comunicazione sicura su canali altrimenti non sicuri. Ad esempio, è possibile crittografare i dati usando un algoritmo di crittografia, trasmesso in stato crittografato e quindi decrittografato dal destinatario designato. Se una terza parte intercetta i dati crittografati, la decrittografia risulterà difficile.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  Lo svantaggio della crittografia a chiave segreta consiste nel fatto che presuppone che le due parti si siano accordate su una chiave e un vettore di inizializzazione e che abbiano comunicato i rispettivi valori. Il vettore di inizializzazione non è considerato segreto e può essere trasmesso in testo normale con il messaggio. La chiave deve essere tuttavia mantenuta segreta agli utenti non autorizzati. A causa di questi problemi, la crittografia a chiave segreta viene usata spesso insieme alla crittografia a chiave pubblica per comunicare in modo privato i valori della chiave e del vettore di inizializzazione.  
   
- Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, potranno usare la crittografia a chiave segreta nel modo seguente: Alice e Bob decidono di usare un algoritmo specifico, ad esempio AES, con una chiave e un vettore di inizializzazione specifici. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o posta elettronica di rete) su cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.  
+ Supponendo che Alice e Bob siano due parti che vogliono comunicare su un canale non sicuro, potranno usare la crittografia a chiave segreta nel modo seguente: Alice e Bob decidono di usare un algoritmo specifico, ad esempio AES, con una chiave e un vettore di inizializzazione specifici. Alice compone un messaggio e crea un flusso di rete (forse una named pipe o rete posta elettronica) a cui inviare il messaggio. In seguito crittografa il testo usando la chiave e il vettore di inizializzazione e invia il messaggio crittografato e il vettore di inizializzazione a Bob tramite Intranet. Bob riceve il testo crittografato e lo decrittografa usando il vettore di inizializzazione e la chiave precedentemente concordata. Se la trasmissione viene intercettata, l'intercettore non può recuperare il messaggio originale, poiché non conosce la chiave. In questo scenario, solo la chiave deve rimanere segreta. In uno scenario reale Alice o Bob genera una chiave segreta e usa la crittografia a chiave pubblica (asimmetrica) per trasferire la chiave segreta (simmetrica) all'altra parte. Per altre informazioni sulla crittografia a chiave pubblica, vedere la sezione successiva.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce le classi seguenti che implementano algoritmi di crittografia a chiave segreta:  
   

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazioni basate su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
   
 ## <a name="basic-considerations"></a>Considerazioni di base  
  Per fornire informazioni di base sugli aspetti seguenti per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], in questa sezione vengono evidenziate alcune preoccupazioni e considerazioni generali per le codifiche, i dati binari e i flussi che in genere riguardano le infrastrutture di sistemi connessi.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  In una stringa con codifica Base64, ogni carattere rappresenta 6 bit dei dati originali a 8 bit, con un conseguente rapporto di codifica-sovraccarico di 4:3 per Base64, senza contare i caratteri aggiuntivi della formattazione (ritorno a capo/avanzamento riga) che vengono normalmente aggiunti per convenzione. Mentre l'importanza delle differenze tra le codifiche XML e binaria dipende in genere dallo scenario, un aumento della dimensione di oltre il 33% durante la trasmissione di un payload da 500 MB non è in genere accettabile.  
   
- Per evitare questo sovraccarico della codifica, lo standard MTOM (Message Transmission Optimization Mechanism) consente di esternalizzare i dati di grandi dimensioni contenuti in un messaggio per trasportarli con il messaggio in forma di dati binari senza alcuna codifica speciale. Con lo standard MTOM, i messaggi vengono scambiati in modo simile ai messaggi di posta elettronica SMTP (Simple Mail Transfer Protocol) con allegati o contenuto incorporato (immagini e altro contenuto incorporato). I messaggi MTOM vengono crittografati come una sequenza MIME multiparte/correlata e la parte radice corrisponde all'effettivo messaggio SOAP.  
+ Per evitare questo sovraccarico della codifica, lo standard MTOM (Message Transmission Optimization Mechanism) consente di esternalizzare i dati di grandi dimensioni contenuti in un messaggio per trasportarli con il messaggio in forma di dati binari senza alcuna codifica speciale. Con MTOM, i messaggi vengono scambiati in modo simile ai messaggi di posta elettronica Simple Mail Transfer Protocol (SMTP) con allegati o contenuto incorporato (immagini e altro contenuto incorporato); I messaggi MTOM vengono crittografati come una sequenza MIME multiparte/correlata e la parte radice corrisponde all'effettivo messaggio SOAP.  
   
  Un messaggio SOAP MTOM viene modificato rispetto alla versione non codificata in modo che tag di elemento speciali, riferiti alle relative parti MIME, sostituiscano gli elementi originali nel messaggio che conteneva dati binari. Di conseguenza, il messaggio SOAP fa riferimento al contenuto binario puntando alle parti MIME inviate con il messaggio stesso, ma contiene solo dati di testo XML. Poiché questo modello è perfettamente allineato al diffuso modello SMTP, sono disponibili numerosi strumenti di supporto per codificare e decodificare i messaggi MTOM su molte piattaforme. Questa scelta diventa quindi estremamente interoperativa.  
   

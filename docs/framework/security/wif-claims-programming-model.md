@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>Modello di programmazione attestazioni WIF
 Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in genere le interfacce IIdentity e IPrincipal per lavorare con le informazioni sull'identità dell'utente. In .NET 4.5 è stato integrato Windows Identity Foundation (WIF), in modo che le attestazioni siano ora sempre presenti per qualsiasi entità di sicurezza, come illustrato nel diagramma seguente:  
@@ -29,9 +31,9 @@ Gli sviluppatori ASP.NET e Windows Communication Foundation (WCF) usano in gener
   
  Un'attestazione è rappresentata dalla classe <xref:System.Security.Claims.Claim>. Questa classe ha le proprietà importanti seguenti:  
   
--   <xref:System.Security.Claims.Claim.Type%2A> rappresenta il tipo di attestazione ed è in genere un URI. Ad esempio, l'attestazione di un indirizzo di posta elettronica è rappresentata come `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> rappresenta il tipo di attestazione ed è in genere un URI. Ad esempio, l'attestazione di indirizzo di posta elettronica è rappresentato come `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A> contiene il valore dell'attestazione e viene rappresentato come stringa. L'indirizzo di posta elettronica può essere ad esempio rappresentato come "someone@contoso.com".  
+-   <xref:System.Security.Claims.Claim.Value%2A> contiene il valore dell'attestazione e viene rappresentato come stringa. Ad esempio, l'indirizzo di posta elettronica può essere rappresentato come "someone@contoso.com".  
   
 -   <xref:System.Security.Claims.Claim.ValueType%2A> rappresenta il tipo di valore dell'attestazione ed è in genere un URI. Ad esempio, il tipo di stringa è rappresentato come `http://www.w3.org/2001/XMLSchema#string`. Il tipo valore deve essere un oggetto QName in base allo standard XML Schema. Il valore deve essere nel formato `namespace#format` per consentire a WIF di restituire un valore QName valido. Se lo spazio dei nomi non è uno spazio dei nomi ben definito, il codice XML generato probabilmente non può essere convalidato dallo schema, perché non ci sarà un file XSD pubblicato per tale spazio dei nomi. Il tipo valore predefinito è `http://www.w3.org/2001/XMLSchema#string`. Vedere [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) per i tipi valore noti che è possibile usare in modo sicuro.  
   

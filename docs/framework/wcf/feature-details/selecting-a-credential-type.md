@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
 *Credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'attestazione di identità o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o una regione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  Quando viene usata la sicurezza SSL con .NET Framework 3.5 e versioni successive, un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa sia i certificati intermedi nel proprio archivio certificati sia i certificati intermedi ricevuti durante la negoziazione SSL per eseguire la convalida della catena di certificati sul certificato del servizio. In .NET Framework 3.0 vengono usati solo i certificati intermedi installati nell'archivio certificati locale.  
   
 #### <a name="out-of-band-negotiation"></a>Negoziazione fuori banda  
- Se la negoziazione automatica è disabilitata, la credenziale del servizio deve essere fornita al client prima di inviare qualsiasi messaggio al servizio. È anche noto come un *out of band* provisioning. Ad esempio, se il tipo di credenziale specificato è un certificato e la negoziazione automatica è disabilitata, il client deve contattare il proprietario del servizio per ricevere e installare il certificato nel computer che esegue l'applicazione client. Questa operazione può essere eseguita, ad esempio, quando si desidera controllare accuratamente i client che possono accedere a un servizio in uno scenario business-to-business. La negoziazione fuori banda può essere eseguita tramite posta elettronica e il certificato X.509 può essere archiviato nell'archivio certificati di Windows, mediante uno strumento come lo snap-in Certificati di Microsoft Management Console (MMC).  
+ Se la negoziazione automatica è disabilitata, la credenziale del servizio deve essere fornita al client prima di inviare qualsiasi messaggio al servizio. È anche noto come un *out of band* provisioning. Ad esempio, se il tipo di credenziale specificato è un certificato e la negoziazione automatica è disabilitata, il client deve contattare il proprietario del servizio per ricevere e installare il certificato nel computer che esegue l'applicazione client. Questa operazione può essere eseguita, ad esempio, quando si desidera controllare accuratamente i client che possono accedere a un servizio in uno scenario business-to-business. Questo timeout-di--negoziazione banda può essere eseguita in posta elettronica e il certificato x. 509 viene archiviato nell'archivio certificati di Windows, utilizzare uno strumento come lo snap-in certificati di Microsoft Management Console (MMC).  
   
 > [!NOTE]
 >  La proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> viene usata per fornire al servizio un certificato ottenuto tramite la negoziazione fuori banda. Questa proprietà è necessaria quando si usa la classe <xref:System.ServiceModel.BasicHttpBinding> poiché l'associazione non consente la negoziazione automatica. La proprietà viene usata anche in uno scenario duplex non correlato. Si tratta di un scenario in cui un server invia un messaggio al client senza richiedere prima al client l'invio di una richiesta al server. Poiché il server non riceve una richiesta dal client, deve usare il certificato del client per crittografare il messaggio per il client.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  È necessario tenere presente un aspetto legato all'impossibilità di cambiare identità (quando viene stabilito il contesto di sicurezza, ovvero il comportamento predefinito). Se si crea un servizio che comunica con un secondo servizio, l'identità usata per aprire il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al secondo servizio non può essere modificata. Questo diventa un problema se più client possono usare il primo servizio e il servizio rappresenta i client nell'accesso al secondo servizio. Se il servizio riusa lo stesso client per tutti i chiamanti, tutte le chiamate al secondo servizio vengono eseguite con l'identità del primo chiamante usato per aprire il client al secondo servizio. In altre parole, il servizio usa l'identità del primo client per tutti i client che vogliono comunicare con il secondo servizio. Ciò può causare un'elevazione di privilegi. Se questo non è il comportamento desiderato del servizio, è necessario registrare ogni chiamante e creare un nuovo client per il secondo servizio per ogni singolo chiamante e verificare che il servizio usi solo il client corretto per consentire ai diversi chiamanti la comunicazione con il secondo servizio.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

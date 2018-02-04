@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
-Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere, ad esempio, il nome dell'utente o un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
+Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere il nome dell'utente, un altro potrebbe essere un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
   
  In questo modello, un punto di accesso singolo è molto più semplice da ottenere e l'applicazione non viene più utilizzata per le operazioni seguenti:  
   
@@ -49,7 +51,7 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
  Ai fini della descrizione del modello di programmazione in Windows Identity Foundation (WIF), il termine "identità" verrà usato per rappresentare un set di attributi che descrivono un utente o un'altra entità in un sistema che si vuole proteggere.  
   
 ### <a name="claim"></a>Attestazione  
- Un'attestazione può essere una parte di informazioni sull'identità come il nome, l'indirizzo di posta elettronica, l'età, l'appartenenza al ruolo Vendite e così via. Più sono le attestazioni ricevute dall'applicazione, maggiori saranno le informazioni di cui si disporrà sull'utente. Ci si potrebbe chiedere per quale motivo vengono definite "attestazioni" anziché "attributi", come avviene comunemente nella descrizione delle directory di un'organizzazione. Il motivo è correlato al metodo di recapito. In questo modello, gli attributi dell'utente in una directory non vengono trovati dall'applicazione. L'utente recapita le attestazioni all'applicazione tramite cui vengono esaminate. Tutte le attestazioni vengono eseguite da un'autorità di certificazione e vengono considerate attendibili dall'utente solo se anche l'autorità di certificazione è altrettanto attendibile. Ad esempio, un'attestazione effettuata da un controller di dominio della società viene considerata più attendibile di una effettuata dall'utente stesso. In WIF le attestazioni vengono rappresentate con un tipo <xref:System.Security.Claims.Claim>, che dispone di una proprietà <xref:System.Security.Claims.Claim.Issuer%2A> che consente all'utente di scoprire l'autore del rilascio dell'attestazione.  
+ Pensare a un'attestazione come un'informazione di identità, ad esempio nome, indirizzo di posta elettronica, età, l'appartenenza al ruolo Sales. Più sono le attestazioni ricevute dall'applicazione, maggiori saranno le informazioni di cui si disporrà sull'utente. Ci si potrebbe chiedere per quale motivo vengono definite "attestazioni" anziché "attributi", come avviene comunemente nella descrizione delle directory di un'organizzazione. Il motivo è correlato al metodo di recapito. In questo modello, gli attributi dell'utente in una directory non vengono trovati dall'applicazione. L'utente recapita le attestazioni all'applicazione tramite cui vengono esaminate. Tutte le attestazioni vengono eseguite da un'autorità di certificazione e vengono considerate attendibili dall'utente solo se anche l'autorità di certificazione è altrettanto attendibile. Ad esempio, un'attestazione effettuata da un controller di dominio della società viene considerata più attendibile di una effettuata dall'utente stesso. In WIF le attestazioni vengono rappresentate con un tipo <xref:System.Security.Claims.Claim>, che dispone di una proprietà <xref:System.Security.Claims.Claim.Issuer%2A> che consente all'utente di scoprire l'autore del rilascio dell'attestazione.  
   
 ### <a name="security-token"></a>Token di sicurezza  
  L'utente fornisce un set di attestazioni all'applicazione con una richiesta. In un servizio Web, queste attestazioni vengono eseguite nell'intestazione di sicurezza della busta SOAP. In un'applicazione Web basata sul browser, le attestazioni arrivano tramite HTTP POST dal browser dell'utente e, successivamente, possono essere memorizzate nella cache in un cookie se si desidera una sessione. Indipendentemente dalla modalità di arrivo, queste attestazioni devono essere serializzate, operazione durante la quale vengono utilizzati i token di sicurezza. Un token di sicurezza è un set serializzato di attestazioni con firma digitale di un'autorità emittente. La firma è importante: garantisce che l'utente non ha semplicemente costituito un gruppo di attestazioni che ha poi inviato. In situazioni a bassa sicurezza in cui la crittografia non è necessaria o desiderata, è possibile utilizzare token senza firma, ma uno scenario simile non è descritto in questo argomento.  
