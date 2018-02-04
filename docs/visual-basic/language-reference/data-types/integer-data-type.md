@@ -1,9 +1,10 @@
 ---
 title: Tipo di dati Integer (Visual Basic)
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Integer
@@ -27,11 +28,11 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69c7fb6caf5d9a10c7d033d1ba0a05c9230d472c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba700cac58c96b3d6d2f5ed3c74fdd7e95761352
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo di dati integer (Visual Basic)
 Contiene valori integer con segno a 32 bit (4 byte) in un intervallo compreso tra -2.147.483.648 e 2.147.483.647.  
@@ -56,10 +57,18 @@ A partire da Visual Basic 2017, è inoltre possibile utilizzare il carattere di 
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
+A partire da Visual Basic 15,5, è inoltre possibile utilizzare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre binarie, ottale o esadecimale. Ad esempio:
+
+```vb
+Dim number As Integer = &H_C305_F860
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Valori letterali numerici possono includere anche il `I` [carattere tipo](../../programming-guide\language-features\data-types/type-characters.md) per indicare il `Integer` il tipo di dati, come illustrato nell'esempio seguente.
 
 ```vb
-Dim number = &H035826I
+Dim number = &H_035826I
 ```
 
 ## <a name="programming-tips"></a>Suggerimenti sulla programmazione

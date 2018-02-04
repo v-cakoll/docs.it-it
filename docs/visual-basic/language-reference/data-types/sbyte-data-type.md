@@ -3,9 +3,11 @@ title: Tipo di dati SByte (Visual Basic)
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>Tipo di dati SByte (Visual Basic)
 
@@ -50,6 +52,14 @@ Nell'esempio seguente, i numeri interi uguale a-102 rappresentati come decimali,
 A partire da Visual Basic 2017, è inoltre possibile utilizzare il carattere di sottolineatura, `_`, come un separatore di cifre per migliorare la leggibilità, come nell'esempio seguente viene illustrato.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+A partire da Visual Basic 15,5, è inoltre possibile utilizzare il carattere di sottolineatura (`_`) come separatore iniziale tra il prefisso e le cifre binarie, ottale o esadecimale. Ad esempio:
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
 Se il valore letterale integer è esterno all'intervallo di `SByte`, vale a dire se è minore di <xref:System.SByte.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.SByte.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione. Quando un valore letterale integer non ha alcun suffisso, un [intero](integer-data-type.md) è dedotto. Se il valore letterale integer è compreso nell'intervallo del `Integer` tipo, un [lungo](long-data-type.md) è dedotto. Ciò significa che, negli esempi precedenti, i valori letterali numerici `0x9A` e `0b10011010` vengono interpretati come interi con segno a 32 bit con un valore di 156, che supera <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Per la corretta compilazione di codice simile al seguente che assegna un intero decimale non a un `SByte`, è possibile effettuare una delle operazioni seguenti:
 
