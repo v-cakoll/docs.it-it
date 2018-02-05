@@ -2,7 +2,8 @@
 title: Operatori di conversione (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, conversion operators
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5277c1160c604ee56ff575df5bd603e115588d21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 056971dcd648208d77573c180df28ffdd46788c5
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operatori di conversione (Guida per programmatori C#)
 C# consente ai programmatori di dichiarare conversioni in classi o struct, in modo che sia possibile convertire le classi o gli struct da e/o in altre classi o altri struct oppure tipi di base. Le conversioni vengono definite come operatori e sono denominate in base al tipo di destinazione della conversione. Il tipo dell'argomento da convertire oppure il tipo del risultato della conversione, ma non entrambi, deve essere il tipo contenitore.  
@@ -51,4 +52,4 @@ C# consente ai programmatori di dichiarare conversioni in classi o struct, in mo
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Convert>  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Conversioni esplicite concatenate definite dall'utente in C#](http://go.microsoft.com/fwlink/?LinkId=112384)
+ [Conversioni esplicite concatenate definite dall'utente in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>Portabilità in .NET Core - Librerie
 
@@ -123,7 +124,7 @@ Poiché i progetti hanno ora come destinazione .NET Framework 4.6.2, usare tale 
 
 Il passaggio successivo consiste nell'esecuzione di ApiPort (API Portability Analyzer) per generare un report sulla portabilità per l'analisi.
 
-Assicurarsi di comprendere lo strumento [API Portability Analyzer (ApiPort)](~/docs/standard/portability-analyzer.md) e come generare report sulla portabilità per usare .NET Core come destinazione. La procedura dipende probabilmente dalle esigenze e dai gusti personali. Di seguito sono descritti alcuni approcci diversi. A seconda della strutturazione del codice, potrebbe essere necessario usare una combinazione di tali strategie.
+Assicurarsi di comprendere lo strumento [API Portability Analyzer (ApiPort)](../../standard/analyzers/portability-analyzer.md) e come generare report sulla portabilità per usare .NET Core come destinazione. La procedura dipende probabilmente dalle esigenze e dai gusti personali. Di seguito sono descritti alcuni approcci diversi. A seconda della strutturazione del codice, potrebbe essere necessario usare una combinazione di tali strategie.
 
 ### <a name="dealing-primarily-with-the-compiler"></a>Gestire prima di tutto il compilatore
 

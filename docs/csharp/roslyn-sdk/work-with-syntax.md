@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>Utilizzare la sintassi
 
@@ -89,7 +89,7 @@ Il nodo dell'istruzione all'interno del blocco ha un intervallo indicato da sing
 
 ## <a name="kinds"></a>Tipi
 
-Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=fullName>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente tramite l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente tramite l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> consente di risolvere facilmente eventuali ambiguità per i tipi di nodi della sintassi che condividono la stessa classe di nodo. Per i token e gli elementi semplici, questa proprietà è l'unico modo per distinguere un tipo di elemento da un alto. 
 
