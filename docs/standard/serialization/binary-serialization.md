@@ -11,17 +11,17 @@ helpviewer_keywords:
 - binary serialization, .net core serialization
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ViktorHofer
 ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 509d29ee2a6fe2f0b9d63d1cf69919a3de41bac2
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="binary-serialization"></a>Serializzazione binaria
 
@@ -93,7 +93,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>   
 - <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>   
 - <xref:System.Collections.Stack?displayProperty=nameWithType>   
-- `System.Collections.Generic.NonRandomizedStringEqualityComparer`<!--zz <xref:System.Collections.Generic.NonRandomizedStringEqualityComparer?displayProperty=fullName> --> (disponibile in .NET Core 2.0.4 e versioni successive)
+- `System.Collections.Generic.NonRandomizedStringEqualityComparer`<!--zz <xref:System.Collections.Generic.NonRandomizedStringEqualityComparer?displayProperty=nameWithType> --> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>   
 - <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
@@ -151,7 +151,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.DateTime?displayProperty=nameWithType>   
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>   
 - <xref:System.Decimal?displayProperty=nameWithType>   
-- `System.Diagnostics.Contracts.ContractException`<!--zz <xref:System.Diagnostics.Contracts.ContractException?displayProperty=fullName> --> (disponibile in .NET Core 2.0.4 e versioni successive)
+- `System.Diagnostics.Contracts.ContractException`<!--zz <xref:System.Diagnostics.Contracts.ContractException?displayProperty=nameWithType> --> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
@@ -195,7 +195,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Globalization.SortVersion?displayProperty=nameWithType>   
 - <xref:System.Guid?displayProperty=nameWithType>   
-- `System.IO.Compression.ZLibException`<!--zz <xref:System.IO.Compression.ZLibException?displayProperty=fullName --> (disponibile in .NET Core 2.0.4 e versioni successive)
+- `System.IO.Compression.ZLibException`<!--zz <xref:System.IO.Compression.ZLibException?displayProperty=nameWithType --> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.IO.EndOfStreamException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.IO.FileFormatException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
@@ -277,7 +277,7 @@ Poiché la natura della serializzazione binaria consente la modifica di membri p
 - <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
-- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException`<!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=fullName --> (disponibile in .NET Core 2.0.4 e versioni successive)
+- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException`<!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=nameWithType --> (disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.HostProtectionException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)
 - <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType>(disponibile in .NET Core 2.0.4 e versioni successive)

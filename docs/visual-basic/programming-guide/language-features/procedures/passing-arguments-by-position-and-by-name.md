@@ -1,11 +1,10 @@
 ---
 title: Passaggio di argomenti in base alla posizione e al nome (Visual Basic)
 ms.custom: 
-ms.date: 07/20/2015
+ms.date: 02/01/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing by name
@@ -28,14 +27,13 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 164f69fcf23049441a0acbe05058c792d5363a03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 13f5e5a8da6a899d4920a25b250ca88b2a21f559
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passaggio di argomenti in base alla posizione e al nome (Visual Basic)
 Quando si chiama un `Sub` o `Function` procedura, è possibile passare argomenti *in base alla posizione* , ovvero nell'ordine in cui appaiono nella definizione della stored procedure, oppure è possibile passare loro *in base al nome*, senza tener conto della posizione.  
@@ -44,40 +42,61 @@ Quando si chiama un `Sub` o `Function` procedura, è possibile passare argomenti
   
  Ad esempio, `Sub` procedura accetta tre argomenti:  
   
- [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
+ [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
   
  Quando si chiama questa procedura, è possibile fornire gli argomenti in base alla posizione, in base al nome o utilizzando una combinazione di entrambi.  
   
 ## <a name="passing-arguments-by-position"></a>Passaggio di argomenti in base alla posizione  
- È possibile chiamare la routine `studentInfo` con i relativi argomenti passati per posizione e delimitato da virgole, come illustrato nell'esempio seguente:  
+ È possibile chiamare il `Display` (metodo) con i relativi argomenti passati per posizione e delimitato da virgole, come illustrato nell'esempio seguente:  
   
- [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
+[!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
   
- Se si omette un argomento facoltativo in un elenco di argomenti posizionali, deve contenere al suo posto, con una virgola. L'esempio seguente chiama `studentInfo` senza il `age` argomento:  
+ Se si omette un argomento facoltativo in un elenco di argomenti posizionali, deve contenere al suo posto, con una virgola. L'esempio seguente chiama il `Display` metodo senza il `age` argomento:  
   
- [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
+[!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
   
 ## <a name="passing-arguments-by-name"></a>Passaggio di argomenti in base al nome  
- In alternativa, è possibile chiamare `studentInfo` con gli argomenti passati in base al nome, delimitati da virgole, come illustrato nell'esempio seguente:  
+ In alternativa, è possibile chiamare `Display` con gli argomenti passati in base al nome, delimitati da virgole, come illustrato nell'esempio seguente:  
   
- [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
+[!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
+
+ Passaggio di argomenti in base al nome in questo modo è particolarmente utile quando si chiama una routine con più di un argomento facoltativo. Se vengono forniti gli argomenti in base al nome, non è necessario utilizzare virgole per indicare gli argomenti posizionali mancante. Passaggio di argomenti in base al nome rende anche più facile tenere traccia degli argomenti passati e quelle che sono omessi.  
   
 ## <a name="mixing-arguments-by-position-and-by-name"></a>Combinazione di argomenti in base alla posizione e al nome  
- È possibile fornire entrambi gli argomenti in base alla posizione e con nome in un'unica chiamata di routine, come illustrato nell'esempio seguente:  
+
+È possibile fornire entrambi gli argomenti in base alla posizione e con nome in un'unica chiamata di routine, come illustrato nell'esempio seguente:  
   
- [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
   
  Nell'esempio precedente, non è necessario indicare la posizione dell'omessi alcuna virgola aggiuntiva `age` argomento, poiché `birth` viene passato in base al nome.  
   
- Quando si specificano argomenti da una combinazione di posizione e nome, gli argomenti posizionali devono provenire prima. Una volta che viene fornito un argomento in base al nome, tutti i restanti argomenti devono essere in base al nome.  
-  
-## <a name="supplying-optional-arguments-by-name"></a>Passaggio di argomenti facoltativi per nome  
- Passaggio di argomenti in base al nome è particolarmente utile quando si chiama una routine con più di un argomento facoltativo. Se vengono forniti gli argomenti in base al nome, non è necessario utilizzare virgole per indicare gli argomenti posizionali mancante. Passaggio di argomenti in base al nome rende anche più facile tenere traccia degli argomenti passati e quelle che sono omessi.  
-  
+Nelle versioni di Visual Basic prima 15,5, quando si specificano argomenti da una combinazione di posizione e nome, gli argomenti posizionali devono provenire tutte prima. Una volta che viene fornito un argomento in base al nome, tutti eventuali argomenti rimanenti devono essere passati per nome.  Ad esempio, la seguente chiamata per il `Display` metodo consente di visualizzare l'errore del compilatore [BC30241: è previsto un argomento denominato](../../../misc/bc30241.md).
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
+
+A partire da Visual Basic 15,5, gli argomenti posizionali possono seguire gli argomenti denominati se gli argomenti posizionali finali sono nella posizione corretta. Se compilato in Visual Basic 15,5, la chiamata precedente al `Display` metodo viene compilato correttamente e non genera l'errore del compilatore [BC30241](../../../misc/bc30241.md).  
+
+La possibilità di combinare e associare gli argomenti denominati e posizionali in qualsiasi ordine è particolarmente utile quando si desidera utilizzare un argomento denominato per rendere il codice più leggibile. Ad esempio, `Person` costruttore della classe richiede due argomenti di tipo `Person`, che può essere `Nothing`. 
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
+
+Utilizzo misti argomenti posizionali e denominati, per rendere lo scopo del codice consente di cancellare quando il valore della `father` e `mother` argomenti è `Nothing`:
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
+
+Per seguire gli argomenti posizionali con argomenti denominati, è necessario aggiungere l'elemento seguente al progetto Visual Basic (\*. vbproj) file:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
 ## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrizioni al passaggio di argomenti in base al nome  
- È possibile passare argomenti in base al nome per evitare di immettere gli argomenti obbligatori. È possibile omettere solo gli argomenti facoltativi.  
+
+È possibile passare argomenti in base al nome per evitare di immettere gli argomenti obbligatori. È possibile omettere solo gli argomenti facoltativi.  
   
- È possibile passare una matrice di parametri in base al nome. Infatti, quando si chiama la routine, si fornisce un numero indefinito di argomenti delimitato da virgole per la matrice di parametri e il compilatore non è possibile associare più di un argomento con un solo nome.  
+È possibile passare una matrice di parametri in base al nome. Infatti, quando si chiama la routine, si fornisce un numero indefinito di argomenti delimitato da virgole per la matrice di parametri e il compilatore non è possibile associare più di un argomento con un solo nome.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine](./index.md)  
