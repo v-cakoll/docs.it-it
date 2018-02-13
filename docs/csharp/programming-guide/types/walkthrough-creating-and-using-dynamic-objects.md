@@ -2,7 +2,8 @@
 title: 'Procedura dettagliata: creazione e utilizzo di oggetti dinamici (C# e Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: creazione e utilizzo di oggetti dinamici (C# e Visual Basic)
 
@@ -38,7 +39,7 @@ Gli oggetti dinamici espongono i membri, ad esempio proprietà e metodi, in fase
 -   Creare un progetto che usa una libreria `IronPython`.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-È necessario [IronPython](http://ironpython.net/) per .NET per completare questa procedura dettagliata. Vai al loro [pagina di Download](http://ironpython.net/download/) per ottenere la versione più recente.
+Per completare questa procedura, è necessario avere [IronPython](http://ironpython.net/) per .NET. Passare alla [pagina di download](http://ironpython.net/download/) per ottenere la versione più recente.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -178,4 +179,4 @@ Il progetto successivo di questa procedura dettagliata accede a una libreria scr
  [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Implementazione delle interfacce dinamiche (blog esterno)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [Implementazione delle interfacce dinamiche (PDF scaricabile da Microsoft TechNet)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

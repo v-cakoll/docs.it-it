@@ -2,21 +2,23 @@
 title: abstract (Riferimenti per C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-helpviewer_keywords: abstract keyword [C#]
+helpviewer_keywords:
+- abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (Riferimenti per C#)
 Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implementazione mancante o incompleta. Il modificatore abstract può essere usato con classi, metodi, proprietà, indicizzatori ed eventi. Usare il modificatore `abstract` in una dichiarazione di classe per indicare che una classe verrà usata solo come classe di base per altre classi. I membri contrassegnati come astratti o inclusi in una classe astratta devono essere implementati dalle classi che derivano dalla classe astratta.  
@@ -50,7 +52,7 @@ Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implem
     public abstract void MyMethod();  
     ```  
   
-     L'implementazione viene specificata da un metodo di [override](../../../csharp/language-reference/keywords/override.md), che è un membro di una classe non astratta.  
+     L'implementazione viene specificata tramite l'[override](../../../csharp/language-reference/keywords/override.md) di un metodo, che è un membro di una classe non astratta.  
   
 -   Non è possibile usare il modificatore [static](../../../csharp/language-reference/keywords/static.md) o [virtual](../../../csharp/language-reference/keywords/virtual.md) in una dichiarazione di un metodo astratto.  
   
