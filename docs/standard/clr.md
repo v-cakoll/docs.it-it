@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 In .NET Framework viene fornito un ambiente di runtime, denominato Common Language Runtime, in cui viene eseguito il codice e nel quale sono offerti servizi che facilitano il processo di sviluppo.  
@@ -33,7 +36,7 @@ In .NET Framework viene fornito un ambiente di runtime, denominato Common Langua
  I compilatori e gli strumenti dei linguaggi espongono le funzionalità di Common Language Runtime e consentono di scrivere codice che sfrutta i vantaggi di tale ambiente di esecuzione gestito. Il codice sviluppato tramite un compilatore di linguaggio basato su Common Language Runtime viene definito codice gestito e si avvantaggia di funzionalità quali l'integrazione tra i linguaggi, la gestione delle eccezioni con linguaggi diversi, la sicurezza avanzata, il supporto per il controllo delle versioni e la distribuzione, un modello semplificato per l'interazione tra componenti e servizi di debug e di profilatura.  
   
 > [!NOTE]
->  I compilatori e gli strumenti sono in grado di produrre un output che può essere usato da Common Language Runtime perché il sistema di tipi, il formato dei metadati e l'ambiente di runtime (il sistema di esecuzione virtuale) sono tutti definiti da uno standard pubblico, la specifica di ECMA Common Language Infrastructure. Per altre informazioni, vedere [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkId=99212) (Specifiche ECMA C# e Common Language Infrastructure).  
+>  I compilatori e gli strumenti sono in grado di produrre un output che può essere usato da Common Language Runtime perché il sistema di tipi, il formato dei metadati e l'ambiente di runtime (il sistema di esecuzione virtuale) sono tutti definiti da uno standard pubblico, la specifica di ECMA Common Language Infrastructure. Per altre informazioni, vedere [ECMA C# and Common Language Infrastructure Standards](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Specifiche ECMA C# e Common Language Infrastructure).  
   
  Per consentire all'ambiente di esecuzione di fornire servizi al codice gestito, è necessario che i compilatori di linguaggio generino metadati che descrivono i tipi, i membri e i riferimenti presenti nel codice. I metadati sono memorizzati con il codice: ogni file eseguibile trasportabile (PE, Portable Executable) caricabile in Common Language Runtime contiene metadati. I metadati vengono usati nell'ambiente di esecuzione per individuare e caricare classi, disporre istanze in memoria, risolvere chiamate di metodo, generare codice nativo, garantire sicurezza e impostare limiti di contesto per la fase di esecuzione.  
   
@@ -76,7 +79,7 @@ In .NET Framework viene fornito un ambiente di runtime, denominato Common Langua
 |4|4|  
 |4.5 (incluse 4.5.1 e 4.5.2)|4|  
 |4.6 (incluse 4.6.1 e 4.6.2)|4|
-|4.7 (inclusi 4.7.1)|4|  
+|4.7 (inclusa 4.7.1)|4|  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
@@ -84,7 +87,7 @@ In .NET Framework viene fornito un ambiente di runtime, denominato Common Langua
 |-----------|-----------------|  
 |[Processo di esecuzione gestita](../../docs/standard/managed-execution-process.md)|Vengono descritti i passaggi necessari per essere in condizione di sfruttare i vantaggi di Common Language Runtime.|  
 |[Gestione automatica della memoria](../../docs/standard/automatic-memory-management.md)|Viene descritta la modalità usata dal Garbage Collector per allocare e liberare memoria.|  
-|[NIB: Cenni preliminari su .NET Framework](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Vengono descritti i concetti principali di .NET Framework quali Common Type System, l'interoperabilità tra più linguaggi, l'esecuzione gestita, i domini delle applicazioni e gli assembly.|  
+|[NIB: Cenni preliminari su .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Vengono descritti i concetti principali di .NET Framework quali Common Type System, l'interoperabilità tra più linguaggi, l'esecuzione gestita, i domini delle applicazioni e gli assembly.|  
 |[Common Type System](../../docs/standard/base-types/common-type-system.md)|Vengono descritte le modalità di dichiarazione, utilizzo e gestione dei tipi nell'ambiente di esecuzione in supporto all'integrazione tra i linguaggi.|  
   
 ## <a name="see-also"></a>Vedere anche  

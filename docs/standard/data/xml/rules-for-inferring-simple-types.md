@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regole per l'inferenza di tipi semplici
 Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> inferisce il tipo di dati per attributi ed elementi.  
@@ -42,7 +45,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |unsignedInt|Numeri interi nell'intervallo compreso tra 0 e 4294967295.|  
 |long|Numeri interi nell'intervallo compreso tra -9223372036854775808 e 9223372036854775807.|  
 |unsignedLong|Numeri interi nell'intervallo compreso tra 0 e 18446744073709551615.|  
-|integer|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
+|numero intero|Un numero finito di cifre che può essere preceduto dal prefisso "-".|  
 |decimal|Valori numerici che contengono da 0 a 28 cifre di precisione.|  
 |float|Decimali eventualmente seguiti da "E" o "e", quindi da un numero intero che rappresenta l'esponente. I valori decimali possono essere compresi tra -16777216 e 16777216 I valori dell'esponente tra –149 e 104.<br /><br /> Il tipo float consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
 |double|Analogo a float, ad eccezione del fatto che i valori decimali possono essere compresi tra -9007199254740992 e 9007199254740992 e i valori dell'esponente tra –1075 e 970.<br /><br /> Il tipo double consente ai valori speciali di rappresentare i valori infinito e quelli non numerici. I valori speciali per float sono i seguenti: 0, -0, INF - INF, NaN.|  
@@ -51,7 +54,7 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 |ora|Formato di ora W3C.|  
 |date|I valori relativi agli anni sono compresi tra 0001 e 9999.|  
 |gYearMonth|Formato dell'anno e del mese gregoriano W3C.|  
-|string|Uno o più caratteri Unicode.|  
+|stringa|Uno o più caratteri Unicode.|  
   
 ## <a name="type-promotion"></a>Promozione tipo  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> esamina i valori di attributi ed elementi singolarmente. Quando i valori vengono rilevati, viene inferito il tipo più restrittivo e senza segno. Se è stato inferito un tipo per un attributo o elemento ed è stato rilevato un nuovo valore che non corrisponde al tipo inferito, quest'ultimo viene promosso a un nuovo tipo applicabile sia al tipo inferito che al nuovo valore. Durante la promozione del tipo inferito, la classe <xref:System.Xml.Schema.XmlSchemaInference> valuta i valori precedenti.  
@@ -85,4 +88,4 @@ Viene descritto come la classe <xref:System.Xml.Schema.XmlSchemaInference> infer
 ## <a name="see-also"></a>Vedere anche  
  [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [Inferenza degli schemi da documenti XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Regole per l'inferenza di tipi di nodo dello Schema e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+ [Regole per l'inferenza dello schema per tipi di nodo e struttura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

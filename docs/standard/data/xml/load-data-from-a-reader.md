@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Caricamento di dati da un lettore
 Se un documento XML viene caricato usando il metodo <xref:System.Xml.XmlDocument.Load%2A> e un parametro di un lettore <xref:System.Xml.XmlReader>, si otterrà un comportamento diverso rispetto alla situazione in cui i dati vengono caricati dagli altri formati. Se il lettore è nel suo stato iniziale, il metodo <xref:System.Xml.XmlDocument.Load%2A> utilizzerà l'intero contenuto del lettore e compilerà il modello DOM XML usando tutti i dati nel lettore.  
@@ -37,4 +40,4 @@ Se un documento XML viene caricato usando il metodo <xref:System.Xml.XmlDocument
  Per impostazione predefinita, il metodo <xref:System.Xml.XmlDocument.Load%2A> non verifica se l'XML è valido usando la DTD o la convalida dello schema. Verifica solo che l'XML sia in formato corretto. Affinché avvenga la convalida, è necessario creare un tipo <xref:System.Xml.XmlReader> usando la classe <xref:System.Xml.XmlReaderSettings>. La classe <xref:System.Xml.XmlReader> consente di applicare la convalida usando una DTD o uno schema XSD (Schema definition language). La proprietà <xref:System.Xml.ValidationType> della classe <xref:System.Xml.XmlReaderSettings> consente di determinare se l'istanza <xref:System.Xml.XmlReader> applica la convalida. Per altre informazioni sulla convalida dei dati XML, vedere la sezione Note della pagina di riferimento <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

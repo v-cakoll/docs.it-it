@@ -8,22 +8,26 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: .NET Framework development
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-application-essentials"></a>Concetti di base sulle applicazioni .NET Framework
 Questa sezione della documentazione di .NET Framework fornisce informazioni sulle attività di base per lo sviluppo di applicazioni in .NET Framework.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Tipi di base](../../docs/standard/base-types/index.md)  
  Vengono descritte la formattazione e l'analisi di tipi di dati di base e l'uso di espressioni regolari per l'elaborazione del testo.  
   

@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, creating pre-computed
+helpviewer_keywords:
+- tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4596b28afe48aad4a84a7dd72b4a1d44a9ada8a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 262aa626e9e426da94de0d2ad5f2ef04a5bbc5f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Procedura: Creare attività precalcolate
 In questo documento viene descritto come utilizzare il metodo <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> per recuperare i risultati di operazioni di download asincrone contenute in una cache. Tramite il metodo <xref:System.Threading.Tasks.Task.FromResult%2A> viene restituito un oggetto <xref:System.Threading.Tasks.Task%601> finito contenente il valore fornito come relativa proprietà <xref:System.Threading.Tasks.Task%601.Result%2A>. Questo metodo è utile quando si esegue un'operazione asincrona che restituisce un oggetto <xref:System.Threading.Tasks.Task%601> e il risultato di tale oggetto <xref:System.Threading.Tasks.Task%601> è già calcolato.  
@@ -39,11 +43,11 @@ In questo documento viene descritto come utilizzare il metodo <xref:System.Threa
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe cacheddownloads. cs**  
+ **csc.exe CachedDownloads.cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe cacheddownloads. vb**  
+ **vbc.exe CachedDownloads.vb**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   

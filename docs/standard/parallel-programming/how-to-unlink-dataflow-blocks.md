@@ -1,12 +1,8 @@
 ---
 title: 'Procedura: scollegare i blocchi di flussi di dati'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +12,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41f1b83fab6ff44e69ac2f010f70e6e254341f5e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: db3c0d3a6d94e2e9eb65046267f14feff0c056cb
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Procedura: scollegare i blocchi di flussi di dati
-In questo documento viene descritto come scollegare un blocco di flussi di dati di destinazione dalla relativa origine.  
-  
-> [!TIP]
->  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
-  
+In questo documento viene descritto come scollegare un blocco di flussi di dati di destinazione dalla relativa origine.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono creati tre oggetti <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, tramite ognuno dei quali viene chiamato il metodo `TrySolution` per calcolare un valore. Per questo esempio è necessario solo il risultato della prima chiamata a `TrySolution` per il completamento.  
   
@@ -47,13 +44,11 @@ In questo documento viene descritto come scollegare un blocco di flussi di dati 
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll dataflowreceiveany. cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll dataflowreceiveany. vb**  
-  
-## <a name="robust-programming"></a>Programmazione efficiente  
-  
+ **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
+
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

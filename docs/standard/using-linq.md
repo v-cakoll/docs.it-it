@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -80,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Scrivere il codice per attraversare manualmente il documento XML ed eseguire tale operazione sarebbe più complicato.
 
-I provider LINQ non consentono solo di interagire con XML. [LINQ to SQL](https://msdn.microsoft.com/library/bb386976.aspx) è un Object-Relational Mapper (ORM) pressoché essenziale per un database del server MSSQL. La libreria [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) consente l'attraversamento di un documento JSON tramite LINQ. Se invece non esiste una libreria adatta, è anche possibile [scrivere un provider LINQ personalizzato](https://msdn.microsoft.com/library/Bb546158.aspx).
+I provider LINQ non consentono solo di interagire con XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) è un Object-Relational Mapper (ORM) pressoché essenziale per un database del server MSSQL. La libreria [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) consente l'attraversamento di un documento JSON tramite LINQ. Se invece non esiste una libreria adatta, è anche possibile [scrivere un provider LINQ personalizzato](https://msdn.microsoft.com/library/Bb546158.aspx).
 
 ## <a name="why-use-the-query-syntax"></a>Perché usare la sintassi di query?
 
@@ -254,7 +257,7 @@ Sotto forma di diagramma:
 
 ![Diagramma PLINQ](./media/using-linq/plinq-diagram.png)
 
-I processi basati su CPU parallelizzabili che possono essere espressi facilmente tramite LINQ, quindi funzioni pure senza effetti collateri, sono i candidati ideali di PLINQ. Per i processi _con_ effetti collaterali, è possibile usare [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx).
+I processi basati su CPU parallelizzabili che possono essere espressi facilmente tramite LINQ, quindi funzioni pure senza effetti collateri, sono i candidati ideali di PLINQ. Per i processi _con_ effetti collaterali, è possibile usare [Task Parallel Library](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Altre risorse:
 

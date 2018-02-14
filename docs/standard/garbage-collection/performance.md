@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
 <a name="top"></a>Questo argomento descrive i problemi relativi a Garbage Collection e all'uso della memoria. Sono incluse informazioni per risolvere i problemi che riguardano l'heap gestito e che descrivono come ridurre al minimo l'effetto di Garbage Collection sulle applicazioni. Per ogni problema sono disponibili collegamenti alle procedure che è possibile usare per approfondimenti aggiuntivi.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Debug con SOS  
- È possibile usare il [debugger di Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) per controllare gli oggetti nell'heap gestito.  
+ È possibile usare il [debugger di Windows (WinDbg)](/windows-hardware/drivers/debugger/index) per controllare gli oggetti nell'heap gestito.  
   
  Per installare WinDbg, installare gli strumenti di debug per Windows dal [sito Web WDK and Developer Tools](http://go.microsoft.com/fwlink/?LinkID=103787).  
   
@@ -330,7 +333,7 @@ ms.lasthandoff: 10/18/2017
   
      In questo esempio la dimensione dell'area libera più grande è circa 24000 KB (3A980 in formato esadecimale). Questa area è molto minore rispetto alle dimensioni richieste da Garbage Collector per un segmento.  
   
-     -oppure-  
+     oppure  
   
 -   Utilizzare il comando **vmstat**:  
   

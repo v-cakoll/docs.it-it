@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Cenni preliminari sulla libreria di classi .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] include classi, interfacce e tipi di valore che consentono di ottimizzare il processo di sviluppo rendendolo più rapido e che forniscono accesso alle funzionalità di sistema. Per facilitare l'interoperabilità tra i linguaggi, la maggior parte dei tipi .NET Framework è compatibile con la specifica CLS (Common Language Specification) e può pertanto essere utilizzata da qualsiasi linguaggio di programmazione dotato di compilatore conforme a tale specifica.  
@@ -88,15 +91,15 @@ ms.lasthandoff: 11/21/2017
   
  Nella tabella riportata di seguito sono elencati i tipi di base disponibili in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] con una breve descrizione di ciascun tipo e viene inoltre indicato il tipo corrispondente in Visual Basic, C#, C++ e JScript.  
   
-|Categoria|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++|Tipo di dati di JScript|  
+|Category|Nome di classe|Descrizione|Tipo di dati di Visual Basic|Tipo di dati di C#|Tipo di dati C++|Tipo di dati di JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Integer|<xref:System.Byte>|Intero senza segno a 8 bit.|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /><br /> -oppure-<br /><br /> **signed** **char**|**SByte**|  
+||<xref:System.SByte>|Intero con segno a 8 bit.<br /><br /> Non conforme a CLS.|**SByte**|**sbyte**|**char**<br /><br /> oppure<br /><br /> **signed** **char**|**SByte**|  
 ||<xref:System.Int16>|Intero con segno a 16 bit.|**Short**|**short**|**short**|**short**|  
-||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> -oppure-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Intero con segno a 32 bit.|**Integer**|**int**|**int**<br /><br /> oppure<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Intero con segno a 64 bit.|**Long**|**long**|**__int64**|**long**|  
 ||<xref:System.UInt16>|Intero senza segno a 16 bit.<br /><br /> Non conforme a CLS.|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /><br /> -oppure-<br /><br /> **unsigned long**|**UInt32**|  
+||<xref:System.UInt32>|Intero senza segno a 32 bit.<br /><br /> Non conforme a CLS.|**UInteger**|**uint**|**unsigned int**<br /><br /> oppure<br /><br /> **unsigned long**|**UInt32**|  
 ||<xref:System.UInt64>|Intero senza segno a 64 bit.<br /><br /> Non conforme a CLS.|**ULong**|**ulong**|**unsigned __int64**|**UInt64**|  
 |Virgola mobile|<xref:System.Single>|Un numero a virgola mobile e precisione singola a 32 bit.|**Single**|**float**|**float**|**float**|  
 ||<xref:System.Double>|Un numero a virgola mobile e precisione doppia a 64 bit.|**Double**|**double**|**double**|**double**|  

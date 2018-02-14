@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f36bae495631db68afb1404398cbf43e890d4f33
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-types-generics-overview"></a>Panoramica di tipi generici (generics)
 
@@ -22,7 +25,7 @@ I generics vengono usati sempre in C#, implicitamente o esplicitamente. Durante 
 
 Introdotto per la prima volta in .NET Framework 2.0, i generics comportavano modifiche al linguaggio C# e a Common Language Runtime (CLR). I **generics** sono essenzialmente un "modello di codice" che consente agli sviluppatori di definire strutture di dati [indipendenti dai tipi](https://msdn.microsoft.com/library/hbzz1a9a.aspx) senza il commit di un tipo di dati effettivo. Ad esempio, `List<T>` è una [raccolta generica](xref:System.Collections.Generic) che può essere dichiarata e usata con qualsiasi tipo: `List<int>`, `List<string>`, `List<Person>`, e così via.
 
-Quindi? Perché i generics sono utili? Per capire meglio questo meccanismo, è necessario esaminare una classe specifica prima e dopo l'aggiunta dei generics. Viene esaminata la classe `ArrayList`. In C# 1.0, gli elementi `ArrayList` erano di tipo `object`. Ciò vuol dire che qualsiasi elemento aggiunto veniva convertito automaticamente nel tipo `object`; la stessa cosa accade durante la lettura degli elementi dall'elenco (questo processo è noto come [conversione boxing](https://msdn.microsoft.com/library/yz2be5wk.aspx) e unboxing rispettivamente). Le conversioni boxing e unboxing influiscono sulle prestazioni. Non è possibile tuttavia individuare in fase di compilazione il tipo effettivo dei dati nell'elenco. E ciò crea un codice fragile. I generics risolvono il problema, offrendo informazioni aggiuntive sul tipo di dati contenuti in ogni istanza dell'elenco. In parole semplici, è possibile aggiungere solo numeri interi al tipo `List<int>` e persone al tipo `List<Person>`, e così via.
+Quindi? Perché i generics sono utili? Per capire meglio questo meccanismo, è necessario esaminare una classe specifica prima e dopo l'aggiunta dei generics. Viene esaminata la classe `ArrayList`. In C# 1.0, gli elementi `ArrayList` erano di tipo `object`. Ciò vuol dire che qualsiasi elemento aggiunto veniva convertito automaticamente nel tipo `object`; la stessa cosa accade durante la lettura degli elementi dall'elenco (questo processo è noto come [conversione boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) e unboxing rispettivamente). Le conversioni boxing e unboxing influiscono sulle prestazioni. Non è possibile tuttavia individuare in fase di compilazione il tipo effettivo dei dati nell'elenco. E ciò crea un codice fragile. I generics risolvono il problema, offrendo informazioni aggiuntive sul tipo di dati contenuti in ogni istanza dell'elenco. In parole semplici, è possibile aggiungere solo numeri interi al tipo `List<int>` e persone al tipo `List<Person>`, e così via.
 
 I generics sono anche disponibili in fase di esecuzione o **reified**. Ciò significa che il runtime sa quale tipo di struttura dei dati si sta usando e può eseguire un'archiviazione in memoria in modo più efficiente.
 
@@ -72,4 +75,4 @@ Se il runtime riconosce il tipo generico, offre una migliore esperienza di debug
 ## <a name="further-reading-and-resources"></a>Altre informazioni e risorse
 
 *   [Introduzione ai generics per C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [Generics (Guida per programmatori C#)](https://msdn.microsoft.com/library/512aeb7t.aspx)
+*   [Generics (Guida per programmatori C#)](../../docs/csharp/programming-guide/generics/index.md)

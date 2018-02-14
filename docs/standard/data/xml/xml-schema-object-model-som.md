@@ -9,23 +9,26 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 44ce1337e347020926fe2dee29d70fe226ad087a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b11fc10128807dfbd0082bbc1884068c5cde7d32
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-som"></a>SOM (Schema Object Model) XML
 XML Schema è uno strumento potente e complesso per la creazione e la convalida della struttura in documenti XML conformi. Analogamente alla modellazione dei dati in un database relazionale, uno schema consente di definire la struttura di documenti XML specificando gli elementi che è possibile usare nei documenti, oltre alla struttura e ai tipi che tali elementi devono seguire per essere validi per quello specifico schema.  
   
  Il modello SOM (Schema Object Model) fornisce un set di classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> che consente di leggere uno schema da un file oppure di creare a livello di codice uno schema in memoria. È quindi possibile attraversare, modificare, compilare, convalidare o scrivere lo schema in un file.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Panoramica del modello a oggetti dello Schema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Vengono descritti il modello SOM (Schema Object Model) e le funzionalità e le classi fornite.  
   
  [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  

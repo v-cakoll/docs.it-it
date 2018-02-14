@@ -8,19 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: thread-safe collections, when to upgrade
+helpviewer_keywords:
+- thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>Quando usare una raccolta thread-safe
+# <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
   
  In determinati scenari il sovraccarico della sincronizzazione è trascurabile e consente al tipo con multithread un'elaborazione molto più rapida e una miglior scalabilità rispetto al tipo equivalente non thread-safe se protetto da un blocco esterno. In altri scenari il sovraccarico può far sì che la scalabilità e le prestazioni del tipo thread-safe risultino uguali o più lente rispetto alla versione del tipo non thread-safe con blocco esterno.  

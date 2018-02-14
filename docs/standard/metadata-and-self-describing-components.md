@@ -21,15 +21,18 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadati e componenti auto-descrittivi
 In passato, un componente software (EXE o DLL) scritto in un linguaggio non poteva usare facilmente un componente software scritto in un linguaggio diverso. Il sistema COM ha costituito un passo in avanti nella soluzione di questo problema. Oggi .NET Framework rende l'interazione tra i componenti ancora più semplice consentendo ai compilatori di inserire informazioni dichiarative aggiuntive in tutti i moduli e in tutti gli assembly. Queste informazioni, note come metadati, semplificano l'interazione tra i componenti.  
@@ -161,11 +164,11 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
  Nella tabella che segue viene illustrata la parte di **MethodDef** a cui fa riferimento il token di metadati che descrive il metodo `Add`. Benché questo assembly includa altre tabelle di metadati, ciascuna con i propri valori univoci, viene qui discussa solo questa tabella.  
   
-|Riga|RVA (Relative Virtual Address)|ImplFlags|Flag|Nome<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|  
+|Riga|RVA (Relative Virtual Address)|ImplFlags|Flag|nome<br /><br /> (punta all'heap delle stringhe)|Firma (punta all'heap dei blob)|  
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|  
 |1|0x00002050|IL<br /><br /> Gestito|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (costruttore)||  
-|2|0x00002058|IL<br /><br /> Gestito|Public<br /><br /> Statico<br /><br /> ReuseSlot|Main|Stringa|  
-|3|0x0000208c|IL<br /><br /> Gestito|Public<br /><br /> Statico<br /><br /> ReuseSlot|Aggiungi|int, int, int|  
+|2|0x00002058|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|Stringa|  
+|3|0x0000208c|IL<br /><br /> Gestito|Public<br /><br /> Static<br /><br /> ReuseSlot|Aggiunta|int, int, int|  
   
  Ogni colonna della tabella contiene importanti informazioni sul codice. La colonna **RVA** consente al runtime di calcolare l'indirizzo di memoria iniziale del codice MSIL che definisce questo metodo. Le colonne **ImplFlags** e **Flags** contengono maschere di bit che descrivono il metodo, indicando ad esempio se il metodo è pubblico o privato. La colonna **Name** indicizza il nome del metodo nell'heap delle stringhe. La colonna **Signature** indicizza la definizione della firma del metodo nell'heap dei blob.  
   

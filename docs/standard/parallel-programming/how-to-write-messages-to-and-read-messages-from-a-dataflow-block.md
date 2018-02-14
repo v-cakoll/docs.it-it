@@ -1,12 +1,8 @@
 ---
 title: 'Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,22 +11,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bf609a8c350a44fc802cce0ec10693431bbf4f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedura: scrivere messaggi in un blocco di flussi di dati e leggere messaggi da un blocco di flussi di dati
 In questo documento viene descritto come utilizzare la libreria del flusso di dati TPL per scrivere messaggi in un blocco di flussi di dati e per leggerli da quest'ultimo. La libreria del flusso di dati TPL fornisce sia metodi sincroni sia asincroni per la lettura e scrittura di messaggi da e in un blocco di flussi di dati. In questo documento viene utilizzata la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Mediante la classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> i messaggi vengono inseriti nel buffer; inoltre, essa viene utilizzata sia come origine sia come destinazione dei messaggi.  
-  
-> [!TIP]
->  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Scrittura in e lettura da un blocco di flussi di dati in modo sincrono  
  Nell'esempio seguente vengono utilizzati il metodo <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> per scrivere in un blocco di flussi di dati <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> e il metodo <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> per leggere dallo stesso oggetto.  
   

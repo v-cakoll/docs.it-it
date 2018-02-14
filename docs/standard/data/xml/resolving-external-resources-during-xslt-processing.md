@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8921321191a68899e114613f8469e1552fff34bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2bb115e14f8ff5d1065d87335d4d9021bd32ddd1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Risoluzione delle risorse esterne durante l'elaborazione XSLT
 Durante una trasformazione XSLT si presentano vari casi in cui può essere necessario risolvere le risorse esterne.  
@@ -30,8 +33,8 @@ Durante una trasformazione XSLT si presentano vari casi in cui può essere neces
   
 |Attività XSLT|Scopo per il quale viene usato XmlResolver|  
 |---------------|--------------------------------------|  
-|Compilare il foglio di stile.|Risolvere l'URI del foglio di stile.<br /><br /> -and-<br /><br /> Risolvere i riferimenti URI negli elementi `xsl:import` o `xsl:include`.|  
-|Eseguire il foglio di stile.|Risolvere l'URI del documento di contesto.<br /><br /> -and-<br /><br /> Risolvere i riferimenti URI in qualsiasi funzione `document()` XSLT.|  
+|Compilare il foglio di stile.|Risolvere l'URI del foglio di stile.<br /><br /> -e-<br /><br /> Risolvere i riferimenti URI negli elementi `xsl:import` o `xsl:include`.|  
+|Eseguire il foglio di stile.|Risolvere l'URI del documento di contesto.<br /><br /> -e-<br /><br /> Risolvere i riferimenti URI in qualsiasi funzione `document()` XSLT.|  
   
  I metodi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> includono overload che accettano un oggetto <xref:System.Xml.XmlResolver> come argomento. Se non viene specificato alcun tipo <xref:System.Xml.XmlResolver>, viene usato un tipo predefinito <xref:System.Xml.XmlUrlResolver> senza credenziali.  
   

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e49c2130702fc7df223f2eab0ea0500b1c27b660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72e3d707caf9c5e64c9860a8e79b5e151ce68852
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-xml-schemas"></a>Compilazione di XML Schema
 Le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType> sono associate alle strutture definite nella raccomandazione W3C (World Wide Web Consortium) XML Schema e possono essere usate per compilare schemi XML in memoria.  
@@ -96,10 +99,10 @@ Le classi nello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWith
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello a oggetti dello Schema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione dello Schema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

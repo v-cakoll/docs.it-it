@@ -9,28 +9,31 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 06c8b2e130dbecaca4c08684d030c8dcef1cd5a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: de7ca0ff08ae7183f92fd7caa1bfe977e01e616d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>Elaborazione di dati XML con il modello DOM
 Il DOM (Document Object Model) XML considera i dati XML come un set standard di oggetti e viene usato per elaborare i dati XML in memoria. Lo spazio dei nomi `System.Xml` fornisce una rappresentazione programmatica di documenti, frammenti, nodi o set di nodi XML. Si basa sulle raccomandazioni principali del World Wide Web Consortium (W3C) DOM Level 1 e DOM Level 2.  
   
  La classe <xref:System.Xml.XmlDocument> rappresenta un documento XML. Include membri per il recupero e la creazione di tutti gli altri oggetti XML. Usando la classe <xref:System.Xml.XmlDocument> e le classi correlate è possibile costruire documenti XML, caricare e accedere ai dati, modificare i dati e salvare le modifiche.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
--   [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+-   [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
 -   [Tipi di nodi XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
--   [Gerarchia del modello (DOM) oggetto documento XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+-   [Gerarchia del modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
   
 -   [Mapping della gerarchia di oggetti in dati XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
   
@@ -46,11 +49,11 @@ Il DOM (Document Object Model) XML considera i dati XML come un set standard di 
   
 -   [Convalida di un documento XML nel DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
   
--   [Salvataggio e la scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
+-   [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
   
--   [Selezionare i nodi utilizzando la navigazione XPath](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
+-   [Selezionare nodi con la navigazione XPath](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
   
--   [Risolvere risorse esterne](../../../../docs/standard/data/xml/resolving-external-resources.md)  
+-   [Risoluzione di risorse esterne](../../../../docs/standard/data/xml/resolving-external-resources.md)  
   
 -   [Confronto di oggetti con XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)  
   
@@ -58,7 +61,7 @@ Il DOM (Document Object Model) XML considera i dati XML come un set standard di 
   
 -   [Aggiornamenti dinamici di NodeLists e NamedNodeMaps](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
   
--   [Supporto di Namespace nel DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
+-   [Supporto dello spazio dei nomi nel DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
   
 -   [Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
   
