@@ -4,11 +4,14 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 7f7715bb0ec323874271a7e9ce1c666e23e33b22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Spostare le app di esistenti IaaS di Azure
 
@@ -84,7 +87,7 @@ Figura 2-3 viene illustrata l'esecuzione di più migrazioni di macchine Virtuali
 
 -   **Foglio dati eseguire la migrazione di Azure**
 
-    [https://aka.ms/azuremigration\_foglio dati](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
 -   **Eseguire la migrazione di Azure**
 
@@ -92,15 +95,15 @@ Figura 2-3 viene illustrata l'esecuzione di più migrazioni di macchine Virtuali
 
 -   **Eseguire la migrazione a Azure con il ripristino del sito**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-migrate-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
 -   **Panoramica del servizio Azure Site Recovery**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-Overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
 -   **Macchine virtuali di migrazione in AWS a macchine virtuali di Azure**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-migrate-AWS-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 
 >[!div class="step-by-step"]
 [Precedente](index.md)

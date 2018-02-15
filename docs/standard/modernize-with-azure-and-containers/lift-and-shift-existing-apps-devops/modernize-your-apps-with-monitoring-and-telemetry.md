@@ -4,11 +4,14 @@ description: Architettura di Microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 03a6f2be9dc6c020cfe93a2597d1288943e527c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizzare le app con monitoraggio e telemetria
 
@@ -36,7 +39,7 @@ Il [soluzione di monitoraggio contenitore](https://docs.microsoft.com/azure/log-
 
 -   Sciame docker
 
--   CONTROLLER DI DOMINIO/OS
+-   DC/OS
 
 -   Kubernetes
 
@@ -68,31 +71,31 @@ Figura 4-11 Mostra le relazioni tra vari host contenitore e gli agenti e OMS.
 
 -   **Panoramica di monitoraggio in Microsoft Azure**
 
-[https://docs.microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
 
 -   **Che cos'è Application Insights?**
 
-[https://docs.microsoft.com/Azure/Application-Insights/App-Insights-Overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
 -   **Che cos'è Analitica Log?**
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-Overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
 -   **Soluzione di monitoraggio di contenitore in Log Analitica**
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-Containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
 -   **Panoramica di monitoraggio di Azure**
 
-[https://docs.microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview-Azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
 
 -   **Che cos'è Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/Azure/Operations-Management-Suite/Operations-Management-Suite-Overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
 
 -   **Monitoraggio di contenitori di Windows Server nell'infrastruttura di servizio con OMS**
 
-[https://docs.microsoft.com/Azure/Service-fabric/Service-fabric-Diagnostics-Containers-WindowsServer](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
 [Precedente](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

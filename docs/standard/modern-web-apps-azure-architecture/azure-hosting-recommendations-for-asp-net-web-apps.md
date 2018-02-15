@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Hosting di indicazioni per le applicazioni Web ASP.NET di base di Azure
 
 > "Leader line-of-business everywhere sono ignorando i reparti IT per ottenere applicazioni dal cloud (noto anche come SaaS) e come se fossero una rivista sottoscrizione a pagamento per tali. E quando il servizio non è più necessario, è possibile annullare la sottoscrizione con nessun apparecchiature lasciata inutilizzata nell'angolo".  
-> _\-Daryl Plummer, analista Gartner_
+> _\- Daryl Plummer, analista Gartner_
 
 ## <a name="summary"></a>Riepilogo
 
@@ -75,18 +78,18 @@ Se si dispone di un'applicazione esistente che richiede modifiche sostanziali pe
 
 | Funzionalità di servizio App | Service Fabric | Macchina virtuale |
 |---------|----------|----------|
-| Distribuzione quasi immediata | X | X | |
-| Scalabilità verticale in computer più grandi senza ridistribuzione | X | X | |
-| Le istanze condividono contenuto e configurazione. non è necessario ridistribuire o riconfigurare in caso di ridimensionamento | X | X | |
-| Più ambienti di distribuzione (produzione e gestione temporanea) | X | X | |
-| Gestione automatica degli aggiornamenti del sistema operativo | X | | |
-| Trasparente il passaggio tra le piattaforme a 32/64 bit | X | | |
-| Distribuzione del codice con Git, FTP | X | | X |
-| Distribuzione del codice con WebDeploy | X | | X |
-| Distribuzione del codice con TFS | X | X | X |
-| Sito web host o il livello di servizio web dell'architettura a più livelli | X | X | X |
-| Accesso ai servizi di Azure come Database di SQL Service Bus, archiviazione, | X | X | X |
-| Installare qualsiasi MSI personalizzato | | X | X |
+| Distribuzione quasi immediata | x | x | |
+| Scalabilità verticale in computer più grandi senza ridistribuzione | x | x | |
+| Le istanze condividono contenuto e configurazione. non è necessario ridistribuire o riconfigurare in caso di ridimensionamento | x | x | |
+| Più ambienti di distribuzione (produzione e gestione temporanea) | x | x | |
+| Gestione automatica degli aggiornamenti del sistema operativo | x | | |
+| Trasparente il passaggio tra le piattaforme a 32/64 bit | x | | |
+| Distribuzione del codice con Git, FTP | x | | x |
+| Distribuzione del codice con WebDeploy | x | | x |
+| Distribuzione del codice con TFS | x | X | x |
+| Sito web host o il livello di servizio web dell'architettura a più livelli | x | X | x |
+| Accesso ai servizi di Azure come Database di SQL Service Bus, archiviazione, | x | X | x |
+| Installare qualsiasi MSI personalizzato | | x | x |
 
 ## <a name="logical-processes"></a>Criteri logici
 
@@ -115,16 +118,16 @@ Figura 11-2 è illustrata un'architettura di riferimento di esempio. Questo diag
 **Riferimenti: indicazioni di Hosting di Azure**
 
 -   Soluzione Azure Architectures\
-    <https://Azure.microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guide\ per sviluppatori Azure
-    <https://Azure.microsoft.com/Campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Che cos'è Azure App Service? \
-    <https://docs.microsoft.com/Azure/App-Service/App-Service-Value-prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Servizio App di Azure, le macchine virtuali, Service Fabric e Comparison\ di servizi Cloud
-    <https://docs.microsoft.com/Azure/App-Service-Web/Choose-Web-Site-cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Precedente] (sviluppo-processo-per-azure.md)

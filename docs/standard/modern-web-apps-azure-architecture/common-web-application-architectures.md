@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -169,10 +172,10 @@ Oltre alle implementazioni di accesso ai dati, il progetto di infrastruttura dev
 Il layer dell'interfaccia utente in un'applicazione ASP.NET MVC di base sarà il punto di ingresso per l'applicazione e sarà un progetto ASP.NET MVC di base. Questo progetto deve fare riferimento al progetto principale dell'applicazione e relativi tipi devono interagire con l'infrastruttura esclusivamente tramite le interfacce definite nell'applicazione principale. Nessun creazione diretta di istanze di (o statiche chiamate a) i tipi di livello dell'infrastruttura devono essere consentiti nel livello dell'interfaccia utente.
 
 > ### <a name="ui-layer-types"></a>Tipi di livelli dell'interfaccia utente
-> -   Controller
+> -   Controllers
 > -   Filtri
 > -   Visualizzazioni
-> -   ViewModel
+> -   ViewModels
 > -   Avvio
 
 La classe di avvio è responsabile per la configurazione dell'applicazione e per il collegamento dei tipi di implementazione di interfacce, consentendo l'inserimento di dipendenze per il corretto funzionamento in fase di esecuzione.
@@ -218,7 +221,7 @@ Mentre l'App monolitica possono trarre vantaggio da Docker, interruzione dell'ap
 > - **L'architettura di pulizia**  
 > <https://8thlight.com/blog/Uncle-Bob/2012/08/13/the-Clean-Architecture.HTML>
 > - **L'architettura ad anello**  
-> <http://jeffreypalermo.com/blog/the-Onion-Architecture-part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Il modello di Repository**  
 > <http://deviq.com/repository-pattern/>
 > - **Esempio di architettura Pulisci soluzione**  
@@ -226,4 +229,4 @@ Mentre l'App monolitica possono trarre vantaggio da Docker, interruzione dell'ap
 > - **Architettura di e-book di Microservizi** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Precedente] (dell'architettura principles.md) [Avanti] (comuni-client-side-web-technologies.md)
+[Previous] (architectural-principles.md) [Next] (common-client-side-web-technologies.md)

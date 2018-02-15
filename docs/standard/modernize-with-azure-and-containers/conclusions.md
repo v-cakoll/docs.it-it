@@ -4,17 +4,20 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 0bcc330a5970ab923b48d8790c4de93171283d94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conclusions"></a>Conclusioni
 
 -   Soluzioni basate sul contenitore forniscono in definitiva vantaggi risparmio sui costi. I contenitori sono una soluzione per i problemi di distribuzione perché rimuovono le discrepanze causata dall'assenza di dipendenze in ambienti di produzione. Tramite la rimozione di tali problemi, è possibile migliorare le operazioni di sviluppo/Test, di DevOps e di produzione in modo significativo.
 
--   Un contenitore Docker è sempre l'unità di distribuzione per qualsiasi applicazione basata su server o di servizio standard.
+-   Il contenitore Docker sta diventando l'unità di distribuzione standard per qualsiasi applicazione o servizio basato su server.
 
 -   Per gli ambienti di produzione, è necessario utilizzare l'agente di orchestrazione (ad esempio, Service Fabric o Kubernetes) per ospitare applicazioni scalabili basati sui contenitori di Windows.
 

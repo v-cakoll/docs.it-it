@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caratteristiche di moderne applicazioni Web
 
 > "… con la progettazione adeguata, le funzionalità disponibili economici. Questo approccio è complicato, ma continua ad avere esito positivo."  
-> _\-Dennis Ritchie hanno_
+> _\- Dennis Ritchie hanno_
 
 ## <a name="summary"></a>Riepilogo
 
@@ -41,7 +44,7 @@ ASP.NET Core è ottimizzato per il cloud (cloud pubblico, cloud privato, qualsia
 
 ## <a name="cross-platform"></a>Multipiattaforma
 
-ASP.NET Core è multipiattaforma ed è possibile eseguire su Linux e MacOS nonché Windows. Verrà visualizzata molte nuove opzioni per lo sviluppo e distribuzione di applicazioni compilate con ASP.NET Core. Contenitori di docker, che in genere eseguito Linux oggi stesso, possono ospitare applicazioni ASP.NET Core, consentendo loro di sfruttare i vantaggi di [contenitori e microservizi](../microservices-architecture).
+ASP.NET Core è multipiattaforma ed è possibile eseguire su Linux e MacOS nonché Windows. Verrà visualizzata molte nuove opzioni per lo sviluppo e distribuzione di applicazioni compilate con ASP.NET Core. Contenitori di docker, che in genere eseguito Linux oggi stesso, possono ospitare applicazioni ASP.NET Core, consentendo loro di sfruttare i vantaggi di [contenitori e microservizi](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modulare e regime di controllo
 
@@ -71,11 +74,11 @@ Oltre a ASP.NET Core, tradizionale ASP.NET 4. x continua a essere una piattaform
 
 > ### <a name="references--modern-web-applications"></a>Riferimenti: moderne applicazioni Web
 > - **Introduzione a ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Sei chiave vantaggi di ASP.NET Core che rendono differente e una situazione migliore**  
-> <https://blog.trigent.com/Six-Key-Benefits-of-ASP-NET-core-1-0-Which-Make-IT-Different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Test in ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/core/testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Precedente] [Avanti] (choose-between-traditional-web-and-single-page-apps.md) (index.md)

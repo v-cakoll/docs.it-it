@@ -1,19 +1,22 @@
 ---
 title: Flusso di lavoro di sviluppo ciclo interno per le app di Docker
-description: Ciclo di vita dell'applicazione nei contenitori Docker con strumenti e piattaforma Microsoft
+description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo ciclo interno per le app di Docker
 
-Prima di attivare il flusso di lavoro ciclo esterno spanning DevOps l'intero ciclo, inizia in ogni computer dello sviluppatore, la codifica app stessa, utilizzando il suo Preferiti linguaggi o piattaforme e testarlo in locale (figura 4-14). Ma in ogni caso, sarà necessario un punto molto importante in comune, indipendentemente da quali lingua, un framework o piattaforme prescelto. In questo flusso di lavoro specifico, sempre sviluppo e verifica i contenitori di Docker, ma in locale.
+Prima di attivare il flusso di lavoro ciclo esterno spanning DevOps l'intero ciclo, inizia in ogni computer dello sviluppatore, la codifica app stessa, usando le lingue preferite o piattaforme e testarlo in locale (figura 4-14). Ma in ogni caso, sarà necessario un punto molto importante in comune, indipendentemente da quali lingua, un framework o piattaforme prescelto. In questo flusso di lavoro specifico, sempre sviluppo e verifica i contenitori di Docker, ma in locale.
 
 ![](./media/image18.png)
 
@@ -259,4 +262,4 @@ Codice di Visual Studio supporta Docker debug se si utilizza Node.js e altre pia
 
 
 >[!div class="step-by-step"]
-[Precedente] (docker-App-sviluppo-environment.md) [Avanti] (visual-studio-strumenti-per-docker.md)
+[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)

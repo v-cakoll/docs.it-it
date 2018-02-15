@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra le app Web tradizionali e singola pagina (stabilimenti termali)
 
 > "Diritto del Atwood: qualsiasi applicazione che può essere scritta in JavaScript, infine verrà scritto in JavaScript."  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>Riepilogo
 
@@ -75,7 +78,7 @@ La scrittura stabilimenti termali richiede una certa familiarità con JavaScript
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Confronto di 4 Framework JavaScript comuni**  
-> <https://www.developereconomics.com/feature-Comparison-of-4-popular-js-MV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **L'applicazione deve già espongono un'API per gli altri client (interno o pubblico)**
 
@@ -87,10 +90,10 @@ La tabella decisioni seguente vengono riepilogati alcuni dei fattori da consider
 
   | **Fattore** | **App Web tradizionali** | **Applicazione a pagina singola** |
   |---|---|---|
-  | Conoscenza obbligatorie del Team con JavaScript o TypeScript | **Minimo** | **Richiesto** |
-  | Supportare i browser senza script | **Supportato** | **Non è supportato** |
-  | Comportamento dell'applicazione sul lato Client minima | **Adatta** | **Eccessivi** |
-  | Requisiti dell'interfaccia utente dettagliate e complesse | **Limitato** | **Adatta** |
+  | Conoscenza obbligatorie del Team con JavaScript o TypeScript | **Minimal** | **Obbligatorio** |
+  | Supportare i browser senza script | **Supportato** | Non è supportato |
+  | Comportamento dell'applicazione sul lato Client minima | **Well-Suited** | **Eccessivi** |
+  | Requisiti dell'interfaccia utente dettagliate e complesse | **Limitato** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Precedente] (modern-web-applicazioni-characteristics.md) [successivo](architectural-principles.md)

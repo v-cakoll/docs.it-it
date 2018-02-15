@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologie di Web sul lato Client comuni
 
@@ -145,27 +148,27 @@ I framework JavaScript di continuano a sviluppare con velocità breakneck. Usare
 
 > ### <a name="references--client-web-technologies"></a>Riferimenti: tecnologie Web Client
 > - **HTML e CSS**  
-> <https://www.w3.org/Standards/webdesign/htmlcss>
-> - **Visual Studio sass. MINORE**  
-> <https://www.keycdn.com/blog/sass-VS-less/>
+> <https://www.w3.org/standards/webdesign/htmlcss>
+> - **Visual Studio sass. LESS**  
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Stile carattere straordinario App ASP.NET Core con meno e Sass**  
-> <https://docs.microsoft.com/ASPNET/core/client-side/less-sass-fa>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Sviluppo sul lato client in ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/core/client-side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
-> <https://jQuery.com/>
+> <https://jquery.com/>
 > - **jQuery vs AngularJS**  
-> <https://www.airpair.com/angularjs/posts/jQuery-angularjs-Comparison-Migration-Walkthrough>
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
-> <https://Angular.IO/>
-> - **Rispondere**  
-> <https://Facebook.github.IO/React/>
+> <https://angular.io/>
+> - rispondere  
+> <https://facebook.github.io/react/>
 > - **Slingshot React**  
-> <https://github.com/coryhouse/React-Slingshot>
+> <https://github.com/coryhouse/react-slingshot>
 > - **Visual Studio React angolare confronto 2**  
-> <https://www.codementor.IO/codementorteam/React-VS-Angular-2-Comparison-Beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **5 migliore i framework JavaScript di 2017**  
-> <https://hackernoon.com/5-Best-JavaScript-Frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
 [Precedente] (comuni-web-applicazione-architectures.md) [Avanti] (develop-asp-net-core-mvc-apps.md)

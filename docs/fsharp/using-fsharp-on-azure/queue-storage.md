@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introduzione all'archiviazione di Accodamento di Azure con F # #
 
@@ -142,8 +142,8 @@ Per eliminare una coda e tutti i messaggi in esso contenuti, chiamare il `Delete
 
 Ora che si è appreso le nozioni fondamentali sull'archiviazione delle code, vedere i collegamenti seguenti per informazioni sulle attività di archiviazione più complesse.
 
-- [Libreria Client di archiviazione per il riferimento di .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [API di archiviazione di Azure per .NET](/dotnet/api/overview/azure/storage)
 - [Provider di tipi di archiviazione di Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Blog del Team di archiviazione di Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Configurazione delle stringhe di connessione](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [Riferimento all'API REST](http://msdn.microsoft.com/library/azure/dd179355)
+- [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)
+- [Riferimento all'API REST di servizi di archiviazione di Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

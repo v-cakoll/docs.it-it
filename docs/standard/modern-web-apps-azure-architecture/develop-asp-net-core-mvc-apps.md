@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare applicazioni MVC ASP.NET Core
 
@@ -208,7 +211,7 @@ Componenti di base di ASP.NET MVC utilizza anche una convenzione di trovare le v
 
 Applicazioni di aumento delle dimensioni, diventa sempre più importante tenere in considerazione le problematiche a montaggio incrociato per eliminare i duplicati e mantenere la coerenza. Alcuni esempi di problemi di montaggio incrociato nelle applicazioni ASP.NET Core sono l'autenticazione, le regole di convalida del modello, la memorizzazione nella cache di output e gestione degli errori, anche se esistono molti altri. Componenti di base di ASP.NET MVC [filtri](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) consentono di eseguire codice prima o dopo alcuni passaggi nella pipeline di elaborazione della richiesta. Ad esempio, un filtro è possibile eseguire prima e dopo l'associazione di modelli, prima e dopo un'azione, o prima e dopo il risultato di un'azione. È inoltre possibile utilizzare un filtro di autorizzazione per controllare l'accesso al resto della pipeline. Viene illustrato nelle figure 7-2 richiesta come flussi di esecuzione tramite i filtri, se configurato.
 
-![La richiesta viene elaborata tramite filtri di autorizzazione, filtri delle risorse, associazione di modelli, filtri azione, esecuzione azione e azione di conversione di risultati, i filtri eccezioni, filtri dei risultati e risultati esecuzione. La modalità di timeout, la richiesta viene elaborata solo mediante filtri dei risultati e i filtri di risorsa prima di diventare una risposta inviata al client.](./media/image7-2.png)
+![La richiesta passa attraverso i filtri autorizzazione, i filtri risorse, l'associazione di modelli, i filtri azione, l'esecuzione dell'azione e la conversione del risultato dell'azione, i filtri eccezioni, i filtri risultato e l'esecuzione del risultato. All'uscita della pipeline, la richiesta viene elaborata solo dai filtri risultato e dai filtri risorse prima di diventare una risposta inviata al client.](./media/image7-2.png)
 
 Figura 7-2 l'esecuzione della richiesta tramite pipeline di richieste e di filtri.
 
@@ -279,11 +282,11 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 > ### <a name="references--structuring-applications"></a>Riferimenti: strutturare applicazioni
 > - **Aree**  
-> <https://docs.microsoft.com/ASPNET/core/MVC/Controllers/Areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN: gli intervalli di funzionalità per i componenti di base di ASP.NET MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtri**  
-> <https://docs.microsoft.com/ASPNET/core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN-filtri MVC ASP.NET Core mondo reale**  
 > <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
@@ -385,15 +388,15 @@ La maggior parte dei web API deve implementare un sistema di autenticazione basa
 
 > ### <a name="references--security"></a>Riferimenti: sicurezza
 > - **Panoramica della sicurezza documenti**  
-> https://docs.microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Applicazione di SSL in un'applicazione ASP.NET di base**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introduzione a Identity**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authentication/Identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introduzione alle autorizzazioni**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticazione e autorizzazione per App per le API nel servizio App di Azure**  
-> <https://docs.microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Comunicazione client
 
@@ -452,9 +455,9 @@ Considerare l'esperienza di modi in cui le applicazioni comunicano direttamente 
 
 > ### <a name="references--client-communication"></a>Riferimenti: la comunicazione Client
 > - **Componenti di base di ASP.NET SignalR**  
-> <https://github.com/ASPNET/SignalR>
+> <https://github.com/aspnet/SignalR>
 > - **Gestione di WebSocket**  
-> https://github.com/Radu-matei/WebSocket-Manager
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Progettazione – basati su dominio deve viene applicato?
 
@@ -502,7 +505,7 @@ Un approccio ibrido può essere usata solo DDD per le aree transazionale o di pi
 
 > ### <a name="references--domain-driven-design"></a>Riferimenti: progettazione basati su dominio
 > - **DDD in lingua inglese (StackOverflow risposta)**  
-> <https://StackOverflow.com/Questions/1222392/CAN-someone-Explain-Domain-Driven-Design-ddd-in-Plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Distribuzione
 
@@ -544,13 +547,13 @@ Se si ospita l'applicazione in Azure, è possibile utilizzare il Gateway di appl
 
 > ### <a name="references--deployment"></a>Riferimenti: distribuzione
 > - **Cenni preliminari sulla distribuzione e hosting**  
-> <https://docs.microsoft.com/ASPNET/core/Publishing/>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Quando utilizzare Kestrel con un proxy inverso**  
-> <https://docs.microsoft.com/ASPNET/core/Fundamentals/Servers/kestrel#When-to-Use-kestrel-with-a-reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Host di applicazioni ASP.NET Core in Docker**  
-> <https://docs.microsoft.com/ASPNET/core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Introduzione di Gateway applicazione Azure**  
-> <https://docs.microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Precedente] (comuni-client-side-web-technologies.md) [Avanti] (work-with-data-in-asp-net-core-apps.md)
+[Previous] (common-client-side-web-technologies.md) [Next] (work-with-data-in-asp-net-core-apps.md)

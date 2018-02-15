@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Principi architetturali
+# <a name="architectural-principles"></a>Principi architetturali
 
 > "Se generatori di edifici i programmatori modo scritto programmi quindi il primo woodpecker che è arrivata sarebbe destroy civiltà."  
-> _\-Ideatore è Gerald Weinberg_
+> _\- Ideatore è Gerald Weinberg_
 
 ## <a name="summary"></a>Riepilogo
 
@@ -103,19 +106,19 @@ Il requisito che presentano le funzionalità o i comportamenti precedente aggiun
 Come minimo, singole applicazioni web devono essere quanto più possibile i propri contesto delimitata, con un proprio archivio di persistenza per i modelli di business, piuttosto che condividono un database con altre applicazioni. Ha luogo la comunicazione tra contesti delimitati tramite interfacce di programmazione, anziché tramite un database condiviso che consente la logica di business e inserire gli eventi da eseguire in risposta alle modifiche che si verificano. Limitato strettamente mappa contesti di microservizi, anche in teoria implementati come proprio singoli contesti limitati.
 
 > ### <a name="references--modern-web-applications"></a>Riferimenti: moderne applicazioni Web
-> - **Separazione dei compiti**  
-> <http://deviq.com/Separation-of-concerns/>
+> - Separazione dei compiti  
+> <http://deviq.com/separation-of-concerns/>
 > - **Incapsulamento** <http://deviq.com/encapsulation/>
 > - **Principio di inversione di dipendenza**  
-> <http://deviq.com/Dependency-Inversion-Principle/>
-> - **Principio dipendenze esplicite**  
-> <http://deviq.com/Explicit-Dependencies-Principle/>
+> <http://deviq.com/dependency-inversion-principle/>
+> - **Explicit Dependencies Principle** (Principio delle dipendenze esplicite)  
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **Non ripetere manualmente**  
-> <http://deviq.com/Don-t-Repeat-Yourself/>
-> - **Mancato riconoscimento della persistenza**  
-> <http://deviq.com/Persistence-Ignorance/>
+> <http://deviq.com/don-t-repeat-yourself/>
+> - Mancato riconoscimento della persistenza  
+> <http://deviq.com/persistence-ignorance/>
 > - **Contesto associato**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
 [Precedente] [Avanti] (comuni-web-applicazione-architectures.md) (choose-between-traditional-web-and-single-page-apps.md)

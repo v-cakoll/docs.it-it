@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Procedura dettagliata: Accesso a un database SQL tramite entità e provider di tipi
 
@@ -66,7 +66,7 @@ Per completare questa procedura, è necessario avere accesso a un server che ese
 3. Aprire il menu di scelta rapida per il nuovo nodo di connessione e quindi scegliere **nuova Query**.
 <br />
 
-4. Aprire [la creazione di Database di esempio School](http://go.microsoft.com/fwlink/?LinkID=237278) sul sito Web Microsoft e quindi copiare e incollare lo script del database che crea il database di studenti nella finestra dell'editor.
+4. Aprire [la creazione di Database di esempio School](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) sul sito Web Microsoft e quindi copiare e incollare lo script del database che crea il database School nella finestra dell'editor.
 <br />
 
 
@@ -240,14 +240,9 @@ Esaminare altre opzioni di query prendendo in considerazione gli operatori di qu
 
 
 ## <a name="see-also"></a>Vedere anche
-[Provider di tipi](index.md)
-
-[Provider di tipi SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Procedura dettagliata: Generazione di tipi F # da un File di Schema EDMX](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[Cenni preliminari sui file con estensione edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[Generatore EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Provider di tipi](index.md)  
+[Provider di tipi SqlEntityConnection](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Procedura dettagliata: Generazione di tipi F # da un File di Schema EDMX](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[Cenni preliminari sui file con estensione edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[Generatore EDM &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

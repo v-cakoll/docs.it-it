@@ -1,15 +1,18 @@
 ---
 title: "Orchestrazione di microservizi e multicontainer applicazioni per la scalabilità e disponibilità elevate"
-description: Ciclo di vita dell'applicazione nei contenitori Docker con strumenti e piattaforma Microsoft
+description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: ea492de1c4709eb7bafe65fcf288482da9855240
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e multicontainer applicazioni per la scalabilità e disponibilità elevate
 
@@ -39,9 +42,9 @@ Tabella 4-1: piattaforme di Software per il clustering di contenitore, orchestra
 
 | Piattaforma | Descrizione |
 |---|---|
-| Sciame docker<br/> ![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/Images/Swarm.PNG?v=2016-07-10-AM](./media/image7.png) | Docker sciame offre la possibilità di inserire nel cluster e pianificare i contenitori di Docker. Utilizzando sciame, è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono effettuare richieste di API al sciame nello stesso modo che agli host, vale a dire che sciame semplifica per la scalabilità delle applicazioni a più host. <br /><br /> Sciame docker è un prodotto da Docker, la società. <br /><br /> V 1.12 docker o in un secondo momento eseguire modalità nativa e incorporati Swarm. |
-| Controller di dominio mesosphere/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-Horizontal-Styled.PNG](./media/image8.png) |  Mesosphere Enterprise DC/OS (basato su Apache Mesos) è una piattaforma di ambiente di produzione per l'esecuzione di contenitori e le applicazioni distribuite. <br /><br /> Controller di dominio/OS funziona tramite l'astrazione di una raccolta di risorse disponibili nel cluster e rendere tali risorse disponibili per i componenti compilati su di esso. Maratona viene in genere utilizzato come un'utilità di pianificazione integrata con controller di dominio o del sistema operativo. |
-| Kubernetes di Google<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes è un prodotto open source che offre funzionalità che è compreso tra l'infrastruttura di cluster e il contenitore di programmazione alle funzionalità di orchestrazione. Con questa soluzione, è possibile automatizzare operazioni di contenitori di applicazioni, scalabilità e la distribuzione per i cluster di host. <br /><br /> Kubernetes fornisce un'infrastruttura incentrato sul contenitore che raggruppa i contenitori di applicazioni in unità logiche per facilità di gestione e l'individuazione. |
+| Sciame docker<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker sciame offre la possibilità di inserire nel cluster e pianificare i contenitori di Docker. Utilizzando sciame, è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono effettuare richieste di API al sciame nello stesso modo che agli host, vale a dire che sciame semplifica per la scalabilità delle applicazioni a più host. <br /><br /> Sciame docker è un prodotto da Docker, la società. <br /><br /> V 1.12 docker o in un secondo momento eseguire modalità nativa e incorporati Swarm. |
+| Controller di dominio mesosphere/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (basato su Apache Mesos) è una piattaforma di ambiente di produzione per l'esecuzione di contenitori e le applicazioni distribuite. <br /><br /> Controller di dominio/OS funziona tramite l'astrazione di una raccolta di risorse disponibili nel cluster e rendere tali risorse disponibili per i componenti compilati su di esso. Maratona viene in genere utilizzato come un'utilità di pianificazione integrata con controller di dominio o del sistema operativo. |
+| Kubernetes di Google<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes è un prodotto open source che offre funzionalità che è compreso tra l'infrastruttura di cluster e il contenitore di programmazione alle funzionalità di orchestrazione. Con questa soluzione, è possibile automatizzare operazioni di contenitori di applicazioni, scalabilità e la distribuzione per i cluster di host. <br /><br /> Kubernetes fornisce un'infrastruttura incentrato sul contenitore che raggruppa i contenitori di applicazioni in unità logiche per facilità di gestione e l'individuazione. |
 | Azure Service Fabric<br />![https://Azure.microsoft.com/svghandler/Service-fabric?Width=600&Height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. Si tratta di un [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e creato un cluster di macchine. Per impostazione predefinita, Service Fabric distribuisce e Attiva servizi come processi, ma Service Fabric è possibile distribuire servizi immagini contenitore con Docker. Più importante, è possibile combinare i servizi in processi con i servizi in contenitori nella stessa applicazione. <br /><br /> A partire da maggio 2017, la funzionalità dell'infrastruttura di servizio che supporta i servizi di distribuzione come contenitori di Docker è in stato di anteprima. <br /><br /> È possibile sviluppare servizi Service Fabric in diversi modi, mediante il [modelli di programmazione di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) alla distribuzione [eseguibili guest](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) nonché contenitori. Service Fabric supporta i modelli di applicazione rigorosa come [servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>In Azure usando orchestrators basate sul contenitore
@@ -89,19 +92,19 @@ Il servizio contenitore è attualmente disponibile per le macchine virtuali Linu
 Di seguito sono percorsi in cui è possibile trovare ulteriori informazioni:
 
 -   Introduzione al contenitore Docker hosting soluzioni con il servizio contenitore:  
-    https://docs.microsoft.com/Azure/Container-Service/kubernetes/Container-Service-intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Panoramica di docker sciame:  
-    <https://docs.docker.com/Swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Panoramica sulla modalità di Swarm:  
-    <https://docs.docker.com/Engine/Swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Panoramica di controller di dominio/OS mesosphere:    
-    <https://docs.mesosphere.com/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (sito ufficiale):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Utilizzo di Service Fabric
 
@@ -181,4 +184,4 @@ Si noti che i contenitori di Docker sono senza stato. Se si desidera implementar
 
 
 >[!div class="step-by-step"]
-[Precedente] (applications.md soa) [Avanti] (docker-App-sviluppo-environment.md)
+[Previous] (soa-applications.md) [Next] (docker-apps-development-environment.md)

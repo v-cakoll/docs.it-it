@@ -1,15 +1,18 @@
 ---
 title: Eseguire applicazioni basate su microservizi composte e negli ambienti di produzione
-description: Ciclo di vita dell'applicazione nei contenitori Docker con strumenti e piattaforma Microsoft
+description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e7a2788098aa731699cbb201c7177e7578907673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Eseguire applicazioni basate su microservizi composte e negli ambienti di produzione
 

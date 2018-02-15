@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introduzione all'estendibilità
 Il modello dell'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è progettato per soddisfare la maggior parte dei requisiti di comunicazione di qualsiasi applicazione distribuita. Esistono tuttavia scenari che non sono supportati dal modello di applicazione predefinito né dalle implementazioni fornite dal sistema. Il modello di estendibilità [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deve supportare scenari personalizzati consentendo di modificare il comportamento del sistema a ogni livello, anche al punto di sostituire l'intero modello di applicazione. In questo argomento vengono illustrate le varie aree di estensione e vengono forniti i collegamenti alle informazioni aggiuntive relative a ogni area.  
@@ -41,27 +43,27 @@ Il modello dell'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
  I messaggi dell'applicazione contengono dati destinati a un'operazione client o di servizio creata personalmente o dal cliente. Questi messaggi sono disponibili nel sistema di estensione al livello dell'applicazione in formato messaggio o oggetto, a seconda delle esigenze specifiche.  
   
- Tutti i messaggi passano attraverso il sistema di canali. Solo i messaggi dell'applicazione vengono passati dal sistema di canali nell'applicazione. Per creare una nuova funzionalità a livello di canale, è necessario estendere il sistema di canali. Per creare nuove funzionalità a livello di applicazione, è necessario estendere la fase di esecuzione del servizio o del client (dispatcher e channel factory rispettivamente). [!INCLUDE[crabout](../../../includes/crabout-md.md)]estensione del runtime di applicazione, vedere [estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Tutti i messaggi passano attraverso il sistema di canali. Solo i messaggi dell'applicazione vengono passati dal sistema di canali nell'applicazione. Per creare una nuova funzionalità a livello di canale, è necessario estendere il sistema di canali. Per creare nuove funzionalità a livello di applicazione, è necessario estendere la fase di esecuzione del servizio o del client (dispatcher e channel factory rispettivamente). [!INCLUDE[crabout](../../../includes/crabout-md.md)] estensione del runtime di applicazione, vedere [estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Estensione della protezione  
- Per creare meccanismi di sicurezza personalizzati, quali token e credenziali, è necessario estendere il sistema di sicurezza. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione della protezione](../../../docs/framework/wcf/extending/extending-security.md).  
+ Per creare meccanismi di sicurezza personalizzati, quali token e credenziali, è necessario estendere il sistema di sicurezza. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione della protezione](../../../docs/framework/wcf/extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Estensione di metadati  
- Per esporre i metadati diversamente dall'impostazione predefinita, è necessario estendere il sistema dei metadati. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione del sistema di metadati](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Per esporre i metadati diversamente dall'impostazione predefinita, è necessario estendere il sistema dei metadati. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione del sistema di metadati](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 #### <a name="extending-serialization"></a>Estensione della serializzazione  
- Per compilare codificatori personalizzati, fornire surrogati dei dati o eseguire altre operazioni che comportano la personalizzazione di dati trasferiti, è necessario estendere il sistema di serializzazione. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione codificatori e serializzatori](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+ Per compilare codificatori personalizzati, fornire surrogati dei dati o eseguire altre operazioni che comportano la personalizzazione di dati trasferiti, è necessario estendere il sistema di serializzazione. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione di codificatori e serializzatori](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Estensione delle associazioni  
- Per associare canali del trasporto o del protocollo al livello dell'applicazione, è necessario estendere il sistema delle associazioni. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione delle associazioni](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Per associare canali del trasporto o del protocollo al livello dell'applicazione, è necessario estendere il sistema delle associazioni. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione delle associazioni](../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 ### <a name="extending-the-channel-system"></a>Estensione del sistema di canali  
  Per creare canali che supportano i trasporti personalizzati o funzionalità del protocollo, vedere [estendendo il livello del canale](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ### <a name="extending-the-service-hosting-system"></a>Estensione del sistema host del servizio  
- Per modificare il modello di applicazione a livello di servizio, è necessario estendere la classe <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Per modificare il modello di applicazione a livello di servizio, è necessario estendere la classe <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione di ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Per modificare la relazione tra il dominio dell'applicazione host e l'host del servizio, è necessario estendere la classe <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Estensione dell'Hosting tramite ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Per modificare la relazione tra il dominio dell'applicazione host e l'host del servizio, è necessario estendere la classe <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Estensione dell'Hosting tramite ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensione di WCF](../../../docs/framework/wcf/extending/extending-wcf.md)
+ [Estensione di WCF](../../../docs/framework/wcf/extending/index.md)

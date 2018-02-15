@@ -1,15 +1,18 @@
 ---
 title: Con Visual Studio Tools per Docker (Visual Studio in Windows)
-description: Ciclo di vita dell'applicazione nei contenitori Docker con strumenti e piattaforma Microsoft
+description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d7a24633f5857bc5b72ebab42020627c645f4302
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools per Docker (Visual Studio in Windows)
 
@@ -35,7 +38,7 @@ Visual Studio Tools per Docker offre un sistema coerente per sviluppare e conval
 
 Se si usa un singolo contenitore, la prima cosa che occorre per iniziare è per attivare il supporto di Docker nel progetto .NET Core. A tale scopo, fare clic sul file di progetto, come illustrato nella figura 4-25.
 
-![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/Image/file/205468/1/Add-docker-Support.PNG](./media/image31.png)
+![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
 Figura 4-25: l'attivazione del supporto di Docker per il progetto di Visual Studio
 

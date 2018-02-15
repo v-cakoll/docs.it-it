@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Utilizzo dei dati nelle applicazioni ASP.NET Core
 
@@ -199,11 +202,11 @@ Il primo elemento DbContext è il \_catalogContext e il secondo elemento DbConte
 
 > ### <a name="references--entity-framework-core"></a>Riferimenti: Entity Framework Core
 > - **Documenti principali di Entity Framework**  
-> <https://docs.microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF principale: Dati correlati**  
-> <https://docs.microsoft.com/EF/core/Querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Evitare il caricamento Lazy entità nelle applicazioni ASP.NET**  
-> <http://ardalis.com/Avoid-lazy-Loading-Entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>Componenti di base EF o prodotto ORM micro?
 
@@ -283,7 +286,7 @@ Il linguaggio di query di DocumentDB è un'interfaccia semplice e potente per es
 **Riferimenti: DocumentDB**
 
 -   DocumentDB Introduction\
-    <https://docs.microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Altre opzioni di persistenza
 
@@ -300,7 +303,7 @@ Oltre ai dati relazionali e le opzioni di archiviazione di database NoSQL, appli
 **Riferimenti: archiviazione di Azure**
 
 -   Introduction\ di archiviazione di Azure
-    <https://docs.microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Memorizzazione nella cache
 

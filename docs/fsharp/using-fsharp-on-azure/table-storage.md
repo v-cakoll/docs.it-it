@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: bf833a96809768011f26df35332ab2372ced2aaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Introduzione all'archiviazione tabelle di Azure con F # #
 
@@ -186,8 +186,8 @@ Dopo avere recuperato, è possibile eliminare un'entità. Come con l'aggiornamen
 
 Ora che si è appreso le nozioni di base dell'archiviazione tabelle, vedere i collegamenti seguenti per informazioni sulle attività più complesse di archiviazione:
 
-- [Libreria Client di archiviazione per il riferimento di .NET](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [API di archiviazione di Azure per .NET](/dotnet/api/overview/azure/storage)
 - [Provider di tipi di archiviazione di Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog del Team di archiviazione di Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Configurazione delle stringhe di connessione](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)
 - [Introduzione all'archiviazione tabelle di Azure in .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

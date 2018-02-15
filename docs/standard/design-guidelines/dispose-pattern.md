@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Modello Dispose
 Tutti i programmi di acquisire una o più risorse di sistema, ad esempio memoria, handle del sistema o le connessioni di database, nel corso della loro esecuzione. Gli sviluppatori devono prestare molta attenzione quando si utilizzano tali risorse di sistema, poiché deve essere liberate dopo l'acquisizione e utilizzati.  
@@ -35,7 +35,7 @@ Tutti i programmi di acquisire una o più risorse di sistema, ad esempio memoria
   
  Purtroppo, della memoria gestita è solo uno dei molti tipi di risorse di sistema. Risorse diverse dalla memoria gestita ancora devono essere rilasciate in modo esplicito e sono dette risorse non gestite. Il catalogo globale in modo specifico non è stato progettato per gestire tali risorse non gestite, il che significa che la responsabilità per la gestione delle risorse non gestite si trovi in mani degli sviluppatori di.  
   
- CLR fornisce alcune informazioni utili per il rilascio di risorse non gestite. <xref:System.Object?displayProperty=nameWithType>dichiara un metodo virtuale <xref:System.Object.Finalize%2A> (detto anche il finalizzatore) che viene chiamato dal GC prima che la memoria venga recuperata tramite il catalogo globale e può essere sottoposto a override per rilasciare le risorse non gestite. I tipi che eseguono l'override del finalizzatore vengono definiti come tipi di finalizzazione.  
+ CLR fornisce alcune informazioni utili per il rilascio di risorse non gestite. <xref:System.Object?displayProperty=nameWithType> dichiara un metodo virtuale <xref:System.Object.Finalize%2A> (detto anche il finalizzatore) che viene chiamato dal GC prima che la memoria venga recuperata tramite il catalogo globale e può essere sottoposto a override per rilasciare le risorse non gestite. I tipi che eseguono l'override del finalizzatore vengono definiti come tipi di finalizzazione.  
   
  Sebbene i finalizzatori sono validi in alcuni scenari di pulizia, presentano due svantaggi significativi:  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Inoltre, questa sezione si applica alle classi con una base che non implementano il modello Dispose. Se sta ereditando da una classe che implementa già il modello, è sufficiente eseguire l'override di `Dispose(bool)` metodo per fornire la logica di pulizia di risorse aggiuntive.  
   
- **✓ SI** dichiarare un valore void virtuale protetto `Dispose(bool disposing)` metodo per centralizzare la logica di tutti i relativi al rilascio di risorse non gestite.  
+ **✓ SI** dichiarare un `protected virtual void Dispose(bool disposing)` metodo per centralizzare la logica di tutti i relativi al rilascio di risorse non gestite.  
   
  Pulizia di tutte le risorse deve essere eseguito in questo metodo. Il metodo viene chiamato da entrambi il finalizzatore e `IDisposable.Dispose` metodo. Il parametro sarà false se viene richiamata dall'interno un finalizzatore. E deve essere utilizzato per garantire che qualsiasi codice in esecuzione durante la finalizzazione non accede ad altri oggetti finalizzabili. Dettagli dell'implementazione di finalizzatori sono descritti nella sezione successiva.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X non** dichiarare un overload di `Dispose` metodo diverso `Dispose()` e `Dispose(bool)`.  
   
- `Dispose`deve essere considerata una parola riservata per codificare questo modello e per impedire confusione tra i responsabili dell'implementazione, utenti e i compilatori. Alcuni linguaggi è potrebbero scegliere di implementare automaticamente questo modello su determinati tipi.  
+ `Dispose` deve essere considerata una parola riservata per codificare questo modello e per impedire confusione tra i responsabili dell'implementazione, utenti e i compilatori. Alcuni linguaggi è potrebbero scegliere di implementare automaticamente questo modello su determinati tipi.  
   
  **✓ SI** consentono di `Dispose(bool)` metodo da chiamare più volte. Il metodo è possibile scegliere di non eseguire alcuna operazione dopo la prima chiamata.  
   
