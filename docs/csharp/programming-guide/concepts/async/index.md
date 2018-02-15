@@ -2,17 +2,18 @@
 title: Programmazione asincrona con Async e Await
 ms.date: 05/22/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9ece88b666547677eba64b9d6976f1e4cc89e6b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f943bbc849c5c960884752780e48401f4cb59a7d
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programmazione asincrona con async e await (C#)
 È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona. Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.  
@@ -28,7 +29,7 @@ In questo argomento viene fornita una panoramica di come e quando utilizzare la 
   
 | Area dell'applicazione    | Tipi .NET con metodi asincroni     | Tipi Windows Runtime con metodi asincroni  |
 |---------------------|-----------------------------------|-------------------------------------------|
-|Accesso Web|<xref:System.Net.Http.HttpClient>|[SyndicationClient](http://go.microsoft.com/fwlink/p/?LinkId=259441)|
+|Accesso Web|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
 |Utilizzo dei file|<xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|[StorageFile](http://go.microsoft.com/fwlink/p/?LinkId=248220)|  
 |Utilizzo delle immagini||[MediaCapture](http://go.microsoft.com/fwlink/p/?LinkId=261839), [BitmapEncoder](http://go.microsoft.com/fwlink/p/?LinkId=261840), [BitmapDecoder](http://go.microsoft.com/fwlink/p/?LinkId=261841)|  
 |Programmazione WCF|[Operazioni sincrone e asincrone](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
