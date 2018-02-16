@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 780af689f6aff86e2e96738c356df4a81128f4ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recupero di nodi ordinati in base all'indice
-Il World Wide Web Consortium (W3C) XML oggetto modello DOM (Document) descrive anche un NodeList, che è in grado di gestire un elenco ordinato di nodi, mentre il set non ordinato di competenza di **XmlNamedNodeMap**. Viene chiamato il NodeList di Microsoft .NET Framework **XmlNodeList**. Metodi e proprietà che restituiscono un **XmlNodeList** sono:  
+Il DOM (Document Object Model) XML W3C (World Wide Web Consortium) descrive anche un oggetto NodeList, che ha la capacità di gestire un elenco ordinato di nodi, mentre i set non ordinati sono gestiti da **XmlNamedNodeMap**. L'oggetto NodeList in Microsoft .NET Framework è denominato **XmlNodeList**. I metodi e le proprietà che restituiscono un oggetto **XmlNodeList** sono:  
   
 -   XmlNode.ChildNodes  
   
@@ -33,7 +36,7 @@ Il World Wide Web Consortium (W3C) XML oggetto modello DOM (Document) descrive a
   
 -   XmlNode.SelectNodes  
   
- Il **XmlNodeList** ha un **conteggio** proprietà che può essere usato per scrivere cicli per scorrere i nodi di **XmlNodeList**, come illustrato nell'esempio di codice seguente:  
+ Per l'oggetto **XmlNodeList** è disponibile una proprietà **Count** che può essere usata per scrivere cicli di iterazione per scorrere i nodi in **XmlNodeList**, come mostrato nell'esempio di codice seguente:  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -62,7 +65,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- Oltre al **conteggio** proprietà, è presente un **GetEnumerator** metodo che fornisce, `foreach` sulla raccolta di nodi di iterazione di stile di **XmlNodeList**. Nell'esempio di codice seguente viene illustrato l'uso dell'istruzione `foreach`:  
+ Oltre alla proprietà **Count**, è disponibile un metodo **GetEnumerator** che consente di eseguire un'iterazione in stile `foreach` sulla raccolta di nodi in **XmlNodeList**. Nell'esempio di codice seguente viene illustrato l'uso dell'istruzione `foreach`:  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -99,7 +102,7 @@ End While
   }  
 ```  
   
- Per ulteriori informazioni sui metodi e proprietà disponibili sul **XmlNodeList**, vedere <xref:System.Xml.XmlNodeList>.  
+ Per altre informazioni sui metodi e sulle proprietà disponibili per **XmlNodeList**, vedere <xref:System.Xml.XmlNodeList>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
