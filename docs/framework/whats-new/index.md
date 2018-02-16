@@ -3,22 +3,25 @@ title: "Novità di .NET Framework"
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -80,15 +83,15 @@ Per creare un generatore di configurazioni personalizzato, è necessario derivar
 
 **Rilevamento delle funzionalità in fase di esecuzione**
 
-La classe <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> fornisce un meccanismo per determinare se una funzionalità predefinita è supportata in un'implementazione .NET specifica in fase di compilazione o di esecuzione. In fase di compilazione un compilatore può verificare se sia presente un campo specifico per determinare se la funzionalità è supportata. In questo caso, può emettere il codice che sfrutta questa funzionalità. In fase di esecuzione un'applicazione può chiamare il metodo <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> prima di emettere il codice in fase di esecuzione. Per altre informazioni, vedere [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116) (Aggiungere un metodo helper per descrivere le funzionalità supportate dal runtime).
+La classe <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> fornisce un meccanismo per determinare se una funzionalità predefinita è supportata in un'implementazione .NET specifica in fase di compilazione o di esecuzione. In fase di compilazione un compilatore può verificare se sia presente un campo specifico per determinare se la funzionalità è supportata. In questo caso, può emettere il codice che sfrutta questa funzionalità. In fase di esecuzione un'applicazione può chiamare il metodo <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> prima di emettere il codice in fase di esecuzione. Per altre informazioni, vedere [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116) (Aggiungere un metodo helper per descrivere le funzionalità supportate dal runtime).
 
 **I tipi di tupla di valori sono serializzabili**
 
-A partire da .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullName> e i tipi generici associati sono contrassegnati come [serializzabili](xref:System.SerializableAttribute), consentendo la serializzazione binaria. Questa novità dovrebbe semplificare la migrazione dei tipi di tupla, come <xref:System.Tuple%603> e <xref:System.Tuple%604>, ai tipi di tupla di valori. Per altre informazioni, vedere la sezione relativa al compilatore e alla serializzazione di ValueTuple nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
+A partire da .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> e i tipi generici associati sono contrassegnati come [serializzabili](xref:System.SerializableAttribute), consentendo la serializzazione binaria. Questa novità dovrebbe semplificare la migrazione dei tipi di tupla, come <xref:System.Tuple%603> e <xref:System.Tuple%604>, ai tipi di tupla di valori. Per altre informazioni, vedere la sezione relativa al compilatore e alla serializzazione di ValueTuple nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
 
 **Supporto per riferimenti di sola lettura**
 
-In .NET Framework 4.7.1 è stato aggiunto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
+In .NET Framework 4.7.1 è stato aggiunto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
@@ -1446,7 +1449,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- Le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 è disponibile per la compilazione di applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] per Windows usando C# o Visual Basic. Questo subset è denominato [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e viene descritto in una [panoramica](http://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Le applicazioni sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 è disponibile per la compilazione di applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] per Windows usando C# o Visual Basic. Questo subset è denominato [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e viene descritto in una [panoramica](http://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Librerie di classi portabili
