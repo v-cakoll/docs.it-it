@@ -89,7 +89,7 @@ Figura 2-3 viene illustrata l'esecuzione di più migrazioni di macchine Virtuali
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Eseguire la migrazione di Azure**
+-   Eseguire la migrazione di Azure
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

@@ -42,7 +42,7 @@ Quando si esegue il [immagine di Application Insights Docker](https://hub.docker
 
 Per creare una risorsa di Application Insights, seguire le istruzioni riportate nell'elenco che segue gli articoli. Portale di Azure verrà creato lo script necessario per l'utente.
 
--   **Monitoraggio delle applicazioni di Docker in Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Monitoraggio delle applicazioni di Docker in Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Application Insights Docker immagine Hub Docker e Github:**  
 [https://hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) e <https://github.com/Microsoft/ApplicationInsights-Docker>
