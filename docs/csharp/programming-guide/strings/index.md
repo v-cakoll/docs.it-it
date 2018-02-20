@@ -2,20 +2,21 @@
 title: Stringhe (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -125,7 +126,7 @@ string s = String.Empty;
 |[Procedura: Modificare il contenuto delle stringhe](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Esempio di codice che illustra come modificare il contenuto delle stringhe.|  
 |[Procedura: Concatenare più stringhe](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Viene illustrato come usare l'operatore `+` e la classe `Stringbuilder` per unire stringhe in fase di compilazione e fase di esecuzione.|  
 |[Procedura: Confrontare stringhe](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Viene illustrato come eseguire confronti ordinali di stringhe.|  
-|[Procedura: Analizzare le stringhe con String.Split ](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|Esempio di codice che illustra come usare il metodo `String.Split` per analizzare le stringhe.|  
+|[Procedura: Analizzare le stringhe con String.Split ](../../how-to/parse-strings-using-split.md)|Esempio di codice che illustra come usare il metodo `String.Split` per analizzare le stringhe.|  
 |[Procedura: Eseguire la ricerca di stringhe usando metodi stringa](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Viene spiegato come usare metodi specifici per la ricerca di stringhe.|  
 |[Procedura: Eseguire la ricerca di stringhe usando espressioni regolari](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Viene spiegato come usare le espressioni regolari per la ricerca di stringhe.|  
 |[Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  

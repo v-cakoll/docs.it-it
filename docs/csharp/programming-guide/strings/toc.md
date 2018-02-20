@@ -1,5 +1,4 @@
 # [Stringhe](index.md)
-## [Procedura: Concatenare più stringhe](how-to-concatenate-multiple-strings.md)
 ## [Procedura: Modificare il contenuto delle stringhe](how-to-modify-string-contents.md)
 ## [Procedura: Confrontare stringhe](how-to-compare-strings.md)
 ## [Procedura: Eseguire la ricerca di stringhe usando metodi stringa](how-to-search-strings-using-string-methods.md)
