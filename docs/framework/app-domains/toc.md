@@ -10,7 +10,7 @@
 ### [Assembly ed esecuzione side-by-side](assemblies-and-side-by-side-execution.md)
 ## [Domini dell'applicazione](application-domains.md)
 ## [Argomenti relativi alle procedure per domini applicazione e assembly](application-domains-and-assemblies-how-to-topics.md)
-## [Uso dei domini dell'applicazione](application-domains.md)
+## [Uso dei domini dell'applicazione](use.md)
 ### [Procedura: Creare un dominio dell'applicazione](how-to-create-an-application-domain.md)
 ### [Procedura: Scaricare un dominio dell'applicazione](how-to-unload-an-application-domain.md)
 ### [Procedura: Configurare un dominio dell'applicazione](how-to-configure-an-application-domain.md)
