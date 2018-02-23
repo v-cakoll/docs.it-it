@@ -3,17 +3,18 @@ title: Controllo delle versioni di .NET Core
 description: Informazioni sul funzionamento del controllo delle versioni di .NET Core.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>Controllo delle versioni di .NET Core
 
@@ -23,9 +24,13 @@ Questo articolo intende chiarire come avviene il controllo delle versioni dell'S
 
 Esistono numerose parti mobili che eseguono il controllo delle versioni in modo indipendente in .NET Core. Tuttavia, a partire da .NET Core 2.0, è semplice comprendere il numero di versione principale che tutti gli utenti sono in grado di comprendere come *la* versione di ".NET Core" nel suo complesso. Il resto di questo documento viene inserito nei dettagli del controllo delle versioni di tutte le parti. Questi dettagli possono essere importanti se non si ha una gestore di pacchetti, ad esempio.
 
+> [!IMPORTANT]
+> I dettagli sul controllo delle versioni illustrati in questo argomento non si applicano alla versione corrente di .NET Core SDK e del relativo runtime.
+> Lo schema della versione cambierà nelle versioni future. La proposta attuale è disponibile nel repository [dotnet/designs](https://github.com/dotnet/designs/pull/29).
+
 ## <a name="versioning-details"></a>Dettagli del controllo delle versioni
 
-A partire dalla versione 2.0 di .NET Core, i download mostrano un numero di versione singolo nel nome del file. I numeri di versione seguenti sono stati unificati:
+Con .NET Core 2.0, i download mostrano un solo numero di versione nel nome del file. I numeri di versione seguenti sono stati unificati:
 
 * Il framework condiviso e il runtime associato.
 * L'SDK di .NET Core e l'interfaccia della riga di comando di .NET Core associata.
@@ -35,8 +40,8 @@ L'uso di un numero di versione singolo rende più semplice per gli utenti scopri
 
 ### <a name="installers"></a>Programmi di installazione
 
-A partire dalla versione 2.0 di .NET Core, i download per le [build giornaliere](https://github.com/dotnet/core-setup#daily-builds) e le [versioni](https://www.microsoft.com/net/download/core) sono conformi a un nuovo schema di denominazione più facile da comprendere.
-Il programma di installazione dell'interfaccia utente in questi download è stato modificato anche per presentare chiaramente i nomi e le versioni dei componenti da installare. In particolare, i titoli mostrano ora lo stesso numero di versione che è nel nome del file del download.
+Con .NET Core 2.0, i download per le [build giornaliere](https://github.com/dotnet/core-setup#daily-builds) e le [versioni](https://www.microsoft.com/net/download/core) sono conformi a un nuovo schema di denominazione più facile da comprendere.
+Anche l'interfaccia utente del programma di installazione in questi download è stata modificata per presentare chiaramente i nomi e le versioni dei componenti da installare. In particolare, i titoli mostrano ora lo stesso numero di versione che è nel nome del file del download.
 
 #### <a name="file-name-format"></a>Formato del nome del file
 
@@ -88,7 +93,7 @@ Può capitare che una versione dell'SDK contenga più di una versione del runtim
 #### <a name="minimum-package-set"></a>Set minimo del pacchetto
 
 * `dotnet-runtime-[major].[minor]`: un runtime con la versione specificata (nel sistema di gestione pacchetti deve essere disponibile solo l'ultima versione di patch per una determinata combinazione di versione principale+secondaria). Le nuove versioni di patch aggiornano il pacchetto, ma le nuove versioni principali o secondarie sono pacchetti separati.
- 
+
   **Dipendenze**:`dotnet-host`
 
 * `dotnet-sdk`: l'SDK più recente. `update`: esegue il roll forward delle versioni principale, secondaria e di patch.
@@ -118,7 +123,7 @@ Una convenzione di denominazione di tag Docker generale consiste nell'inserire i
 
 I tag di SDK devono essere aggiornati per rappresentare la versione dell'SDK invece che di Runtime.
 
-È anche possibile che sia necessario correggere .NET Core Tools ma aumenterebbe un tempo di runtime esistente. In tal caso, la versione di SDK viene aumentata (ad esempio, a 2.1.2) e quindi il Runtime rileva la prossima volta in cui aumenta il tempo (ad esempio, sia Runtime sia SDK presentano lo stesso tempo che in 2.1.3).
+È anche possibile che gli strumenti dell'interfaccia della riga di comando di .NET Core (inclusi nell'SDK) vengano corretti ma che il runtime rimanga quello esistente. In tal caso, la versione dell'SDK viene aumentata (ad esempio a 2.1.2) e il Runtime viene aggiornato al successivo rilascio (ad esempio, la volta successiva sia il Runtime che l'SDK vengono rilasciati con la versione 2.1.3).
 
 ## <a name="semantic-versioning"></a>Versionamento Semantico
 
@@ -128,26 +133,29 @@ I tag di SDK devono essere aggiornati per rappresentare la versione dell'SDK inv
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-Le parti facoltative `PRERELEASE` e `BUILDNUMBER` non faranno mai parte delle versioni supportate, e sono disponibili solo per le compilazioni notturne, compilate localmente da destinazioni di origine, e per le versioni in anteprima non supportate.
+Le parti facoltative `PRERELEASE` e `BUILDNUMBER` non fanno mai parte delle versioni supportate e sono disponibili solo nelle compilazioni notturne, nelle build locali compilate da destinazioni di origine e nelle versioni in anteprima non supportate.
 
 ### <a name="how-version-numbers-are-incremented"></a>In che modo vengono incrementati i numeri di versione?
 
 `MAJOR` viene incrementato quando:
-  - Una versione precedente non è più supportata.
-  - Viene adottata una versione `MAJOR` più recente di una dipendenza esistente.
-  - L'impostazione predefinita di un dettaglio di compatibilità viene modificato passando a "off".
+
+- Una versione precedente non è più supportata.
+- Viene adottata una versione `MAJOR` più recente di una dipendenza esistente.
+- L'impostazione predefinita di un dettaglio di compatibilità viene modificato passando a "off".
 
 `MINOR` viene incrementato quando:
-  - Viene aggiunta la superficie di attacco dell'API pubblica.
-  - Viene aggiunto un nuovo comportamento.
-  - Viene adottata una versione `MINOR` più recente di una dipendenza esistente.
-  - Viene introdotta una nuova dipendenza.
-  
+
+- Viene aggiunta la superficie di attacco dell'API pubblica.
+- Viene aggiunto un nuovo comportamento.
+- Viene adottata una versione `MINOR` più recente di una dipendenza esistente.
+- Viene introdotta una nuova dipendenza.
+
 `PATCH` viene incrementato quando:
-  - Vengono eseguite correzioni di bug.
-  - Viene aggiunto il supporto per una piattaforma più recente.
-  - Viene adottata una versione `PATCH` più recente di una dipendenza esistente.
-  - Qualsiasi altra modifica che non corrisponda a uno dei casi precedenti.
+
+- Vengono eseguite correzioni di bug.
+- Viene aggiunto il supporto per una piattaforma più recente.
+- Viene adottata una versione `PATCH` più recente di una dipendenza esistente.
+- Qualsiasi altra modifica non corrisponde a uno dei casi precedenti.
 
 Quando sono presenti più modifiche, viene incrementato l'elemento maggiore interessato da singole modifiche e quelli che seguono vengono reimpostati a zero. Ad esempio, quando `MAJOR` viene incrementato, `MINOR` e `PATCH` vengono reimpostati su zero. Quando `MINOR` viene incrementato, `PATCH` viene reimpostato su zero mentre `MAJOR` viene lasciato invariato.
 
@@ -176,7 +184,7 @@ Per altre informazioni, vedere [.NET Core Support Lifecycle Fact Sheet](https://
 
 .NET Core è costituito dalle parti seguenti:
 
-- Un host (noto anche come muxer): `dotnet.exe` con `hostfxr` librerie dei criteri.
+- Un host: *dotnet.exe* per le applicazioni dipendenti dal framework o *\<nomeapp>.exe* per le applicazioni indipendenti.
 - Un SDK (il set di strumenti necessari sul computer dello sviluppatore, ma non nell'ambiente di produzione).
 - Un runtime.
 - Un'implementazione di framework condivisa, distribuita sotto forma di pacchetti. La definizione delle versioni avviene in modo indipendente per ciascun pacchetto, in particolare per quanto riguarda le versioni patch.
@@ -204,7 +212,7 @@ Il controllo delle versioni dei metapacchetti .NET Core è basato sulla versione
 
 Ad esempio, i metapacchetti in .NET Core 2.1.3 devono tutti avere 2.1 come numero di versione `MAJOR` e `MINOR`.
 
-La versione patch per il metapacchetto viene incrementata ogni volta che viene aggiornato un pacchetto di riferimento. Le versioni patch non includeranno una versione aggiornata del framework. Di conseguenza, i metapacchetti non sono strettamente conformi a SemVer perché il loro schema di controllo delle versioni non rappresenta il grado di cambiamento nei pacchetti sottostanti, ma principalmente il livello API. 
+La versione patch per il metapacchetto viene incrementata ogni volta che viene aggiornato un pacchetto di riferimento. Le versioni patch non includeranno una versione aggiornata del framework. Di conseguenza, i metapacchetti non sono strettamente conformi al Versionamento Semantico perché il loro schema di controllo delle versioni non rappresenta il grado di cambiamento dei pacchetti sottostanti, ma principalmente del livello API.
 
 Per .NET Core sono presenti attualmente due metapacchetti principali:
 
@@ -226,7 +234,7 @@ Le versioni del framework d destinazione vengono aggiornate quando si aggiungono
 
 ## <a name="versioning-in-practice"></a>Controllo delle versioni in pratica
 
-Quando si esegue il download di .NET Core, il nome del file di cui si è eseguito il download esegue la versione, ad esempio, di `dotnet-sdk-2.0.4-win10-x64.exe`.
+Quando si esegue il download di .NET Core, il nome del file scaricato contiene il numero di versione, ad esempio `dotnet-sdk-2.0.4-win10-x64.exe`.
 
 Ogni giorno in GitHub vengono inseriti commit e richieste pull nei repository relativi a .NET Core, con la conseguente generazione di nuove build di diverse librerie. Non è pratico creare nuove versioni pubbliche di .NET Core per ogni modifica. Le modifiche vengono invece aggregate nel corso di un periodo di tempo non determinato (ad esempio mesi o settimane) prima di creare una nuova versione pubblica stabile di .NET Core.
 
@@ -251,7 +259,8 @@ Ogni volta che viene fornita una nuova versione principale di .NET Core, viene i
 I diversi metapacchetti vengono aggiornati in modo che facciano riferimento ai pacchetti della libreria .NET Core aggiornati. Sul metapacchetto [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) e sul framework di destinazione `netcore` viene eseguito il controllo delle versioni in un aggiornamento principale corrispondente al numero della versione `MAJOR` della nuova versione.
 
 ## <a name="see-also"></a>Vedere anche
-[Framework di destinazione](../../standard/frameworks.md)   
-[Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)   
-[.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)  (Scheda informativa sul ciclo di supporto per .NET Core)  
-[Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)   
+
+[Framework di destinazione](../../standard/frameworks.md)  
+[Pacchetti di distribuzione di .NET Core](../build/distribution-packaging.md)  
+[.NET Core Support Lifecycle Fact Sheet (Scheda informativa sul ciclo di supporto per .NET Core)](https://www.microsoft.com/net/core/support)  
+[Associazione della versione di .NET core 2+](https://github.com/dotnet/designs/issues/3)  

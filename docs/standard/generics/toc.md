@@ -1,5 +1,5 @@
 # [Generics](index.md)
-## [Raccolte generiche in .NET Framework](collections.md)
+## [Raccolte generiche in .NET](collections.md)
 ## [Delegati generici per la modifica di matrici ed elenchi](delegates-for-manipulating-arrays-and-lists.md)
 ## [Interfacce generiche](interfaces.md)
 ## [Covarianza e controvarianza](covariance-and-contravariance.md)
