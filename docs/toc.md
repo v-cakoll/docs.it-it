@@ -265,6 +265,7 @@
 ## [Argomenti della Procedura di C#](csharp/how-to/index.md)
 ### [Come analizzare le stringhe con `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Come concatenare stringhe](csharp/how-to/concatenate-multiple-strings.md)
+### [Procedura Convertire una stringa in un oggetto DateTime](standard/base-types/parsing-datetime.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guida per programmatori C#](csharp/programming-guide/)

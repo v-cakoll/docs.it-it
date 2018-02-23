@@ -4,4 +4,3 @@
 ## [Procedura: Eseguire la ricerca di stringhe usando metodi stringa](how-to-search-strings-using-string-methods.md)
 ## [Procedura: Eseguire la ricerca di stringhe usando espressioni regolari](how-to-search-strings-using-regular-expressions.md)
 ## [Procedura: Determinare se una stringa rappresenta un valore numerico](how-to-determine-whether-a-string-represents-a-numeric-value.md)
-## [Procedura: Convertire una stringa in un oggetto DateTime](how-to-convert-a-string-to-a-datetime.md)
