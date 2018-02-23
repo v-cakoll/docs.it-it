@@ -2,7 +2,8 @@
 title: "Non è don &#39; dispone di informazioni specifiche sull'errore c#"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -882,27 +883,28 @@ f1_keywords:
 - CS8168
 - CS8172
 - CS8179
-helpviewer_keywords: errors [C#], additional information
+helpviewer_keywords:
+- errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Non è don &#39; dispone di informazioni specifiche sull'errore c#
 Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibile cercare il numero dell'errore e il testo del messaggio per trovare informazioni sul Web. In alternativa, è possibile chiedere altri sviluppatori che usano uno di questi forum:  
   
- [Linguaggio Visual C#](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ [Linguaggio Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
  Forum dedicato a domande e discussioni di carattere generale relative al linguaggio e alla sintassi di [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [IDE di Visual C#](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ [IDE di Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Forum dedicato a domande relative all'uso dell'ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Forum generale su Visual C#](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ [Forum generale su Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Forum dedicato a domande e problemi relativi a [!INCLUDE[csprcs](~/includes/csprcs-md.md)] non trattati in altri forum.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
@@ -914,5 +916,4 @@ Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibil
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../csharp/programming-guide/index.md)  
  [Riferimenti per C#](../../csharp/language-reference/index.md)  
- [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)  
- [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)
+ [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)  
