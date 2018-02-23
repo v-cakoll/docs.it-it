@@ -1,54 +1,57 @@
 ---
-title: Progettare il livello di applicazione microservizio e l'API Web
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Progettare il livello di applicazione microservizio e l'API Web
+title: Progettazione del livello dell'applicazione di microservizi e dell'API Web
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Progettazione del livello dell'applicazione di microservizi e dell'API Web
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7509b470a30005dd48fa88eefa91f7ed241e4e09
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>Progettare il livello di applicazione microservizio e l'API Web
+# <a name="designing-the-microservice-application-layer-and-web-api"></a>Progettazione del livello dell'applicazione di microservizi e dell'API Web
 
-## <a name="using-solid-principles-and-dependency-injection"></a>Utilizzando i principi a tinta unita e inserimento di dipendenze
+## <a name="using-solid-principles-and-dependency-injection"></a>Uso dei principi SOLID e dell'inserimento delle dipendenze
 
-Tinta unite principi sono critiche tecniche da utilizzare in qualsiasi applicazione moderna e mission-critical, ad esempio lo sviluppo di un microservizio con i modelli di DDD. Tinta unita è l'acronimo di principi fondamentali di cinque gruppi:
+I principi SOLID sono tecniche fondamentali da usare nelle applicazioni cruciali moderne, ad esempio lo sviluppo di un microservizio con schemi progettazione basata su domini. SOLID è un acronimo che raggruppa cinque principi fondamentali:
 
--   Principio di responsabilità singolo
+-   SRP (Single Responsibility Principle, principio di singola responsabilità)
 
--   Principio di apertura/chiusura
+-   OCP (Open/Closed Principle, principio aperto/chiuso)
 
--   Principio di sostituzione Liskov
+-   LSP (Liskov Substitution Principle, principio di sostituzione di Liskov)
 
--   Principio di inversione di separazione
+-   ISP (Interface Segregation Principle, principio di segregazione delle interfacce)
 
--   Principio di inversione di dipendenza
+-   DIP (Dependency Inversion Principle, principio di inversione delle dipendenze)
 
-SOLIDO è più su come progettare l'applicazione o microservizio interno livelli e sulle disaccoppiamento dipendenze tra di essi. Non è correlato al dominio, ma per la progettazione tecnica dell'applicazione. Il principio finale, il principio di inversione di dipendenze (DI), consente di separare il livello di infrastruttura dal resto dei livelli, che consente a un'implementazione separata migliore dei livelli DDD.
+SOLID si riferisce soprattutto alla progettazione dei livelli interni dell'applicazione o del microservizio e alla separazione delle reciproche dipendenze. Non è relativo al dominio, ma alla progettazione tecnica dell'applicazione. L'ultimo principio, quello dell'inversione delle dipendenze, consente di disaccoppiare il livello infrastruttura dagli altri livelli e permette quindi una migliore implementazione disaccoppiata dei livelli di progettazione basata su domini.
 
-SEN è un modo per implementare il principio di inversione di dipendenza. È una tecnica per l'implementazione dell'accoppiamento debole tra gli oggetti e le relative dipendenze. Anziché creare direttamente un'istanza di collaboratori o utilizzando i riferimenti statici, gli oggetti che è necessario che una classe per eseguire le azioni sono forniti a (o "inseriti in") della classe. In genere, le classi verranno dichiarare le relative dipendenze attraverso il relativo costruttore, consentendo loro di seguire il principio di dipendenze esplicite. SEN si basa in genere per contenitori specifici che Inversion of Control (IoC). ASP.NET Core fornisce un semplice contenitore IoC incorporato, ma è anche possibile usare il contenitore IoC preferito, ad esempio Autofac o Ninject.
+L'inserimento delle dipendenze è un modo per implementare il principio di inversione delle dipendenze. È una tecnica per ottenere un regime di controllo libero tra gli oggetti e le relative dipendenze. Invece di creare direttamente un'istanza dei collaboratori o usare riferimenti statici, gli oggetti necessari a una classe per eseguire le azioni vengono forniti alla (o "inseriti nella") classe. Nella maggior parte dei casi le classi dichiarano le dipendenze tramite il costruttore consentendo di seguire il principio delle dipendenze esplicite. L'inserimento delle dipendenze si basa in genere su contenitori a inversione del controllo (IoC, Inversion of Control). ASP.NET Core fornisce un semplice contenitore IoC predefinito, ma è anche possibile usare il contenitore IoC preferito, ad esempio Autofac o Ninject.
 
-Seguendo i principi a tinta unita, le classi verranno tendenzialmente naturalmente piccole, ben fornita e facilmente testate. Ma come possibile fa a sapere se sono venga introdotto troppe dipendenze in classi? Se si utilizza DI tramite il costruttore, sarà facile rilevare che semplicemente esaminando il numero di parametri per il costruttore. Se sono presenti troppe dipendenze, si tratta in genere un segno (un [codice odore](http://deviq.com/code-smells/)) la classe sta tentando di eccessivo che è probabile che violano il principio di responsabilità singolo.
+Se si seguono i principi SOLID, le classi tenderanno a essere piccole, con refactoring corretto e facili da testare. Ma come sapere se nelle classi vengono inserite troppe dipendenze? Se si usa l'inserimento delle dipendenze tramite il costruttore, sarà possibile determinarlo con facilità, semplicemente esaminando il numero di parametri del costruttore. Se le dipendenze sono troppe, ciò è in genere una prova (un [code smell](http://deviq.com/code-smells/)) che la classe sta provando a eseguire troppe operazioni e probabilmente sta violando il principio di singola responsabilità.
 
-Occorrere un'altra Guida per coprire CONTINUO in modo dettagliato. Pertanto, questa guida è necessario conoscere solo un minimo di questi argomenti.
+Per illustrare SOLID in dettaglio, servirebbe un'altra guida. Questa guida presuppone quindi che si abbia solo una conoscenza di base di questi argomenti.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **CONTINUO: Principi fondamentali OOP**
+-   **SOLID: Fundamental OOP Principles** (SOLID: principi OOP fondamentali)
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversione di contenitori di controlli e il modello di inserimento di dipendenze**
+-   **Inversion of Control Containers and the Dependency Injection Pattern** (Contenitori di inversione del controllo e schema di inserimento delle dipendenze)
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. Novità è Glue**
+-   **Steve Smith. New is Glue**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 
 >[!div class="step-by-step"]
-[Precedente] (nosql-database-persistenza-infrastructure.md) [Avanti] (microservice-application-layer-implementation-web-api.md)
+[Indietro] (nosql-database-persistence-infrastructure.md) [Avanti] (microservice-application-layer-implementation-web-api.md)

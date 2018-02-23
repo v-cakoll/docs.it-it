@@ -1,6 +1,6 @@
 ---
-title: Progettazione di un'applicazione orientata ai servizi microservizio
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Progettazione di un'applicazione orientata ai servizi microservizio
+title: Progettazione di un'applicazione orientata ai microservizi
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Progettazione di un'applicazione orientata ai microservizi
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,194 +8,197 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1e1dc919c7e35580576c86b4cf9872b4f8cea2c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai servizi microservizio
+# <a name="designing-a-microservice-oriented-application"></a>Progettazione di un'applicazione orientata ai microservizi
 
-Questa sezione viene illustrato lo sviluppo di un'applicazione del ipotetica enterprise sul lato server.
+Questa sezione illustra lo sviluppo di un'ipotetica applicazione aziendale sul lato server.
 
 ## <a name="application-specifications"></a>Specifiche dell'applicazione
 
-L'applicazione del ipotetica gestisce le richieste dalla logica di business in esecuzione, l'accesso ai database e quindi restituire risposte HTML, JSON o XML. Si indicherà che l'applicazione deve supportare un'ampia gamma di client, inclusi i browser desktop che eseguono applicazioni a pagina singola (stabilimenti termali), App web tradizionali, App web per dispositivi mobili e App native per dispositivi mobili. L'applicazione potrebbe inoltre esporre un'API per terze parti di utilizzare. Inoltre deve essere in grado di integrare in modo asincrono, il relativo microservizi o applicazioni esterne in modo che l'approccio consentirà di resilienza di microservizi in caso di errori parziali.
+L'ipotetica applicazione gestisce le richieste eseguendo la logica di business, effettuando l'accesso ai database e quindi restituendo risposte HTML, JSON o XML. Si può affermare che l'applicazione deve supportare un'ampia gamma di client, inclusi i browser desktop che eseguono applicazioni a pagina singola, app Web tradizionali, app Web per dispositivi mobili e app per dispositivi mobili native. L'applicazione potrebbe inoltre esporre un'API utilizzabile da terze parti. Dovrebbe essere anche in grado di integrare in modo asincrono i relativi microservizi o le applicazioni esterne, pertanto questo approccio contribuirà alla resilienza dei microservizi in caso di errori parziali.
 
-L'applicazione è costituita da questi tipi di componenti:
+L'applicazione sarà costituita da questi tipi di componenti:
 
--   Componenti di presentazione. Questi sono responsabili per l'interfaccia utente di gestione e utilizzo di servizi remoti.
+-   Componenti della presentazione, responsabili della gestione dell'interfaccia utente e dell'utilizzo dei servizi remoti.
 
--   Dominio o la regola business. Si tratta di logica di dominio dell'applicazione.
+-   Logica di business o di dominio, ovvero la logica di dominio dell'applicazione.
 
--   Logica di accesso ai database. Si tratta di componenti di accesso ai dati responsabile per l'accesso ai database (SQL o NoSQL).
+-   Logica di accesso al database, costituita dai componenti di accesso ai dati responsabili dell'accesso ai database (SQL o NoSQL).
 
--   Logica di integrazione dell'applicazione. Sono inclusi un canale di messaggistica, soprattutto in base a gestori di messaggi.
+-   Logica di integrazione dell'applicazione, che include un canale di messaggistica basato principalmente su broker di messaggi.
 
-L'applicazione richiederà ad alta scalabilità, consentendo la sottosistemi verticale per scalare in orizzontale in modo autonomo, perché alcuni sottosistemi richiedono maggiore scalabilità rispetto ad altri.
+L'applicazione richiederà una scalabilità elevata, consentendo ai relativi sottosistemi verticali di aumentare il numero di istanze in modo autonomo, dal momento che alcuni sottosistemi richiederanno maggiore scalabilità rispetto ad altri.
 
-L'applicazione deve essere in grado di essere distribuita in più ambienti di infrastruttura (più cloud pubblici e locali) e deve essere idealmente multipiattaforma, in grado di spostarsi facilmente da Linux a Windows (o viceversa).
+L'applicazione deve poter essere distribuita in più ambienti infrastrutturali (più cloud pubblici e locali) e idealmente dovrebbe essere multipiattaforma, in grado di passare facilmente da Linux a Windows (o viceversa).
 
 ## <a name="development-team-context"></a>Contesto del team di sviluppo
 
-Si presuppongono inoltre le seguenti informazioni sul processo di sviluppo per l'applicazione:
+Si presuppongono inoltre le informazioni seguenti sul processo di sviluppo per l'applicazione:
 
--   Sono presenti più team di sviluppo con particolare attenzione ad aree diverse di business dell'applicazione.
+-   Sono presenti più team di sviluppo che si occupano delle diverse aree di attività dell'applicazione.
 
--   Nuovi membri del team devono diventare rapidamente produttivi e l'applicazione deve essere facile da comprendere e modificare.
+-   I nuovi membri dei team devono diventare produttivi rapidamente e l'applicazione deve essere facile da comprendere e modificare.
 
--   L'applicazione avrà un andamento a lungo termine e regole di business in continua evoluzione.
+-   L'applicazione avrà un'evoluzione a lungo termine e regole business in continuo cambiamento.
 
--   È necessario una buona manutenibilità a lungo termine, ovvero con flessibilità durante l'implementazione di nuove modifiche in futuro pur essendo in grado di aggiornare più sottosistemi con un impatto minimo sugli altri sottosistemi.
+-   È necessaria una buona manutenibilità a lungo termine, ovvero flessibilità durante l'implementazione di nuove modifiche future pur essendo in grado di aggiornare più sottosistemi con un impatto minimo sugli altri sottosistemi.
 
--   Si desidera integrazione continua pratica e la distribuzione continua dell'applicazione.
+-   È necessario assicurare l'integrazione e la distribuzione continue dell'applicazione.
 
--   Si desidera sfruttare i vantaggi di nuove tecnologie (Framework, linguaggi di programmazione e così via) durante l'evoluzione dell'applicazione. Non si desidera rendere migrazioni complete dell'applicazione durante lo spostamento in nuove tecnologie, poiché che potrebbe comportare costi elevati e impatto della prevedibilità e della stabilità dell'applicazione.
+-   Si vogliono sfruttare i vantaggi delle tecnologie emergenti (framework, linguaggi di programmazione e così via) durante l'evoluzione dell'applicazione. Non si vogliono eseguire migrazioni complete dell'applicazione durante il passaggio a nuove tecnologie, dal momento che potrebbero comportare costi elevati e incidere sulla prevedibilità e sulla stabilità dell'applicazione.
 
-## <a name="choosing-an-architecture"></a>Scelta dell'architettura
+## <a name="choosing-an-architecture"></a>Scelta di un'architettura
 
-Quale deve essere l'architettura di distribuzione dell'applicazione? Le specifiche per l'applicazione, insieme al contesto di sviluppo, suggeriscono che è necessario progettare l'applicazione per la scomposizione in sottosistemi autonomi sotto forma di microservizi in collaborazione e contenitori, dove un microservizio è un contenitore.
+Quale dovrebbe essere l'architettura di distribuzione dell'applicazione? Le specifiche per l'applicazione, insieme al contesto di sviluppo, suggeriscono che è opportuno progettare l'applicazione scomponendola in sottosistemi autonomi sotto forma di microservizi e contenitori in collaborazione, dove un microservizio è un contenitore.
 
-In questo approccio, ogni servizio (contenitore) implementa un set di funzioni coesiva e ristretto correlati. Ad esempio, un'applicazione può essere costituito da servizi come il servizio di catalogo, ordinamento service, servizio carrello, servizio profili utente e così via.
+In questo approccio ogni servizio (contenitore) implementa un set di funzioni coerenti e strettamente correlate. Ad esempio, un'applicazione potrebbe essere costituita da servizi come il servizio catalogo, il servizio di gestione degli ordini, il servizio carrello, il servizio profilo utente e così via.
 
-Microservizi comunicano utilizzando protocolli quali HTTP (REST), ma anche in modo asincrono, ovvero AMQP, laddove possibile, soprattutto quando la propagazione Aggiorna con eventi di integrazione.
+I microservizi comunicano usando protocolli quali HTTP (REST), ma anche in modo asincrono (ad esempio, tramite AMQP) ogni volta che è possibile, soprattutto quando si propagano gli aggiornamenti con eventi di integrazione.
 
-Microservizi vengono sviluppati e distribuiti come contenitori indipendentemente uno da altro. Ciò significa che un team di sviluppo può essere lo sviluppo e distribuzione di un determinato microservizio senza alcun impatto sugli altri sottosistemi.
+I microservizi vengono sviluppati e distribuiti come contenitori indipendentemente uno dall'altro. Ciò significa che un team di sviluppo può sviluppare e distribuire un determinato microservizio senza alcun impatto sugli altri sottosistemi.
 
-Ogni microservizio dispone del proprio database, in modo che possa essere completamente separato da altri microservizi. Se necessario, la coerenza tra i database da diversi microservizi avviene mediante gli eventi di integrazione a livello di applicazione (tramite un bus di eventi logici), come gestiti nei comandi e Query Responsibility Segregation (CQRS). Per questo motivo, i vincoli di business devono prevedere l'eventualità di coerenza finale tra le più microservizi e i relativi database.
+Ogni microservizio dispone del proprio database, in modo da poter essere completamente separato dagli altri. Se necessario, la coerenza tra database di microservizi diversi viene ottenuta usando eventi di integrazione a livello di applicazione (tramite un bus di eventi logici), così come vengono gestiti in Command and Query Responsibility Segregation (CQRS). Per questo motivo, i vincoli aziendali devono prevedere la coerenza finale tra i diversi microservizi e i relativi database.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: un'applicazione di riferimento per .NET Core e microservizi distribuito utilizzando contenitori
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: un'applicazione di riferimento per .NET Core e microservizi distribuiti tramite contenitori
 
-In modo che sia possibile concentrarsi sull'architettura e le tecnologie anziché pensare a un dominio di business hypothetic che potrebbe non essere noto, è stato selezionato un dominio aziendale noto, vale a dire, un'applicazione di e-commerce semplificata (e-bar) che presenta un catalogo di i prodotti, accetta gli ordini dei clienti, verifica di inventario e consente di eseguire altre funzioni di business. È disponibile in questo codice sorgente dell'applicazione contenitore in base il [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) repository GitHub.
+Nell'intento di concentrarsi maggiormente sull'architettura e le tecnologie anziché pensare a un ipotetico dominio aziendale sconosciuto, è stato scelto un dominio aziendale noto, per l'esattezza un'applicazione e-commerce (e-shop) semplificata che presenta un catalogo di prodotti, accetta gli ordini dei clienti, verifica l'inventario ed esegue altre funzioni aziendali. Il codice sorgente di questa applicazione basata su contenitori è disponibile nel repository GitHub [eShopOnContainers](http://aka.ms/MicroservicesArchitecture).
 
-L'applicazione è costituita da più sottosistemi, inclusi diversi archivio dell'interfaccia utente front-end (un'applicazione Web e una app native per dispositivi mobili), insieme alla microservizi back-end e i contenitori per tutte le operazioni necessarie sul lato server. Figura 8-1 è illustrata l'architettura dell'applicazione di riferimento.
+L'applicazione è costituita da più sottosistemi, inclusi diversi front-end con interfaccia utente per negozi (un'applicazione Web e un'app per dispositivi mobili nativa), insieme ai microservizi e ai contenitori back-end per tutte le operazioni richieste sul lato server. La figura 8-1 illustra l'architettura dell'applicazione di riferimento.
 
 ![](./media/image1.png)
 
-**Figura 8-1**. Il eShopOnContainers riferimento applicazione, che mostra una comunicazione client-a-microservizio diretta e il bus di eventi
+**Figura 8-1**. Applicazione di riferimento eShopOnContainers, che mostra una comunicazione da client a microservizio diretta e il bus di eventi
 
-**Ambiente di hosting**. Nella figura 8-1, vedrai diversi contenitori distribuiti all'interno di un singolo host Docker. Che sarebbe durante la distribuzione in un singolo host Docker con docker-comporre il comando. Tuttavia, se si utilizzando l'agente di orchestrazione o cluster di contenitore, ogni contenitore può essere eseguito in un host diverso (nodo) e qualsiasi nodo potrebbe essere in esecuzione un numero qualsiasi di contenitori, come è illustrato in precedenza nella sezione architettura.
+**Ambiente host**. Nella figura 8-1 sono visibili diversi contenitori distribuiti all'interno di un singolo host Docker, ovvero la situazione che si verifica durante la distribuzione in un singolo host Docker con il comando docker-compose up. Tuttavia, se si usa un agente di orchestrazione o un cluster di contenitori, ogni contenitore potrebbe essere eseguito in un host (nodo) differente e i nodi potrebbero eseguire un numero qualsiasi di contenitori, come illustrato in precedenza nella sezione sull'architettura.
 
-**Architettura di comunicazione**. L'applicazione eShopOnContainers utilizza due tipi di comunicazione, a seconda del tipo dell'azione funzionale (query e aggiornamenti e le transazioni):
+**Architettura di comunicazione**. L'applicazione eShopOnContainers usa due tipi di comunicazione, a seconda del tipo di azione funzionale (query o aggiornamenti e transazioni):
 
--   Comunicazione client-a-microservizio diretta. Per le query e viene utilizzato per l'accettazione di aggiornamento o i comandi transazionali dalle App client.
+-   Comunicazione da client a microservizio diretta. Viene usata per le query e quando si accettano comandi di aggiornamento o transazionali dalle app client.
 
--   Comunicazione asincrona basato su eventi. Questo errore si verifica a un bus di eventi per distribuire gli aggiornamenti in microservizi o per l'integrazione con applicazioni esterne. Il bus di eventi può essere implementato con qualsiasi tecnologia di infrastruttura di broker di messaggistica come RabbitMQ o tramite bus di servizio livello superiore come Azure Service Bus, NServiceBus, MassTransit o Brighter.
+-   Comunicazione asincrona basata su eventi. Si verifica tramite un bus di eventi per la propagazione degli aggiornamenti tra i microservizi o per l'integrazione con applicazioni esterne. Il bus di eventi può essere implementato con qualsiasi tecnologia di infrastruttura di broker di messaggistica come RabbitMQ o tramite bus di servizio di livello superiore come il bus di servizio di Azure, NServiceBus, MassTransit o Brighter.
 
-L'applicazione viene distribuita come un set di microservizi sotto forma di contenitori. Le applicazioni client possono comunicare con i contenitori, nonché la comunicazione tra microservizi. Come accennato, questa architettura iniziale utilizza un'architettura di comunicazione client-a-microservizio diretta, il che significa che un'applicazione client può richiedere a ognuna di microservizi direttamente. Ogni microservizio dispone di un endpoint pubblico come https://servicename.applicationname.companyname. Se necessario, ogni microservizio può utilizzare una porta TCP diversa. Nell'ambiente di produzione, che consente il mapping di URL di bilanciamento del carico degli microservizi, che distribuisce le richieste tra le istanze disponibili microservizio.
+L'applicazione viene distribuita come un set di microservizi sotto forma di contenitori. Le app client possono comunicare con tali contenitori, nonché comunicare tra microservizi. Come accennato, questa architettura iniziale usa un'architettura di comunicazione da client a microservizio diretta, il che significa che un'applicazione client può inoltrare richieste direttamente a ognuno dei microservizi. Ciascun microservizio dispone di un endpoint pubblico come https://servicename.applicationname.companyname. Se necessario, ogni microservizio può usare una porta TCP diversa. Nell'ambiente di produzione viene eseguito il mapping di tale URL con il bilanciamento del carico dei microservizi, in modo da distribuire le richieste tra le istanze dei microservizi disponibili.
 
-**Nota importante in vs API Gateway. Comunicazione diretta in eShopOnContainers.** Come illustrato nella sezione architettura di questa Guida, l'architettura di comunicazione client-a-microservizio diretta può presentare svantaggi quando si compila un'applicazione basata su microservizio grande e complessa. Ma può essere adeguata per una piccola applicazione, ad esempio nel eShopOnContainers applicazione, in cui l'obiettivo è di concentrarsi su un recupero più semplice avviata applicazioni basate sul contenitore Docker e non si desidera creare un singolo Gateway monolitico API che possono influire le autonomia di sviluppo di microservizi.
+**Nota importante sul gateway API a confronto con la comunicazione diretta in eShopOnContainers.** Come illustrato nella sezione di questa guida relativa all'architettura, l'architettura di comunicazione da client a microservizio diretta può presentare alcuni svantaggi quando si compila un'applicazione basata su microservizi complessa e di grandi dimensioni. Ma può essere una soluzione appropriata per una piccola applicazione, ad esempio l'applicazione eShopOnContainers, in cui l'obiettivo è quello di concentrarsi su un'applicazione preliminare più semplice basata su contenitori Docker e non si vuole creare un singolo gateway API monolitico che possa influire sull'autonomia di sviluppo dei microservizi.
 
-Tuttavia, se si intende progettare un'applicazione basata su microservizio grandi dimensioni con dozzine di microservizi, è consigliabile prendere in considerazione il modello API Gateway, come illustrato nella sezione architettura.
-Una volta pensando di applicazioni in ambienti di produzione e aspetti apportate appositamente per i client remoti, è possibile effettuare il refactoring questa decisione dell'architettura. Presenza di più gateway API personalizzato in base al fattore di forma delle App client può offrire vantaggi per quanto riguarda l'aggregazione di dati diversi per ciascuna applicazione client inoltre è possibile nascondere microservizi interno o le API per le applicazioni client e autorizzare in tale livello di singolo. 
+Tuttavia, se si intende progettare un'applicazione basata su microservizi di grandi dimensioni con decine di microservizi, è consigliabile prendere in considerazione lo schema di gateway API, come illustrato nella sezione sull'architettura.
+Questa scelta architetturale potrebbe essere sottoposta a refactoring in fase di progettazione di applicazioni pronte per la produzione e di caratteristiche pensate espressamente per i client remoti. La presenza di più gateway API personalizzati dipendenti dal fattore di forma delle app client può offrire vantaggi rispetto all'aggregazione di dati diversi per app client; inoltre è possibile nascondere API o microservizi interni alle app client ed eseguire l'autorizzazione in tale livello singolo. 
 
-Tuttavia e come indicato, fare attenzione alle contro grandi e monolitico gateway API che potrebbe terminare l'autonomia di sviluppo di microservizi il.
+Tuttavia, come già accennato, prestare attenzione ai gateway API monolitici di grandi dimensioni che potrebbero compromettere l'autonomia di sviluppo dei microservizi.
 
-### <a name="data-sovereignty-per-microservice"></a>Sovranità di dati per ogni microservizio
+### <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
-Nell'applicazione di esempio, ogni microservizio possiede il proprio database o l'origine dati e ogni database o origine dati viene distribuita come un altro contenitore. Questa decisione progettuale effettuata solo per semplificare lo sviluppatore può ottenere il codice da GitHub, clonarla e aprirlo in Visual Studio o Visual Studio Code. O, in alternativa, semplifica inoltre compilare le immagini Docker personalizzate usando .NET Core CLI e l'interfaccia CLI di Docker e quindi distribuire ed eseguirli in un ambiente di sviluppo di Docker. In entrambi i casi, l'utilizzo di contenitori per i dati di origini consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o qualsiasi altra origine dati con dipendenze rigide sull'infrastruttura (cloud o locale).
+Nell'applicazione di esempio ciascun microservizio ha il proprio database o origine dati e ogni database o origine dati viene distribuita come un altro contenitore. Questa decisione progettuale è stata presa solo per semplificare l'acquisizione del codice da GitHub, la clonazione e l'apertura in Visual Studio o Visual Studio Code da parte dello sviluppatore. In alternativa, può anche facilitare la compilazione di immagini Docker personalizzate tramite l'interfaccia della riga di comando di .NET Core e l'interfaccia della riga di comando di Docker, nonché la relativa distribuzione ed esecuzione in un ambiente di sviluppo Docker. In entrambi i casi, l'uso di contenitori per le origini dati consente agli sviluppatori di compilare e distribuire in pochi minuti senza dover eseguire il provisioning di un database esterno o di qualsiasi altra origine dati con dipendenze rigide dall'infrastruttura (cloud o locale).
 
-In un ambiente di produzione reali, per la disponibilità elevata e scalabilità, i database dovrebbero essere basati su server di database nel cloud o locale, ma non nei contenitori.
+In un ambiente di produzione reale, per la disponibilità elevata e la scalabilità i database dovrebbero essere basati su server di database nel cloud o in locale, ma non nei contenitori.
 
-Pertanto, le unità di distribuzione di microservizi e anche per i database in questa applicazione, sono contenitori di Docker e l'applicazione di riferimento è un'applicazione multi-contenitore basata sul modello microservizi principi.
+Pertanto, le unità di distribuzione per i microservizi (e anche per i database in questa applicazione) sono contenitori Docker e l'applicazione di riferimento è un'applicazione a più contenitori basata sui principi dei microservizi.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **eShopOnContainers repository GitHub. Codice sorgente per l'applicazione di riferimento**
+-   **Repository GitHub eShopOnContainers. Codice sorgente per l'applicazione di riferimento**
     *https://aka.ms/eShopOnContainers/*
 
-## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizio
+## <a name="benefits-of-a-microservice-based-solution"></a>Vantaggi di una soluzione basata su microservizi
 
-Una soluzione di base microservizio simile al seguente presenta numerosi vantaggi:
+Una soluzione basata su microservizi come questa offre numerosi vantaggi:
 
-**Ogni microservizio è relativamente piccolo, semplice da gestire e sviluppare**. In particolare:
+**Ogni microservizio è relativamente piccolo, semplice da gestire e da sviluppare**. In particolare:
 
--   È facile per uno sviluppatore di comprendere e iniziare rapidamente con buona produttività.
+-   Sono concetti facili da comprendere e gli sviluppatori possono essere rapidamente operativi e ottenere una buona produttività.
 
--   Contenitori di avvio veloce, che consente agli sviluppatori più produttivi.
+-   I contenitori possono essere usati subito, rendendo più produttivi gli sviluppatori.
 
--   Un IDE come Visual Studio è possibile caricare i progetti di piccole dimensioni veloci, rendendo la produttività agli sviluppatori.
+-   Un ambiente di sviluppo integrato come Visual Studio può caricare rapidamente progetti di dimensioni minori, assicurando la produttività degli sviluppatori.
 
--   Ogni microservizio può essere progettato, sviluppato e distribuito in modo indipendente da altri microservizi, che offre flessibilità in quanto è più facile da distribuire nuove versioni di microservizi frequentemente.
+-   Ogni microservizio può essere progettato, sviluppato e distribuito in modo indipendente dagli altri, il che garantisce una maggiore flessibilità dal momento che è più facile distribuire con regolarità nuove versioni dei microservizi.
 
-**È possibile scalare le singole aree dell'applicazione**. Il servizio catalogo o il carrello, ad esempio, potrebbe essere necessario per la scalabilità, ma non il processo di ordinamento. Un'infrastruttura di microservizi sarà molto più efficiente per quanto riguarda le risorse usate quando si distribuisce orizzontalmente rispetto a un'architettura monolitica.
+**È possibile aumentare il numero delle singole aree dell'applicazione**. Ad esempio, potrebbe essere necessario aumentare il numero delle istanze del servizio catalogo o del servizio carrello, ma non quello del processo di gestione degli ordini. Un'infrastruttura di microservizi sarà molto più efficiente di un'architettura monolitica per quel che riguarda le risorse usate quando si aumenta il numero delle istanze.
 
-**È possibile dividere il lavoro tra più team di sviluppo**. Ogni servizio può essere di proprietà da un team di sviluppo singolo. Ogni team può gestire, sviluppare, distribuire e scalare il servizio in modo indipendente il resto dei team.
+**È possibile dividere le attività di sviluppo tra più team**. Ogni servizio può essere di proprietà di un unico team di sviluppo. Ogni team può gestire, sviluppare, distribuire e ridimensionare il servizio in modo indipendente dal resto dei team.
 
-**I problemi sono più isolati**. Se si verifica un problema in un servizio, solo tale servizio è compromessa inizialmente (tranne quando viene utilizzata la progettazione errata, con le dipendenze dirette tra microservizi) e altri servizi possono continuare a gestire le richieste. Al contrario, un componente che non funziona correttamente in un'architettura di distribuzione monolitico può arrestare l'intero sistema, soprattutto quando implica risorse, ad esempio una perdita di memoria. Inoltre, quando un problema in un microservizio viene risolto, è possibile distribuire solo il microservizio interessato senza alcun impatto sul resto dell'applicazione.
+**I problemi sono più isolati**. Se si verifica un problema in un servizio, solo tale servizio risulta interessato inizialmente (tranne quando si usa una progettazione errata, con dipendenze dirette tra i microservizi) e gli altri servizi possono continuare a gestire le richieste. Al contrario, un componente che non funziona correttamente in un'architettura di distribuzione monolitica può arrestare l'intero sistema, soprattutto quando si ripercuote sulle risorse, come nel caso di una perdita di memoria. Inoltre, quando un problema in un microservizio viene risolto, è possibile distribuire solo il microservizio interessato senza ripercussioni sul resto dell'applicazione.
 
-**È possibile utilizzare le tecnologie più recenti**. Poiché è possibile iniziare a sviluppare servizi in modo indipendente ed eseguirli side-by-side (grazie a contenitori e .NET Core), iniziare a utilizzare le tecnologie e i framework più recente speditamente anziché rimanga bloccato su un framework per l'intero o un stack precedente applicazione.
+**Possono essere usate le tecnologie più recenti**. Potendo iniziare a sviluppare i servizi in modo indipendente ed eseguirli side-by-side (grazie ai contenitori e a .NET Core), è possibile cominciare a usare agevolmente le tecnologie e i framework più recenti anziché rimanere ancorati a uno stack o a un framework obsoleto per l'intera applicazione.
 
-## <a name="downsides-of-a-microservice-based-solution"></a>Negativi di una soluzione basata su microservizio
+## <a name="downsides-of-a-microservice-based-solution"></a>Svantaggi di una soluzione basata su microservizi
 
-Una soluzione di base microservizio simile al seguente presenta alcuni svantaggi:
+Una soluzione basata su microservizi come questa presenta anche alcuni svantaggi:
 
-**Applicazione distribuita**. Distribuzione dell'applicazione aggiunge complessità per gli sviluppatori quando vengono la progettazione e i servizi di compilazione. Ad esempio, gli sviluppatori devono implementare comunicazioni interservizi mediante protocolli quali HTTP o AMPQ, che aggiunge complessità per i test e la gestione delle eccezioni. Aggiunge anche la latenza per il sistema.
+**Applicazione distribuita**. La distribuzione dell'applicazione aumenta la complessità per gli sviluppatori in fase di progettazione e compilazione dei servizi. Ad esempio, gli sviluppatori devono implementare la comunicazione tra i servizi tramite protocolli quali HTTP o AMPQ, che implicano una maggiore complessità per i test e la gestione delle eccezioni. Anche la latenza per il sistema aumenta.
 
-**Complessità di distribuzione**. Un'applicazione che dispone di decine di tipi di microservizi e scalabilità elevate (deve essere in grado di creare molte istanze per ogni servizio e bilanciare i servizi su molti computer host) è necessario pertanto un elevato livello di complessità di distribuzione per la gestione e gli operatori IT. Se non si utilizza un'infrastruttura orientata ai servizi microservizio (ad esempio, un agente di orchestrazione e utilità di pianificazione), tale complessità può richiedere molto più attività di sviluppo rispetto all'applicazione di business stesso.
+**Complessità della distribuzione**. Un'applicazione che dispone di decine di tipi di microservizi e necessita di scalabilità elevata (dovendo essere in grado di creare molte istanze per ogni servizio e di bilanciare tali servizi su molti host) comporta un livello elevato di complessità di distribuzione per le operazioni IT e la gestione. Se non si usa un'infrastruttura orientata ai microservizi (come un agente di orchestrazione e un'utilità di pianificazione), questa ulteriore complessità può richiedere molte più attività di sviluppo dell'applicazione aziendale stessa.
 
-**Le transazioni atomiche**. Le transazioni atomiche tra più microservizi in genere non sono possibili. I requisiti aziendali sono necessario adottare la coerenza eventuale tra più microservizi.
+**Transazioni atomiche**. Le transazioni atomiche tra più microservizi in genere non sono possibili. I requisiti aziendali devono prevedere la coerenza finale tra più microservizi.
 
-**Aumento delle esigenze di risorse globali** (totale di memoria, le unità e risorse di rete per tutti i server o host). In molti casi, quando si sostituisce un'applicazione monolitica con un approccio di microservizi, la quantità di risorse globali necessari per la nuova applicazione microservizio sarà maggiore rispetto alle esigenze di infrastruttura dell'applicazione monolitico originale. Questo avviene perché il livello più elevato di granularità e i servizi distribuiti richiede risorse più globale. Tuttavia, dato il costo delle risorse in generale e il vantaggio di poter scalare orizzontalmente solo determinate aree dell'applicazione rispetto ai costi elevati a lungo termine quando si sviluppano applicazioni monolitiche, l'uso di un aumento delle risorse è in genere un buon compromesso per grandi dimensioni, applicazioni a lungo termine.
+**Aumento delle richieste di risorse globali** (memoria totale, unità e risorse di rete per tutti i server o gli host). In molti casi, quando si sostituisce un'applicazione monolitica con un approccio di tipo microservizi, la quantità di risorse globali necessarie per la nuova applicazione basata su microservizi sarà maggiore rispetto alle esigenze dell'infrastruttura dell'applicazione monolitica originale. Questo avviene perché il maggiore livello di granularità e di servizi distribuiti richiede più risorse globali. Tuttavia, considerato il costo minimo delle risorse in generale e il vantaggio di poter ridimensionare solo determinate aree dell'applicazione rispetto ai costi a lungo termine per lo sviluppo di applicazioni monolitiche, l'incremento nell'uso delle risorse in genere è un buon compromesso per applicazioni a lungo termine di grandi dimensioni.
 
-**Problemi di comunicazione diretta client‑to‑microservice**. Quando l'applicazione è di grandi dimensioni, con decine di microservizi, esistono problematiche e limitazioni se l'applicazione richiede le comunicazioni client-a-microservizio dirette. Un problema è una potenziale mancata corrispondenza tra le esigenze del client e le API esposte da ognuno di microservizi. In alcuni casi, l'applicazione client potrebbe essere necessario apportare molte richieste separate per comporre l'interfaccia utente, che può risultare inefficiente su Internet e non risulterebbe conveniente in una rete mobile. Pertanto, richieste dall'applicazione client per il sistema back-end devono essere ridotta a icona.
+**Problemi con la comunicazione da client a microservizio diretta**. Quando l'applicazione è di grandi dimensioni, con decine di microservizi, possono presentarsi diverse problematiche e limitazioni se l'applicazione richiede comunicazioni da client a microservizio dirette. Un problema è una potenziale mancata corrispondenza tra le esigenze del client e le API esposte da ognuno dei microservizi. In alcuni casi, l'applicazione client potrebbe aver bisogno di presentare molte richieste distinte per comporre l'interfaccia utente, causando problemi di inefficienza su Internet e di scarsa praticità in una rete mobile. Pertanto, le richieste dall'applicazione client al sistema back-end dovrebbero essere ridotte al minimo.
 
-Un altro problema con le comunicazioni client-a-microservizio dirette è che alcune microservizi potrebbero avere utilizzato i protocolli che non sono adatti a Web. Un servizio può usare un protocollo binario, mentre un altro servizio utilizzi messaggistica AMQP. Tali protocolli non sono firewall‑friendly e vengono utilizzate internamente. In genere, un'applicazione deve utilizzare protocolli quali HTTP e WebSockets per la comunicazione all'esterno del firewall.
+Un altro problema con le comunicazioni da client a microservizio dirette è che alcuni microservizi potrebbero usare protocolli non appropriati per il Web. Un servizio potrebbe usare un protocollo binario, mentre un altro servizio potrebbe fare ricorso alla messaggistica AMQP. Tali protocolli non sono indicati per il firewall e sono più adatti per un uso interno. In genere, un'applicazione dovrebbe usare protocolli quali HTTP e WebSocket per la comunicazione all'esterno del firewall.
 
-Ancora un altro svantaggio con questo approccio diretto client‑to‑service è che rende difficile eseguire il refactoring i contratti per tali microservizi. Nel tempo agli sviluppatori potrebbe essere opportuno modificare il modo in cui il sistema è partizionato in servizi. Ad esempio, potrebbero unire i due servizi o suddividere un servizio in due o più servizi. Tuttavia, se i client comunicano direttamente con i servizi, l'esecuzione di questo tipo di refactoring può interrompere la compatibilità con le applicazioni client.
+Un altro svantaggio di questo approccio di tipo comunicazione da client a servizio diretta è che rende difficile effettuare il refactoring dei contratti per tali microservizi. Nel tempo, gli sviluppatori potrebbero avere bisogno di modificare il modo in cui il sistema è partizionato nei servizi. Ad esempio, potrebbero unire due servizi o suddividere un servizio in due o più servizi. Tuttavia, se i client comunicano direttamente con i servizi, l'esecuzione di questo tipo di refactoring può interrompere la compatibilità con le applicazioni client.
 
-Come indicato nella sezione architettura, durante la progettazione e creazione di un'applicazione complessa basata su microservizi, è possibile considerare l'utilizzo di più gateway API con granularità fine anziché l'approccio più semplice di comunicazione client‑to‑microservice diretto.
+Come accennato nella sezione relativa all'architettura, durante la progettazione e la compilazione di un'applicazione complessa basata su microservizi è possibile prendere in considerazione l'uso di più gateway API con granularità fine, anziché l'approccio più semplice di tipo comunicazione da client a microservizio diretta.
 
-**Partizionamento di microservizi**. Infine, indipendentemente dall'approccio adottato per l'architettura del microservizio, un'altra richiesta di verifica deve decidere come un'applicazione end-to-end in più microservizi di partizione. Come indicato nella sezione della Guida all'architettura, esistono diverse tecniche e approcci. In pratica, è necessario identificare le aree dell'applicazione che vengono disaccoppiati da altre aree e che hanno un numero basso di dipendenze rigide. In molti casi, questo è allineato al partizionamento servizi dal caso d'uso. Ad esempio, nell'applicazione e reparto, è necessario un servizio di ordinamento che è responsabile di tutta la logica di business relative al processo di ordine. È necessario anche il servizio del catalogo e il servizio di basket che implementano le altre funzionalità. Idealmente, ogni servizio deve avere solo un piccolo set di responsabilità. È simile al singolo responsabilità principio (criteri di restrizione software) applicato alle classi, che indica che una classe debba avere solo uno dei motivi per modificare. Ma in questo caso, è su microservizi, in modo che l'ambito sia maggiore di una singola classe. Soprattutto, un microservizio deve essere completamente autonomo, to end, compresa la responsabilità per le proprie origini dati.
+**Partizionamento dei microservizi**. Infine, indipendentemente dall'approccio adottato per l'architettura basata su microservizi, un'altra questione cruciale è quella di decidere come partizionare un'applicazione end-to-end in più microservizi. Come indicato nella sezione sull'architettura di questa guida, esistono differenti tecniche e approcci che è possibile adottare. Fondamentalmente, è necessario identificare le aree dell'applicazione che vengono separate dalle altre e che hanno un numero ridotto di dipendenze rigide. In molti casi, questo approccio è allineato al partizionamento dei servizi in base al caso d'uso. Ad esempio, nell'applicazione e-shop è disponibile un servizio di gestione degli ordini che è responsabile di tutta la logica di business relativa al processo di ordine. Si dispone inoltre del servizio catalogo e del servizio carrello che implementano altre funzionalità. Idealmente, ogni servizio dovrebbe avere solo un piccolo set di responsabilità. Il concetto è analogo a quello del principio di singola responsabilità (SRP, Single Responsibility Principle) applicato alle classi, che indica che una classe deve avere un solo motivo per cambiare. Ma in questo caso si tratta di microservizi, pertanto l'ambito sarà maggiore rispetto a una singola classe. Soprattutto, un microservizio deve essere completamente autonomo, end-to-end, compresa la responsabilità per le relative origini dati.
 
-## <a name="external-versus-internal-architecture-and-design-patterns"></a>Esterni e interni modelli di architettura e progettazione
+## <a name="external-versus-internal-architecture-and-design-patterns"></a>Architettura e schemi progettuali esterni e interni a confronto
 
-L'architettura esterno è composto da più servizi, seguendo i principi descritti nella sezione architettura di questa Guida all'architettura di microservizio. Tuttavia, a seconda della natura di ogni microservizio e indipendentemente dall'architettura di alto livello microservizio si sceglie, è comune e in alcuni casi è consigliabile disporre di diverse architetture interne, ognuna basata su modelli differenti, per diversi microservizi. Il microservizi è anche possono utilizzare diverse tecnologie e linguaggi di programmazione. Figura 8-2 viene illustrata questa diversità.
+L'architettura esterna è costituita dall'architettura di microservizi composta da più servizi, in base ai principi descritti nella sezione sull'architettura di questa guida. Tuttavia, a seconda della natura di ogni microservizio e indipendentemente dall'architettura di microservizi di alto livello scelta, è comune e in alcuni casi consigliabile disporre di diverse architetture interne, ognuna basata su schemi differenti, per microservizi diversi. I microservizi possono anche usare tecnologie e linguaggi di programmazione differenti. La figura 8-2 illustra questa diversità.
 
 ![](./media/image2.png)
 
-**Figura 8-2**. Esterni e di architettura e progettazione
+**Figura 8-2**. Architettura e progettazione esterne e interne a confronto
 
-Ad esempio, nel nostro *eShopOnContainers* microservizi profilo di esempio, il catalogo, basket e utente sono semplici (in pratica, sottosistemi CRUD). Pertanto, la progettazione e l'architettura interna è semplice. Tuttavia, potrebbe essere altri microservizi, ad esempio l'ordinamento microservizio, che è più complessa e rappresenta le regole di business in continua evoluzione con un elevato livello di complessità di dominio. In questi casi si consiglia di implementare i modelli più avanzati all'interno di un particolare microservizio, come quelli definiti con gli approcci di progettazione basati su dominio (DDD), come *eShopOnContainers* ordinamento microservizio. (Questi modelli DDD della sezione in un secondo momento in cui viene illustrata l'implementazione di verranno esaminate le *eShopOnContainers* ordinamento microservizio.)
+Ad esempio, nell'esempio *eShopOnContainers* i microservizi del catalogo, del carrello e del profilo utente sono semplici (fondamentalmente, sottosistemi CRUD). Pertanto, la relativa architettura e la progettazione interne sono lineari. Tuttavia, potrebbero essere presenti altri microservizi, ad esempio quello di gestione degli ordini, che è più complesso e rappresenta le regole business in continua evoluzione con un livello elevato di complessità di dominio. In casi come questi, è consigliabile implementare schemi più avanzati all'interno di un determinato microservizio, come quelli definiti con l'approccio di tipo progettazione basata su domini (DDD), come nel caso del microservizio di gestione degli ordini di *eShopOnContainers*. Questi schemi DDD verranno riesaminati più avanti nella sezione che illustra l'implementazione del servizio di gestione degli ordini di *eShopOnContainers*.
 
-Un altro motivo per una tecnologia diversa per ogni microservizio potrebbe essere la natura di ogni microservizio. Ad esempio, potrebbe essere preferibile utilizzare un linguaggio di programmazione funzionale, ad esempio F\#, o anche un linguaggio come R Se la destinazione è AI e machine learning domini, anziché un linguaggio di programmazione orientata ad esempio C\#.
+Un altro motivo per usare una tecnologia differente per ogni microservizio potrebbe essere la natura dei diversi microservizi. Ad esempio, potrebbe essere preferibile usare un linguaggio di programmazione funzionale quale F\# o addirittura un linguaggio come R se si fa riferimento a domini di Machine Learning e intelligenza artificiale, invece di un linguaggio di programmazione più orientato a oggetti come C\#.
 
-La riga inferiore è che ogni microservizio può avere un'architettura interna diversa in base ai modelli di progettazione diverse. Microservizi tutti non devono essere implementate utilizzando modelli avanzati DDD, perché che potrebbe essere eccessivo engineering li. Analogamente, microservizi complessi con la logica di business in continua evoluzione non devono essere implementata come componenti CRUD oppure possono finire con codice di bassa qualità.
+In conclusione, ogni microservizio può avere un'architettura interna differente in base ai diversi schemi progettuali. Non tutti i microservizi devono essere implementati usando schemi DDD avanzati, dal momento che questo approccio apporterebbe troppe modifiche alla progettazione. Analogamente, i microservizi complessi con una logica di business in continua evoluzione non dovrebbero essere implementati come componenti CRUD perché il risultato potrebbe essere un codice di scarsa qualità.
 
 
 
-## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Il nuovo ambiente: più modelli di architettura e microservizi polyglot
+## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Il nuovo mondo: più schemi architetturali e microservizi poliglotti
 
-Esistono molti modelli di architettura utilizzati da sviluppatori e progettisti software. Di seguito sono riportati alcuni (combinazione di stili di architettura e i modelli di architettura):
+Esistono molti schemi architetturali usati dagli sviluppatori e dai progettisti software. Di seguito sono riportati alcuni esempi, che combinano stili e schemi architetturali:
 
--   Semplice CRUD, a livello di singolo, solo livello.
+-   CRUD semplice a un solo livello.
 
--   [Tradizionale a più livelli N](https://msdn.microsoft.com/en-us/library/ee658109.aspx#Layers).
+-   [Tradizionale a N livelli](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
 
--   [Basati su dominio progettazione a più livelli N](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+-   [Progettazione basata su domini a N livelli](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
--   [Eseguire la pulizia architettura](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (se utilizzato con [eShopOnWeb](http://aka.ms/WebAppArchitecture))
+-   [Architettura pulita](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (come quella usata con [eShopOnWeb](http://aka.ms/WebAppArchitecture))
 
--   [Comando ed eseguire Query di separazione delle responsabilità](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+-   [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 
--   [Architettura basata sugli eventi](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
+-   [Architettura basata su eventi](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
-È anche possibile compilare microservizi con numerose tecnologie e i linguaggi, ad esempio API Web di ASP.NET Core, NancyFx, ASP.NET Core SignalR (disponibile con .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang e molto altro.
+È anche possibile compilare microservizi con molti linguaggi e tecnologie, come le API Web di ASP.NET Core, NancyFx, ASP.NET Core SignalR (disponibile con .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang e molto altro ancora.
 
-L'aspetto importante è che nessun motivo particolare architettura o stile né qualsiasi tecnologia specifica, è appropriato per tutte le situazioni. Figura 8-3 illustra alcuni approcci e delle tecnologie (anche se non in un ordine particolare) che possono essere utilizzati nel microservizi diversi.
+Il concetto fondamentale da comprendere è che nessuno stile o schema architetturale particolare né nessuna tecnologia specifica è appropriata per tutte le situazioni. La figura 8-3 illustra alcuni approcci e tecnologie (anche se non in un ordine specifico) che possono essere usati nei diversi microservizi.
 
 ![](./media/image3.png)
 
-**Figura 8-3**. I modelli di architettura più e con il mondo microservizi polyglot
+**Figura 8-3**. Il mondo dei diversi schemi architetturali e microservizi poliglotti
 
-Come illustrato nella figura 8-3, nelle applicazioni costituito da molti microservizi (delimitata contesti nella terminologia di progettazione basati su dominio, o semplicemente "sottosistemi" come microservizi autonomo), è possibile implementare ogni microservizio in modo diverso. Ogni potrebbe dispongono di un modello di architettura diversi e utilizzare diversi linguaggi e i database a seconda della natura dell'applicazione, i requisiti di business e priorità. In alcuni casi il microservizi potrebbero essere simile. Ma che non è in genere il caso, poiché il limite di contesto e requisiti di ogni sottosistema sono in genere diversi.
+Come illustrato nella figura 8-3, nelle applicazioni costituite da molti microservizi (contesti delimitati nella terminologia della progettazione basata su domini o semplicemente "sottosistemi" come microservizi autonomi), è possibile implementare ogni microservizio in un modo diverso. Ognuno potrebbe avere uno schema architetturale differente e usare linguaggi e database diversi a seconda della natura dell'applicazione, dei requisiti aziendali e delle priorità. In alcuni casi, i microservizi potrebbero essere simili. Ma non si tratta di un caso frequente, dal momento che il limite di contesto e i requisiti di ciascun sottosistema in genere sono diversi.
 
-Ad esempio, per una semplice applicazione di manutenzione CRUD, non potrebbe non senso per progettare e implementare DDD modelli. Ma per il dominio di base o business di base, potrebbe essere necessario applicare i modelli più avanzati per gestire la complessità di business con regole di business in continua evoluzione.
+Ad esempio, per una semplice applicazione di manutenzione CRUD, potrebbe non avere senso progettare e implementare schemi DDD. Ma per il dominio base o l'attività principale, potrebbe essere necessario applicare schemi più avanzati per gestire la complessità aziendale con regole business in continua evoluzione.
 
-Soprattutto quando si gestiscono con applicazioni di grandi dimensioni composte da più sistemi secondari, è consigliabile non applicare un'unica architettura di primo livello in base a un modello di architettura single. Ad esempio, CQRS non deve essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbero essere utili per un set specifico di servizi.
+Soprattutto quando si gestiscono applicazioni di grandi dimensioni composte da più sottosistemi, è consigliabile non applicare un'unica architettura di primo livello basata su un singolo schema architetturale. Ad esempio, CQRS non dovrebbe essere applicato come un'architettura di primo livello per un'intera applicazione, ma potrebbe essere utile per un set specifico di servizi.
 
-È presente alcun punto argento o un modello di architettura per ogni case specificato. Non è possibile avere "uno schema di architettura per tutte le regole." A seconda della priorità di ogni microservizio, è necessario scegliere un approccio diverso per ognuno, come illustrato nelle sezioni seguenti.
+Non esiste un metodo infallibile o il giusto schema architetturale per ogni singolo caso. Non è possibile disporre di uno schema architetturale applicabile a tutte le situazioni. In base alle priorità di ogni microservizio, è necessario scegliere un approccio differente, come illustrato nelle sezioni successive.
 
 
 >[!div class="step-by-step"]
-[Precedente] [Avanti] (data-driven-crud-microservice.md) (index.md)
+[Precedente] (index.md) [Successivo] (data-driven-crud-microservice.md)

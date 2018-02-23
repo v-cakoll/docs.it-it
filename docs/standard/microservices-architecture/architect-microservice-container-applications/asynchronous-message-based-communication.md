@@ -1,6 +1,6 @@
 ---
 title: Comunicazione asincrona basata su messaggi
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Comunicazione asincrona basata su messaggi
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Comunicazione asincrona basata su messaggi
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,107 +8,110 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: df39771295d12e122edbe27e91cd899e3318e301
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
-Messaggistica asincrona e la comunicazione basata su eventi sono fondamentali per la propagazione delle modifiche tra più microservizi e i relativi modelli di dominio correlate. Come accennato in precedenza nella discussione microservizi delimitata contesti (BCs), modelli (utente, cliente, prodotto, Account, e così via) possono avere diversi significati diversi microservizi o BCs. Ciò significa che quando si verificano modifiche, è necessario un modo per risolvere le modifiche tra i diversi modelli. Una soluzione è coerenza finale e la comunicazione basata sugli eventi in base a messaggistica asincrona.
+La messaggistica asincrona e la comunicazione basata su eventi sono fondamentali per la propagazione delle modifiche tra più microservizi e i modelli di dominio correlati. Come accennato in precedenza nella sezione relativa a microservizi e contesti delimitati, i modelli (utente, cliente, prodotto, account e così via) possono avere diversi significati per differenti microservizi o contesti delimitati. Ciò significa che, quando si verificano modifiche, è necessario un sistema per riconciliare le modifiche tra i diversi modelli. Una soluzione è coerenza finale e la comunicazione basata su eventi in base alla messaggistica asincrona.
 
-Quando si utilizza la messaggistica, i processi comunicano mediante lo scambio di messaggi in modo asincrono. Un client esegue un comando o una richiesta a un servizio mediante l'invio di un messaggio. Se il servizio deve rispondere, invia un messaggio diverso al client. Poiché si tratta di una comunicazione basata su messaggi, il client si presuppone che la risposta non verrà ricevuta immediatamente, e che non potrebbero essere presenti alcuna risposta affatto.
+Quando si utilizza la messaggistica, i processi comunicano mediante lo scambio di messaggi in modalità asincrona. Un client esegue un comando o una richiesta a un servizio mediante l'invio di un messaggio al servizio. Se il servizio deve rispondere, invia un messaggio diverso al client. Poiché si tratta di una comunicazione basata su messaggi, il client presuppone che la risposta non verrà ricevuta immediatamente e che potrebbe non essere ricevuta alcuna risposta.
 
-Un messaggio è composto da un'intestazione (metadati, ad esempio informazioni di identificazione o sicurezza) e un corpo. I messaggi vengono inviati in genere tramite protocolli asincroni come AMQP.
+Un messaggio è composto da un'intestazione (metadati come informazioni di identificazione o di sicurezza) e un corpo. I messaggi in genere vengono inviati tramite protocolli asincroni come AMQP.
 
-L'infrastruttura preferito per questo tipo di comunicazione della community di microservizi è un broker messaggi leggero, che è diverso da Broker di grandi dimensioni e orchestrators utilizzati in SOA. In un gestore di messaggi semplice, l'infrastruttura è in genere "muto," funge solo da un gestore di messaggi, con implementazioni semplici, ad esempio RabbitMQ o a un bus di servizio scalabile nel cloud come Azure Service Bus. In questo scenario, la maggior parte del concetto di "intelligente" è sempre presente negli endpoint di creazione e utilizzo dei messaggi, vale a dire nel microservizi.
+L'infrastruttura preferita per questo tipo di comunicazione nella community dei microservizi è un broker di messaggi leggero, diverso dai broker e dagli agenti di orchestrazione di grandi dimensioni usati in SOA. In un broker di messaggi leggero, l'infrastruttura in genere opera solo come un broker di messaggi, con implementazioni semplici come RabbitMQ o un bus di servizio scalabile nel cloud come il bus di servizio di Azure. In questo scenario, la maggior parte dell'elaborazione "intelligente" viene eseguita negli endpoint che producono e usano i messaggi, ovvero nei microservizi.
 
-Un'altra regola, che è consigliabile provare a seguire il più possibile consiste nell'utilizzare la messaggistica asincrona solo tra i servizi interni e consente la comunicazione sincrona (ad esempio HTTP) solo dalle App client per i servizi front-end (API gateway e il primo livello di microservizi).
+Un'altra regola che è consigliabile provare a seguire il più possibile consiste nell'usare solo la messaggistica asincrona tra i servizi interni e impiegare la comunicazione sincrona (ad esempio, HTTP) solo dalle app client ai servizi front-end (gateway API e il primo livello di microservizi).
 
-Esistono due tipi di comunicazione di messaggistica asincrona: comunicazione basata su messaggi singolo destinatario e la comunicazione basata su messaggi di più destinatari. Nelle sezioni seguenti si forniscono informazioni dettagliate su tali.
+Esistono due tipi di comunicazione per la messaggistica asincrona: comunicazione basata su messaggi con singolo destinatario e comunicazione basata su messaggi con più destinatari. Nelle sezioni seguenti vengono fornite informazioni dettagliate in proposito.
 
-## <a name="single-receiver-message-based-communication"></a>Comunicazione basata su messaggi singolo ricevitore 
+## <a name="single-receiver-message-based-communication"></a>Comunicazione basata su messaggi con singolo destinatario 
 
-Comunicazione asincrona basata su messaggi con un singolo ricevitore pertanto è comunicazione punto a punto che recapita un messaggio a uno e uno solo dei consumatori che sta leggendo il canale e che il messaggio viene elaborato solo una volta. Tuttavia, esistono casi speciali. In un sistema cloud che tenta di recuperare automaticamente da errori, ad esempio, lo stesso messaggio può essere inviato più volte. Problemi di rete o altri errori, il client deve essere in grado di ripetere l'invio di messaggi e il server deve implementare un'operazione per essere idempotenti per elaborare una sola volta un determinato messaggio.
+La comunicazione basata su messaggi con singolo destinatario implica che sia presente una comunicazione point-to-point che recapita un messaggio a uno e uno solo dei consumer che eseguono la lettura del canale e che il messaggio venga elaborato una sola volta. Esistono tuttavia casi speciali. Ad esempio, in un sistema cloud che tenta di eseguire automaticamente il ripristino dagli errori, lo stesso messaggio potrebbe essere inviato più volte. A causa di problemi di rete o altri errori, il client deve essere in grado di ripetere l'invio dei messaggi e il server deve implementare un'operazione idempotente, in modo da elaborare un particolare messaggio una sola volta.
 
-Comunicazione basata su messaggi singolo ricevitore è particolarmente adatto per l'invio di comandi asincroni dal uno microservizio a altro come mostrato nella figura 4-18 che illustra questo approccio.
+La comunicazione basata su messaggi con singolo destinatario è particolarmente adatta per l'invio di comandi asincroni da un microservizio all'altro, come mostrato nella figura 4-18 che illustra questo approccio.
 
-Una volta avviato l'invio di comunicazione basata su messaggi (sia con i comandi o gli eventi), è consigliabile evitare di combinazione di comunicazioni basate su messaggi con la comunicazione HTTP sincrona.
+Una volta che si iniziano a inviare comunicazioni basate su messaggi (con comandi o eventi), è consigliabile evitare di combinare la comunicazione basata su messaggi con la comunicazione HTTP sincrona.
 
 ![](./media/image18.PNG)
 
-**Figura 4-18**. Un singolo microservizio riceve un messaggio asincrono
+**Figura 4-18**. Un singolo microservizio che riceve un messaggio asincrono
 
-Si noti che quando i comandi provengono da applicazioni client, possono essere implementate come i comandi sincroni HTTP. Quando è necessaria una maggiore scalabilità o quando si è già in un processo di business basata su messaggi, è necessario utilizzare comandi basata su messaggi.
+Si noti che quando i comandi provengono da applicazioni client, possono essere implementati come comandi sincroni HTTP. È necessario usare comandi basati su messaggi quando è necessaria una maggiore scalabilità o quando si è già in un processo aziendale basato su messaggi.
 
-## <a name="multiple-receivers-message-based-communication"></a>Comunicazione basata su messaggi più destinatari 
+## <a name="multiple-receivers-message-based-communication"></a>Comunicazione basata su messaggi con più destinatari 
 
-Come un approccio più flessibile, è inoltre possibile utilizzare un meccanismo di pubblicazione/sottoscrizione in modo che la comunicazione tra il mittente sarà disponibile al sottoscrittore aggiuntive microservizi o alle applicazioni esterne. Pertanto, consente di seguire il [principio di apertura/chiusura](https://en.wikipedia.org/wiki/Open/closed_principle) nel servizio di invio. In questo modo, è possibile aggiungere ulteriori server di sottoscrizione in futuro senza dover modificare il servizio del mittente.
+Come approccio più flessibile, è anche possibile usare un meccanismo di pubblicazione/sottoscrizione, in modo da rendere disponibile la comunicazione dal mittente per microservizi sottoscrittori aggiuntivi o applicazioni esterne. Questo pertanto consente di seguire il [principio aperto/chiuso](https://en.wikipedia.org/wiki/Open/closed_principle) nel servizio di invio. In questo modo, sarà possibile aggiungere ulteriori sottoscrittori in futuro senza dover modificare il servizio del mittente.
 
-Quando si utilizza una comunicazione di pubblicazione/sottoscrizione, è possibile utilizzare un'interfaccia del bus di eventi agli eventi di pubblicazione a qualsiasi sottoscrittore.
+Quando si usa una comunicazione basata su pubblicazione/sottoscrizione, è possibile usare un'interfaccia di bus di eventi per pubblicare gli eventi per qualsiasi sottoscrittore.
 
 ## <a name="asynchronous-event-driven-communication"></a>Comunicazione asincrona basata su eventi
 
-Quando si usa la comunicazione asincrona basata sugli eventi, un microservizio pubblica un evento di integrazione quando si verifica un evento all'interno del dominio e un altro microservizio deve da considerare, ad esempio una variazione di prezzo di un microservizio catalogo prodotti. Ulteriori microservizi sottoscrivono gli eventi in modo che possano ricevere di in modo asincrono. In questo caso, i destinatari potrebbero aggiornare le proprie entità di dominio, causando ulteriori eventi di integrazione da pubblicare. Questo sistema di pubblicazione/sottoscrizione viene in genere eseguito tramite un'implementazione di un bus di eventi. Il bus di eventi può essere progettato come astrazione o un'interfaccia, con l'API necessarie per la sottoscrizione o annullare la sottoscrizione a eventi e per pubblicare eventi. Il bus di eventi può avere anche uno o più implementazioni in base a qualsiasi broker tra i processi e messaggistica, ad esempio una coda di messaggi o il bus di servizio che supporta la comunicazione asincrona e un modello di pubblicazione/sottoscrizione.
+Quando si usa la comunicazione asincrona basata su eventi, un microservizio pubblica un evento di integrazione quando accade qualcosa all'interno del proprio dominio e un altro microservizio deve rilevare tale evento, ad esempio una variazione di prezzo in un microservizio per un catalogo prodotti. Ulteriori microservizi eseguono la sottoscrizione agli eventi in modo da poterli ricevere in modo asincrono. In questo caso, i destinatari potrebbero aggiornare le proprie entità di dominio, causando la pubblicazione di altri eventi di integrazione. Questo sistema di pubblicazione/sottoscrizione viene in genere eseguito usando un'implementazione di un bus di eventi. Il bus di eventi può essere progettato come un'astrazione o un'interfaccia, con l'API necessaria per sottoscrivere o annullare la sottoscrizione a eventi e per pubblicare eventi. Il bus di eventi può anche avere uno o più implementazioni basate su qualsiasi broker tra processi e di messaggistica, ad esempio una coda di messaggi o un bus di servizio che supporta la comunicazione asincrona e un modello di pubblicazione/sottoscrizione.
 
-Se un sistema utilizza la coerenza eventuale definita dagli eventi di integrazione, è consigliabile che questo approccio precisare completamente per l'utente finale. Il sistema non deve utilizzare un approccio in grado di simulare eventi di integrazione, ad esempio SignalR o sistemi di polling dal client. L'utente finale e il titolare dell'organizzazione è necessario adottare la coerenza finale nel sistema e tenere presente che in molti casi l'azienda non disporre di qualsiasi problema con questo approccio, purché esplicita in modo esplicito.
+Se un sistema usa la coerenza finale definita dagli eventi di integrazione, è consigliabile rendere questo approccio completamente chiaro per l'utente finale. Il sistema non deve usare un approccio che simuli gli eventi di integrazione, ad esempio SignalR o il polling dei sistemi dal client. L'utente finale e il titolare dell'azienda devono prevedere esplicitamente la coerenza finale nel sistema e tenere presente che in molti casi l'azienda non ha alcun problema con questo approccio, purché venga esplicitato.
 
-Come accennato in precedenza il [sfide e soluzioni per la gestione di dati distribuite](#challenges-and-solutions-for-distributed-data-management) sezione, è possibile utilizzare gli eventi di integrazione per implementare le attività di business che si estendono su più microservizi. In questo modo si avrà la coerenza eventuale tra tali servizi. Una transazione alla fine coerente è costituita da una raccolta di azioni distribuite. In ogni azione, il microservizio correlato aggiorna un'entità di dominio e pubblica un altro evento di integrazione che genera l'azione successiva all'interno della stessa attività di business-to-end.
+Come accennato in precedenza nella sezione [Problemi e soluzioni per la gestione dei dati distribuiti](#challenges-and-solutions-for-distributed-data-management), è possibile usare gli eventi di integrazione per implementare attività aziendali che interessano più microservizi. In questo modo, si otterrà la coerenza finale tra tali servizi. Una transazione con coerenza finale è costituita da un insieme di azioni distribuite. A ogni azione, il microservizio correlato aggiorna un'entità di dominio e pubblica un altro evento di integrazione che genera l'azione successiva all'interno della stessa attività aziendale end-to-end.
 
-Un aspetto importante è che si desidera comunicare a più microservizi sottoscritti all'evento stesso. A tale scopo, è possibile usare pubblicazione/sottoscrizione messaggistica basato sulla comunicazione basata sugli eventi, come illustrato nella figura 4-19. Questo meccanismo di pubblicazione/sottoscrizione non è esclusivo per l'architettura del microservizio. È simile a quello [delimitata contesti](http://martinfowler.com/bliki/BoundedContext.html) in DDD deve comunicare, o al modo in cui si distribuire gli aggiornamenti dal database di scrittura al database di lettura nel [comando e Query Responsibility Segregation (CQRS)](http://martinfowler.com/bliki/CQRS.html)modello di architettura. L'obiettivo consiste nell'ottenere la coerenza eventuale tra più origini dei dati tra i sistemi distribuiti.
+Un aspetto importante è che potrebbe essere necessario comunicare con più microservizi sottoscritti allo stesso evento. A tale scopo, è possibile usare la messaggistica con pubblicazione/sottoscrizione in base alla comunicazione basata su eventi, come illustrato nella figura 4-19. Questo meccanismo di pubblicazione/sottoscrizione non è esclusivo per l'architettura dei microservizi. È simile al modo in cui devono comunicare i [contesti delimitati](http://martinfowler.com/bliki/BoundedContext.html) in DDD o al modo in cui si propagano gli aggiornamenti dal database di scrittura al database di lettura nello schema di architettura [Command and Query Responsibility Segregation (CQRS)](http://martinfowler.com/bliki/CQRS.html). L'obiettivo è ottenere la coerenza finale tra più origini dati in tutto il sistema distribuito.
 
 ![](./media/image19.png)
 
-**Figura 4-19**. Comunicazione asincrona dei messaggi basato su eventi
+**Figura 4-19**. Comunicazione di messaggi asincrona basata su eventi
 
-Determina l'implementazione del protocollo da utilizzare per le comunicazioni basate su eventi, basata su messaggi. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) possono aiutare a realizzare una comunicazione affidabile in coda.
+L'implementazione determina il protocollo da usare per le comunicazioni di messaggi basate su eventi. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) può consentire di realizzare comunicazioni in coda affidabili.
 
-Quando si utilizza un bus di eventi, si desidera utilizzare un livello di astrazione (ad esempio, un'interfaccia di bus di eventi) basato su un'implementazione correlata nelle classi con codice usando l'API da un gestore di messaggi come [RabbitMQ](https://www.rabbitmq.com/) o a un bus di servizio come [Azure Service Bus con argomenti](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). In alternativa, è possibile utilizzare un bus di servizio di livello superiore come NServiceBus, MassTransit o Brighter per esprimere il bus di eventi e sistema di pubblicazione/sottoscrizione.
+Quando si usa un bus di eventi, è possibile usare un livello di astrazione (ad esempio, un'interfaccia di bus di eventi) basato su un'implementazione correlata nelle classi con codice che usa l'API da un broker di messaggi come [RabbitMQ](https://www.rabbitmq.com/) o un bus di servizio come il [bus di servizio di Azure con argomenti](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). In alternativa, è possibile usare un bus di servizio di livello superiore come NServiceBus, MassTransit o Brighter per articolare il bus di eventi e il sistema di pubblicazione/sottoscrizione.
 
-## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Una nota sulle tecnologie per i sistemi di produzione di messaggistica
+## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Nota sulle tecnologie di messaggistica per i sistemi di produzione
 
-Le tecnologie di messaggistica disponibili per l'implementazione del bus di eventi astratti sono a livelli diversi. Prodotti come RabbitMQ (trasporto di Service broker messaggistica) e Azure Service Bus, ad esempio, si trovano a un livello inferiore di altri prodotti come, NServiceBus, MassTransit o Brighter, che può essere utilizzata su RabbitMQ e Azure Service Bus. La scelta dipende da quanti funzionalità avanzate a livello di applicazione e la scalabilità della casella che è necessario per l'applicazione. Per implementare solo un bus di eventi di prova per l'ambiente di sviluppo, come nell'esempio eShopOnContainers, potrebbe essere una semplice implementazione sopra RabbitMQ in esecuzione in un contenitore Docker sufficiente.
+Le tecnologie di messaggistica disponibili per l'implementazione del bus di eventi astratto sono a livelli diversi. Ad esempio, prodotti come RabbitMQ (un trasporto di broker di messaggi) e il bus di servizio di Azure sono a un livello inferiore rispetto ad altri prodotti come NServiceBus, MassTransit o Brighter, che possono essere usati in aggiunta a RabbitMQ e al bus di servizio di Azure. La scelta dipende dal numero di funzionalità a livello di applicazione e dalla quantità di scalabilità predefinita necessaria per l'applicazione. Per implementare solo un modello di prova del bus di eventi per l'ambiente di sviluppo, come nell'esempio eShopOnContainers, potrebbe essere sufficiente una semplice implementazione su RabbitMQ eseguito in un contenitore Docker.
 
-Tuttavia, di importanza critica e sistemi di produzione che richiedono la scalabilità di hyper, si consiglia di valutare Azure Service Bus. Astrazioni di alto livello e le funzionalità che consentono di semplificare lo sviluppo di applicazioni distribuite, è consigliabile valutare altri bus di servizio commerciale e open source, quali NServiceBus, MassTransit e Brighter. Naturalmente, è possibile creare funzionalità personalizzate bus di servizio su tecnologie di livello inferiore come RabbitMQ e Docker. Ma tale lavoro plumbing potrebbe essere costo troppo elevato per un'applicazione personalizzati dell'organizzazione.
+Tuttavia, per i sistemi di produzione e mission-critical che necessitano di una scalabilità molto elevata, può essere opportuno valutare il bus di servizio di Azure. Per astrazioni e funzionalità di alto livello che semplificano lo sviluppo di applicazioni distribuite, è consigliabile valutare altri bus di servizio commerciali e open source, come NServiceBus, MassTransit e Brighter. Naturalmente, è possibile creare funzionalità personalizzate per il bus di servizio su tecnologie di livello inferiore come RabbitMQ e Docker. Un'attività tanto complessa potrebbe tuttavia avere dei costi troppo elevati per un'applicazione aziendale personalizzata.
 
-## <a name="resiliently-publishing-to-the-event-bus"></a>Modo resiliente pubblicazione per il bus di eventi
+## <a name="resiliently-publishing-to-the-event-bus"></a>Pubblicazione resiliente per il bus di eventi
 
-Un problema durante l'implementazione di un'architettura basata sugli eventi in più microservizi viene illustrato come aggiornare in modo atomico stato il microservizio originale durante la pubblicazione modo resiliente l'evento di integrazione correlata nel bus di eventi, in qualche modo, in base a transazioni. Ecco alcuni modi per eseguire questa operazione, anche se è possibile che anche altri approcci.
+Un problema durante l'implementazione di un'architettura basata su eventi per più microservizi è come aggiornare in modo atomico lo stato nel microservizio originale, pubblicando al tempo stesso in modo resiliente l'evento di integrazione correlato nel bus di eventi, in qualche modo basato sulle transazioni. Ecco alcuni modi per eseguire questa operazione, anche se potrebbero essere adottati anche altri approcci.
 
--   Utilizzo di una coda transazionale (basato su DTC) come MSMQ. (Tuttavia, questo è un approccio legacy).
+-   Uso di una coda transazionale (basata su DTC) come MSMQ. Questo, tuttavia, è un approccio di tipo legacy.
 
--   Utilizzando [data mining del log delle transazioni](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Uso dell'[estrazione del log delle transazioni](http://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Utilizzo completo [di determinazione dell'origine evento](https://msdn.microsoft.com/en-us/library/dn589792.aspx) modello.
+-   Uso dello schema [Event Sourcing](https://msdn.microsoft.com/library/dn589792.aspx) completo.
 
--   Utilizzo di [modello posta in uscita](http://gistlabs.com/2014/05/the-outbox/): una tabella di database transazionale come una coda di messaggi che sarà la base per un componente creatore di eventi che è necessario creare l'evento e pubblicarlo.
+-   Uso dello [schema Outbox](http://gistlabs.com/2014/05/the-outbox/): una tabella di database transazionale come una coda di messaggi che sarà la base per un componente per la creazione di eventi, che crea l'evento e lo pubblica.
 
-Argomenti aggiuntivi da considerare quando si usa la comunicazione asincrona sono idempotenza messaggio e la deduplicazione di messaggio. Questi argomenti vengono trattati nella sezione [implementazione basato su eventi di comunicazione tra microservizi (eventi di integrazione)](#implementing_event_based_comms_microserv) più avanti in questa Guida.
+Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'idempotenza dei messaggi e la deduplicazione dei messaggi. Questi argomenti sono trattati nella sezione [Implementazione della comunicazione basata su eventi tra microservizi (eventi di integrazione)](#implementing_event_based_comms_microserv) più avanti in questa guida.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Basato su messaggistica degli eventi**
-    [*http://soapatterns.org/design\_modelli/evento\_driven\_messaggistica*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging (Messaggistica basata su eventi)**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Canale di pubblicazione/sottoscrizione**
+-   **Publish-Subscribe channel (Canale di pubblicazione/sottoscrizione)**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **udi Dahan. È stato chiarito CQRS**
+-   **Udi Dahan. Clarified CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Comando ed eseguire Query responsabilità Segregation (CQRS)**
+-   **Command and Query Responsibility Segregation (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **La comunicazione tra contesti di delimitata**
+-   **Communicating Between Bounded Contexts (Comunicazioni tra contesti delimitati)**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **La coerenza eventuale**
-    [*https://en.wikipedia.org/wiki/Eventual\_coerenza*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual consistency (Coerenza finale)**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard. Refactoring verso resilienza: Valutazione accoppiamento**
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 
 >[!div class="step-by-step"]
-[Precedente] (comunicazione-in-microservizio-architecture.md) [Avanti] (mantenere-microservizio-apis.md)
+[Indietro] (communication-in-microservice-architecture.md) [Avanti] (maintain-microservice-apis.md)

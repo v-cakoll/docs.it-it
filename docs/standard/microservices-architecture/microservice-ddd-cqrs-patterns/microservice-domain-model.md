@@ -1,123 +1,126 @@
 ---
-title: Progettazione di un modello di dominio microservizio
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Progettazione di un modello di dominio microservizio
+title: Progettazione di un modello di dominio del microservizio
+description: Architettura dei microservizi .NET per le applicazioni .NET in contenitori | Progettazione di un modello di dominio del microservizio
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 455a2c5a39fb9b765b557610ab108f8c75882dbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-a-microservice-domain-model"></a>Progettazione di un modello di dominio microservizio
+# <a name="designing-a-microservice-domain-model"></a>Progettazione di un modello di dominio del microservizio
 
-*Definire un modello di dominio completo per ogni business microservizio o contesto limitato*
+*Definire un modello di dominio avanzato per ogni microservizio aziendale o contesto limitato*
 
-L'obiettivo consiste nel creare un modello di dominio coesiva singolo per ogni business microservizio o contesto limitato (BC). Tenere presente, tuttavia, che a BC o microservizio business può talvolta essere costituito da diversi servizi fisici che condividono un modello di dominio singolo. Il modello di dominio è necessario acquisire le regole, comportamento, il linguaggio di business e i vincoli del singolo contesto delimitata o microservizio business che rappresenta.
+L'obiettivo consiste nel creare un modello di dominio coerente per ogni microservizio aziendale o contesto limitato. Tenere presente, tuttavia, che un contesto limitato o un microservizio aziendale è costituito talvolta da diversi servizi fisici che condividono un unico modello di dominio. Quest'ultimo deve acquisire le regole, il comportamento, il linguaggio aziendale e i vincoli del singolo contesto delimitato o microservizio aziendale che rappresenta.
 
-## <a name="the-domain-entity-pattern"></a>Il modello di entità di dominio
+## <a name="the-domain-entity-pattern"></a>Schema Domain Entity
 
-Le entità rappresentano gli oggetti di dominio e vengono definite principalmente da identità, la continuità e persistenza nel tempo e non solo per gli attributi che costituiscono le. Come viene visualizzato, Eric Evans "di un oggetto definito principalmente tramite l'identità viene chiamato un'entità." Le entità sono molto importanti per il modello di dominio, poiché sono la base per un modello. Pertanto, identificare e progettare con attenzione.
+Le entità rappresentano oggetti di dominio e vengono definite principalmente in base alla loro identità, continuità e persistenza nel tempo, e non solo in base agli attributi che le caratterizzano. Come sostiene Eric Evans, "un oggetto definito principalmente dalla propria identità prende il nome di entità". Le entità sono molto importanti nel modello di dominio, poiché costituiscono la base per il modello. È quindi necessario identificarle e progettarle attentamente.
 
-*Identità di un'entità può attraversare più microservizi o contesti limitato.*
+*L'identità di un'entità può coinvolgere più microservizi o contesti limitati.*
 
-La stessa identità (anche se non è la stessa entità) possono essere modellate in più contesti delimitata o microservizi. Tuttavia, non implica che la stessa entità, con gli stessi attributi e logica potrebbe essere implementate in più contesti delimitata. Al contrario, le entità in ogni contesto delimitata limitare i relativi attributi e i comportamenti di quelli richiesti nel dominio del contesto che delimitata.
+La stessa identità (ma non la stessa entità) può essere modellata in più microservizi o contesti limitati. Questo non significa tuttavia che la stessa entità, con gli stessi attributi e la stessa logica, venga implementata in più contesti delimitati. Al contrario, le entità presenti in ogni contesto delimitato limitano i relativi attributi e comportamenti a quelli strettamente necessari nel dominio del contesto delimitato.
 
-Ad esempio, l'entità dell'acquirente potrebbe essere la maggior parte degli attributi di una persona che sono definiti nell'entità in microservizio il profilo o l'identità, tra cui l'identità utente. L'entità buyer nell'ordinamento microservizio potrebbe invece essere meno attributi, perché solo determinati dati buyer sono correlati al processo di ordine. Il contesto di ogni microservizio o delimitata contesto ha un impatto relativo modello di dominio.
+È possibile, ad esempio, che all'entità "acquirente" sia associata la maggior parte degli attributi di persona definiti nell'entità utente del microservizio dell'identità o del profilo, inclusa l'identità. Nel microservizio degli ordini, tuttavia, è possibile che all'entità acquirente sia associato un minor numero di attributi, poiché solo alcuni dati dell'acquirente sono effettivamente correlati al processo di ordine. Il contesto di ogni microservizio o contesto delimitato influisce sul relativo modello di dominio.
 
-*Entità di dominio deve implementare il comportamento oltre all'implementazione di attributi dei dati*
+*Le entità di dominio devono implementare il comportamento oltre agli attributi dei dati*
 
-Un'entità di dominio in DDD deve implementare la logica di dominio o il comportamento correlati ai dati di entità (oggetto cui si accede in memoria). Come parte di una classe di entità order, ad esempio, è necessario disporre della logica di business e le operazioni implementate come metodi per attività quali l'aggiunta di un elemento di ordine, la convalida dei dati e calcolo del totale. I metodi dell'entità svolgere le regole dell'entità anziché le regole di livello dell'applicazione vengono suddivisi e invarianti.
+In una progettazione basata su domini, un'entità di dominio deve implementare la logica di dominio o il comportamento correlato ai dati dell'entità (l'oggetto a cui si accede in memoria). Nell'ambito della classe di un'entità ordine, ad esempio, è necessario che le operazioni e la logica aziendale siano implementate come i metodi per attività quali l'aggiunta di un elemento ordine, la convalida dei dati e il calcolo totale. I metodi di un'entità si occupano delle invarianti e delle regole dell'entità per evitare che le regole vengano disseminate nel livello dell'applicazione.
 
-Figura 9-8 è illustrata un'entità di dominio che implementa non solo gli attributi di dati ma le operazioni o i metodi con la logica di dominio correlate.
+La figura 9-8 illustra un'entità di dominio che implementa non solo gli attributi dei dati, ma anche le operazioni o i metodi con la logica di dominio correlata.
 
 ![](./media/image9.png)
 
-**Figura 9-8**. Esempio di un'entità di dominio progettare l'implementazione dei dati e comportamento
+**Figura 9-8**. Esempio di progettazione di un'entità di dominio che implementa dati e comportamento
 
-Naturalmente, in alcuni casi è possibile disporre le entità che non implementano qualsiasi logica come parte della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un'aggregazione se l'entità figlio non dispone di una logica speciale perché la maggior parte della logica di è definito nella radice di aggregazione. Se si dispone di un microservizio complesso con molta logica implementata nelle classi del servizio anziché le entità di dominio, è possibile che rientrano nel modello di dominio anemic, illustrato nella sezione seguente.
+In alcuni casi, naturalmente, è possibile che un'entità non implementi alcuna logica nell'ambito della classe di entità. Questa situazione può verificarsi nelle entità figlio all'interno di un aggregazione se l'entità figlio non contiene alcuna logica speciale, poiché la maggior parte della logica è definita nella radice di aggregazione. Se si ha un microservizio complesso in cui la maggior parte della logica è implementata nelle classi del servizio anziché nelle entità di dominio, è possibile che si abbia a che fare con un modello di dominio anemico, illustrato nella sezione seguente.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modello di dominio Rich rispetto al modello di dominio anemic
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modello di dominio avanzato e modello di dominio anemico a confronto
 
-Nel suo post [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martin Fowler descrive un modello di dominio anemic in questo modo:
+Nel post [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html), Martin Fowler descrive così un modello di dominio anemico:
 
-Il sintomo di un modello di dominio Anemic base è inizialmente sembra reali. Sono presenti oggetti, molti denominato dopo i nomi nello spazio di dominio e questi oggetti sono connessi con le relazioni avanzate e la struttura con i modelli di dominio true. Catch viene fornito quando si osserva il comportamento e ci si accorge che è praticamente qualsiasi comportamento di tali oggetti, rendendoli leggermente più contenitori di getter e Setter.
+La caratteristica principale di un modello di dominio anemico è che inizialmente sembra un oggetto reale. Alcuni oggetti, denominati in base ai nomi presenti nello spazio di dominio, sono connessi con la stessa struttura e le stesse relazioni avanzate che hanno i veri modelli di dominio. Quando se ne osserva il comportamento, tuttavia, ci si accorge che questi oggetti non hanno pressoché alcun tipo di comportamento, essendo in realtà poco più che contenitori di proprietà Get e Set.
 
-Naturalmente, quando si utilizza un modello di dominio anemic, i modelli di dati verranno utilizzati da un set di oggetti servizio (denominata in genere il *livello business*) cui acquisire tutta la logica di business o di dominio. Il livello business si trova nella parte superiore del modello di dati e utilizza il modello di dati come dati.
+Quando si usa un modello di dominio anemico, ovviamente, questi modelli di dati vengono usati da un set di oggetti servizio (tradizionalmente denominato *livello aziendale*) che acquisisce tutta la logica aziendale o di dominio. Il livello aziendale si basa quindi sul modello di dati, che usa come dati.
 
-Il modello di dominio anemic è una progettazione di stile procedurale. Oggetti entità anemic non sono oggetti reali perché dispongono di un comportamento (metodi). Contengono solo le proprietà di dati e non è pertanto progettazione orientata agli oggetti. Inserendo tutti i comportamenti out in oggetti del servizio (il livello business) essenzialmente finire con [assai complicato](https://en.wikipedia.org/wiki/Spaghetti_code) o [script transazione](https://martinfowler.com/eaaCatalog/transactionScript.html), e pertanto persi i vantaggi che un modello di dominio fornisce.
+Il modello di dominio anemico è una progettazione di tipo procedurale. Gli oggetti entità anemici non sono oggetti reali perché non hanno un comportamento (metodi). Si limitano a contenere proprietà di dati e, pertanto, non hanno una progettazione orientata agli oggetti. Inserendo tutti i tipi di comportamento in oggetti servizio (il livello aziendale), tuttavia, si finisce per avere [blocchi di codice complicato](https://en.wikipedia.org/wiki/Spaghetti_code) o [script transazionali](https://martinfowler.com/eaaCatalog/transactionScript.html) e, quindi, si perdono i vantaggi offerti da un modello di dominio.
 
-Indipendentemente dal fatto che, se lo microservizio o il contesto limitato è molto semplice (un servizio CRUD), il modello di dominio anemic sotto forma di oggetti entità con solo le proprietà di dati potrebbe essere sufficiente e che non sia opportuno implementare modelli DDD più complessi. In tal caso, sarà sufficiente un modello di persistenza, poiché è stato creato intenzionalmente un'entità solo i dati per scopi CRUD.
+Indipendentemente dal fatto che il microservizio o il contesto limitato sia molto semplice (un servizio CRUD), è possibile che il modello di dominio anemico sotto forma di oggetti entità contenenti solo le proprietà dei dati sia sufficiente e, in questo caso, non sarebbe necessario implementare schemi di progettazione basata su domini più complessi. Si tratterà semplicemente di un modello di persistenza, poiché è stata intenzionalmente creata un'entità contenente solo i dati necessari per il servizio CRUD.
 
-Che è il motivo per cui le architetture di microservizi sono ideali per un approccio architetturale più a seconda del contesto ogni delimitata. Ad esempio, in eShopOnContainers, l'ordinamento microservizio implementa modelli DDD, ma non microservizio il catalogo, che è un semplice servizio CRUD.
+Ecco perché le architetture di microservizi sono ideali per un approccio a più architetture basato sul contesto delimitato. In eShopOnContainers, ad esempio, il microservizio degli ordini implementa schemi di progettazione basata su domini, ma non il microservizio catalogo, che è un semplice servizio CRUD.
 
-Alcune persone, si supponga che il modello di dominio anemic è un anti-pattern. Questo dipende si sta implementando. Se il microservizio si sta creando è semplice sufficientemente (ad esempio, un servizio CRUD), al modello di dominio anemic non è un anti-pattern. Tuttavia, se è necessario affrontare la complessità del dominio di un microservizio che dispone di molte delle regole di business in continua evoluzione, il modello di dominio anemic potrebbe essere un anti-pattern del microservizio o contesto limitato. In tal caso, impostandolo come potente modello con le entità che contengono dati e comportamento nonché implementare altri modelli DDD (valore oggetti aggregati, e così via) può presentare enormi vantaggi per il successo a lungo termine di questo tipo un microservizio.
+Alcune persone sostengono che il modello di dominio anemico sia un antipattern: dipende essenzialmente da cosa si sta implementando. Se il microservizio che si sta creando è abbastanza semplice (ad esempio, un servizio CRUD), il modello di dominio anemico che ne consegue non è un antipattern. Se invece è necessario affrontare la complessità di un dominio di microservizio con molte regole in continua evoluzione, è possibile che il modello di dominio anemico sia davvero un antipattern per il microservizio o il contesto limitato in questione. In questo caso, progettandolo come un modello avanzato con entità contenenti dati e comportamento, nonché implementando altri schemi di progettazione basata su domini (aggregazioni, oggetti valore e così via), è possibile ottenere vantaggi significativi per il successo a lungo termine di questo microservizio.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **DevIQ. Entità di dominio**
+-   **DevIQ. Domain Entity (DevIQ. Entità di dominio) **
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler. Il modello di dominio**
+-   **Martin Fowler. The Domain Model (Il modello di dominio) **
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. Il modello di dominio Anemic**
+-   **Martin Fowler. The Anemic Domain Model (Il modello di dominio anemico)**
 
-    <https://martinfowler.com/bliki/AnemicDomainModel.HTML>
+    <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
-### <a name="the-value-object-pattern"></a>Il modello oggetto di valore
+### <a name="the-value-object-pattern"></a>Schema Value Object
 
-Come Eric Evans ha illustrato, "molti oggetti non hanno identità concettuale. Questi oggetti descrivono alcune caratteristiche di un elemento".
+Come ha osservato Eric Evans: "Molti oggetti non hanno un'identità concettuale, ma descrivono alcune caratteristiche di un elemento".
 
-Un'entità richiede un'identità, ma sono presenti molti oggetti in un sistema che non, ad esempio il modello oggetto di valore. Un oggetto di valore è un oggetto con alcuna identità concettuale che descrive un aspetto di dominio. Si tratta di oggetti che si crea un'istanza per rappresentare gli elementi di progettazione che riguardano soltanto è temporaneamente. Si è interessati *cosa* , non sono *che* sono. Esempi includono numeri e stringhe, ma possono anche essere concetti di livello superiore quali gruppi di attributi.
+Un'entità richiede un'identità, che non è necessaria invece in molti oggetti presenti in un sistema, come lo schema Value Object. Un oggetto valore è un oggetto senza identità concettuale che descrive un aspetto di un dominio. Si tratta di oggetti per i quali è necessario creare un'istanza che rappresenti gli elementi di progettazione temporaneamente richiesti. L'importante è *cosa* sono, non *chi* sono. Alcuni esempi possono essere numeri e stringhe, ma anche concetti di livello superiore come gruppi di attributi.
 
-Un elemento che è un'entità in un microservizio potrebbe non essere un'entità in un altro microservizio, poiché nel secondo caso, il contesto limitato potrebbe avere un significato diverso. Ad esempio, un indirizzo di un'applicazione di e-commerce potrebbe è un'identità, poiché potrebbe rappresentare solo un gruppo di attributi del profilo del cliente per una persona o della società. In questo caso, l'indirizzo deve essere classificato come un oggetto valore. Tuttavia, in un'applicazione per una società di energia elettrica utilità, l'indirizzo del cliente potrebbe essere importante per il dominio aziendale. Pertanto, l'indirizzo deve avere un'identità in modo il sistema di fatturazione può essere collegato direttamente all'indirizzo. In tal caso, un indirizzo deve essere classificato come un'entità di dominio.
+È possibile che un elemento che rappresenta un'entità in un microservizio non svolga la stessa funzione in un altro microservizio poiché, in questo secondo caso, il contesto limitato ha un significato diverso. È possibile, ad esempio, che un indirizzo in un'applicazione di e-commerce non abbia alcuna identità, poiché rappresenta solo un gruppo di attributi del profilo cliente relativo a una persona o una società. In questo caso, l'indirizzo deve essere classificato come un oggetto valore. In un'applicazione per una società di energia elettrica, invece, l'indirizzo del cliente può essere importante per il dominio aziendale. L'indirizzo, quindi, deve avere un'identità in modo che il sistema di fatturazione sia direttamente collegato all'indirizzo. In questo caso, l'indirizzo deve essere classificato come un'entità di dominio.
 
-Un utente con un nome e cognome in genere è un'entità perché una persona con un'identità, anche se il nome e cognome coincide con un altro set di valori, ad esempio se tali nomi fa riferimento anche a un utente diverso.
+Una persona con un nome e un cognome, in genere, costituisce un'entità perché ogni persona ha un'identità, anche se il nome e il cognome coincidono con un altro set di valori, come nel caso in cui i nomi facciano riferimento anche a una persona diversa.
 
-Gli oggetti di valore sono difficili da gestire nei database relazionali e ORM come Entity Framework, mentre nel documento orientata ai servizi sono più facili da implementare e utilizzare i database.
+Gli oggetti valore sono difficili da gestire nei database relazionali e in ORM come Entity Framework, mentre nei database orientati ai documenti sono più facili da implementare e usare.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Martin Fowler. Modello di oggetti valore**
+-   **Martin Fowler. Value Object pattern (Schema Value Object)**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Valore oggetto**
+-   **Value Object (Oggetto valore)**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Valore di oggetti in fase di sviluppo TDD**
-    [*https://leanpub.com/tdd-ebook/read\#oggetti valore di auto leanpub*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Value Objects in Test-Driven Development (Oggetti valore nello sviluppo basato su test)**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Progettazione basati su dominio: Affrontare complessità il cuore del Software.** (Una cartella di lavoro e include una descrizione di oggetti valore) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una discussione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-### <a name="the-aggregate-pattern"></a>Il modello di aggregazione
+### <a name="the-aggregate-pattern"></a>Schema Aggregate
 
-Un modello di dominio contiene cluster delle entità di dati diversi e i processi che è possono controllare un'area significativa di funzionalità, ad esempio l'evasione dell'ordine o inventario. Un'unità DDD con granularità fine è l'aggregazione, che descrive un cluster o un gruppo di entità e i comportamenti che possono essere considerati come un'unità coesiva.
+Un modello di dominio contiene cluster di vari processi ed entità di dati che possono controllare un'area significativa di funzionalità, ad esempio per la gestione dell'inventario o l'evasione degli ordini. L'aggregazione costituisce un'unità di progettazione basata su domini più dettagliata, che descrive un cluster o un gruppo di entità e comportamenti che è possibile considerare come un'unica unità.
 
-Si definisce in genere un'aggregazione in base alle transazioni di cui è necessario. Un esempio classico è un ordine contenente un elenco di elementi di ordine. Un elemento order in genere è un'entità. Ma sarà un'entità figlio all'interno dell'aggregazione ordine, che conterrà anche l'entità ordine come relativa entità principale, in genere chiamato una radice di aggregazione.
+In genere, un'aggregazione viene definita in base alle transazioni necessarie. Un esempio classico è un ordine contenente un elenco di elementi ordine, ciascuno dei quali costituirà un'entità. In particolare, costituirà un'entità figlio all'interno dell'aggregazione ordine, che conterrà anche l'entità ordine come entità principale, solitamente definita "radice di aggregazione".
 
-Identificazione di funzioni di aggregazione può essere difficile. Un'aggregazione è un gruppo di oggetti che devono essere coerenti tra loro, ma non è possibile solo selezionare un gruppo di oggetti e contrassegnarli come un'aggregazione. È necessario iniziare con il concetto di dominio e considerare le entità che vengono utilizzate nelle transazioni più comuni relativi a questo concetto. Le entità che devono essere coerenti sono cosa costituisce un'aggregazione. Considerare le operazioni di transazioni è probabilmente il modo migliore per identificare le aggregazioni.
+Identificare le aggregazioni può essere difficile. Un'aggregazione è un gruppo di oggetti che devono essere coerenti tra loro: non è sufficiente, quindi, selezionare un gruppo di oggetti e contrassegnarli come un'aggregazione. È necessario iniziare con il concetto di dominio e prendere in considerazione le entità usate nelle transazioni più comuni relative a questo concetto. Queste entità, che devono essere coerenti a livello di transazione, formano un'aggregazione. Pensare alle operazioni delle transazioni costituisce probabilmente il modo migliore per identificare le aggregazioni.
 
-### <a name="the-aggregate-root-or-root-entity-pattern"></a>Il modello radice di aggregazione o entità radice
+### <a name="the-aggregate-root-or-root-entity-pattern"></a>Schema Aggregate Root o Root Entity
 
-Un'aggregazione è composta da almeno un'entità: la radice di aggregazione, definito anche come entità principale o primario ientity. Inoltre, può avere più entità figlio e gli oggetti di valore, con tutte le entità e oggetti che interagiscono per implementare le transazioni e il comportamento richiesto.
+Un'aggregazione è composta da almeno un'entità: la radice di aggregazione, definita anche entità radice o entità principale. Può avere più entità figlio e oggetti valore, che interagiscono per implementare le transazioni e il comportamento richiesti.
 
-Lo scopo di una radice di aggregazione è garantire la coerenza della funzione di aggregazione; deve essere il solo punto di ingresso per l'aggregazione tramite i metodi di aggiornamenti o le operazioni di classe root. È necessario apportare modifiche alle entità all'interno dell'aggregazione solo tramite la radice di aggregazione. Si tratta di sorveglianza la coerenza dell'aggregazione, tenendo in considerazione tutte le invarianti e regole di uniformità che potrebbe essere necessario rispettare nell'aggregazione. Se si modifica un oggetto di entità o un valore figlio in modo indipendente, la radice di aggregazione non è possibile verificare che la funzione di aggregazione sia in uno stato valido. Sarebbe ad esempio una tabella con un segmento separato. Mantenere la coerenza è lo scopo principale della radice dell'aggregazione.
+Lo scopo di una radice di aggregazione è garantire la coerenza dell'aggregazione: deve essere il solo punto di ingresso per gli aggiornamenti dell'aggregazione eseguiti tramite operazioni o metodi nella classe della radice di aggregazione. Ma non solo: eventuali modifiche alle entità all'interno dell'aggregazione devono essere apportate solo tramite la radice di aggregazione, che deve controllare la coerenza dell'aggregazione tenendo conto di tutte le invarianti e le regole di coerenza che devono essere rispettate nell'aggregazione. Se si modifica un entità figlio o un oggetto valore in modo indipendente, la radice di aggregazione non può garantire che l'aggregazione sia in uno stato valido. Sarebbe come un tavolo con una gamba fissata male. Mantenere la coerenza, quindi, è lo scopo principale della radice di aggregazione.
 
-Nella figura 9-9, è possibile visualizzare le aggregazioni di esempio come acquirente aggregazione, che contiene una singola entità (la radice di aggregazione acquirente). L'aggregazione di ordine contiene più entità e un oggetto valore.
+Nella figura 9-9 è possibile osservare aggregazioni di esempio come l'aggregazione Buyer (acquirente), che contiene un'unica entità (la radice di aggregazione Buyer). L'aggregazione Order contiene invece più entità e un oggetto valore.
 
 ![](./media/image10.png)
 
-**Figura 9-9**. Esempio di funzioni di aggregazione con più o singole entità
+**Figura 9-9**. Esempio di aggregazioni con una o più entità
 
-Si noti che l'aggregazione dell'acquirente potrebbe avere entità figlio aggiuntivi, a seconda del dominio, come avviene per l'ordinamento microservizio nell'applicazione di riferimento eShopOnContainers. Figura 9-9 è illustrato solo un caso in cui l'acquirente ha una singola entità, ad esempio di un'aggregazione che contiene una radice di aggregazione.
+L'aggregazione Buyer può avere entità figlio aggiuntive, in base al dominio, come avviene nel microservizio degli ordini nell'applicazione di riferimento eShopOnContainers. La figura 9-9 illustra un caso in cui l'aggregazione Buyer contiene un'unica entità, come esempio di aggregazione contente solo una radice di aggregazione.
 
-Per mantenere la separazione di aggregazioni e mantenere i limiti ben definiti tra di essi, è buona norma in un modello di dominio DDD a impedire l'esplorazione diretta tra funzioni di aggregazione e solo con il campo di chiave esterna (FK), come implementato nel [ Ordinamento di modello di dominio microservizio](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. L'entità Order ha solo un campo di chiave esterna per l'acquirente, ma non una proprietà di navigazione principale di Entity Framework, come illustrato nel codice seguente:
+Per mantenere le aggregazioni separate in un modello di progettazione basata su domini, è buona norma impedire l'esplorazione diretta tra le aggregazioni e mantenere solo il campo della chiave esterna, come implementato nel [modello di dominio del microservizio degli ordini](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) in eShopOnContainers. L'entità Order include solo un campo di chiave esterna per l'aggregazione Buyer, ma non una proprietà di navigazione EF Core, come illustrato nel codice seguente:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -126,31 +129,34 @@ public class Order : Entity, IAggregateRoot
     public Address Address { get; private set; }
     private int? _buyerId; //FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+    // ... Additional code
 }
 ```
 
-Identificazione e l'utilizzo di funzioni di aggregazione richiede esperienza e ricerca. Per ulteriori informazioni, vedere l'elenco di risorse aggiuntive seguenti.
+Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ricerca. Per altre informazioni, vedere l'elenco di Risorse aggiuntive seguente.
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Vaughn Vernon. Progettazione di aggregazione efficace - parte i: modellazione di una singola funzione di aggregazione**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_approfondimento\_ Funzioni di aggregazione\_parte\_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Progettazione efficace di aggregazioni - Parte I: Modellazione di una singola aggregazione)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Progettazione aggregazione efficace - parte II: Apportato aggregazioni collaborano**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Progettazione efficace di aggregazioni - Parte II: Integrazione delle aggregazioni)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. Progettazione aggregazione efficace - parte III: Ottenere informazioni dettagliate tramite individuazione**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+-   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Progettazione efficace di aggregazioni - Parte III: Acquisizione di informazioni dettagliate tramite il rilevamento)**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak. Modelli di progettazione tattico DDD**
+-   **Sergey Grybniak. DDD Tactical Design Patterns (Schemi progettuali tattici per la progettazione basata su domini)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Sviluppo di Microservizi transazionale utilizzando funzioni di aggregazione**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates (Sviluppo di microservizi transazionali con aggregazioni)**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Il modello di aggregazione**
+-   **DevIQ. The Aggregate pattern (Schema Aggregate)**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 
 >[!div class="step-by-step"]
-[Precedente] (ddd-oriented-microservice.md) [Avanti] (net-core-microservizio-dominio-model.md)
+[Precedente] (ddd-oriented-microservice.md) [Successivo] (net-core-microservice-domain-model.md)
