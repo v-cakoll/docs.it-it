@@ -1,6 +1,6 @@
 ---
-title: "Sovranità di dati per ogni microservizio"
-description: "Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Sovranità di dati per ogni microservizio"
+title: "Sovranità dei dati per microservizio"
+description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Sovranità dei dati per microservizio"
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,51 +8,54 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c51daae04215cfa6f5b5b8d2158a8ed1a8949652
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76265490d7cb0d53686b43b88cb797cf887d578a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="data-sovereignty-per-microservice"></a>Sovranità di dati per ogni microservizio
+# <a name="data-sovereignty-per-microservice"></a>Sovranità dei dati per microservizio
 
-Una regola per l'architettura di microservizi importante è che ogni microservizio deve essere proprietaria dominio dati e logica. Come proprietario di un'applicazione completa la logica e i dati, pertanto deve ogni microservizio possedere la logica e i dati in un ciclo di vita autonomo, con la distribuzione indipendente per ogni microservizio.
+Una regola importate per l'architettura dei microservizi prevede che ogni microservizio sia proprietario dei rispettivi dati di dominio e della rispettiva logica. Analogamente a un'applicazione completa che è proprietaria della rispettiva logica e dei rispettivi dati, ogni microservizio deve essere proprietario della rispettiva logica e dei rispettivi dati in un ciclo di vita autonomo, con una distribuzione indipendente per ogni microservizio.
 
-Ciò significa che il modello concettuale del dominio variano tra i sottosistemi o microservizi. Prendere in considerazione le applicazioni aziendali, customer relationship management (CRM) applicazioni, transazionale acquistano sottosistemi e i sottosistemi di supporto clienti ogni chiamata di dati e gli attributi di entità cliente univoco e ognuno utilizza un altro Contesto associato (BC).
+Il modello concettuale del dominio presenterà quindi differenze tra sottosistemi e microservizi. È possibile prendere in considerazione le applicazioni aziendali, in cui le applicazioni CRM (Customer Relationship Management), i sottosistemi di acquisto transazionale e i sottosistemi di supporto clienti chiamano attributi e dati univoci dell'entità cliente e in cui ogni applicazione usa un contesto delimitato.
 
-Questo principio è simile in [progettazione basati su dominio (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design), dove ogni [contesto delimitata](https://martinfowler.com/bliki/BoundedContext.html) o sottosistema autonomo o un servizio deve essere proprietaria relativo modello di dominio (dati e logica e il comportamento). Ogni contesto delimitata DDD è correlata a una business microservizio (uno o più servizi). (È expand in questo punto, sul modello di contesto limitato nella sezione successiva).
+Questo principio è simile nella [progettazione basata su domini (DDD, Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design), in cui ogni [contesto delimitato](https://martinfowler.com/bliki/BoundedContext.html) o sottosistema autonomo o servizio deve essere proprietario del proprio modello di dominio (dati più logica e comportamento). Ogni contesto delimitato DDD è correlato a un microservizio aziendale (uno o più servizi). Il concetto relativo allo schema Bounded Context verrà illustrato in maggiore dettaglio nella sezione successiva.
 
-D'altra parte, l'approccio tradizionale (dati monolitico) utilizzata in molte applicazioni è disporre di una o pochi database centralizzato. Questo è spesso un database SQL normalizzato che viene utilizzato per l'intera applicazione e tutti i sottosistemi relativo interni, come illustrato nella figura 4-7.
+L'approccio tradizionale (dati monolitici) usato in molte applicazioni prevede tuttavia un singolo database centralizzato o qualche database. Si tratta spesso di un database SQL normalizzato, usato per l'intera applicazione e per tutti i rispettivi sottosistemi interni, come mostrato nella figura 4-7.
 
 ![](./media/image7.png)
 
-**Figura 4-7**. Confronto di dati sovranità: monolitico database anziché microservizi
+**Figura 4-7**. Confronto relativo alla sovranità dei dati: database monolitico e microservizi
 
-L'approccio centralizzato database inizialmente è più semplice e sembra per consentire il riutilizzo di entità in sottosistemi diversi per qualsiasi coerente. Ma in realtà che si finisce con le tabelle di grandi dimensioni che gestiscono molti diversi sottosistemi, e che includono gli attributi e le colonne che non sono necessari nella maggior parte dei casi. è come provare a utilizzare la mappa fisica stesso per escursionismo un breve riepilogo, richiede un trip giornata car e apprendimento geography.
+L'approccio basato sul database centralizzato risulta apparentemente più semplice e sembra consentire il riutilizzo delle entità nei diversi sottosistemi per assicurare la coerenza complessiva. In realtà si ottengono tuttavia tabelle di grandi dimensioni che gestiscono molti sottosistemi diversi e che includono attributi e colonne che risultano nella maggior parte dei casi superflui. Questo approccio è paragonabile all'uso della stessa mappa fisica per una breve passeggiata, per una gita di un giorno in auto e per l'apprendimento della geografia.
 
-Un'applicazione monolitica con in genere un solo database relazionale ha due importanti vantaggi: [transazioni ACID](https://en.wikipedia.org/wiki/ACID) e il linguaggio SQL, sia funzionante tra tutte le tabelle e i dati relativi all'applicazione. Questo approccio consente di scrivere facilmente una query che combina i dati da più tabelle.
+Un'applicazione monolitica con in genere un singolo database relazionale offre due vantaggi importanti, ovvero le [transazioni ACID](https://en.wikipedia.org/wiki/ACID) e il linguaggio SQL, che possono essere usati in tutte le tabelle e in tutti i dati correlati all'applicazione. Questo approccio consente di scrivere con facilità una query che combina dati da più tabelle.
 
-Tuttavia, l'accesso ai dati diventa più complessa quando si passa a un'architettura di microservizi. Ma anche quando le transazioni ACID possono o devono essere utilizzate all'interno di un microservizio o il contesto limitato, i dati di proprietà di ogni microservizio sono privati per tale microservizio e accessibile solo tramite l'API microservizio. Incapsulamento dei dati garantisce che i microservizi ad accoppiamento debole e possono evolvere indipendentemente uno da altro. Se più servizi accedesse agli stessi dati, gli aggiornamenti dello schema sono necessario coordinare gli aggiornamenti a tutti i servizi. Ciò causa l'interruzione del ciclo di vita autonomia microservizio. Ma le strutture di dati distribuiti significa che non è possibile apportare una singola transazione ACID tra microservizi. Questo significa che a sua volta quando un processo di business interessa più microservizi, è necessario utilizzare la coerenza eventuale. Questo è molto più difficile da implementare rispetto ai join SQL semplice; Analogamente, molte altre funzionalità di database relazionale non sono disponibili in più microservizi.
+L'accesso ai dati risulta tuttavia più complesso quando si passa a un'architettura di microservizi. Anche nel caso in cui sia possibile o necessario usare le transazioni ACID entro un microservizio o un contesto delimitato, i dati di proprietà di ogni microservizio sono privati per il microservizio specifico ed è possibile accedervi solo tramite la rispettiva API di microservizio. L'incapsulamento dei dati assicura che i microservizi siano a regime di controllo libero e possano evolversi in modo indipendente. Se più servizi accedono agli stessi dati, gli aggiornamenti dello schema richiederebbero aggiornamenti coordinati per tutti i servizi. Ciò comprometterebbe l'autonomia del ciclo di vita dei microservizi. Le strutture di dati distribuite tuttavia non consentono di eseguire alcuna transazione ACID tra microservizi. È quindi necessario usare la coerenza finale quando un processo aziendale interessa più microservizi. Questo approccio è molto più difficile da implementare rispetto ai semplici join SQL. Analogamente, molte altre funzionalità dei database relazionali non sono disponibili in più microservizi.
 
-Continua anche, microservizi diversi utilizzano spesso diversi *tipi* di database. Archivio applicazioni moderne e processo di diversi tipi di dati e un database relazionale non è sempre la scelta migliore. Per alcuni casi d'uso, un database NoSQL come Azure DocumentDB o MongoDB potrebbe disporre di un modello di dati più semplice e offrono migliori prestazioni e scalabilità rispetto a un database SQL, ad esempio SQL Server o Database SQL di Azure. In altri casi, un database relazionale è ancora l'approccio migliore. Pertanto, le applicazioni basate su microservizi spesso utilizzare una combinazione di database SQL e database NoSQL, talvolta denominato il [polyglot persistenza](http://martinfowler.com/bliki/PolyglotPersistence.html) approccio.
+I diversi microservizi inoltre usano spesso diversi *tipi* di database. Le applicazioni moderne archiviano ed elaborano diversi tipi di dati e un database relazionale non è sempre la scelta ottimale. Per alcuni casi d'uso è possibile che un database NoSQL, ad esempio Azure DocumentDB o MongoDB, offra un modello di dati più appropriato e prestazioni e scalabilità migliori rispetto a un database SQL come SQL Server o il database SQL di Azure. In altri casi un database relazionale è comunque l'approccio migliore. Le applicazioni basate su microservizi usano quindi spesso una combinazione di database SQL e NoSQL. Questo approccio viene a volte definito [persistenza poliglotta](http://martinfowler.com/bliki/PolyglotPersistence.html).
 
-Un'architettura partizionata, polyglot permanente per l'archivio dati presenta numerosi vantaggi. Tra cui servizi loosely-coupled e migliori prestazioni, scalabilità, costi e la gestibilità. Tuttavia, può causare alcuni problemi di gestione di dati distribuiti, come verrà illustrato "[che identifica i limiti di modello di dominio](#identifying-domain-model-boundaries-for-each-microservice)" più avanti in questo capitolo.
+Un'architettura partizionata, con persistenza poliglotta per l'archiviazione dei dati presenta molti vantaggi, tra cui servizi a regime di controllo libero e prestazioni, scalabilità, costi e gestibilità migliori. Può tuttavia introdurre alcuni problemi a livello di gestione dei dati distribuiti, come illustrato in "[Identificazione dei limiti del modello di dominio](#identifying-domain-model-boundaries-for-each-microservice)" più avanti in questo capitolo.
 
-## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>La relazione tra microservizi e il criterio di contesto limitato
+## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relazione tra microservizi e schema Bounded Context
 
-Il concetto di microservizio deriva il [modello delimitata contesto (BC)](http://martinfowler.com/bliki/BoundedContext.html) in [progettazione basati su dominio (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD riguarda i modelli di grandi dimensioni suddividendo li in più BCs e siano espliciti sui loro limiti. Ogni BC deve avere il proprio modello e il database. ogni microservizio appartiene allo stesso modo, i dati correlati. Inoltre, in genere ogni BC ha il proprio [linguaggio universale](http://martinfowler.com/bliki/UbiquitousLanguage.html) per la comunicazione tra gli sviluppatori di software e gli esperti di dominio.
+Il concetto di microservizi deriva dallo [schema Bounded Context](http://martinfowler.com/bliki/BoundedContext.html) in [DDD (Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD gestisce modelli di grandi dimensioni suddividendoli in più contesti delimitato e fornendo informazioni esplicite sui rispettivi limiti. Ogni contesto delimitato deve avere il proprio modello e il proprio database. Analogamente, ogni microservizio è proprietario dei rispettivi dati correlati. Ogni contesto delimitato inoltre ha un [linguaggio comune](http://martinfowler.com/bliki/UbiquitousLanguage.html) specifico che semplifica le comunicazioni tra sviluppatori software ed esperti di dominio.
 
-Tali condizioni (principalmente le entità di dominio) in linguaggio universale possono avere nomi diversi in contesti diversi delimitata, entità di dominio anche quando diversi condividono la stessa identità (vale a dire l'ID univoco utilizzato per leggere l'entità dall'archiviazione). Ad esempio, in un contesto limitato per il profilo utente, l'entità utente di dominio potrebbe condividere identità con l'entità di dominio dell'acquirente nel contesto limitato di ordinamento.
+Questi termini, principalmente entità di dominio, nel linguaggio comune possono avere nomi diversi in contesti delimitati diversi, anche quando diverse entità di dominio condividono la stessa identità, ovvero l'ID univoco usato per leggere l'entità dalla risorsa di archiviazione. In un contesto delimitato di un profilo utente, ad esempio, è possibile che l'entità di dominio utente condivida l'identità con l'entità di dominio acquirente nel contesto delimitato di ordinazione.
 
-Un microservizio equivale pertanto un contesto limitato, ma specifica inoltre che è un servizio distribuito. È compilato come processo separato per ogni contesto delimitata e deve utilizzare i protocolli distribuiti indicati in precedenza, ad esempio HTTP/HTTPS, WebSockets, o [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Criterio di contesto limitato, tuttavia, non specificare se il contesto delimitata è un servizio distribuito o se è semplicemente un limite logico (ad esempio un sottosistema generico) all'interno di un'applicazione monolitico distribuzione.
+Un microservizio è quindi simile a un contesto delimitato, ma specifica anche che si tratta di un servizio distribuito. È basato su un processo separato per ogni contesto delimitato e deve usare i protocolli distribuiti indicati in precedenza, ad esempio HTTP/HTTPS, WebSockets o [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Lo schema Bounded Context, tuttavia, non specifica se il contesto delimitato è un servizio distribuito o se si tratta semplicemente di un limite logico, ad esempio un sottosistema generico, entro un'applicazione con distribuzione monolitica.
 
-È importante evidenziare che la definizione di un servizio per ogni contesto delimitata è un buon punto di partenza. Ma non si dispone di vincolare la progettazione a esso. In alcuni casi è necessario progettare un contesto delimitato o microservizio business è costituita da diversi servizi fisici. Ma in definitiva, entrambi i modelli, delimitata contesto e microservizio, ovvero sono strettamente correlati.
+È importante evidenziare che la definizione di un servizio per ogni contesto delimitato è un buon punto di partenza. Non è tuttavia necessario limitare la progettazione a questo aspetto. In alcuni casi è necessario progettare un contesto delimitato o un microservizio aziendale costituito da diversi servizi fisici. Entrambi gli schemi, ovvero Bounded Context e il microservizio, sono tuttavia essenzialmente strettamente correlati.
 
-DDD dei vantaggi di microservizi ottenendo reali limiti sotto forma di microservizi distribuita. Ma idee come la condivisione non di modello tra microservizi ciò che si desidera anche in un contesto delimitato.
+I microservizi risultano vantaggiosi per DDD perché forniscono limiti reali sotto forma di microservizi distribuiti. In un contesto con limiti tuttavia è consigliabile non condividere il modello tra microservizi.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Chris Richardson. Modello: Per ogni servizio del Database**
+-   **Chris Richardson. Pattern: Database per service** (Schema: database per servizio) 
     [*http://microservices.io/patterns/data/database-per-service.html*](http://microservices.io/patterns/data/database-per-service.html)
 
 -   **Martin Fowler. BoundedContext**
@@ -61,9 +64,9 @@ DDD dei vantaggi di microservizi ottenendo reali limiti sotto forma di microserv
 -   **Martin Fowler. PolyglotPersistence**
     [*http://martinfowler.com/bliki/PolyglotPersistence.html*](http://martinfowler.com/bliki/PolyglotPersistence.html)
 
--   **Alberto Brandolini. Progettazione con il Mapping del contesto basata su domini strategico**
+-   **Alberto Brandolini. Strategic Domain Driven Design with Context Mapping** (DDD strategico con il mapping dei contesti) 
     [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
 
 
 >[!div class="step-by-step"]
-[Precedente] (architecture.md microservizi) [Avanti] (logico-e-fisica-architecture.md)
+[Indietro] (microservices-architecture.md) [Avanti] (logical-versus-physical-architecture.md)

@@ -1,6 +1,6 @@
 ---
 title: Strategie di gestione degli errori parziali
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Strategie di gestione degli errori parziali
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Strategie di gestione degli errori parziali
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,40 +8,43 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie di gestione degli errori parziali
 
-Di seguito sono elencate le strategie per affrontare gli errori parziali.
+Le strategie di gestione degli errori parziali sono le seguenti.
 
-**Usare la comunicazione asincrona (ad esempio, comunicazione basata su messaggi) tra microservizi interno**. È consigliabile non creare lunghe catene di chiamate HTTP sincrone tra l'interno microservizi perché tale progettazione corretta infine diventerà la causa principale di interruzioni non valide. Al contrario, ad eccezione delle comunicazioni front-end tra le applicazioni client e il primo livello di microservizi o granulari per le API gateway, è consigliabile usare solo (basata su messaggi) comunicazione asincrona di una volta dopo la richiesta iniziale / ciclo di risposta, attraverso il microservizi interno. Architetture di basato su eventi e la coerenza eventuale consente di ridurre gli effetti ripple. Questi approcci, applicano un livello superiore di autonomia microservizio e pertanto prevenire il problema indicato di seguito.
+**Usare la comunicazione asincrona, ad esempio la comunicazione basata su messaggi, tra i microservizi interni**. È consigliabile evitare di creare lunghe catene di chiamate HTTP sincrone tra i microservizi perché questa progettazione non corretta diventerà alla fine la causa principale delle interruzioni di servizio. Al contrario, ad eccezione delle comunicazioni front-end tra le applicazioni client e il primo livello dei microservizi o i gateway API con granularità fine, è consigliabile usare solo la comunicazione asincrona (basata su messaggi) immediatamente al termine del ciclo di richiesta/risposta iniziale, tra i microservizi interni. Le architetture di coerenza finale e basate su eventi consentiranno di ridurre al minimo l'effetto domino. Questi approcci impongono un livello di autonomia dei microservizi più elevato e consentono di prevenire il problema specificato.
 
-**Utilizzare i tentativi con backoff esponenziale**. Questa tecnica consente di evitare breve e verificati errori intermittenti eseguendo chiamate Riprova a eseguire un determinato numero di volte, nel caso in cui il servizio non era disponibile solo per un breve periodo di tempo. Questa situazione può verificarsi a causa di problemi intermittenti della rete o quando un microservizio/contenitore viene spostato su un nodo in un cluster diverso. Tuttavia, se questi tentativi non sono progettati in modo corretto con circuito, è possibile aggravare gli effetti di ripple, infine anche che provocano un [Denial of Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Usare i tentativi con backoff incrementale**. Questa tecnica permette di evitare errori brevi e intermittenti tramite la ripetizione delle chiamate per un determinato numero di volte, nel caso in cui il servizio non sia stato disponibile per un breve periodo di tempo. Questa situazione può essere causata da problemi di rete intermittenti o quando un microservizio/contenitore viene spostato in un altro nodo del cluster. Tuttavia, se i tentativi non sono progettati correttamente con interruttori di circuito, l'effetto domino può aggravarsi fino a generare un errore di tipo [Denial of Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
-**Risolvere i timeout di rete**. In generale, i client devono essere progettati non bloccare in modo indefinito e di utilizzare sempre i timeout durante l'attesa di una risposta. Utilizzo di timeout assicura che le risorse non sono mai associate per un periodo illimitato.
+**Usare i timeout di rete**. In generale, i client devono essere progettati in modo da non bloccarsi a tempo indefinito e per usare sempre i timeout durante l'attesa per una risposta. L'uso dei timeout garantisce che le risorse non rimangano bloccate per un periodo di tempo indefinito.
 
-**Utilizzare il modello di interruttore**. In questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la frequenza degli errori supera un limite configurato, un trip "interruttore" in modo che i tentativi non riescono immediatamente. (Se non riesce, un numero elevato di richieste che suggerisce il servizio è disponibile e che l'invio delle richieste è inutile.) Dopo un periodo di timeout, il client deve ripetere l'operazione e, se le nuove richieste hanno esito positivo, chiudere l'interruttore.
+**Usare lo schema Circuit Breaker**. Con questo approccio, il processo client tiene traccia del numero di richieste non riuscite. Se la frequenza di errori supera un limite configurato, si attiva un "interruttore di circuito" affinché i tentativi successivi abbiano immediatamente esito negativo. Se un numero elevato di richieste presenta errori, il servizio potrebbe non essere disponibile e risulta inutile inviare altre richieste. Trascorso il periodo di timeout, il client deve riprovare e, se le nuove richieste hanno esito positivo, l'interruttore di circuito si chiude.
 
-**Fornire fallback**. In questo approccio, il processo client esegue una logica di fallback quando una richiesta ha esito negativo, ad esempio la restituzione di dati memorizzati nella cache o un valore predefinito. Questo è un approccio adatto per le query e si è più complesso per gli aggiornamenti o i comandi.
+**Fornire fallback**. Con questo approccio, il processo client esegue la logica di fallback in caso di esito negativo di una richiesta, ad esempio restituendo i dati memorizzati nella cache o un valore predefinito. Questo approccio è adatto alle query, ma risulta più complesso per gli aggiornamenti o i comandi.
 
-**Limitare il numero di richieste in coda**. I client inoltre devono imporre un limite superiore al numero di richieste in attesa che un microservizio client può inviare a un particolare servizio. Se è stato raggiunto il limite, è probabilmente inutile effettuare richieste aggiuntive e i tentativi dovrebbero generare immediatamente un errore. In termini di implementazione, il Polly [isolamento ponte](https://github.com/App-vNext/Polly/wiki/Bulkhead) criteri possono essere usato per soddisfare questo requisito. Questo approccio è essenzialmente una limitazione di parallelizzazione con [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) dell'implementazione. Consente inoltre di una "coda" di fuori di ponte. È possibile lasci eccessivo carico anche prima dell'esecuzione in modo proattivo (ad esempio, perché la capacità viene considerata completa). In questo modo la risposta a determinati scenari di errore più velocemente rispetto a un interruttore, poiché l'interruttore è in attesa per gli errori. L'oggetto BulkheadPolicy in Polly espone il livello di riempimento di ponte e coda sono offerte eventi in caso di overflow così utilizzabile anche per favorire la scalabilità orizzontale automatica.
+**Limitare il numero di richieste in coda**. I client devono inoltre imporre una soglia massima per il numero di richieste in sospeso che un microservizio può inviare a un determinato servizio. Se il limite è stato raggiunto, è inutile inviare richieste aggiuntive, quindi questi tentativi devono avere immediatamente esito negativo. In termini di implementazione, è possibile usare i criteri [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) (isolamento a scomparti) in Polly per soddisfare questo requisito. Questo approccio rappresenta semplicemente una limitazione della parallelizzazione con la classe [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) come implementazione. Consente anche la creazione di una "coda" all'esterno dello scomparto. È possibile rimuovere il carico in eccesso anche prima dell'esecuzione, ad esempio se la capacità è considerata piena. La risposta a determinati scenari di errori risulta quindi più veloce rispetto a quella di un interruttore di circuito, dal momento che l'interruttore rimane in attesa degli errori. L'oggetto BulkheadPolicy in Polly mostra il livello di riempimento di scomparto e coda, offre eventi di overflow e può anche essere usato per aumentare automaticamente il numero di istanze.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Modelli di resilienza**
+-   **Schemi di resilienza**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Aggiunta di resilienza e ottimizzazione delle prestazioni**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+-   **Adding Resilience and Optimizing Performance (Aggiunta di resilienza e ottimizzazione delle prestazioni)**
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Ponte.** Repository di GitHub. Implementazione con criteri Polly. \
-    [*https://github.com/App-vNext/Polly/Wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+-   **Bulkhead.** Repository GitHub. Implementazione con i criteri Polly.\
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Progettazione di applicazioni Azure resilienti**
+-   **Progettazione di applicazioni resilienti per Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **Gestione degli errori temporanei**
@@ -49,4 +52,4 @@ Di seguito sono elencate le strategie per affrontare gli errori parziali.
 
 
 >[!div class="step-by-step"]
-[Precedente] (handle-parziale-failure.md) [Avanti] (implementare-tentativi-esponenziale-backoff.md)
+[Indietro] (handle-partial-failure.md) [Avanti] (implement-retries-exponential-backoff.md)

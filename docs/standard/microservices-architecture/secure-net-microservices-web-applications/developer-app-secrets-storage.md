@@ -1,6 +1,6 @@
 ---
-title: Archiviare in modo sicuro i segreti dell'applicazione durante lo sviluppo
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Archiviare in modo sicuro i segreti dell'applicazione durante lo sviluppo
+title: Archiviazione sicura dei segreti dell'applicazione durante lo sviluppo
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Archiviazione sicura dei segreti dell'applicazione durante lo sviluppo
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: mjrousos
 ms.author: wiwagn
@@ -8,23 +8,26 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f1b8b257a3e677c7e665e1d394a8adf7e651bec2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="storing-application-secrets-safely-during-development"></a>Archiviare in modo sicuro i segreti dell'applicazione durante lo sviluppo
+# <a name="storing-application-secrets-safely-during-development"></a>Archiviazione sicura dei segreti dell'applicazione durante lo sviluppo
 
-Per connettersi con le risorse protette e altri servizi, applicazioni ASP.NET Core in genere necessario utilizzare stringhe di connessione, le password o altre credenziali contenenti informazioni riservate. Questi tipi di informazioni riservati vengono chiamati *segreti*. È consigliabile non includere informazioni riservate nel codice sorgente e sicuramente non per archiviare i segreti nel controllo del codice sorgente. In alternativa, utilizzare il modello di configurazione di ASP.NET Core per i segreti di lettura da posizioni più sicuri.
+Per connettersi a risorse protette e ad altri servizi, le applicazioni ASP.NET Core in genere usano stringhe di connessione, password o altre credenziali che contengono informazioni sensibili. Queste informazioni sensibili sono chiamate *segreti*. È consigliabile non includere i segreti nel codice sorgente e non archiviarli nel controllo del codice sorgente. È invece necessario usare il modello di configurazione di ASP.NET Core per eseguire la lettura dei segreti da posizioni più sicure.
 
-È necessario separare i segreti per l'accesso di sviluppo e gestione temporanea di risorse da quelli utilizzati per accedere alle risorse di produzione, poiché utenti diversi saranno necessario accedere a tali set diversi di informazioni riservate. Per archiviare i segreti utilizzati durante lo sviluppo, gli approcci comuni sono per l'archiviazione di segreti nelle variabili di ambiente o tramite lo strumento di gestione di ASP.NET Core segreto. Per l'archiviazione più sicura in ambienti di produzione, microservizi possono archiviare i segreti in un insieme di credenziali chiave di Azure.
+È opportuno separare i segreti per accedere alle risorse di sviluppo e di staging da quelli usati per accedere alle risorse di produzione, perché utenti diversi dovranno accedere a quei set di segreti differenti. Per archiviare i segreti usati per lo sviluppo, gli approcci comuni ne prevedono che vengano archiviati in variabili di ambiente o usando lo strumento Secret Manager di ASP.NET Core. Per l'archiviazione sicura negli ambienti di produzione, i microservizi possono archiviare i segreti in un'istanza del servizio Azure Key Vault.
 
-## <a name="storing-secrets-in-environment-variables"></a>L'archiviazione di segreti nelle variabili di ambiente
+## <a name="storing-secrets-in-environment-variables"></a>Archiviazione dei segreti nelle variabili di ambiente
 
-Un modo per proteggere le informazioni riservate da codice sorgente è destinata agli sviluppatori impostare i segreti basato su stringa come [le variabili di ambiente](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) sul proprio computer di sviluppo. Quando si utilizzano variabili di ambiente per l'archiviazione di segreti con nomi gerarchici (quelli annidati in sezioni di configurazione), creare un nome per le variabili di ambiente che include la gerarchia completa del nome del segreto, delimitati da punti (:).
+Un modo per mantenere i segreti al di fuori del codice sorgente è impostare i segreti basati su stringa come [variabili di ambiente](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) nei computer di sviluppo. Quando si usano le variabili di ambiente per archiviare i segreti con nomi gerarchici (annidati nelle sezioni di configurazione), creare un nome per le variabili di ambiente che includa l'intera gerarchia del nome del segreto, separata dai due punti (:).
 
-Ad esempio, l'impostazione di una variabile di ambiente: LogLevel:Default di registrazione di Debug sarà equivalente a un valore di configurazione dal file JSON seguente:
+Ad esempio, se si imposta la variabile di ambiente Logging:LogLevel:Default su Debug, questo equivale a un valore di configurazione del file JSON seguente:
 
 ```json
 {
@@ -36,15 +39,15 @@ Ad esempio, l'impostazione di una variabile di ambiente: LogLevel:Default di reg
 }
 ```
 
-Per accedere a questi valori dalle variabili di ambiente, l'applicazione deve semplicemente chiamare AddEnvironmentVariables nel relativo ConfigurationBuilder quando si crea un oggetto IConfigurationRoot.
+Per accedere ai valori delle variabili di ambiente, l'applicazione deve semplicemente chiamare AddEnvironmentVariables in ConfigurationBuilder durante la creazione di un oggetto IConfigurationRoot.
 
-Si noti che le variabili di ambiente sono in genere archiviate come testo normale, pertanto se il computer o i processi con le variabili di ambiente sono compromesso, i valori delle variabili di ambiente saranno visibili.
+Si noti che le variabili di ambiente vengono generalmente archiviate come testo normale, quindi se il computer o il processo con le variabili di ambiente è compromesso, i valori delle variabili di ambiente saranno visibili.
 
-## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>L'archiviazione di segreti usando gestione ASP.NET Core segreto
+## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Archiviazione dei segreti tramite lo strumento Secret Manager di ASP.NET Core
 
-ASP.NET Core [Manager segreto](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) strumento fornisce un altro metodo di protezione delle informazioni riservate da codice sorgente. Per utilizzare lo strumento di gestione di segreto, includere un riferimento di strumenti (DotNetCliToolReference) per il pacchetto Microsoft.Extensions.SecretManager.Tools nel file di progetto. Una volta che tale dipendenza è presente ed è stato ripristinato, il comando di informazioni riservate dell'utente dotnet può essere utilizzato per impostare il valore di segreti dalla riga di comando. Questi segreti verranno archiviati in un file JSON nella directory del profilo dell'utente (dettagli variano a seconda del sistema operativo), dal codice sorgente.
+Lo strumento [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) di ASP.NET Core fornisce un altro metodo per mantenere i segreti al di fuori del codice sorgente. Per usare lo strumento Secret Manager, includere un riferimento agli strumenti (DotNetCliToolReference) nel pacchetto Microsoft.Extensions.SecretManager.Tools del file di progetto. Non appena la dipendenza è presente ed è stata ripristinata, è possibile usare il comando dotnet user-secrets per impostare il valore dei segreti dalla riga di comando. I segreti verranno archiviati in un file JSON nella directory del profilo dell'utente (i dettagli variano in base al sistema operativo), lontano dal codice sorgente.
 
-I segreti impostati dallo strumento di gestione segreto sono organizzati per la proprietà UserSecretsId del progetto che usa i segreti. Pertanto, è necessario assicurarsi di impostare la proprietà UserSecretsId nel file di progetto (come illustrato nel frammento riportato di seguito). La stringa effettiva utilizzata come l'ID non è importante, purché sia univoco nel progetto.
+I segreti impostati dallo strumento Secret Manager sono organizzati dalla proprietà UserSecretsId del progetto che usa i segreti. Di conseguenza, è necessario accertarsi di impostare la proprietà UserSecretsId nel file di progetto, come mostrato nel frammento di codice seguente. La stringa effettiva usata come ID non è importante, purché sia univoca nel progetto.
 
 ```xml
 <PropertyGroup>
@@ -52,8 +55,8 @@ I segreti impostati dallo strumento di gestione segreto sono organizzati per la 
 </PropertyGroup>
 ```
 
-Utilizzo di segreti archiviati con segreto Manager in un'applicazione viene eseguita chiamando AddUserSecrets&lt;T&gt; nell'istanza ConfigurationBuilder per includere informazioni riservate per l'applicazione nella configurazione. Il parametro generico T deve essere un tipo di assembly che è stato applicato il UserSecretId a. In genere utilizzando AddUserSecrets&lt;avvio&gt; funziona correttamente.
+I segreti archiviati con Secret Manager vengono usati in un'applicazione chiamando AddUserSecrets&lt;T&gt; nell'istanza di ConfigurationBuilder per includere i segreti per l'applicazione nella relativa configurazione. Il parametro generico T deve essere un tipo dell'assembly a cui la proprietà UserSecretId è stata applicata. In generale, l'uso di AddUserSecrets&lt;Startup&gt; funziona correttamente.
 
 
 >[!div class="step-by-step"]
-[Precedente] (autorizzazione-net-microservizi-web-applications.md) [Avanti] (azure-key-insieme di credenziali-protegge-secrets.md)
+[Indietro] (authorization-net-microservices-web-applications.md) [Avanti] (azure-key-vault-protects-secrets.md)

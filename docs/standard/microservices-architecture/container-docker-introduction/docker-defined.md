@@ -1,6 +1,6 @@
 ---
 title: "Che cos'è Docker?"
-description: "Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Che cos'è Docker?"
+description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Che cos'è Docker?"
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: aa9cb379628fa91e5dc5b1b529f92db98fa59305
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a079a3303d1e1fed9a8df2dca2c5627beb0c672d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
-[Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) per automatizzare la distribuzione di applicazioni come portabile, autosufficiente contenitori che è possibile eseguire nel cloud o locale. Docker è anche un [società](https://www.docker.com/) che Alza di livello e si evolve questa tecnologia. Docker funziona in collaborazione con fornitori di Windows, inclusi Microsoft di cloud, Linux e.
+[Docker](https://www.docker.com/) è un [progetto open source](https://github.com/docker/docker) per automatizzare la distribuzione di app come contenitori portabili e autosufficienti che possono essere eseguiti nel cloud o in locale. Docker è anche un'[azienda](https://www.docker.com/) che promuove questa tecnologia e ne guida l'evoluzione. Docker collabora con i fornitori di Windows, Linux e servizi cloud, inclusa Microsoft.
 
 ![](./media/image2.png)
 
-**Figura 2-2**. Docker consente di distribuire contenitori di tutti i livelli del cloud ibrido
+**Figura 2-2**. Docker distribuisce contenitori a tutti i livelli del cloud ibrido
 
-Contenitori di immagini docker vengono eseguiti in modo nativo in Linux e Windows. Immagini di Windows eseguire solo negli host di Windows e Linux immagini eseguite solo su host Linux. L'host è un server o una macchina virtuale.
+I contenitori di immagini Docker vengono eseguiti in modo nativo in Linux e Windows. Le immagini Windows vengono eseguite solo negli host Windows e le immagini Linux solo negli host Linux. L'host è un server o una macchina virtuale.
 
-È possibile sviluppare in Windows, Linux o Mac OS. Il computer di sviluppo viene eseguito un host Docker in cui sono distribuite le immagini Docker, tra cui l'app e le relative dipendenze. In Linux o Mac OS, utilizzare un host Docker Linux in base e creare immagini solo per i contenitori di Linux. (In macOS è possibile modificare il codice o eseguire l'interfaccia CLI di Docker, ma al momento della redazione del presente documento, i contenitori non vengono eseguiti direttamente in macOS.) In Windows è possibile creare immagini per i contenitori di Windows o Linux.
+È possibile sviluppare in Windows, Linux o macOS. Il computer di sviluppo esegue un host Docker in cui vengono distribuite le immagini Docker, inclusa l'app e le relative dipendenze. In Linux o macOS, si usa un host Docker basato su Linux che può creare immagini solo per i contenitori Linux. In macOS è possibile modificare il codice o eseguire l'interfaccia della riga di comando di Docker, ma al momento della stesura di questo documento, non è possibile eseguire i contenitori direttamente in macOS. In Windows è possibile creare le immagini sia per i contenitori Linux che per i contenitori Windows.
 
-In Windows o Mac OS, [Docker Community Edition (CE)](https://www.docker.com/community-edition) ospita contenitori in un ambiente di sviluppo e fornisce gli strumenti di sviluppo aggiuntive. [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition) viene usato dai team IT che compila, spedire ed eseguire applicazioni business-critical di grandi dimensioni. ~ La macchina virtuale necessaria (host Docker) per ospitare i contenitori di installare entrambi i prodotti. ~ 
+In Windows o in macOS [Docker Community Edition (CE)](https://www.docker.com/community-edition) ospita i contenitori in un ambiente di sviluppo e offre strumenti di sviluppo aggiuntivi. [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition) è invece usato dai team IT che compilano, distribuiscono ed eseguono applicazioni business-critical di grandi dimensioni. ~Entrambi i prodotti installano la macchina virtuale necessaria (host Docker) per l'hosting dei contenitori.~ 
 
-[Contenitori di Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) funzionano con due tipi di runtime:
+I [contenitori Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) funzionano con due tipi di runtime:
 
--   Contenitori di Windows Server offrono l'isolamento dell'applicazione attraverso una tecnologia di isolamento dei processi e dello spazio dei nomi. Un contenitore di Windows Server condivide un kernel con l'host contenitore e tutti i contenitori in esecuzione nell'host.
+-   I contenitori Windows Server offrono l'isolamento dell'applicazione tramite una tecnologia di isolamento dei processi e dello spazio dei nomi. Un contenitore Windows Server condivide un kernel con l'host del contenitore e con tutti i contenitori in esecuzione nell'host.
 
--   I contenitori di Hyper-V si espandono l'isolamento fornito dai contenitori di Windows Server eseguendo ciascun contenitore in una macchina virtuale altamente ottimizzata. In questa configurazione il kernel dell'host contenitore non viene condiviso con i contenitori di Hyper-V, che fornisce un migliore isolamento. Consente di contenitori di Hyper-V non attendibili e *ostile multi-tenant* applicazioni da eseguire nello stesso host. Contenitori di Hyper-V hanno un po' meno efficienza in tempi di avvio e la densità più contenitori di Windows Server.
+-   I contenitori Hyper-V espandono l'isolamento fornito dai contenitori Windows Server tramite l'esecuzione di ogni contenitore in una macchina virtuale con ottimizzazione elevata. In questa configurazione, il kernel dell'host dei contenitori non è condiviso con i contenitori Hyper-V per fornire un isolamento migliore. I contenitori Hyper-V consentono l'esecuzione di applicazioni non attendibili e *multi-tenant ostili* nello stesso host. I contenitori Hyper-V presentano tempi di avvio e densità meno efficienti rispetto ai contenitori Windows Server.
 
-Le immagini per questi contenitori vengono create e funzionano allo stesso modo. Differiscono nel modo in cui viene creato il contenitore. Per informazioni dettagliate, vedere [contenitori di Hyper-V](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+Le immagini per questi contenitori vengono create e funzionano nello stesso modo. La differenza sta nella modalità di creazione del contenitore. Per informazioni dettagliate, vedere [Contenitori Hyper-V](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
 
-## <a name="comparing-docker-containers-with-virtual-machines"></a>Confronto tra contenitori di Docker con le macchine virtuali
+## <a name="comparing-docker-containers-with-virtual-machines"></a>Confronto tra contenitori Docker e macchine virtuali
 
-Figura 2-3 viene illustrato un confronto tra le macchine virtuali e Docker contenitori.
+La figura 2-3 mostra un confronto tra macchine virtuali e contenitori Docker.
 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Macchine virtuali****contenitori di Docker** 
+  **Macchine virtuali**                                                                                                                                                                  **Contenitori Docker**
                                                                                                                                                                                         
   ![](./media/image3.png)                                                                                                                                ![](./media/image4.png)
                                                                                                                                                                                         
-  Macchine virtuali includono l'applicazione, le librerie necessarie o i file binari e un sistema operativo completo. Virtualizzazione completa richiede più risorse di creazione dei contenitori. I contenitori includono l'applicazione e tutte le relative dipendenze. Tuttavia, i contenitori condividono kernel del sistema operativo con gli altri contenitori. Contenitori vengono eseguiti come processi isolati nello spazio utente nel sistema operativo host. Tranne che in contenitori di Hyper-V in ogni contenitore viene eseguito all'interno di una speciale macchina virtuale per ogni contenitore.
+  Le macchine virtuali includono l'applicazione, le librerie o i file binari necessari e un sistema operativo guest completo. La virtualizzazione completa richiede più risorse rispetto alla creazione di contenitori. I contenitori includono l'applicazione e tutte le relative dipendenze. Tuttavia, i contenitori condividono il kernel del sistema operativo con altri contenitori. I contenitori vengono eseguiti come processi isolati nello spazio utente nel sistema operativo host. Tranne che nei contenitori Hyper-V, in cui ogni contenitore viene eseguito all'interno di una macchina virtuale speciale per contenitore.
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Figura 2-3**. Confronto tra le macchine virtuali tradizionali ai contenitori di Docker
+**Figura 2-3**. Confronto tra macchine virtuali tradizionali e contenitori Docker
 
-Poiché i contenitori richiedono molto meno risorse (ad esempio, non richiedono un sistema operativo completo), avvio rapido e facili da distribuire. Basso utilizzo delle risorse consente maggiore densità. È possibile eseguire più servizi nella stessa unità di hardware e ridurre i costi.
+Poiché i contenitori richiedono un numero molto ridotto di risorse, ad esempio non necessitano di un sistema operativo completo, si avviano rapidamente e sono facili da distribuire. L'utilizzo ridotto delle risorse consente una densità più elevata. È possibile eseguire più servizi nella stessa unità hardware e ridurre i costi.
 
-Gli stessi risultati del kernel in meno isolamento rispetto a forniscono le macchine virtuali in esecuzione.
+L'esecuzione nello stesso kernel determina un isolamento minore rispetto a quello fornito dalle macchine virtuali.
 
-L'obiettivo principale di un'immagine è che rende l'ambiente (dipendenze) uguali tra le diverse distribuzioni. Ciò significa che è possibile eseguire il debug nel computer e quindi distribuirla in un altro computer con lo stesso ambiente garantito.
+L'obiettivo principale di un'immagine è rendere l'ambiente (dipendenze) uguale su distribuzioni diverse. Questo significa che è possibile eseguirne il debug nel computer corrente e quindi distribuirla in un altro computer con lo stesso ambiente garantito.
 
-Un'immagine contenitore è un modo per un'app o un servizio del pacchetto e distribuirlo in modo affidabile e riproducibile. È possibile specificare che Docker sia non solo una tecnologia, ma anche una filosofia e un processo.
+Un'immagine del contenitore consente di creare un pacchetto di app o servizi e distribuirlo in modo affidabile e riproducibile. Si potrebbe dire che Docker non è solo una tecnologia, ma anche una filosofia e un processo.
 
-Gli sviluppatori di docker non ad esempio, "Funziona nel computer, non vengono visualizzati nell'ambiente di produzione?" Si dice, "Viene eseguito in Docker". App in pacchetto docker può essere eseguita in qualsiasi ambiente supportato da Docker. App in pacchetto docker eseguire in modo coerente in tutte le destinazioni di distribuzione (sviluppo, QA, gestione temporanea, produzione).
+Gli sviluppatori Docker non dicono "Funziona sul mio computer, perché non in produzione?" Dicono "È in esecuzione in Docker." Le app in pacchetti per Docker possono essere eseguite in qualsiasi ambiente Docker supportato. Le app in pacchetti per Docker vengono eseguite in modo coerente in tutte le destinazioni di distribuzione, ovvero sviluppo, controllo qualità, staging, produzione.
 
 >[!div class="step-by-step"]
-[Precedente] [Avanti] (docker terminology.md) (index.md)
+[Indietro] (index.md) [Avanti] (docker-terminology.md)

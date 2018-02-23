@@ -1,6 +1,6 @@
 ---
-title: Approcci CQRS l'applicazione e CQS in un microservizio DDD in eShopOnContainers
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Approcci CQRS l'applicazione e CQS in un microservizio DDD in eShopOnContainers
+title: Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,63 +8,66 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: a2c4429a75ca47d4fbcde868b95e76bc65ea2bef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Approcci CQRS l'applicazione e CQS in un microservizio DDD in eShopOnContainers
+# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicazione degli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
-La progettazione dell'ordinamento microservizio l'applicazione di riferimento eShopOnContainers si basa sui principi CQRS. Tuttavia, utilizza l'approccio più semplice, che è sufficiente che separa le query dei comandi e utilizzando lo stesso database per le azioni.
+La progettazione del microservizio per gli ordini nell'applicazione di riferimento eShopOnContainers è basata sui principi del modello CQRS. Tuttavia, usa l'approccio più semplice che consiste nella separazione delle query dai comandi e nell'uso dello stesso database per entrambe le azioni.
 
-Le tracce di tali modelli e in questo caso, l'aspetto importante sono che le query sono idempotenti: indipendentemente da quante volte si esegue un sistema, lo stato del sistema di una query non verranno modificato è anche possibile usare un modello di dati diverso "lettura" più la logica transazionale "scrittura" modello di dominio, anche se l'ordinamento microservizi utilizza lo stesso database. Pertanto, questo è un approccio CQRS semplificato.
+La sostanza di questi schemi e il punto importante stanno nel fatto che le query sono idempotenti: indipendentemente dal numero di query inviate al sistema, lo stato del sistema non cambia. È anche possibile usare un modello di dati per le "letture" diverso dal modello di dominio per le "scritture" della logica transazionale, sebbene il microservizio degli ordini usi lo stesso database. Ecco perché questo è un approccio CQRS semplificato.
 
-D'altra parte, comandi, attivano le transazioni e gli aggiornamenti dei dati, modificano lo stato del sistema. Con i comandi, è necessario prestare attenzione quando relative complessità e le regole di business in continua evoluzione. Questa è la posizione in cui si desidera applicare le tecniche DDD per disporre di un sistema modellato meglio.
+D'altra parte, lo stato dei comandi che attivano le transazioni e gli aggiornamenti dei dati cambia nel sistema. Con i comandi, occorre prestare attenzione quando si affrontano scenari complessi e regole aziendali in continua evoluzione. Ecco perché le tecniche di progettazione DDD consentono di ottenere un sistema con una modellazione ottimale.
 
-I modelli DDD presentati in questa Guida non devono essere applicati universalmente. Introducono vincoli alla progettazione. Tali vincoli offrono vantaggi, ad esempio una qualità più elevata nel tempo, soprattutto in comandi e altro codice che modifica lo stato del sistema. Tuttavia, tali vincoli aggiungono complessità con meno vantaggi per la lettura e di eseguire query sui dati.
+Gli schemi DDD presentati in questa guida non devono essere applicati a livello universale, perché introducono vincoli nella progettazione. Questi vincoli offrono vantaggi come una migliore qualità nel tempo, in particolare per i comandi e il codice che modifica lo stato del sistema. Tuttavia, questi vincoli aggiungono complessità con vantaggi ridotti per la lettura e le query sui dati.
 
-Un modello di questo tipo è il modello di aggregazione, che verranno esaminati più nelle sezioni successive. In breve, nel modello di aggregazione, si considerano molti oggetti di dominio come una singola unità come risultato la relazione del dominio. È possibile che non sempre vantaggi da questo modello di query. è possibile aumentare la complessità della logica di query. Per le query di sola lettura, non è possibile ottenere i vantaggi di gestione di più oggetti come una singola funzione di aggregazione. Si ottiene solo la complessità.
+Uno di questi schemi è lo schema Aggregate che verrà esaminato più in dettaglio nelle sezioni successive. In breve, nello schema Aggregate, gli oggetti di dominio vengono considerati come una singola unità in virtù della relativa relazione nel dominio. Non sempre questo schema genera vantaggi nelle query, in quanto può aumentare la complessità della logica di query. Per le query di sola lettura non è vantaggioso considerare più oggetti come una singola aggregazione. Aumenta solo la complessità.
 
-Come illustrato nella figura 9-2, è consigliabile in base a modelli DDD solo nell'area transazionale, aggiornamenti del microservizio (vale a dire come attivata da comandi). Le query possono seguire un approccio più semplice e devono essere separate da comandi, adotta un approccio CQRS.
+Come illustrato nella figura 9-2, questa guida suggerisce l'uso di schemi di progettazione DDD solo nell'area transazionale e degli aggiornamenti del microservizio, ovvero quella attivata dai comandi. Le query possono seguire un approccio più semplice e devono essere separate dai comandi, secondo quanto previsto dall'approccio CQRS.
 
-Per implementare il lato"query", è possibile scegliere tra molti approcci, tra l'autentico ORM come Core EF AutoMapper proiezioni o stored procedure, viste, viste materializzate una ORM micro.
+Per implementare il "lato query" è possibile scegliere tra numerosi approcci, ad esempio uno basato su ORM (Object-Relational Mapping), come EF Core, proiezioni di AutoMapper, stored procedure, viste, viste materializzate o micro ORM.
 
-In questa Guida e in eShopOnContainers (in particolare l'ordinamento microservizio) è stato scelto di implementare semplici query utilizzando un micro ORM come [Dapper](https://github.com/StackExchange/dapper-dot-net). Ciò consente di implementare qualsiasi query in base alle istruzioni SQL per ottenere prestazioni ottimali, grazie a un framework chiaro con un overhead minimo.
+In questa guida e in eShopOnContainers, in particolare nel microservizio degli ordini, è stato scelto di implementare query lineari tramite un micro ORM come [Dapper](https://github.com/StackExchange/dapper-dot-net). In questo modo è possibile implementare qualsiasi query basata su istruzioni SQL per ottenere le prestazioni migliori, grazie a un framework leggero con un sovraccarico ridotto.
 
-Si noti che, quando si utilizza questo approccio, tutti gli aggiornamenti al modello che influiscono su come le entità vengono resi persistenti in un database SQL necessario anche aggiornamenti separati in query SQL utilizzate da Dapper o eventuali altri approcci (non EF) separati per l'esecuzione di query.
+Si noti che quando si usa questo approccio, gli aggiornamenti al modello che influiscono sul modo in cui le entità vengono salvate in modo permanente in un database SQL devono separare gli aggiornamenti alle query SQL usate da Dapper o da qualsiasi altro approccio separato (non EF) all'esecuzione di query.
 
-## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>I modelli CQRS e DDD non sono le architetture di livello superiore
+## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>Gli schemi CQRS e DDD non sono architetture di primo livello
 
-È importante comprendere che CQRS e la maggior parte dei modelli DDD (come livelli DDD o un modello di dominio con funzioni di aggregazione) non sono gli stili dell'architettura, ma solo i modelli di architettura. Microservizi, SOA e architettura basata su eventi (EDA) sono esempi di stili dell'architettura. Descrivono un sistema di molti componenti, ad esempio microservizi molti. Modelli di CQRS e DDD descrivono un aspetto all'interno di un unico sistema o un componente. In questo caso, oggetto all'interno di un microservizio.
+È importante comprendere che gli schemi CQRS e la maggior parte degli schemi DDD, come i livelli DDD o un modello di dominio con aggregazioni, non sono stili architetturali, ma solo schemi di architetture. I microservizi, l'architettura orientata ai servizi (SOA) e l'architettura basata su eventi (EDA) sono esempi di stili architetturali. Descrivono un sistema costituito da molti componenti, ad esempio vari microservizi. Gli schemi CQRS e DDD descrivono un aspetto all'interno di un singolo sistema o componente. In questo caso, all'interno di un microservizio.
 
-Contesti diversi delimitata (BCs) verranno impiegati modelli diversi. Responsabilità diverse e che comporta diverse soluzioni. È la pena sottolineare che imporre lo stesso modello che Everywhere provoca un errore. Non utilizzare modelli di CQRS e DDD ovunque. Molti dei sottosistemi, BCs o microservizi sono più semplici e possono essere implementato più facilmente utilizzando servizi CRUD semplici o un altro approccio.
+Diversi contesti delimitati useranno schemi differenti. Poiché hanno responsabilità diverse, verranno impiegate soluzioni differenziate. Tenere presente che forzare lo stesso schema ovunque può generare errori. Non usare gli schemi CQRS e DDD ovunque. Molti sottosistemi, contesti delimitati o microservizi sono più semplici e possono essere implementati facilmente con servizi CRUD o altri approcci.
 
-Vi è solo un'applicazione architettura: l'architettura dell'applicazione end-to-end o di sistema si progettano (ad esempio, l'architettura di microservizi). Tuttavia, la struttura di ogni contesto delimitata o microservizio all'interno di tale applicazione riflette il proprio compromessi e le decisioni di progettazione interna a livello di modelli di architettura. Non tentare di applicare gli stessi dell'architettura modelli come CQRS o DDD ovunque.
+Esiste una sola architettura dell'applicazione: l'architettura del sistema o dell'applicazione end-to-end che si sta progettando, ad esempio l'architettura di microservizi. Tuttavia la progettazione di ogni contesto delimitato o microservizio all'interno dell'applicazione riflette i compromessi e le decisioni di progettazione interne al livello degli schemi di architettura. Non provare ad applicare gli stessi schemi architetturali, come CQRS o DDD, ovunque.
 
 ####  <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Martin Fowler. CQRS**
     [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young. Visual Studio CQS. CQRS**
+-   **Greg Young. CQS e CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. Documenti CQRS**
+-   **Greg Young. Documentazione per l'approccio CQRS**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. Attività di CQRS, basato su interfacce utente e determinazione dell'origine evento**
+-   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, interfacce utente basate su attività ed Event Sourcing)**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **udi Dahan. È stato chiarito CQRS**
+-   **Udi Dahan. Clarified CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Evento-Sourcing (ES)**
+-   **Event-Sourcing (ES)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 
 >[!div class="step-by-step"]
-[Precedente] [Avanti] (cqrs-microservizio-reads.md) (apply-simplified-microservice-cqrs-ddd-patterns.md)
+[Indietro] (apply-simplified-microservice-cqrs-ddd-patterns.md) [Avanti] (cqrs-microservice-reads.md)

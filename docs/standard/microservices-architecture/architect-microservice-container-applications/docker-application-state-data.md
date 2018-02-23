@@ -1,65 +1,68 @@
 ---
-title: Stato e i dati nelle applicazioni di Docker
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Stato e i dati nelle applicazioni di Docker
-keywords: Docker, Microservizi, ASP.NET, contenitore, SQL, CosmosDB, Docker
+title: Stato e dati nelle applicazioni di Docker
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Stato e dati nelle applicazioni di Docker
+keywords: Docker, microservizi, ASP.NET, contenitore, SQL, CosmosDB, Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 36d0fb9f27ef56b36c380e2fc972c79cff77003e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef11d89c39ee02d52dab29f949d1ac6be981d87f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="state-and-data-in-docker-applications"></a>Stato e i dati nelle applicazioni di Docker
+# <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
-Nella maggior parte dei casi, è possibile considerare un contenitore come un'istanza di un processo. Un processo non mantiene uno stato persistente. Mentre un contenitore è possibile scrivere nello spazio di archiviazione locale, presupponendo che un'istanza sarà intorno all'infinito sarebbe simile a quanto presupponendo che un'unica posizione in memoria siano durevole. Immagini contenitore, ad esempio i processi, devono essere presupposto di avere più istanze o che sono infine essere terminate; Se vengono gestiti con un agente di orchestrazione del contenitore, è necessario considerare che potrebbe essere stata spostate da un nodo o da macchina virtuale a un altro.
+Nella maggior parte dei casi è possibile considerare un contenitore come un'istanza di un processo. Un processo non mantiene uno stato persistente. Anche se un contenitore può scrivere nella propria archiviazione locale, presupporre che un'istanza resti disponibile all'infinito sarebbe come presupporre che una singola posizione in memoria sia durevole. Si deve presupporre che le immagini del contenitore, come i processi, abbiano più istanze o che queste vengano infine terminate. Se vengono gestite con un agente di orchestrazione dei contenitori, dovrebbero poter essere spostate da un nodo o da una macchina virtuale a un'altra.
 
-Docker offre una funzionalità denominata la *sovrapposizione sistema file*. Implementa un'operazione copy-on-write che archivia informazioni aggiornate al file system del contenitore radice. Tali informazioni sono inoltre l'immagine originale su cui è basato il contenitore. Se il contenitore viene eliminato dal sistema, tali modifiche andranno perdute. Pertanto, sebbene sia possibile salvare lo stato di un contenitore entro lo spazio di archiviazione locale, la progettazione di un sistema di risoluzione di questo problema genererebbe un conflitto con il presupposto di progettazione di contenitore, che per impostazione predefinita è senza stato.
+Docker offre una funzionalità denominata *sovrimpressione di file system*. Implementa un'operazione di copia su scrittura che archivia le informazioni aggiornate nel file system radice del contenitore. Tali informazioni vengono aggiunte all'immagine originale su cui si basa il contenitore. Se il contenitore viene eliminato dal sistema, le modifiche andranno perdute. Quindi, anche se è possibile salvare lo stato di un contenitore all'interno dell'archiviazione locale, progettare un sistema in base a questo presupposto genererebbe un conflitto con una delle impostazioni predefinite della progettazione di contenitori, ovvero l'assenza di stato.
 
-Le soluzioni seguenti consentono di gestire i dati nelle applicazioni di Docker:
+Le soluzioni seguenti vengono usate per gestire i dati persistenti nelle applicazioni di Docker:
 
--   [I volumi di dati](https://docs.docker.com/engine/tutorials/dockervolumes/) che di montaggio all'host.
+-   [I volumi di dati](https://docs.docker.com/engine/tutorials/dockervolumes/) montati nell'host.
 
--   [Contenitori di volumi di dati](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) che forniscono spazio di archiviazione condiviso tra contenitori tramite un contenitore esterno.
+-   [I contenitori dei volumi di dati](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) che forniscono l'archiviazione condivisa tra contenitori usando un contenitore esterno.
 
--   [I plug-in di volume](https://docs.docker.com/engine/tutorials/dockervolumes/) che montare i volumi ai servizi remoti, fornendo la persistenza a lungo termine.
+-   [I plug-in di volume](https://docs.docker.com/engine/tutorials/dockervolumes/) che montano i volumi nei servizi remoti, fornendo una persistenza a lungo termine.
 
--   [Archiviazione di Azure](https://docs.microsoft.com/azure/storage/), che fornisce l'archiviazione geo-distribuibile, fornendo una buona soluzione persistenza a lungo termine per i contenitori.
+-   [Archiviazione di Azure](https://docs.microsoft.com/azure/storage/) che fornisce un'archiviazione geo-distribuibile e una buona soluzione di persistenza a lungo termine per i contenitori.
 
--   Ad esempio database relazionali remoti [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/) o nei database NoSQL, ad esempio [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), oppure memorizzare nella cache di servizi come [Redis](https://redis.io/).
+-   Database relazionali remoti come i [database SQL di Azure](https://azure.microsoft.com/services/sql-database/), database NoSQL come [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) o servizi di cache come [Redis](https://redis.io/).
 
-Nelle sezioni che seguono vengono fornite ulteriori informazioni su queste opzioni.
+Le sezioni seguenti forniscono altre informazioni su queste opzioni.
 
-**I volumi di dati** sono directory associate dal sistema operativo host per le directory nei contenitori. Quando codice nel contenitore dispone di accesso alla directory, che l'accesso sia effettivamente in una directory nel sistema operativo host. Questa directory non è correlata al ciclo di vita del contenitore e la directory sia accessibile dal codice eseguito direttamente nel sistema operativo host o da un altro contenitore che esegue il mapping nella stessa directory di host a se stessa. Di conseguenza, i volumi di dati sono progettati per rendere persistenti i dati in modo indipendente dal ciclo di vita del contenitore. Se si elimina un contenitore o un'immagine dall'host Docker, i dati persistenti nel volume di dati non viene eliminato. I dati in un volume è accessibile dall'host del sistema operativo anche.
+**I volumi di dati** sono directory associate dal sistema operativo host alle directory nei contenitori. Quando il codice nel contenitore accede alla directory, in realtà accede a una directory nel sistema operativo host. Questa directory non è legata alla durata dello specifico contenitore e l'accesso può essere eseguito dal codice in esecuzione direttamente nel sistema operativo host o da un altro contenitore che esegue il mapping della stessa directory host a se stessa. Di conseguenza, i volumi di dati sono progettati per rendere persistenti i dati in modo indipendente dalla durata del contenitore. Se si elimina un contenitore o un'immagine dall'host Docker, i dati persistenti nel volume di dati non vengono eliminati. L'accesso ai dati in un volume può essere eseguito anche dal sistema operativo host.
 
-**Contenitori di volumi di dati** sono un'evoluzione di volumi di dati normali. Un contenitore di volumi di dati è un contenitore semplice che include uno o più volumi di dati in esso contenuti. Il contenitore del volume di dati fornisce l'accesso ai contenitori da un punto di montaggio centrale. Questo metodo di accesso ai dati è utile perché estrae il percorso dei dati originali. A parte ciò, il comportamento è simile a quello di un volume di dati normale, pertanto i dati sono persistenti in questo contenitore dedicato in modo indipendente dal ciclo di vita dei contenitori dell'applicazione.
+**I contenitori dei volumi di dati** sono un'evoluzione dei normali volumi di dati. Un contenitore dei volumi di dati è un contenitore semplice che include uno o più volumi di dati. Il contenitore del volume di dati fornisce l'accesso ai contenitori da un punto di montaggio centrale. Questo metodo di accesso ai dati è utile perché estrae il percorso dei dati originali. A parte ciò, il comportamento è simile a quello di un volume di dati normale, quindi i dati vengono mantenuti in questo contenitore dedicato in modo indipendente dalla durata dei contenitori dell'applicazione.
 
-Come illustrato nella figura 4-5, volumi Docker regolari possono essere archiviati di fuori di contenitori stessi ma entro i limiti fisici del server host o VM. Tuttavia, i contenitori di Docker non possono accedere a un volume dal server di un host o macchina virtuale a un altro. In altre parole, con questi volumi, non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in diversi host Docker
+Come illustrato nella figura 4-5, i volumi Docker normali possono essere archiviati fuori dai contenitori stessi, ma all'interno dei limiti fisici del server host o della macchina virtuale. Tuttavia, i contenitori Docker non possono accedere a un volume da un server host o da una macchina virtuale a un'altra. In altre parole, con questi volumi non è possibile gestire i dati condivisi tra contenitori che vengono eseguiti in diversi host Docker
 
 ![](./media/image5.png)
 
-**Figura 4-5**. I volumi di dati e origini dati esterne per le applicazioni basate sul contenitore
+**Figura 4-5**. Volumi di dati e origini dati esterne per applicazioni basate su contenitore
 
-Inoltre, quando da un agente di orchestrazione vengono gestiti i contenitori di Docker, contenitori potrebbero "Sposta" tra gli host, a seconda che le ottimizzazioni eseguite dal cluster. Pertanto, non è consigliabile utilizzare i volumi di dati per i dati aziendali. Ma sono un meccanismo efficace per lavorare con file di traccia, il file temporale, o simile che non influiranno la coerenza dei dati di business.
+Quando i contenitori Docker vengono gestiti da un agente di orchestrazione, i contenitori possono anche "spostarsi" tra gli host, a seconda delle ottimizzazioni eseguite dal cluster. Non è quindi consigliabile usare i volumi di dati per i dati aziendali. Tuttavia, possono essere efficaci quando si lavora con file di traccia, file temporanei o file simili che non influiscono sulla coerenza dei dati aziendali.
 
-**I plug-in di volume** come [Flocker](https://clusterhq.com/flocker/) forniscono accesso ai dati in tutti gli host in un cluster. Mentre non tutti i plug-in di volume vengono creati nello stesso modo, i plug-in di volume in genere forniscono esternalizzati archiviazione affidabile permanente dai contenitori non modificabili.
+**I plug-in di volume** come [Flocker](https://clusterhq.com/flocker/) forniscono l'accesso ai dati in tutti gli host in un cluster. Anche se non tutti i plug-in di volume sono uguali, i plug-in di volume in genere forniscono un'archiviazione affidabile, persistente ed esternalizzata grazie a contenitori non modificabili.
 
-**Origini dati remote e cache** strumenti come Database SQL di Azure, Azure Cosmos DB o una cache remota come Redis può essere usato in contenitore applicazioni esattamente come vengono utilizzati durante lo sviluppo senza contenitori. Questo è un modo comprovato per archiviare i dati delle applicazioni aziendali.
+**Gli strumenti per le origini dati remote e la cache**, ad esempio i database SQL di Azure, Azure Cosmos DB o le cache remote come Redis, possono essere usati nelle applicazioni incluse in contenitori allo stesso modo con cui vengono usati durante lo sviluppo senza contenitori. Si tratta di un modo consolidato per archiviare i dati delle applicazioni aziendali.
 
-**Archiviazione di Azure.** Dati di business in genere dovrà essere inserito nel database, come archiviazione di Azure o di risorse esterne. Archiviazione di Azure, in concreto, fornisce i seguenti servizi nel cloud:
+**Archiviazione di Azure.** I dati aziendali in genere devono essere inseriti in risorse o database esterni, ad esempio Archiviazione di Azure. Archiviazione di Azure fornisce essenzialmente i servizi seguenti nel cloud:
 
--   Archiviazione BLOB archivia i dati di oggetto non strutturati. Un blob può essere qualsiasi tipo di dati di testo o binario, ad esempio i file di documento o un supporto (file immagini, audio e video). Archiviazione BLOB è detta anche archiviazione di oggetti.
+-   L'archiviazione BLOB archivia i dati oggetto non strutturati. Un BLOB può essere costituito da qualsiasi tipo di dati di testo o binari, ad esempio documenti o file multimediali (file di immagini, audio e video). L'archiviazione BLOB viene chiamata anche archiviazione di oggetti.
 
--   Archiviazione di file offre spazio di archiviazione condiviso per le applicazioni legacy utilizzando il protocollo SMB standard. Macchine virtuali di Azure e servizi cloud possono condividere i dati dei file nei componenti delle applicazioni tramite condivisioni montate. Applicazioni locali possono accedere dati dei file in una condivisione tramite l'API REST del servizio File.
+-   L'archiviazione dei file offre un'archiviazione condivisa per le applicazioni legacy usando il protocollo SMB standard. Le macchine virtuali di Azure e i servizi cloud possono condividere i dati dei file nei componenti delle applicazioni tramite condivisioni montate. Le applicazioni locali possono accedere ai dati dei file in una condivisione tramite l'API REST del Servizio file.
 
--   Archiviazione tabelle vengono memorizzati i set di dati strutturati. Archiviazione tabelle è un archivio dati degli attributi di chiave NoSQL, che consente lo sviluppo rapido e l'accesso rapido a quantità elevate di dati.
+-   L'archiviazione tabelle archivia i set di dati strutturati. L'archiviazione tabelle è un archivio dati chiave-attributo NoSQL, che consente di sviluppare e di accedere rapidamente a quantità elevate di dati.
 
-**I database relazionali e database NoSQL.** Esistono numerose opzioni per i database esterni, dai database relazionali, come i database di SQL Server, PostgreSQL, Oracle o NoSQL Azure Cosmos DB, MongoDB, ecc. Questi database non intende essere spiegato come parte di questa Guida, poiché si trovano in un oggetto completamente diverso.
+**Database relazionali e database NoSQL.** Esistono numerose opzioni per i database esterni, dai database relazionali come SQL Server, PostgreSQL, Oracle o NoSQL ai database NoSQL come Azure Cosmos DB, MongoDB e così via. Questi database non verranno spiegati in questa guida perché riguardano un argomento completamente diverso.
 
 
 >[!div class="step-by-step"]
-[Precedente] (inserita in un contenitore-monolitico-applications.md) [Avanti] (service-oriented-architecture.md)
+[Indietro] (containerize-monolithic-applications.md) [Avanti] (service-oriented-architecture.md)

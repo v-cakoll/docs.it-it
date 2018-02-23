@@ -1,6 +1,6 @@
 ---
 title: Progettazione di convalide nel livello del modello di dominio
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Progettazione di convalide nel livello del modello di dominio
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Progettazione di convalide nel livello del modello di dominio
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,29 +8,32 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f4870d0568c3539f296bcb3f577291cb0250cfca
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Progettazione di convalide nel livello del modello di dominio
 
-In DDD, le regole di convalida possono essere considerate come invarianti. Il compito principale di un'aggregazione consiste nell'imporre invarianti le modifiche di stato per tutte le entità all'interno di tale aggregazione.
+In DDD le regole di convalida possono essere considerate invariabili. Lo scopo principale di un'aggregazione consiste nell'applicare invariabili tra modifiche dello stato per tutte le entità entro tale aggregazione.
 
-Entità di dominio deve essere sempre entità valida. Esistono un certo numero di invarianti per un oggetto che deve essere sempre true. Ad esempio, è sempre un oggetto elemento di ordine deve disporre di una quantità che deve essere un numero intero positivo e un nome di articolo e prezzo. Pertanto, l'imposizione invarianti è responsabilità dell'entità di dominio (in particolare di aggregazione radice) e un oggetto entità non deve essere in grado di non essere validi. Regole invariante semplicemente sono espressi come contratti e le eccezioni o le notifiche vengono generate quando essi vengono violati.
+Le entità di dominio devono essere sempre entità valide. Alcune invariabili per un oggetto devono essere sempre true. Ad esempio, la quantità di un oggetto di tipo articolo dell'ordine deve essere sempre un numero intero positivo e tale oggetto deve includere anche un nome di articolo e il prezzo. L'applicazione delle invariabili è quindi responsabilità delle entità di dominio, in particolare per la radice dell'aggregazione, e l'oggetto entità non può esistere senza essere valido. Le regole delle invariabili vengono semplicemente espresse come contratti e vengono generate eccezioni o notifiche in caso di violazione.
 
-La giustificazione è che molti bug si verificano perché gli oggetti sono in uno stato che avrebbero non dovuto essere mai in. Di seguito è riportato una spiegazione chiara da Greg Young in un [conversazione](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+È infatti possibile che vengano generati molti bug perché gli oggetti hanno uno stato non previsto. Greg Young fornisce una spiegazione eccellente in una [discussione online](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
 
-Di seguito viene proposto che è ora disponibile un SendUserCreationEmailService che accetta un UserProfile … come possiamo è razionalizzare in quel servizio nome non è null? È ripetere il controllo? O più probabile che... semplicemente, non preoccuparti per controllare e "auguriamo per ottenere la migliore", che si spera che qualcuno preoccupare di convalida prima di inviarlo all'utente. Naturalmente, Usa TDD uno dei test prima che si dovrebbe essere scritto è che, se si invia un cliente con un nome null deve essere generato un errore. Ma quando si inizia la scrittura di questi tipi di test in modo continuativo si... "se è mai consentito nome diventi null non sono tutti di questi test"
+Si supponga che sia disponibile un SendUserCreationEmailService che accetta un valore UserProfile. È necessario stabilire come razionalizzare il fatto che il nome non sia Null in tale servizio. È ad esempio possibile controllarlo di nuovo oppure è semplicemente possibile non controllare e augurarsi che il nome sia stato convalidato prima dell'invio. Usando TDD è ovviamente consigliabile scrivere prima di tutto un test in modo che venga generato un errore in caso di invio di un cliente con nome Null. Quando tuttavia si scrivono ripetutamente test di questo tipo, ci si rende conto che se non si consente mai al nome di essere Null non sarebbe necessario scrivere i test.
 
 ## <a name="implementing-validations-in-the-domain-model-layer"></a>Implementazione di convalide nel livello del modello di dominio
 
-Le convalide vengono in genere implementate in costruttori di entità di dominio o in metodi che è possano aggiornare l'entità. Esistono diversi modi per implementare le convalide, ad esempio dati di verifica e la generazione di eccezioni se la convalida non riesce. Esistono anche modelli più avanzati, ad esempio usando il modello specifica per le convalide e il modello di notifica per restituire una raccolta di errori anziché restituire un'eccezione per ogni convalida quando si verifica.
+Le convalide vengono in genere implementate nei costruttori delle entità di dominio o nei metodi in grado di aggiornare l'entità. È possibile implementare le convalide in molti modi, ad esempio verificando i dati e generando eccezioni in caso di esito negativo della convalida. Sono disponibili anche schemi più avanzati, ad esempio l'uso dello schema Specification per le convalide e dello schema Notification per la restituzione di una raccolta di errori invece di restituire un'eccezione per ogni convalida eseguita.
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>Le condizioni di convalida e generazione di eccezioni
+### <a name="validating-conditions-and-throwing-exceptions"></a>Convalida delle condizioni e generazione delle eccezioni
 
-Esempio di codice seguente viene illustrato l'approccio più semplice per la convalida di un'entità di dominio genera un'eccezione. Nella tabella di riferimento alla fine di questa sezione è possibile visualizzare i collegamenti alle implementazioni più avanzate in base agli schemi che sono stati illustrati in precedenza.
+L'esempio di codice seguente mostra l'approccio più semplice per la convalida in una entità di dominio tramite la generazione di un'eccezione. Nella tabella dei riferimenti alla fine di questa sezione sono disponibili collegamenti a implementazioni più avanzate basate sugli schemi illustrati in precedenza.
 
 ```csharp
 public void SetAddress(Address address)
@@ -39,7 +42,7 @@ public void SetAddress(Address address)
 }
 ```
 
-Un esempio migliore sarebbe illustrano la necessità di verificare che lo stato interno non sono stati modificati o che tutte le modifiche per un metodo si è verificato. Ad esempio, l'implementazione seguente lascia l'oggetto in uno stato non valido:
+Un esempio migliore consente di dimostrare la necessità di assicurare che lo stato interno non abbia subito modifiche o che si siano verificate tutte le mutazioni per un metodo. L'implementazione seguente, ad esempio, lascia l'oggetto in uno stato non valido:
 
 ```csharp
 public void SetAddress(string line1, string line2,
@@ -52,15 +55,15 @@ public void SetAddress(string line1, string line2,
 }
 ```
 
-Se il valore dello stato è valido, la prima riga dell'indirizzo e la città sono già stati modificati. Che potrebbe rendere l'indirizzo non valido.
+Se il valore dello stato non è valido, la prima riga dell'indirizzo e la città sono già state modificate. È quindi possibile che l'indirizzo non sia valido.
 
-Un approccio simile può essere utilizzato nel costruttore dell'entità, generare un'eccezione per assicurarsi che l'entità sia valido dopo averla creata.
+Un approccio simile può essere usato nel costruttore dell'entità, generando un'eccezione per assicurarsi che l'entità sia valida dopo la creazione.
 
-### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Utilizzo degli attributi di convalida del modello in base alle annotazioni dati
+### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Uso degli attributi di convalida nel modello in base alle annotazioni dei dati
 
-Un altro approccio consiste nell'utilizzare attributi di convalida in base alle annotazioni dei dati. Gli attributi di convalida consentono di configurare la convalida del modello, che è concettualmente simile convalida nei campi nelle tabelle di database. Sono inclusi i vincoli, ad esempio l'assegnazione di tipi di dati o i campi obbligatori. Altri tipi di convalida includono l'applicazione di modelli per i dati per applicare le regole di business, ad esempio un numero di carta di credito, il numero di telefono o indirizzo di posta elettronica. Gli attributi di convalida rendono più semplice applicare requisiti.
+Un altro approccio prevede l'uso degli attributi di convalida in base alle annotazioni dei dati. Gli attributi di convalida consentono di configurare la convalida. Concettualmente assomigliano alla convalida nei campi delle tabelle del database. Esistono vincoli, ad esempio l'assegnazione di tipi di dati o campi obbligatori. Altri tipi di convalida includono l'uso di schemi di dati per applicare le regole di business, ad esempio un numero di carta di credito, il numero di telefono o un indirizzo di posta elettronica. Gli attributi di convalida semplificano l'applicazione dei requisiti.
 
-Tuttavia, come illustrato nel codice seguente, questo approccio potrebbe essere troppo intrusivo in un modello DDD, poiché assume una dipendenza ModelState.IsValid da Microsoft.AspNetCore.Mvc.ModelState, che è necessario chiamare da controller MVC. Si verifica la convalida del modello prima di ogni azione del controller richiamato e, è responsabilità del metodo del controller per controllare il risultato della chiamata ModelState.IsValid e rispondere nel modo appropriato. La decisione di usarla dipende strettamente si desidera che il modello da utilizzare con l'infrastruttura.
+Come mostrato nel codice seguente, tuttavia, questo approccio potrebbe essere troppo invadente in un modello DDD, perché accetta una dipendenza su ModelState.IsValid da Microsoft.AspNetCore.Mvc.ModelState, che deve essere chiamato dai controller MVC. La convalida del modello viene eseguita prima della chiamata di ogni azione del controller e il metodo del controller deve verificare il risultato della chiamata di ModelState.IsValid e rispondere in modo appropriato. La scelta di questo approccio dipende dal livello di associazione che si vuole applicare al modello e all'infrastruttura.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -90,49 +93,49 @@ public class Product : Entity
 }
 ```
 
-Tuttavia, dal punto di vista DDD, il modello di dominio è preferibile mantenere pulito con l'utilizzo delle eccezioni nei metodi di comportamento dell'entità o mediante l'implementazione di modelli specifica e di notifica per applicare le regole di convalida. Il framework di convalida come le annotazioni dei dati in ASP.NET Core o altri framework di convalida come FluentValidation contengono un requisito per richiamare il framework dell'applicazione. Ad esempio, quando si chiama il metodo ModelState.IsValid nelle annotazioni dei dati, è necessario richiamare il controller di ASP.NET.
+Dal punto di vista di DDD, tuttavia, è consigliabile mantenere un modello di dominio molto semplice tramite l'uso di eccezioni nei metodi di comportamento dell'entità o tramite l'implementazione degli schemi Specification e Notification per applicare le regole di convalida. I framework di convalida come le annotazioni dei dati in ASP.NET Core o qualsiasi altro framework di convalida come FluentValidation prevedono un requisito relativo alla chiamata al framework dell'applicazione. Quando ad esempio si chiama il metodo ModelState.IsValid nelle annotazioni dei dati, è necessario richiamare i controller ASP.NET.
 
-Senso per utilizzare le annotazioni dei dati al livello dell'applicazione nelle classi ViewModel (anziché le entità di dominio) che accetta l'input, per consentire la convalida del modello all'interno del livello dell'interfaccia utente. Tuttavia, questo non deve essere eseguito all'esclusione di convalida all'interno del modello di dominio.
+L'uso delle annotazioni dei dati a livello di applicazione nelle classi ViewModel, invece delle entità di dominio, che accetteranno l'input può risultare vantaggioso per consentire la convalida dei modelli entro il livello dell'interfaccia utente. Questo approccio tuttavia non deve escludere la convalida entro il modello di dominio.
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Convalida l'entità implementando il modello specifica e il modello di notifica
+### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Convalida di entità tramite l'implementazione dello schema Specification e dello schema Notification
 
-Infine, un approccio più complesso per l'implementazione delle convalide del modello di dominio è implementando il modello specifica in combinazione con il modello di notifica, come illustrato in alcune risorse aggiuntive elencate più avanti.
+Un approccio più complesso per l'implementazione delle convalide nel modello di dominio è infine costituito dall'implementazione dello schema Specification insieme allo schema Notification, come illustrato in alcune risorse aggiuntive elencate più avanti.
 
-È importante ricordare che è possibile utilizzare anche solo uno di questi modelli, ad esempio, la convalida manualmente con le istruzioni di controllo, ma usando il modello di notifica dello stack e restituire un elenco di errori di convalida.
+È importante notare che è possibile usare anche uno solo degli schemi, ad esempio eseguendo la convalida manualmente con le istruzioni di controllo, usando tuttavia lo schema Notification per creare uno stack e restituire un elenco di errori di convalida.
 
-### <a name="using-deferred-validation-in-the-domain"></a>Tramite la convalida posticipata nel dominio
+### <a name="using-deferred-validation-in-the-domain"></a>Uso della convalida posticipata nel dominio
 
-Esistono diversi approcci per affrontare le convalide posticipate nel dominio. Nel suo libro [Implementing Domain-Driven progettazione](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577), Vaughn Vernon illustra queste nella sezione sulla convalida.
+Sono disponibili diversi approcci per la gestione delle convalide posticipate nel dominio. Nel suo manuale [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577) (Implementazione della progettazione basata su dominio) Vaughn Vernon illustra tali approcci nella sezione relativa alla convalida.
 
 ### <a name="two-step-validation"></a>Convalida in due passaggi
 
-Considerare inoltre la convalida in due passaggi. Utilizzare la convalida a livello di campo nel comando dati trasferire oggetti DTO e la convalida a livello di dominio le entità. Ciò si realizza tramite la restituzione di un oggetto risultato invece le eccezioni per renderlo più semplice gestire gli errori di convalida.
+È possibile prendere in considerazione anche la convalida in due passaggi. Usare la convalida a livello di campo sugli oggetti di trasferimento dei dati del comando e la convalida a livello di dominio nelle entità. Per usare questo approccio è possibile restituire un oggetto risultato invece di eccezioni per semplificare la gestione degli errori di convalida.
 
-Utilizza la convalida dei campi con le annotazioni dei dati, ad esempio, si effettua la duplicazione la definizione di convalida. L'esecuzione, tuttavia, può essere sul lato server sia lato client nel caso di DTO (comandi e ViewModel, ad esempio).
+L'uso della convalida dei campi con le annotazioni dei dati, ad esempio, consente di non duplicare la definizione della convalida. L'esecuzione tuttavia può essere lato server e lato client nel caso degli oggetti di trasferimento dei dati (comandi e ViewModels, ad esempio).
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Rachel Appel. Introduzione alla convalida del modello in ASP.NET MVC Core**
+-   **Rachel Appel. Introduzione alla convalida del modello in ASP.NET Core MVC**
     [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
 -   **Rick Anderson. Aggiunta della convalida**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Sostituzione di generare un'eccezione con la notifica convalide**
+-   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** (Sostituzione della generazione di eccezioni con le notifiche nelle convalide) 
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Specifica e i modelli di notifica**
+-   **Specification and Notification Patterns** (Schemi Specification e Notification) 
     [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Gorodinski Lev. Convalida progettazione basati su dominio (DDD)**
+-   **Lev Gorodinski. Validation in Domain-Driven Design (DDD)** (Convalida in DDD) 
     [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin presa. La convalida del modello di dominio**
+-   **Colin Jack. Domain Model Validation** (Convalida dei modelli di dominio) 
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Convalida in un mondo DDD**
+-   **Jimmy Bogard. Validation in a DDD world** (Convalida in ambito DDD) 
     [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 
 >[!div class="step-by-step"]
-[Precedente] (enumerazione-classi-over-enum-types.md) [Avanti] (validation.md client-side)
+[Indietro] (enumeration-classes-over-enum-types.md) [Avanti] (client-side-validation.md)

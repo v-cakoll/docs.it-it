@@ -1,36 +1,39 @@
 ---
-title: Implementazione del modello di interruttore
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Implementazione del modello di interruttore
+title: Implementazione dello schema Circuit Breaker
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Implementazione dello schema Circuit Breaker
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-circuit-breaker-pattern"></a>Implementazione del modello di interruttore
+# <a name="implementing-the-circuit-breaker-pattern"></a>Implementazione dello schema Circuit Breaker
 
-Come notato in precedenza, è necessario gestire gli errori che potrebbero richiedere una quantità di tempo per il recupero, come può verificarsi quando si tenta di connettersi a una risorsa o un servizio remoto variabile. La gestione di questo tipo di errore, è possibile migliorare la stabilità e la flessibilità di un'applicazione.
+Come notato in precedenza, è necessario gestire gli errori che potrebbero richiedere una quantità di tempo variabile per il ripristino, come accade quando si prova a connettersi a una risorsa o a un servizio remoto. La gestione di questo tipo di errore può migliorare la stabilità e la resilienza di un'applicazione.
 
-In un ambiente distribuito, le chiamate alle risorse remote e ai servizi può non riuscire a causa di errori temporanei, ad esempio connessioni di rete lente e i timeout, o se le risorse vengono rallentare o sono temporaneamente non disponibile. Questi errori in genere correggere autonomamente dopo un breve periodo di tempo e un'applicazione cloud affidabile deve essere preparata per gestirli utilizzando una strategia simile il criterio di ripetizione.
+In un ambiente distribuito, le chiamate a servizi e risorse remote può non riuscire a causa di errori temporanei, ad esempio connessioni di rete lente e timeout oppure se le risorse vengono rallentate o sono temporaneamente non disponibili. Questi errori in genere si correggono autonomamente dopo un breve periodo di tempo e un'applicazione cloud affidabile deve essere preparata a gestirli usando una strategia simile allo schema Retry.
 
-Tuttavia, può anche essere situazioni in cui a causa di eventi imprevisti che potrebbero richiedere molto più tempo per risolvere gli errori. Questi errori possono variare in base alla gravità da una perdita parziale di connettività per l'errore completo di un servizio. In questi casi, potrebbe essere inutile per un'applicazione continuamente ripetere un'operazione che è improbabile che venga eseguita correttamente. Al contrario, l'applicazione deve essere codificato per accettare che l'operazione non è riuscita e gestire l'errore, di conseguenza.
+Tuttavia, in alcune situazioni gli errori sono dovuti a eventi imprevisti, la cui risoluzione potrebbe richiedere molto più tempo. La gravità di questi errori può variare, da una perdita parziale di connettività a un errore generale di un servizio. In questi casi, è inutile continuare a ripetere in un'applicazione un'operazione che è improbabile venga eseguita. È consigliabile invece codificare l'applicazione in modo che accetti l'errore dell'operazione e lo gestisca di conseguenza.
 
-Il modello di interruttore ha uno scopo diverso del modello di tentativi. Il criterio di ripetizione consente a un'applicazione ripetere un'operazione nella previsione che l'operazione verrà infine completata. Il modello di interruttore impedisce un'applicazione eseguendo un'operazione che potrebbe non riuscire. Un'applicazione è possibile combinare questi due modelli utilizzando il modello di tentativi per richiamare un'operazione tramite un interruttore. Tuttavia, la logica di tentativi deve essere sensibile alle eventuali eccezioni restituite dall'interruttore e deve essere abbandonato tentativi se l'interruttore indica che un errore non è temporaneo.
+Lo schema Circuit Breaker ha uno scopo diverso rispetto allo schema Retry. Lo schema Retry consente a un'applicazione di ripetere un'operazione che si prevede possa essere completata correttamente. Lo schema Circuit Breaker impedisce a un'applicazione di eseguire un'operazione che potrebbe non riuscire. Un'applicazione può combinare questi due schemi, usando lo schema Retry per richiamare un'operazione con un interruttore di circuito. Tuttavia, la logica di ripetizione deve essere sensibile alle eventuali eccezioni restituite dall'interruttore di circuito e deve sospendere i tentativi se l'interruttore di circuito indica che un errore non è temporaneo.
 
-## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementazione di un modello di interruttore con Polly
+## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implementazione dello schema Circuit Breaker con Polly
 
-Come quando si implementa tentativi, l'approccio consigliato per gli interruttori di sfruttare le librerie .NET si basa sulla collaudata come Polly.
+Come accade quando si implementano i tentativi, l'approccio consigliato per gli interruttori di circuito prevede l'uso di librerie .NET collaudate come Polly.
 
-L'applicazione eShopOnContainers utilizza i criteri di Polly interruttore quando si implementa tentativi HTTP. In realtà, l'applicazione applica entrambi i criteri per la classe di utilità ResilientHttpClient. Quando si usa un oggetto di tipo ResilientHttpClient per le richieste HTTP (da eShopOnContainers), si applicano entrambe tali criteri, ma è possibile aggiungere altri criteri, troppo.
+L'applicazione eShopOnContainers usa i criteri dell'interruttore di circuito di Polly quando si implementano tentativi HTTP. In realtà, l'applicazione applica entrambi i criteri alla classe di utilità ResilientHttpClient. Quando si usa un oggetto di tipo ResilientHttpClient per le richieste HTTP da eShopOnContainers, vengono applicati entrambi i criteri, ma è possibile aggiungerne anche altri.
 
-L'aggiunta sola per il codice utilizzato per i tentativi di chiamata HTTP è il codice aggiungere il criterio interruttore all'elenco di criteri da usare, come illustrato alla fine di codice riportato di seguito:
+In questo scenario, l'unica aggiunta al codice usato per i tentativi di chiamata HTTP è il codice in cui viene aggiunto il criterio dell'interruttore di circuito all'elenco di criteri da usare, come illustrato alla fine di codice riportato di seguito:
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -75,15 +78,15 @@ private Policy[] CreatePolicies()
 }
 ```
 
-Il codice aggiunge un criterio per il wrapper HTTP. Che criteri definiscono un interruttore che viene visualizzata quando il codice rileva il numero di eccezioni consecutivi (eccezioni in una riga), specificato come passato nel parametro exceptionsAllowedBeforeBreaking (in questo caso, 5). Una volta aperto il circuito, le richieste HTTP non funzionano, ma viene generata un'eccezione.
+Il codice aggiunge un criterio al wrapper HTTP. Questi criteri definiscono un interruttore di circuito che viene aperto quando il codice rileva il numero indicato di eccezioni consecutive (eccezioni in una riga), specificato nel parametro exceptionsAllowedBeforeBreaking (in questo caso, 5). Quando il circuito è aperto, le richieste HTTP non funzionano, ma viene generata un'eccezione.
 
-Circuito va inoltre usata per reindirizzare le richieste a un'infrastruttura di fallback, se si potrebbe presentare problemi in una determinata risorsa che viene distribuito in un ambiente diverso rispetto all'applicazione client o servizio che esegue la chiamata HTTP. In questo modo, se si verifica un'interruzione nel Data Center che influisce solo il microservizi back-end, ma non le applicazioni client, le applicazioni client possono reindirizzare a servizi di fallback. Un nuovo criterio per automatizzare questa operazione prevede Polly [criteri di failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) scenario.
+Gli interruttori di circuito devono essere usati anche per reindirizzare le richieste a un'infrastruttura di fallback nel caso di problemi in una determinata risorsa che viene distribuita in un ambiente diverso rispetto all'applicazione client o al servizio che esegue la chiamata HTTP. In questo modo, se si verifica un'interruzione nel centro dati che influisce solo sui microservizi back-end, ma non sulle applicazioni client, queste applicazioni possono essere reindirizzate ai servizi di fallback. È il corso la pianificazione di un nuovo criterio in Polly che consenta di automatizzare questo scenario per i [criteri di failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy).
 
-Naturalmente, tutte queste funzionalità sono casi in cui si sta gestendo il failover da all'interno del codice .NET, anziché viene gestita automaticamente da Azure, con la trasparenza dei percorsi.
+Naturalmente, tutte queste funzionalità riguardano casi in cui il failover viene gestito internamente nel codice .NET, e non automaticamente da Azure, con la trasparenza dei percorsi.
 
-## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Utilizzo della classe di utilità ResilientHttpClient da eShopOnContainers
+## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Uso della classe di utilità ResilientHttpClient da eShopOnContainers
 
-Utilizzare la classe di utilità ResilientHttpClient in modo analogo a come si utilizza la classe .NET HttpClient. Nell'esempio seguente dall'applicazione web MVC eShopOnContainers (OrderingService classe agent utilizzata da OrderController), viene inserito l'oggetto ResilientHttpClient tramite il parametro httpClient del costruttore. L'oggetto viene quindi utilizzato per eseguire richieste HTTP.
+La classe di utilità ResilientHttpClient viene usata in modo analogo alla classe .NET HttpClient. Nell'esempio seguente relativo all'applicazione Web MVC in eShopOnContainers, ossia la classe dell'agente OrderingService usata da OrderController, l'oggetto ResilientHttpClient viene inserito con il parametro httpClient del costruttore. L'oggetto viene quindi usato per eseguire le richieste HTTP.
 
 ```csharp
 public class OrderingService : IOrderingService
@@ -134,90 +137,92 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Ogni volta che il \_viene utilizzato l'oggetto membro apiClient, utilizza internamente la classe wrapper con Polly policiesؙ: i criteri di ripetizione, il criterio interruttore e altri criteri che è possibile applicare dalla raccolta di criteri Polly.
+Quando viene usato l'oggetto membro \_apiClient, al suo interno viene usata la classe wrapper con criteri di Polly: criteri di ripetizione, criteri dell'interruttore di circuito e altri criteri applicabili disponibili nella raccolta di Polly.
 
-## <a name="testing-retries-in-eshoponcontainers"></a>Test di nuovi tentativi in eShopOnContainers
+## <a name="testing-retries-in-eshoponcontainers"></a>Tentativi di test in eShopOnContainers
 
-Ogni volta che si avvia la soluzione eShopOnContainers in un host Docker, è necessario avviare più contenitori. Alcuni dei contenitori sono più lenti per l'avvio e l'inizializzazione, ad esempio il contenitore di SQL Server. Questo vale in particolare la prima volta che si distribuisce l'applicazione eShopOnContainers in Docker, perché è necessario impostare le immagini e il database. Il fatto che alcuni contenitori di avviare più lenta rispetto ad altri utenti può causare il resto dei servizi inizialmente generare eccezioni HTTP, anche se si impostano le dipendenze tra i contenitori nella composizione docker livello, come illustrato nelle sezioni precedenti. Quelli docker-creare dipendenze tra i contenitori sono solo a livello di processo. Processo del punto di ingresso del contenitore potrebbe essere avviato, ma SQL Server potrebbe non essere pronto per le query. Il risultato può essere una catena di errori e l'applicazione può ottenere un'eccezione durante il tentativo di utilizzare tale contenitore specifico.
+Ogni volta che si avvia la soluzione eShopOnContainers in un host Docker, è necessario avviare più contenitori. Alcuni dei contenitori vengono avviati e inizializzati più lentamente, ad esempio il contenitore di SQL Server. Questo vale in particolare la prima volta che si distribuisce l'applicazione eShopOnContainers in Docker, perché è necessario configurare le immagini e il database. Il fatto che alcuni contenitori vengano avviati più lentamente rispetto ad altri può causare la generazione iniziale di eccezioni HTTP negli altri servizi, anche se si impostano dipendenze tra i contenitori al livello Docker Compose, come illustrato nelle sezioni precedenti. Le dipendenze Docker Compose tra i contenitori si trovano solo sul livello processo. Il processo del punto di ingresso del contenitore può essere avviato, ma SQL Server potrebbe non essere pronto per le query. Di conseguenza, possono essere visualizzati numerosi errori e può essere restituita un'eccezione all'applicazione quando prova a usare il contenitore specificato.
 
-Quando l'applicazione viene distribuita nel cloud, è possibile visualizzare questo tipo di errore all'avvio. In tal caso, orchestrators potrebbe essere spostamento contenitori da un nodo o da macchina virtuale a un altro (che è, avvio di nuove istanze) quando il numero di contenitori di bilanciamento tra i nodi del cluster.
+Questo tipo di errore può essere visualizzato anche all'avvio quando l'applicazione viene distribuita nel cloud. In questo caso, è possibile che gli agenti di orchestrazione stiano spostando i contenitori da un nodo o da una macchina virtuale a un'altra (ovvero, stanno avviando nuove istanze) durante il bilanciamento del numero di contenitori tra i nodi del cluster.
 
-Il modo eShopOnContainers per risolvere questo problema è utilizzando il modello di tentativi che è illustrati in precedenza. È inoltre perché, quando si avvia la soluzione, è possibile ottenere le tracce di log o avvisi simile al seguente:
+eShopOnContainers risolve il problema usando lo schema Retry illustrato in precedenza. Questo approccio viene seguito anche perché, quando si avvia la soluzione, potrebbero essere visualizzate tracce di log o avvisi simili al seguente:
 
-> "**Tentativo 1 implementato con RetryPolicy di Polly**, a causa di: System.Net.Http.HttpRequestException: si è verificato un errore durante l'invio della richiesta. ---&gt;System.Net.Http.CurlException: Impossibile connettersi al server\\n in System.Net.Http.CurlHandler.ThrowIfCURLEError (errore CURLcode)\\n in \[... \].
+> "**Tentativo 1 implementato con i criteri di ripetizione di Polly**, causato da: System.Net.Http.HttpRequestException: Si è verificato un errore durante l'invio della richiesta. ---&gt; System.Net.Http.CurlException: impossibile connettersi al server\\ in System.Net.Http.CurlHandler.ThrowIfCURLEError(errore CURLcode)\\ in \[...\].
 
-## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Test dell'interruttore in eShopOnContainers
+## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Test dell'interruttore di circuito in eShopOnContainers
 
-Esistono diversi modi, è possibile aprire il circuito ed eseguirne il test con eShopOnContainers.
+Esistono diversi modi per aprire il circuito ed eseguirne il test con eShopOnContainers.
 
-È possibile ridurre il numero consentito di tentativi su 1 nei criteri di interruttore e ridistribuire l'intera soluzione in Docker. Con un nuovo tentativo singolo, è probabile che una richiesta HTTP avrà esito negativo durante la distribuzione, verrà aperto l'interruttore e si verifica un errore.
+Una possibilità consiste nel ridurre il numero consentito di tentativi a 1 nei criteri dell'interruttore di circuito e ridistribuire l'intera soluzione in Docker. Con un solo tentativo, è probabile che una richiesta HTTP non riuscirà durante la distribuzione, l'interruttore di circuito verrà aperto e verrà visualizzato un errore.
 
-Un'altra opzione consiste nell'utilizzare middleware personalizzato che viene implementato in microservizio l'ordinamento. Quando è abilitato questo middleware, intercetta tutte le richieste HTTP e lo restituisce il codice di stato 500. È possibile abilitare il middleware tramite una richiesta GET ha generato l'errore URI, simile al seguente:
+Un'altra opzione consiste nell'usare middleware personalizzato che viene implementato nel microservizio `Basket`. Quando il middleware è abilitato, intercetta tutte le richieste HTTP e restituisce il codice di stato 500. È possibile abilitare il middleware eseguendo una richiesta GET all'URI che ha generato l'errore, come riportato di seguito:
 
--   OTTENERE/non superati
+-   GET /failing
 
-Questa richiesta restituisce lo stato corrente del middleware. Se il middleware è abilitato, la richiesta restituisce il codice di stato 500. Se il middleware è disabilitato, non è stata ricevuta alcuna risposta.
+Questa richiesta restituisce lo stato corrente del middleware. Se il middleware è abilitato, la richiesta restituisce il codice di stato 500. Se il middleware è disabilitato, non viene ricevuta alcuna risposta.
 
--   OTTENERE/non superati? abilitare
+-   GET /failing?enable
 
-Questa richiesta consente il middleware.
+Questa richiesta abilita il middleware.
 
--   OTTENERE/non superati? disabilitare
+-   GET /failing?disable
 
 Questa richiesta disabilita il middleware.
 
-Ad esempio, dopo l'applicazione è in esecuzione, è possibile abilitare il middleware tramite una richiesta utilizzando il seguente URI in qualsiasi browser. Si noti che l'ordinamento microservizio utilizza la porta 5102.
+Ad esempio, quando l'applicazione è in esecuzione, è possibile abilitare il middleware eseguendo una richiesta usando l'URI seguente in qualsiasi browser. Il microservizio degli ordini usa la porta 5103.
 
-http://localhost:5102 / non superati? abilitare
+http://localhost:5103/failing?enable
 
-È quindi possibile controllare lo stato usando l'URI [http://localhost:5102 / non superati](http://localhost:5100/failing), come illustrato nella figura 10-4.
+È quindi possibile controllare lo stato usando l'URI [http://localhost:5103/failing](http://localhost:5103/failing), come illustrato nella figura 10-4.
 
 ![](./media/image4.png)
 
-**Nella figura 10-4**. Simulazione di un errore con il middleware ASP.NET
+**Figura 10-4**. Verifica dello stato di errore del middleware ASP.NET. In questo caso, è disabilitato. 
 
-A questo punto, risponde microservizio ordinamento con codice di stato 500 ogni volta che chiamano richiamano.
+A questo punto, il microservizio Basket risponde con il codice di stato 500 ogni volta che viene chiamato.
 
-Quando il middleware è in esecuzione, è possibile provare a effettuare un ordine dall'applicazione web MVC. Poiché le richieste non riesce, verrà aperto il circuito.
+Quando il middleware è in esecuzione, è possibile provare a effettuare un ordine dall'applicazione Web MVC. Le richieste non riescono, quindi il circuito viene aperto.
 
-Nell'esempio seguente, è possibile visualizzare l'applicazione web MVC di un blocco catch bloccare nella logica dell'immissione di un ordine. Se il codice rileva un'eccezione di open circuito, verrà visualizzato all'utente un messaggio descrittivo informa di attesa.
+Nell'esempio seguente si vede che l'applicazione Web MVC ha un blocco catch nella logica per l'immissione di un ordine. Se il codice rileva un'eccezione di circuito aperto, verrà visualizzato un messaggio descrittivo che comunica all'utente di attendere.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 
-Di seguito è riportato un riepilogo. I criteri di ripetizione tenta più volte per la richiesta HTTP e ottiene gli errori HTTP. Quando il numero di tentativi raggiunge il massimo valore impostato per il criterio interruttore (in questo caso, 5), l'applicazione genera un BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 10-5.
+Ecco un riepilogo. I criteri di ripetizione provano più volte a eseguire la richiesta HTTP e ottengono errori HTTP. Quando il numero di tentativi raggiunge il valore massimo impostato per i criteri dell'interruttore di circuito (in questo caso, 5), l'applicazione genera un'eccezione BrokenCircuitException. Il risultato è un messaggio descrittivo, come illustrato nella figura 10-5.
 
 ![](./media/image5.png)
 
-**Nella figura 10-5**. Interruttore restituendo un errore nell'interfaccia utente
+**Figura 10-5**. Interruttore di circuito che restituisce un errore nell'interfaccia utente
 
-È possibile implementare una logica diversa per i casi in cui aprire il circuito. O se è presente un Data Center di fallback o ridondante sistema back-end, è possibile provare una richiesta HTTP in un diverso microservizio back-end.
+È possibile implementare una logica diversa per specificare quando aprire il circuito. In alternativa, si può provare a eseguire una richiesta HTTP in un microservizio back-end diverso, se è presente un centro dati di fallback o un sistema back-end ridondante.
 
-Infine, un'altra possibilità per il CircuitBreakerPolicy consiste nell'utilizzare isolano (che forza aperto e mantiene aperta del circuito) e la reimpostazione (che chiude nuovamente). È possibile utilizzarli per creare un endpoint HTTP di utilità che richiama isolano e reimpostare direttamente al criterio. Tale endpoint HTTP può essere utilizzato anche adeguatamente protetto, nell'ambiente di produzione per isolare temporaneamente un sistema a valle, ad esempio quando si desidera eseguire l'aggiornamento. O Impossibile attivarsi il circuito manualmente per proteggere un sistema a valle che sospetti è possibile generare un errore.
+Infine, un'altra possibilità per i criteri dell'interruttore di circuito prevede l'uso di Isolate, che forza l'apertura e mantiene aperto il circuito, e di Reset, che lo chiude nuovamente. È possibile usarli per creare un endpoint HTTP di utilità che richiama Isolate e Reset direttamente nei criteri. Questo endpoint HTTP può essere anche usato, se adeguatamente protetto, nell'ambiente di produzione per isolare temporaneamente un sistema downstream, ad esempio quando si vuole eseguire l'aggiornamento di tale sistema. In alternativa, si può attivare il circuito manualmente per proteggere un sistema downstream che si sospetta essere in stato di errore.
 
-## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Aggiunta di una strategia di instabilità per i criteri di ripetizione
+## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Aggiunta di una strategia di instabilità ai criteri di ripetizione
 
-Criteri di ripetizione regolari possono influire su sistema nel caso di scalabilità e concorrenza elevata e con elevata contesa. Per risolvere i picchi di tentativi simile provenienti da molti client in caso di interruzioni parziali, una soluzione alternativa efficace consiste nell'aggiungere una strategia di instabilità per l'algoritmo/criteri di ripetizione. Ciò può migliorare le prestazioni complessive del sistema end-to-end mediante l'aggiunta di casualità di backoff esponenziale. Consistenti i picchi di problemi. Quando si utilizza Polly, codice per implementare l'instabilità potrebbe essere simile al seguente:
+I normali criteri di ripetizione possono influire sul sistema quando scalabilità e concorrenza sono elevate e sono presenti molti conflitti. Per risolvere i picchi di tentativi simili provenienti da molti client in caso di interruzioni parziali, una soluzione alternativa efficace consiste nell'aggiungere una strategia di instabilità all'algoritmo o ai criteri di ripetizione. Ciò può migliorare le prestazioni complessive del sistema end-to-end grazie all'aggiunta di casualità nel backoff esponenziale. Permette di diluire i picchi quando si verificano problemi. Quando si usa Polly, il codice per implementare l'instabilità potrebbe somigliare a quello nell'esempio seguente:
 
 ```csharp
 Random jitterer = new Random();
@@ -230,18 +235,18 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Ripetere modello**
+-   **Schema Retry**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Resilienza di connessione** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Resilienza della connessione** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (resilienza .NET e la gestione di errori temporanei libreria) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (libreria .NET con funzionalità di resilienza e di gestione degli errori temporanei) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Modello di interruttore**
+-   **Schema Circuit Breaker**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Marc Brooker. Instabilità: Eseguire operazioni meglio con casualità** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Jitter: Making Things Better With Randomness (Instabilità: usare la casualità per ottimizzare le procedure)** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]
-[Precedente] [Avanti] (app-monitor-health.md) (implement-http-call-retries-exponential-backoff-polly.md)
+[Indietro] (implement-http-call-retries-exponential-backoff-polly.md) [Avanti] (monitor-app-health.md)

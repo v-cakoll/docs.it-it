@@ -1,6 +1,6 @@
 ---
-title: Tabella decisioni. Versioni di .NET Framework da utilizzare per Docker
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Tabella decisioni, le versioni di .NET Framework da utilizzare per Docker
+title: Tabella decisioni. Framework .NET da usare per Docker
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Tabella decisioni, framework .NET da usare per Docker
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4889662c4d887bebd320389e3ced6aae1c93133b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 40e6a14e7e3515194185e1f4558c91ac29429108
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabella decisioni: le versioni di .NET Framework da utilizzare per Docker
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabella decisioni: framework .NET da usare per Docker
 
-Di seguito vengono riepilogati se si desidera utilizzare i contenitori di .NET Framework o .NET Core e Windows o Linux. Tenere presente che per i contenitori di Linux, è necessario host Docker basati su Linux (macchine virtuali o server) e per i contenitori di Windows è necessario Windows Server basato su host Docker (macchine virtuali o server).
+La tabella seguente indica se usare .NET Framework o .NET Core con contenitori Windows o Linux. Tenere presente che per i contenitori Linux sono necessari host Docker (macchine virtuali o server) basati su Linux e che per i contenitori Windows sono necessari host Docker (macchine virtuali o server) basati su Windows Server.
 
-Sono disponibili diverse funzionalità dell'applicazione che interessano la decisione. Valutare l'importanza di queste funzionalità, è necessario prendere la decisione.
+Sono molte le funzionalità dell'applicazione che influiscono sulla scelta. Ponderare l'importanza di tali funzionalità per prendere una decisione.
 
 > [!IMPORTANT]
-> Il computer di sviluppo verrà eseguito un host Docker, Linux o Windows. Microservizi correlati che si desidera eseguire e testare insieme in un'unica soluzione saranno necessario eseguire la stessa piattaforma di contenitore.
+> I computer di sviluppo eseguiranno un host Docker, Linux o Windows. I servizi correlati da eseguire e testare insieme in un'unica soluzione dovranno essere eseguiti sulla stessa piattaforma di contenitori.
 
-* La scelta di architettura dell'applicazione è **Microservizi sui contenitori**.
-    - Deve essere la scelta di implementazione di .NET *.NET Core*.
-    - Può essere la scelta della piattaforma contenitore *contenitori di Linux* o *contenitori di Windows*.
-* La scelta di architettura dell'applicazione è un **applicazione monolitico**.
-    - Può essere la scelta di implementazione di .NET *.NET Core* o *.NET Framework*.
-    - Se si è scelto *.NET Core*, può essere la scelta della piattaforma contenitore *contenitori di Linux* o *contenitori di Windows*.
-    - Se si è scelto *.NET Framework*, deve essere la scelta della piattaforma contenitore *contenitori di Windows*.
-* L'applicazione è un **nuovo sviluppo basato su contenitore ("verde-field")**.
-    - Deve essere la scelta di implementazione di .NET *.NET Core*.
-    - Può essere la scelta della piattaforma contenitore *contenitori di Linux* o *contenitori di Windows*.
-* L'applicazione è un **migrazione app legacy ("brown-field") di Windows Server per i contenitori**
-    - La scelta di implementazione di .NET è *.NET Framework* in base alle dipendenze di framework.
-    - Deve essere la scelta della piattaforma contenitore *contenitori di Windows* a causa di dipendenze di .NET Framework.
-* Obiettivo di progettazione dell'applicazione **scalabilità e prestazioni migliori in class**.
-    - Deve essere la scelta di implementazione di .NET *.NET Core*.
-    - Può essere la scelta della piattaforma contenitore *contenitori di Linux* o *contenitori di Windows*.
-* È stato compilato l'applicazione utilizzando **ASP.NET Core**.
-    - Deve essere la scelta di implementazione di .NET *.NET Core*.
-    - È possibile utilizzare il *.NET Framework* implementazione, se si dispone di altre dipendenze di framework.
-    - Se si è scelto *.NET Core*, può essere la scelta della piattaforma contenitore *contenitori di Linux* o *contenitori di Windows*.
-    - Se si è scelto *.NET Framework*, deve essere la scelta della piattaforma contenitore *contenitori di Windows*.
-* È stato compilato l'applicazione utilizzando **ASP.NET 4 (5 MVC, API Web 2 e Web Form)**.
-    - La scelta di implementazione di .NET è *.NET Framework* in base alle dipendenze di framework.
-    - Deve essere la scelta della piattaforma contenitore *contenitori di Windows* a causa di dipendenze di .NET Framework.
-* L'applicazione usa **i servizi SignalR**.
-    - Può essere la scelta di implementazione di .NET *.NET Framework*, o *.NET Core 2.1 (quando rilasciato) o versione successiva*.
-    - Deve essere la scelta della piattaforma contenitore *contenitori di Windows* se si sceglie l'implementazione di SignalR in .NET Framework.
-    - La scelta della piattaforma contenitore può essere contenitori di Linux o i contenitori di Windows se si sceglie l'implementazione di SignalR in .NET Core 2.1 o versioni successive (quando rilasciato).  
-    - Quando **i servizi SignalR** eseguiti *.NET Core*, è possibile utilizzare *Linux contenitori o i contenitori di Windows*.
+* L'architettura dell'applicazione è **microservizi in contenitori**.
+    - L'implementazione .NET dovrà essere *.NET Core*.
+    - La piattaforma di contenitori può essere *contenitori Linux* o *contenitori Windows*.
+* L'architettura dell'applicazione è un'**applicazione monolitica**.
+    - L'implementazione .NET può essere *.NET Core* o *.NET Framework*.
+    - Se si è scelto di usare *.NET Core*, la piattaforma di contenitori può essere *contenitori Linux* o *contenitori Windows*.
+    - Se si è scelto di usare *.NET Framework*, la piattaforma di contenitori deve essere *contenitori Windows*.
+* L'applicazione è un **nuovo sviluppo basato su contenitori (green field)**.
+    - L'implementazione .NET dovrà essere *.NET Core*.
+    - La piattaforma di contenitori può essere *contenitori Linux* o *contenitori Windows*.
+* L'applicazione è una **migrazione di un'app legacy (brown field) Windows Server ai contenitori**
+    - L'implementazione .NET è *.NET Framework* in base alla dipendenza dal framework.
+    - La piattaforma di contenitori deve essere *contenitori Windows* a causa della dipendenza da .NET Framework.
+* L'obiettivo di progettazione dell'applicazione è **migliori prestazioni e scalabilità**.
+    - L'implementazione .NET dovrà essere *.NET Core*.
+    - La piattaforma di contenitori può essere *contenitori Linux* o *contenitori Windows*.
+* L'applicazione è stata creata con **ASP.NET Core**.
+    - L'implementazione .NET dovrà essere *.NET Core*.
+    - È possibile usare l'implementazione *.NET Framework* se sono presenti altre dipendenze da framework.
+    - Se si è scelto di usare *.NET Core*, la piattaforma di contenitori può essere *contenitori Linux* o *contenitori Windows*.
+    - Se si è scelto di usare *.NET Framework*, la piattaforma di contenitori deve essere *contenitori Windows*.
+* L'applicazione è stata creata con **ASP.NET 4 (MVC 5, Web API 2 e Web Form)**.
+    - L'implementazione .NET è *.NET Framework* in base alla dipendenza dal framework.
+    - La piattaforma di contenitori deve essere *contenitori Windows* a causa della dipendenza da .NET Framework.
+* L'applicazione usa **servizi SignalR**.
+    - L'implementazione .NET può essere *.NET Framework* o *.NET Core 2.1 o versioni successive (quando saranno rilasciate)*.
+    - La piattaforma di contenitori deve essere *contenitori Windows* se è stata scelta l'implementazione SignalR in .NET Framework.
+    - La piattaforma di contenitori può essere contenitori Linux o Windows se è stata scelta l'implementazione SignalR in .NET Core 2.1 o versioni successive (quando saranno rilasciate).  
+    - Quando i **servizi SignalR** vengono eseguiti in *.NET Core*, è possibile usare *contenitori Linux o contenitori Windows*.
 * L'applicazione usa **WCF, WF e altri framework legacy**.
-    - La scelta di implementazione di .NET è *.NET Framework*, o *.NET Core (in Guida di orientamento per una versione successiva)*.
-    - Deve essere la scelta della piattaforma contenitore *contenitori di Windows* a causa di dipendenze di .NET Framework.
-* L'applicazione prevede **servizi al consumo di Azure**.
-    - La scelta di implementazione di .NET è *.NET Framework*, o *(servizi di Azure alla fine di tutti i fornirà client SDK per .NET Core) di .NET Core*.
-    - Deve essere la scelta della piattaforma contenitore *contenitori di Windows* se si utilizza l'API client di .NET Framework.
-    - Se si utilizzano le API disponibili per client *.NET Core*, è anche possibile scegliere tra *Linux contenitori e i contenitori di Windows*.
+    - L'implementazione .NET può essere *.NET Framework* o *.NET Core (nella roadmap per una versione futura)*.
+    - La piattaforma di contenitori deve essere *contenitori Windows* a causa della dipendenza da .NET Framework.
+* L'applicazione prevede l'**utilizzo di servizi di Azure**.
+    - L'implementazione .NET può essere *.NET Framework* o *.NET Core (prossimamente tutti i servizi di Azure forniranno SDK client per .NET Core)*.
+    - Se si usano le API client di .NET Framework, la piattaforma di contenitori deve essere *contenitori Windows*.
+    - Se si usano le API client disponibili per *.NET Core* è anche possibile scegliere tra *contenitori Linux e contenitori Windows*.
 
 >[!div class="step-by-step"]
-[Precedente] (net-framework-contenitore-scenarios.md) [Avanti] (net-contenitore-os-targets.md)
+[Indietro] (net-framework-container-scenarios.md) [Avanti] (net-container-os-targets.md)

@@ -1,6 +1,6 @@
 ---
-title: Convalida lato client (convalida dei livelli di presentazione)
-description: Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Convalida lato client (convalida dei livelli di presentazione)
+title: Convalida lato client (convalida nei livelli di presentazione)
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Convalida lato client (convalida nei livelli di presentazione)
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,64 +8,67 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: db88a3b5c95afdc8d5a20094105f1f5991483ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida dei livelli di presentazione)
+# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida nei livelli di presentazione)
 
-Anche quando l'origine di dati reali è il modello di dominio e infine è necessario disporre convalida al livello del modello di dominio, convalida ancora può essere gestita a livello di modello di dominio (lato server) e il lato client.
+Anche quando l'origine della verità è il modello di dominio e occorre una convalida al livello del modello di dominio, è comunque possibile gestire la convalida sia a livello del modello di dominio (lato server) che sul lato client.
 
-La convalida lato client è una maggiore praticità per gli utenti. Consente di risparmiare tempo in caso contrario spendere in attesa di un round trip al server che potrebbero restituire gli errori di convalida. In termini di business, anche alcuni le frazioni di secondo moltiplicato centinaia di volte in cui ogni giorno vengono aggiunti a una grande quantità di tempo, expense e frustrazione. Convalida semplice e immediata consente agli utenti di lavorare in modo più efficiente e ottenere una migliore qualità di input e output.
+La convalida lato client è molto pratica per gli utenti. Consente infatti di ridurre i tempi di attesa di un round trip al server che potrebbe restituire errori di convalida. In termini di business, anche poche frazioni di secondo moltiplicate per centinaia di volte al giorno contribuiscono all'aumento di tempo, costi e frustrazione. Grazie a un processo di convalida semplice e immediato, gli utenti possono lavorare in modo più efficiente e garantire input e output di qualità elevata.
 
-Come il modello di visualizzazione e il modello di dominio sono diversi, la convalida del modello di visualizzazione e la convalida del modello di dominio potrebbe essere simile ma uno scopo diverso. Se si teme su sorgente (non ripetere manualmente principio), tenere presente che in questo caso il riutilizzo del codice potrebbe anche trattarsi di attacco, e in applicazioni aziendali è più importante per non associare lato server al lato client rispetto in base al principio secca.
+Così come il modello di visualizzazione e il modello di dominio sono diversi, la convalida del modello di visualizzazione e del modello di dominio possono essere simili ma hanno uno scopo diverso. Se si è preoccupati circa il principio DRY (Don't Repeat Yourself), ovvero non ripetersi, considerare che in questo caso il riutilizzo del codice può significare un accoppiamento, ma nelle applicazioni aziendali è più importante non accoppiare il lato server al lato client che non seguire il principio DRY.
 
-Anche quando si utilizza la convalida lato client, è consigliabile sempre convalidare i comandi o di input DTO nel codice server, perché le API server rappresentano un vettore di attacco. In genere, ciò infatti il modo migliore se si dispone di un'applicazione client, dal punto di vista dell'esperienza utente, è consigliabile essere attiva e non consentire all'utente di immettere informazioni non valide.
+Quando si usa la convalida lato client, è necessario convalidare sempre i comandi o gli oggetti DTO di input nel codice del server, poiché le API del server rappresentano un possibile vettore di attacco. In genere, l'opzione migliore prevede di eseguirle entrambe, perché nel caso di un'applicazione client, dalla prospettiva dell'esperienza utente è consigliabile essere proattivi e non consentire all'utente di immettere informazioni non valide.
 
-Pertanto, nel codice sul lato client è in genere convalidare il ViewModel. È inoltre possibile convalidare il client invia l'output DTO o comandi prima di inviarli ai servizi.
+Di conseguenza, nel codice sul lato client vengono in genere convalidati gli oggetti ViewModel. È anche possibile convalidare i comandi o gli oggetti DTO di output del client prima di inviarli ai servizi.
 
-L'implementazione della convalida lato client dipende dal tipo di applicazione client si sta compilando. Sarà diverso se si esegue la convalida dei dati in un'applicazione web MVC web con la maggior parte del codice in .NET, un'applicazione web SPA con tale convalida codificata in JavaScript o TypeScript, o un'app mobile codificati con Xamarin e C\#.
+L'implementazione della convalida del lato client dipende dalla tipologia di applicazione client che si sta creando. La scelta sarà diversa se si vogliono convalidare i dati in un'applicazione Web MVC con la maggior parte del codice in .NET, un'applicazione Web a pagina singola con la convalida scritta in JavaScript o TypeScript o un'applicazione per dispositivi mobili scritta in Xamarin e C\#.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-### <a name="validation-in-xamarin-mobile-apps"></a>Convalida Xamarin App per dispositivi mobili
+### <a name="validation-in-xamarin-mobile-apps"></a>Convalida nelle app per dispositivi mobili in Xamarin
 
--   **Convalidare l'Input di testo e Visualizza errori**
-    [*https://developer.xamarin.com/recipes/ios/standard\_testo o controlli\_campo/convalidare\_input /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validate Text Input and Show Errors (Convalidare gli input di testo e visualizzare gli errori)**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Callback di convalida**
+-   **Validation Callback (Callback di convalida)**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
-### <a name="validation-in-aspnet-core-apps"></a>Convalida nelle applicazioni ASP.NET Core
+### <a name="validation-in-aspnet-core-apps"></a>Convalida nelle app ASP.NET Core
 
 -   **Rick Anderson. Aggiunta della convalida**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
-### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida in SPA Web App (angolare 2, macchina, JavaScript)
+### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida nelle app Web a pagina singola (Angular 2, TypeScript, JavaScript)
 
--   **Kukic ADO. Convalida modulo 2 angolare** **
-     ** [ *https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Angular 2 Form Validation (Convalida dei moduli in Angular 2)** **
+    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Modulo di convalida**
+-   **Form Validation (Convalida dei moduli)**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Convalida.** Documentazione molto semplice.
-    [*http://Breeze.github.IO/doc-js/Validation.HTML*](http://breeze.github.io/doc-js/validation.html)
+-   **Convalida.** Documentazione per Breeze.
+    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
 
-In sintesi, ecco i concetti più importanti relativamente alla convalida:
+In breve, questi sono i concetti più importanti in merito alla convalida:
 
--   Entità e funzioni di aggregazione deve applicare le proprie coerenza e "sempre valido". Radici di aggregazione sono responsabili per la coerenza di più entità all'interno dell'aggregazione stesso.
+-   Le entità e le aggregazioni devono imporre la propria coerenza ed essere "sempre valide". Le radici di aggregazione sono responsabili della coerenza di più entità all'interno della stessa aggregazione.
 
--   Se si ritiene che un'entità deve entri in uno stato non valido, è consigliabile utilizzare un modello a oggetti diversi, ad esempio, usando un DTO temporanea fino a creare l'entità finale di dominio.
+-   Se si pensa che un'entità debba passare a uno stato non valido, provare a usare un modello a oggetti diverso, ad esempio un oggetto DTO temporaneo fino a quando non viene creata l'entità del dominio finale.
 
--   Se è necessario creare diversi oggetti correlati, ad esempio un'aggregazione, e sono validi solo dopo avere creati tutti gli elementi, utilizzare il modello di Factory.
+-   Se occorre creare numerosi oggetti correlati, ad esempio un'aggregazione, e questi sono validi solo quando tutti saranno stati creati, provare a usare lo schema Factory.
 
--   Framework di convalida vengono utilizzate in livelli specifici, ad esempio il livello di presentazione o il livello di servizio / dell'applicazione, ma in genere non nel livello del modello di dominio, in quanto è necessario accettare una dipendenza sicura su un framework di infrastruttura.
+-   I framework di convalida sono ideali per l'uso in livelli specifici, ad esempio il livello della presentazione o il livello dell'applicazione/servizio, ma in genere non nel livello del modello di dominio, in quanto sarebbe necessario creare una dipendenza elevata dal framework dell'infrastruttura.
 
--   Nella maggior parte dei casi, con la convalida ridondante sul lato client è valida, poiché l'applicazione può essere attiva.
+-   Nella maggior parte dei client, è consigliabile adottare una convalida ridondante sul lato client, per aumentare la proattività dell'applicazione.
 
 
 >[!div class="step-by-step"]
-[Precedente] (dominio-modello-layer-validations.md) [Avanti] (dominio eventi-progettazione implementation.md)
+[Indietro] (domain-model-layer-validations.md) [Avanti] (domain-events-design-implementation.md)
