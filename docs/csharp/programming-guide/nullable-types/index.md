@@ -2,21 +2,22 @@
 title: Tipi nullable (Guida per programmatori C#)
 ms.date: 05/15/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b874b265f4adb131a056ea1ef6fb5ffc820343f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipi nullable (Guida per programmatori C#)
 I tipi nullable sono istanze dello struct <xref:System.Nullable%601?displayProperty=nameWithType>. Un tipo nullable può rappresentare l'intervallo di valori corretto del tipo valore sottostante, più un valore `null` aggiuntivo. Ad esempio, a un tipo `Nullable<Int32>`, detto anche "Nullable of Int32", può essere assegnato qualsiasi valore compreso tra -2147483648 e 2147483647. In alternativa, può essere assegnato il valore `null`. A un tipo `Nullable<bool>` può essere assegnato il valore [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) o [null](../../../csharp/language-reference/keywords/null.md). La possibilità di assegnare il valore `null` a tipi numerici e booleani è particolarmente utile quando si gestiscono database e altri tipi di dati contenenti elementi a cui non è possibile assegnare un valore. Ad esempio, un campo booleano di un database può archiviare i valori `true` o `false` oppure può essere non definito. 
@@ -67,4 +68,4 @@ Per altri esempi, vedere [Uso dei tipi nullable](../../../csharp/programming-gui
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md)  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Cosa significa esattamente "elevato"?](http://go.microsoft.com/fwlink/?LinkId=112382)
+ [Cosa significa esattamente "elevato"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
