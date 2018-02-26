@@ -1,6 +1,6 @@
 ---
-title: "Orchestrazione di microservizi e le applicazioni multi-contenitore per la scalabilità e disponibilità elevate"
-description: "Architettura di Microservizi .NET per le applicazioni nei contenitori .NET | Orchestrazione di microservizi e le applicazioni multi-contenitore per la scalabilità e disponibilità elevate"
+title: "Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate"
+description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate"
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,134 +8,137 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ec33901a0ddc9e5b58263440b0e4399e687c6904
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e le applicazioni multi-contenitore per la scalabilità e disponibilità elevate
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
-Utilizzare orchestrators per le applicazioni di ambiente di produzione è essenziale se l'applicazione è basata sul microservizi o semplicemente suddivisi tra più contenitori. Come descritto in precedenza, in un approccio basato su microservizio, ogni microservizio possiede il modello e i dati in modo che sia di un punto di vista di distribuzione e sviluppo. Tuttavia, anche se si dispone di un'applicazione più tradizionale è costituito da più servizi (ad esempio SOA), si disporrà di più contenitori o servizi che comprendono un'applicazione di business che devono essere distribuiti come un sistema distribuito. Questi tipi di sistemi sono complessi di scalabilità orizzontale e gestire; Pertanto, è indispensabile agente di orchestrazione se si desidera disporre di un'applicazione contenitore più ambienti di produzione e scalabile.
+L'uso di agenti di orchestrazione per applicazioni pronte per la produzione è essenziale se l'applicazione è basata su microservizi o semplicemente suddivisa tra più contenitori. Come illustrato in precedenza, in un approccio basato su microservizi ogni microservizio è proprietario dei rispettivi modelli e dati, quindi sarà autonomo dal punto di vista dello sviluppo e della distribuzione. Anche se è disponibile un'applicazione più tradizionale costituita da più servizi, ad esempio SOA, saranno comunque disponibili più contenitori o servizi che comprendono una singola applicazione aziendale da distribuire come sistema distribuito. Il ridimensionamento e la gestione di questi tipi di sistemi sono complessi ed è quindi assolutamente necessario un agente di orchestrazione se si vuole ottenere un'applicazione a più contenitori pronta per la produzione e ridimensionabile.
 
-Figura 4-23 illustra la distribuzione in un cluster di un'applicazione composta da più microservizi (contenitori).
+La figura 4-23 illustra la distribuzione in un cluster di un'applicazione costituita da più microservizi (contenitori).
 
 ![](./media/image23.PNG)
 
-**Figura 4-23**. Un cluster di contenitori
+**Figura 4-23**. Cluster di contenitori
 
-Si differenzia da un approccio logico. Ma, come bilanciamento carico di gestione, routing e la coordinazione questi composte da applicazioni?
+Si tratta di un approccio apparentemente logico. Occorre tuttavia stabilire come vengono gestiti il bilanciamento del carico, il routing e l'orchestrazione di queste applicazioni.
 
-Il motore Docker normale negli host Docker singolo soddisfa le esigenze di gestire le istanze di singola immagine in un host, ma ricadere breve per quanto riguarda la gestione dei contenitori più distribuiti su più host per le applicazioni distribuite complesse. Nella maggior parte dei casi, è necessario una piattaforma di gestione che verrà automaticamente contenitori, i contenitori di scalabilità orizzontale con più istanze per ogni immagine di avvio, sospenderli o spegnerle quando necessario e idealmente inoltre controllare la modalità con cui accedono alle risorse come la rete e i dati spazio di archiviazione.
+Il semplice motore Docker in host Docker singoli soddisfa le esigenze di gestione di istanze singole per immagine su un host, ma non è sufficiente in caso di gestione di più contenitori distribuiti su più host per applicazioni distribuite più complesse. Nella maggior parte dei casi è necessaria una piattaforma di gestione in grado di avviare automaticamente i contenitori, ridimensionare i contenitori con più istanze per immagine, sospenderli o arrestarli in caso di necessità e idealmente controllare anche la rispettiva modalità di accesso a risorse come la rete e l'archiviazione dati.
 
-Per andare oltre la gestione dei singoli contenitori o le app di comporre molto semplice e spostamento verso più grandi applicazioni aziendali con microservizi, è necessario attivare di orchestrazione e al clustering di piattaforme.
+Per passare a un livello superiore rispetto alla gestione di singoli contenitori o app composte molto semplici e gestire ad applicazioni aziendali di dimensioni maggiori con microservizi, è necessario usare l'orchestrazione e le piattaforme di clustering.
 
-Da un'architettura e sviluppo punto di vista, se si sta compilando una grande impresa costituita da applicazioni basate su microservizi, è importante comprendere le piattaforme e i prodotti che supportano scenari avanzati seguenti:
+Dal punto di vista dell'architettura e dello sviluppo, se si creano applicazioni aziendali composte di grandi dimensioni e basate su microservizi, è importante comprendere le piattaforme e i prodotti seguenti che supportano gli scenari avanzati:
 
-**I cluster e orchestrators**. Quando è necessario scalare orizzontalmente le applicazioni attraverso numerosi host Docker, come quando un'applicazione basata su microservizio grandi dimensioni, è importante essere in grado di gestire tutti gli host come un singolo cluster mediante l'astrazione della complessità della piattaforma sottostante. Che rappresenta il cluster di contenitore e orchestrators fornire. Esempi di orchestrators sono Azure Service Fabric, Kubernetes, Docker Swarm e Mesosphere controller di dominio o sistema operativo. Le ultime tre orchestrators open source disponibili in Azure tramite il servizio contenitore di Azure.
+**Cluster e agenti di orchestrazione**. Quando è necessario aumentare il numero di istanze delle applicazioni in molti host Docker, ad esempio nel caso di un'applicazione di grandi dimensioni basata su microservizi, è essenziale poter gestire tutti questi host come un singolo cluster tramite l'astrazione della complessità della piattaforma sottostante. I cluster di contenitori e gli agenti di orchestrazione offrono questo vantaggio. Alcuni agenti di orchestrazione disponibili sono Azure Service Fabric, Kubernetes, Docker Swarm e Mesosphere DC/OS. Gli ultimi tre agenti di orchestrazione open source sono disponibili in Azure tramite il servizio contenitore di Azure.
 
-**Utilità di pianificazione**. *Pianificazione* significa avere la funzionalità di un amministratore per avviare i contenitori in un cluster in modo oltre a fornire un'interfaccia utente. Un'utilità di pianificazione di cluster con responsabilità diverse: da usare in modo efficiente le risorse del cluster, per impostare i vincoli forniti dall'utente, ai contenitori di bilanciamento del carico in modo efficiente tra nodi o host e affidabile per dagli errori fornendo alto disponibilità.
+**Utilità di pianificazione**. Per *pianificazione* si intende la possibilità per un amministratore di avviare contenitori in un cluster in modo che forniscano anche un'interfaccia utente. Un'utilità di pianificazione di cluster ha molte responsabilità, tra cui usare in modo efficiente le risorse del cluster, configurare i vincoli forniti dall'utente, bilanciare in modo efficiente il carico dei contenitori nei nodi e negli host e infine assicurare l'affidabilità in caso di errori, offrendo al tempo stesso una disponibilità elevata.
 
-I concetti di un cluster e un'utilità di pianificazione sono strettamente correlati, pertanto i prodotti disponibili da fornitori diversi spesso forniscono entrambi i set di funzionalità. Nell'elenco seguente viene illustrata la piattaforma più importante e scelte di software che disponibili per i cluster e le utilità di pianificazione. Questi orchestrators sono in genere disponibili in cloud pubblici, come Azure.
+I concetti di cluster e utilità di pianificazione sono strettamente correlati, quindi i prodotti offerti da diversi fornitori includono spesso entrambi i set di funzionalità. L'elenco seguente mostra le opzioni più importanti a livello di piattaforma e software disponibili per i cluster e per le utilità di pianificazione. Questi agenti di orchestrazione sono in genere offerti in cloud pubblici quali Azure.
 
-## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Piattaforme software per il clustering di contenitore, orchestrazione e la pianificazione
+## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Piattaforme software per il clustering, l'orchestrazione e la pianificazione dei contenitori
 
 Kubernetes
 
-![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image24.png)
+![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
 
-> Kubernetes è un prodotto open source che offre funzionalità che è compreso tra l'infrastruttura di cluster e il contenitore di programmazione alle funzionalità di orchestrazione. Consente di automatizzare la distribuzione, ridimensionamento e delle operazioni di contenitori di applicazioni per i cluster di host.
+> Kubernetes è un prodotto open source che offre funzionalità per l'infrastruttura dei cluster, la pianificazione dei contenitori e l'orchestrazione. Consente di automatizzare la distribuzione, il ridimensionamento e la gestione di contenitori di applicazioni in cluster di host.
 >
-> Kubernetes fornisce un'infrastruttura incentrato sul contenitore che raggruppa i contenitori di applicazioni in unità logiche per facilità di gestione e l'individuazione.
+> Kubernetes offre un'infrastruttura incentrata sui contenitori che raggruppa i contenitori di applicazioni in unità logiche per semplificarne la gestione e l'individuazione.
 >
-> Kubernetes è obsoleta in Linux, è meno avanzata in Windows.
+> Kubernetes è maturo in Linux, meno maturo in Windows.
 
-Sciame docker
+Docker Swarm
 
-![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/Images/Swarm.PNG?v=2016-07-10-AM](./media/image25.png)
+![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
 
-> Docker sciame consente di pianificare i contenitori di Docker e del cluster. Utilizzando sciame, è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono effettuare le richieste di API per Swarm esattamente come che avviene per gli host, vale a dire che sciame consente alle applicazioni di adattarsi a più host.
+> Docker Swarm consente di creare cluster e pianificazioni per i contenitori Docker. Tramite Swarm è possibile trasformare un pool di host Docker in un singolo host Docker virtuale. I client possono inviare richieste API a Swarm con una procedura analoga a quella per gli host. Swarm semplifica infatti il ridimensionamento delle applicazioni in più host.
 >
-> Sciame docker è un prodotto da Docker, la società.
+> Docker Swarm è un prodotto dell'azienda Docker.
 >
-> V 1.12 docker o in un secondo momento eseguire modalità nativa e incorporati Swarm.
+> Docker v1.12 o versioni successive può eseguire la modalità Swarm nativa e predefinita.
 
-Controller di dominio mesosphere/OS
+Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-Horizontal-Styled.PNG](./media/image26.png)
+![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
 
-> Mesosphere Enterprise DC/OS (basato su Apache Mesos) è una piattaforma di ambiente di produzione per l'esecuzione di contenitori e le applicazioni distribuite.
+> Mesosphere Enterprise DC/OS, basata su Apache Mesos, è una piattaforma pronta per la produzione per l'esecuzione di contenitori e applicazioni distribuite.
 >
-> Controller di dominio/OS funziona tramite l'astrazione di una raccolta di risorse disponibili nel cluster e rendere tali risorse disponibili per i componenti compilati su di esso. Maratona viene in genere utilizzato come un'utilità di pianificazione integrata con controller di dominio o del sistema operativo.
+> DC/OS esegue l'astrazione di una raccolta delle risorse disponibili nel cluster e le rende disponibili ai componenti basati su di esso. Marathon viene in genere usato come utilità di pianificazione integrata con DC/OS.
 >
-> Controller di dominio o sistema operativo è avanzata in Linux, è meno avanzata in Windows.
+> DC/OS è maturo in Linux, meno maturo in Windows.
 
 Azure Service Fabric
 
-![https://Azure.microsoft.com/svghandler/Service-fabric?Width=600&Height=315](./media/image27.png)
+![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. Si tratta di un [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e creato un cluster di macchine. Service Fabric è possibile distribuire servizi come contenitori o processi normali. È possibile anche combinazione servizi nei processi con i servizi in contenitori all'interno della stessa applicazione e del cluster.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) è una piattaforma di microservizi Microsoft per la creazione di applicazioni. È un [agente di orchestrazione](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) di servizi e crea cluster di macchine virtuali. Service Fabric può distribuire servizi come contenitori o come processi semplici. Può anche combinare servizi nei processi con servizi nei contenitori entro la stessa applicazione e lo stesso cluster.
 >
-> Service Fabric fornisce aggiuntive e facoltative rigorosa [modelli di programmazione di Service Fabric ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) come [servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+> Service Fabric offre [modelli di programmazione di Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) prescrittivi aggiuntivi e facoltativi, come [servizi con stato](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) e [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 >
-> Service Fabric è avanzata in Windows (anni evoluzione di Windows), meno avanzata in Linux. 
-> Contenitori di Linux e Windows sono supportati in Service Fabric dal 2017.
+> Service Fabric è maturo in Windows (anni di evoluzione in Windows), meno maturo in Linux. 
+> I contenitori Linux e Windows sono supportati in Service Fabric dal 2017.
 
-## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Utilizzo di orchestrators basate sul contenitore in Microsoft Azure
+## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Uso degli agenti di orchestrazione basati su contenitori in Microsoft Azure
 
-Diversi fornitori di cloud offrono il supporto di contenitori di Docker più cluster Docker e supporto di orchestrazione, tra cui Microsoft Azure, servizio di Amazon EC2 contenitore e il motore di contenitore di Google. Microsoft Azure supporta Docker cluster e orchestrator tramite servizio contenitore di Azure (ACS), come illustrato nella sezione successiva.
+Alcuni fornitori cloud, tra cui Microsoft Azure, Amazon EC2 Container Service e Google Container Engine, offrono il supporto per contenitori Docker oltre al supporto per i contenitori e l'agente di orchestrazione Docker. Microsoft Azure offre il supporto per cluster e agente di orchestrazione Docker tramite il servizio contenitore di Azure, come illustrato nella sezione successiva.
 
-Un'altra opzione consiste nell'usare Microsoft Azure Service Fabric (un microservizi platform), che supporta anche Docker basato sui contenitori di Windows e Linux. Service Fabric in esecuzione in Azure o qualsiasi altro cloud ed esegue anche [locale](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
+È anche possibile usare Microsoft Azure Service Fabric, una piattaforma di microservizi, che supporta contenitori Linux e Windows basati su Docker. È possibile eseguire Service Fabric in Azure o in qualsiasi altro cloud e anche [in locale](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere).
 
-## <a name="using-azure-container-service"></a>Tramite il servizio contenitore di Azure
+## <a name="using-azure-container-service"></a>Uso del servizio contenitore di Azure
 
-Un cluster di Docker pool più host Docker e li espone come un unico host Docker virtuale, pertanto è possibile distribuire più contenitori nel cluster. Il cluster consente di gestire tutte le funzionalità di gestione complesse, quali la scalabilità, integrità e così via. Figura 4-24 rappresenta la modalità di mapping per servizio contenitore di Azure (ACS) in un cluster di Docker per comporre applicazioni.
+Un cluster Docker crea pool di host Docker e li espone come un singolo host Docker virtuale, per consentire di distribuire più contenitori nel cluster. Il cluster gestirà tutte le operazioni di gestione complesse, ad esempio la scalabilità, l'integrità e così via. La figura 4-24 rappresenta il mapping di un cluster Docker per applicazioni composte al servizio contenitore di Azure.
 
-ACS fornisce un modo per semplificare la creazione, configurazione e gestione di un cluster di macchine virtuali che sono preconfigurati per l'esecuzione di applicazioni nei contenitori. Ottimizzare la configurazione di strumenti di pianificazione e l'orchestrazione open source più diffusi, ACS consente di usare le competenze esistenti o creare un corpo elevato e crescente di esperienza della community per distribuire e gestire applicazioni basate sul contenitore in Microsoft Azure .
+Il servizio contenitore di Azure consente di semplificare la creazione, la configurazione e la gestione di un cluster di macchine virtuali preconfigurate per l'esecuzione di applicazioni in contenitori. Usando una configurazione ottimizzata degli strumenti open source più diffusi per la pianificazione e l'orchestrazione, il servizio contenitore di Azure consente di usare le competenze esistenti o di avvalersi delle vaste competenze in continua crescita della community per distribuire e gestire le applicazioni basate su contenitori in Microsoft Azure.
 
-Il servizio contenitore di Azure consente di ottimizzare la configurazione di comuni strumenti di Docker clustering open source e tecnologie in modo specifico per Azure. È possibile ottenere una soluzione aperta che offre la portabilità per i contenitori e configurazione dell'applicazione. Si seleziona la dimensione, il numero di host e gli strumenti di orchestrator e il servizio contenitore gestisce tutto il resto.
+Il servizio contenitore di Azure ottimizza la configurazione degli strumenti e delle tecnologie open source più diffusi per clustering Docker in modo specifico per Azure. Si ottiene una soluzione che offre la portabilità per la configurazione di contenitori e applicazioni. È sufficiente selezionare le dimensioni, il numero di host e gli strumenti dell'agente di orchestrazione. Il servizio contenitore gestisce tutte le altre operazioni.
 
 ![](./media/image28.png)
 
-**Figura 4-24**. Clustering scelte contenitore nel servizio di Azure
+**Figura 4-24**. Opzioni per il clustering nel servizio contenitore di Azure
 
-ACS sfrutta le immagini Docker per assicurarsi che i contenitori di applicazioni siano completamente portabili. Supporta la scelta delle piattaforme open source orchestrazione come controller di dominio o del sistema operativo (con tecnologia Mesos Apache), Kubernetes (originariamente creato da Google) e Docker Swarm, per garantire che queste applicazioni possono essere ridimensionate a migliaia o persino decine di migliaia di contenitori.
+Il servizio contenitore di Azure sfrutta i vantaggi delle immagini Docker per assicurare la portabilità completa dei contenitori delle applicazioni. Supporta qualsiasi piattaforma di orchestrazione open source, tra cui DC/OS (con tecnologia Apache Mesos), Kubernetes (creato in origine da Google) e Docker Swarm, per assicurare che queste applicazioni possano essere ridimensionate fino a migliaia o decine di migliaia di contenitori.
 
-Il servizio contenitore di Azure consente di sfruttare le funzionalità di livello aziendale di Azure mantenendo al tempo stesso la portabilità dell'applicazione, inclusi i livelli di orchestrazione.
+Il servizio contenitore di Azure consente di sfruttare i vantaggi delle funzionalità di livello aziendale di Azure, mantenendo al tempo stesso la portabilità delle applicazioni, inclusi i livelli di orchestrazione.
 
 ![](./media/image29.png)
 
-**Figura 4-25**. Orchestrators in ACS
+**Figura 4-25**. Agenti di orchestrazione nel servizio contenitore di Azure
 
-Come illustrato nella figura 4-25, il servizio contenitore di Azure è semplicemente l'infrastruttura fornita da Azure per distribuire i controller di dominio/OS, Kubernetes o Docker Swarm, ma ACS non implementa alcun orchestrator aggiuntive. Pertanto, ACS non è un agente di orchestrazione di conseguenza, solo un'infrastruttura che sfrutta esistente orchestrators open source per i contenitori.
+Come illustrato nella figura 4-25, il servizio contenitore di Azure è semplicemente l'infrastruttura fornita da Azure per distribuire DC/OS, Kubernetes o Docker Swarm, ma non implementa alcun agente di orchestrazione aggiuntivo. Il servizio contenitore di Azure non è quindi un agente di orchestrazione. Si tratta solo di un'infrastruttura che sfrutta i vantaggi degli agenti di orchestrazione open source esistenti per i contenitori.
 
-Dal punto di vista dell'utilizzo, l'obiettivo di servizio di contenitore di Azure è fornire un ambiente host del contenitore usando tecnologie e strumenti open source più diffusi. A tal fine, che espone gli endpoint API standard per la scelta orchestrator. Tramite questi endpoint, è possibile utilizzare qualsiasi software in grado di comunicare con gli endpoint. Ad esempio, nel caso l'endpoint Docker Swarm, è possibile utilizzare l'interfaccia della riga di comando di Docker (CLI). Per controller di dominio o del sistema operativo, è possibile scegliere di utilizzare l'interfaccia CLI di controller di dominio o del sistema operativo.
+Dal punto di vista dell'utilizzo, l'obiettivo del servizio contenitore di Azure consiste nel fornire un ambiente di hosting di contenitori tramite strumenti e tecnologie open source più diffusi. A questo scopo, espone gli endpoint API standard per l'agente di orchestrazione scelto. Usando questi endpoint, è possibile sfruttare i vantaggi di qualsiasi software in grado di comunicare con tali endpoint. Ad esempio, nel caso dell'endpoint di Docker Swarm è possibile scegliere di usare l'interfaccia della riga di comando di Docker. Per DC/OS è possibile scegliere di usare l'interfaccia della riga di comando di DC/OS.
 
-### <a name="getting-started-with-azure-container-service"></a>Introduzione al servizio di contenitore di Azure 
+### <a name="getting-started-with-azure-container-service"></a>Iniziare a usare il servizio contenitore di Azure 
 
-Per iniziare a utilizzare il servizio contenitore di Azure, si distribuisce un cluster il servizio contenitore di Azure dal portale di Azure utilizzando un modello di gestione risorse di Azure o [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli). I modelli disponibili includono [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes), e [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos). Per includere la configurazione di Azure aggiuntiva o avanzata, è possono modificare i modelli di avvio rapido. Per ulteriori informazioni sulla distribuzione di un cluster il servizio contenitore di Azure, vedere [distribuire un cluster il servizio contenitore di Azure](https://docs.microsoft.com/azure/container-service/container-service-deployment) sul sito Web di Azure.
+Per iniziare a usare il servizio contenitore di Azure, distribuire un cluster del servizio contenitore di Azure dal portale di Azure tramite un modello di Azure Resource Manager o l'[interfaccia della riga di comando](https://docs.microsoft.com/cli/azure/install-azure-cli). I modelli disponibili includono [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes) e [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos). I modelli della guida introduttiva possono essere modificati per includere impostazioni di configurazione aggiuntive o avanzate di Azure. Per altre informazioni sulla distribuzione di un cluster del servizio contenitore di Azure, vedere [Distribuire un cluster del servizio contenitore di Azure](https://docs.microsoft.com/azure/container-service/container-service-deployment) nel sito Web Azure.
 
-Sono non state tariffe per tutti i software installati per impostazione predefinita come parte del servizio ACS. Tutte le opzioni predefinite sono implementate con software open source.
+Non sono previsti addebiti per il software installato per impostazione predefinita come parte del servizio contenitore di Azure. Tutte le opzioni predefinite vengono implementate con software open source.
 
-ACS è attualmente disponibile per la serie di Standard A, D, DS, G e GS macchine virtuali Linux in Azure. Viene addebitato solo per le istanze di calcolo che si sceglie, nonché altri infrastruttura risorse sottostanti utilizzate, ad esempio l'archiviazione e rete. Non sono previsti costi incrementali per ACS se stesso.
+Il servizio contenitore di Azure è attualmente disponibile per macchine virtuali Linux Standard di serie A, D, DS, G e GS in Azure. Non vengono applicati addebiti per le istanze di risorse di calcolo scelte, oltre che per le altre risorse di infrastruttura sottostanti usate, ad esempio per le risorse di archiviazione e di rete. Non sono previsti inoltre addebiti incrementali per il servizio contenitore di Azure.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Introduzione a soluzioni con il servizio contenitore di Azure contenitore Docker**
+-   **Introduzione alle soluzioni di hosting di contenitori Docker con il servizio contenitore di Azure**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
--   **Panoramica di docker sciame**
+-   **Docker Swarm overview** (Panoramica di Docker Swarm) 
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Panoramica sulla modalità di Swarm**
+-   **Swarm mode overview** (Panoramica della modalità Swarm) 
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
--   **Panoramica di controller di dominio/OS mesosphere**
+-   **Mesosphere DC/OS Overview** (Panoramica di Mesosphere DC/OS) 
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
--   **Kubernetes.** Il sito ufficiale. \
-    [*http://kubernetes.IO/*](http://kubernetes.io/)
+-   **Kubernetes.** Sito ufficiale.\
+    [*http://kubernetes.io/*](http://kubernetes.io/)
 
 
 >[!div class="step-by-step"]
-[Precedente] (resilienti-elevata-disponibilità-microservices.md) [Avanti] (con-azure-servizio-fabric.md)
+[Indietro] (resilient-high-availability-microservices.md) [Avanti] (using-azure-service-fabric.md)
