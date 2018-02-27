@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e074874a539d1dd52901ff6a5841b5a501b5b5af
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)
 È possibile migliorare le prestazioni della soluzione asincrona in [Procedura dettagliata: accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Questo metodo mette in attesa più operazioni asincrone, rappresentate come una raccolta di attività.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/21/2017
  Si applica il metodo `Task.WhenAll` a una raccolta di attività. L'applicazione di `WhenAll` restituisce una singola attività che non viene completata fino quando non vengono completate tutte le attività nella raccolta. Le attività vengono eseguite in parallelo, ma non vengono creati thread aggiuntivi. Il completamento delle attività può avvenire in qualsiasi ordine.  
   
 > [!IMPORTANT]
->  Le procedure seguenti descrivono le estensioni per le applicazioni asincrone che sono state sviluppate in [Procedura dettagliata: accesso al Web tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). È possibile sviluppare le applicazioni completando la procedura dettagliata o scaricando il codice da [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191) (Esempi di codice per gli sviluppatori).  
+>  Le procedure seguenti descrivono le estensioni per le applicazioni asincrone che sono state sviluppate in [Procedura dettagliata: accesso al Web tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). È possibile sviluppare le applicazioni completando la procedura dettagliata o scaricando il codice da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempi di codice per gli sviluppatori).  
 >   
 >  Per eseguire l'esempio, è necessario avere Visual Studio 2012 o versioni successive installate nel computer.  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Aggiungere il metodo `ProcessURLAsync` per la prima applicazione che è stata sviluppata in [Procedura dettagliata: accesso al Web tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Se è stato scaricato il codice da [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191) (Esempi di codice per gli sviluppatori), aprire il progetto AsyncWalkthrough e aggiungere `ProcessURLAsync` nel file MainWindow.xaml.cs.  
+    -   Se è stato scaricato il codice da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempi di codice per gli sviluppatori), aprire il progetto AsyncWalkthrough e aggiungere `ProcessURLAsync` nel file MainWindow.xaml.cs.  
   
     -   Se il codice è stato sviluppato completando la procedura dettagliata, aggiungere `ProcessURLAsync` all'applicazione che include il metodo `GetURLContentsAsync`. Il file MainWindow.xaml.cs per questa applicazione è il primo esempio nella sezione dedicata agli esempi di codice della procedura dettagliata.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Aggiungere la versione seguente di `ProcessURLAsync` alla seconda applicazione sviluppata in [Procedura dettagliata: accesso al Web tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Se è stato scaricato il codice da [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191) (Esempi di codice per gli sviluppatori), aprire il progetto AsyncWalkthrough_HttpClient e aggiungere `ProcessURLAsync` nel file MainWindow.xaml.cs.  
+    -   Se è stato scaricato il codice da [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempi di codice per gli sviluppatori), aprire il progetto AsyncWalkthrough_HttpClient e aggiungere `ProcessURLAsync` nel file MainWindow.xaml.cs.  
   
     -   Se il codice è stato sviluppato completando la procedura dettagliata, aggiungere `ProcessURLAsync` all'applicazione che usa il metodo `HttpClient.GetByteArrayAsync`. Il file MainWindow.xaml.cs per questa applicazione è il secondo esempio nella sezione dedicata agli esempi di codice della procedura dettagliata.  
   

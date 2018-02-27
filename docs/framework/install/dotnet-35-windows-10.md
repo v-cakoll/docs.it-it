@@ -6,12 +6,13 @@ ms.author: mairaw
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: ca56bfb37cee60ab014dada7b5d72b74b375dd7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
 
@@ -39,4 +40,4 @@ Se si prova a eseguire un'app che richiede .NET Framework 3.5 può essere visual
 
 Durante l'installazione può verificarsi un errore 0x800f0906, 0x800f0907, 0x800f081f o 0x800F0922. In tal caso, vedere [Errore di installazione di .NET Framework 3.5: 0x800f0906, 0x800f0907 o 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) per informazioni su come risolvere questi problemi.
 
-Se uno dei metodi illustrati nell'articolo precedente non riesce o non è presente una connessione Internet, è necessario usare il supporto di installazione di Windows. Per altre informazioni, vedere [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](https://technet.microsoft.com/library/Dn482069.aspx) (Distribuire .NET Framework 3.5 usando Gestione e manutenzione immagini distribuzione). Se il supporto di installazione non è disponibile, vedere [Creare supporti di installazione per Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Se uno dei metodi illustrati nell'articolo precedente non riesce o non è presente una connessione Internet, è necessario usare il supporto di installazione di Windows. Per altre informazioni, vedere [Deploy .NET Framework 3.5 by using Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism) (Distribuire .NET Framework 3.5 usando Gestione e manutenzione immagini distribuzione). Se il supporto di installazione non è disponibile, vedere [Creare supporti di installazione per Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flusso di controllo in programmi asincroni (C#)
 Le parole chiave `async` e `await` consentono di scrivere e gestire più facilmente i programmi asincroni. Tuttavia, i risultati potrebbero creare perplessità se non si conosce il funzionamento del programma. Questo argomento descrive il flusso di controllo attraverso un programma asincrono semplice per indicare quando il controllo si sposta da un metodo a un altro e quali informazioni vengono trasferite ogni volta.  
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  Per eseguire l'esempio, è necessario che Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versione successiva siano installati nel computer.  
   
 ### <a name="download-the-program"></a>Scaricare il programma  
- È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/?LinkId=255285) (Esempio di attività asincrona: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.  
+ È possibile scaricare l'applicazione di questo argomento da [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: flusso di controllo in programmi asincroni). I passaggi seguenti consentono di aprire ed eseguire il programma.  
   
 1.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -154,7 +155,7 @@ Length of the downloaded string: 33946.
   
 7.  Aggiunge un riferimento a <xref:System.Net.Http>.  
   
-8.  In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e scegliere **Visualizza codice**.  
+8.  In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.  
   
 9. Sostituire il codice in MainWindow.xaml.cs con quello riportato di seguito.  
   
@@ -388,7 +389,7 @@ int contentLength = await getLengthTask;
  ![Passaggio SEI](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione asincrona con async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285) (Esempio di attività asincrona: Flusso di controllo in programmi asincroni (C# e Visual Basic))
+ [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di attività asincrona: Flusso di controllo in programmi asincroni (C# e Visual Basic))
