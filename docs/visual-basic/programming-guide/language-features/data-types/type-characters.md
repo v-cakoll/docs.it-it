@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Digitare i caratteri (Visual Basic)
 
@@ -88,7 +88,7 @@ Il modulo di un valore letterale come appare nel codice in genere determina il t
 |Formato testuale del valore letterale|Tipo di dati predefinito|Esempio|  
 |-----------------------------|-----------------------|-------------|  
 |Numerico, senza parte frazionaria|`Integer`|`2147483647`|  
-|Numerico, senza parte frazionaria, troppo grande per`Integer`|`Long`|`2147483648`|  
+|Numerico, senza parte frazionaria, troppo grande per `Integer`|`Long`|`2147483648`|  
 |Numerico, parte frazionaria|`Double`|`1.2`|  
 |Racchiuso tra virgolette doppie|`String`|`"A"`|  
 |Racchiuso tra simboli di cancelletto|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ In genere, il compilatore interpreta un valore letterale integer per il sistema 
 |Numero di base|Prefisso|Valori di cifra valida|Esempio|
 |-----------------|------------|------------------------|-------------|
 |Esadecimale (base 16)|`&H`|0-9 e A-F|`&HFFFF`|
-|Binario (base 2)|`0B`|0-1|`&B01111100`|
+|Binario (base 2)|`&B`|0-1|`&B01111100`|
 |Ottale (base 8)|`&O`|0-7|`&O77`|
 
 A partire da Visual Basic 2017, è possibile utilizzare il carattere di sottolineatura (`_`) come separatore di gruppi per migliorare la leggibilità di un valore letterale integrale. L'esempio seguente usa il `_` carattere per raggruppare un valore letterale binario in gruppi di 8 bit:

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 89401c1f889be6c5585a302e3a7ac62478573b95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="modules"></a>Moduli
 
@@ -91,7 +91,7 @@ Se si desidera che tutto il codice in un file in un singolo modulo esterno e si 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="module-rec-allowing-mutual-recursive-code-at-the-module-level"></a>Modulo `rec`: consente al codice ricorsiva reciproca a livello di modulo
+## <a name="recursive-modules"></a>Moduli ricorsiva
 
 F # 4.1 introduce la nozione di moduli che consentono di tutto il codice indipendente reciprocamente sono ricorsivi.  Questa operazione viene eseguita tramite `module rec`.  Utilizzo di `module rec` possibile tentare di risolvere alcune difficoltà in non è in grado di scrivere codice reciprocamente referenziale tra i tipi e i moduli.  Di seguito è riportato un esempio di questo oggetto:
 

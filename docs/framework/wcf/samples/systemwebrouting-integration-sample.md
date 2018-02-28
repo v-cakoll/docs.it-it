@@ -5,48 +5,53 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Esempio di integrazione di SystemWebRouting
-In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. L'uso del routing Web consente allo sviluppatore di creare indirizzi virtuali per HTTP dei quali viene quindi eseguito il mapping ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettivi. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. Per questo esempio vengono usati due feed RSS creati con WCF, ovvero un feed `movies` e un feed `channels`. Gli URL per l'attivazione dei servizi non contengono un'estensione e sono registrati nel `Application_Start` metodo il `Global` classe derivata dalla <xref:System.Web.HttpApplication.Application_Start> classe.  
-  
+In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. L'uso del routing Web consente allo sviluppatore di creare indirizzi virtuali per HTTP dei quali viene quindi eseguito il mapping ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] effettivi. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. 
+
 > [!NOTE]
 >  Le classi nello spazio dei nomi <xref:System.Web.Routing> possono essere usate solo per i servizi ospitati su HTTP.  
   
-> [!NOTE]
->  Questo esempio può essere usato solo in [!INCLUDE[iisver](../../../../includes/iisver-md.md)], poiché [!INCLUDE[iis60](../../../../includes/iis60-md.md)] usa un metodo diverso per il supporto di URL senza estensione.  
+In questo esempio vengono usati WCF per creare due feed RSS: un `movies` feed e un `channels` feed. Gli URL per l'attivazione dei servizi non contengono un'estensione e sono registrati nel `Application_Start` metodo il `Global` classe derivata dalla <xref:System.Web.HttpApplication> classe.  
   
-> [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
+> [!NOTE]
+>  Questo esempio funziona solo in Internet Information Services (IIS) 7.0 e versioni successive, come IIS 6.0 utilizza un metodo diverso per il supporto di URL senza estensione.  
+
+#### <a name="to-download-this-sample"></a>Per scaricare questo esempio
+  
+In questo esempio siano già installato nel computer in uso. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
+   
+`<InstallDrive>:\WF_WCF_Samples`  
+   
+ Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
+   
+`<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] aprire il file WebRoutingIntegration.sln.  
+1.  Utilizzando Visual Studio, aprire il file WebRoutingIntegration.sln.  
   
 2.  Per eseguire la soluzione e avviare il server Web di sviluppo, premere F5.  
   
      Verrà aperta la visualizzazione directory per l'esempio. Si noti che non sono presenti file con l'estensione di file svc.  
   
-3.  Nella barra degli indirizzi aggiungere `movies` all'URL, in modo da ottenere http://localhost:[port]/movies, quindi premere INVIO.  
+3.  Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che legge http://localhost: [port] /Movies, quindi premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
@@ -60,7 +65,7 @@ In questo esempio viene descritta l'integrazione del livello di hosting con le c
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Per usare questo esempio ospitato in IIS  
   
-1.  In [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] aprire il file WebRoutingIntegration.sln.  
+1.  Utilizzando Visual Studio, aprire il file WebRoutingIntegration.sln.  
   
 2.  Premere CTRL+MAIUSC+B per compilare il progetto.  
   
@@ -89,7 +94,7 @@ In questo esempio viene descritta l'integrazione del livello di hosting con le c
  In questo esempio illustrato come il livello di hosting sia in grado di interagire con le classi nello spazio dei nomi <xref:System.Web.Routing> per l'indirizzamento delle richieste dei servizi ospitati su HTTP.  
   
 > [!NOTE]
->  Se è impostata sulla versione 2, aggiornare la versione del pool di applicazioni predefinito a [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
+>  È necessario aggiornare la versione di pool di applicazioni predefinita da [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] se è impostato per la versione 2.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Hosting di AppFabric ed esempi di persistenza](http://go.microsoft.com/fwlink/?LinkId=193961)
