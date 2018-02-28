@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicazione in un'architettura di microservizi
 
@@ -47,7 +47,7 @@ Il secondo asse definisce se la comunicazione ha un singolo destinatario o più 
 
 Un'applicazione basata su microservizi userà spesso una combinazione di questi stili di comunicazione. Il tipo più comune è la comunicazione con singolo destinatario con un protocollo sincrono come HTTP/HTTPS quando si richiama un servizio HTTP API Web normale. I microservizi usano in genere anche i protocolli di messaggistica per la comunicazione asincrona tra microservizi.
 
-È opportuno conoscere questi assi in modo che ci sia chiarezza sui possibili meccanismi di comunicazione, ma non sono aspetti importanti da prendere in considerazione per la creazione di microservizi. Per l'integrazione dei microservizi non serve neanche prendere in considerazione la natura asincrona dell'esecuzione dei thread del client né la natura asincrona del protocollo selezionato. L'aspetto che *è* importante è la possibilità di integrare in modo asincrono i microservizi mantenendone al contempo l'indipendenza, come illustrato nella sezione seguente.
+È opportuno conoscere questi assi in modo che ci sia chiarezza sui possibili meccanismi di comunicazione, ma non sono aspetti importanti da prendere in considerazione per la creazione di microservizi. Per l'integrazione dei microservizi non serve prendere in considerazione né la natura asincrona dell'esecuzione dei thread del client né la natura asincrona del protocollo selezionato. L'aspetto che *è* importante è la possibilità di integrare in modo asincrono i microservizi mantenendone al contempo l'indipendenza, come illustrato nella sezione seguente.
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>L'integrazione di microservizi asincroni impone l'autonomia del microservizio
 

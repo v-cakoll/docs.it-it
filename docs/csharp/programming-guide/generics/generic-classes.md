@@ -2,25 +2,26 @@
 title: Classi generiche (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classi generiche (Guida per programmatori C#)
 Le classi generiche incapsulano operazioni che non sono specifiche di un determinato tipo di dati. L'uso più comune per le classi generiche è con raccolte come elenchi collegati, tabelle hash, stack, code, alberi e così via. Le operazioni come l'aggiunta e la rimozione di elementi dalla raccolta vengono eseguite praticamente allo stesso modo, indipendentemente dal tipo dei dati archiviati.  
   
- Per la maggior parte degli scenari che richiedono classi di raccolta, l'approccio consigliato consiste nell'usare quelle disponibili nella libreria di classi .NET Framework. Per altre informazioni sull'uso di queste classi, vedere [Generics nella libreria di classi .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+ Per la maggior parte degli scenari che richiedono classi di raccolta, l'approccio consigliato consiste nell'usare quelle disponibili nella libreria di classi .NET. Per altre informazioni sull'uso di queste classi, vedere [Generic Collections in .NET](../../../standard/generics/collections.md) (Raccolte generiche in .NET).  
   
  Normalmente, per creare classi generiche è possibile iniziare da una classe concreta esistente, modificando quindi i tipi in parametri di tipo uno per volta fino a raggiungere l'equilibrio ottimale tra generalizzazione e usabilità. Ecco alcuni aspetti importanti di cui tenere conto quando si creano classi generiche personalizzate:  
   
@@ -74,5 +75,5 @@ Le classi generiche incapsulano operazioni che non sono specifiche di un determi
  <xref:System.Collections.Generic>  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Generics](../../../csharp/programming-guide/generics/index.md)  
- [Salvare lo stato di enumeratori](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [An Inheritance Puzzle, Part One](http://go.microsoft.com/fwlink/?LinkId=112380) (Indovinello sull'ereditarietà - Parte 1)
+ [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (Salvataggio dello stato degli enumeratori)  
+ [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/) (Indovinello sull'ereditarietà - Parte 1)

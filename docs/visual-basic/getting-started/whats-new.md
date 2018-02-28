@@ -1,23 +1,25 @@
 ---
 title: "Novità in Visual Basic"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -25,10 +27,13 @@ Questo argomento elenca i nomi delle funzionalità principali per ogni versione 
   
 ## <a name="current-version"></a>Versione corrente
 
-Visual Basic / Visual Studio .NET 2017   
-Per le funzionalità nuove, vedere [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 15.5   
+Per le funzionalità nuove, vedere [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Versioni precedenti
+
+Visual Basic 15.3   
+Per le funzionalità nuove, vedere [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic/Visual Studio .NET 2015   
 Per le funzionalità nuove, vedere [Visual Basic 14](#visual-basic-14)
@@ -53,6 +58,41 @@ Operatori di scorrimento bit, dichiarazione di variabile del ciclo
 
 Visual Basic/Visual Studio .NET 2002   
 Prima versione di Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[Argomenti denominati non finali](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+In Visual Basic 15.3 e versioni precedenti, quando una chiamata al metodo includeva argomenti in base alla posizione e al nome, gli argomenti posizionali dovevano precedere gli argomenti denominati. A partire da Visual Basic 15,5, gli argomenti posizionali e denominati possono trovarsi in qualsiasi ordine, purché tutti gli argomenti fino all'ultimo argomento posizionale si trovino nella posizione corretta. Ciò è particolarmente utile quando gli argomenti denominati vengono utilizzati per rendere il codice più leggibile.
+
+Ad esempio, la seguente chiamata al metodo ha due argomenti posizionali tra un argomento denominato. L'argomento denominato chiarisce che il valore 19 rappresenta un'età.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Separatore esadecimale/binario/ottali iniziale**
+
+Visual Basic 2017 ha aggiunto il supporto del carattere di sottolineatura (`_`) come separatore di cifre. A partire da Visual Basic 15.5, è possibile usare il carattere di sottolineatura come separatore iniziale tra il prefisso e la cifra esadecimale, binaria o ottale. L'esempio seguente usa il separatore di cifra iniziali per definire 3.271.948.384 come numero esadecimale:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Per usare il carattere di sottolineatura come separatore iniziale, è necessario aggiungere l'elemento seguente al file di progetto (*.vbproj) di Visual Basic:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[Inferenza di tupla denominata](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+Quando si assegna il valore di elementi di tupla provenienti da variabili, Visual Basic deduce il nome degli elementi di tupla dai nomi di variabili corrispondenti; non è necessario assegnare esplicitamente un nome a un elemento di tupla. L'esempio seguente usa l'inferenza per creare una tupla con tre elementi denominati, `state`, `stateName`, e `capital`.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
