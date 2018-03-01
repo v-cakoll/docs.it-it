@@ -18,20 +18,23 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="culture-insensitive-string-operations"></a>Operazioni sulle stringhe indipendenti dalle impostazioni cultura
 Le operazioni eseguite sulle stringhe dipendenti dalle impostazioni cultura possono costituire un vantaggio nella creazione di applicazioni progettate per la visualizzazione dei risultati in base alle impostazioni cultura. Per impostazione predefinita, i metodi dipendenti dalle impostazioni cultura ottengono le impostazioni cultura da utilizzare dalla proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del thread corrente.  
   
- Si noti che le operazioni sulle stringhe dipendenti dalle impostazioni cultura, tuttavia, non sempre corrispondono al comportamento desiderato. L'utilizzo di operazioni dipendenti dalle impostazioni cultura nei casi in cui è preferibile che i risultati siano indipendenti dalle impostazioni cultura può determinare errori nel codice dell'applicazione per le impostazioni cultura con mappatura di maiuscole/minuscole personalizzata e regole di ordinamento. Per un esempio, vedere la sezione "Stringa confronti che usa il corrente delle impostazioni cultura" il [procedure consigliate per l'uso di stringhe](../../../docs/standard/base-types/best-practices-strings.md) articolo.  
+ Si noti che le operazioni sulle stringhe dipendenti dalle impostazioni cultura, tuttavia, non sempre corrispondono al comportamento desiderato. L'utilizzo di operazioni dipendenti dalle impostazioni cultura nei casi in cui è preferibile che i risultati siano indipendenti dalle impostazioni cultura può determinare errori nel codice dell'applicazione per le impostazioni cultura con mappatura di maiuscole/minuscole personalizzata e regole di ordinamento. Per un esempio, vedere la sezione "Confronti tra stringhe che usano le impostazioni cultura correnti" nell'articolo [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md).  
   
  L'opportunità di utilizzare operazioni sulle stringhe dipendenti oppure indipendenti dalle impostazioni cultura è determinata dall'utilizzo dei risultati da parte dell'applicazione. È in genere preferibile che le operazioni sulle stringhe che determinano la visualizzazione di risultati siano dipendenti dalle impostazioni cultura. Se in un'applicazione viene visualizzato un elenco ordinato di stringhe localizzate in una casella di riepilogo, ad esempio, l'applicazione dovrebbe eseguire un ordinamento dipendente dalle impostazioni cultura.  
   

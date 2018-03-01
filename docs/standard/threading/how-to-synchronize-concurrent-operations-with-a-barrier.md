@@ -11,28 +11,32 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: Barrier, how to use
+helpviewer_keywords:
+- Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0b2e32fe3cec30a4da7467447aee625dfe7e379b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 616229abed93c6793b392724d038d8f9160cd6ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Procedura: sincronizzare operazioni simultanee con una barriera
-Nell'esempio seguente viene illustrato come sincronizzare le attività simultanee con una <xref:System.Threading.Barrier>.  
+L'esempio seguente mostra come sincronizzare le attività simultanee con un oggetto <xref:System.Threading.Barrier>.  
   
 ## <a name="example"></a>Esempio  
- Lo scopo del programma seguente è per contare il numero di iterazioni (o fasi) sono necessari per due thread per ogni ricerca relativa metà della soluzione sulla stessa fase utilizzando un algoritmo di casualità riassegnare le parole. Dopo ogni thread ha mescolate le proprie parole, l'operazione di post-fase barriera confronta i due risultati per vedere se è stato eseguito il rendering della frase completa nell'ordine corretto di word.  
+ Lo scopo del programma seguente è quello di contare il numero di iterazioni (o fasi) necessarie per due thread in modo che ognuno trovi la propria metà della soluzione nella stessa fase usando un algoritmo di scelta casuale per riselezionare in ordine casuale le parole. Dopo che ogni thread ha selezionato in ordine casuale le parole, l'operazione post-fase della barriera confronta i due risultati per verificare se è stato eseguito il rendering della frase completa con l'ordine corretto di parole.  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]
  [!code-vb[CDS_Barrier#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#01)]  
   
- Oggetto <xref:System.Threading.Barrier> è un oggetto che impedisce di singole attività in un'operazione parallela non potrà continuare fino a quando tutte le attività di raggiungono la barriera. È utile quando si verifica un'operazione parallela in fasi e ogni fase richiede la sincronizzazione tra le attività. In questo esempio sono presenti due fasi per l'operazione. Nella prima fase, ogni attività riempie la relativa sezione del buffer con dati. Quando ogni attività viene completata la compilazione di sezione, l'attività segnala la barriera che è pronto per continuare, quindi attende. Quando tutte le attività hanno eseguito la barriera, inizia la seconda fase vengono sbloccate. La barriera è necessaria perché la seconda fase richiede che ogni attività abbia accesso a tutti i dati che è stato generato a questo punto. Senza la barriera, le attività da completare prima potrebbero tentare di leggere dal buffer non sono stati compilati ancora da altre attività. È possibile sincronizzare un numero qualsiasi di fasi in questo modo.  
+ Un oggetto <xref:System.Threading.Barrier> è un oggetto che impedisce alle singole attività in un'operazione parallela di continuare fino a quando tutte le attività non raggiungono la barriera. È utile quando un'operazione parallela avviene in fasi e ogni fase richiede la sincronizzazione tra le attività. In questo esempio l'operazione include due fasi. Nella prima fase ogni attività riempie la propria sezione del buffer con dati. Quando ogni attività finisce di riempire la propria sezione, segnala alla barriera che è pronta per continuare e quindi attende. Quando tutte le attività hanno segnalato il completamento alla barriera, vengono sbloccate e inizia la seconda fase. La barriera è necessaria perché la seconda fase richiede che ogni attività abbia accesso a tutti i dati che sono stati generati fino a questo punto. Senza la barriera, le prime attività potrebbero cercare di leggere da buffer che non sono ancora stati riempiti da altre attività. In questo modo, è possibile sincronizzare un numero qualsiasi di fasi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture di dati per la programmazione in parallelo](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

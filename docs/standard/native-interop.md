@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="native-interoperability"></a>Interoperabilità nativa
 
@@ -71,7 +74,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +87,7 @@ namespace PInvokeSamples {
 }
 ```
 
-Naturalmente, il procedimento è simile in Linux. Il nome della funzione è lo stesso, dal momento che `getpid(2)` è la chiamata di sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).
+È simile anche in Linux. Il nome della funzione è lo stesso, dal momento che `getpid(2)` è una chiamata di sistema [POSIX](https://en.wikipedia.org/wiki/POSIX) standard.
 
 ```csharp
 using System;
@@ -93,7 +96,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -263,7 +266,7 @@ Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i par
 
 Il termine **marshalling** indica il processo di trasformazione dei tipi quando questi devono passare dal codice gestito a quello nativo e viceversa.
 
-Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
+Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

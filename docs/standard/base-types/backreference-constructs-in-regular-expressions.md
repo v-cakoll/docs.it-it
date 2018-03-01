@@ -17,15 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa. Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.  
@@ -33,16 +36,16 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
 > [!NOTE]
 >  Per fare riferimento a gruppi di acquisizione denominati e numerati in stringhe sostitutive, si usa una sintassi separata. Per altre informazioni, vedere [Substitutions](substitutions-in-regular-expressions.md).  
   
- .NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati. Per ulteriori informazioni sui gruppi di acquisizione, vedere [costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ .NET definisce elementi di linguaggio separati per fare riferimento a gruppi di acquisizione denominati e numerati. Per altre informazioni sui gruppi di acquisizione, vedere [Costrutti di raggruppamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 ## <a name="numbered-backreferences"></a>Backreference numerati  
  Nei backreference numerati si usa la sintassi seguente:  
   
  `\` *numero*  
   
- dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se *numero* non definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`.  
+ dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se nel modello di espressione regolare *numero* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`.  
   
- Si noti l'ambiguità tra i codici di escape ottale (ad esempio `\16`) e `\` *numero* backreference che usano la stessa notazione. Questa ambiguità viene risolta nel modo seguente:  
+ Si noti l'ambiguità tra i codici di escape ottale, ad esempio `\16`, e i backreference `\`*numero* che usano la stessa notazione. Questa ambiguità viene risolta nel modo seguente:  
   
 -   Le espressioni da `\1` a `\9` vengono sempre interpretate come backreference e non come codici ottali.  
   
@@ -50,9 +53,9 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
 -   Le espressioni con numerazione a partire da `\10` vengono considerate backreference se esiste un backreference a tale numero; in caso contrario, vengono interpretate come codici ottali.  
   
--   Se un'espressione regolare contiene un backreference in un numero di gruppo indefinito, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.  
+-   Se l'espressione regolare contiene un backreference a un numero di gruppo non definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.  
   
- Se l'ambiguità costituisce un problema, è possibile utilizzare il `\k<` *nome* `>` notazione, che è ambiguo e non può essere confuso con ottali. Analogamente, i codici esadecimale come `\xdd` non sono ambigui e non possono essere confusi con backreference.  
+ Se il problema è dovuto all'ambiguità, è possibile usare la notazione `\k<`*nome*`>` che, non essendo ambigua, non può essere confusa con codici di caratteri ottali. Analogamente, i codici esadecimale come `\xdd` non sono ambigui e non possono essere confusi con backreference.  
   
  L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(\w)\1` costituita dagli elementi seguenti.  
   
@@ -73,14 +76,14 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  `\k'` *name* `'`  
   
- dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare. Se *nome* non definito nel criterio di espressione regolare, si verifica un errore di analisi e il motore delle espressioni regolari genera un <xref:System.ArgumentException>.  
+ dove *nome* è il nome di un gruppo di acquisizione definito nel modello di espressione regolare. Se nel modello di espressione regolare *nome* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>.  
   
  L'esempio seguente consente di trovare caratteri alfanumerici doppi all'interno di una stringa. Viene definita un'espressione regolare `(?<char>\w)\k<char>` costituita dagli elementi seguenti.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|`(?<char>\w)`|Corrisponde a un carattere alfanumerico e assegnarlo a un gruppo di acquisizione denominato `char`.|  
-|`\k<char>`|Corrisponde al carattere successivo è lo stesso valore di `char` gruppo di acquisizione.|  
+|`(?<char>\w)`|Trova la corrispondenza di un carattere alfanumerico e la assegna a un gruppo di acquisizione denominato `char`.|  
+|`\k<char>`|Trova la corrispondenza del carattere successivo, uguale al valore del gruppo di acquisizione denominato `char`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -95,17 +98,17 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  L'esempio seguente include un modello di espressione regolare `(?<1>a)(?<1>\1b)*`, che ridefinisce il gruppo denominato \1. Nella tabella seguente sono descritti i modelli di espressione regolare.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
-|`(?<1>a)`|Corrispondenza con il carattere "a" e assegnare il risultato al gruppo di acquisizione denominato `1`.|  
-|`(?<1>\1b)*`|Occorrenza di corrispondenza di 0 o 1 del gruppo denominato `1` insieme a un "b" e di assegnare il risultato al gruppo di acquisizione denominato `1`.|  
+|`(?<1>a)`|Trova la corrispondenza del carattere "a" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
+|`(?<1>\1b)*`|Trova la corrispondenza dell'occorrenza 0 o 1 del gruppo denominato `1` con una "b" e assegna il risultato al gruppo di acquisizione denominato `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  Confrontando l'espressione regolare con la stringa di input ("aababb"), il motore delle espressioni regolari esegue le operazioni seguenti:  
   
-1.  Parte dall'inizio della stringa e trova una corrispondenza per "a" con l'espressione `(?<1>a)`. Il valore di `1` gruppo è ora "a".  
+1.  Parte dall'inizio della stringa e trova una corrispondenza per "a" con l'espressione `(?<1>a)`. Il valore del `1` gruppo è ora "a".  
   
 2.  Passa al secondo carattere e trova una corrispondenza per la stringa "ab" con l'espressione `\1b` o "ab". Assegna il risultato "ab" a `\1`.  
   
@@ -113,9 +116,9 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  In questo esempio `*` è un quantificatore di cicli, vale a dire che viene eseguito ripetutamente finché il motore delle espressioni regolari non trova una corrispondenza con il modello che definisce. I quantificatori di cicli non cancellano le definizioni di gruppi.  
   
- Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza. Questo comportamento è illustrato il modello di espressione regolare `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, che viene definito come segue:  
+ Se un gruppo non ha acquisito alcuna sottostringa, un backreference a tale gruppo risulterà non definito e non troverà mai corrispondenza. Questo comportamento è illustrato dal modello delle espressioni regolari `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, definito nel modo seguente:  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\p{Lu}{2})`|Trova la corrispondenza di due maiuscole. Equivale al primo gruppo di acquisizione.|  

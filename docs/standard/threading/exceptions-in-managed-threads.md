@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>Eccezioni in thread gestiti
 A partire da .NET Framework versione 2.0, Common Language Runtime consente alla maggior parte delle eccezioni non gestite nei thread di proseguire normalmente. Nella maggior parte dei casi questo significa che l'eccezione non gestita provoca l'interruzione dell'applicazione.  
@@ -32,9 +35,9 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
  Common Language Runtime fornisce una barriera per determinate eccezioni non gestite usate per controllare il flusso del programma:  
   
--   Oggetto <xref:System.Threading.ThreadAbortException> , viene generata in un thread perché <xref:System.Threading.Thread.Abort%2A> è stato chiamato.  
+-   Viene generata un'eccezione <xref:System.Threading.ThreadAbortException> in un thread perché è stato chiamato il metodo <xref:System.Threading.Thread.Abort%2A>.  
   
--   Un <xref:System.AppDomainUnloadedException> , viene generata in un thread perché il dominio applicazione in cui è in esecuzione il thread è in corso lo scaricamento.  
+-   Viene generata un'eccezione <xref:System.AppDomainUnloadedException> in un thread perché è in corso lo scaricamento del dominio dell'applicazione in cui è in esecuzione il thread.  
   
 -   Common Language Runtime o un processo host termina il thread generando un'eccezione interna.  
   
@@ -56,7 +59,7 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
 -   Non esiste alcun equivalente di un'eccezione non gestita in un pool di thread. Quando un'attività genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi restituisce il thread al pool di thread.  
   
--   Non è non esiste un'eccezione non gestita in un thread creato con il <xref:System.Threading.Thread.Start%2A> metodo la <xref:System.Threading.Thread> classe. Quando un codice in esecuzione su un thread simile genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi termina normalmente il thread.  
+-   Non esiste alcun equivalente di un'eccezione non gestita in un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> della classe <xref:System.Threading.Thread>. Quando un codice in esecuzione su un thread simile genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e quindi termina normalmente il thread.  
   
 -   Non esiste alcun equivalente di un'eccezione non gestita nel thread finalizzatore. Se un finalizzatore genera un'eccezione non gestibile, il runtime consente di stampare la traccia dello stack eccezione nella console e consente quindi al thread finalizzatore di riprendere l'esecuzione dei finalizzatori.  
   
@@ -69,7 +72,7 @@ A partire da .NET Framework versione 2.0, Common Language Runtime consente alla 
   
 -   Ristrutturare il codice in modo che il thread venga chiuso normalmente quando viene ricevuto un segnale.  
   
--   Utilizzare il <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> metodo per interrompere il thread.  
+-   Usare il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per interrompere il thread.  
   
 -   Se un thread deve essere arrestato in modo che la terminazione del processo possa continuare, spostare il thread in background in modo che venga terminato automaticamente all'uscita dal processo.  
   

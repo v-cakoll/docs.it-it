@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c5cfcc9f35e4a07e9426a4dd24c1e2f04985f16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Fogli di stile incorporati in un documento
-Può accadere che il codice XML esistente contenga la direttiva dei fogli di stile di `<?xml:stylesheet?>` Microsoft Internet Explorer viene accettata come alternativa per il `<?xml-stylesheet?>` sintassi. Quando i dati XML contengono una direttiva `<?xml:stylesheet?>`, come nei dati seguenti, se si tenta di caricare questi dati nel DOM XML, viene generata un'eccezione.  
+Può accadere che il codice XML esistente contenga la direttiva dei fogli di stile di `<?xml:stylesheet?>` che viene accettata da Microsoft Internet Explorer come alternativa alla sintassi `<?xml-stylesheet?>`. Quando i dati XML contengono una direttiva `<?xml:stylesheet?>`, come nei dati seguenti, se si tenta di caricare questi dati nel DOM XML, viene generata un'eccezione.  
   
 ```xml  
 <?xml version="1.0" ?>  
@@ -31,9 +34,9 @@ Può accadere che il codice XML esistente contenga la direttiva dei fogli di sti
 </root>  
 ```  
   
- Questo errore si verifica perché il `<?xml:stylesheet?>` viene considerata non valida **ProcessingInstruction** al DOM. Qualsiasi **ProcessingInstruction**, in base agli spazi dei nomi specifica XML, è possibile solo senza due punti (NCName), nomi (QName).  
+ Questo si verifica perché `<?xml:stylesheet?>` viene considerata una **ProcessingInstruction** non valida per il DOM. In base alla specifica XML degli spazi dei nomi, una **ProcessingInstruction** può essere solo un NCName (No Column Name, nome senza due punti).  
   
- Dalla sezione 6 della specifica XML, l'effetto della presenza degli spazi del **carico** e **LoadXml** metodi sono conformi alla specifica significa che in un documento:  
+ In base alla sezione 6 della specifica sugli spazi dei nomi in XML, la conformità dei metodi **Load** e **LoadXml** alla specifica significa che in un documento:  
   
 -   Tutti i tipi di elementi e i nomi di attributi contengono uno zero o un segno di due punti.  
   
@@ -44,4 +47,4 @@ Può accadere che il codice XML esistente contenga la direttiva dei fogli di sti
  Secondo la raccomandazione W3C (World Wide Web Consortium) Associating Style Sheets with XML documents Version 1.0 (informazioni in lingua inglese), disponibile all'indirizzo www.w3.org/TR/xml-stylesheet, l'istruzione di elaborazione per associare un foglio di stile XSL a un documento XML è `<?xml-stylesheet?>`, con un trattino al posto del segno di due punti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

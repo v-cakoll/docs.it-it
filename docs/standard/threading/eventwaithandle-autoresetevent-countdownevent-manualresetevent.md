@@ -13,37 +13,40 @@ helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
 - event wait handles [.NET Framework]
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c0bcb27ed9c8981665a50c129dfbd824c9612f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c545f9ebc924c0a12ee2e76fdb6c725c25e2353
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
 Gli handle di attesa degli eventi consentono di sincronizzare le attività segnalandosi reciprocamente e attendendo segnali degli altri thread. Questi eventi di sincronizzazione sono basati sugli handle di attesa Win32 e possono essere suddivisi in due tipi: quelli che vengono reimpostati automaticamente quando vengono segnalati e quelli che devono essere reimpostati manualmente.  
   
- Handle di attesa eventi sono utili in molti degli stessi scenari di sincronizzazione di <xref:System.Threading.Monitor> classe. Handle di attesa eventi sono spesso più facili da utilizzare rispetto di <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> metodi e forniscono un controllo più efficiente della segnalazione. Gli handle di attesa dell'evento denominato possono inoltre essere usati per sincronizzare le attività nei domini delle applicazioni e nei processi, mentre i monitor sono locali rispetto a un dominio dell'applicazione.  
+ Gli handle di attesa degli eventi sono utili in molti degli scenari di sincronizzazione della classe <xref:System.Threading.Monitor>. Gli handle di attesa degli eventi sono spesso più facili da usare dei metodi <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> e offrono un controllo maggiore sulla segnalazione. Gli handle di attesa dell'evento denominato possono inoltre essere usati per sincronizzare le attività nei domini delle applicazioni e nei processi, mentre i monitor sono locali rispetto a un dominio dell'applicazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md)  
- La <xref:System.Threading.EventWaitHandle> classe può rappresentare un automatico o manuale Reimposta nonché eventi locali o eventi di sistema denominato.  
+ La classe <xref:System.Threading.EventWaitHandle> può rappresentare sia gli eventi di reimpostazione automatici che quelli manuali, nonché gli eventi locali o gli eventi del sistema denominato.  
   
  [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
- Il <xref:System.Threading.AutoResetEvent> deriva dalla classe <xref:System.Threading.EventWaitHandle> e rappresenta un evento locale viene reimpostato automaticamente.  
+ La classe <xref:System.Threading.AutoResetEvent> deriva da <xref:System.Threading.EventWaitHandle> e rappresenta un evento locale che viene reimpostato automaticamente.  
   
  [ManualResetEvent e ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- Il <xref:System.Threading.ManualResetEvent> deriva dalla classe <xref:System.Threading.EventWaitHandle> e rappresenta un evento locale che deve essere reimpostato manualmente. La <xref:System.Threading.ManualResetEventSlim> classe è una versione più veloce e semplice che può essere utilizzata per gli eventi all'interno del processo stesso.  
+ La classe <xref:System.Threading.ManualResetEvent> deriva da <xref:System.Threading.EventWaitHandle> e rappresenta un evento locale che deve essere reimpostato manualmente. La classe <xref:System.Threading.ManualResetEventSlim> è una versione leggera e più veloce che può essere usata per gli eventi all'interno del processo stesso.  
   
  [CountdownEvent](../../../docs/standard/threading/countdownevent.md)  
- La <xref:System.Threading.CountdownEvent> classe fornisce un metodo semplificato per implementare modelli di parallelismo di divisione e unione nel codice che usa handle di attesa.  
+ La classe <xref:System.Threading.CountdownEvent> fornisce un metodo semplificato per implementare modelli di parallelismo fork/join nel codice che sfrutta gli handle di attesa.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Handle di attesa](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- Il <xref:System.Threading.WaitHandle> classe è la classe base per il <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, e <xref:System.Threading.Mutex> classi. Contiene metodi statici, ad esempio <xref:System.Threading.WaitHandle.SignalAndWait%2A> e <xref:System.Threading.WaitHandle.WaitAll%2A> che sono utili quando si lavora con tutti i tipi di handle di attesa.  
+ La classe <xref:System.Threading.WaitHandle> è la classe di base per le classi <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore> e <xref:System.Threading.Mutex>. Contiene metodi statici, ad esempio <xref:System.Threading.WaitHandle.SignalAndWait%2A> e <xref:System.Threading.WaitHandle.WaitAll%2A>, che sono utili quando si usano tutti i tipi di handle di attesa.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading.EventWaitHandle>  

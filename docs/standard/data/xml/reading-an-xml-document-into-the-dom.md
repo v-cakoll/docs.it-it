@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b8844705b492574443ff4f37de33ccaf1f5fedd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bbbd61cbe22eb2c8e54daad863ad35ef076c1bc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lettura di un documento XML nel DOM
 Le informazioni relative a XML vengono lette in memoria da diversi formati. Possono essere lette da una stringa, un flusso, un URL, un lettore di testo o una classe derivata dal tipo <xref:System.Xml.XmlReader>.  
@@ -31,9 +34,9 @@ Le informazioni relative a XML vengono lette in memoria da diversi formati. Poss
   
 |Oggetto|Argomento|  
 |-------------|-----------|  
-|Creazione di nodi con spazi vuoti|L'oggetto usato per caricare il DOM influisce sui nodi con spazi vuoti e spazi vuoti significativi generati nel DOM. Per ulteriori informazioni, vedere [spazi vuoti e significativa la gestione di spazi vuoti durante il caricamento del DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Caricamento di XML da un nodo specifico o caricamento dell'intero documento XML|Utilizzo di <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> dati di metodo possono essere caricati da un nodo specifico nel DOM. Per ulteriori informazioni, vedere [caricare i dati da un lettore](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|Convalida di XML durante il caricamento|È possibile convalidare i dati XML quando vengono caricati nel DOM. Per eseguire l'operazione si usa un tipo <xref:System.Xml.XmlReader> per la convalida. Per ulteriori informazioni sulla convalida di XML durante il caricamento, vedere [convalida di un documento XML nel DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Creazione di nodi con spazi vuoti|L'oggetto usato per caricare il DOM influisce sui nodi con spazi vuoti e spazi vuoti significativi generati nel DOM. Per altre informazioni, vedere [Gestione degli spazi vuoti e degli spazi vuoti significativi durante il caricamento del DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Caricamento di XML da un nodo specifico o caricamento dell'intero documento XML|Tramite il metodo <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> è possibile caricare i dati da un nodo specifico nel DOM. Per altre informazioni, vedere [Caricare i dati da un lettore](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
+|Convalida di XML durante il caricamento|È possibile convalidare i dati XML quando vengono caricati nel DOM. Per eseguire l'operazione si usa un tipo <xref:System.Xml.XmlReader> per la convalida. Per altre informazioni sulla convalida di XML durante il caricamento, vedere [Convalida di un documento XML nel DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
   
  Nell'esempio seguente viene illustrato il caricamento di dati XML con il metodo <xref:System.Xml.XmlDocument.LoadXml%2A> e il successivo salvataggio dei dati in un file di testo denominato `data.xml`.  
   
@@ -78,4 +81,4 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 11c22bf71109137ea328b8e1136180494364ce0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Procedura: eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime
 .NET Framework per le applicazioni Windows Store è un subset della versione completa di .NET Framework. Per motivi di sicurezza e di altri requisiti per le applicazioni Windows Store, non è possibile usare l'Integer set di API di .NET Framework per aprire e leggere i file. Per altre informazioni, vedere [Panoramica di .NET per le applicazioni Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Tuttavia, è possibile usare le API di .NET Framework per altre operazioni di manipolazione di un flusso. Per modificare questi flussi, potrebbe essere necessario effettuare la conversione tra un tipo di flusso di .NET Framework come <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>e un flusso di Windows Runtime come [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)o [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  
@@ -88,5 +91,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida introduttiva: Lettura e scrittura di un file (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
- [Panoramica di App .NET per Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [Panoramica di .NET per le app di Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [.NET per app di Windows Store – API supportate](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)

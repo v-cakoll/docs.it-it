@@ -16,15 +16,18 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Procedura: scrivere un ciclo Parallel.For semplice
 Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Il primo usa l'overload del metodo <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, mentre il secondo usa l'overload <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, ovvero i due overload più semplici del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. È possibile usare questi due overload del metodo <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando non è necessario annullare il ciclo, interrompere le iterazioni del ciclo o mantenere qualsiasi stato locale dei thread.  
@@ -49,7 +52,7 @@ Questo argomento contiene due esempi che mostrano il metodo <xref:System.Threadi
  Quando si parallelizza qualsiasi codice, inclusi i cicli, un obiettivo importante consiste nell'utilizzare i processori quanto più possibile senza eseguire una parallelizzazione eccessiva che faccia sì che l'overhead per l'elaborazione parallela vanifichi qualsiasi vantaggio in termini di prestazioni. In questo esempio specifico viene parallelizzato solo il ciclo esterno, perché nel ciclo interno non vengono eseguite molte attività. La combinazione di una quantità ridotta di attività e di effetti della cache indesiderati può provocare un peggioramento delle prestazioni nei cicli paralleli annidati. Di conseguenza, la parallelizzazione del solo ciclo esterno è il modo migliore per ottimizzare i vantaggi della concorrenza sulla maggior parte dei sistemi.  
   
 ## <a name="the-delegate"></a>Delegato  
- Il terzo parametro di questo overload di <xref:System.Threading.Tasks.Parallel.For%2A> è un delegato di tipo `Action<int>` in C# o `Action(Of Integer)` in Visual Basic. Un delegato `Action`, che abbia nessuno, uno o sedici parametri di tipo, restituisce sempre void. In Visual Basic il comportamento di un delegato `Action` viene definito con un oggetto `Sub`. L'esempio usa un'espressione lambda per creare il delegato, ma è possibile creare il delegato anche in altri modi. Per ulteriori informazioni, vedere [espressioni Lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Il terzo parametro di questo overload di <xref:System.Threading.Tasks.Parallel.For%2A> è un delegato di tipo `Action<int>` in C# o `Action(Of Integer)` in Visual Basic. Un delegato `Action`, che abbia nessuno, uno o sedici parametri di tipo, restituisce sempre void. In Visual Basic il comportamento di un delegato `Action` viene definito con un oggetto `Sub`. L'esempio usa un'espressione lambda per creare il delegato, ma è possibile creare il delegato anche in altri modi. Per altre informazioni, vedere [Espressioni lambda in PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="the-iteration-value"></a>Valore di iterazione  
  Il delegato accetta un singolo parametro di input il cui valore è l'iterazione corrente. Questo valore di iterazione viene fornito dal runtime e il suo valore iniziale è l'indice del primo elemento nel segmento (partizione) dell'origine elaborata nel thread corrente.  

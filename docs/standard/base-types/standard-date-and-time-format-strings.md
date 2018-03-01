@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-date-and-time-format-strings"></a>Stringhe di formato di data e ora standard
 Una stringa di formato data e ora standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore di data e ora. Qualsiasi stringa di formato data e ora contenente più di un carattere, inclusi gli spazi, viene interpretata come una stringa di formato data e ora personalizzata. Per altre informazioni, vedere [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una stringa di formato standard o personalizzata può essere usata in due modi:  
@@ -58,7 +61,7 @@ Una stringa di formato data e ora standard usa un singolo identificatore di form
 |"s"|Schema di data/ora ordinabile.<br /><br /> Altre informazioni: [Identificatore di formato ordinabile ("s")](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Schema di ora breve.<br /><br /> Altre informazioni: [Identificatore di formato di ora breve ("t")](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
 |"T"|Schema di ora estesa.<br /><br /> Altre informazioni: [Identificatore di formato di ora estesa ("T")](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|"u"|Schema di data/ora ordinabile universale.<br /><br /> Altre informazioni: [Identificatore di formato ordinabile universale ("u")](#UniversalSortable).|Con un <xref:System.DateTime> valore: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un <xref:System.DateTimeOffset> valore: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|"u"|Schema di data/ora ordinabile universale.<br /><br /> Altre informazioni: [Identificatore di formato ordinabile universale ("u")](#UniversalSortable).|Con un valore <xref:System.DateTime>: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un valore <xref:System.DateTimeOffset>: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
 |"U"|Schema di data/ora completa universale.<br /><br /> Altre informazioni: [Identificatore di formato completo universale ("U")](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
 |"Y", "y"|Schema di mese e anno.<br /><br /> Altre informazioni: [Identificatore di formato di mese e anno ("Y")](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |Qualsiasi altro carattere singolo|Identificatore sconosciuto.|Genera un evento <xref:System.FormatException> in fase di esecuzione.|  
@@ -90,7 +93,7 @@ Una stringa di formato data e ora standard usa un singolo identificatore di form
   
 |Stringa di formato standard|Definita dalla proprietà DateTimeFormatInfo.InvariantInfo|Stringa di formato personalizzata|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
-|"O" o "o"|Nessuno|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
+|"O" o "o"|nessuno|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
 |"R" o "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|  
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  
@@ -252,7 +255,7 @@ Una stringa di formato data e ora standard usa un singolo identificatore di form
   
  L'identificatore di formato standard "O" o "o" corrisponde alla stringa di formato personalizzata "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" per valori <xref:System.DateTime> e alla stringa di formato personalizzata "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz" per valori <xref:System.DateTimeOffset>. In questa stringa le coppie di virgolette singole che delimitano singoli caratteri, ad esempio trattini, due punti e la lettera "T", indicano che il singolo carattere è un valore letterale che non può essere modificato. Gli apostrofi non vengono visualizzati nella stringa di output.  
   
- L'identificatore di formato standard "O" o "o" (e "yyyy '-' MM'-'dd ' T'HH': 'mm':'ss '.' stringa di formato personalizzata fffffffK") sfrutta i tre modi in cui ISO 8601 rappresenta informazioni sul fuso orario per preservare la <xref:System.DateTime.Kind%2A> proprietà di <xref:System.DateTime> valori:  
+ L'identificatore di formato standard "O" o "o" (e la stringa di formato personalizzata "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") sfrutta i tre modi in cui lo standard ISO 8601 rappresenta le informazioni sul fuso orario per preservare la proprietà <xref:System.DateTime.Kind%2A> dei valori <xref:System.DateTime>:  
   
 -   Il componente relativo al fuso orario dei valori di data e ora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> è un offset rispetto all'ora UTC (ad esempio +01:00, -07:00). Anche tutti i valori <xref:System.DateTimeOffset> sono rappresentati in questo formato.  
   
@@ -413,7 +416,7 @@ Una stringa di formato data e ora standard usa un singolo identificatore di form
 ### <a name="control-panel-settings"></a>Impostazioni del Pannello di controllo  
  Le impostazioni di **Opzioni internazionali e della lingua** nel Pannello di controllo influiscono sulla stringa risultato prodotta da un'operazione di formattazione. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.  
   
- Inoltre, se si utilizza il <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> costruttore per creare un'istanza di un nuovo <xref:System.Globalization.CultureInfo> oggetto che rappresenta le stesse impostazioni cultura come le impostazioni cultura correnti di sistema, eventuali personalizzazioni definite tramite la **internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo <xref:System.Globalization.CultureInfo> oggetto. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
+ Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
   
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo  
  La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread correnti o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Per il parametro <xref:System.IFormatProvider> l'applicazione deve specificare un oggetto <xref:System.Globalization.CultureInfo> che rappresenta un tipo di impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le convenzioni di formattazione di data e ora di impostazioni cultura particolari. Molti degli identificatori di formato di data e ora standard sono alias di schemi di formattazione definiti dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente. Nell'applicazione può quindi essere modificato il risultato prodotto da alcuni identificatori di formato di data e ora personalizzati standard modificando gli schemi di formato di data e ora corrispondenti della proprietà <xref:System.Globalization.DateTimeFormatInfo> corrispondente.  

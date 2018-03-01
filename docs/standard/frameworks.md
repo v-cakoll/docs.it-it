@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>Framework di destinazione
 
@@ -30,7 +33,7 @@ Per i framework di destinazione basati su pacchetti, ad esempio .NET Standard e 
 
 La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](~/docs/standard/net-standard.md) implementate da tali pacchetti. Queste versioni di framework di destinazione sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive. Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET. 
 
-| Framework di destinazione      | Ultima versione | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementata <br/> Versione standard di .NET |
+| Framework di destinazione      | Ultima versione | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Implementato <br/> Versione standard di .NET |
 | :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0            | netstandard2.0                 | N/D                                     |
 | Applicazione .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |

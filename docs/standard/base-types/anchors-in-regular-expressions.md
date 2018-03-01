@@ -21,15 +21,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Inizio di stringa o riga: ^  
- L'ancoraggio `^` specifica che il criterio seguente deve iniziare in corrispondenza della posizione del primo carattere della stringa. Se si utilizza `^` con il <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> opzione (vedere [opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)), la corrispondenza deve verificarsi all'inizio di ogni riga.  
+ L'ancoraggio `^` specifica che il criterio seguente deve iniziare in corrispondenza della posizione del primo carattere della stringa. Se si usa `^` con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vedere [Opzioni di espressioni regolari](../../../docs/standard/base-types/regular-expression-options.md)), la corrispondenza deve verificarsi all'inizio di ogni riga.  
   
  L'esempio seguente usa l'ancoraggio `^` in un'espressione regolare che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. L'esempio chiama due overload del metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|La corrispondenza deve iniziare all'inizio della stringa di input (o all'inizio della riga se il metodo viene chiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
 |`((\w+(\s?)){2,}`|Trova uno o più caratteri alfanumerici seguiti da nessuno o uno spazio esattamente due volte. Equivale al primo gruppo di acquisizione. Questa espressione definisce anche un secondo e un terzo gruppo di acquisizione: il secondo è costituito dalla parola acquisita, il terzo dagli spazi acquisiti.|  
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Solo fine di stringa: \z  
- L'ancoraggio `\z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input. Come per l'elemento del linguaggio `$`, `\z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Diversamente dall'elemento del linguaggio `\Z` , `\z` non trova un carattere `\n` alla fine di una stringa. Di conseguenza, può trovare solo l'ultima riga della stringa di input.  
+ L'ancoraggio `\z` specifica che la corrispondenza deve verificarsi alla fine della stringa di input. Come per l'elemento del linguaggio `$`, `\z` ignora l'opzione <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Diversamente dall'elemento del linguaggio `\Z`, `\z` non trova un carattere `\n` alla fine di una stringa. Di conseguenza, può trovare solo l'ultima riga della stringa di input.  
   
  L'esempio seguente usa l'ancoraggio `\z` in un'espressione regolare che è altrimenti identica all'esempio della sezione precedente, che estrae informazioni sugli anni durante i quali sono esistite alcune squadre di baseball professionale. L'esempio prova a trovare ognuno dei cinque elementi in una matrice di stringhe con il criterio di espressione regolare `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Due delle stringhe terminano con caratteri di ritorno a capo e di avanzamento riga, mentre le altre due no. Come mostrato dall'output, solo le stringhe senza carattere di ritorno a capo o avanzamento riga corrispondono al criterio.  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/21/2017
   
  L'espressione regolare `\G(\w+\s?\w*),?` viene interpretata come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\G`|La corrispondenza deve iniziare nel punto in cui termina l'ultima corrispondenza.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -146,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>Confine di parola: \b  
- L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. (Per ulteriori informazioni, vedere [le classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) La corrispondenza può verificarsi anche in un confine di parola all'inizio o alla fine della stringa.  
+ L'ancoraggio `\b` specifica che la corrispondenza deve verificarsi in un confine tra un carattere alfanumerico (elemento del linguaggio `\w` ) e uno non alfanumerico (elemento del linguaggio `\W` ). I caratteri alfanumerici sono costituiti da lettere, cifre e caratteri di sottolineatura. Un carattere non alfanumerico è qualsiasi carattere diverso da lettere, cifre e carattere di sottolineatura. Per altre informazioni, vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). La corrispondenza può verificarsi anche in un confine di parola all'inizio o alla fine della stringa.  
   
  L'ancoraggio `\b` viene usato di frequente per garantire che una sottoespressione corrisponda a un'intera parola anziché solo all'inizio o alla fine di una parola. L'espressione regolare `\bare\w*\b` nell'esempio seguente mostra questo utilizzo. L'espressione trova qualsiasi parola che inizia con la sottostringa "are". L'output dell'esempio mostra anche che `\b` trova sia l'inizio sia la fine della stringa di input.  
   
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`are`|Trova la sottostringa "are".|  
@@ -175,7 +178,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari viene interpretato come illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\B`|La corrispondenza non deve iniziare nel confine di parola.|  
 |`qu`|Trova la sottostringa "qu".|  

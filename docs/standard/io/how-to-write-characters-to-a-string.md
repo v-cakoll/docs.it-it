@@ -17,27 +17,30 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 336a7fec5e64cc0c45566631c73928e0c1d40a5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d409b9f9cada319c64c4b5a1315b8a5abbd731e9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Procedura: Scrivere caratteri in una stringa
-Gli esempi di codice seguente scrivere caratteri in modo sincrono e asincrono da una matrice di caratteri in una stringa.  
+Gli esempi di codice seguenti illustrano come scrivere i caratteri in modo sincrono e asincrono da una matrice di caratteri a una stringa.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente scrive 5 caratteri da una matrice a una stringa in modo sincrono.  
+ L'esempio seguente scrive 5 caratteri in modo sincrono da una matrice a una stringa.  
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio successivo legge tutti i caratteri in modo asincrono da un <xref:System.Windows.Controls.TextBox> controllare e li archivia in una matrice. Quindi scrive in modo asincrono ogni carattere lettera o uno spazio vuoto su una riga separata, seguita da un'interruzione di riga una <xref:System.Windows.Controls.TextBlock> controllo.  
+ L'esempio seguente legge tutti i caratteri in modo asincrono da un controllo <xref:System.Windows.Controls.TextBox> e li archivia in una matrice. Scrive quindi in modo asincrono ogni lettera o spazio su una riga separata seguita da un'interruzione di riga in un controllo <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
 L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Object Model) consente di accedere a elementi, attributi e tipi archiviati nel modello SOM. Tale attraversamento rappresenta inoltre il primo passaggio per la modifica di uno schema XML tramite l'API del modello SOM.  
@@ -46,7 +49,7 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
 >   
 >  La proprietà <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> fornisce l'accesso agli attributi che non appartengono allo spazio dei nomi dello schema. Tali attributi non vengono elaborati dal processore dello schema.  
   
- L'esempio di codice che segue viene illustrato come attraversare lo schema del cliente creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento. Nell'esempio di codice viene eseguito l'attraversamento dello schema usando le raccolte descritte in precedenza e tutti gli elementi e attributi dello schema vengono scritti nella console.  
+ Nel seguente esempio di codice viene illustrato l'attraversamento dello schema del cliente creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md). Nell'esempio di codice viene eseguito l'attraversamento dello schema usando le raccolte descritte in precedenza e tutti gli elementi e attributi dello schema vengono scritti nella console.  
   
  L'esempio consente di attraversare lo schema del cliente eseguendo i passaggi seguenti.  
   
@@ -72,13 +75,13 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
   
  Se è un tipo semplice o un tipo complesso definito dall'utente, il tipo della proprietà <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> può essere <xref:System.Xml.Schema.XmlSchemaSimpleType> o <xref:System.Xml.Schema.XmlSchemaComplexType>. Se è uno dei tipi di dati incorporati definiti nella raccomandazione W3C relativa agli schemi XML, il tipo della proprietà può essere anche <xref:System.Xml.Schema.XmlSchemaDatatype>. Nello schema del cliente, il tipo della proprietà <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> dell'elemento `Customer` è <xref:System.Xml.Schema.XmlSchemaComplexType> e il tipo degli elementi `FirstName` e `LastName` è <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
   
- Nell'esempio di codice il [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento utilizzato il <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> raccolta a cui aggiungere l'attributo `CustomerId` per il `Customer` elemento. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.  
+ Nell'esempio di codice dell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md) è stata usata la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> per aggiungere l'attributo `CustomerId` all'elemento `Customer`. Questa è una proprietà precedente alla compilazione dello schema. La proprietà PSCI corrispondente è la raccolta <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, che contiene tutti gli attributi del tipo complesso, inclusi quelli ereditati tramite una derivazione del tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello a oggetti dello Schema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione dello Schema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

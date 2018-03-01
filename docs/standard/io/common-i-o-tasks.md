@@ -1,5 +1,5 @@
 ---
-title: I-O comuni
+title: "Attività di I/O comuni"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,20 +8,24 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: I/O, common tasks
+helpviewer_keywords:
+- I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51238020f4d93ad32dac85a95d7b1cab26f2dd64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-io-tasks"></a>Attività di I/O comuni
-Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseguire diverse operazioni, ad esempio la lettura e la scrittura, su file, directory e flussi. Per ulteriori informazioni, vedere [File e flussi I-O](../../../docs/standard/io/index.md).  
+Lo spazio dei nomi <xref:System.IO> fornisce molte classi che consentono di eseguire diverse operazioni, ad esempio la lettura e la scrittura, su file, directory e flussi. Per altre informazioni, vedere [I/O di file e di flussi](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Attività comuni sui file  
   

@@ -15,47 +15,50 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d8031758462df45c030b8b75a3507f1bfb44bfd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ed3d38cdfd70e7588ba0c4d94816c7105c7cf3e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procedura: annullare una query PLINQ
-Gli esempi seguenti mostrano due modi per annullare una query PLINQ. Nel primo esempio viene illustrato come annullare una query che è costituito principalmente da attraversamento di dati. Nel secondo esempio viene illustrato come annullare una query che contiene una funzione utente che è dispendiosa.  
+Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo esempio descrive come annullare una query costituita principalmente da attraversamento di dati. Il secondo esempio descrive come annullare una query che contiene una funzione utente onerosa dal punto di vista delle risorse di calcolo.  
   
 > [!NOTE]
->  Quando "Just My Code" è abilitato, Visual interruzione sulla riga che genera l'eccezione e verrà visualizzato un messaggio di errore simile a "eccezione non gestita dal codice utente". Questo errore non è grave. È possibile premere F5 per continuare e osservare il comportamento di gestione delle eccezioni illustrato negli esempi seguenti. Per impedire l'interruzione per il primo errore di Visual Studio, deselezionare semplicemente la casella di controllo "Just My Code" **strumenti, opzioni, debug, generale**.  
+>  Quando è abilitato "Just My Code", Visual Studio si interrompe in corrispondenza della riga che genera l'eccezione e visualizza un messaggio di errore che indica che l'eccezione non è stata gestita dal codice utente. Questo errore non è grave. È possibile premere F5 per continuare e osservare il comportamento di gestione delle eccezioni illustrato negli esempi seguenti. Per impedire l'interruzione di Visual Studio al primo errore, deselezionare semplicemente la casella di controllo "Just My Code" in **Strumenti, Opzioni, Debug, Generale**.  
 >   
->  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per ulteriori informazioni sull'aumento di velocità, vedere [comprensione aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
  [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]  
   
- Il framework PLINQ non esegue il rollback di una singola <xref:System.OperationCanceledException> in un <xref:System.AggregateException?displayProperty=nameWithType>; <xref:System.OperationCanceledException> devono essere gestiti in un blocco catch separato. Se uno o più utente genera un oggetto OperationCanceledException (utilizzando un riferimento esterno <xref:System.Threading.CancellationToken?displayProperty=nameWithType>) ma non altre eccezioni e la query è stata definita come `AsParallel().WithCancellation(externalCT)`, PLINQ genererà un singolo <xref:System.OperationCanceledException> (externalCT) anziché un oggetto <xref:System.AggregateException?displayProperty=nameWithType>. Tuttavia, se un utente delegato genera un <xref:System.OperationCanceledException>e un altro delegato genera un altro tipo di eccezione, quindi entrambe le eccezioni verranno incluse in un <xref:System.AggregateException>.  
+ Il framework PLINQ non gestisce un singolo oggetto <xref:System.OperationCanceledException> in un oggetto <xref:System.AggregateException?displayProperty=nameWithType>. L'oggetto <xref:System.OperationCanceledException> deve essere gestito in un blocco catch separato. Se uno o più delegati dell'utente generano un oggetto OperationCanceledException (externalCT), usando un oggetto <xref:System.Threading.CancellationToken?displayProperty=nameWithType> esterno, ma senza altre eccezioni e se la query è stata definita come `AsParallel().WithCancellation(externalCT)`, PLINQ genererà un singolo oggetto <xref:System.OperationCanceledException>(externalCT) anziché un oggetto <xref:System.AggregateException?displayProperty=nameWithType>. Tuttavia, se un delegato dell'utente genera un oggetto <xref:System.OperationCanceledException> e un altro delegato genera un altro tipo di eccezione, entrambe le eccezioni vengono gestite in un oggetto <xref:System.AggregateException>.  
   
- Le indicazioni generali al momento dell'annullamento sono come segue:  
+ Le indicazioni generali sull'annullamento sono le seguenti:  
   
-1.  Se si esegue l'annullamento di delegato dell'utente è necessario informare PLINQ esterno <xref:System.Threading.CancellationToken> e generare un <xref:System.OperationCanceledException>(externalCT).  
+1.  Se si esegue l'annullamento dei delegati dell'utente, è necessario indicare a PLINQ l'oggetto <xref:System.Threading.CancellationToken> esterno e generare un oggetto <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Se si verifica l'annullamento e non altri vengono generate eccezioni, è necessario gestire un <xref:System.OperationCanceledException> anziché un oggetto <xref:System.AggregateException>.  
+2.  Se si verifica l'annullamento e non vengono generate altre eccezioni, è necessario gestire un oggetto <xref:System.OperationCanceledException> invece di un oggetto <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come gestire l'annullamento quando si dispone di una funzione dispendiosa a livello di codice utente.  
+ L'esempio seguente mostra come gestire l'annullamento in presenza di una funzione onerosa dal punto di vista delle risorse di calcolo nel codice utente.  
   
  [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
  [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]  
   
- Quando si gestisce l'annullamento nel codice utente, non è necessario utilizzare <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nella definizione della query. Tuttavia, è consigliabile farlo perché <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> non ha alcun effetto sulle prestazioni delle query e consente l'annullamento deve essere gestito da operatori di query e il codice utente.  
+ Quando si gestisce l'annullamento nel codice utente, non è necessario usare <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> nella definizione di query. Tuttavia, è consigliabile farlo perché <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> non ha alcun effetto sulle prestazioni delle query e consente la gestione dell'annullamento da parte di operatori di query e del codice utente.  
   
- Per garantire velocità di risposta del sistema, si consiglia di verificare la disponibilità di annullamento circa una volta al millisecondo. Tuttavia, qualsiasi periodo fino a 10 millisecondi viene considerata accettabile. Questa frequenza senza un impatto negativo sulle prestazioni del codice.  
+ Per garantire velocità di risposta del sistema, è consigliabile verificare l'annullamento circa una volta al millisecondo, ma è considerato accettabile qualsiasi periodo fino a 10 millisecondi. Questa frequenza non dovrebbe avere impatto negativo sulle prestazioni del codice.  
   
- Quando viene eliminato un enumeratore, ad esempio quando il codice esce da un ciclo foreach (For Each in Visual Basic) che esegue l'iterazione sui risultati di query, quindi la query è stata annullata, ma viene generata alcuna eccezione.  
+ Quando viene eliminato un enumeratore, ad esempio quando il codice esce da un ciclo foreach (For Each in Visual Basic) che esegue l'iterazione sui risultati della query, la query viene annullata, ma senza generare eccezioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq.ParallelEnumerable>  

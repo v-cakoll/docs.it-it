@@ -13,22 +13,25 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modifica dei dati XML con XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati per modificare nodi e valori in un documento XML. Per usare questi metodi, è necessario che l'oggetto <xref:System.Xml.XPath.XPathNavigator> sia modificabile, ovvero, la relativa proprietà <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve essere `true`.  
   
  Gli oggetti <xref:System.Xml.XPath.XPathNavigator> che possono modificare un documento XML vengono creati dal metodo <xref:System.Xml.XmlDocument.CreateNavigator%2A> della classe <xref:System.Xml.XmlDocument>. Gli oggetti <xref:System.Xml.XPath.XPathNavigator> creati dalla classe <xref:System.Xml.XPath.XPathDocument> sono di sola lettura e qualsiasi tentativo di usare i metodi di modifica di un oggetto <xref:System.Xml.XPath.XPathNavigator> creato da un oggetto <xref:System.Xml.XPath.XPathDocument> genererà un oggetto <xref:System.NotSupportedException>.  
   
- Per ulteriori informazioni sulla creazione modificabile <xref:System.Xml.XPath.XPathNavigator> degli oggetti, vedere [lettura di dati XML con XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
+ Per altre informazioni sulla creazioni di oggetti <xref:System.Xml.XPath.XPathNavigator> modificabili, vedere [Lettura di dati XML con XPathDocument e XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md).  
   
 ## <a name="modifying-nodes"></a>Modifica dei nodi  
  Una tecnica semplice per modificare il valore di un nodo è quella di usare i metodi <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> della classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -48,7 +51,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce un set di metodi usati
 > [!NOTE]
 >  La modifica dei nodi <xref:System.Xml.XPath.XPathNodeType.Namespace> o del nodo <xref:System.Xml.XPath.XPathNodeType.Root> non è supportata.  
   
- La classe <xref:System.Xml.XPath.XPathNavigator> fornisce inoltre un set di metodi usati per inserire e rimuovere nodi. Per ulteriori informazioni sull'inserimento e rimozione di nodi da un documento XML, vedere il [inserire dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) e [rimozione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) argomenti.  
+ La classe <xref:System.Xml.XPath.XPathNavigator> fornisce inoltre un set di metodi usati per inserire e rimuovere nodi. Per altre informazioni sull'inserimento e la rimozione di nodi da un documento XML, vedere gli argomenti [Inserire dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) e [Rimuovere dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
 ### <a name="modifying-untyped-values"></a>Modifica dei valori non tipizzati  
  Il metodo <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> consente semplicemente di inserire il valore non tipizzato `string`, passato come parametro, come valore del nodo su cui è attualmente posizionato l'oggetto <xref:System.Xml.XPath.XPathNavigator>. Il valore viene inserito senza alcun tipo o senza verificare la validità del nuovo valore in base al tipo del nodo se sono disponibili le informazioni sullo schema.  
@@ -122,7 +125,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  Dato che la validità di un elemento dipende dalla validità degli elementi e attributi figlio, le modifiche apportate a entrambi determinano una modifica della validità dell'elemento in precedenza valido. In particolare, se gli elementi o attributi figlio di un elemento vengono inseriti, aggiornati o eliminati, la validità dell'elemento risulterà sconosciuta. Ciò risulterà dalla proprietà <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> della proprietà <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> dell'elemento impostata su <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>. Inoltre, questo effetto si estende in modo ricorsivo verso l'alto nel documento XML, poiché anche la validità dell'elemento padre dell'elemento (e del suo elemento padre e così via) risulterà sconosciuta.  
   
- Per ulteriori informazioni sulla convalida dello schema e <xref:System.Xml.XPath.XPathNavigator> classe, vedere [convalida dello Schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
+ Per altre informazioni sulla convalida degli schemi e sulla classe <xref:System.Xml.XPath.XPathNavigator>, vedere [Convalida dello schema con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md).  
   
 ### <a name="modifying-attributes"></a>Modifica degli attributi  
  I metodi <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> e <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> possono essere usati per modificare i nodi Attribute tipizzati e non tipizzati, nonché gli altri tipi di nodo elencati nella sezione "Modifica dei nodi".  
@@ -253,12 +256,12 @@ Console.WriteLine(navigator.OuterXml);
 >  Se il contenuto di un elemento con un attributo `xsi:nil` impostato su `false` viene eliminato, il valore dell'attributo non verrà modificato in `true`.  
   
 ## <a name="saving-an-xml-document"></a>Salvataggio di un documento XML  
- Il salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument> come risultato dei metodi di modifica descritti in questo argomento viene eseguito usando i metodi della classe <xref:System.Xml.XmlDocument>. Per ulteriori informazioni sul salvataggio le modifiche apportate a un <xref:System.Xml.XmlDocument> , vedere [salvataggio e la scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
+ Il salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument> come risultato dei metodi di modifica descritti in questo argomento viene eseguito usando i metodi della classe <xref:System.Xml.XmlDocument>. Per altre informazioni sul salvataggio delle modifiche apportate a un oggetto <xref:System.Xml.XmlDocument>, vedere [Salvataggio e scrittura di un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Inserire i dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [Rimozione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [Inserire dati XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+ [Rimuovere dati XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

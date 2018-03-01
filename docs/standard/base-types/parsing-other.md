@@ -19,18 +19,21 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd48993f50ec8b91ba7941a682d7de9f22aa12e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 714c361507a95fc5f45efbca79191b17e7917fba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisi di altre stringhe in .NET
-Oltre a numerico e <xref:System.DateTime> stringhe, è possibile analizzare le stringhe che rappresentano i tipi di <xref:System.Char>, <xref:System.Boolean>, e <xref:System.Enum> in tipi di dati.  
+Oltre alle stringhe numeriche e<xref:System.DateTime> è possibile analizzare le stringhe che rappresentano i tipi <xref:System.Char>, <xref:System.Boolean> ed <xref:System.Enum> in tipi di dati.  
   
 ## <a name="char"></a>Char  
  Il metodo di analisi statico associato al tipo di dati **Char** è utile per la conversione di una stringa contenente un solo carattere nel valore Unicode corrispondente. Nell'esempio seguente viene analizzata una stringa in un carattere Unicode.  
@@ -40,24 +43,24 @@ Oltre a numerico e <xref:System.DateTime> stringhe, è possibile analizzare le s
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Booleano  
- Il **booleano** tipo di dati contiene un **analizzare** metodo che è possibile utilizzare per convertire una stringa che rappresenta un valore booleano in una vera e propria **booleano** tipo. Questo metodo non fa distinzione tra maiuscole e minuscole e consente di analizzare correttamente una stringa contenente "True" o "False". Il **analizzare** metodo associato il **booleano** tipo consente inoltre di analizzare le stringhe sono racchiusi tra spazi vuoti. Se viene passata qualsiasi altra stringa, un <xref:System.FormatException> viene generata un'eccezione.  
+ Il tipo di dati **Boolean** contiene un metodo **Parse** che può essere usato per convertire una stringa che rappresenta un valore booleano in un vero e proprio tipo **Boolean**. Questo metodo non fa distinzione tra maiuscole e minuscole e consente di analizzare correttamente una stringa contenente "True" o "False". Il metodo **Parse** associato al tipo **Boolean** consente anche di analizzare stringhe precedute e seguite da spazi vuoti. Se viene passata qualsiasi altra stringa, viene generata un'eccezione <xref:System.FormatException>.  
   
- Nell'esempio di codice viene illustrato come utilizzare il **analizzare** metodo per convertire una stringa in un valore booleano.  
+ Nell'esempio di codice seguente viene usato il metodo **Parse** per convertire una stringa in un valore di tipo Boolean.  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
 ## <a name="enumeration"></a>Enumerazione  
- È possibile usare il metodo statico **Parse** per inizializzare un tipo di enumerazione per il valore di una stringa. Questo metodo accetta il tipo di enumerazione che si sta analizzando la stringa da analizzare e un flag booleano facoltativo che indica se è o meno l'analisi tra maiuscole e minuscole. La stringa da analizzare può contenere diversi valori separati da virgole, che possono essere preceduti o seguiti da uno o più spazi vuoti. Quando la stringa contiene più valori, il valore dell'oggetto restituito è il valore di tutti i valori specificati combinati con un'operazione OR bit per bit.  
+ È possibile usare il metodo statico **Parse** per inizializzare un tipo di enumerazione per il valore di una stringa. Questo metodo accetta il tipo di enumerazione che si sta analizzando, la stringa da analizzare e un flag Boolean facoltativo che indica se l'analisi fa distinzione tra maiuscole e minuscole. La stringa da analizzare può contenere diversi valori separati da virgole, che possono essere preceduti o seguiti da uno o più spazi vuoti. Quando la stringa contiene più valori, il valore dell'oggetto restituito è il valore di tutti i valori specificati combinati con un'operazione OR bit per bit.  
   
- L'esempio seguente usa il **analizzare** metodo per convertire una rappresentazione di stringa in un valore di enumerazione. Il <xref:System.DayOfWeek> enumerazione viene inizializzata su **giovedì** da una stringa.  
+ Nell'esempio seguente viene usato il metodo **Parse** per convertire una rappresentazione di stringa in un valore di enumerazione. L'enumerazione <xref:System.DayOfWeek> viene inizializzata su **Thursday** da una stringa.  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)

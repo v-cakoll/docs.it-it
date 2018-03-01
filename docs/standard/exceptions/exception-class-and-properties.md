@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Classe e proprietà dell'eccezione
 
@@ -46,7 +49,7 @@ La classe <xref:System.Exception> include le proprietà seguenti che facilitano 
 
 La maggior parte delle classi che ereditano da <xref:System.Exception> non implementano membri aggiuntivi né offrono funzionalità supplementari, ma si limitano a ereditare da <xref:System.Exception>. Per questa ragione, le informazioni più importanti per un'eccezione si trovano nella gerarchia delle classi delle eccezioni, nel nome dell'eccezione e nelle informazioni contenute nell'eccezione.
 
-Si consiglia di generare e intercettare solo oggetti che derivano da <xref:System.Exception>, ma è possibile generare qualsiasi oggetto che deriva dalla <xref:System.Object> classe come un'eccezione. Si noti che non tutti i linguaggi supportano la generazione e il rilevamento degli oggetti che non derivano da <xref:System.Exception>.
+Si consiglia di generare e rilevare solo oggetti che derivano da <xref:System.Exception>, ma è possibile generare qualsiasi oggetto che deriva dalla classe <xref:System.Object> come eccezione. Si noti che non tutti i linguaggi supportano la generazione e il rilevamento degli oggetti che non derivano da <xref:System.Exception>.
   
 ## <a name="see-also"></a>Vedere anche  
 [Eccezioni](index.md)

@@ -24,25 +24,28 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Procedura: implementare un client del modello asincrono basato su eventi
-Esempio di codice seguente viene illustrato come utilizzare un componente che rispetti il [Panoramica del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Il form per questo esempio Usa il `PrimeNumberCalculator` componente descritto in [procedura: implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+L'esempio di codice seguente mostra come usare un componente che aderisce a quanto indicato in [Panoramica del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Il form per questo esempio usa il componente `PrimeNumberCalculator` descritto in [Procedura: Implementare un componente che supporta il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
- Quando si esegue un progetto che utilizza questo esempio, si verrà visualizzato un form "Calcolatrice di numeri primi" con una griglia e due pulsanti: **Avvia nuova attività** e **Annulla**. È possibile scegliere di **Avvia nuova attività** più volte in successione e per ogni clic, un'operazione asincrona inizierà a un calcolo per determinare se un numero di test in modo casuale generato è primo. Il modulo verrà visualizzato periodicamente lo stato di avanzamento e risultati incrementali. Ogni operazione viene assegnato un ID attività univoco. Il risultato del calcolo viene visualizzato nel **risultato** colonna; se il numero di test non è primo, contrassegnato come **composito,** e viene visualizzato il relativo primo divisore.  
+ Quando si esegue un progetto che usa questo esempio, viene visualizzato un form "Calcolatrice di numeri primi" con una griglia e due pulsanti: **Avvia nuova attività** e **Annulla**. È possibile fare clic sul pulsante **Avvia nuova attività** più volte in successione. Per ogni clic, un'operazione asincrona avvierà un calcolo per determinare se un numero di test generato in modo casuale è un numero primo. Il form visualizzerà periodicamente l'avanzamento e i risultati incrementali. A ogni operazione viene assegnato un ID attività univoco. Il risultato del calcolo viene visualizzato nella colonna **Risultato**. Se il numero di test non è un numero primo, viene contrassegnato come **Composito** e ne viene visualizzato il primo divisore.  
   
- Qualsiasi operazione in sospeso possono essere annullato con la **Annulla** pulsante. Può essere più selezioni.  
+ Qualsiasi operazione in sospeso può essere annullata con il pulsante **Annulla**. È possibile eseguire più selezioni.  
   
 > [!NOTE]
->  Non è la maggior parte dei numeri primi. Se non è stato possibile trovare un numero primo dopo diverse operazioni completate, avviare semplicemente più attività e alla fine si troveranno alcuni numeri primi.  
+>  La maggior parte dei numeri non sarà un numero primo. Se non è stato trovato alcun numero primo dopo il completamento di diverse operazioni, avviare semplicemente altre attività e si finirà certamente per trovare alcuni numeri primi.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  
@@ -29,7 +32,7 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
  Il primo passaggio della modifica di uno schema caricato nel modello SOM consiste nell'attraversare lo schema. Prima di tentare di modificare uno schema, è necessario essere in grado di attraversare uno schema usando un'API del SOM. È necessario inoltre conoscere le proprietà del set PSCI (Post-Schema-Compilation-Infoset) precedenti e successive alla compilazione dello schema.  
   
 ## <a name="editing-an-xml-schema"></a>Modifica di uno schema XML  
- In questa sezione vengono forniti due esempi di codice, che modifica lo schema del cliente creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento. Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer`, mentre il secondo aggiunge un nuovo attributo `Title` all'elemento `FirstName`. Nel primo esempio, inoltre, per attraversare lo schema del cliente, viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema, mentre nel secondo esempio di codice viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
+ In questa sezione vengono forniti due esempi di codice che consentono di modificare lo schema del cliente creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md). Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer`, mentre il secondo aggiunge un nuovo attributo `Title` all'elemento `FirstName`. Nel primo esempio, inoltre, per attraversare lo schema del cliente, viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema, mentre nel secondo esempio di codice viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
   
 ### <a name="phonenumber-element-example"></a>Esempio dell'elemento PhoneNumber  
  Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer` dello schema del cliente. L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.  
@@ -54,7 +57,7 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- Di seguito è riportato lo schema del cliente modificati creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento.  
+ Di seguito è riportato lo schema modificato del cliente e creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- Di seguito è riportato lo schema del cliente modificati creato nel [compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md) argomento.  
+ Di seguito è riportato lo schema modificato del cliente e creato nell'argomento [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -143,10 +146,10 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica del modello a oggetti dello Schema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet per la compilazione dello Schema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Post-Schema Compilation Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

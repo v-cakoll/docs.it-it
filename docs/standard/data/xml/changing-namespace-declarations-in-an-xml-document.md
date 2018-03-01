@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 627882efcbc41310ee177cba984e4add5b07bd15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6db78e689b8529ef62a3b42c2cefb6a5b3d3f02f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Modifica delle dichiarazioni dello spazio dei nomi in un documento XML
-Il **XmlDocument** espone le dichiarazioni dello spazio dei nomi e **xmlns** attributi come parte del modello a oggetti documento. Questi elementi sono archiviati nel **XmlDocument**, pertanto quando si salva il documento, è possibile mantenere il percorso di questi attributi. La modifica di questi attributi non ha effetto sul **nome**, **NamespaceURI**, e **prefisso** proprietà degli altri nodi già presenti nell'albero. Se si carica il documento seguente, ad esempio il `test` elemento ha **NamespaceURI**`123.`  
+Le dichiarazioni dello spazio dei nomi e gli attributi **xmlns** vengono esposti da **XmlDocument** come parte del modello a oggetti del documento e archiviati in **XmlDocument**, perché il documento mantenga la posizione degli attributi quando viene salvato. La modifica di questi attributi non ha effetto sulle proprietà **Name**, **NamespaceURI** e **Prefix** degli altri nodi già presenti nell'albero. Se ad esempio si carica il documento seguente, l'elemento `test` ha **NamespaceURI** `123.`  
   
 ```xml  
 <test xmlns="123"/>  
 ```  
   
- Se si rimuove il `xmlns` attributo come indicato di seguito, quindi il `test` elemento ha ancora il **NamespaceURI** di `123`.  
+ Se si rimuove l'attributo `xmlns` nel modo seguente, l'elemento `test` ha ancora il **NamespaceURI** `123`.  
   
 ```vb  
 doc.documentElement.RemoveAttribute("xmlns")  
@@ -39,7 +42,7 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- Analogamente, se si aggiunge un altro `xmlns` attributo il `doc` elemento come indicato di seguito, quindi il `test` elemento ha ancora **NamespaceURI** `123`.  
+ Analogamente, se si aggiunge un attributo `xmlns` diverso all'elemento `doc` nel seguente modo, l'elemento `test` ha ancora il **NamespaceURI** `123`.  
   
 ```vb  
 doc.documentElement.SetAttribute("xmlns","456");  
@@ -49,7 +52,7 @@ doc.documentElement.SetAttribute("xmlns","456");
 doc.documentElement.SetAttribute("xmlns","456");  
 ```  
   
- Pertanto, la modifica `xmlns` attributi non avranno effetto fino a quando non verrà salvato e ricaricato il **XmlDocument** oggetto.  
+ La modifica degli attributi `xmlns` non avrà quindi alcun effetto fino a quando l'oggetto **XmlDocument** non verrà salvato e ricaricato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

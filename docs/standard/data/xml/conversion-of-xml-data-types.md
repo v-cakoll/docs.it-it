@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d18b69c2d5baeac77cbdf45bebd6f0c9d5c94d9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conversion-of-xml-data-types"></a>Conversione dei tipi di dati XML
-La maggior parte dei metodi trovato un **XmlConvert** utilizzata per convertire i dati tra le stringhe e i formati fortemente tipizzata. I metodi sono indipendenti dalle impostazioni locali, il che significa che le impostazioni locali non vengono prese in considerazione al momento della conversione.  
+La maggior parte dei metodi presenti in una classe **XmlConvert** viene usata per convertire i dati tra le stringhe e i formati fortemente tipizzati. I metodi sono indipendenti dalle impostazioni locali, il che significa che le impostazioni locali non vengono prese in considerazione al momento della conversione.  
   
 ## <a name="reading-string-as-types"></a>Lettura delle stringhe come tipi  
- L'esempio seguente legge una stringa e la converte in un **DateTime** tipo.  
+ Nell'esempio seguente viene illustrato come una stringa viene letta e convertita in un tipo **DateTime**.  
   
  Dato l'input XML seguente:  
   
@@ -36,7 +39,7 @@ La maggior parte dei metodi trovato un **XmlConvert** utilizzata per convertire 
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Questo codice la stringa viene convertita la **DateTime** formato:  
+ la stringa viene convertita dal codice nel formato **DateTime**:  
   
 ```vb  
 reader.ReadStartElement()  
@@ -51,7 +54,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>Scrittura delle stringhe come tipi  
- Nell'esempio seguente legge un **Int32** e lo converte in una stringa.  
+ Nell'esempio seguente viene illustrato come un **Int32** viene letto e convertito in una stringa.  
   
  Dato l'input XML seguente:  
   
@@ -61,7 +64,7 @@ Console.WriteLine(vDateTime);
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Questo codice converte il **Int32** in un **stringa**:  
+ **Int32** viene convertito dal codice in una stringa **String**:  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  
@@ -74,5 +77,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione di stringhe in tipi di dati .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
- [Conversione di tipi .NET Framework in stringhe](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+ [Conversione delle stringhe in tipi di dati di .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+ [Conversione dei tipi di .NET Framework in stringhe](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

@@ -21,36 +21,39 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communcation [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 952600e71311184c4a4f906734addbf335d0358a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 36b33a3b29a739391cb926e706cfe811e82579be
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Procedura: utilizzare le named pipe per la comunicazione interprocesso in rete
-Named pipe forniscono la comunicazione interprocesso tra un server di pipe e uno o più client pipe. Offrono maggiori funzionalità rispetto alle pipe anonime che forniscono la comunicazione interprocesso in un computer locale. Le named pipe supportano la comunicazione full duplex in una rete e in più istanze server, la comunicazione basata su messaggi e la rappresentazione client che consente ai processi di connessione di utilizzare il proprio set di autorizzazioni nei server remoti.  
+Le named pipe forniscono la comunicazione interprocesso tra un server pipe e uno o più client pipe. Offrono maggiori funzionalità rispetto alle pipe anonime che forniscono la comunicazione interprocesso in un computer locale. Le named pipe supportano la comunicazione full duplex in una rete e in più istanze server, la comunicazione basata su messaggi e la rappresentazione client che consente ai processi di connessione di utilizzare il proprio set di autorizzazioni nei server remoti.  
   
  Per implementare le named pipe, utilizzare le classi <xref:System.IO.Pipes.NamedPipeServerStream> e <xref:System.IO.Pipes.NamedPipeClientStream>.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare una named pipe mediante il <xref:System.IO.Pipes.NamedPipeServerStream> classe. In questo esempio, il processo server crea quattro thread. Ogni thread può accettare una connessione client. Il processo client connesso fornisce quindi il server con un nome di file. Se il client disponga di autorizzazioni sufficienti, il processo server apre il file e invia il contenuto al client.  
+ L'esempio seguente illustra come creare una named pipe usando la classe <xref:System.IO.Pipes.NamedPipeServerStream>. In questo esempio il processo server crea quattro thread. Ogni thread può accettare una connessione client. Il processo client connesso fornisce quindi al server un nome file. Se il client ha autorizzazioni sufficienti, il processo server apre il file e invia il contenuto al client.  
   
  [!code-cpp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il processo client, che usa la <xref:System.IO.Pipes.NamedPipeClientStream> classe. Il client si connette al processo del server e invia un nome di file al server. Nell'esempio viene utilizzata la rappresentazione, pertanto l'identità con cui è in esecuzione l'applicazione client deve disporre dell'autorizzazione per accedere al file. Il server invia quindi il contenuto del file al client. Il contenuto del file viene quindi visualizzato nella console.  
+ L'esempio seguente mostra il processo client, che usa la classe <xref:System.IO.Pipes.NamedPipeClientStream>. Il client si connette al processo server e invia un nome file al server. L'esempio usa la rappresentazione, quindi l'identità che esegue l'applicazione client deve avere l'autorizzazione per accedere al file. Il server invia quindi il contenuto del file al client. Il contenuto del file viene quindi visualizzato nella console.  
   
  [!code-csharp[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
- I processi client e server in questo esempio siano in esecuzione nello stesso computer, pertanto il nome del server fornito per il <xref:System.IO.Pipes.NamedPipeClientStream> oggetto `"."`. Se i processi client e server in computer separati, `"."` verrà sostituito con il nome di rete del computer che esegue il processo server.  
+ I processi client e server in questo esempio sono in esecuzione nello stesso computer, quindi il nome del server fornito all'oggetto <xref:System.IO.Pipes.NamedPipeClientStream> è `"."`. Se i processi client e server fossero in computer distinti, `"."` verrebbe sostituito dal nome di rete del computer che esegue il processo server.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Security.Principal.TokenImpersonationLevel>  

@@ -22,27 +22,30 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>Stringhe di formato numerico personalizzato
 È possibile creare una stringa di formato numerico personalizzata costituita da uno o più identificatori numerici personalizzati, per definire la formattazione dei dati numerici. Viene considerata stringa di formato numerico personalizzata qualsiasi stringa di formato che non rientri nella categoria di [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Stringhe di formato numerico personalizzate sono supportate anche da .NET [funzionalità di formattazione composta](../../../docs/standard/base-types/composite-formatting.md), che è usata da alcuni `Write` e `WriteLine` metodi del <xref:System.Console> e <xref:System.IO.StreamWriter> classi, il <xref:System.String.Format%2A?displayProperty=nameWithType>(metodo) e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metodo.  
+ Le stringhe di formato numerico personalizzate sono supportate da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Le stringhe di formato numerico personalizzate sono supportate anche dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.  
   
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
   
 <a name="table"></a> Nella tabella seguente vengono descritti gli identificatori di formato numerico personalizzati e viene visualizzato l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesCustomFormatting) per informazioni aggiuntive sull'utilizzo di stringhe di formato numerico personalizzate e la sezione [Esempio](#example) per un'illustrazione completa dell'utilizzo.  
   
-|Identificatore di formato|Nome|Descrizione|Esempi|  
+|Identificatore di formato|nome|Descrizione|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Segnaposto zero|Sostituisce lo zero con la cifra corrispondente, se disponibile; in caso contrario, lo zero viene visualizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Segnaposto per cifre|Sostituisce il simbolo "#" con la cifra corrispondente, se disponibile; in caso contrario, nella stringa di risultato non viene visualizzata nessuna cifra.<br /><br /> Si noti che nella stringa di risultato non viene visualizzata nessuna cifra se la cifra corrispondente nella stringa di input equivale a uno 0 non significativo. Ad esempio, 0003 ("####") -> 3.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |"%"|Segnaposto percentuale|Moltiplica un numero per 100 e inserisce un simbolo di percentuale localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|Segnaposto per mille|Moltiplica un numero per 1000 e inserisce un simbolo di per mille localizzato nella stringa di risultato.<br /><br /> Ulteriori informazioni: [Identificatore personalizzato "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notazione esponenziale|Se è seguito da almeno uno 0 (zero), formatta il risultato usando la notazione esponenziale. L'utilizzo di "E" o "e" indica se il simbolo dell'esponente nella stringa di risultato deve essere, rispettivamente, maiuscolo o minuscolo. Il numero di zeri che seguono il carattere "E" o "e" determina il numero minimo di cifre nell'esponente. Un segno più (+) indica che l'esponente è sempre preceduto da un carattere di segno. Un segno meno (-) indica che solo gli esponenti negativi sono preceduti da un carattere di segno.<br /><br /> Ulteriori informazioni: [Identificatori personalizzati "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [il "\\" carattere di Escape](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
+|"\\"|Carattere di escape|Fa in modo che il carattere successivo venga interpretato come valore letterale anziché come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Carattere di escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
 |'*string*'<br /><br /> "*string*"|Delimitatore di stringa letterale|Indica che i caratteri contenuti devono essere copiati nella stringa di risultato senza essere modificati.|68 ("# ' gradi'") -> 68 gradi<br /><br /> 68 ("# ' gradi'") -> 68 gradi|  
 |;|Separatore di sezione|Definisce le sezioni con stringhe di formato separate per numeri positivi, negativi e zero.<br /><br /> Ulteriori informazioni: [Separatore di sezione ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |Altro|Tutti gli altri caratteri|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.|68 ("# °") -> 68 °|  
@@ -171,7 +174,7 @@ ms.lasthandoff: 11/21/2017
  [Torna alla tabella](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>Il "\\" carattere di Escape  
+## <a name="the--escape-character"></a>Carattere di escape "\\"  
  I simboli "#", "0", ".", ",", "%" e "‰" in una stringa di formato vengono interpretati come identificatori di formato anziché come caratteri letterali. A seconda della posizione in una stringa di formato personalizzata, anche la "E" maiuscola e minuscola nonché i simboli + e - possono essere interpretati come identificatori di formato.  
   
  Per impedire che un carattere venga interpretato come un identificatore di formato, è possibile anteporvi una barra rovesciata (\), che rappresenta il carattere di escape. Il carattere di escape indica che il carattere seguente è un valore letterale carattere che deve essere incluso nella stringa di risultato senza modifiche.  
@@ -181,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Alcuni compilatori, ad esempio i compilatori C++ e C#, possono anche interpretare un singolo carattere barra rovesciata come carattere di escape. Per assicurarsi che una stringa venga interpretata correttamente quando viene eseguita la formattazione, è possibile usare il carattere del valore letterale stringa letterale (carattere @) prima della stringa in C# o aggiungere un altro carattere barra rovesciata prima di ogni barra rovesciata in C# e C++. Nell'esempio C# seguente vengono illustrati entrambi gli approcci.  
   
- L'esempio seguente usa il carattere di escape per impedire l'operazione di formattazione da interpretare il "#", "0" e "\\" caratteri come caratteri di escape o identificatori di formato. Negli esempi C# viene usata una barra rovesciata aggiuntiva per garantire che la barra rovesciata venga interpretata come carattere letterale.  
+ Nell'esempio seguente viene usato il carattere di escape per evitare che durante l'operazione di formattazione i caratteri "#", "0" e "\\" vengano interpretati come caratteri di escape o identificatori di formato. Negli esempi C# viene usata una barra rovesciata aggiuntiva per garantire che la barra rovesciata venga interpretata come carattere letterale.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -218,7 +221,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>Impostazioni del Pannello di controllo  
  Le impostazioni di **Opzioni internazionali e della lingua** nel Pannello di controllo influiscono sulla stringa risultato prodotta da un'operazione di formattazione. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.NumberFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.  
   
- Inoltre, se si utilizza il <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> costruttore per creare un'istanza di un nuovo <xref:System.Globalization.CultureInfo> oggetto che rappresenta le stesse impostazioni cultura come le impostazioni cultura correnti di sistema, eventuali personalizzazioni definite tramite la **internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo <xref:System.Globalization.CultureInfo> oggetto. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
+ Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>Arrotondamento e stringhe di formato a virgola fissa  
  Per le stringhe di formato a virgola fissa, ovvero stringhe di formato non contenenti caratteri di formato in notazione scientifica, i numeri vengono arrotondati al numero di posizioni decimali corrispondente al numero di segnaposto per cifre a destra del separatore decimale. Se la stringa di formato non contiene alcun separatore decimale, il numero viene arrotondato all'intero più vicino. Se le cifre del numero sono più numerose dei segnaposto per le cifre riportati a sinistra del separatore decimale, le cifre eccedenti vengono copiate nella stringa di risultato immediatamente prima del primo segnaposto per le cifre.  

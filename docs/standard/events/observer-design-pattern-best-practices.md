@@ -12,21 +12,24 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedure consigliate per un modello di progettazione observer
 In.NET Framework, il modello di progettazione osservatore è implementato come un insieme di interfacce. L'interfaccia <xref:System.IObservable%601?displayProperty=nameWithType> rappresenta il provider di dati, che è anche responsabile di fornire un'implementazione di <xref:System.IDisposable> che consenta agli osservatori di annullare la sottoscrizione di notifiche. L'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType> rappresenta l'osservatore. In questo argomento vengono descritte le procedure consigliate che gli sviluppatori devono seguire per implementare il modello di progettazione osservatore usando queste interfacce.  
   
 ## <a name="threading"></a>Threading  
- In genere, un provider implementa il metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> aggiungendo un osservatore specifico a un elenco di server di sottoscrizione, che è rappresentato da un oggetto di raccolta, e implementa il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> rimuovendo un osservatore specifico dall'elenco dei server di sottoscrizione. Un osservatore può chiamare questi metodi in qualsiasi momento. Inoltre, perché il contratto provider/osservatore non specifica chi è responsabile dell'annullamento della sottoscrizione dopo il metodo di callback <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il provider e l'osservatore possono provare a rimuovere lo stesso membro dall'elenco. Grazie a questa possibilità, entrambi i metodi <xref:System.IObservable%601.Subscribe%2A> e <xref:System.IDisposable.Dispose%2A> dovrebbero essere thread-safe. In genere, ciò comporta l'utilizzo un [raccolta simultanea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) o di un blocco. Le implementazioni che non sono thread-safe devono documentare esplicitamente che non lo sono.  
+ In genere, un provider implementa il metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> aggiungendo un osservatore specifico a un elenco di server di sottoscrizione, che è rappresentato da un oggetto di raccolta, e implementa il metodo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> rimuovendo un osservatore specifico dall'elenco dei server di sottoscrizione. Un osservatore può chiamare questi metodi in qualsiasi momento. Inoltre, perché il contratto provider/osservatore non specifica chi è responsabile dell'annullamento della sottoscrizione dopo il metodo di callback <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, il provider e l'osservatore possono provare a rimuovere lo stesso membro dall'elenco. Grazie a questa possibilità, entrambi i metodi <xref:System.IObservable%601.Subscribe%2A> e <xref:System.IDisposable.Dispose%2A> dovrebbero essere thread-safe. In genere, ciò comporta l'uso di una [raccolta simultanea](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md) o di un blocco. Le implementazioni che non sono thread-safe devono documentare esplicitamente che non lo sono.  
   
  Tutte le garanzie aggiuntive devono essere specificate in un livello all'inizio del contratto provider/osservatore. Gli implementatori devono indicare chiaramente quando impongono requisiti aggiuntivi per evitare confusione sul contratto di osservatore.  
   

@@ -21,11 +21,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 Le stringhe di formato numerico standard vengono usate per formattare tipi numerici comuni. Una stringa di formato numerico standard usa il formato `Axx`, dove:  
@@ -34,34 +37,34 @@ Le stringhe di formato numerico standard vengono usate per formattare tipi numer
   
 -   `xx` è un numero intero facoltativo denominato *identificatore di precisione*. L'identificatore di precisione, compreso tra 0 e 99, controlla il numero di cifre nel risultato. L'identificatore di precisione controlla il numero di cifre nella rappresentazione di stringa di un numero. Non arrotonda il numero stesso. Per eseguire un'operazione di arrotondamento, usare il metodo <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Quando *identificatore di precisione* controlla il numero di cifre frazionarie nella stringa di risultato, le stringhe di risultato riflettono numeri che vengono arrotondati per eccesso (vale a dire usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
+     Quando l'*identificatore di precisione* controlla il numero di cifre frazionarie nella stringa di risultato, le stringhe di risultato riflettono numeri che vengono arrotondati per eccesso (vale a dire usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
   
     > [!NOTE]
     >  L'identificatore di precisione determina il numero di cifre nella stringa risultato. Per riempire una stringa risultato con spazi iniziali o finali, usare la funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md) e definire un *componente allineamento* nell'elemento di formato.  
   
-Stringhe di formato numerico standard sono supportate da:
+Le stringhe di formato numerico standard sono supportate:
 
-- Alcuni overload di `ToString` metodo di tutti i tipi numerici. Ad esempio, è possibile fornire una stringa di formato numerico per il <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> metodi. 
+- Da alcuni overload del metodo `ToString` di tutti i tipi numerici. È ad esempio possibile fornire una stringa di formato numerico ai metodi <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> e <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>. 
  
-- .NET [funzionalità di formattazione composta](../../../docs/standard/base-types/composite-formatting.md), utilizzato da alcuni `Write` e `WriteLine` metodi del <xref:System.Console> e <xref:System.IO.StreamWriter> classi, il <xref:System.String.Format%2A?displayProperty=nameWithType> (metodo) e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metodo. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
+- Dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Stringhe interpolate](../../csharp/language-reference/keywords/interpolated-strings.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composita.
+- Dalle [stringhe interpolate](../../csharp/language-reference/keywords/interpolated-strings.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
  
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
   
 <a name="table"></a> La tabella seguente descrive gli identificatori di formato numerico standard e visualizza l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesStandardFormatting) per informazioni aggiuntive sull'uso di stringhe di formato numerico standard e la sezione [Esempio](#example) per un'illustrazione completa dell'uso.  
   
-|Identificatore di formato|Nome|Descrizione|Esempi|  
+|Identificatore di formato|nome|Descrizione|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"C" o "c"|Valuta|Risultato: un valore di valuta.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato di valuta ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" o "d"|Decimal|Risultato: cifre intere con segno negativo facoltativo.<br /><br /> Supportato da: solo tipi integrali.<br /><br /> Identificatore di precisione: numero minimo di cifre.<br /><br /> Identificatore di precisione predefinito: numero minimo di cifre richieste.<br /><br /> Altre informazioni: [Identificatore di formato decimale ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
 |"E" o "e"|Esponenziale (scientifico)|Risultato: notazione esponenziale.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: 6.<br /><br /> Altre informazioni: [Identificatore di formato esponenziale ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1,05E+003|  
 |"F" o "f"|A virgola fissa|Risultato: cifre integrali e decimali con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato a virgola fissa ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" o "g"|Generale|Risultato: la più compatta tra la notazione a virgola fissa e quella scientifica.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero di cifre significative.<br /><br /> Identificatore di precisione predefinito: dipende dal tipo numerico.<br /><br /> Altre informazioni: [Identificatore di formato generale ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" o "n"|Numero|Risultato: cifre integrali e decimali, separatori di gruppi e un separatore decimale con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato numerico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"N" o "n"|Number|Risultato: cifre integrali e decimali, separatori di gruppi e un separatore decimale con segno negativo facoltativo.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato numerico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" o "p"|Percentuale|Risultato: numero moltiplicato per 100 e visualizzato con un simbolo di percentuale.<br /><br /> Supportato da: tutti i tipi numerici.<br /><br /> Identificatore di precisione: numero desiderato di posizioni decimali.<br /><br /> Identificatore di precisione predefinito: definito da <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Altre informazioni: [Identificatore di formato percentuale ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" o "r"|Round trip|Risultato: stringa che può eseguire il round trip a un numero identico.<br /><br /> Supportato da: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Nota: È consigliabile per il <xref:System.Numerics.BigInteger> solo tipo. Per <xref:System.Double> tipi, usare "G17" per <xref:System.Single> tipi, usare "G9". </br> Identificatore di precisione: ignorato.<br /><br /> Altre informazioni: [Identificatore di formato di round trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" o "r"|Round trip|Risultato: stringa che può eseguire il round trip a un numero identico.<br /><br /> Supportato da: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Nota: consigliato solo per il tipo <xref:System.Numerics.BigInteger>. Per i tipi <xref:System.Double>, usare "G17"; per i tipi <xref:System.Single>, usare "G9". </br> Identificatore di precisione: ignorato.<br /><br /> Altre informazioni: [Identificatore di formato di round trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" o "x"|Esadecimale|Risultato: stringa esadecimale.<br /><br /> Supportato da: solo tipi integrali.<br /><br /> Identificatore di precisione: numero di cifre nella stringa di risultato.<br /><br /> Altre informazioni: [Identificatore di formato esadecimale ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Qualsiasi altro carattere singolo|Identificatore sconosciuto|Risultato: genera un evento <xref:System.FormatException> in fase di esecuzione.||  
   
@@ -69,19 +72,19 @@ Stringhe di formato numerico standard sono supportate da:
 ## <a name="using-standard-numeric-format-strings"></a>uso di stringhe di formato numerico standard  
  È possibile usare una stringa di formato numerico standard per definire la formattazione di un valore numerico in uno dei due modi seguenti:  
   
--   È possibile passare la stringa a un overload del metodo `ToString` che ha un parametro `format`. Nell'esempio seguente un valore numerico viene formattato come stringa di valuta nelle impostazioni cultura correnti (in questo caso, le impostazioni cultura en-US).  
+-   È possibile passare la stringa a un overload del metodo `ToString` che ha un parametro `format`. Nell'esempio seguente un valore numerico viene formattato come stringa di valuta nelle impostazioni cultura correnti (in questo caso, en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Può essere fornito come il `formatString` argomento in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.  
+-   È possibile fornire la stringa come argomento `formatString` in un elemento di formato usato con metodi come <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene usato un elemento di formato per inserire un valore di valuta in una stringa.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
-     Facoltativamente, è possibile fornire un `alignment` argomento per specificare la larghezza del campo numerico e se il relativo valore è allineato a destra o sinistra. L'esempio seguente allinea a sinistra un valore corrente in un campo a 28 caratteri e allinea a destra un valore di valuta in un campo a 14 caratteri.  
+     Facoltativamente, fornire un argomento `alignment` per specificare la lunghezza del campo numerico e se il relativo valore è allineato a destra o a sinistra. L'esempio seguente allinea a sinistra un valore corrente in un campo a 28 caratteri e allinea a destra un valore di valuta in un campo a 14 caratteri.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
@@ -101,7 +104,7 @@ Stringhe di formato numerico standard sono supportate da:
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Definisce la posizione del simbolo di valuta per i valori positivi.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definisce la posizione del simbolo di valuta per i valori negativi e specifica se il segno negativo è rappresentato da parentesi o dalla proprietà <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>.|  
-|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce il segno negativo usato se <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> indica che non vengono utilizzate le parentesi.|  
+|<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definisce il segno negativo usato se <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> indica che non vengono usate le parentesi.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>|Definisce il simbolo di valuta.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>|Definisce il numero predefinito di cifre decimali in un valore di valuta. È possibile eseguire l'override di questo valore usando l'identificatore di precisione.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>|Definisce la stringa che separa le cifre integrali da quelle decimali.|  
@@ -162,7 +165,7 @@ Stringhe di formato numerico standard sono supportate da:
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Identificatore di formato a virgola fissa ("F")  
- L'identificatore di formato a virgola fissa ("F") Converte un numero in una stringa di formato "--ddd.ddd …" dove ciascuna "d" indica una cifra (0-9). Se il numero è negativo, la stringa inizierà con un segno meno.  
+ L'identificatore di formato a virgola fissa ("F") converte il numero di una stringa nel formato "-ddd.ddd…" dove ciascuna "d" indica una cifra (0-9). Se il numero è negativo, la stringa inizierà con un segno meno.  
   
  L'identificatore di precisione indica il numero di posizioni decimali desiderato. Se l'identificatore di precisione viene omesso, la precisione numerica viene fornita dalla proprietà <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> corrente.  
   
@@ -204,12 +207,12 @@ Stringhe di formato numerico standard sono supportate da:
   
  Se viene usata la notazione scientifica, l'esponente nel risultato sarà preceduto da un prefisso "E" se l'identificatore di formato è "G" o da un prefisso "e" se l'identificatore di formato è "g". L'esponente contiene un minimo di due cifre. Questo aspetto è diverso rispetto al formato per la notazione scientifica, prodotto dall'identificatore di formato esponenziale, che include un minimo di tre cifre nell'esponente.  
  
-Si noti che, quando si utilizza un <xref:System.Double> valore, l'identificatore di formato "G17" assicura che originale <xref:System.Double> valore correttamente round trip. In questo modo <xref:System.Double> è una IEEE 754 2008-compatibile con precisione doppia (`binary64`) numero in virgola mobile che consente fino a 17 cifre significative di precisione. Si consiglia l'utilizzo di anziché il [identificatore di formato "R"](#RFormatString), dal momento che in alcuni casi "R" non completano il round trip valori a virgola mobile e precisione doppia. Nell'esempio seguente viene illustrato un esempio.
+Si noti che, se usato con un valore <xref:System.Double>, l'identificatore di formato "G17" assicura che il valore <xref:System.Double> originale esegua correttamente il round trip. Ciò è dovuto al fatto che <xref:System.Double> è un numero in formato a virgola mobile a doppia precisione (`binary64`) conforme allo standard IEEE 754-2008, caratterizzato da una precisione con fino a 17 cifre significative. Se ne consiglia l'uso al posto dell'[identificatore di formato "R"](#RFormatString), dal momento che in alcuni casi "R" non esegue correttamente il round trip dei valori a virgola mobile e precisione doppia. Nell'esempio riportato di seguito viene illustrato un caso di questo tipo.
 
 [!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-Quando si utilizza un <xref:System.Single> valore, l'identificatore di formato "G9" assicura che originale <xref:System.Single> valore correttamente round trip. In questo modo <xref:System.Single> è una IEEE 754 conformi 2008 e con precisione singola (`binary32`) numero in virgola mobile che consente fino a nove cifre di precisione significative. Si consiglia l'utilizzo di anziché il [identificatore di formato "R"](#RFormatString), dal momento che in alcuni casi "R" non completano il round trip valori a virgola mobile e precisione singola.
+Se usato con un valore <xref:System.Single>, l'identificatore di formato "G9" assicura che il valore <xref:System.Single> originale esegua correttamente il round trip. Ciò è dovuto al fatto che <xref:System.Single> è un numero in formato a virgola mobile a precisione singola (`binary32`) conforme allo standard IEEE 754-2008, caratterizzato da una precisione con fino a nove cifre significative. Se ne consiglia l'uso al posto dell'[identificatore di formato "R"](#RFormatString), dal momento che in alcuni casi "R" non esegue correttamente il round trip dei valori a virgola mobile e precisione singola.
 
  La stringa di risultato è influenzata dalle informazioni sulla formattazione dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente. Nella tabella seguente sono elencate le proprietà di <xref:System.Globalization.NumberFormatInfo> che consentono di controllare la formattazione della stringa di risultato.  
   
@@ -277,9 +280,9 @@ Quando si utilizza un <xref:System.Single> valore, l'identificatore di formato "
   
 <a name="RFormatString"></a>   
 ## <a name="the-round-trip-r-format-specifier"></a>Identificatore di formato di round trip ("R")  
- L'identificatore di formato round trip ("R") tenta di garantire che un valore numerico che viene convertito in una stringa viene analizzato nello stesso valore numerico. Questo formato è supportato solo per i tipi <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.  
+ L'identificatore di formato di round trip ("R") cerca di garantire che un valore numerico convertito in una stringa venga riportato al medesimo valore numerico. Questo formato è supportato solo per i tipi <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.  
 
-Per <xref:System.Double> e <xref:System.Single> valori, l'identificatore di formato "R" in alcuni casi non riesce a completano il round trip al valore originale e offre inoltre prestazioni relativamente ridotte. È invece consigliabile utilizzare il ["G17"](#GFormatString) identificatore di formato <xref:System.Double> valori e ["G9"](#GFormatString) identificatore di formato per completano il round trip <xref:System.Single> valori.
+Per i valori <xref:System.Double> e <xref:System.Single> l'identificatore di formato "R" in alcuni casi non esegue correttamente il round trip del valore originale ed è caratterizzato da prestazioni relativamente ridotte. È invece consigliabile usare l'identificatore di formato ["G17"](#GFormatString) per i valori <xref:System.Double> e l'identificatore di formato ["G9"](#GFormatString) per eseguire correttamente il round trip dei valori <xref:System.Single>.
 
  Quando un valore <xref:System.Numerics.BigInteger> viene formattato usando questo identificatore, la relativa rappresentazione di stringa contiene tutte le cifre significative nel valore <xref:System.Numerics.BigInteger>.  
   
@@ -292,7 +295,7 @@ Per <xref:System.Double> e <xref:System.Single> valori, l'identificatore di form
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definisce la stringa che separa le cifre integrali da quelle decimali.|  
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Definisce la stringa che indica che un esponente è positivo.|  
   
- Nell'esempio seguente viene formattato un <xref:System.Numerics.BigInteger> valore con l'identificatore di formato round trip.  
+ Nell'esempio seguente viene formattato un valore <xref:System.Numerics.BigInteger> con l'identificatore di formato round trip.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
  [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
@@ -330,7 +333,7 @@ Per <xref:System.Double> e <xref:System.Single> valori, l'identificatore di form
 ### <a name="control-panel-settings"></a>Impostazioni del Pannello di controllo  
  Le impostazioni di **Opzioni internazionali e della lingua** nel Pannello di controllo influiscono sulla stringa risultato prodotta da un'operazione di formattazione. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.NumberFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.  
   
- Inoltre, se il <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> costruttore viene utilizzato per creare un nuovo <xref:System.Globalization.CultureInfo> oggetto che rappresenta le stesse impostazioni cultura come le impostazioni cultura correnti di sistema, eventuali personalizzazioni definite tramite la **internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo <xref:System.Globalization.CultureInfo> oggetto. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
+ Inoltre, se viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite dall'elemento **Opzioni internazionali e della lingua** nel Pannello Controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
   
 ### <a name="numberformatinfo-properties"></a>Proprietà NumberFormatInfo  
  La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.NumberFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread corrente o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Specificare un oggetto <xref:System.Globalization.NumberFormatInfo> o <xref:System.Globalization.CultureInfo> per questo parametro.  

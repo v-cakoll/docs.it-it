@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6370db06cbe7ff8d46258b0315059f5c37587fea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33b3b0589fb9d3cdf550b8d56d82a2bd999a59f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Lettura delle dichiarazioni di entità e dei riferimenti a entità nel DOM
 Un'entità è una dichiarazione che stabilisce il nome da usare in XML al posto del contenuto o del markup. Le entità sono composte da due parti. Innanzitutto, è necessario associare un nome al contenuto di sostituzione tramite una dichiarazione di entità. La dichiarazione di entità viene creata mediante la sintassi `<!ENTITY name "value">` in una DTD (Document Type Definition) o in uno schema XML. Successivamente, il nome definito nella dichiarazione di entità viene usato in XML e, in questo caso, viene denominato riferimento all'entità. Ad esempio, la dichiarazione di entità seguente dichiara un'entità il cui nome `publisher` viene associato al contenuto di "Microsoft Press".  
@@ -51,15 +54,15 @@ Un'entità è una dichiarazione che stabilisce il nome da usare in XML al posto 
   
  Esistono molti tipi di entità. Nel diagramma seguente è riportata la suddivisione dei tipi di entità e della terminologia.  
   
- ![diagramma di flusso della gerarchia dei tipi di entità](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![Diagramma di flusso della gerarchia del tipo di entità](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
- Il valore predefinito per l'implementazione di Microsoft .NET Framework dell'oggetto modello DOM (Document XML) è di preservare i riferimenti a entità e non le entità vengono espanse quando si carica il XML. L'implicazione di ciò è che quando un documento viene caricato nel DOM, un **XmlEntityReference** nodo che contiene la variabile di riferimento `&publisher;` viene creato, i nodi figlio che rappresenta il contenuto dell'entità dichiarata nella DTD.  
+ Per impostazione predefinita, nell'implementazione Microsoft .NET Framework del DOM XML, i riferimenti alle entità vengono conservati e le entità non vengono espanse quando si carica l'XML. Di conseguenza quando un documento viene caricato nel DOM, viene creato un nodo **XmlEntityReference** contenente la variabile di riferimento `&publisher;` con tutti i nodi figlio che rappresentano il contenuto dell'entità dichiarata nella DTD.  
   
- Utilizzando il `<!ENTITY publisher "Microsoft Press">` dichiarazione di entità, il diagramma seguente mostra il **XmlEntity** e **XmlText** nodi creati da questa dichiarazione.  
+ Usando la dichiarazione di entità `<!ENTITY publisher "Microsoft Press">`, nel diagramma seguente vengono mostrati i nodi **XmlEntity** e **XmlText** creati da questa dichiarazione.  
   
  ![nodi creati da dichiarazioni di entità](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   
- Il fatto che i riferimenti alle entità vengano espansi o meno determina quali nodi vengono generati nell'albero DOM, in memoria. La differenza tra i nodi generati è descritta negli argomenti [riferimenti alle entità conservati](../../../../docs/standard/data/xml/entity-references-are-preserved.md) e [i riferimenti alle entità vengono espansi e non conservati](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
+ Il fatto che i riferimenti alle entità vengano espansi o meno determina quali nodi vengono generati nell'albero DOM, in memoria. La differenza tra i nodi generati è descritta negli argomenti [Riferimenti alle entità conservati](../../../../docs/standard/data/xml/entity-references-are-preserved.md) e [Riferimenti alle entità espansi e non conservati](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

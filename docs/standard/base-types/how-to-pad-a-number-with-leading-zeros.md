@@ -17,15 +17,18 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedura: aggiungere zeri iniziali a un numero
 È possibile aggiungere degli zeri iniziali a un numero intero usando la [stringa di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un identificatore di precisione. È possibile aggiungere zeri iniziali sia ai numeri interi che ai numeri a virgola mobile usando una [stringa di formato numerico personalizzata](../../../docs/standard/base-types/custom-numeric-format-strings.md). In questo argomento viene illustrato come usare entrambi i metodi per aggiungere un numero con gli zeri iniziali.  
@@ -36,11 +39,11 @@ ms.lasthandoff: 11/21/2017
   
 2.  Determinare se si vuole visualizzare il valore di tipo Integer come valore decimale o esadecimale.  
   
-    -   Per visualizzare il valore integer come valore decimale, chiamare il relativo `ToString(String)` (metodo) e passare la stringa "D*n*" come valore della `format` parametro, in cui  *n*  rappresenta la lunghezza minima della stringa.  
+    -   Per visualizzare il valore intero come valore decimale, chiamare il relativo metodo `ToString(String)` e passare la stringa "D*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
   
-    -   Per visualizzare il valore integer come valore esadecimale, chiamare il relativo `ToString(String)` (metodo) e passare la stringa "X*n*" come valore della `format` parametro, in cui  *n*  rappresenta la lunghezza minima della stringa.  
+    -   Per visualizzare il valore intero come valore esadecimale, chiamare il relativo metodo `ToString(String)` e passare la stringa "X*n*" come valore del parametro `format`, dove *n* rappresenta la lunghezza minima della stringa.  
   
-     È inoltre possibile utilizzare la stringa di formato in un metodo, ad esempio <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, che utilizza [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
+     È anche possibile usare la stringa di formato in un metodo, come <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, che usa la [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
   
  Il seguente esempio formatta diversi valori di tipo Integer con gli zeri iniziali in modo che la lunghezza totale del numero formattato sia almeno di otto caratteri.  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Aggiungere il numero di zeri iniziali da includere nella stringa formattata nella lunghezza della stringa numerica non aggiunta. In questo modo si definisce la lunghezza totale della stringa aggiunta.  
   
-5.  Chiamare l'integer `ToString(String)` (metodo) e passare la stringa "D*n*" per le stringhe decimali e "X*n*" per le stringhe esadecimali, dove  *n*  rappresenta la lunghezza totale della stringa aggiunta. È inoltre possibile utilizzare il "D*n*" o "X*n*" formato di stringa in un metodo che supporta la formattazione composita.  
+5.  Chiamare il metodo `ToString(String)` del valore intero e passare la stringa "D*n*" per le stringhe decimali e "X*n*" per le stringhe esadecimali, dove *n* rappresenta la lunghezza totale della stringa riempita. È anche possibile usare la stringa di formato "D*n*" o "X*n*" in un metodo che supporta la formattazione composita.  
   
  Il seguente esempio aggiunge un valore di tipo Integer con cinque zeri iniziali.  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
     2.  In questo caso, determinare il numero di caratteri alla sinistra del separatore decimale.  
   
-         -oppure-  
+         oppure  
   
          In caso contrario, determinare la lunghezza della stringa.  
   

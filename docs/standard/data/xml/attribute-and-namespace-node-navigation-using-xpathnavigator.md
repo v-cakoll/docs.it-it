@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navigazione dei nodi di attributi e dello spazio dei nomi con XPathNavigator
-Il <xref:System.Xml.XPath.XPathNavigator> classe fornisce due set di metodi di navigazione, il primo set, vedere il [Node Set Navigation utilizzando XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) argomento, vengono utilizzati per passare *i set di nodi* in un <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> oggetto. Il secondo set, descritto in questo argomento, vengono utilizzati per passare *nodi attribute e namespace* in un <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> oggetto.  
+La classe <xref:System.Xml.XPath.XPathNavigator> offre due set di metodi di navigazione. Il primo set, che si trova nell'argomento [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), consente di navigare nei *set di nodi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>. Il secondo set, descritto in questo argomento, consente di navigare nei *nodi di attributi e dello spazio dei nomi* di un oggetto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
 ## <a name="attribute-node-navigation"></a>Navigazione di nodi di attributi  
  Gli attributi sono proprietà di un elemento, non elementi figlio dell'elemento. Questa distinzione è importante, a causa dei metodi della classe <xref:System.Xml.XPath.XPathNavigator> usati per esplorare i nodi di pari livello, padre e figlio.  
@@ -108,6 +111,6 @@ Il <xref:System.Xml.XPath.XPathNavigator> classe fornisce due set di metodi di n
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Elaborazione di dati XML con il modello di dati XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Navigazione del Set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Estrazione di dati XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [Accesso sicuro ai dati XML tipizzati con XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [Navigazione del set di nodi con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Estrarre dati XML con XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [Accesso a dati XML fortemente tipizzati con XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

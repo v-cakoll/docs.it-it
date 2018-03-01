@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator nelle trasformazioni
-La classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce i metodi per eseguire un'iterazione in un set di nodi creato come risultato di una query XPath (XML Path Language) o un frammento di albero risultato convertito in un set di nodi usando il metodo node-set. La classe <xref:System.Xml.XPath.XPathNodeIterator> consente di eseguire un'iterazione tra i nodi all'interno di quel determinato set. Una volta recuperato il set di nodi, la classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce al set di nodi selezionato un cursore forward-only di sola lettura. Il set di nodi viene creato in base all'ordine con cui è riportato nel documento, quindi la chiamata a questo metodo consente di spostarsi al nodo successivo nell'ordine del documento. L'oggetto <xref:System.Xml.XPath.XPathNodeIterator> non compila un albero con tutti i nodi del set, bensì fornisce una finestra per i dati di ogni singolo nodo, esponendo il nodo sottostante a cui si riferisce quando il cursore viene spostato all'interno dell'albero. I metodi e le proprietà disponibili nella classe <xref:System.Xml.XPath.XPathNodeIterator> consentono di ottenere informazioni dal nodo corrente. Per un elenco dei metodi disponibili e delle proprietà, vedere <xref:System.Windows.Forms.ToolBar>.  
+La classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce i metodi per eseguire un'iterazione in un set di nodi creato come risultato di una query XPath (XML Path Language) o un frammento di albero risultato convertito in un set di nodi usando il metodo node-set. La classe <xref:System.Xml.XPath.XPathNodeIterator> consente di eseguire un'iterazione tra i nodi all'interno di quel determinato set. Una volta recuperato il set di nodi, la classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce al set di nodi selezionato un cursore forward-only di sola lettura. Il set di nodi viene creato in base all'ordine con cui è riportato nel documento, quindi la chiamata a questo metodo consente di spostarsi al nodo successivo nell'ordine del documento. L'oggetto <xref:System.Xml.XPath.XPathNodeIterator> non compila un albero con tutti i nodi del set, bensì fornisce una finestra per i dati di ogni singolo nodo, esponendo il nodo sottostante a cui si riferisce quando il cursore viene spostato all'interno dell'albero. I metodi e le proprietà disponibili nella classe <xref:System.Xml.XPath.XPathNodeIterator> consentono di ottenere informazioni dal nodo corrente. Per un elenco dei metodi e delle proprietà disponibili, vedere <xref:System.Windows.Forms.ToolBar>.  
   
  Poiché <xref:System.Xml.XPath.XPathNodeIterator> si sposta in un set di nodi creato da una query XPath e scorre solo in avanti, per spostarsi è necessario usare il metodo <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>. Il tipo restituito dal metodo è `Boolean`, con valore `true` se viene eseguito lo spostamento al nodo successivo selezionato e `false` se non vi sono altri nodi selezionati. Se viene restituito `true`, nell'elenco seguente verranno illustrate le proprietà disponibili:  
   
@@ -35,7 +38,7 @@ La classe <xref:System.Xml.XPath.XPathNodeIterator> fornisce i metodi per esegui
   
  La prima volta che si visualizza un set di nodi, è necessario eseguire una chiamata al metodo <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> per posizionare il tipo <xref:System.Xml.XPath.XPathNodeIterator> sul primo nodo del set selezionato. In questo modo è possibile scrivere un ciclo while.  
   
- Nell'esempio di codice seguente viene descritto come passare un tipo <xref:System.Xml.XPath.XPathNodeIterator> a un <xref:System.Xml.Xsl.XslTransform> come parametro nel tipo <xref:System.Xml.Xsl.XsltArgumentList>. L'input per il codice è **books.xml**, e il foglio di stile è **text.xsl**. Il file **test.xml** è il <xref:System.Xml.XPath.XPathDocument>.  
+ Nell'esempio di codice seguente viene descritto come passare un tipo <xref:System.Xml.XPath.XPathNodeIterator> a un <xref:System.Xml.Xsl.XslTransform> come parametro nel tipo <xref:System.Xml.Xsl.XsltArgumentList>. L'input per il codice è **books.xml** e il foglio di stile è **text.xsl**. Il file **test.xml** è il tipo <xref:System.Xml.XPath.XPathDocument>.  
   
 ```vb  
 Imports System  
@@ -166,4 +169,4 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Classe XslTransform implementa il processore XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

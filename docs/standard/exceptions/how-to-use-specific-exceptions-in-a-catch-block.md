@@ -17,19 +17,22 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94e5840ca4bb5f871a0ae91f53404de6a60d749d
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ebc59035140ff0464cd959129fdf48a4e9a269f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Come utilizzare eccezioni specifiche in un blocco catch
+# <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Come usare eccezioni specifiche in un blocco catch
 
-In generale, è buona norma di intercettare un tipo specifico di eccezione, anziché usare un base di programmazione `catch` istruzione.
+In generale, è buona norma intercettare un tipo di eccezione specifico invece che usare un'istruzione `catch` di base.
 
 Quando si verifica un'eccezione, l'eccezione viene passata nello stack e a ogni blocco catch viene data la possibilità di gestirla. L'ordine delle istruzioni catch è importante. Inserire i blocchi catch per il rilevamento di eccezioni specifiche prima di un blocco catch generale per il rilevamento delle eccezioni per evitare che il compilatore generi un errore. Il blocco catch appropriato viene determinato tramite la corrispondenza del tipo di eccezione al nome dell'eccezione specificato nel blocco catch. Se non è presente alcun blocco catch specifico, l'eccezione viene rilevata da un blocco catch generale, se disponibile.
 

@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappresenta un semaforo denominato (systemwide) o locale. È un semplice wrapper per l'oggetto semaforo Win32. I semafori Win32 sono semafori di conteggio che possono essere usati per controllare l'accesso a un pool di risorse.  
@@ -39,7 +42,7 @@ La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> rappres
 ### <a name="semaphores-and-thread-identity"></a>Semafori e identità thread  
  I due tipi di semaforo non applicano l'identità thread alle chiamate ai metodi <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> e <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Ad esempio, uno scenario di utilizzo comune per i semafori implica un thread producer e un thread consumer, di cui uno incrementa sempre il conteggio del semaforo e l'altro lo decrementa sempre.  
   
- È compito del programmatore garantire che un thread non rilasci il semaforo troppe volte. Ad esempio, si consideri un semaforo con un conteggio massimo di due e il thread A e B accedano entrambi al semaforo. Se un errore di programmazione nel thread B fa sì che venga chiamato `Release` due volte, entrambe le chiamate hanno esito positivo. Il conteggio del semaforo è completo e quando il thread chiama `Release`, <xref:System.Threading.SemaphoreFullException> viene generata un'eccezione.  
+ È compito del programmatore garantire che un thread non rilasci il semaforo troppe volte. Ad esempio, si consideri un semaforo con un conteggio massimo di due e il thread A e B accedano entrambi al semaforo. Se un errore di programmazione nel thread B fa sì che venga chiamato `Release` due volte, entrambe le chiamate hanno esito positivo. Il conteggio sul semaforo è completo e quando il thread A alla fine chiama `Release`, viene generata un'eccezione <xref:System.Threading.SemaphoreFullException>.  
   
 ## <a name="named-semaphores"></a>Semafori denominati  
  Il sistema operativo Windows consente di assegnare nomi ai semafori. Un semaforo denominato è a livello di sistema: vale a dire che, una volta creato, il semaforo denominato è visibile a tutti i thread in tutti i processi. In questo modo, il semaforo denominato può essere usato per sincronizzare le attività di processi e thread.  

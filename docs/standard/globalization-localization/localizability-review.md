@@ -22,18 +22,21 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>Revisione della localizzabilità
-La revisione della localizzabilità è un passaggio intermedio nello sviluppo di un'applicazione internazionale. Viene verificato che un'applicazione globalizzata sia pronta per la localizzazione e viene identificato qualsiasi codice o aspetto dell'interfaccia utente per cui è richiesta una gestione speciale. Questo passaggio consente di garantire che durante il processo di localizzazione non verranno introdotti difetti funzionali nell'applicazione. Quando tutti i problemi generati dall'analisi della localizzazione vengono risolti, l'applicazione è pronta per la localizzazione. Se l'analisi della localizzabilità è completa, non è necessario modificare nessun codice sorgente durante il processo di localizzazione.  
+La revisione della localizzabilità è un passaggio intermedio nello sviluppo di un'applicazione internazionale. Viene verificato che un'applicazione globalizzata sia pronta per la localizzazione e viene identificato qualsiasi codice o aspetto dell'interfaccia utente per cui è richiesta una gestione speciale. Questo passaggio consente di garantire che durante il processo di localizzazione non verranno introdotti difetti funzionali nell'applicazione. Quando tutti i problemi generati dall'analisi della localizzazione vengono risolti, l'applicazione è pronta per la localizzazione. Se la revisione della localizzabilità è completa, non è necessario modificare nessun codice sorgente durante il processo di localizzazione.  
   
  La revisione della localizzabilità è costituita dai tre controlli seguenti:  
   
@@ -41,11 +44,11 @@ La revisione della localizzabilità è un passaggio intermedio nello sviluppo di
   
 -   [Le funzionalità dipendenti dalle impostazioni cultura sono gestite correttamente?](#culture)  
   
--   [È stata testata l'applicazione con dati internazionali?](#test)  
+-   [L'applicazione è stata testata con dati internazionali?](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>Implementazione dei requisiti di globalizzazione  
- Se aver progettato e sviluppata l'applicazione con localizzazione presente e se sono state eseguite le raccomandazioni descritte nel [globalizzazione](../../../docs/standard/globalization-localization/globalization.md) articolo, la revisione della localizzabilità è principalmente un passaggio di controllo della qualità . In caso contrario, durante questa fase è necessario rivedere e implementare i requisiti per [globalizzazione](../../../docs/standard/globalization-localization/globalization.md)e correggere gli errori nel codice sorgente che impediscono la localizzazione.  
+ Se l'applicazione è stata progettata e sviluppata pensando alla localizzazione e se sono stati seguiti i consigli forniti nell'articolo [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md), la revisione della localizzabilità sarà principalmente un passaggio di controllo di qualità. In caso contrario, durante questa fase sarà necessario rivedere e implementare i consigli per la [globalizzazione](../../../docs/standard/globalization-localization/globalization.md) e correggere gli errori nel codice sorgente che impediscono la localizzazione.  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>Gestione delle funzionalità dipendenti dalle impostazioni cultura  
@@ -78,7 +81,7 @@ La revisione della localizzabilità è un passaggio intermedio nello sviluppo di
   
 -   Confronti di stringhe o confronti per l'uguaglianza tramite cui vengono restituiti risultati imprevisti.  
   
- Se aver seguito i requisiti di globalizzazione, quando si sviluppa l'applicazione, gestita correttamente, le funzionalità dipendenti dalle impostazioni cultura e identificato e risolto i problemi di localizzazione che si è verificato durante il test, è possibile procedere al passaggio successivo, [Localizzazione](../../../docs/standard/globalization-localization/localization.md).  
+ Se durante lo sviluppo dell'applicazione sono stati seguiti i consigli per la globalizzazione, le funzionalità dipendenti dalle impostazioni cultura sono state gestite correttamente e i problemi di localizzazione riscontrati durante i test sono stati identificati e risolti, è possibile procedere al passaggio successivo, [Localizzazione](../../../docs/standard/globalization-localization/localization.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  

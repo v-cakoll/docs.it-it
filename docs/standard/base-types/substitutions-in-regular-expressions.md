@@ -19,15 +19,18 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sostituzioni nelle espressioni regolari
 <a name="Top"></a> Le sostituzioni sono elementi di linguaggio riconosciuti solo all'interno dei criteri di sostituzione. Utilizzano un modello di espressione regolare per definire in tutto o in parte il testo che sostituirà il testo corrispondente nella stringa di input. Il criterio di sostituzione può essere costituito da una o più sostituzioni insieme a caratteri letterali. I criteri di sostituzione vengono forniti agli overload del metodo <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> che dispongono di un parametro `replacement` e al metodo <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. I metodi sostituiscono il criterio di ricerca con il criterio definito dal parametro `replacement` .  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Trovare la corrispondenza con zero o più caratteri di simboli valutari.|  
 |`\s?`|Trova la corrispondenza di uno o nessuno spazio vuoto.|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `\b(\d+)(\.(\d+))?` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza all'inizio di un confine di parola.|  
 |`(\d+)`|Trova la corrispondenza con una o più cifre decimali. Equivale al primo gruppo di acquisizione.|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `^(\w+\s?)+$` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(\w+\s?)+`|Ottiene una o più volte la corrispondenza con il modello di uno o più caratteri alfanumerici seguiti da zero o da uno spazio vuoto.|  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Sostituzione del testo prima della corrispondenza  
- La sostituzione <code>$\`</code> sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(Nell'esempio viene illustrato questo concetto.\) Se non esiste alcuna corrispondenza, la sostituzione <code>$\`</code> non ha alcun effetto.  
+ La sostituzione <code>$\`</code> sostituisce la stringa corrispondente con l'intera stringa di input prima della corrispondenza. Ovvero, duplica la stringa di input fino alla corrispondenza e rimuove il testo corrispondente. Qualsiasi testo che segue il testo corrispondente resta invariato nella stringa di risultato. Se esistono più corrispondenze in una stringa di input, il testo di sostituzione viene derivato dalla stringa di input originale anziché dalla stringa in cui il testo è stato sostituito dalle corrispondenze precedenti. \(Nell'esempio viene illustrata una situazione di questo tipo.\) Se non esiste alcuna corrispondenza, la sostituzione <code>$\`</code> non ha alcun effetto.  
   
  Nell'esempio seguente viene usato il criterio di espressione regolare `\d+` per trovare la corrispondenza con una sequenza di una o più cifre decimali nella stringa di input. La stringa di sostituzione <code>$`</code> sostituisce queste cifre con il testo che precede la corrispondenza.  
   
@@ -200,7 +203,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\s\1\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  

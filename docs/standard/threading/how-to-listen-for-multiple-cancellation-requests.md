@@ -15,31 +15,34 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 36cf338a15ad3f7d234f902c50a2dbb1b2e95847
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 397de114a3d8c3cbcfbc8ab55e4dbaf45ca9b652
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procedura: Ascolto di più richieste di annullamento
-In questo esempio viene illustrato come contemporaneamente in attesa di due token di annullamento in modo che se uno dei token lo richiede, è possibile annullare un'operazione.  
+Questo esempio illustra come essere in ascolto di due token di annullamento contemporaneamente, in modo da annullare un'operazione se uno dei due token lo richiede.  
   
 > [!NOTE]
->  Quando "Just My Code" è abilitato, Visual Studio in alcuni casi si interromperà in corrispondenza della riga che genera l'eccezione e visualizzerà un messaggio di errore simile a "Eccezione non gestita dal codice utente". Questo errore non è grave. È possibile premere F5 per continuare e osservare il comportamento di gestione delle eccezioni illustrato negli esempi seguenti. Per impedire l'interruzione per il primo errore di Visual Studio, deselezionare semplicemente la casella di controllo "Just My Code" **strumenti, opzioni, debug, generale**.  
+>  Quando "Just My Code" è abilitato, Visual Studio in alcuni casi si interromperà in corrispondenza della riga che genera l'eccezione e visualizzerà un messaggio di errore simile a "Eccezione non gestita dal codice utente". Questo errore non è grave. È possibile premere F5 per continuare e osservare il comportamento di gestione delle eccezioni illustrato negli esempi seguenti. Per impedire l'interruzione di Visual Studio al primo errore, deselezionare semplicemente la casella di controllo "Just My Code" in **Strumenti, Opzioni, Debug, Generale**.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il <xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> metodo viene utilizzato per unire due token in un token. In questo modo il token deve essere passato ai metodi che accettano l'annullamento di un solo token come argomento. Nell'esempio viene illustrato uno scenario comune in cui un metodo è necessario osservare sia un token passato dall'esterno della classe e un token generato all'interno della classe.  
+ Nell'esempio seguente il metodo <xref:System.Threading.CancellationTokenSource.CreateLinkedTokenSource%2A> viene usato per unire due token in un token. In questo modo, il token può essere passato ai metodi che accettano un solo token di annullamento come argomento. L'esempio illustra uno scenario comune in cui un metodo deve rilevare sia un token passato dall'esterno della classe che un token generato all'interno della classe.  
   
  [!code-csharp[Cancellation#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#13)]
  [!code-vb[Cancellation#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#13)]  
   
- Quando il token collegato genera un <xref:System.OperationCanceledException>, il token passato all'eccezione è il token collegato, non uno dei token del predecessore. Per determinare quale dei token è stata annullata, controllare lo stato dei token del predecessore direttamente.  
+ Quando il token collegato genera un'eccezione <xref:System.OperationCanceledException>, il token passato all'eccezione è il token collegato, non uno dei token predecessori. Per determinare quale token è stato annullato, controllare direttamente lo stato dei token predecessori.  
   
- In questo esempio, <xref:System.AggregateException> non deve essere mai generata, ma venga intercettato qui perché in scenari reali eccezione <xref:System.OperationCanceledException> generati da un delegato di attività viene eseguito il wrapping un <xref:System.OperationCanceledException>.  
+ In questo esempio l'eccezione <xref:System.AggregateException> non deve essere mai generata, ma qui viene intercettata perché in scenari reali per le eccezioni diverse da <xref:System.OperationCanceledException> generate da un delegato dell'attività viene eseguito il wrapping in un oggetto <xref:System.OperationCanceledException>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md)

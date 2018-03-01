@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>Procedure consigliate per le eccezioni
 
@@ -90,7 +94,7 @@ Quando è necessaria un'eccezione personalizzata, assegnare un nome appropriato 
 
 Usare almeno i tre costruttori comuni quando si creano classi di eccezione personalizzate: il costruttore predefinito, un costruttore che accetta un messaggio stringa e un costruttore che accetta un messaggio stringa e un'eccezione interna.
 
-* <xref:System.Exception.%23ctor>, che utilizza i valori predefiniti.
+* <xref:System.Exception.%23ctor>, che usa valori predefiniti.
   
 * <xref:System.Exception.%23ctor%28System.String%29>, che accetta un messaggio stringa.  
   
@@ -102,7 +106,7 @@ Per un esempio, vedere [Procedura: Creare eccezioni definite dall'utente](how-to
 
 Quando si creano eccezioni definite dall'utente, garantire che i metadati relativi alle eccezioni siano disponibili per il codice eseguito in modalità remota. 
 
-In implementazioni di .NET che supportano i domini applicazione, ad esempio, le eccezioni possono verificarsi tra domini App. Si supponga che il dominio app A crei il dominio app B che esegue codice che genera un'eccezione. Per rilevare e gestire correttamente l'eccezione è necessario che il dominio app A sia in grado di individuare l'assembly contenente l'eccezione generata dal dominio app B. Se il dominio app B genera un'eccezione contenuta in un assembly nella relativa base dell'applicazione ma non nella base dell'applicazione del dominio app A, il dominio app A non sarà in grado di individuare l'eccezione e Common Language Runtime genererà un'eccezione <xref:System.IO.FileNotFoundException>. Per evitare che questo si verifichi è possibile distribuire l'assembly contenente le informazioni sull'eccezione in due modi:
+Ad esempio, nelle implementazioni .NET che supportano domini app, è possibile che si verifichino eccezioni nei domini app. Si supponga che il dominio app A crei il dominio app B che esegue codice che genera un'eccezione. Per rilevare e gestire correttamente l'eccezione è necessario che il dominio app A sia in grado di individuare l'assembly contenente l'eccezione generata dal dominio app B. Se il dominio app B genera un'eccezione contenuta in un assembly nella relativa base dell'applicazione ma non nella base dell'applicazione del dominio app A, il dominio app A non sarà in grado di individuare l'eccezione e Common Language Runtime genererà un'eccezione <xref:System.IO.FileNotFoundException>. Per evitare che questo si verifichi è possibile distribuire l'assembly contenente le informazioni sull'eccezione in due modi:
 
 - Inserendo l'assembly in una base applicativa comune condivisa da entrambi i domini applicazione
 
@@ -116,7 +120,7 @@ Il messaggio di errore visualizzato all'utente è derivato dalla stringa descrit
 
 ## <a name="use-grammatically-correct-error-messages"></a>Usare messaggi di errore grammaticalmente corretti
 
-Scrivere frasi chiare e includere la punteggiatura finale. È necessario che ogni frase della stringa descrittiva di un'eccezione termini con un punto. Ad esempio, "tabella del log di overflow." è una stringa descrittiva corretta.
+Scrivere frasi chiare e includere la punteggiatura finale. È necessario che ogni frase della stringa descrittiva di un'eccezione termini con un punto. Ad esempio, "Overflow della tabella del log." è una stringa descrittiva corretta.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Nelle eccezioni personalizzate specificare le proprietà aggiuntive necessarie
 
@@ -134,7 +138,7 @@ Una classe genera spesso la stessa eccezione da punti diversi dell'implementazio
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-In alcuni casi è preferibile usare il costruttore dell'eccezione per compilare l'eccezione. Un esempio è una classe di eccezione globali, ad esempio <xref:System.ArgumentException>.
+In alcuni casi è preferibile usare il costruttore dell'eccezione per compilare l'eccezione. Un esempio è una classe di eccezioni globali, ad esempio <xref:System.ArgumentException>.
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Eliminare i risultati intermedi quando si genera un'eccezione
 

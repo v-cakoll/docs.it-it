@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura
-Il <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> forniscono overload che accettano parametri. Per impostazione predefinita, questi overload senza parametri eseguono modifiche in base al valore del <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Questo produce risultati tra maiuscole e minuscole che possono variare in base alle impostazioni cultura. Per indicare chiaramente se si desidera case modifiche delle impostazioni cultura o indipendenti dalle impostazioni cultura, è opportuno utilizzare l'overload di questi metodi che è necessario specificare in modo esplicito un `culture` parametro. Per modifiche delle impostazioni cultura, specificare `CultureInfo.CurrentCulture` per il `culture` parametro. Per le modifiche indipendenti dalle impostazioni cultura, specificare `CultureInfo.InvariantCulture` per il `culture` parametro.  
+I metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> forniscono overload che non accettano parametri. Per impostazione predefinita, questi overload senza parametri eseguono modifiche di maiuscole e minuscole in base al valore di <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Ciò produce risultati con distinzione tra maiuscole e minuscole che possono variare in base alle impostazioni cultura. Per definire modifiche di maiuscole e minuscole dipendenti o meno dalle impostazioni cultura, è consigliabile usare gli overload di questi metodi che richiedono di specificare in modo esplicito un parametro `culture`. Per definire modifiche di maiuscole e minuscole dipendenti dalle impostazioni cultura, specificare `CultureInfo.CurrentCulture` per il parametro `culture`. Per definire modifiche indipendenti dalle impostazioni cultura, specificare `CultureInfo.InvariantCulture` per il parametro `culture`.  
   
- Spesso, le stringhe vengono convertite in un caso standard per abilitare la ricerca semplice in un secondo momento. Quando le stringhe vengono utilizzate in questo modo, è necessario specificare `CultureInfo.InvariantCulture` per il `culture` parametro, perché il valore di <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> può essere modificato tra il momento in caso di modifica e l'ora in cui viene eseguita la ricerca.  
+ La combinazione di maiuscole e minuscole nelle stringhe viene spesso convertita in base a un criterio standard per abilitare e semplificare la ricerca in un secondo momento. Quando le stringhe vengono usate in questo modo, è necessario specificare `CultureInfo.InvariantCulture` per il parametro `culture`, perché è possibile che il valore di <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> vari tra il momento in cui si verifica la modifica di maiuscole e minuscole e il momento in cui viene eseguita la ricerca.  
   
- Se una decisione relativa alla sicurezza è basato su un'operazione di modifica di maiuscole, l'operazione deve essere indipendente dalle impostazioni cultura per assicurarsi che il risultato non è influenzato dal valore di `CultureInfo.CurrentCulture`. Vedere la sezione "Stringa confronti che usa il corrente delle impostazioni cultura" il [procedure consigliate per l'uso di stringhe](../../../docs/standard/base-types/best-practices-strings.md) articolo per un esempio che illustra le operazioni di stringa come impostazioni cultura può produrre risultati incoerenti.  
+ Se una decisione relativa alla sicurezza è basata su un'operazione di modifica di maiuscole e minuscole, è necessario che l'operazione sia indipendente dalle impostazioni cultura in modo che il risultato non venga influenzato dal valore di `CultureInfo.CurrentCulture`. Per un esempio in cui viene illustrato il modo in cui le operazioni su stringhe dipendenti dalle impostazioni cultura possono comportare risultati non coerenti, vedere la sezione relativa ai confronti di stringhe in cui vengono utilizzate le impostazioni cultura correnti nell'articolo [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md).  
   
-## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Utilizzo di String. ToUpper e String. ToLower metodi  
- Per maggiore chiarezza del codice, è consigliabile utilizzare sempre l'overload di `String.ToUpper` e `String.ToLower` metodi che consentono di specificare un `culture` parametro in modo esplicito. Ad esempio, il codice seguente esegue una ricerca dell'identificatore. Il `key.ToLower` l'operazione è la distinzione delle impostazioni cultura per impostazione predefinita, ma questo comportamento non è chiara dalla lettura del codice.  
+## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Uso dei metodi String.ToUpper e String.ToLower  
+ Per ottenere una maggiore chiarezza del codice, è consigliabile usare sempre gli overload dei metodi `String.ToUpper` e `String.ToLower`, che consentono di specificare un parametro `culture` in modo esplicito. Nel codice seguente, ad esempio, viene eseguita una ricerca dell'identificatore. L'operazione `key.ToLower` non dipende dalle impostazioni cultura per impostazione predefinita, ma questo comportamento non è evidente da una lettura del codice.  
   
 ### <a name="example"></a>Esempio  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- Se si desidera che il `key.ToLower` operazione sia indipendente dalle impostazioni cultura, è necessario modificare l'esempio precedente come indicato di seguito per utilizzare in modo esplicito il `CultureInfo.InvariantCulture` quando si modifica il case.  
+ Se si desidera che l'operazione `key.ToLower` non dipenda dalle impostazioni cultura, è necessario modificare l'esempio precedente come indicato di seguito per usare in modo esplicito `CultureInfo.InvariantCulture` in caso di modifica di maiuscole/minuscole.  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -71,8 +74,8 @@ static object LookupKey(string key)
 }  
 ```  
   
-## <a name="using-the-chartoupper-and-chartolower-methods"></a>Utilizzando il Char. ToUpper e Char. ToLower metodi  
- Sebbene il `Char.ToUpper` e `Char.ToLower` metodi hanno le stesse caratteristiche come il `String.ToUpper` e `String.ToLower` metodi, le uniche impostazioni cultura su cui hanno effetto sono Turco (Turchia) e Azero (alfabeto latino, Azerbaijan). Queste sono le uniche due lingue con differenze di maiuscole e minuscole a carattere singolo. Per informazioni dettagliate su questo mapping di maiuscole e minuscole univoco, vedere la sezione "Maiuscole e minuscole" dell'argomento della classe <xref:System.String>. Per maggiore chiarezza del codice e per garantire risultati coerenti, è consigliabile utilizzare sempre l'overload di questi metodi che consentono di specificare in modo esplicito un `culture` parametro.  
+## <a name="using-the-chartoupper-and-chartolower-methods"></a>Uso dei metodi Char.ToUpper e Char.ToLower  
+ Sebbene i metodi `Char.ToUpper` e `Char.ToLower` abbiano le stesse caratteristiche dei metodi `String.ToUpper` e `String.ToLower`, le uniche impostazioni cultura su cui hanno effetto sono Turco (Turchia) e Azero (alfabeto latino, Azerbaigian). Queste sono le uniche due impostazioni cultura con differenze di maiuscole e minuscole a carattere singolo. Per informazioni dettagliate su questo mapping di maiuscole e minuscole univoco, vedere la sezione "Maiuscole e minuscole" dell'argomento della classe <xref:System.String>. Per maggiore chiarezza del codice e per garantire risultati coerenti, è consigliabile usare sempre gli overload di questi metodi che consentono di specificare in modo esplicito un parametro `culture`.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  

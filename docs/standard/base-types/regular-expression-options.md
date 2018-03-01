@@ -18,15 +18,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 <a name="Top"></a> Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -112,7 +115,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
  [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]  
   
- Nelle sezioni seguenti vengono elencano le opzioni supportate da espressioni regolari di .NET.  
+ Nelle sezioni seguenti sono riportate le opzioni supportate dalle espressioni regolari in .NET.  
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>Opzioni predefinite  
@@ -170,7 +173,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `^(\w+)\s(\d+)\r*$` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Comincia all'inizio della riga.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  è intesa solo per l'estrazione di frasi che terminano con un punto, un punto esclamativo o un punto interrogativo da un documento, solo la frase risultante (rappresentata dall'oggetto <xref:System.Text.RegularExpressions.Match>) rappresenta un elemento di interesse. Le singola parole nella raccolta non lo sono.  
   
- I gruppi di acquisizione che successivamente non vengono usati possono risultare costosi, in quanto il motore delle espressioni regolari deve popolare entrambi gli oggetti raccolta <xref:System.Text.RegularExpressions.GroupCollection> e <xref:System.Text.RegularExpressions.CaptureCollection>. In alternativa, è possibile utilizzare il <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> opzione o `n` opzione inline per specificare che le uniche acquisizioni valide sono denominate o numerate gruppi che sono contraddistinte da in modo esplicito il `(?<` *nome* `>` *sottoespressione* `)` costruire.  
+ I gruppi di acquisizione che successivamente non vengono usati possono risultare costosi, in quanto il motore delle espressioni regolari deve popolare entrambi gli oggetti raccolta <xref:System.Text.RegularExpressions.GroupCollection> e <xref:System.Text.RegularExpressions.CaptureCollection>. In alternativa, si può usare l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o l'opzione inline `n` per specificare che le sole acquisizioni valide sono i gruppi denominati o numerati in modo esplicito definiti dal costrutto `(?<`*nome*`>` *sottoespressione*`)`.  
   
  L'esempio seguente mostra informazioni sulle corrispondenze restituite dal criterio di ricerca di espressioni regolari `\b\(?((\w+),?\s?)+[\.!?]\)?` quando viene chiamato il metodo <xref:System.Text.RegularExpressions.Regex.Match%2A> con e senza l'opzione <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>. Come mostra l'output della prima chiamata al metodo, il motore delle espressioni regolari popola interamente gli oggetti raccolta <xref:System.Text.RegularExpressions.GroupCollection> e <xref:System.Text.RegularExpressions.CaptureCollection> con informazioni sulle sottostringhe acquisite. Poiché il secondo metodo viene chiamato con `options` impostato su <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>, non acquisisce informazioni sui gruppi.  
   
@@ -223,7 +226,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari `\b\(?((?>\w+),?\s?)+[\.!?]\)?` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
 |`\(?`|Trova la corrispondenza di una o nessuna parentesi di apertura ("(").|  
@@ -282,11 +285,11 @@ ms.lasthandoff: 10/18/2017
   
 -   Uno spazio vuoto in una classe di caratteri viene sempre interpretato letteralmente. Ad esempio, il criterio di ricerca di espressioni regolari `[ .,;:]` trova la corrispondenza di qualsiasi spazio vuoto, punto, virgola, punto e virgola o due punti.  
   
--   Lo spazio vuoto non è consentito all'interno di un quantificatore tra parentesi quadre, ad esempio `{`  *n*  `}`, `{`  *n*  `,}`e `{`  *n*  `,` *m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1. 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.  
+-   Gli spazi vuoti non sono consentiti all'interno di un quantificatore tra parentesi, ad esempio `{`*n*`}`, `{`*n*`,}` e `{`*n*`,`*m*`}`. Ad esempio, il criterio di ricerca di espressioni regolari `\d{1. 3}` non riesce a trovare sequenze di cifre da una a tre cifre perché contiene uno spazio vuoto.  
   
 -   Gli spazi vuoti non sono consentiti all'interno di una sequenza di caratteri che introduce un elemento di linguaggio. Ad esempio:  
   
-    -   L'elemento di linguaggio `(?:`*sottoespressione*`)` rappresenta un gruppo di non acquisizione e la porzione `(?:` dell'elemento non può contenere spazi vuoti. Il modello `(? :` *sottoespressione* `)` genera un <xref:System.ArgumentException> in fase di esecuzione perché il motore delle espressioni regolari non può analizzare il modello e il criterio `( ?:` *sottoespressione*  `)` non riesce a trovare *sottoespressione*.  
+    -   L'elemento di linguaggio `(?:`*sottoespressione*`)` rappresenta un gruppo di non acquisizione e la porzione `(?:` dell'elemento non può contenere spazi vuoti. Il criterio `(? :`*sottoespressione*`)` genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione, perché il motore delle espressioni regolari non può analizzare il criterio e il criterio `( ?:`*sottoespressione*`)` non riesce a trovare la corrispondenza di *sottoespressione*.  
   
     -   L'elemento di linguaggio `\p{`*nome*`}`, che rappresenta una categoria Unicode o un blocco denominato, non può includere spazi vuoti nella porzione `\p{` dell'elemento. Se si include uno spazio vuoto, l'elemento genera un'eccezione <xref:System.ArgumentException> in fase di esecuzione.  
   
@@ -296,7 +299,7 @@ ms.lasthandoff: 10/18/2017
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- Questo criterio è simile a quello definito nel [solo acquisizioni esplicite](#Explicit) sezione, ad eccezione del fatto che usa il <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> opzione per ignorare spazi vuoti nel criterio.  
+ Questo criterio è simile a quello definito nella sezione [Solo acquisizioni esplicite](#Explicit), ad eccezione del fatto che usa l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> per ignorare lo spazio vuoto del criterio.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
@@ -327,7 +330,7 @@ ms.lasthandoff: 10/18/2017
   
  Il criterio di ricerca di espressioni regolari è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`(?<=\d{1,2}\s)`|L'inizio della corrispondenza deve essere preceduto da una o due cifre decimali seguite da uno spazio.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
@@ -348,7 +351,7 @@ ms.lasthandoff: 10/18/2017
   
  Il comportamento di ECMAScript e quello delle espressioni regolari canoniche differiscono in tre aspetti: sintassi delle classi di caratteri, gruppi di acquisizione autoreferenziali e interpretazione degli ottali rispetto a quella dei backreference.  
   
--   Sintassi delle classi di caratteri. Poiché le espressioni regolari canoniche supportano Unicode a differenza di ECMAScript, le classi di caratteri in ECMAScript hanno una sintassi più limitata e alcuni elementi di linguaggio delle classi di caratteri hanno un significato diverso. Ad esempio, ECMAScript non supporta elementi di linguaggio come la categoria Unicode o gli elementi di blocco `\p` e `\P`. Analogamente, l'elemento `\w`, che trova la corrispondenza di un carattere alfanumerico è equivalente alla classe di caratteri `[a-zA-Z_0-9]` quando si usa ECMAScript e a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` quando si usa il comportamento canonico. Per altre informazioni, vedere [Classi di caratteri](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+-   Sintassi delle classi di caratteri. Poiché le espressioni regolari canoniche supportano Unicode a differenza di ECMAScript, le classi di caratteri in ECMAScript hanno una sintassi più limitata e alcuni elementi di linguaggio delle classi di caratteri hanno un significato diverso. Ad esempio, ECMAScript non supporta elementi di linguaggio come la categoria Unicode o gli elementi di blocco `\p` e `\P`. Analogamente, l'elemento `\w`, che trova la corrispondenza di un carattere alfanumerico è equivalente alla classe di caratteri `[a-zA-Z_0-9]` quando si usa ECMAScript e a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` quando si usa il comportamento canonico. Per altre informazioni, vedere [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
      L'esempio seguente illustra le differenze tra i criteri di ricerca canonici ed ECMAScript. Definisce un'espressione regolare, `\b(\w+\s*)+`, che trova la corrispondenza di parole seguite da spazi vuoti. L'input è costituito da due stringhe, una che usa il set di caratteri latini e l'altra che usa il set di caratteri cirillici. Come mostra l'output, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> che usa i criteri di ricerca ECMAScript non riesce a trovare la corrispondenza delle parole in cirillico, mentre la chiamata al metodo che usa i criteri di ricerca individua trova la corrispondenza.  
   
@@ -362,7 +365,7 @@ ms.lasthandoff: 10/18/2017
   
      L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-    |Criterio|Descrizione|  
+    |Modello|Descrizione|  
     |-------------|-----------------|  
     |(a+)|Trova la corrispondenza della lettera "a" una o più volte. Equivale al secondo gruppo di acquisizione.|  
     |(\1)|Trova la corrispondenza della sottostringa acquisita dal primo gruppo di acquisizione. Equivale al terzo gruppo di acquisizione.|  

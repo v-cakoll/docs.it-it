@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87a03883622ba63a8d999907305356905b36bf1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Spazi dei nomi e DTD nel DOM (Document Object Model)
 Le DTD (Document Type Definition) rendono più complicato il supporto dello spazio dei nomi. Ad esempio, nel seguente codice XML sono presenti attributi predefiniti contenenti due punti nei nomi.  
@@ -38,7 +41,7 @@ Le DTD (Document Type Definition) rendono più complicato il supporto dello spaz
   
 -   Quando l'utente richiede la convalida della DTD, il supporto per lo spazio dei nomi viene disattivato per l'intero documento. In tal modo è possibile caricare le DTD W3C e ottenere un comportamento prevedibile.  
   
- Il codice XML in Microsoft .NET Framework implementa la seconda opzione per la massima compatibilità di W3C.  
+ Il codice XML in Microsoft .NET Framework implementa la seconda opzione per garantire la massima compatibilità con le specifiche W3C.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

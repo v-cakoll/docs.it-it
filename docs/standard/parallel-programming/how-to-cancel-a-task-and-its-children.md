@@ -11,38 +11,42 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, how to cancel
+helpviewer_keywords:
+- tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 374068694a3aa9724905964717dc5e77c09fc0ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecccd5ddd3ff662b03ae7078aabaf58e397f7003
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procedura: Annullare un'attività e i relativi figli
-Questi esempi illustrano come eseguire le attività seguenti:  
+Questi esempi mostrano come eseguire le attività seguenti:  
   
 1.  Creare e avviare un'attività annullabile.  
   
-2.  Passare un token di annullamento al delegato dell'utente e, facoltativamente, per l'istanza dell'attività.  
+2.  Passare un token di annullamento al delegato dell'utente e, facoltativamente, all'istanza dell'attività.  
   
 3.  Rilevare e rispondere alla richiesta di annullamento nel delegato dell'utente.  
   
-4.  Facoltativamente, si noti sul thread chiamante che l'attività è stata annullata.  
+4.  Facoltativamente, indicare nel thread chiamante che l'attività è stata annullata.  
   
- Il thread chiamante non termina forzatamente dell'attività. indica solo che la richiesta di annullamento. Se l'attività è già in esecuzione, è responsabilità del delegato dell'utente si noti che la richiesta e rispondere in modo appropriato. Se la richiesta di annullamento prima dell'esecuzione di attività, il delegato dell'utente non viene mai eseguito e l'oggetto attività passa allo stato Canceled.  
+ Il thread chiamante non forza la fine dell'attività, ma segnala solo che è richiesto l'annullamento. Se l'attività è già in esecuzione, è responsabilità del delegato dell'utente rilevare la richiesta e rispondervi nel modo appropriato. Se l'annullamento viene richiesto prima dell'esecuzione dell'attività, il delegato dell'utente non viene mai eseguito e l'oggetto attività passa allo stato annullato.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene illustrato come terminare una <xref:System.Threading.Tasks.Task> e relativi elementi figlio in risposta a una richiesta di annullamento. Viene inoltre mostrato che quando un delegato dell'utente viene terminato generando un oggetto <xref:System.Threading.Tasks.TaskCanceledException>, tramite il thread chiamante è possibile utilizzare facoltativamente il metodo <xref:System.Threading.Tasks.Task.Wait%2A> o il metodo <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere il completamento delle attività. In questo caso, è necessario utilizzare un blocco `try/catch` per gestire le eccezioni nel thread chiamante.  
+ Questo esempio mostra come terminare un'attività <xref:System.Threading.Tasks.Task> e i relativi elementi figlio in risposta a una richiesta di annullamento. Viene inoltre mostrato che quando un delegato dell'utente viene terminato generando un oggetto <xref:System.Threading.Tasks.TaskCanceledException>, tramite il thread chiamante è possibile utilizzare facoltativamente il metodo <xref:System.Threading.Tasks.Task.Wait%2A> o il metodo <xref:System.Threading.Tasks.Task.WaitAll%2A> per attendere il completamento delle attività. In questo caso, è necessario utilizzare un blocco `try/catch` per gestire le eccezioni nel thread chiamante.  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  
   
- Il <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classe è completamente integrata con il modello di annullamento che si basa sul <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> e <xref:System.Threading.CancellationToken?displayProperty=nameWithType> tipi. Per ulteriori informazioni, vedere [annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md) e [annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ La classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> è completamente integrata con il modello di annullamento basato sui tipi <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> e <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Per altre informazioni, vedere [Annullamento in thread gestiti](../../../docs/standard/threading/cancellation-in-managed-threads.md) e [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  

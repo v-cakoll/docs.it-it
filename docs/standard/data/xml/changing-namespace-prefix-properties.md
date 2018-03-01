@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ce6e4b705188b9c1d0949703991633e3f450689
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3cb0db0fbffa5f42fb09f29da2976727451e3741
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-namespace-prefix-properties"></a>Modifica delle proprietà del prefisso dello spazio dei nomi
-Il **XmlNode** classe consente di modificare il prefisso dello spazio dei nomi associato a un determinato nodo. Nel codice seguente, ad esempio, viene mostrata la modifica del prefisso di un elemento.  
+La classe **XmlNode** consente di modificare il prefisso dello spazio dei nomi associato a un determinato nodo. Nel codice seguente, ad esempio, viene mostrata la modifica del prefisso di un elemento.  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -71,7 +74,7 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Quando la struttura ad albero è stata resa persistente in una stringa in seguito alla chiamata a **doc. InnerXml**, `xmlns:a='123'` attributo è stato aggiunto per mantenere lo spazio dei nomi di `test` elemento. Era `'123'`, ed è rimasto `'123'`.  
+ Poiché l'albero è stato reso permanente in una stringa in seguito alla chiamata a **doc.InnerXml**, l'attributo `xmlns:a='123'` è stato aggiunto per mantenere lo spazio dei nomi dell'elemento `test`. Era `'123'`, ed è rimasto `'123'`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

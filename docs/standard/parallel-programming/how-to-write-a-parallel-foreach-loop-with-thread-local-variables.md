@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel foreach loop, how to use local state
+helpviewer_keywords:
+- parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Procedura: scrivere un ciclo Parallel.ForEach con variabili di thread locali
 Nell'esempio seguente viene illustrato come scrivere un metodo <xref:System.Threading.Tasks.Parallel.ForEach%2A> che usa variabili locale di thread. Quando viene eseguito un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, la relativa raccolta di origine viene divisa in più partizioni. Ogni partizione otterrà la propria copia della variabile di "locale di thread". Il termine "locale di thread" è leggermente impreciso, in quanto in alcuni casi è possibile che due partizioni vengano eseguite sullo stesso thread.  
   
- Il codice e i parametri riportati in questo esempio, somigliano molto al metodo <xref:System.Threading.Tasks.Parallel.For%2A> corrispondente. Per ulteriori informazioni, vedere [procedura: scrivere un ciclo Parallel. for con variabili di Thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ Il codice e i parametri riportati in questo esempio, somigliano molto al metodo <xref:System.Threading.Tasks.Parallel.For%2A> corrispondente. Per altre informazioni, vedere [Procedura: scrivere un ciclo Parallel.For con variabili di thread locali](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Per usare una variabile locale di thread in un ciclo <xref:System.Threading.Tasks.Parallel.ForEach%2A>, è necessario chiamare uno degli overload del metodo che accetta due parametri di tipo. Il primo parametro di tipo, `TSource`, specifica il tipo di elemento di origine e il secondo parametro di tipo, `TLocal`, specifica il tipo di variabile locale di thread.  
   

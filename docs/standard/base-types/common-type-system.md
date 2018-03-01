@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -95,7 +98,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Strutture  
- Una struttura è un tipo di valore che deriva in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>, che a sua volta deriva da <xref:System.Object?displayProperty=nameWithType>. Una struttura è molto utile per la rappresentazione di valori con requisiti di memoria piccoli e per passare valori come parametri per valori a metodi che dispongono di parametri fortemente tipizzati. In .NET, tutti i tipi di dati primitivi (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, e <xref:System.UInt64>) sono definite come strutture.  
+ Una struttura è un tipo di valore che deriva in modo implicito da <xref:System.ValueType?displayProperty=nameWithType>, che a sua volta deriva da <xref:System.Object?displayProperty=nameWithType>. Una struttura è molto utile per la rappresentazione di valori con requisiti di memoria piccoli e per passare valori come parametri per valori a metodi che dispongono di parametri fortemente tipizzati. In .NET Framework tutti i tipi di dati primitivi (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) sono definiti come strutture.  
   
  Analogamente alle classi, le strutture definiscono sia i dati (i campi della struttura) che le operazioni che è possibile eseguire s tali dati (i metodi della struttura). Ciò significa che è possibile chiamare metodi nelle strutture, inclusi i metodi virtuali definiti nelle classi <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e qualsiasi metodo definito nel tipo di valore stesso. In altre parole, le strutture possono disporre di campi, proprietà ed eventi, nonché di metodi statici e non statici. È possibile creare istanze di strutture, passarle come parametri, archiviarle come variabili locali oppure in un campo di un altro tipo di valore o tipo di riferimento. Le strutture possono inoltre implementare interfacce.  
   
@@ -120,7 +123,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
 -   Le enumerazioni non possono essere generiche, a meno che non siano generiche solo perché annidate all'interno di un tipo generico. In altre parole, un'enumerazione non può disporre di parametri dei tipi propri.  
   
     > [!NOTE]
-    >  I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipi. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
+    >  I tipi annidati, incluse le enumerazioni, creati con Visual Basic, C# e C++ comprendono i parametri di tutti i tipi generici che li comprendono e sono pertanto generici anche se non dispongono di propri parametri di tipo. Per ulteriori informazioni, vedere "Tipi annidati" nell'argomento di riferimento <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
  L'attributo <xref:System.FlagsAttribute> denota un tipo speciale di enumerazione definito campo di bit. Nel runtime non viene fatta distinzione tra enumerazioni tradizionali e campi di bit, ma è possibile che tale distinzione esista nel linguaggio utilizzato. Quando tale distinzione viene effettuata, gli operatori bit per bit possono essere utilizzati sui campi di bit, ma non sulle enumerazioni, per generare valori non denominati. Le enumerazioni sono in genere utilizzate per elenchi di elementi univoci, come giorni della settimana o nomi di paesi o province. I campi di bit sono normalmente utilizzati per elenchi di qualità o quantità che possono ricorrere in combinazioni, come `Red And Big And Fast`.  
   
@@ -166,7 +169,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
  In molti casi, ad esempio con i metodi di callback, un delegato rappresenta un solo metodo e le uniche azioni che è necessario eseguire sono la creazione e il richiamo del delegato.  
   
- Per i delegati che rappresentano più metodi, .NET fornisce metodi del <xref:System.Delegate> e <xref:System.MulticastDelegate> alle classi di supporto di operazioni come aggiunta di un metodo all'elenco di chiamate del delegato, un delegato (il <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> metodo), la rimozione di un metodo (il <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> metodo) e il recupero dell'elenco chiamate (il <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> (metodo)).  
+ Per i delegati che rappresentano più metodi, .NET fornisce metodi delle classi di delegati <xref:System.Delegate> e <xref:System.MulticastDelegate> per supportare operazioni quali l'aggiunta di un metodo a un elenco chiamate di un delegato (il metodo <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), la rimozione di un metodo (il metodo <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) e il recupero dell'elenco chiamate (il metodo <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
 >  Non è necessario utilizzare questi metodi per i delegati dei gestori di eventi nei linguaggi C#, C++ e Visual Basic perché questi linguaggi forniscono la sintassi per l'aggiunta e la rimozione dei gestori di eventi.  

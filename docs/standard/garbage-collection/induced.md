@@ -8,39 +8,43 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: garbage collection, forced
+helpviewer_keywords:
+- garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 92918e347b10dfcf3a0d6e2c08cec8c7a6963f5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c3093a14fe5186df086cb5b63d20a7eb309c7ba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="induced-collections"></a>Raccolte indotte
-Nella maggior parte dei casi, tramite il Garbage Collector è possibile determinare il momento migliore per eseguire una raccolta ed è consigliabile consentire l'esecuzione in modo indipendente. In rari casi una raccolta forzata può migliorare le prestazioni dell'applicazione. In questi casi, si può provocare un'operazione di garbage collection con il <xref:System.GC.Collect%2A?displayProperty=nameWithType> metodo per forzare un'operazione di garbage collection.  
+Nella maggior parte dei casi, tramite il Garbage Collector è possibile determinare il momento migliore per eseguire una raccolta ed è consigliabile consentire l'esecuzione in modo indipendente. In rari casi una raccolta forzata può migliorare le prestazioni dell'applicazione. In questi casi, è possibile indurre un'operazione di Garbage Collection usando il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> per forzarla.  
   
- Utilizzare il <xref:System.GC.Collect%2A?displayProperty=nameWithType> metodo quando si verifica una riduzione significativa della quantità di memoria utilizzata in un punto specifico nel codice dell'applicazione. Ad esempio, se l'applicazione utilizza una finestra di dialogo complesso che dispone di diversi controlli, la chiamata <xref:System.GC.Collect%2A> quando viene chiuso la finestra di dialogo potrebbe migliorare le prestazioni recuperando immediatamente la memoria utilizzata dalla finestra di dialogo. Assicurarsi che l'applicazione non induca troppo spesso l'operazione di Garbage Collection, in quanto può causare una riduzione delle prestazioni se il Garbage Collector tenta di recuperare oggetti in momenti non ottimali. È possibile fornire un <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> valore di enumerazione per il <xref:System.GC.Collect%2A> metodo per raccogliere solo quando l'insieme sarebbe produttivo, come descritto nella sezione successiva.  
+ Usare il metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> quando si verifica una riduzione significativa della quantità di memoria usata in un momento specifico nel codice dell'applicazione. Se, ad esempio, l'applicazione usa una finestra di dialogo complessa con numerosi controlli, chiamando il metodo <xref:System.GC.Collect%2A> quando la finestra di dialogo è chiusa è possibile migliorare le prestazioni, recuperando immediatamente la memoria usata dalla finestra di dialogo. Assicurarsi che l'applicazione non induca troppo spesso l'operazione di Garbage Collection, in quanto può causare una riduzione delle prestazioni se il Garbage Collector tenta di recuperare oggetti in momenti non ottimali. È possibile fornire un valore di enumerazione <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> al metodo <xref:System.GC.Collect%2A> in modo che la raccolta venga eseguita solo quando l'operazione è produttiva, come descritto nella sezione seguente.  
   
 ## <a name="gc-collection-mode"></a>Modalità di raccolta Garbage Collection  
- È possibile utilizzare uno del <xref:System.GC.Collect%2A?displayProperty=nameWithType> overload del metodo che include un <xref:System.GCCollectionMode> valore per specificare il comportamento per una raccolta forzato come indicato di seguito.  
+ È possibile usare uno degli overload del metodo <xref:System.GC.Collect%2A?displayProperty=nameWithType> che include un valore <xref:System.GCCollectionMode> per specificare il comportamento di una raccolta forzata, come indicato di seguito.  
   
 |Valore di `GCCollectionMode`|Descrizione|  
 |------------------------------|-----------------|  
-|<xref:System.GCCollectionMode.Default>|Utilizza l'impostazione di garbage collection per la versione di .NET in esecuzione.|  
-|<xref:System.GCCollectionMode.Forced>|Forza l'esecuzione immediata dell'operazione di Garbage Collection. Questo è equivalente alla chiamata di <xref:System.GC.Collect?displayProperty=nameWithType> rapporto di overload. Restituisce una raccolta di blocco completa di tutte le generazioni.<br /><br /> È anche possibile compattare i heap degli oggetti grandi impostando la <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> proprietà <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> prima di forzare un immediato completa di garbage collection bloccante.|  
+|<xref:System.GCCollectionMode.Default>|Usa l'impostazione di Garbage Collection predefinita per la versione di .NET in esecuzione.|  
+|<xref:System.GCCollectionMode.Forced>|Forza l'esecuzione immediata dell'operazione di Garbage Collection. Equivale alla chiamata dell'overload di <xref:System.GC.Collect?displayProperty=nameWithType>. Restituisce una raccolta di blocco completa di tutte le generazioni.<br /><br /> È anche possibile compattare l'heap di oggetti di grandi dimensioni impostando la proprietà <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> su <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> prima di forzare una procedura completa immediata di Garbage Collection di blocco.|  
 |<xref:System.GCCollectionMode.Optimized>|Consente al Garbage Collector di determinare se il momento corrente è ottimale per recuperare oggetti.<br /><br /> Il Garbage Collector può determinare che una raccolta non è sufficientemente produttiva per giustificarne l'esecuzione, nel qual caso esce dalla funzione senza recuperare oggetti.|  
   
 ## <a name="background-or-blocking-collections"></a>Raccolte in background o di blocco  
- È possibile chiamare il <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> overload del metodo per specificare se o non sia bloccate da una raccolta indotta. Il tipo della raccolta eseguita dipende da una combinazione del metodo `mode` e `blocking` parametri. `mode`è un membro del <xref:System.GCCollectionMode> , enumerazione e `blocking` è un <xref:System.Boolean> valore. Nella tabella seguente viene riepilogata l'interazione del `mode` e `blocking` argomenti.  
+ È possibile chiamare l'overload del metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29?displayProperty=nameWithType> per specificare se una raccolta indotta è di blocco o meno. Il tipo di raccolta eseguita dipende da una combinazione dei parametri `mode` e `blocking` del metodo. `mode` è un membro dell'enumerazione <xref:System.GCCollectionMode> e `blocking` è un valore <xref:System.Boolean>. La tabella seguente riepiloga l'interazione degli argomenti `mode` e `blocking`.  
   
 |`mode`|`blocking` = `true`|`blocking` = `false`|  
 |------------|--------------------------|---------------------------|  
-|<xref:System.GCCollectionMode.Forced> o <xref:System.GCCollectionMode.Default>|Viene eseguita una raccolta di blocco il prima possibile. Se una raccolta in background è in corso e la generazione è 0 o 1, il <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> metodo attiva immediatamente una raccolta di blocco e al termine della raccolta. Se una raccolta in background è in corso e `generation` parametro è 2, il metodo attende fino a quando la raccolta in background al termine, attiva una raccolta di generazione 2 blocco e quindi restituisce.|Viene eseguita una raccolta il prima possibile. Il <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> metodo richiede una raccolta in background, ma questo non è garantito, a seconda delle circostanze, può ancora essere eseguita una raccolta di blocco. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
-|<xref:System.GCCollectionMode.Optimized>|Una raccolta di blocco può essere eseguita, a seconda dello stato del garbage collector e `generation` parametro. Il Garbage Collector tenta di garantire prestazioni ottimali.|È possibile eseguire una raccolta, a seconda dello stato del Garbage Collector. Il <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> metodo richiede una raccolta in background, ma questo non è garantito, a seconda delle circostanze, può ancora essere eseguita una raccolta di blocco. Il Garbage Collector tenta di garantire prestazioni ottimali. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
+|<xref:System.GCCollectionMode.Forced> o <xref:System.GCCollectionMode.Default>|Viene eseguita una raccolta di blocco il prima possibile. Se è in corso una raccolta in background e il valore di generation è 0 o 1, il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> attiva immediatamente una raccolta di blocco e restituisce un risultato al termine della raccolta. Se è in corso una raccolta in background e il parametro `generation` è 2, il metodo attende fino a quando la raccolta in background non viene completata, attiva una raccolta di blocco di generazione 2 e quindi restituisce il risultato.|Viene eseguita una raccolta il prima possibile. Il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> richiede una raccolta in background, la cui esecuzione non è comunque garantita. A seconda della situazione, può venire comunque eseguita una raccolta di blocco. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
+|<xref:System.GCCollectionMode.Optimized>|Può venire eseguita una raccolta di blocco, a seconda dello stato del Garbage Collector e del parametro `generation`. Il Garbage Collector tenta di garantire prestazioni ottimali.|È possibile eseguire una raccolta, a seconda dello stato del Garbage Collector. Il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> richiede una raccolta in background, la cui esecuzione non è comunque garantita. A seconda della situazione, può venire comunque eseguita una raccolta di blocco. Il Garbage Collector tenta di garantire prestazioni ottimali. Se è già in corso una raccolta in background, il metodo viene restituito immediatamente.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)  

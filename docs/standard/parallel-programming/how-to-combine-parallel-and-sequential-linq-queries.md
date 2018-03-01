@@ -11,32 +11,36 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel queries, combine parallel and sequential
+helpviewer_keywords:
+- parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4da91ff535059b181baa637164a854cd75d06334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02e3af91525b75df051b73587eb3e7cd8ede5504
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Procedura: combinare query LINQ parallele e sequenziali
-In questo esempio viene illustrato come utilizzare il <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metodo per indicare a elaborare in modo sequenziale tutti gli operatori successivi nella query PLINQ. Anche se è in genere inferiore a parallelo elaborazione sequenza, in alcuni casi è necessario ottenere risultati corretti.  
+Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.AsSequential%2A> per indicare a PLINQ di elaborare tutti gli operatori successivi nella query in modo sequenziale. Anche se l'elaborazione sequenziale è generalmente più lenta di quella parallela, a volte è necessaria per produrre risultati corretti.  
   
 > [!WARNING]
->  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per ulteriori informazioni sull'aumento di velocità, vedere [comprensione aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato uno scenario in cui <xref:System.Linq.ParallelEnumerable.AsSequential%2A> è obbligatorio, in particolare per conservare l'ordine è stata stabilita in una clausola della query precedente.  
+ L'esempio seguente mostra uno scenario in cui è necessario usare <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, in particolare per mantenere l'ordinamento stabilito in una clausola precedente della query.  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Per compilare ed eseguire il codice, incollarlo il [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del progetto, aggiungere una riga per chiamare il metodo dal `Main`, e premere F5.  
+ Per compilare ed eseguire il codice, incollarlo nel progetto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md), aggiungere una riga per chiamare il metodo da `Main` e quindi premere F5.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

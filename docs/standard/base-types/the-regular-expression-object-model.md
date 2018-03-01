@@ -41,26 +41,29 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>Modello a oggetti delle espressioni regolari
-<a name="introduction"></a>In questo argomento viene descritto il modello a oggetti utilizzato durante l'utilizzo di espressioni regolari di .NET. Include le sezioni seguenti:  
+<a name="introduction"></a> In questo argomento viene illustrato il modello a oggetti usato con le espressioni regolari di .NET. Include le sezioni seguenti:  
   
--   [Il motore delle espressioni regolari](#Engine)  
+-   [Motore delle espressioni regolari](#Engine)  
   
 -   [Oggetti MatchCollection e Match](#Match_and_MCollection)  
   
 -   [Raccolta Group](#GroupCollection)  
   
--   [Il gruppo acquisito](#the_captured_group)  
+-   [Gruppo acquisito](#the_captured_group)  
   
 -   [Raccolta Capture](#CaptureCollection)  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>Motore delle espressioni regolari  
- Il motore delle espressioni regolari in .NET è rappresentato dalla <xref:System.Text.RegularExpressions.Regex> classe. Il motore delle espressioni regolari è responsabile dell'analisi e della compilazione di un'espressione regolare e dell'esecuzione di operazioni che associano il criterio di espressione regolare a una stringa di input. Il motore è il componente centrale nel modello oggetto di espressione regolare di .NET.  
+ Il motore delle espressioni regolari di .NET è rappresentato dalla classe <xref:System.Text.RegularExpressions.Regex>. Il motore delle espressioni regolari è responsabile dell'analisi e della compilazione di un'espressione regolare e dell'esecuzione di operazioni che associano il criterio di espressione regolare a una stringa di input. Il motore è il componente centrale del modello a oggetti delle espressioni regolari di .NET.  
   
  È possibile usare il motore delle espressioni regolari in uno dei due modi seguenti:  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `^\d{3}-\d{2}-\d{4}$` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Trova la corrispondenza con l'inizio della stringa di input.|  
 |`\d{3}`|Trova la corrispondenza con tre cifre decimali.|  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di espressione regolare `\b(\w+)\W+(\1)\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -138,7 +141,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `\b\d+\.\d{2}\b` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -148,7 +151,7 @@ ms.lasthandoff: 11/21/2017
   
  Il modello di sostituzione `$$$&` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Criterio|Stringa di sostituzione|  
+|Modello|Stringa di sostituzione|  
 |-------------|------------------------|  
 |`$$`|Simbolo del dollaro ($).|  
 |`$&`|Intera stringa corrispondente.|  
@@ -161,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `\b\d{1,2}\.\s` è interpretato nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d{1,2}`|Trova la corrispondenza con una o due cifre decimali.|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>Raccolta Match  
  Il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> restituisce un oggetto <xref:System.Text.RegularExpressions.MatchCollection> contenente gli oggetti <xref:System.Text.RegularExpressions.Match> che rappresentano tutte le corrispondenze rilevate dal motore delle espressioni regolari, in base all'ordine in cui si trovano nella stringa di input. Se non sono rilevate corrispondenze, il metodo restituisce un oggetto <xref:System.Text.RegularExpressions.MatchCollection> senza membri. La proprietà <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> permette di accedere a singoli membri della raccolta in base all'indice, da zero al valore della proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> meno uno. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> è l'indicizzatore della raccolta (in C#) e la proprietà predefinita (in Visual Basic).  
   
- Per impostazione predefinita, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa la valutazione lenta per il popolamento dell'oggetto <xref:System.Text.RegularExpressions.MatchCollection>. L'accesso alle proprietà che necessitano di una raccolta completamente popolata, ad esempio le proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, potrebbe comportare gravi conseguenze per le prestazioni. È quindi consigliabile accedere alla raccolta usando l'oggetto <xref:System.Collections.IEnumerator> restituito dal metodo <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. I singoli linguaggi forniscono i costrutti, ad esempio `For``Each` in Visual Basic e `foreach` in c#, che esegue il wrapping della raccolta <xref:System.Collections.IEnumerator> interfaccia.  
+ Per impostazione predefinita, la chiamata al metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> usa la valutazione lenta per il popolamento dell'oggetto <xref:System.Text.RegularExpressions.MatchCollection>. L'accesso alle proprietà che necessitano di una raccolta completamente popolata, ad esempio le proprietà <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, potrebbe comportare gravi conseguenze per le prestazioni. È quindi consigliabile accedere alla raccolta usando l'oggetto <xref:System.Collections.IEnumerator> restituito dal metodo <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. I singoli linguaggi forniscono i costrutti, ad esempio `For``Each` in Visual Basic e `foreach` in C#, che eseguono il wrapping dell'interfaccia <xref:System.Collections.IEnumerator> della raccolta.  
   
  L'esempio seguente usa il metodo <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> per popolare un oggetto <xref:System.Text.RegularExpressions.MatchCollection> con tutte le corrispondenze rilevate in una stringa di input. L'esempio enumera la raccolta, copia le corrispondenze a una matrice di stringhe e registra le posizioni dei caratteri in una matrice di valori di tipo Integer.  
   
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di espressione regolare `\b\d+(,\d{3})*\.\d{2}\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\d+`|Trova la corrispondenza con una o più cifre decimali.|  
@@ -255,7 +258,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`(\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Equivale al primo gruppo di acquisizione.|  
@@ -270,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>Gruppo Captured  
- La classe <xref:System.Text.RegularExpressions.Group> rappresenta il risultato di un singolo gruppo di acquisizione. Gli oggetti di gruppo che rappresentano i gruppi di acquisizione definiti in un'espressione regolare sono restituiti dalla proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. La proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> è l'indicizzatore (in C#) e la proprietà predefinita (in Visual Basic) della classe <xref:System.Text.RegularExpressions.Group>. È anche possibile recuperare singoli membri eseguendo l'iterazione nella raccolta usando il `foreach` o `For``Each` costruire. Per un esempio, vedere la sezione precedente.  
+ La classe <xref:System.Text.RegularExpressions.Group> rappresenta il risultato di un singolo gruppo di acquisizione. Gli oggetti di gruppo che rappresentano i gruppi di acquisizione definiti in un'espressione regolare sono restituiti dalla proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> dell'oggetto <xref:System.Text.RegularExpressions.GroupCollection> restituito dalla proprietà <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. La proprietà <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> è l'indicizzatore (in C#) e la proprietà predefinita (in Visual Basic) della classe <xref:System.Text.RegularExpressions.Group>. È anche possibile recuperare i singoli membri eseguendo l'iterazione della raccolta mediante il costrutto `foreach` o `For``Each`. Per un esempio, vedere la sezione precedente.  
   
  L'esempio seguente usa i costrutti di raggruppamento annidati per acquisire le sottostringhe nei gruppi. Il criterio di espressione regolare `(a(b))c` corrisponde alla stringa "abc". Assegna la sottostringa "ab" al primo gruppo di acquisizione e la sottostringa "b" al secondo gruppo di acquisizione.  
   
@@ -284,7 +287,7 @@ ms.lasthandoff: 11/21/2017
   
  Il criterio di ricerca di espressioni regolari `^(?<name>\w+):(?<value>\w+)` è definito nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la corrispondenza all'inizio della stringa di input.|  
 |`(?<name>\w+)`|Trova la corrispondenza di uno o più caratteri alfanumerici. Il nome di questo gruppo di acquisizione è `name`.|  
@@ -293,7 +296,7 @@ ms.lasthandoff: 11/21/2017
   
  Le proprietà della classe <xref:System.Text.RegularExpressions.Group> forniscono informazioni sul gruppo acquisito. La proprietà `Group.Value` include la sottostringa acquisita, la proprietà`Group.Index` indica la posizione iniziale del gruppo acquisito nel testo di input, la proprietà `Group.Length` include la lunghezza del testo acquisito e la proprietà `Group.Success` indica se una sottostringa corrisponde al modello definito dal gruppo di acquisizione.  
   
- L'applicazione di quantificatori a un gruppo (per ulteriori informazioni, vedere [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
+ L'applicazione di quantificatori a un gruppo (per altre informazioni, vedere [Quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica la relazione di un'acquisizione per ogni gruppo di acquisizione in due modi:  
   
 -   Se il quantificatore `*` o `*?` (che specifica zero o più corrispondenze) è applicato a un gruppo, è possibile che per un gruppo di acquisizione non siano rilevate corrispondenze nella stringa di input. Se non è presente testo acquisito, le proprietà dell'oggetto <xref:System.Text.RegularExpressions.Group> sono impostate come mostrato nella tabella seguente.  
   
@@ -348,7 +351,7 @@ ms.lasthandoff: 11/21/2017
   
  L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
-|Criterio|Descrizione|  
+|Modello|Descrizione|  
 |-------------|-----------------|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`(\s\w+)*`|Trova la corrispondenza con zero o più occorrenze di un carattere di spaziatura seguito da uno o più caratteri di parola. Questo modello corrisponde a nomi di città composti da più parole. Equivale al terzo gruppo di acquisizione.|  
@@ -360,5 +363,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Text.RegularExpressions>  
- [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md)  
+ [Espressioni regolari .NET](../../../docs/standard/base-types/regular-expressions.md)  
  [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

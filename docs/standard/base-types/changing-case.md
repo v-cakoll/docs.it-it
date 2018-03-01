@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="changing-case-in-net"></a>Modificare maiuscole e minuscole in .NET
+# <a name="changing-case-in-net"></a>Modifica della combinazione di maiuscole e minuscole in .NET
 Quando si scrive un'applicazione che accetta input dall'utente non si può conoscere la combinazione di maiuscole e minuscole che verrà usata durante l'immissione dei dati. Spesso è desiderabile che le la combinazione di maiuscole e minuscole nelle stringhe sia coerente, in particolare se le stringhe vengono visualizzate nell'interfaccia utente. La tabella seguente descrive tre metodi per la modifica della combinazione di maiuscole e minuscole. I primi due metodi forniscono un overload che accetta determinate impostazioni cultura.  
   
-|Nome metodo|Uso|  
+|Nome metodo|Usa|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Converte tutti i caratteri di una stringa in lettere maiuscole.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Converte tutti i caratteri di una stringa in lettere minuscole.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Converte una stringa nella combinazione con tutte le iniziali maiuscole.|  
   
 > [!WARNING]
->  Si noti che i metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> non vanno usati per convertire le stringhe a scopo di confronto o verifica dell'uguaglianza. Per ulteriori informazioni, vedere il [il confronto di stringhe di caratteri maiuscoli e minuscoli](#Comparing) sezione.  
+>  Si noti che i metodi <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> non vanno usati per convertire le stringhe a scopo di confronto o verifica dell'uguaglianza. Per altre informazioni, vedere la sezione [Confronto di stringhe con una combinazione mista di maiuscole e minuscole](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Confronto di stringhe con una combinazione mista di maiuscole e minuscole  
@@ -55,7 +58,7 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- L'esempio precedente dipende dalle impostazioni cultura per impostazione predefinita; applica le convenzioni sulla combinazione di maiuscole e minuscole delle impostazioni cultura correnti. Per eseguire una modifica di maiuscole indipendente dalle impostazioni cultura o per applicare le convenzioni delle impostazioni cultura specifiche, utilizzare il <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> l'overload di metodo e fornire un valore di <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> oggetto che rappresenta le impostazioni cultura specificate per il *delle impostazioni cultura* parametro. Per un esempio che illustra come usare il <xref:System.String.ToUpper%2A> metodo per eseguire una modifica della combinazione indipendente dalle impostazioni cultura, vedere [eseguire modifiche di maiuscole indipendente dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ L'esempio precedente dipende dalle impostazioni cultura per impostazione predefinita; applica le convenzioni sulla combinazione di maiuscole e minuscole delle impostazioni cultura correnti. Per eseguire una modifica di maiuscole e minuscole indipendente dalle impostazioni cultura o applicare le convenzioni sulla combinazione di maiuscole e minuscole di determinate impostazioni cultura, usare l'overload del metodo <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e fornire il valore <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un oggetto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> che rappresenti le impostazioni cultura specificate nel parametro *culture*. Per un esempio in cui viene illustrato l'uso del metodo <xref:System.String.ToUpper%2A> per eseguire una modifica della combinazione di maiuscole e minuscole indipendente dalle impostazioni cultura, vedere [Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  Il metodo <xref:System.String.ToLower%2A?displayProperty=nameWithType> è simile al precedente, con la differenza che converte tutti i caratteri di una stringa in lettere minuscole. L'esempio seguente converte la stringa "Hello World!" in caratteri minuscoli.  
@@ -63,7 +66,7 @@ Quando si scrive un'applicazione che accetta input dall'utente non si può conos
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- L'esempio precedente dipende dalle impostazioni cultura per impostazione predefinita; applica le convenzioni sulla combinazione di maiuscole e minuscole delle impostazioni cultura correnti. Per eseguire una modifica di maiuscole indipendente dalle impostazioni cultura o per applicare le convenzioni delle impostazioni cultura specifiche, utilizzare il <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> l'overload di metodo e fornire un valore di <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> oggetto che rappresenta le impostazioni cultura specificate per il *delle impostazioni cultura* parametro. Per un esempio che illustra come usare il <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> metodo per eseguire una modifica della combinazione indipendente dalle impostazioni cultura, vedere [eseguire modifiche di maiuscole indipendente dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ L'esempio precedente dipende dalle impostazioni cultura per impostazione predefinita; applica le convenzioni sulla combinazione di maiuscole e minuscole delle impostazioni cultura correnti. Per eseguire una modifica di maiuscole e minuscole indipendente dalle impostazioni cultura o applicare le convenzioni sulla combinazione di maiuscole e minuscole di determinate impostazioni cultura, usare l'overload del metodo <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> e fornire il valore <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> o un oggetto <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> che rappresenti le impostazioni cultura specificate nel parametro *culture*. Per un esempio in cui viene illustrato l'uso del metodo <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> per eseguire una modifica della combinazione di maiuscole e minuscole indipendente dalle impostazioni cultura, vedere [Esecuzione di modifiche di maiuscole e minuscole indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  Il metodo <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> converte il primo carattere di ogni parola in maiuscolo e i caratteri rimanenti in minuscolo. Le parole interamente in maiuscolo, tuttavia, vengono considerate acronimi e non vengono convertite.  

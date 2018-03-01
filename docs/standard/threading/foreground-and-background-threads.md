@@ -14,30 +14,33 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 42ad427fc2c1175c0d9b333aa418aea039f11a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 83022bd27379e1ee34197af4897a5c809f495f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="foreground-and-background-threads"></a>Thread in primo piano e in background
-Un thread gestito è un thread in background o un thread in primo piano. Thread in background sono identiche a thread in foreground con un'unica eccezione: un thread in background non mantiene l'ambiente di esecuzione gestito. Una volta tutti i thread in primo piano sono stati interrotti in un processo gestito (in cui il file .exe è un assembly gestito), il sistema di tutti i thread in background e viene chiuso.  
+Un thread gestito è un thread in background o un thread in primo piano. I thread in background sono identici ai thread in primo piano con un'unica eccezione: un thread in background non mantiene in esecuzione l'ambiente di esecuzione gestito. Dopo che tutti i thread in primo piano sono stati arrestati in un processo gestito (in cui il file EXE è un assembly gestito), il sistema arresta tutti i thread in background e si arresta.  
   
 > [!NOTE]
->  Quando il runtime interrompe un thread in background, perché si sta arrestando il processo, viene generata alcuna eccezione nel thread. Tuttavia, quando i thread vengono interrotti perché il <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metodo scarica il dominio dell'applicazione, un <xref:System.Threading.ThreadAbortException> viene generata nel thread di sfondo e primo piano.  
+>  Quando il runtime arresta un thread in background perché è in corso l'arresto del processo, non vengono generate eccezioni nel thread. Quando tuttavia i thread vengono arrestati perché il metodo <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> scarica il dominio dell'applicazione, viene generata un'eccezione <xref:System.Threading.ThreadAbortException> nei thread in primo piano e in background.  
   
- Utilizzare il <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> proprietà per determinare se un thread è uno sfondo o un thread in primo piano o per modificare il relativo stato. Un thread può essere cambiato in un thread in background in qualsiasi momento impostando il relativo <xref:System.Threading.Thread.IsBackground%2A> proprietà `true`.  
+ Usare la proprietà <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> per determinare se un thread è un thread in background o in primo piano oppure per modificarne lo stato. Un thread può essere sostituito con un thread in background in qualsiasi momento impostandone la proprietà <xref:System.Threading.Thread.IsBackground%2A> su `true`.  
   
 > [!IMPORTANT]
->  Lo stato di primo piano o di sfondo di un thread non incidono sul risultato di un'eccezione non gestita nel thread. In .NET Framework versione 2.0, un'eccezione non gestita in primo piano o in background thread comporta la terminazione dell'applicazione. Vedere [eccezioni in thread gestiti](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+>  Lo stato di primo piano o di background di un thread non interessa l'esito di un'eccezione non gestita nel thread. In .NET Framework versione 2.0 un'eccezione non gestita nei thread in primo piano o in background comporta la terminazione dell'applicazione. Vedere [Eccezioni in thread gestiti](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
- Thread che appartengono al pool di thread gestiti (ovvero, i thread la cui <xref:System.Threading.Thread.IsThreadPoolThread%2A> proprietà `true`) sono thread in background. Tutti i thread che accedono all'ambiente di esecuzione gestita dal codice non gestito sono contrassegnati come thread in background. Tutti i thread generati creando e avviando un nuovo <xref:System.Threading.Thread> oggetto sono thread per impostazione predefinita in primo piano.  
+ I thread che appartengono al pool di thread gestiti (ovvero, i thread la cui proprietà <xref:System.Threading.Thread.IsThreadPoolThread%2A> è `true`) sono thread in background. Tutti i thread che accedono all'ambiente di esecuzione gestito dal codice non gestito sono contrassegnati come thread in background. Tutti i thread generati creando e avviando un nuovo oggetto <xref:System.Threading.Thread> sono thread in primo piano per impostazione predefinita.  
   
- Se si utilizza un thread per monitorare un'attività, ad esempio una connessione socket, impostare il relativo <xref:System.Threading.Thread.IsBackground%2A> proprietà `true` in modo che il thread non impedisce l'interruzione del processo.  
+ Se si usa un thread per monitorare un'attività, ad esempio una connessione socket, impostarne la proprietà <xref:System.Threading.Thread.IsBackground%2A> su `true` in modo che il thread non impedisca la terminazione del processo.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  

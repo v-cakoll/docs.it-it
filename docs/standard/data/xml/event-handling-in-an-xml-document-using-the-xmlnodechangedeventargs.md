@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs
-Il **XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nel **XmlDocument** oggetto per la gestione degli eventi. Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
+**XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi registrati nell'oggetto **XmlDocument** per gestire gli eventi. Nella tabella seguente viene fornita una descrizione degli eventi e della relativa generazione.  
   
-|Evento|Generato|  
+|event|Generato|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Quando un nodo che appartiene al documento corrente sta per essere inserito in un altro nodo.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Quando un nodo che appartiene al documento corrente è stato inserito in un altro nodo.|  
@@ -35,7 +38,7 @@ Il **XmlNodeChangedEventArgs** incapsula gli argomenti passati ai gestori eventi
 |<xref:System.Xml.XmlDocument.NodeChanged>|Quando il valore di un nodo è stato modificato.|  
   
 > [!NOTE]
->  Se il **XmlDataDocument** utilizzo della memoria è completamente ottimizzato per l'utilizzo di **DataSet** spazio di archiviazione, il **XmlDataDocument** potrebbe non generare gli eventi elencati in precedenza quando le modifiche sono apportate alla classe sottostante **DataSet**. Se è necessario di questi eventi, è necessario scorrere l'intero **XmlDocument** una volta per rendere l'utilizzo della memoria non completamente ottimizzato.  
+>  Se l'uso della memoria di **XmlDataDocument** è completamente ottimizzato per usare la risorsa di archiviazione **DataSet**, è possibile che nessuno degli eventi precedenti venga generato da **XmlDataDocument** quando vengono apportate modifiche al **DataSet** sottostante. Se tali eventi sono indispensabili, è necessario scorrere l'intero documento **XmlDocument** una volta per rendere l'uso della memoria non completamente ottimizzato.  
   
  Nell'esempio di codice seguente viene illustrato come definire un gestore eventi e come aggiungerlo a un evento.  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Alcune operazioni DOM (Document Object Model) XML sono operazioni composte che possono determinare la generazione di più eventi. Ad esempio, **AppendChild** potrebbe anche essere necessario rimuovere il nodo aggiunto dal padre precedente. In questo caso, viene visualizzato un **NodeRemoved** evento generato prima, seguita da un **NodeInserted** evento. Operazioni quali l'impostazione **InnerXml** potrebbe generare più eventi.  
+ Alcune operazioni DOM (Document Object Model) XML sono operazioni composte che possono determinare la generazione di più eventi. Ad esempio, è possibile che **AppendChild** debba anche rimuovere il nodo aggiunto dal nodo padre precedente. In questo caso, viene prima visualizzato un evento **NodeRemoved** generato, seguito da un evento **NodeInserted**. Operazioni quali l'impostazione del codice **InnerXml** potrebbero restituire più eventi.  
   
- Esempio di codice seguente viene illustrata la creazione del gestore dell'evento e la gestione del **NodeInserted** evento.  
+ Nell'esempio di codice seguente viene illustrata la creazione del gestore eventi e la gestione dell'evento **NodeInserted**.  
   
 ```vb  
 Imports System  
@@ -216,4 +219,4 @@ public class Sample
  Per altre informazioni, vedere <xref:System.Xml.XmlNodeChangedEventArgs> e <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

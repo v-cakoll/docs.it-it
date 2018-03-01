@@ -18,21 +18,24 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e741de47fec5f0ed607bba33b963d449c5c51cce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-tables-in-net"></a>Tabelle di conversione dei tipi in .NET
 Si parla di conversione verso un tipo di dati più grande quando un valore di un certo tipo viene convertito in un altro tipo di dimensioni identiche o maggiori. Si parla di conversione verso un tipo di dati più piccolo quando un valore di un certo tipo viene convertito in un valore di un altro tipo di dimensioni inferiori. Le tabelle in questo argomento illustrano i comportamenti di entrambi i tipi di conversioni.  
   
 ## <a name="widening-conversions"></a>conversioni verso un tipo di dati più grande  
- Nella tabella seguente vengono descritte le conversioni di ampliamento che possono essere eseguite senza perdita di informazioni.  
+ Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono essere eseguite senza la perdita di informazioni.  
   
 |Tipo|Conversione senza perdita di dati in|  
 |----------|-------------------------------------------|  
@@ -47,7 +50,7 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Alcune conversioni di ampliamento verso <xref:System.Single> o <xref:System.Double> può causare una perdita di precisione. Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono generare una perdita di informazioni.  
+ Alcune conversioni verso il tipo di dati più grande <xref:System.Single> o <xref:System.Double> possono causare una perdita di precisione. Nella tabella seguente sono elencate le conversioni verso un tipo di dati più grande che possono generare una perdita di informazioni.  
   
 |Tipo|Conversione in|  
 |----------|-------------------------|  
@@ -58,11 +61,11 @@ Si parla di conversione verso un tipo di dati più grande quando un valore di un
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>conversioni verso un tipo di dati più piccolo  
- Conversioni verso <xref:System.Single> o <xref:System.Double> può causare una perdita di informazioni. Se il tipo di destinazione non è in grado di rappresentare in modo appropriato l'ordine di grandezza dell'origine, il tipo risultante viene impostato sulla costante `PositiveInfinity` o `NegativeInfinity`. `PositiveInfinity`risultato della divisione per zero di un numero positivo e viene restituito anche quando il valore di un <xref:System.Single> o <xref:System.Double> supera il valore del `MaxValue` campo. `NegativeInfinity`risultato della divisione per zero di un numero negativo e viene restituito anche quando il valore di un <xref:System.Single> o <xref:System.Double> è inferiore al valore del `MinValue` campo. Una conversione da un <xref:System.Double> per un <xref:System.Single> potrebbe essere `PositiveInfinity` o `NegativeInfinity`.  
+ Alcune conversioni verso il tipo di dati più piccolo <xref:System.Single> o <xref:System.Double> possono causare una perdita di informazioni. Se il tipo di destinazione non è in grado di rappresentare in modo appropriato l'ordine di grandezza dell'origine, il tipo risultante viene impostato sulla costante `PositiveInfinity` o `NegativeInfinity`. `PositiveInfinity` è il risultato della divisione di un numero positivo per zero e viene restituito anche quando il valore di un tipo <xref:System.Single> o <xref:System.Double> supera il valore del campo `MaxValue`. `NegativeInfinity` è il risultato della divisione di un numero negativo per zero e viene restituito anche quando il valore di un tipo <xref:System.Single> o <xref:System.Double> è minore del valore del campo `MinValue`. Una conversione da un tipo <xref:System.Double>Double a un tipo <xref:System.Single> potrebbe avere come risultato un valore `PositiveInfinity` o `NegativeInfinity`.  
   
- Una conversione verso un tipo di dati più piccolo può generare una perdita di informazioni anche per altri tipi di dati. Tuttavia, un <xref:System.OverflowException> viene generata se il valore di un tipo da convertire non rientra nell'intervallo specificato per il tipo di destinazione `MaxValue` e `MinValue` campi e la conversione è controllato dal runtime per assicurarsi che il valore di destinazione tipo non superi il `MaxValue` o `MinValue`. Le conversioni eseguite con la <xref:System.Convert?displayProperty=nameWithType> classe vengono sempre archiviate in questo modo.  
+ Una conversione verso un tipo di dati più piccolo può generare una perdita di informazioni anche per altri tipi di dati. Viene tuttavia generato un evento <xref:System.OverflowException> se il valore di un tipo da convertire non rientra nell'intervallo specificato dai campi `MaxValue` e `MinValue` del tipo di destinazione e il processo di conversione viene controllato dal runtime per poter assicurare che il valore del tipo di destinazione non superi `MaxValue` o `MinValue`. Le conversioni eseguite tramite la classe <xref:System.Convert?displayProperty=nameWithType> vengono sempre controllate in questo modo.  
   
- Nella tabella seguente sono elencate le conversioni che generano un <xref:System.OverflowException> utilizzando <xref:System.Convert?displayProperty=nameWithType> o qualsiasi conversione controllata se il valore del tipo da convertire non rientra nell'intervallo specificato per il tipo risultante.  
+ Nella tabella seguente sono elencate le conversioni che generano un evento <xref:System.OverflowException> tramite <xref:System.Convert?displayProperty=nameWithType> o qualsiasi conversione controllata se il valore del tipo convertito non rientra nell'intervallo specificato per il tipo risultante.  
   
 |Tipo|Conversione in|  
 |----------|-------------------------|  

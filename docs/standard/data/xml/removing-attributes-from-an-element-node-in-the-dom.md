@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 967344db880347bde94330912bc5689c57b29921
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Rimozione di attributi da un nodo di elemento nel DOM
 Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consiste nel rimuoverli dalla raccolta di attributi. Per eseguire questa operazione, attenersi alla procedura seguente:  
@@ -42,9 +45,9 @@ Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consis
   
  Un'altra alternativa consiste nell'ottenere l'elemento, ottenere l'attributo dalla raccolta di attributi e rimuovere direttamente il nodo dell'attributo. Per ottenere l'attributo dalla raccolta di attributi, è possibile usare un nome, `XmlAttribute attr = attrs["attr_name"];`, un indice, `XmlAttribute attr = attrs[0];`, o qualificare completamente il nome con lo spazio dei nomi `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   
- Qualunque sia il metodo usato per rimuovere gli attributi, la rimozione di attributi definiti come attributi predefiniti nella DTD è soggetta ad alcuni limiti specifici. Non è possibile rimuovere gli attributi predefiniti a meno che non venga rimosso l'elemento al quale appartengono. Gli attributi predefiniti devono essere sempre presenti negli elementi per cui sono dichiarati. Quando si rimuove un attributo predefinito da un tipo <xref:System.Xml.XmlAttributeCollection> o da un tipo <xref:System.Xml.XmlElement>, viene inserito un attributo di sostituzione nel tipo <xref:System.Xml.XmlAttributeCollection> dell'elemento, inizializzato in base al valore predefinito che era stato dichiarato. Se un elemento è stato definito come `<book att1="1" att2="2" att3="3"></book>`, si avrà un elemento `book` con tre attributi predefiniti dichiarati. L'implementazione del modello oggetto documento (DOM) XML garantisce che fintanto `book` elemento esiste, dispone di questi tre attributi predefiniti `att1`, `att2`, e `att3`.  
+ Qualunque sia il metodo usato per rimuovere gli attributi, la rimozione di attributi definiti come attributi predefiniti nella DTD è soggetta ad alcuni limiti specifici. Non è possibile rimuovere gli attributi predefiniti a meno che non venga rimosso l'elemento al quale appartengono. Gli attributi predefiniti devono essere sempre presenti negli elementi per cui sono dichiarati. Quando si rimuove un attributo predefinito da un tipo <xref:System.Xml.XmlAttributeCollection> o da un tipo <xref:System.Xml.XmlElement>, viene inserito un attributo di sostituzione nel tipo <xref:System.Xml.XmlAttributeCollection> dell'elemento, inizializzato in base al valore predefinito che era stato dichiarato. Se un elemento è stato definito come `<book att1="1" att2="2" att3="3"></book>`, si avrà un elemento `book` con tre attributi predefiniti dichiarati. L'implementazione DOM XML garantisce che fintanto che esisterà, l'elemento `book` avrà questi tre attributi predefiniti, `att1`, `att2` e `att3`.  
   
  Quando viene chiamato con <xref:System.Xml.XmlAttribute>, il metodo <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> imposta il valore dell'attributo su String.Empty, in quanto un attributo non può esistere senza un valore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

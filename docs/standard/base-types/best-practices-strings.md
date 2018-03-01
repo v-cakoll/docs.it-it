@@ -1,5 +1,5 @@
 ---
-title: Procedure consigliate per l'utilizzo di stringhe in .NET
+title: Procedure consigliate per l'uso delle stringhe in .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'utilizzo di stringhe in .NET
-<a name="top"></a>.NET offre ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica applicare le convenzioni delle impostazioni cultura correnti o impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e visualizzare le stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
+# <a name="best-practices-for-using-strings-in-net"></a>Procedure consigliate per l'uso delle stringhe in .NET
+<a name="top"></a> .NET offre un ampio supporto per lo sviluppo di applicazioni localizzate e globalizzate e semplifica l'applicazione delle convenzioni relative alle impostazioni cultura correnti o alle impostazioni cultura specifiche quando si eseguono operazioni comuni come l'ordinamento e la visualizzazione delle stringhe. Tuttavia, l'ordinamento o il confronto delle stringhe non è sempre un'operazione con distinzione delle impostazioni cultura. Ad esempio, le stringhe usate internamente da un'applicazione in genere devono essere gestite in modo identico in tutte le impostazioni cultura. Quando i dati di stringa indipendenti dalle impostazioni cultura, ad esempio i tag XML, i tag HTML, i nomi utente, i percorsi di file e i nomi degli oggetti di sistema, vengono interpretati come dati con distinzione delle impostazioni cultura, nel codice dell'applicazione possono verificarsi bug complessi, riduzioni delle prestazioni e, in alcuni casi, problemi di sicurezza.  
   
- In questo argomento esamina l'ordinamento di stringhe, di confronto e metodi di maiuscole e minuscole in .NET, consigli per la selezione di un metodo di gestione delle stringhe appropriato e fornisce informazioni aggiuntive sui metodi di gestione delle stringhe. Inoltre, esamina come vengono gestiti i file formattati, ad esempio i dati numerici e i dati relativi a data e ora, per la visualizzazione e l'archiviazione.  
+ Questo argomento esamina i metodi di ordinamento, confronto e uso di maiuscole e minuscole nelle stringhe in .NET, offre raccomandazioni per selezionare il metodo di gestione delle stringhe appropriato e fornisce informazioni aggiuntive sui metodi di gestione delle stringhe. Inoltre, esamina come vengono gestiti i file formattati, ad esempio i dati numerici e i dati relativi a data e ora, per la visualizzazione e l'archiviazione.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Scelta di un membro StringComparison per la chiamata al metodo](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [Metodi comuni di confronto tra stringhe in .NET](#common_string_comparison_methods_in_the_net_framework)  
+-   [Metodi comuni per il confronto tra stringhe in .NET](#common_string_comparison_methods_in_the_net_framework)  
   
 -   [Metodi che eseguono indirettamente il confronto tra stringhe](#methods_that_perform_string_comparison_indirectly)  
   
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   Overload <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
   
--   Il valore predefinito <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> (metodo) e <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metodo con un `null` <xref:System.Globalization.CultureInfo> parametro.  
+-   Metodo <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.  
   
--   Il valore predefinito <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> (metodo) e <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> metodo con un `null` <xref:System.Globalization.CultureInfo> parametro.  
+-   Metodo <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> predefinito e metodo <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> con un parametro `null`<xref:System.Globalization.CultureInfo>.  
   
 -   Overload <xref:System.String.IndexOf%2A?displayProperty=nameWithType> che accettano <xref:System.String> come parametro di ricerca e che non hanno un parametro <xref:System.StringComparison>.  
   
@@ -160,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  È possibile che vengano generati bug complessi e meno complessi quando i dati non linguistici della stringa vengono interpretati linguisticamente oppure quando i dati della stringa di specifiche impostazioni cultura vengono interpretati usando le convenzioni di altre impostazioni cultura. L'esempio canonico è il problema della I turca.  
   
- Per quasi tutti gli alfabeti latini, incluso l'inglese (Stati Uniti), il carattere "i" (\u0069) corrisponde alla versione minuscola del carattere "I" (\u0049). Questa regola di utilizzo di maiuscole e minuscole diventa rapidamente l'impostazione predefinita per chi programma queste impostazioni cultura. Tuttavia, l'alfabeto turco ("tr-TR") include un carattere "I con punto" "İ" (\u0130), che corrisponde alla versione maiuscola della "i". In turco esiste anche un carattere minuscolo "i senza punto", "ı" (\u0131), la cui versione maiuscola è "I". Questo comportamento si verifica anche con le impostazioni cultura azera ("az").  
+ Per quasi tutti gli alfabeti latini, incluso l'inglese (Stati Uniti), il carattere "i" (\u0069) corrisponde alla versione minuscola del carattere "I" (\u0049). Questa regola di utilizzo di maiuscole e minuscole diventa rapidamente l'impostazione predefinita per chi programma queste impostazioni cultura. Tuttavia, l'alfabeto turco ("tr-TR") include una "I con punto", "İ" (\u0130), che è la versione maiuscola di "i". In turco esiste anche un carattere minuscolo "i senza punto", "ı" (\u0131), la cui versione maiuscola è "I". Questo comportamento si verifica anche con le impostazioni cultura azera ("az").  
   
  Pertanto, i presupposti relativi all'uso della maiuscola per "i" o della minuscola per "I" non sono validi in tutte le impostazioni cultura. Se si usano gli overload predefiniti per le routine di confronto tra stringhe, questi saranno soggetti a variazioni tra le diverse impostazioni cultura. Se i dati da confrontare sono di tipo non linguistico, l'uso degli overload predefiniti può produrre risultati indesiderati, come illustrato in questo tentativo di eseguire un confronto senza distinzione tra maiuscole e minuscole delle stringhe "file" e "FILE".  
   
@@ -187,7 +190,7 @@ ms.lasthandoff: 10/18/2017
 > [!IMPORTANT]
 >  Anche se i metodi di confronto tra stringhe ignorano i caratteri null incorporati, i metodi di ricerca di stringhe come <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> e <xref:System.String.StartsWith%2A?displayProperty=nameWithType> li prendono in considerazione.  
   
- L'esempio successivo esegue un confronto con distinzione delle impostazioni cultura della stringa "Aa" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e mostra in che modo le due stringhe vengono considerate uguali..  
+ L'esempio successivo esegue un confronto con distinzione delle impostazioni cultura della stringa "Aa" con una stringa simile che contiene diversi caratteri null incorporati tra "A" e "a" e mostra in che modo le due stringhe vengono considerate uguali.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]  
@@ -225,12 +228,12 @@ ms.lasthandoff: 10/18/2017
   
  InvariantCulture: a + ̊ = å  
   
- Il carattere LATIN SMALL LETTER A "a" (\u0061), quando è accanto al carattere COMBINING RING ABOVE "+ " ̊" (\u030a), viene interpretato come carattere LATIN SMALL LETTER A WITH RING ABOVE "å" (\u00e5). Come mostrato nell'esempio seguente, questo comportamento è diverso dal confronto ordinale.  
+ La LETTERA A MINUSCOLA LATINA "a" (\u0061), quando si trova accanto al carattere CERCHIO IN ALTO "+ " ̊" (\u030a), viene interpretata come LETTERA A MINUSCOLA LATINA CON CERCHIO IN ALTO "å" (\u00e5). Come mostrato nell'esempio seguente, questo comportamento è diverso dal confronto ordinale.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
   
- Quando si interpretano i nomi file, i cookie o qualsiasi altro elemento in cui è presente una combinazione come "å", i confronti ordinali offrono il comportamento più trasparente e appropriato.  
+ Quando si interpretano i nomi di file, i cookie o qualsiasi altro elemento che può contenere un carattere come "å", i confronti ordinali offrono il comportamento più trasparente e appropriato.  
   
  In realtà la lingua inglese ha poche proprietà che la rendono utile per il confronto. Esegue il confronto in un modo linguisticamente rilevante, che non assicura un'equivalenza simbolica completa, ma non rappresenta la scelta ottimale per la visualizzazione nelle impostazioni cultura. Uno dei pochi motivi per usare <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> per il confronto riguarda la possibilità di conservare i dati ordinati per visualizzarli in modo identico nelle varie impostazioni cultura. Ad esempio, se un file di dati di grandi dimensioni che contiene un elenco di identificatori ordinati per la visualizzazione viene associato a un'applicazione, per aggiungere elementi all'elenco è necessario l'inserimento con un ordinamento in lingua inglese.  
   
@@ -244,13 +247,13 @@ ms.lasthandoff: 10/18/2017
 |----------|--------------|-----------------------------------------------------|  
 |Identificatori interni con distinzione tra maiuscole e minuscole.<br /><br /> Identificatori con distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Impostazioni relative alla sicurezza con distinzione tra maiuscole e minuscole.|Identificatore non linguistico, con una corrispondenza esatta dei byte.|<xref:System.StringComparison.Ordinal>|  
 |Identificatori interni senza distinzione tra maiuscole e minuscole.<br /><br /> Identificatori senza distinzione tra maiuscole e minuscole in standard come XML e HTTP.<br /><br /> Percorsi di file.<br /><br /> Chiavi e valori del Registro di sistema.<br /><br /> Variabili di ambiente.<br /><br /> Identificatori di risorse (ad esempio, nomi di handle).<br /><br /> Impostazioni relative alla sicurezza senza distinzione tra maiuscole e minuscole.|Identificatore non linguistico, in cui la distinzione tra maiuscole e minuscole non è rilevante. In particolare, dati archiviati nella maggior parte dei servizi di sistema Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> -oppure-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Alcuni dati persistenti e linguisticamente rilevanti.<br /><br /> Visualizzazione di dati linguistici che richiedono un ordinamento fisso.|Dati indipendenti dalle impostazioni cultura, ma ancora linguisticamente rilevanti.|<xref:System.StringComparison.InvariantCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Dati visualizzati dall'utente.<br /><br /> La maggior parte dell'input utente.|Dati che richiedono personalizzazioni linguistiche locali.|<xref:System.StringComparison.CurrentCulture><br /><br /> oppure<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Torna all'inizio](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
-## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni di confronto tra stringhe in .NET  
+## <a name="common-string-comparison-methods-in-net"></a>Metodi comuni per il confronto tra stringhe in .NET  
  Le sezioni seguenti descrivono i metodi più comuni per il confronto tra stringhe.  
   
 ### <a name="stringcompare"></a>String.Compare  

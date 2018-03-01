@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 Una stringa di formato di data e ora definisce la rappresentazione di testo di un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> risultante da un'operazione di formattazione. Può anche definire la rappresentazione di un valore di data e ora richiesto in un'operazione di analisi per convertire correttamente la stringa in una data e ora. Una stringa di formato personalizzata è costituita da uno o più identificatori di formato di data e ora personalizzati. Qualsiasi stringa diversa da una [stringa di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) viene interpretata come stringa di formato di data e ora personalizzato.  
@@ -358,7 +361,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
   
 -   Per un'ora di un fuso orario non specificato (un'ora la cui proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> è uguale a <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) il risultato è equivalente a <xref:System.String.Empty?displayProperty=nameWithType>.  
   
- Per <xref:System.DateTimeOffset> valori, l'identificatore di formato "K" è equivalenti all'identificatore di formato "zzz" e genera una stringa di risultato che contiene il <xref:System.DateTimeOffset> offset del valore rispetto a UTC.  
+ Per i valori <xref:System.DateTimeOffset>, l'identificatore di formato "K" è equivalente all'identificatore di formato "zzz" e genera una stringa di risultato che contiene l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC.  
   
  Se l'identificatore di formato "K" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.  
   
@@ -636,7 +639,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 |-|-|-|-|-|  
 |F|H|K|M|d|  
 |f|V|h|m|s|  
-|u|s|l|%|:|  
+|u|y|l|%|:|  
 |/|"|'|\||  
   
  Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.  
@@ -691,7 +694,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 ### <a name="control-panel-settings"></a>Impostazioni del Pannello di controllo  
  L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.  
   
- Inoltre, se si utilizza il <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> costruttore per creare un'istanza di un nuovo <xref:System.Globalization.CultureInfo> oggetto che rappresenta le stesse impostazioni cultura come le impostazioni cultura correnti di sistema, eventuali personalizzazioni definite tramite la **internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo <xref:System.Globalization.CultureInfo> oggetto. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
+ Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo>. È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.  
   
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo  
  La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread correnti o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Per il parametro <xref:System.IFormatProvider>, è necessario specificare un oggetto <xref:System.Globalization.CultureInfo>, che rappresenta determinate impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo>.  
@@ -702,5 +705,5 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [Esempio: Utilità di formattazione in .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

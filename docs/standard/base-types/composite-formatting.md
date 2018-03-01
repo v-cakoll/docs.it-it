@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 La funzionalità di formattazione composta di .NET Framework consente di usare come input un elenco di oggetti e una stringa di formato composto. Una stringa di formato composto è costituita da testo fisso alternato a segnaposto indicizzati, denominati elementi di formato, che corrispondono agli oggetti dell'elenco. L'operazione di formattazione produce una stringa risultato costituita dal testo fisso originale alternato alla rappresentazione di stringa degli oggetti dell'elenco.  
@@ -87,13 +90,13 @@ La funzionalità di formattazione composta di .NET Framework consente di usare c
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Componente della stringa di formato  
- Il componente *formatString* facoltativo è una stringa di formato appropriata per il tipo di oggetto formattato. Specificare una stringa di formato numerico standard o personalizzata se l'oggetto corrispondente è un valore numerico, standard o personalizzata di data e ora stringa di formato se l'oggetto corrispondente è un <xref:System.DateTime> oggetto, o un [stringa di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md)se l'oggetto corrispondente è un valore di enumerazione. Se il componente *formatString* viene omesso, verrà usato l'identificatore di formato generale "G" per un tipo numerico, di data e ora o di enumerazione. Se viene specificato il componente *formatString*, i due punti sono obbligatori.  
+ Il componente *formatString* facoltativo è una stringa di formato appropriata per il tipo di oggetto formattato. Specificare una stringa di formato numerico standard o personalizzata se l'oggetto corrispondente è un valore numerico, una stringa di formato di data e ora standard o personalizzata se l'oggetto corrispondente è un oggetto <xref:System.DateTime> o una [stringa di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md) se l'oggetto corrispondente è un valore di enumerazione. Se il componente *formatString* viene omesso, verrà usato l'identificatore di formato generale "G" per un tipo numerico, di data e ora o di enumerazione. Se viene specificato il componente *formatString*, i due punti sono obbligatori.  
   
  Nella tabella seguente sono elencati i tipi o le categorie di tipi della libreria di classi .NET Framework che supportano un set predefinito di stringhe di formato e vengono forniti collegamenti ad argomenti in cui vengono elencate le stringhe di formato supportate. Si noti che la formattazione delle stringhe è un meccanismo estendibile che consente di definire nuove stringhe di formato per tutti i tipi esistenti nonché definire un set di stringhe di formato supportate da un tipo definito dall'applicazione. Per altre informazioni, vedere gli argomenti delle interfacce <xref:System.IFormattable> e <xref:System.ICustomFormatter>.  
   
 |Tipo o categoria di tipo|Vedere|  
 |---------------------------|---------|  
-|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
@@ -126,7 +129,7 @@ La funzionalità di formattazione composta di .NET Framework consente di usare c
   
 1.  Se il valore da formattare è `null`, viene restituita una stringa vuota ("").  
   
-2.  Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo dell'elemento di formato *formatString* valore, se presente, o `null` in caso contrario, insieme al <xref:System.IFormatProvider> implementazione.  
+2.  Se l'implementazione di <xref:System.ICustomFormatter> è disponibile, il runtime chiama il metodo <xref:System.ICustomFormatter.Format%2A>. Passa al metodo il valore *formatString* dell'elemento di formato, se disponibile, o `null` in caso contrario, con l'implementazione di <xref:System.IFormatProvider>.  
   
 3.  Se il valore implementa l'interfaccia <xref:System.IFormattable>, verrà chiamato il relativo metodo <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>. Al metodo viene passato il valore *formatString*, se disponibile nell'elemento di formato, o `null` in caso contrario. L'argomento <xref:System.IFormatProvider> è determinato come segue:  
   

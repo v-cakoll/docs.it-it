@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
@@ -24,7 +27,7 @@ Le librerie di classi rappresentano il concetto di [libreria condivisa](http://e
 
 *   Le librerie di classi **specifiche della piattaforma**  possono accedere a tutte le API in una determinata piattaforma, ad esempio .NET Framework, Xamarin iOS, ma possono essere usate solo da app e librerie destinate a tale piattaforma.
 *   Le librerie di classi **portabili** possono accedere a un sottoinsieme di API e possono essere usate da app e librerie destinate a più piattaforme.
-*   Le librerie di classi **.NET Core** sono una fusione del concetto di libreria specifica della piattaforma e della libreria portabile in un unico modello che offre i vantaggi di entrambi i tipi di libreria.
+*   Le librerie di classi **.NET Standard** sono una fusione del concetto di libreria specifica della piattaforma e della libreria portabile in un unico modello che offre i vantaggi di entrambi i tipi di libreria.
 
 ## <a name="platform-specific-class-libraries"></a>Librerie di classi specifiche della piattaforma
 

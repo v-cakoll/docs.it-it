@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Modalità di latenza
 Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tutti i thread in esecuzione in un'applicazione. In alcune situazioni, ad esempio quando un'applicazione recupera dati o visualizza contenuto, un'operazione completa di Garbage Collection può verificarsi in un momento critico e può ostacolare le prestazioni. È possibile rettificare l'ingerenza del Garbage Collector impostando la proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> su uno dei valori <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -57,7 +60,7 @@ Per recuperare oggetti, tramite il Garbage Collector devono essere arrestati tut
   
 -   Tenere presenti i thread che potrebbero essere in corso di allocazione. Poiché l'impostazione delle proprietà <xref:System.Runtime.GCSettings.LatencyMode%2A> interessa l'intero processo, è possibile generare un'eccezione <xref:System.OutOfMemoryException> su qualsiasi thread eventualmente in corso di allocazione.  
   
--   Eseguire il wrapping del codice di bassa latenza nelle aree a esecuzione vincolata (per ulteriori informazioni, vedere [aree a esecuzione vincolata](../../../docs/framework/performance/constrained-execution-regions.md)).  
+-   Eseguire il wrapping del codice a bassa latenza nelle aree a esecuzione vincolata (per altre informazioni, vedere [Aree a esecuzione vincolata](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
 -   È possibile forzare le operazioni di Garbage Collection di generazione 2 durante un periodo di bassa latenza chiamando il metodo <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   

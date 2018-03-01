@@ -13,18 +13,21 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)
-Il [World Wide Web Consortium (W3C) XML Schema Recommendation](http://go.microsoft.com/fwlink/?linkid=45242) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida di pre-schema e di compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
+Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](http://go.microsoft.com/fwlink/?linkid=45242) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  L'infoset sulla convalida pre-schema viene compilato durante la modifica dello schema. L'infoset sulla compilazione post-schema viene generato dopo la chiamata al metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>, durante la compilazione dello schema, e viene esposto come proprietà.  
   

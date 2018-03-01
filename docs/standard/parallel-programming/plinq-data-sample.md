@@ -11,35 +11,39 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>PLINQ Data Sample
-Questo esempio contiene dati in formato CSV, nonché metodi che trasforma in raccolte in memoria di clienti, prodotti, ordini e dettagli dell'ordine. Per sperimentare ulteriormente PLINQ, è possibile incollare gli esempi di codice da alcuni altri argomenti nel codice in questo argomento e richiamarlo dal `Main` metodo. È anche possibile utilizzare questi dati con le query PLINQ.  
+Questo esempio contiene dati in formato CSV, nonché metodi che trasformano tali dati in raccolte in memoria di clienti, prodotti, ordini e dettagli di ordini. Per sperimentare ulteriormente PLINQ, è possibile incollare esempi di codice da altri argomenti nel codice riportato in questo argomento e richiamarlo dal metodo `Main`. È anche possibile usare questi dati con query PLINQ personalizzate.  
   
- I dati rappresentano un subset del database Northwind. I record cliente cinquanta (50) sono inclusi, ma non tutti i campi. È incluso un subset delle righe di Orders e dati Order_Detail corrispondenti per ogni cliente. Sono inclusi tutti i prodotti.  
+ I dati rappresentano un subset del database Northwind. Sono inclusi cinquanta (50) record clienti, ma non sono inclusi tutti i campi. Per ogni cliente è incluso un subset di righe dei dati Orders e dei corrispondenti dati Order_Detail. Sono inclusi tutti i prodotti.  
   
 > [!NOTE]
->  Il set di dati non è sufficientemente grande per dimostrare che PLINQ è più veloce di LINQ to Objects per le query che contengono solo di base `where` e `select` clausole. Per osservare aumenti di velocità per piccoli set di dati come questo, utilizzare le query che contengono onerose operazioni su ogni elemento nel set di dati.  
+>  Il set di dati non è sufficientemente grande per dimostrare che PLINQ è più veloce di LINQ to Objects per quanto riguarda le query che contengono solo clausole `where` e `select` di base. Per riscontrare incrementi di velocità per piccoli set di dati come questo, usare le query che contengono operazioni a uso elevato di calcolo su ogni elemento nel set di dati.  
   
 ### <a name="to-set-up-this-sample"></a>Per impostare questo esempio  
   
-1.  Creare un progetto di applicazione console Visual Basic o Visual c#.  
+1.  Creare un progetto di applicazione console di Visual Basic o Visual C#.  
   
-2.  Sostituire il contenuto di Module1. vb o Program.cs con il codice che segue questi passaggi.  
+2.  Sostituire il contenuto di Module1.vb o Program.cs con il codice riportato dopo questi passaggi.  
   
-3.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare **File di testo** e quindi fare clic su **OK**. Copiare i dati in questo argomento e quindi incollarlo nel nuovo file di testo. Nel **File** menu, fare clic su **salvare**, denominare il file Plinqdata.csv e quindi salvarlo nella cartella che contiene i file di codice sorgente.  
+3.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare **File di testo** e quindi fare clic su **OK**. Copiare i dati in questo argomento e quindi incollarli nel nuovo file di testo. Nel menu **File** fare clic su **Salva**, denominare il file Plinqdata.csv e quindi salvarlo nella cartella che contiene i file del codice sorgente.  
   
-4.  Premere F5 per verificare che il progetto viene compilato ed eseguito correttamente. Deve essere visualizzato il seguente output nella finestra della console.  
+4.  Premere F5 per verificare che il progetto venga compilato ed eseguito correttamente. Nella finestra della console verrà visualizzato l'output seguente.  
   
     ```  
     Customer count: 50  

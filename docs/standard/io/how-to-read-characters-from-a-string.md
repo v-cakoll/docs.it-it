@@ -19,28 +19,31 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9116ec63bfc1d12daf7627186a52bd29d5918485
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8c41350431f49b638c4353e68c9bacded947a1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Procedura: Leggere caratteri da una stringa
-Gli esempi di codice seguente viene illustrato come leggere i caratteri in modo sincrono e asincrono da una stringa.  
+Gli esempi di codice seguenti illustrano come leggere i caratteri in modo sincrono e asincrono da una stringa.  
   
 ## <a name="example"></a>Esempio  
- Il primo esempio legge 13 caratteri in modo sincrono da una stringa, li archivia in una matrice e visualizza tali caratteri. Quindi legge i caratteri rimanenti nella stringa, li archivia nella matrice a partire dal sesto elemento e visualizza il contenuto della matrice.  
+ Questo esempio legge 13 caratteri in modo sincrono da una stringa, li archivia in una matrice e li visualizza. Legge quindi i caratteri rimanenti nella stringa, li archivia nella matrice a partire dal sesto elemento e visualizza il contenuto della matrice.  
   
  [!code-cpp[Conceptual.StringReader#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.stringreader/cpp/source.cpp#1)]
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio successivo legge tutti i caratteri in modo asincrono da un <xref:System.Windows.Controls.TextBox> controllare e li archivia in una matrice. Quindi scrive in modo asincrono ogni carattere lettera o uno spazio vuoto su una riga separata, seguita da un'interruzione di riga una <xref:System.Windows.Controls.TextBlock> controllo.  
+ L'esempio seguente legge tutti i caratteri in modo asincrono da un controllo <xref:System.Windows.Controls.TextBox> e li archivia in una matrice. Scrive quindi in modo asincrono ogni lettera o spazio su una riga separata seguita da un'interruzione di riga in un controllo <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
@@ -49,7 +52,7 @@ Gli esempi di codice seguente viene illustrato come leggere i caratteri in modo 
  <xref:System.IO.StringReader>  
  <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
  [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Procedura: creare una visualizzazione Directory](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Procedura: Aprire e accodare un file di log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
  [Procedura: Leggere testo da un file](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

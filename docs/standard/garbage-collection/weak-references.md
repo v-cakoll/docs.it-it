@@ -14,15 +14,18 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Riferimenti deboli
 Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione finché il codice dell'applicazione è in grado raggiungere tale oggetto. Si dice che l'applicazione ha un riferimento sicuro all'oggetto.  
@@ -31,11 +34,11 @@ Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione fi
   
  I riferimenti deboli sono utili per gli oggetti che usano grandi quantità di memoria ma possono essere ricreati facilmente se vengono raccolti dall'operazione di Garbage Collection.  
   
- Si supponga che una visualizzazione albero in un'applicazione Windows Form visualizza una scelta complessa gerarchica delle opzioni all'utente. Se i dati sottostanti sono di grandi dimensioni, non è efficiente mantenere la struttura in memoria mentre l'utente esegue altre operazioni nell'applicazione.  
+ Si supponga che una visualizzazione struttura ad albero in un'applicazione Windows Forms mostri una gamma gerarchica complessa di opzioni all'utente. Se i dati sottostanti sono di grandi dimensioni, non è efficiente mantenere la struttura in memoria mentre l'utente esegue altre operazioni nell'applicazione.  
   
- Quando l'utente passa a un'altra parte dell'applicazione, è possibile utilizzare la <xref:System.WeakReference> classe per creare un riferimento debole all'albero e distruggere tutti i riferimenti forti. Quando l'utente torna alla struttura, l'applicazione cerca di ottenere un riferimento sicuro alla struttura ad albero e, se vi riesce, evita la ricostruzione della struttura.  
+ Quando l'utente passa a un'altra parte dell'applicazione, è possibile usare la classe <xref:System.WeakReference> per creare un riferimento debole all'albero ed eliminare tutti i riferimenti sicuri. Quando l'utente torna alla struttura, l'applicazione cerca di ottenere un riferimento sicuro alla struttura ad albero e, se vi riesce, evita la ricostruzione della struttura.  
   
- Per stabilire un riferimento debole a un oggetto, è necessario creare un <xref:System.WeakReference> utilizzando l'istanza dell'oggetto da rilevare. È quindi necessario impostare la proprietà <xref:System.WeakReference.Target%2A> su questo oggetto e impostare il riferimento originale all'oggetto su `null`. Per un esempio di codice, vedere <xref:System.WeakReference> nella libreria di classi.  
+ Per stabilire un riferimento debole a un oggetto è necessario creare una classe <xref:System.WeakReference> usando l'istanza dell'oggetto di cui tenere traccia. È quindi necessario impostare la proprietà <xref:System.WeakReference.Target%2A> su questo oggetto e impostare il riferimento originale all'oggetto su `null`. Per un esempio di codice, vedere <xref:System.WeakReference> nella libreria di classi.  
   
 ## <a name="short-and-long-weak-references"></a>Riferimenti deboli brevi e lunghi  
  È possibile creare un riferimento debole breve o lungo:  
@@ -46,11 +49,11 @@ Il Garbage Collector non può raccogliere un oggetto usato da un'applicazione fi
   
 -   Long  
   
-     Un riferimento debole lungo viene mantenuto dopo l'oggetto <xref:System.Object.Finalize%2A> metodo è stato chiamato. Ciò consente che l'oggetto venga ricreato, ma lo stato dell'oggetto non è prevedibile. Per utilizzare un riferimento lungo, specificare `true` nel <xref:System.WeakReference> costruttore.  
+     Un riferimento debole lungo viene mantenuto dopo la chiamata al metodo <xref:System.Object.Finalize%2A> dell'oggetto. Ciò consente che l'oggetto venga ricreato, ma lo stato dell'oggetto non è prevedibile. Per usare un riferimento lungo, specificare `true` nel costruttore <xref:System.WeakReference>.  
   
-     Se il tipo di oggetto non ha un <xref:System.Object.Finalize%2A> (metodo), il riferimento debole breve funzionalità si applica e il riferimento debole è valido solo fino a quando non verrà raccolti la destinazione, che può verificarsi in qualsiasi momento dopo il finalizzatore viene eseguito.  
+     Se il tipo dell'oggetto non dispone di un metodo <xref:System.Object.Finalize%2A>, viene applicata la funzionalità del riferimento debole breve e il riferimento debole è valido solo fino alla raccolta del target, che può verificarsi in qualsiasi momento dopo l'esecuzione del finalizzatore.  
   
- Per stabilire un riferimento forte e utilizzare nuovamente l'oggetto, eseguire il cast di <xref:System.WeakReference.Target%2A> proprietà di un <xref:System.WeakReference> per il tipo dell'oggetto. Se il <xref:System.WeakReference.Target%2A> restituisce proprietà `null`, l'oggetto è stato raccolto; in caso contrario, è possibile continuare a utilizzare l'oggetto perché l'applicazione ha recuperato un riferimento forte ad esso.  
+ Per stabilire un riferimento sicuro e usare nuovamente l'oggetto, eseguire il cast della proprietà <xref:System.WeakReference.Target%2A> di un <xref:System.WeakReference> al tipo dell'oggetto. Se la proprietà <xref:System.WeakReference.Target%2A> restituisce `null` l'oggetto è stato raccolto. In caso contrario è possibile continuare a usare l'oggetto, perché l'applicazione ha recuperato un riferimento sicuro all'oggetto stesso.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Linee guida per l'uso dei riferimenti deboli  
  Usare i riferimenti deboli lunghi solo in caso di necessità, perché dopo la finalizzazione lo stato dell'oggetto è imprevedibile.  

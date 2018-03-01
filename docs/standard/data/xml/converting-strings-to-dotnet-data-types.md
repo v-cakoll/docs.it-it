@@ -12,26 +12,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d21667ada5592c62824a97b4a8a9b8127abab75a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Conversione delle stringhe in tipi di dati di .NET Framework
-Se si desidera convertire una stringa in un tipo di dati .NET Framework, usare il **XmlConvert** metodo che soddisfa i requisiti dell'applicazione. Per un elenco di tutti i metodi di conversione disponibili nel **XmlConvert** classe, vedere <xref:System.Xml.XmlConvert>.  
+Per convertire una stringa in un tipo di dati di .NET Framework, usare il metodo **XmlConvert** che soddisfa i requisiti dell'applicazione. Per un elenco di tutti i metodi di conversione disponibili nella classe **XmlConvert**, vedere <xref:System.Xml.XmlConvert>.  
   
- La stringa restituita dal **ToString** metodo è una versione di dati che viene passati nella stringa. Inoltre, esistono diversi tipi di .NET Framework che convertono utilizzando il **XmlConvert** classe ma non usano i metodi nel **Convert** classe. Il **XmlConvert** classe segue la specifica di tipo di dati XML Schema (XSD) e un tipo di dati sono di tipo che il **XmlConvert** può eseguire il mapping a.  
+ La stringa restituita dal metodo **ToString** è una versione in formato stringa dei dati passati. Esistono inoltre diversi tipi .NET Framework che consentono di eseguire la conversione usando la classe **XmlConvert**, ma che non consentono l'uso dei metodi della classe **System.Convert**. La classe **XmlConvert** è conforme alla specifica dei tipi di dati XML Schema (XSD) e ha un tipo di dati a cui è possibile eseguire il mapping di **XmlConvert**.  
   
- Nella tabella seguente sono elencati i tipi di dati di .NET Framework e i tipi di stringa che vengono restituiti dal mapping dei tipi di dati XML Schema (XSD). Questi tipi .NET Framework non possono essere elaborati con **Convert**.  
+ Nella tabella seguente sono elencati i tipi di dati di .NET Framework e i tipi di stringa che vengono restituiti dal mapping dei tipi di dati XML Schema (XSD). I tipi di .NET Framework non possono essere elaborati con **System.Convert**.  
   
 |Tipo .NET Framework|Stringa restituita|  
 |-------------------------|---------------------|  
-|Boolean|"true", "false"|  
+|Booleano|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
@@ -40,9 +43,9 @@ Se si desidera convertire una stringa in un tipo di dati .NET Framework, usare i
 |TimeSpan|Il formato è PnYnMnTnHnMnS, ovvero `P2Y10M15DT10H30M20S` corrisponde a una durata di 2 anni, 10 mesi, 15 giorni, 10 ore, 30 minuti e 20 secondi.|  
   
 > [!NOTE]
->  Se la conversione di uno dei tipi di .NET Framework elencati nella tabella in una stringa tramite il **ToString** metodo, la stringa restituita non è il tipo di base, ma il tipo di stringa di XML Schema (XSD).  
+>  Se viene eseguita la conversione in una stringa di uno dei tipi di .NET Framework elencati nella tabella usando il metodo **ToString**, la stringa restituita non corrisponderà al tipo di base, ma al tipo di stringa XML Schema (XSD).  
   
- Il **DateTime** e **Timespan** tipo valore diverso in cui un **DateTime** rappresenta un istante di tempo, mentre un **TimeSpan** rappresenta un intervallo di tempo. Il **DateTime** e **Timespan** formati vengono specificati nella specifica di tipi di dati XML Schema (XSD). Ad esempio:  
+ I tipi di valore **DateTime** e **TimeSpan** sono diversi perché **DateTime** rappresenta un istante nel tempo, mentre **TimeSpan** rappresenta un intervallo di tempo. I formati **DateTime** e **TimeSpan** sono definiti nella specifica dei tipi di dati di XML Schema (XSD). Ad esempio:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -78,10 +81,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Tuttavia, se si converte una stringa a **booleano**, **singolo**, o **doppie**, il tipo di .NET Framework restituito non è identico al tipo restituito quando si utilizza il **Convert** classe.  
+ Se tuttavia si converte una stringa in **Boolean**, **Single** o **Double**, il tipo di .NET Framework restituito non corrisponde al tipo restituito quando si usa la classe **System.Convert**.  
   
 ## <a name="string-to-boolean"></a>Stringa in Boolean  
- Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in **booleano** utilizzando il **ToBoolean** metodo.  
+ Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in **Boolean** usando il metodo **ToBoolean**.  
   
 |Parametro di input della stringa valido|Tipo di output di .NET Framework|  
 |----------------------------------|--------------------------------|  
@@ -99,7 +102,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>   
 ```  
   
- Entrambi possono essere interpretati dal codice seguente, e **bvalue** è **correttamente**:  
+ Entrambi possono essere interpretati correttamente dal codice seguente e **bvalue** corrisponde a **System.Boolean.True**:  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -113,7 +116,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>Stringa in Single  
- Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in un **singolo** utilizzando il **ToSingle** metodo.  
+ Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in **Single** usando il metodo **ToSingle**.  
   
 |Parametro di input della stringa valido|Tipo di output di .NET Framework|  
 |----------------------------------|--------------------------------|  
@@ -121,7 +124,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>Stringa in Double  
- Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in un **singolo** utilizzando il **ToDouble** metodo.  
+ Nella tabella seguente viene illustrato quale tipo viene generato per le stringhe di input fornite, quando si converte una stringa in **Single** usando il metodo **ToDouble**.  
   
 |Parametro di input della stringa valido|Tipo di output di .NET Framework|  
 |----------------------------------|--------------------------------|  
@@ -141,5 +144,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione di tipi di dati XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [Conversione di tipi .NET Framework in stringhe](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+ [Conversione dei tipi di dati XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [Conversione dei tipi di .NET Framework in stringhe](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

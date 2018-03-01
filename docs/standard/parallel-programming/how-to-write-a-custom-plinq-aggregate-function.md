@@ -11,23 +11,27 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to create aggregate function
+helpviewer_keywords:
+- PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b098f21e29d0d59cd99ddbb64af6246d9953a3a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 210e9913ab3eba636ff99b7610df05655246f4eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Procedura: scrivere una funzione di aggregazione PLINQ personalizzata
-In questo esempio viene illustrato come utilizzare il <xref:System.Linq.ParallelEnumerable.Aggregate%2A> per applicare una funzione di aggregazione personalizzata a una sequenza di origine.  
+Questo esempio mostra come usare il metodo <xref:System.Linq.ParallelEnumerable.Aggregate%2A> per applicare una funzione di aggregazione personalizzata a una sequenza di origine.  
   
 > [!WARNING]
->  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per ulteriori informazioni sull'aumento di velocità, vedere [comprensione aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente calcola la deviazione standard di una sequenza di numeri interi.  
@@ -35,9 +39,9 @@ In questo esempio viene illustrato come utilizzare il <xref:System.Linq.Parallel
  [!code-csharp[PLINQ#31](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#31)]
  [!code-vb[PLINQ#31](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#31)]  
   
- In questo esempio viene usato un overload dell'operatore di query standard di aggregazione che è univoco in PLINQ. Questo overload accetta un ulteriore <xref:System.Func%603?displayProperty=nameWithType> come terzo parametro di input. Questo delegato combina i risultati di tutti i thread, prima di eseguire il calcolo finale i risultati aggregati. In questo esempio si sommano le somme da tutti i thread.  
+ L'esempio usa un overload dell'operatore query standard Aggregate specifico di PLINQ. Questo overload accetta un oggetto <xref:System.Func%603?displayProperty=nameWithType> aggiuntivo come terzo parametro di input. Questo delegato combina i risultati di tutti i thread prima di eseguire il calcolo finale sui risultati aggregati. In questo esempio si sommano i totali di tutti i thread.  
   
- Si noti che quando un corpo di espressione lambda è costituito da un'unica espressione, il valore restituito di <xref:System.Func%602?displayProperty=nameWithType> delegato è il valore dell'espressione.  
+ Si noti che quando il corpo di un'espressione lambda è costituito da una singola espressione, il valore restituito dal delegato <xref:System.Func%602?displayProperty=nameWithType> è il valore dell'espressione.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq.ParallelEnumerable>  

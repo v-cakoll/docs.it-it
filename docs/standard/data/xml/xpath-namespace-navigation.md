@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: beb6265e8b245893cd7fa5edca28ba1b081481ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-namespace-navigation"></a>Navigazione dello spazio dei nomi XPath
 Per usare le query XPath con i documenti XML, è necessario indirizzare correttamente gli spazi dei nomi XML e gli elementi da questi contenuti. Gli spazi dei nomi evitano le ambiguità che si possono verificare quando i nomi vengono usati in più contesti; ad esempio il nome `ID` potrebbe far riferimento a più identificatori associati a diversi elementi di un documento XML. La sintassi dello spazio dei nomi specifica gli URI, i nomi e i prefissi che distinguono gli elementi di un documento XML.  
   
- Nell'esempio di questo argomento viene illustrato l'uso di prefissi nella navigazione di un documento XML con l'oggetto <xref:System.Xml.XPath.XPathNavigator>. Per ulteriori informazioni sulla sintassi e gli spazi dei nomi, vedere [spazi dei nomi XML comprensione](http://go.microsoft.com/fwlink/?linkid=140245).  
+ Nell'esempio di questo argomento viene illustrato l'uso di prefissi nella navigazione di un documento XML con l'oggetto <xref:System.Xml.XPath.XPathNavigator>. Per altre informazioni sugli spazi dei nomi e sulla sintassi, vedere [Understanding XML Namespaces](http://go.microsoft.com/fwlink/?linkid=140245).  
   
 ## <a name="namespace-declarations"></a>Dichiarazioni dello spazio dei nomi  
  Le dichiarazioni dello spazio dei nomi consentono di distinguere e indirizzare gli elementi di un documento XML quando si usa un'istanza dell'oggetto <xref:System.Xml.XPath.XPathNavigator>. I prefissi dello spazio dei nomi forniscono una breve sintassi per l'indirizzamento degli spazi dei nomi.  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>Parametri XSLT
 I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentList> mediante il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nome qualificato e un URI dello spazio dei nomi sono associati all'oggetto parametro in quel momento.  
@@ -43,11 +46,11 @@ I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentLi
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  *Questo è equivalente a un set di nodi che contiene un unico nodo.  
   
- Se l'oggetto parametro non appartiene a una delle classi indicate sopra, viene convertito in base alle seguenti regole. I tipi numerici CLR vengono convertiti nel tipo <xref:System.Double>. Il tipo <xref:System.DateTime> viene convertito in <xref:System.String> e i tipi <xref:System.Xml.XPath.IXPathNavigable> in <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** viene convertito in <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Se l'oggetto parametro non appartiene a una delle classi indicate sopra, viene convertito in base alle seguenti regole. I tipi numerici CLR vengono convertiti nel tipo <xref:System.Double>. Il tipo <xref:System.DateTime> viene convertito in <xref:System.String> e i tipi <xref:System.Xml.XPath.IXPathNavigable> in <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** viene convertito nel tipo <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Per tutti gli altri tipi verrà generato un errore.  
   

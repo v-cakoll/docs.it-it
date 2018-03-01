@@ -19,28 +19,31 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75800210a52620c5b08a01c5f8fa888bf40843fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composing-streams"></a>Composizione dei flussi
-Un archivio di backup è un supporto di archiviazione, ad esempio un disco o memoria. Ogni archivio di backup diversi implementa il flusso come un'implementazione del <xref:System.IO.Stream> classe. Ogni tipo di flusso legge e scrive byte da e in un archivio di backup specificato. Flussi di connettono ad archivi di backup vengono chiamati i flussi di base. Flussi di base hanno costruttori che accettano i presentano per il flusso di connettersi all'archivio di backup. Ad esempio, <xref:System.IO.FileStream> dispone di costruttori che specificano un parametro di percorso che specifica come il file verrà condiviso dai processi e così via.  
+Un archivio di backup è un supporto di archiviazione, ad esempio un disco o la memoria. Ogni tipo di archivio di backup implementa il flusso come implementazione della classe <xref:System.IO.Stream>. Ogni tipo di flusso legge e scrive i byte da e nel relativo archivio di backup. I flussi che si connettono agli archivi di backup sono chiamati flussi di base. I flusso di base hanno costruttori con i parametri necessari per connettere il flusso all'archivio di backup. <xref:System.IO.FileStream>, ad esempio, ha costruttori che specificano un parametro del percorso, che specifica come il file verrà condiviso dai processi e così via.  
   
- La progettazione della <xref:System.IO> classi fornisce la composizione di flussi. Flussi di base possono essere collegati a uno o più flussi di pass-through che forniscono la funzionalità desiderata. Un lettore o writer può essere collegato alla fine della catena in modo che i tipi Preferiti possono essere letto o scritti facilmente.  
+ La progettazione delle classi <xref:System.IO> consente una composizione dei flussi semplificata. I flussi di base possono essere collegati a uno o più flussi pass-through che forniscono la funzionalità desiderata. Un reader o un writer può essere accodato alla fine della catena in modo che i tipi preferiti possano essere letti o scritti facilmente.  
   
- L'esempio di codice seguente crea un **FileStream** intorno esistente `MyFile.txt` per inserire nel buffer `MyFile.txt`. (Si noti che **FileStream** vengono memorizzati nel buffer per impostazione predefinita.) Successivamente, un <xref:System.IO.StreamReader> viene creato per leggere caratteri dal **FileStream**, che viene passato al **StreamReader** come argomento del costruttore. <xref:System.IO.StreamReader.ReadLine%2A>legge fino a quando <xref:System.IO.StreamReader.Peek%2A> non trova più caratteri.  
+ L'esempio di codice seguente crea un elemento **FileStream** attorno all'elemento `MyFile.txt` esistente per memorizzare nel buffer `MyFile.txt`. Si noti che gli elementi **FileStream** vengono memorizzati nel buffer per impostazione predefinita. Viene quindi creato un elemento <xref:System.IO.StreamReader> per leggere i caratteri dal **FileStream**, che viene passato allo **StreamReader** come argomento del costruttore. <xref:System.IO.StreamReader.ReadLine%2A> legge finché <xref:System.IO.StreamReader.Peek%2A> non trova più caratteri.  
   
  [!code-cpp[System.IO.StreamReader#20](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source2.cpp#20)]
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
- L'esempio di codice seguente crea un **FileStream** intorno esistente `MyFile.txt` per inserire nel buffer `MyFile.txt`. (Si noti che **FileStream** vengono memorizzati nel buffer per impostazione predefinita.) Successivamente, un **BinaryReader** viene creato per leggere i byte dal **FileStream**, che viene passato al **BinaryReader** come argomento del costruttore. <xref:System.IO.BinaryReader.ReadByte%2A>legge fino a quando <xref:System.IO.BinaryReader.PeekChar%2A> non trova più byte.  
+ L'esempio di codice seguente crea un elemento **FileStream** attorno all'elemento `MyFile.txt` esistente per memorizzare nel buffer `MyFile.txt`. Si noti che gli elementi **FileStream** vengono memorizzati nel buffer per impostazione predefinita. Viene quindi creato un **BinaryReader** per leggere i byte dal **FileStream**, che viene passato al **BinaryReader** come argomento del costruttore. <xref:System.IO.BinaryReader.ReadByte%2A> legge finché <xref:System.IO.BinaryReader.PeekChar%2A> non trova più byte.  
   
  [!code-cpp[System.IO.StreamReader#21](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source3.cpp#21)]
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

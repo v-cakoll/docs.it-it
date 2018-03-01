@@ -9,23 +9,26 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6dec61860fba5815b1dae802d280e8df6628ab91
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4d2ffaa994ce3c9b02ed0937967845be1b803f6d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Gerarchia del modello a oggetti di documenti XML (Document Object Model, DOM)
 Nell'illustrazione seguente è rappresentata la gerarchia delle classi per il DOM XML, con il nome W3C (World Wide Web Consortium) tra parentesi insieme a quello della classe ove pertinente.  
   
- ![DOM XML Document Object Model &#40; &#41; gerarchia](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![Gerarchia del modello a oggetti di documenti XML &#40;DOM&#41;](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Gerarchia del modello a oggetti di documenti XML (DOM, Document Object Model)  
   
- Le classi seguenti non ereditano il **XmlNode**:  
+ Le classi seguenti non ereditano da **XmlNode**:  
   
 -   **XmlImplementation**  
   
@@ -35,15 +38,15 @@ Gerarchia del modello a oggetti di documenti XML (DOM, Document Object Model)
   
 -   **XmlNodeChangedEventArgs**  
   
- Il **XmlImplementation** classe viene utilizzata per creare un documento XML. Per ulteriori informazioni, vedere [creazione di documenti XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
+ La classe **XmlImplementation** viene usata per creare un documento XML. Per altre informazioni, vedere [Creazione di documenti XML](../../../../docs/standard/data/xml/xml-document-creation.md).  
   
- Il **XmlNamedNodeMap** classe gestisce un set di nodi non ordinato. Per ulteriori informazioni, vedere [il recupero di nodi non ordinati per nome o indice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
+ Dalla classe **XmlNamedNodeMap** viene gestito un set di nodi non ordinato. Per altre informazioni, vedere [Recupero di nodi non ordinati in base al nome o all'indice](../../../../docs/standard/data/xml/unordered-node-retrieval-by-name-or-index.md).  
   
- Il **XmlNodeList** classe gestisce un elenco ordinato di nodi. Per ulteriori informazioni, vedere [recupero di nodi ordinati in base all'indice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
+ Dalla classe **XmlNodeList** viene gestito un elenco di nodi ordinato. Per altre informazioni, vedere [Recupero di nodi ordinati in base all'indice](../../../../docs/standard/data/xml/ordered-node-retrieval-by-index.md).  
   
- Il **XmlNodeChangedEventArgs** classe gestisce i gestori eventi registrati il **XmlDocument**. Per ulteriori informazioni, vedere [gestione degli eventi in un documento XML con XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
+ Dalla classe **XmlNodeChangedEventArgs** vengono gestiti i gestori eventi registrati in **XmlDocument**. Per altre informazioni, vedere [Gestione degli eventi in un documento XML con XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md).  
   
- Il **XmlLinkedNode** classe eredita da **XmlNode**. Lo scopo consiste nell'eseguire l'override di due metodi di **XmlNode**: il **PreviousSibling** e **NextSibling** metodi. Questi metodi sottoposti a override vengono quindi ereditati e utilizzati da **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference**, e **XmlProcessingInstruction**, che sono classi di elementi di pari livello precedenti e successivi.  
+ La classe **XmlLinkedNode** eredita da **XmlNode**. Lo scopo di questa classe è di eseguire l'override di due metodi di **XmlNode**: i metodi **PreviousSibling** e **NextSibling**. Questi metodi di cui è stato eseguito l'override vengono quindi ereditati e usati dalle classi **XmlCharacterData**, **XmlDeclaration**, **XmlDocumentType**, **XmlElement**, **XmlEntityReference** e **XmlProcessingInstruction**, che presentano elementi di pari livello precedenti e successivi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

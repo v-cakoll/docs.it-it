@@ -5,79 +5,81 @@ ms.date: 11/08/2017
 ms.prod: .net
 ms.topic: article
 ms.technology: dotnet-standard
-ms.##devlang: dotnet
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e938c009b79af3b2f36094bbb74f4d38baeeac0b
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a5833bdfcf1e3433ea82403908e9a06a88cde27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novità di .NET Standard
 
-.NET Standard è una specifica formale che definisce un set di API che devono essere disponibile nelle implementazioni .NET conformi con tale versione dello standard con controllo delle versioni. .NET Standard è destinato agli sviluppatori di librerie. Una libreria che ha come destinazione una versione .NET Standard è utilizzabile in qualsiasi implementazione di .NET Framework, .NET Core o Xamarin che supporta tale versione dello standard.
+.NET Standard è una specifica formale che definisce un set di API con versioni specifiche che devono essere disponibili nelle implementazioni .NET conformi a tale versione dello standard. .NET Standard è destinato agli sviluppatori di librerie. Una libreria che ha come destinazione una versione di .NET Standard è utilizzabile in qualsiasi implementazione di .NET Framework, .NET Core o Xamarin che supporta tale versione dello standard.
 
-La versione più recente di .NET Standard è 2.0. È inclusa con il SDK 2.0 di .NET Core e con versione 15.3 2017 di Visual Studio con il carico di lavoro di .NET Core installato.
+La versione più recente di .NET Standard è la versione 2.0. Questa versione è inclusa con .NET Core 2.0 SDK e con Visual Studio 2017 versione 15.3 con il carico di lavoro .NET Core installato.
 
 ## <a name="supported-net-implementations"></a>Implementazioni di .NET supportate
 
-Standard di .NET 2.0 è supportata tramite le implementazioni .NET seguenti:
+.NET Standard 2.0 è supportato dalle implementazioni .NET seguenti:
 
-- .NET core 2.0
+- .NET Core 2.0
 - .NET Framework 4.6.1
 - Mono 5.4
-- Xamarin 10.14
-- 3.8 Xamarin.Mac
-- Xamarin 8.0
-- Piattaforma Windows universale 10.0.16299
+- Xamarin.iOS 10.14
+- Xamarin.Mac 3.8
+- Xamarin.Android 8.0
+- Piattaforma UWP (Universal Windows Platform) 10.0.16299
 
-## <a name="whats-new-in-the-net-standard-20"></a>Novità di .NET 2.0 Standard
+## <a name="whats-new-in-the-net-standard-20"></a>Novità di .NET Standard 2.0
  
-Standard di .NET 2.0 include le nuove funzionalità seguenti:
+.NET Standard 2.0 include le nuove funzionalità seguenti:
 
-**Un vasto set di API**
+**Un set di API notevolmente ampliato**
 
-Alla versione 1.6, .NET Standard incluso un subset relativamente ridotto di API. Tra quelli esclusi sono state molte API comunemente usati in .NET Framework o Xamarin. Ciò complica lo sviluppo, poiché richiede che gli sviluppatori troveranno sostituzioni appropriate per le API familiarità durante lo sviluppo di applicazioni e librerie destinate a più implementazioni di .NET. .NET 2.0 Standard risolve questa limitazione aggiungendo le API più oltre 20.000 che erano disponibili in .NET Standard 1.6, la versione precedente dello standard. Per un elenco delle API che sono stati aggiunti a Standard di .NET 2.0, vedere [Visual Studio .NET 2.0 Standard 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md). 
+Nella versione 1.6 .NET Standard includeva un subset relativamente ridotto di API. Molte API escluse erano tra quelle comunemente usate in .NET Framework o Xamarin. Ciò rende lo sviluppo più complesso, poiché gli sviluppatori devono trovare sostituzioni appropriate per le API a loro ben note durante lo sviluppo di applicazioni e librerie destinate a più implementazioni .NET. .NET 2.0 Standard risolve questa limitazione rendendo disponibili più di 20.000 API rispetto a quelle disponibili in .NET Standard 1.6, la versione precedente. Per un elenco delle API aggiunte a .NET Standard 2.0, vedere [.NET Standard 2.0 vs 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) (Confronto tra le versioni 2.0 e 1.6 di .NET Standard) 
 
-Alcune delle aggiunte di <xref:System> dello spazio dei nomi .NET 2.0 Standard includono:
+Ecco alcune delle funzionalità aggiunte allo spazio dei nomi <xref:System> in .NET 2.0 Standard:
 
-- Supporto per la <xref:System.AppDomain> classe.
-- Supporto migliorato per l'utilizzo di matrici da altri membri di <xref:System.Array> classe.
-- Supporto migliorato per lavorare con gli attributi da altri membri di <xref:System.Attribute> classe.
-- Calendario migliore supporto e le opzioni di formattazione aggiuntive per <xref:System.DateTime> valori.
-- Ulteriori <xref:System.Decimal> arrotondamento funzionalità.
-- Funzionalità aggiuntive di <xref:System.Environment> classe.
-- Il controllo tramite il garbage collector tramite avanzato di <xref:System.GC> classe.
-- Supporto migliorato per confronto tra stringhe, enumerazione e la normalizzazione nel <xref:System.String> classe.
-- Supporto per legale rettifiche e tempi di transizione nel <xref:System.TimeZoneInfo.AdjustmentRule> e <xref:System.TimeZoneInfo.TransitionTime> classi.
-- Sensibilmente migliorata e ora funzionalità di <xref:System.Type> classe.
-- Supporto migliorato per la deserializzazione di oggetti eccezione mediante l'aggiunta di un costruttore di eccezione con <xref:System.Runtime.Serialization.SerializationInfo> e <xref:System.Runtime.Serialization.StreamingContext> parametri.
+- Supporto della classe <xref:System.AppDomain>.
+- Supporto più efficiente dell'uso delle matrici da altri membri della classe <xref:System.Array>.
+- Supporto più efficiente per l'uso degli attributi da altri membri della classe <xref:System.Attribute>.
+- Supporto più efficiente del calendario e opzioni di formattazione aggiuntive per i valori <xref:System.DateTime>.
+- Funzionalità di arrotondamento <xref:System.Decimal> aggiuntiva.
+- Funzionalità aggiuntive nella classe <xref:System.Environment>.
+- Miglioramento del controllo sul Garbage Collector tramite la classe <xref:System.GC>.
+- Supporto più efficiente del confronto tra stringhe, dell'enumerazione e della normalizzazione nella classe <xref:System.String>.
+- Supporto della rettifica relativa all'ora legale e dei tempi di transizione nelle classi <xref:System.TimeZoneInfo.AdjustmentRule> e <xref:System.TimeZoneInfo.TransitionTime>.
+- Sensibile miglioramento delle funzionalità nella classe <xref:System.Type>.
+- Supporto più efficiente della deserializzazione degli oggetti eccezione tramite l'aggiunta di un costruttore di eccezioni con parametri <xref:System.Runtime.Serialization.SerializationInfo> e <xref:System.Runtime.Serialization.StreamingContext>.
 
-**Supporto per le librerie .NET Framework**
+**Supporto delle librerie di .NET Framework**
 
-La maggior parte delle librerie di destinazione di .NET Framework anziché .NET Standard. Tuttavia, la maggior parte delle chiamate in tali raccolte sono alle API incluse in .NET 2.0 Standard. A partire da .NET 2.0 Standard, è possibile accedere alle librerie .NET Framework da una libreria .NET Standard con un [shim di compatibilità](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Questo livello di compatibilità è trasparente per gli sviluppatori; non è necessario eseguire alcuna operazione per sfruttare i vantaggi delle librerie .NET Framework.
+La stragrande maggioranza delle librerie è destinata a .NET Framework anziché a .NET Standard. La maggior parte delle chiamate in tali librerie, tuttavia, riguardano API incluse in .NET Standard 2.0. A partire da .NET Standard 2.0, è possibile accedere alle librerie .NET Framework da una libreria .NET Standard tramite uno [shim di compatibilità](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Questo livello di compatibilità è trasparente per gli sviluppatori. Non è necessario eseguire alcuna operazione per sfruttare i vantaggi delle librerie .NET Framework.
 
-L'unico requisito è che le API chiamate dalla libreria di classi .NET Framework devono essere incluso in .NET 2.0 Standard.
+L'unico requisito è che le API chiamate dalla libreria di classi di .NET Framework siano incluse in .NET Standard 2.0.
 
 **Supporto per Visual Basic**
 
-È ora possibile sviluppare le librerie Standard di .NET in Visual Basic. Per gli sviluppatori di Visual Basic in Visual Studio 2017 versione 15.3 o versioni successive con il carico di lavoro di .NET Core installata, Visual Studio ora include un modello di libreria di classi .NET Standard. Per gli sviluppatori di Visual Basic che utilizzano altri strumenti di sviluppo e gli ambienti, è possibile utilizzare il [dotnet nuovo](../../core/tools/dotnet-new.md) comando per creare un progetto di libreria Standard di .NET. Per ulteriori informazioni, vedere il [gli strumenti di supporto per le librerie .NET Standard](#tooling).
+È ora possibile sviluppare librerie .NET Standard in Visual Basic. Per gli sviluppatori Visual Basic che usano Visual Studio 2017 versione 15.3 o versioni successive con il carico di lavoro di .NET Core installato, Visual Studio ora include un modello di librerie di classi .NET Standard. Per gli sviluppatori Visual Basic che usano altri strumenti e ambienti di sviluppo, è possibile usare il comando [dotnet new](../../core/tools/dotnet-new.md) per creare un progetto di libreria .NET Standard. Per altre informazioni, vedere [Supporto degli strumenti per librerie .NET Standard](#tooling).
 
-<a name="tooling" />**Strumenti di supporto per le librerie .NET Standard**
+<a name="tooling" />**Supporto degli strumenti per librerie .NET Standard**
 
-Con la versione di .NET Core 2.0 e .NET 2.0 Standard, entrambi 2017 Studio Visual e [.NET Core interfaccia della riga di comando (CLI)](../../core/tools/index.md) includono gli strumenti di supporto per la creazione di librerie .NET Standard. 
+Con la versione 2.0 di .NET Core e .NET Standard, sia Visual Studio 2017 che l'[interfaccia della riga di comando di .NET Core](../../core/tools/index.md) includono il supporto degli strumenti per la creazione di librerie .NET Standard. 
 
-Se si installa Visual Studio con il **lo sviluppo multipiattaforma con .NET Core** carico di lavoro, è possibile creare un progetto di libreria .NET 2.0 Standard utilizzando un modello di progetto, come illustrato nella figura seguente. 
+Se si installa Visual Studio con il carico di lavoro **Sviluppo multipiattaforma .NET Core**, è possibile creare un progetto di libreria .NET Standard 2.0 usando un modello di progetto, come illustrato nella figura seguente. 
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Aggiungere il progetto di libreria Standard di nuovo .NET](./media/std-project-cs.png)
+![Aggiungere un nuovo progetto di libreria .NET Standard](./media/std-project-cs.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![Aggiungere il progetto di libreria Standard di nuovo .NET](./media/std-project-vb.png)
+<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![Aggiungere un nuovo progetto di libreria .NET Standard](./media/std-project-vb.png)
 ---
 
-Se si utilizza l'interfaccia CLI Core .NET, le operazioni seguenti [dotnet nuovo](../../core/tools/dotnet-new.md) comando crea un progetto libreria di classi destinate a .NET 2.0 Standard.
+Se si usa l'interfaccia della riga di comando di .NET Core, il comando [dotnet new](../../core/tools/dotnet-new.md) seguente crea un progetto di libreria di classi destinata a .NET Standard 2.0.
 
 ```csharp
 dotnet new classlib
@@ -87,5 +89,5 @@ dotnet new classlib -lang vb
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[.NET standard](../net-standard.md)
-[Introduzione a .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+[.NET Standard](../net-standard.md)
+[Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) (Presentazione di .NET Standard)

@@ -16,21 +16,24 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-best-practices"></a>Suggerimenti per l'utilizzo del threading gestito
 Il multithreading richiede un'attenta programmazione. È possibile ridurre la complessità della maggior parte delle attività accodando le richieste di esecuzione tramite thread di pool di thread. In questo argomento vengono analizzate situazioni più complesse, come il coordinamento del lavoro di più thread o la gestione di thread che effettuano un blocco.  
   
 > [!NOTE]
-> A partire da .NET Framework 4, la libreria Task Parallel Library e PLINQ fornisce API che consentono di ridurre in parte la complessità e rischi della programmazione multithreading. Per ulteriori informazioni, vedere [la programmazione parallela in .NET](../../../docs/standard/parallel-programming/index.md).  
+> A partire da .NET Framework 4, la libreria TPL (Task Parallel Library) e PLINQ specificano API che riducono, in parte, la complessità e i rischi associati alla programmazione multithread. Per altre informazioni, vedere [Programmazione parallela in .NET](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks e race condition  
  Il multithreading consente di risolvere problemi di trasmissione dei dati e velocità di risposta, ma è anche causa di nuovi problemi: i deadlock e le race condition.  
@@ -38,7 +41,7 @@ Il multithreading richiede un'attenta programmazione. È possibile ridurre la co
 ### <a name="deadlocks"></a>Deadlock  
  Un deadlock si verifica quando uno di due thread tenta di bloccare una risorsa già bloccata dall'altro. Nessuno dei due è in grado di fare ulteriori progressi.  
   
- È possibile rilevare i deadlock tramite i timeout disponibili in molti metodi delle classi di threading gestito. Ad esempio, il codice seguente tenta di acquisire un blocco su un oggetto denominato `lockObject`. Se il blocco non viene ottenuto 300 millisecondi, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> restituisce `false`.  
+ È possibile rilevare i deadlock tramite i timeout disponibili in molti metodi delle classi di threading gestito. Il codice riportato di seguito, ad esempio, prova ad acquisire un blocco su un oggetto denominato `lockObject`. Se il blocco non viene ottenuto in 300 millisecondi, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> restituisce `false`.  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
@@ -73,7 +76,7 @@ else {
   
  In un'applicazione multithreading, un thread che abbia caricato e incrementato il valore potrebbe venire interrotto da un altro thread che esegue tutti e tre i passaggi. Quando il primo thread riprende l'esecuzione e archivia il valore, sovrascrive `objCt` anche se nel frattempo il valore è stato modificato.  
   
- Questa particolare race condition è evitare facilmente tramite metodi di <xref:System.Threading.Interlocked> classe, ad esempio <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Per informazioni sulle altre tecniche di sincronizzazione dei dati tra più thread, vedere [Sincronizzazione dei dati per il multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md).  
+ Questa particolare race condition è facilmente evitabile usando i metodi della classe <xref:System.Threading.Interlocked>, ad esempio <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>. Per informazioni sulle altre tecniche di sincronizzazione dei dati tra più thread, vedere [Sincronizzazione dei dati per il multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md).  
   
  Le race condition possono verificarsi anche quando si sincronizzano le attività di più thread. Quando si scrive una riga di codice, è necessario considerare le possibili conseguenze nel caso in cui un thread venisse interrotto prima dell'esecuzione della riga o di una qualsiasi delle singole istruzioni del computer che costituiscono la riga e un altro thread lo raggiungesse.  
   
@@ -87,7 +90,7 @@ else {
   
 -   Un thread in background viene eseguito solo quando il numero di thread in primo piano in esecuzione è inferiore al numero dei processori.  
   
--   Quando si chiama il <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> metodo su un thread, thread potrebbero o potrebbe non essere avviato l'esecuzione immediata, a seconda del numero di processori e il numero di thread attualmente in attesa di esecuzione.  
+-   Quando si chiama il metodo <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> su un thread, l'avvio immediato dell'esecuzione dipende dal numero di processori e thread attualmente in attesa di esecuzione.  
   
 -   Le race condition possono verificarsi non solo perché i thread vengono interrotti inaspettatamente, ma anche perché è possibile che due thread in esecuzione su processori diversi competano per raggiungere lo stesso blocco di codice.  
   
@@ -98,7 +101,7 @@ else {
   
 -   Viene eseguito un thread in background solo quando il thread utente principale è inattivo. Un thread in primo piano costantemente in esecuzione priva i thread in background del tempo del processore.  
   
--   Quando si chiama il <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> metodo su un thread, quest ' ultimo viene eseguito finché il thread corrente non viene generato o interrotto dal sistema operativo.  
+-   Quando si chiama il metodo <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> su un thread, quest'ultimo non viene eseguito finché il thread corrente non viene generato o interrotto dal sistema operativo.  
   
 -   Le race condition si verificano in genere perché il programmatore non ha previsto che un thread potesse venire interrotto in un momento inopportuno, consentendo talvolta a un altro thread di raggiungere per primo un blocco di codice.  
   
@@ -112,21 +115,21 @@ else {
 ## <a name="general-recommendations"></a>Suggerimenti generali  
  Quando si usano più thread, attenersi alle seguenti linee guida:  
   
--   Non utilizzare <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per terminare altri thread. Chiamare **Abort** su un altro thread equivale a generare un'eccezione su tale thread, senza conoscere il punto raggiunto dal thread nell'elaborazione.  
+-   Non usare <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> per terminare altri thread. Chiamare **Abort** su un altro thread equivale a generare un'eccezione su tale thread, senza conoscere il punto raggiunto dal thread nell'elaborazione.  
   
--   Non utilizzare <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> per sincronizzare le attività di più thread. Utilizzare <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, e <xref:System.Threading.Monitor>.  
+-   Non usare <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> per sincronizzare le attività di più thread. Usare <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.Monitor>.  
   
--   Non controllare l'esecuzione dei thread in funzione dal programma principale, ad esempio tramite gli eventi. Progettare invece il programma in modo che i thread in funzione siano responsabili di attendere finché il lavoro non è disponibile, eseguirlo e informare gli altri componenti del programma del termine dell'esecuzione. Se i thread di lavoro non consentono il blocco, prendere in considerazione l'uso di thread del pool di thread. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>è utile nelle situazioni in cui i thread di lavoro si blocchi.  
+-   Non controllare l'esecuzione dei thread in funzione dal programma principale, ad esempio tramite gli eventi. Progettare invece il programma in modo che i thread in funzione siano responsabili di attendere finché il lavoro non è disponibile, eseguirlo e informare gli altri componenti del programma del termine dell'esecuzione. Se i thread di lavoro non consentono il blocco, prendere in considerazione l'uso di thread del pool di thread. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> è utile nelle situazioni in cui i thread di lavoro si bloccano.  
   
--   Non usare tipi come oggetti di blocco. Vale a dire evitare, ad esempio codice `lock(typeof(X))` in c# o `SyncLock(GetType(X))` in Visual Basic o l'utilizzo di <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> con <xref:System.Type> oggetti. Per un determinato tipo, è disponibile solo un'istanza di <xref:System.Type?displayProperty=nameWithType> per ogni dominio applicazione. Se il tipo per cui si acquisisce un blocco è pubblico, anche codice diverso dal proprio può acquisire blocchi su di esso, con il conseguente verificarsi di deadlock. Per informazioni su altre problematiche, vedere [Reliability Best Practices](../../../docs/framework/performance/reliability-best-practices.md) (Procedure consigliate per l'ottimizzazione dell'affidabilità).  
+-   Non usare tipi come oggetti di blocco. Ciò significa evitare codice come `lock(typeof(X))` in C# o `SyncLock(GetType(X))` in Visual Basic oppure l'uso di <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> con oggetti <xref:System.Type>. Per un determinato tipo, è disponibile una sola istanza di <xref:System.Type?displayProperty=nameWithType> per ogni dominio dell'applicazione. Se il tipo per cui si acquisisce un blocco è pubblico, anche codice diverso dal proprio può acquisire blocchi su di esso, con il conseguente verificarsi di deadlock. Per informazioni su altre problematiche, vedere [Reliability Best Practices](../../../docs/framework/performance/reliability-best-practices.md) (Procedure consigliate per l'ottimizzazione dell'affidabilità).  
   
 -   Procedere con cautela in caso di blocco sulle istanze, ad esempio `lock(this)` in C# o `SyncLock(Me)` in Visual Basic. Se altro codice dell'applicazione, esterno al tipo, acquisisce un blocco sull'oggetto, potrebbero verificarsi situazioni di deadlock.  
   
--   Assicurarsi che un thread entrato in un monitor lasci sempre il monitor, anche se si verifica un'eccezione mentre il thread si trova nel monitor. C# [blocco](~/docs/csharp/language-reference/keywords/lock-statement.md) istruzione e Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) istruzione generano questo comportamento automaticamente, impiegando un **infine** blocco per garantire che <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> è chiamato. Se non è possibile garantire che **Exit** verrà chiamato, modificare la progettazione in modo da usare **Mutex**. Un mutex viene rilasciato automaticamente quando il thread che ne è attualmente proprietario termina.  
+-   Assicurarsi che un thread entrato in un monitor lasci sempre il monitor, anche se si verifica un'eccezione mentre il thread si trova nel monitor. L'istruzione [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) di C# e l'istruzione [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) di Visual Basic generano automaticamente questo comportamento, impiegando un blocco **finally** per garantire che venga chiamato <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Se non è possibile garantire che **Exit** verrà chiamato, modificare la progettazione in modo da usare **Mutex**. Un mutex viene rilasciato automaticamente quando il thread che ne è attualmente proprietario termina.  
   
 -   Usare più thread per le attività che richiedono risorse diverse ed evitare di assegnare più thread a una sola risorsa. Alcune attività, ad esempio, che hanno un proprio thread, usufruiscono dei vantaggi di I/O, poiché il thread si bloccherà durante le operazioni di I/O consentendo l'esecuzione di altri thread. Anche l'input utente è una risorsa che trae vantaggio da un thread dedicato. In un computer a processore unico, un'attività che comporta un calcolo a elevato utilizzo di risorse coesiste con l'input utente e con attività che coinvolgono I/O, ma più attività con un elevato utilizzo di risorse competono fra loro.  
   
--   È consigliabile utilizzare i metodi del <xref:System.Threading.Interlocked> classe dei cambiamenti di stato semplice, anziché utilizzare il `lock` istruzione (`SyncLock` in Visual Basic). Il `lock` istruzione è un valido strumento generico, ma la <xref:System.Threading.Interlocked> classe fornisce prestazioni migliori per gli aggiornamenti che devono essere atomici. Internamente esegue un unico prefisso lock se non esistono conflitti. Nelle analisi di codice controllare il codice simile a quello indicato negli esempi riportati di seguito. Nel primo esempio viene incrementata una variabile di stato:  
+-   Si prenda in considerazione l'uso dei metodi della classe <xref:System.Threading.Interlocked> per le modifiche semplici allo stato, invece dell'uso dell'istruzione `lock` (`SyncLock` in Visual Basic). L'istruzione `lock` è un valido strumento generico, ma la classe <xref:System.Threading.Interlocked> offre prestazioni migliori per gli aggiornamenti che devono essere atomici. Internamente esegue un unico prefisso lock se non esistono conflitti. Nelle analisi di codice controllare il codice simile a quello indicato negli esempi riportati di seguito. Nel primo esempio viene incrementata una variabile di stato:  
   
     ```vb  
     SyncLock lockObject  
@@ -141,7 +144,7 @@ else {
     }  
     ```  
   
-     È possibile migliorare le prestazioni utilizzando il <xref:System.Threading.Interlocked.Increment%2A> anziché il `lock` istruzione, come indicato di seguito:  
+     Per migliorare le prestazioni, è possibile usare il metodo <xref:System.Threading.Interlocked.Increment%2A> invece dell'istruzione `lock`, come illustrato di seguito:  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  
@@ -152,7 +155,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework versione 2.0, il <xref:System.Threading.Interlocked.Add%2A> metodo fornisce aggiornamenti atomici in incrementi di dimensioni maggiori di 1.  
+    >  In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.Add%2A> offre aggiornamenti atomici in incrementi maggiori di 1.  
   
      Nel secondo esempio una variabile del tipo di riferimento viene aggiornata solo se corrisponde a un riferimento Null (`Nothing` in Visual Basic).  
   
@@ -179,7 +182,7 @@ else {
     }  
     ```  
   
-     Per migliorare le prestazioni, è possano utilizzare il <xref:System.Threading.Interlocked.CompareExchange%2A> metodo invece, come indicato di seguito:  
+     Per migliorare le prestazioni, è invece possibile usare il metodo <xref:System.Threading.Interlocked.CompareExchange%2A>, come indicato di seguito:  
   
     ```vb  
     System.Threading.Interlocked.CompareExchange(x, y, Nothing)  
@@ -190,7 +193,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework versione 2.0, il <xref:System.Threading.Interlocked.CompareExchange%2A> metodo presenta un overload generico che può essere utilizzato per la sostituzione indipendente dai tipi di qualsiasi tipo di riferimento.  
+    >  In .NET Framework versione 2.0 il metodo <xref:System.Threading.Interlocked.CompareExchange%2A> presenta un overload generico che può essere usato per la sostituzione indipendente dai tipi di qualsiasi tipo di riferimento.  
   
 ## <a name="recommendations-for-class-libraries"></a>Suggerimenti per le librerie di classi  
  Si prendano in considerazione le linee guida riportate di seguito per la progettazione di librerie di classi per il multithreading:  
@@ -205,4 +208,4 @@ else {
   
 ## <a name="see-also"></a>Vedere anche  
  [Threading](../../../docs/standard/threading/index.md)  
- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)
+ [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)

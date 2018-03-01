@@ -22,15 +22,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61efa26db0f416c56691399779d15310457ce483
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Cenni preliminari sul modello asincrono basato su eventi
 Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo disponibili all'utente, richiedono spesso una progettazione che preveda l'uso di più thread. Lo spazio dei nomi <xref:System.Threading> offre tutti gli strumenti necessari per creare applicazioni multithreading a elevate prestazioni, per l'uso dei quali è necessaria tuttavia una notevole esperienza nel campo della progettazione di software multithreading. Per applicazioni multithreading relativamente semplici, il componente <xref:System.ComponentModel.BackgroundWorker> rappresenta una soluzione adeguata. Per applicazioni asincrone più complesse, si consiglia di implementare una classe che segua il modello asincrono basato su eventi.  
@@ -43,9 +46,9 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
   
 -   Attendere la disponibilità delle risorse senza interrompere o sospendere l'esecuzione dell'applicazione.  
   
--   Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per ulteriori informazioni sull'utilizzo di gestori eventi e delegati, vedere [eventi](../../../docs/standard/events/index.md).  
+-   Comunicare con operazioni asincrone in sospeso mediante un modello noto di eventi e delegati. Per altre informazioni sull'uso di gestori eventi e delegati, vedere [Eventi](../../../docs/standard/events/index.md).  
   
- Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati *NomeMetodo*`Async`. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe potrebbe anche avere un *NomeMetodo* `Completed` evento e può avere un *NomeMetodo* `AsyncCancel` (o semplicemente `CancelAsync`) metodo.  
+ Una classe che supporta il modello asincrono basato su eventi avrà uno o più metodi denominati *NomeMetodo***Async**. Tali metodi possono eseguire il mirroring delle versioni sincrone che eseguono la stessa operazione sul thread corrente. La classe può anche avere un evento *NomeMetodo***Completed** e un metodo *NomeMetodo***AsyncCancel** (o semplicemente **CancelAsync**).  
   
  <xref:System.Windows.Forms.PictureBox> è un componente tipico che supporta il modello asincrono basato su eventi. Per scaricare un'immagine in modo sincrono è possibile chiamare il relativo metodo <xref:System.Windows.Forms.PictureBox.Load%2A>, ma qualora le dimensioni dell'immagine fossero eccessive o la connessione di rete troppo lenta, l'esecuzione dell'applicazione verrà interrotta o sospesa fino al completamento dell'operazione di download e alla restituzione della chiamata a <xref:System.Windows.Forms.PictureBox.Load%2A>.  
   
@@ -54,10 +57,10 @@ Le applicazioni che eseguono più attività contemporaneamente, pur rimanendo di
  Il modello asincrono basato su eventi richiede la possibilità di annullare un'operazione asincrona, requisito supportato dal controllo <xref:System.Windows.Forms.PictureBox> per mezzo del relativo metodo <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. La chiamata del metodo <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> determina l'invio di una richiesta di interruzione del download in sospeso. Quando l'attività viene annullata, viene generato l'evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
 > [!CAUTION]
->  Il download potrebbe terminare non appena viene effettuata la richiesta di <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. In tal caso, la proprietà <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> potrebbe non riflettere la richiesta di annullamento. Si tratta di un *situazioni di race condition* e rappresenta un problema comune nella programmazione multithreading. Per ulteriori informazioni sui problemi di programmazione multithreading, vedere [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md).  
+>  Il download potrebbe terminare non appena viene effettuata la richiesta di <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. In tal caso, la proprietà <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> potrebbe non riflettere la richiesta di annullamento. Si tratta di una *race condition*, ovvero di un problema riscontrato comunemente nella programmazione multithreading. Per altre informazioni sui problemi inerenti la programmazione multithreading, vedere [Procedure consigliate per il threading gestito](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Caratteristiche del modello asincrono basato su eventi  
- Sono disponibili diversi tipi di modello asincrono basato su eventi, a seconda della complessità delle operazioni supportate da una determinata classe. Le classi più semplici possono presentare un solo *NomeMetodo* `Async` (metodo) e un oggetto corrispondente *NomeMetodo* `Completed` evento. Le classi più complesse possono invece avere diversi *NomeMetodo* `Async` metodi, ognuno dei quali con un *NomeMetodo* `Completed` eventi, nonché versioni sincrone di questi metodi. Per ogni metodo asincrono le classi possono supportare funzionalità di annullamento e creazione di rapporti sullo stato di avanzamento, nonché risultati incrementali.  
+ Sono disponibili diversi tipi di modello asincrono basato su eventi, a seconda della complessità delle operazioni supportate da una determinata classe. Le classi più semplici possono presentare un solo metodo *NomeMetodo***Async** e un evento *NomeMetodo***Completed** corrispondente. Le classi più complesse possono invece avere diversi metodi *NomeMetodo***Async**, ognuno dei quali con un evento *NomeMetodo***Completed** associato, nonché versioni sincrone di tali metodi. Per ogni metodo asincrono le classi possono supportare funzionalità di annullamento e creazione di rapporti sullo stato di avanzamento, nonché risultati incrementali.  
   
  Un metodo asincrono può anche supportare più chiamate in sospeso, ovvero più richiami concorrenti, consentendo al codice di chiamarlo un numero indeterminato di volte prima del completamento di altre operazioni in sospeso. Una gestione efficace di questa situazione può richiedere che l'applicazione tenga traccia del completamento di ogni operazione.  
   
@@ -118,25 +121,25 @@ public class AsyncExample
 ### <a name="asynchronous-method-overloads"></a>Overload di metodi asincroni  
  Esistono potenzialmente due overload per le operazioni asincrone: a richiamo singolo e a più richiami. È possibile distinguere i due tipi di overload dalle firme dei relativi metodi. Il tipo a più richiami presenta un parametro supplementare denominato `userState` e consente al codice di chiamare più volte `Method1Async(string param, object userState)` senza attendere il completamento di eventuali operazioni asincrone in sospeso. Se, invece, si prova a chiamare `Method1Async(string param)` prima del completamento di un richiamo precedente, il metodo genera una <xref:System.InvalidOperationException>.  
   
- Il parametro `userState` degli overload a più richiami consente di distinguere le diverse operazioni asincrone. Specificare un valore univoco (ad esempio, un codice hash o GUID) per ogni chiamata a `Method1Async(string param, object userState)`, al termine di ogni operazione, il gestore eventi è possibile determinare l'istanza dell'operazione ha generato l'evento di completamento.  
+ Il parametro `userState` degli overload a più richiami consente di distinguere le diverse operazioni asincrone. Specificare un valore univoco, ad esempio un GUID o un codice hash, per ogni chiamata al metodo `Method1Async(string param, object userState)`. Al termine di ogni operazione, il gestore eventi potrà determinare l'istanza dell'operazione che ha generato l'evento di completamento.  
   
 ### <a name="tracking-pending-operations"></a>Verifica delle operazioni in sospeso  
- Se si usano gli overload a più richiami, il codice deve tenere traccia degli oggetti `userState` (o ID attività) relativi alle attività in sospeso. Per ogni chiamata a `Method1Async(string param, object userState)`, solito viene generato un nuovo, univoco `userState` dell'oggetto e aggiungerlo a una raccolta. Quando l'attività corrispondente a tale oggetto `userState` genera l'evento di completamento, l'implementazione del metodo di completamento esamina <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> e la rimuove dalla raccolta. Se usato in questo modo, il parametro `userState` funge da ID attività.  
+ Se si usano gli overload a più richiami, il codice deve tenere traccia degli oggetti `userState` (o ID attività) relativi alle attività in sospeso. Per ogni chiamata al metodo `Method1Async(string param, object userState)`, di solito viene generato un nuovo oggetto `userState` univoco che viene aggiunto a una raccolta. Quando l'attività corrispondente a tale oggetto `userState` genera l'evento di completamento, l'implementazione del metodo di completamento esamina <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> e la rimuove dalla raccolta. Se usato in questo modo, il parametro `userState` funge da ID attività.  
   
 > [!NOTE]
 >  È necessario specificare un valore univoco per il parametro `userState` nelle chiamate a overload a più richiami. La specifica di ID attività non univoci determina la generazione di una <xref:System.ArgumentException> da parte della classe asincrona.  
   
 ### <a name="canceling-pending-operations"></a>Annullamento delle operazioni in sospeso  
- È importante che sia possibile annullare le operazioni asincrone in qualsiasi momento prima che vengano completate. Le classi che implementano il modello asincrono basato su eventi avranno un `CancelAsync` (metodo) (se è presente un solo metodo asincrono) o un *NomeMetodo* `AsyncCancel` (se sono presenti più metodi asincroni).  
+ È importante che sia possibile annullare le operazioni asincrone in qualsiasi momento prima che vengano completate. Le classi che implementano il modello asincrono basato su eventi avranno un metodo `CancelAsync` (se è presente un solo metodo asincrono) o *NomeMetodo***AsyncCancel** (se sono presenti più metodi asincroni).  
   
  I metodi che consentono più chiamate accettano un parametro `userState` che può essere usato per tenere traccia della durata di ogni attività. `CancelAsync` accetta un parametro `userState` che consente di annullare attività specifiche in sospeso.  
   
  I metodi che supportano una sola operazione in sospeso alla volta, come `Method1Async(string param)`, non sono annullabili.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Ricezione di aggiornamenti sullo stato di avanzamento e di risultati incrementali  
- Per tenere traccia dello stato di avanzamento e dei risultati incrementali, una classe conforme al modello asincrono basato su eventi può facoltativamente fornire un evento, Ciò in genere è denominato `ProgressChanged` o *NomeMetodo*`ProgressChanged`, e il gestore dell'evento corrispondente avrà un <xref:System.ComponentModel.ProgressChangedEventArgs> parametro.  
+ Per tenere traccia dello stato di avanzamento e dei risultati incrementali, una classe conforme al modello asincrono basato su eventi può facoltativamente fornire un evento, che in genere è denominato `ProgressChanged` o *NomeMetodo***ProgressChanged**, il cui gestore eventi accetta un parametro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
- Il gestore eventi per il `ProgressChanged` può esaminare il <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> proprietà per determinare quale percentuale di un'attività asincrona è stata completata. Questa proprietà ha il valore compreso tra 0 e 100 e può essere usata per aggiornare la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A> di un oggetto <xref:System.Windows.Forms.ProgressBar>. Se sono in sospeso più operazioni asincrone, è possibile usare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> per identificare l'operazione per la quale viene generato il rapporto sullo stato di avanzamento.  
+ Il gestore eventi relativo all'evento `ProgressChanged` può esaminare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> per determinare la percentuale di completamento di un'attività asincrona. Questa proprietà ha il valore compreso tra 0 e 100 e può essere usata per aggiornare la proprietà <xref:System.Windows.Forms.ProgressBar.Value%2A> di un oggetto <xref:System.Windows.Forms.ProgressBar>. Se sono in sospeso più operazioni asincrone, è possibile usare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> per identificare l'operazione per la quale viene generato il rapporto sullo stato di avanzamento.  
   
  Alcune classi possono generare un rapporto sui risultati incrementali mano a mano che procede l'esecuzione delle operazioni asincrone. I risultati verranno memorizzati in una classe derivata da <xref:System.ComponentModel.ProgressChangedEventArgs> e verranno visualizzati come proprietà nella classe derivata. È possibile accedere ai risultati nel gestore eventi dell'evento `ProgressChanged` usando la stessa procedura valida per la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>. Se sono in sospeso più operazioni asincrone, è possibile usare la proprietà <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> per identificare l'operazione per la quale viene generato il rapporto sui risultati incrementali.  
   

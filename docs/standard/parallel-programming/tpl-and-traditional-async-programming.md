@@ -11,24 +11,28 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Task Parallel Library e programmazione asincrona .NET Framework tradizionale
 .NET Framework offre i due modelli standard seguenti per eseguire operazioni asincrone di solo I/O e di solo calcolo:  
   
 -   Modello di programmazione asincrono (APM, Asynchronous Programming Model), in cui le operazioni asincrone sono rappresentate da una coppia di metodi Begin/End come <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> e <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Basato su eventi modello asincrono (EAP), in cui le operazioni asincrone sono rappresentate da una coppia metodo/evento denominati *OperationName*Async e *OperationName*Completed, ad esempio, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> e <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. Il modello EAP è stato introdotto in .NET Framework versione 2.0.  
+-   Modello asincrono basato su eventi (EAP, Event-based Asynchronous Pattern), in cui le operazioni asincrone sono rappresentate da una coppia metodo/evento denominati *OperationName*Async e *OperationName*Completed, ad esempio, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> e <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. Il modello EAP è stato introdotto in .NET Framework versione 2.0.  
   
  È possibile usare Task Parallel Library (TPL) in diversi modi insieme a uno dei due modelli asincroni. È possibile esporre operazioni APM ed EAP come attività nei consumer della libreria oppure esporre i modelli APM ma usare oggetti Task per implementarli internamente. In entrambi gli scenari, usando oggetti Task è possibile semplificare il codice e trarre vantaggio dalle utili funzionalità seguenti:  
   
@@ -110,7 +114,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Per un esempio più completo, che include gestione aggiuntiva delle eccezioni e viene illustrato come chiamare il metodo dal codice client, vedere [procedura: eseguire il wrapping di modelli EAP in un'attività](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Per un esempio più completo, che include gestione aggiuntiva delle eccezioni e mostra come chiamare il metodo dal codice client, vedere [Procedura: Eseguire il wrapping di modelli EAP in un'attività](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Tenere presente che qualsiasi attività creata da <xref:System.Threading.Tasks.TaskCompletionSource%601> verrà avviata da TaskCompletionSource e, di conseguenza, il codice utente non deve chiamare il metodo Start sull'attività.  
   
@@ -123,7 +127,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Uso del codice di esempio StreamExtensions  
- Il file Streamextensions.cs, incluso in [esempi per la programmazione parallela con .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) del sito Web MSDN, contiene diverse implementazioni di riferimento che usano oggetti Task per asincrono di file e i/o di rete.  
+ Nel file Streamextensions.cs, disponibile nella pagina relativa a [esempi di programmazione parallela con .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) nel sito Web MSDN, sono contenute diverse implementazioni di riferimento in cui vengono utilizzati oggetti Task per l'I/O asincrono di file e di rete.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

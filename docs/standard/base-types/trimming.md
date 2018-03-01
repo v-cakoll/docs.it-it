@@ -1,5 +1,5 @@
 ---
-title: L'eliminazione e la rimozione di caratteri da stringhe in .NET
+title: Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,20 +21,23 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>L'eliminazione e la rimozione di caratteri da stringhe in .NET
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Eliminazione di spazi iniziali e finali e rimozione di caratteri dalle stringhe in .NET
 Se si sta analizzando una frase in singole parole, è possibile che si ottengano parole con spazi vuoti alle estremità. In questo caso è possibile usare uno dei metodi trim della classe **System.String** per rimuovere un numero qualsiasi di spazi o altri caratteri da una posizione specificata nella stringa. La tabella seguente illustra i metodi trim disponibili.  
   
-|Nome metodo|Uso|  
+|Nome metodo|Usa|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Rimuove gli spazi vuoti o i caratteri specificati in una matrice di caratteri all'inizio e alla fine di una stringa.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Rimuove i caratteri specificati in una matrice di caratteri alla fine di una stringa.|  
@@ -56,7 +59,7 @@ Se si sta analizzando una frase in singole parole, è possibile che si ottengano
 ## <a name="trimend"></a>TrimEnd  
  Il metodo **TrimEnd** rimuove caratteri alla fine di una stringa, creando un nuovo oggetto stringa. Una matrice di caratteri viene passata a questo metodo per specificare i caratteri da rimuovere. L'ordine degli elementi nella matrice di caratteri non influenza l'operazione di rimozione. La rimozione si interrompe quando viene trovato un carattere non specificato nella matrice.  
   
- L'esempio seguente rimuove le ultime lettere di una stringa usando il **TrimEnd** metodo. In questo esempio la posizione dei caratteri `'r'` e `'W'` viene invertita per indicare che l'ordine dei caratteri nella matrice non è importante. Si noti che questo codice rimuove l'ultima parola di `MyString` e una parte della prima parola.  
+ L'esempio seguente rimuove le ultime lettere di una stringa con il metodo **TrimEnd**. In questo esempio la posizione dei caratteri `'r'` e `'W'` viene invertita per indicare che l'ordine dei caratteri nella matrice non è importante. Si noti che questo codice rimuove l'ultima parola di `MyString` e una parte della prima parola.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]

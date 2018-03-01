@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0cd1a3bad69499b4804299adecabad3a43b5eab1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f6c65581437bfb22cf771d66716b3dbb62dbafae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Confronto di oggetti con XmlNameTable
-**XmlDocument**, quando creato, dispone di una tabella dei nomi creata specificamente per quel documento. Quando si carica il XML nel documento o vengono creati nuovi elementi o attributi, i nomi di attributi ed elementi vengono inseriti i **XmlNameTable**. È inoltre possibile creare un **XmlDocument** utilizzando una classe **NameTable** da un altro documento. Quando **XmlDocuments** vengono creati con il costruttore che accetta un **XmlNameTable** parametro, il documento ha accesso ai nomi dei nodi, spazi dei nomi e prefissi già archiviati nella  **XmlNameTable**. Indipendentemente da come viene caricata la tabella dei nomi, una volta che i nomi vengono archiviati nella tabella, potranno essere confrontati rapidamente, usando il confronto degli oggetti invece del confronto delle stringhe. Possono inoltre aggiungere stringhe alla tabella dei nomi usando il <xref:System.Xml.NameTable.Add%2A>. Esempio di codice seguente viene illustrata la creazione di una tabella di nome e la stringa **MyString** da aggiungere alla tabella. Successivamente, un **XmlDocument** viene creato utilizzando quella tabella e i nomi degli elementi e attributi in **Myfile.xml** vengono aggiunti alla tabella dei nomi esistente.  
+Al momento della creazione, ogni **XmlDocument** ha una tabella dei nomi creata specificamente per quel documento. Quando il codice XML viene caricato nel documento o vengono creati nuovi elementi o attributi, i nomi di attributi ed elementi vengono inseriti nella **XmlNameTable**. È anche possibile creare un **XmlDocument** usando una **NameTable** esistente di un altro documento. Quando gli **XmlDocument** vengono creati con il costruttore che accetta un parametro **XmlNameTable**, il documento ha accesso ai nomi dei nodi, agli spazi dei nomi e ai prefissi già archiviati nella **XmlNameTable**. Indipendentemente da come viene caricata la tabella dei nomi, una volta che i nomi vengono archiviati nella tabella, potranno essere confrontati rapidamente, usando il confronto degli oggetti invece del confronto delle stringhe. È anche possibile aggiungere stringhe alla tabella dei nomi usando <xref:System.Xml.NameTable.Add%2A>. L'esempio di codice seguente illustra la creazione di una tabella dei nomi e l'aggiunta alla tabella della stringa **MyString**. Successivamente viene creato un **XmlDocument** usando quella tabella e i nomi degli elementi e degli attributi contenuti in **Myfile.xml** vengono aggiunti alla tabella dei nomi esistente.  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -61,4 +64,4 @@ if (((object)node1.Name) == ((object)node2.Name))
  In genere, il passaggio di una tabella dei nomi tra due documenti si verifica quando lo stesso tipo di documento viene elaborato ripetutamente, come nel caso di documenti d'ordine in un sito Web di e-commerce, in modo conforme a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition), dove si ripetono le stesse stringhe. Usando la stessa tabella dei nomi si ottengono migliori prestazioni in quanto lo stesso nome di elemento ricorre in più documenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -13,20 +13,23 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle matrici
-Esegue l'overload di <xref:System.Array.Sort%2A?displayProperty=nameWithType> e <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metodi eseguono ordinamenti predefinito utilizzando il <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> proprietà. Le impostazioni cultura restituite da questi metodi possono variare dalle impostazioni cultura a causa delle differenze nell'ordinamento. Per eliminare il comportamento delle impostazioni cultura, utilizzare uno degli overload del metodo che accetta un `comparer` parametro. Il `comparer` parametro specifica il <xref:System.Collections.IComparer> implementazione da usare quando si confrontano gli elementi nella matrice. Per il parametro, specificare una classe che utilizza <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Viene fornito un esempio di una classe nell'argomento secondario di "Utilizzo della classe SortedList" il [esecuzione di operazioni di stringa indipendenti dalle impostazioni cultura nelle raccolte](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) argomento.  
+Per impostazione predefinita, gli overload dei metodi <xref:System.Array.Sort%2A?displayProperty=nameWithType> e <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> consentono di eseguire ordinamenti dipendenti dalle impostazioni cultura tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. I risultati dipendenti dalle impostazioni cultura restituiti da questi metodi possono variare in base a tali impostazioni a causa dei diversi tipi di ordinamento. Per eliminare il comportamento dipendente dalle impostazioni cultura, usare uno degli overload del metodo che accetta il parametro `comparer`. Il parametro `comparer` specifica l'implementazione di <xref:System.Collections.IComparer> da usare quando si confrontano gli elementi nella matrice. Per il parametro specificare una classe di operatori di confronto invariabili personalizzati che usi <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Un esempio di classe di operatori di confronto invariabili viene fornito nell'argomento secondario "Utilizzo della classe SortedList" dell'argomento [Esecuzione di operazioni sulle stringhe indipendenti dalle impostazioni cultura nelle raccolte](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md).  
   
- **Nota** passando **CultureInfo. InvariantCulture** per un confronto metodo viene eseguito un confronto senza distinzione di impostazioni cultura. Non viene tuttavia eseguito un confronto non linguistico, ad esempio per percorsi di file, chiavi del Registro di sistema e variabili di ambiente e non sono supportate le decisioni relative alla sicurezza basate sul risultato del confronto. Per un confronto non linguistico o il supporto per le decisioni di sicurezza basata sui risultati, l'applicazione deve utilizzare un metodo di confronto che accetta un <xref:System.StringComparison> valore. L'applicazione deve passare quindi <xref:System.StringComparison.Ordinal>.  
+ **Nota** Il passaggio di**CultureInfo.InvariantCulture** a un metodo di confronto comporta l'esecuzione di un confronto non basato sulle impostazioni di cultura. Non viene tuttavia eseguito un confronto non linguistico, ad esempio per percorsi di file, chiavi del Registro di sistema e variabili di ambiente e non sono supportate le decisioni relative alla sicurezza basate sul risultato del confronto. Per un confronto non linguistico o per il supporto delle decisioni relative alla sicurezza basate sul risultato, l'applicazione deve utilizzare un metodo di confronto che accetti un valore <xref:System.StringComparison>. L'applicazione deve quindi passare <xref:System.StringComparison.Ordinal>.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  

@@ -17,21 +17,24 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 60c31339231405a1cbbb98dae37d36ad3c3709c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Procedura: Aprire e accodare un file di log
-<xref:System.IO.StreamWriter>e <xref:System.IO.StreamReader> caratteri da scrivere e leggere i caratteri da flussi. Nell'esempio di codice viene aperto il `log.txt` del file di input o creare il file se non esiste già e aggiunge informazioni alla fine del file. Il contenuto del file viene quindi scritti nell'output standard per la visualizzazione. In alternativa a questo esempio, le informazioni può essere archiviate come un'unica stringa o matrice di stringhe e <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> metodo può essere utilizzato per ottenere la stessa funzionalità.  
+<xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> scrivono e leggono i caratteri nei flussi. L'esempio di codice seguente apre il file `log.txt` per l'input oppure crea il file, se non esiste già, e aggiunge le informazioni alla fine del file. Il contenuto del file viene quindi scritto nell'output standard per la visualizzazione. In alternativa a questo esempio, è possibile archiviare le informazioni come un'unica stringa o matrice di stringhe e usare il metodo <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> per ottenere la stessa funzionalità.  
   
 > [!NOTE]
->  Gli utenti di Visual Basic è possono scegliere di utilizzare i metodi e le proprietà forniti dal <xref:Microsoft.VisualBasic.Logging.Log> classe o <xref:Microsoft.VisualBasic.FileIO.FileSystem> classe per la creazione o la scrittura nei file di log.  
+>  Gli utenti di Visual Basic possono scegliere di usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.Logging.Log> o dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem> per creare file di log o scrivere al loro interno.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]

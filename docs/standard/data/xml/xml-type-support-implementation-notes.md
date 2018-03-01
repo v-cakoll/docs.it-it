@@ -9,21 +9,24 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>Note sull'implementazione del supporto per il tipo XML
 In questo argomento vengono descritti alcuni dettagli sull'implementazione di cui è consigliabile essere a conoscenza.  
   
 ## <a name="list-mappings"></a>Mapping degli elenchi  
- Il <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type []**, e <xref:System.String> tipi vengono utilizzati per rappresentare tipi di elenco di XML Schema definition language (XSD).  
+ I tipi <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type[]** e <xref:System.String> vengono usati per rappresentare i tipi di elenco XSD (XML Schema definition language).  
   
 ## <a name="union-mappings"></a>Mapping delle unioni  
  I tipi di unione vengono rappresentati usando il tipo <xref:System.Xml.Schema.XmlAtomicValue> o <xref:System.String>. Pertanto, il tipo di origine o il tipo di destinazione devono sempre essere <xref:System.String> o <xref:System.Xml.Schema.XmlAtomicValue>.  

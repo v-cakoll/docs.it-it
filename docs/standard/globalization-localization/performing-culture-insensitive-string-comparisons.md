@@ -19,15 +19,18 @@ helpviewer_keywords:
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Esecuzione di confronti di stringhe indipendenti dalle impostazioni cultura
 Per impostazione predefinita, il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> consente di eseguire confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Questo metodo include anche molti overload che forniscono il parametro `culture` che consente di specificare le impostazioni cultura da usare e il parametro `comparisonType` che consente di specificare le regole di confronto da usare. La chiamata di questi metodi invece dell'overload predefinito rimuove qualsiasi ambiguità sulle regole usate in una particolare chiamata al metodo e chiarisce se un particolare confronto dipende o meno dalle impostazioni cultura.  
@@ -35,7 +38,7 @@ Per impostazione predefinita, il metodo <xref:System.String.Compare%2A?displayPr
 > [!NOTE]
 >  Entrambi gli overload del metodo <xref:System.String.CompareTo%2A?displayProperty=nameWithType> eseguono confronti dipendenti dalle impostazioni cultura e con distinzione tra maiuscole e minuscole. Non è possibile usare questo metodo per eseguire confronti indipendenti dalle impostazioni cultura. Per motivi di chiarezza, in alternativa, si consiglia di usare il metodo <xref:System.String.Compare%2A?displayProperty=nameWithType>.  
   
- Per le operazioni dipendenti dalle impostazioni cultura, specificare il valore di enumerazione <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> come parametro `comparisonType`. Se si desidera eseguire un confronto con distinzione delle impostazioni cultura usando impostazioni cultura definite diverse da quelle correnti, specificare il <xref:System.Globalization.CultureInfo> oggetto che rappresenta quelle impostazioni cultura come il `culture` parametro.  
+ Per le operazioni dipendenti dalle impostazioni cultura, specificare il valore di enumerazione <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> come parametro `comparisonType`. Se si desidera eseguire un confronto dipendente dalle impostazioni cultura usando impostazioni cultura definite diverse da quelle correnti, specificare l'oggetto <xref:System.Globalization.CultureInfo> che rappresenta quelle impostazioni cultura come parametro `culture`.  
   
  I confronti di stringhe indipendenti dalle impostazioni cultura supportati dal metodo <xref:System.String.Compare%2A?displayProperty=nameWithType> sono linguistici (basati sulle convenzioni di ordinamento della lingua inglese) o non linguistici (basati sul valore ordinale dei caratteri nella stringa). La maggior parte di confronti di stringhe indipendenti dalle impostazioni cultura non sono linguistici. Per questi confronti, specificare il valore di enumerazione <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> o <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> come parametro `comparisonType`. Ad esempio, se una decisione relativa alla sicurezza (come ad esempio un confronto del nome utente o della password) è basata sul risultato di un confronto di stringhe, l'operazione dovrebbe essere indipendente dalle impostazioni cultura e non linguistica in modo che il risultato non venga influenzato dalle convenzioni di una lingua o da impostazioni cultura particolari.  
   

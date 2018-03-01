@@ -11,20 +11,24 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: strings [.NET Framework], examples
+helpviewer_keywords:
+- strings [.NET Framework], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ee9c00d02b7b5d1f391ce60f843c18445efd6edc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d3d5351a0a639a3f0b674640bcaaf7321ca0d76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Procedura: esecuzione di base delle stringhe in .NET
-Nell'esempio seguente vengono utilizzati alcuni dei metodi descritti nel [operazioni di stringa base](../../../docs/standard/base-types/basic-string-operations.md) per costruire una classe che esegue delle stringhe in modo che potrebbe essere presenti in un'applicazione reale. Nella classe `MailToData` vengono archiviati il nome e l'indirizzo di un utente in proprietà separate e viene usato un modo per combinare i campi `City`, `State` e `Zip` in una singola stringa da visualizzare all'utente. Questa classe consente anche all'utente di immettere la città, lo stato e il codice postale ZIP (Stati Uniti) sotto forma di singola stringa. L'applicazione automaticamente analizza la singola stringa e immette le informazioni corrette nella proprietà corrispondente.  
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a>Procedura: Eseguire modifiche di base delle stringhe in .NET
+Nell'esempio seguente vengono usati alcuni dei metodi descritti nell'argomento [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md) per costruire una classe con la quale modificare le stringhe, come può avvenire in un'applicazione reale. Nella classe `MailToData` vengono archiviati il nome e l'indirizzo di un utente in proprietà separate e viene usato un modo per combinare i campi `City`, `State` e `Zip` in una singola stringa da visualizzare all'utente. Questa classe consente anche all'utente di immettere la città, lo stato e il codice postale ZIP (Stati Uniti) sotto forma di singola stringa. L'applicazione automaticamente analizza la singola stringa e immette le informazioni corrette nella proprietà corrispondente.  
   
  Per semplicità, in questo esempio viene usata un'applicazione console con un'interfaccia della riga di comando.  
   

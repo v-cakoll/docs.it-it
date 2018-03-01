@@ -16,18 +16,21 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22a95ce18b602d4e329499c5d36557213e08a8b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33c9249692998aea8c22ddbf75a5a9b7bdf28708
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-compress-and-extract-files"></a>Procedura: comprimere ed estrarre file
-Il <xref:System.IO.Compression> dello spazio dei nomi contiene i seguenti tipi per la compressione e decompressione dei file e flussi. È inoltre possibile utilizzare questi tipi per leggere e modificare il contenuto di un file compresso:  
+Lo spazio dei nomi <xref:System.IO.Compression> contiene i tipi seguenti per la compressione e la decompressione di file e flussi. È possibile usare questi tipi anche per leggere e modificare il contenuto di un file compresso:  
   
 -   <xref:System.IO.Compression.ZipFile>  
   
@@ -39,28 +42,28 @@ Il <xref:System.IO.Compression> dello spazio dei nomi contiene i seguenti tipi p
   
 -   <xref:System.IO.Compression.GZipStream>  
   
- Gli esempi seguenti mostrano alcune delle funzioni che è possibile eseguire quando si lavora con i file compressi.  
+ Gli esempi seguenti mostrano alcune delle funzioni che è possibile eseguire quando si usano file compressi.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene illustrato come creare ed estrarre un file compresso con estensione zip utilizzando la <xref:System.IO.Compression.ZipFile> classe. Comprime il contenuto di una cartella in un nuovo file con estensione zip e quindi estrae il contenuto in una nuova cartella. Utilizzare il <xref:System.IO.Compression.ZipFile> (classe), è necessario fare riferimento il `System.IO.Compression.FileSystem` assembly nel progetto.  
+ Questo esempio mostra come creare ed estrarre un file compresso con estensione zip usando la classe <xref:System.IO.Compression.ZipFile>. L'esempio comprime il contenuto di una cartella in un nuovo file ZIP e quindi estrae il contenuto in una nuova cartella. Per usare la classe <xref:System.IO.Compression.ZipFile>, è necessario referenziare l'assembly `System.IO.Compression.FileSystem` nel progetto.  
   
  [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
  [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come scorrere il contenuto di un file con estensione zip esistente ed estrarre i file con estensione txt. Usa il <xref:System.IO.Compression.ZipArchive> classe per accedere al file ZIP esistenti e <xref:System.IO.Compression.ZipArchiveEntry> classe per controllare le singole voci nel file compresso. Usa un metodo di estensione (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) per il <xref:System.IO.Compression.ZipArchiveEntry> oggetto. Il metodo di estensione è disponibile nel <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> classe. Utilizzare il <xref:System.IO.Compression.ZipFileExtensions> (classe), è necessario fare riferimento il `System.IO.Compression.FileSystem` assembly nel progetto.  
+ L'esempio seguente mostra come eseguire l'iterazione del contenuto di un file ZIP esistente ed estrarre file con estensione txt. L'esempio usa la classe <xref:System.IO.Compression.ZipArchive> per accedere a un file ZIP esistente e la classe <xref:System.IO.Compression.ZipArchiveEntry> per controllare le singole voci nel file compresso. Usa un metodo di estensione (<xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A>) per l'oggetto <xref:System.IO.Compression.ZipArchiveEntry>. Il metodo di estensione è disponibile nella classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>. Per usare la classe <xref:System.IO.Compression.ZipFileExtensions>, è necessario referenziare l'assembly `System.IO.Compression.FileSystem` nel progetto.  
   
  [!code-csharp[System.IO.Compression.ZipArchive#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
  [!code-vb[System.IO.Compression.ZipArchive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente viene utilizzata la <xref:System.IO.Compression.ZipArchive> classe per accedere a un file con estensione zip esistente e aggiunge un nuovo file per il file compresso. Il nuovo file viene compressa quando viene aggiunta al file con estensione zip esistente.  
+ L'esempio seguente usa la classe <xref:System.IO.Compression.ZipArchive> per accedere a un file ZIP esistente e aggiunge un nuovo file al file compresso. Il nuovo file viene compresso quando lo si aggiunge al file ZIP esistente.  
   
  [!code-csharp[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
  [!code-vb[System.IO.Compression.ZipArchiveMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
   
 ## <a name="example"></a>Esempio  
- È inoltre possibile utilizzare il <xref:System.IO.Compression.GZipStream> e <xref:System.IO.Compression.DeflateStream> classi per comprimere e decomprimere i dati. Usano lo stesso algoritmo di compressione. Compresso <xref:System.IO.Compression.GZipStream> gli oggetti che vengono scritti in un file con estensione gz possono essere decompressi utilizzando numerosi strumenti comuni, oltre ai metodi forniti da <xref:System.IO.Compression.GZipStream>. In questo esempio viene illustrato come comprimere e decomprimere una directory di file utilizzando il <xref:System.IO.Compression.GZipStream> classe.  
+ È possibile usare anche le classi <xref:System.IO.Compression.GZipStream> e <xref:System.IO.Compression.DeflateStream> per comprimere e decomprimere dati. Queste due classi usano lo stesso algoritmo di compressione. Gli oggetti <xref:System.IO.Compression.GZipStream> compressi scritti in un file con estensione gz possono essere decompressi usando molti strumenti comuni oltre ai metodi forniti da <xref:System.IO.Compression.GZipStream>. Questo esempio mostra come comprimere e decomprimere una directory di file usando la classe <xref:System.IO.Compression.GZipStream>.  
   
  [!code-csharp[IO.Compression.GZip1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.GZip1/CS/gziptest.cs#1)]
  [!code-vb[IO.Compression.GZip1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.GZip1/VB/gziptest.vb#1)]  

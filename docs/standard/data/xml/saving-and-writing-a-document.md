@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Salvataggio e scrittura di un documento
 Quando si carica e si salva un <xref:System.Xml.XmlDocument>, il documento salvato potrebbe essere diverso dall'originale nei seguenti modi:  
@@ -29,7 +32,7 @@ Quando si carica e si salva un <xref:System.Xml.XmlDocument>, il documento salva
   
 -   Tutti gli spazi vuoti tra gli attributi vengono ridotti a un singolo carattere di spazio.  
   
--   Lo spazio vuoto tra gli elementi viene modificato. I caratteri spazio vuoto significativi vengono mantenuti, a differenza di quelli non significativi. Ma quando il documento viene salvato, verrà utilizzato il <xref:System.Xml.XmlTextWriter> **rientri** modalità per impostazione predefinita per stampare accuratamente l'output in modo che sia più leggibile.  
+-   Lo spazio vuoto tra gli elementi viene modificato. I caratteri spazio vuoto significativi vengono mantenuti, a differenza di quelli non significativi. Tuttavia, quando il documento viene salvato, per impostazione predefinita utilizzerà la modalità **Rientri** del tipo <xref:System.Xml.XmlTextWriter> per stampare accuratamente l'output in modo che sia più leggibile.  
   
 -   Il carattere virgoletta usato intorno ai valori degli attributi viene modificato in virgolette doppie per impostazione predefinita. È possibile usare la proprietà <xref:System.Xml.XmlTextReader.QuoteChar%2A> su <xref:System.Xml.XmlTextWriter> per impostare il carattere virgoletta su virgolette doppie o virgoletta singola.  
   
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Al contrario, se si desidera il contenuto dei nodi figlio, è possibile usare la proprietà <xref:System.Xml.XmlNode.InnerText%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

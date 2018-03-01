@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>Modello di progettazione observer
-Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (noto anche come un *soggetto* o *observable*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  
+Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la registrazione con e ricevere notifiche da un provider. È appropriato per qualsiasi scenario che richieda la notifica basata su push. Lo schema definisce un *provider* (anche noto come *oggetto* o *osservabile*) e zero, uno o più *osservatori*. Gli osservatori effettuano la registrazione con il provider e ogni volta che si verifica una condizione, un evento o un cambiamento di stato predefinito, il provider invia automaticamente una notifica a tutti gli osservatori chiamando uno dei relativi metodi. In questa chiamata al metodo, il provider può anche fornire informazioni sullo stato corrente degli osservatori. In .NET Framework, lo schema progettuale osservatore viene applicato implementando le interfacce generiche <xref:System.IObservable%601?displayProperty=nameWithType> e <xref:System.IObserver%601?displayProperty=nameWithType>. Il parametro di tipo generico rappresenta il tipo che fornisce le informazioni di notifica.  
   
 ## <a name="applying-the-pattern"></a>Applicazione dello schema  
  Lo schema progettuale osservatore è appropriato per le notifiche distribuite basate su push, poiché supporta una netta separazione tra due diversi componenti o livelli dell'applicazione, ad esempio un livello di origine dati (logica di business) e un livello di interfaccia utente (visualizzazione). Lo schema può essere implementato ogni volta che un provider usa callback per fornire ai client informazioni aggiornate.  
@@ -53,7 +56,7 @@ Lo schema progettuale osservatore consente a un sottoscrittore di effettuare la 
 -   Un oggetto contenente i dati che il provider invia agli osservatori. Il tipo di questo oggetto corrisponde al parametro di tipo generico delle interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Sebbene questo oggetto possa essere lo stesso dell'implementazione di <xref:System.IObservable%601>, in genere è un tipo distinto.  
   
 > [!NOTE]
->  Oltre all'implementazione dello schema progettuale osservatore, potrebbe risultare interessante l'esplorazione delle librerie compilate usando le interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Ad esempio, [Reactive Extensions per .NET (Rx)](http://go.microsoft.com/fwlink/?LinkId=186345) sono costituiti da un set di metodi di estensione e operatori di sequenza standard LINQ per supportare la programmazione asincrona.  
+>  Oltre all'implementazione dello schema progettuale osservatore, potrebbe risultare interessante l'esplorazione delle librerie compilate usando le interfacce <xref:System.IObservable%601> e <xref:System.IObserver%601>. Ad esempio, le [estensioni Rx (Reactive Extensions) per .NET](https://msdn.microsoft.com/library/hh242985.aspx) sono costituite da un set di metodi di estensione e da operatori di sequenza standard LINQ per supportare la programmazione asincrona.  
   
 ## <a name="implementing-the-pattern"></a>Implementazione dello schema  
  Nell'esempio seguente, lo schema progettuale osservatore viene usato per implementare un sistema di informazioni per il ritiro dei bagagli in aeroporto. Una classe `BaggageInfo` fornisce informazioni sui voli in arrivo e sui nastri in cui possono essere ritirati i bagagli per ogni volo, come illustrato nell'esempio seguente.  

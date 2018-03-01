@@ -19,21 +19,24 @@ helpviewer_keywords:
 - isolated storage, enumerating stores
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f8863f1d8b3c7f4ed8f65f8f8eb3e8af51b0405
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7c4fa63c5c7f966831a55c9103c9ba58cfa621d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Procedura: Enumerare gli archivi per lo spazio di memorizzazione isolato
-È possibile enumerare tutti gli archivi isolati dell'utente corrente utilizzando il metodo statico <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>. Questo metodo accetta un valore <xref:System.IO.IsolatedStorage.IsolatedStorageScope> e restituisce un enumeratore <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Per enumerare gli archivi, è necessario disporre di <xref:System.Security.Permissions.IsolatedStorageFilePermission> autorizzazione che specifica il <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> valore. Se si chiama il <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metodo con il <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> valore, viene restituita una matrice di <xref:System.IO.IsolatedStorage.IsolatedStorageFile> gli oggetti definiti per l'utente corrente.  
+È possibile enumerare tutti gli archivi isolati dell'utente corrente utilizzando il metodo statico <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType>. Questo metodo accetta un valore <xref:System.IO.IsolatedStorage.IsolatedStorageScope> e restituisce un enumeratore <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Per enumerare gli archivi, è necessario avere l'autorizzazione <xref:System.Security.Permissions.IsolatedStorageFilePermission> con il valore <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> specificato. Se si chiama il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> con il valore <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User>, viene restituita una matrice di oggetti <xref:System.IO.IsolatedStorage.IsolatedStorageFile> definiti per l'utente corrente.  
   
 ## <a name="example"></a>Esempio  
- L'esempio di codice seguente viene ottenuto un archivio che è isolato dall'utente e all'assembly, vengono creati alcuni file e recupera i file utilizzando il <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> metodo.  
+ L'esempio di codice seguente ottiene uno spazio di memorizzazione isolato in base all'utente e all'assembly, crea alcuni file e recupera i file usando il metodo <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A>.  
   
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  

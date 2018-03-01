@@ -15,35 +15,38 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 811db42e04e73d7acbc03e303297b19fdf643384
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c2193dd1b1f3c0478efb5fc9c2b80250ef1878f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-strings-in-net"></a>Analisi di stringhe in .NET
-Un'operazione di analisi converte una stringa che rappresenta un tipo di base .NET in quel tipo di base. Ad esempio, un'operazione di analisi viene usata per convertire una stringa in un numero a virgola mobile o in un valore di data e ora. Il metodo più comunemente usato per eseguire un'operazione di analisi è il metodo `Parse`. Poiché l'analisi è l'operazione inversa della formattazione (che comporta la conversione di un tipo di base nella relativa rappresentazione di stringa), vengono applicate molte delle stesse regole e convenzioni. Come nella formattazione viene utilizzato un oggetto che implementa il <xref:System.IFormatProvider> interfaccia per fornire informazioni di formattazione delle impostazioni cultura, utilizza anche nell'analisi di un oggetto che implementa il <xref:System.IFormatProvider> interfaccia per determinare come interpretare una rappresentazione di stringa . Per ulteriori informazioni, vedere [formattazione dei tipi di](../../../docs/standard/base-types/formatting-types.md).  
+Un'operazione di analisi converte una stringa che rappresenta un tipo di base .NET in quel tipo di base. Ad esempio, un'operazione di analisi viene usata per convertire una stringa in un numero a virgola mobile o in un valore di data e ora. Il metodo più comunemente usato per eseguire un'operazione di analisi è il metodo `Parse`. Poiché l'analisi è l'operazione inversa della formattazione (che comporta la conversione di un tipo di base nella relativa rappresentazione di stringa), vengono applicate molte delle stesse regole e convenzioni. Se la formattazione usa un oggetto che implementa l'interfaccia <xref:System.IFormatProvider> per visualizzare informazioni di formattazione dipendenti dalle impostazioni cultura, l'analisi usa anche un oggetto che implementa l'interfaccia <xref:System.IFormatProvider> per stabilire come interpretare una rappresentazione di stringa. Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Analisi di stringhe numeriche](../../../docs/standard/base-types/parsing-numeric.md)  
- Viene descritto come convertire le stringhe in tipi numerici .NET.  
+ Descrive come eseguire la conversione di stringhe in tipi numerici .NET.  
   
  [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)  
- Viene descritto come convertire le stringhe in .NET **DateTime** tipi.  
+ Descrive come eseguire la conversione di stringhe in tipi **DateTime** .NET.  
   
  [Analisi di altre stringhe](../../../docs/standard/base-types/parsing-other.md)  
- Viene descritto come convertire le stringhe in **Char**, **booleano**, e **Enum** tipi.  
+ Descrive come convertire le stringhe nei tipi **Char**, **Boolean** ed **Enum**.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- Descrive i concetti di formattazione di base come identificatori di formato e provider di formato.  
+ Descrive i concetti di formattazione di base, come identificatori di formato e provider di formato.  
   
  [Conversione di tipi in .NET](../../../docs/standard/base-types/type-conversion.md)  
- Viene descritto come convertire i tipi.  
+ Descrive come convertire i tipi.  
   
  [Tipi di base](../../../docs/standard/base-types/index.md)  
  Descrive le operazioni comuni che è possibile eseguire sui tipi di base di .NET.

@@ -9,50 +9,53 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d03a0ca7518b06c08d98967d7c5ae864f1c04ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0728ff5d695ccc5fc5912631d29c89b7cc36ca5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integrazione di XML con dati relazionali e ADO.NET
-Il **XmlDataDocument** classe è una classe derivata del **XmlDocument**e contiene dati XML. Il vantaggio di **XmlDataDocument** è quello di fornire un bridge tra i dati relazionali sia gerarchici. Si tratta di un **XmlDocument** che può essere associato a un **DataSet** ed entrambe le classi possono sincronizzare le modifiche apportate ai dati contenuti in due classi. Un **XmlDocument** associato a un **DataSet** consente XML per l'integrazione con dati relazionali e non si dispone i dati rappresentati in un formato relazionale o XML. È possibile usare entrambe le rappresentazioni di dati, senza essere costretti a usarne una sola.  
+La classe **XmlDataDocument** è una classe derivata di **XmlDocument** e contiene dati XML. Il principale vantaggio è costituito dal fatto che **XmlDataDocument** fornisce un collegamento tra i dati relazionali e quelli gerarchici. Si tratta infatti di un elemento di **XmlDocument** che può essere associato a un **DataSet** ed entrambe le classi sono in grado di sincronizzare le modifiche apportate ai dati in esse contenuti. Usando un elemento di **XmlDocument** associato a un **DataSet** è possibile integrare l'XML con i dati relazionali senza dover rappresentare i dati in formato relazionale o XML. È possibile usare entrambe le rappresentazioni di dati, senza essere costretti a usarne una sola.  
   
  La possibilità di visualizzare i dati in due modi diversi comporta i seguenti vantaggi:  
   
 -   È possibile associare la parte strutturata di un documento XML a un dataset per aumentare l'efficacia delle operazioni di archiviazione, indicizzazione e ricerca.  
   
--   Le operazioni di trasformazione, convalida e navigazione possono essere eseguite in modo efficace tramite un modello a cursore per i dati XML archiviati in modo relazionale. In alcuni casi può essere eseguita in modo più efficiente rispetto a strutture relazionali più se il codice XML viene archiviato un **XmlDocument** modello.  
+-   Le operazioni di trasformazione, convalida e navigazione possono essere eseguite in modo efficace tramite un modello a cursore per i dati XML archiviati in modo relazionale. A volte queste operazioni si rivelano più efficaci se eseguite in strutture relazionali, anziché con dati XML archiviati in un modello **XmlDocument**.  
   
--   Il **DataSet** può archiviare una parte del codice XML. Ovvero, è possibile utilizzare **XPath** o **XslTransform** per archiviare un **DataSet** solo gli elementi e attributi di interesse. Da qui, è possibile apportare modifiche al subset più piccolo, filtrato di dati, con le modifiche propagate in dati di dimensioni maggiori nel **XmlDataDocument**.  
+-   È possibile archiviare in un **DataSet** solo una parte dei dati XML. Questo significa che è possibile usare **XPath** o **XslTransform** per archiviare in un **DataSet** solo gli elementi e gli attributi desiderati. Pertanto, è possibile apportare le modifiche a un subset di dati filtrato e di dimensioni minori, quindi propagarle a gruppi di dati di dimensioni maggiori nella classe **XmlDataDocument**.  
   
- È anche possibile eseguire una trasformazione sui dati caricati nel **DataSet** da SQL Server. Un'altra opzione consiste nell'associare WinForm classi stile gestito di .NET Framework e i controlli Web Form a un **DataSet** compilato da un flusso di input XML.  
+ È inoltre possibile eseguire una trasformazione dei dati caricati in un **DataSet** da SQL Server e associare controlli gestiti Web Form e Windows Form, costituiti da classi .NET Framework, a un **DataSet** compilato da un flusso di input XML.  
   
- Oltre a supportare **XslTransform**, un **XmlDataDocument** espone dati relazionali alle **XPath** convalida e query.  Fondamentalmente, per i dati relazionali sono disponibili tutti i servizi XML. Le funzionalità relazionali, quali l'associazione dei controlli, la chiamata CODEGEN e così via sono inoltre disponibili nelle proiezioni strutturate di XML, senza compromettere la fedeltà al documento XML.  
+ Oltre a supportare **XslTransform**, una classe **XmlDataDocument** consente di esporre i dati relazionali alle operazioni di convalida e query **XPath**.  Fondamentalmente, per i dati relazionali sono disponibili tutti i servizi XML. Le funzionalità relazionali, quali l'associazione dei controlli, la chiamata CODEGEN e così via sono inoltre disponibili nelle proiezioni strutturate di XML, senza compromettere la fedeltà al documento XML.  
   
- Poiché **XmlDataDocument** viene ereditata da un **XmlDocument**, fornisce un'implementazione del DOM W3C. Il fatto che il **XmlDataDocument** è associato e archivia un subset dei dati all'interno di un **DataSet** non ne limitano né modificano l'utilizzo come un **XmlDocument** in alcun modo. Il codice scritto per utilizzare un **XmlDocument** funziona anche con un **XmlDataDocument**. Il **DataSet** consente una visualizzazione relazionale degli stessi dati mediante la definizione di tabelle, colonne, relazioni e vincoli, senza che sia un archivio dati utente autonomo, in memoria.  
+ Dal momento che è ereditata dalla classe **XmlDocument**, la classe **XmlDataDocument** fornisce un'implementazione del modello DOM di W3C. L'associazione di **XmlDataDocument** a un **DataSet** e il fatto che un subset dei dati di questa classe sia archiviato in un DataSet non ne limitano né modificano in alcun modo l'uso come **XmlDocument**. Il codice scritto per usare **XmlDocument** funziona anche con **XmlDataDocument**. Il **DataSet** consente una visualizzazione relazionale degli stessi dati mediante la definizione di tabelle, colonne, relazioni e vincoli. Rappresenta inoltre un archivio dei dati utente autonomo e residente in memoria.  
   
- La figura seguente illustra le diverse associazioni dei dati XML con il **DataSet** e **XmlDataDocument**.  
+ Nella figura seguente sono illustrate le diverse associazioni dei dati XML con gli oggetti**DataSet** e **XmlDataDocument**.  
   
- ![Set di dati XML](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
   
- La figura mostra che i dati XML possono essere caricati direttamente in un **DataSet**, che consente la modifica diretta di XML in modo relazionale. O, il codice XML possono essere caricate in una classe derivata del DOM, ovvero il **XmlDataDocument**e successivamente caricati e sincronizzati con il **DataSet**. Poiché il **DataSet** e **XmlDataDocument** sono sincronizzati rispetto a un singolo set di dati, le modifiche apportate ai dati in un archivio si riflettono in altro archivio.  
+ Nella figura viene mostrato che i dati XML possono essere caricati direttamente in un **DataSet**, per consentirne un'elaborazione diretta con i dati XML in modo relazionale. In alternativa, i dati XML possono essere caricati in una classe derivata del DOM, la classe **XmlDataDocument**, quindi possono essere caricati e sincronizzati con il **DataSet** in un secondo momento. Dal momento che gli oggetti **DataSet** e **XmlDataDocument** sono sincronizzati rispetto a un unico set di dati, le modifiche apportate ai dati di un archivio si riflettono nell'altro archivio.  
   
- Il **XmlDataDocument** eredita tutte le funzionalità di modifica e di navigazione dal **XmlDocument**. Vi sono casi quando si utilizza il **XmlDataDocument** le relative funzionalità ereditate, sincronizzato con un **DataSet**, è un'opzione più appropriata, anziché caricare i dati XML direttamente nel **setdidati**. Nella tabella seguente mostra gli elementi da considerare nella scelta del metodo da utilizzare per caricare il **DataSet**.  
+ **XmlDataDocument** eredita tutte le funzionalità di modifica e di navigazione da **XmlDocument**. A volte può risultare più conveniente usare un elemento **XmlDataDocument** con le relative funzionalità ereditate, sincronizzato con un **DataSet**, anziché caricare i dati XML direttamente in un **DataSet**. Nella tabella seguente sono indicati gli elementi da considerare nella scelta del metodo di caricamento del **DataSet**.  
   
 |Quando caricare i dati XML direttamente in un DataSet|Quando sincronizzare una classe XmlDataDocument con un DataSet|  
 |----------------------------------------------|-----------------------------------------------------------|  
-|Query di dati di **set di dati** sono più semplici usando SQL anziché XPath.|Query XPath sono necessarie nei dati di **DataSet**.|  
+|È più semplice eseguire query di dati in un **DataSet** usando SQL anziché XPath.|È necessario eseguire query XPath nei dati del **DataSet**.|  
 |Non è necessario conservare l'ordine degli elementi nel documento XML di origine.|È necessario conservare l'ordine degli elementi nel documento XML di origine.|  
 |Non è necessario conservare gli spazi vuoti tra gli elementi e la formattazione nel documento XML di origine.|È necessario conservare gli spazi vuoti tra gli elementi e la formattazione nel documento XML di origine.|  
   
- Se il caricamento e la scrittura del codice XML direttamente in e da un **DataSet** risolve le proprie esigenze, vedere [durante il caricamento di un set di dati da XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [scrittura di un DataSet come dati XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Per informazioni sul caricamento e la scrittura dei dati XML direttamente in e da un **DataSet**, vedere [Caricamento di un DataSet da XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) e [Scrittura di un DataSet sotto forma di dati XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Se il caricamento di **DataSet** da un **XmlDataDocument** risolve le proprie esigenze, vedere [sincronizzazione un XmlDataDocument un](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ Per informazioni sul caricamento di un **DataSet** da una classe **XmlDataDocument**, vedere [Sincronizzazione di un Dataset con un documento XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

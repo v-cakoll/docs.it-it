@@ -11,32 +11,36 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to use execution mode
+helpviewer_keywords:
+- PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 745ceae9832582c7b66a56075d128f9cf1c8ff69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c1c815131a1553001cdcf20e3c7408e472299677
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Procedura: specificare la modalità di esecuzione in PLINQ
-In questo esempio viene illustrato come forzare PLINQ per ignorare le proprie regole euristiche predefinite e la parallelizzazione di una query indipendentemente dalla forma della query.  
+Questo esempio mostra come forzare PLINQ a ignorare l'euristica predefinita e parallelizzare una query indipendentemente dalla relativa forma.  
   
 > [!WARNING]
->  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per ulteriori informazioni sull'aumento di velocità, vedere [comprensione aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Lo scopo di questo esempio consiste nell'illustrare l'uso ed è possibile che l'esecuzione non sia più veloce rispetto alla query LINQ to Objects sequenziale equivalente. Per altre informazioni sull'aumento di velocità, vedere [Informazioni sull'aumento di velocità in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
- PLINQ è progettato per sfruttare le opportunità di parallelizzazione. Tuttavia, non tutte le query trarre vantaggio dall'esecuzione parallela. Ad esempio, quando una query contiene un delegato di singolo utente che esegue un intervento minimo, eseguirà la query in genere più veloce in sequenza. In questo modo l'overhead necessario per consentire l'esecuzione parallela rappresenta uno è più costoso di un aumento di velocità ottenuti. Pertanto, PLINQ non parallelizza automaticamente tutte le query. Viene innanzitutto esaminato la forma di query e i vari operatori che lo compongono. In base a questa analisi, nella modalità di esecuzione predefinita PLINQ può decidere di eseguire alcune o tutte le query in sequenza. Tuttavia, in alcuni casi è possibile conoscere più query di PLINQ è in grado di determinare dall'analisi. Ad esempio, si potrebbe sapere che un delegato è molto costoso e che la query verrà sicuramente sfruttano la parallelizzazione. In questi casi, è possibile utilizzare il <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> (metodo) e specificare il <xref:System.Linq.ParallelExecutionMode.ForceParallelism> valore per indicare alla query vengono eseguite sempre come parallelo PLINQ.  
+ PLINQ è progettato per sfruttare le opportunità di parallelizzazione. Tuttavia, l'esecuzione parallela non è vantaggiosa per tutte le query. Quando una query contiene un delegato utente singolo che esegue operazioni minime, ad esempio, risulta in genere più veloce l'esecuzione sequenziale. Il motivo è che il sovraccarico correlato all'abilitazione dell'esecuzione parallela è superiore all'aumento di velocità ottenuto. PLINQ pertanto non parallelizza automaticamente ogni query. Esamina prima di tutto la forma della query e i vari operatori inclusi. In base a questa analisi, in modalità di esecuzione predefinita PLINQ può decidere di eseguire alcune o tutte le query in sequenza. In alcuni casi, tuttavia, l'utente potrebbe avere più informazioni sulla query rispetto a quelle che PLINQ è in grado di determinare dall'analisi. Si potrebbe ad esempio sapere che un delegato è molto costoso e che la parallelizzazione offre sicuramente vantaggi per la query. In questi casi, è possibile usare il metodo <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> e specificare il valore <xref:System.Linq.ParallelExecutionMode.ForceParallelism> per indicare a PLINQ di eseguire sempre la query in parallelo.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Tagliare e incollare questo codice nel [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) e chiamare il metodo da `Main`.  
+ Tagliare e incollare questo codice nell'[esempio di dati PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) e chiamare il metodo da `Main`.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
