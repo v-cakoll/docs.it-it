@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: user-defined bindings [WCF]
+helpviewer_keywords:
+- user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 |<span data-ttu-id="50624-135">Affidabilità</span><span class="sxs-lookup"><span data-stu-id="50624-135">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|<span data-ttu-id="50624-136">No</span><span class="sxs-lookup"><span data-stu-id="50624-136">No</span></span>|  
 |<span data-ttu-id="50624-137">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="50624-137">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|<span data-ttu-id="50624-138">No</span><span class="sxs-lookup"><span data-stu-id="50624-138">No</span></span>|  
 |<span data-ttu-id="50624-139">Duplex composito</span><span class="sxs-lookup"><span data-stu-id="50624-139">Composite Duplex</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|<span data-ttu-id="50624-140">No</span><span class="sxs-lookup"><span data-stu-id="50624-140">No</span></span>|  
-|<span data-ttu-id="50624-141">Codifica</span><span class="sxs-lookup"><span data-stu-id="50624-141">Encoding</span></span>|<span data-ttu-id="50624-142">Testo, binario, MTOM, personalizzata</span><span class="sxs-lookup"><span data-stu-id="50624-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="50624-143">Sì*</span><span class="sxs-lookup"><span data-stu-id="50624-143">Yes*</span></span>|  
+|<span data-ttu-id="50624-141">Codifica</span><span class="sxs-lookup"><span data-stu-id="50624-141">Encoding</span></span>|<span data-ttu-id="50624-142">Testo, binario, MTOM, personalizzata</span><span class="sxs-lookup"><span data-stu-id="50624-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="50624-143">Sì\*</span><span class="sxs-lookup"><span data-stu-id="50624-143">Yes\*</span></span>|  
 |<span data-ttu-id="50624-144">Trasporto</span><span class="sxs-lookup"><span data-stu-id="50624-144">Transport</span></span>|<span data-ttu-id="50624-145">TCP, named pipe, HTTP, HTTPS, MSMQ, personalizzato</span><span class="sxs-lookup"><span data-stu-id="50624-145">TCP, Named Pipes, HTTP, HTTPS, MSMQ, Custom</span></span>|<span data-ttu-id="50624-146">Sì</span><span class="sxs-lookup"><span data-stu-id="50624-146">Yes</span></span>|  
   
- <span data-ttu-id="50624-147">*Dato che per ogni associazione è necessaria una codifica, se non viene specificata alcuna codifica, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne aggiunge automaticamente una predefinita.</span><span class="sxs-lookup"><span data-stu-id="50624-147">*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="50624-148">L'impostazione predefinita è Text/XML per i trasporti HTTP e HTTPS e Binary per gli altri trasporti.</span><span class="sxs-lookup"><span data-stu-id="50624-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
+ <span data-ttu-id="50624-147">\*Dato che per ogni associazione è necessaria una codifica, se non viene specificata alcuna codifica, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne aggiunge automaticamente una predefinita.</span><span class="sxs-lookup"><span data-stu-id="50624-147">\*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="50624-148">L'impostazione predefinita è Text/XML per i trasporti HTTP e HTTPS e Binary per gli altri trasporti.</span><span class="sxs-lookup"><span data-stu-id="50624-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
   
 ## <a name="creating-a-new-binding-element"></a><span data-ttu-id="50624-149">Creazione di un nuovo elemento di associazione</span><span class="sxs-lookup"><span data-stu-id="50624-149">Creating a new Binding Element</span></span>  
  <span data-ttu-id="50624-150">Oltre ai tipi derivati da <xref:System.ServiceModel.Channels.BindingElement> forniti da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile creare propri elementi di associazione.</span><span class="sxs-lookup"><span data-stu-id="50624-150">In addition to the types derived from <xref:System.ServiceModel.Channels.BindingElement> that are provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you can create your own binding elements.</span></span> <span data-ttu-id="50624-151">Questo consente di personalizzare la modalità di creazione dello stack di associazioni e di specificare i componenti in esso inclusi creando un proprio <xref:System.ServiceModel.Channels.BindingElement> che può essere composto con gli altri tipi forniti dal sistema nello stack.</span><span class="sxs-lookup"><span data-stu-id="50624-151">This lets you customize the way the stack of bindings is created and the components that go in it by creating your own <xref:System.ServiceModel.Channels.BindingElement> that can be composed with the other system-provided types in the stack.</span></span>  
