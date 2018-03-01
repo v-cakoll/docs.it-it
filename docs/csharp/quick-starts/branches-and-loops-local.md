@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva - Cicli e rami - Guida a C#
+title: Esercitazione su rami e cicli - Guide introduttive locali per C#
 description: In questa guida introduttiva dedicata ai rami e ai cicli si scrive il codice C# per esplorare la sintassi del linguaggio che supporta le diramazioni condizionali e i cicli per eseguire ripetutamente le istruzioni.
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Rami e cicli
 
@@ -23,7 +23,7 @@ Questa guida introduttiva prevede la disponibilità di un computer da usare per 
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendere decisioni usando l'istruzione `if`
 
-Creare una directory denominata **branches-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console -n BranchesAndLoops -o .`. Questo comando crea una nuova applicazione console .NET Core nella directory corrente. 
+Creare una directory denominata **branches-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console -n BranchesAndLoops -o .`. Questo comando crea una nuova applicazione console .NET Core nella directory corrente.
 
 Aprire **Program.cs** nell'editor preferito e sostituire la riga `Console.Writeline("Hello World!");` con il codice seguente:
 
@@ -45,12 +45,11 @@ int b = 3;
 Digitare di nuovo `dotnet run`. Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.
 
 > [!TIP]
-> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il compilatore troverà e segnalerà gli errori. Esaminare attentamente l'output dell'errore e il codice che ha generato l'errore. L'errore del compilatore consente in genere di trovare il problema. 
+> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il compilatore troverà e segnalerà gli errori. Esaminare attentamente l'output dell'errore e il codice che ha generato l'errore. L'errore del compilatore consente in genere di trovare il problema.
 
-Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata. 
+Questo primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata.
 
 Questo processo di controllo delle condizioni ed esecuzione di istruzioni in base a queste condizioni offre molte potenzialità.
-
 
 ## <a name="make-if-and-else-work-together"></a>Usare insieme if ed else
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento. 
+Questo codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento.
 
 La prima parte è l'**inizializzatore for**: `for index = 0;` dichiara che `index` è la variabile di ciclo e imposta il valore iniziale su `0`.
 
@@ -258,7 +257,7 @@ Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 
 
 Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
 
-[Istruzioni if ed else](../language-reference/keywords/if-else.md)   
-[Istruzione while](../language-reference/keywords/while.md)   
-[Istruzione do](../language-reference/keywords/do.md)   
-[Istruzione for](../language-reference/keywords/for.md)   
+[Istruzioni if ed else](../language-reference/keywords/if-else.md)  
+[Istruzione while](../language-reference/keywords/while.md)  
+[Istruzione do](../language-reference/keywords/do.md)  
+[Istruzione for](../language-reference/keywords/for.md)  

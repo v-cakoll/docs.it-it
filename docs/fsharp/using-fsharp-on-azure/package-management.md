@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: 22dc94ea69e0dfb95e22da4bc64ce915398190d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Gestione dei pacchetti per le dipendenze F# di Azure
 
@@ -26,7 +26,7 @@ Se si utilizza [Paket](https://fsprojects.github.io/Paket/) come la gestione del
 
     > paket add nuget WindowsAzure.Storage
 
-Oppure, se si utilizza [Mono](http://www.mono-project.com/) per lo sviluppo multipiattaforma con .NET:
+Oppure, se si utilizza [Mono](https://www.mono-project.com/) per lo sviluppo multipiattaforma con .NET:
 
     > mono paket.exe add nuget WindowsAzure.Storage
 

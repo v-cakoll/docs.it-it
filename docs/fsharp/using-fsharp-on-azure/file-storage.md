@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introduzione all'archiviazione di File di Azure con F # #
 
@@ -97,7 +97,7 @@ Qui scaricare il file appena creato, aggiungendo il contenuto in un file locale.
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Impostare la dimensione massima per una condivisione file
 
-Nell'esempio seguente viene illustrato come controllare l'utilizzo corrente per una condivisione e come impostare la quota per la condivisione. `FetchAttributes`deve essere chiamato per popolare una condivisione `Properties`, e `SetProperties` per propagare le modifiche locali per l'archiviazione di File di Azure.
+Nell'esempio seguente viene illustrato come controllare l'utilizzo corrente per una condivisione e come impostare la quota per la condivisione. `FetchAttributes` deve essere chiamato per popolare una condivisione `Properties`, e `SetProperties` per propagare le modifiche locali per l'archiviazione di File di Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -152,7 +152,7 @@ Vedere i collegamenti per ulteriori informazioni sull'archiviazione di File di A
 - [Come usare AzCopy con archiviazione di Microsoft Azure](/azure/storage/storage-use-azcopy)
 - [Tramite l'interfaccia CLI di Azure con l'archiviazione di Azure](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Riferimento
+### <a name="reference"></a>Riferimenti
 
 - [Libreria Client di archiviazione per il riferimento di .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Riferimento API REST di servizi file](/rest/api/storageservices/fileservices/File-Service-REST-API)
@@ -161,5 +161,5 @@ Vedere i collegamenti per ulteriori informazioni sull'archiviazione di File di A
 
 - [Archiviazione di File di Azure è disponibile](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Archiviazione di File all'interno di Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Introduzione a servizi di File di Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Connessioni persistenti al file di Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Introduzione a servizi di File di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Connessioni persistenti al file di Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -29,21 +32,21 @@ Simile a [JIT](#jit), questo compilatore esegue anche la conversione del linguag
 
 Implementazione originale di ASP.NET inclusa con .NET Framework.
 
-In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento ad ASP.NET 4. x per chiarire che non si usa ASP.NET significato entrambe le implementazioni. 
+In alcuni casi ASP.NET è un termine generico che fa riferimento a entrambe le implementazioni di ASP.NET, inclusa ASP.NET Core. Il significato assunto dal termine in una specifica istanza è determinato dal contesto. Fare riferimento ad ASP.NET 4.x per definire che non si sta usando ASP.NET per indicare entrambe le implementazioni. 
 
-Vedere [documentazione di ASP.NET](/aspnet/#pivot=aspnet).
+Vedere [Documentazione di ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Implementazione open source, ad alte prestazioni e multi-piattaforma di ASP.NET basata su .NET Core.
 
-Vedere [documentazione di ASP.NET Core](/aspnet/#pivot=core).
+Vedere [Documentazione di ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-File *DLL* contenente una raccolta di API che possono essere chiamate da app o altri assembly.
+File *DLL*/*EXE* contenente una raccolta di API che possono essere chiamate da app o altri assembly.
 
-Un assembly .NET è una raccolta di tipi. Un assembly include interfacce, classi, strutture, enumerazioni e delegati.  Gli assembly presenti nella cartella *bin* di un progetto sono anche denominati *binari*. Vedere anche [libreria](#library).
+Un assembly può includere tipi, ad esempio interfacce, classi, strutture, enumerazioni e delegati. Gli assembly presenti nella cartella *bin* di un progetto sono anche denominati *binari*. Vedere anche [libreria](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -207,7 +210,7 @@ Generazione di immagini native.
 
 Un pacchetto NuGet &mdash; o semplicemente un pacchetto &mdash; è un file *ZIP* contenente uno o più assembly con lo stesso nome, unitamente a metadati aggiuntivi, quali il nome dell'autore.
 
-Il file *ZIP* è caratterizzato dall'estensione *nupkg* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
+Il file *ZIP* è caratterizzato dall'estensione *NUPKG* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni di destinazione. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
 
 ## <a name="platform"></a>platform
 
@@ -263,7 +266,7 @@ Formato di token standardizzato per specificare il framework di destinazione di 
 
 Vedere [Framework di destinazione](frameworks.md).
 
-## <a name="uwp"></a>Piattaforma UWP
+## <a name="uwp"></a>UWP
 
 Piattaforma UWP (Universal Windows Platform).
 

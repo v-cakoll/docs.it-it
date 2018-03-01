@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Suggerimenti per lo sviluppo di applicazioni internazionali
 In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo di applicazioni internazionali.  
@@ -57,7 +60,7 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 9. Eseguire il test della funzionalità dell'applicazione in versioni internazionali dei sistemi operativi utilizzando dati internazionali.  
   
-10. Se una decisione relativa alla sicurezza è basata sul risultato di un confronto di stringhe o di un'operazione di modifica delle lettere maiuscole e minuscole, eseguire un'operazione indipendente dalle impostazioni cultura. In questo modo è possibile verificare che il valore di `CultureInfo.CurrentCulture` non influisca sul risultato. Vedere la sezione "Stringa confronti che usa il corrente delle impostazioni cultura" [procedure consigliate per l'uso di stringhe](../../../docs/standard/base-types/best-practices-strings.md) per un esempio che illustra la modalità di distinzione delle impostazioni cultura stringa confronti possono produrre risultati incoerenti.  
+10. Se una decisione relativa alla sicurezza è basata sul risultato di un confronto di stringhe o di un'operazione di modifica delle lettere maiuscole e minuscole, eseguire un'operazione indipendente dalle impostazioni cultura. In questo modo è possibile verificare che il valore di `CultureInfo.CurrentCulture` non influisca sul risultato. Per un esempio in cui viene illustrato il modo in cui i confronti tra stringhe dipendenti dalle impostazioni cultura possono comportare risultati non coerenti, vedere la sezione "Confronti tra stringhe che usano le impostazioni cultura correnti" in [Procedure consigliate per l'uso delle stringhe](../../../docs/standard/base-types/best-practices-strings.md).  
   
 ## <a name="localization-best-practices"></a>Suggerimenti per la localizzazione  
   
@@ -77,11 +80,11 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 8.  Utilizzare la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType> per recuperare le risorse in base alle impostazioni cultura.  
   
-9. Utilizzare Visual Studio per creare finestre di dialogo Windows Form, in modo che possono essere localizzate mediante il [Editor risorse di Windows Form (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Non codificare manualmente le finestre di dialogo di Windows Form.  
+9. Usare Visual Studio per creare finestre di dialogo Windows Form, in modo che possano essere localizzate tramite l'[Editor risorse di Windows Form (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Non codificare manualmente le finestre di dialogo di Windows Form.  
   
 10. Assegnare la localizzazione (traduzione) a professionisti.  
   
-11. Per una descrizione completa della creazione e localizzazione di risorse, vedere [risorse nelle applicazioni](../../../docs/framework/resources/index.md).  
+11. Per una descrizione completa della creazione e localizzazione delle risorse, vedere [Risorse nelle applicazioni](../../../docs/framework/resources/index.md).  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>Suggerimenti per la globalizzazione per le applicazioni ASP.NET  
   
@@ -99,7 +102,7 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 4.  Specificare i valori per gli attributi requestEncoding, responseEncoding, fileEncoding, culture e uiCulture nei seguenti tre punti in un'applicazione ASP.NET:  
   
-    -   Nella sezione di globalizzazione di un file Web.config. Questo file è esterno all'applicazione ASP.NET. Per ulteriori informazioni, vedere [ \<globalizzazione > elemento](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Nella sezione di globalizzazione di un file Web.config. Questo file è esterno all'applicazione ASP.NET. Per altre informazioni, vedere l'[elemento \<globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   In un'istruzione di pagina. Si noti che quando in un'applicazione viene visualizzata una pagina, il file è già stato letto, pertanto non è più possibile specificare fileEncoding e requestEncoding. In un'istruzione di pagina è possibile specificare solo uiCulture, Culture e responseEncoding.  
   

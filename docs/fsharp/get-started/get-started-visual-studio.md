@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 944bbbba6a26634ace269d86cbbdde9ef9de7bcd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione a F # in Visual Studio
 
-F # e gli strumenti di Visual F # sono supportate nell'IDE di Visual Studio.  Per iniziare, è necessario [scaricare Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs), se hai già fatto.  In questo articolo usa l'edizione Community di Visual Studio 2017, ma è possibile utilizzare F # con la versione di propria scelta.
+F # e gli strumenti di Visual F # sono supportate nell'IDE di Visual Studio.  Per iniziare, è necessario [scaricare Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), se hai già fatto.  In questo articolo usa l'edizione Community di Visual Studio 2017, ma è possibile utilizzare F # con la versione di propria scelta.
 
 ## <a name="installing-f"></a>L'installazione di F # #
 
@@ -26,7 +26,7 @@ Se si sta scaricando Visual Studio per la prima volta, verrà installato prima d
 
 Successivamente verrà visualizzato un elenco dei carichi di lavoro. È possibile installare F # tramite uno qualsiasi dei carichi di lavoro seguenti:
 
-|Carico di lavoro|Azione|
+|Carico di lavoro|Operazione|
 |--------|------|
 | Sviluppo multipiattaforma .NET Core | Nessuna azione - F # è installata per impostazione predefinita |
 | Sviluppo ASP.NET e Web | Nessuna azione - F # è installata per impostazione predefinita |

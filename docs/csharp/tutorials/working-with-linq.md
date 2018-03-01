@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -329,6 +329,6 @@ Compilare e ripetere l'esecuzione. L'output è un po' più pulito e il codice è
 
 ## <a name="conclusion"></a>Conclusione
 
-Questo esempio ha illustrato alcuni dei metodi usati in LINQ e come creare metodi personalizzati da usare facilmente con il codice abilitato per LINQ. Ha inoltre mostrato le differenze tra le modalità di valutazione lazy e eager e l'effetto che può avere tale decisione sulle prestazioni.
+Questo esempio ha illustrato alcuni dei metodi usati in LINQ e come creare metodi personalizzati da usare facilmente con il codice abilitato per LINQ. Ha anche indicato le differenze tra le modalità di valutazione lazy e eager e l'effetto che può avere tale decisione sulle prestazioni.
 
 Ha spiegato anche alcuni aspetti di una delle tecniche di cartomagia. I prestigiatori usano il miscuglio Faro perché possono controllare lo spostamento di ogni carta nel mazzo. In alcuni trucchi, il prestigiatore chiede a una persona del pubblico di mettere una carta all'inizio del mazzo e mischia il mazzo più volte senza mai perdere di vista la posizione della carta. Per altri trucchi di illusionismo il mazzo di carte deve essere impostato in un certo modo. Il prestigiatore ordina il mazzo prima di eseguire il trucco e quindi mischia cinque volte le carte interne al mazzo. In uno spettacolo, può mostrare un mazzo apparentemente ordinato in maniera casuale, mischiare le carte tre volte e infine ottenere un mazzo con le carte disposte esattamente nel modo desiderato.

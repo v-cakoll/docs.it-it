@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva - Ambiente locale - Guida a C#
-description: Questa guida rapida fornisce le nozioni di base per l'esecuzione in locale delle guide introduttive
+title: Esercitazione sull'ambiente locale - Guide introduttive locali per C#
+description: Questa guida introduttiva illustra le nozioni di base per l'esecuzione delle guide introduttive in locale
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,15 +8,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="local-environment"></a>Ambiente locale
 
-Il primo passaggio per provare una guida introduttiva in locale è la configurazione di un ambiente di sviluppo nel computer locale.
+Il primo passaggio per provare una guida introduttiva in locale consiste nel configurare un ambiente di sviluppo nel computer locale.
 L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux.
 
 In alternativa è possibile installare [.NET Core SDK](http://dot.net/core) e [Visual Studio Code](https://code.visualstudio.com/).

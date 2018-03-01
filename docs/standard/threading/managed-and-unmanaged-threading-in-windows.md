@@ -13,18 +13,21 @@ helpviewer_keywords:
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c55caaff3fd96b2791e75a392a9522abfceb22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gestito e non gestito in Windows
-La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Threading.Thread> , inclusi i thread creati da Common Language Runtime e quelli creati all'esterno dell'ambiente di esecuzione che accedono all'ambiente gestito per eseguire il codice. L'ambiente di esecuzione monitora tutti i thread nei relativi processi che abbiano eseguito codice nell'ambiente di esecuzione gestito. Non tiene traccia di altri thread. I thread possono accedere all'ambiente di esecuzione gestito tramite l'interoperabilità COM (perché il runtime espone gli oggetti gestiti come oggetti COM all'ambiente non gestito), la funzione [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) COM e la funzionalità platform invoke.  
+La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Threading.Thread> , inclusi i thread creati da Common Language Runtime e quelli creati all'esterno dell'ambiente di esecuzione che accedono all'ambiente gestito per eseguire il codice. L'ambiente di esecuzione monitora tutti i thread nei relativi processi che abbiano eseguito codice nell'ambiente di esecuzione gestito. Non tiene traccia di altri thread. I thread possono accedere all'ambiente di esecuzione gestito tramite l'interoperabilità COM (perché il runtime espone gli oggetti gestiti come oggetti COM all'ambiente non gestito), la funzione [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) COM e la funzionalità platform invoke.  
   
  Quando un thread non gestito accede al runtime tramite, ad esempio, un oggetto COM Callable Wrapper, il sistema verifica l'archivio locale dei thread del thread in questione per trovare un oggetto <xref:System.Threading.Thread> gestito interno. Se ne viene trovato uno, all'ambiente di esecuzione è già nota la presenza di questo thread. Se non ne vengono trovati, tuttavia, il runtime compila un nuovo oggetto <xref:System.Threading.Thread> e lo installa nell'archivio locale dei thread del thread in questione.  
   
@@ -54,7 +57,7 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
 ## <a name="managed-threads-and-com-apartments"></a>Thread gestiti e apartment COM  
  Un thread gestito può essere contrassegnato per indicare che ospita un apartment [a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) o [a thread multipli](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Per altre informazioni sull'architettura di threading COM, vedere [Processi, thread e apartment](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) I metodi <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> della classe <xref:System.Threading.Thread> restituiscono e assegnano lo stato dell'apartment di un thread. Se lo stato non è stato impostato, <xref:System.Threading.Thread.GetApartmentState%2A> restituisce <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
- La proprietà può essere impostata solo quando il thread si trova il <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> stato; può essere impostata solo una volta per un thread.  
+ La proprietà può essere impostata solo quando il thread è nello stato <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> e solo una volta per ogni thread.  
   
  Se lo stato dell'apartment non è impostato prima dell'avvio del thread, il thread viene inizializzato come un apartment a thread multipli. Il thread finalizzatore e tutti i thread controllati da <xref:System.Threading.ThreadPool> sono apartment a thread multipli.  
   
@@ -63,12 +66,12 @@ La gestione di tutti i thread viene eseguita tramite la classe <xref:System.Thre
   
  Gli oggetti gestiti esposti a COM si comportano come se avessero aggregato il gestore del marshalling a thread libero. In altre parole, possono essere chiamati da qualsiasi apartment COM con modello a thread libero. Gli unici oggetti gestiti che non esibiscono questo comportamento a thread libero sono gli oggetti che derivano da <xref:System.EnterpriseServices.ServicedComponent> o <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   
- Nell'ambiente gestito non è disponibile il supporto per <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> a meno che non si usino i contesti e le istanze gestite associate al contesto. Se si utilizza Enterprise Services, quindi l'oggetto deve derivare da <xref:System.EnterpriseServices.ServicedComponent> (che è a sua volta deriva da <xref:System.ContextBoundObject>).  
+ Nell'ambiente gestito non è disponibile il supporto per <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> a meno che non si usino i contesti e le istanze gestite associate al contesto. Se si usa Enterprise Services, l'oggetto deve derivare da <xref:System.EnterpriseServices.ServicedComponent>, che a sua volta è derivato da <xref:System.ContextBoundObject>.  
   
  Quando il codice gestito effettua una chiamata agli oggetti COM, segue sempre le regole COM. In altre parole, la chiamata viene eseguita tramite proxy di apartment COM e wrapper del contesto COM+ 1.0 come indicato da OLE32.  
   
 ## <a name="blocking-issues"></a>Problemi di blocco  
- Se un thread effettua una chiamata non gestita all'interno del sistema operativo che ha bloccato il thread nel codice non gestito, l'ambiente di esecuzione non ne assumerà il controllo per <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. In caso di <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, il runtime contrassegna il thread per **Abort** e assume il controllo al rientro nel codice gestito. È preferibile usare il blocco gestito anziché quello non gestito. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>e così via rispondono tutti a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Inoltre, se il thread è incluso in un apartment a thread singolo, tutte queste operazioni di blocco gestite eseguiranno correttamente il pumping dei messaggi nell'apartment fintanto che il thread è bloccato.  
+ Se un thread effettua una chiamata non gestita all'interno del sistema operativo che ha bloccato il thread nel codice non gestito, l'ambiente di esecuzione non ne assumerà il controllo per <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Nel caso di <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, il runtime contrassegna il thread per **Abort** e ne assume il controllo al rientro nel codice gestito. È preferibile usare il blocco gestito anziché quello non gestito. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> e così via sono tutti reattivi rispetto a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Inoltre, se il thread è incluso in un apartment a thread singolo, tutte queste operazioni di blocco gestite eseguiranno correttamente il pumping dei messaggi nell'apartment fintanto che il thread è bloccato.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  

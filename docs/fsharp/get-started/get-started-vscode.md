@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Introduzione a F # nel codice di Visual Studio con Ionide
 
-È possibile scrivere F # in [codice di Visual Studio](https://code.visualstudio.com) con il [plug-in Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), per ottenere un'esperienza ottimale per IDE multipiattaforma e leggera con IntelliSense e il refactoring del codice di base.  Visitare [Ionide.io](http://ionide.io) per ulteriori informazioni sulla famiglia di plug-in.
+È possibile scrivere F # in [codice di Visual Studio](https://code.visualstudio.com) con il [plug-in Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), per ottenere un'esperienza ottimale per IDE multipiattaforma e leggera con IntelliSense e il refactoring del codice di base.  Visitare [Ionide.io](https://ionide.io) per ulteriori informazioni sulla famiglia di plug-in.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -26,7 +26,7 @@ F # 4.0 o versione successiva deve essere installati nel computer di utilizzare 
 
 È inoltre necessario [git installato](https://git-scm.com/download) e disponibile nel percorso per rendere utilizzare modelli di progetto in Ionide.  È possibile verificare che sia installato correttamente digitando `git` in pressanti prompt.and comando **invio**.
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>WINDOWS
 
 Se si è in Windows, sono disponibili due opzioni per l'installazione di F #.
 
@@ -39,9 +39,9 @@ Se non si vuole installare Visual Studio, è possibile utilizzare le istruzioni 
 2. Installare Windows SDK per il sistema operativo:
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. Installare il [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  È inoltre necessario installare [2013 gli strumenti di compilazione Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
 
@@ -65,9 +65,9 @@ C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
 
 Ionide rileva automaticamente il compilatore e gli strumenti, ma se non per qualche motivo (ad esempio, gli strumenti di Visual F # sono stati installati in un'altra directory), è possibile aggiungere manualmente la cartella che contiene (`...\Microsoft SDKs\F#\4.0`) al percorso.
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-In macOS, Usa Ionide [Mono](http://www.mono-project.com).  Il modo più semplice per installare Mono in macOS è tramite Homebrew.  È sufficiente digitare quanto segue in terminale:
+In macOS, Usa Ionide [Mono](https://www.mono-project.com).  Il modo più semplice per installare Mono in macOS è tramite Homebrew.  È sufficiente digitare quanto segue in terminale:
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-Usa anche su Linux, Ionide [Mono](http://www.mono-project.com).  Se si è in Debian o Ubuntu, è possibile utilizzare le operazioni seguenti:
+Usa anche su Linux, Ionide [Mono](https://www.mono-project.com).  Se si è in Debian o Ubuntu, è possibile utilizzare le operazioni seguenti:
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ sudo apt-get install mono-complete fsharp
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Il plug-in solo necessari per il supporto di F # in Visual Studio Code è [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Tuttavia, è inoltre possibile installare [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) e per ottenere [CAMUFFARE](http://fsharp.github.io/FAKE/) supporta e [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) ottenere [Paket](https://fsprojects.github.io/Paket/) supportano.  FALSIFICARE e Paket sono strumenti community aggiuntivi F # per la compilazione di progetti e la gestione delle dipendenze, rispettivamente.
+Il plug-in solo necessari per il supporto di F # in Visual Studio Code è [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Tuttavia, è inoltre possibile installare [Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) e per ottenere [CAMUFFARE](https://fake.build/) supporta e [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) ottenere [Paket](https://fsprojects.github.io/Paket/) supportano.  FALSIFICARE e Paket sono strumenti community aggiuntivi F # per la compilazione di progetti e la gestione delle dipendenze, rispettivamente.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Creazione del primo progetto con Ionide
 
@@ -121,7 +121,7 @@ Selezionare "F #: nuovo progetto" premendo **invio**, che verrà visualizzata pe
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-Verranno visualizzate un modello per un tipo di progetto specifico.  Sono disponibili alcune opzioni, ad esempio un [FsLab](http://fslab.org) modello per l'analisi scientifica dei dati o [Suave](https://suave.io) modello di programmazione Web.  Questo articolo viene utilizzata la `classlib` modello, quindi evidenziare che e hit **invio**.  Quindi si raggiungerà il passaggio seguente:
+Verranno visualizzate un modello per un tipo di progetto specifico.  Sono disponibili alcune opzioni, ad esempio un [FsLab](https://fslab.org) modello per l'analisi scientifica dei dati o [Suave](https://suave.io) modello di programmazione Web.  Questo articolo viene utilizzata la `classlib` modello, quindi evidenziare che e hit **invio**.  Quindi si raggiungerà il passaggio seguente:
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ Se è stata seguita la procedura di passaggio precedente, è necessario ottenere
 Questo modello genera alcuni aspetti considerati utili:
 
 1. F # del progetto stesso, trova di sotto di `ClassLibraryDemo` cartella.
-2. La struttura di directory corretto per l'aggiunta di pacchetti tramite [ `Paket` ](http://fsprojects.github.io/Paket/).
-3. Una libreria multipiattaforma compilare lo script con [ `FAKE` ](http://fsharp.github.io/FAKE/).
+2. La struttura di directory corretto per l'aggiunta di pacchetti tramite [ `Paket` ](https://fsprojects.github.io/Paket/).
+3. Una libreria multipiattaforma compilare lo script con [ `FAKE` ](https://fake.build/).
 4. Il `paket.exe` eseguibile che può recuperare i pacchetti e risolvere le dipendenze per l'utente.
 5. Oggetto `.gitignore` file se si desidera aggiungere il progetto al controllo del codice sorgente basati su Git.
 
@@ -307,4 +307,4 @@ Per ulteriori informazioni su F # e le funzionalità del linguaggio, estrarre [p
 
 [Spazi dei nomi](../language-reference/namespaces.md)
 
-[Ionide VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)
+[Ionide-VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)

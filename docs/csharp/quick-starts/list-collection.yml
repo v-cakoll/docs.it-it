@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Raccolte in C#
 metadata:
-  title: Raccolte in C#. Imparare a usare sequenze e raccolte in C#.
+  title: Esercitazione interattiva sulle raccolte - Guide introduttive per C#
   description: "In questa esercitazione si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser."
   audience: Developer
   ms.topic: get-started-article
@@ -11,14 +11,14 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 57cdf4e5c82c0e50de5422051df251db8ddb5d83
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 483b403b35eef4405b1c7debc52678aef19cb9b6
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
-  content: "In questa guida introduttiva il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. L'esercitazione è composta da una serie di lezioni che descrivono come creare, modificare ed esplorare raccolte e matrici.\n"
+  content: "In questa guida introduttiva il linguaggio C# viene insegnato in modo interattivo, usando il browser per scrivere codice C# e visualizzare i risultati della compilazione e dell'esecuzione del codice. L'esercitazione è composta da una serie di lezioni che descrivono come creare, modificare ed esplorare raccolte e matrici.\n"
 - title: Creare elenchi
   durationInMinutes: 2
   content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva (sostituire \"<name>\" con il proprio nome) e fare clic sul pulsante **Esegui**:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nQuesto codice consente di creare un elenco di stringhe, aggiungere tre nomi all'elenco e stampare i nomi in lettere maiuscole. Vengono usati i concetti appresi in guide introduttive precedenti per scorrere l'elenco in ciclo.\n\nIl codice per visualizzare i nomi usa **stringhe interpolate**.  Anteponendo il carattere `$` a `string`, è possibile incorporare il codice C# nella dichiarazione della stringa. La stringa effettiva sostituisce il codice C# con il valore generato. In questo esempio, `{name.ToUpper()}` viene sostituito con ogni nome, convertito in lettere maiuscole, perché è stato chiamato il metodo <xref:System.String.ToUpper%2A>.\n\nL'esplorazione continua nelle prossime lezioni.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
@@ -37,4 +37,4 @@ items:
 - title: Completare l'esercizio
   durationInMinutes: 3
   content: "I risultati ottenuti sono simili a questi?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nA ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: "È stata completata la guida introduttiva dedicata agli elenchi. Questa guida introduttiva è la guida introduttiva interattiva finale. È possibile continuare con queste guide introduttive nel proprio ambiente di sviluppo. Dopo aver acquisito familiarità con gli elementi di base dello [sviluppo locale](local-environment.md), scegliere una guida introduttiva. È possibile provare questo stesso esercizio, passare direttamente alla guida introduttiva seguente o iniziare da capo con la guida introduttiva [Numeri in C#](numbers-in-csharp-local.md).\n\nAltre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.\0"
+- content: "È stata completata la guida introduttiva dedicata agli elenchi. Questa guida introduttiva è la guida introduttiva interattiva finale. È possibile continuare con queste guide introduttive nel proprio ambiente di sviluppo. Dopo aver acquisito familiarità con le nozioni di base dello [sviluppo locale](local-environment.md), scegliere una guida introduttiva. È possibile provare questo stesso esercizio, passare direttamente alla guida introduttiva seguente o iniziare da capo con la guida introduttiva [Numeri in C#](numbers-in-csharp-local.md).\n\nAltre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.\0"

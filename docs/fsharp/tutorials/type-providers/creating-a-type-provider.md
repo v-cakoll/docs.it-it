@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Esercitazione: Creazione di un Provider di tipi
 
@@ -56,7 +56,7 @@ Provider di tipi sono particolarmente adatti per situazioni in cui lo schema è 
 
 
 ## <a name="a-simple-type-provider"></a>Un Provider di tipi semplici
-Questo esempio è Samples.HelloWorldTypeProvider nel `SampleProviders\Providers` directory del [pacchetto di esempio F # 3.0](http://fsharp3sample.codeplex.com) nel sito Web Codeplex. Il provider rende disponibili un "spazio di tipo" che contiene i tipi cancellati 100, come illustrato nel codice seguente utilizzando la sintassi di firma F # e omettendo i dettagli per tutti tranne quelli `Type1`. Per ulteriori informazioni sui tipi cancellati, vedere [dettagli sulle cancellati forniti tipi](#details-about-erased-provided-types) più avanti in questo argomento.
+Questo esempio è Samples.HelloWorldTypeProvider nel `SampleProviders\Providers` directory del [pacchetto di esempio F # 3.0](https://fsharp3sample.codeplex.com) nel sito Web Codeplex. Il provider rende disponibili un "spazio di tipo" che contiene i tipi cancellati 100, come illustrato nel codice seguente utilizzando la sintassi di firma F # e omettendo i dettagli per tutti tranne quelli `Type1`. Per ulteriori informazioni sui tipi cancellati, vedere [dettagli sulle cancellati forniti tipi](#details-about-erased-provided-types) più avanti in questo argomento.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ Si noti quanto segue:
 - Risultati di ogni gruppo denominato in una proprietà specificata e l'accesso alla proprietà comporta un utilizzo di un indicizzatore in caso di corrispondenza `Groups` insieme.
 <br />
 
-Il codice seguente rappresenta il nucleo della logica di implementare un provider di questo tipo, e in questo esempio vengono omessi l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [pacchetto di esempio F # 3.0](http://fsharp3sample.codeplex.com) nel sito Web Codeplex.
+Il codice seguente rappresenta il nucleo della logica di implementare un provider di questo tipo, e in questo esempio vengono omessi l'aggiunta di tutti i membri per il tipo specificato. Per informazioni su ogni membro aggiunto, vedere la sezione appropriata più avanti in questo argomento. Per il codice completo, scaricare l'esempio dal [pacchetto di esempio F # 3.0](https://fsharp3sample.codeplex.com) nel sito Web Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ Finora, cui è illustrato in questo documento come fornire tipi cancellati. È i
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 Il codice helper ProvidedTypes 0,2 che fa parte della versione di F # 3.0 offre solo supporto limitato per fornire tipi generati. Le istruzioni seguenti devono essere soddisfatte per una definizione di tipo generato:
@@ -1196,10 +1196,10 @@ Quando si scrivono i provider di tipi, tenere le seguenti regole e limitazioni p
 I suggerimenti seguenti potrebbero risultare utili durante il processo di sviluppo.
 
 
-- `Run Two Instances of Visual Studio.`È possibile sviluppare il provider di tipi in un'istanza e testare il provider negli altri perché il test IDE assumerà un blocco file DLL che impedisce il provider di tipi di ricompilazione. Di conseguenza, è necessario chiudere la seconda istanza di Visual Studio mentre il provider viene compilato nella prima istanza e quindi è necessario aprire nuovamente la seconda istanza dopo il provider di compilazione.
+- `Run Two Instances of Visual Studio.` È possibile sviluppare il provider di tipi in un'istanza e testare il provider negli altri perché il test IDE assumerà un blocco file DLL che impedisce il provider di tipi di ricompilazione. Di conseguenza, è necessario chiudere la seconda istanza di Visual Studio mentre il provider viene compilato nella prima istanza e quindi è necessario aprire nuovamente la seconda istanza dopo il provider di compilazione.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`È possibile richiamare i provider di tipi con gli strumenti seguenti:
+- `Debug type providers by using invocations of fsc.exe.` È possibile richiamare i provider di tipi con gli strumenti seguenti:
 <br />
   - FSC.exe (compilatore della riga di comando di F #)
 <br />

@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva alle stringhe interpolate - Guida a C#
-description: Questa guida introduttiva sulle stringhe interpolate spiega come scrivere il codice C# per includere il risultato di un'espressione in una stringa di dimensioni maggiori.
+title: Esercitazione sulle stringhe interpolate - Guide introduttive locali per C#
+description: Questa guida introduttiva sulle stringhe interpolate spiega come scrivere codice C# per includere il risultato di un'espressione in una stringa di dimensioni maggiori.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Stringhe interpolate
 
-Questa guida introduttiva indica come usare le stringhe interpolate in C# per inserire i valori in un'unica stringa di output. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. La guida introduttiva include una serie di lezioni che spiegano come inserire i valori nelle stringhe e applicare formattazioni diverse a tali valori.
+Questa guida introduttiva illustra come usare le stringhe interpolate in C# per inserire i valori in un'unica stringa di output. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice. La guida introduttiva include una serie di lezioni che spiegano come inserire i valori nelle stringhe e applicare formattazioni diverse a tali valori.
 
-Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni. 
+Questa guida introduttiva richiede un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni. 
 
 ## <a name="create-an-interpolated-string"></a>Creare una stringa interpolata
 
@@ -49,7 +49,7 @@ Ora si proveranno altri esempi di stringhe interpolate con altri tipi di dati.
     
 ## <a name="include-different-data-types"></a>Includere tipi di dati diversi
 
-Nella sezione precedente è stata usata una stringa interpolata per inserire una stringa in un'altra stringa. Un'espressione di stringa interpolata può avere qualsiasi tipo di dati. Considerare ad esempio una stringa interpolata con valori di più tipi di dati. 
+Nella sezione precedente è stata usata una stringa interpolata per inserire una stringa in un'altra stringa. Un'espressione di stringa interpolata può avere qualsiasi tipo di dati. Considerare ad esempio una stringa interpolata con valori di tipi di dati diversi. 
     
 L'esempio seguente include espressioni interpolate con un oggetto `Vegetable`, un membro dell'enumerazione `Unit`, un valore <xref:System.DateTime> e un valore <xref:System.Decimal>. Sostituire tutto il codice C# in un editor con il codice seguente e usare il comando `console run` per l'eseguirlo:
 
@@ -162,7 +162,7 @@ L'output è simile al seguente:
 1/11/2018            Hour 09                1,063.34 feet
 ```
 
-È stata completata la guida introduttiva per le stringhe interpolate. 
+È stata completata la guida introduttiva sulle stringhe interpolate. 
     
 È possibile continuare con la guida introduttiva [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 

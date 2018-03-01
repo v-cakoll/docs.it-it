@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva - Numeri in C# - Guida a C#
+title: Esercitazione sui numeri in C# - Guide introduttive locali per C#
 description: "Vengono illustrati i tipi numerici, con le proprietà e i metodi, in C#."
 author: billwagner
 ms.author: wiwagn
@@ -9,13 +9,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>Guida introduttiva ai numeri C# #
+# <a name="numbers-in-c-quickstart"></a>Guida introduttiva per i numeri in C#
 
 Questa guida introduttiva illustra in modo interattivo i tipi di numeri in C#. Si scriveranno piccole quantità di codice, quindi si compilerà ed eseguirà tale codice. La guida introduttiva contiene una serie di lezioni che illustrano l'uso dei numeri e le operazioni matematiche in C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 

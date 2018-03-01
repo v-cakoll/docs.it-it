@@ -1,7 +1,6 @@
 ---
-title: Guida introduttiva - Raccolte - Guida a C#
-description: Imparare a usare C# esplorando la raccolta List in questa guida introduttiva.
-keywords: C#, introduzione, esercitazione, raccolte, List
+title: Esercitazione sulle raccolte - Guide introduttive locali per C#
+description: Imparare a usare C# esplorando la raccolta List in questa esercitazione.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,25 +9,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>Guida introduttiva per C#: raccolte #
+# <a name="c-quickstart-collections"></a>Guida introduttiva per C#: raccolte
 
 Questa guida introduttiva presenta il linguaggio C# e i concetti di base della classe <xref:System.Collections.Generic.List%601>.
 
 Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
 
-## <a name="a-basic-list-example"></a>Esempio di elenco di base.
+## <a name="a-basic-list-example"></a>Esempio di elenco di base
 
 Creare una directory denominata **list-quickstart**. Impostarla come directory corrente ed eseguire `dotnet new console`.
 
 > [!NOTE]
 > Se si è già completato [Get started with .NET in 10 minutes](https://www.microsoft.com/net) (Iniziare a usare .NET in 10 minuti), è possibile continuare a usare l'applicazione myApp appena creata.
- 
+
 Aprire **Program.cs** nell'editor preferito e sostituire il codice esistente con il seguente:
 
 ```csharp
@@ -58,11 +57,11 @@ Questo codice consente di creare un elenco di stringhe, aggiungere tre nomi all'
 Il codice per visualizzare i nomi usa **stringhe interpolate**.  Anteponendo il carattere `$` a `string`, è possibile incorporare il codice C# nella dichiarazione della stringa. La stringa effettiva sostituisce il codice C# con il valore generato. In questo esempio, `{name.ToUpper()}` viene sostituito con ogni nome, convertito in lettere maiuscole, perché è stato chiamato il metodo <xref:System.String.ToUpper%2A>.
 
 L'esplorazione continua nelle prossime lezioni.
-    
+
 ## <a name="modify-list-contents"></a>Modificare il contenuto dell'elenco
 
 La raccolta creata usa il tipo <xref:System.Collections.Generic.List%601>. Questo tipo archivia sequenze di elementi. Il tipo degli elementi viene specificato tra parentesi uncinate.
-    
+
 Un aspetto importante di questo tipo di <xref:System.Collections.Generic.List%601> è che supporta estensioni o riduzioni, consentendo l'aggiunta o la rimozione di elementi. Aggiungere questo codice prima della parentesi `}` di chiusura nel metodo `Main`:
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 Sono stati aggiunti altri due nomi alla fine dell'elenco e ne è stato anche rimosso uno. Salvare il file e digitare `dotnet run` per provare il codice.
-    
+
 <xref:System.Collections.Generic.List%601> consente di fare riferimento a singoli elementi anche in base all'**indice**. Inserire l'indice tra i token `[` e `]` dopo il nome dell'elenco. C# usa il valore 0 per il primo indice. Aggiungere questo codice direttamente sotto il codice appena aggiunto e provarlo:
 
 ```csharp
@@ -91,9 +90,10 @@ Non è possibile accedere a un indice oltre la fine dell'elenco. Tenere presente
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Salvare il file e digitare di nuovo `dotnet run` per visualizzare i risultati.    
+Salvare il file e digitare di nuovo `dotnet run` per visualizzare i risultati.
 
 ## <a name="search-and-sort-lists"></a>Eseguire ricerche negli elenchi e ordinarli
+
 In questi esempi vengono usati elenchi relativamente piccoli, ma le applicazioni reali creano spesso elenchi con molti più elementi, a volte anche migliaia. Per trovare elementi in raccolte di tali dimensioni, è necessario avere la possibilità di eseguire ricerche nell'elenco. Il metodo <xref:System.Collections.Generic.List%601.IndexOf%2A> cerca un elemento e ne restituisce l'indice. Aggiungere questo codice in fondo al metodo `Main`:
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>Elenchi di altri tipi
 
-Finora è stato usato il tipo `string` negli elenchi. Di seguito verrà creato un <xref:System.Collections.Generic.List%601> con un tipo diverso. Per iniziare, creare un set di numeri. 
+Finora è stato usato il tipo `string` negli elenchi. Di seguito verrà creato un <xref:System.Collections.Generic.List%601> con un tipo diverso. Per iniziare, creare un set di numeri.
 
 Aggiungere il codice seguente alla fine del nuovo metodo `Main`:
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Salvare il file e digitare `dotnet run` per visualizzare i risultati. 
+Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 
 > [!TIP]
-> Per concentrarsi solo su questa sezione, è possibile impostare come commento il codice che chiama `WorkingWithStrings();`. Inserire due caratteri `/` prima della chiamata come di seguito: `// WorkingWithStrings();`. 
+> Per concentrarsi solo su questa sezione, è possibile impostare come commento il codice che chiama `WorkingWithStrings();`. Inserire due caratteri `/` prima della chiamata come di seguito: `// WorkingWithStrings();`.
 
 ## <a name="challenge"></a>Esercizio
+
 È il momento di scoprire se è possibile mettere in pratica alcuni dei concetti appresi in questa lezione e in quelle precedenti. Applicare i concetti appresi finora in relazione ai numeri di Fibonacci. Provare a scrivere il codice per generare i primi 20 numeri nella successione. Tenere presente che il 20° numero di Fibonacci è 6765.
 
 ## <a name="complete-challenge"></a>Completare l'esercizio
@@ -218,6 +219,6 @@ Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 
 A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.
 
-È stata completata questa guida introduttiva dedicata agli elenchi. È possibile continuare con la guida introduttiva [Introduzione alle classi](introduction-to-classes.md) nel proprio ambiente di sviluppo.
+Questa guida introduttiva dedicata agli elenchi è stata completata. È possibile continuare con la guida introduttiva [Introduzione alle classi](introduction-to-classes.md) nel proprio ambiente di sviluppo.
 
 Altre informazioni sull'uso del tipo `List` sono disponibili nell'argomento della [Guida di .NET](../../standard/index.md) dedicato alle [raccolte](../../standard/collections/index.md). Questo argomento include anche informazioni su molti altri tipi di raccolta.

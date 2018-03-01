@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Provider di tipi
 
 > [!NOTE]
-Questa guida è stata scritta a partire da F# 3.0 e verrà aggiornata.  Per provider di tipo multipiattaforma aggiornati, vedere [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Questa guida è stata scritta a partire da F# 3.0 e verrà aggiornata.  Per provider di tipo multipiattaforma aggiornati, vedere [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 Un provider di tipi F# è un componente che fornisce tipi, proprietà e metodi da utilizzare in un programma. I provider di tipi sono una parte significativa per il supporto di F# 3.0, per una programmazione con informazioni. La chiave per la programmazione con informazioni è eliminare le barriere per utilizzare le diverse risorse trovate in Internet e negli ambienti aziendali moderni. Una barriera significativa per includere una risorsa di informazioni in un programma è la necessità di rappresentare tali informazioni come tipi, proprietà e metodi da utilizzare nell'ambiente di un linguaggio di programmazione. La scrittura manuale di questi tipi richiede molto tempo ed è difficile da gestire. Un'alternativa comune prevede l'utilizzo di un generatore di codice per aggiungere file al progetto. Tuttavia, i tipi convenzionali per la generazione di codice non si adattano alle modalità esplorative di programmazione supportate da F#, perché il codice generato deve essere sostituito ogni volta che viene modificato un riferimento al servizio.
 

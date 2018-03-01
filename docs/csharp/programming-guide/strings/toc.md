@@ -1,6 +1,4 @@
 # [Stringhe](index.md)
 ## [Procedura: Modificare il contenuto delle stringhe](how-to-modify-string-contents.md)
 ## [Procedura: Confrontare stringhe](how-to-compare-strings.md)
-## [Procedura: Eseguire la ricerca di stringhe usando metodi stringa](how-to-search-strings-using-string-methods.md)
-## [Procedura: Eseguire la ricerca di stringhe usando espressioni regolari](how-to-search-strings-using-regular-expressions.md)
 ## [Procedura: Determinare se una stringa rappresenta un valore numerico](how-to-determine-whether-a-string-represents-a-numeric-value.md)

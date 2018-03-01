@@ -3,45 +3,36 @@ title: Valori restituiti e variabili locali ref (Guida a C#)
 description: Informazioni su come definire e usare valori restituiti e variabili locali ref
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
-ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
-A partire da C# 7, C# supporta i valori restituiti di riferimento (valori restituiti ref). Un valore restituito di riferimento consente a un metodo di restituire a un chiamante un riferimento a un oggetto, anziché un valore. Il chiamante può quindi scegliere di trattare l'oggetto restituito come se fosse stato restituito tramite un valore o un riferimento. Un valore restituito di riferimento che il chiamante gestisce come un riferimento anziché come un valore è una variabile locale ref.
+A partire da C# 7, C# supporta i valori restituiti di riferimento (valori restituiti ref). Un valore restituito di riferimento consente a un metodo di restituire a un chiamante un riferimento a una variabile, invece di un valore. Il chiamante può quindi scegliere di trattare la variabile come se fosse stata restituita da un valore o un riferimento. Il chiamante può creare una nuova variabile che è di per sé un riferimento al valore restituito, chiamata variabile locale ref.
 
 ## <a name="what-is-a-reference-return-value"></a>Che cos'è un valore restituito di riferimento?
 
-La maggior parte degli sviluppatori ha familiarità con il passaggio di un argomento a un metodo chiamato *tramite un riferimento*. Un elenco di argomenti del metodo chiamato include un valore passato tramite un riferimento e tutte le modifiche apportate al relativo valore dal metodo chiamato vengono restituite al chiamante. Un *valore restituito di riferimento* è l'opposto:
+La maggior parte degli sviluppatori ha familiarità con il passaggio di un argomento a un metodo chiamato *tramite un riferimento*. Un elenco di argomenti del metodo chiamato include una variabile passata da un riferimento e tutte le modifiche apportate al relativo valore dal metodo chiamato vengono osservate dal chiamante. Un *valore restituito di riferimento* indica che un metodo restituisce un *riferimento* (o un alias) a una variabile il cui ambito include il metodo e la cui durata deve estendersi oltre la restituzione del metodo. Le modifiche effettuate dal chiamante al valore restituito del metodo vengono apportate alla variabile restituita dal metodo.
 
-- Il valore restituito del metodo chiamato è un riferimento, anziché un argomento passato al metodo.
+La dichiarazione che un metodo restituisce un *valore restituito di riferimento* indica che il metodo restituisce un alias a una variabile. La finalità della progettazione è spesso quella di fare in modo che il codice chiamante abbia accesso a tale variabile tramite l'alias, inclusa la possibilità di modificarla. Ne consegue che i metodi restituiti per riferimento non possono avere il tipo restituito `void`.
 
-- Il chiamante, anziché il metodo chiamato, può modificare il valore restituito dal metodo.
+Esistono alcune restrizioni per l'espressione che un metodo può restituire come valore restituito di riferimento. Sono inclusi:
 
-- Invece di riflettere le modifiche all'argomento nello stato dell'oggetto sul chiamante, le modifiche al valore restituito del metodo dal chiamante vengono riflesse nello stato dell'oggetto di cui è stato chiamato il metodo.
+- Il valore restituito deve avere una durata che si estende oltre l'esecuzione del metodo. In altre parole, non può essere una variabile locale nel metodo che la restituisce. Può essere un'istanza o un campo statico di una classe oppure un argomento passato al metodo. Se si tenta di restituire una variabile locale, viene generato l'errore del compilatore CS8168, "Non è possibile restituire la variabile locale 'obj' per riferimento perché non è una variabile locale ref".
 
-I valori restituiti di riferimento possono produrre codice più compatto, nonché consentire a un oggetto di esporre solo i singoli elementi di dati, ad esempio un elemento di matrice, che sono di interesse per il chiamante. In tal modo si riduce la probabilità che il chiamante modifichi inavvertitamente lo stato dell'oggetto.
+- Il valore restituito non può essere il valore letterale `null`. Se si tenta di restituire `null`, viene generato l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
-Esistono alcune restrizioni per il valore che un metodo può restituire come valore restituito di riferimento, tra cui:
-
-- Il valore restituito non può essere `void`. Se si tenta di definire un metodo con un valore restituito di riferimento `void`, viene generato l'errore del compilatore CS1547, "Non è possibile usare la parola chiave 'void' in questo contesto".
+   Un metodo con un valore restituito ref può restituire un alias a una variabile il cui valore è attualmente il valore null (senza istanza) o un [tipo nullable](../nullable-types/index.md) per un tipo valore.
  
-- Il valore restituito non può essere una variabile locale nel metodo che lo restituisce: deve avere un ambito all'esterno del metodo che lo restituisce. Può essere un'istanza o un campo statico di una classe oppure un argomento passato al metodo. Se si tenta di restituire una variabile locale, viene generato l'errore del compilatore CS8168, "Non è possibile restituire la variabile locale 'obj' per riferimento perché non è una variabile locale ref".
-
-- Il valore restituito non può essere `null`. Se si tenta di restituire `null`, viene generato l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
-
-   Se un metodo con un valore restituito ref deve restituire un valore null, è possibile restituire un valore null (privo di istanze) per un tipo riferimento o un [tipo nullable](../nullable-types/index.md) per un tipo valore.
- 
-- Il valore restituito non può essere una costante, un membro di enumerazione o una proprietà di un oggetto `class` o `struct`. Se si tenta di restituire questi valori, viene generato l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
+- Il valore restituito non può essere una costante, un membro di enumerazione, il valore restituito per valore da una proprietà o un metodo di un oggetto `class` o `struct`. Se si tenta di restituire questi valori, viene generato l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
 Inoltre, poiché un metodo asincrono può eseguire la restituzione prima di aver terminato l'esecuzione mentre il relativo valore restituito non è ancora noto, i valori restituiti di riferimento non sono consentiti nei metodi asincroni.
  
@@ -53,7 +44,7 @@ Inoltre, poiché un metodo asincrono può eseguire la restituzione prima di aver
 public ref Person GetContactInformation(string fname, string lname);
 ```
 
-Inoltre, il nome dell'oggetto restituito da ciascuna istruzione [return](../../language-reference/keywords/return.md) nel corpo del metodo deve essere preceduto dalla parola chiave [ref](../../language-reference/keywords/ref.md). Ad esempio, l'istruzione `return` seguente restituisce un oggetto `Person` denominato `p` per riferimento:
+Inoltre, il nome dell'oggetto restituito da ciascuna istruzione [return](../../language-reference/keywords/return.md) nel corpo del metodo deve essere preceduto dalla parola chiave [ref](../../language-reference/keywords/ref.md). Ad esempio, l'istruzione `return` seguente restituisce un riferimento a un oggetto `Person` denominato `p`:
 
 ```csharp
 return ref p;
@@ -61,25 +52,40 @@ return ref p;
 
 ## <a name="consuming-a-ref-return-value"></a>Uso di un valore restituito ref
 
-Un chiamante può gestire un valore restituito ref in due modi:
+Il valore restituito ref è un alias per un'altra variabile nell'ambito del metodo chiamato. È possibile interpretare qualsiasi uso del valore restituito ref come uso della variabile di cui effettua l'aliasing:
 
-- Come un normale valore restituito per valore da un metodo. Il chiamante può scegliere di ignorare il fatto che il valore restituito è un valore restituito di riferimento. In questo caso, tutte le modifiche apportate al valore restituito dalla chiamata al metodo non vengono riflesse nello stato del tipo chiamato. Se il valore restituito è un tipo valore, tutte le modifiche apportate al valore restituito dalla chiamata al metodo non vengono riflesse nello stato del tipo chiamato.
+- Quando si assegna il valore, si assegna un valore alla variabile di cui effettua l'aliasing.
+- Quando si legge il valore, si legge il valore della variabile di cui effettua l'aliasing.
+- Se lo si restituisce *per riferimento*, si restituisce un alias alla stessa variabile.
+- Se lo si passa a un altro metodo *per riferimento*, si passa un riferimento alla variabile di cui effettua l'aliasing.
+- Quando si crea un alias [locale ref](#ref-local), si crea un nuovo alias per la stessa variabile.
 
-- Come un valore restituito di riferimento. Il chiamante deve definire la variabile a cui è assegnato il valore restituito di riferimento come una [variabile locale ref](#ref-local) e tutte le modifiche apportate al valore restituito dalla chiamata al metodo vengono riflesse nello stato del tipo chiamato. 
 
 ## <a name="ref-locals"></a>Variabili locali ref
 
-Per gestire il valore restituito di riferimento come un riferimento, il chiamante deve dichiarare il valore come una *variabile locale ref* usando la parola chiave `ref`. Ad esempio, se il valore restituito dal metodo `Person.GetContactInfomation` deve essere usato come un riferimento anziché come un valore, la chiamata al metodo avrà il seguente aspetto:
+Si supponga che il metodo `GetContactInformation` venga dichiarato come valore restituito ref:
+
+```csharp
+public ref Person GetContactInformation(string fname, string lname)
+```
+
+Un'assegnazione per valore legge il valore di una variabile e la assegna a una nuova variabile:
+
+```csharp
+Person p = contacts.GetContactInformation("Brandie", "Best");
+```
+
+L'assegnazione precedente dichiara `p` come variabile locale. Il valore iniziale viene copiato dalla lettura del valore restituito da `GetContactInformation`. Eventuali assegnazioni future a `p` non modificheranno il valore della variabile restituita da `GetContactInformation`. La variabile `p` non è più un alias per la variabile restituita.
+
+Si dichiara una variabile *locale ref* per copiare l'alias nel valore originale. Nell'assegnazione seguente `p` è un alias per la variabile restituita da `GetContactInformation`.
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Si noti che la parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore". 
- 
-Le successive modifiche all'oggetto `Person` restituito dal metodo vengono riflesse nell'oggetto `contacts`.
+L'utilizzo successivo di `p` è uguale all'utilizzo della variabile restituita da `GetContactInformation` perché `p` è un alias per tale variabile. Le modifiche apportate a `p` modificano anche la variabile restituita da `GetContactInformation`.
 
-Se `p` non è definito come una variabile locale ref usando la parola chiave `ref`, qualsiasi modifica apportata a `p` dal chiamante non viene riflessa nell'oggetto `contacts`.
+Si noti che la parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore". 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Valori restituiti e variabili locali ref: un esempio
 

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>Procedura dettagliata: Accesso a un database SQL tramite provider di tipi
 
 > [!NOTE]
-Questa guida è stata scritta per F # 3.0 e verrà aggiornata.  Per provider di tipo multipiattaforma aggiornati, vedere [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Questa guida è stata scritta per F # 3.0 e verrà aggiornata.  Per provider di tipo multipiattaforma aggiornati, vedere [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 I collegamenti di riferimento API richiederà a MSDN.  Il riferimento all'API in Microsoft Docs (docs.microsoft.com) non è completo.
@@ -96,7 +96,7 @@ In questo passaggio viene creato un provider di tipi per lo schema del database.
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>Per configurare il provider di tipi da una connessione diretta del database
 
-Esistono due righe critiche del codice necessarie per creare i tipi che è possibile utilizzare per un database SQL tramite il provider di tipi di query. Innanzitutto, creare un'istanza del provider di tipi. A tale scopo, creare l'aspetto seguente abbreviazione di tipo per un `SqlDataConnection` con un parametro generico statico. `SqlDataConnection`è un provider di tipi SQL e non deve essere confuso con `SqlConnection` tipo che è utilizzato nella programmazione di ADO.NET. Se si dispone di un database che si desidera connettersi e dispone di una stringa di connessione, usare il codice seguente per richiamare il provider di tipi. Sostituire con la propria stringa di connessione per la stringa di esempio specificata. Ad esempio, se il server MYSERVER e l'istanza del database è l'istanza, il nome del database è MyDatabase e si desidera utilizzare l'autenticazione di Windows per accedere al database, quindi la stringa di connessione sarebbe quello specificato nell'esempio di codice seguente.
+Esistono due righe critiche del codice necessarie per creare i tipi che è possibile utilizzare per un database SQL tramite il provider di tipi di query. Innanzitutto, creare un'istanza del provider di tipi. A tale scopo, creare l'aspetto seguente abbreviazione di tipo per un `SqlDataConnection` con un parametro generico statico. `SqlDataConnection` è un provider di tipi SQL e non deve essere confuso con `SqlConnection` tipo che è utilizzato nella programmazione di ADO.NET. Se si dispone di un database che si desidera connettersi e dispone di una stringa di connessione, usare il codice seguente per richiamare il provider di tipi. Sostituire con la propria stringa di connessione per la stringa di esempio specificata. Ad esempio, se il server MYSERVER e l'istanza del database è l'istanza, il nome del database è MyDatabase e si desidera utilizzare l'autenticazione di Windows per accedere al database, quindi la stringa di connessione sarebbe quello specificato nell'esempio di codice seguente.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">

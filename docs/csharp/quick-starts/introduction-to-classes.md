@@ -1,5 +1,5 @@
 ---
-title: Guide introduttive - Introduzione alle classi - Guida a C#
+title: Esercitazione introduttiva sulle classi - Guide introduttive locali per C#
 description: Creare il primo programma C# ed esplorare i concetti della programmazione orientata a oggetti
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>Introduzione alle classi
 
-Questa guida introduttiva prevede la disponibilità di un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
+Questa guida introduttiva richiede un computer da usare per lo sviluppo. L'argomento [Get started with .NET in 10 minutes](https://www.microsoft.com/net/core) (Iniziare a usare .NET in 10 minuti) contiene istruzioni per la configurazione dell'ambiente di sviluppo locale in Mac, PC o Linux. Una breve panoramica dei comandi usati è disponibile nell'[introduzione alle guide introduttive locali](local-environment.md) che contiene anche collegamenti ad altre informazioni.
 
 ## <a name="create-your-application"></a>Creare l'applicazione
 
@@ -76,7 +76,7 @@ namespace classes
 }
 ```
 
-Prima di procedere, è opportuno esaminare il codice finora creato.  La dichiarazione `namespace` offre un modo per organizzare logicamente il codice. Il codice per questa guida introduttiva è relativamente contenuto, quindi verrà inserito tutto in un solo spazio dei nomi. 
+Prima di procedere, è opportuno esaminare il codice finora creato.  La dichiarazione `namespace` offre un modo per organizzare logicamente il codice. Il codice per questa guida introduttiva è relativamente ridotto, quindi verrà inserito tutto in un solo spazio dei nomi. 
 
 `public class BankAccount` definisce la classe, o tipo, che si sta creando. Tutti gli elementi racchiusi tra le parentesi `{` e `}` che seguono la dichiarazione della classe definiscono il comportamento della classe. Esistono cinque ***membri*** della classe `BankAccount`. I primi tre sono ***proprietà***. Le proprietà sono elementi di dati e possono contenere codice per l'applicazione della convalida o di altre regole. Gli ultimi due sono ***metodi***. I metodi sono blocchi di codice che eseguono una singola funzione. La lettura dei nomi di ogni membro dovrebbe fornire informazioni sufficienti per consentire all'utente o a un altro sviluppatore di capire gli scopi della classe.
 
@@ -217,4 +217,4 @@ Digitare `dotnet run` per visualizzare i risultati.
 
 Se necessario, è possibile visualizzare il codice sorgente per questa guida introduttiva nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
 
-Sono state così completate tutte le guide introduttive. Per continuare con la formazione, è possibile provare queste [esercitazioni](../tutorials/index.md).
+Sono state completate tutte le guide introduttive. Per continuare con la formazione, è possibile provare queste [esercitazioni](../tutorials/index.md).
