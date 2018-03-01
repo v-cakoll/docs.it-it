@@ -2,73 +2,74 @@
 title: Introduzione a Visual Basic
 ms.date: 08/10/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="get-started-with-visual-basic"></a><span data-ttu-id="9201f-102">Introduzione a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9201f-102">Get started with Visual Basic</span></span>
-<span data-ttu-id="9201f-103">Questa sezione della documentazione fornisce informazioni introduttive per lo sviluppo di applicazione di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9201f-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  
+# <a name="get-started-with-visual-basic"></a><span data-ttu-id="5fa25-102">Introduzione a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5fa25-102">Get started with Visual Basic</span></span>
+<span data-ttu-id="5fa25-103">Questa sezione della documentazione fornisce informazioni introduttive per lo sviluppo di applicazione di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5fa25-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  
   
-## <a name="get-started-with-visual-basic-and-net-core"></a><span data-ttu-id="9201f-104">Introduzione a Visual Basic e .NET Core</span><span class="sxs-lookup"><span data-stu-id="9201f-104">Get started with Visual Basic and .NET Core</span></span>
+## <a name="get-started-with-visual-basic-and-net-core"></a><span data-ttu-id="5fa25-104">Introduzione a Visual Basic e .NET Core</span><span class="sxs-lookup"><span data-stu-id="5fa25-104">Get started with Visual Basic and .NET Core</span></span>
 
-[<span data-ttu-id="9201f-105">Creazione di un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9201f-105">Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md)
+[<span data-ttu-id="5fa25-105">Creazione di un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="5fa25-105">Build a Visual Basic Hello World application with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md)
 
-[<span data-ttu-id="9201f-106">Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9201f-106">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md)  
+[<span data-ttu-id="5fa25-106">Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="5fa25-106">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md)  
 
-## <a name="additional-information"></a><span data-ttu-id="9201f-107">Informazioni aggiuntive</span><span class="sxs-lookup"><span data-stu-id="9201f-107">Additional information</span></span>
+## <a name="additional-information"></a><span data-ttu-id="5fa25-107">Informazioni aggiuntive</span><span class="sxs-lookup"><span data-stu-id="5fa25-107">Additional information</span></span>
 
-<span data-ttu-id="9201f-108">[Novità in Visual Basic](whats-new.md) </span><span class="sxs-lookup"><span data-stu-id="9201f-108">[What's new for Visual Basic](whats-new.md) </span></span>  
-<span data-ttu-id="9201f-109">Elenca le nuove funzionalità di ogni versione di Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="9201f-109">Lists new features in each of the versions of Visual Basic .NET.</span></span>
+<span data-ttu-id="5fa25-108">[Novità in Visual Basic](whats-new.md) </span><span class="sxs-lookup"><span data-stu-id="5fa25-108">[What's new for Visual Basic](whats-new.md) </span></span>  
+<span data-ttu-id="5fa25-109">Elenca le nuove funzionalità di ogni versione di Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="5fa25-109">Lists new features in each of the versions of Visual Basic .NET.</span></span>
 
-[<span data-ttu-id="9201f-110">Modifiche importanti apportate a Visual Basic in Visual Studio </span><span class="sxs-lookup"><span data-stu-id="9201f-110">Visual Basic Breaking Changes in Visual Studio</span></span>](breaking-changes-in-visual-studio.md)  
-<span data-ttu-id="9201f-111">Vengono elencate le modifiche in questa versione che potrebbero impedire la compilazione di un'applicazione o che potrebbero modificarne il comportamento in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="9201f-111">Lists changes in this release that might prevent an application from compiling or change its run-time behavior.</span></span>  
+[<span data-ttu-id="5fa25-110">Modifiche importanti apportate a Visual Basic in Visual Studio </span><span class="sxs-lookup"><span data-stu-id="5fa25-110">Visual Basic Breaking Changes in Visual Studio</span></span>](breaking-changes-in-visual-studio.md)  
+<span data-ttu-id="5fa25-111">Vengono elencate le modifiche in questa versione che potrebbero impedire la compilazione di un'applicazione o che potrebbero modificarne il comportamento in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="5fa25-111">Lists changes in this release that might prevent an application from compiling or change its run-time behavior.</span></span>  
   
-[<span data-ttu-id="9201f-112">Risorse aggiuntive per i programmatori Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9201f-112">Additional Resources for Visual Basic Programmers</span></span>](additional-resources.md)  
-<span data-ttu-id="9201f-113">Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai problemi più comuni.</span><span class="sxs-lookup"><span data-stu-id="9201f-113">Provides a list of Web sites and newsgroups that can help you find answers to common problems.</span></span>  
+[<span data-ttu-id="5fa25-112">Risorse aggiuntive per i programmatori Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5fa25-112">Additional Resources for Visual Basic Programmers</span></span>](additional-resources.md)  
+<span data-ttu-id="5fa25-113">Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai problemi più comuni.</span><span class="sxs-lookup"><span data-stu-id="5fa25-113">Provides a list of Web sites and newsgroups that can help you find answers to common problems.</span></span>  
 
-## <a name="develop-net-core-applications-with-visual-basic"></a><span data-ttu-id="9201f-114">Sviluppare applicazioni .NET Core con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9201f-114">Develop .NET Core applications with Visual Basic</span></span>
+## <a name="develop-net-core-applications-with-visual-basic"></a><span data-ttu-id="5fa25-114">Sviluppare applicazioni .NET Core con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5fa25-114">Develop .NET Core applications with Visual Basic</span></span>
 
-[<span data-ttu-id="9201f-115">Compilare un'app Hello World usando Visual Basic con .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9201f-115">Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md) 
+[<span data-ttu-id="5fa25-115">Compilare un'app Hello World usando Visual Basic con .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="5fa25-115">Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-with-visual-studio.md) 
 
-[<span data-ttu-id="9201f-116">Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9201f-116">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md) 
+[<span data-ttu-id="5fa25-116">Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="5fa25-116">Build a class library with Visual Basic and .NET Core in Visual Studio 2017</span></span>](../../core/tutorials/vb-library-with-visual-studio.md) 
 
-## <a name="see-also"></a><span data-ttu-id="9201f-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9201f-117">See also</span></span>
- [<span data-ttu-id="9201f-118">Ottenere Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9201f-118">Get Visual Basic</span></span>](https://www.visualstudio.com/downloads/)  
- <span data-ttu-id="9201f-119">Fornisce i collegamenti ai download per le versioni di Visual Studio che includono il supporto di Visual Basic, comprese le versioni gratuite.</span><span class="sxs-lookup"><span data-stu-id="9201f-119">Provides download links for Visual Studio versions that include Visual basic support, including free versions.</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5fa25-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5fa25-117">See also</span></span>
+ [<span data-ttu-id="5fa25-118">Ottenere Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5fa25-118">Get Visual Basic</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
+ <span data-ttu-id="5fa25-119">Fornisce i collegamenti ai download per le versioni di Visual Studio che includono il supporto di Visual Basic, comprese le versioni gratuite.</span><span class="sxs-lookup"><span data-stu-id="5fa25-119">Provides download links for Visual Studio versions that include Visual basic support, including free versions.</span></span>  
 
- [<span data-ttu-id="9201f-120">Concetti di base su Visual Basic per principianti</span><span class="sxs-lookup"><span data-stu-id="9201f-120">Visual Basic Fundamentals for Absolute Beginners</span></span>](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
- <span data-ttu-id="9201f-121">Corso Microsoft Virtual Academy che illustra le nozioni di base della programmazione con Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9201f-121">Microsoft Virtual Academy course that teaches the fundamentals of Visual Basic programming.</span></span>
+ [<span data-ttu-id="5fa25-120">Concetti di base su Visual Basic per principianti</span><span class="sxs-lookup"><span data-stu-id="5fa25-120">Visual Basic Fundamentals for Absolute Beginners</span></span>](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
+ <span data-ttu-id="5fa25-121">Corso Microsoft Virtual Academy che illustra le nozioni di base della programmazione con Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5fa25-121">Microsoft Virtual Academy course that teaches the fundamentals of Visual Basic programming.</span></span>
 
- [<span data-ttu-id="9201f-122">Programmazione orientata ad oggetti</span><span class="sxs-lookup"><span data-stu-id="9201f-122">Object-Oriented Programming</span></span>](../programming-guide/concepts/object-oriented-programming.md)  
- <span data-ttu-id="9201f-123">Vengono forniti collegamenti a pagine in cui è introdotta la programmazione orientata a oggetti, la creazione di oggetti personalizzati e l'utilizzo degli oggetti per semplificare l'attività di codifica.</span><span class="sxs-lookup"><span data-stu-id="9201f-123">Provides links to pages that introduce object-oriented programming and describe how to create your own objects and how to use objects to simplify your coding.</span></span>  
+ [<span data-ttu-id="5fa25-122">Programmazione orientata ad oggetti</span><span class="sxs-lookup"><span data-stu-id="5fa25-122">Object-Oriented Programming</span></span>](../programming-guide/concepts/object-oriented-programming.md)  
+ <span data-ttu-id="5fa25-123">Vengono forniti collegamenti a pagine in cui è introdotta la programmazione orientata a oggetti, la creazione di oggetti personalizzati e l'utilizzo degli oggetti per semplificare l'attività di codifica.</span><span class="sxs-lookup"><span data-stu-id="5fa25-123">Provides links to pages that introduce object-oriented programming and describe how to create your own objects and how to use objects to simplify your coding.</span></span>  
   
- [<span data-ttu-id="9201f-124">Esempi</span><span class="sxs-lookup"><span data-stu-id="9201f-124">Samples</span></span>](../../visual-basic/sample-applications.md)  
- <span data-ttu-id="9201f-125">Vengono forniti i collegamenti ai codici di esempio in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9201f-125">Provides links to sample code in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
+ [<span data-ttu-id="5fa25-124">Esempi</span><span class="sxs-lookup"><span data-stu-id="5fa25-124">Samples</span></span>](../../visual-basic/sample-applications.md)  
+ <span data-ttu-id="5fa25-125">Vengono forniti i collegamenti ai codici di esempio in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5fa25-125">Provides links to sample code in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [<span data-ttu-id="9201f-126">Procedure dettagliate</span><span class="sxs-lookup"><span data-stu-id="9201f-126">Walkthroughs</span></span>](../../visual-basic/walkthroughs.md)  
- <span data-ttu-id="9201f-127">Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9201f-127">Provides a list of Help pages that demonstrate aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
+ [<span data-ttu-id="5fa25-126">Procedure dettagliate</span><span class="sxs-lookup"><span data-stu-id="5fa25-126">Walkthroughs</span></span>](../../visual-basic/walkthroughs.md)  
+ <span data-ttu-id="5fa25-127">Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5fa25-127">Provides a list of Help pages that demonstrate aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
- [<span data-ttu-id="9201f-128">Comunicazioni con Microsoft</span><span class="sxs-lookup"><span data-stu-id="9201f-128">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)  
- <span data-ttu-id="9201f-129">Vengono fornite informazioni su come richiedere assistenza e inviare commenti e suggerimenti.</span><span class="sxs-lookup"><span data-stu-id="9201f-129">Covers how to receive support and give feedback.</span></span>  
+ <span data-ttu-id="5fa25-128">[Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)</span><span class="sxs-lookup"><span data-stu-id="5fa25-128">[Talk to Us](/visualstudio/ide/talk-to-us)</span></span>  
+ <span data-ttu-id="5fa25-129">Vengono fornite informazioni su come richiedere assistenza e inviare commenti e suggerimenti.</span><span class="sxs-lookup"><span data-stu-id="5fa25-129">Covers how to receive support and give feedback.</span></span>  
   
- [<span data-ttu-id="9201f-130">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9201f-130">Visual Studio</span></span>](/visualstudio/)  
- <span data-ttu-id="9201f-131">Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9201f-131">Provides links into the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] documentation.</span></span>  
+ [<span data-ttu-id="5fa25-130">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5fa25-130">Visual Studio</span></span>](/visualstudio/)  
+ <span data-ttu-id="5fa25-131">Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5fa25-131">Provides links into the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] documentation.</span></span>  
   
- <span data-ttu-id="9201f-132">[C#](../../csharp/index.md) Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9201f-132">[C#](../../csharp/index.md) Provides links into the documentation on application development with [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span></span>  
+ <span data-ttu-id="5fa25-132">[C#](../../csharp/index.md) Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5fa25-132">[C#](../../csharp/index.md) Provides links into the documentation on application development with [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span></span>  
   
- [<span data-ttu-id="9201f-133">Visual C++</span><span class="sxs-lookup"><span data-stu-id="9201f-133">Visual C++</span></span>](/cpp/)  
- <span data-ttu-id="9201f-134">Vengono forniti collegamenti alla documentazione di Visual C++.</span><span class="sxs-lookup"><span data-stu-id="9201f-134">Provides links into the Visual C++ documentation.</span></span>  
+ [<span data-ttu-id="5fa25-133">Visual C++</span><span class="sxs-lookup"><span data-stu-id="5fa25-133">Visual C++</span></span>](/cpp/)  
+ <span data-ttu-id="5fa25-134">Vengono forniti collegamenti alla documentazione di Visual C++.</span><span class="sxs-lookup"><span data-stu-id="5fa25-134">Provides links into the Visual C++ documentation.</span></span>  
   
- [<span data-ttu-id="9201f-135">Sviluppo di Office e SharePoint</span><span class="sxs-lookup"><span data-stu-id="9201f-135">Office and SharePoint Development</span></span>](https://msdn.microsoft.com/library/d2tx7z6d)  
- <span data-ttu-id="9201f-136">Vengono fornite informazioni sull'utilizzo di Microsoft Office e [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come parte di un'applicazione aziendale.</span><span class="sxs-lookup"><span data-stu-id="9201f-136">Provides information about using Microsoft Office and [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] as part of a business application.</span></span>
+ [<span data-ttu-id="5fa25-135">Sviluppo di Office e SharePoint</span><span class="sxs-lookup"><span data-stu-id="5fa25-135">Office and SharePoint Development</span></span>](https://msdn.microsoft.com/library/d2tx7z6d)  
+ <span data-ttu-id="5fa25-136">Vengono fornite informazioni sull'utilizzo di Microsoft Office e [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come parte di un'applicazione aziendale.</span><span class="sxs-lookup"><span data-stu-id="5fa25-136">Provides information about using Microsoft Office and [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] as part of a business application.</span></span>
