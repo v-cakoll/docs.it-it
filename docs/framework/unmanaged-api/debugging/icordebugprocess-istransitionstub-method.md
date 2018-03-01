@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.IsTransitionStub
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::IsTransitionStub
+api_name:
+- ICorDebugProcess.IsTransitionStub
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::IsTransitionStub
 helpviewer_keywords:
 - ICorDebugProcess::IsTransitionStub method [.NET Framework debugging]
 - IsTransitionStub method [.NET Framework debugging]
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9fe38cf5f53c2514b845238c1d52fa12df526fdd
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT IsTransitionStub(
  <span data-ttu-id="89a56-106">[in] Oggetto `CORDB_ADDRESS` valore che specifica l'indirizzo in questione.</span><span class="sxs-lookup"><span data-stu-id="89a56-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="89a56-107">[out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causerà una transizione a codice gestito; in caso contrario *`pbTransitionStub` è `false`.</span><span class="sxs-lookup"><span data-stu-id="89a56-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise *`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="89a56-107">[out] Un puntatore a un valore booleano che è `true` se l'indirizzo specificato si trova all'interno di uno stub che causerà una transizione a codice gestito; in caso contrario \*`pbTransitionStub` è `false`.</span><span class="sxs-lookup"><span data-stu-id="89a56-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="89a56-108">Note</span><span class="sxs-lookup"><span data-stu-id="89a56-108">Remarks</span></span>  
  <span data-ttu-id="89a56-109">Il `IsTransitionStub` metodo può essere usato da passo a passo il codice non gestito per decidere quando restituire il controllo per il gestore di istruzioni gestito.</span><span class="sxs-lookup"><span data-stu-id="89a56-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
