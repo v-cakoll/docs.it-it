@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Pool di thread gestiti
 La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool di thread di lavoro gestiti dal sistema, per consentire di concentrarsi sulle attività dell'applicazione anziché sulla gestione dei thread. Se si dispone di attività brevi che richiedono l'elaborazione in background, il pool di thread gestiti consente di sfruttare in modo semplice i vantaggi di più thread. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è ad esempio possibile creare oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> che eseguono attività asincrone nei thread del pool.  
@@ -52,7 +55,7 @@ La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool d
 -   È necessario disporre di un'identità stabile associata al thread o dedicare un thread a un'attività.  
   
 ## <a name="thread-pool-characteristics"></a>Caratteristiche del pool di thread  
- I thread del pool sono thread in background. Vedere [in primo piano e i thread in Background](../../../docs/standard/threading/foreground-and-background-threads.md). Ogni thread usa la dimensione dello stack predefinita, viene eseguito con la priorità predefinita e si trova in un apartment a thread multipli.  
+ I thread del pool sono thread in background. Vedere [Thread in primo piano e in background](../../../docs/standard/threading/foreground-and-background-threads.md). Ogni thread usa la dimensione dello stack predefinita, viene eseguito con la priorità predefinita e si trova in un apartment a thread multipli.  
   
  È presente un solo pool di thread per processo.  
   
@@ -65,7 +68,7 @@ La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool d
   
 -   Common Language Runtime o un processo host termina il thread.  
   
- Per ulteriori informazioni, vedere [eccezioni in thread gestiti](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+ Per altre informazioni, vedere [Eccezioni in thread gestiti](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
 >  In .NET Framework versioni 1.0 e 1.1, Common Language Runtime intercetta automaticamente le eccezioni non gestite nei thread del pool. Ciò potrebbe danneggiare lo stato dell'applicazione e anche provocare il blocco delle applicazioni e il debug potrebbe risultare molto difficoltoso.  
@@ -90,10 +93,10 @@ La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool d
 >  È possibile usare il metodo <xref:System.Threading.ThreadPool.SetMinThreads%2A> per aumentare il numero minimo di thread inattivi. Tuttavia, un aumento non necessario di questi valori può provocare problemi di prestazioni. Se si avviano troppe attività contemporaneamente, potrebbero sembrare tutte lente. Nella maggior parte dei casi, il pool di thread offre prestazioni migliori con il proprio algoritmo per l'allocazione dei thread.  
   
 ## <a name="skipping-security-checks"></a>Ignorare i controlli di sicurezza  
- Il pool di thread fornisce anche i metodi <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> e <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Usare questi metodi solo quando si è certi che lo stack del chiamante non sia rilevante per i controlli di sicurezza svolti durante l'esecuzione dell'attività in coda. <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>e <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> entrambi di acquisire lo stack del chiamante, che viene unito nello stack del thread del pool quando il thread inizia a eseguire un'attività. Se è necessario un controllo di sicurezza, deve essere controllato l'intero stack. Sebbene il controllo garantisca la sicurezza, comporta anche una riduzione delle prestazioni.  
+ Il pool di thread fornisce anche i metodi <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> e <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>. Usare questi metodi solo quando si è certi che lo stack del chiamante non sia rilevante per i controlli di sicurezza svolti durante l'esecuzione dell'attività in coda. I metodi <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> e <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> consentono entrambi di acquisire lo stack del chiamante, che viene unito nello stack del thread del pool quando il thread inizia a eseguire un'attività. Se è necessario un controllo di sicurezza, deve essere controllato l'intero stack. Sebbene il controllo garantisca la sicurezza, comporta anche una riduzione delle prestazioni.  
   
 ## <a name="using-the-thread-pool"></a>Uso del pool di thread  
- A partire dal [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il modo più semplice per usare il pool di thread consiste nell'utilizzare il [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). Per impostazione predefinita, i tipi di librerie parallele come <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> usano i thread del pool per eseguire le attività. È anche possibile usare il pool di thread chiamando <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> dal codice gestito (o `CorQueueUserWorkItem` dal codice non gestito) e passando un delegato <xref:System.Threading.WaitCallback> che rappresenta il metodo che esegue l'attività. Un altro metodo per usare il pool di thread consiste nell'accodare gli elementi di lavoro correlati a un'operazione di attesa usando il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> e passando un oggetto <xref:System.Threading.WaitHandle> che, quando viene segnalato o in caso di time out, chiama il metodo rappresentato dal delegato <xref:System.Threading.WaitOrTimerCallback>. I thread del pool vengono usati per richiamare i metodi di callback.  
+ A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], il modo più semplice per usare il pool di thread consiste nell'usare [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md). Per impostazione predefinita, i tipi di librerie parallele come <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> usano i thread del pool per eseguire le attività. È anche possibile usare il pool di thread chiamando <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> dal codice gestito (o `CorQueueUserWorkItem` dal codice non gestito) e passando un delegato <xref:System.Threading.WaitCallback> che rappresenta il metodo che esegue l'attività. Un altro metodo per usare il pool di thread consiste nell'accodare gli elementi di lavoro correlati a un'operazione di attesa usando il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> e passando un oggetto <xref:System.Threading.WaitHandle> che, quando viene segnalato o in caso di time out, chiama il metodo rappresentato dal delegato <xref:System.Threading.WaitOrTimerCallback>. I thread del pool vengono usati per richiamare i metodi di callback.  
   
 ## <a name="threadpool-examples"></a>Esempi di ThreadPool  
  Gli esempi di codice in questa sezione illustrano il pool di thread usando la classe <xref:System.Threading.Tasks.Task>, il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> e il metodo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>.  
@@ -108,7 +111,7 @@ La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool d
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>Esecuzione di attività asincrone con Task Parallel Library  
- L'esempio di codice seguente mostra come creare e usare un oggetto <xref:System.Threading.Tasks.Task> chiamando il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Per un esempio che utilizza il <xref:System.Threading.Tasks.Task%601> classe per restituire un valore da un'attività asincrona, vedere [procedura: restituire un valore da un'attività](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+ L'esempio di codice seguente mostra come creare e usare un oggetto <xref:System.Threading.Tasks.Task> chiamando il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Per un esempio in cui viene usata la classe <xref:System.Threading.Tasks.Task%601> per restituire un valore da un'attività asincrona, vedere [Procedura: Restituire un valore da un'attività](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -153,6 +156,6 @@ La classe <xref:System.Threading.ThreadPool> fornisce all'applicazione un pool d
  [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [Procedura: Restituire un valore da un'attività](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
  [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) (Oggetti e funzionalità del threading)  
- [Thread e Threading](../../../docs/standard/threading/threads-and-threading.md)  
+ [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md) (Thread e threading)  
  [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)  
  [Timer](../../../docs/standard/threading/timers.md)

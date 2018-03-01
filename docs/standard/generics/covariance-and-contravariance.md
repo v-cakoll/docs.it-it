@@ -17,15 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo meno derivato (meno specifico) o più derivato (più specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Delegati generici con parametri di tipo variante  
- In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]i delegati generici `Func` , ad esempio <xref:System.Func%602>, presentano tipi restituiti covarianti e tipi di parametro controvarianti. I delegati generici `Action` , ad esempio <xref:System.Action%602>, presentano tipi di parametro controvarianti. Ciò significa che i delegati possono essere assegnati a variabili che presentano tipi di parametro più derivati e (nel caso dei delegati generici `Func` ) tipi restituiti meno derivati.  
+ In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]i delegati generici `Func` , ad esempio <xref:System.Func%602>, presentano tipi restituiti covarianti e tipi di parametro controvarianti. I delegati generici `Action` , ad esempio <xref:System.Action%602>, presentano tipi di parametro controvarianti. Ciò significa che i delegati possono essere assegnati a variabili che presentano tipi di parametro più derivati e (nel caso dei delegati generici `Func`) tipi restituiti meno derivati.  
   
 > [!NOTE]
 >  L'ultimo parametro di tipo generico dei delegati generici `Func` specifica il tipo del valore restituito nella firma del delegato. È covariante (parola chiave`out` ), mentre gli altri parametri di tipo generico sono controvarianti (parola chiave`in` ).  
@@ -179,21 +182,21 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo|Parametri di tipo covariante|Parametri di tipo controvariante|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> in <xref:System.Action%6016>||Sì|  
-|<xref:System.Comparison%601>||Sì|  
-|<xref:System.Converter%602>|Sì|Sì|  
-|<xref:System.Func%601>|Sì||  
-|<xref:System.Func%602> in <xref:System.Func%6017>|Sì|Sì|  
-|<xref:System.IComparable%601>||Sì|  
-|<xref:System.Predicate%601>||Sì|  
-|<xref:System.Collections.Generic.IComparer%601>||Sì|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sì||  
-|<xref:System.Collections.Generic.IEnumerator%601>|Sì||  
-|<xref:System.Collections.Generic.IEqualityComparer%601>||Sì|  
-|<xref:System.Linq.IGrouping%602>|Sì||  
-|<xref:System.Linq.IOrderedEnumerable%601>|Sì||  
-|<xref:System.Linq.IOrderedQueryable%601>|Sì||  
-|<xref:System.Linq.IQueryable%601>|Sì||  
+|<xref:System.Action%601> in <xref:System.Action%6016>||Yes|  
+|<xref:System.Comparison%601>||Yes|  
+|<xref:System.Converter%602>|Yes|Yes|  
+|<xref:System.Func%601>|Yes||  
+|<xref:System.Func%602> in <xref:System.Func%6017>|Yes|Yes|  
+|<xref:System.IComparable%601>||Yes|  
+|<xref:System.Predicate%601>||Yes|  
+|<xref:System.Collections.Generic.IComparer%601>||Yes|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Yes||  
+|<xref:System.Collections.Generic.IEnumerator%601>|Yes||  
+|<xref:System.Collections.Generic.IEqualityComparer%601>||Yes|  
+|<xref:System.Linq.IGrouping%602>|Yes||  
+|<xref:System.Linq.IOrderedEnumerable%601>|Yes||  
+|<xref:System.Linq.IOrderedQueryable%601>|Yes||  
+|<xref:System.Linq.IQueryable%601>|Yes||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  

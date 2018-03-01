@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>Cenni preliminari sulle primitive di sincronizzazione
 <a name="top"></a>.NET Framework fornisce diverse primitive di sincronizzazione per controllare le interazioni dei thread ed evitare race condition. Queste possono essere divise approssimativamente in tre categorie: blocco, segnalazione e operazioni interlocked.  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  I blocchi consentono il controllo di una risorsa usando un thread alla volta o un numero di thread specificato. Un thread che richiede un blocco esclusivo quando il blocco è in uso si blocca finché il blocco non diventa disponibile.  
   
 ### <a name="exclusive-locks"></a>Blocchi esclusivi  
- La forma di blocco più semplice è l'istruzione `lock` di C# e l'istruzione `SyncLock` in Visual Basic, che controlla l'accesso a un blocco di codice. Questo blocco viene spesso denominato sezione critica. Il `lock` istruzione viene implementata usando il <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> metodi e utilizza `try…catch…finally` blocco per garantire che il blocco viene rilasciato.  
+ La forma di blocco più semplice è l'istruzione `lock` di C# e l'istruzione `SyncLock` in Visual Basic, che controlla l'accesso a un blocco di codice. Questo blocco viene spesso denominato sezione critica. L'istruzione `lock` viene implementata usando i metodi <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> e usa il blocco `try…catch…finally` per assicurarsi che il blocco venga rilasciato.  
   
- In generale, l'utilizzo di `lock` o `SyncLock` istruzione per proteggere piccoli blocchi di codice, non comprendono più di un singolo metodo, è il modo migliore per utilizzare il <xref:System.Threading.Monitor> classe. Sebbene sia potete, la classe <xref:System.Threading.Monitor> è soggetta a blocchi orfani e deadlock.  
+ In generale, l'uso dell'istruzione `lock` o `SyncLock` per proteggere piccoli blocchi di codice che non comprendono più di un metodo è la soluzione migliore per usare la classe <xref:System.Threading.Monitor>. Sebbene sia potente, la classe <xref:System.Threading.Monitor> è soggetta a blocchi orfani e deadlock.  
   
 #### <a name="monitor-class"></a>Classe Monitor  
  La classe <xref:System.Threading.Monitor> fornisce funzionalità aggiuntive che possono essere usate insieme all'istruzione `lock`:  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  Per una panoramica concettuale, vedere [Mutex](../../../docs/standard/threading/mutexes.md).  
   
 #### <a name="spinlock-class"></a>Classe SpinLock  
- A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile utilizzare il <xref:System.Threading.SpinLock> classe quando il sovraccarico richiesto da <xref:System.Threading.Monitor> comporta una riduzione delle prestazioni. Quando <xref:System.Threading.SpinLock> rileva una sezione critica bloccata, avvia semplicemente una rotazione ciclica finché il blocco non diventa disponibile. Se il blocco viene mantenuto per un tempo molto breve, la rotazione può fornire prestazioni migliori rispetto al blocco. Tuttavia, se il blocco viene mantenuto per più di qualche decine di cicli, <xref:System.Threading.SpinLock> così come <xref:System.Threading.Monitor>, ma richiedono più cicli CPU, riducendo le prestazioni di altri thread o processi.  
+ A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare la classe <xref:System.Threading.SpinLock> quando il sovraccarico richiesto da <xref:System.Threading.Monitor> riduce le prestazioni. Quando <xref:System.Threading.SpinLock> rileva una sezione critica bloccata, avvia semplicemente una rotazione ciclica finché il blocco non diventa disponibile. Se il blocco viene mantenuto per un tempo molto breve, la rotazione può fornire prestazioni migliori rispetto al blocco. Tuttavia, se il blocco viene mantenuto per diverse decine di cicli, le prestazioni di <xref:System.Threading.SpinLock> sono analoghe a <xref:System.Threading.Monitor>, ma richiedono più cicli CPU, riducendo così le prestazioni degli altri thread o processi.  
   
 ### <a name="other-locks"></a>Altri blocchi  
  Non è necessario che i blocchi siano esclusivi. Spesso è utile consentire l'accesso simultaneo a una risorsa a un numero limitato di thread. I semafori e i blocchi in lettura/scrittura sono progettati per controllare questo tipo di accesso alle risorse in pool.  
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- A partire dal [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è possibile utilizzare il <xref:System.Threading.SpinWait?displayProperty=nameWithType> struttura quando un thread deve attendere un evento venga segnalato o una condizione da soddisfare, ma quando il tempo di attesa effettivo deve essere inferiore al tempo di attesa richiesto da un handle di attesa o da otherwi se bloccare il thread corrente. Usando <xref:System.Threading.SpinWait>, è possibile specificare un breve intervallo di tempo di rotazione durante l'attesa e quindi produrre un risultato (ad esempio, mediante l'attesa o la sospensione) solo se la condizione non viene soddisfatta nel tempo specificato.  
+ A partire da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], è possibile usare la struttura <xref:System.Threading.SpinWait?displayProperty=nameWithType> quando un thread deve attendere che un evento venga segnalato o una condizione soddisfatta. Tuttavia, il tempo di attesa previsto deve essere inferiore a quello richiesto da un handle di attesa o da altre operazioni di blocco del thread corrente. Usando <xref:System.Threading.SpinWait>, è possibile specificare un breve intervallo di tempo di rotazione durante l'attesa e quindi produrre un risultato (ad esempio, mediante l'attesa o la sospensione) solo se la condizione non viene soddisfatta nel tempo specificato.  
   
  [Torna all'inizio](#top)  
   

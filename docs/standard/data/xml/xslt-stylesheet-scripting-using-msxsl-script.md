@@ -1,5 +1,5 @@
 ---
-title: 'XSLT Stylesheet Scripting utilizzando &lt;msxsl: script&gt;'
+title: Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35f24c0a033748917b465510d4f70b75946a0a74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT Stylesheet Scripting utilizzando &lt;msxsl: script&gt;
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
   
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Vedere [utilizzando la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [la migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) per ulteriori informazioni.  
+>  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`. Dal momento che, quando viene caricato il foglio di stile, le funzioni definite vengono compilate nel linguaggio MSIL (Microsoft Intermediate Language) mediante l'incapsulamento in una definizione della classe, non si verifica alcuna riduzione delle prestazioni.  
   
@@ -44,22 +47,22 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  Poiché l'elemento `msxsl:script` appartiene allo spazio dei nomi `urn:schemas-microsoft-com:xslt`, il foglio di stile deve includere la dichiarazione dello spazio dei nomi `xmlns:msxsl=urn:schemas-microsoft-com:xslt`.  
   
- Se il chiamante dello script non ha <xref:System.Security.Permissions.SecurityPermissionFlag> accesso autorizzazione, quindi lo script in un foglio di stile non verrà compilato e la chiamata a <xref:System.Xml.Xsl.XslTransform.Load%2A> avrà esito negativo.  
+ Se il chiamante dello script non dispone dell'autorizzazione di accesso <xref:System.Security.Permissions.SecurityPermissionFlag>, lo script presente nel foglio di stile non verrà compilato e non sarà possibile eseguire la chiamata a <xref:System.Xml.Xsl.XslTransform.Load%2A>.  
   
  Se il chiamante dispone dell'autorizzazione `UnmanagedCode`, lo script verrà compilato, ma le operazioni consentite dipenderanno dall'evidenza fornita in fase di caricamento.  
   
- Se per il caricamento del foglio di stile si usa uno dei metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlReader> o <xref:System.Xml.XPath.XPathNavigator>, è necessario usare il metodo di overload <xref:System.Xml.Xsl.XslTransform.Load%2A> che accetta un parametro <xref:System.Security.Policy.Evidence> come argomento. Per fornire l'evidenza, il chiamante deve disporre <xref:System.Security.Permissions.SecurityPermissionFlag> dell'autorizzazione per fornire `Evidence` per l'assembly di script. Se il chiamante non dispone di questa autorizzazione, il parametro `Evidence` può essere impostato su `null`. In questo caso la funzione <xref:System.Xml.Xsl.XslTransform.Load%2A> non viene eseguita se vengono rilevati degli script. L'autorizzazione `ControlEvidence` è molto efficace e deve essere concessa esclusivamente a codice completamente attendibile.  
+ Se per il caricamento del foglio di stile si usa uno dei metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlReader> o <xref:System.Xml.XPath.XPathNavigator>, è necessario usare il metodo di overload <xref:System.Xml.Xsl.XslTransform.Load%2A> che accetta un parametro <xref:System.Security.Policy.Evidence> come argomento. Per fornire l'evidenza, il chiamante deve disporre dell'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag> per fornire il parametro `Evidence` per l'assembly dello script. Se il chiamante non dispone di questa autorizzazione, il parametro `Evidence` può essere impostato su `null`. In questo caso la funzione <xref:System.Xml.Xsl.XslTransform.Load%2A> non viene eseguita se vengono rilevati degli script. L'autorizzazione `ControlEvidence` è molto efficace e deve essere concessa esclusivamente a codice completamente attendibile.  
   
  Per ottenere l'evidenza dall'assembly, usare `this.GetType().Assembly.Evidence`. Per ottenere l'evidenza da un URI (Uniform Resource Identifier), usare `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per ulteriori informazioni, vedere <xref:System.Security.SecurityZone> e [set di autorizzazioni denominati](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityZone> e [Set di autorizzazioni denominati](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   
 |Spazi dei nomi predefiniti|Descrizione|  
 |------------------------|-----------------|  
-|Sistema|Classe di sistema.|  
-|System.Collection|Classi di raccolte.|  
+|System|Classe di sistema.|  
+|System.Collection|Classi Collection.|  
 |System.Text|Classi di testo.|  
 |System.Text.RegularExpressions|Classi di espressioni regolari.|  
 |System.Xml|Classi XML di base.|  
@@ -69,13 +72,13 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  Quando si dichiara una funzione, questa è contenuta in un blocco di script. I fogli di stile possono contenere più blocchi di script con funzionamento indipendente l'uno dall'altro. Ciò significa che, all'interno di un blocco di script, non è possibile chiamare una funzione definita in un altro blocco di script a meno che per quest'ultimo non sia dichiarato lo stesso spazio dei nomi e lo stesso linguaggio di script. Poiché ogni blocco di script può essere scritto nel proprio linguaggio e il blocco viene analizzato in base alle regole grammaticali del parser di quel linguaggio, è necessario usare la sintassi corretta per il linguaggio in uso. Ad esempio, in un blocco di script C# è un errore usare un nodo Comment XML `<!-- an XML comment -->` nel blocco.  
   
- È necessario che gli argomenti forniti e i valori restituiti definiti dalle funzioni di script siano di tipo W3C (World Wide Web Consortium) XPath o XSLT. La tabella seguente illustra i tipi W3C corrispondenti e classi di .NET Framework equivalente (tipo) e se il W3C tipo è un tipo XPath o XSLT.  
+ È necessario che gli argomenti forniti e i valori restituiti definiti dalle funzioni di script siano di tipo W3C (World Wide Web Consortium) XPath o XSLT. Nella tabella seguente vengono mostrati i tipi W3C corrispondenti, le classi .NET Framework equivalenti (tipo) e se il tipo W3C è un tipo XPath o XSLT.  
   
 |Tipo|Classe .NET Framework equivalente (tipo)|Tipo XPath o tipo XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Numero|System.Double|XPath|  
+|Stringa|System.String|XPath|  
+|Booleano|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |Frammento di albero risultato|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -83,7 +86,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  Se la funzione di script usa un tipo diverso da quelli specificati in precedenza o se la funzione non viene compilata quando il foglio di stile viene caricato nell'oggetto <xref:System.Xml.Xsl.XslTransform>, verrà generata un'eccezione.  
   
- Quando si utilizza il `msxsl:script` elemento, è consigliabile che lo script, indipendentemente dal linguaggio, deve essere inserito all'interno di una sezione CDATA. Nel codice XML seguente, ad esempio, viene illustrato il modello della sezione CDATA in cui è inserito il codice.  
+ Quando si usa l'elemento `msxsl:script`, si consiglia che tale script, indipendentemente dal linguaggio, venga inserito all'interno di una sezione CDATA. Nel codice XML seguente, ad esempio, viene illustrato il modello della sezione CDATA in cui è inserito il codice.  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -104,7 +107,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
 </msxsl:script>  
 ```  
   
- In questo esempio viene generata un'eccezione in quanto le e commerciali non sono in sequenza di escape. Il documento viene caricato come XML e viene applicato alcun trattamento speciale al testo tra i `msxsl:script` tag dell'elemento.  
+ In questo esempio viene generata un'eccezione in quanto le e commerciali non sono in sequenza di escape. Il documento viene caricato come XML e non viene applicato alcun trattamento speciale al testo compreso tra i tag dell'elemento `msxsl:script`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usato uno script incorporato per calcolare la circonferenza di un cerchio di cui viene fornito il raggio.  
@@ -237,4 +240,4 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Classe XslTransform implementa il processore XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b867b2d7eb2f4b1252579bbf1f47430d9a9a48f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 964e2de7258f4849de01e4fbeae330d009710289
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrazione dalla classe XslTransform
-L'architettura XSLT è stata riprogettata il [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] rilasciare. La classe <xref:System.Xml.Xsl.XslTransform> è stata sostituita dalla classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
+L'architettura XSLT è stata riprogettata nella versione [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. La classe <xref:System.Xml.Xsl.XslTransform> è stata sostituita dalla classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
  Nelle sezioni seguenti vengono descritte alcune delle principali differenze tra <xref:System.Xml.Xsl.XslCompiledTransform> e le classi di <xref:System.Xml.Xsl.XslTransform>.  
   
@@ -33,7 +36,7 @@ L'architettura XSLT è stata riprogettata il [!INCLUDE[vsprvslong](../../../../i
  Inoltre, la classe <xref:System.Xml.Xsl.XslCompiledTransform> include altre ottimizzazioni che rendono molto più veloce la classe <xref:System.Xml.Xsl.XslTransform>.  
   
 > [!NOTE]
->  Sebbene le prestazioni complessive della classe <xref:System.Xml.Xsl.XslCompiledTransform> siano migliori rispetto alla classe <xref:System.Xml.Xsl.XslTransform>, l'esecuzione del metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslCompiledTransform> potrebbe risultare più lenta di quella del metodo <xref:System.Xml.Xsl.XslTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslTransform> la prima volta che tale metodo viene chiamato su una trasformazione. Questa situazione si verifica perché il file XSLT deve essere compilato prima del caricamento. Per ulteriori informazioni, vedere il post del blog: [XslCompiledTransform Slower che XslTransform?](http://go.microsoft.com/fwlink/?LinkId=130590)  
+>  Sebbene le prestazioni complessive della classe <xref:System.Xml.Xsl.XslCompiledTransform> siano migliori rispetto alla classe <xref:System.Xml.Xsl.XslTransform>, l'esecuzione del metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslCompiledTransform> potrebbe risultare più lenta di quella del metodo <xref:System.Xml.Xsl.XslTransform.Load%2A> della classe <xref:System.Xml.Xsl.XslTransform> la prima volta che tale metodo viene chiamato su una trasformazione. Questa situazione si verifica perché il file XSLT deve essere compilato prima del caricamento. Per altre informazioni, vedere il post di blog seguente: [XslCompiledTransform Slower than XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/) (XslCompiledTransform è più lento di XslTransform?)  
   
 ## <a name="security"></a>Sicurezza  
  Per impostazione predefinita, la classe <xref:System.Xml.Xsl.XslCompiledTransform> disabilita il supporto per la funzione `document()` di XSLT e per lo script incorporato. Queste funzionalità possono essere abilitate creando un oggetto <xref:System.Xml.Xsl.XsltSettings> in cui le funzionalità sono abilitate e passandolo al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Nell'esempio seguente viene illustrato come abilitare lo scripting ed eseguire una trasformazione XSLT.  
@@ -41,7 +44,7 @@ L'architettura XSLT è stata riprogettata il [!INCLUDE[vsprvslong](../../../../i
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
- Per ulteriori informazioni, vedere [considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).  
+ Per altre informazioni, vedere [Considerazioni sulla sicurezza XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md).  
   
 ## <a name="new-features"></a>Nuove funzionalità  
   
@@ -98,7 +101,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ```  
   
 ### <a name="discretionary-behavior"></a>Comportamento discretionary  
- Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Sono numerose le aree in cui <xref:System.Xml.Xsl.XslCompiledTransform> si comporta in modo diverso rispetto alla classe <xref:System.Xml.Xsl.XslTransform>. Per ulteriori informazioni, vedere [Recoverable XSLT Errors](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).  
+ Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Sono numerose le aree in cui <xref:System.Xml.Xsl.XslCompiledTransform> si comporta in modo diverso rispetto alla classe <xref:System.Xml.Xsl.XslTransform>. Per altre informazioni, vedere [Errori XSLT risolvibili](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).  
   
 ### <a name="extension-objects-and-script-functions"></a>Oggetti di estensione e funzioni di script  
  Con <xref:System.Xml.Xsl.XslCompiledTransform> vengono introdotte due nuove restrizioni relative all'utilizzo di funzioni script:  
@@ -109,18 +112,18 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
  In <xref:System.Xml.Xsl.XslCompiledTransform> si verifica un'associazione (ricerca del nome del metodo) alle funzioni di script in fase di compilazione e i fogli di stile usati con XslTranform possono generare un'eccezione quando vengono caricati con <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
- Con <xref:System.Xml.Xsl.XslCompiledTransform> sono supportati gli elementi figlio `msxsl:using` e `msxsl:assembly` all'interno dell'elemento `msxsl:script`. Gli elementi `msxsl:using` e `msxsl:assembly` sono usati per dichiarare spazi dei nomi e assembly aggiuntivi da usare nel blocco di script. Vedere [blocchi di Script utilizzando msxsl: script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) per ulteriori informazioni.  
+ Con <xref:System.Xml.Xsl.XslCompiledTransform> sono supportati gli elementi figlio `msxsl:using` e `msxsl:assembly` all'interno dell'elemento `msxsl:script`. Gli elementi `msxsl:using` e `msxsl:assembly` sono usati per dichiarare spazi dei nomi e assembly aggiuntivi da usare nel blocco di script. Per altre informazioni, vedere [Blocchi di script con msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md).  
   
  In <xref:System.Xml.Xsl.XslCompiledTransform> sono proibiti gli oggetti di estensione che presentano più overload con lo stesso numero di argomenti.  
   
 ### <a name="msxml-functions"></a>Funzioni MSXML  
  Alla classe <xref:System.Xml.Xsl.XslCompiledTransform> è stato aggiunto il supporto per altre funzioni MSXML. Nell'elenco seguente vengono descritte le funzionalità nuove o migliorate.  
   
--   msxsl: node-set: <xref:System.Xml.Xsl.XslTransform> è obbligatorio l'argomento del [funzione di set di nodi](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) funzione da un frammento di albero risultato. Questo requisito non è invece previsto con la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
+-   msxsl:node-set: con <xref:System.Xml.Xsl.XslTransform> è necessario che l'argomento della funzione [node-set Function](http://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) sia un frammento dell'albero dei risultati. Questo requisito non è invece previsto con la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 -   msxsl:version: questa funzione è supportata in <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   Funzioni di estensione XPath: il [ms: String-compare (funzione)](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee), [funzione MS: UTC](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms: namespace-uri funzione](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms: local-name(funzione)](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [funzione MS: Number](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms: Format-funzione date](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5), e [ms: Format-time, funzione](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) funzioni sono ora supportate.  
+-   Funzioni dell'estensione XPath: le funzioni [ms:string-compare](http://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc](http://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri](http://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name](http://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number](http://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date](http://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) e [ms:format-time](http://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) ora sono supportate.  
   
 -   Funzioni di estensione XPath correlate allo schema: queste funzioni non sono supportate in modalità nativa da <xref:System.Xml.Xsl.XslCompiledTransform>. Tuttavia, possono essere implementate come funzioni di estensione.  
   

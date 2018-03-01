@@ -23,18 +23,21 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>Stringhe di formato TimeSpan standard
-<a name="Top"></a>Standard <xref:System.TimeSpan> stringa di formato viene utilizzato un singolo identificatore di formato per definire la rappresentazione testuale di un <xref:System.TimeSpan> valore risultante da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+<a name="Top"></a> Una stringa di formato <xref:System.TimeSpan> standard usa un singolo identificatore di formato per definire la rappresentazione di testo di un valore <xref:System.TimeSpan> che risulta da un'operazione di formattazione. Le stringhe di formato contenenti più caratteri alfabetici, inclusi gli spazi vuoti, vengono interpretate come stringhe di formato <xref:System.TimeSpan> personalizzato. Per altre informazioni, vedere [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Le rappresentazione di stringa dei valori <xref:System.TimeSpan> vengono prodotte da chiamate agli overload del metodo <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, nonché dai metodi che supportano la formattazione composita, come <xref:System.String.Format%2A?displayProperty=nameWithType>. Per altre informazioni, vedere [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md) e [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md). Nell'esempio seguente viene illustrato l'utilizzo di stringhe di formato standard nelle operazioni di formattazione.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="top"></a> Nella tabella seguente sono elencati gli identificatori di formato di intervallo di tempo standard.  
   
-|Identificatore di formato|Nome|Descrizione|Esempi|  
+|Identificatore di formato|nome|Descrizione|Esempi|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato di costante (invariante)|Questo identificatore non è dipendente dalle impostazioni cultura. Assume il formato `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`<br /><br /> (le stringhe di formato "t" e "T" producono gli stessi risultati).<br /><br /> Altre informazioni: [Identificatore di formato di costante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato breve generale|Questo identificatore restituisce informazioni strettamente necessarie. È basato sulle impostazioni cultura e assume il formato `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Altre informazioni: [Identificatore di formato breve generale ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |*ss*|Numero di secondi, nell'intervallo compreso tra "0" e "59".|  
 |*fffffff*|La parte frazionaria facoltativa di un secondo.  Il valore può variare da "0000001" (un tick oppure un decimilionesimo di secondo) e "9999999" (9.999.999 decimilionesimi di secondo, o un secondo meno di un tick).|  
   
- A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariante e comune a tutte le versioni precedenti di.NET Framework prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. il valore predefinito è "c" <xref:System.TimeSpan> stringa di formato; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> metodo formatta un valore di intervallo di tempo usando la stringa di formato "c".  
+ A differenza degli identificatori di formato "g" e "G", l'identificatore di formato "c" non è dipendente dalle impostazioni cultura. Produce la rappresentazione di stringa di un valore <xref:System.TimeSpan> invariante e comune a tutte le versioni precedenti di.NET Framework prima di [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c" è la stringa di formato <xref:System.TimeSpan> predefinita; il metodo <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formatta un valore di intervallo di tempo usando la stringa di formato "c".  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> supporta anche le stringhe di formato standard "t" e "T", che hanno un comportamento identico alla stringa di formato standard "c".  
@@ -140,4 +143,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1a4b585fe34a841061f8e5bab7cb18a58f53cfe8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04e23f39f522fca7f69aa86be7036320a5698a60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Frammento di alberi risultato nelle trasformazioni
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Vedere [utilizzando la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [la migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) per ulteriori informazioni.  
+>  La classe <xref:System.Xml.Xsl.XslTransform> è obsoleta in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. È possibile eseguire le trasformazioni XSLT (Extensible Stylesheet Language for Transformations) usando la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Per altre informazioni, vedere [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) e [Migrazione dalla classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  I frammenti di nodi, detti anche frammenti di albero risultato, sono semplicemente un particolare tipo di set di nodi. Sui frammenti di nodi è possibile eseguire le stesse funzioni che sono eseguibili sui set di nodi. È inoltre possibile usare la funzione `node-set()` per convertire un frammento di albero risultato in un set di nodi, quindi usarlo in qualsiasi posizione adatta.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  Da entrambi gli elementi `parameter` e `variable`, se viene assegnato un valore dall'espressione XPath, viene restituito uno dei quattro tipi XPath principali: Boolean, string, number o node set. Se il valore viene assegnato usando un corpo del modello non vuoto, verrà restituito un tipo di dati non XPath, ovvero un frammento di albero risultato.  
   
- Una query XPath restituisce un tipo di dati che non appartiene a uno dei quattro tipi di oggetti XPath unicamente nel caso in cui una variabile è associata a un frammento di albero risultato, anziché a uno dei quattro tipi di dati XPath di base. I frammenti di albero risultato e il relativo comportamento sono descritti nella specifica W3C, all'indirizzo http://www.w3.org/XSLT, dalla sezione 11.1 Result Tree Fragments alla sezione 11.6 Passing Parameters to Templates (informazioni in lingua inglese). Inoltre, nella sezione 1, Introduction, viene illustrato come i modelli possono contenere elementi dello spazio dei nomi XSLT che restituiscono o creano frammenti di albero risultato.  
+ Una query XPath restituisce un tipo di dati che non appartiene a uno dei quattro tipi di oggetti XPath unicamente nel caso in cui una variabile è associata a un frammento di albero risultato, anziché a uno dei quattro tipi di dati XPath di base. I frammenti di albero risultato e il relativo comportamento sono descritti nella specifica W3C, all'indirizzo http://www.w3.org/XSLT, dalla sezione 11.1 Result Tree Fragments (Frammenti di albero risultato) alla sezione 11.6 Passing Parameters to Templates (Passaggio di parametri ai modelli). Inoltre, nella sezione 1, Introduction, viene illustrato come i modelli possono contenere elementi dello spazio dei nomi XSLT che restituiscono o creano frammenti di albero risultato.  
   
  Un frammento di albero risultato si comporta, teoricamente, come un set di nodi con un unico nodo radice, mentre gli altri nodi restituiti sono nodi figlio. Per visualizzare i nodi figlio a livello di codice, copiare il frammento di albero risultato nell'albero risultato stessa usando l'elemento `<xsl:copy-of>`. Questa operazione consente di copiare in sequenza tutti i nodi figlio nell'albero risultato. Il frammento di albero risultato non farà parte dell'albero risultato o dell'output della trasformazione finché non viene usato un comando `copy` o `copy-of`.  
   
@@ -202,4 +205,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XPath.XPathNodeIterator>  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  [Trasformazioni XSLT con la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Classe XslTransform implementa il processore XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementazione del processore XSLT da parte della classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

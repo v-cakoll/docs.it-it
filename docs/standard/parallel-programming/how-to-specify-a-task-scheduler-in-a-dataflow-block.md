@@ -1,12 +1,8 @@
 ---
 title: "Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,34 +12,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati
-In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Form per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente.  
+In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Form per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente. method to enable a dataflow block to run on the user-interface thread.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>Per creare l'applicazione Windows Forms  
   
-> [!TIP]
->  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
+1.  Creare un progetto **Windows Forms Application** [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic. Nei passaggi seguenti il progetto viene denominato `WriterReadersWinForms`.  
   
-### <a name="to-create-the-windows-forms-application"></a>Per creare l'applicazione Windows Forms  
-  
-1.  Creare un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic **Windows Forms Application** progetto. Nei passaggi seguenti il progetto viene denominato `WriterReadersWinForms`.  
-  
-2.  Nella finestra di progettazione del form per il form principale, Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), aggiungere quattro controlli <xref:System.Windows.Forms.CheckBox>. Impostare il <xref:System.Windows.Forms.Control.Text%2A> proprietà **Reader 1** per `checkBox1`, **Reader 2** per `checkBox2`, **Reader 3** per `checkBox3`, e  **Writer** per `checkBox4`. Impostare la proprietà <xref:System.Windows.Forms.Control.Enabled%2A> per ogni controllo su `False`.  
+2.  Nella finestra di progettazione del form per il form principale, Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), aggiungere quattro controlli <xref:System.Windows.Forms.CheckBox>. Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su **Reader 1** per `checkBox1`, **Reader 2** per `checkBox2`, **Reader 3** per `checkBox3` e **Writer** per `checkBox4`. Impostare la proprietà <xref:System.Windows.Forms.Control.Enabled%2A> per ogni controllo su `False`.  
   
 3.  Aggiungere un controllo <xref:System.Windows.Forms.Timer> al form. Impostare la proprietà <xref:System.Windows.Forms.Timer.Interval%2A> su `2500`.  
   
 ## <a name="adding-dataflow-functionality"></a>Aggiunta di funzionalità del flusso di dati  
  In questa sezione viene descritto come creare i blocchi di flussi di dati che fanno parte dell'applicazione e come associare ognuno di essi a un'utilità di pianificazione delle attività.  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>Per aggiungere funzionalità del flusso di dati all'applicazione  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>Per aggiungere funzionalità del flusso di dati all'applicazione  
   
 1.  Nel progetto aggiungere un riferimento a System.Threading.Tasks.Dataflow.dll.  
   

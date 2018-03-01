@@ -1,27 +1,25 @@
 ---
 title: 'Procedura dettagliata: Uso del flusso di dati in un''applicazione Windows Forms'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2775cc99020fd99d6e7d79cdf3e1ffcc3219146
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procedura dettagliata: Uso del flusso di dati in un'applicazione Windows Forms
 Questo documento illustra come creare una rete di blocchi di flussi di dati tramite cui viene eseguita l'elaborazione di immagini in una Windows Forms Application.  
@@ -30,11 +28,9 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Prima di iniziare questa procedura dettagliata, leggere [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
-  
-> [!TIP]
->  La libreria del flusso di dati TPL (spazio dei nomi <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) non viene distribuita con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Per installare il <xref:System.Threading.Tasks.Dataflow> dello spazio dei nomi, Apri il progetto in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], scegliere **Gestisci pacchetti NuGet** dal menu progetto e cercare online il `Microsoft.Tpl.Dataflow` pacchetto.  
- 
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="sections"></a>Sezioni  
  Questa procedura dettagliata contiene le sezioni seguenti:  
   
@@ -54,13 +50,13 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
 1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] creare un progetto [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic **Windows Forms Application**. In questo documento, il progetto viene denominato `CompositeImages`.  
   
-2.  Nella finestra di progettazione di form per il form principale, Form1.cs (Form1. vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), aggiungere un <xref:System.Windows.Forms.ToolStrip> controllo.  
+2.  Nella finestra di progettazione del form principale Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) aggiungere un controllo <xref:System.Windows.Forms.ToolStrip>.  
   
-3.  Aggiungere un <xref:System.Windows.Forms.ToolStripButton> controllo il <xref:System.Windows.Forms.ToolStrip> controllo. Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> e <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà **cartella scegliere**.  
+3.  Aggiungere un controllo <xref:System.Windows.Forms.ToolStripButton> al controllo <xref:System.Windows.Forms.ToolStrip>. Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> su <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> e la proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su **Scegli cartella**.  
   
-4.  Aggiungere un secondo <xref:System.Windows.Forms.ToolStripButton> controllo il <xref:System.Windows.Forms.ToolStrip> controllo. Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, il <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà **Annulla**e <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> proprietà `False`.  
+4.  Aggiungere un secondo controllo <xref:System.Windows.Forms.ToolStripButton> al controllo <xref:System.Windows.Forms.ToolStrip>. Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> su <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, la proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su **Annulla** e la proprietà <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> su `False`.  
   
-5.  Aggiungere un <xref:System.Windows.Forms.PictureBox> oggetto al form principale. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> su <xref:System.Windows.Forms.DockStyle.Fill>.  
+5.  Aggiungere un oggetto <xref:System.Windows.Forms.PictureBox> al form principale. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> su <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>Creazione della rete del flusso di dati  
@@ -91,26 +87,26 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La versione c# del `CreateCompositeBitmap` metodo utilizza i puntatori per consentire l'elaborazione efficiente del <xref:System.Drawing.Bitmap?displayProperty=nameWithType> oggetti. Pertanto, è necessario abilitare l'opzione **Consenti codice di tipo unsafe** nel progetto per utilizzare la parola chiave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Per ulteriori informazioni su come abilitare il codice unsafe in un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] del progetto, vedere [pagina compilazione, Progettazione progetti (c#)] https://msdn.microsoft.com/library/kb4wyys2).  
+    >  La versione C# del metodo `CreateCompositeBitmap` usa puntatori per abilitare l'elaborazione efficiente degli oggetti <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Pertanto, è necessario abilitare l'opzione **Consenti codice di tipo unsafe** nel progetto per utilizzare la parola chiave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Per ulteriori informazioni su come abilitare il codice unsafe in un progetto [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Nella tabella seguente vengono descritti i membri della rete.  
   
-|Membro|Tipo|Descrizione|  
+|Member|Tipo|Descrizione|  
 |------------|----------|-----------------|  
-|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta un percorso della cartella come input e produce una raccolta di <xref:System.Drawing.Bitmap> oggetti come output.|  
-|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta una raccolta di <xref:System.Drawing.Bitmap> oggetti come input e produce una bitmap composita come output.|  
+|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta il percorso di una cartella come input e genera una raccolta di oggetti <xref:System.Drawing.Bitmap> come output.|  
+|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Accetta una raccolta di oggetti <xref:System.Drawing.Bitmap> come input e genera una bitmap composita come output.|  
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Visualizza il bitmap composito nel modulo.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Visualizza un'immagine per indicare che l'operazione è annullata e consente all'utente di selezionare un'altra cartella.|  
   
- Per connettere i blocchi di flussi di dati per formare una rete, questo esempio viene utilizzato il <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metodo. Il <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metodo contiene una versione di overload che accetta un <xref:System.Predicate%601> oggetto che determina se il blocco di destinazione accetta o rifiuta un messaggio. Questo processo di filtraggio consente ai blocchi di messaggi di ricevere solo certi valori. In questo esempio, la rete può creare un ramo in due modi. Il ramo principale carica le immagini dal disco, crea un'immagine composita e visualizza tale immagine nel modulo. Il ramo alternativo annulla l'operazione in corso. Il <xref:System.Predicate%601> oggetti abilitare i blocchi di flussi di dati lungo il ramo principale per passare al ramo alternativo rifiutando determinati messaggi. Ad esempio, se l'utente annulla l'operazione, il blocco del flusso di dati `createCompositeBitmap` produce `null` (`Nothing` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) come output. Il blocco del flusso di dati `displayCompositeBitmap` rifiuta i valori di input `null` e pertanto, il messaggio viene offerto a `operationCancelled`. Il blocco del flusso di dati `operationCancelled` accetta tutti i messaggi e visualizza quindi un'immagine per indicare che l'operazione viene annullata.  
+ Per connettere i blocchi di flussi di dati per formare una rete, questo esempio usa il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. Il metodo <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> contiene una versione di overload che accetta un oggetto <xref:System.Predicate%601> che determina se il blocco di destinazione accetta o rifiuta un messaggio. Questo processo di filtraggio consente ai blocchi di messaggi di ricevere solo certi valori. In questo esempio, la rete può creare un ramo in due modi. Il ramo principale carica le immagini dal disco, crea un'immagine composita e visualizza tale immagine nel modulo. Il ramo alternativo annulla l'operazione in corso. Gli oggetti <xref:System.Predicate%601> consentono ai blocchi di flussi di dati lungo il ramo principale di passare al ramo alternativo rifiutando determinati messaggi. Ad esempio, se l'utente annulla l'operazione, il blocco del flusso di dati `createCompositeBitmap` produce `null` (`Nothing` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) come output. Il blocco del flusso di dati `displayCompositeBitmap` rifiuta i valori di input `null` e pertanto, il messaggio viene offerto a `operationCancelled`. Il blocco del flusso di dati `operationCancelled` accetta tutti i messaggi e visualizza quindi un'immagine per indicare che l'operazione viene annullata.  
   
  Nella figura seguente viene illustrata la rete di elaborazione di immagini.  
   
  ![Rete di elaborazione delle immagini](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
   
- Poiché i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono usati nell'interfaccia utente, è importante che queste azioni si verifichino nel thread di interfaccia utente. A tale scopo, durante la costruzione, ognuno di questi oggetti fornisce un <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> oggetto che ha il <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> proprietà impostata su <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> viene creato un oggetto <xref:System.Threading.Tasks.TaskScheduler> mediante il quale viene eseguito il lavoro nel contesto di sincronizzazione corrente. Poiché il metodo `CreateImageProcessingNetwork` viene chiamato dal gestore del pulsante **Scegli cartella**, che viene eseguito nel thread di interfaccia utente, anche le azioni per i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono eseguite nel thread di interfaccia utente.  
+ Poiché i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono usati nell'interfaccia utente, è importante che queste azioni si verifichino nel thread di interfaccia utente. A questo scopo, durante la costruzione ognuno di questi oggetti fornisce un oggetto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> la cui proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> è impostata su <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> viene creato un oggetto <xref:System.Threading.Tasks.TaskScheduler> mediante il quale viene eseguito il lavoro nel contesto di sincronizzazione corrente. Poiché il metodo `CreateImageProcessingNetwork` viene chiamato dal gestore del pulsante **Scegli cartella**, che viene eseguito nel thread di interfaccia utente, anche le azioni per i blocchi di flussi di dati `displayCompositeBitmap` e `operationCancelled` vengono eseguite nel thread di interfaccia utente.  
   
- Questo esempio viene utilizzato un token di annullamento condiviso anziché impostare la <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> proprietà perché il <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> proprietà Annulla definitivamente bloccare l'esecuzione del flusso di dati. Un token di annullamento consente in questo esempio di riutilizzare la stessa rete del flusso di dati più volte, anche quando l'utente annulla una o più operazioni. Per un esempio che utilizza <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> per annullare in modo permanente l'esecuzione di un blocco di flussi di dati, vedere [procedura: annullare un Dataflow Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ Questo esempio usa un token di annullamento condiviso anziché impostare la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>, perché la proprietà <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> annulla in modo permanente l'esecuzione dei blocchi di flussi di dati. Un token di annullamento consente in questo esempio di riutilizzare la stessa rete del flusso di dati più volte, anche quando l'utente annulla una o più operazioni. Per un esempio che usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> per annullare in modo permanente l'esecuzione di un blocco di flussi di dati, vedere [Procedura: Annullare un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>   
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Connessione della rete del flusso dati all'interfaccia utente  
@@ -118,15 +114,15 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Per connettere la rete del flusso dati all'interfaccia utente  
   
-1.  Nella finestra di progettazione di form per il form principale, creare un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento per il **cartella scegliere** pulsante.  
+1.  Nella finestra di progettazione del form principale creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> per il pulsante **Scegli cartella**.  
   
-2.  Implementare il <xref:System.Windows.Forms.ToolStripItem.Click> evento per il **cartella scegliere** pulsante.  
+2.  Implementare l'evento <xref:System.Windows.Forms.ToolStripItem.Click> per il pulsante **Scegli cartella**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  Nella finestra di progettazione di form per il form principale, creare un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento per il **Annulla** pulsante.  
+3.  Nella finestra di progettazione del form principale creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> per il pulsante **Annulla**.  
   
-4.  Implementare il <xref:System.Windows.Forms.ToolStripItem.Click> evento per il **Annulla** pulsante.  
+4.  Implementare l'evento <xref:System.Windows.Forms.ToolStripItem.Click> per il pulsante **Annulla**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
@@ -139,8 +135,6 @@ Questo documento illustra come creare una rete di blocchi di flussi di dati tram
  La figura seguente mostra un output tipico per la cartella common\Sample Pictures\.  
   
  ![Windows Forms Application](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_Cancellation")  
-  
-## <a name="next-steps"></a>Passaggi successivi  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

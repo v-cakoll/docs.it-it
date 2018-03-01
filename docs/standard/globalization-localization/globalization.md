@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Globalizzazione
 La globalizzazione comporta la progettazione e lo sviluppo di un'app internazionalizzata che supporti interfacce localizzate e dati locali per utenti in più impostazioni cultura. Prima di iniziare la fase di progettazione, è necessario determinare quali impostazioni cultura verranno supportate dall'app. Sebbene un'app sia destinata per impostazione predefinita a singole impostazioni cultura o a una singola area, è possibile progettarla e scriverla in modo che possa essere facilmente estesa agli utenti di altre impostazioni cultura o aree.  
@@ -38,25 +41,25 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 -   [Gestione delle stringhe](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
   
-    -   [Utilizzare Unicode internamente](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
+    -   [Usare Unicode internamente](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
   
-    -   [Utilizzare i file di risorse](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
+    -   [Usare file di risorse](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [Ricerca e confronto di stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [Ricerca e confronto delle stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [Test per verificarne l'uguaglianza di stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [Test dell'uguaglianza delle stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [Ordinamento e l'ordinamento delle stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [Ordinamento delle stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
     -   [Evitare la concatenazione di stringhe](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
--   [La gestione di date e ore](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
+-   [Gestione di date e ore](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
     -   [Salvare in modo permanente date e ore](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
     -   [Visualizzazione di date e ore](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [La serializzazione e informazioni sul fuso orario](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Presenza di fuso orario e serializzazione](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
     -   [Eseguire l'aritmetica di data e ora](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
@@ -64,9 +67,9 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
     -   [Visualizzazione di valori numerici](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
   
-    -   [Persistenza dei valori numerici](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
+    -   [Salvare in modo permanente i valori numerici](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [Utilizzo delle impostazioni cultura](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [Uso di impostazioni specifiche delle impostazioni cultura](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>Gestione delle stringhe  
@@ -97,7 +100,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
  L'uso di file di risorse presenta vantaggi specifici se si crea un'app localizzata. Quando si distribuiscono le risorse in assembly satellite, Common Language Runtime seleziona automaticamente una risorsa di impostazioni cultura appropriata basata sulle impostazioni cultura dell'interfaccia utente corrente come specificato dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Purché venga definita una risorsa specifica delle impostazioni cultura adatta e si crei correttamente un'istanza di un oggetto <xref:System.Resources.ResourceManager> o si usi una classe di risorse fortemente tipizzata, il runtime gestisce i dettagli relativi al recupero delle risorse appropriate.  
   
- Per ulteriori informazioni sulla creazione di file di risorse, vedere [la creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Per informazioni sulla creazione e distribuzione di assembly satellite, vedere [creazione di assembly Satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [package e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Per altre informazioni sulla creazione di file di risorse, vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Per informazioni sulla creazione e distribuzione di assembly satellite, vedere [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>Ricerca e confronto delle stringhe  
@@ -123,7 +126,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
  I confronti di uguaglianza talvolta comportano ricerche o confronti delle sottostringhe anziché chiamate al metodo <xref:System.String.Equals%2A?displayProperty=nameWithType>. In alcuni casi, si potrebbe usare la ricerca di una sottostringa per determinare se la sottostringa è uguale a un'altra stringa. Se lo scopo di questo confronto non è linguistico, anche la ricerca deve essere ordinale anziché dipendente dalle impostazioni cultura.  
   
- Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un'URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che la "i" (U+0069) è sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e azero, la versione maiuscola della "i" è "i" (U + 0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
+ Nell'esempio seguente viene illustrato il rischio di una ricerca dipendente dalle impostazioni cultura su dati non linguistici. Il metodo `AccessesFileSystem` è progettato per impedire l'accesso al file system agli URI che iniziano con la sottostringa "FILE". A tale scopo, esegue un confronto dipendente dalle impostazioni cultura, con distinzione tra maiuscole e minuscole, dell'inizio dell'URI con la stringa "FILE". Poiché un'URI che accede al file system può iniziare con "FILE:" o "file:", il presupposto implicito è che la "i" (U+0069) è sempre l'equivalente minuscolo di "I" (U+0049). Tuttavia, in turco e azero, la versione maiuscola della "i" è "İ" (U+0130). A causa di questa discrepanza, il confronto dipendente dalle impostazioni cultura consente l'accesso al file system anche se non dovesse essere consentito.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
@@ -182,7 +185,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 -   Il metodo <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, che include una stringa di formato  
   
--   Il [formattazione composita](../../../docs/standard/base-types/composite-formatting.md) funzionalità, quando viene utilizzata con le date  
+-   La funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md), quando viene usata con le date  
   
  Nell'esempio seguente vengono visualizzati due volte i dati di tramonto e di alba dell'11 ottobre 2012. Innanzitutto vengono impostate le impostazioni cultura correnti su Croato (Croazia) e, successivamente, su Inglese (Gran Bretagna). In entrambi i casi, le date e le ore verranno visualizzate nel formato appropriato per le impostazioni cultura specifiche.  
   
@@ -213,7 +216,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
 ### <a name="serialization-and-time-zone-awareness"></a>Presenza di fuso orario e serializzazione  
  Un valore di data e ora può avere più interpretazioni, a partire da un'ora generale (Gli archivi vengono aperti il 2 gennaio 2013 alle 9:00) a un momento specifico ("Data di nascita: 2 gennaio 2013 6.32.00"). Quando un valore di ora rappresenta un momento specifico e si ripristina da un valore serializzato, è necessario assicurarsi che rappresenti lo stesso momento indipendentemente dalla posizione geografica o dal fuso orario dell'utente.  
   
- L'esempio seguente illustra questo problema. Salva un singolo locale valore data e ora sotto forma di stringa in tre [formati standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" per data, ora estesa, "s" per data/ora ordinabile e "o" per round trip data/ora) nonché in formato binario.  
+ L'esempio seguente illustra questo problema. Viene salvato un singolo valore locale di data e ora come stringa in tre [formati standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" per ora estesa e data generale, "S" per data/ora ordinabile e "O" per data/ora roundtrip), nonché in formato binario.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -263,13 +266,13 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
 3/31/2013 3:00:00 AM Local  
 ```  
   
- Per ulteriori informazioni, vedere [conversione orari tra fusi orari](../../../docs/standard/datetime/converting-between-time-zones.md).  
+ Per altre informazioni, vedere [Conversione degli orari tra fusi orari](../../../docs/standard/datetime/converting-between-time-zones.md).  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>Eseguire l'aritmetica di data e ora  
  Entrambi i tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> supportano le operazioni aritmetiche. È possibile calcolare la differenza tra due valori di data, oppure aggiungere o sottrarre intervalli di tempo particolari a o da un valore di data. Tuttavia, nelle operazioni aritmetiche sui valori di data e ora non vengono presi in considerazione i fusi orari e le relative norme di regolazione. Per questo motivo, le operazioni aritmetiche con date e ore sui valori che rappresentano determinati momenti possono restituire risultati imprecisi.  
   
- Ad esempio, la transizione dall'ora solare Pacifico all'ora legale Pacifico si verifica la seconda domenica di marzo, cioè il 10 marzo per l'anno 2013. Come nell'esempio seguente viene illustrato, se si calcola la data e l'ora che è 48 ore dopo il 9 marzo 2013 ore 10:30. in un sistema nel fuso orario ora solare del Pacifico, il risultato, l'11 marzo 2013 alle 10:30 ore, non accetta la regolazione dell'ora corrispondente in considerazione.  
+ Ad esempio, la transizione dall'ora solare Pacifico all'ora legale Pacifico si verifica la seconda domenica di marzo, cioè il 10 marzo per l'anno 2013. Come illustrato nell'esempio seguente, se si calcola una data e un'ora di 48 ore successive al 9 marzo 2013 ore 10:30. in un sistema con il fuso orario impostato su Ora solare Pacifico, il risultato (11 marzo 2013 ore 10:30) non considera l'adeguamento dell'ora corrispondente.  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -287,7 +290,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- Per ulteriori informazioni, vedere [esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
+ Per altre informazioni, vedere [Esecuzione di operazioni aritmetiche con date e ore](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>Utilizzo dei nomi dipendenti delle impostazioni cultura per gli elementi di dati  
  È possibile che l'app debba visualizzare il nome del mese o il giorno della settimana. A tale scopo, il codice come il seguente è comune.  
@@ -297,7 +300,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
  Tuttavia, tramite il codice vengono restituiti sempre i nomi dei giorni della settimana in inglese. Il codice che estrae il nome del mese è spesso più flessibile. Spesso si presuppone un calendario di dodici mesi con i nomi dei mesi in una lingua specifica.  
   
- Utilizzando [stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) o le proprietà del <xref:System.Globalization.DateTimeFormatInfo> dell'oggetto, è facile estrarre le stringhe che riflettono i nomi dei giorni della settimana o i mesi in impostazioni cultura dell'utente, come illustrato nell'esempio seguente. Vengono impostate le impostazioni cultura correnti su Francese (Francia) e vengono visualizzati il nome del giorno della settimana e il nome del mese per il 1° luglio 2013.  
+ Usando le [stringhe di formato di data e ora personalizzate](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) o le proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo>, è facile estrarre le stringhe che riflettono i nomi dei giorni della settimana o dei mesi nelle impostazioni cultura dell'utente, come illustrato nell'esempio seguente. Vengono impostate le impostazioni cultura correnti su Francese (Francia) e vengono visualizzati il nome del giorno della settimana e il nome del mese per il 1° luglio 2013.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 -   Il metodo `ToString(String)` di qualsiasi tipo numerico, che include una stringa di formato come argomento  
   
--   Il [formattazione composita](../../../docs/standard/base-types/composite-formatting.md) funzionalità, quando viene utilizzata con valori numerici  
+-   La funzionalità di [formattazione composita](../../../docs/standard/base-types/composite-formatting.md), quando viene usata con valori numerici  
   
  L'esempio seguente consente di visualizzare la temperatura mensile media di Parigi, Francia. Innanzitutto vengono impostate le impostazioni cultura correnti su Francese (Francia) prima di visualizzare i dati e, successivamente, vengono impostate su Inglese (Stati Uniti). In ogni caso, le temperature e i nomi dei mesi verranno visualizzati nel formato appropriato per le impostazioni cultura in questione. Si noti che nelle due impostazioni cultura vengono usati separatori decimali diversi per il valore della temperatura. Si noti inoltre che in questo esempio viene usata la stringa di formato di data e ora personalizzata "MMMM" per visualizzare il nome completo dei mesi e che viene allocata la quantità di spazio appropriata per il nome del mese nella stringa di risultato determinando la lunghezza del nome del mese più lungo nella matrice <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.  
   
@@ -374,7 +377,7 @@ La globalizzazione comporta la progettazione e lo sviluppo di un'app internazion
   
 -   .NET Framework supporta impostazioni cultura sostitutive. Ciò consente di definire nuove impostazioni cultura personalizzate che completano le impostazioni cultura standard esistenti o li sostituiscono completamente.  
   
--   L'utente può personalizzare impostazioni specifiche delle impostazioni cultura utilizzando il **paese e lingua** app nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app degli utenti finali, è necessario rispettare le preferenze dell'utente in modo da offrirgli i dati in un formato che l'utente si aspetta.  
+-   L'utente può personalizzare le impostazioni specifiche di una cultura usando l'app **Area e lingua** nel Pannello di controllo. Quando viene creata un'istanza di un oggetto <xref:System.Globalization.CultureInfo>, è possibile determinare se rifletta le personalizzazioni dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. In genere, per le app degli utenti finali, è necessario rispettare le preferenze dell'utente in modo da offrirgli i dati in un formato che l'utente si aspetta.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)  

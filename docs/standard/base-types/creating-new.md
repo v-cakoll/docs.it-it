@@ -19,29 +19,32 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d000cd88fc9ee9fd48ef25e9bb4982688564a2a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ba91b42bc9815b1b12fdc761882741b11790060
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-strings-in-net"></a>Creazione di nuove stringhe in .NET
-Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente stringhe deve essere creato tramite una semplice assegnazione oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe utilizzando un numero di parametri diversi. Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce inoltre metodi diversi nella <xref:System.String?displayProperty=nameWithType> oggetti combinando più stringhe, matrici di stringhe, o oggetti di classe che crea una nuova stringa.  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente di creare stringhe usando una semplice assegnazione, oltre a eseguire l'overload del costruttore di classe per supportare la creazione di stringhe tramite una serie di parametri diversi. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornisce diversi metodi nella classe <xref:System.String?displayProperty=nameWithType> per creare nuovi oggetti stringa combinando più stringhe, matrici di stringhe o oggetti.  
   
 ## <a name="creating-strings-using-assignment"></a>Creazione di stringhe tramite assegnazione  
- Il modo più semplice per creare un nuovo <xref:System.String> oggetto consiste semplicemente nell'assegnare una valore letterale stringa a un <xref:System.String> oggetto.  
+ Il modo più semplice per creare un nuovo oggetto <xref:System.String> consiste nell'assegnare un valore letterale stringa a un oggetto <xref:System.String>.  
   
 ## <a name="creating-strings-using-a-class-constructor"></a>Creazione di stringhe tramite un costruttore di classe  
- È possibile utilizzare l'overload di <xref:System.String> costruttore della classe per creare stringhe da matrici di caratteri. È anche possibile creare una nuova stringa duplicando un determinato carattere per un numero specifico di volte.  
+ È possibile usare overload del costruttore della classe <xref:System.String> per creare stringhe da matrici di caratteri. È anche possibile creare una nuova stringa duplicando un determinato carattere per un numero specifico di volte.  
   
 ## <a name="methods-that-return-strings"></a>Metodi che restituiscono stringhe  
  Nella tabella seguente sono elencati diversi metodi utili che restituiscono nuovi oggetti stringa.  
   
-|Nome metodo|Uso|  
+|Nome metodo|Usa|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Compila una stringa formattata da un insieme di oggetti di input.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Compila stringhe da due o più stringhe.|  
@@ -50,23 +53,23 @@ Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente stringh
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia i caratteri specificati di una stringa in una determinata posizione all'interno di una matrice di caratteri.|  
   
 ### <a name="format"></a>Formato  
- È possibile utilizzare il **String. Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Ad esempio, se l'applicazione deve visualizzare un **Int32** valore e un **DateTime** valore all'utente, è possibile creare facilmente una stringa per rappresentare questi valori utilizzando il **formato**metodo. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
+ È possibile usare il metodo **String.Format** per creare stringhe formattate e concatenare stringhe che rappresentano più oggetti. Qualsiasi oggetto venga passato a questo metodo viene automaticamente convertito in una stringa. Se ad esempio l'applicazione deve visualizzare un valore **Int32** e un valore **DateTime**, è possibile costruire con facilità una stringa che rappresenti tali valori usando il metodo **Format**. Per altre informazioni sulle convenzioni di formattazione usate con questo metodo, vedere la sezione relativa alla [formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
   
- L'esempio seguente usa il **formato** metodo per creare una stringa che utilizza una variabile integer.  
+ L'esempio di codice seguente usa il metodo **Format** per creare una stringa che usa una variabile integer.  
   
  [!code-csharp[Strings.Creating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#1)]
  [!code-vb[Strings.Creating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#1)]  
   
- In questo esempio,<xref:System.DateTime.Now%2A?displayProperty=nameWithType> Visualizza la data e ora correnti nel modo specificato dalle impostazioni cultura associate al thread corrente.  
+ In questo esempio <xref:System.DateTime.Now%2A?displayProperty=nameWithType> visualizza l'ora e la data correnti nel modo specificato dalle impostazioni cultura associate al thread corrente.  
   
 ### <a name="concat"></a>Concat  
- Il **Concat** metodo può essere utilizzato per creare facilmente un nuovo oggetto stringa da due o più oggetti esistenti. Questo metodo rappresenta una modalità di concatenamento delle stringhe indipendente dal linguaggio. Questo metodo accetta qualsiasi classe che deriva da **System. Object**. Nell'esempio di codice che segue viene creata una stringa da due oggetti stringa esistenti e da un carattere di separazione.  
+ Il metodo **String.Concat** può essere usato per creare facilmente un nuovo oggetto stringa da due o più oggetti esistenti. Questo metodo rappresenta una modalità di concatenamento delle stringhe indipendente dal linguaggio. Il metodo accetta qualsiasi classe derivi da **System.Object**. Nell'esempio di codice che segue viene creata una stringa da due oggetti stringa esistenti e da un carattere di separazione.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
 ### <a name="join"></a>Join  
- Il **String. join** metodo crea una nuova stringa da una matrice di stringhe e una stringa di separazione. Questo metodo è utile per concatenare più stringhe, creando un elenco, eventualmente separato da virgole.  
+ Il metodo **String.Join** consente di creare una nuova stringa da una matrice di stringhe e da una stringa di separazione. Questo metodo è utile per concatenare più stringhe, creando un elenco, eventualmente separato da virgole.  
   
  Nell'esempio di codice seguente viene usato uno spazio per eseguire l'associazione di una matrice di stringhe.  
   
@@ -74,15 +77,15 @@ Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente stringh
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
 ### <a name="insert"></a>INS  
- Il **String. Insert** metodo crea una nuova stringa inserendo una stringa in una posizione specificata in un'altra stringa. Questo metodo usa un indice a base zero. Nell'esempio di codice che segue viene inserita una stringa in corrispondenza della quinta posizione di indice di `MyString` e viene creata una nuova stringa con tale valore.  
+ Il metodo **String.Insert** consente di creare una nuova stringa inserendo una stringa in una posizione specificata in un'altra stringa. Questo metodo usa un indice a base zero. Nell'esempio di codice che segue viene inserita una stringa in corrispondenza della quinta posizione di indice di `MyString` e viene creata una nuova stringa con tale valore.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
 ### <a name="copyto"></a>CopyTo  
- Il **String. CopyTo consente** metodo copiare parti di una stringa in una matrice di caratteri. È possibile specificare sia l'indice iniziale della stringa sia il numero dei caratteri da copiare. Il metodo contiene l'indice di origine, una matrice di caratteri, l'indice di destinazione e il numero dei caratteri da copiare. Tutti gli indici sono a base zero.  
+ Il metodo **String.CopyTo** consente di copiare parti di una stringa in una matrice di caratteri. È possibile specificare sia l'indice iniziale della stringa sia il numero dei caratteri da copiare. Il metodo contiene l'indice di origine, una matrice di caratteri, l'indice di destinazione e il numero dei caratteri da copiare. Tutti gli indici sono a base zero.  
   
- L'esempio seguente usa il **CopyTo** metodo per copiare i caratteri della parola "Hello" da una stringa dell'oggetto in prima posizione di indice di una matrice di caratteri.  
+ Nell'esempio di codice riportato di seguito il metodo **CopyTo** viene usato per copiare nella prima posizione di indice di una matrice di caratteri i caratteri della parola "Hello" di un oggetto stringa.  
   
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  

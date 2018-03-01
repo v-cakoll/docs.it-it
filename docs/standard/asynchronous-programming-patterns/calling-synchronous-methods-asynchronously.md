@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Chiamata asincrona dei metodi sincroni
 .NET Framework consente di chiamare qualsiasi metodo in modo asincrono. A questo scopo occorre definire un delegato con la stessa firma del metodo che si vuole chiamare. Common Language Runtime definisce automaticamente i metodi `BeginInvoke` e `EndInvoke` per il delegato, con le firme appropriate.  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Eseguire alcune operazioni, quindi chiamare `EndInvoke` per bloccare l'esecuzione fino al completamento della chiamata.  
   
--   Ottenere un <xref:System.Threading.WaitHandle> utilizzando il <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> proprietà, utilizzare il relativo <xref:System.Threading.WaitHandle.WaitOne%2A> metodo per bloccare l'esecuzione fino a quando il <xref:System.Threading.WaitHandle> viene segnalato e chiama `EndInvoke`.  
+-   Ottenere un oggetto <xref:System.Threading.WaitHandle> con la proprietà <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, usare il relativo metodo <xref:System.Threading.WaitHandle.WaitOne%2A> per bloccare l'esecuzione fino a quando non viene segnalato <xref:System.Threading.WaitHandle>, quindi chiamare `EndInvoke`.  
   
 -   Eseguire il polling dell'oggetto <xref:System.IAsyncResult> restituito da `BeginInvoke` per stabilire quando viene completata la chiamata, quindi chiamare `EndInvoke`.  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
  Se si usa un <xref:System.Threading.WaitHandle>, è possibile eseguire altre operazioni prima o dopo il completamento della chiamata asincrona, ma prima di chiamare `EndInvoke` per recuperare i risultati.  
   
 > [!NOTE]
->  L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema subito dopo aver terminato di utilizzare l'handle di attesa, eliminarlo chiamando il <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> metodo. Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.  
+>  L'handle di attesa non viene chiuso automaticamente quando si chiama `EndInvoke`. Se si rilasciano tutti i riferimenti all'handle di attesa, le risorse di sistema vengono liberate quando Garbage Collection recupera l'handle di attesa. Per liberare le risorse di sistema non appena si ha finito di usare l'handle di attesa, eliminarlo chiamando il metodo <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. Garbage Collection opera in modo più efficiente quando gli oggetti eliminabili vengono eliminati in modo esplicito.  
   
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -103,11 +106,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>Esecuzione di un metodo di callback al completamento di una chiamata asincrona  
  Se il thread che avvia la chiamata asincrona non deve necessariamente essere il thread che elabora i risultati, è possibile eseguire un metodo di callback al completamento della chiamata. Il metodo di callback viene eseguito su un thread <xref:System.Threading.ThreadPool> .  
   
- Per usare un metodo di callback, è necessario passare a `BeginInvoke` un delegato <xref:System.AsyncCallback> che rappresenta il metodo di callback. È possibile passare anche un oggetto contenente informazioni che devono essere usate dal metodo di callback. Nel metodo di callback è possibile eseguire il cast di <xref:System.IAsyncResult>, che è l'unico parametro del metodo di callback, a un oggetto <xref:System.Runtime.Remoting.Messaging.AsyncResult> . È quindi possibile utilizzare il <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> proprietà per ottenere il delegato utilizzato per avviare la chiamata in modo che sia possibile chiamare `EndInvoke`.  
+ Per usare un metodo di callback, è necessario passare a `BeginInvoke` un delegato <xref:System.AsyncCallback> che rappresenta il metodo di callback. È possibile passare anche un oggetto contenente informazioni che devono essere usate dal metodo di callback. Nel metodo di callback è possibile eseguire il cast di <xref:System.IAsyncResult>, che è l'unico parametro del metodo di callback, a un oggetto <xref:System.Runtime.Remoting.Messaging.AsyncResult> . È quindi possibile usare la proprietà <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> per ottenere il delegato usato per avviare la chiamata in modo che sia possibile chiamare `EndInvoke`.  
   
  Note sull'esempio:  
   
--   Il `threadId` parametro di `TestMethod` è un `out` parametro ([`<Out>` `ByRef` in Visual Basic), pertanto il valore di input non viene mai utilizzato da `TestMethod`. Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.  
+-   Il parametro `threadId` di `TestMethod` è un parametro `out` ([`<Out>` `ByRef` in Visual Basic), quindi il valore di input non viene mai usato da `TestMethod`. Viene passata una variabile fittizia alla chiamata `BeginInvoke` . Se il parametro `threadId` fosse un parametro `ref` (`ByRef` in Visual Basic), la variabile dovrebbe essere un campo a livello di classe perché possa essere passata sia a `BeginInvoke` che a `EndInvoke`.  
   
 -   Le informazioni sullo stato che vengono passate a `BeginInvoke` sono costituite da una stringa di formato, che viene usata dal metodo di callback per formattare un messaggio di output. Dato che le informazioni sullo stato vengono passate come tipo <xref:System.Object>, è necessario eseguirne il cast al tipo appropriato prima di poterle usare.  
   
@@ -119,4 +122,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Delegate>  
- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi)
+ [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)

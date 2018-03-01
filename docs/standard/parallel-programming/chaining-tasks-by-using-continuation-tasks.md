@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, continuations
+helpviewer_keywords:
+- tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Concatenamento di attività tramite attività di continuazione
 Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. Tradizionalmente, a questo scopo vengono usati metodi callback. In Task Parallel Library la stessa funzionalità viene resa possibile dalle *attività di continuazione*. Un'attivazione di continuazione, chiamata anche semplicemente continuazione, è un'attività asincrona richiamata da un'altra attività, denominata *attività precedente*, al termine di quest'ultima.  
@@ -58,7 +62,7 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>Creazione di una continuazione per più attività precedenti  
  È anche possibile creare una continuazione che verrà eseguita al termine di una o tutte le attività di un gruppo di attività. Per eseguire una continuazione al termine di tutte le attività precedenti, chiamare il metodo statico (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> o il metodo <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> dell'istanza. Per eseguire una continuazione al termine delle attività precedenti, chiamare il metodo statico (`Shared` in Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> o il metodo <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> dell'istanza.  
   
- Si noti che le chiamate al <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> overload non bloccano il thread chiamante.  Tuttavia, si chiama in genere tutto tranne il <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> metodi per recuperare l'oggetto restituito <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> proprietà, che blocca il thread chiamante.  
+ Si noti che le chiamate agli overload <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> non bloccano il thread chiamante.  Tuttavia, in genere si eseguono chiamate a tutti gli elementi a eccezione dei metodi <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> per recuperare la proprietà <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> restituita, che blocca il thread chiamante.  
   
  Nell'esempio seguente viene chiamato il metodo <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> per creare un'attività di continuazione che riflette il risultato delle proprie dieci attività precedenti. Ogni attività precedente eleva al quadrato un valore di indice compreso tra uno e dieci. Se le attività precedenti vengono completate correttamente (ovvero la relativa proprietà <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> è <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>), la proprietà <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> della continuazione è una matrice dei valori <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> restituiti da ogni attività precedente. L'esempio aggiunge tali valori per calcolare la somma dei quadrati per tutti i numeri compresi tra uno e dieci.  
   
@@ -124,7 +128,7 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
 ## <a name="associating-state-with-continuations"></a>Associazione dello stato alle continuazioni  
  È possibile associare uno stato arbitrario a una continuazione di attività. Il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A> fornisce versioni di overload, ciascuna delle quali può accettare un valore <xref:System.Object> che rappresenta lo stato della continuazione. Successivamente, è possibile accedere a questo oggetto stato usando la proprietà <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>. Questo oggetto stato è `null` se non si specifica un valore.  
   
- Lo stato della continuazione è utile quando si converte codice esistente che usa il [modello di programmazione asincrono (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) per usare TPL. Nel modello APM, in genere forniscono lo stato di oggetto nel  **iniziare*metodo** * metodo e possibile accedere a tale stato usando la <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> proprietà. Tramite il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A> è possibile mantenere questo stato quando si converte il codice che usa il modello APM per usare TPL.  
+ Lo stato della continuazione è utile quando si converte codice esistente che usa il [modello di programmazione asincrono (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) per usare TPL. In APM l'oggetto stato viene specificato in genere nel metodo **Begin***Method*. È quindi possibile accedere a tale stato usando la proprietà <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Tramite il metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A> è possibile mantenere questo stato quando si converte il codice che usa il modello APM per usare TPL.  
   
  Lo stato della continuazione può essere utile anche quando si usano oggetti <xref:System.Threading.Tasks.Task> nel debugger di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Ad esempio, nella finestra **Attività in parallelo** la colonna **Attività** mostra la rappresentazione di stringa dell'oggetto stato per ogni attività. Per altre informazioni sulla finestra **Attività in parallelo**, vedere [Uso della finestra Attività](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -151,7 +155,7 @@ Nella programmazione asincrona è molto comune che un'operazione asincrona, al c
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Per altre informazioni, vedere [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB - Procedura: gestire le eccezioni generate dalle attività](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Per altre informazioni, vedere [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB - Procedura: gestire le eccezioni generate dalle attività](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Se la continuazione è un'attività figlio collegata creata usando l'opzione <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, le eccezioni verranno propagate dall'attività padre di nuovo al thread di chiamata, come nel caso di qualsiasi altra attività figlio collegata. Per altre informazioni, vedere [Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Attività figlio connesse e disconnesse).  
   

@@ -16,15 +16,18 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/18/2017
   
     -   Eseguito. Il blocco di memoria è assegnato all'archiviazione fisica.  
   
--   Lo spazio degli indirizzi virtuali può diventare frammentato. Ciò significa che sono presenti blocchi liberi, noti anche come buchi, nello spazio degli indirizzi. Quando viene richiesta un'allocazione della memoria virtuale, il gestore di memoria virtuale deve trovare un singolo blocco libero con dimensioni sufficienti per soddisfare la richiesta di allocazione. Anche se si dispone di 2 GB di spazio disponibile, l'allocazione che richiede 2 GB sarà esito negativo a meno che tutto lo spazio disponibile sia in un unico blocco di indirizzi.  
+-   Lo spazio degli indirizzi virtuali può diventare frammentato. Ciò significa che sono presenti blocchi liberi, noti anche come buchi, nello spazio degli indirizzi. Quando viene richiesta un'allocazione della memoria virtuale, il gestore di memoria virtuale deve trovare un singolo blocco libero con dimensioni sufficienti per soddisfare la richiesta di allocazione. Anche se si hanno 2 GB di spazio disponibile, l'allocazione che richiede 2 GB avrà esito negativo a meno che tutto lo spazio disponibile si trovi in un unico blocco di indirizzi.  
   
 -   È possibile esaurire la memoria se si esaurisce lo spazio degli indirizzi virtuali da riservare o lo spazio fisico di cui eseguire il commit.  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="conditions-for-a-garbage-collection"></a>Condizioni per un'operazione di Garbage Collection  
  Le operazioni di Garbage Collection vengono eseguite in presenza di una delle seguenti condizioni:  
   
--   La memoria fisica del sistema è insufficiente. Questa è stata rilevata la notifica di memoria insufficiente dal sistema operativo o di memoria insufficiente, indicato dall'host.
+-   La memoria fisica del sistema è insufficiente. Questa viene rilevata tramite la notifica di memoria non sufficiente dal sistema operativo o di memoria non sufficiente indicata dall'host.
   
 -   La memoria usata dagli oggetti allocati nell'heap gestito supera una soglia accettabile. Questa soglia viene continuamente modificata durante l'esecuzione del processo.  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 10/18/2017
   
  Per ogni processo gestito esiste un heap gestito. Tutti i thread nel processo allocano memoria per gli oggetti sullo stesso heap.  
   
- Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva inoltre i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) Win32.  
+ Per riservare memoria, il Garbage Collector chiama la funzione [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) Win32 e riserva un segmento di memoria alla volta per le applicazioni gestite. Il Garbage Collector riserva anche i segmenti secondo le esigenze e li rilascia al sistema operativo dopo aver cancellato tutti gli oggetti, chiamando la funzione [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) Win32.  
   
 > [!IMPORTANT]
 >  La dimensione dei segmenti allocati dal Garbage Collector è specifica dell'implementazione ed è soggetta a modifiche in qualsiasi momento, tra cui aggiornamenti periodici. L'applicazione non deve dare per scontata o dipendere da una particolare dimensione del segmento, né provare a configurare la quantità di memoria disponibile per le allocazioni di segmenti.  
@@ -189,7 +192,7 @@ ms.lasthandoff: 10/18/2017
   
  Nell'illustrazione seguente viene illustrato un thread che attiva un'operazione di Garbage Collection causando la sospensione degli altri thread.  
   
- ![Quando un thread che attiva un'operazione di Garbage Collection](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
+ ![Quando un thread attiva un'operazione di Garbage Collection](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 Thread che attiva un'operazione di Garbage Collection  
   
  [Torna all'inizio](#top)  
@@ -208,7 +211,7 @@ Thread che attiva un'operazione di Garbage Collection
 ## <a name="workstation-and-server-garbage-collection"></a>Operazione di Garbage Collection per workstation e server  
  Il Garbage Collector si regola da sé e può funzionare in un'ampia varietà di scenari. È possibile usare un'impostazione del file di configurazione per impostare il tipo di operazione di Garbage Collection, in base alle caratteristiche del carico di lavoro. CLR fornisce i seguenti tipi di Garbage Collection:  
   
--   Garbage Collection per workstation, per tutte le workstation client e i PC autonomi. Questo è l'impostazione predefinita per il [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) nello schema di configurazione di runtime.  
+-   Garbage Collection per workstation, per tutte le workstation client e i PC autonomi. Si tratta dell'impostazione predefinita per l'[elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) nello schema di configurazione di runtime.  
   
      Le operazioni di Garbage Collection per workstation possono essere eseguite in modalità simultanea o non simultanea. La modalità simultanea consente ai thread gestiti di continuare le operazioni durante un'operazione di Garbage Collection.  
   
@@ -218,13 +221,13 @@ Thread che attiva un'operazione di Garbage Collection
   
  La seguente illustrazione mostra i thread dedicati che eseguono l'operazione di Garbage Collection in un server.  
   
- ![Thread di Garbage Collection server](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
+ ![Thread di Garbage Collection del server](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 Garbage Collection nel server  
   
 ### <a name="configuring-garbage-collection"></a>Configurazione dell'operazione di Garbage Collection  
- È possibile utilizzare il [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) dello schema di configurazione di runtime per specificare il tipo di garbage collection desiderate da eseguire tramite CLR. Quando l'attributo `enabled` di questo elemento è impostato su `false` (impostazione predefinita), CLR esegue un'operazione di Garbage Collection per workstation. Quando si imposta l'attributo `enabled` su `true`, CLR esegue un'operazione di Garbage Collection per server.  
+ È possibile usare l'[elemento \<gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) dello schema di configurazione di runtime per specificare il tipo di operazione di Garbage Collection da eseguire tramite CLR. Quando l'attributo `enabled` di questo elemento è impostato su `false` (impostazione predefinita), CLR esegue un'operazione di Garbage Collection per workstation. Quando si imposta l'attributo `enabled` su `true`, CLR esegue un'operazione di Garbage Collection per server.  
   
- Garbage collection simultanea è specificata con il [ \<gcConcurrent > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) dello schema di configurazione di runtime. L'impostazione predefinita è `enabled`. Questa impostazione controlla sia l'operazione di Garbage Collection simultanea che quella in background.  
+ La modalità di concorrenza viene specificata con l'[elemento \<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) dello schema di configurazione di runtime. L'impostazione predefinita è `enabled`. Questa impostazione controlla sia l'operazione di Garbage Collection simultanea che quella in background.  
   
  È anche possibile specificare operazioni di Garbage Collection per server con interfacce di hosting non gestite. Si noti che ASP.NET e SQL Server abilitano automaticamente le operazioni di Garbage Collection per server se l'applicazione è ospitata in uno di questi ambienti.  
   
@@ -235,7 +238,7 @@ Garbage Collection nel server
   
      I thread che eseguono codice nativo non vengono sospesi.  
   
--   Garbage collection per workstation vengono sempre eseguite in un computer con un solo processore, indipendentemente dal valore di [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) impostazione. Se si specifica un'operazione di Garbage Collection per server, tramite CLR viene usata la modalità per workstation, con la modalità simultanea disabilitata.  
+-   Le operazioni di Garbage Collection per workstation vengono sempre eseguite in computer con un solo processore, indipendentemente dall'impostazione di [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Se si specifica un'operazione di Garbage Collection per server, tramite CLR viene usata la modalità per workstation, con la modalità simultanea disabilitata.  
   
  Di seguito sono riportate alcune considerazioni su threading e prestazioni per l'operazione di Garbage Collection per server:  
   
@@ -259,7 +262,7 @@ Garbage Collection nel server
   
  La modalità simultanea consente alle applicazioni interattive una maggiore efficienza di risposta riducendo al minimo le pause di una raccolta. È possibile continuare a eseguire i thread gestiti per la maggior parte del tempo in cui viene eseguito il thread di Garbage Collection in modalità simultanea. Il risultato saranno pause più brevi durante l'esecuzione di un'operazione di Garbage Collection.  
   
- Per migliorare le prestazioni in caso di esecuzione di numerosi processi, disabilitare la modalità simultanea. Questo scopo, è possibile aggiungere un [ \<gcConcurrent > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) al file di configurazione dell'app e impostare il valore del relativo `enabled` attributo `"false"`.  
+ Per migliorare le prestazioni in caso di esecuzione di numerosi processi, disabilitare la modalità simultanea. A questo scopo, è possibile aggiungere un [\<elemento gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) al file di configurazione dell'app e impostare il valore dell'attributo `enabled` su `"false"`.  
   
  La modalità simultanea di Garbage Collection viene eseguita in un thread dedicato. Per impostazione predefinita, CLR esegue le operazioni di Garbage Collection per workstation con la modalità simultanea abilitata. Ciò vale tanto per i computer a processore singolo quanto per quelli multiprocessore.  
   
@@ -269,7 +272,7 @@ Garbage Collection nel server
   
  Nell'illustrazione riportata di seguito viene mostrata l'esecuzione simultanea di un'operazione di Garbage Collection in un thread dedicato separato.  
   
- ![Thread di simultanea di Garbage Collection](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
+ ![Thread di Garbage Collection simultanei](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 Garbage Collection contemporanea  
   
  [Torna all'inizio](#top)  
@@ -289,18 +292,18 @@ Garbage Collection contemporanea
   
  Nell'illustrazione riportata di seguito viene mostrata l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato in una workstation.  
   
- ![Garbage collection della workstation in background](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
+ ![Garbage Collection della workstation in background](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
 Garbage Collection della workstation in background  
   
  [Torna all'inizio](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Garbage Collection del server in background  
- A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background per server è la modalità predefinita per l'operazione di Garbage Collection per server. Per scegliere questa modalità, impostare il `enabled` attributo del [ \<gcServer > elemento](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) a `true` nello schema di configurazione di runtime. Questa modalità è simile alla modalità in background descritta nella sezione precedente, ma con alcune differenze. La modalità in background dell'operazione di Garbage Collection per workstation usa un thread di Garbage Collection in background dedicato, mentre quella dell'operazione di Garbage Collection per server usa più thread, in genere un thread dedicato per ogni processore logico. A differenza del thread di Garbage Collection in background per workstation, questi thread non scadono.  
+ A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background per server è la modalità predefinita per l'operazione di Garbage Collection per server. Per scegliere questa modalità, impostare l'attributo `enabled` dell'[elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) su `true` nello schema di configurazione di runtime. Questa modalità è simile alla modalità in background descritta nella sezione precedente, ma con alcune differenze. La modalità in background dell'operazione di Garbage Collection per workstation usa un thread di Garbage Collection in background dedicato, mentre quella dell'operazione di Garbage Collection per server usa più thread, in genere un thread dedicato per ogni processore logico. A differenza del thread di Garbage Collection in background per workstation, questi thread non scadono.  
   
  Nell'illustrazione riportata di seguito viene mostrata l'esecuzione di un'operazione di Garbage Collection in background in un thread dedicato separato in un server.  
   
- ![Operazione di Garbage collection in background](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
+ ![Garbage Collection del server in background](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 Garbage Collection del server in background  
   
 ## <a name="see-also"></a>Vedere anche  

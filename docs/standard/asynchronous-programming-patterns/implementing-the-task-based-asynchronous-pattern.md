@@ -2,7 +2,8 @@
 title: "Implementazione del modello asincrono basato su attività"
 ms.date: 06/14/2017
 ms.prod: .net
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,25 +15,28 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e61b0c94b1512509008d67017389fa11f938999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su attività
-È possibile implementare il modello asincrono basato su attività (TAP) in i tre modi: con i compilatori C# e Visual Basic in Visual Studio, manualmente oppure con una combinazione dei primi due. Le sezioni seguenti illustrano in dettaglio ogni metodo. È possibile utilizzare il modello TAP per implementare operazioni asincrone calcolo e associate I/O. Il [i carichi di lavoro](#workloads) sezione viene descritto ciascun tipo di operazione.
+È possibile implementare il modello asincrono basato su attività (TAP) in i tre modi: con i compilatori C# e Visual Basic in Visual Studio, manualmente oppure con una combinazione dei primi due. Le sezioni seguenti illustrano in dettaglio ogni metodo. È possibile usare il modello TAP per implementare operazioni asincrone di calcolo e di I/O. La sezione [Carichi di lavoro](#workloads) illustra ogni tipo di operazione.
 
 ## <a name="generating-tap-methods"></a>Generazione di metodi TAP
 
-### <a name="using-the-compilers"></a>Utilizzando i compilatori
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], qualsiasi metodo che è stato attribuito il `async` (parola chiave) (`Async` in Visual Basic) viene considerato un metodo asincrono e i compilatori c# e Visual Basic eseguono le trasformazioni necessarie per implementare il metodo in modo asincrono tramite TOCCO. Un metodo asincrono deve restituire un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Nel secondo caso, il corpo della funzione deve restituire un `TResult`, e il compilatore garantisce che il risultato sia reso disponibile tramite l'oggetto attività risultante. Allo stesso modo, viene eseguito il marshalling di qualsiasi eccezione gestita all'interno del corpo del metodo per l'attività di output, per far sì che l'attività risultante termini con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. L'eccezione si verifica quando un <xref:System.OperationCanceledException> (o tipo derivato) non viene gestito, in qual caso l'attività risultante termina nello stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
+### <a name="using-the-compilers"></a>Uso dei compilatori
+A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], qualsiasi metodo con la parola chiave `async` (`Async` in Visual Basic) viene considerato un metodo asincrono e i compilatori C# e Visual Basic eseguono le trasformazioni necessarie per implementare il metodo in modo asincrono tramite TAP. Un metodo asincrono deve restituire un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Nel secondo caso, il corpo della funzione deve restituire un oggetto `TResult` e il compilatore garantisce che il risultato sia reso disponibile tramite l'oggetto attività risultante. Allo stesso modo, viene eseguito il marshalling di qualsiasi eccezione gestita all'interno del corpo del metodo per l'attività di output, per far sì che l'attività risultante termini con lo stato <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. L'eccezione si verifica quando un <xref:System.OperationCanceledException> (o tipo derivato) non viene gestito, in qual caso l'attività risultante termina nello stato <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
-### <a name="generating-tap-methods-manually"></a>Generazione di metodi TAP manualmente
+### <a name="generating-tap-methods-manually"></a>Generazione manuale di metodi TAP
 È possibile implementare il modello TAP manualmente per un controllo migliore sull'implementazione. Il compilatore si basa sull'area di superficie esposta dallo spazio dei nomi <xref:System.Threading.Tasks?displayProperty=nameWithType> e i tipi di supporto nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Per implementare autonomamente il modello TAP, creare un oggetto <xref:System.Threading.Tasks.TaskCompletionSource%601>, eseguire l'operazione asincrona e, al completamento, chiamare il metodo <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> o <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oppure la versione `Try` di uno di questi metodi. Quando si implementa un metodo TAP manualmente, è necessario completare l'attività risultante al completamento dell'operazione asincrona rappresentata. Ad esempio:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
@@ -47,7 +51,7 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], qualsiasi met
  Un altro caso in cui tale delega è utile si verifica quando si implementa l'ottimizzazione fast-path e si vuole restituire un'attività nella cache.
 
 ## <a name="workloads"></a>Carichi di lavoro
-È possibile implementare le operazioni asincrone di solo calcolo e associate ai I/O come metodi TAP. Tuttavia, quando i metodi TAP vengono esposti pubblicamente da una libreria, dovrebbero essere forniti solo per i carichi di lavoro che implicano operazioni associate a I/O (che possono anche implicare il calcolo, ma non devono essere puramente di calcolo). Se un metodo è di solo calcolo, dovrebbe essere esposto solo come un'implementazione sincrona. Il codice che lo usa può quindi scegliere se eseguire il wrapping di una chiamata di tale metodo sincrono in un'attività per ripartire il lavoro a un altro thread oppure per ottenere parallelismo. E, se un metodo è associato ai / o, dovrebbe essere esposto solo come un'implementazione asincrona.
+È possibile implementare le operazioni asincrone di solo calcolo e associate ai I/O come metodi TAP. Tuttavia, quando i metodi TAP vengono esposti pubblicamente da una libreria, dovrebbero essere forniti solo per i carichi di lavoro che implicano operazioni associate a I/O (che possono anche implicare il calcolo, ma non devono essere puramente di calcolo). Se un metodo è di solo calcolo, deve essere esposto solo come implementazione sincrona. Il codice che lo utilizza può quindi scegliere se eseguire il wrapping di una chiamata di tale metodo sincrono in un'attività per l'offload del lavoro in un altro thread oppure per ottenere parallelismo. Se invece un metodo è di I/O, deve essere esposto solo come implementazione asincrona.
 
 ### <a name="compute-bound-tasks"></a>Attività di calcolo
 La classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> è la soluzione ideale per la rappresentazione di operazioni con calcoli complessi. Per impostazione predefinita, consente di usufruire del supporto speciale all'interno della classe <xref:System.Threading.ThreadPool> per fornire un'esecuzione efficiente e fornisce anche un controllo significativo su quando, dove e come eseguire i calcoli asincroni.
@@ -56,13 +60,13 @@ La classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> è la 
 
 - In .NET Framework 4, usare il metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>, che accetta l'esecuzione asincrona di un delegato (di solito <xref:System.Action%601> o <xref:System.Func%601>). Se l'utente fornisce un delegato <xref:System.Action%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> che rappresenta l'esecuzione asincrona di tale delegato. Se si fornisce un delegato <xref:System.Func%601>, il metodo restituisce un oggetto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Gli overload del metodo <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> accettano un token di annullamento (<xref:System.Threading.CancellationToken>), opzioni di creazione attività (<xref:System.Threading.Tasks.TaskCreationOptions>) e un'utilità di pianificazione delle attività (<xref:System.Threading.Tasks.TaskScheduler>), tutti i quali offrono un controllo granulare sulla pianificazione e l'esecuzione dell'attività. Un'istanza della factory destinata all'utilità di pianificazione dell'attività corrente è disponibile come proprietà statica (<xref:System.Threading.Tasks.Task.Factory%2A>) della classe <xref:System.Threading.Tasks.Task>; ad esempio: `Task.Factory.StartNew(…)`.
 
-- Nel [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive (inclusi .NET Core e Standard di .NET), utilizzare il metodo statico <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> metodo come un collegamento a <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. È possibile usare <xref:System.Threading.Tasks.Task.Run%2A> per avviare facilmente un'attività di calcolo destinata al pool di thread. Nel [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive, questo è il meccanismo preferito per l'avvio di un'attività di calcolo. Utilizzare `StartNew` direttamente solo quando si desidera un controllo più accurato l'attività.
+- In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive (inclusi .NET Core e .NET Standard), usare il metodo statico <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> come collegamento a <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. È possibile usare <xref:System.Threading.Tasks.Task.Run%2A> per avviare facilmente un'attività di calcolo destinata al pool di thread. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e versioni successive questo è il meccanismo preferenziale per l'avvio di un'attività di calcolo. Usare `StartNew` direttamente solo quando si vuole controllare l'attività in modo più accurato.
 
-- Usare i costruttori del tipo `Task` o del metodo `Start` se si vuol generare e pianificare l'attività separatamente. I metodi pubblici devono restituire solo operazioni già avviate.
+- Usare i costruttori del tipo `Task` o del metodo `Start` se si vuol generare e pianificare l'attività separatamente. I metodi pubblici devono restituire solo attività già avviate.
 
 - Usare gli overload del metodo <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Questo metodo crea una nuova attività pianificata al completamento di un'altra attività. Alcuni degli overload <xref:System.Threading.Tasks.Task.ContinueWith%2A> accettano un token di annullamento, opzioni di continuazione e un'utilità di pianificazione delle attività per un miglior un controllo sulla pianificazione e l'esecuzione dell'attività di continuazione.
 
-- Utilizzare il <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> metodi. Questi metodi creano una nuova attività pianificata al completamento di tutte o una qualsiasi delle attività di un set fornito. Questi metodi vengono anche forniti overload per controllare la pianificazione e l'esecuzione di queste attività.
+- Usare i metodi <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>. Questi metodi creano una nuova attività pianificata al completamento di tutte o una qualsiasi delle attività di un set fornito. Questi metodi forniscono anche gli overload per controllare la pianificazione e l'esecuzione di queste attività.
 
 Nelle operazioni di calcolo, il sistema può impedire l'esecuzione di un'operazione pianificata se riceve una richiesta di annullamento prima dell'avvio dell'esecuzione dell'attività. In tal caso, se si fornisce un token di annullamento (oggetto <xref:System.Threading.CancellationToken>), è possibile passare tale token al codice asincrono che monitora il token. È anche possibile fornire il token a uno dei metodi indicati in precedenza, ad esempio `StartNew` o `Run` in modo che il runtime `Task` possa monitorare anche il token.
 
@@ -79,7 +83,7 @@ Le attività di calcolo terminano in uno stato <xref:System.Threading.Tasks.Task
 
 Se un'altra eccezione non viene gestita nel corpo dell'attività, l'attività termina nello stato <xref:System.Threading.Tasks.TaskStatus.Faulted> e tutti i tentativi di attesa dell'attività o di accesso al risultato causano la generazione di un'eccezione.
 
-### <a name="io-bound-tasks"></a>Attività associate I/O
+### <a name="io-bound-tasks"></a>Attività di I/O
 Per creare un'attività che non deve essere supportata direttamente da un thread per l'intera esecuzione, usare il tipo <xref:System.Threading.Tasks.TaskCompletionSource%601>. Questo tipo espone una proprietà <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> che restituisce un'istanza di <xref:System.Threading.Tasks.Task%601> associata. Il ciclo di vita di questa attività viene controllato con i metodi <xref:System.Threading.Tasks.TaskCompletionSource%601> come <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> e relative varianti `TrySet`.
 
 Si supponga di voler creare un'attività che verrà completata dopo un periodo di tempo specificato. Ad esempio, è possibile ritardare un'attività nell'interfaccia utente. La classe <xref:System.Threading.Timer?displayProperty=nameWithType> consente già di richiamare in modo asincrono un delegato dopo un determinato periodo di tempo e usando <xref:System.Threading.Tasks.TaskCompletionSource%601> è possibile inserire un oggetto <xref:System.Threading.Tasks.Task%601> all'inizio del timer, ad esempio:
@@ -97,13 +101,13 @@ La classe <xref:System.Threading.Tasks.TaskCompletionSource%601> non ha una cont
 [!code-csharp[Conceptual.TAP_Patterns#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#6)]
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
-### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Attività di calcolo e associate I/O mista
+### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Attività miste di calcolo e di I/O
 I metodi asincroni non sono limitati solo a operazioni associate a calcolo o I/O, ma possono rappresentare una combinazione di entrambe. Infatti, più operazioni asincrone vengono combinate spesso in operazioni miste di dimensioni maggiori. In un esempio precedente, tramite il metodo `RenderAsync` era stata effettuata un'operazione complessa a livello di calcolo per eseguire il rendering di un'immagine basata su un input `imageData`. Questi `imageData` possono provenire da un servizio Web a cui si accede in modo asincrono:
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-In questo esempio viene illustrato come un unico token di annullamento può essere multithreading con più operazioni asincrone. Per ulteriori informazioni, vedere la sezione sull'utilizzo di annullamento in [utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+In questo esempio viene illustrato come un unico token di annullamento può essere multithreading con più operazioni asincrone. Per altre informazioni, vedere la sezione relativa all'annullamento in [Utilizzo del modello asincrono basato su attività](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Vedere anche
  [Modello asincrono basato su attività (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
