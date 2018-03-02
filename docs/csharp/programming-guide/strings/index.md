@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
@@ -83,7 +83,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
  Un overload del metodo <xref:System.Console.WriteLine%2A> accetta una stringa di formato come parametro. Pertanto, è possibile incorporare solo un valore letterale stringa di formato senza una chiamata esplicita al metodo. Se tuttavia si usa il metodo <xref:System.Diagnostics.Trace.WriteLine%2A> per visualizzare l'output di debug nella finestra **Output** di Visual Studio è necessario chiamare in modo esplicito il metodo <xref:System.String.Format%2A>, perché <xref:System.Diagnostics.Trace.WriteLine%2A> accetta solo una stringa, non una stringa di formato. Per altre informazioni sulle stringhe di formato, vedere [Formattazione di tipi](../../../standard/base-types/formatting-types.md).  
   
 ## <a name="substrings"></a>Sottostringhe  
- Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: eseguire la ricerca di stringhe tramite metodi stringa](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) e [Procedura: modificare il contenuto delle stringhe](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: Cercare stringhe](../../how-to/search-strings.md) e [Procedura: Modificare il contenuto delle stringhe](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Procedura: Concatenare più stringhe](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Viene illustrato come usare l'operatore `+` e la classe `Stringbuilder` per unire stringhe in fase di compilazione e fase di esecuzione.|  
 |[Procedura: Confrontare stringhe](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Viene illustrato come eseguire confronti ordinali di stringhe.|  
 |[Procedura: Analizzare le stringhe con String.Split ](../../how-to/parse-strings-using-split.md)|Esempio di codice che illustra come usare il metodo `String.Split` per analizzare le stringhe.|  
-|[Procedura: Eseguire la ricerca di stringhe usando metodi stringa](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Viene spiegato come usare metodi specifici per la ricerca di stringhe.|  
-|[Procedura: Eseguire la ricerca di stringhe usando espressioni regolari](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Viene spiegato come usare le espressioni regolari per la ricerca di stringhe.|  
+|[Procedura: Cercare stringhe](../../how-to/search-strings.md)|Viene spiegato come usare metodi specifici per la ricerca di stringhe.|  
 |[Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Viene illustrato come analizzare in modo sicuro una stringa per verificare se ha un valore numerico valido.|  
 |[Procedura: Convertire una stringa in un oggetto DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Illustra come convertire una stringa come "24/01/2008" in un oggetto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Operazioni di base su stringhe](../../../../docs/standard/base-types/basic-string-operations.md)|Fornisce collegamenti ad argomenti che usano metodi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> per eseguire operazioni di base sulle stringhe.|  
