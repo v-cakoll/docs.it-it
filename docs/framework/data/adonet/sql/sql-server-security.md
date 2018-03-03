@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>Sicurezza di SQL Server
-In [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sono disponibili molte funzionalità che supportano la creazione di applicazioni di database protette.  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] ha molte funzionalità che supportano la creazione di applicazioni di database protette.  
   
  Indipendentemente dalla versione di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] in uso, esistono problemi di sicurezza, ad esempio furto dei dati o vandalismo, che è opportuno considerare. Anche l'integrità dei dati rientra tra i problemi di sicurezza da considerare. Se i dati non sono protetti, potrebbero diventare inutili se ne viene consentita la modifica ad hoc e vengono modificati con valori incorretti oppure eliminati, inavvertitamente o intenzionalmente. È inoltre spesso necessario garantire la conformità a requisiti di carattere legale, ad esempio la corretta archiviazione di informazioni riservate. A seconda delle leggi in vigore in una determinata giurisdizione, è infatti assolutamente vietata l'archiviazione di alcuni tipi di dati personali.  
   
@@ -44,13 +46,12 @@ In [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sono dispo
  Vengono illustrate le considerazioni sulla sicurezza relative a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Sicurezza e protezione (motore di Database)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- Argomenti sulla sicurezza della documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
-  
- [Considerazioni sulla sicurezza per SQL Server](http://go.microsoft.com/fwlink/?LinkId=98587)  
- Argomenti sulla sicurezza della documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
-  
+[Centro di sicurezza per il motore di Database SQL Server e Database SQL di Azure](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+Considerazioni sulla sicurezza per SQL Server e Database SQL di Azure.
+
+[Considerazioni sulla sicurezza per un'installazione di SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+Viene descritta la sicurezza da considerare prima di installare SQL Server.
+
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
