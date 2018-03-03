@@ -49,7 +49,7 @@ Per un elenco delle distribuzioni e delle versioni Linux supportate, vedere l'ar
 
 ## <a name="os-x--macos"></a>OS X/macOS
 
-Installare .NET Core per [macOS](https://www.microsoft.com/net/core#macos). .NET Cre è supportato in OS X El Capitan (versione 10.11) e macOS Sierra (versione 10.12).
+Installare .NET Core per [macOS](https://www.microsoft.com/net/core#macos). .NET Core è supportato in OS X El Capitan (versione 10.11) e macOS Sierra (versione 10.12).
 
 È possibile iniziare lo sviluppo di app .NET Core seguendo queste esercitazioni dettagliate.
 
