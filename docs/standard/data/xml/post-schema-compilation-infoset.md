@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)
-Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](http://go.microsoft.com/fwlink/?linkid=45242) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
+Nel documento [World Wide Web Consortium (W3C) XML Schema Recommendation](https://www.w3.org/XML/Schema) viene illustrato il set di informazioni (infoset) che deve essere esposto per la convalida pre-schema e la compilazione post-schema. Il modello SOM (Schema Object Model) XML visualizza questa esposizione prima e dopo che venga chiamato il metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  L'infoset sulla convalida pre-schema viene compilato durante la modifica dello schema. L'infoset sulla compilazione post-schema viene generato dopo la chiamata al metodo <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> del tipo <xref:System.Xml.Schema.XmlSchemaSet>, durante la compilazione dello schema, e viene esposto come proprietà.  
   

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quando scegliere .NET Framework per i contenitori Docker
 
@@ -29,7 +29,7 @@ Nella maggior parte dei casi per questo scenario, non sarà necessario eseguire 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Utilizzo di pacchetti NuGet o di librerie .NET di terze parti non disponibili per .NET Core
 
-Le librerie di terze parti stanno rapidamente adottando [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive, la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e nelle applicazioni .NET Core 2.0 può anche fare riferimento direttamente alle librerie .NET Framework esistenti (vedere la [compatibilità delle versioni](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Le librerie di terze parti stanno rapidamente adottando [.NET Standard](../../net-standard.md), che consente la condivisione di codice tra tutte le versioni di .NET incluso .NET Core. Con la libreria .NET Standard 2.0 e versioni successive, la compatibilità della superficie dell'API tra framework diversi è aumentata in modo significativo e nelle applicazioni .NET Core 2.0 può anche fare riferimento direttamente alle librerie .NET Framework esistenti (vedere la [compatibilità delle versioni](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Tuttavia, nonostante questo avanzamento eccezionale a partire da .NET Standard 2.0 e .NET Core 2.0, in determinati casi per eseguire alcuni pacchetti NuGet potrebbe essere necessario usare Windows perché questi non supportano .NET Core. Se questi pacchetti sono vitali per l'applicazione, sarà necessario usare .NET Framework in contenitori Windows.
 
@@ -56,16 +56,16 @@ Nel frattempo, se una piattaforma o un servizio in Azure ancora non supporta .NE
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Guida a .NET Core**
-    [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **Porting from .NET Framework to .NET Core (Portabilità da .NET Framework a .NET Core)**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **Guida a .NET Framework su Docker**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **Panoramica dei componenti di .NET**
-    [*https://docs.microsoft.com/dotnet/standard/components*](https://docs.microsoft.com/dotnet/standard/components)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -421,7 +421,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |`\w+`|Trova la corrispondenza con uno o più caratteri alfanumerici seguiti da uno spazio vuoto.|  
 |`\d{1,2},`|Trova la corrispondenza con una o due cifre digitali seguite da uno spazio vuoto e da una virgola.|  
 |`\d{4}\b`|Trova la corrispondenza di quattro cifre digitali e termina la corrispondenza sul confine di parola.|  
-|`(?<!(Saturday&#124;Sunday) )`|Se la corrispondenza viene preceduta da un elemento diverso dalle stringhe "Saturday" o "Sunday" seguito da uno spazio, la corrispondenza ha esito positivo.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Se la corrispondenza viene preceduta da un elemento diverso dalle stringhe "Saturday" o "Sunday" seguito da uno spazio, la corrispondenza ha esito positivo.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Sottoespressioni di non backtracking  

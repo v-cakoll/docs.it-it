@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
@@ -30,8 +31,8 @@ Installare .NET Core in [Windows](https://www.microsoft.com/net/core#windows).
 * [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md): informazioni su come compilare una libreria di classi scritta in C# con Visual Studio 2017.
 * [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md): informazioni su come compilare, eseguire il debug e pubblicare una semplice applicazione console .NET Core con Visual Basic e Visual Studio 2017. 
 * [Build a class library with Visual Basic and .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) (Compilare una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017) - Informazioni su come compilare una libreria di classi scritta in Visual Basic con Visual Studio 2017.
-* [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (Introduzione a Visual Studio Code con C# e .NET Core in Windows): video di [Channel9](https://channel9.msdn.com) che illustra come installare e usare [Visual Studio Code](https://www.visualstudio.com/products/code-vs), editor di codice multipiattaforma lightweight di Microsoft, per creare la prima applicazione console in .NET Core.
-* [Get Started with .NET Core and Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) (Introduzione a .NET Core e Visual Studio 2017): video di [Channel9](https://channel9.msdn.com) che illustra come installare e usare [Visual Studio 2017](https://www.visualstudio.com/), l'IDE completo di Microsoft, per creare la prima applicazione multipiattaforma in .NET Core.
+* [Get started with Visual Studio Code using C# and .NET Core on Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) (Introduzione a Visual Studio Code con C# e .NET Core in Windows): video di [Channel9](https://channel9.msdn.com) che illustra come installare e usare [Visual Studio Code](https://code.visualstudio.com/), editor di codice multipiattaforma lightweight di Microsoft, per creare la prima applicazione console in .NET Core.
+* [Get Started with .NET Core and Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) (Introduzione a .NET Core e Visual Studio 2017): video di [Channel9](https://channel9.msdn.com) che illustra come installare e usare [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), l'IDE completo di Microsoft, per creare la prima applicazione multipiattaforma in .NET Core.
 * [Introduzione all'uso di .NET Core dalla riga di comando](tutorials/using-with-xplat-cli.md): usare qualsiasi editor di codice con l'[interfaccia della riga di comando multipiattaforma di .NET Core](tools/index.md).
 
 Per un elenco delle versioni Windows supportate, vedere l'argomento [Prerequisites for Windows development](windows-prerequisites.md) (Prerequisiti per lo sviluppo in Windows).

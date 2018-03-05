@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>Hosting di .NET Core
 
@@ -26,7 +27,7 @@ Questo articolo offre una panoramica dei passaggi necessari per avviare il runti
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Poiché gli host sono applicazioni native, in questa esercitazione verrà descritta la costruzione di un'applicazione C++ per l'hosting di .NET Core. Sarà necessario un ambiente di sviluppo C++, come quello incluso in [Visual Studio](https://www.visualstudio.com/downloads/).
+Poiché gli host sono applicazioni native, in questa esercitazione verrà descritta la costruzione di un'applicazione C++ per l'hosting di .NET Core. Sarà necessario un ambiente di sviluppo C++, come quello incluso in [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
 
 Poiché sarà necessaria anche un'applicazione .NET Core semplice con cui testare l'host, installare [.NET Core SDK](https://www.microsoft.com/net/core) e [creare una piccola app di test .NET Core](../../core/tutorials/with-visual-studio.md), ad esempio un'app 'Hello World'. L'app 'Hello World' creata dal nuovo modello di progetto della console di .NET Core è sufficiente.
 

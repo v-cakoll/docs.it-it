@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test delle app Web e dei servizi ASP.NET di base
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Steve Smith. Test della logica dei controller in ASP.NET Core** [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Test della logica dei controller in ASP.NET Core** [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Integrazione di test in ASP.NET Core** [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Integrazione di test in ASP.NET Core** [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
 -   **Testing unità di C# in .NET Core usando il test dotnet e xUnit**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Sito ufficiale.
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 Come indicato in precedenza, quando si testano applicazioni a più contenitori, tutti i microservizi devono essere eseguiti all'interno dell'host Docker o del cluster di contenitori. I test di servizio end-to-end che includono più operazioni che implicano diversi microservizi richiedono la distribuzione e l'avvio dell'intera applicazione nell'host Docker con l'esecuzione del comando docker-compose up (o un meccanismo analogo, se si usa un agente di orchestrazione). Quando l'intera applicazione e tutti i relativi servizi saranno in esecuzione, sarà possibile eseguire i test funzionali e di integrazione end-to-end.
 
-Sono possibili alcuni approcci. Nel file docker-compose.yml usato per distribuire l'applicazione (o file simili, come docker-compose.ci.build.yml), a livello di soluzione è possibile espandere il punto di ingresso in modo da usare [dotnet test](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). È anche possibile usare un altro file Compose che esegua i test nell'immagine specificata come destinazione. Se per i test di integrazione si usa un altro file Compose che include i microservizi e i database nei contenitori, ci si assicura di ripristinare sempre lo stato originale dei dati correlati prima di eseguire i test.
+Sono possibili alcuni approcci. Nel file docker-compose.yml usato per distribuire l'applicazione (o file simili, come docker-compose.ci.build.yml), a livello di soluzione è possibile espandere il punto di ingresso in modo da usare [dotnet test](../../../core/tools/dotnet-test.md). È anche possibile usare un altro file Compose che esegua i test nell'immagine specificata come destinazione. Se per i test di integrazione si usa un altro file Compose che include i microservizi e i database nei contenitori, ci si assicura di ripristinare sempre lo stato originale dei dati correlati prima di eseguire i test.
 
 Quando l'applicazione Compose è operativa, è possibile sfruttare i punti di interruzione e le eccezioni se si esegue Visual Studio. In alternativa, è possibile eseguire i test di integrazione nella pipeline CI in Visual Studio Team Services o qualsiasi altro sistema di integrazione continua/recapito continuo che supporti i contenitori Docker.
 

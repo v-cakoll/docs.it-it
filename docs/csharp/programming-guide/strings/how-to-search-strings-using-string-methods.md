@@ -2,20 +2,21 @@
 title: 'Procedura: eseguire la ricerca di stringhe tramite metodi stringa (Guida per programmatori C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 7253b7db044c76bdec1ceb35048e0ef5f023c743
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-string-methods-c-programming-guide"></a>Procedura: eseguire la ricerca di stringhe tramite metodi stringa (Guida per programmatori C#)
 Il tipo [string](../../../csharp/language-reference/keywords/string.md), che è un alias per la classe <xref:System.String?displayProperty=nameWithType>, fornisce diversi metodi utili per la ricerca dei contenuti di una stringa.  

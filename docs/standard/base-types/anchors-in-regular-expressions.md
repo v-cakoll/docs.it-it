@@ -28,11 +28,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancoraggi in espressioni regolari
 <a name="top"></a> Gli ancoraggi, o asserzioni atomiche di larghezza zero, specificano una posizione della stringa in cui deve verificarsi una corrispondenza. Quando si usa un ancoraggio nell'espressione di ricerca, il motore delle espressioni regolari non avanza nella stringa né utilizza caratteri, ma cerca una corrispondenza solo nella posizione specificata. Ad esempio, `^` specifica che la corrispondenza deve iniziare all'inizio di una riga o stringa. Di conseguenza, l'espressione regolare `^http:` considera la corrispondenza "http:" solo quando si verifica all'inizio di una riga. La tabella seguente contiene gli ancoraggi supportati dalle espressioni regolari in .NET.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|Trova uno o più caratteri alfanumerici seguiti da uno spazio, seguito da uno o più caratteri alfanumerici. Questo è il quarto gruppo di acquisizione.|  
 |`,`|Trova la corrispondenza con una virgola.|  
 |`\s\d{4}`|Trova uno spazio seguito da quattro cifre decimali.|  
-|(-`(\d{4}&#124;present))?`|Trova nessuna o una occorrenza di un trattino seguita da quattro cifre decimali o dalla stringa "present". Equivale al sesto gruppo di acquisizione. Include anche un settimo gruppo di acquisizione.|  
+|<code>(-(\d{4}&#124;present))?</code>|Trova nessuna o una occorrenza di un trattino seguita da quattro cifre decimali o dalla stringa "present". Equivale al sesto gruppo di acquisizione. Include anche un settimo gruppo di acquisizione.|  
 |`,?`|Trova nessuna o una occorrenza di una virgola.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|Trova una o più occorrenze di: uno spazio, quattro cifre decimali, nessuna o una occorrenza di un trattino seguita da quattro cifre decimali oppure la stringa "present" e nessuna o una virgola. Equivale al quinto gruppo di acquisizione.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Trova una o più occorrenze di: uno spazio, quattro cifre decimali, nessuna o una occorrenza di un trattino seguita da quattro cifre decimali oppure la stringa "present" e nessuna o una virgola. Equivale al quinto gruppo di acquisizione.|  
   
  [Torna all'inizio](#top)  
   

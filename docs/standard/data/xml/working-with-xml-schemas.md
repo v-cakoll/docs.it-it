@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1cfac14f934efb22f7cd39faceb232cc819b540e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="working-with-xml-schemas"></a>Utilizzo di schemi XML
 Per definire la struttura di un documento XML, oltre alle relazioni dei suoi elementi, i tipi di dati e i vincoli di contenuto, si usa una DTD (Document Type Definition, definizione del tipo di documento) o uno schema XSD (XML Schema Definition Language). Sebbene un documento XML venga considerato in formato corretto se soddisfa tutti i requisiti sintattici definiti dalla raccomandazione W3C (World Wide Web Consortium) Extensible Markup Language (XML) 1.0, non viene ritenuto valido a meno che non sia in formato corretto e conforme ai vincoli definiti dalla relativa DTD o dal relativo schema. Pertanto, anche se tutti i documenti XML validi sono in formato corretto, non tutti i documenti XML in formato corretto sono validi.  
   
- Per altre informazioni su XML, vedere [W3C XML 1.0 Recommendation](http://go.microsoft.com/fwlink/?linkid=7269) (Consigli su W3C XML 1.0). Per altre informazioni sullo schema XML, vedere i consigli in [W3C XML Schema Part 1: Structures Recommendation](http://go.microsoft.com/fwlink/?linkid=48881) (Schema W3C XML, parte 1: consigli sulle strutture) e [W3C XML Schema Part 2: Datatypes Recommendation](http://go.microsoft.com/fwlink/?linkid=17392) (Schema W3C XML, parte 2: consigli sui tipi di dati).  
+ Per altre informazioni su XML, vedere [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/) (Consigli su W3C XML 1.0). Per altre informazioni sullo schema XML, vedere i consigli in [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) (Schema W3C XML, parte 1: consigli sulle strutture) e [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (Schema W3C XML, parte 2: consigli sui tipi di dati).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
