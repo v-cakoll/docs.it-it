@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificatori in espressioni regolari
 I quantificatori specificano il numero di istanze di un carattere, un gruppo o una classe di caratteri che deve essere presente nell'input affinché venga trovata una corrispondenza.  Nella tabella seguente vengono elencati i quantificatori supportati da .NET.  
@@ -273,7 +273,7 @@ I quantificatori specificano il numero di istanze di un carattere, un gruppo o u
 |Criterio|Descrizione|  
 |-------------|-----------------|  
 |`(a\1`|Trova la corrispondenza con "a" insieme al valore del primo gruppo acquisito...|  
-|`&#124;(?(1)`|… o verifica se è stato definito il primo gruppo acquisito. Si noti che il costrutto `(?(1)` non definisce un gruppo di acquisizione.|  
+|<code>&#124;(?(1)</code>|… o verifica se è stato definito il primo gruppo acquisito. Si noti che il costrutto `(?(1)` non definisce un gruppo di acquisizione.|  
 |`\1))`|Se il primo gruppo acquisito esiste, trovare la corrispondenza con il relativo valore. Se non esiste, il gruppo corrisponderà a <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  La prima espressione regolare tenta di trovare la corrispondenza con questo criterio da zero a due volte, la seconda esattamente due volte. Poiché il primo criterio raggiunge il numero minimo di acquisizioni con la prima acquisizione di <xref:System.String.Empty?displayProperty=nameWithType>, non ripete mai il tentativo di trovare una corrispondenza con `a\1` e il quantificatore `{0,2}` consente solo corrispondenze vuote nell'ultima iterazione. Al contrario, la seconda espressione regolare trova la corrispondenza con "a" perché restituisce `a\1` una seconda volta. Il numero minimo di iterazioni, 2, impone al motore la ripetizione dopo una corrispondenza vuota.  

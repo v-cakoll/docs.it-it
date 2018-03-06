@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|Inizia la corrispondenza sul confine di parola.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
-|`(\r?\n)&#124;,?\s)`|Trova la corrispondenza di uno o nessun ritorno a capo seguito da un carattere di nuova riga o di una o nessuna virgola seguita da uno spazio vuoto.|  
-|`(\w+((\r?\n)&#124;,?\s))*`|Trova la corrispondenza di zero o più occorrenze di uno o più caratteri alfanumerici seguiti da uno o nessun ritorno a capo e un carattere di nuova riga o da una o nessuna virgola seguita da uno spazio vuoto.|  
+|<code>(\r?\n)&#124;,?\s)</code>|Trova la corrispondenza di uno o nessun ritorno a capo seguito da un carattere di nuova riga o di una o nessuna virgola seguita da uno spazio vuoto.|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|Trova la corrispondenza di zero o più occorrenze di uno o più caratteri alfanumerici seguiti da uno o nessun ritorno a capo e un carattere di nuova riga o da una o nessuna virgola seguita da uno spazio vuoto.|  
 |`\w+`|Trova la corrispondenza di uno o più caratteri alfanumerici.|  
 |`[.?:;!]`|Trova la corrispondenza di un punto, un punto interrogativo, due punti, un punto e virgola o un punto esclamativo.|  
   
