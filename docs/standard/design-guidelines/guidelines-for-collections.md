@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Linee guida per le raccolte
 Qualsiasi tipo progettato specificamente per la modifica di un gruppo di oggetti con alcune caratteristiche comuni può essere considerato come una raccolta. È quasi sempre appropriato per questi tipi implementare <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, pertanto in questa sezione vengono considerate solo i tipi che implementano una o entrambe le interfacce di raccolte.  
@@ -31,7 +31,7 @@ Qualsiasi tipo progettato specificamente per la modifica di un gruppo di oggetti
   
  **X non** utilizzare <xref:System.Collections.ArrayList> o <xref:System.Collections.Generic.List%601> nelle API pubbliche.  
   
- Questi tipi sono strutture di dati progettate per essere usato nell'implementazione interna, non nelle API pubbliche. `List<T>`è ottimizzato per le prestazioni e potenza al costo di condizionamento l'API e flessibilità. Ad esempio, se si restituisce `List<T>`, non sempre sarà in grado di ricevere notifiche quando il codice client modifica la raccolta. Inoltre, `List<T>` espone molti membri, ad esempio <xref:System.Collections.Generic.List%601.BinarySearch%2A>, che non sono utili o applicabile in molti scenari. Due sezioni seguenti vengono descritti i tipi (astrazioni) progettati appositamente per l'utilizzo nelle API pubbliche.  
+ Questi tipi sono strutture di dati progettate per essere usato nell'implementazione interna, non nelle API pubbliche. `List<T>` è ottimizzato per le prestazioni e potenza al costo di condizionamento l'API e flessibilità. Ad esempio, se si restituisce `List<T>`, non sempre sarà in grado di ricevere notifiche quando il codice client modifica la raccolta. Inoltre, `List<T>` espone molti membri, ad esempio <xref:System.Collections.Generic.List%601.BinarySearch%2A>, che non sono utili o applicabile in molti scenari. Due sezioni seguenti vengono descritti i tipi (astrazioni) progettati appositamente per l'utilizzo nelle API pubbliche.  
   
  **X non** utilizzare `Hashtable` o `Dictionary<TKey,TValue>` nelle API pubbliche.  
   
@@ -61,7 +61,7 @@ Qualsiasi tipo progettato specificamente per la modifica di un gruppo di oggetti
   
  **✓ SI** utilizzare <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, una sottoclasse di `ReadOnlyCollection<T>`, o, in casi rari `IEnumerable<T>` per le raccolte di sola lettura che rappresenta i valori restituiti o proprietà.  
   
- In genere, è preferibile `ReadOnlyCollection<T>`. Se non vengono soddisfatti alcuni requisiti (ad esempio, la raccolta non è necessario implementare `IList`), utilizzare una raccolta personalizzata implementando `IEnumerable<T>`, `ICollection<T>`, o `IList<T>`. Se si implementa una raccolta di sola lettura personalizzata, implementare `ICollection<T>.ReadOnly` restituisca false.  
+ In genere, è preferibile `ReadOnlyCollection<T>`. Se non vengono soddisfatti alcuni requisiti (ad esempio, la raccolta non è necessario implementare `IList`), utilizzare una raccolta personalizzata implementando `IEnumerable<T>`, `ICollection<T>`, o `IList<T>`. Se si implementa una raccolta di sola lettura personalizzata, implementare `ICollection<T>.IsReadOnly` per restituire `true`.  
   
  Nei casi in cui si è certi che l'unico scenario si desidera supportare mai iterazione forward-only, è possibile utilizzare semplicemente `IEnumerable<T>`.  
   

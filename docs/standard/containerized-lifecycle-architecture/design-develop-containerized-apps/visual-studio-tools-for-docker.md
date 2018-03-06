@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools per Docker (Visual Studio in Windows)
 
@@ -28,7 +28,7 @@ Se si utilizza Visual Studio 2015, è necessario disporre di Update 3 o versione
 
 **Altre informazioni:** per istruzioni sull'installazione di Visual Studio, visitare [https://www.visualstudio.com/ \ edizioni dei prodotti/Visual Studio-2015-prodotto](https://www.visualstudio.com/products/vs-2015-product-editions).
 
-Per visualizzare ulteriori informazioni sull'installazione di Visual Studio Tools per Docker, passare a <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/dotnet/articles/core/docker/visual-studio-tools-for-docker>.
+Per visualizzare ulteriori informazioni sull'installazione di Visual Studio Tools per Docker, passare a <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
 Se si utilizza Visual Studio 2017, il supporto di Docker è già incluso.
 

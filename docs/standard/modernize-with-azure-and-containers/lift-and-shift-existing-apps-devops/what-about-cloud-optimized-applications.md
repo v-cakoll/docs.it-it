@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Per quanto riguarda le applicazioni ottimizzato su cloud?
 
@@ -41,7 +41,7 @@ La differenza fondamentale nelle applicazioni a livello di ottimizzazione Cloud 
 
 Creazione di nuove applicazioni che non usano microservizi anche senso. Esistono molti scenari di nuovo e moderni ancora in cui un approccio basato su microservizi potrebbe superare le proprie esigenze. In alcuni casi, è consigliabile solo creare un'applicazione web monolitico più semplice, o aggiungere i servizi con granularità grossolana a un'applicazione a più livelli. In questi casi, è comunque possibile effettuare usufruire del cloud PaaS funzionalità come quelle offerte dal servizio App di Azure. È comunque ridurre il lavoro di manutenzione per il limite.
 
-Inoltre, poiché si sviluppa un nuovo codice in ottimizzato per il Cloud scenari (per un'applicazione completa o parziali sottosistemi), quando si crea nuovo codice, utilizzare le versioni più recenti di .NET ([.NET Core](https://docs.microsoft.com/dotnet/core/) e [ASP.NET Core](https://docs.microsoft.com/aspnet/core/), in particolare). Ciò vale soprattutto se si creano contenitori e microservizi perché .NET Core è un framework pulito e veloce. Si otterrà un footprint di memoria di piccole dimensioni e l'avvio rapido nei contenitori e le applicazioni saranno elevate. Questo approccio si adatta perfettamente con i requisiti dei contenitori e microservizi e si ottengono i vantaggi di un libreria multipiattaforma framework-essere in grado di eseguire la stessa applicazione su Linux, Windows Server e computer Mac per ambienti di sviluppo.
+Inoltre, poiché si sviluppa un nuovo codice in ottimizzato per il Cloud scenari (per un'applicazione completa o parziali sottosistemi), quando si crea nuovo codice, utilizzare le versioni più recenti di .NET ([.NET Core](../../../core/index.md) e [ASP.NET Core](/aspnet/core/), in particolare). Ciò vale soprattutto se si creano contenitori e microservizi perché .NET Core è un framework pulito e veloce. Si otterrà un footprint di memoria di piccole dimensioni e l'avvio rapido nei contenitori e le applicazioni saranno elevate. Questo approccio si adatta perfettamente con i requisiti dei contenitori e microservizi e si ottengono i vantaggi di un libreria multipiattaforma framework-essere in grado di eseguire la stessa applicazione su Linux, Windows Server e computer Mac per ambienti di sviluppo.
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>Applicazioni cloud nativo con applicazioni ottimizzato su Cloud
 
@@ -65,7 +65,7 @@ Tuttavia, microservizi non sono obbligatori per tutte le applicazioni moderne o 
 
 L'architettura di microservizi è sempre la scelta migliore per le applicazioni cruciali distribuite e grandi dimensioni o complesse basati su più sottosistemi indipendenti sotto forma di servizi autonomi. In un'architettura basata su microservizi, un'applicazione basata su una raccolta di servizi che possono essere sviluppate in modo indipendente, testati, con controllo delle versioni, distribuiti e ridimensionata. Può trattarsi di qualsiasi database autonomo, correlati per microservizio.
 
-Per informazioni dettagliate in un'architettura di microservizi che è possibile implementare con .NET Core, vedere l'e-book a PDF scaricabile [microservizi .NET: architettura per applicazioni .NET nei contenitori](https://aka.ms/microservicesebook). La Guida è disponibile anche [online](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).
+Per informazioni dettagliate in un'architettura di microservizi che è possibile implementare con .NET Core, vedere l'e-book a PDF scaricabile [microservizi .NET: architettura per applicazioni .NET nei contenitori](https://aka.ms/microservicesebook). La Guida è disponibile anche [online](../../microservices-architecture/index.md).
 
 Ma anche negli scenari in cui microservizi offrono potente funzionalità indipendenti dalla distribuzione, i limiti del sottosistema sicuro e diversità di tecnologia-generano anche molte nuove sfide. I problemi sono correlati allo sviluppo di applicazioni distribuite, ad esempio i modelli di dati frammentati e indipendente; ottenere resiliente comunicazione tra microservizi; la necessità di coerenza finale; e la complessità operativa. Microservizi introducono un livello superiore rispetto alle tradizionali applicazioni monolitiche di complessità.
 
