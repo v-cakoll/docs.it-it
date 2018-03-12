@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Procedura (C#)
 
@@ -55,7 +55,7 @@ Questi articoli contengono informazioni sull'uso delle raccolte di dati.
 Le stringhe sono il tipo di dati di base usato per visualizzare o modificare il testo. Questi articoli illustrano le procedure comuni da seguire con le stringhe.
 
 - [Confrontare stringhe](../programming-guide/strings/how-to-compare-strings.md).
-- [Modificare il contenuto di una stringa](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Modificare il contenuto di una stringa](modify-string-contents.md).
 - [Determinare se una stringa rappresenta un numero](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Usare `String.Split` per separare stringhe](parse-strings-using-split.md).
 - [Unire più stringhe in una](concatenate-multiple-strings.md).

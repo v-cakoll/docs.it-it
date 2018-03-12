@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Costrutti di alternanza nelle espressioni regolari
 <a name="top"></a> I costrutti di alternanza modificano un'espressione regolare per abilitare la corrispondenza di tipo either/or o condizionale. .NET supporta tre costrutti di alternanza:  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
+ Il criterio di ricerca di espressioni regolari `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` è interpretato nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`\b`|Inizia dal confine di una parola.|  
-|`(?<n2>\d{2}-)*`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  
+|`(?<n2>\d{2}-)?`|Corrisponde a zero o una occorrenza di due cifre seguite da un trattino. Il nome di questo gruppo di acquisizione è `n2`.|  
 |`(?(n2)`|Verificare se per `n2` è stata individuata una corrispondenza nella stringa di input.|  
 |`)\d{7}`|Se per `n2` è stata individuata una corrispondenza, far corrispondere sette cifre decimali.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Se per `n2` non è stata trovata alcuna corrispondenza, far corrispondere tre cifre decimali, un trattino, due cifre decimali, un altro trattino e quattro cifre decimali.|  
 |`\b`|Trova la corrispondenza di un confine di parola.|  
   
- Nell'esempio seguente è illustrata una variante di questo esempio che usa un gruppo numerato anziché un gruppo denominato. Il criterio di espressione regolare è `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ Nell'esempio seguente è illustrata una variante di questo esempio che usa un gruppo numerato anziché un gruppo denominato. Il criterio di espressione regolare è `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

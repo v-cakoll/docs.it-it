@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -393,7 +393,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
 |Modello|Descrizione|  
 |-------------|-----------------|  
 |`\d{2}`|Trova la corrispondenza con due cifre decimali.|  
-|`{?<=\b20)`|Continua la corrispondenza per verificare se le due cifre decimali sono precedute dalle cifre decimali "20" su un confine di parola.|  
+|`(?<=\b20)`|Continua la corrispondenza per verificare se le due cifre decimali sono precedute dalle cifre decimali "20" su un confine di parola.|  
 |`\b`|Termina la corrispondenza sul confine di parola.|  
   
  Le asserzioni lookbehind positive di larghezza zero vengono usate anche per limitare il backtracking quando l'ultimo carattere o gli ultimi caratteri in un gruppo acquisito devono essere costituiti da un subset di caratteri corrispondenti al criterio di ricerca di espressioni regolari di tale gruppo. Se, ad esempio, un gruppo acquisisce tutti i caratteri alfanumerici consecutivi, è possibile usare un'asserzione positiva lookbehind di larghezza zero per richiedere che l'ultimo carattere sia un carattere alfabetico.  

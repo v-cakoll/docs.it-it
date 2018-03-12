@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>Procedura: Cercare stringhe
 
@@ -47,7 +47,7 @@ L'esempio di codice seguente cerca la parola "the" o "their" in una frase, ignor
 
 I criteri di ricerca descrivono il testo da cercare. La tabella seguente descrive ogni elemento dei criteri di ricerca. (Nella tabella seguente viene usata la barra singola `\` per la quale è necessario l'escape come `\\` in una stringa in C#).
 
-| Criteri  | Significato     |
+| pattern  | Significato     |
 | -------- |-------------|
 | the      | corrisponde al testo "the" |
 | (eir)?   | corrisponde a 0 o 1 occorrenza di "eir" |
@@ -60,9 +60,9 @@ I criteri di ricerca descrivono il testo da cercare. La tabella seguente descriv
 
 ## <a name="does-a-string-follow-a-pattern"></a>Una stringa segue un modello?
 
-Il codice seguente usa le espressioni regolari per convalidare il formato di ogni stringa in una matrice. Per la convalida è necessario che ogni stringa abbia il formato di un numero di telefono costituito da tre gruppi di cifre separate da trattini, di cui i primi due gruppi contengono tre cifre e il terzo ne contiene quattro. I criteri di ricerca usano l'espressione regolare `^\\d{3}-\\d{3}-\\d{4}$`. Per altre informazioni, vedere [Linguaggio di espressioni regolari - Riferimento rapido](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).
+Il codice seguente usa le espressioni regolari per convalidare il formato di ogni stringa in una matrice. Per la convalida è necessario che ogni stringa abbia il formato di un numero di telefono costituito da tre gruppi di cifre separate da trattini, di cui i primi due gruppi contengono tre cifre e il terzo ne contiene quattro. I criteri di ricerca usano l'espressione regolare `^\\d{3}-\\d{3}-\\d{4}$`. Per altre informazioni, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| Criteri  | Significato                             |
+| pattern  | Significato                             |
 | -------- |-------------------------------------|
 | ^        | corrisponde all'inizio della stringa |
 | \d{3}    | corrisponde esattamente a 3 caratteri numerici  |
