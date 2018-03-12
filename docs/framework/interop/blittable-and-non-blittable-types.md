@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c61fe689a2a708b10fdf21e3638b1fc6ff117d25
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
 La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memoria gestita sia in quella non gestita e non richiede quindi una gestione particolare tramite il gestore di marshalling di interoperabilità. Questi tipi sono definiti *copiabili da BLT*, poiché non richiedono la conversione quando vengono passati tra codice gestito e codice non gestito.  
@@ -58,7 +60,7 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 -   Matrici unidimensionali di tipi copiabili da BLT, come una matrice di integer. Non è tuttavia copiabile da BLT un tipo contenente una matrice variabile di tipi copiabili da BLT.  
   
--   Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [Marshalling predefinito per i tipi di valore](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a).  
+-   Tipi di valore formattati contenenti solo tipi copiabili da BLT (e classi, se sottoposti a marshalling come tipi formattati). Per altre informazioni sui tipi di valore formattati, vedere [Marshalling predefinito per i tipi di valore](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
   
  Non sono copiabili da BLT i riferimenti a oggetti, incluse le matrici di riferimenti a oggetti che invece sono copiabili da BLT. È possibile, ad esempio, definire una struttura copiabile da BLT, ma non un tipo copiabile da BLT contenente una matrice di riferimenti alla struttura.  
   
@@ -66,18 +68,18 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
  Alcuni tipi di dati gestiti richiedono una rappresentazione diversa in un ambiente non gestito. Questi tipi di dati non copiabili da BLT devono essere convertiti in un formato di cui è possibile eseguire il marshalling. Le stringhe gestite, ad esempio, sono tipi non copiabili da BLT perché devono essere convertite in oggetti stringa prima di poter eseguire il marshalling.  
   
- Nella tabella seguente sono elencati i tipi non copiabili da BLT dello spazio dei nomi <xref:System>. Anche i [delegati](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2), ossia le strutture di dati che fanno riferimento a un metodo statico o a un'istanza di classe, non sono copiabili da BLT.  
+ Nella tabella seguente sono elencati i tipi non copiabili da BLT dello spazio dei nomi <xref:System>. Anche i [delegati](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), ossia le strutture di dati che fanno riferimento a un metodo statico o a un'istanza di classe, non sono copiabili da BLT.  
   
 |Tipi non copiabili da BLT|Descrizione|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
-|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
-|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|Viene convertito in un carattere Unicode o ANSI.|  
-|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|Viene convertito in un'interfaccia di classe.|  
+|[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|Viene convertito in un valore a 1, 2 o 4 byte con `true` pari a 1 o -1.|  
+|[System.Char](https://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb(v=vs.100))|Viene convertito in un carattere Unicode o ANSI.|  
+|[System.Class](https://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6(v=vs.100))|Viene convertito in un'interfaccia di classe.|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Viene convertito in una variante o in un'interfaccia.|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|Viene convertito in una stringa che termina con un riferimento Null o un BSTR.|  
-|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|Viene convertito in una struttura con un layout a memoria fissa.|  
+|[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|Viene convertito in una struttura con un layout a memoria fissa.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Viene convertito in una matrice di tipo C o in `SAFEARRAY`.|  
   
  I tipi di classe e oggetto sono supportati solo dall'interoperabilità COM. Per i tipi corrispondenti in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# e C++, vedere [Cenni preliminari sulla libreria di classi](../../../docs/standard/class-library-overview.md).  

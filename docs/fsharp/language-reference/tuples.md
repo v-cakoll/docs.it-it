@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Tuple
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperabilità con c# Tuple
 
-Il linguaggio c# 7 introdotti Tuple.  Tuple in c# e sono strutture e sono equivalenti alle tuple struct in F #.  Se è necessario interoperare con c# utilizza tuple, è necessario utilizzare tuple struct.
+Il linguaggio c# 7 introdotti Tuple.  Le tuple in c# sono strutture e sono equivalenti alle tuple struct in F #.  Se è necessario interoperare con c#, è necessario utilizzare tuple struct.
 
 Si tratta di un'operazione semplice.  Si supponga, ad esempio, che è necessario passare una tupla a una classe c# e quindi utilizzare il risultato, che è anche una tupla:
 
@@ -119,7 +119,7 @@ Le tuple di riferimento e Struct Tuples dispone di una rappresentazione sottosta
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costitutive.  Ad esempio:
+È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costitutive.  Di seguito è riportato un esempio:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
