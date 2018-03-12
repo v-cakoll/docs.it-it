@@ -4,14 +4,15 @@ description: Modernizzare le applicazioni .NET esistenti con Cloud di Azure e i 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>La migrazione di database relazionali in azure
 
@@ -35,27 +36,27 @@ Un'organizzazione che funziona in un settore altamente regolamentato, e che nece
 
 Istanza gestita nel Database di SQL Azure presenta le caratteristiche seguenti:
 
--   Isolamento di sicurezza attraverso la rete virtuale di Azure
+- Isolamento di sicurezza attraverso la rete virtuale di Azure
 
--   Superficie di attacco compatibilità, grazie a queste funzionalità:
+- Superficie di attacco compatibilità, grazie a queste funzionalità:
 
-    -   SQL Server Profiler e SQL Server Agent
+  - SQL Server Profiler e SQL Server Agent
 
-    -   Replica di query, CLR SQL e i riferimenti tra database, change data capture (CDC) e Service Broker
+  - Replica di query, CLR SQL e i riferimenti tra database, change data capture (CDC) e Service Broker
 
--   Database di dimensioni fino a 35 TB
+- Database di dimensioni fino a 35 TB
 
--   Migrazione del tempo di inattività minimo, con queste caratteristiche:
+- Migrazione del tempo di inattività minimo, con queste caratteristiche:
 
-    -   Servizio di migrazione di Database di Azure
+  - Servizio di migrazione di Database di Azure
 
-    -   Native backup e ripristino e il log shipping
+  - Native backup e ripristino e il log shipping
 
 Con queste funzionalità, quando si esegue la migrazione di database dell'applicazione esistente al Database di SQL Azure, il modello di istanza gestita offre quasi il 100% dei vantaggi di Paas per SQL Server. Istanza gestita è un ambiente di SQL Server in cui continuare a usare le funzionalità a livello di istanza senza modificare la progettazione dell'applicazione.
 
 Istanza gestita è probabilmente la scelta migliore per le aziende che attualmente utilizzano SQL Server e che richiedono flessibilità per la sicurezza di rete nel cloud. È ad esempio disporre di una rete privata virtuale per i database SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Quando eseguire la migrazione di Database SQL di Azure 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Quando eseguire la migrazione di Database SQL di Azure
 
 Come indicato, il Database SQL di Azure standard è un DBaaS relazionale e completamente gestito. Database SQL attualmente gestisce milioni di database di produzione, in data 38 Center, tutto il mondo. Supporta un'ampia gamma di applicazioni e carichi di lavoro, la gestione dei dati transazionali semplici, per gestire le applicazioni più dati impegnativa in termini di importanza critica che richiedono l'elaborazione dati avanzata in una scala globale.
 
@@ -65,19 +66,19 @@ Database SQL di Azure è il servizio di database cloud solo intelligente che è 
 
 Database SQL di Azure offre i vantaggi seguenti:
 
--   Intelligenti (apprendimento) che apprende e si adatta all'App
+- Intelligenti (apprendimento) che apprende e si adatta all'App
 
--   Provisioning del database su richiesta
+- Provisioning del database su richiesta
 
--   Una serie di offerte, per tutti i carichi di lavoro
+- Una serie di offerte, per tutti i carichi di lavoro
 
--   disponibilità del 99,99% contratto di servizio, zero manutenzione
+- disponibilità del 99,99% contratto di servizio, zero manutenzione
 
--   Servizi di ripristino e la replica geografica per la protezione dati
+- Servizi di ripristino e la replica geografica per la protezione dati
 
--   Punto di Database SQL di Azure nella funzionalità Ripristino temporizzato
+- Punto di Database SQL di Azure nella funzionalità Ripristino temporizzato
 
--   Compatibilità con SQL Server 2016, inclusi ibrida e migrazione
+- Compatibilità con SQL Server 2016, inclusi ibrida e migrazione
 
 Il Database SQL di Azure standard è inferiore a PaaS di istanza gestita di Azure SQL Database. È consigliabile utilizzarlo, se possibile, perché viene visualizzato da un cloud gestito ulteriori vantaggi. Tuttavia, il Database di SQL Azure presenta alcune differenze fondamentali normali e istanze di SQL Server locale. A seconda di requisiti del database dell'applicazione esistente e i requisiti dell'organizzazione e i criteri, che non sia la scelta migliore quando si pianifica la migrazione al cloud.
 
@@ -108,23 +109,23 @@ Per informazioni su come eseguire la migrazione di database tramite servizio di 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Scegliere un cloud di opzione di SQL Server: Database SQL di Azure (PaaS) o SQL Server nella macchina virtuale di Azure (IaaS)**
+- **Scegliere un cloud di opzione di SQL Server: Database SQL di Azure (PaaS) o SQL Server nella macchina virtuale di Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **Ottenere il cloud più velocemente all'istanza gestita di Azure SQL database e il servizio di migrazione di Database**
+- **Ottenere il cloud più velocemente all'istanza gestita di Azure SQL database e il servizio di migrazione di Database**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **Migrazione di database di SQL Server al Database SQL nel cloud**
+- **Migrazione di database di SQL Server al Database SQL nel cloud**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Database SQL di Azure**
+- **Database SQL di Azure**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **SQL Server in macchine virtuali**
+- **SQL Server in macchine virtuali**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

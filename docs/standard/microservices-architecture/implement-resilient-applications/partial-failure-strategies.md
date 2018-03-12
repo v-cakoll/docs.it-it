@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie di gestione degli errori parziali
 
@@ -31,7 +31,7 @@ Le strategie di gestione degli errori parziali sono le seguenti.
 
 **Fornire fallback**. Con questo approccio, il processo client esegue la logica di fallback in caso di esito negativo di una richiesta, ad esempio restituendo i dati memorizzati nella cache o un valore predefinito. Questo approccio è adatto alle query, ma risulta più complesso per gli aggiornamenti o i comandi.
 
-**Limitare il numero di richieste in coda**. I client devono inoltre imporre una soglia massima per il numero di richieste in sospeso che un microservizio può inviare a un determinato servizio. Se il limite è stato raggiunto, è inutile inviare richieste aggiuntive, quindi questi tentativi devono avere immediatamente esito negativo. In termini di implementazione, è possibile usare i criteri [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) (isolamento a scomparti) in Polly per soddisfare questo requisito. Questo approccio rappresenta semplicemente una limitazione della parallelizzazione con la classe [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) come implementazione. Consente anche la creazione di una "coda" all'esterno dello scomparto. È possibile rimuovere il carico in eccesso anche prima dell'esecuzione, ad esempio se la capacità è considerata piena. La risposta a determinati scenari di errori risulta quindi più veloce rispetto a quella di un interruttore di circuito, dal momento che l'interruttore rimane in attesa degli errori. L'oggetto BulkheadPolicy in Polly mostra il livello di riempimento di scomparto e coda, offre eventi di overflow e può anche essere usato per aumentare automaticamente il numero di istanze.
+**Limitare il numero di richieste in coda**. I client devono inoltre imporre una soglia massima per il numero di richieste in sospeso che un microservizio può inviare a un determinato servizio. Se il limite è stato raggiunto, è inutile inviare richieste aggiuntive, quindi questi tentativi devono avere immediatamente esito negativo. In termini di implementazione, è possibile usare i criteri [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) (isolamento a scomparti) in Polly per soddisfare questo requisito. Questo approccio rappresenta semplicemente una limitazione della parallelizzazione con <xref:System.Threading.SemaphoreSlim> come implementazione. Consente anche la creazione di una "coda" all'esterno dello scomparto. È possibile rimuovere il carico in eccesso anche prima dell'esecuzione, ad esempio se la capacità è considerata piena. La risposta a determinati scenari di errori risulta quindi più veloce rispetto a quella di un interruttore di circuito, dal momento che l'interruttore rimane in attesa degli errori. L'oggetto BulkheadPolicy in Polly mostra il livello di riempimento di scomparto e coda, offre eventi di overflow e può anche essere usato per aumentare automaticamente il numero di istanze.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

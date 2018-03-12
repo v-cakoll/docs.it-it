@@ -2,7 +2,8 @@
 title: 'Operatore ?: (Riferimenti per C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ?:_CSharpKeyword
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9abfe4ca6be29b54edd591b503069c15e02c3532
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbd434e02ece4843bab4ffded6877f81f622950c
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="-operator-c-reference"></a>Operatore ?: (Riferimenti per C#)
-L'operatore condizionale (`?:`) restituisce uno tra due valori in base al valore di un'espressione booleana. Di seguito è riportata la sintassi per l'operatore condizionale.  
+L'operatore condizionale (`?:`), noto come operatore condizionale ternario, restituisce uno di due valori in base al valore di un'espressione booleana. Di seguito è riportata la sintassi per l'operatore condizionale.  
   
 ```  
 condition ? first_expression : second_expression;  
@@ -61,5 +62,5 @@ classify = (input > 0) ? "positive" : "negative";
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Operatori C#](../../../csharp/language-reference/operators/index.md)  
  [if-else](../../../csharp/language-reference/keywords/if-else.md)  
- [?. e? Operatori](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+ [Operatori ?. e ?](../../../csharp/language-reference/operators/null-conditional-operators.md)  
  [?? (operatore)](../../../csharp/language-reference/operators/null-conditional-operator.md)

@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Costrutti di backreference nelle espressioni regolari
 I backreference sono uno strumento utile per identificare un carattere ripetuto o una sottostringa all'interno di una stringa. Se la stringa di input contiene ad esempio più occorrenze di una sottostringa arbitraria, è possibile trovare la prima occorrenza con un gruppo di acquisizione e usare un backreference per trovare le occorrenze successive della sottostringa.  
@@ -43,7 +43,7 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  `\` *numero*  
   
- dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se nel modello di espressione regolare *numero* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`.  
+ dove *numero* è la posizione corretta del gruppo di acquisizione nell'espressione regolare. Ad esempio, `\4` corrisponde al contenuto del quarto gruppo di acquisizione. Se nel modello di espressione regolare *numero* non è definito, si verifica un errore di analisi e il motore delle espressioni regolari genera un'eccezione <xref:System.ArgumentException>. Ad esempio, l'espressione regolare `\b(\w+)\s\1` è valida, poiché `(\w+)` è il primo e l'unico gruppo di acquisizione nell'espressione. D'altra parte, `\b(\w+)\s\2` non è un'espressione valida e genera un'eccezione di argomento, perché non esistono gruppi di acquisizione numerati `\2`. Inoltre, se *numero* identifica un gruppo di acquisizione in una determinata posizione ordinale, ma a tale gruppo di acquisizione è stato assegnato un valore numerico diverso dalla relativa posizione ordinale, il parser delle espressioni regolari genera anche un'eccezione <xref:System.ArgumentException>. 
   
  Si noti l'ambiguità tra i codici di escape ottale, ad esempio `\16`, e i backreference `\`*numero* che usano la stessa notazione. Questa ambiguità viene risolta nel modo seguente:  
   
@@ -87,12 +87,24 @@ I backreference sono uno strumento utile per identificare un carattere ripetuto 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- Si noti che *nome* può anche essere la rappresentazione di stringa di un numero. Nell'esempio seguente viene usata l'espressione regolare `(?<2>\w)\k<2>` per trovare caratteri alfanumerici doppi all'interno di una stringa.  
+
+## <a name="named-numeric-backreferences"></a>Backreference numerici denominati
+
+In un backreference denominato con `\k`, *nome* può anche essere la rappresentazione stringa di un numero. Nell'esempio seguente viene usata l'espressione regolare `(?<2>\w)\k<2>` per trovare caratteri alfanumerici doppi all'interno di una stringa. In questo caso, l'esempio definisce un gruppo di acquisizione denominato "2" in modo esplicito e conseguentemente il backreference è denominato "2". 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+Se *nome* è la rappresentazione stringa di un numero e nessun gruppo di acquisizione ha tale nome, `\k<`*nome*`>` corrisponde al `\`*numero* del backreference, dove *numero* è la posizione ordinale dell'acquisizione. Nell'esempio seguente, è presente un solo gruppo di acquisizione denominato `char`. Il costrutto del backreference fa riferimento a tale gruppo come `\k<1>`. Come dimostra l'output dell'esempio, la chiamata a <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> ha esito positivo perché `char` è il primo gruppo di acquisizione.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+Tuttavia, se *nome* è la rappresentazione stringa di un numero e al gruppo di acquisizione in tale posizione è stato assegnato in modo esplicito un nome numerico, il parser delle espressioni regolari non è in grado di identificare il gruppo di acquisizione in base alla posizione ordinale. Al contrario, genera un'eccezione <xref:System.ArgumentException>. L'unico gruppo di acquisizione nell'esempio seguente è denominato "2". Dato che il costrutto `\k` viene usato per definire un backreference denominato "1", il parser delle espressioni regolari non è in grado di identificare il primo gruppo di acquisizione e genera un'eccezione.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>Corrispondenza dei backreference  
  Un backreference fa riferimento alla definizione più recente di un gruppo, vale a dire alla definizione all'estrema sinistra, in caso di corrispondenza da sinistra a destra. Quando un gruppo esegue più acquisizioni, un backreference fa riferimento all'acquisizione più recente.  
   

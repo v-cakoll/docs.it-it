@@ -22,14 +22,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="memory-mapped-files"></a>File mappati alla memoria
-Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file di cui è stato eseguito il mapping alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file di cui è stato eseguito il mapping alla memoria, come descritto in [Managing Memory-Mapped Files in Win32](http://go.microsoft.com/fwlink/?linkid=180801) (Gestione di file di cui è stato eseguito il mapping alla memoria in Win32).  
+Un file mappato alla memoria include il contenuto di un file nella memoria virtuale. Questo mapping tra un file e uno spazio di memoria consente a un'applicazione, inclusi più processi, di modificare il file leggendo e scrivendo direttamente nella memoria. A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], è possibile usare il codice gestito per accedere ai file mappati alla memoria nello stesso modo in cui le funzioni Windows native accedono ai file mappati alla memoria, come descritto in [Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx) (Gestione di file mappati alla memoria).  
   
  Esistono due tipi di file di cui è stato eseguito il mapping alla memoria:  
   

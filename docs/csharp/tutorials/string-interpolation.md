@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
 
-Il termine interpolazione di stringhe indica il modo in cui i segnaposto presenti in una stringa vengono sostituiti dal valore di una variabile di tipo stringa. Prima di C# 6, per eseguire questa operazione veniva usato `System.String.Format`. Questa procedura funziona correttamente, ma, poiché usa segnaposto numerati, la scrittura delle istruzioni risulta più complessa e prolissa.
+Il termine interpolazione di stringhe indica il modo in cui i segnaposto presenti in una stringa vengono sostituiti dal valore di una variabile di tipo stringa. Prima di C# 6, per eseguire questa operazione veniva usato <xref:System.String.Format%2A?displayProperty=nameWithType>. Questa procedura funziona correttamente, ma, poiché usa segnaposto numerati, la scrittura delle istruzioni risulta più complessa e prolissa.
 
 L'interpolazione di stringhe è stata integrata in altri linguaggi di programmazione per un certo periodo di tempo. Ad esempio, in PHP:
 
@@ -42,7 +42,7 @@ Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Co
 dotnet new console
 ```
 
-Questo comando creerà un progetto .NET di base con un file di progetto, *interpolated.csproj*, e un file di codice sorgente, *Program.cs*. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
+Questo comando crea un progetto .NET Core di base con un file di progetto, *interpolated.csproj*, e un file di codice sorgente, *Program.cs*. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Per eseguire il programma, usare `dotnet run`. Nella console viene visualizzato 
 
 ## <a name="intro-to-string-interpolation"></a>Introduzione all'interpolazione di stringhe
 
-Con `System.String.Format` vengono specificati i "segnaposto" presenti in una stringa che devono essere sostituiti dai parametri che seguono la stringa stessa. Ad esempio:
+Con <xref:System.String.Format%2A?displayProperty=nameWithType> vengono specificati i "segnaposto" presenti in una stringa che devono essere sostituiti dagli argomenti che seguono la stringa stessa. Ad esempio:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Funzionamento dell'interpolazione di stringhe
 
-Nel background, la sintassi dell'interpolazione di stringhe viene convertita in String.Format dal compilatore. Di conseguenza, è possibile eseguire lo [stesso tipo di operazioni eseguite prima con String.Format](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+In background, la sintassi dell'interpolazione di stringhe viene convertita in `String.Format` dal compilatore. Di conseguenza, è possibile eseguire lo [stesso tipo di operazioni eseguite prima con `String.Format`](../../standard/base-types/formatting-types.md).
 
 Ad esempio, è possibile aggiungere spaziatura interna e formattazione numerica:
 
@@ -96,7 +96,7 @@ L'output del codice sopra riportato sarà simile a quanto segue:
 1004       6,227.77
 ```
 
-Se un nome di variabile non viene trovato, verrà generato un errore in fase di compilazione.
+Se un nome di variabile non viene trovato, viene generato un errore in fase di compilazione.
 
 Ad esempio:
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-Se si compila il codice sopra riportato, verranno generati degli errori:
+Se si compila il codice sopra riportato, vengono generati errori:
  
 * `Cannot use local variable 'adj' before it is declared`: la variabile `adj` non è stata dichiarata *prima* della stringa interpolata.
 * `The name 'otheranimal' does not exist in the current context`: la variabile denominata `otheranimal` non è mai stata dichiarata.
 
 ## <a name="localization-and-internationalization"></a>Localizzazione e internazionalizzazione
 
-Una stringa interpolata supporta `IFormattable` e `FormattableString`, caratteristica utile per l'internazionalizzazione.
+Una stringa interpolata supporta <xref:System.IFormattable?displayProperty=nameWithType> e <xref:System.FormattableString?displayProperty=nameWithType>, caratteristica utile per l'internazionalizzazione.
 
-Per impostazione predefinita, una stringa interpolata usa le impostazioni cultura correnti. Per usare impostazioni cultura differenti, è possibile eseguire il cast della stringa come `IFormattable`.
-
-Ad esempio:
+Per impostazione predefinita, una stringa interpolata usa le impostazioni cultura correnti. Per usare impostazioni cultura diverse, eseguire il cast di una stringa interpolata come `IFormattable`. Ad esempio:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Conclusione 
 
-In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6. Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati.
+In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6. Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati. Per altre informazioni, vedere l'argomento [Stringhe interpolate](../../csharp//language-reference/keywords/interpolated-strings.md).

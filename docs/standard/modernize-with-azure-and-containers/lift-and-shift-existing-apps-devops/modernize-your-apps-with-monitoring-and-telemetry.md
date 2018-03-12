@@ -4,14 +4,15 @@ description: Architettura di Microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizzare le app con monitoraggio e telemetria
 
@@ -37,7 +38,7 @@ In relazione i log dell'infrastruttura di Azure, Log Analitica, come un servizio
 
 Il [soluzione di monitoraggio contenitore](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) in Analitica Log consente visualizzare e gestire gli host Docker e contenitore di Windows in un'unica posizione. La soluzione Mostra i contenitori sono in esecuzione, quali immagini contenitore vengono eseguiti e in cui vengono eseguiti i contenitori. È possibile visualizzare informazioni dettagliate di controllo, inclusi i comandi che vengono utilizzati con i contenitori. È anche possibile risolvere contenitori mediante la visualizzazione e la ricerca di log centralizzato, senza la necessità di visualizzare in remoto host Docker o di Windows. È possibile trovare i contenitori che potrebbero essere rumore e dispendiosa in termini di quantità eccessiva di risorse in un host. Inoltre, è possibile visualizzare centralizzata della CPU, memoria, archiviazione e utilizzo della rete e informazioni sulle prestazioni, per i contenitori. Nei computer che eseguono Windows, è possibile centralizzare e confrontare i registri di Windows Server, Hyper-V e i contenitori di Docker. La soluzione supporta orchestrators il contenitore seguente:
 
--   Sciame docker
+-   Docker Swarm
 
 -   DC/OS
 

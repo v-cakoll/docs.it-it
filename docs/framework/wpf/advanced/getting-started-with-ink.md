@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Nozioni di base sull'input penna
 Inserimento di input penna nelle applicazioni è più semplice che mai. Input penna è stato migliorato da un corollario al metodo COM e Windows Form di programmazione per raggiungere la piena integrazione in corso il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Non è necessario installare gli SDK separati o le librerie di runtime.  
@@ -38,14 +40,14 @@ Inserimento di input penna nelle applicazioni è più semplice che mai. Input pe
 ## <a name="quick-start"></a>Avvio rapido  
  In questa sezione consente di scrivere un semplice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che raccoglie input penna.  
   
- Se non già stato fatto, installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni in genere devono essere compilate prima possibile visualizzarli, anche se sono costituite interamente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Tuttavia, il [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] include un'applicazione, XamlPad, progettata per velocizzare il processo di implementazione di un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-interfaccia utente basata su. Per visualizzare e globalmente con i primi esempi riportati in questo documento, è possibile utilizzare tale applicazione. Il processo di creazione di applicazioni compilate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene descritta più avanti in questo documento.  
+ Se non già stato fatto, installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni in genere devono essere compilate prima possibile visualizzarli, anche se sono costituite interamente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Tuttavia, il [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] include un'applicazione, XamlPad, progettata per velocizzare il processo di implementazione di un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-interfaccia utente basata su. Per visualizzare e globalmente con i primi esempi riportati in questo documento, è possibile utilizzare tale applicazione. Il processo di creazione di applicazioni compilate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene descritta più avanti in questo documento.  
   
- Per avviare XAMLPad, fare clic su di **avviare** dal menu **tutti i programmi**, scegliere **Microsoft Winndows SDK**, scegliere **strumenti**, fare clic su **XAMLPad**. Nel riquadro di rendering XAMLPad esegue il rendering del codice XAML scritto nel riquadro del codice. È possibile modificare il codice XAML, e le modifiche vengano visualizzate immediatamente nel riquadro di rendering.  
+ Per avviare XAMLPad, fare clic su di **avviare** dal menu **tutti i programmi**, scegliere **Microsoft Windows SDK**, scegliere **strumenti**, fare clic su **XAMLPad**. Nel riquadro di rendering XAMLPad esegue il rendering del codice XAML scritto nel riquadro del codice. È possibile modificare il codice XAML, e le modifiche vengano visualizzate immediatamente nel riquadro di rendering.  
   
 #### <a name="got-ink"></a>Hai input penna?  
  Per avviare la prima [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che supporta l'input penna:  
   
-1.  Aprire Microsoft Visual Studio 2005  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  Creare un nuovo **applicazione WPF (Windows)**  
   

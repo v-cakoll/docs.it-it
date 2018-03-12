@@ -4,14 +4,15 @@ description: Architettura di Microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Come distribuire le app .NET esistenti in Azure App Service 
 
@@ -37,7 +38,7 @@ Lo strumento di migrazione del servizio App consentono di analizzare i siti Web 
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Migration Assistant di servizio App di Azure**
+- **Migration Assistant di servizio App di Azure**
 
     [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 

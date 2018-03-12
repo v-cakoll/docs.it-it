@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Esempio di espressione regolare: ricerca di HREF
 Nell'esempio riportato di seguito viene cercata una stringa di input e vengono visualizzati tutti i valori href="…" e le relative posizioni nella stringa.  
@@ -54,7 +54,7 @@ Nell'esempio riportato di seguito viene cercata una stringa di input e vengono v
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
 |`=`|Corrisponde al segno di uguale.|  
 |`\s*`|Trovare la corrispondenza di zero o più spazi vuoti.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /><br /> - Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.<br />- Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Senza l'assegnazione del risultato a un gruppo acquisito, corrisponde a uno degli elementi seguenti:<br /> <ul><li><p>Una virgoletta o un apostrofo, seguito da zero o più occorrenze di qualsiasi carattere diverso dai primi, seguito da una virgoletta o un apostrofo. Il gruppo denominato `1` è incluso in questo modello.</p></li><li><p>Uno o più caratteri diversi dallo spazio vuoto. Il gruppo denominato `1` è incluso in questo modello.</p></li></ul>|  
 |`(?<1>[^"']*)`|Assegnare zero o più occorrenze di qualsiasi carattere diverso da una virgoletta o un apostrofo al gruppo di acquisizione denominato `1`.|  
 |`"(?<1>\S+)`|Assegnare uno o più caratteri diversi da spazi vuoti al gruppo di acquisizione denominato `1`.|  
   

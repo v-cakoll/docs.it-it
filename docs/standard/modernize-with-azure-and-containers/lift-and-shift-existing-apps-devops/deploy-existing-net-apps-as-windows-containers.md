@@ -4,20 +4,21 @@ description: Architettura di Microservizi .NET per le applicazioni nei contenito
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Distribuire app .NET esistenti come contenitori di Windows
 
 Le distribuzioni che si basano sui contenitori di Windows sono applicabili alle applicazioni di ottimizzato su Cloud, le applicazioni cloud nativo e le applicazioni Cloud pronto DevOps.
 
-In questa Guida e nelle sezioni seguenti, esaminato l'utilizzo di contenitori di Windows per *Cloud pronto DevOps* applicazioni, quando si sollevare e spostare le applicazioni .NET esistenti.
+In questa Guida e nelle sezioni seguenti è attiva utilizzando i contenitori di Windows per *Cloud pronto DevOps* applicazioni, quando si sollevare e spostare le applicazioni .NET esistenti.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Che cosa sono contenitori? (Linux o Windows)
 
@@ -57,7 +58,7 @@ La riduzione dei costi significativi miglioramenti significativi in agilità, la
 
 ![](./media/image6.png)
 
-> **Figura 4-6.** Docker consente di distribuire contenitori di tutti i livelli del cloud ibrido
+> **Figura 4-6.** Docker distribuisce contenitori a tutti i livelli del cloud ibrido
 
 A un utente ha familiarità con le macchine virtuali, i contenitori potrebbero risultare molto simile. Un contenitore esegue un sistema operativo, dispone di un file system e sia accessibile tramite una rete, esattamente come un sistema di computer fisici o virtuali. Tuttavia, la tecnologia e i concetti di base dei contenitori sono molto diversi dalle macchine virtuali. Da un punto di vista di sviluppatore, un contenitore deve essere considerato più come un singolo processo. In effetti, un contenitore ha un singolo punto di ingresso per un processo.
 
@@ -81,9 +82,9 @@ Pertanto, uno dei principali vantaggi di contenitori di Windows è che essi offr
 
 Considerata la diversità dei sistemi operativi supportati da Docker, nonché le differenze tra .NET Framework e .NET Core, si deve essere indirizzata a uno specifico sistema operativo e le versioni specifiche in base al framework in uso.
 
-Per Windows, è possibile utilizzare Windows Server Core o Nano Server di Windows. Queste versioni di Windows forniscono caratteristiche diverse (ad esempio, IIS e un server web self-hosted come Kestrel) che potrebbero essere necessari per le applicazioni .NET Framework o .NET Core.
+Per Windows, è possibile usare Windows Server Core o Windows Nano Server. Queste versioni di Windows forniscono caratteristiche diverse (ad esempio, IIS e un server web self-hosted come Kestrel) che potrebbero essere necessari per le applicazioni .NET Framework o .NET Core.
 
-Per Linux e le distribuzioni più sono disponibile e supportata nelle immagini Docker .NET ufficiale (ad esempio, Debian).
+Per Linux, sono disponibili più distribuzioni supportate in immagini Docker. NET ufficiali, ad esempio Debian.
 
 Figura 4-7 mostra versioni del sistema operativo che è possibile impostare come destinazione, a seconda della versione dell'app di .NET Framework.
 
@@ -95,14 +96,14 @@ In scenari di migrazione per le applicazioni legacy o esistenti che si basano su
 
 Quando si aggiunge il nome dell'immagine nel file Dockerfile, è possibile selezionare il sistema operativo e la versione con un tag, come negli esempi seguenti per le immagini contenitore di Windows basate su .NET Framework:
 
-> | tag | **Sistema e versione** |
+> | **tag** | **Sistema e versione** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4. x in Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4. x con un'ulteriore personalizzazione di ASP.NET, in Windows Server Core |
 
 Per .NET Core (multipiattaforma per Linux e Windows), i tag sarebbe simile al seguente:
 
-> | tag | **Sistema e versione**
+> | **tag** | **Sistema e versione**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 runtime solo in Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 runtime solo in Windows Nano Server |

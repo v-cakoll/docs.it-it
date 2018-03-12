@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
 
@@ -269,4 +269,5 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un'at
 ## <a name="other-resources"></a>Altre risorse
 
 * L'articolo [La programmazione asincrona in dettaglio](../standard/async-in-depth.md) offre altre informazioni sul funzionamento di Task.
+* [Programmazione asincrona con async e await (C#)](../csharp/programming-guide/concepts/async/index.md)
 * L'articolo [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Sei suggerimenti essenziali per la modalità asincrona) di Lucian Wischik è una risorsa eccellente per la programmazione asincrona.

@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Stringhe interpolate (Riferimento per C#)
 
@@ -47,7 +47,7 @@ dove:
 
  È possibile usare una stringa interpolata ovunque sia possibile usare un valore letterale stringa.  La stringa interpolata viene valutata ogni volta che si esegue codice con la stringa interpolata. Ciò consente di separare la definizione e la valutazione di una stringa interpolata.  
   
- Per includere una parentesi graffa ("{" o "}") in una stringa interpolata, digitarne due, ovvero "{{" o "}}".  Per altri dettagli, vedere la sezione Conversioni implicite.  
+ Per includere una parentesi graffa ("{" o "}") in una stringa interpolata, digitarne due, ovvero "{{" o "}}".  Per altri dettagli, vedere la sezione [Conversioni implicite](#implicit-conversions).  
 
 Se la stringa interpolata contiene altri caratteri con un significato speciale in una stringa interpolata, ad esempio virgolette doppie ("), due punti (:) o virgola (,), è necessario specificare il carattere di escape se si presentano nel testo letterale, oppure inserirli in un'espressione racchiusa tra parentesi se sono elementi del linguaggio inclusi in un'espressione interpolata. Nell'esempio seguente viene specificato il carattere di escape delle virgolette per includerle nella stringa di risultato e si usano le parentesi per delimitare l'espressione `(age == 1 ? "" : "s")` in modo che i due punti non vengano interpretati come l'inizio di una stringa di formato.
 
@@ -91,5 +91,8 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Interpolazione di stringhe in C#](../../../csharp/tutorials/string-interpolation.md)  
+ [Stringhe interpolate in C#](../../../csharp/quick-starts/interpolated-strings.yml)  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)

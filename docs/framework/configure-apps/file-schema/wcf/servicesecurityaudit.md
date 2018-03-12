@@ -5,36 +5,38 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le operazioni del servizio.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<i comportamenti >  
-\<serviceBehaviors >  
-\<comportamento >  
-\<serviceSecurityAudit >  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
 <serviceSecurityAudit   
    auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessAndFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessAndFailure"  
+   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
    suppressAuditFailure="Boolean"  
 />  
 ```  
@@ -48,8 +50,8 @@ Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le
 |---------------|-----------------|  
 |auditLogLocation|Specifica il percorso del registro di controllo. Di seguito vengono elencati i valori validi:<br /><br /> -Default: Gli eventi di sicurezza vengono scritti nel registro applicazioni in Windows XP e nel registro eventi in Windows Server 2003 e Windows Vista.<br />-Applicazione: Eventi di controllo vengono scritti nel Log eventi dell'applicazione.<br />-Security: Gli eventi di controllo vengono scritti nel registro eventi di sicurezza.<br /><br /> Il valore predefinito è Default. Per altre informazioni, vedere <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Valore booleano che specifica il comportamento per l'eliminazione di errori di scrittura nel log di controllo.<br /><br /> Le applicazioni devono ricevere notifiche per errori di scrittura nel registro di controllo. Se l'applicazione non è progettata per gestire errori di controllo, è necessario usare questo attributo per eliminare errori di scrittura nel registro di controllo.<br /><br /> Se l'attributo è `true`, le eccezioni diverse da OutOfMemoryException, StackOverFlowException, ThreadAbortException e ArgumentException che sono il risultato di tentativi di scrivere eventi di controllo vengono gestite dal sistema e non vengono propagate all'applicazione. Se questo attributo è `false`, tutte le eccezioni che sono il risultato di tentativi di scrivere eventi di controllo vengono passate all'applicazione.<br /><br /> Il valore predefinito è `true`.|  
-|serviceAuthorizationAuditLevel|Specifica i tipi di eventi di autorizzazione registrati nel registro di controllo. Di seguito vengono elencati i valori validi:<br /><br /> -None: Autorizzazione eventi del servizio viene eseguito alcun controllo.<br />-Operazione riuscita: Vengono controllati solo gli eventi di autorizzazione del servizio ha esito positivo.<br />-Errore: Vengono controllati solo eventi di autorizzazione del servizio errori.<br />-SuccessAndFailure: Entrambi vengono controllati gli eventi di autorizzazione servizio esito positivo e negativo.<br /><br /> Il valore predefinito è None. Per altre informazioni, vedere <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Specifica il tipo di eventi di controllo di autenticazione dei messaggi registrati. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessun evento di controllo viene generato.<br />-Operazione riuscita: Vengono registrati solo gli eventi di sicurezza riusciti (convalida completa inclusa la convalida della firma di messaggi, cifra e convalida dei token).<br />-Errore: Vengono registrati solo gli eventi di errore.<br />-SuccessAndFailure: Entrambi vengono registrati gli eventi di esito positivo e negativo.<br /><br /> Il valore predefinito è None. Per altre informazioni, vedere <xref:System.ServiceModel.AuditLevel>.|  
+|serviceAuthorizationAuditLevel|Specifica i tipi di eventi di autorizzazione registrati nel registro di controllo. Di seguito vengono elencati i valori validi:<br /><br /> -None: Autorizzazione eventi del servizio viene eseguito alcun controllo.<br />-Operazione riuscita: Vengono controllati solo gli eventi di autorizzazione del servizio ha esito positivo.<br />-Errore: Vengono controllati solo eventi di autorizzazione del servizio errori.<br />-SuccessOrFailure: Entrambi gli eventi di autorizzazione servizio esito positivo e negativo sono controllati.<br /><br /> Il valore predefinito è None. Per altre informazioni, vedere <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Specifica il tipo di eventi di controllo di autenticazione dei messaggi registrati. Di seguito vengono elencati i valori validi:<br /><br /> -None: Nessun evento di controllo viene generato.<br />-Operazione riuscita: Vengono registrati solo gli eventi di sicurezza riusciti (convalida completa inclusa la convalida della firma di messaggi, cifra e convalida dei token).<br />-Errore: Vengono registrati solo gli eventi di errore.<br />-SuccessOrFailure: Entrambi vengono registrati gli eventi di esito positivo e negativo.<br /><br /> Il valore predefinito è None. Per altre informazioni, vedere <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -58,7 +60,7 @@ Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di configurazione viene usato per controllare gli eventi di autenticazione di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Quando il controllo è attivato, è possibile controllare tentativi di autenticazione riusciti o con errori (o entrambi). Gli eventi vengono scritti in uno di tre registri eventi (applicazione, sicurezza o predefinito) in base alla versione del sistema operativo. I registri eventi possono essere tutti visualizzati con il Visualizzatore eventi di Windows.  
@@ -71,7 +73,7 @@ Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le
   
  Gli eventi di controllo di autenticazione dei messaggi analizzano se il messaggio è stato manomesso, se è scaduto e se il client può essere autenticato presso il servizio. Forniscono informazioni sull'esito positivo o meno dell'autenticazione insieme all'identità del client e dell'endpoint a cui è stato inviato il messaggio a insieme all'azione associata al messaggio.  
   
- Gli eventi di controllo dell'autorizzazione del servizio analizzano la decisione di autorizzazione adottata dalla gestione autorizzazioni del servizio. Forniscono informazioni sull'esito positivo o meno dell'autorizzazione insieme all'identità del client, l'endpoint al quale è stato inviato il messaggio, l'azione associata al messaggio, l'identificatore del contesto di autorizzazione che è stato generato dal messaggio in arrivo e il tipo di gestione autorizzazioni che ha eseguito la decisione dell'accesso.  
+ Gli eventi di controllo dell'autorizzazione del servizio analizzano la decisione di autorizzazione adottata dalla gestione autorizzazioni del servizio. Forniscono informazioni sull'eventuale autorizzazione ha avuto esito positivo o non è riuscita con l'identità del client, l'endpoint del messaggio è stato inviato, l'azione associata al messaggio, l'identificatore del contesto di autorizzazione che è stato generato dal messaggio in arrivo e il tipo di gestione autorizzazioni che ha preso la decisione di accesso.  
   
 ## <a name="example"></a>Esempio  
   
