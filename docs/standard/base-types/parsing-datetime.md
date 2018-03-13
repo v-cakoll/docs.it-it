@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a17c96a03a35fcc4eb12e188dbc79d8d48153fb7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -64,7 +64,7 @@ L'esempio seguente illustra l'uso del metodo <xref:System.DateTime.Parse%2A?disp
 > Tutti gli esempi C# in questo articolo vengono eseguiti nel browser. Premere il pulsante **Run** (Esegui) per visualizzare l'output. È anche possibile modificarli per sperimentare.
 
 > [!NOTE]
-> Questi esempi sono disponibili nel repository docs di GitHub sia per [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) che per [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions). In alternativa, è possibile scaricare il progetto come file ZIP per [C#]((https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) o [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
+> Questi esempi sono disponibili nel repository docs di GitHub sia per [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) che per [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions). In alternativa, è possibile scaricare il progetto come file ZIP per [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) o [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

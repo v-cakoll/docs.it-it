@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: a0f872ae930d17638e018cdd204cc08a773a3df5
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -34,7 +35,7 @@ Il comando `dotnet nuget push` effettua il push di un pacchetto nel server e lo 
 
 `ROOT`
 
-Specificare il percorso del pacchetto e la chiave API per effettuare il push del pacchetto al server.
+Specifica il percorso del file del pacchetto di cui eseguire il push.
 
 ## <a name="options"></a>Opzioni
 

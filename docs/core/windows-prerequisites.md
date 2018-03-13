@@ -3,16 +3,16 @@ title: Prerequisiti per .NET Core in Windows
 description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazioni .NET Core in computer Windows.
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -100,5 +100,6 @@ Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visua
 >
 > * Dal menu **Guida** scegliere **About Microsoft Visual Studio** (Informazioni su Microsoft Visual Studio).
 > * Nella finestra di dialogo **Informazioni su Microsoft Visual Studio** verificare il numero di versione.
->   * Per le app .NET Core 2.x, Visual Studio 2017 versione 15.3 (26730.01) o successiva.
->   * Per le app .NET Core 1.x, Visual Studio 2017 versione 15.0 (26228.04) o successiva.
+>   * Per le app .NET Core 2.1 anteprima 1, Visual Studio 2017 versione 15.6 anteprima 6 o successiva.
+>   * Per le app .NET Core 2.0, Visual Studio 2017 versione 15.3 o successiva.
+>   * Per le app .NET Core 1.x, Visual Studio 2017 versione 15.0 o successiva.

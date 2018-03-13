@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creare un modello personalizzato per dotnet new
 
@@ -40,7 +41,7 @@ Se si desidera utilizzare l'esempio scaricato con la distribuzione di file syste
 
 ## <a name="create-a-template-from-a-project"></a>Creare un modello da un progetto
 
-Usare un progetto esistente di cui è stata verificata la corretta compilazione ed esecuzione oppure creare un nuovo progetto di app console in una cartella nel disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp* archiviato in *Documents/Templates* nel profilo dell'utente. Il nome del modello di progetto dell'esercitazione è nel formato  *\<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>*, tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
+Usare un progetto esistente di cui è stata verificata la corretta compilazione ed esecuzione oppure creare un nuovo progetto di app console in una cartella nel disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp*, in *Documents/Templates* nel profilo utente. Il nome del modello di progetto dell'esercitazione è nel formato  *\<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>*, tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
 
 1. Aggiungere una cartella radice del progetto denominato *.template.config*.
 1. All'interno della cartella *.template.config*, creare un file di configurazione del modello *template.json*. Per altre informazioni e la definizione del membro per il file *template.json*, vedere l’argomento [Modelli personalizzati per dotnet new](../tools/custom-templates.md#templatejson) e lo schema [ *template.json* nell'archivio di Schema JSON](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ Il modello è finito. A questo punto, sono disponibili due opzioni per la distri
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Comprimere il modello in un pacchetto NuGet
 
-1. Creare una cartella per il pacchetto NuGet. Per l'esercitazione, viene utilizzato il nome della cartella *GarciaSoftware.ConsoleTemplate.CSharp* e la cartella viene creata all'interno della cartella *Documents/NuGetTemplate* nel profilo dell'utente. Creare una cartella denominata *content* all'interno della cartella del nuovo modello per contenere i file di progetto.
+1. Creare una cartella per il pacchetto NuGet. Per l'esercitazione, il nome usato per la cartella è *GarciaSoftware.ConsoleTemplate.CSharp* e la cartella viene creata all'interno della cartella *Documents\NuGetTemplates* nel profilo utente. Creare una cartella denominata *content* all'interno della cartella del nuovo modello per contenere i file di progetto.
 1. Copiare il contenuto della cartella del progetto, insieme al relativo file *.template.config/template.json*nella cartella *content* creata.
 1. Accanto alla cartella *content*, aggiungere un file [*nuspec*](/nuget/create-packages/creating-a-package). Il file nuspec un file manifesto XML che descrive il contenuto di un pacchetto e guida il processo di creazione del pacchetto NuGet.
    
@@ -102,10 +103,10 @@ Il modello è finito. A questo punto, sono disponibili due opzioni per la distri
    </package>
    ```
 
-1. [Creare il pacchetto](/nuget/create-packages/creating-a-package#creating-the-package) usando il comando `nuget pack <PATH_TO_NUSPEC_FILE>`. Il comando seguente presuppone che la cartella che contiene gli asset di NuGet si trovi al percorso *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*. Tuttavia quando la cartella è collocata nel sistema, il comando `nuget pack` accetta il percorso del file *nuspec*:
+1. [Creare il pacchetto](/nuget/create-packages/creating-a-package#creating-the-package) usando il comando `nuget pack <PATH_TO_NUSPEC_FILE>`. Il comando seguente presuppone che la cartella che contiene gli asset di NuGet si trovi nel percorso \\C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/\*. Tuttavia quando la cartella è collocata nel sistema, il comando `nuget pack` accetta il percorso del file *nuspec*:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Pubblicazione del pacchetto su nuget.org
@@ -119,7 +120,7 @@ Per pubblicare un pacchetto NuGet, seguire le istruzioni dell’argomento [Creaz
 Per installare il modello dal file *nupkg* che è stato creato, utilizzare il comando `dotnet new` con l’opzione `-i|--install` e specificare il percorso del file *nupkg*:
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Installare il modello da un pacchetto NuGet archiviato in nuget.org
@@ -187,14 +188,14 @@ Per distribuire il modello, collocare la cartella del modello di progetto in una
 L'esercitazione presuppone che il modello di progetto sia archiviato nella cartella *Documents/Templates* del profilo dell'utente. Da quel percorso, è necessario installare il modello con il comando seguente sostituendo \<USER > con il nome del profilo dell'utente:
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Creare un progetto da un modello
 
 Dopo aver installato il modello dal file system, utilizzare il modello eseguendo il comando `dotnet new <TEMPLATE>` dalla directory in cui si desidera collocare il motore del modello di output (a meno che non si utilizzi l’opzione `-o|--output` per specificare una directory specifica). Per altre informazioni, vedere [`dotnet new` Opzioni](~/docs/core/tools/dotnet-new.md#options). Specificare il nome breve del modello direttamente nel comando `dotnet new`.
 
-Da una nuova cartella di progetto creata in *C:/Users/\<USER>/Documents/Projects/MyConsoleApp*, creare un progetto dal modello `garciaconsole`:
+Da una nuova cartella di progetto creata in *C:\Users\\\<UTENTE>\Documents\Projects\MyConsoleApp* creare un progetto dal modello `garciaconsole`:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Disinstallare il modello
 
-Se è stato creato il modello nel file system locale in *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, disinstallarlo con lo switch `-u|--uninstall` e il percorso della cartella di modello:
+Se il modello è stato creato nel file system locale in *C:\Users\\\<UTENTE>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*, disinstallarlo con l'opzione `-u|--uninstall` e il percorso della cartella di modello:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Per disinstallare il modello dal file system locale, è necessario specificare il percorso completo. Ad esempio, *C:/Users/\<UTENTE>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* è corretto, ma *./GarciaSoftware.ConsoleTemplate.CSharp* dalla cartella contenitore non funzionerà.
+> Per disinstallare il modello dal file system locale, è necessario specificare il percorso completo. Ad esempio, *C:\Users\\\<UTENTE>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* è corretto, ma *./GarciaSoftware.ConsoleTemplate.CSharp* dalla cartella contenitore non funzionerà.
 > Inoltre, non includere la barra finale di terminazione della directory nel percorso del modello.
 
 ## <a name="see-also"></a>Vedere anche
