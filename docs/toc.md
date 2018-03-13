@@ -267,6 +267,7 @@
 ### [Come concatenare stringhe](csharp/how-to/concatenate-multiple-strings.md)
 ### [Procedura Convertire una stringa in un oggetto DateTime](standard/base-types/parsing-datetime.md)
 ### [Come cercare stringhe](csharp/how-to/search-strings.md)
+### [Come modificare il contenuto delle stringhe](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guida per programmatori C#](csharp/programming-guide/)
