@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>Direttive per il compilatore
 
@@ -29,11 +29,11 @@ Nella tabella riportata di seguito sono elencate le direttive per il preprocesso
 
 |Direttiva|Descrizione|
 |---------|-----------|
-|`#if`*simbolo*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` viene incluso se il *simbolo* è definito.|
+|`#if` *symbol*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` viene incluso se il *simbolo* è definito.|
 |`#else`|Supporta la compilazione condizionale. Contrassegna una sezione di codice da includere se il simbolo usato nella precedente direttiva `#if` non è definito.|
 |`#endif`|Supporta la compilazione condizionale. Contrassegna la fine di una sezione condizionale di codice.|
 |`#`[riga] *int*,<br/>`#`[riga] *int* *stringa*,<br/>`#`[riga] *int* *stringa verbatim*|Indica la riga e il nome di file del codice sorgente originale per il debug. Questa funzionalità viene fornita per gli strumenti che generano codice sorgente F#.|
-|`#nowarn`*warningcode*|Disabilita un avviso o più avvisi del compilatore. Per disabilitare un avviso, individuare il numero dall'output del compilatore e includerlo tra virgolette. Omettere il prefisso "FS". Per disabilitare più numeri di avviso sulla stessa riga, racchiudere ogni numero tra virgolette e separare ogni stringa con uno spazio. Ad esempio:
+|`#nowarn` *warningcode*|Disabilita un avviso o più avvisi del compilatore. Per disabilitare un avviso, individuare il numero dall'output del compilatore e includerlo tra virgolette. Omettere il prefisso "FS". Per disabilitare più numeri di avviso sulla stessa riga, racchiudere ogni numero tra virgolette e separare ogni stringa con uno spazio. Ad esempio:
 
 `#nowarn "9" "40"`
 
@@ -75,7 +75,7 @@ Nella tabella seguente viene elencata la direttiva del compilatore disponibile i
 
 |Direttiva|Descrizione|
 |---------|-----------|
-|`#light`["on"|"off"]|Abilita o disabilita la sintassi leggera per la compatibilità con altre versioni di ML. Per impostazione predefinita, la sintassi leggera è abilitata. La sintassi dettagliata è sempre abilitata. Pertanto, è possibile usare sia sintassi leggera che sintassi dettagliata. La direttiva `#light` da sola equivale a `#light "on"`. Se si specifica `#light "off"`, è necessario usare la sintassi dettagliata per tutti i costrutti del linguaggio. La sintassi nella documentazione per F# viene presentata partendo dal presupposto che venga usata la sintassi leggera. Per ulteriori informazioni, vedere [sintassi dettagliata](verbose-syntax.md).|
+|`#light` ["on"&#124;"off"]|Abilita o disabilita la sintassi leggera per la compatibilità con altre versioni di ML. Per impostazione predefinita, la sintassi leggera è abilitata. La sintassi dettagliata è sempre abilitata. Pertanto, è possibile usare sia sintassi leggera che sintassi dettagliata. La direttiva `#light` da sola equivale a `#light "on"`. Se si specifica `#light "off"`, è necessario usare la sintassi dettagliata per tutti i costrutti del linguaggio. La sintassi nella documentazione per F# viene presentata partendo dal presupposto che venga usata la sintassi leggera. Per ulteriori informazioni, vedere [sintassi dettagliata](verbose-syntax.md).|
 Per le direttive interprete (fsi.exe), vedere [programmazione interattiva con F #](../tutorials/fsharp-interactive/index.md).
 
 
