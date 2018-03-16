@@ -4,17 +4,17 @@ description: "Esaminare alcune delle funzionalità chiave di F # in questa prese
 keywords: 'Visual f #, f #, funzionale programmazione, .NET, panoramica'
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Presentazione di F # #
 
@@ -22,20 +22,13 @@ Il modo migliore per imparare a F # è di lettura e scrittura di codice F #.  In
 
 Esistono due concetti principali in F #: le funzioni e tipi.  Questa esercitazione verrà illustrate le funzionalità del linguaggio che rientrano in questi due concetti.
 
-## <a name="how-to-run-the-code-samples"></a>Come eseguire gli esempi di codice
-
->[!NOTE]
-Sono disponibili due opzioni per l'esecuzione degli esempi di codice [provare F #](http://www.tryfsharp.org/Create) (richiede Silverlight) e [F # per Azure notebook](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) in Microsoft Azure.
-
-Per eseguire questi esempi di codice nel modo più rapido consiste nell'utilizzare [F # Interactive](tutorials/fsharp-interactive/index.md).  È sufficiente copiare e incollare gli esempi di codice ed eseguirli non esiste.  In alternativa è possibile impostare un progetto per compilare ed eseguire il codice come applicazione Console.  Vedere il [iniziare](./get-started/index.md) sezione per altre informazioni.
-
 ## <a name="functions-and-modules"></a>Funzioni e moduli
 
-Gli elementi più importanti di qualsiasi programma F # sono ***funzioni*** organizzati in ***moduli***.  [Funzioni](language-reference/functions/index.md) eseguire operazioni di input per produrre output e sono organizzati in [moduli](language-reference/modules.md), che sono il mezzo principale è raggruppare elementi in F #.  Sono definiti mediante il [ `let` associazione](language-reference/functions/let-bindings.md), che assegna un nome di funzione e definire i relativi argomenti.
+Gli elementi più importanti di qualsiasi programma F # sono ***funzioni*** organizzati in ***moduli***.  [Le funzioni](language-reference/functions/index.md) operare su input per produrre output e in cui sono organizzate [moduli](language-reference/modules.md), che sono il mezzo principale è raggruppare elementi in F #.  Sono definiti mediante il [ `let` associazione](language-reference/functions/let-bindings.md), che assegna un nome di funzione e definire i relativi argomenti.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`le associazioni sono anche viene illustrato come associare un valore a un nome simile a una variabile in altri linguaggi.  `let`le associazioni sono ***non modificabile*** per impostazione predefinita, il che significa che una volta associato a un nome di una funzione o un valore, non può essere modificato sul posto.  Ciò si differenzia variabili in altri linguaggi, che sono ***modificabile***, vale a dire i relativi valori possono essere modificati in qualsiasi punto nel tempo.  Se è necessaria un'associazione modificabile, è possibile utilizzare `let mutable ...` sintassi.
+`let` le associazioni sono anche viene illustrato come associare un valore a un nome simile a una variabile in altri linguaggi.  `let` le associazioni sono ***immutabile*** per impostazione predefinita, il che significa che una volta un valore o una funzione è associato a un nome, non può essere modificata sul posto.  Ciò si differenzia variabili in altri linguaggi, che sono ***modificabile***, vale a dire i relativi valori possono essere modificati in qualsiasi punto nel tempo.  Se è necessaria un'associazione modificabile, è possibile utilizzare `let mutable ...` sintassi.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
@@ -79,11 +72,11 @@ L'esempio precedente apportata usare molte funzionalità di F #, incluse le funz
 
 Elenchi, matrici e sequenze sono tre tipi di raccolta primaria nella libreria di base F #.
 
-[Elenca](language-reference/lists.md) vengono raccolte non modificabile ordinate di elementi dello stesso tipo.  Sono gli elenchi collegati singolarmente, pertanto che sono disponibili solo per l'enumerazione, ma una scelta insufficiente per l'accesso continuo casuale e concatenazione se sono di grandi dimensioni.  Questa differenza di elenchi in altri linguaggi, che in genere non utilizzano un elenco collegato singolarmente per rappresentare elenchi.
+[Elenca](language-reference/lists.md) sono ordinate, non modificabile raccolte di elementi dello stesso tipo.  Sono gli elenchi collegati singolarmente, pertanto che sono disponibili solo per l'enumerazione, ma una scelta insufficiente per l'accesso continuo casuale e concatenazione se sono di grandi dimensioni.  Questa differenza di elenchi in altri linguaggi, che in genere non utilizzano un elenco collegato singolarmente per rappresentare elenchi.
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[Matrici](language-reference/arrays.md) sono di dimensioni fisse, *modificabile* raccolte di elementi dello stesso tipo.  Supportano l'accesso casuale veloce degli elementi e sono più veloci rispetto a F # perché tali elenchi sono contigui solo blocchi di memoria.
+[Le matrici](language-reference/arrays.md) sono a dimensione fissa *modificabile* raccolte di elementi dello stesso tipo.  Supportano l'accesso casuale veloce degli elementi e sono più veloci rispetto a F # perché tali elenchi sono contigui solo blocchi di memoria.
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
@@ -143,7 +136,7 @@ L'impossibilità di seguire il precedente comporterà un errore di compilazione.
 
 ## <a name="pattern-matching"></a>Criteri di ricerca
 
-[Corrispondenza di schema](language-reference/pattern-matching.md) è la funzionalità del linguaggio F # che consente di correttezza per l'uso di tipi F #.  Negli esempi precedenti, è possibile notare una netta `match x with ...` sintassi.  Questo costrutto consente al compilatore, che è in grado di riconoscere la "forma" tipi di dati, per forzare l'utilizzo di account per tutti i casi possibili quando si utilizza un tipo di dati tramite l'operazione nota come esaustivo criteri di ricerca.  Questo è incredibilmente potente per la correttezza e può essere usato modo intelligente per "accuratezza" che normalmente sarebbe un problema di runtime in fase di compilazione.
+[Corrispondenza di schema](language-reference/pattern-matching.md) è la funzionalità del linguaggio F # che consente la correttezza per l'uso di tipi F #.  Negli esempi precedenti, è possibile notare una netta `match x with ...` sintassi.  Questo costrutto consente al compilatore, che è in grado di riconoscere la "forma" tipi di dati, per forzare l'utilizzo di account per tutti i casi possibili quando si utilizza un tipo di dati tramite l'operazione nota come esaustivo criteri di ricerca.  Questo è incredibilmente potente per la correttezza e può essere usato modo intelligente per "accuratezza" che normalmente sarebbe un problema di runtime in fase di compilazione.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L739)]
 
@@ -169,7 +162,7 @@ Un caso speciale di tipi di unione discriminata è il tipo di opzione, questa op
 
 Una funzionalità univoca di sistema di tipi F # è la possibilità di fornire contesto per i valori letterali numerici tramite unità di misura.
 
-[Unità di misura](language-reference/units-of-measure.md) consentono di associare un tipo numerico a una singola unità, ad esempio, misuratori e avere funzioni di operare su unità anziché valori letterali numerici.  In questo modo il compilatore di verificare che i tipi di valori letterali numerici passati senso in un determinato contesto, eliminando così gli errori di runtime associato a questo tipo di lavoro.
+[Unità di misura](language-reference/units-of-measure.md) consentono di associare un tipo numerico a una singola unità, ad esempio metri, e hanno funzioni svolgere il lavoro sulle unità anziché valori letterali numerici.  In questo modo il compilatore di verificare che i tipi di valori letterali numerici passati senso in un determinato contesto, eliminando così gli errori di runtime associato a questo tipo di lavoro.
 
 [!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L818-L839)]
 
@@ -179,7 +172,7 @@ La libreria di base F # definisce molti tipi di unità di isolamento e conversio
 
 F # contiene inoltre il supporto completo per le classi .NET, [interfacce](language-reference/interfaces.md), [classi astratte](language-reference/abstract-classes.md), [ereditarietà](language-reference/inheritance.md)e così via.
 
-[Classi](language-reference/classes.md) sono tipi che rappresentano gli oggetti .NET, che può avere proprietà, metodi ed eventi come relativo [membri](language-reference/members/index.md).
+[Le classi](language-reference/classes.md) sono tipi che rappresentano gli oggetti .NET, che può avere proprietà, metodi ed eventi come relativo [membri](language-reference/members/index.md).
 
 [!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L848-L877)]
 
