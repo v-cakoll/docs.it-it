@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>Monitoraggio dell'integrità
 
@@ -37,7 +37,7 @@ Per usare questa libreria, è necessario usare prima la libreria presente nei mi
 
 È possibile verificare come viene usata la libreria HealthChecks nell'applicazione di esempio eShopOnContainers. Per iniziare, è necessario definire gli elementi che costituiscono uno stato integro per ogni microservizio. Nell'applicazione di esempio, un microservizio è integro se la relativa API è accessibile tramite HTTP e se è disponibile anche il database SQL Server correlato.
 
-In futuro, sarà possibile installare la libreria HealthChecks come pacchetto NuGet. Al momento della scrittura di questo articolo, tuttavia, è necessario scaricare e compilare il codice come parte della soluzione. Clonare il codice disponibile all'indirizzo https://github.com/dotnet-architecture/HealthChecks e copiare le cartelle seguenti nella soluzione:
+In futuro, sarà possibile installare la libreria HealthChecks come pacchetto NuGet. Al momento della scrittura di questo articolo, tuttavia, è necessario scaricare e compilare il codice come parte della soluzione. Clonare il codice disponibile all'indirizzo https://github.com/dotnet-architecture/HealthChecks e copiare le cartelle seguenti alla soluzione:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,16 +190,16 @@ Infine, se sono stati archiviati tutti i flussi di eventi, è possibile usare Mi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **ASP.NET Core HealthChecks** (versione preliminare) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** (rilascio anticipato) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introduzione al monitoraggio dell'integrità di Service Fabric**
+-   **Introduzione al monitoraggio dell'integrità dell'infrastruttura di servizio**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
+-   **Applicazione Azure Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
-    [*https://www.microsoft.com/it-it/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 [Indietro] (implement-circuit-breaker-pattern.md) [Avanti] (../secure-net-microservices-web-applications/index.md)

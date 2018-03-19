@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,24 +18,25 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;rimuovere&gt; elemento per webRequestModules (impostazioni di rete)
 Rimuove un modulo di richiesta Web personalizzato dall'applicazione.  
   
  \<configuration>  
-\<System.NET >  
-\<webRequestModules >  
-\<rimuovere >  
+\<system.net>  
+\<webRequestModules>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +67,7 @@ Rimuove un modulo di richiesta Web personalizzato dall'applicazione.
 ## <a name="remarks"></a>Note  
  Il `remove` elemento rimuove il modulo di richiesta Web registrato per il prefisso URI specificato.  
   
- Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http" o "http://www.contoso.com".  
+ Il valore per il `prefix` attributo deve corrispondere ai caratteri iniziali di un URI valido, ad esempio, "http", o "http://www.contoso.com".  
   
 ## <a name="configuration-files"></a>File di configurazione  
  Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  

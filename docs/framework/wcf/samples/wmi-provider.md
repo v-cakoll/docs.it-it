@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider"></a>Provider WMI
 In questo esempio viene illustrato come raccogliere dati dai servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in fase di esecuzione usando il provider di Strumentazione gestione Windows (WMI) incorporato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Viene inoltre illustrato come aggiungere un oggetto WMI definito dall'utente a un servizio. L'esempio attiva il provider WMI per il [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e viene illustrato come raccogliere dati di `ICalculator` servizio in fase di esecuzione.  
@@ -43,7 +45,7 @@ In questo esempio viene illustrato come raccogliere dati dai servizi [!INCLUDE[i
  L'aggiunta di oggetti WMI a un servizio rende possibile la rivelazione di informazioni definite dall'utente insieme alle informazioni del provider WMI incorporato. Questa operazione viene eseguita pubblicando lo schema del servizio in WMI usando l'applicazione Installutil.exe. Le istruzioni per svolgere questa operazione, insieme ad altri dettagli, sono disponibili tra le istruzioni di installazione alla fine dell'argomento.  
   
 ## <a name="accessing-wmi-information"></a>Accesso alle informazioni WMI  
- L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API WMI per gli script, le applicazioni [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], le applicazioni C++ e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API di WMI per gli script, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] le applicazioni, applicazioni C++ e la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
  In questo esempio vengono usati due script Java: uno per enumerare i servizi in esecuzione nel computer con alcune delle relative proprietà e il secondo per visualizzare i dati WMI definiti dall'utente. Lo script apre una connessione al provider WMI, analizza i dati e visualizza i dati raccolti.  
   
@@ -136,7 +138,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pubblicare lo schema dei servizi in WMI eseguendo InstallUtil.exe (il percorso predefinito per InstallUtil.exe è "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") sul file service.dll nella directory di hosting. È necessario eseguire questo passaggio solo quando sono state apportate modifiche al file service.dll. Per altre informazioni, vedere Fornire dati di gestione dotando le applicazioni di strumentazione all'indirizzo https://msdn2.microsoft.com/it-it/library/ms186147.aspx nella sezione relativa alla procedura di pubblicazione dello schema in WMI per un'applicazione di strumentazione.  
+3.  Pubblicare lo schema dei servizi in WMI eseguendo InstallUtil.exe (il percorso predefinito per InstallUtil.exe è "%WINDIR%\Microsoft.NET\Framework\v4.0.30319") sul file service.dll nella directory di hosting. È necessario eseguire questo passaggio solo quando sono state apportate modifiche al file service.dll. Per altre informazioni, vedere fornendo le informazioni di gestione per la strumentazione di applicazioni: http://msdn2.microsoft.com/library/ms186147.aspx nella sezione "Come a: pubblicare il schema per WMI per un'applicazione instrumentata".  
   
 4.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

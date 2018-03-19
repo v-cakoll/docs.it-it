@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Lo strumento XML Schema Definition (Xsd.exe) consente di generare classi Common Language Runtime o XML Schema da file XDR, XML e XSD o da classi di un assembly di runtime.  
@@ -63,12 +63,12 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/e**[**lement**]**:***elemento*|Specifica l'elemento dello schema per il quale generare codice. Per impostazione predefinita, sono specificati tutti gli elementi. È possibile specificare questo argomento più volte.|  
+|**/e**[**lemento**] **: * * * elemento*|Specifica l'elemento dello schema per il quale generare codice. Per impostazione predefinita, sono specificati tutti gli elementi. È possibile specificare questo argomento più volte.|  
 |**/enableDataBinding**|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi generati per consentire l'associazione dati. La forma abbreviata è `/edb`.|  
 |**/enableLinqDataSet**|(forma abbreviata: `/eld`). Specifica che il dataset generato può essere sottoposto a query mediante LINQ to DataSet. Questa opzione viene utilizzata quando è specificata anche l'opzione per i /dataset . Per altre informazioni, vedere [LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) (Panoramica di LINQ to DataSet) e [Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md) (Esecuzione di query su dataset tipizzati). Per informazioni generali sull'uso di LINQ, vedere [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Genera campi anziché proprietà. Per impostazione predefinita, vengono generate le proprietà.|  
-|**/l**[**anguage**]**:***linguaggio*|Specifica il linguaggio di programmazione da utilizzare. È possibile scegliere tra `CS` (C#, il linguaggio predefinito), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). È anche possibile specificare un nome completo per una classe che implementa <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**]**:***spazio dei nomi*|Specifica lo spazio dei nomi del runtime per i tipi generati. Lo spazio dei nomi predefinito è `Schemas`.|  
+|**/l**[**anguage**]**:***language*|Specifica il linguaggio di programmazione da utilizzare. È possibile scegliere tra `CS` (C#, il linguaggio predefinito), `VB` (Visual Basic), `JS` (JScript) o `VJS` (Visual J#). È anche possibile specificare un nome completo per una classe che implementa <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**] **: * * * lo spazio dei nomi*|Specifica lo spazio dei nomi del runtime per i tipi generati. Lo spazio dei nomi predefinito è `Schemas`.|  
 |**/nologo**|Evita la visualizzazione del messaggio di avvio.|  
 |**/order**|Genera identificatori di ordine espliciti su tutti i membri particella.|  
 |**/o[ut]:** *nomedirectory*|Specifica la directory di output in cui inserire i file. Il valore predefinito è la directory corrente.|  
@@ -78,7 +78,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/t**[**ype**]**:***nometipo*|Specifica il nome del tipo per il quale creare uno schema. È possibile specificare più argomenti type. Se *nometipo* non specifica uno spazio dei nomi, Xsd.exe associa tutti i tipi nell'assembly con il tipo specificato. Se *nometipo* specifica uno spazio dei nomi, viene associato solo il tipo specifico. Se *nometipo* termina con un asterisco (\*), vengono associati tutti i tipi che iniziano con la stringa che precede \*. Se si omette l'opzione `/type`, verranno generati schemi per tutti i tipi dell'assembly.|  
+|**/t**[**ipo**] **: * * * typename*|Specifica il nome del tipo per il quale creare uno schema. È possibile specificare più argomenti type. Se *nometipo* non specifica uno spazio dei nomi, Xsd.exe associa tutti i tipi nell'assembly con il tipo specificato. Se *nometipo* specifica uno spazio dei nomi, viene associato solo il tipo specifico. Se *nometipo* termina con un asterisco (\*), vengono associati tutti i tipi che iniziano con la stringa che precede \*. Se si omette l'opzione `/type`, verranno generati schemi per tutti i tipi dell'assembly.|  
   
 ## <a name="remarks"></a>Note  
  Nella tabella riportata di seguito vengono illustrate le operazioni eseguite da Xsd.exe.  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Da classi a XSD  
  Generare uno schema XML da uno o più tipi presenti in un file di assembly di runtime. Lo schema generato definisce il formato XML utilizzato da `System.Xml.Serialization.XmlSerializer`.  
   
- Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per ulteriori informazioni sulla proposta XSD o sullo standard XML, visitare il sito http://w3.org (informazioni in lingua inglese).  
+ Xsd.exe consente solo di modificare gli schemi XML che seguono il linguaggio XSD (XML Schema Definition) proposto da W3C (World Wide Web Consortium). Per ulteriori informazioni sulla proposta di XML Schema Definition o lo standard XML, vedere http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Impostazione delle opzioni con un file XML  
  Usando l'opzione `/parameters`, è possibile specificare un singolo file XML che imposta diverse opzioni. Le opzioni che è possibile impostare dipendono dalla modalità di utilizzo dello strumento XSD.exe. È possibile scegliere di generare schemi, file di codice o file di codice con funzionalità `DataSet`. Ad esempio, è possibile impostare l'elemento `<assembly\>` sul nome di un file eseguibile (.exe) o di una libreria di tipi (.dll) durante la generazione di uno schema, ma non durante la generazione di un file di codice. Nel codice XML riportato di seguito viene illustrato come utilizzare l'elemento `<generateSchemas\>` con un determinato file eseguibile:  

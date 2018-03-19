@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
 A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e identificarlo. L'indirizzo è costituito principalmente da un URI (Uniform Resource Identifier) che specifica il percorso dell'endpoint. L'indirizzo endpoint è rappresentato nel modello di programmazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tramite la classe <xref:System.ServiceModel.EndpointAddress>. Questa contiene una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A> facoltativa che consente l'autenticazione dell'endpoint tramite altri endpoint che scambiano messaggi con esso e un set di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Tali proprietà definiscono qualsiasi altra intestazione SOAP richiesta per raggiungere il servizio. Le intestazioni facoltative forniscono dettagli aggiuntivi e più precisi sull'indirizzo per identificare o interagire con l'endpoint del servizio. L'indirizzo di un endpoint è rappresentato in transito come riferimento all'endpoint di WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Struttura URI di un indirizzo  
- L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint, ad esempio, possono essere specificate come segue:  
+ L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, le quattro parti dell'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint possono essere specificate come segue:  
   
 -   Schema: http:  
   
@@ -86,7 +88,7 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
 </system.serviceModel>  
 ```  
   
- Nell'esempio precedente, net.tcp://payroll.myorg.com:8000 e http://shipping.myorg.com:8000 sono gli unici indirizzi di base, per i rispettivi schemi, che vengono passati.  
+ Nell'esempio precedente, NET.TCP://Payroll.myorg.com:8000: 8000 e http://shipping.myorg.com:8000 sono solo gli indirizzi di base, i rispettivi schemi, che vengono passati.  
   
  `baseAddressPrefixFilter` non supporta caratteri jolly.  
   

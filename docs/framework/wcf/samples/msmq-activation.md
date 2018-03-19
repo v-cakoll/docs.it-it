@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="msmq-activation"></a>Attivazione MSMQ
 In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi. Questo esempio viene utilizzata la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio. Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
@@ -29,11 +31,11 @@ In questo esempio viene illustrato come ospitare le applicazioni del servizio di
 > [!NOTE]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  \<Unitàinstallazione >: \WF_WCF_Samples  
+>  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se questa directory non esiste, passare a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e [!INCLUDE[wf](../../../../includes/wf-md.md)] esempi per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare al [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e [!INCLUDE[wf](../../../../includes/wf-md.md)] esempi per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi. Questo esempio si trova nella directory seguente.  
 >   
->  \<Unitàinstallazione >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
+>  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
  Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, Named Pipe e MSMQ. La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
   

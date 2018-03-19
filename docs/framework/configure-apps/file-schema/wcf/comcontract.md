@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8fa70ba3cf8e66411812b84821e80772c9930f7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Specifica un contratto del servizio COM+ Integration.  
   
- \<System. ServiceModel >  
-\<comContracts >  
+ \<system.ServiceModel>  
+\<comContracts>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -81,7 +83,7 @@ Specifica un contratto del servizio COM+ Integration.
 |comContracts|Contiene una raccolta di elementi `comContract`.|  
   
 ## <a name="remarks"></a>Note  
- Contratti di servizio COM+ integration sono limitati attualmente allo spazio dei nomi "http://tempuri.org" e nome del contratto è derivato dall'interfaccia COM di supporto. È tuttavia possibile specificare alternative usando la sezione `comContracts` e anche l'elemento `comContract` nel file di configurazione. Ad esempio, è possibile usare la configurazione seguente per specificare lo spazio dei nomi, il nome del contratto, i tipi definiti dall'utente da includere e altre impostazioni per un contratto di servizio.  
+ Contratti di servizio COM+ integration sono limitati attualmente al "http://tempuri.org" spazio dei nomi e nome del contratto è derivato dall'interfaccia COM di supporto. È tuttavia possibile specificare alternative usando la sezione `comContracts` e anche l'elemento `comContract` nel file di configurazione. Ad esempio, è possibile usare la configurazione seguente per specificare lo spazio dei nomi, il nome del contratto, i tipi definiti dall'utente da includere e altre impostazioni per un contratto di servizio.  
   
 ```xml  
 <comContracts>  
@@ -105,6 +107,6 @@ Specifica un contratto del servizio COM+ Integration.
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [Integrazione con applicazioni COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [Procedura: Configurare le impostazioni del servizio COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

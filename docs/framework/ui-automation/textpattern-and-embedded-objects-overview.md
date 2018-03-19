@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Panoramica sugli oggetti incorporati e TextPattern
 > [!NOTE]
@@ -54,7 +56,7 @@ Esempio di un flusso di testo con oggetti incorporati e le estensioni degli inte
   
  Quando è necessario scorrere il contenuto di un intervallo di testo, per garantire una corretta esecuzione del metodo <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> è prevista una serie di passaggi dietro le quinte.  
   
-1.  L'intervallo di testo viene normalizzato, ovvero viene compresso in un intervallo degenerato all'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> . Ciò rende superfluo l'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . Questo passaggio è necessario per rimuovere l'ambiguità nei casi in cui un intervallo di testo si estenda sui limiti di <xref:System.Windows.Automation.Text.TextUnit> : ad esempio, "{L'U}RL [http://www.microsoft.com](http://www.microsoft.com) è incorporato nel testo", dove "{" e "}" rappresentano gli endpoint dell'intervallo di testo.  
+1.  L'intervallo di testo viene normalizzato, ovvero viene compresso in un intervallo degenerato all'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> . Ciò rende superfluo l'endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . Questo passaggio è necessario rimuovere l'ambiguità nei casi in cui un intervallo di testo si estenda <xref:System.Windows.Automation.Text.TextUnit> limiti: ad esempio, "{l'U} RL [ http://www.microsoft.com ](http://www.microsoft.com) è incorporato nel testo" dove "{" e "}" rappresentano il testo endpoint dell'intervallo.  
   
 2.  L'intervallo risultante viene spostato indietro in <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> all'inizio del limite <xref:System.Windows.Automation.Text.TextUnit> richiesto.  
   
@@ -79,11 +81,11 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 ### <a name="hyperlink"></a>Hyperlink  
  **Esempio 1: intervallo di testo che contiene un collegamento ipertestuale con testo incorporato**  
   
- {L'URL [http://www.microsoft.com](http://www.microsoft.com) è incorporato nel testo}.  
+ {L'URL [ http://www.microsoft.com ](http://www.microsoft.com) è incorporato nel testo}.  
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Restituisce la stringa "L'URL http://www.microsoft.com è incorporato nel testo".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Restituisce la stringa "l'URL http://www.microsoft.com è incorporato nel testo".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Restituisce l' <xref:System.Windows.Automation.AutomationElement> più interno che racchiude l'intervallo di testo, in questo caso, l' <xref:System.Windows.Automation.AutomationElement> che rappresenta il provider di testo stesso.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Restituisce un <xref:System.Windows.Automation.AutomationElement> che rappresenta il controllo collegamento ipertestuale.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> dove <xref:System.Windows.Automation.AutomationElement> è l'oggetto restituito dal metodo `GetChildren` precedente.|Restituisce l'intervallo che rappresenta "http://www.microsoft.com".|  
@@ -100,7 +102,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
   
  **Esempio 3: intervallo di testo che si estende parzialmente sul contenuto di un contenitore di testo. Il contenitore di testo contiene testo incorporato che non fa parte dell'intervallo di testo.**  
   
- {L'URL} [http://www.microsoft.com](http://www.microsoft.com) è incorporato nel testo.  
+ {L'URL} [ http://www.microsoft.com ](http://www.microsoft.com) è incorporato nel testo.  
   
 |Metodo chiamato|Risultato|  
 |-------------------|------------|  
@@ -139,7 +141,7 @@ Esempi di regolazione di un intervallo di testo per Move() ed ExpandToEnclosingU
 |Cella con immagine|Cella con testo|  
 |---------------------|--------------------|  
 |![Esempio di immagine incorporata](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|x|  
-|![Esempio di immagine 2 incorporato](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
+|![Incorporati di esempio di immagine 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
 |![Incorporati di esempio di immagine 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Immagine per Z|Z|  
   
  **Esempio 1: ottenere il contenitore di testo dal contenuto di una cella.**  

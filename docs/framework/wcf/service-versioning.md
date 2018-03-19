@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. In questo argomento viene illustrato come controllare la versione in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -65,7 +67,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
 ### <a name="lax-versioning"></a>Controllo delle versioni Lax  
  In molti altri scenari, lo sviluppatore del servizio può presumere che l'aggiunta di un nuovo membro facoltativo al contratto dati non causerà l'interruzione dei client esistenti. A tale fine, deve controllare se i client esistenti non stanno eseguendo la convalida dello schema e ignorano i membri dati sconosciuti. In questi scenari, è possibile sfruttare le funzionalità del contratto dati per aggiungere nuovi membri in modo da non causare interruzioni. Lo sviluppatore del servizio può fare tranquillamente questa ipotesi se le funzionalità del contratto dati per il controllo delle versioni sono già state utilizzate per la prima versione del servizio.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Servizi Web ASP.NET e numerosi altri Web servizio Stack supportano *delle versioni lax*:, ovvero non generano eccezioni per i nuovi membri dati sconosciuti nei dati ricevuti.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Servizi Web ASP.NET e numerosi altri Web servizio Stack supportano *controllo delle versioni lax*: vale a dire, ovvero non generano eccezioni per i nuovi membri dati sconosciuti nei dati ricevuti.  
   
  Accade di credere erroneamente che l'aggiunta di un nuovo membro non interromperà i client esistenti. Se non si è certi che tutti i client possano gestire il controllo delle versioni lax, è consigliabile utilizzare le indicazioni sul controllo delle versioni strict e trattare i contratti dati come immutabili.  
   
@@ -110,7 +112,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  Anche il controllo delle versioni dei contratti di servizio implica operazioni di aggiunta, modifica e rimozione, in modo analogo a quello dei contratti dati.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Specifica di nome, spazio dei nomi e azione  
- Per impostazione predefinita, il nome di un contratto di servizio è il nome dell'interfaccia. Il suo spazio dei nomi predefinito è "http://tempuri.org" e l'azione di ogni operazione è "http://tempuri.org/contractname/methodname". È consigliabile specificare in modo esplicito un nome e un spazio dei nomi per il contratto di servizio e un'azione per ogni operazione per evitare di utilizzare "http://tempuri.org" e impedire che i nomi del metodo e dell'interfaccia vengano esposti nel contratto di servizio.  
+ Per impostazione predefinita, il nome di un contratto di servizio è il nome dell'interfaccia. Spazio dei nomi predefinito è "http://tempuri.org", e azione di ogni operazione è "http://tempuri.org/contractname/methodname". È consigliabile specificare in modo esplicito un nome e spazio dei nomi per il contratto di servizio e un'azione per ogni operazione per evitare l'utilizzo di "http://tempuri.org" e per impedire che i nomi di interfaccia e il metodo vengano esposti nel contratto del servizio.  
   
 ### <a name="adding-parameters-and-operations"></a>Aggiunta di parametri e operazioni  
  L'aggiunta di operazioni del servizio esposte dal servizio è una modifica che non provoca interruzioni perché non è necessario che i client esistenti si occupino delle nuove operazioni.  
@@ -136,7 +138,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  Le modifiche all'indirizzo endpoint e all'associazione sono modifiche che possono determinare interruzioni a meno che i client non siano in grado di scoprire dinamicamente il nuovo indirizzo endpoint o la nuova associazione. Per implementare questa funzionalità è possibile utilizzare un Registro di sistema UDDI (Universal Discovery Description and Integration) e il modello di chiamata UDDI in cui un client tenta di comunicare con un endpoint e, in caso di errore, esegue una query nel registro di sistema UDDI noto, per cercare i metadati dell'endpoint corrente. Il client utilizza quindi l'indirizzo e l'associazione da questi metadati per comunicare con l'endpoint. Se la comunicazione riesce, il client memorizza nella cache le informazioni sull'indirizzo e sull'associazione per utilizzarle in seguito.  
   
 ## <a name="routing-service-and-versioning"></a>Servizio di routing e controllo delle versioni  
- Se le modifiche apportate a un servizio sono in grado di determinare interruzioni e sono necessarie due o più versioni diverse di un servizio in esecuzione contemporanea, è possibile utilizzare il servizio di routing WCF per indirizzare messaggi all'istanza del servizio appropriata. Il servizio di routing WCF utilizza il routing basato sul contenuto, ovvero informazioni contenute nel messaggio, per determinare l'indirizzamento del messaggio stesso. [!INCLUDE[crabout](../../../includes/crabout-md.md)]il servizio di Routing WCF vedere [servizio di Routing](../../../docs/framework/wcf/feature-details/routing-service.md). Per un esempio di come utilizzare il servizio di Routing WCF per il controllo delle versioni di servizio vedere [How To: controllo delle versioni del servizio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Se le modifiche apportate a un servizio sono in grado di determinare interruzioni e sono necessarie due o più versioni diverse di un servizio in esecuzione contemporanea, è possibile utilizzare il servizio di routing WCF per indirizzare messaggi all'istanza del servizio appropriata. Il servizio di routing WCF utilizza il routing basato sul contenuto, ovvero informazioni contenute nel messaggio, per determinare l'indirizzamento del messaggio stesso. [!INCLUDE[crabout](../../../includes/crabout-md.md)] vedere il servizio di Routing WCF [servizio di Routing](../../../docs/framework/wcf/feature-details/routing-service.md). Per un esempio di come utilizzare il servizio di Routing WCF per il controllo delle versioni di servizio vedere [How To: controllo delle versioni del servizio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Appendice  
  Quando è richiesto un controllo rigoroso delle versioni dei contratti dati, trattare questi ultimi come immutabili e creare nuovi contratti dati quando è necessario apportare modifiche. È necessario creare una nuova classe per ogni nuovo contratto dati, pertanto è richiesto un meccanismo che eviti di prendere il codice esistente scritto secondo la vecchia classe del contratto dati e riscriverli secondo quella nuova del contratto dati.  
