@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: db22c9251fa5e9f5a9cb66af6ec8b193b88e0eb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-72"></a>Novità di C# 7.2
 
@@ -31,7 +31,7 @@ Le nuove funzionalità relative al linguaggio in questa versione sono:
   - Gli argomenti denominati possono essere seguiti da argomenti posizionali.
 * [Caratteri di sottolineatura iniziali nei valori letterali numerici](#leading-underscores-in-numeric-literals)
   - I valori letterali numerici possono ora includere caratteri di sottolineatura iniziali prima di qualsiasi cifra stampata.
-* [Modificatore di accesso `private protected`](#private-protected)
+* [Modificatore di accesso `private protected`](#private-protected-access-modifier)
   - Il modificatore di accesso `private protected` consente l'accesso per le classi derivate nello stesso assembly.
 
 ## <a name="reference-semantics-with-value-types"></a>Semantica di riferimento con i tipi valore

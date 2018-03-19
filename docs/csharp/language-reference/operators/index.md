@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>Operatori [C#]
 C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione.  È possibile eseguire l'[overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.  
@@ -78,7 +78,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md): negazione numerica.  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md): negazione logica.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md): negazione logica.  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md): complemento bit per bit.  
   

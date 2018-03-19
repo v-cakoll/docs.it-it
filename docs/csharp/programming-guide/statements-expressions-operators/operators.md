@@ -2,21 +2,22 @@
 title: Operatori (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
 Nel linguaggio C# un *operatore* è un elemento del programma che si applica a uno o più *operandi* in un'espressione o in un'istruzione. Gli operatori che accettano un unico operando, ad esempio l'operatore di incremento (`++`) o `new`, sono denominati operatori *unari* . Quelli che accettano due operandi, ad esempio gli operatori aritmetici (`+`,`-`,`*`,`/`), sono denominati operatori *binari* . L'operatore condizionale (`?:`) accetta tre operandi ed è l'unico operatore ternario disponibile in C#.  
@@ -63,9 +64,9 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
   
 |Espressione|Descrizione|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identità|  
+|[+](../../../csharp/language-reference/operators/addition-operator.md)x|identità|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negazione|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negazione logica|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negazione logica|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negazione bit per bit|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|Pre-incremento|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Pre-decremento|  
@@ -113,7 +114,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
   
  **Operatori logici, condizionali e Null**  
   
-|Categoria|Espressione|Descrizione|  
+|Category|Espressione|Descrizione|  
 |--------------|----------------|-----------------|  
 |AND logico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND Integer bit per bit, AND logico booleano|  
 |XOR logico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR Integer bit per bit, XOR logico booleano|  
@@ -131,7 +132,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |x op= y|Assegnazione composta. Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Funzione anonima (espressione lambda)|  
   
-## <a name="associativity"></a>associatività  
+## <a name="associativity"></a>Associazione  
  Quando in un'espressione sono presenti due o più operatori con la stessa precedenza, verranno valutati in base all'associazione. Gli operatori che prevedono l'associazione all'operando sinistro vengono valutati nell'ordine da sinistra a destra. L'espressione `x * y / z` viene ad esempio valutata come `(x * y) / z`. Gli operatori che prevedono l'associazione all'operando destro vengono valutati nell'ordine da destra a sinistra. Ad esempio, l'operatore di assegnazione prevede l'associazione all'operando destro. Se non fosse così, il codice seguente restituirà un errore.  
   
 ```csharp  
