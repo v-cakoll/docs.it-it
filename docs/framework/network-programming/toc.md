@@ -66,6 +66,7 @@
 #### [Procedura: Personalizzare criteri di cache basati sul tempo](how-to-customize-a-time-based-cache-policy.md)
 #### [Procedura: Impostare criteri di cache per una richiesta](how-to-set-cache-policy-for-a-request.md)
 ## [Sicurezza nella programmazione di rete](security-in-network-programming.md)
+### [Procedure consigliate per Transport Layer Security (TLS)](tls.md)
 ### [Uso di Secure Sockets Layer](using-secure-sockets-layer.md)
 #### [Selezione e convalida dei certificati](certificate-selection-and-validation.md)
 ### [Autenticazione Internet](internet-authentication.md)
