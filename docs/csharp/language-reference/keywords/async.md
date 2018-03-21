@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 Usare il modificatore `async` per specificare che un metodo, un'[espressione lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o un [metodo anonimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) sia asincrono. Se si usa questo modificatore in un metodo o in un'espressione, viene indicato come *metodo asincrono*. L'esempio seguente definisce un metodo asincrono denominato `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Un metodo asincrono può avere i tipi restituiti seguenti:
 - [void](../../../csharp/language-reference/keywords/void.md), che deve essere usato solo per i gestori eventi.
 - A partire da C# 7, qualsiasi tipo con un metodo `GetAwaiter` accessibile. Il tipo `System.Threading.Tasks.ValueTask<TResult>` è una di queste implementazioni ed è disponibile aggiungendo il pacchetto NuGet `System.Threading.Tasks.Extensions`. 
 
-Un metodo asincrono non può dichiarare parametri [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out.md) e nemmeno avere un valore di riferimento restituito <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->, ma può chiamare metodi con tali parametri.  
+Un metodo asincrono non può dichiarare parametri [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) e nemmeno avere un [valore di riferimento restituito ](../../programming-guide/classes-and-structs/ref-returns.md), ma può chiamare metodi con tali parametri.  
   
 Specificare `Task<TResult>` come tipo restituito di un metodo asincrono se l'istruzione [return](../../../csharp/language-reference/keywords/return.md) del metodo specifica un operando di tipo `TResult`. Utilizzare `Task` se non viene restituito alcun valore significativo al completamento del metodo. Ciò significa che una chiamata al metodo restituisce `Task`, ma al completamento di `Task`, qualsiasi espressione `await` in attesa di `Task` restituisce `void`.  
   

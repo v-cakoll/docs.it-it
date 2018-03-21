@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0a6ba6bd85d0bdfa7e98dd85886fee89527b59fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 585d1fc3ee6114532d7ddbfd30f5e09950d3b0b0
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Creazione di interfacce generiche varianti (C#)
 È possibile dichiarare parametri di tipo generico nelle interfacce come covarianti o controvarianti. La *covarianza* consente ai metodi di interfaccia di avere tipi restituiti più derivati rispetto a quelli definiti dai parametri di tipo generico. La *controvarianza* consente ai metodi di interfaccia di avere tipi di argomenti meno derivati rispetto a quelli specificati dai parametri generici. Un'interfaccia generica che ha parametri di tipo generico varianti e covarianti è definita *variante*.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  È possibile dichiarare le interfacce generiche varianti usando le parole chiave `in` e `out` per i parametri di tipo generico.  
   
 > [!IMPORTANT]
->  I parametri `ref` e `out` in C# non possono essere varianti. Anche i tipi di valore non supportano la varianza.  
+>  I parametri `ref`, `in` e `out` in C# non possono essere varianti. Anche i tipi di valore non supportano la varianza.  
   
  È possibile dichiarare un parametro di tipo generico covariante usando la parola chiave `out`. Il tipo covariante deve soddisfare le condizioni seguenti:  
   

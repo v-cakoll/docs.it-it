@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
+ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Creare un modello personalizzato per dotnet new
 
@@ -103,7 +103,7 @@ Il modello è finito. A questo punto, sono disponibili due opzioni per la distri
    </package>
    ```
 
-1. [Creare il pacchetto](/nuget/create-packages/creating-a-package#creating-the-package) usando il comando `nuget pack <PATH_TO_NUSPEC_FILE>`. Il comando seguente presuppone che la cartella che contiene gli asset di NuGet si trovi nel percorso \\C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/\*. Tuttavia quando la cartella è collocata nel sistema, il comando `nuget pack` accetta il percorso del file *nuspec*:
+1. [Creare il pacchetto](/nuget/create-packages/creating-a-package#creating-the-package) usando il comando `nuget pack <PATH_TO_NUSPEC_FILE>`. Il comando seguente presuppone che la cartella che contiene gli asset di NuGet si trovi nel percorso *C:\Users\\\<UTENTE>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*. Tuttavia quando la cartella è collocata nel sistema, il comando `nuget pack` accetta il percorso del file *nuspec*:
 
    ```console
    nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec

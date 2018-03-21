@@ -2,21 +2,22 @@
 title: Metodi anonimi (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4d942e0f3245f6404c896173b2c7ca6f1090a8c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e78257c5aab84562cd8cdb336bb5a91ba59534
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metodi anonimi (Guida per programmatori C#)
 Nelle versioni di C# precedenti alla 2.0, l'unico modo per dichiarare un [delegato](../../../csharp/language-reference/keywords/delegate.md) consiste nell'usare [metodi denominati](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). In C# 2.0 sono stati introdotti i metodi anonimi e in C# versione 3.0 e successive le espressioni lambda sostituiscono i metodi anonimi come modalità preferita per la scrittura di codice inline. Le informazioni sui metodi anonimi in questo argomento, tuttavia, si applicano anche alle espressioni lambda. Esiste un caso in cui un metodo anonimo fornisce funzionalità non disponibili nelle espressioni lambda. I metodi anonimi consentono di omettere l'elenco di parametri. Ciò significa che un metodo anonimo può essere convertito in delegati con un'ampia gamma di firme. Questo non è possibile con le espressioni lambda. Per altre informazioni specifiche sulle espressioni lambda, vedere [Espressioni lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -44,7 +45,7 @@ Nelle versioni di C# precedenti alla 2.0, l'unico modo per dichiarare un [delega
   
  Un riferimento alla variabile esterna `n` viene detto *acquisito* al momento della creazione del delegato. A differenza delle variabili locali, la durata di una variabile acquisita si estende fino a quando i delegati che fanno riferimento ai metodi anonimi sono idonei per l'operazione di Garbage Collection.  
   
- Un metodo anonimo non può accedere ai parametri [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out.md) di un ambito esterno.  
+ Un metodo anonimo non può accedere ai parametri [in](../../../csharp/language-reference/keywords/in.md), [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) di un ambito esterno.  
   
  Nessun codice non gestito è accessibile all'interno di un *blocco di metodo anonimo*.  
   

@@ -1,33 +1,32 @@
 ---
 title: Modificatore del parametro out (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 03/06/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.assetid: 3fce0dc5-03f4-4faa-bd61-36c41bc6baf1
-caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68ef554f95fe71f925cfa22cc49758cec3da237e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0686d8bb0dec2a5ea6dd92491e58c93b7ee53a8
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificatore del parametro out (Riferimenti per C#)
-La parola chiave `out` fa sì che gli argomenti vengono passati per riferimento. È come la parola chiave [ref](../../../csharp/language-reference/keywords/ref.md), con la differenza che `ref` richiede l'inizializzazione della variabile prima di essere passato. Per usare un parametro `out`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `out`. Ad esempio:  
+La parola chiave `out` fa sì che gli argomenti vengono passati per riferimento. È come la parola chiave [ref](ref.md), con la differenza che `ref` richiede l'inizializzazione della variabile prima di essere passato. È anche come la parola chiave [in](in-parameter-modifier.md), con la differenza che `in` non consente al metodo chiamato di modificare il valore dell'argomento. Per usare un parametro `out`, la definizione del metodo e il metodo chiamante devono usare in modo esplicito la parola chiave `out`. Ad esempio:  
   
- [!code-csharp[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/out/out-1.cs)]  
+[!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
 > [!NOTE] 
-> La parola chiave `out` può essere usata anche con un parametro di tipo generico per specificare che il parametro tipo è covariante. Per altre informazioni sull'uso della parola chiave `out` in questo contesto, vedere [out (Modificatore generico)](../../../csharp/language-reference/keywords/out-generic-modifier.md).
+> La parola chiave `out` può essere usata anche con un parametro di tipo generico per specificare che il parametro tipo è covariante. Per altre informazioni sull'uso della parola chiave `out` in questo contesto, vedere [out (Modificatore generico)](out-generic-modifier.md).
   
- Le variabili passate come argomenti `out` non devono essere inizializzate prima di essere passate in una chiamata al metodo. È necessario tuttavia che il metodo chiamato assegni un valore prima della restituzione del metodo.  
+Le variabili passate come argomenti `out` non devono essere inizializzate prima di essere passate in una chiamata al metodo. È necessario tuttavia che il metodo chiamato assegni un valore prima della restituzione del metodo.  
   
- Nonostante le parole chiave `ref` e `out` determinino un comportamento differente in fase di esecuzione, non sono considerate parte della firma del metodo in fase di compilazione. Non è quindi possibile eseguirne l'overload se l'unica differenza è che un metodo accetta un argomento `ref` e l'altro un argomento `out`. Il codice seguente, ad esempio, non verrà compilato:  
+Nonostante le parole chiave `in`, `ref` e `out` determinino un comportamento differente in fase di esecuzione, non sono considerate parte della firma del metodo in fase di compilazione. Non è quindi possibile eseguirne l'overload se l'unica differenza è che un metodo accetta un argomento `ref` o `in` e l'altro un argomento `out`. Il codice seguente, ad esempio, non verrà compilato:  
   
 ```csharp
 class CS0663_Example
@@ -39,15 +38,17 @@ class CS0663_Example
 }
 ```
   
-L'overload può essere eseguito, tuttavia, se un metodo accetta un argomento `ref` o `out` e l'altro non ne usa, come illustrato di seguito:  
+L'overload è consentito, tuttavia, se un metodo accetta un argomento `ref`, `in` o `out` e l'altro non ha alcuno di questi modificatori, come illustrato di seguito:  
   
- [!code-csharp[csrefKeywordsMethodParams#3](../../../../samples/snippets/csharp/language-reference/keywords/out/out-3.cs)]  
-  
- Le proprietà non sono variabili e quindi non possono essere passate come parametri `out`.  
+[!code-csharp[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#2)]  
+
+Il compilatore sceglie il miglior overload creando una corrispondenza tra i modificatori di parametro nel sito di chiamata e i modificatori di parametro utilizzati nella chiamata al metodo.
+ 
+Le proprietà non sono variabili e quindi non possono essere passate come parametri `out`.
   
  Per informazioni sul passaggio di matrici, vedere [Passaggio di matrici mediante ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
- Non è possibile usare le parole chiave `ref` e `out` per i seguenti tipi di metodi:  
+ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi di metodi:  
   
 -   Metodi asincroni definiti usando il modificatore [async](../../../csharp/language-reference/keywords/async.md).  
   
@@ -57,7 +58,7 @@ L'overload può essere eseguito, tuttavia, se un metodo accetta un argomento `re
 
  La dichiarazione di un metodo con argomenti `out` è utile quando si vuole che un metodo restituisca più valori. Nell'esempio seguente viene usato `out` per restituire tre variabili con una sola chiamata al metodo. Notare che il terzo argomento è assegnato a null. In questo modo i metodi restituiscono i valori facoltativamente.  
   
- [!code-csharp[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
+[!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
  Il [modello Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) prevede la restituzione di `bool` per indicare se l'operazione è riuscita e la restituzione del valore prodotto dall'operazione in un argomento `out`. Numerosi metodi di analisi, ad esempio il metodo [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)), usano questo modello.
    
@@ -65,18 +66,18 @@ L'overload può essere eseguito, tuttavia, se un metodo accetta un argomento `re
 
 In C# 6 e nelle versioni precedenti è necessario dichiarare una variabile in un'istruzione separata prima di passarla come argomento `out`. L'esempio seguente dichiara una variabile denominata `number` prima che venga passata al metodo [Int32.TryParse3](xref:System.Int32.TryParse(System.String,System.Int32@)), che tenta di convertire una stringa in numero.
 
- [!code-csharp[csrefKeywordsMethodParams#5](../../../../samples/snippets/csharp/language-reference/keywords/out/out-5.cs)]  
+[!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#4)]  
 
 A partire da C# 7, è possibile dichiarare la variabile `out` nell'elenco degli argomenti della chiamata al metodo anziché in una dichiarazione di variabile separata. Il codice prodotto risulta più compatto e leggibile e viene impedita l'assegnazione accidentale di un valore alla variabile prima della chiamata al metodo. L'esempio seguente è uguale all'esempio precedente, ad eccezione del fatto che definisce la variabile `number` nella chiamata al metodo [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)).
 
- [!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/out/out-6.cs)]  
+[!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#5)]  
    
 Nell'esempio precedente la variabile `number` è fortemente tipizzata come `int`. È anche possibile dichiarare una variabile locale tipizzata in modo implicito, come avviene nell'esempio seguente.
 
- [!code-csharp[csrefKeywordsMethodParams#7](../../../../samples/snippets/csharp/language-reference/keywords/out/out-7.cs)]  
+[!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#6)]  
    
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informazioni sul modello di .NET Compiler Platform SDK
 
@@ -24,7 +24,7 @@ I compilatori elaborano il codice scritto seguendo regole strutturate spesso div
 
 ![Passaggi della pipeline del compilatore per l'elaborazione del codice sorgente come codice oggetti](media/compiler-pipeline.png)
 
-Ogni fase della pipeline è un componente separato. Innanzitutto, la fase di analisi suddivide in token e analizza il testo di origine convertendolo in sintassi conforme alla grammatica del linguaggio. La fase di dichiarazione analizza poi l'origine e i metadati importati per formare simboli denominati. La fase di associazione abbina poi gli identificatori nel codice ai simboli. La fase di emit, infine, genera un assembly con tutte le informazioni raccolte dal compilatore.
+Ogni fase della pipeline è un componente separato. Innanzitutto, la fase di analisi suddivide in token e analizza il testo di origine convertendolo in sintassi conforme alla grammatica del linguaggio. In secondo luogo, la fase di dichiarazione analizza l'origine e i metadati importati per formare simboli denominati. La fase di associazione abbina poi gli identificatori nel codice ai simboli. La fase di creazione, infine, genera un assembly con tutte le informazioni raccolte dal compilatore.
 
 ![L'API della pipeline del compilatore consente l'accesso a ogni passaggio incluso nella pipeline](media/compiler-pipeline-api.png)
 

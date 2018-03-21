@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Costrutti di raggruppamento nelle espressioni regolari
 I costrutti di raggruppamento delineano sottoespressioni di un'espressione regolare e acquisiscono sottostringhe di una stringa di input. È possibile usare i costrutti di raggruppamento per effettuare le operazioni seguenti:  
@@ -301,7 +301,7 @@ I costrutti di raggruppamento delineano sottoespressioni di un'espressione regol
   
  Il costrutto delle opzioni di gruppo non è un gruppo di acquisizione. Ovvero, sebbene qualsiasi parte di una stringa acquisita dalla *sottoespressione* sia inclusa nella corrispondenza, non viene inclusa in un gruppo acquisito né usata per popolare l'oggetto <xref:System.Text.RegularExpressions.GroupCollection> .  
   
- Ad esempio, l'espressione regolare `\b(?ix: d \w+)\s` nell'esempio seguente usa le opzioni inline in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi vuoti nel criterio durante l'identificazione delle parole che iniziano con la lettera "d". L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
+ Ad esempio, l'espressione regolare `\b(?ix: d \w+)\s` nell'esempio seguente usa opzioni inline in un costrutto di raggruppamento per abilitare la corrispondenza senza distinzione tra maiuscole e minuscole e per ignorare gli spazi nel criterio durante l'identificazione delle parole che iniziano con la lettera "d". L'espressione regolare è definita nel modo illustrato nella tabella seguente.  
   
 |Modello|Descrizione|  
 |-------------|-----------------|  

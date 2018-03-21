@@ -3,16 +3,17 @@ title: Comando dotnet pack - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet pack consente di creare pacchetti NuGet per il progetto .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 12/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -27,7 +28,8 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
@@ -47,6 +49,8 @@ Le dipendenze NuGet del progetto compresso vengono aggiunte al file con estensio
 Per impostazione predefinita, `dotnet pack` compila prima il progetto. Se si vuole evitare questo comportamento, passare l'opzione `--no-build`. Questo può essere utile negli scenari di compilazione di integrazione continua (CI, Continuous Integration), in cui si sa che il codice è stato compilato in precedenza.
 
 È possibile aggiungere proprietà MSBuild al comando `dotnet pack` per il processo di compressione. Per altre informazioni, vedere [NuGet metadata properties](csproj.md#nuget-metadata-properties) (Proprietà dei metadati NuGet) e [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) (Informazioni di riferimento sulla riga di comando di MSBuild). La sezione [Esempi](#examples) illustra come usare l'opzione di MSBuild /p per due diversi scenari.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Argomenti
 
@@ -157,7 +161,7 @@ Comprimere il progetto nella directory corrente:
 Comprimere il progetto `app1`:
 
 `dotnet pack ~/projects/app1/project.csproj`
-    
+
 Comprimere il progetto nella directory corrente e inserire i pacchetti risultanti nella cartella `nupkgs`:
 
 `dotnet pack --output nupkgs`
@@ -177,3 +181,7 @@ Impostare la versione del pacchetto su `2.1.0` con la proprietà MSBuild `Packag
 Comprimere il progetto per un [framework di destinazione](../../standard/frameworks.md) specifico:
 
 `dotnet pack /p:TargetFrameworks=net45`
+
+Comprimere il progetto e usare un runtime specifico (Windows 10) per l'operazione di ripristino (.NET Core SDK 2.0 e versioni successive):
+
+`dotnet pack --runtime win10-x64`

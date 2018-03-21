@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
 Un'espressione lambda è una [funzione anonima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) che è possibile utilizzare per creare [delegati](../../../csharp/programming-guide/delegates/using-delegates.md) o tipi di [alberi delle espressioni](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . Mediante le espressioni lambda è possibile scrivere funzioni locali che possono essere passate come argomenti o restituite come valore delle chiamate di funzione. Le espressioni lambda sono particolarmente utili per la scrittura delle espressioni di query LINQ.  
@@ -265,7 +265,7 @@ class Test
   
 -   Le variabili introdotte all'interno di un'espressione lambda non sono visibili nel metodo esterno.  
   
--   Un'espressione lambda non può acquisire direttamente un parametro `ref` o `out` da un metodo contenitore.  
+-   Un'espressione lambda non può acquisire direttamente un parametro `in`, `ref` o `out` da un metodo contenitore.  
   
 -   Un'istruzione return in un'espressione lambda non causa la restituzione del metodo contenitore.  
   

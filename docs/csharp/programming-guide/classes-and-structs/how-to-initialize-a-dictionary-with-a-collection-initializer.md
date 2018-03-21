@@ -12,16 +12,16 @@ caps.latest.revision:
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Procedura: Inizializzare un dizionario con un inizializzatore di raccolta (Guida per programmatori C#)
-Il metodo relativo <xref:System.Collections.Generic.Dictionary`2> contains a collection of key/value pairs. Its <xref:System.Collections.Generic.Dictionary`2.Add*> accetta due parametri, uno per la chiave e uno per il valore. Per inizializzare un <xref:System.Collections.Generic.Dictionary`2>, or any collection whose `Add` o qualsiasi raccolta il cui metodo accetta più parametri, racchiudere tra parentesi ogni set di parametri, come illustrato nell'esempio seguente.  
+Un oggetto <xref:System.Collections.Generic.Dictionary`2> contiene una raccolta di coppie chiave-valore. Il relativo metodo <xref:System.Collections.Generic.Dictionary`2.Add*> accetta due parametri, uno per la chiave e uno per il valore. Per inizializzare un oggetto <xref:System.Collections.Generic.Dictionary`2> o qualsiasi raccolta il cui metodo `Add` accetta più parametri, racchiudere ogni set di parametri tra parentesi graffe, come illustrato nell'esempio seguente.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene visualizzato <xref:System.Collections.Generic.Dictionary`2> is initialized with instances of type `StudentName`.  
+ Nell'esempio di codice seguente, viene inizializzato un oggetto <xref:System.Collections.Generic.Dictionary`2> con istanze di tipo `StudentName`.  
   
  [!code-csharp[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   

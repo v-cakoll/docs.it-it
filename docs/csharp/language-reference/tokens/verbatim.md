@@ -2,7 +2,8 @@
 title: '@ (Riferimenti per C#)'
 ms.date: 02/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
@@ -13,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30f937951557ba65971a752b414cce6b485149be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="-c-reference"></a>@ (Riferimenti per C#)
 
@@ -35,7 +36,7 @@ Il carattere speciale `@` funge da identificatore verbatim. Può essere usato ne
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Per consentire al compilatore di distinguere tra gli attributi in caso di conflitto di denominazione. Un attributo è un tipo che deriva da <xref:System.Attribute>. Il nome del relativo tipo in genere include il suffisso **Attribute**, anche se il compilatore non applica questa convenzione. È possibile fare riferimento all'attributo nel codice usando il nome completo del tipo, ad esempio `[InfoAttribute]`, o il nome abbreviato, ad esempio, `[Info]`. Tuttavia, si verifica un conflitto di denominazione se due nomi di tipo di attributo abbreviati sono identici e se un nome di tipo include il suffisso **Attribute** e l'altro no. Ad esempio, il codice seguente non viene compilato perché il compilatore non è in grado di determinare se l'attributo `Info` o `InfoAttribute` viene applicato al metodo `Main`.
+1. Per consentire al compilatore di distinguere tra gli attributi in caso di conflitto di denominazione. Un attributo è un tipo che deriva da <xref:System.Attribute>. Il nome del relativo tipo in genere include il suffisso **Attribute**, anche se il compilatore non applica questa convenzione. È possibile fare riferimento all'attributo nel codice usando il nome completo del tipo, ad esempio `[InfoAttribute]`, o il nome abbreviato, ad esempio, `[Info]`. Tuttavia, si verifica un conflitto di denominazione se due nomi di tipo di attributo abbreviati sono identici e se un nome di tipo include il suffisso **Attribute** e l'altro no. Ad esempio, il codice seguente non viene compilato perché il compilatore non è in grado di determinare se l'attributo `Info` o `InfoAttribute` viene applicato alla classe `Example`.
 
    ```csharp
    using System;

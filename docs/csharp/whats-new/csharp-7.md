@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="whats-new-in-c-7"></a>Novità di C# 7
 
@@ -122,7 +122,7 @@ Usare le tuple in questo modo offre diversi vantaggi:
 
 * Si salva il lavoro di creazione di una `class` o uno `struct` che definisce il tipo restituito. 
 * Non è necessario creare un nuovo tipo.
-* L'ottimizzazione del linguaggio consente di evitare la chiamata ai metodi <xref:System.Tuple.Create``1(``0) >.
+* L'ottimizzazione del linguaggio consente di evitare la chiamata ai metodi <xref:System.Tuple.Create``1(``0)>.
 
 La dichiarazione per il metodo specifica i nomi per i campi della tupla restituita. Quando si chiama il metodo, il valore restituito è una tupla i cui campi sono `Max` e `Min`:
 

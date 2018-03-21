@@ -3,16 +3,17 @@ title: Comando dotnet build - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet build consente di compilare un progetto e tutte le relative dipendenze.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e7181f502e2a25b17077366da9d9f071e7e94d33
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -26,12 +27,14 @@ ms.lasthandoff: 12/23/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+    [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 ---
@@ -44,7 +47,7 @@ Se il progetto ha dipendenze di terze parti, ad esempio librerie di NuGet, quest
 
 Per la compilazione è necessario il file *project.assets.json*, che elenca le dipendenze dell'applicazione. Il file viene creato quando [`dotnet restore`](dotnet-restore.md) viene eseguito. Senza il file di asset sul posto, gli strumenti non sono in grado di risolvere gli assembly di riferimento, generando così errori. Con .NET Core è 1. x SDK, è necessario eseguire esplicitamente il `dotnet restore` prima di eseguire `dotnet build`. A partire da .NET Core 2.0 SDK `dotnet restore` viene eseguito implicitamente quando si esegue `dotnet build`. Se si desidera disabilitare ripristino implicito quando si esegue il comando di compilazione, è possibile passare l’opzione `--no-restore`.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 `dotnet build` usa MSBuild per compilare il progetto e quindi supporta le compilazioni parallele e incrementali. Per altre informazioni, vedere [Compilazioni incrementali](/visualstudio/msbuild/incremental-builds).
 
@@ -167,3 +170,7 @@ Compilare un progetto e le relative dipendenze usando la configurazione per il r
 Compilare un progetto e le relative dipendenze per un runtime specifico ( in questo esempio, Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
+
+Compilare il progetto e usare l'origine del pacchetto NuGet specificato durante l'operazione di ripristino (.NET Core SDK 2.0 e versioni successive):
+
+`dotnet build --source c:\packages\mypackages`

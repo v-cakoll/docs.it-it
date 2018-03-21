@@ -2,21 +2,22 @@
 title: Classi e metodi parziali (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classi e metodi parziali (Guida per programmatori C#)
 È possibile suddividere la definizione di una [classe](../../../csharp/language-reference/keywords/class.md) o uno [struct](../../../csharp/language-reference/keywords/struct.md), di un'[interfaccia](../../../csharp/language-reference/keywords/interface.md) o un metodo tra due o più file di origine. Ogni file di origine contiene una sezione della definizione di tipo o metodo e tutte le parti vengono combinate al momento della compilazione dell'applicazione.  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Le dichiarazioni di metodi parziali devono iniziare con la parola chiave contestuale [partial](../../../csharp/language-reference/keywords/partial-type.md) e il metodo deve restituire [void](../../../csharp/language-reference/keywords/void.md).  
   
--   I metodi parziali possono contenere il parametro [ref](../../../csharp/language-reference/keywords/ref.md) ma non il parametro [out](../../../csharp/language-reference/keywords/out.md).  
+-   I metodi parziali possono contenere il parametro [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) o [ref](../../../csharp/language-reference/keywords/ref.md) ma non il parametro [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
 -   I metodi parziali sono implicitamente [private](../../../csharp/language-reference/keywords/private.md) e pertanto non possono essere [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   

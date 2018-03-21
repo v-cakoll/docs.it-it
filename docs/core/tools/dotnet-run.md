@@ -3,16 +3,17 @@ title: Comando dotnet run - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/24/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 251aca6dcd3edb17fe86dc03ea8f5c6d7d699d48
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -42,9 +43,9 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando. Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando. Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice. I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`. 
+Il comando `dotnet run` offre un modo pratico per eseguire l'applicazione dal codice sorgente con un solo comando. Questo comando è utile per lo sviluppo iterativo veloce dalla riga di comando. Il comando dipende dal comando [`dotnet build`](dotnet-build.md) per compilare il codice. I requisiti per la compilazione, ad esempio il ripristino preliminare del progetto, si applicano anche a `dotnet run`.
 
-I file di output vengono scritti nel percorso predefinito, ovvero `bin/<configuration>/<target>`. Se ad esempio si ha un'applicazione `netcoreapp1.0` e si esegue `dotnet run`, l'output viene inserito in `bin/Debug/netcoreapp1.0`. I file vengono sovrascritti in base alle esigenze. I file temporanei vengono inseriti nella directory `obj`. 
+I file di output vengono scritti nel percorso predefinito, ovvero `bin/<configuration>/<target>`. Se ad esempio si ha un'applicazione `netcoreapp1.0` e si esegue `dotnet run`, l'output viene inserito in `bin/Debug/netcoreapp1.0`. I file vengono sovrascritti in base alle esigenze. I file temporanei vengono inseriti nella directory `obj`.
 
 Se il progetto specifica più framework, l'esecuzione di `dotnet run` genera un errore a meno che non venga usata l'opzione `-f|--framework <FRAMEWORK>` per specificare il framework.
 
@@ -57,6 +58,8 @@ dotnet myapp.dll
 Per altre informazioni sul driver `dotnet`, vedere l'argomento [Strumenti dell'interfaccia della riga di comando di .NET Core](index.md).
 
 Per eseguire l'applicazione, il comando `dotnet run` risolve le dipendenze dell'applicazione esterne al runtime condiviso dalla cache NuGet. È consigliabile non per usare `dotnet run` per eseguire le applicazioni nell'ambiente di produzione perché questo comando usa dipendenze memorizzate nella cache. In alternativa, [creare una distribuzione](../deploying/index.md) usando il comando [`dotnet publish`](dotnet-publish.md) e distribuire l'output pubblicato.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>Opzioni
 
@@ -133,7 +136,7 @@ Stampa una breve guida per il comando.
 Specifica il percorso e il nome del file di progetto. Vedere la nota. Se non specificato, per impostazione predefinita il percorso corrisponde alla directory corrente.
 
 > [!NOTE]
-> Usare il percorso e il nome del file di progetto con l'opzione `-p|--project`. Una regressione nell'interfaccia della riga di comando impedisce di specificare un percorso di cartella con .NET Core 1.x SDK. Per altre informazioni su questo problema, vedere [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, non è possibile avviare un progetto (dotnet/cli #5992)).
+> Usare il percorso e il nome del file di progetto con l'opzione `-p|--project`. Una regressione nell'interfaccia della riga di comando impedisce di specificare un percorso di cartella con .NET Core SDK 1.x. Per altre informazioni su questo problema, vedere [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, non è possibile avviare un progetto (dotnet/cli #5992)).
 
 ---
 
@@ -150,3 +153,7 @@ Eseguire il progetto specificato:
 Eseguire il progetto nella directory corrente. L'argomento `--help` in questo esempio viene passato all'applicazione perché viene usato l'argomento `--`:
 
 `dotnet run --configuration Release -- --help`
+
+Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente visualizzando solo il risultato minimo, quindi eseguire il progetto: (.NET Core SDK 2.0 e versioni successive):
+
+`dotnet run --verbosity m`

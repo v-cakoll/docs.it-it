@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: ce81991e48fb5eb4eb3bed3dd2fcfe1734ca7bac
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="implementing-value-objects"></a>Implementazione di oggetti valore
 
@@ -92,6 +92,13 @@ public abstract class ValueObject
         }
         return !thisValues.MoveNext() && !otherValues.MoveNext();
     }
+
+    public override int GetHashCode()
+    {
+        return GetAtomicValues()
+         .Select(x => x != null ? x.GetHashCode() : 0)
+         .Aggregate((x, y) => x ^ y);
+    }        
     // Other utilility methods
 }
 ```
@@ -304,17 +311,17 @@ public class Address
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Martin Fowler. ValueObject pattern (Schema ValueObject)**
+-   **Martin Fowler. Modello ValueObject**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una discussione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).** (Libro. Include una discussione sugli oggetti valore) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   **Vaughn Vernon. Implementing Domain-Driven Design (Implementazione della progettazione basata su domini).** (Libro. Include una trattazione sugli oggetti valore) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Proprietà shadow**
+-   **Proprietà shadow **
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub EntityFrameworkCore (scheda dei problemi) [ *https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+-   **Complex types and/or value objects (Tipi complessi e/o oggetti valore)**. Discussione nel repository GitHub di EF Core (scheda Issues) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
 -   **ValueObject.cs.** Classe oggetti valore di base in eShopOnContainers.
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)

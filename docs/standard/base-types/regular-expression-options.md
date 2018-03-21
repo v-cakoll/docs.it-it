@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Opzioni di espressioni regolari
 <a name="Top"></a> Per impostazione predefinita, il confronto di una stringa di input con qualsiasi carattere letterale in un criterio di ricerca di espressioni regolari prevede la distinzione tra maiuscole e minuscole. Gli spazi vuoti in un criterio di ricerca di espressioni regolari vengono interpretati come caratteri di spazio vuoto letterali e i gruppi di acquisizione in un'espressione regolare sono denominati in modo sia implicito che esplicito. È possibile modificare questi e molti altri aspetti del comportamento predefinito delle espressioni regolari specificando le relative opzioni. Queste opzioni, elencate nella tabella seguente, possono essere incluse inline come parte del criterio di ricerca di espressioni regolari o in alternativa fornite a un costruttore della classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o a un metodo statico dei criteri di ricerca come valore di enumerazione <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -281,7 +281,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Il simbolo di cancelletto (#) viene interpretato come l'inizio di un commento anziché come un carattere letterale. Tutto il testo nel criterio di ricerca di espressioni regolari, dal carattere # alla fine della stringa, viene interpretato come un commento.  
   
- Nei casi seguenti, tuttavia, gli spazi vuoti in un'espressione regolare non vengono ignorati anche se si usa l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>:  
+ Nei casi seguenti, tuttavia, gli spazi in un'espressione regolare non vengono ignorati anche se si usa l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>:  
   
 -   Uno spazio vuoto in una classe di caratteri viene sempre interpretato letteralmente. Ad esempio, il criterio di ricerca di espressioni regolari `[ .,;:]` trova la corrispondenza di qualsiasi spazio vuoto, punto, virgola, punto e virgola o due punti.  
   

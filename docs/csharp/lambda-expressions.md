@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Espressioni lambda #
 
 Un'*espressione lambda* è un blocco di codice costituito da espressioni o da istruzioni che viene trattato come oggetto. Tale blocco può essere passato come argomento ai metodi e può anche essere restituito dalle chiamate al metodo. Le espressioni lambda sono spesso usate per eseguire le attività seguenti:
 
-- Passando il codice che è necessario eseguire per i metodi asincroni, ad esempio <xref:System.Threading.Tasks.Task.Run(System.Action)>.
+- Passaggio del codice da eseguire a metodi asincroni, ad esempio <xref:System.Threading.Tasks.Task.Run(System.Action)>.
 
 - Scrittura di [espressioni di query LINQ](linq/index.md).
 
 - Creazione di [alberi delle espressioni](expression-trees-building.md).
 
-Le espressioni lambda sono codice che può essere rappresentato come delegato o come albero delle espressioni che viene compilato in un delegato. Il tipo di delegato specifico di un'espressione lambda dipende dai parametri dell'espressione e dal valore restituito. Le espressioni lambda che non restituiscono un valore corrispondano a un delegato `Action` specifico, che dipende dal relativo numero di parametri. Le espressioni lambda che restituiscono un valore corrispondano a un delegato `Func` specifico, che dipende dal relativo numero di parametri. Ad esempio, un'espressione lambda che presenta due parametri, ma non restituisce alcun valore corrisponde a un <xref:System.Action%602> delegato. Un'espressione lambda che dispone di un parametro e restituisce un valore corrisponde a <xref:System.Func%602> delegato.
+Le espressioni lambda sono codice che può essere rappresentato come delegato o come albero delle espressioni che viene compilato in un delegato. Il tipo di delegato specifico di un'espressione lambda dipende dai parametri dell'espressione e dal valore restituito. Le espressioni lambda che non restituiscono un valore corrispondano a un delegato `Action` specifico, che dipende dal relativo numero di parametri. Le espressioni lambda che restituiscono un valore corrispondano a un delegato `Func` specifico, che dipende dal relativo numero di parametri. Se ad esempio un'espressione lambda con due parametri non restituisce un valore, corrisponde a un delegato <xref:System.Action%602>. Se un'espressione lambda ha un parametro e restituisce un valore, corrisponde a un delegato <xref:System.Func%602>.
 
 Un'espressione lambda usa `=>`, vale a dire l'[operatore di dichiarazione lambda](language-reference/operators/lambda-operator.md), per separare l'elenco di parametri dell'espressione lambda dal codice eseguibile. Per creare un'espressione lambda, specificare gli eventuali parametri di input a sinistra dell'operatore lambda e inserire il blocco di espressioni o di istruzioni dall'altra parte. Ad esempio, l'espressione lambda `x => x * x` a riga singola specifica un parametro denominato `x` e restituisce il valore di `x` al quadrato. È possibile assegnare questa espressione a un tipo di delegato, come illustrato nell'esempio riportato di seguito:
 
@@ -96,7 +96,7 @@ Per altre informazioni sul supporto delle tuple in C#, vedere [C# Tuple types](t
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Espressioni lambda con operatori query standard ##
 
-LINQ agli oggetti, tra le altre implementazioni, hanno un parametro di input il cui tipo è uno del <xref:System.Func%601> famiglia dei delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati `Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Si consideri ad esempio il <xref:System.Func%601> delegato la cui sintassi sono:
+LINQ to Objects, tra altre implementazioni, ha un parametro di input il cui tipo appartiene alla famiglia <xref:System.Func%601> di delegati generici. Questi delegati usano parametri di tipo per definire il numero e il tipo di parametri di input e il tipo restituito del delegato. I delegati `Func` sono molto utili per incapsulare le espressioni definite dall'utente applicate a ogni elemento in un set di dati di origine. Considerare ad esempio il delegato <xref:System.Func%601>, la cui sintassi è la seguente:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -108,7 +108,7 @@ dove `int` è un parametro di input e `bool` è il valore restituito. Il valore 
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-È inoltre possibile fornire un'espressione lambda quando il tipo di argomento è un <xref:System.Linq.Expressions.Expression%601>, ad esempio negli operatori di query standard definiti nel <xref:System.Linq.Queryable> tipo. Quando si specifica un <xref:System.Linq.Expressions.Expression%601> argomento, l'espressione lambda viene compilata in un albero delle espressioni. Nell'esempio seguente viene usato l'operatore di query standard [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
+È anche possibile specificare un'espressione lambda quando il tipo di argomento è <xref:System.Linq.Expressions.Expression%601>, ad esempio negli operatori query standard definiti nel tipo <xref:System.Linq.Queryable>. Quando si specifica un argomento <xref:System.Linq.Expressions.Expression%601>, l'espressione lambda viene compilata per un albero delle espressioni. Nell'esempio seguente viene usato l'operatore di query standard [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -150,7 +150,7 @@ Le espressioni lambda possono fare riferimento alle *variabili esterne* (vedere 
 
 - Le variabili introdotte all'interno di un'espressione lambda non sono visibili nel metodo esterno.
 
-- Un'espressione lambda non può acquisire direttamente un parametro `ref` o `out` da un metodo contenitore.
+- Un'espressione lambda non può acquisire direttamente un parametro `in`, `ref` o `out` da un metodo contenitore.
 
 - Un'istruzione return in un'espressione lambda non causa la restituzione del metodo contenitore.
 

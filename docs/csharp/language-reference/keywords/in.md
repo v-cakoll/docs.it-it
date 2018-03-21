@@ -1,6 +1,6 @@
 ---
 title: in (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 02/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,24 +10,23 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.assetid: 52032838-0a38-476e-b4d5-94b59141952f
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 56824b21da416aecb9b00b46f2817b3d0fba2be2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8c45427a99756006799d1dca42841ef09b9ed8e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="in-c-reference"></a>in (Riferimenti per C#)
-La parola chiave contestuale `in` viene usata in tre contesti:  
+
+La parola chiave contestuale `in` viene usata in quattro contesti:  
   
--   in istruzioni [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
-  
--   in [clausole join](../../../csharp/language-reference/keywords/join-clause.md) nelle espressioni di query  
-  
--   in [parametri di tipo generico](../../../csharp/language-reference/keywords/in-generic-modifier.md) all'interno di interfacce e delegati generici.  
+-   in [parametri di tipo generico](in-generic-modifier.md) all'interno di interfacce e delegati generici.
+-   Come [modificatore di parametro](in-parameter-modifier.md), che consente di passare un argomento a un metodo per riferimento e non per valore.
+-   in istruzioni [foreach](foreach-in.md).
+-   in [clausole join](join-clause.md) nelle espressioni di query LINQ.
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+ [Parole chiave di C#](index.md)  
+ [Riferimenti per C#](../index.md)

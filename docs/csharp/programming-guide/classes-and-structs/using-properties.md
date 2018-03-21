@@ -2,26 +2,27 @@
 title: "Utilizzo delle proprietà (Guida per programmatori C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizzo delle proprietà (Guida per programmatori C#)
 Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente di un oggetto, una proprietà si presenta come un campo: l'accesso alla proprietà richiede la stessa sintassi. Per il responsabile dell'implementazione di una classe, una proprietà è costituita da uno o due blocchi di codice, che rappresentano una funzione di accesso [get](../../../csharp/language-reference/keywords/get.md) e/o una funzione di accesso [set](../../../csharp/language-reference/keywords/set.md). Il blocco di codice per la funzione di accesso `get` viene eseguito al momento della lettura della proprietà; il blocco di codice per la funzione di accesso `set` viene eseguito quando viene assegnato un nuovo valore alla proprietà. Una proprietà senza una funzione di accesso `set` viene considerata di sola lettura. Una proprietà senza una funzione di accesso `get` viene considerata di sola scrittura. Una proprietà con entrambe le funzioni di accesso è di lettura/scrittura.  
   
- A differenza dei campi, le proprietà non sono classificate come variabili. Non è pertanto possibile passare una proprietà come un parametro [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out.md).  
+ A differenza dei campi, le proprietà non sono classificate come variabili. Non è pertanto possibile passare una proprietà come un parametro [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
  Le proprietà possono essere usate per diversi scopi: possono convalidare i dati prima di consentire una modifica, esporre in modo trasparente i dati in una classe in cui i dati vengono effettivamente recuperati da un'altra origine come un database oppure eseguire un'azione quando i dati vengono modificati, ad esempio generare un evento o modificare il valore di altri campi.  
   
@@ -66,7 +67,7 @@ Le proprietà combinano gli aspetti sia dei campi che dei metodi. Per l'utente d
  È un errore usare il nome del parametro implicito, `value`, per una dichiarazione di variabile locale in una funzione di accesso `set`.  
   
 ## <a name="remarks"></a>Note  
- Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Le proprietà possono essere contrassegnate come `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere alla proprietà. Le funzioni di accesso `get` e `set` per la stessa proprietà possono avere modificatori di accesso diversi. Ad esempio, `get` potrebbe essere `public` per consentire l'accesso in sola lettura dall'esterno del tipo e `set` potrebbe essere `private` o `protected`. Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).  
   
  Una proprietà può essere dichiarata come proprietà statica tramite la parola chiave `static`. Questo rende la proprietà disponibile per i chiamanti in qualsiasi momento, anche se non esiste alcuna istanza della classe. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
