@@ -1,19 +1,21 @@
 ---
 title: Introduzione di .NET Native
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 4.  [Risolvere manualmente i metadati mancanti](#Step4)e ripetere il [passaggio 3](#Step3) finché non vengono risolti tutti i problemi.  
   
 > [!NOTE]
->  Se si sta migrando un'app di Windows Store esistente a [!INCLUDE[net_native](../../../includes/net-native-md.md)], consultare [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
+>  Se si sta migrando un'app di Windows Store esistente a [!INCLUDE[net_native](../../../includes/net-native-md.md)], consultare [Migrazione dell'app di Windows Store a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Passaggio 1: Sviluppare e testare le build di debug dell'app UWP  
