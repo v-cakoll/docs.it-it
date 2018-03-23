@@ -1,1 +1,1 @@
-<span data-ttu-id="20c2c-101">Esplora file</span><span class="sxs-lookup"><span data-stu-id="20c2c-101">File Explorer</span></span>
+<span data-ttu-id="4520c-101">Esplora file</span><span class="sxs-lookup"><span data-stu-id="4520c-101">File Explorer</span></span>
