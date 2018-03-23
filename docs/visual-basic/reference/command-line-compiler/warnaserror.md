@@ -1,74 +1,73 @@
 ---
-title: /warnaserror (Visual Basic)
-ms.date: 07/20/2015
+title: -warnaserror (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 6ae8ed68045529e626f2788f854d8e6a6933e7e2
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="warnaserror-visual-basic"></a><span data-ttu-id="c9b37-102">/warnaserror (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9b37-102">/warnaserror (Visual Basic)</span></span>
-<span data-ttu-id="c9b37-103">Indica al compilatore di considerare la prima occorrenza di un avviso come errore.</span><span class="sxs-lookup"><span data-stu-id="c9b37-103">Causes the compiler to treat the first occurrence of a warning as an error.</span></span>  
+# <a name="-warnaserror-visual-basic"></a><span data-ttu-id="937a1-102">-warnaserror (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="937a1-102">-warnaserror (Visual Basic)</span></span>
+<span data-ttu-id="937a1-103">Indica al compilatore di considerare la prima occorrenza di un avviso come errore.</span><span class="sxs-lookup"><span data-stu-id="937a1-103">Causes the compiler to treat the first occurrence of a warning as an error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9b37-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c9b37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="937a1-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="937a1-104">Syntax</span></span>  
   
 ```  
-/warnaserror[+ | -][:numberList]  
+-warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="c9b37-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="c9b37-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="937a1-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="937a1-105">Arguments</span></span>  
   
-|<span data-ttu-id="c9b37-106">Termine</span><span class="sxs-lookup"><span data-stu-id="c9b37-106">Term</span></span>|<span data-ttu-id="c9b37-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="c9b37-107">Definition</span></span>|  
+|<span data-ttu-id="937a1-106">Termine</span><span class="sxs-lookup"><span data-stu-id="937a1-106">Term</span></span>|<span data-ttu-id="937a1-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="937a1-107">Definition</span></span>|  
 |---|---|  
-|<span data-ttu-id="c9b37-108">+ &#124; -</span><span class="sxs-lookup"><span data-stu-id="c9b37-108">+ &#124; -</span></span>|<span data-ttu-id="c9b37-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="c9b37-109">Optional.</span></span> <span data-ttu-id="c9b37-110">Per impostazione predefinita, `/warnaserror-` è attivo; gli avvisi non impedire al compilatore che produce un file di output.</span><span class="sxs-lookup"><span data-stu-id="c9b37-110">By default, `/warnaserror-` is in effect; warnings do not prevent the compiler from producing an output file.</span></span> <span data-ttu-id="c9b37-111">Il `/warnaserror` opzione, ovvero lo stesso come `/warnaserror+`, gli avvisi vengono considerati come errori.</span><span class="sxs-lookup"><span data-stu-id="c9b37-111">The `/warnaserror` option, which is the same as `/warnaserror+`, causes warnings to be treated as errors.</span></span>|  
-|`numberList`|<span data-ttu-id="c9b37-112">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="c9b37-112">Optional.</span></span> <span data-ttu-id="c9b37-113">Elenco delimitato da virgole di ID di avviso di numeri a cui il `/warnaserror` opzione si applica.</span><span class="sxs-lookup"><span data-stu-id="c9b37-113">Comma-delimited list of the warning ID numbers to which the `/warnaserror` option applies.</span></span> <span data-ttu-id="c9b37-114">Se viene specificato alcun ID di avviso, il `/warnaserror` opzione si applica a tutti gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="c9b37-114">If no warning ID is specified, the `/warnaserror` option applies to all warnings.</span></span>|  
+|<span data-ttu-id="937a1-108">+ &#124; -</span><span class="sxs-lookup"><span data-stu-id="937a1-108">+ &#124; -</span></span>|<span data-ttu-id="937a1-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="937a1-109">Optional.</span></span> <span data-ttu-id="937a1-110">Per impostazione predefinita, `-warnaserror-` è attivo; gli avvisi non impedire al compilatore che produce un file di output.</span><span class="sxs-lookup"><span data-stu-id="937a1-110">By default, `-warnaserror-` is in effect; warnings do not prevent the compiler from producing an output file.</span></span> <span data-ttu-id="937a1-111">Il `-warnaserror` opzione, ovvero lo stesso come `-warnaserror+`, gli avvisi vengono considerati come errori.</span><span class="sxs-lookup"><span data-stu-id="937a1-111">The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.</span></span>|  
+|`numberList`|<span data-ttu-id="937a1-112">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="937a1-112">Optional.</span></span> <span data-ttu-id="937a1-113">Elenco delimitato da virgole di ID di avviso di numeri a cui il `-warnaserror` opzione si applica.</span><span class="sxs-lookup"><span data-stu-id="937a1-113">Comma-delimited list of the warning ID numbers to which the `-warnaserror` option applies.</span></span> <span data-ttu-id="937a1-114">Se viene specificato alcun ID di avviso, il `-warnaserror` opzione si applica a tutti gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="937a1-114">If no warning ID is specified, the `-warnaserror` option applies to all warnings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c9b37-115">Note</span><span class="sxs-lookup"><span data-stu-id="c9b37-115">Remarks</span></span>  
- <span data-ttu-id="c9b37-116">Il `/warnaserror` opzione Considera tutti gli avvisi come errori.</span><span class="sxs-lookup"><span data-stu-id="c9b37-116">The `/warnaserror` option treats all warnings as errors.</span></span> <span data-ttu-id="c9b37-117">Tutti i messaggi che verranno in genere segnalati come avvisi vengono invece segnalati come errori.</span><span class="sxs-lookup"><span data-stu-id="c9b37-117">Any messages that would ordinarily be reported as warnings are instead reported as errors.</span></span> <span data-ttu-id="c9b37-118">Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.</span><span class="sxs-lookup"><span data-stu-id="c9b37-118">The compiler reports subsequent occurrences of the same warning as warnings.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="937a1-115">Note</span><span class="sxs-lookup"><span data-stu-id="937a1-115">Remarks</span></span>  
+ <span data-ttu-id="937a1-116">Il `-warnaserror` opzione Considera tutti gli avvisi come errori.</span><span class="sxs-lookup"><span data-stu-id="937a1-116">The `-warnaserror` option treats all warnings as errors.</span></span> <span data-ttu-id="937a1-117">Tutti i messaggi che verranno in genere segnalati come avvisi vengono invece segnalati come errori.</span><span class="sxs-lookup"><span data-stu-id="937a1-117">Any messages that would ordinarily be reported as warnings are instead reported as errors.</span></span> <span data-ttu-id="937a1-118">Il compilatore segnala le occorrenze successive dello stesso avviso come avvisi.</span><span class="sxs-lookup"><span data-stu-id="937a1-118">The compiler reports subsequent occurrences of the same warning as warnings.</span></span>  
   
- <span data-ttu-id="c9b37-119">Per impostazione predefinita, `/warnaserror-` è attiva, pertanto gli avvisi solo come messaggio informativo.</span><span class="sxs-lookup"><span data-stu-id="c9b37-119">By default, `/warnaserror-` is in effect, which causes the warnings to be informational only.</span></span> <span data-ttu-id="c9b37-120">Il `/warnaserror` opzione, ovvero lo stesso come `/warnaserror+`, gli avvisi vengono considerati come errori.</span><span class="sxs-lookup"><span data-stu-id="c9b37-120">The `/warnaserror` option, which is the same as `/warnaserror+`, causes warnings to be treated as errors.</span></span>  
+ <span data-ttu-id="937a1-119">Per impostazione predefinita, `-warnaserror-` è attiva, pertanto gli avvisi solo come messaggio informativo.</span><span class="sxs-lookup"><span data-stu-id="937a1-119">By default, `-warnaserror-` is in effect, which causes the warnings to be informational only.</span></span> <span data-ttu-id="937a1-120">Il `-warnaserror` opzione, ovvero lo stesso come `-warnaserror+`, gli avvisi vengono considerati come errori.</span><span class="sxs-lookup"><span data-stu-id="937a1-120">The `-warnaserror` option, which is the same as `-warnaserror+`, causes warnings to be treated as errors.</span></span>  
   
- <span data-ttu-id="c9b37-121">Se si desidera che solo determinati avvisi vengano considerati errori, è possibile specificare un elenco delimitato da virgole di numeri di avvisi da considerare come errori.</span><span class="sxs-lookup"><span data-stu-id="c9b37-121">If you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.</span></span>  
+ <span data-ttu-id="937a1-121">Se si desidera che solo determinati avvisi vengano considerati errori, è possibile specificare un elenco delimitato da virgole di numeri di avvisi da considerare come errori.</span><span class="sxs-lookup"><span data-stu-id="937a1-121">If you want only a few specific warnings to be treated as errors, you may specify a comma-separated list of warning numbers to treat as errors.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c9b37-122">Il `/warnaserror` opzione non controlla come vengono visualizzati gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="c9b37-122">The `/warnaserror` option does not control how warnings are displayed.</span></span> <span data-ttu-id="c9b37-123">Utilizzare il [/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) opzione per disattivare gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="c9b37-123">Use the [/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) option to disable warnings.</span></span>  
+>  <span data-ttu-id="937a1-122">Il `-warnaserror` opzione non controlla come vengono visualizzati gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="937a1-122">The `-warnaserror` option does not control how warnings are displayed.</span></span> <span data-ttu-id="937a1-123">Usare la [- nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) opzione per disattivare gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="937a1-123">Use the [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) option to disable warnings.</span></span>  
   
-|<span data-ttu-id="c9b37-124">Per impostare /warnaserror considerare tutti gli avvisi come errori nell'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c9b37-124">To set /warnaserror to treat all warnings as errors in the Visual Studio IDE</span></span>|  
+|<span data-ttu-id="937a1-124">Per impostare - warnaserror considerare tutti gli avvisi come errori nell'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="937a1-124">To set -warnaserror to treat all warnings as errors in the Visual Studio IDE</span></span>|  
 |---|  
-|<span data-ttu-id="c9b37-125">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-125">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="c9b37-126">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-126">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="c9b37-127">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-127">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="c9b37-128">3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="c9b37-128">3.  Make sure the **Disable all warnings** check box is unchecked.</span></span><br /><span data-ttu-id="c9b37-129">4.  Controllare il **considera tutti gli avvisi come errori** casella di controllo.</span><span class="sxs-lookup"><span data-stu-id="c9b37-129">4.  Check the **Treat all warnings as errors** check box.</span></span>|  
+|<span data-ttu-id="937a1-125">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="937a1-125">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="937a1-126">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="937a1-126">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="937a1-127">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="937a1-127">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="937a1-128">3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="937a1-128">3.  Make sure the **Disable all warnings** check box is unchecked.</span></span><br /><span data-ttu-id="937a1-129">4.  Controllare il **considera tutti gli avvisi come errori** casella di controllo.</span><span class="sxs-lookup"><span data-stu-id="937a1-129">4.  Check the **Treat all warnings as errors** check box.</span></span>|  
   
-|<span data-ttu-id="c9b37-130">Per impostare /warnaserror a considera avvisi specifici come errori nell'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c9b37-130">To set /warnaserror to treat specific warnings as errors in the Visual Studio IDE</span></span>|  
+|<span data-ttu-id="937a1-130">Per impostare - warnaserror a considera avvisi specifici come errori nell'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="937a1-130">To set -warnaserror to treat specific warnings as errors in the Visual Studio IDE</span></span>|  
 |---|  
-|<span data-ttu-id="c9b37-131">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-131">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="c9b37-132">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-132">On the **Project** menu, click **Properties**.</span></span><br /><span data-ttu-id="c9b37-133">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c9b37-133">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="c9b37-134">3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="c9b37-134">3.  Make sure the **Disable all warnings** check box is unchecked.</span></span><br /><span data-ttu-id="c9b37-135">4.  Verificare che il **considera tutti gli avvisi come errori** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="c9b37-135">4.  Make sure the **Treat all warnings as errors** check box is unchecked.</span></span><br /><span data-ttu-id="c9b37-136">5.  Selezionare **errore** dal **notifica** colonna adiacente all'avviso che deve essere considerato come un errore.</span><span class="sxs-lookup"><span data-stu-id="c9b37-136">5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.</span></span>|  
+|<span data-ttu-id="937a1-131">1.  Selezionare un progetto in **Esplora soluzioni**.</span><span class="sxs-lookup"><span data-stu-id="937a1-131">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="937a1-132">Scegliere **Proprietà** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="937a1-132">On the **Project** menu, click **Properties**.</span></span><br /><span data-ttu-id="937a1-133">2.  Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="937a1-133">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="937a1-134">3.  Verificare che il **Disabilita tutti gli avvisi** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="937a1-134">3.  Make sure the **Disable all warnings** check box is unchecked.</span></span><br /><span data-ttu-id="937a1-135">4.  Verificare che il **considera tutti gli avvisi come errori** casella di controllo è deselezionata.</span><span class="sxs-lookup"><span data-stu-id="937a1-135">4.  Make sure the **Treat all warnings as errors** check box is unchecked.</span></span><br /><span data-ttu-id="937a1-136">5.  Selezionare **errore** dal **notifica** colonna adiacente all'avviso che deve essere considerato come un errore.</span><span class="sxs-lookup"><span data-stu-id="937a1-136">5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="c9b37-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="c9b37-137">Example</span></span>  
- <span data-ttu-id="c9b37-138">Il codice seguente Compila `In.vb` e indica al compilatore di visualizzare un errore per la prima occorrenza di ogni avviso generato.</span><span class="sxs-lookup"><span data-stu-id="c9b37-138">The following code compiles `In.vb` and directs the compiler to display an error for the first occurrence of every warning it finds.</span></span>  
+## <a name="example"></a><span data-ttu-id="937a1-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="937a1-137">Example</span></span>  
+ <span data-ttu-id="937a1-138">Il codice seguente Compila `In.vb` e indica al compilatore di visualizzare un errore per la prima occorrenza di ogni avviso generato.</span><span class="sxs-lookup"><span data-stu-id="937a1-138">The following code compiles `In.vb` and directs the compiler to display an error for the first occurrence of every warning it finds.</span></span>  
   
-```  
-vbc /warnaserror in.vb  
-```  
-  
-## <a name="example"></a><span data-ttu-id="c9b37-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="c9b37-139">Example</span></span>  
- <span data-ttu-id="c9b37-140">Il codice seguente Compila `T2.vb` e viene considerato come un errore solo l'avviso per le variabili locali inutilizzate (42024).</span><span class="sxs-lookup"><span data-stu-id="c9b37-140">The following code compiles `T2.vb` and treats only the warning for unused local variables (42024) as an error.</span></span>  
-  
-```  
-vbc /warnaserror:42024 t2.vb  
+```console
+vbc -warnaserror in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c9b37-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9b37-141">See Also</span></span>  
- [<span data-ttu-id="c9b37-142">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c9b37-142">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="c9b37-143">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="c9b37-143">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [<span data-ttu-id="c9b37-144">Configurazione degli avvisi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c9b37-144">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)
+## <a name="example"></a><span data-ttu-id="937a1-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="937a1-139">Example</span></span>  
+ <span data-ttu-id="937a1-140">Il codice seguente Compila `T2.vb` e viene considerato come un errore solo l'avviso per le variabili locali inutilizzate (42024).</span><span class="sxs-lookup"><span data-stu-id="937a1-140">The following code compiles `T2.vb` and treats only the warning for unused local variables (42024) as an error.</span></span>  
+  
+```console
+vbc -warnaserror:42024 t2.vb  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="937a1-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="937a1-141">See Also</span></span>  
+ [<span data-ttu-id="937a1-142">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="937a1-142">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="937a1-143">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="937a1-143">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="937a1-144">Configurazione degli avvisi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="937a1-144">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)
