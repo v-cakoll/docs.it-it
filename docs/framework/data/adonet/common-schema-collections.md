@@ -1,24 +1,26 @@
 ---
 title: Raccolte di schemi comuni
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Raccolte di schemi comuni
 Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun provider gestito .NET Framework. È possibile eseguire query di un provider gestito .NET Framework per determinare l'elenco delle raccolte di schemi supportati chiamando il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate. Tutte le colonne richieste vengono descritte in queste raccolte. I provider hanno la possibilità di aggiungere colonne, se necessario. Ad esempio, `SqlClient` e `OracleClient` aggiungono ParameterName alla raccolta delle restrizioni.  
@@ -41,7 +43,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|L'espressione regolare che corrisponde ai separatori compositi in un identificatore composito. Ad esempio, "\\." (per SQL Server) o "@&#124; \\." (per Oracle).<br /><br /> Un identificatore composito viene generalmente utilizzato per un nome di oggetto di database, ad esempio: pubs.dbo o pubs@dbo.authors.<br /><br /> Per SQL Server, utilizzare l'espressione regolare "\\.". Per OracleClient, usare "@&#124; \\.".<br /><br /> Per ODBC, usare Catalog_name_seperator.<br /><br /> Per OLE DB, usare DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|L'espressione regolare che corrisponde ai separatori compositi in un identificatore composito. Ad esempio, "\\." (per SQL Server) o "@&#124;\\." (per Oracle).<br /><br /> Un identificatore composito viene generalmente utilizzato per un nome di oggetto di database, ad esempio: pubs.dbo o pubs@dbo.authors.<br /><br /> Per SQL Server, utilizzare l'espressione regolare "\\.". Per OracleClient, usare "@&#124;\\.".<br /><br /> Per ODBC, usare Catalog_name_seperator.<br /><br /> Per OLE DB, usare DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|Il nome del prodotto a cui ha avuto accesso il provider, come "Oracle" o "SQLServer".|  
 |DataSourceProductVersion|string|Indica la versione del prodotto a cui ha avuto accesso il provider, nel formato nativo delle origini dati e non in formato Microsoft.<br /><br /> In alcuni casi DataSourceProductVersion e DataSourceProductVersionNormalized corrisponderanno allo stesso valore. Nel caso di OLE DB e ODBC risulteranno sempre uguali poiché sono mappati alla stessa chiamata di funzione nell'API nativo sottostante.|  
 |DataSourceProductVersionNormalized|string|Una versione normalizzata per l'origine dati, che è possibile confrontare con `String.Compare()`. Il formato è lo stesso in tutte le versioni del provider per evitare che la versione 10 venga elencata tra la versione 1 e la versione 2.<br /><br /> Ad esempio, il provider Oracle Usa il formato "nn.nn.nn.nn.nn" per la versione normalizzata, provocando un'origine di dati Oracle 8i restituire "il valore 08.01.07.04.01". SQL Server utilizza il formato "nn.nn.nnnn" Microsoft tipico.<br /><br /> In alcuni casi DataSourceProductVersion e DataSourceProductVersionNormalized corrisponderanno allo stesso valore. Nel caso di OLE DB e ODBC risulteranno sempre uguali poiché sono mappati alla stessa chiamata di funzione nell'API nativo sottostante.|  
@@ -53,10 +55,10 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
 |ParameterMarkerPattern|string|Un'espressione regolare che corrisponde al marcatore di parametro. Avrà un valore corrispondente per il nome del parametro, se disponibile.<br /><br /> Se ad esempio i parametri denominati sono supportati con un carattere "@" principale incluso nel nome del parametro, il risultato sarà: "(@[A-Za-z0-9_$#]*)".<br /><br /> Tuttavia, se i parametri denominati sono supportati con un ':' come carattere iniziale e non è parte del nome del parametro, il risultato sarà: ": ([A-Za-z0-9 _ $#]\*)".<br /><br /> Se l'origine dati non supporta i parametri nominati, il risultato sarà "?".|  
 |ParameterNameMaxLength|int|La lunghezza massima del nome del parametro in caratteri. In Visual Studio si presuppone che se i nomi di parametri sono supportati, il valore minimo per la lunghezza massima corrisponderà a 30 caratteri.<br /><br /> Se l'origine dati non supporta i parametri denominati, questa proprietà restituisce zero.|  
 |ParameterNamePattern|string|Un'espressione regolare che corrisponde ai nomi di parametro validi. Origini dati diverse hanno regole diverse per i caratteri che è possibile usare con i nomi di parametro.<br /><br /> In Visual Studio si presuppone che se sono supportati i nomi di parametro, i caratteri "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" rappresentano il set di caratteri minimo supportato, valido per i nomi di parametro.|  
-|QuotedIdentifierPattern|string|Un'espressione regolare che corrisponde a un identificatore delimitato e dispone di un valore di corrispondenza dell'identificatore senza virgolette. Ad esempio, se l'origine dati utilizzate le virgolette doppie per identificare gli identificatori delimitati, il risultato sarà: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|string|Un'espressione regolare che corrisponde a un identificatore delimitato e dispone di un valore di corrispondenza dell'identificatore senza virgolette. Ad esempio, se l'origine dati usato le virgolette doppie per identificare gli identificatori tra virgolette, sarebbe: "(([^\\"]&#124;\\"\\") *) ".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica se per gli identificatori delimitati viene eseguita la distinzione tra maiuscole e minuscole.|  
 |StatementSeparatorPattern|string|Un'espressione regolare che corrisponde al separatore di istruzione.|  
-|StringLiteralPattern|string|Un'espressione regolare che corrisponde a una stringa letterale e dispone di un valore di corrispondenza del valore letterale. Ad esempio, se l'origine dati utilizzata virgolette singole per identificare le stringhe, il risultato sarà: "('([^'] &#124; ') *')"'|  
+|StringLiteralPattern|string|Un'espressione regolare che corrisponde a una stringa letterale e dispone di un valore di corrispondenza del valore letterale. Ad esempio, se l'origine dati consente di identificare le stringhe virgolette singole, sarebbe: "('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Specifica i tipi di istruzioni join di SQL supportati dall'origine dati.|  
   
 ## <a name="datatypes"></a>DataTypes  

@@ -1,5 +1,5 @@
 ---
-title: "Novità in Visual Basic"
+title: Novità in Visual Basic
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -34,6 +34,9 @@ Per le funzionalità nuove, vedere [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3   
 Per le funzionalità nuove, vedere [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Per le funzionalità nuove, vedere [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic/Visual Studio .NET 2015   
 Per le funzionalità nuove, vedere [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ Visual Basic 2017 ha aggiunto il supporto del carattere di sottolineatura (`_`) 
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Per usare il carattere di sottolineatura come separatore iniziale, è necessario aggiungere l'elemento seguente al file di progetto (*.vbproj) di Visual Basic:
+Per utilizzare il carattere di sottolineatura come separatore iniziale, è necessario aggiungere l'elemento seguente al progetto Visual Basic (\*. vbproj) file:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Per usare il carattere di sottolineatura come separatore iniziale, è necessario
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Inferenza di tupla denominata](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Tupla denominato inferenza**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Quando si assegna il valore di elementi di tupla provenienti da variabili, Visual Basic deduce il nome degli elementi di tupla dai nomi di variabili corrispondenti; non è necessario assegnare esplicitamente un nome a un elemento di tupla. L'esempio seguente usa l'inferenza per creare una tupla con tre elementi denominati, `state`, `stateName`, e `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Opzioni aggiuntive del compilatore**  
+
+Visual Basic compilatore da riga di comando supporta ora il [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) e [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opzioni del compilatore per controllare l'output di assembly di riferimento. **-refout** definisce la directory di output dell'assembly di riferimento, e **- refonly** specifica che solo un assembly di riferimento deve essere l'output di compilazione.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Tuple](../programming-guide/language-features/data-types/tuples.md)
+[**Tuple**](../programming-guide/language-features/data-types/tuples.md)
 
 Le tuple sono una semplice struttura dei dati che viene solitamente usata per restituire più valori da una singola chiamata al metodo. In genere, per restituire più valori da un metodo, è necessario eseguire una delle operazioni seguenti:
 

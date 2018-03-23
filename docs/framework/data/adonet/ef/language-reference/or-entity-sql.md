@@ -17,10 +17,10 @@ manager: craigg
 ms.workload:
 - dotnet
 ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 Combina due espressioni `Boolean` .  
@@ -43,7 +43,7 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>Note  
  OR è un operatore logico [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usato per combinare due condizioni. Quando in un'istruzione si usa più di un operatore logico, gli operatori OR vengono valutati dopo gli operatori AND. È tuttavia possibile modificare l'ordine di valutazione tramite l'uso delle parentesi.  
   
- Le barre verticali doppie (&#124; &#124;) ha la stessa funzionalità come l'operatore OR.  
+ Le barre verticali doppie (&#124;&#124;) ha la stessa funzionalità come l'operatore OR.  
   
  Nella tabella seguente sono inclusi i possibili valori di input e i tipi restituiti.  
   

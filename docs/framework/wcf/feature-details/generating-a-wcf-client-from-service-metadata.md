@@ -1,24 +1,26 @@
 ---
 title: Generazione di un client WCF dai metadati del servizio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generazione di un client WCF dai metadati del servizio
 In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
@@ -31,7 +33,7 @@ In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil
   
 -   Richiesta DISCO (mediante il [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET) all'indirizzo fornito.  
   
- Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell’entità utente (UPN) viene generato concatenando il nome utente con "@" e aggiungendo quindi un nome di dominio completo (FQDN). Tuttavia, per gli utenti registrati su Active Directory, questo formato non è valido e l'UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il seguente messaggio di errore: **non è riuscito il tentativo di accesso.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
+ Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio. Il nome dell’entità utente (UPN) viene generato concatenando il nome utente con "@" e aggiungendo quindi un nome di dominio completo (FQDN). Tuttavia, per gli utenti registrati su Active Directory, questo formato non valido e l'UPN dallo strumento provoca un errore di autenticazione Kerberos con il seguente messaggio di errore: **non è riuscito il tentativo di accesso.** Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -50,7 +52,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |------------|-----------------|  
 |**/serializer:Auto**|Seleziona automaticamente il serializzatore. Utilizza il serializzatore `DataContract`. In caso di errore, viene utilizzato `XmlSerializer`.<br /><br /> Forma abbreviata: `/ser:Auto`|  
 |**/serializer:DataContractSerializer**|Generare tipi di dati che utilizzano il serializzatore `DataContract` per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:DataContractSerializer`|  
-|**/serializer: XmlSerializer**|Genera tipi di dati che utilizzano `XmlSerializer` per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:XmlSerializer`|  
+|**/serializer:XmlSerializer**|Genera tipi di dati che utilizzano `XmlSerializer` per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configura il serializzatore `DataContract` per importare tipi non `DataContract` come tipi `IXmlSerializable`.<br /><br /> Forma abbreviata: `/ixt`|  
 |**/dataContractOnly**|Genera codice solo per i tipi `DataContract`. Vengono generati i tipi `ServiceContract`.<br /><br /> Per questa opzione è necessario specificare soltanto file di metadati locali.<br /><br /> Forma abbreviata: `/dconly`|  
   
@@ -58,7 +60,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/Language:\<lingua >**|Specifica il linguaggio di programmazione da utilizzare per la generazione del codice. Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valori: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Impostazione predefinita: csharp<br /><br /> Forma abbreviata: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language:\<lingua >**|Specifica il linguaggio di programmazione da utilizzare per la generazione del codice. Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valori: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Impostazione predefinita: csharp<br /><br /> Forma abbreviata: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Scelta di uno spazio dei nomi per il client  
   
@@ -76,7 +78,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/config:\<configFile >**|Specifica il nome file per il file di configurazione generato.<br /><br /> Impostazione predefinita: output.config|  
+|**/config:\<configFile>**|Specifica il nome file per il file di configurazione generato.<br /><br /> Impostazione predefinita: output.config|  
 |**/mergeConfig**|Incorpora la configurazione generata in un file esistente, anziché sovrascrivere il file esistente.|  
 |**/noConfig**|Non genera file di configurazione.|  
   

@@ -1,24 +1,26 @@
 ---
 title: Riferimento a Entity SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Riferimento a Entity SQL
 In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. In questo argomento sono riepilogati e raggruppati i [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori per categoria.  
@@ -57,7 +59,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |[= (uguale a)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Consente di confrontare due espressioni per verificare se sono uguali.|  
 |[> (maggiore di)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore maggiore di quella a destra.|  
 |[>= (maggiore di o uguale a)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra.|  
-|[È &#91; NON &#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Consente di determinare se un'espressione di query è null.|  
+|[È &AMP;#91;NON&AMP;#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Consente di determinare se un'espressione di query è null.|  
 |[< (minore di)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore di quella a destra.|  
 |[<= (minore di o uguale a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore o uguale a quella a destra.|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se un'espressione restituisce un valore incluso in un intervallo specificato.|  
@@ -71,7 +73,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |--------------|-----------------|  
 |[& & (AND logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND logico.|  
 |[! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
-|[&#124; &#124; (OR logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR logico.|  
+|[&#124;&#124;(OR logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR logico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Valuta un set di espressioni booleane per determinare il risultato.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Il risultato di un [quando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clausola quando restituisce true.|  
   
@@ -92,7 +94,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtra condizionatamente i dati che sono restituiti da una query.|  
   
 ## <a name="reference-operators"></a>Operatori di riferimento  
- Un riferimento è un puntatore logico (chiave esterna) a un'entità specifica in un set di entità specifico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]supporta gli operatori seguenti per costruire o annullare, nonché esplorare i riferimenti.  
+ Un riferimento è un puntatore logico (chiave esterna) a un'entità specifica in un set di entità specifico. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta gli operatori seguenti per costruire o, nonché esplorare i riferimenti.  
   
 |Operatore|Usa|  
 |--------------|---------|  
@@ -118,7 +120,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combina i risultati di due o più query in una singola raccolta.|  
   
 ## <a name="type-operators"></a>Operatori di tipo  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]fornisce le operazioni che consentono il tipo di un'espressione (valore) viene costruito, eseguire una query e modificato. Nella tabella seguente sono elencati gli operatori usati per lavorare con i tipi.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce le operazioni che consentono il tipo di un'espressione (valore) viene costruito, eseguire una query e modificato. Nella tabella seguente sono elencati gli operatori usati per lavorare con i tipi.  
   
 |Operatore|Usa|  
 |--------------|---------|  

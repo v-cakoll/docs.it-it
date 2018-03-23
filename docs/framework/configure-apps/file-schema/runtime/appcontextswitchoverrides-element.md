@@ -1,14 +1,14 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; elemento'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,22 +16,23 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  
   
  \<configuration>  
- \<runtime >  
+ \<runtime>  
 \<AppContextSwitchOverrides >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -109,7 +110,7 @@ Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.A
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Determina se Windows Presentation Foundation applica un algoritmo precedente (`true`) o un nuovo algoritmo (`false`) per l'allocazione dello spazio per \*-colonne. Per altre informazioni, vedere [Mitigazione: Allocazione dello spazio di controllo della griglia alle colonne a stella](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Evento di modifica se un selettore o una scheda di controllo sempre aggiorna il valore della proprietà di valore selezionato prima di generare la selezione di controlli.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Indica di rifiutare esplicitamente il codice che consente a un oggetto personalizzato <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementazione per filtrare in modo sicuro i messaggi senza generare un'eccezione quando il <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> metodo viene chiamato. Per altre informazioni, vedere [Mitigazione: Implementazioni IMessageFilter.PreFilterMessage personalizzate](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
-|`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Determina se un parametro facoltativo `WM_POINTER`-stack tocco base/dello stilo è abilitato nelle applicazioni WPF. Per ulteriori informazioni, vedere [attenuazione: basata sul puntatore tocco e supporto dello stilo](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
+|`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Determina se un parametro facoltativo `WM_POINTER`-stack tocco base/dello stilo è abilitato nelle applicazioni WPF. Per altre informazioni, vedere [mitigazione: basata sul puntatore tocco e supporto dello stilo](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Controlla se un legacy [NullReferenceException](xref:System.NullReferenceException) viene generata un'eccezione anziché l'eccezione che indica in dettaglio la causa dell'eccezione (ad esempio un [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) o un [ FileNotFoundException](xref:System.IO.FileNotFoundException). È destinato da codice che dipende dalla gestione di [NullReferenceException](xref:System.NullReferenceException). | .NET Framework 4.7 |
 |`Switch.UseLegacyAccessibilityFeatures`|Controlla se le funzionalità di accessibilità disponibile a partire da .NET Framework 4.7.1 è abilitato o disabilitato. | .NET Framework 4.7.1 |
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controlla se le sequenze vuote di chiavi nelle chiavi composte vengono ignorate da convalida dello schema XSD. Per ulteriori informazioni, vedere [attenuazione: convalida di XML Schema](~/docs/framework/migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  

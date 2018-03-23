@@ -1,26 +1,28 @@
 ---
-title: "Novità &#39; s New in ADO.NET"
-ms.custom: 
+title: Novità&#39;s New in ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-adonet"></a>Novità &#39; s New in ADO.NET
+# <a name="what39s-new-in-adonet"></a>Novità&#39;s New in ADO.NET
 Di seguito sono riportate le nuove funzionalità di [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>Provider di dati SqlClient  
@@ -54,7 +56,7 @@ Di seguito sono riportate le nuove funzionalità di [!INCLUDE[vstecado](../../..
   
 -   `Type System Version=SQL Server 2012;` è il nuovo valore da passare alla proprietà di connessione `Type System Version`. Il valore `Type System Version=Latest;` è obsoleto ed è diventato equivalente a `Type System Version=SQL Server 2008;`. Per altre informazioni, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
--   SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica se una colonna è una colonna di tipo sparse (vedere [raccolte di schemi di SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) per altre informazioni). Per ulteriori informazioni sulle colonne di tipo sparse, vedere [utilizzando colonne di tipo Sparse](http://go.microsoft.com/fwlink/?LinkId=224244).  
+-   SqlClient fornisce supporto aggiuntivo per le colonne di tipo sparse, una funzionalità aggiunta in SQL Server 2008. Se l'applicazione accede già ai dati in una tabella che usa colonne di tipo sparse, si noterà un miglioramento delle prestazioni. La colonna IsColumnSet di <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se una colonna è di tipo sparse, ovvero membro di un set di colonne. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se una colonna è di tipo sparse (vedere [raccolte di schemi di SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) per altre informazioni). Per ulteriori informazioni sulle colonne di tipo sparse, vedere [utilizzando colonne di tipo Sparse](http://go.microsoft.com/fwlink/?LinkId=224244).  
   
 -   L'assembly Microsoft.SqlServer.Types.dll, che contiene i tipi di dati spaziali, è stato aggiornato dalla versione 10.0 alla versione 11.0. Le applicazioni che fanno riferimento a questo assembly potrebbero avere esito negativo. Per ulteriori informazioni, vedere [modifiche di rilievo alle funzionalità del motore di Database](http://go.microsoft.com/fwlink/?LinkId=224367).  
   
