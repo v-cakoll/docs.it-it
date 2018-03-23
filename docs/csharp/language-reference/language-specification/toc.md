@@ -1,4 +1,5 @@
 # [Bozza di specifica C# 6.0](index.md)
+## [Introduzione](../../../../_csharplang/spec/introduction.md)
 ## [Struttura lessicale](../../../../_csharplang/spec/lexical-structure.md)
 ## [Concetti di base](../../../../_csharplang/spec/basic-concepts.md)
 ## [Tipi](../../../../_csharplang/spec/types.md)
