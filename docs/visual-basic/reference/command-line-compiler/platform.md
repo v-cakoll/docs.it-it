@@ -1,32 +1,31 @@
 ---
-title: /platform (Visual Basic)
-ms.date: 07/20/2015
+title: -platform (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 09c7d677e614186d26a2ff8a1ce2fe5213cf7799
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="platform-visual-basic"></a>/platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
+-platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -41,7 +40,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 |`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. Questo flag è valido solo per i file eseguibili (EXE) e richiede [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## <a name="remarks"></a>Note  
- Per specificare il tipo di processore di destinazione del file di output, usare l'opzione `/platform`.  
+ Per specificare il tipo di processore di destinazione del file di output, usare l'opzione `-platform`.  
   
  In genere, gli assembly .NET Framework scritti in Visual Basic vengono sempre eseguiti, indipendentemente dalla piattaforma. L'elaborazione di alcuni elementi può tuttavia risultare influenzata dalla piattaforma in uso. I casi più comuni sono:  
   
@@ -55,7 +54,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 -   Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
   
- Il **/platform** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura di cui verrà eseguito il codice. In particolare:  
+ Il **-piattaforma** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura verrà eseguito il codice. In particolare:  
   
 -   Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
   
@@ -63,17 +62,17 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
  In un sistema operativo Windows a 64 bit:  
   
--   Gli assembly compilati con l'opzione `/platform:x86` potranno essere eseguiti da CLR a 32 bit in WOW64.  
+-   Gli assembly compilati con l'opzione `-platform:x86` potranno essere eseguiti da CLR a 32 bit in WOW64.  
   
--   Gli eseguibili compilati con l'opzione `/platform:anycpu` potranno essere eseguiti da CLR a 64 bit.  
+-   Gli eseguibili compilati con l'opzione `-platform:anycpu` potranno essere eseguiti da CLR a 64 bit.  
   
--   Una DLL compilata con l'opzione `/platform:anycpu` potrà essere eseguita dallo stesso CLR del processo in cui viene caricata.  
+-   Una DLL compilata con l'opzione `-platform:anycpu` potrà essere eseguita dallo stesso CLR del processo in cui viene caricata.  
   
--   Gli eseguibili compilati con l'opzione `/platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
+-   Gli eseguibili compilati con l'opzione `-platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
   
  Per ulteriori informazioni su come sviluppare un'applicazione da eseguire in una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set-platform-in-the-visual-studio-ide"></a>Per impostare /platform nell'IDE di Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Per impostare - piattaforma nell'IDE di Visual Studio  
   
 1.  In **Esplora**, scegliere il progetto, aprire il **progetto** menu e quindi fare clic su **proprietà**.  
   
@@ -82,10 +81,10 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
      Per ulteriori informazioni, vedere [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente mostra come usare l'opzione del compilatore `/platform`.  
+ L'esempio seguente mostra come usare l'opzione del compilatore `-platform`.  
   
-```  
-vbc /platform:x86 myFile.vb  
+```console
+vbc -platform:x86 myFile.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

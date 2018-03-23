@@ -1,22 +1,21 @@
 ---
 title: 'Procedura: creare assembly Friend firmati (Visual Basic)'
-ms.custom: 
-ms.date: 07/20/2015
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3ffaf30cdcbc075b772a7350984d060e47fddb7
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4fd9521a87a985cbdeff1616c3070c822892b6e5
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: creare assembly Friend firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
@@ -46,7 +45,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     ```vb  
     ' friend_signed_A.vb  
     ' Compile with:   
-    ' Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     Imports System.Runtime.CompilerServices  
   
     <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
@@ -60,8 +59,8 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
 4.  Compilare e firmare friend_signed_A usando il comando seguente.  
   
-    ```vb  
-    Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ```console  
+    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
 5.  Creare un file di Visual Basic denominato `friend_signed_B` e contiene il codice seguente. Poiché friend_signed_A specifica che friend_signed_B è un assembly Friend, il codice in friend_signed_B può accedere ai tipi e ai membri `Friend` da friend_signed_A. Il file contiene il codice seguente.  
@@ -69,7 +68,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     ```vb  
     ' friend_signed_B.vb  
     ' Compile with:   
-    ' Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     Module Sample  
         Public Sub Main()  
             Dim inst As New Class1  
@@ -80,15 +79,15 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
 6.  Compilare e firmare friend_signed_B usando il comando seguente.  
   
-    ```vb  
-    Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ```console  
+    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È possibile impostare in modo esplicito l'assembly utilizzando il `/out` l'opzione del compilatore. Per ulteriori informazioni, vedere [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
+     Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È possibile impostare in modo esplicito l'assembly utilizzando il `-out` l'opzione del compilatore. Per altre informazioni, vedere [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
 7.  Eseguire il file friend_signed_B.exe.  
   
-     Il programma stampa la stringa "Class1.Test".  
+     Il programma visualizza la stringa "Class1".  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `Friend`.  
@@ -98,7 +97,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
  [Assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Assembly Friend (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Procedura: creare assembly Friend non firmati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (strumento nome sicuro)] [Sn.exe (strumento nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
  [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)

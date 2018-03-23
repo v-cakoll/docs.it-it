@@ -1,10 +1,10 @@
 ---
-title: /reference (Visual Basic)
-ms.date: 07/20/2015
+title: -riferimenti (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+# <a name="-reference-visual-basic"></a>-riferimenti (Visual Basic)
 Indica al compilatore di rendere disponibili per il progetto in corso di compilazione informazioni sui tipi negli assembly specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/reference:fileList  
+-reference:fileList  
 ' -or-  
-/r:fileList  
+-r:fileList  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -49,24 +48,24 @@ Indica al compilatore di rendere disponibili per il progetto in corso di compila
   
 -   Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Utilizzare [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti agli assembly.  
+ Uso [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti agli assembly.  
   
  Per il compilatore di riconoscere un tipo in un assembly (non un modulo), è necessario imporre la risoluzione del tipo. Un esempio di come è possibile farlo consiste nel definire un'istanza del tipo. Esistono altri modi risolvere i nomi dei tipi in un assembly per il compilatore. Ad esempio, se si eredita da un tipo in un assembly, il nome del tipo quindi diventa nota al compilatore.  
   
- Il file di risposta Vbc.rsp, i riferimenti utilizzati comunemente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly, viene utilizzato per impostazione predefinita. Utilizzare `/noconfig` se non si desidera al compilatore di usare Vbc.rsp.  
+ Il file di risposta Vbc.rsp, i riferimenti utilizzati comunemente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly, viene utilizzato per impostazione predefinita. Utilizzare `-noconfig` se non si desidera al compilatore di usare Vbc.rsp.  
   
- La forma breve di `/reference` è `/r`.  
+ La forma breve di `-reference` è `/r`.  
   
 ## <a name="example"></a>Esempio  
- Nel codice riportato di seguito viene compilato il file di origine `Input.vb` e viene fatto riferimento agli assembly di `Metad1.dll` e `Metad2.dll` per generare `Out.exe`.  
+ Il comando seguente consente di compilare file di origine `Input.vb` e fare riferimento agli assembly da `Metad1.dll` e `Metad2.dll` per produrre `Out.exe`.  
   
-```  
-vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
+```console
+vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,10 +1,10 @@
 ---
-title: /nologo (Visual Basic)
-ms.date: 07/20/2015
+title: -nologo (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -nologo compiler option [Visual Basic]
@@ -12,35 +12,34 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3c2c7e7a111a3763d7463f67c2d984955da33bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 8e5eb9db7af861a8439b47adb8f5e515331fae6e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="nologo-visual-basic"></a>/nologo (Visual Basic)
+# <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Evita la visualizzazione di informazioni sul copyright e sui messaggi informativi durante la compilazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>Note  
- Se si specifica `/nologo`, il compilatore non visualizza informazioni sul copyright. Per impostazione predefinita, l'opzione `/nologo` non è attiva.  
+ Se si specifica `-nologo`, il compilatore non visualizza informazioni sul copyright. Per impostazione predefinita, l'opzione `-nologo` non è attiva.  
   
 > [!NOTE]
->  Il `/nologo` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
+>  Il `-nologo` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e non visualizza informazioni sul copyright.  
   
-```  
-vbc /nologo t2.vb  
+```console
+vbc -nologo t2.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

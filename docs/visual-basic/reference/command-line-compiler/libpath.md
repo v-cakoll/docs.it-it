@@ -1,32 +1,31 @@
 ---
-title: /libpath
-ms.date: 07/20/2015
+title: -libpath
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4f8a87ea3f3e551dfc84212e92f1409ef61bcba2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cff59d9b406045b4522d3a7d6e85528513214635
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="libpath"></a>/libpath
+# <a name="-libpath"></a>-libpath
 Specifica il percorso degli assembly di riferimento.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/libpath:dirList  
+-libpath:dirList  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -36,7 +35,7 @@ Specifica il percorso degli assembly di riferimento.
 |`dirList`|Obbligatorio. Elenco delimitato da punto e virgola di directory per il compilatore la ricerca se un assembly di riferimento non trova in una directory di lavoro corrente (la directory da cui si richiama il compilatore) o la directory di sistema di common language runtime. Se il nome della directory contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
 ## <a name="remarks"></a>Note  
- Il `/libpath` opzione specifica il percorso degli assembly a cui fa riferimento il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) opzione.  
+ Il `-libpath` opzione consente di specificare la posizione degli assembly a cui fanno riferimento le [-riferimento](../../../visual-basic/reference/command-line-compiler/reference.md) opzione.  
   
  La ricerca dei riferimenti non completi agli assembly viene operata nell'ordine seguente:  
   
@@ -48,19 +47,19 @@ Specifica il percorso degli assembly di riferimento.
   
 4.  Directory specificate dalla variabile di ambiente LIB.  
   
- Il `/libpath` opzione si sommano tra loro; specificando che più di una volta aggiunto a eventuali valori precedenti.  
+ Il `-libpath` opzione si sommano tra loro; specificando che più di una volta aggiunto a eventuali valori precedenti.  
   
- Utilizzare `/reference` per specificare un riferimento all'assembly.  
+ Utilizzare `-reference` per specificare un riferimento all'assembly.  
   
 |Per impostare /libpath in Visual Studio ambiente di sviluppo integrato.|  
 |---|  
-|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Fare clic su di **fanno riferimento a percorsi...**  pulsante.<br />4.  Nel **percorsi di riferimento** finestra di dialogo immettere il nome della directory nel **cartella:** casella.<br />5.  Fare clic su **aggiungere la cartella**.|  
+|1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Riferimenti**.<br />3.  Fare clic su di **fanno riferimento a percorsi...** pulsante.<br />4.  Nel **percorsi di riferimento** finestra di dialogo immettere il nome della directory nel **cartella:** casella.<br />5.  Fare clic su **aggiungere la cartella**.|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` per creare un file .exe. Il compilatore cerca nella directory di lavoro, nella directory radice dell'unità c: e nella directory dell'unità c: nuovi assembly riferimenti ad assembly.  
   
-```  
-vbc /libpath:c:\;"c:\New Assemblies" /reference:t2.dll t2.vb  
+```console  
+vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

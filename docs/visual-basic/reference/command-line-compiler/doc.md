@@ -1,45 +1,44 @@
 ---
-title: /doc
-ms.date: 07/20/2015
+title: -doc
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - doc compiler option [Visual Basic]
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1f9d4f584f217e6996a499614b97f184b28664f8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="doc"></a>/doc
+# <a name="-doc"></a>-doc
 Elabora commenti sulla documentazione in un file XML.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/doc[+ | -]  
+-doc[+ | -]  
 ' -or-  
-/doc:file  
+-doc:file  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
   
 |Termine|Definizione|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Specificando +, o semplicemente `/doc`, indica al compilatore di generare informazioni relative alla documentazione e inserirle in un file XML. Specifica di `-` è l'equivalente della specifica di non `/doc`, non causando alcuna informazione di documentazione da creare.|  
-|`file`|Richiesto se è usato `/doc:`. Specifica il file XML di output, che viene popolato con i commenti dai file di codice sorgente della compilazione. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
+|`+` &#124; `-`|Facoltativo. Specificando +, o semplicemente `-doc`, indica al compilatore di generare informazioni relative alla documentazione e inserirle in un file XML. Specifica di `-` è l'equivalente della specifica di non `-doc`, non causando alcuna informazione di documentazione da creare.|  
+|`file`|Richiesto se è usato `-doc:`. Specifica il file XML di output, che viene popolato con i commenti dai file di codice sorgente della compilazione. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette ("").|  
   
 ## <a name="remarks"></a>Note  
- Il `/doc` opzione controlli se il compilatore genera un file XML contenente i commenti della documentazione. Se si utilizza il `/doc:``file` sintassi, il `file` parametro specifica il nome del file XML. Se si utilizza `/doc` o `/doc+`, il compilatore prende il nome del file XML dal file eseguibile o libreria che il compilatore sta creando. Se si utilizza `/doc-` o non si specifica il `/doc` opzione, il compilatore non crea un file XML.  
+ Il `-doc` opzione controlli se il compilatore genera un file XML contenente i commenti della documentazione. Se si utilizza il `-doc:file` sintassi, il `file` parametro specifica il nome del file XML. Se si utilizza `-doc` o `-doc+`, il compilatore prende il nome del file XML dal file eseguibile o libreria che il compilatore sta creando. Se si utilizza `-doc-` o non si specifica il `-doc` opzione, il compilatore non crea un file XML.  
   
  Nei file di codice sorgente, i commenti della documentazione possono precedere le definizioni seguenti:  
   
@@ -53,7 +52,7 @@ Elabora commenti sulla documentazione in un file XML.
   
  Vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md) per informazioni sulla generazione di documentazione dai commenti nel codice.  
   
-|Per impostare l'opzione /doc in Visual Studio ambiente di sviluppo integrato.|  
+|Per impostare - ambiente di sviluppo integrato di documenti in Visual Studio|  
 |---|  
 |1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Impostare il valore di **file di documentazione XML generare** casella.|  
   

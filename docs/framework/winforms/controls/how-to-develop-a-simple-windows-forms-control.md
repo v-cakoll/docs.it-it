@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: sviluppare un controllo di Windows Form semplice'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Procedura: sviluppare un controllo di Windows Form semplice
 Questa sezione illustra i passaggi chiave per la creazione di un controllo di Windows Form personalizzato. Il controllo semplice sviluppato in questa procedura dettagliata consente l'allineamento della relativa <xref:System.Windows.Forms.Control.Text%2A> proprietà da modificare. Non genera o gestisce eventi.  
@@ -50,7 +52,7 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Quando si imposta una proprietà che modifica la visualizzazione del controllo, è necessario richiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo per ridisegnare il controllo. <xref:System.Windows.Forms.Control.Invalidate%2A>è definito nella classe base <xref:System.Windows.Forms.Control>.  
+     Quando si imposta una proprietà che modifica la visualizzazione del controllo, è necessario richiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo per ridisegnare il controllo. <xref:System.Windows.Forms.Control.Invalidate%2A> è definito nella classe base <xref:System.Windows.Forms.Control>.  
   
 3.  Eseguire l'override protetto <xref:System.Windows.Forms.Control.OnPaint%2A> metodo ereditato da <xref:System.Windows.Forms.Control> per fornire la logica di rendering del controllo. Se esegue l'override <xref:System.Windows.Forms.Control.OnPaint%2A>, il controllo non sarà in grado di disegno. Nel frammento di codice seguente, il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo visualizza il <xref:System.Windows.Forms.Control.Text%2A> proprietà ereditata da <xref:System.Windows.Forms.Control> con l'allineamento specificato il `alignmentValue` campo.  
   
@@ -70,12 +72,12 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
   
     2.  Compilare il codice sorgente in un assembly e salvarlo nella directory dell'applicazione. Per questo scopo, eseguire il comando seguente dalla directory che contiene il file d'origine.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          L'opzione `/t:library` indica al compilatore che l'assembly che si sta creando è una libreria e non un file eseguibile. L'opzione `/out` specifica il percorso e il nome dell'assembly. L'opzione `/r` specifica il nome delle assembly a cui fa riferimento il codice. In questo esempio, si crea un assembly privato che può essere usato solo dalle applicazioni. Di conseguenza, è necessario salvarlo nella directory dell'applicazione. Per altre informazioni sulla creazione di pacchetti e sulla distribuzione di un controllo, vedere [Distribuzione](../../../../docs/framework/deployment/index.md).  
@@ -94,19 +96,19 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
   
 2.  Compilare il codice sorgente in un assembly eseguibile tramite il comando seguente dalla directory che contiene il file di origine.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls. dll è l'assembly che contiene la classe `FirstControl`. L'assembly deve essere nella stessa directory del file di origine per il form che accede all'assembly (SimpleForm.cs o SimpleForms.vb).  
   
 3.  Eseguire SimpleForm.exe usando il comando seguente.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   

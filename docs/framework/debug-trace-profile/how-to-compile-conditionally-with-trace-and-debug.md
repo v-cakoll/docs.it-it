@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: compilare in modo condizionale con traccia e debug'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
@@ -59,9 +61,9 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
      Ad esempio, l'istruzione del compilatore che segue, immessa sulla riga di comando, includerà il codice di tracciatura in un eseguibile compilato:  
   
-     Per Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     Per Visual Basic: **vbc-r:System.dll -d: TRACE = TRUE -d: DEBUG = FALSE MyApplication. vb**  
   
-     Per C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     Per c#: **csc-r:System.dll -d: traccia -d: DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Per compilare più file dell'applicazione, lasciare uno spazio vuoto tra i nomi dei file, ad esempio: **MyApplication1.vb MyApplication2.vb MyApplication3.vb** o **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
     |---------------|-------------|  
     |`vbc`|Visual Basic (compilatore)|  
     |`csc`|Compilatore C#|  
-    |`/r:`|Riferimenti a un assembly esterno (EXE o DLL)|  
-    |`/d:`|Definizione di un simbolo di compilazione condizionale|  
+    |`-r:`|Riferimenti a un assembly esterno (EXE o DLL)|  
+    |`-d:`|Definizione di un simbolo di compilazione condizionale|  
   
     > [!NOTE]
     >  È necessario scrivere TRACE o DEBUG con le lettere maiuscole. Per altre informazioni sui comandi di compilazione condizionale, immettere `vbc /?` (per Visual Basic) o `csc /?` (per C#) al prompt dei comandi. Per altre informazioni, vedere [Compilazione dalla riga di comando (C#)](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) o [Utilizzo del compilatore dalla riga di comando (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md).  
@@ -95,14 +97,14 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 ### <a name="to-disable-tracing-or-debugging"></a>Per disabilitare la traccia o il debug  
   
-1.  Eliminare la direttiva del compilatore dal codice sorgente.  
+Eliminare la direttiva del compilatore dal codice sorgente.  
   
-     \- oppure -  
+\- oppure -  
   
-2.  Impostare come commento la direttiva del compilatore.  
+Impostare come commento la direttiva del compilatore.  
   
-    > [!NOTE]
-    >  Al momento di avviare la compilazione è possibile scegliere **Compila** dal menu **Compila** o usare il metodo della riga di comando senza digitare **d:** per definire i simboli di compilazione condizionale.  
+> [!NOTE]
+>  Al momento di avviare la compilazione è possibile scegliere **Compila** dal menu **Compila** o usare il metodo della riga di comando senza digitare **d:** per definire i simboli di compilazione condizionale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  

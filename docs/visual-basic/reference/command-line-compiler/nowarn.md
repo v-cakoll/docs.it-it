@@ -1,32 +1,33 @@
 ---
-title: /nowarn
+title: -nowarn
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - nowarn compiler option [Visual Basic]
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d1eafe8d7ccd6f2c71b754dadc343518948e7146
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: d2f3f15ef12b24b8baedc9db59e772aa9eb073bc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="nowarn"></a>/nowarn
+# <a name="-nowarn"></a>-nowarn
 Inibisce la capacità del compilatore di generare avvisi.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-/nowarn[:numberList]  
+-nowarn[:numberList]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -36,28 +37,28 @@ Inibisce la capacità del compilatore di generare avvisi.
 |`numberList`|Facoltativo. Elenco delimitato da virgole dei numeri di ID di avviso che il compilatore deve eliminare. Se non viene specificato l'ID di avviso, tutti gli avvisi vengono soppressi.|  
   
 ## <a name="remarks"></a>Note  
- Il `/nowarn` opzione, il compilatore di non generare avvisi. Per eliminare un singolo avviso, specificare l'ID di avviso per il `/nowarn` opzione dopo la virgola. Separare più numeri di avviso con virgole.  
+ Il `-nowarn` opzione, il compilatore di non generare avvisi. Per eliminare un singolo avviso, specificare l'ID di avviso per il `-nowarn` opzione dopo la virgola. Separare più numeri di avviso con virgole.  
   
- È necessario specificare solo la parte numerica dell'identificatore di avviso. Ad esempio, se si desidera eliminare BC42024, l'avviso per le variabili locali inutilizzate, specificare `/nowarn:42024`.  
+ È necessario specificare solo la parte numerica dell'identificatore di avviso. Ad esempio, se si desidera eliminare BC42024, l'avviso per le variabili locali inutilizzate, specificare `-nowarn:42024`.  
   
  Per ulteriori informazioni sui numeri di ID avviso, vedere [configurazione degli avvisi in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|Per impostare /nowarn in Visual Studio ambiente di sviluppo integrato.|  
+|Per impostare - nowarn nell'ambiente di sviluppo integrato di Visual Studio|  
 |---|  
 |1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**. <br />2.  Fare clic sulla scheda **Compila**.<br />3.  Selezionare il **Disabilita tutti gli avvisi** casella di controllo per disabilitare tutti gli avvisi.<br />     -oppure-<br />     Per disabilitare un avviso specifico, fare clic su **Nessuno** dall'elenco a discesa adiacente all'avviso.|  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e non vengono visualizzati tutti gli avvisi.  
   
-```  
-vbc /nowarn t2.vb  
+```console
+vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e non vengono visualizzati gli avvisi per le variabili locali inutilizzate (42024).  
   
-```  
-vbc /nowarn:42024 t2.vb  
+```console
+vbc -nowarn:42024 t2.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
