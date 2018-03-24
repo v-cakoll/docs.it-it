@@ -1,5 +1,5 @@
 ---
-title: "Novità di .NET Framework"
+title: Novità di .NET Framework
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -100,12 +100,6 @@ In .NET Framework 4.7.1 è stato aggiunto <xref:System.Runtime.CompilerServices.
 
 Le modifiche apportate a Garbage Collection in .NET Framework 4.7.1 migliorano le prestazioni complessive, in particolare per allocazioni di heap di oggetti grandi. In .NET Framework 4.7.1 vengono usati blocchi separati per allocazioni di heap di oggetti piccoli e heap di oggetti grandi, per consentire l'esecuzione di allocazioni di heap di oggetti grandi quando Garbage Collection in background elimina gli heap di oggetti piccoli. Di conseguenza, le applicazioni che eseguono una quantità elevata di allocazioni di heap di oggetti grandi riscontreranno una riduzione dei conflitti di blocco delle allocazioni e prestazioni migliori. Per altre informazioni, vedere la sezione relativa al runtime e ai miglioramenti per le prestazioni di Garbage Collection nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). 
 
-**Supporto per file PDB portatili**
-
-A partire da .NET Framework versione 4.7.1, sono supportati i file PDB portatili. Mentre i file PDB standard sono solo per Windows, i file PDB portatili possono essere creati e letti in tutte le piattaforme. Nella maggior parte dei casi, il formato file è trasparente per un'applicazione in esecuzione in un'implementazione .NET specifica. Un'eccezione è costituita da un'applicazione che emette dinamicamente un assembly in fase di esecuzione. In questo caso, la capacità di emettere un file PDB portatile può offrire un miglioramento delle prestazioni e ridurre il footprint di memoria dell'applicazione. 
-
-È possibile determinare in fase di esecuzione se i file PDB portatili sono supportati nell'implementazione .NET corrente passando la stringa "PortablePdb" al metodo <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> prima di emettere l'assembly.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>Servizi di rete
 
@@ -198,7 +192,7 @@ A partire da Framework .NET 4.7, ASP.NET aggiunge un nuovo set di API che consen
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-Windows Communication Foundation (WFC) aggiunge le seguenti funzionalità e modifiche:
+Windows Communication Foundation (WCF) aggiunge le seguenti funzionalità e modifiche:
 
 **Possibilità di configurare le impostazioni predefinite di sicurezza dei messaggi su TLS 1.1 o TLS 1.2**
 
@@ -1140,7 +1134,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
 - **Ridimensionamento nei controlli Windows Form** Questa funzionalità è stata ampliata. È ora possibile usare l'impostazione DPI di sistema per ridimensionare i componenti dei seguenti controlli aggiuntivi (ad esempio, la freccia a discesa nelle caselle combinate):
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      È una funzionalità che prevede il consenso esplicito. Per attivarla, impostare l'elemento `EnableWindowsFormsHighDpiAutoResizing` su `true` nel file di configurazione dell'applicazione (app.config):
 
@@ -1220,7 +1214,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
 - Ridimensionamento nei controlli Windows Form. È possibile usare l'impostazione DPI per ridimensionare i componenti dei controlli (ad esempio, le icone visualizzate in una griglia delle proprietà) scegliendo una voce nel file di configurazione dell'applicazione (app.config) relativo alla propria app. Questa funzionalità è attualmente supportata nei seguenti controlli Windows Form:
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    Alcuni aspetti di <xref:System.Windows.Forms.DataGridView> (per gli altri controlli supportati, vedere le [nuove funzionalità nella versione 4.5.2](#v452))
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> Alcuni aspetti di <xref:System.Windows.Forms.DataGridView> (per gli altri controlli supportati, vedere le [nuove funzionalità nella versione 4.5.2](#v452))
 
      Per attivare questa funzionalità, aggiungere un nuovo elemento \<appSettings> al file di configurazione (app.config) e impostare l'elemento `EnableWindowsFormsHighDpiAutoResizing` su `true`:
 
@@ -1449,7 +1443,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Le applicazioni sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 è disponibile per la compilazione di applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] per Windows usando C# o Visual Basic. Questo subset è denominato [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e viene descritto in una [panoramica](http://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
+ Le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] sono progettate per fattori di forma specifici e sfruttano la potenza del sistema operativo Windows. Un subset di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 è disponibile per la compilazione di applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] per Windows usando C# o Visual Basic. Questo subset è denominato [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e viene descritto in una [panoramica](http://go.microsoft.com/fwlink/?LinkId=228491) in Windows Dev Center.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Librerie di classi portabili
