@@ -1,11 +1,11 @@
 ---
 title: Programmazione di rete in .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmazione di rete in .NET Framework
 Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, estendibile e gestita, di servizi Internet che possono essere integrati nelle applicazioni in modo rapido e semplice. Le applicazioni di rete possono essere compilate su protocolli modulari per usufruire automaticamente di nuovi protocolli Internet oppure possono utilizzare un'implementazione gestita dell'interfaccia Windows Sockets per utilizzare la rete a livello di socket.  
   
 ## <a name="in-this-section"></a>In questa sezione  
+
  [Introduzione ai protocolli di collegamento](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Viene descritto come accedere a una risorsa Internet indipendentemente dal protocollo di accesso richiesto.  
   
@@ -144,6 +146,8 @@ Con Microsoft .NET Framework viene fornita un'implementazione a più livelli, es
  Fornisce il supporto per la configurazione dell'autenticazione utilizzando la protezione estesa per le applicazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
+
+ [Procedure consigliate per Transport Layer Security (TLS) con .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Procedure per la programmazione di rete](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Esempi di rete per .NET in MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

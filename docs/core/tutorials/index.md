@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>Esercitazioni di .NET Core
 
@@ -30,7 +31,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Test di una libreria di classi](testing-library-with-visual-studio.md)
 - [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
 - [Compilare una soluzione completa C# con .NET in Windows](using-on-windows-full-solution.md)
-- [Esercitazione su NoSQL: Compilare un'applicazione console C# di DocumentDB in .Net Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: introduzione all'API SQL e a .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Compilazione di applicazioni con codice di Visual Studio
 

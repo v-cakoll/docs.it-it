@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -1033,7 +1033,7 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
         - **Uso di un prefisso del nome del gruppo di connessione**
 
-             Gli utenti possono specificare una stringa che WCF userà per ottenere un prefisso per il nome del gruppo di connessione. Due messaggi con prefissi diversi vengono inviati usando diverse connessioni HTTP sottostanti. Per impostare il prefisso, aggiungere una coppia chiave/valore alla proprietà <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> del messaggio. La chiave è "HttpTransportConnectionGroupNamePrefix", mentre il valore è il prefisso desiderato.
+             Gli utenti possono specificare una stringa che WCF userà come prefisso per il nome del gruppo di connessione. Due messaggi con prefissi diversi vengono inviati usando diverse connessioni HTTP sottostanti. Per impostare il prefisso, aggiungere una coppia chiave/valore alla proprietà <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> del messaggio. La chiave è "HttpTransportConnectionGroupNamePrefix", mentre il valore è il prefisso desiderato.
 
         - **Uso di channel factory diverse**
 
