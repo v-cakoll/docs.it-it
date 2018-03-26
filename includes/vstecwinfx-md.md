@@ -1,1 +1,1 @@
-<span data-ttu-id="804cc-101">WinFX</span><span class="sxs-lookup"><span data-stu-id="804cc-101">WinFX</span></span>
+<span data-ttu-id="24da4-101">WinFX</span><span class="sxs-lookup"><span data-stu-id="24da4-101">WinFX</span></span>

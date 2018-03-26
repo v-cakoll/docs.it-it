@@ -1,1 +1,1 @@
-<span data-ttu-id="8814c-101">Progettazione flussi di lavoro di Windows.</span><span class="sxs-lookup"><span data-stu-id="8814c-101">Windows Workflow Designer</span></span>
+<span data-ttu-id="6a7f6-101">Progettazione flussi di lavoro di Windows.</span><span class="sxs-lookup"><span data-stu-id="6a7f6-101">Windows Workflow Designer</span></span>

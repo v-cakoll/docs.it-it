@@ -1,1 +1,1 @@
-<span data-ttu-id="adba9-101">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="adba9-101">.NET Framework 4</span></span>
+<span data-ttu-id="b7db8-101">.NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="b7db8-101">.NET Framework 4</span></span>
