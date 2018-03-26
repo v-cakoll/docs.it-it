@@ -2,7 +2,8 @@
 title: Globalizzazione per WPF
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], international user interface
@@ -10,16 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono presentati i problemi da prendere in considerazione quando si scrive [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni per il mercato globale. Gli elementi di programmazione di globalizzazione sono definiti [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.  
@@ -28,7 +30,7 @@ In questo argomento vengono presentati i problemi da prendere in considerazione 
   
 <a name="xaml_globalization"></a>   
 ## <a name="xaml-globalization"></a>Globalizzazione XAML  
- [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)]si basa sul [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] e consente di sfruttare il supporto di globalizzazione definito nel [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] specifica. Nelle sezioni seguenti vengono descritte alcune [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] funzionalità che è necessario essere consapevoli di.  
+ [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)] basa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] e consente di sfruttare il supporto di globalizzazione definito nel [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] specifica. Nelle sezioni seguenti vengono descritte alcune [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] funzionalità che è necessario essere consapevoli di.  
   
 <a name="char_reference"></a>   
 ### <a name="character-references"></a>Riferimenti ai caratteri  
@@ -54,7 +56,7 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 <a name="lang_attrib"></a>   
 ### <a name="language-attribute"></a>Attributo Language  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Usa [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo language dell'elemento.  Per sfruttare il <xref:System.Globalization.CultureInfo> (classe), il valore dell'attributo lingua deve essere uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nell'albero di elementi (in base alle regole XML, non necessariamente a causa dell'ereditarietà della proprietà di dipendenza) e il valore predefinito è una stringa vuota se non viene assegnato in modo esplicito.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene utilizzato [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo language dell'elemento.  Per sfruttare il <xref:System.Globalization.CultureInfo> (classe), il valore dell'attributo lingua deve essere uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nell'albero di elementi (in base alle regole XML, non necessariamente a causa dell'ereditarietà della proprietà di dipendenza) e il valore predefinito è una stringa vuota se non viene assegnato in modo esplicito.  
   
  L'attributo language è molto utile per specificare i dialetti. Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera. Anche il cinese, giapponese e coreano condividere i punti di codice nella [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideografiche sono diverse e che utilizzano diversi tipi di carattere.  
   
@@ -66,7 +68,7 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 <a name="unicode"></a>   
 ### <a name="unicode"></a>Unicode  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]supporta tutti [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] funzionalità tra cui surrogati. Fino a quando il set di caratteri può essere mappato a [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], è supportato. GB18030, ad esempio, introduce alcuni caratteri con mapping all'estensione A e B per cinese, giapponese e coreano e le coppie di surrogati, quindi è completamente supportato. Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione può utilizzare <xref:System.Globalization.StringInfo> per modificare le stringhe senza capire se dispongono delle coppie di surrogati o combinazione di caratteri.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] supporta tutti [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] funzionalità tra cui surrogati. Fino a quando il set di caratteri può essere mappato a [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], è supportato. GB18030, ad esempio, introduce alcuni caratteri con mapping all'estensione A e B per cinese, giapponese e coreano e le coppie di surrogati, quindi è completamente supportato. Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione può utilizzare <xref:System.Globalization.StringInfo> per modificare le stringhe senza capire se dispongono delle coppie di surrogati o combinazione di caratteri.  
   
 <a name="design_intl_ui_with_xaml"></a>   
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Progettazione di un'interfaccia utente internazionale con XAML  
@@ -74,7 +76,7 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>Testo internazionale  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]include l'elaborazione predefinita per tutti i [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] sistemi di scrittura è supportata.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include l'elaborazione predefinita per tutti i [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] sistemi di scrittura è supportata.  
   
  Sono attualmente supportati gli script seguenti:  
   
@@ -132,11 +134,11 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 -   Singalese  
   
- Il sistema di scrittura motori supporto [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]tipi di carattere possono includere il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelle layout che consentono ai creatori di tipo di carattere progettare meglio ottimale caratteri tipografici internazionali e di fascia alta. Il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] carattere layout che contengono informazioni sulle sostituzioni, il posizionamento del glifo, giustificazione e sul posizionamento di base, consentendo alle applicazioni di elaborazione del testo migliorare il layout del testo.  
+ Il sistema di scrittura motori supporto [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] i tipi di carattere possono includere il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tabelle layout che consentono agli autori del tipo di carattere progettare meglio ottimale caratteri tipografici internazionali e di fascia alta. Il [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] carattere layout che contengono informazioni sulle sostituzioni, il posizionamento del glifo, giustificazione e sul posizionamento di base, consentendo alle applicazioni di elaborazione del testo migliorare il layout del testo.  
   
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]tipi di carattere consentono la gestione di grandi dimensioni glifo imposta utilizzando [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] codifica. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.  
+ [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] tipi di carattere consentono la gestione di grandi dimensioni glifo imposta utilizzando [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] codifica. Tale codifica consente un esteso supporto internazionale, oltre alle varianti dei glifi tipografici.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]il rendering del testo [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tecnologia pixel secondaria che supporta l'indipendenza dalla risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] il rendering del testo è alimentato dalle [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tecnologia pixel secondaria che supporta l'indipendenza dalla risoluzione. Questo migliora considerevolmente la leggibilità e consente di supportare documenti in stile rivista di qualità elevata per tutti gli script.  
   
 <a name="intl_layout"></a>   
 ### <a name="international-layout"></a>Layout internazionale  
@@ -152,16 +154,16 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 <a name="mui"></a>   
 ### <a name="multilingual-user-interface"></a>Interfaccia utente multilingue  
- Interfacce utente multilingue (MUI) è un [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] il supporto per il cambio [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] da una lingua a altra. Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza il modello di assembly per supportare l'interfaccia MUI. Un'applicazione contiene assembly indipendenti dalla lingua, ma anche assembly di risorse satellite dipendenti dalla lingua. Il punto di ingresso è un file EXE gestito nell'assembly principale.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]caricatore di risorse consente di sfruttare il [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]del gestore delle risorse per supportare la ricerca di risorse e del fallback. Gli assembly satellite di più lingue usano lo stesso assembly principale. Dipende da assembly di risorse che viene caricato il <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> del thread corrente.  
+ Interfacce utente multilingue (MUI) è un [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] il supporto per il cambio [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] da una lingua a altra. Oggetto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza il modello di assembly per supportare l'interfaccia MUI. Un'applicazione contiene assembly indipendenti dalla lingua, ma anche assembly di risorse satellite dipendenti dalla lingua. Il punto di ingresso è un file EXE gestito nell'assembly principale.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] caricatore di risorse consente di sfruttare il [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]del gestore delle risorse per supportare la ricerca di risorse e del fallback. Gli assembly satellite di più lingue usano lo stesso assembly principale. Dipende da assembly di risorse che viene caricato il <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> del thread corrente.  
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>Interfaccia utente localizzabile  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le applicazioni utilizzano [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per definire i relativi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consente agli sviluppatori di specificare una gerarchia di oggetti con un set di proprietà e una logica. L'utilizzo principale di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è necessario sviluppare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni ma può essere utilizzata per specificare una gerarchia di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetti. Maggior parte degli sviluppatori [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare le applicazioni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e usare un linguaggio di programmazione, ad esempio [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] per rispondere all'interazione dell'utente.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni utilizzano [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per definire i relativi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] consente agli sviluppatori di specificare una gerarchia di oggetti con un set di proprietà e una logica. L'utilizzo principale di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è necessario sviluppare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni ma può essere utilizzata per specificare una gerarchia di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] oggetti. Maggior parte degli sviluppatori [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare le applicazioni [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e usare un linguaggio di programmazione, ad esempio [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] per rispondere all'interazione dell'utente.  
   
  Dal punto di vista della risorsa, una [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file progettato per descrivere un dipendenti dalla lingua [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è un elemento di risorsa, pertanto il formato di distribuzione finale deve essere localizzabile per supportare lingue internazionali. Poiché [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] non può gestire eventi molti [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] applicazioni contengono blocchi di codice per eseguire questa operazione. Per ulteriori informazioni, vedere [Panoramica di XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Codice viene rimosso e compilato in diversi file binari quando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file è suddiviso in token nel modulo BAML di XAML. Il formato BAML dei file XAML, le immagini e altri tipi di oggetti risorsa gestita vengono incorporati nell'assembly di risorse satellite, che può essere localizzato in altre lingue, o nell'assembly principale quando la localizzazione non è necessaria.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]applicazioni supportano tutte le [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] risorse tra le tabelle di stringhe, immagini e così via.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni supportano tutte le [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] risorse tra le tabelle di stringhe, immagini e così via.  
   
 <a name="building_localizable_apps"></a>   
 ### <a name="building-localizable-applications"></a>Compilazione di applicazioni localizzabili  

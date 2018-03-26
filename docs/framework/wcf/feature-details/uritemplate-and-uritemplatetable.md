@@ -1,24 +1,26 @@
 ---
 title: UriTemplate e UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate e UriTemplateTable
 Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il layout degli URI a cui rispondono i loro servizi. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono state aggiunte due nuove classi per consentire agli sviluppatori di controllare gli URI. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> rappresentano in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gli elementi fondamentali del motore di invio basato su URI. Queste classi possono inoltre essere utilizzate autonomamente, in modo da consentire agli sviluppatori di sfruttare i modelli e il meccanismo di mapping degli URI senza dover implementare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -104,7 +106,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
   
 -   "casa/{stanza}?x={letto}&y=divano"  
   
--   "? x = {casa}"  
+-   "?x={shoe}"  
   
 -   "casa?x=3&y={var}  
   
@@ -140,7 +142,7 @@ Gli sviluppatori Web devono poter essere in grado di descrivere la forma e il la
 -   /{casa}{stanza}: le variabili devono essere separate da un valore letterale.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmenti di percorso composti e corrispondenti  
- I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "indirizzi / {state}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL quale "http://example.com/Washington.Redmond" ma corrisponderà anche un URL quale "http://example.com/Washington.Redmond.Microsoft". Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", inserire la variabile in un segmento di modello separato, ad esempio: "indirizzi / {regione} / {città}.  
+ I segmenti di percorso composti consentono di definire un UriTemplate che dispone di più variabili all'interno di un solo segmento di percorso. Ad esempio, nella stringa di modello seguente: "indirizzi / {state}. {Città} "due variabili (stato e città) sono definite all'interno del segmento stesso. Questo modello corrisponderebbe a un URL, ad esempio "http://example.com/Washington.Redmond"ma corrisponderà anche un URL, ad esempio"http://example.com/Washington.Redmond.Microsoft". Nel secondo caso, la variabile di stato conterrà "Washington" e la variabile della città conterrà "Redmond". In questo caso il qualsiasi testo (eccetto '/') corrisponderà alla variabile {city}. Se si desidera un modello che non corrisponderà al testo "extra", inserire la variabile in un segmento di modello separato, ad esempio: "indirizzi / {regione} / {città}.  
   
 ### <a name="named-wildcard-segments"></a>Segmenti con caratteri jolly con nome  
  Un segmento con carattere jolly con nome è un qualsiasi segmento variabile di percorso il cui nome di variabile inizia con il carattere jolly '*'. La stringa di modello seguente contiene un segmento con carattere jolly con nome denominato "casa".  

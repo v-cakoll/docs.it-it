@@ -1,24 +1,26 @@
 ---
 title: Scelta di un filtro
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.  
@@ -142,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Questo filtro è utile se si è certi che i messaggi in ricezione contengono un determinato valore. Se ad esempio si ospitano due versioni dello stesso servizio e si sa che messaggi indirizzati alla versione più recente del servizio contengono un valore univoco in un'intestazione personalizzata, è possibile creare un filtro che utilizza XPath per passare a questa intestazione e confrontare il valore presente nell'intestazione con un altro specificato nella configurazione del filtro per determinare le corrispondenze.  
   
- Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la tabella dello spazio dei nomi, vedere [filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la tabella dello spazio dei nomi, vedere [filtri dei messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]progettazione di query XPath, vedere [sintassi XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Progetta query XPath, vedere [sintassi XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  

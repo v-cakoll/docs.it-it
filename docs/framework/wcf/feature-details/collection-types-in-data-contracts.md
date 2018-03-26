@@ -1,12 +1,13 @@
 ---
 title: Tipi di raccolta nei contratti dati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -38,7 +40,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Nelle sezioni seguenti vengono descritti dettagliatamente gli ulteriori requisiti relativi ai tipi di raccolte, ad esempio la presenza di un metodo denominato `Add` e di un costruttore predefinito. La presenza di questi requisiti garantisce che i tipi di raccolta possano essere serializzati e deserializzati e implica inoltre che alcune raccolte non sono supportate direttamente, ad esempio l'oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generico (perché non dispone di un costruttore predefinito). Per informazioni su come evitare queste restrizioni, tuttavia, vedere la sezione "Utilizzo di tipi di interfacce di raccolta e raccolte di sola lettura" più avanti in questo argomento.  
   
- I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] distinzione tra raccolta valida e raccolta non valida, nonché sulla modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione delle raccolte nella sezione "Regole avanzate di inserimento in raccolte" di questo argomento.  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Tipo a cui viene fatto riferimento|Interfaccia implementata dal tipo a cui viene fatto riferimento|Esempio|Tipo trattato come|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Non generico o generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oppure<br /><br /> `MyType<T> : IDictionary` dove T=`int`|Generico chiuso `IDictionary<object,object>`|  
-|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>, chiuso|`MyType<T> : IDictionary<string, bool>`dove T =`int`|Generico chiuso (ad esempio `IDIctionary<string,bool>`)|  
-|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, la chiave o il valore è chiuso, l'altro è aperto e utilizza uno dei parametri del tipo|`MyType<T,U,V> : IDictionary<string,V>`dove T =`int`, U =`float`, V =`bool`<br /><br /> oppure<br /><br /> `MyType<Z> : IDictionary<Z,bool>`dove Z =`string`|Generico chiuso (ad esempio `IDictionary<string,bool>`)|  
+|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>, chiuso|`MyType<T> : IDictionary<string, bool>` dove T =`int`|Generico chiuso (ad esempio `IDIctionary<string,bool>`)|  
+|Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, la chiave o il valore è chiuso, l'altro è aperto e utilizza uno dei parametri del tipo|`MyType<T,U,V> : IDictionary<string,V>` dove T =`int`, U =`float`, V =`bool`<br /><br /> oppure<br /><br /> `MyType<Z> : IDictionary<Z,bool>` dove Z =`string`|Generico chiuso (ad esempio `IDictionary<string,bool>`)|  
 |Generico chiuso (qualsiasi numero di parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, chiave e valore sono aperti e ognuno utilizza uno dei parametri del tipo|`MyType<T,U,V> : IDictionary<V,U>` dove T=`int`, U=`bool`, V=`string`|Generico chiuso (ad esempio `IDictionary<string,bool>`)|  
 |Generico aperto (due parametri)|<xref:System.Collections.Generic.IDictionary%602>generico, aperto, utilizza entrambi i parametri generici del tipo nell'ordine in cui sono visualizzati.|`MyType<K,V> : IDictionary<K,V>`, K e V entrambi aperti|Generico aperto (ad esempio `IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Denominazione di raccolte  
  Di seguito vengono elencate le regole di denominazione delle raccolte:  
   
--   Lo spazio dei nomi predefinito per tutti i contratti dati delle raccolte di dizionario, nonché per contratti dati delle raccolte di elenco contenenti tipi primitivi, è http://schemas.microsoft.com/2003/10/Serialization/Arrays, a meno che non venga sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
+-   Spazio dei nomi predefinito per tutti i contratti di dati di raccolte di dizionario, nonché per contratti di dati raccolte di elenco contenenti tipi primitivi, http://schemas.microsoft.com/2003/10/Serialization/Arrays a meno che non sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
   
 -   Lo spazio dei nomi predefinito per tipi di raccolta che contengono tipi non primitivi corrisponde allo spazio dei nomi del contratto dati del tipo contenuto nella raccolta, a meno che non venga eseguito l'override utilizzando Namespace.  
   

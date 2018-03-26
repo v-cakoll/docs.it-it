@@ -1,24 +1,26 @@
 ---
 title: Migrazione da .NET Remoting a WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrazione da .NET Remoting a WCF
 In questo articolo viene descritto come eseguire la migrazione di un'applicazione che usa Servizi remoti .NET per l'uso di Windows Communication Foundation (WCF). Vengono confrontati concetti simili tra questi prodotti e quindi viene descritto come realizzare diversi scenari comuni di Servizi remoti .NET in WCF.  
@@ -34,7 +36,7 @@ In questo articolo viene descritto come eseguire la migrazione di un'applicazion
 |Operazioni di servizio|Metodi pubblici nel tipo di server|Contrassegno con l'attributo [OperationContract]|  
 |Serializzazione|ISerializable o [Serializable]|DataContractSerializer o XmlSerializer|  
 |Oggetti passati|In base al valore o in base al riferimento|Solo in base al valore|  
-|Errori/eccezioni|Qualsiasi eccezione serializzabile|FaultContract\<TDetail >|  
+|Errori/eccezioni|Qualsiasi eccezione serializzabile|FaultContract\<TDetail>|  
 |Oggetti proxy client|Proxy trasparenti fortemente tipizzati vengono creati automaticamente da MarshalByRefObjects|Proxy fortemente tipizzati vengono generati su richiesta usando ChannelFactory\<TChannel >|  
 |Piattaforma richiesta|Sia il client che il server devono usare un sistema operativo Microsoft e .NET|Multipiattaforma|  
 |Formato dei messaggi|Private|Standard di settore (SOAP, WS-* e così via)|  
@@ -174,7 +176,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
   
 -   *Per valore* : i valori dell'oggetto vengono serializzati attraverso i limiti del livello e viene creata una nuova istanza dell'oggetto su un altro livello. Tutte le chiamate a metodi o proprietà della nuova istanza sono in esecuzione solo in locale e non influiscono sull'oggetto o sul livello originale.  
   
--   *Per riferimento* : una speciale "riferimento all'oggetto" viene serializzata attraverso i limiti del livello. Quando un livello interagisce con metodi o proprietà di tale oggetto, comunica con l'oggetto originale nel livello originale. Il flusso degli oggetti in base al riferimento può avvenire in entrambe le direzioni: dal server al client o dal client al server.  
+-   *Per riferimento* – una speciale "riferimento all'oggetto" viene serializzata attraverso i limiti del livello. Quando un livello interagisce con metodi o proprietà di tale oggetto, comunica con l'oggetto originale nel livello originale. Il flusso degli oggetti in base al riferimento può avvenire in entrambe le direzioni: dal server al client o dal client al server.  
   
  I tipi in base al valore in Servizi remoti .NET sono contrassegnati con l'attributo [Serializable] o implementano ISerializable, come nell'esempio seguente:  
   
@@ -297,7 +299,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   [Sicurezza](./feature-details/security.md)  
   
--   [Informazioni aggiuntive sulla sicurezza WCF](./feature-details/security-guidance-and-best-practices.md)  
+-   [Materiale sussidiario sulla sicurezza WCF](./feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="migrating-to-wcf"></a>Migrazione a WCF  
   

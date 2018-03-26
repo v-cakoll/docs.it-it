@@ -1,24 +1,26 @@
 ---
 title: 'Procedura: recuperare metadati e implementare un servizio conforme'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedura: recuperare metadati e implementare un servizio conforme
 Spesso i servizi non vengono progettati e implementati dalla stessa persona. Negli ambienti dove le applicazioni interoperative svolgono un ruolo importante, i contratti possono essere progettati o descritti in WSDL (Web Services Description Language) e uno sviluppatore deve implementare un servizio che sia conforme al contratto fornito. In alcuni casi può essere necessario eseguire la migrazione di un servizio esistente a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mantenendo tuttavia il formato di trasmissione. I contratti duplex richiedono inoltre ai chiamanti di implementare anche un contratto di callback.  

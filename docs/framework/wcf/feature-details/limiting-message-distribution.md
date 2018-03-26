@@ -1,24 +1,26 @@
 ---
 title: Limitazione della distribuzione di messaggi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>Limitazione della distribuzione di messaggi
 In base alla progettazione, il canale peer è una rete di trasmissione. Il relativo modello di flooding di base prevede la distribuzione di ogni messaggio inviato da qualsiasi membro di una rete a tutti gli altri membri di quella stessa rete. Questa soluzione è ideale nelle situazioni in cui tutti i messaggi generati da un membro sono attinenti e utili a tutti gli altri membri, ad esempio in una chat. Tuttavia, molte applicazioni hanno occasionalmente la necessità di limitare la distribuzione dei messaggi. Ad esempio, se un nuovo membro si aggiunge a una rete e desidera recuperare l'ultimo messaggio inviato attraverso di essa, non è necessario che questa richiesta venga propagata a ogni membro della rete. È possibile limitare la richiesta ai router adiacenti oppure applicare un filtro ai messaggi generati in locale. I messaggi possono anche essere inviati a un singolo nodo della rete. In questo argomento viene illustrato come utilizzare il conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta per controllare il modo in cui i messaggi vengono inoltrati attraverso la rete. Vengono inoltre fornite linee guida generali per la scelta dell'approccio più appropriato.  
@@ -28,14 +30,14 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
   
  Il conteggio hop può essere inserito in un messaggio aggiungendo `PeerHopCount` come attributo alla proprietà o al campo pertinente nell'implementazione della classe del messaggio. È possibile impostarlo su un valore specifico prima di inviare il messaggio nella rete. Il conteggio hop consente quindi di limitare la distribuzione dei messaggi nella rete in caso di necessità, evitando potenzialmente la duplicazione non necessaria dei messaggi. Ciò si rivela utile nei casi in cui la rete contiene una quantità elevata di dati ridondanti oppure per l'invio di un messaggio a router immediatamente adiacenti o all'interno di un numero ridotto di hop.  
   
--   Per frammenti di codice e informazioni correlate, vedere il [blog del canale Peer](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
+-   Per frammenti di codice e informazioni correlate, vedere la [blog del canale Peer](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>Filtro di propagazione dei messaggi  
  `MessagePropagationFilter` può essere utilizzato per il controllo personalizzato del flood di messaggi, in particolare quando il contenuto del messaggio o altri scenari specifici determinano una propagazione. Il filtro è responsabile delle decisioni sulla propagazione di ogni messaggio che passa attraverso il nodo. Questa situazione si verifica sia per i messaggi creati in altri punti della rete e ricevuti dal nodo sia per i messaggi creati dall'applicazione. Il filtro accede sia al messaggio che alla sua origine, pertanto le decisioni relative all'inoltro o all'eliminazione del messaggio possono basarsi sulle informazioni complete disponibili.  
   
  <xref:System.ServiceModel.PeerMessagePropagationFilter> è una classe astratta di base con una sola funzione, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Il primo argomento della chiamata al metodo passa una copia completa del messaggio. Qualsiasi modifica apportata al messaggio non influisce sul messaggio effettivo. L'ultimo argomento della chiamata al metodo identifica l'origine del messaggio (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Le implementazioni concrete di questo metodo devono restituire una costante dall'enumerazione <xref:System.ServiceModel.PeerMessagePropagation> che indica che il messaggio deve essere inoltrato all'applicazione locale (`Local`), a client remoti (`Remote`), a entrambi (`LocalAndRemote`) o a nessuna delle parti (`None`). È possibile applicare questo filtro accedendo all'oggetto `PeerNode` corrispondente e specificando un'istanza della classe del filtro di propagazione derivata nella proprietà `PeerNode.MessagePropagationFilter`. Assicurarsi che il filtro di propagazione sia collegato prima di aprire il canale peer.  
   
--   Per frammenti di codice e informazioni correlate, vedere il [blog del canale Peer](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
+-   Per frammenti di codice e informazioni correlate, vedere la [blog del canale Peer](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
   
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>Contatto di un singolo nodo nella rete  
  È possibile contattare un singolo nodo in una rete configurando un filtro locale o una connessione diretta.  
@@ -47,23 +49,23 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
 ## <a name="choosing-an-approach-for-limiting-message-distribution"></a>Scelta di un approccio per limitare la distribuzione di messaggi  
  Quando si rileva uno scenario in cui è necessario limitare la distribuzione di messaggi, è opportuno porsi le seguenti domande:  
   
--   **Che** deve ricevere il messaggio? Solo un nodo adiacente? Un nodo in un'altra posizione della rete? Metà della rete?  
+-   **Chi** deve ricevere il messaggio? Solo un nodo adiacente? Un nodo in un'altra posizione della rete? Metà della rete?  
   
--   **La frequenza con cui** verrà inviato questo messaggio?  
+-   **Frequenza** verrà inviato il messaggio?  
   
 -   Il tipo di **della larghezza di banda** utilizzerà questo messaggio?  
   
  Le risposte a queste domande possono essere utili per stabilire se utilizzare un conteggio hop, un filtro di propagazione dei messaggi, un filtro locale o una connessione diretta. Si considerino le seguenti linee guida generali:  
   
--   **Che**  
+-   **Who**  
   
     -   *Singolo nodo*: filtro locale o connessione diretta.  
   
-    -   *All'interno di una determinata distanza*: PeerHopCount.  
+    -   *Router adiacenti entro una determinata*: PeerHopCount.  
   
     -   *Sottoinsieme complesso della mesh*: MessagePropagationFilter.  
   
--   **La frequenza con cui**  
+-   **Frequenza**  
   
     -   *Molto frequenti*: connessione diretta, PeerHopCount, MessagePropagationFilter.  
   
@@ -73,7 +75,7 @@ In base alla progettazione, il canale peer è una rete di trasmissione. Il relat
   
     -   *Elevata*: connessione diretta, meno consigliabile l'utilizzo di MessagePropagationFilter o filtro locale.  
   
-    -   *Bassa*:, qualsiasi connessione diretta probabilmente non è necessaria.  
+    -   *Bassa*: qualsiasi, connessione diretta probabilmente non necessari.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

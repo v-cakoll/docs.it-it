@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creazione di un microservizio CRUD semplice basato sui dati
 
@@ -217,10 +217,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Esecuzione di query su dati**
+-   **Eseguire query sui dati**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
--   **Salvataggio di dati**
+-   **Il salvataggio dei dati**
     [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Stringa di connessione di database e variabili di ambiente usate dai contenitori Docker
@@ -293,13 +293,13 @@ Questo meccanismo di controllo delle versioni è semplice e dipende dal server c
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Semplificazione del controllo delle versioni dell'API Web RESTful ASP.NET Core)**
+-   **Scott Hanselman. Controllo delle versioni Web RESTful API ASP.NET Core da rendere più semplice**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Controllo delle versioni di un'API Web RESTful**
+-   **Controllo delle versioni di un'API web RESTful**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)**
+-   **Roy Fielding. Controllo delle versioni, Hypermedia e REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generazione dei metadati delle descrizioni Swagger dall'API Web ASP.NET Core 
@@ -310,7 +310,7 @@ L'elemento centrale di Swagger è la specifica Swagger, costituita dai metadati 
 
 La specifica è la base della specifica OpenAPI (OAS) ed è sviluppata in una community aperta, trasparente e collaborativa allo scopo di standardizzare le modalità di definizione delle interfacce RESTful.
 
-La specifica definisce la struttura in base alla quale è possibile individuare un servizio e riconoscerne le funzionalità. Per altre informazioni, incluso un editor Web ed esempi di specifiche Swagger rese disponibili da società quali Spotify, Uber, Slack e Microsoft, visitare il sito di Swagger (<http://swagger.io>).
+La specifica definisce la struttura in base alla quale è possibile individuare un servizio e riconoscerne le funzionalità. Per altre informazioni, ad esempio un editor di web e gli esempi di specifiche di Swagger di società, ad esempio sorprendere da Spotify, Uber, flessibilità e Microsoft, visitare il sito Swagger (<http://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Perché usare Swagger?
 
@@ -415,7 +415,7 @@ Nella Figura 8-10 sono illustrati i metadati JSON di Swagger generati dal micros
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Pagine della Guida dell'API Web ASP.NET Core con Swagger**
+-   **ASP.NET Web API Guida pagine utilizzando Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

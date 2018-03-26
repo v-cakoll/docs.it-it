@@ -1,24 +1,26 @@
 ---
 title: Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] include un'opzione della modalità compatibilità ASP.NET che consente alle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di essere programmate e configurate come servizi Web ASP.NET e riprodurne il comportamento. Nelle sezioni seguenti viene eseguito un confronto tra servizi Web ASP.NET e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basato sugli elementi necessari per lo sviluppo di applicazioni usando entrambe le tecnologie.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  Questo esempio mostra in che modo vengono specificati gli indirizzi per uno o più protocolli di trasporto nella costruzione di una classe <xref:System.ServiceModel.ServiceHost>. Questi indirizzi sono detti indirizzi di base.  
   
- L'indirizzo fornito per un endpoint di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è un indirizzo relativo di un indirizzo di base dell'host dell'endpoint. L'host può avere un indirizzo di base per ogni protocollo di trasporto della comunicazione. Nella configurazione di esempio nel file di configurazione precedente, il costruttore <xref:System.ServiceModel.BasicHttpBinding> selezionato per l'endpoint usa HTTP come protocollo di trasporto. L'indirizzo dell'endpoint, `EchoService` è quindi relativo all'indirizzo di base HTTP dell'host. Nel caso dell'host dell'esempio precedente, l'indirizzo di base HTTP è http://www.contoso.com: 8000/. Nel caso di un servizio ospitato in IIS o WAS, l'indirizzo di base è l'URL del file del servizio.  
+ L'indirizzo fornito per un endpoint di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è un indirizzo relativo di un indirizzo di base dell'host dell'endpoint. L'host può avere un indirizzo di base per ogni protocollo di trasporto della comunicazione. Nella configurazione di esempio nel file di configurazione precedente, il costruttore <xref:System.ServiceModel.BasicHttpBinding> selezionato per l'endpoint usa HTTP come protocollo di trasporto. L'indirizzo dell'endpoint, `EchoService` è quindi relativo all'indirizzo di base HTTP dell'host. Nel caso dell'host dell'esempio precedente, l'indirizzo di base HTTP è http://www.contoso.com:8000/. Nel caso di un servizio ospitato in IIS o WAS, l'indirizzo di base è l'URL del file del servizio.  
   
  Soltanto ai servizi ospitati in IIS o WAS e che sono configurati in modo esclusivo con HTTP come protocollo di trasporto può essere consentito di usare l'opzione della modalità di compatibilità ASP.NET di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per attivare questa opzione è necessario eseguire i passaggi seguenti.  
   

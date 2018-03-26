@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Progettazione del livello di persistenza dell'infrastruttura
 
@@ -138,30 +138,30 @@ Nelle sezioni successive, viene illustrato come implementare lo schema Specifica
 
 ### <a name="the-repository-pattern"></a>Schema repository
 
--   **Edward Hieatt and Rob Mee. Repository pattern.**
+-   **Edward Hieatt and Rob Mee. Modello di repository.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **Schema Repository**
+-   **Il modello di Repository**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction**
+-   **Modello di repository: Un'astrazione dei dati persistenza**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro. Include una discussione sullo schema Repository) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Una cartella di lavoro, inclusa una descrizione del modello di Repository) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Schema Unit of Work
 
--   **Martin Fowler. Unit of Work pattern.**
+-   **Martin Fowler. Unità di modello di lavoro.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementazione dei schemi Repository e Unit of Work in un'applicazione MVC ASP.NET)**
+-   **Implementazione dei modelli con repository e unità di lavoro in un'applicazione ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Schema Specification
 
--   **The Specification pattern (Schema Specification)**
+-   **Il modello specifica.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design. Addison-Wesley. p. 224.**

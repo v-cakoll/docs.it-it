@@ -1,12 +1,13 @@
 ---
 title: Sintassi di markup del percorso
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Sintassi di markup del percorso
 Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini linguaggio consente di specificare percorso in modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Mini linguaggi StreamGeometry e PathFigureCollection  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sono disponibili due classi che forniscono mini lingue per la descrizione di percorsi geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono disponibili due classi che forniscono mini-lingue per la descrizione percorsi geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Utilizzare il <xref:System.Windows.Media.StreamGeometry> lingue ridotto durante l'impostazione di una proprietà di tipo <xref:System.Windows.Media.Geometry>, ad esempio il <xref:System.Windows.UIElement.Clip%2A> proprietà di un <xref:System.Windows.UIElement> o <xref:System.Windows.Shapes.Path.Data%2A> proprietà di un <xref:System.Windows.Shapes.Path> elemento. L'esempio seguente usa la sintassi degli attributi per creare un <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
   
 |Utilizzo degli attributi XAML StreamGeometry|  
 |-----------------------------------------|  
-|`<`*oggetto* *proprietà* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.PathFigureCollection> è costituito da uno o più descrizioni di figure.  
   
 |Utilizzo degli attributi XAML PathFigureCollection|  
 |-----------------------------------------------|  
-|`<`*oggetto* *proprietà* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Termine|Descrizione|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza il <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1`Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il sottopercorso utilizza il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza il <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il sottopercorso utilizza il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
 |*figureDescription*|Figura costituita da un comando di spostamento, da alcuni comandi di disegno e da un comando di chiusura facoltativo.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Comando di spostamento che specifica il punto iniziale della figura. Vedere il [comando Sposta](#themovecommand) sezione.|  
 |*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere il [comandi Draw](#drawcommands) sezione.|  
@@ -95,7 +97,7 @@ Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../
  Per inserire ciascun comando, usare una lettera maiuscola o una lettera minuscola: le lettere maiuscole indicano valori assoluti, quelle minuscole valori relativi. I punti di controllo del segmento specificato si riferiscono al punto finale dell'esempio precedente. Quando si immette in sequenza più comandi dello stesso tipo, è possibile omettere la voce di comando duplicato. ad esempio, `L 100,200 300,400` equivale a `L 100,200 L 300,400`. Nella tabella seguente vengono descritti il **spostare** e **disegnare** comandi.  
   
 ### <a name="line-command"></a>Comando Line  
- Crea una linea retta tra il punto corrente e il punto finale specificato. `l 20 30`e `L 20,30` sono esempi di valido **riga** comandi.  
+ Crea una linea retta tra il punto corrente e il punto finale specificato. `l 20 30` e `L 20,30` sono esempi di valido **riga** comandi.  
   
 |Sintassi|  
 |------------|  

@@ -1,12 +1,13 @@
 ---
 title: Associazioni e protezione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>Associazioni e protezione
 Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offrono un modo rapido per programmare applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Tutte le associazioni, tranne una, dispongono di uno schema di sicurezza predefinito attivo. In questo argomento viene illustrato come selezionare l'associazione corretta per la sicurezza desiderata.  
   
- Per una panoramica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzano associazioni, vedere [programmazione sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Per una panoramica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uso di associazioni, vedere [programmazione sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Se è già stata selezionata un'associazione, è possibile trovare ulteriori informazioni sui comportamenti in fase di esecuzione associati di sicurezza in [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Alcune funzionalità di sicurezza non sono programmabili tramite le associazioni fornite dal sistema. Per un maggiore controllo utilizzando un'associazione personalizzata, vedere [funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funzionalità di sicurezza delle associazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle necessità. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco di associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include numerose associazioni fornite dal sistema che soddisfano la maggior parte delle necessità. È inoltre possibile creare un'associazione personalizzata se una determinata associazione non è sufficiente. Per un elenco di associazioni fornite dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Ogni associazione in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si presenta in due forme: come API e come elemento XML utilizzato in un file di configurazione. Ad esempio, il `WSHttpBinding` (API) ha una controparte nel [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
@@ -50,11 +52,11 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
 -   Applicazioni Web Service Enhancements (WSE).  
   
--   Profilo di base come definito in Web Services Interoperability (WS-I) specifica ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Basic profilo in base a quanto definito in Web Services Interoperability (WS-I) specifica ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).  
   
 -   Basic Security Profile come definito in WS-I.  
   
- Per impostazione predefinita, questa associazione non è protetta. È progettata per interagire con i servizi ASMX. Quando la sicurezza è attivata, l'associazione è progettata per l'interazione con meccanismi di sicurezza di Internet Information Services (IIS), ad esempio l'autenticazione di base, digest e la sicurezza di Windows integrata. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cenni preliminari sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Questa associazione supporta:  
+ Per impostazione predefinita, questa associazione non è protetta. È progettata per interagire con i servizi ASMX. Quando la sicurezza è attivata, l'associazione è progettata per l'interazione con meccanismi di sicurezza di Internet Information Services (IIS), ad esempio l'autenticazione di base, digest e la sicurezza di Windows integrata. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Cenni preliminari sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Questa associazione supporta:  
   
 -   Sicurezza del trasporto HTTPS.  
   
@@ -100,7 +102,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
     -   Fornitura di credenziali del servizio negoziate dal servizio come parte della configurazione del canale.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity> e <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> e <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  Nel codice, utilizzare il <xref:System.ServiceModel.NetTcpBinding> classe; in configurazione, utilizzare il [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -155,7 +157,7 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
 -   Sicurezza del trasporto MSMQ (Transport).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity> e <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> e <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Nel codice, utilizzare il <xref:System.ServiceModel.NetMsmqBinding> classe; in configurazione, utilizzare il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -176,17 +178,17 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
   
  La credenziale <xref:System.ServiceModel.MessageCredentialType.Certificate> è supportata solo quando la modalità di sicurezza è impostata su <xref:System.ServiceModel.NetMsmqSecurityMode.Both> o su <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq> e <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> e <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Nel codice, utilizzare il <xref:System.ServiceModel.WSFederationHttpBinding> classe; in configurazione, utilizzare il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Per impostazione predefinita, questa associazione utilizza WS-Security (sicurezza a livello di messaggio).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, e <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federazione](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, e <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Associazioni personalizzate  
- Se i requisiti non vengono soddisfatti da alcuna associazione fornita dal sistema, è possibile creare un'associazione personalizzata con un elemento di associazione di sicurezza personalizzato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Se i requisiti non vengono soddisfatti da alcuna associazione fornita dal sistema, è possibile creare un'associazione personalizzata con un elemento di associazione di sicurezza personalizzato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Scelte di associazioni  
  Nella tabella seguente vengono riepilogate le funzionalità offerte nell'impostazione della modalità di sicurezza, ovvero vengono elencate le funzionalità disponibili quando la modalità di sicurezza è impostata su `Transport`, `Message` o `TransportWithMessageCredential`. L'utilizzo di questa tabella consente di trovare le funzionalità di sicurezza più appropriate per l'applicazione.  
@@ -216,19 +218,19 @@ Le associazioni fornite dal sistema incluse in [!INCLUDE[indigo1](../../../../in
 |Tipo|Descrizione|  
 |----------|-----------------|  
 |None|Specifica che il client non deve presentare alcuna credenziale. Il client viene pertanto autenticato come anonimo.|  
-|Basic|Autenticazione di base. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic e autenticazione del Digest, disponibile all'indirizzo [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Autenticazione digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic e autenticazione del Digest, disponibile all'indirizzo [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Autenticazione di base. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Autenticazione digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP Authentication: Basic and Digest Authentication, disponibile all'indirizzo [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Autenticazione NT LAN Manager (NTLM).|  
 |WINDOWS|Autenticazione Windows.|  
 |Certificato|Autenticazione eseguita mediante un certificato.|  
-|IssuedToken|Consente al servizio di richiedere l'autenticazione del client tramite un token emesso da un servizio token di sicurezza o da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Consente al servizio di richiedere l'autenticazione del client tramite un token emesso da un servizio token di sicurezza o da [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Credenziali client dei messaggi nelle associazioni  
  Nella tabella seguente vengono elencati i tipi di credenziali client disponibili quando si utilizza un'associazione nella modalità di sicurezza dei messaggi.  
   
 |Tipo|Descrizione|  
 |----------|-----------------|  
-|nessuno|Consente al servizio di interagire con client anonimi.|  
+|Nessuno|Consente al servizio di interagire con client anonimi.|  
 |WINDOWS|Consente gli scambi di messaggi SOAP nel contesto autenticato di una credenziale di Windows.|  
 |UserName|Consente al servizio di richiedere che l'autenticazione del client sia eseguita tramite una credenziale UserName. Si noti che quando la modalità di sicurezza è impostata su `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'invio di un digest delle password, né la derivazione delle chiavi basata su password e neppure l'utilizzo di tali chiavi per implementare la modalità di sicurezza dei messaggi. Di conseguenza, quando si utilizzano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il trasporto sia protetto.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  

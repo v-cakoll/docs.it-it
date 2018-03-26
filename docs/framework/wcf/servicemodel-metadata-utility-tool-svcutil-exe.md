@@ -25,7 +25,7 @@ ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il codice del modello di servizi da documenti di metadati e documenti di metadati dal codice di modello di servizi.  

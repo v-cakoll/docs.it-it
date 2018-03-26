@@ -1,27 +1,29 @@
 ---
 title: Supporto di memorizzazione nella cache per servizi HTTP Web WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Supporto di memorizzazione nella cache per servizi HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET la memorizzazione nella cache, vedere [Cenni preliminari sulla memorizzazione nella cache di ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Consente di utilizzare il meccanismo dichiarativo di memorizzazione nella cache già disponibile in ASP.NET nei servizi HTTP Web WCF. In questo modo è possibile memorizzare nella cache le risposte inviate dalle operazioni del servizio HTTP Web WCF. Se un utente invia un'operazione HTTP GET al servizio configurato per la memorizzazione nella cache, ASP.NET restituisce la risposta memorizzata nella cache e il metodo del servizio non viene chiamato. Se la cache scade, al successivo tentativo di invio di un'operazione HTTP GET da parte dell'utente, viene chiamato il metodo del servizio e la risposta viene nuovamente memorizzata nella cache. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET la memorizzazione nella cache, vedere [Cenni preliminari sulla memorizzazione nella cache di ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Memorizzazione nella cache del servizio HTTP Web di base  
  Per abilitare la memorizzazione nella cache del servizio HTTP WEB, è innanzitutto necessario abilitare la compatibilità ASP.NET applicando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> al servizio, impostando <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> su <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -133,7 +135,7 @@ public class Service
  In questo caso la durata della cache è impostata su 60 secondi, `varyByParam` è impostato su none e `sqlDependency` è impostato su un elenco con valori delimitati da punti e virgola di coppie di nomi/tabelle del database separate dai due punti. Se i dati in `MyTable` vengono modificati, la risposta memorizzata nella cache per l'operazione del servizio viene rimossa e, se si richiama l'operazione, una nuova risposta viene generata, memorizzata nella cache e restituita al client.  
   
 > [!IMPORTANT]
->  Per accedere a un database SQL con ASP.NET, è necessario usare il [strumento di registrazione di SQL Server ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152536). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Accesso a SQL Server da un'applicazione Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Per accedere a un database SQL con ASP.NET, è necessario usare il [strumento di registrazione di SQL Server ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152536). È inoltre necessario consentire l'accesso dell'account utente appropriato al database e alla tabella. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Accesso a SQL Server da un'applicazione Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Memorizzazione nella cache basata su HTTP GET condizionale  
  In scenari HTTP Web HTTP GET condizionale viene spesso utilizzato dai servizi per implementare la memorizzazione nella cache di intelligente HTTP come descritto nella [specifica HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). A tale scopo, il servizio deve impostare il valore dell'intestazione ETag nella risposta HTTP. Deve inoltre verificare l'intestazione If-None-Match nella richiesta HTTP per controllare se una o più delle intestazioni ETag specificate corrisponde all'intestazione ETag corrente.  

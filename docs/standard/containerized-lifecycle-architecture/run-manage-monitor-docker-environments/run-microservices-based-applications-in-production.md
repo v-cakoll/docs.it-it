@@ -9,10 +9,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Eseguire applicazioni basate su microservizi composte e negli ambienti di produzione
 
@@ -24,11 +24,11 @@ Applicazioni composte da più microservizi devono essere distribuiti in cluster 
 
 Quando le applicazioni vengono scalate orizzontalmente tra più sistemi host, la possibilità di gestire ogni sistema host e astrarre la complessità della piattaforma sottostante diventa interessante. Che è esattamente cosa fornisce orchestrators e utilità di pianificazione. Diamo un'occhiata breve qui:
 
--   **Utilità di pianificazione*** *"Pianificazione" si intende la possibilità che un amministratore di caricare un file di servizio in un sistema host che definisce le modalità di esecuzione di un contenitore specifico. Avvio di contenitori in un cluster di Docker tende a essere noto come pianificazione. Sebbene la pianificazione si riferisce all'atto specifico di caricare la definizione del servizio, nel senso più generale, le utilità di pianificazione sono responsabili per l'associazione nel sistema init un host per gestire i servizi in qualsiasi capacità necessita.
+-   **Utilità di pianificazione * * * *"Pianificazione" si intende la possibilità per un amministratore caricare un file del servizio in un sistema host che consente di stabilire come eseguire un contenitore specifico. Avvio di contenitori in un cluster di Docker tende a essere noto come pianificazione. Sebbene la pianificazione si riferisce all'atto specifico di caricare la definizione del servizio, nel senso più generale, le utilità di pianificazione sono responsabili per l'associazione nel sistema init un host per gestire i servizi in qualsiasi capacità necessita.
 
 Un'utilità di pianificazione di cluster con più obiettivi: utilizzando in modo efficiente le risorse del cluster, l'utilizzo di vincoli di posizionamento fornito dall'utente, la programmazione di applicazioni rapidamente lasciarli non in uno stato in sospeso, con una certa "equità", viene affidabile agli errori, e essere sempre disponibile.
 
--   **Orchestrazione*** *piattaforme estendono la funzionalità di gestione del ciclo di vita a carichi di lavoro complessi e multicontainer distribuite in un cluster di host. : L'infrastruttura host, utilizzando strumenti di orchestrazione consentire agli utenti di gestire l'intero cluster come destinazione una singola distribuzione.
+-   **Orchestrazione * * * *piattaforme estendono le funzionalità di gestione del ciclo di vita a carichi di lavoro complessi e multicontainer distribuite in un cluster di host. : L'infrastruttura host, utilizzando strumenti di orchestrazione consentire agli utenti di gestire l'intero cluster come destinazione una singola distribuzione.
 
 Il processo di orchestrazione implica strumenti e una piattaforma in grado di automatizzare tutti gli aspetti della gestione delle applicazioni dalla posizione iniziale o di distribuzione per ogni contenitore. lo spostamento di contenitori in host diversi a seconda dell'host o per l'integrità delle prestazioni. controllo delle versioni e in sequenza gli aggiornamenti e le funzioni che supportano il ridimensionamento e il failover; monitoraggio dello stato e molto altro ancora.
 

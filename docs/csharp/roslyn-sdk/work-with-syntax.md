@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Utilizzare la sintassi
 
@@ -69,7 +69,7 @@ A differenza dei nodi e dei token di sintassi, per gli elementi semplici della s
 
 Ogni nodo, token o elemento semplice conosce la propria posizione all'interno del testo di origine e il numero di caratteri di cui è costituito. Una posizione del testo è rappresentata come intero a 32 bit, ovvero un indice `char` in base zero. Un oggetto <xref:Microsoft.CodeAnalysis.Text.TextSpan> rappresenta la posizione di inizio e il conteggio di caratteri, entrambi rappresentati come valori integer. Se <xref:Microsoft.CodeAnalysis.Text.TextSpan> ha lunghezza zero, fa riferimento a una posizione tra due caratteri.
 
-Per ogni nodo sono disponibili due proprietà <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Ogni nodo dispone di due <xref:Microsoft.CodeAnalysis.Text.TextSpan> proprietà: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> corrisponde all'intervallo di testo dall'inizio del primo token nel sottoalbero del nodo alla fine dell'ultimo token. Questo intervallo non include alcun elemento semplice iniziale o finale.
 
@@ -89,7 +89,7 @@ Il nodo dell'istruzione all'interno del blocco ha un intervallo indicato da sing
 
 ## <a name="kinds"></a>Tipi
 
-Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente tramite l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente mediante l'accesso di <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> i metodi di estensione.
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> consente di risolvere facilmente eventuali ambiguità per i tipi di nodi della sintassi che condividono la stessa classe di nodo. Per i token e gli elementi semplici, questa proprietà è l'unico modo per distinguere un tipo di elemento da un alto. 
 

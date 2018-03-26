@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Convalida lato client (convalida nei livelli di presentazione)
 
@@ -35,10 +35,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Convalida nelle app per dispositivi mobili in Xamarin
 
--   **Validate Text Input and Show Errors (Convalidare gli input di testo e visualizzare gli errori)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Convalidare l'Input di testo e Mostra messaggi di errore**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controlli/testo\_campo/convalidare\_input /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (Callback di convalida)**
+-   **Callback di convalida**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Convalida nelle app ASP.NET Core
@@ -48,10 +48,10 @@ L'implementazione della convalida del lato client dipende dalla tipologia di app
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Convalida nelle app Web a pagina singola (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Convalida dei moduli in Angular 2)** **
+-   **Ado Kukic. Convalida del Form 2 Angular** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (Convalida dei moduli)**
+-   **Convalida del form**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Convalida.** Documentazione per Breeze.

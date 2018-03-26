@@ -1,6 +1,6 @@
 ---
-title: "Definizione dell'applicazione a più contenitori con docker-compose.yml"
-description: "Architettura di microservizi .NET per le applicazioni nei contenitori .NET | Definizione dell'applicazione a più contenitori con docker-compose.yml"
+title: Definizione dell'applicazione a più contenitori con docker-compose.yml
+description: Architettura di microservizi .NET per le applicazioni nei contenitori .NET | Definizione dell'applicazione a più contenitori con docker-compose.yml
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml 
 
@@ -434,11 +434,11 @@ Si noti che i valori impostati nell'ambiente di runtime eseguono sempre l'overri
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Overview of Docker Compose (Panoramica di Docker Compose)**
+-   **Panoramica di Docker comporre**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Multiple Compose files (Più file Compose)**
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **Più file Compose**
+    [*https://docs.docker.com/compose/extends/\#più comporre-file-*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Creazione di immagini Docker ottimizzate con ASP.NET Core
 
@@ -468,7 +468,7 @@ Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un 
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Building Optimized Docker Images with ASP.NET Core (Creazione di immagini Docker ottimizzate con ASP.NET Core)**
+-   **Creazione di immagini di Docker con ASP.NET Core ottimizzate**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Compilazione dell'applicazione da un contenitore (CI) di compilazione
@@ -549,8 +549,8 @@ La conclusione generale è che è possibile compilare l'applicazione allo stesso
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Building bits from a container: Setting the eShopOnContainers solution up in a Windows CLI environment (dotnet CLI, Docker CLI and VS Code) (Compilazione di bit da un contenitore: Configurazione della soluzione eShopOnContainers in un ambiente con interfaccia della riga di comando di Windows - di dotnet, di Docker e Visual Studio Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Compilazione di bits da un contenitore: impostazione della soluzione eShopOnContainers in un ambiente Windows CLI (dotnet CLI, Docker CLI e il codice di Visual Studio)**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- e -VS-codice)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

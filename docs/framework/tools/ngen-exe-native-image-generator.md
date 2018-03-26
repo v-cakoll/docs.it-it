@@ -1,12 +1,13 @@
 ---
 title: Ngen.exe (generatore di immagini native)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: "57"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
 Il generatore di immagini native (Ngen.exe) consente di migliorare le prestazioni delle applicazioni gestite. Questo strumento crea immagini native, ovvero file contenenti codice macchina compilato specifico del processore, e le installa nella cache delle immagini native del computer locale. Il runtime può usare le immagini native della cache anziché il compilatore Just-In-Time (JIT) per compilare l'assembly originale.  
@@ -529,8 +531,8 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
 |Nome attività|Computer a 32 bit|Computer a 64 bit|  
 |---------------|----------------------|----------------------|  
-|NET Framework NGEN v4.0.30319|Yes|Yes|  
-|NET Framework NGEN v4.0.30319 64|No|Yes|  
+|NET Framework NGEN v4.0.30319|Sì|Sì|  
+|NET Framework NGEN v4.0.30319 64|No|Sì|  
   
  L'attività di immagine nativa è disponibile in .NET Framework 4.5 e versioni successive quando eseguita in Windows 8 o versioni successive. Nelle versioni precedenti di Windows .NET Framework usa il [Servizio immagini native][Native Image Service].  
   

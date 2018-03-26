@@ -2,7 +2,8 @@
 title: 'Procedura: ospitare ed eseguire un servizio Windows Communication Foundation di base'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,12 +15,13 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedura: ospitare ed eseguire un servizio Windows Communication Foundation di base
 Questa è la terza delle sei attività necessarie per creare un'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Per una panoramica di tutte e sei le attività, vedere il [esercitazione introduttiva](../../../docs/framework/wcf/getting-started-tutorial.md) argomento.  
@@ -164,7 +166,7 @@ Questa è la terza delle sei attività necessarie per creare un'applicazione [!I
   
     4.  Passaggio 4: viene abilitato lo scambio di metadati. I client utilizzeranno lo scambio di metadati per generare i proxy che saranno utilizzati per chiamare le operazioni del servizio. Per abilitare lo scambio di metadati, creare un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> dell'istanza, impostarlo del <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> proprietà `true`e aggiungere il comportamento per la <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` insieme del <xref:System.ServiceModel.ServiceHost> istanza.  
   
-    5.  Passaggio 5: viene aperto l'oggetto <xref:System.ServiceModel.ServiceHost> per attendere i messaggi in arrivo. Si noti che il codice attende che l'utente prema Invio. In caso contrario, l'applicazione verrà chiusa immediatamente e il servizio verrà arrestato. Si noti inoltre l'utilizzo di un blocco try/catch. Dopo la creazione di un'istanza di <xref:System.ServiceModel.ServiceHost>, tutto l'altro codice viene inserito in un blocco try/catch. Per ulteriori informazioni in modo sicuro intercettare le eccezioni generate da <xref:System.ServiceModel.ServiceHost>, vedere [evitare problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+    5.  Passaggio 5: viene aperto l'oggetto <xref:System.ServiceModel.ServiceHost> per attendere i messaggi in arrivo. Si noti che il codice attende che l'utente prema Invio. In caso contrario, l'applicazione verrà chiusa immediatamente e il servizio verrà arrestato. Si noti inoltre l'utilizzo di un blocco try/catch. Dopo la creazione di un'istanza di <xref:System.ServiceModel.ServiceHost>, tutto l'altro codice viene inserito in un blocco try/catch. Per ulteriori informazioni in modo sicuro intercettare le eccezioni generate dalle <xref:System.ServiceModel.ServiceHost>, vedere [come evitare problemi con l'istruzione Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
 ### <a name="to-verify-the-service-is-working"></a>Per verificare il funzionamento del servizio  
   
@@ -422,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Servizi come questo richiedono l'autorizzazione per registrare gli indirizzi HTTP nel computer per l'ascolto. Gli account amministratore dispongono di questa autorizzazione, ma agli account senza privilegi di amministratore è necessario concedere l'autorizzazione per gli spazi dei nomi HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]come configurare le prenotazioni dello spazio dei nomi, vedere [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). In caso di esecuzione in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], il servizio.exe deve essere eseguito con privilegi di amministratore.  
+>  Servizi come questo richiedono l'autorizzazione per registrare gli indirizzi HTTP nel computer per l'ascolto. Gli account amministratore dispongono di questa autorizzazione, ma agli account senza privilegi di amministratore è necessario concedere l'autorizzazione per gli spazi dei nomi HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] come configurare le prenotazioni dello spazio dei nomi, vedere [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). In caso di esecuzione in [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], il servizio.exe deve essere eseguito con privilegi di amministratore.  
   
  Il servizio è ora in esecuzione. Passare alla [procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Per ulteriori informazioni, vedere [esercitazione introduttiva di risoluzione dei problemi](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

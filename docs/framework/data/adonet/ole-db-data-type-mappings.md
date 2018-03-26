@@ -1,24 +1,26 @@
 ---
 title: Mapping dei tipi di dati OLE DB
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapping dei tipi di dati OLE DB
 Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dedotti per i tipi di dati dal provider di dati .NET Framework per ADO e OLE DB (<xref:System.Data.OleDb>). I metodi delle funzioni di accesso tipizzate per il <xref:System.Data.OleDb.OleDbDataReader> sono inoltre elencati.  
@@ -58,7 +60,7 @@ Nella tabella seguente sono illustrati i tipi [!INCLUDE[dnprdnshort](../../../..
 |adUserDefined|DBTYPE_UDT|Non supportato||  
 |adVarNumeric|DBTYPE_VARNUMERIC|Non supportato||  
   
- \*Per i tipi OLE DB `DBTYPE_IUNKNOWN` e `DBTYPE_IDISPATCH`, il riferimento all'oggetto è una rappresentazione con marshalling del puntatore.  
+ \* Per i tipi OLE DB `DBTYPE_IUNKNOWN` e `DBTYPE_IDISPATCH`, il riferimento all'oggetto è una rappresentazione con marshalling del puntatore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

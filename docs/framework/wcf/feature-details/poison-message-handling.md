@@ -1,24 +1,26 @@
 ---
 title: Gestione dei messaggi non elaborabili
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
@@ -73,7 +75,7 @@ Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero ma
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Procedura consigliata: gestione di MsmqPoisonMessageException  
  Quando il servizio stabilisce che un messaggio non è elaborabile, il trasporto in coda genera un'eccezione <xref:System.ServiceModel.MsmqPoisonMessageException> contenente il `LookupId` del messaggio non elaborabile.  
   
- Un'applicazione ricevente può implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler> per gestire qualsiasi errore che l'applicazione richieda. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Estensione del controllo sulla gestione degli errori e Reporting](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Un'applicazione ricevente può implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler> per gestire qualsiasi errore che l'applicazione richieda. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Estensione del controllo sulla gestione e sulla creazione di report](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  L'applicazione potrebbe richiedere una forma di gestione automatica dei messaggi non elaborabili per spostare tali messaggi in una coda apposita affinché il servizio possa accedere al resto dei messaggi presenti nella coda. L'unico scenario in cui viene utilizzato il meccanismo di gestione degli errori per rimanere in attesa delle eccezioni di messaggi non elaborabili si verifica quanto la proprietà <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> è impostata su <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Nell'esempio di messaggio non elaborabile per Accodamento messaggi 3.0 viene illustrato questo comportamento. Di seguito vengono descritti i passaggi necessari per gestire i messaggi non elaborabili, comprese le procedure consigliate:  
   
@@ -102,7 +104,7 @@ Oggetto *messaggio non elaborabile* è un messaggio che ha superato il numero ma
  Una sessione subisce le stesse procedure di ripetizione e gestione di messaggi non elaborabili di un messaggio singolo. Le proprietà elencate in precedenza per i messaggi non elaborabili sono applicabili all'intera sessione. Ciò significa che l'intera sessione verrà ripetuta e verrà inserita in una coda finale di messaggi non elaborabili o nella coda di messaggi non recapitabili del mittente se il messaggio verrà rifiutato.  
   
 ## <a name="batching-and-poison-messages"></a>Batch e messaggi non elaborabili  
- Se un messaggio diventa non elaborabile e fa parte di un batch, viene eseguito il rollback dell'intero batch e il canale riprende a leggere i messaggi uno alla volta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]invio in batch, vedere [l'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Se un messaggio diventa non elaborabile e fa parte di un batch, viene eseguito il rollback dell'intero batch e il canale riprende a leggere i messaggi uno alla volta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] invio in batch, vedere [raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Gestione di messaggi non elaborabili per messaggi di una coda non elaborabile  
  La gestione di messaggi non elaborabili non termina quando un messaggio viene inserito nella coda di messaggi non elaborabili. I messaggi presenti nella coda di messaggi non elaborabili devono comunque essere letti e gestiti. È possibile utilizzare un sottoinsieme di impostazioni della gestione di messaggi non elaborabili durante la lettura di messaggi dalla coda secondaria non elaborabile finale. Le impostazioni applicabili sono `ReceiveRetryCount` e `ReceiveErrorHandling`. È possibile impostare `ReceiveErrorHandling` su Drop, Reject o Fault. `MaxRetryCycles` viene ignorato e viene generata un'eccezione se `ReceiveErrorHandling` è impostato su Move.  

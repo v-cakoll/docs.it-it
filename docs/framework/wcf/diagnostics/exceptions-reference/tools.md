@@ -1,24 +1,26 @@
 ---
 title: Strumenti
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Strumenti
 In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -28,7 +30,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |Codice risorsa|Stringa di risorsa|  
 |-------------------|---------------------|  
 |ParametersTarget|\<enumerazione >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Il percorso specificato non è valido. Controllare l'argomento specificato.|  
 |ParametersReference|\<percorso del file >|  
 |WrnCannotLoadConfigFileForValidation|Si è verificato un errore durante l'elaborazione del file di configurazione caricato dal percorso specificato. Non è possibile convalidare i servizi definiti in questo file di configurazione.|  
@@ -79,7 +81,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |HelpCodeGenerationCategory|-= GENERAZIONE DI CODICE =-|  
 |RetreivingMetadataWithMexAndDisco|Tentativo di download dei metadati dalla posizione specificata utilizzando WS-Metadati Exchange o DISCO.|  
 |ErrGeneralSchemaValidation|Si è verificato un errore durante la verifica di schemi XML generati durante l'esportazione.|  
-|ParametersDirectory|\<directory >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Nessun tipo può essere caricato per il valore specificato passato all'opzione indicata. Assicurarsi che l'assembly al quale appartiene questo tipo venga specificato utilizzando l'opzione indicata.|  
 |ErrOptionModeConflict|L'opzione specificata non può essere utilizzata con l'altra opzione perché implicano tipi di output diversi.|  
 |ErrIsNotAnAssembly|È stato impossibile caricare l'elemento specificato come assembly. Verificare che il file sia un assembly .NET.|  
@@ -98,7 +100,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrDirectoryNotFound|Non è possibile trovare la directory specificata. Verificare che la directory esista e che si disponga delle autorizzazioni appropriate per accedervi.|  
 |ErrUnableToLoadFile|È impossibile leggere il file specificato.|  
 |ErrNoFilesFound|Il percorso di input specificato non sembra fare riferimento ad alcun file esistente.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Il percorso di input specificato sembra essere una directory. Deve essere un URL o un percorso di file.|  
 |HelpConfig|Indica agli strumenti di generare un file di configurazione con il nome fornito. Impostazione predefinita: output.config.|  
 |ErrSingleUseSwitch|L'opzione specificata non può essere indicata più volte.|  
@@ -123,7 +125,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrInvalidTarget|La destinazione indicata è non valida se specificata con l'opzione indicata. Le destinazioni supportate sono specificate.|  
 |ErrPathTooLong|Il percorso risultante è troppo lungo. Consultare gli argomenti specificati.|  
 |HelpCommonOptionsCategory|- = OPZIONI COMUNI = -|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Non è stato specificato alcun file di input valido. Specificare documenti di metadati o file di assembly.|  
 |ParametersLanguage|\<lingua >|  
 |ErrUnableToLoadMetadataDocument|Si è verificato un errore durante la lettura dei metadati da uno dei documenti caricati. L'identificatore del documento è specificato.|  
@@ -136,7 +138,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |GeneratingFiles|Generazione di file in corso.|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Un valore non valido è stato passato all'opzione specificata. Non è possibile mappare lo spazio dei nomi di destinazione specificato a più spazi dei nomi CLR come indicato.|  
 |ErrCouldNotLoadReferenceAssemblyAt|È impossibile caricare l'assembly di riferimento specificato.|  
-|ParametersOut|\<file >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|Per generare contratti per gli schemi, utilizzare l'opzione specificata.|  
 |ErrUnableToLoadInputConfig|È impossibile caricare il file di configurazione specificato.|  
 |ErrUnexpectedDelimiter|Un delimitatore di argomento non valido (':' o '=') non può avviare l'opzione.|  
@@ -153,7 +155,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dagli strumenti
 |ErrCodegenError|Si è verificato un errore durante la generazione di codice nel linguaggio specificato.<br /><br /> Il linguaggio non supporta tutti gli elementi di codice generati. È necessario utilizzare un altro linguaggio.|  
 |ErrInputWsdlParseError|Si è verificato un errore di analisi WSDL durante la lettura dell'elemento specificato. Verificare che il formato del file XML sia corretto e valido.|  
 |ErrCouldNotCreateInstance|È impossibile creare un'istanza del tipo specificato passato all'argomento indicato.|  
-|ParametersNamespace|\<String, string >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|Non fare riferimento a librerie standard (per impostazione predefinita viene fatto riferimento a mscorlib.dll e system.servicemodel.dll).|  
 |WrnCannotLoadConfigFileForExport|Si è verificato un errore durante l'elaborazione del file di configurazione caricato dal percorso indicato. È impossibile caricare servizi definiti in questo file di configurazione.|  
 |WrnUnableToLoadContractForExport|Si è verificato un errore durante il caricamento di un tipo di contratto. È impossibile esportare il tipo specificato.|

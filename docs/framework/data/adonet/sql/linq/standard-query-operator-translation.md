@@ -1,27 +1,29 @@
 ---
 title: Conversione dell'operatore query standard
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
 Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Il processore di query del database determina la semantica di esecuzione della conversione SQL.  
@@ -45,7 +47,7 @@ Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[v
  Il metodo <xref:System.Linq.Enumerable.Union%2A> viene definito per i tipi multiset come concatenazione non ordinata di multiset, che corrisponde in effetti al risultato della clausola UNION ALL in SQL.  
   
 ### <a name="take-skip"></a>Metodi Take, Skip  
- <xref:System.Linq.Enumerable.Take%2A>e <xref:System.Linq.Enumerable.Skip%2A> metodi sono definiti correttamente solo sugli *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
+ <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> metodi sono definiti correttamente solo sugli *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per ulteriori informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" in [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
@@ -105,7 +107,7 @@ ORDER BY [t0].[CustomerID]
  In modo analogo la conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Average%2A> di valori integer viene calcolata come un valore `integer`, non come un valore `double`.  
   
 ### <a name="entity-arguments"></a>Argomenti di entità  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]consente ai tipi di entità da utilizzare per il <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A> metodi. Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente ai tipi di entità da utilizzare nel <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A> metodi. Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo. Ad esempio, il codice seguente è equivalente.  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]supporta uguaglianza e confronto per *flat* argomenti, ma non per gli argomenti sono o che contengono le sequenze. Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL. Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta uguaglianza e confronto per *flat* argomenti, ma non per gli argomenti sono o che contengono le sequenze. Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL. Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.  
   
  Di seguito sono riportati esempi di argomenti non strutturati:  
   
@@ -206,7 +208,7 @@ ORDER BY [t0].[CustomerID]
  Non sono disponibili risoluzioni per questa limitazione. In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento attivato dalle query annidate  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](tramite SP4) dello strumento di associazione presenta alcune peculiarità attivate dalle query annidate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query che potrebbero provocare eccezioni di SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (tramite SP4) dello strumento di associazione presenta alcune peculiarità attivate dalle query annidate. Il set di query SQL che attiva queste peculiarità non è esattamente definito. Per questo motivo, è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query che potrebbero provocare eccezioni di SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Operatori Skip e Take  
  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Per ulteriori informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" in [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
