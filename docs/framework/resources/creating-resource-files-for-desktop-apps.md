@@ -1,12 +1,13 @@
 ---
 title: Creazione di file di risorse per applicazioni desktop
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Creazione di file di risorse per applicazioni desktop
 È possibile includere risorse, ad esempio stringhe, immagini o dati di oggetti, all'interno di file di risorse per renderli facilmente disponibili per l'applicazione. In .NET Framework è possibile creare file di risorse in cinque modi diversi:  
@@ -130,11 +132,15 @@ greeting=Hello, {0}!
   
  Se si usa Visual Basic e il file di codice sorgente è denominato Greeting.vb, il comando seguente crea un file eseguibile che include il file con estensione resources incorporato:  
   
- **vbc greeting.vb /resource:GreetingResources.resources**  
+```console 
+vbc greeting.vb -resource:GreetingResources.resources
+```
   
  Se si usa C# e il file di codice sorgente è denominato Greeting.cs, il comando seguente crea un file eseguibile che include il file con estensione resources incorporato:  
   
- **csc greeting.cs /resource:GreetingResources.resources**  
+ ```console
+csc greeting.cs -resource:GreetingResources.resources
+```
   
 <a name="ResxFiles"></a>   
 ## <a name="resources-in-resx-files"></a>Risorse nei file con estensione resx  

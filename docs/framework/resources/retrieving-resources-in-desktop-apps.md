@@ -1,12 +1,13 @@
 ---
 title: Recupero di risorse nelle applicazioni desktop
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recupero di risorse nelle applicazioni desktop
 Quando si utilizzano le risorse localizzate in applicazioni desktop di .NET Framework, è consigliabile comprimere le risorse per le impostazioni cultura predefinite o non associate ad alcun paese con l'assembly principale e creare un assembly satellite separato per ciascuna lingua o impostazione cultura supportata dall'applicazione. È quindi possibile utilizzare la classe <xref:System.Resources.ResourceManager> come descritto nella sezione successiva per accedere alle risorse denominate. Se si sceglie di non includere le risorse nell'assembly principale e negli assembly satellite, è inoltre possibile accedere direttamente ai file binari .resources, come illustrato nella sezione [Recupero delle risorse dai file .resources](#from_file) più avanti in questo articolo.  Per recuperare le risorse nelle app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , vedere [Creazione e recupero di risorse nelle app di Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674) nel Windows Dev Center.  
@@ -77,15 +79,15 @@ TimeHeader=Текущее время —
   
 ```  
 resgen strings.txt  
-csc GetString.cs /resource:strings.resources  
+csc GetString.cs -resource:strings.resources  
   
 resgen strings.fr-FR.txt  
 md fr-FR  
-al /embed:strings.fr-FR.resources /culture:fr-FR /out:fr-FR\GetString.resources.dll  
+al -embed:strings.fr-FR.resources -culture:fr-FR -out:fr-FR\GetString.resources.dll  
   
 resgen strings.ru-RU.txt  
 md ru-RU  
-al /embed:strings.ru-RU.resources /culture:ru-RU /out:ru-RU\GetString.resources.dll  
+al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.dll  
 ```  
   
  Quando le impostazioni cultura correnti dell'interfaccia utente sono impostate sullo spagnolo (Spagna), si noti che nell'esempio vengono visualizzate le risorse della lingua inglese, perché le risorse della lingua spagnola non sono disponibili e l'inglese rappresenta le impostazioni cultura predefinite dell'esempio.  
@@ -111,7 +113,7 @@ CreateResources
   
 resgen AppResources.resx  
   
-csc GetStream.cs /resource:AppResources.resources  
+csc GetStream.cs -resource:AppResources.resources  
 ```  
   
  Nell'esempio seguente viene usato il metodo <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> per deserializzare un oggetto personalizzato. L'esempio include un file di codice sorgente denominato UIElements.cs (UIElements.vb per Visual Basic) che definisce la seguente struttura denominata `PersonTable`. Questa struttura deve essere usata da una procedura generale di visualizzazione della tabella che mostra i nomi localizzati delle colonne della tabella. Si noti che la struttura `PersonTable` è contrassegnata con l'attributo <xref:System.SerializableAttribute> .  
@@ -132,12 +134,12 @@ csc GetStream.cs /resource:AppResources.resources
  È possibile creare il file di risorse e gli assembly necessari ed eseguire l'app mediante il file batch seguente. È necessario usare l'opzione `/r` per fornire a Resgen.exe un riferimento a UIElements.dll in modo che possa accedere alle informazioni sulla struttura `PersonTable` . Se si usa C#, sostituire il nome del compilatore `vbc` con `csc`e l'estensione `.vb` con `.cs`.  
   
 ```  
-vbc /t:library UIElements.vb  
-vbc CreateResources.vb /r:UIElements.dll  
+vbc -t:library UIElements.vb  
+vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
   
-resgen UIResources.resx  /r:UIElements.dll  
-vbc GetObject.vb /r:UIElements.dll /resource:UIResources.resources  
+resgen UIResources.resx  -r:UIElements.dll  
+vbc GetObject.vb -r:UIElements.dll -resource:UIResources.resources  
   
 GetObject.exe  
 ```  

@@ -1,12 +1,12 @@
 ---
 title: Backtracking nelle espressioni regolari
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -30,10 +30,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking nelle espressioni regolari
 <a name="top"></a> Il backtracking si verifica quando un modello di espressione regolare contiene [quantificatori](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) facoltativi o [costrutti di alternanza](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)e il motore delle espressioni regolari torna a uno stato salvato in precedenza per continuare la ricerca di una corrispondenza. Il backtracking è fondamentale per la potenza delle espressioni regolari. Consente alle espressioni di essere potenti e flessibili e di cercare una corrispondenza di modelli molto complessi. Questa tecnica presenta tuttavia anche alcuni svantaggi. Il backtracking spesso è il fattore più importante che influisce sulle prestazioni del motore delle espressioni regolari. Fortunatamente, lo sviluppatore è in grado di controllare il comportamento del motore delle espressioni regolari e il modo in cui viene utilizzato il backtracking. In questo argomento viene illustrato il funzionamento del backtracking e il modo in cui può essere controllato.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Torna alla corrispondenza 3 salvata in precedenza. Determina che esistono sono altri due caratteri "a" da assegnare a un gruppo acquisito aggiuntivo. Tuttavia, il test di fine della stringa ha esito negativo. Torna quindi alla corrispondenza 3 e tenta di trovare una corrispondenza degli altri due caratteri "a" nei due gruppi acquisiti aggiuntivi. Il test di fine della stringa ha ancora esito negativo. Le corrispondenza non riuscite richiedono 12 confronti. Fino a questo punto, sono stati eseguiti complessivamente 25 confronti.  
   
- Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O(2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri nella stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare.  
+ Il confronto della stringa di input con l'espressione regolare continua in questo modo fino a quando il motore delle espressioni regolari non ha tentato tutte le combinazioni di corrispondenze possibili, concludendo infine che non vi è alcuna corrispondenza. A causa dei quantificatori annidati, questo confronto è un'operazione O (2<sup>n</sup>) o un'operazione esponenziale, dove *n* è il numero di caratteri nella stringa di input. Ciò significa che nei casi peggiori una stringa di input di 30 caratteri richiede circa 1.073.741.824 confronti e una stringa di input di 40 caratteri richiede circa 1.099.511.627.776 confronti. Se si utilizzano stringhe di queste lunghezze o di lunghezze ancora maggiore, i metodi delle espressioni regolari possono richiedere una quantità di tempo eccessiva per il completamento quando elaborano un input che non corrisponde al modello di espressione regolare.  
   
  [Torna all'inizio](#top)  
   
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/01/2018
   
  Il secondo criterio di espressione regolare, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa un'asserzione lookbehind positiva e viene definito come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`[0-9A-Z]`|Trova la corrispondenza di un carattere alfanumerico. Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 02/01/2018
   
  Il secondo criterio di espressione regolare, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, usa un'asserzione lookahead positiva e viene definito come illustrato nella tabella seguente.  
   
-|Modello|Descrizione|  
+|Criterio|Descrizione|  
 |-------------|-----------------|  
 |`^`|Inizia la ricerca della corrispondenza all'inizio della stringa.|  
 |`(?=[A-Z])`|Esegue la ricerca fino primo carattere e continua la ricerca della corrispondenza se si tratta di un carattere alfabetico (A-Z). Poiché il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> viene richiamato con l'opzione <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, il confronto non rileva la distinzione tra maiuscole e minuscole.|  
