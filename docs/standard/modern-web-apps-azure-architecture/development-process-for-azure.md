@@ -1,6 +1,6 @@
 ---
 title: Processo di sviluppo per Azure
-description: Architettura di moderne applicazioni Web con ASP.NET Core e Azure | Processo di sviluppo per Azure
+description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Processo di sviluppo per Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
@@ -11,108 +11,108 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
 ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Processo di sviluppo per Azure
 
-> _"Con il cloud, agli utenti e aziende di piccole dimensioni può blocca le dita e impostare immediatamente i servizi di livello aziendale."_  
-> _-Roy Stephan_
+> _"Con il cloud, privati e piccole aziende possono configurare rapidamente servizi di livello professionale"._  
+> _- Roy Stephan_
 
- ## <a name="vision"></a>Visione
+ ## <a name="vision"></a>Vision
 
-> *Sviluppare applicazioni ASP .NET Core ben progettate il modo in cui che si desidera, tramite Visual Studio o dotnet CLI e codice di Visual Studio o l'editor preferito.*
+> *Sviluppare applicazioni ASP .NET Core ben progettate nel modo desiderato usando Visual Studio o l'interfaccia della riga di comando per .NET e Visual Studio Code o l'editor preferito.*
 
-## <a name="development-environment-for-aspnet-core-apps"></a>Ambiente di sviluppo per applicazioni ASP.NET Core
+## <a name="development-environment-for-aspnet-core-apps"></a>Ambiente di sviluppo per app ASP.NET Core
 
-### <a name="development-tools-choices-ide-or-editor"></a>Gli strumenti di sviluppo scelte: IDE o editor
+### <a name="development-tools-choices-ide-or-editor"></a>Opzioni degli strumenti di sviluppo: IDE o editor
 
-Se si preferisce un IDE potente e completo o un editor semplice e agile, Microsoft ha la copertura durante lo sviluppo di applicazioni ASP.NET Core.
+Durante lo sviluppo di applicazioni ASP.NET Core Microsoft offre gli strumenti necessari sia che si scelga un IDE potente e completo sia che si preferisca un editor semplice e agile.
 
-**Visual Studio 2017.** Se si utilizza *Visual Studio 2017* la compilazione di ASP.NET Core applicazioni purché disponga di *lo sviluppo multipiattaforma con .NET Core* installato carico di lavoro. Nella figura 10-1 viene illustrato il carico di lavoro richiesto nella finestra di dialogo di installazione di Visual Studio 2017.
+**Visual Studio 2017.** Se si usa *Visual Studio 2017* è possibile compilare le applicazioni ASP.NET Core solo se è stato installato il carico di lavoro di *sviluppo multipiattaforma .NET Core*. La figura 10-1 illustra il carico di lavoro richiesto nella finestra di dialogo di installazione di Visual Studio 2017.
 
 ![](./media/image10-1.png)
 
-**Nella figura 10-1.** Installazione del carico di lavoro di .NET Core in Visual Studio 2017.
+**Figure 10-1.** Installazione del carico di lavoro .NET Core in Visual Studio 2017.
 
 [Scarica Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code e dotnet CLI** (strumenti multipiattaforma per Windows, Mac e Linux). Se si preferisce un editor leggero e multipiattaforma supportare qualsiasi linguaggio di sviluppo, è possibile utilizzare Microsoft Visual Studio Code e dotnet CLI. Questi prodotti forniscono un'esperienza semplice ed efficace che consente di ottimizzare il flusso di lavoro di sviluppo. Inoltre, supporta le estensioni di Visual Studio Code per C\# e lo sviluppo web, fornire intellisense e attività di collegamento all'interno dell'editor.
+**Visual Studio Code e l'interfaccia della riga di comando per .NET** (strumenti multipiattaforma per Mac, Linux e Windows). Se si preferisce un editor leggero e multipiattaforma che supporta qualsiasi linguaggio di sviluppo, è possibile usare Microsoft Visual Studio Code e l'interfaccia della riga di comando per .NET. Questi prodotti offrono un'esperienza semplice ed efficace che consente di ottimizzare il flusso di lavoro di sviluppo. Inoltre, Visual Studio Code supporta le estensioni per C\# e lo sviluppo Web offrendo IntelliSense e attività di collegamento all'interno dell'editor.
 
-[Scaricare il SDK .NET di base](https://www.microsoft.com/net/download/core)
+[Download di .NET Core SDK](https://www.microsoft.com/net/download/core)
 
-[Scaricare il codice di Visual Studio](https://code.visualstudio.com/download)
+[Download di Visual Studio Code](https://code.visualstudio.com/download)
 
 
 
-## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Flusso di lavoro di sviluppo per applicazioni ASP.NET Core ospitato di Azure
+## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Flusso di lavoro di sviluppo per le app ASP.NET Core ospitate in Azure
 
-Il ciclo di vita di sviluppo di applicazioni viene avviato dal computer di ogni sviluppatore, la generazione di codice l'app utilizzando la lingua desiderata e il relativo test in locale. Gli sviluppatori possono scegliere il controllo del codice sorgente preferito e possono configurare l'integrazione continua (CI) e/o recapito/distribuzione continua (CD) utilizzando un server di compilazione o in base alle funzionalità incorporate di Azure.
+Il ciclo di vita dello sviluppo applicativo inizia dal computer di ogni sviluppatore quando l'applicazione viene scritta usando il linguaggio preferito e viene testata in locale. Gli sviluppatori possono scegliere il sistema di controllo del codice sorgente preferito e possono configurare l'integrazione continua (CI) e/o il recapito/distribuzione continua (CD) usando un server di compilazione o in base alle funzionalità di Azure predefinite.
 
-Per iniziare con lo sviluppo di un'applicazione ASP.NET di base utilizzando l'elemento di configurazione/CD, è possibile utilizzare Visual Studio Team Services o l'organizzazione proprietari di Team Foundation Server (TFS).
+Per iniziare a sviluppare un'applicazione ASP.NET Core mediante CI/CD, è possibile usare Visual Studio Team Services o Team Foundation Server (TFS) dell'organizzazione.
 
 ### <a name="initial-setup"></a>Configurazione iniziale
 
-Per creare una pipeline di rilascio per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un archivio remoto in un progetto team. Seguire queste istruzioni:
+Per creare una pipeline di versione per l'app, è necessario avere il codice dell'applicazione nel controllo del codice sorgente. Configurare un repository locale e connetterlo a un repository remoto in un progetto team. Seguire le istruzioni seguenti:
 
--   [Condividere il codice con Git e di Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) o
+-   [Condividere il codice con Git e Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) oppure
 
--   [Condividere il codice con TFVC e Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+-   [Condividere il codice con il controllo della versione di Team Foundation e Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
-Creare un servizio App di Azure in cui verrà distribuita l'applicazione. Creare un'App Web, passare al pannello delle servizi App nel portale di Azure. Fare clic su + Aggiungi, selezionare il modello di applicazione Web, fare clic su Crea e specificare un nome e altri dettagli. L'app web sarà accessibile da {name}. azurewebsites.net.
+Creare un servizio app di Azure in cui verrà distribuita l'applicazione. Creare un'app Web passando al pannello Servizi app nel portale di Azure. Fare clic su +Aggiungi, selezionare il modello di app Web, fare clic su Crea e specificare un nome e altri dettagli. L'app Web sarà accessibile da {name}.azurewebsites.net.
 
 ![AzureWebApp](./media/image10-2.png)
 
-**Figura 10-2.** Creazione di una nuova App Web di Azure App Service nel portale di Azure.
+**Figura 10-2.** Creazione di una nuova app Web del servizio app di Azure nel portale di Azure.
 
-Il processo di compilazione CI eseguirà una compilazione automatica ogni volta che viene eseguito il commit al repository di controllo codice sorgente del progetto nuovo codice. Ciò consente di verificare immediatamente che il codice verrà compilato (e, idealmente, supera i test automatizzati) e potenzialmente possono essere distribuiti. Questa compilazione CI produrrà un web distribuire l'elemento di pacchetto e pubblicarlo per l'utilizzo dal processo di CD-ROM.
+Il processo di compilazione CI eseguirà una compilazione automatica ogni volta che viene eseguito il commit di nuovo codice nel repository di controllo del codice sorgente del progetto. Ciò consente di verificare immediatamente che il codice venga compilato (e passi i test automatizzati) e possa essere potenzialmente distribuito. Questa compilazione CI produrrà un artefatto del pacchetto di distribuzione Web e lo pubblicherà per l'utilizzo da parte del processo CD.
 
 [Definire il processo di compilazione CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
-Assicurarsi di abilitare l'integrazione continua in modo il sistema verrà accodare una compilazione ogni volta che un utente membro del team esegue il commit di nuovo codice. La compilazione di test e verificare che produce un web distribuire un pacchetto come uno dei relativi elementi.
+Assicurarsi di abilitare l'integrazione continua in modo che il sistema accodi una compilazione ogni volta che un utente del team esegue il commit di nuovo codice. Testare la compilazione e verificare che produca un pacchetto di distribuzione Web come uno dei relativi artefatti.
 
-Quando una compilazione ha esito positivo, il processo CD distribuirà i risultati della compilazione CI all'App web di Azure. A questo scopo, creare e configurare un *versione*, che verrà distribuito del servizio App di Azure.
+Dopo aver eseguito la compilazione, il processo CD distribuirà i risultati della compilazione CI nell'app Web di Azure. Per procedere alla configurazione, creare e configurare una *Versione* che verrà distribuita nel servizio app di Azure.
 
-[Definire il processo di rilascio del CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[Definire il processo della versione CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
-Una volta configurata la pipeline CI/CD, è possibile effettuare aggiornamenti per l'app web e ne esegue il commit in modo che vengano distribuiti nel controllo del codice sorgente.
+Dopo aver configurato la pipeline CI/CD, è possibile effettuare aggiornamenti nell'app Web ed eseguirne il commit nel controllo del codice sorgente per distribuirli.
 
-### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni ASP.NET Core ospitato di Azure
+### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Flusso di lavoro per lo sviluppo di applicazioni ASP.NET Core ospitate in Azure
 
-Dopo aver configurato l'account di Azure e il processo di CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitato di Azure è semplice. Di seguito sono indicati i passaggi di base che accettano in genere quando si compila un'applicazione ASP.NET di base, ospitata in Azure App Service come un'App Web, come illustrato nella figura 10-3.
+Dopo aver configurato l'account di Azure e il processo CI/CD, lo sviluppo di applicazioni ASP.NET Core ospitate in Azure è semplice. Di seguito sono descritti i passaggi di base che vengono in genere eseguiti durante la compilazione di un'app ASP.NET Core, ospitata nel servizio app di Azure come app Web, come illustrato nella figura 10-3.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**Nella figura 10-3.** Flusso di lavoro dettagliato per la creazione di applicazioni ASP.NET Core e all'hosting in Azure
+**Figura 10-3.** Flusso di lavoro dettagliato per la compilazione di app ASP.NET Core e l'hosting in Azure
 
-#### <a name="step-1-local-dev-environment-inner-loop"></a>Passaggio 1. Ciclo interno ambiente di sviluppo locale
+#### <a name="step-1-local-dev-environment-inner-loop"></a>Passaggio 1. Ciclo interno dell'ambiente di sviluppo locale
 
-Sviluppo dell'applicazione ASP.NET di base per la distribuzione in Azure non è diverso dallo sviluppo dell'applicazione in caso contrario. Utilizzare l'ambiente di sviluppo locale acquisita familiarità con, se Visual Studio 2017 o dotnet CLI e codice di Visual Studio o l'editor preferito. È possibile scrivere codice, eseguire e debug le modifiche, eseguire test automatizzati e apportare commit locale al controllo del codice sorgente fino a quando non si è pronti per il push delle modifiche nel repository di controllo del codice sorgente condiviso.
+Lo sviluppo di un'applicazione ASP.NET Core per la distribuzione in Azure non differisce dalla normale procedura di sviluppo dell'applicazione. Usare l'ambiente di sviluppo locale desiderato, ovvero Visual Studio 2017 o l'interfaccia della riga di comando per .NET e Visual Studio Code o l'editor preferito. È possibile scrivere codice, eseguire ed eseguire il debug delle modifiche, eseguire test automatizzati e commit locali nel controllo del codice sorgente fino a quando non si è pronti per il push delle modifiche nel repository del controllo del codice sorgente condiviso.
 
-#### <a name="step-2-application-code-repository"></a>Passaggio 2. Repository di codice dell'applicazione
+#### <a name="step-2-application-code-repository"></a>Passaggio 2. Repository del codice dell'applicazione
 
-Ogni volta che si è pronti per condividere il codice con il team, è necessario il push delle modifiche dal repository del codice sorgente locale al repository di origine condivisa del team. Se si è collaborato in un ramo personalizzato, questo passaggio prevede in genere l'unione di codice in un branch condiviso (ad esempio per mezzo di un [richiesta pull](https://docs.microsoft.com/vsts/git/pull-requests)).
+Quando si è pronti per condividere il codice con il proprio team, eseguire il push delle modifiche dal repository del codice sorgente locale al repository del codice sorgente condiviso del team. Se è stato usato un ramo personalizzato, questo passaggio prevede in genere l'unione del codice in un ramo condiviso, ad esempio per mezzo di una [richiesta pull](https://docs.microsoft.com/vsts/git/pull-requests).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Passaggio 3. Server di compilazione: Integrazione continua. Pacchetto di compilazione, Test,
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Passaggio 3. Server di compilazione: integrazione continua. Compilazione, test, pacchetto
 
-Ogni volta che viene eseguito il commit di una nuova nel repository di codice di applicazione condivisa, nel server di compilazione viene attivata una nuova compilazione. Come parte del processo di integrazione continua, la compilazione deve compilare l'applicazione completamente ed eseguire test automatizzati per verificare che funzionino come previsto. Il risultato finale del processo di CI deve essere una versione nel pacchetto dell'app web, pronto per la distribuzione.
+Per ogni nuovo commit eseguito nel repository di codice dell'applicazione condiviso, nel server di compilazione viene attivata una nuova compilazione. Come parte del processo di integrazione continua (CI), la compilazione deve compilare l'applicazione ed eseguire test automatizzati per verificare che tutto funzioni come previsto. Il risultato finale del processo di integrazione continua deve essere una versione pacchetto dell'app Web pronta per la distribuzione.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Passaggio 4. Server di compilazione: Il recapito continuo
+#### <a name="step-4-build-server-continuous-delivery"></a>Passaggio 4. Server di compilazione: recapito continuo
 
-Una volta una compilazione come ha avuto esito positivo, il processo di CD selezionerà i prodotto degli artefatti di compilazione. Ciò comprende una web distribuire il pacchetto. Il server di compilazione verrà distribuito il pacchetto di servizio App di Azure, sostituendo qualsiasi servizio esistente con quella appena creata. In genere questo passaggio è destinato a un ambiente di gestione temporanea, ma alcune applicazioni distribuire direttamente nell'ambiente di produzione tramite un processo del CD.
+Dopo la compilazione, il processo di recapito continuo (CD) acquisirà gli artefatti di compilazione generati. Gli artefatti includeranno un pacchetto di distribuzione Web. Il server di compilazione distribuirà il pacchetto nel servizio app di Azure, sostituendo eventuali servizi esistenti con il servizio appena creato. Sebbene questo passaggio sia in genere destinato a un ambiente di gestione temporanea, alcune applicazioni eseguono la distribuzione direttamente nell'ambiente di produzione tramite un processo CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Passaggio 5. Servizio App di Azure. App Web.
+#### <a name="step-5-azure-app-service-web-app"></a>Passaggio 5. Servizio app di Azure. App Web.
 
-Una volta distribuito, l'applicazione ASP.NET Core viene eseguita all'interno del contesto di un'App Web di Azure App Service. L'App Web può essere monitorata e ulteriormente configurate tramite il portale di Azure.
+Dopo la distribuzione, l'applicazione ASP.NET Core viene eseguita all'interno del contesto di un'app Web del servizio app di Azure. L'app Web può essere monitorata e configurata tramite il portale di Azure.
 
-#### <a name="step-6-production-monitoring-and-diagnostics"></a>Passaggio 6. Monitoraggio di produzione e di diagnostica
+#### <a name="step-6-production-monitoring-and-diagnostics"></a>Passaggio 6. Monitoraggio e diagnostica della produzione
 
-Mentre l'App Web è in esecuzione, è possibile monitorare l'integrità dell'applicazione e raccogliere dati sul comportamento di utente e di diagnostica. Application Insights è incluso in Visual Studio e offre strumentazione automatica per le applicazioni ASP.NET. Può fornire informazioni sull'utilizzo, eccezioni, le richieste, prestazioni e log.
+Mentre l'app Web è in esecuzione, è possibile monitorare l'integrità dell'applicazione e raccogliere dati di diagnostica e sul comportamento degli utenti. Application Insights è incluso in Visual Studio e offre strumentazione automatica per le app ASP.NET. Application Insights può offrire informazioni sull'utilizzo, le eccezioni, le richieste, le prestazioni e i log.
 
 ## <a name="references"></a>Riferimenti
 
-**Compilare e distribuire l'applicazione ASP.NET di base in Azure**  
+**Compilare e distribuire l'app ASP.NET Core in Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 

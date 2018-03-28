@@ -1,6 +1,6 @@
 ---
-title: Utilizzare i dati in app di ASP.NET Core
-description: Architettura di moderne applicazioni Web con ASP.NET Core e Azure | utilizzo dei dati in asp
+title: Usare i dati nelle app ASP.NET Core
+description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Uso dei dati in ASP
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
@@ -9,37 +9,37 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="working-with-data-in-aspnet-core-apps"></a>Utilizzo dei dati nelle applicazioni ASP.NET Core
+# <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
-> "Dati un aspetto preziosi e durano più tempo rispetto a sistemi stessi".
+> "I dati sono un elemento prezioso che dura più a lungo dei sistemi"
 
 Tim Berners-Lee
 
 ## <a name="summary"></a>Riepilogo
 
-Accesso ai dati è una parte importante di quasi tutte le applicazioni software. ASP.NET Core supporta un'ampia gamma di opzioni di accesso a dati, tra cui Entity Framework Core (e anche Entity Framework 6) e può funzionare con qualsiasi accesso ai dati di .NET framework. La scelta dei quali accesso ai dati framework da utilizzare dipende dalle esigenze dell'applicazione. Fornire l'astrazione di tali scelte dai progetti ApplicationCore e l'interfaccia utente e incapsulare dettagli di implementazione nell'infrastruttura, consente di produrre verificabili regime di controllo software.
+L'accesso ai dati è una questione importante in quasi tutte le applicazioni software. ASP.NET Core supporta un'ampia gamma di opzioni di accesso ai dati, tra cui Entity Framework Core (e anche Entity Framework 6) e può usare qualsiasi framework di accesso ai dati .NET. La scelta del tipo di framework di accesso ai dati da usare dipende dalle esigenze dell'applicazione. Scegliere in base ai progetti ApplicationCore e UI e incapsulare i dettagli di implementazione in Infrastructure per creare un software testabile e poco accoppiato.
 
-## <a name="entity-framework-core-for-relational-databases"></a>Entity Framework Core (per i database relazionali)
+## <a name="entity-framework-core-for-relational-databases"></a>Entity Framework Core (per database relazionali)
 
-Se si sta scrivendo una nuova applicazione ASP.NET di base che deve essere utilizzato con dati relazionali, Entity Framework Core (Core EF) è il modo consigliato per l'applicazione di accedere ai relativi dati. EF Core è un mapping relazionale a oggetti (O/RM) che consente agli sviluppatori di .NET in modo permanente gli oggetti in e da un'origine dati. Elimina la necessità per la maggior parte degli sviluppatori in genere necessario scrivere il codice di accesso ai dati. Ad esempio ASP.NET Core, EF Core è stato riscritto da zero per le applicazioni multipiattaforma modulare di supporto. Aggiungerlo all'applicazione come pacchetto NuGet, configurarlo in avvio e richiesta tramite l'inserimento di dipendenze ovunque sia necessaria.
+Se si scrive una nuova applicazione ASP.NET ASP.NET Core che deve usare dati relazionali, è consigliabile che l'applicazione usi Entity Framework Core (EF Core) per accedere ai dati. EF Core è un mapper relazionale a oggetti che consente agli sviluppatori .NET di salvare in modo permanente gli oggetti in/da un'origine dati. In questo modo la maggior parte del codice per l'accesso ai dati che in genere gli sviluppatori devono scrivere non è più necessaria. Come ASP.NET Core, EF Core è stato completamente riscritto per poter supportare le applicazioni multipiattaforma modulari. Viene aggiunto all'applicazione come pacchetto NuGet, configurato all'avvio e richiesto tramite l'inserimento di dipendenze ovunque sia necessario.
 
-Per usare EF Core con un database di SQL Server, eseguire il comando CLI dotnet seguente:
+Per usare EF Core con un database di SQL Server, eseguire il comando dell'interfaccia della riga di comando dotnet seguente:
 
-dotnet aggiungere pacchetto Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
-Per aggiungere il supporto per un'origine dati InMemory, per il test:
+Per aggiungere il supporto per un'origine dati InMemory per il test:
 
-dotnet aggiungere pacchetto Microsoft.EntityFrameworkCore.InMemory
+add package Microsoft.EntityFrameworkCore.SqlServer
 
-### <a name="the-dbcontext"></a>L'elemento DbContext
+### <a name="the-dbcontext"></a>DbContext
 
-Per utilizzare i componenti di base di Entity Framework, è necessario una sottoclasse di DbContext. Questa classe contiene proprietà che rappresentano raccolte di entità a cui che l'applicazione funzionerà con. L'esempio eShopOnWeb include un CatalogContext con le raccolte per gli elementi, i marchi e i tipi:
+Per usare EF Core è necessaria una sottoclasse di DbContext. Questa classe contiene le proprietà che rappresentano raccolte di entità che l'applicazione userà. L'esempio eShopOnWeb include un oggetto CatalogContext contenente raccolte per elementi, marchi e i tipi:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -57,11 +57,11 @@ public class CatalogContext : DbContext
 }
 ```
 
-Il DbContext deve avere un costruttore che accetta DbContextOptions e passare il costruttore DbContext base di questo argomento. Si noti che se si dispone di un solo elemento DbContext nell'applicazione, è possibile passare un'istanza di DbContextOptions, ma se dispone di più di un è necessario utilizzare il generico DbContextOptions<T> tipo, passando il tipo DbContext come parametro generico.
+DbContext deve avere un costruttore che accetta DbContextOptions e deve passare questo argomento al costruttore DbContext di base. Si noti che se l'applicazione contiene una sola classe DbContext, è possibile passare un'istanza di DbContextOptions, ma se ne contiene di più di una, è necessario usare il tipo generico DbContextOptions<T>, passando il tipo DbContext come parametro generico.
 
-### <a name="configuring-ef-core"></a>Configurazione di Entity Framework Core
+### <a name="configuring-ef-core"></a>Configurazione di EF Core
 
-Nell'applicazione ASP.NET di base, si configurerà in genere EF Core nel metodo ConfigureServices. Componenti di base di Entity Framework Usa un DbContextOptionsBuilder, che supporta diversi metodi di estensione utili per semplificare la configurazione. Per configurare CatalogContext per utilizzare un database di SQL Server con una stringa di connessione definita nella configurazione, aggiungere il codice seguente per ConfigureServices:
+Nell'applicazione ASP.NET Core EF Core sarà generalmente configurato nel metodo ConfigureServices. EF Core usa un oggetto DbContextOptionsBuilder, che supporta diversi metodi di estensione utili che consentono di semplificarne la configurazione. Per configurare CatalogContext in modo che usi un database di SQL Server con una stringa di connessione definita in Configuration, aggiungere il codice seguente a ConfigureServices:
 
 ```csharp
 services.AddDbContext<CatalogContext>(options => options.UseSqlServer (Configuration.GetConnectionString("DefaultConnection")));
@@ -74,17 +74,17 @@ services.AddDbContext<CatalogContext>(options =>
     options.UseInMemoryDatabase());
 ```
 
-Dopo aver installato EF Core, un tipo figlio DbContext creato e configurato nel ConfigureServices, si è pronti per utilizzare componenti di base di Entity Framework. È possibile richiedere un'istanza del tipo DbContext in qualsiasi servizio che ha bisogno e iniziare a lavorare con le entità persistente utilizzando LINQ come se fossero semplicemente in una raccolta. Core EF esegue le operazioni di conversione di espressioni LINQ in query SQL per archiviare e recuperare i dati.
+Dopo aver installato EF Core, aver creato un tipo figlio DbContext e averlo configurato in ConfigureServices, è possibile usare EF Core. È possibile richiedere un'istanza del tipo DbContext in qualsiasi servizio in cui è necessario e iniziare a usare le entità persistenti tramite LINQ come se si trovassero semplicemente in una raccolta. EF Core converte le espressioni LINQ in query SQL per archiviare e recuperare i dati.
 
-È possibile visualizzare le query è in esecuzione Core EF configurando un logger e garantire il livello è impostato su almeno informazioni, come illustrato nella figura 8-1.
+È possibile visualizzare le query eseguite da EF Core configurando un logger e verificando che il livello sia impostato almeno su Information, come illustrato nella Figura 8-1.
 
 ![](./media/image8-1.png)
 
-Figura 8-1 query di registrazione EF Core nella console
+Figura 8-1: registrazione delle query di EF Core nella console
 
-### <a name="fetching-and-storing-data"></a>Recupero e l'archiviazione dei dati
+### <a name="fetching-and-storing-data"></a>Recupero e archiviatone dei dati
 
-Per recuperare dati da Entity Framework Core, accedere alla proprietà appropriata e utilizzare LINQ per filtrare il risultato. È inoltre possibile utilizzare LINQ per eseguire proiezione, di trasformazione del risultato da un tipo a un altro. Nell'esempio seguente si recupererebbe CatalogBrands, ordinati per nome e filtrati per la proprietà Enabled proiettato su un tipo SelectListItem:
+Per recuperare i dati da EF Core, accedere alla proprietà appropriata e usare LINQ per filtrare il risultato. È anche possibile usare LINQ per eseguire una proiezione e trasformare il risultato da un tipo a un altro. Nell'esempio seguente viene recuperato l'oggetto CatalogBrands. Viene ordinato per nome, filtrato per la proprietà Enabled e proiettato in un tipo SelectListItem:
 
 ```csharp
 var brandItems = await _context.CatalogBrands
@@ -95,9 +95,9 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-È importante nell'esempio precedente per aggiungere la chiamata a ToListAsync per eseguire immediatamente la query. In caso contrario, l'istruzione verrà assegnato un IQueryable<SelectListItem> a brandItems, che non verranno eseguiti finché viene enumerata. Esistono vantaggi e svantaggi nella restituzione di risultati IQueryable di metodi. Consente la query che verrà costruito EF Core per essere ulteriormente modificata, ma vengono anche restituiti errori che si verificano solo in fase di esecuzione, se le operazioni vengono aggiunti alla query che non è possibile convertire EF Core. È in genere preferibile passare tutti i filtri al metodo esegue l'accesso ai dati e restituire il backup di una raccolta in memoria (ad esempio, l'elenco<T>) come risultato.
+Nell'esempio precedente è importante aggiungere la chiamata a ToListAsync per eseguire immediatamente la query. In caso contrario, l'istruzione assegnerà oggetto IQueryable<SelectListItem> a brandItems, che non sarà eseguito finché non sarà enumerato. Esistono vantaggi e svantaggi nella restituzione di risultati IQueryable dai metodi. La query costruita da EF Core può essere ulteriormente modificata, ma può anche generare errori che si verificano solo in fase di esecuzione, se alla query vengono aggiunte operazioni che EF Core non può convertire. È generalmente preferibile passare tutti i filtri al metodo che esegue l'accesso ai dati e restituire una raccolta in memoria (ad esempio, List<T>) come risultato.
 
-Core EF tiene traccia delle modifiche alle entità che vengono recuperati dalla persistenza. Per salvare le modifiche a un'entità rilevata, chiamare semplicemente il metodo SaveChanges su DbContext, assicurandosi che è la stessa istanza di DbContext che è stata usata per recuperare l'entità. Aggiunta e rimozione di entità è direttamente sulla proprietà DbSet appropriata, con una chiamata al metodo SaveChanges per eseguire i comandi di database. Nell'esempio seguente viene aggiunta, aggiornamento e rimozione di entità dalla persistenza.
+EF Core tiene traccia delle modifiche apportate alle entità che vengono recuperate dalla persistenza. Per salvare le modifiche a un'entità rilevata, chiamare semplicemente il metodo SaveChanges in DbContext, assicurandosi che sia la stessa istanza di DbContext usata per recuperare l'entità. L'aggiunta e la rimozione delle entità avvengono direttamente nella proprietà DbSet appropriata, eseguendo nuovamente una chiamata al metodo SaveChanges per eseguire i comandi di database. Nell'esempio seguente vengono dimostrate le operazioni di aggiunta, aggiornamento e rimozione delle entità dalla persistenza.
 
 ```csharp
 // create
@@ -116,11 +116,11 @@ _context.CatalogBrands.Remove(brandToDelete);
 await _context.SaveChangesAsync();
 ```
 
-Core EF supporta sia sincrono e i metodi asincroni per il recupero e il salvataggio. Nelle applicazioni web, si consiglia di utilizzare il modello async/await con i metodi asincroni, in modo che i thread del server web non vengono bloccati durante l'attesa di dati per completare le operazioni di accesso.
+EF Core supporta sia metodi sincroni che asincroni per il recupero e il salvataggio. Nelle applicazioni Web è consigliabile usare il modello asincrono/awaiter con i metodi asincroni. In questo modo i thread del server Web non saranno bloccati in attesa che le operazioni di accesso ai dati siano completate.
 
 ### <a name="fetching-related-data"></a>Recupero dei dati correlati
 
-Quando EF Core recupera le entità, viene compilata tutte le proprietà che vengono archiviate direttamente con tale entità nel database. Le proprietà di navigazione, quali gli elenchi di entità correlate, non vengono popolate e può avere il valore impostato su null. In questo modo che core EF non recupera ulteriori dati superiore al necessario, che è particolarmente importante per applicazioni web, che rapidamente è necessario elaborare le richieste e restituire risposte in modo efficiente. Per includere le relazioni con un'entità mediante *caricamento eager*, per specificare la proprietà utilizzando il metodo di estensione di includere nella query, come illustrato:
+Dopo aver recuperato le entità, EF Core compila tutte le proprietà archiviate direttamente con l'entità appropriata nel database. Le proprietà di navigazione, ad esempio elenchi di entità correlate, non vengono popolate e il loro valore può essere impostato su Null. In questo modo, EF Core non recupererà più dati del necessario, requisito particolarmente importante per le applicazioni Web, che devono elaborare velocemente le richieste e restituire le risposte in modo efficiente. Per includere le relazioni con un'entità tramite il *caricamento eager*, specificare la proprietà usando il metodo di estensione Include nella query, come illustrato di seguito:
 
 ```csharp
 // .Include requires using Microsoft.EntityFrameworkCore
@@ -129,19 +129,19 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-È possibile includere più relazioni, ed è anche possibile includere relazioni secondario utilizzando ThenInclude. Core EF eseguirà una singola query per recuperare il set di entità.
+È possibile includere più relazioni, ma anche relazioni secondarie usando ThenInclude. EF Core eseguirà una singola query per recuperare il set di entità ottenuto.
 
-Per il caricamento dei dati correlati un'altra opzione consiste nell'utilizzare *caricamento esplicito*. Caricamento esplicito consente di caricare dati aggiuntivi in un'entità che è già stata recuperata. Poiché si prevede una richiesta separata al database, non è consigliabile per applicazioni web, che è consigliabile ridurre al minimo il numero di database eseguite per ogni richiesta di round trip.
+Il *caricamento esplicito* è un'altra opzione per caricare i dati correlati. Il caricamento esplicito consente di caricare dati aggiuntivi in un'entità che è già stata recuperata. Poiché prevede una richiesta separata al database, non è consigliabile per le applicazioni Web, che devono ridurre al minimo il numero round trip al database per ogni richiesta.
 
-*Caricamento lazy* è una funzionalità che consente di caricare automaticamente i dati correlati perché fa riferimento l'applicazione. Attualmente non è supportata da Entity Framework Core, ma come con il caricamento esplicito deve in genere essere disattivato per le applicazioni web.
+Il *caricamento lazy* è una funzionalità che consente di caricare automaticamente i dati correlati ai quali l'applicazione fa riferimento. Non è attualmente supportata da EF Core. Come per il caricamento esplicito è tuttavia consigliabile disabilitarla per le applicazioni Web.
 
 ### <a name="resilient-connections"></a>Connessioni resilienti
 
-Risorse esterne quali database SQL in alcuni casi potrebbero essere disponibile. In caso di indisponibilità temporanea, le applicazioni è possono utilizzare logica di riesecuzione per evitare la generazione di un'eccezione. Questa tecnica è conosciuta come *resilienza delle connessioni*. È possibile implementare il [proprio tentativi con backoff esponenziale](https://docs.microsoft.com/azure/architecture/patterns/retry) tecnica mediante un tentativo di ripetizione con un tempo di attesa aumenta in modo esponenziale, fino a quando non è stato raggiunto un numero massimo di tentativi. Questa tecnica basata sul modello il fatto che le risorse cloud in modo intermittente siano disponibili per brevi periodi di tempo, causando un errore di alcune richieste.
+In alcuni casi è possibile che le risorse esterne, ad esempio i database SQL, non siano disponibili. In caso di indisponibilità temporanea, le applicazioni possono usare la logica di ripetizione per evitare che sia generata un'eccezione. Questa tecnica è comunemente nota come *resilienza della connessione*. È possibile implementare i [tentativi con backoff esponenziale](https://docs.microsoft.com/azure/architecture/patterns/retry), vale a dire una tecnica che tenta di ripetere un'operazione con un tempo di attesa che aumenta esponenzialmente, fino a quando non viene raggiunto il numero massimo di tentativi. Questa tecnica si basa sul presupposto che le risorse cloud potrebbero essere non disponibili in modo intermittente per brevi periodi, generando l'errore di alcune richieste.
 
-Per il database di SQL Azure, Entity Framework Core fornisce già logica resilienza e tentativi di connessione database interno. Ma è necessario abilitare la strategia di esecuzione di Entity Framework per ogni connessione DbContext se si desidera disporre di connessioni Core EF resiliente.
+Per il database SQL di Azure, Entity Framework Core fornisce già la logica per i tentativi e la resilienza della connessione di database interna. È tuttavia necessario abilitare la strategia di esecuzione di Entity Framework per ogni connessione DbContext per ottenere connessioni di EF Core resilienti.
 
-Ad esempio, il codice seguente a livello di connessione Entity Framework Core consente connessioni SQL resilienti che vengono ripetute nel caso di connessione ha esito negativo.
+Ad esempio, il codice seguente a livello della connessione di EF Core consente connessioni SQL resilienti per le quali vengono effettuati ulteriori tentativi in caso di mancata connessione.
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -165,15 +165,15 @@ public class Startup
 //...
 ```
 
-  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie di esecuzione e le transazioni esplicite utilizzando BeginTransaction e più DbContexts 
+  #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Strategie di esecuzione e transazioni esplicite usando BeginTransaction e più oggetti DbContext 
   
-  Quando i tentativi sono abilitati nelle connessioni di Entity Framework Core, ogni operazione effettuata usando EF Core diventa il proprio possibilità di ritentare. Ogni query e ogni chiamata al metodo SaveChanges verrà ritentate come unità se si verifica un errore temporaneo.
+  Quando nelle connessioni di EF Core sono abilitati i tentativi, ogni operazione che viene eseguita con EF Core diventa un'unica operazione con possibilità di ritentare. Per ogni query e per ogni chiamata a SaveChanges verranno eseguiti altri tentativi come una sola unità nel caso in cui si verifichi un errore temporaneo.
   
-  Tuttavia, se il codice avvia una transazione utilizzando BeginTransaction, si definisce un proprio gruppo di operazioni che devono essere trattati come un'unità, ovvero tutti gli elementi all'interno della transazione è essere sottoposta a rollback se si verifica un errore. Si verrà generata un'eccezione simile al seguente se si tenta di eseguire tale transazione quando si utilizza una strategia di esecuzione EF (criteri di ripetizione) e si includono più SaveChanges da più DbContexts in essa contenuti.
+  Tuttavia, se il codice avvia una transazione tramite BeginTransaction, viene definito un gruppo personalizzato di operazioni che deve essere considerato come un'unità. Se si verifica un errore, verrà eseguito il rollback di tutto ciò che si trova all'interno della transazione. Se si tenta di eseguire la transazione quando si usa una strategia di esecuzione (criteri di ripetizione) di EF e si includono numerosi oggetti SaveChanges da più oggetti DbContext, verrà restituita un'eccezione simile alla seguente.
 
-System. InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Utilizzare la strategia di esecuzione restituita da 'DbContext.Database.CreateExecutionStrategy()' per eseguire tutte le operazioni nella transazione come unità possibilità di ritentare.
+System.InvalidOperationException: La strategia di esecuzione configurata 'SqlServerRetryingExecutionStrategy' non supporta le transazioni avviate dall'utente. Usare la strategia di esecuzione restituita da 'DbContext.Database.CreateExecutionStrategy()' per eseguire tutte le operazioni nella transazione come un'unità con possibilità di ritentare.
 
-La soluzione consiste nel richiamare manualmente la strategia di esecuzione EF con un delegato che rappresenta gli elementi che deve essere eseguito. Se si verifica un errore temporaneo, la strategia di esecuzione verrà nuovamente richiamare il delegato. Il codice seguente viene illustrato come implementare questo approccio:
+La soluzione prevede di richiamare manualmente la strategia di esecuzione di EF con un delegato che rappresenta tutte le operazioni che devono essere eseguite. Se si verifica un errore temporaneo, la strategia di esecuzione richiamerà nuovamente il delegato. Nel codice seguente viene illustrato come implementare questo approccio:
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -198,23 +198,23 @@ await strategy.ExecuteAsync(async () =>
 });
 ```
 
-Il primo elemento DbContext è il \_catalogContext e il secondo elemento DbContext è all'interno di \_integrationEventLogService oggetto. Infine, il Commit di azione da eseguita più DbContexts e l'utilizzo di una strategia di esecuzione di Entity Framework.
+Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si trova all'interno dell'oggetto \_integrationEventLogService. Alla fine, l'azione Commit viene eseguita su più oggetti DbContext tramite una strategia di esecuzione di EF.
 
-> ### <a name="references--entity-framework-core"></a>Riferimenti: Entity Framework Core
-> - **Documenti principali di Entity Framework**  
+> ### <a name="references--entity-framework-core"></a>Riferimenti a Entity Framework Core
+> - **Documentazione di Entity Framework**  
 > <https://docs.microsoft.com/ef/>
-> - **EF principale: Dati correlati**  
+> - **Entity Framework Core: dati correlati**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **Evitare il caricamento Lazy entità nelle applicazioni ASP.NET**  
+> - **Avoid Lazy Loading Entities in ASP.NET Applications** (Evitare il caricamento lazy di entità in applicazioni ASPNET)  
 > <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
-## <a name="ef-core-or-micro-orm"></a>Componenti di base EF o prodotto ORM micro?
+## <a name="ef-core-or-micro-orm"></a>EF Core o micro ORM?
 
-EF Core è un'ottima scelta per la gestione di persistenza, mentre per la maggior parte incapsula i dettagli del database da parte degli sviluppatori dell'applicazione, non è l'unica scelta. È un'alternativa open source comuni [Dapper](https://github.com/StackExchange/Dapper), un cosiddetto prodotto ORM micro. Un prodotto ORM micro è un tipo semplice, meno strumento completo per il mapping di oggetti di strutture di dati. Nel caso di Dapper, la progettazione degli obiettivi di concentrarsi sulle prestazioni, anziché completamente incapsulamento sottostante sottoposto a query viene utilizzato per recuperare e aggiornare i dati. Poiché non astratto SQL da parte dello sviluppatore, Dapper "più vicino a metallo" e consente agli sviluppatori di scrivere la query da utilizzare per i dati di un determinata operazione di accedere.
+EF Core è un'ottima soluzione per la gestione della persistenza. In pratica incapsula i dettagli del database dagli sviluppatori dell'applicazione. Non è tuttavia l'unica possibilità. Esiste un'alternativa open source comune denominata [Dapper](https://github.com/StackExchange/Dapper). Si tratta di un micro ORM. Un micro ORM è uno strumento semplice e meno completo per il mapping di oggetti in strutture di dati. Nel caso di Dapper, è stato progettato per focalizzarsi sulle prestazioni, anziché sul completo incapsulamento delle query sottostanti usate per recuperare e aggiornare i dati. Poiché non estrae le istruzioni SQL dallo sviluppatore, Dapper è un prodotto CTM (close to the meta) e consente agli sviluppatori di scrivere le query esatte da usare per una determinata operazione di accesso ai dati.
 
-Core EF dispone di due importanti funzionalità che fornisce che lo separano dal Dapper ma è aggiungere anche il relativo overhead delle prestazioni. Il primo è una conversione da LINQ. expressions in SQL. Queste conversioni vengono memorizzati nella cache, ma anche in questo caso è overhead durante la prima volta. Il secondo è rilevamento delle modifiche per le entità (in modo che le istruzioni update efficiente possono essere generate). Questo comportamento può essere disattivato per query specifiche tramite l'estensione AsNotTracking. Core EF genera anche le query SQL che in genere sono molto efficienti e in ogni caso è perfettamente accettabile dal punto di vista delle prestazioni, ma se è necessario maggiore controllo sulla query precisa deve essere eseguito, è possibile passare in SQL personalizzato (o eseguire una stored procedure) mediante EF Troppo Core. In questo caso, ancora Dapper supera EF Core, ma solo leggermente. Julie Lerman presenta alcuni dati sulle prestazioni nel proprio potrebbero articolo MSDN 2016 [Dapper, Entity Framework e App ibride](https://msdn.microsoft.com/magazine/mt703432.aspx). Dati aggiuntivi delle prestazioni benchmark per un'ampia gamma di metodi di accesso ai dati possono trovarsi in [il sito Dapper](https://github.com/StackExchange/Dapper).
+EF Core offre due importanti funzionalità che lo distinguono da Dapper ma che al tempo stesso gravano sulle prestazioni. La prima è la conversione di espressioni LINK in SQL. Queste conversioni vengono memorizzate nella cache. Ciononostante, la prima volta che vengono eseguite si verifica un sovraccarico delle prestazioni. La seconda funzionalità importante è il rilevamento delle modifiche nelle entità. In questo modo è possibile generare istruzioni di aggiornamento in modo efficiente. Questo comportamento può essere disattivato per query specifiche tramite l'estensione AsNotTracking. EF Core genera anche query SQL che sono generalmente molto efficienti e in ogni caso perfettamente accettabili dal punto di vista delle prestazioni. Se è tuttavia necessario eseguire un controllo dettagliato sulla query specifica, è anche possibile passare un'istruzione SQL personalizzata (o eseguire una stored procedure) tramite EF Core. In questo caso, le prestazioni offerte da Dapper sono leggermente più elevate rispetto a EF Core. Julie Lerman presenta alcuni dati relativi alle prestazioni nel suo articolo [Dapper, Entity Framework e app ibride](https://msdn.microsoft.com/magazine/mt703432.aspx) pubblicato da MSDN a maggio 2016. Dati benchmark aggiuntivi sulle prestazioni di una serie di metodi di accesso ai dati sono disponibili sul [sito di Dapper](https://github.com/StackExchange/Dapper).
 
-Per vedere come la sintassi per Dapper varia da Entity Framework Core, tenere presenti queste due versioni dello stesso metodo per recuperare un elenco di elementi:
+Per conoscere le diversità in termini di sintassi tra Dapper ed EF Core, considerare queste due versioni dello stesso metodo per recuperare un elenco di elementi:
 
 ```csharp
 // EF Core
@@ -232,21 +232,21 @@ public async Task<IEnumerable<CatalogType>> GetCatalogTypesWithDapper()
 }
 ```
 
-Se è necessario compilare oggetti grafici più complessi con Dapper, è necessario scrivere la query associata (a differenza di aggiunta di un'inclusione esattamente come si farebbe Core EF). Questa è supportata tramite una varietà di sintassi, tra cui la funzione di Mapping che consente di eseguire il mapping di singole righe a più oggetti con mapping più. Ad esempio, specifica una classe Post con una proprietà del proprietario del tipo di utente, l'istruzione SQL seguente restituisce tutti i dati necessari:
+Per compilare oggetti grafici più complessi con Dapper, è necessario scrivere le query associate. Non è invece possibile aggiungere un oggetto Include come EF Core prevede. A tale scopo, sono supportati diversi tipi di sintassi, tra cui la funzione denominata Multi Mapping, che consente di eseguire il mapping di singole righe su più oggetti con mapping. Ad esempio, data una classe Post con una proprietà Owner di tipo User, l'istruzione SQL seguente restituirà tutti i dati necessari:
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 
-Ogni riga restituita include dati utente e di Post. Poiché i dati utente dovrebbero essere collegati ai dati tramite la proprietà Owner Post, viene utilizzata la funzione seguente:
+Ogni riga restituita include i dati sia di User sia di Post. Poiché i dati di User sono collegati ai dati di Post tramite la proprietà Owner, è necessario usare la funzione seguente:
 
 ```csharp
 (post, user) => { post.Owner = user; return post; }
 ```
 
-Il listato di codice completo per restituire una raccolta di annunci con la proprietà Owner popolata con i dati utente associati sarebbe:
+Il listato di codice completo per restituire una raccolta di oggetti Post con la proprietà Owner popolata e i dati di User associati sarà il seguente:
 
 ```csharp
 var sql = @"select * from #Posts p
@@ -256,64 +256,64 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-In quanto offre meno incapsulamento, Dapper richiede gli sviluppatori saperne di più sull'archiviazione dei dati, come eseguire una query in modo efficiente e scrivere codice più per recuperarlo. Quando viene modificato il modello, anziché semplicemente la creazione di una nuova migrazione (un'altra funzionalità di base di Entity Framework) e/o l'aggiornamento delle informazioni di mapping in un'unica posizione in un elemento DbContext, è necessario aggiornare ogni query che è interessata. Queste query sono non compilazione ora garanzie, in modo che è possibile interrompere in runtime in risposta alle modifiche al modello o il database, rendendo più difficile rilevare rapidamente gli errori. In cambio di questi compromessi, Dapper offre prestazioni molto elevate.
+Poiché Dapper offre una capacità di incapsulamento ridotta, è necessario che gli sviluppatori sappiano come archiviare i dati, eseguire una query sui dati in modo efficiente e scrivere altro codice per recuperare i dati. Quando viene modificato il modello, anziché creare semplicemente una nuova migrazione (un'altra funzionalità di EF Core) e/o aggiornare le informazioni di mapping in un unico punto di un oggetto DbContext, è necessario aggiornare tutte le query interessate. Queste query non offrono garanzie durante la compilazione. Possono quindi interrompersi durante l'esecuzione in risposta alle modifiche al modello o al database, compromettendo il rilevamento rapido degli errori. A fronte di questi compromessi, Dapper offre prestazioni molto elevate.
 
-Per la maggior parte delle applicazioni e la maggior parte delle parti di quasi tutte le applicazioni, componenti di base di Entity Framework offre prestazioni accettabili. Di conseguenza, i vantaggi di produttività per sviluppatori intendono genere superano il relativo overhead delle prestazioni. Per le query che possono trarre vantaggio dalla memorizzazione nella cache, l'effettiva query può essere eseguita solo una piccola percentuale di tempo, rendendo relativamente ridotto di query impostato HDR differenze di prestazioni.
+Per la maggior parte delle applicazioni e per molte parti di quasi tutte le applicazioni, le prestazioni di EF Core risultano accettabili. Di conseguenza, i vantaggi offerti agli sviluppatori dal punto della produttività superano il relativo sovraccarico delle prestazioni. Per le query che usano la memorizzazione nella cache, la query effettiva può essere eseguita in brevissimo tempo. In questi casi le differenze in termini di prestazioni di query si riducono e diventano discutibili.
 
 ## <a name="sql-or-nosql"></a>SQL o NoSQL
 
-In genere, i database relazionali, ad esempio SQL Server sono dominato marketplace per l'archiviazione dei dati persistenti, ma non sono l'unica soluzione disponibile. Nei database NoSQL come [MongoDB](https://www.mongodb.com/what-is-mongodb) offrono un approccio diverso per l'archiviazione di oggetti. Anziché oggetti il mapping a tabelle e righe, un'altra opzione è per la serializzazione dell'intero oggetto grafico e memorizza il risultato. I vantaggi di questo approccio, almeno inizialmente, sono le prestazioni e alla semplicità. È certamente più semplice archiviare un singolo oggetto serializzato con una chiave rispetto al scomporre l'oggetto in molte tabelle con relazioni e aggiornamento e le righe che potrebbero essere modificate dall'ultima volta l'oggetto recupero dal database. Analogamente, il recupero e la deserializzazione di un singolo oggetto da un archivio basato su chiavi è in genere molto più veloce e più semplice che complesso join o più query di database necessarie per comporre completamente lo stesso oggetto da un database relazionale. La mancanza di blocchi o le transazioni o uno schema fisso rende inoltre database NoSQL molto adatti per la scalabilità su molti computer, che supporta i set di dati molto grandi.
+I database relazionali, ad esempio SQL Server, hanno tradizionalmente dominato il mercato in termini di archiviazione dei dati persistenti, ma non sono l'unica soluzione disponibile. I database NoSQL come [MongoDB](https://www.mongodb.com/what-is-mongodb) offrono un approccio diverso per l'archiviazione degli oggetti. Anziché eseguire il mapping di oggetti in tabelle e righe, è possibile serializzare l'intero oggetto grafico e memorizzare il risultato. I vantaggi di questo approccio sono, almeno inizialmente, le prestazioni e la semplicità. È certamente più semplice archiviare un singolo oggetto serializzato con una chiave, rispetto a decomporre l'oggetto in molte tabelle con relazioni e aggiornare le righe che potrebbero essere state modificate dall'ultima volta in cui l'oggetto è stato recuperato dal database. Analogamente, il recupero e la deserializzazione di un singolo oggetto da un archivio basato su chiavi è in genere molto più veloce e più semplice rispetto all'uso di join complessi o più query di database necessari per comporre completamente lo stesso oggetto da un database relazionale. La mancanza di blocchi, transazioni o di uno schema fisso rende i database NoSQL anche particolarmente adatti ai fini della scalabilità su molti computer, che supportano set di dati di grandi dimensioni.
 
-D'altra parte, nei database NoSQL (come in genere vengono definite) hanno svantaggi. Database relazionali Usa la normalizzazione per garantire la coerenza ed evitare la duplicazione di dati. Ciò riduce le dimensioni totali del database e si assicura che gli aggiornamenti ai dati condivisi sono disponibili immediatamente in tutto il database. In un database relazionale, una tabella di indirizzi potrebbe fare riferimento una tabella paese dall'ID, in modo che se il nome di un paese sono stato modificato, i record degli indirizzi può costituire un vantaggio rispetto all'aggiornamento di non dover essere aggiornati. Tuttavia, in un database NoSQL, indirizzo e il paese associato potrebbe essere serializzato come parte di molti degli oggetti archiviati. Tali oggetti da aggiornare, anziché una singola riga richiede un aggiornamento di un nome di paese. Database relazionali possono inoltre garantire l'integrità relazionale tramite l'applicazione delle regole, come chiavi esterne. Nei database NoSQL non offrono in genere i vincoli per i propri dati.
+Di contro, nei comunemente detti database NoSQL non mancano gli svantaggi. Nei database relazionali viene applicata la normalizzazione per garantire coerenza ed evitare la duplicazione dei dati. In questo modo si riducono le dimensioni totali del database e si assicura che gli aggiornamenti ai dati condivisi siano immediatamente disponibili in tutto il database. In un database relazionale è possibile che una tabella Address faccia riferimento a una tabella Country usando l'ID, in modo che se il nome di un paese è stato modificato, i record relativi agli indirizzi possano avvantaggiarsi dell'aggiornamento senza dover essere a loro volta aggiornati. In un database NoSQL la tabella Address e la relativa tabella Country associata potrebbero essere invece serializzate come parte di molti oggetti archiviati. Per poter aggiornare il nome del paese è necessario aggiornare tutti questi oggetti anziché una sola riga. I database relazionali possono anche garantire l'integrità relazionale tramite l'applicazione di regole, come le chiavi esterne. I database NoSQL non offrono solitamente vincoli di questo genere sui dati.
 
-Complessità di un altro NoSQL devono gestire i database è il controllo delle versioni. Quando modificare proprietà di un oggetto, potrebbe non essere in grado di deserializzare dalle versioni precedenti che sono state archiviate. Di conseguenza, è necessario aggiornare tutti gli oggetti esistenti con una versione (precedente) serializzata dell'oggetto per rispettare il nuovo schema. Questo non è concettualmente diverso da un database relazionale, in cui modifiche dello schema talvolta richiedono script di aggiornamento o il mapping degli aggiornamenti. Tuttavia, il numero di voci che deve essere modificato è spesso molto maggiore nell'approccio NoSQL, poiché non esiste più di duplicazione dei dati.
+Un altro aspetto complesso che i database NoSQL devono gestire è il controllo delle versioni. Quando le proprietà di un oggetto vengono modificate, non è possibile eseguire la deserializzazione degli oggetti dalle versioni precedenti in cui sono archiviati. Di conseguenza, è necessario aggiornare tutti gli oggetti esistenti con una versione (precedente) serializzata dell'oggetto per rispettare il nuovo schema. Concettualmente non è diverso da quanto accade in un database relazionale dove, in seguito a modifiche allo schema, è talvolta necessario aggiornare script e mapping. Spesso però il numero delle modifiche da apportare in un database NoSQL è molto più elevato, in quanto è necessaria una maggiore duplicazione dei dati.
 
-È possibile nei database NoSQL di archiviare più versioni di oggetti, database relazionali di uno schema fisso che non è in genere supportano. Tuttavia, in questo caso il codice dell'applicazione sarà necessario tenere conto per l'esistenza delle versioni precedenti di oggetti, l'aggiunta di complessità.
+Nei database NoSQL è possibile archiviare più versioni di oggetti, requisito che non è solitamente supportato dai database relazionali a schema fisso. Tuttavia, in questo caso il codice dell'applicazione deve tenere conto dell'esistenza delle versioni precedenti degli oggetti, aumentando così la complessità.
 
-In genere nei database NoSQL non applicano [ACID](http://en.wikipedia.org/wiki/ACID), ovvero presentano vantaggi di prestazioni e scalabilità su database relazionali. Si tratta di ideale per grandi set di dati e gli oggetti che non sono particolarmente adatti per l'archiviazione nelle strutture tabella normalizzata. Non è necessario perché una singola applicazione non è possibile trarre vantaggio da entrambi relazionale e nei database NoSQL, con ogni in cui è preferibile adatto.
+In genere nei database NoSQL non vengono applicate le [ACID](http://en.wikipedia.org/wiki/ACID), vale a dire che sono vantaggiosi rispetto ai database relazionali in termini sia di prestazioni che di scalabilità. Sono database ideali per data set e oggetti di dati di dimensioni molto grandi che non sono particolarmente adatti per essere archiviati in strutture tabella normalizzate. Non esiste un motivo per cui un'applicazione non possa usare sia i database relazionali sia i database NoSQL a seconda dell'utilità.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 
-Azure DocumentDB è un servizio di database NoSQL completamente gestito che offre l'archiviazione di dati privi di schema basato su cloud. DocumentDB è stato compilato per prestazioni rapida e prevedibile, la disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono utilizzare rich e familiare funzionalità di query SQL sui dati JSON. Tutte le risorse in DocumentDB vengono archiviate come documenti JSON. Le risorse vengono gestite come *elementi*, che sono documenti che contengono i metadati, e *feed*, che sono raccolte di elementi. Figura 8-2 viene illustrata la relazione tra le diverse risorse di DocumentDB.
+Azure DocumentDB è un servizio di database NoSQL completamente gestito che offre l'archiviazione di dati privi di schema basata sul cloud. DocumentDB garantisce prestazioni rapide e prevedibili, disponibilità elevata, scalabilità elastica e distribuzione globale. Nonostante sia un database NoSQL, gli sviluppatori possono applicare le note funzionalità avanzate di query SQL su dati JSON. Tutte le risorse in DocumentDB vengono archiviate come documenti JSON. Le risorse sono gestite come *elementi*, vale a dire documenti che contengono metadati, e come *feed*, ovvero raccolte di elementi. Figura 8-2: illustra la relazione tra le diverse risorse di DocumentDB.
 
 
-![La relazione gerarchica tra le risorse di DocumentDB, un database NoSQL JSON](./media/image8-2.png)
+![Relazione gerarchica tra le risorse di DocumentDB, un database NoSQL JSON](./media/image8-2.png)
 
-**Figura 8-2.** Organizzazione di risorse di DocumentDB.
+**Figura 8-2.** Organizzazione delle risorse di DocumentDB.
 
-Il linguaggio di query di DocumentDB è un'interfaccia semplice e potente per eseguire query sui documenti JSON. Il linguaggio supporta un sottoinsieme di grammatica SQL ANSI e aggiunge l'integrazione di oggetti, matrici, la costruzione di oggetti e chiamata di funzione JavaScript.
+Il linguaggio di query di DocumentDB è costituito da un'interfaccia semplice ma potente che consente di eseguire query sui documenti JSON. Il linguaggio supporta un subset di grammatica SQL ANSI e offre totale integrazione di oggetti, matrici, costruzione di oggetti e chiamate JavaScript.
 
-**Riferimenti: DocumentDB**
+**Riferimenti a DocumentDB**
 
--   DocumentDB Introduction\
+-   Introduzione a DocumentDB\
     <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Altre opzioni di persistenza
 
-Oltre ai dati relazionali e le opzioni di archiviazione di database NoSQL, applicazioni ASP.NET Core consente di archiviazione di Azure per archiviare una varietà di formati di dati e i file in modo scalabile e basate su cloud. Archiviazione di Azure è altamente scalabile, pertanto è possibile avviare out archiviare piccole quantità di dati e la scala fino a archiviazione centinaia di terabyte, se richiesto dall'applicazione. Archiviazione di Azure supporta quattro tipi di dati:
+Oltre alle opzioni di archiviazione con database relazionali e NoSQL, le applicazioni ASP.NET Core possono usare l'archiviazione di Azure per archiviare una varietà di formati di dati e file in modelli scalabili, basati sul cloud. L'archiviazione di Azure è altamente scalabile. È quindi possibile iniziare archiviando piccole quantità di dati per poi aumentare l'archiviazione a centinaia di terabyte, se richiesto dall'applicazione. L'archiviazione di Azure supporta quattro tipi di dati:
 
--   Archiviazione BLOB di testo non strutturato o archiviazione binario, detta anche archiviazione di oggetti.
+-   Archiviazione BLOB per l'archiviazione di testo non strutturato o dati binari, detta anche archiviazione di oggetti.
 
 -   Archiviazione tabelle per set di dati strutturati, accessibile tramite chiavi di riga.
 
--   Archiviazione delle code di messaggistica affidabile basata su coda.
+-   Archiviazione code per messaggistica affidabile basata su coda.
 
--   L'archiviazione dei file per l'accesso a file condivisi tra macchine virtuali di Azure e applicazioni locali.
+-   Archiviazione file per l'accesso a file condivisi tra macchine virtuali di Azure e applicazioni locali.
 
-**Riferimenti: archiviazione di Azure**
+**Riferimenti ad archiviazione di Azure**
 
--   Introduction\ di archiviazione di Azure
+-   Introduzione all'archiviazione di Azure\
     <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Memorizzazione nella cache
 
-Nelle applicazioni web, ogni richiesta web deve essere completata in minor tempo possibile. Un modo per ottenere questo risultato consiste nel limitare il numero di chiamate esterne, che il server è necessario apportare per completare la richiesta. La memorizzazione nella cache comporta l'archiviazione di una copia dei dati nel server o un altro archivio dati che è più facilmente sottoposti a query di origine dei dati. Applicazioni Web e soprattutto le applicazioni web tradizionali non SPA, necessario compilare l'intera interfaccia utente per ogni richiesta. Questo comporta spesso l'esecuzione di molte delle stesse query di database ripetutamente da una richiesta di un utente al successivo. Nella maggior parte dei casi, questo dati vengono modificati raramente, pertanto non c'è motivo di richiederla costantemente dal database. ASP.NET Core supporta la memorizzazione nella cache risposta, per la memorizzazione nella cache intere pagine e la memorizzazione nella cache di dati, che supporta il comportamento di memorizzazione nella cache più granulare.
+Nelle applicazioni Web è necessario che ogni richiesta Web sia completata nel minor tempo possibile. A tale scopo è consigliabile limitare il numero di chiamate esterne che il server deve effettuare per completare la richiesta. La memorizzazione nella cache comporta l'archiviazione di una copia di dati nel server, vale a dire un altro archivio dati che può essere sottoposto a query più facilmente rispetto all'origine dei dati. Le applicazioni Web, soprattutto le applicazioni Web tradizionali non SPA, devono compilare l'intera interfaccia utente con ogni richiesta. Così succede spesso che molte delle stesse query sul database vengano eseguite ripetutamente tra una richiesta utente e quella successiva. Nella maggior parte dei casi i dati raramente cambiano. Non c'è quindi motivo di richiederli costantemente dal database. ASP.NET Core supporta la memorizzazione nella cache delle risposte, per le pagine intere, e la memorizzazione nella cache dei dati, che consente un comportamento di memorizzazione nella cache più granulare.
 
-Quando si implementa la memorizzazione nella cache, è importante tenere separazione presente delle problematiche. Evitare di implementazione della logica di memorizzazione nella cache della logica di accesso ai dati o in un'interfaccia utente. Incapsulare la memorizzazione nella cache nelle proprie classi e utilizzare una configurazione per gestire il comportamento. Si attiene ai aperto o chiuso e i principi unica responsabilità e renderà più facile per gestire l'utilizzo di memorizzazione nella cache nell'applicazione di si sviluppa.
+Quando si implementa la memorizzazione nella cache, è importante considerare i concetti in modo separato. Non implementare la logica della memorizzazione nella cache nella logica di accesso ai dati o nell'interfaccia utente. Incapsulare invece la memorizzazione nella cache nelle classi e usare la configurazione per gestirne il comportamento. Applicando così i principi di aperto/chiuso (OCP) e di singola responsabilità (SRP), sarà più facile gestire l'uso della memorizzazione nella cache nell'applicazione man mano che cresce.
 
-### <a name="aspnet-core-response-caching"></a>La memorizzazione nella cache di ASP.NET Core risposta
+### <a name="aspnet-core-response-caching"></a>Memorizzazione nella cache delle risposte di ASP.NET Core
 
-ASP.NET Core supporta due livelli di memorizzazione nella cache di risposta. Il primo livello non memorizzare nella cache qualsiasi elemento nel server, ma aggiunge le intestazioni HTTP che indicano i client e server proxy per memorizzare risposte. Ciò viene implementato, aggiungere l'attributo ResponseCache ai singoli controller o azioni:
+ASP.NET Core supporta due livelli di memorizzazione nella cache delle risposte. Il primo livello non memorizza tutto nella cache nel server, ma aggiunge le intestazioni HTTP che indicano ai client e ai server proxy di memorizzare le risposte nella cache. Questa istruzione viene implementata aggiungendo l'attributo ResponseCache ai singoli controller o azioni:
 
 ```csharp
     [ResponseCache(Duration = 60)]
@@ -342,13 +342,13 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-Il Middleware di memorizzazione nella cache della risposta verrà automaticamente nella cache le risposte in base a un set di condizioni, che è possibile personalizzare. Per impostazione predefinita, vengono memorizzati nella cache le risposte solo 200 (OK), richieste tramite i metodi GET o HEAD. Inoltre, le richieste devono avere una risposta con una Cache-Control: intestazione pubblica e non può includere le intestazioni per l'autorizzazione o Set-Cookie. Vedere un [elenco completo delle condizioni memorizzazione nella cache utilizzato dalla risposta la memorizzazione nella cache middleware](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching).
+Il middleware di memorizzazione nella cache delle risposte memorizzerà autenticamente le risposte sulla base di una serie di condizioni personalizzabili. Per impostazione predefinita, vengono memorizzate nella cache solo risposte con codice di stato 200 (OK) tramite i metodi GET o HEAD. È anche necessario che le richieste abbiano una risposta con intestazione pubblica Cache-Control e non includano le intestazioni Authorization o Set-Cookie. Vedere l'[elenco completo delle condizioni di memorizzazione nella cache usato dal middleware di memorizzazione nella cache delle risposte](https://docs.microsoft.com/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
-### <a name="data-caching"></a>Memorizzazione di dati
+### <a name="data-caching"></a>Memorizzazione nella cache dei dati
 
-Anziché (o in aggiunta a) la memorizzazione nella cache le risposte dei web completo, è possibile memorizzare nella cache i risultati delle query di dati singoli. A tale scopo, è possibile utilizzare la memorizzazione nella cache sul server web o usare [una cache distribuita](https://docs.microsoft.com/aspnet/core/performance/caching/distributed). In questa sezione verrà illustrato come implementare in memoria la memorizzazione nella cache.
+Anziché memorizzare nella cache tutte le risposte Web oppure oltre ad abilitare tale funzionalità, è possibile memorizzare nella cache i risultati delle singole query sui dati. A tale scopo, è possibile usare la memorizzazione nella cache in memoria nel server Web, oppure una [cache distribuita](https://docs.microsoft.com/aspnet/core/performance/caching/distributed). In questa sezione sarà illustrato come implementare la memorizzazione nella cache in memoria.
 
-Aggiungere il supporto per la memoria (o distribuita) la memorizzazione nella cache in ConfigureServices:
+Aggiungere il supporto per la memorizzazione nella cache in memoria (o per la cache distribuita) in ConfigureServices:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -358,9 +358,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Assicurarsi di aggiungere anche il pacchetto Microsoft.Extensions.Caching.Memory NuGet.
+Controllare che sia stato aggiunto anche il pacchetto NuGet Microsoft.Extensions.Caching.Memory.
 
-Dopo aver aggiunto il servizio, richiesta IMemoryCache tramite l'inserimento di dipendenze ogni volta che è necessario accedere alla cache. In questo esempio, il CachedCatalogService viene usato il modello di progettazione Proxy (o un elemento Decorator), fornendo un'implementazione alternativa del ICatalogService che controlla l'accesso a (o comportamento aggiunge) l'implementazione di CatalogService sottostante.
+Dopo aver aggiunto il servizio, le richieste vengono inviate a IMemoryCache tramite l'inserimento di dipendenze ogni volta che è necessario accedere alla cache. In questo esempio CachedCatalogService usa lo schema progettuale Proxy (o Decorator), offrendo un'implementazione alternativa di ICatalogService che controlla l'accesso (o ne aggiunge il comportamento) all'implementazione di CatalogService sottostante.
 
 ```csharp
 public class CachedCatalogService : ICatalogService
@@ -408,7 +408,7 @@ public class CachedCatalogService : ICatalogService
 }
 ```
 
-Per configurare l'applicazione di utilizzare la versione memorizzata nella cache del servizio, ma consentono ancora il servizio per l'istanza di CatalogService necessarie nel relativo costruttore, è necessario aggiungere quanto segue in ConfigureServices:
+Per configurare l'applicazione in modo che usi la versione del servizio memorizzata nella cache, consentendo tuttavia ancora al servizio di ottenere l'istanza di CatalogService necessaria nel relativo costruttore, aggiungere quanto segue in ConfigureServices:
 
 ```csharp
 services.AddMemoryCache();
@@ -416,17 +416,17 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-A questo punto, le chiamate del database per recuperare i dati del catalogo verranno effettuate solo una volta al minuto, piuttosto che a ogni richiesta. In base al traffico al sito, questo può avere un impatto significativo sul numero di query eseguite per il database e il tempo medio di caricamento per la home page che attualmente dipende tutte e tre le query esposti da questo servizio.
+A questo punto, le chiamate al database per recuperare i dati del catalogo verranno eseguite una sola volta al minuto, anziché a ogni richiesta. In base al traffico destinato al sito, questa configurazione può avere un impatto significativo sul numero di query inviate al database e sul tempo medio di caricamento della home page che attualmente dipende da tutte e tre le query esposte da questo servizio.
 
-È un problema che si verifica quando viene implementata la memorizzazione nella cache *dati non aggiornati* –, ovvero i dati modificati in una versione aggiornata, ma l'origine rimangono nella cache. Un modo semplice per risolvere questo problema è utilizzare la durata della cache piccola, poiché per un'applicazione occupata è limitato benefici per estendere la lunghezza dei dati viene memorizzato nella cache. Si consideri ad esempio una pagina che esegue una query di singolo database, e viene richiesto di 10 volte al secondo. Se questa pagina viene memorizzato nella cache per un minuto, si verificherà il numero di query di database eseguite al minuto per eliminare da 600 a una riduzione 99,8% 1. Se invece la durata della cache sono stata apportata a un'ora, la riduzione complessiva sarebbe 99.997%, ma ora l'età di probabilità e il potenziale di dati non aggiornati sono entrambi aumenta notevolmente.
+Quando viene implementata la memorizzazione nella cache si verifica un problema correlato ai *dati non aggiornati* , vale a dire i dati che sono stati modificati nell'origine, ma nella cache è rimasta una versione non aggiornata. Un modo semplice per risolvere questo problema è usare durate della cache ridotte. Infatti, per un'applicazione occupata il vantaggio aggiuntivo di estendere la durata di memorizzazione nella cache dei dati è limitato. Si consideri ad esempio una pagina che esegue un'unica query al database, richiedendola 10 volte al secondo. Se questa pagina rimane memorizzata nella cache per un minuto, il numero di query al database ogni minuto diminuirà da 600 a 1, pari a una riduzione del 99,8%. Se invece la durata della cache fosse di un'ora, la riduzione complessiva sarebbe del 99,997%, ma la probabilità e la potenziale durata dei dati non aggiornati aumentano considerevolmente.
 
-Un altro approccio consiste nel rimuovere in modo proattivo le voci della cache quando vengono aggiornati i dati in che essi contenuti. Qualsiasi singola voce può essere rimossa se si conosce la chiave:
+Un altro approccio consiste nel rimuovere in modo proattivo le voci della cache quando vengono aggiornati i dati in esse contenuti. È possibile rimuovere ogni singola voce se si conosce la relativa chiave:
 
 ```csharp
 _cache.Remove(cacheKey);
 ```
 
-Se l'applicazione espone la funzionalità per l'aggiornamento delle voci che memorizza nella cache, è possibile rimuovere le voci della cache corrispondente nel codice che esegue gli aggiornamenti. In alcuni casi potrebbero essere presenti numerose voci diverse che dipendono da un particolare set di dati. In tal caso, può essere utile creare dipendenze tra le voci della cache, utilizzando un CancellationChangeToken. Con un CancellationChangeToken, è possibile far scadere più voci nella cache in una sola volta per il token di annullamento.
+Se l'applicazione espone la funzionalità per l'aggiornamento delle voci memorizzate nella cache, è possibile rimuovere le voci della cache corrispondenti nel codice che esegue gli aggiornamenti. In alcuni casi potrebbero esistere numerose voci diverse che dipendono da un set di dati specifico. In questo caso può essere utile creare dipendenze tra le voci della cache, usando un oggetto CancellationChangeToken, che consente di annullare la validità di più voci della cache in una sola volta, annullando il token.
 
 ```csharp
 // configure CancellationToken and add entry to cache

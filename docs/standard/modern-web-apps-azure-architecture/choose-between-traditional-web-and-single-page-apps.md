@@ -1,6 +1,6 @@
 ---
-title: Scegliere tra le app web tradizionali e singola pagina
-description: Architetto moderne applicazioni web con ASP.NET Core e Microsoft Azure
+title: Scegliere tra app Web tradizionali e a pagina singola
+description: Progettare applicazioni Web moderne con ASP.NET Core e Microsoft Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -11,89 +11,89 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/23/2017
 ---
-# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra le app Web tradizionali e singola pagina (stabilimenti termali)
+# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Scegliere tra app Web tradizionali e a pagina singola
 
-> "Diritto del Atwood: qualsiasi applicazione che può essere scritta in JavaScript, infine verrà scritto in JavaScript."  
+> "Legge di Atwood: qualsiasi applicazione che può essere creata in JavaScript, finirà per essere creata in JavaScript".  
 > _\- Jeff Atwood_
 
 ## <a name="summary"></a>Riepilogo
 
-Esistono due approcci generali per la creazione di applicazioni web oggi: applicazioni web tradizionali che eseguono la maggior parte della logica dell'applicazione sul server e applicazioni a pagina singola (stabilimenti termali) che eseguono la maggior parte della logica dell'interfaccia utente in un web browser, comunicazione con il server web principalmente tramite l'API web. Un approccio ibrido è anche possibile, il più semplice da host a uno o più simile a SPA secondario applicazioni complete all'interno di un'applicazione web tradizionale più grande.
+Attualmente esistono due approcci generali alla creazione di applicazioni Web: le applicazioni Web tradizionali che eseguono la maggior parte della logica dell'applicazione nel server e le applicazioni a pagina singola (SPA, Single Page Application) che eseguono la maggior parte della logica dell'interfaccia utente in un Web browser, comunicando con il server Web principalmente attraverso API Web. È anche possibile un approccio ibrido: l'esempio più semplice è l'hosting di una o più sottoapplicazioni a pagina singola in un'applicazione Web tradizionale più grande.
 
-È necessario utilizzare le applicazioni web tradizionali quando:
+L'uso delle applicazioni Web tradizionali è consigliato quando:
 
--   I requisiti dell'applicazione sul lato client sono semplici o di sola lettura.
+-   I requisiti lato client dell'applicazione sono semplici o di sola lettura.
 
--   L'applicazione deve funzionare in browser senza supporto JavaScript.
+-   L'applicazione deve funzionare in browser che non supportano JavaScript.
 
--   Il team non ha dimestichezza con le tecniche di sviluppo JavaScript o TypeScript.
+-   Il team non ha dimestichezza con le tecniche di sviluppo di JavaScript o TypeScript.
 
-È consigliabile utilizzare un SPA quando:
+È consigliabile usare un' applicazione a pagina singola quando:
 
 -   L'applicazione deve esporre un'interfaccia utente avanzata con numerose funzionalità.
 
--   Il team è familiare con lo sviluppo di JavaScript e/o TypeScript.
+-   Il team ha familiarità con lo sviluppo in JavaScript e/o TypeScript.
 
--   L'applicazione deve già espongono un'API per gli altri client (interno o pubblico).
+-   L'applicazione deve già esporre un'API per altri client (interni o pubblici).
 
-Inoltre, il Framework SPA richiede maggiore dell'architettura e l'esperienza di sicurezza. Si verifica maggiore varianza a causa di aggiornamenti frequenti e nuovi Framework rispetto alle applicazioni web tradizionali. Configurazione dei processi di compilazione e distribuzione automatizzati e che utilizzano le opzioni di distribuzione come contenitori sono più difficili con applicazioni di SPA rispetto alle App web tradizionali.
+I framework delle applicazioni a pagina singola richiedono anche maggiori conoscenze a livello di architettura e sicurezza. Tali framework soggetti a maggior varianza rispetto alle applicazioni Web tradizionali, a causa di aggiornamenti frequenti e nuovi framework. La configurazione dei processi di compilazione e distribuzione automatizzati e l'uso di opzioni di distribuzione come i contenitori risultano più difficili con le applicazioni a pagina singola che con le app Web tradizionali.
 
-Miglioramenti nell'esperienza utente resa possibile dal modello SPA devono essere confrontati con queste considerazioni.
+I miglioramenti dell'esperienza utente offerti dal modello di applicazione a pagina singola devono essere valutati a fronte di queste considerazioni.
 
-## <a name="when-to-choose-traditional-web-apps"></a>Quando scegli App web tradizionali
+## <a name="when-to-choose-traditional-web-apps"></a>Quando scegliere le app Web tradizionali
 
-Di seguito viene fornita una spiegazione più dettagliata dei motivi indicati in precedenza per il prelievo di applicazioni web tradizionali.
+Di seguito vengono descritti in modo più dettagliato i motivi indicati in precedenza per la scelta delle applicazioni Web tradizionali.
 
-**L'applicazione ha requisiti semplici, possibilmente in sola lettura, sul lato client**
+**L'applicazione ha requisiti lato client semplici o di sola lettura**
 
-Molte applicazioni web vengono utilizzate principalmente in una modalità di sola lettura per la maggior parte degli utenti. Applicazioni di sola lettura (o prevalentemente di sola lettura) tendono a essere molto più semplice rispetto a quelli che gestiscono e modificare un notevole dello stato. Ad esempio, un motore di ricerca può essere costituito da un singolo punto di ingresso con una casella di testo e una seconda pagina per visualizzare i risultati della ricerca. Gli utenti anonimi è possono apportare facilmente le richieste ed è necessario per la logica sul lato client. Analogamente, applicazione pubblico di un blog o nel contenuto gestione del sistema in genere è costituito principalmente contenuto con piccolo comportamento sul lato client. Tali applicazioni facilmente compilate come applicazioni web tradizionale basato su server che eseguono la logica nel server web e il rendering di HTML da visualizzare nel browser. Il fatto che ogni pagina del sito univoco dispone del proprio URL che può essere rimossa e indicizzato dai motori di ricerca (impostazione predefinita, senza dover aggiungere questo elemento come funzionalità separata dell'applicazione) è anche un evidente vantaggio in tali scenari.
+Molte applicazioni Web vengono usate principalmente in modalità di sola lettura dalla maggior parte degli utenti. Le applicazioni di sola lettura (o prevalentemente di sola lettura) tendono a essere molto più semplici rispetto a quelle che devono gestire e modificare grandi quantità di codice. Ad esempio un motore di ricerca può essere costituito da un singolo punto di ingresso con una casella di testo e da una seconda pagina per la visualizzazione dei risultati della ricerca. Qualsiasi utente anonimo può formulare richieste e la logica lato client necessaria è minima. In modo analogo, l'applicazione destinata al pubblico di un blog o di un sistema di gestione dei contenuti è in genere costituita soprattutto da contenuto, con funzionalità lato client limitate. Le applicazioni di questo tipo possono essere create in modo semplice come applicazioni Web tradizionali, che eseguono la logica nel server Web e restituiscono risultati in formato HTML da visualizzare nel browser. Il fatto che ogni pagina univoca del sito disponga di un proprio URL, al quale i motori di ricerca possono applicare un segnalibro e un indice (per impostazione predefinita, senza aggiungere questa operazione come funzionalità separata dell'applicazione) è un altro evidente vantaggio in questi scenari.
 
-**L'applicazione deve funzionare in browser senza supporto JavaScript**
+**L'applicazione deve funzionare in browser che non supportano JavaScript**
 
-Applicazioni Web che richiedono la funzione nei browser con limitato o nessun supporto JavaScript devono essere scritto utilizzando flussi di lavoro app web tradizionali o almeno in grado di eseguire il fallback a tale comportamento. Per funzionare; stabilimenti termali richiedono JavaScript sul lato client Se non è disponibile, stabilimenti termali non sono una buona scelta.
+Le applicazioni Web che devono funzionare in browser con supporto limitato o senza supporto per JavaScript devono essere scritte con i flussi di lavoro tradizionali per le app Web (o almeno devono essere in grado di attivare il comportamento corrispondente se necessario). Per il funzionamento delle applicazioni a pagina singola, JavaScript deve essere disponibile sul lato client. In caso contrario, le applicazioni a pagina singola non rappresentano la scelta ottimale.
 
-**Il team non ha dimestichezza con le tecniche di sviluppo JavaScript o TypeScript**
+**Il team non ha dimestichezza con le tecniche di sviluppo di JavaScript o TypeScript**
 
-Se il team non ha dimestichezza con JavaScript o TypeScript, ma ha familiarità con lo sviluppo di applicazioni web sul lato server, probabilmente sarà in grado di fornire più rapidamente un SPA un'app web tradizionali. A meno che l'apprendimento di stabilimenti termali programma è un obiettivo o l'esperienza utente offerta da un SPA è necessario, App web tradizionali sono una scelta più produttiva per i team che hanno già familiarità con la compilazione.
+Se il team non ha dimestichezza con JavaScript o TypeScript, ma ha familiarità con lo sviluppo di applicazioni Web lato server, probabilmente potrà produrre un'app Web tradizionale più rapidamente di un'applicazione a pagina singola. A meno che l'apprendimento della programmazione di applicazioni a pagina singola non sia un obiettivo o che sia necessaria l'esperienza utente offerta da un'applicazione a pagina singola, le app Web tradizionali sono una scelta più produttiva per i team che hanno già familiarità con lo sviluppo di queste app.
 
-## <a name="when-to-choose-spas"></a>Quando scegliere stabilimenti termali
+## <a name="when-to-choose-spas"></a>Quando scegliere le applicazioni a pagina singola
 
-Di seguito viene fornita una spiegazione più dettagliata del momento in cui scegliere uno stile di applicazioni a pagina singola di sviluppo per l'app web.
+Di seguito è riportata una spiegazione più dettagliata dei casi in cui è opportuno scegliere l'approccio di sviluppo applicazione a pagina singola per l'app Web.
 
-**L'applicazione deve esporre un'interfaccia utente avanzata con molte funzionalità**
+**L'applicazione deve esporre un'interfaccia utente avanzata con numerose funzionalità**
 
-Stabilimenti termali possono supportare funzionalità complete di sul lato client che non richiede il ricaricamento della pagina come utenti di eseguono azioni o passare tra le aree dell'app. Stabilimenti termali possono caricare più rapidamente, recupero dei dati in background, e le azioni utente sono più reattive poiché Ricarica pagina intera è rari. Stabilimenti termali possono supportare gli aggiornamenti incrementali, salvataggio form completata parzialmente o documenti senza che sia necessario fare clic su un pulsante per inviare un form. Stabilimenti termali possono supportare i comportamenti sul lato client complessi, ad esempio di trascinamento e rilascio, molto più rapidamente rispetto alle applicazioni tradizionali. Stabilimenti termali possono essere progettate per l'esecuzione in modalità disconnessa, effettuare aggiornamenti a un modello sul lato client che vengono sincronizzati infine al server quando viene ristabilita una connessione. È consigliabile scegliere un'applicazione di tipo SPA se i requisiti dell'app includono funzionalità complete che vanno oltre cosa offre tipico form HTML.
+Le applicazioni a pagina singola supportano funzionalità lato client complete, che non richiedono di ricaricare la pagina quando gli utenti eseguono operazioni o passano da un'area all'altra dell'app. Le applicazioni a pagina singola vengono caricate rapidamente recuperando i dati in background e le singole azioni dell'utente risultano più rapide, perché pagine vengono ricaricate completamente solo in casi sporadici. Le applicazioni a pagina singola supportano gli aggiornamenti incrementali, salvando documenti o moduli completati solo parzialmente senza richiedere all'utente di fare clic su un pulsante per inoltrare un modulo. Le applicazioni a pagina singola supportano comportamenti lato client complessi, quali il trascinamento della selezione, con maggior facilità rispetto alle applicazioni tradizionali. Le applicazioni a pagina singola possono anche essere progettate per l'esecuzione in modalità non connessa mediante aggiornamento di un modello lato client che viene sincronizzato nel server quando viene ristabilita una connessione. È consigliabile scegliere un'applicazione a pagina singola se i requisiti dell'app includono funzionalità complete, che vanno oltre quelle offerte dai tipici form HTML.
 
-Si noti che spesso stabilimenti termali necessario per implementare le funzionalità incorporate per App web tradizionali, ad esempio la visualizzazione di un URL significativo indirizzo barra che riflettono l'operazione corrente (e che consente agli utenti di segnalibro o un collegamento diretto a questo URL per restituire a esso). Stabilimenti termali, inoltre, devono consentire agli utenti di utilizzare il browser pulsanti Indietro e avanti con risultati che non sorprendere li.
+Si noti che in molti casi le applicazioni a pagina singola devono implementare funzionalità che sono incorporate nelle app Web tradizionali, quali la visualizzazione nella barra dell'indirizzo di un URL corretto che rifletta l'operazione in corso (e l'autorizzazione degli utenti alla creazione di un segnalibro o un deep link a tale URL, per poter tornare alla pagina). Infine le applicazioni a pagina singola devono consentire agli utenti di usare i pulsanti Indietro e Avanti del browser con risultati prevedibili.
 
-**Il team ha familiarità con lo sviluppo di JavaScript e/o TypeScript**
+**Il team ha familiarità con lo sviluppo in JavaScript e/o TypeScript**
 
-La scrittura stabilimenti termali richiede una certa familiarità con JavaScript e/o TypeScript e tecniche di programmazione sul lato client e librerie. Il team deve essere competente nella scrittura moderni JavaScript con un framework di SPA come angolare.
+Per creare applicazioni a pagina singola è necessario avere dimestichezza con JavaScript e/o TypeScript e con le tecniche e le librerie della programmazione lato client. Il team deve essere in grado di creare codice JavaScript moderno tramite un framework per applicazioni a pagina singola come Angular.
 
-> ### <a name="references--spa-frameworks"></a>Riferimenti: Framework SPA
+> ### <a name="references--spa-frameworks"></a>Riferimenti: framework per applicazioni a pagina singola
 > - **AngularJS**  
 > <https://angularjs.org/>
-> - **Confronto di 4 Framework JavaScript comuni**  
+> - **Comparison of 4 Popular JavaScript Frameworks** (Confronto tra quattro framework JavaScript di grande diffusione)  
 > <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
-**L'applicazione deve già espongono un'API per gli altri client (interno o pubblico)**
+**L'applicazione deve già esporre un'API per altri client (interni o pubblici)**
 
-Se si sta già di supportare un'API web per l'utilizzo da altri client, potrebbe essere necessario meno lavoro richiesto per creare un'implementazione di SPA che sfrutta queste API, anziché riprodurre la logica del form sul lato server. Stabilimenti termali usano ampiamente API web per query e aggiornare i dati quando gli utenti interagiscono con l'applicazione.
+Se si supporta già un'API Web per l'uso con altri client, può risultare meno oneroso creare un'implementazione di tipo applicazione a pagina singola che si avvale di tale API anziché riprodurre la logica nel formato lato server. Le applicazioni a pagina singola usano sistematicamente le API Web per eseguire query e aggiornare i dati quando gli utenti interagiscono con l'applicazione.
 
-## <a name="decision-table--traditional-web-or-spa"></a>Tabella decisioni – Web tradizionali o SPA
+## <a name="decision-table--traditional-web-or-spa"></a>Tabella per la scelta tra app Web tradizionale o applicazione a pagina singola
 
-La tabella decisioni seguente vengono riepilogati alcuni dei fattori da considerare nella scelta tra un'applicazione web tradizionale e un SPA base.
+La tabella seguente riepiloga alcuni fattori di base da considerare nella scelta tra un'applicazione Web tradizionale e un'applicazione a pagina singola.
 
-  | **Fattore** | **App Web tradizionali** | **Applicazione a pagina singola** |
+  | **Fattore** | **App Web tradizionale** | **Applicazione a pagina singola** |
   |---|---|---|
-  | Conoscenza obbligatorie del Team con JavaScript o TypeScript | **Minimal** | **Obbligatorio** |
-  | Supportare i browser senza script | **Supportato** | Non è supportato |
-  | Comportamento dell'applicazione sul lato Client minima | **Well-Suited** | **Eccessivi** |
-  | Requisiti dell'interfaccia utente dettagliate e complesse | **Limitato** | **Well-Suited** |
+  | Il team deve conoscere JavaScript o TypeScript | **Minimo** | **Obbligatorio** |
+  | Supporto dei browser senza script | **Supportato** | **Non supportato** |
+  | Comportamento minimo dell'applicazione lato client | **Adeguato** | **Eccessivo** |
+  | Esigenza di un'interfaccia utente dettagliata e complessa | **Limitato** | **Adeguato** |
 
 >[!div class="step-by-step"]
-[Precedente] (modern-web-applicazioni-characteristics.md) [successivo](architectural-principles.md)
+[Indietro] (modern-web-applications-characteristics.md) [Avanti](architectural-principles.md)

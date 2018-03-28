@@ -1,6 +1,6 @@
 ---
 title: Principi architetturali
-description: Architettura di moderne applicazioni Web con ASP.NET Core e Azure | Principi architetturali
+description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Principi architetturali
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -11,114 +11,114 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
 ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/29/2018
 ---
 # <a name="architectural-principles"></a>Principi architetturali
 
-> "Se generatori di edifici i programmatori modo scritto programmi quindi il primo woodpecker che è arrivata sarebbe destroy civiltà."  
-> _\- Ideatore è Gerald Weinberg_
+> "Se i costruttori costruissero edifici come i programmatori scrivono i programmi, il primo picchio che passa distruggerebbe la civiltà."  
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>Riepilogo
 
-È necessario progettare e progettare soluzioni di software con manutenibilità presente. I principi indicati in questa sezione possono semplificare verso alcune decisioni architetturali che si tradurrà in applicazioni pulite e gestibile. In genere, tali principi fornirà le istruzioni per la creazione di applicazioni da componenti discreti che non sono strettamente collegate ad altre parti dell'applicazione, ma piuttosto di comunicare tramite interfacce esplicite o sistemi di messaggistica.
+È necessario ideare e progettare soluzioni software tenendo presente l'aspetto della loro gestione. I principi indicati in questa sezione possono favorire scelte architetturali che daranno vita ad applicazioni pulite e gestibili. Generalmente, questi principi orientano verso la creazione di applicazioni contenenti componenti discreti che non sono strettamente accoppiati ad altre parti dell'applicazione, ma che comunicano tramite interfacce esplicite o sistemi di messaggistica.
 
 ## <a name="common-design-principles"></a>Principi di progettazione comuni
 
-### <a name="separation-of-concerns"></a>Separazione dei compiti
+### <a name="separation-of-concerns"></a>Separazione dei concetti
 
-È un principio durante lo sviluppo di **la separazione di problemi**. Questo principio asserisce che software deve essere separato in base al tipo di lavoro che eseguita. Ad esempio, si consideri un'applicazione che include la logica per l'identificazione di elementi importanti da visualizzare all'utente e che formatta tali elementi in un modo specifico per renderli più evidenti. Il comportamento è responsabile per la scelta di quali elementi di formato devono essere mantenuti separati dal comportamento responsabile per la formattazione degli elementi, poiché si tratta di separare le problematiche che riguardano solo coincidenza uno a altro.
+Un principio guida per lo sviluppo di applicazioni è **la separazione dei concetti**. In base a questo principio, deve esistere una separazione a livello di software in funzione delle operazioni eseguite. Ad esempio, si consideri un'applicazione che include la logica per l'identificazione di elementi importanti da visualizzare all'utente e la formattazione specifica di tali elementi per renderli più evidenti. Il comportamento responsabile della scelta degli elementi da formattare dovrebbe essere mantenuto separato dal comportamento responsabile della formattazione vera e propria degli elementi, poiché si tratta di concetti distinti e solo casualmente correlati tra loro.
 
-L'architettura applicazioni possono essere compilate in modo logico per seguire questo principio separando il comportamento di business principale da logica dell'interfaccia utente e infrastruttura. In teoria, le regole di business e logica deve trovarsi in un progetto separato, non deve dipendere da altri progetti nell'applicazione. Ciò garantisce che il modello di business è facile da testare e possono evolvere senza essere strettamente collegati ai dettagli di implementazione di basso livello. La separazione dei compiti è un fattore chiave dietro l'utilizzo dei livelli nelle architetture di applicazioni.
+Dal punto di vista della progettazione, è possibile costruire in modo logico le applicazioni rispettando questo principio e separando il comportamento di business principale dalla logica dell'interfaccia utente e dell'infrastruttura. Idealmente, le regole e la logica di business dovrebbero risiedere in un progetto separato e autonomo rispetto agli altri progetti dell'applicazione. Ciò garantisce che il modello di business sia facile da testare e possa evolvere senza essere strettamente associato a dettagli di implementazione di basso livello. La separazione dei compiti è un fattore chiave nella scelta di utilizzare i livelli nelle architetture delle applicazioni.
 
 ### <a name="encapsulation"></a>Incapsulamento
 
-Parti diverse di un'applicazione devono utilizzare **incapsulamento** per isolare i loro da altre parti dell'applicazione. Livelli e i componenti dell'applicazione devono essere in grado di regolare riguarda l'implementazione interna senza interrompere i collaboratori fino a quando non vengono violati contratti esterni. Utilizzo appropriato di incapsulamento consente di ottenere regime di controllo e modularità per progettazioni di applicazioni, poiché gli oggetti e i pacchetti possono essere sostituiti con implementazioni alternative, purché la stessa interfaccia viene mantenuta.
+Parti diverse di un'applicazione devono essere isolate da altre mediante l'**incapsulamento**. I componenti e i livelli dell'applicazione devono essere in grado di regolare la loro implementazione interna senza interrompere i collaboratori, a patto che i contratti esterni non vengano violati. Un utilizzo corretto dell'incapsulamento consente di progettare le applicazioni con modularità e un tipo di accoppiamento debole poiché gli oggetti e i pacchetti possono essere sostituiti con implementazioni alternative, purché la stessa interfaccia venga mantenuta.
 
-Nelle classi, incapsulamento avviene tramite la limitazione all'esterno di accesso allo stato interno della classe. Se un attore esterno desidera modificare lo stato dell'oggetto, deve farlo tramite una funzione ben definito (o setter di proprietà), anziché avere accesso diretto per lo stato privato dell'oggetto. Analogamente, i componenti dell'applicazione e le applicazioni stesse devono esporre interfacce ben definite per i collaboratori di utilizzare, invece di lasciare che lo stato su cui è possibile modificare direttamente. In questo modo la progettazione dell'applicazione interna a evolversi nel tempo senza doversi preoccupare che in tal modo verrà interrotto collaboratori, purché i contratti pubblici vengono mantenuti.
+L'incapsulamento delle classi avviene limitando l'accesso esterno allo stato interno della classe. Se un attore esterno vuole modificare lo stato dell'oggetto, dovrà farlo tramite una funzione ben definita o un setter di proprietà anziché accedendo direttamente allo stato privato dell'oggetto. Analogamente, i componenti dell'applicazione e le applicazioni stesse non devono consentire la modifica diretta del loro stato bensì esporre interfacce ben definite a uso dei collaboratori. Questo accorgimento consente alla struttura interna dell'applicazione di evolversi nel tempo senza comportare l'interruzione dei collaboratori, purché i contratti pubblici vengano mantenuti.
 
-### <a name="dependency-inversion"></a>Inversione di dipendenza
+### <a name="dependency-inversion"></a>Inversione delle dipendenze
 
-La direzione di dipendenza all'interno dell'applicazione deve essere nella direzione di astrazione, non i dettagli di implementazione. La maggior parte delle applicazioni vengono scritti in modo che in fase di compilazione dipendenza scorre nella direzione dell'esecuzione di runtime. Ciò produce un grafico di dipendenze dirette. Ovvero, se le chiamate di modulo A una funzione nel modulo B, che chiama una funzione nel modulo C, quindi quando è necessario un tempo di compilazione dipendono da B dipenderà C, come illustrato nella figura 4-1.
+La direzione delle dipendenza all'interno dell'applicazione deve puntare verso l'astrazione, non verso i dettagli di implementazione. La maggior parte delle applicazioni vengono scritte in modo che le dipendenze in fase di compilazione scorrano nella direzione della fase di esecuzione. Ciò produce un grafico delle dipendenze dirette. Ovvero, se il modulo A chiama una funzione nel modulo B, che a sua volta chiama una funzione nel modulo C, in fase di compilazione A dipenderà da B che dipenderà da C, come illustrato nella figura 4-1.
 
 ![](./media/image4-1.png)
 
 **Figura 4-1.** Grafico delle dipendenze dirette.
 
-Applicazione del principio di inversione di dipendenza consente A chiamare metodi sul astrazione che implementa B, rendendo possibili per una chiamata di B in fase di esecuzione, ma per B che dipendono da un'interfaccia controllata da una fase di compilazione (in questo modo, *inversione* la dipendenza della fase di compilazione tipico). In fase di esecuzione, il flusso dell'esecuzione del programma rimane invariato, ma l'introduzione di interfacce significa che le implementazioni diverse di queste interfacce facilmente possono essere collegate.
+L'applicazione del principio di inversione delle dipendenze consente ad A di chiamare metodi su un'astrazione implementata da B, consentendo ad A di chiamare B in fase di esecuzione, ma a B di dipendere da un'interfaccia controllata da A in fase di compilazione pertanto *invertendo* le dipendenze tipiche della fase di compilazione. In fase di esecuzione, il flusso di esecuzione del programma rimane invariato, ma l'introduzione di interfacce significa che sarà possibile collegare facilmente diverse implementazioni di tali interfacce.
 
 ![](./media/image4-2.png)
 
-**Figura 4-2.** Grafico delle dipendenze invertito.
+**Figura 4-2**. Grafico delle dipendenze inverse.
 
-**Inversione di dipendenza** costituisce una parte fondamentale della compilazione di applicazioni ad accoppiamento debole, poiché i dettagli di implementazione possono essere scritta dipendono e implementare astrazioni di livello superiore piuttosto che nel caso opposto. Le applicazioni che sono di conseguenza più testabili modulare e gestibile. La pratica di *inserimento di dipendenze* è reso possibile seguendo il principio di inversione della dipendenza.
+L'**inversione delle dipendenze** è un elemento chiave per costruire applicazioni con accoppiamento debole, perché consente di scrivere i dettagli dell'implementazione in modo che facciano riferimento ad astrazioni di alto livello e le implementino, piuttosto che il contrario. Le applicazioni così ottenute sono più testabili, modulari e gestibili. La pratica dell'*inserimento di dipendenze* è resa possibile dall'applicazione del principio di inversione delle dipendenze.
 
 ### <a name="explicit-dependencies"></a>Dipendenze esplicite
 
-**Classi e metodi devono richiedere in modo esplicito gli oggetti in collaborazione che necessarie per il corretto funzionamento.** Costruttori di classi forniscono un'opportunità per le classi identificare le operazioni che necessarie per poter essere in uno stato valido e funzioni correttamente. Se si definiscono le classi che può essere creato e chiamato, ma che funzionerà correttamente solo se vengono implementati alcuni componenti di infrastruttura o globale, queste classi vengono *disonesti* con i relativi client. Indica il contratto di costruttore client che richiede solo le operazioni specificate (possibilmente nothing se la classe è solo tramite un costruttore predefinito), ma in realtà l'oggetto runtime necessita qualcos'altro.
+**Le classi e i metodi devono richiedere in modo esplicito gli oggetti in collaborazione di cui necessitano per funzionare correttamente.** I costruttori di classi forniscono alle classi l'opportunità di individuare gli elementi necessari per essere in uno stato valido e per funzionare correttamente. Se si definiscono classi che possono essere create e chiamate ma che funzionano correttamente solo in presenza di alcuni componenti di infrastruttura o globali, queste classi si comportano in modo *disonesto* con i relativi client. Il contratto del costruttore dice al client che necessita solo degli elementi specificati, o addirittura di nessun elemento se la classe utilizza solo un costruttore predefinito, ma in realtà in fase di esecuzione necessita di qualcos'altro.
 
-Seguendo il principio di dipendenze esplicite, le classi e i metodi vengono accurati con i client su cui hanno bisogno per funzionare. Questo rende il codice autodocumentato più e l'attività di codifica di contratti più intuitiva, poiché gli utenti accedono per considerare attendibile che, a condizione che forniscono a quello che richiede la forma del metodo o i parametri del costruttore, gli oggetti che stanno con comportamento correttamente in fase di esecuzione.
+Se ci si attiene al principio delle dipendenze esplicite, le classi e i metodi comunicano esattamente ai relativi client ciò di cui hanno bisogno per funzionare. Questo rende il codice più autodocumentato e i contratti di codifica di contratti più intuitivi, perché gli utenti saranno sicuri che nel momento in cui forniscono quello che è richiesto sotto forma di metodi o parametri del costruttore, gli oggetti che stanno usando funzioneranno correttamente in fase di esecuzione.
 
-### <a name="single-responsibility"></a>Unica responsabilità
+### <a name="single-responsibility"></a>Singola responsabilità
 
-Il principio di responsabilità singola si applica a progettazione orientata agli oggetti, ma può anche essere considerato un principio dell'architettura simile per la separazione dei compiti. Indicante che gli oggetti deve essere di sola responsabilità e che hanno solo uno dei motivi per modificare. In particolare, l'unico caso in cui è necessario modificare l'oggetto è se è necessario aggiornare il modo in cui esegue la responsabilità di uno. Consente di produrre più regime questo principio e sistemi modulari, poiché molti tipi di nuovo comportamento possono essere implementati come nuove classi, anziché tramite l'aggiunta di ulteriori responsabilità alle classi esistenti. Aggiunta di nuove classi è sempre più sicuro rispetto alla modifica classi esistenti, dal codice non ancora dipende le nuove classi.
+Il principio di singola responsabilità si applica alla programmazione orientata agli oggetti, ma può anche essere considerato un principio architetturale simile alla separazione dei concetti. Afferma che gli oggetti devono avere una sola responsabilità e un solo motivo per cambiare. Nello specifico, l'unica situazione in cui l'oggetto può cambiare è se il modo in cui svolge la sua unica responsabilità richiede di essere aggiornato. L'applicazione di questo principio favorisce l'elaborazione di sistemi modulari con accoppiamento debole in cui molti nuovi comportamenti possono essere implementati come nuove classi anziché aggiungere ulteriori responsabilità a classi esistenti. L'aggiunta di nuove classi è sempre una pratica più sicura rispetto alla modifica delle classi esistenti, dal momento che da queste nuove classi non dipende alcun codice.
 
-In un'applicazione monolitica, è possibile applicare il principio di responsabilità singolo a un livello elevato per i livelli dell'applicazione. Responsabilità di presentazione deve rimanere nel progetto dell'interfaccia utente, mentre l'accesso ai dati responsabilità deve rimanere all'interno di un progetto di infrastruttura. Logica di business deve essere incluso nel progetto di base dell'applicazione, in cui possono essere facilmente testata e possono evolvere in modo indipendente da altre responsabilità.
+In un'applicazione monolitica, è possibile applicare il principio di singola responsabilità ad alto livello e trasferirlo agli altri livelli dell'applicazione. La responsabilità della presentazione deve rimanere nel progetto dell'interfaccia utente, mentre la responsabilità dell'accesso ai dati deve essere mantenuta all'interno di un progetto di infrastruttura. La logica di business deve essere inclusa nel progetto principale dell'applicazione, dove può essere facilmente testata ed evolvere in modo indipendente da altre responsabilità.
 
-Quando questo principio viene applicato all'architettura delle applicazioni e impiegato per l'endpoint logico, si ottengono microservizi. Un microservizio specificato deve avere un'unica responsabilità. Se è necessario estendere il comportamento di un sistema, è preferibile eseguire questa operazione aggiungendo ulteriori microservizi, anziché tramite l'aggiunta di responsabilità per uno esistente.
+Quando si applica questo principio all'architettura delle applicazioni portandolo fino all'endpoint logico, si ottengono i microservizi. Ogni microservizio deve avere una singola responsabilità. Se si presenta la necessità di estendere il comportamento di un sistema, è preferibile farlo aggiungendo ulteriori microservizi, anziché aggiungendo responsabilità a un microservizio esistente.
 
-[Ulteriori informazioni sull'architettura di microservizi](http://aka.ms/MicroservicesEbook)
+[Altre informazioni sull'architettura dei microservizi](http://aka.ms/MicroservicesEbook)
 
-### <a name="dont-repeat-yourself-dry"></a>Non ripetere manualmente (sorgente)
+### <a name="dont-repeat-yourself-dry"></a>Don't Repeat Yourself (DRY)
 
-L'applicazione deve evitare di specifica del comportamento relative a un particolare concetto in più posizioni poiché si tratta di un'origine frequente di errori. A un certo punto, una modifica nei requisiti sarà necessario modificare questo comportamento e la probabilità che almeno un'istanza del comportamento non verrà aggiornato determineranno un comportamento coerente del sistema.
+In base al principio DRY, in un'applicazione va evitata la ripetizione di un comportamento relativo a un particolare concetto perché è una frequente fonte di errori. Prima o poi, una modifica dei requisiti comporterà la modifica di questo comportamento e la probabilità che almeno un'istanza di tale comportamento non venga aggiornata determineranno un comportamento incoerente del sistema.
 
-Anziché la duplicazione di logica, incapsularlo in un costrutto di programmazione. Imposta come costruire l'unica autorità su questo comportamento, in modo che qualsiasi altra parte dell'applicazione che richiede il problema, utilizzare il costrutto di nuovo.
+Anziché duplicare la logica, è preferibile incapsularla in un costrutto di programmazione. Rendere il costrutto l'unica autorità su questo comportamento e fare in modo che qualsiasi altra parte dell'applicazione che richiede questo comportamento utilizzi il nuovo costrutto.
 
 > [!NOTE]
-> Evitare l'associazione insieme il comportamento che è solo coincidenza ricorrenti. Ad esempio, solo perché due costanti diverse entrambi hanno lo stesso valore, non implica che si deve avere solo una costante, se concettualmente si intendono diversi significati.
+> Evitare di associare tra loro comportamenti che sono solo casualmente ripetitivi. Ad esempio, il fatto che due costanti diverse hanno entrambe lo stesso valore non implica che dovrebbe essercene solo una, se concettualmente si riferiscono ad elementi diversi.
 
 ### <a name="persistence-ignorance"></a>Mancato riconoscimento della persistenza
 
-**Mancato riconoscimento della persistenza** (PI) fa riferimento a tipi che devono essere mantenute, ma il cui codice è influenzato dalla scelta della tecnologia di persistenza. Tali tipi in .NET sono dette Plain Old CLR Object (POCOs), in quanto non devono ereditare da una determinata classe di base o implementare un'interfaccia specifica. Mancato riconoscimento della persistenza è utile perché consente lo stesso modello di business che deve essere mantenuta in più modi, che offre una maggiore flessibilità per l'applicazione. Opzioni di persistenza potrebbero cambiare nel tempo, dalla tecnologia di un database a un altro, o ulteriori forme di persistenza potrebbero essere necessari oltre a qualunque avviata con l'applicazione (ad esempio, utilizzando una cache Redis di Azure DocumentDb, oltre a un database relazionale).
+Il **mancato riconoscimento della persistenza** riguarda i tipi che devono essere resi persistenti ma il cui codice non è influenzato dalla scelta della tecnologia di persistenza. In .NET tali tipi sono a volte definiti Plain Old CLR Object (POCO), in quanto non sono gravati dalla necessità di ereditare da una determinata classe base o di implementare un'interfaccia specifica. Il mancato riconoscimento della persistenza è utile perché consente allo stesso modello di business di essere reso permanente in più modi migliorando la flessibilità dell'applicazione. Le scelte di persistenza possono cambiare nel tempo, in funzione della tecnologia del database oppure possono servire ulteriori forme di persistenza oltre a quelle inizialmente presenti nell'applicazione, ad esempio, l'utilizzo di una cache Redis o di Azure DocumentDb oltre a un database relazionale.
 
 Alcuni esempi di violazioni di questo principio:
 
--   Una classe di base necessaria
+-   Una classe base obbligatoria
 
--   Un'implementazione di interfaccia necessaria
+-   Un'implementazione dell'interfaccia obbligatoria
 
--   Classi responsabile per il loro salvataggio (ad esempio, il modello attivo)
+-   Classi responsabili del proprio salvataggio ad esempio, il criterio del record attivo
 
--   Costruttore predefinito obbligatorio
+-   Un costruttore predefinito obbligatorio
 
--   Proprietà che richiedono virtual (parola chiave)
+-   Proprietà che richiedono una parola chiave virtuale
 
--   Attributi obbligatori di persistenza specifico
+-   Attributi di persistenza obbligatori
 
-Il requisito che presentano le funzionalità o i comportamenti precedente aggiunge l'accoppiamento tra i tipi devono essere rese persistenti e la scelta della tecnologia di persistenza, rende più difficoltoso di adottare strategie di accesso nuovi dati in futuro.
+Il requisito che le classi presentino una o più funzionalità o uno o più comportamenti precedenti rende permanente l'accoppiamento tra i tipi e aggiunge la scelta della tecnologia di persistenza, rendendo più difficoltoso adottare nuove strategie di accesso ai dati in futuro.
 
 ### <a name="bounded-contexts"></a>Contesti limitati
 
-**Delimitata contesti** sono un criterio centrale nella progettazione. Forniscono un modo di complessità di gestione in organizzazioni o applicazioni di grandi dimensioni da suddividerlo in moduli concettuali separati. Ogni modulo concettuale rappresenta quindi un contesto separato da altri contesti (pertanto limitato) e possono evolvere in modo indipendente. Ogni contesto delimitata dovrebbe essere idealmente libero di scegliere i relativi nomi concetti all'interno di esso e dovrebbe avere accesso esclusivo a un proprio archivio di persistenza.
+I **contesti limitati** sono un criterio centrale nell'approccio Domain-driven design. Rappresentano un modo per gestire la complessità in organizzazioni o applicazioni di grandi dimensioni tramite la suddivisione in moduli concettuali separati. Ogni modulo concettuale rappresenta quindi un contesto separato dagli altri, da qui l'aggettivo limitato, che può evolvere in modo indipendente. Ogni contesto limitato dovrebbe essere idealmente libero di scegliere i nomi per i concetti al suo interno e dovrebbe avere accesso esclusivo al proprio archivio di persistenza.
 
-Come minimo, singole applicazioni web devono essere quanto più possibile i propri contesto delimitata, con un proprio archivio di persistenza per i modelli di business, piuttosto che condividono un database con altre applicazioni. Ha luogo la comunicazione tra contesti delimitati tramite interfacce di programmazione, anziché tramite un database condiviso che consente la logica di business e inserire gli eventi da eseguire in risposta alle modifiche che si verificano. Limitato strettamente mappa contesti di microservizi, anche in teoria implementati come proprio singoli contesti limitati.
+Come minimo, ogni singola applicazione web deve puntare ad essere il proprio contesto limitato, con un archivio di persistenza per il proprio modello di business, piuttosto che condividere un database con altre applicazioni. La comunicazione tra contesti limitati non avviene tramite un database condiviso bensì tramite interfacce di programmazione che consentono la generazione di eventi e logica di business in risposta alle modifiche che si verificano. I contesti limitati sono strettamente mappati a microservizi, anch'essi idealmente implementati come singoli contesti limitati.
 
-> ### <a name="references--modern-web-applications"></a>Riferimenti: moderne applicazioni Web
-> - Separazione dei compiti  
+> ### <a name="references--modern-web-applications"></a>Riferimenti: applicazioni Web moderne
+> - **Separazione dei concetti**  
 > <http://deviq.com/separation-of-concerns/>
 > - **Incapsulamento** <http://deviq.com/encapsulation/>
-> - **Principio di inversione di dipendenza**  
+> - **Principio di inversione delle dipendenze**  
 > <http://deviq.com/dependency-inversion-principle/>
 > - **Explicit Dependencies Principle** (Principio delle dipendenze esplicite)  
 > <http://deviq.com/explicit-dependencies-principle/>
-> - **Non ripetere manualmente**  
+> - **Don't Repeat Yourself (DRY)**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - Mancato riconoscimento della persistenza  
+> - **Mancato riconoscimento della persistenza**  
 > <http://deviq.com/persistence-ignorance/>
-> - **Contesto associato**  
+> - **Contesti limitati**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
-[Precedente] [Avanti] (comuni-web-applicazione-architectures.md) (choose-between-traditional-web-and-single-page-apps.md)
+[Precedente] (choose-between-traditional-web-and-single-page-apps.md) [Avanti] (common-web-application-architectures.md)
