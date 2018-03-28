@@ -1,6 +1,6 @@
 ---
 title: Uso di F# in Azure
-description: 'Guida all''utilizzo di servizi di Azure con F #'
+description: "Guida all'utilizzo di servizi di Azure con F #"
 keywords: Azure, cloud, visual f#, f#, programmazione funzionale, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>Uso di F# in Azure
 
@@ -69,14 +69,14 @@ Il [Servizio app di Azure](https://azure.microsoft.com/services/app-service/) è
 * [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md) (Implementazione di app Spark in F# tramite Mobius)
 * [Example F# Spark Apps using Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp) (Esempio di app Spark in F# tramite Mobius)
 
-## <a name="using-azure-documentdb-with-f"></a>Utilizzo di Azure DocumentDB con F # #
+## <a name="using-azure-cosmos-db-with-f"></a>Utilizzo di Azure Cosmos DB con F # #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) è un servizio NoSQL per app distribuite globalmente, a disponibilità elevata.
+[Azure DB Cosmos](https://azure.microsoft.com/services/cosmos-db) è un servizio database NoSQL per le applicazioni a disponibilità elevata, distribuiti in modo globale.
 
-Azure DocumentDB può essere usato con F# in due modi:
+DB Cosmos Azure è utilizzabile con F # in due modi:
 
-1. Tramite la creazione di Funzioni di Azure per F# che reagiscono o eseguono modifiche alle raccolte DocumentDB. Vedere [Azure Function triggers for DocumentDB](/azure/azure-functions/functions-bindings-documentdb) (Trigger di Funzioni di Azure per DocumentDB), oppure
-2. con l'uso di [.NET SDK per Azure](/azure/documentdb/documentdb-get-started-quickstart). Si noti che questi esempi sono basati su C#.
+1. Tramite la creazione di funzioni di Azure di F # che rispondono agli o le modifiche alle raccolte di Azure Cosmos DB. Vedere [Azure Cosmos DB associazioni per le funzioni di Azure](/azure/azure-functions/functions-bindings-cosmosdb), o
+2. Tramite il [Azure Cosmos DB .NET SDK per l'API SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Gli esempi correlati sono in c#.
 
 ## <a name="using-azure-event-hubs-with-f"></a>Utilizzo degli hub di eventi di Azure con F # #
 
@@ -119,7 +119,7 @@ I timer possono essere implementati in F# e ospitati in Azure tramite una [funzi
 
 Le macchine virtuali di Azure possono essere distribuite e gestite a livello di codice a partire dagli script F# tramite le API e i pacchetti Microsoft.Azure.Management. Ad esempio, vedere [Introduzione alle librerie di gestione per .NET](https://msdn.microsoft.com/library/dn722415.aspx) e [Uso di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Analogamente, le altre risorse di Azure possono essere anche distribuite e gestite dagli script F# usando gli stessi componenti. Ad esempio, è possibile creare account di archiviazione, distribuire servizi cloud di Azure, creare istanze di Azure DocumentDB e gestire hub di notifica di Azure a livello di codice da script F#.
+Analogamente, le altre risorse di Azure possono essere anche distribuite e gestite dagli script F# usando gli stessi componenti. Ad esempio, è possibile creare gli account di archiviazione, distribuire servizi Cloud di Azure, creare istanze di Azure Cosmos DB e gestire hub di notifica in WMI di Azure a livello di codice da script F #.
 
 L'uso di script F# per distribuire e gestire risorse non è in genere necessario. Ad esempio, le risorse di Azure possono anche essere distribuite dalle descrizioni dei modelli JSON che possono essere parametrizzati. Vedere [Procedure consigliate per la creazione di modelli di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) che include esempi, quali i [modelli di avvio rapido di Azure](https://azure.microsoft.com/documentation/templates/).
 

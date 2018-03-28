@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>Guida a F#
 
@@ -54,11 +54,14 @@ F # è incentrato sulla produttività essenzialmente. Il supporto per gli strume
 
 [Introduzione a F # con l'interfaccia CLI Core .NET](get-started/get-started-command-line.md) se si desidera utilizzare gli strumenti da riga di comando.
 
+[Introduzione a F # e Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) per la programmazione per dispositivi mobili con F #.
+
 ## <a name="references"></a>Riferimenti
 
 [Riferimenti al linguaggio F #](language-reference/index.md) è il riferimento ufficiale e completo per tutte le funzionalità del linguaggio F #. Ogni articolo viene illustrata la sintassi e vengono mostrati esempi di codice. È possibile utilizzare la barra dei filtri nel sommario per trovare articoli specifici.
 
 [Riferimenti alla libreria dei componenti di base F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) è il riferimento all'API per la libreria di base F #.
+
 
 ## <a name="additional-guides"></a>Guide aggiuntive
 

@@ -2,15 +2,16 @@
 title: Stringhe interpolate (Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f865d5a7167847bf869d70a39570413dac271a2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Stringhe interpolate (riferimenti di Visual Basic)
 
@@ -40,7 +41,7 @@ dove:
 - *format-string* è una stringa di formato appropriata per il tipo di oggetto formattato. Ad esempio, per un <xref:System.DateTime> valore, potrebbe essere un [stringa di formato di data e ora standard](~/docs/standard/base-types/standard-date-and-time-format-strings.md) , ad esempio "D" o "d".
 
 > [!IMPORTANT]
-> È possibile disporre di qualsiasi spazio vuoto tra il `$` e `"` che inizia la stringa. In questo modo, un errore del compilatore.
+> Tra `$` e il simbolo `"` all'inizio della stringa non possono essere presenti spazi vuoti, In questo modo, un errore del compilatore.
 
  È possibile usare una stringa interpolata ovunque sia possibile usare un valore letterale stringa.  La stringa interpolata viene valutata ogni volta che si esegue codice con la stringa interpolata. Ciò consente di separare la definizione e la valutazione di una stringa interpolata.  
   
@@ -62,11 +63,11 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
 
 2. Conversione di una stringa interpolata in una variabile <xref:System.IFormattable> che consente di creare più stringhe risultato con contenuto specifico delle impostazioni cultura da una singola istanza di <xref:System.IFormattable>. Ciò è utile per includere elementi quali i formati numerici e di data corretti per singole impostazioni cultura.  Tutte le occorrenze di parentesi graffe doppie ("{{" e "}}") rimangono tali finché la stringa non viene formattata in modo implicito o esplicito chiamando il metodo <xref:System.Object.ToString>.  Tutte le espressioni di interpolazione contenute vengono convertite in {0}, \{1\} e così via.  
 
-   Nell'esempio seguente viene usata la reflection per visualizzare i membri, nonché i valori di campi e le proprietà di una variabile <xref:System.IFormattable> creata da una stringa interpolata. Passa, inoltre, il <xref:System.IFormattable> variabile il <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metodo.
+   Nell'esempio seguente viene usata la reflection per visualizzare i membri, nonché i valori di campi e le proprietà di una variabile <xref:System.IFormattable> creata da una stringa interpolata. Viene anche passata la variabile <xref:System.IFormattable> al metodo <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   Si noti che la stringa interpolata può essere controllata solo tramite reflection. Se viene passato a una stringa come metodo di formattazione <xref:System.Console.WriteLine(System.String)>, gli elementi di formato vengono risolti e restituita la stringa di risultato. 
+   Si noti che la stringa interpolata può essere controllata solo tramite reflection. Se viene passata a un metodo di formattazione delle stringhe, ad esempio <xref:System.Console.WriteLine(System.String)>, gli elementi di formato vengono risolti e viene restituita la stringa risultato. 
 
 3. Conversione di una stringa interpolata a un <xref:System.FormattableString> variabile che rappresenta una stringa di formato composita. Grazie all'esame della stringa di formato composito e del modo in cui viene eseguito il rendering come stringa di risultato, è ad esempio possibile attuare misure di protezione contro attacchi di tipo injection durante la creazione di una query. Oggetto <xref:System.FormattableString> include anche:
 
@@ -81,7 +82,7 @@ Da una stringa interpolata vengono effettuate tre conversioni di tipo implicito:
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>Vedere anche  
-f<xref:System.IFormattable?displayProperty=nameWithType>   
+ <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Riferimenti per il linguaggio Visual Basic](index.md)  
  
