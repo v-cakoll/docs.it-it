@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 L'utilizzo successivo di `p` è uguale all'utilizzo della variabile restituita da `GetContactInformation` perché `p` è un alias per tale variabile. Le modifiche apportate a `p` modificano anche la variabile restituita da `GetContactInformation`.
 
-Si noti che la parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore". 
+Si noti che la parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima della chiamata al metodo. 
+
+È possibile accedere a un valore per riferimento nello stesso modo. In alcuni casi, l'accesso a un valore per riferimento migliora le prestazioni evitando un'operazione di copia potenzialmente dispendiosa. L'istruzione seguente, ad esempio, spiega come sia possibile definire un valore locale di riferimento usato per fare riferimento a un valore.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Si noti che la parola chiave `ref` viene usata sia prima della dichiarazione di variabile locale *che* prima del valore nel secondo esempio. Se non si includono entrambe le parole chiave `ref` nella dichiarazione di variabile e nell'assegnazione nei due esempi, viene generato l'errore del compilatore CS8172, "Non è possibile inizializzare una variabile per riferimento con un valore". 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Valori restituiti e variabili locali ref: un esempio
 
@@ -101,4 +109,5 @@ Senza il supporto per i valori restituiti di riferimento, tale operazione viene 
  
 ## <a name="see-also"></a>Vedere anche
 
-[ref (parola chiave)](../../language-reference/keywords/ref.md)
+[ref (parola chiave)](../../language-reference/keywords/ref.md)  
+[Semantica di riferimento con i tipi valore](../../../csharp/reference-semantics-with-value-types.md)

@@ -3,17 +3,17 @@ title: Comando dotnet - Interfaccia della riga di comando di .NET Core
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
 author: mairaw
 ms.author: mairaw
-ms.date: 11/28/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 2d22124cb613152df402046541650f3262e7e202
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -27,11 +27,13 @@ ms.lasthandoff: 02/22/2018
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [-v|--verbosity] [--version]
 ```
 ---
 
@@ -75,9 +77,9 @@ Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia
 
  Non esegue il roll forward su framework condiviso candidato.
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-Abilita l'output dettagliato.
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Non supportato in tutti i comandi; vedere la pagina specifica del comando per determinare se l'opzione è disponibile.
 
 `--version`
 
@@ -105,9 +107,9 @@ Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un el
 
 Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-Abilita l'output dettagliato.
+Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Non supportato in tutti i comandi; vedere la pagina specifica del comando per determinare se l'opzione è disponibile.
 
 `--version`
 

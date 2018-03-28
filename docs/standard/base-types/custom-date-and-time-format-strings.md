@@ -1,12 +1,8 @@
 ---
 title: Stringhe di formato di data e ora personalizzato
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 Una stringa di formato di data e ora definisce la rappresentazione di testo di un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> risultante da un'operazione di formattazione. Può anche definire la rappresentazione di un valore di data e ora richiesto in un'operazione di analisi per convertire correttamente la stringa in una data e ora. Una stringa di formato personalizzata è costituita da uno o più identificatori di formato di data e ora personalizzati. Qualsiasi stringa diversa da una [stringa di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) viene interpretata come stringa di formato di data e ora personalizzato.  
@@ -101,7 +97,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 |"/"|Separatore di data.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|Definisce il carattere seguente come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|Carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\|Il carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>.  
@@ -614,7 +610,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
  L'identificatore di formato personalizzato ":" rappresenta il separatore di ora che viene usato per distinguere ore, minuti e secondi. Il separatore di ora localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.  
   
 > [!NOTE]
->  Per modificare il separatore dell'ora per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. Ad esempio, la stringa con formato personalizzato `hh'_'dd'_'ss` produce una stringa in cui "_" (carattere di sottolineatura) è sempre usato come separatore dell'ora. Per cambiare il separatore dell'ora per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.  
+>  Per modificare il separatore dell'ora per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. La stringa con formato personalizzato `hh'_'dd'_'ss`, ad esempio, produce una stringa in cui "\_" (carattere di sottolineatura) è sempre usato come separatore dell'ora. Per cambiare il separatore dell'ora per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.  
   
  Se l'identificatore di formato ":" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.  
   

@@ -1,6 +1,6 @@
 ---
 title: Operatore new (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 03/15/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -8,38 +8,38 @@ ms.topic: article
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab582cd14bc649ca8d1678a583a8f95e78c6bf7e
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="new-operator-c-reference"></a>Operatore new (Riferimenti per C#)
 Usato per creare oggetti e richiamare costruttori. Ad esempio:  
   
-```  
+```csharp
 Class1 obj  = new Class1();  
 ```  
   
  Viene usato anche per creare istanze di tipi anonimi:  
   
-```  
+```csharp
 var query = from cust in customers  
-            select new {Name = cust.Name, Address = cust.PrimaryAddress};  
+            select new { Name = cust.Name, Address = cust.PrimaryAddress };  
 ```  
   
  L'operatore `new` viene usato anche per richiamare il costruttore predefinito per i tipi di valore. Ad esempio:  
   
-```  
+```csharp
 int i = new int();  
 ```  
   
  Nell'istruzione precedente `i` viene inizializzato in `0`, ovvero il valore predefinito per il tipo `int`. L'istruzione ha lo stesso effetto dell'istruzione seguente:  
   
-```  
+```csharp
 int i = 0;  
 ```  
   
@@ -47,7 +47,7 @@ int i = 0;
   
  È utile ricordare che è errato dichiarare un costruttore predefinito per uno [struct](../../../csharp/language-reference/keywords/struct.md) poiché ogni tipo di valore ha implicitamente un costruttore predefinito pubblico. È possibile dichiarare costruttori con parametri su un tipo struct per impostarne i valori iniziali, ma questa operazione è necessaria solo se sono richiesti valori diversi da quello predefinito.  
   
- Gli oggetti di tipo valore, ad esempio gli struct, vengono creati nello stack, mentre gli oggetti di tipo riferimento, ad esempio le classi, vengono creati nell'heap. Entrambi i tipi di oggetti vengono eliminati automaticamente in modo definitivo, mentre gli oggetti basati su tipi di valori vengono eliminati definitivamente quando escono dall'ambito di validità e quelli basati su tipi di riferimento vengono eliminati definitivamente in un momento non specificato dopo che è stato rimosso l'ultimo riferimento ad essi. Per i tipi di riferimento che usano risorse fisse, ad esempio grandi quantità di memoria, handle di file o connessioni di rete, può risultare preferibile adottare la finalizzazione deterministica per assicurarsi che l'oggetto venga eliminato definitivamente prima possibile. Per altre informazioni, vedere [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md).  
+ Sia gli oggetti di tipo valore come gli struct che gli oggetti di tipo riferimento come le classi vengono eliminati automaticamente, ma gli oggetti di tipo valore vengono eliminati quando viene eliminato il loro contesto contenitore, mentre gli oggetti di tipo riferimento vengono eliminati da Garbage Collector in un momento non specificato dopo la rimozione dell'ultimo riferimento a essi relativo. Per i tipi che contengono risorse come ad esempio gli handle di file o le connessioni di rete, è consigliabile adottare la pulitura deterministica per garantire che le risorse contenute vengano rilasciate nel più breve tempo possibile. Per altre informazioni, vedere [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md).  
   
  Non è possibile sottoporre l'operatore `new` a overload.  
   
@@ -56,7 +56,7 @@ int i = 0;
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono creati e inizializzati un oggetto `struct` e un oggetto classe usando l'operatore `new` e vengono quindi assegnati i valori. I valori predefiniti e assegnati sono visualizzati.  
   
- [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](codesnippet/CSharp/new-operator_1.cs)]  
   
  Si noti che nell'esempio il valore predefinito di una stringa è `null` e, pertanto, non viene visualizzato.  
   

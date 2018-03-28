@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Progettazione del livello dell'applicazione di microservizi e dell'API Web
 
@@ -29,7 +29,7 @@ I principi SOLID sono tecniche fondamentali da usare nelle applicazioni cruciali
 
 -   LSP (Liskov Substitution Principle, principio di sostituzione di Liskov)
 
--   ISP (Interface Segregation Principle, principio di segregazione delle interfacce)
+-   Principio di segregazione delle interfacce (Interface Segregation Principle)
 
 -   DIP (Dependency Inversion Principle, principio di inversione delle dipendenze)
 
@@ -43,10 +43,10 @@ Per illustrare SOLID in dettaglio, servirebbe un'altra guida. Questa guida presu
 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **SOLID: Fundamental OOP Principles** (SOLID: principi OOP fondamentali)
+-   **SOLID: Fundamental OOP Principles (SOLID: principi OOP fondamentali)**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection Pattern** (Contenitori di inversione del controllo e schema di inserimento delle dipendenze)
+-   **Inversion of Control Containers and the Dependency Injection Pattern (Contenitori di inversione del controllo e modello di inserimento delle dipendenze)**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
 -   **Steve Smith. New is Glue**

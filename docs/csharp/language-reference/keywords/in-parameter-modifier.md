@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificatore del parametro in (Riferimenti per C#)
 
@@ -60,7 +60,10 @@ Non è possibile usare le parole chiave `in`, `ref` e `out` per i seguenti tipi 
   
 - Metodi iteratori che includono un'istruzione [yield return](../../../csharp/language-reference/keywords/yield.md) o `yield break`.  
 
-In genere si dichiarano argomenti `in` per evitare le operazioni di copia necessarie per il passaggio di argomenti per valore. Ciò è particolarmente utile quando gli argomenti sono strutture o matrici di strutture.
+In genere si dichiarano argomenti `in` per evitare le operazioni di copia necessarie per il passaggio di argomenti per valore. Ciò è particolarmente utile quando gli argomenti sono tipi di valore, ad esempio strutture in cui le operazioni di copia sono più dispendiose rispetto al passaggio per riferimento.
+
+> [!WARNING]
+>  I parametri `in` possono essere ancora più dispendiosi se usati in modo improprio. Il compilatore potrebbe non sapere se i metodi membri modificano lo stato dello struct. Ogni volta che il compilatore non può garantire che l'oggetto non venga modificato, il compilatore crea in modo sicuro una copia e chiama i riferimenti al membro usando tale copia. A tale copia difensiva vengono apportate tutte le modifiche possibili. I due modi per evitare queste copie sono passare parametri `in` come argomenti `in` o definire le strutture come `readonly struct`.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ In genere si dichiarano argomenti `in` per evitare le operazioni di copia necess
  [Riferimenti per C#](../../../csharp/language-reference/index.md)  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [Parametri dei metodi](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Parametri dei metodi](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Semantica di riferimento con i tipi valore](../../../csharp/reference-semantics-with-value-types.md)

@@ -1,12 +1,13 @@
 ---
 title: Uso dei file RESX a livello di codice
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Uso dei file RESX a livello di codice
 Poiché i file di risorse XML (con estensione resx) devono essere costituiti da codice XML ben definito, comprensivo di un'intestazione che deve seguire uno schema specifico, seguita da dati in coppie nome/valore, la creazione manuale di questi file è soggetta a errori. In alternativa, è possibile creare file con estensione resx a livello di codice usando tipi e membri inclusi nella libreria di classi .NET Framework. La libreria di classi .NET Framework può essere usata anche per recuperare risorse archiviate in file con estensione resx. Questo argomento illustra come usare i tipi e i membri nello spazio dei nomi <xref:System.Resources> per i file RESX.  
@@ -87,11 +89,11 @@ Poiché i file di risorse XML (con estensione resx) devono essere costituiti da 
   
  Se si usa C#, la sintassi è la seguente:  
   
- **csc** *filename* **.cs /resource:** *.resourcesFilename*  
+ **csc** *filename* **.cs -resource:** *.resourcesFilename*  
   
  Il file con estensione resources può essere incorporato in un assembly satellite anche tramite [Assembly Linker (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), che ha la seguente sintassi di base:  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
