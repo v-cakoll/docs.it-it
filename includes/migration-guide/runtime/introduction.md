@@ -1,0 +1,12 @@
+## <a name="introduction"></a><span data-ttu-id="ed400-101">Introduzione</span><span class="sxs-lookup"><span data-stu-id="ed400-101">Introduction</span></span>
+<span data-ttu-id="ed400-102">Le modifiche in fase di runtime influiscono su tutte le app in esecuzione in .NET Framework e che usano una determinata funzionalità.</span><span class="sxs-lookup"><span data-stu-id="ed400-102">Runtime changes affect all apps that are running under a .NET Framework it was not compiled against and that use a particular feature.</span></span>
+
+<span data-ttu-id="ed400-103">Negli argomenti che descrivono le modifiche in fase di runtime i singoli elementi sono stati classificati in base all'impatto previsto, come descritto di seguito:</span><span class="sxs-lookup"><span data-stu-id="ed400-103">In the topics that describe runtime changes, we have classified individual items by their expected impact, as follows:</span></span>
+
+<span data-ttu-id="ed400-104">**Principale** Una modifica significativa che influisce su un numero elevato di app o che richiede variazioni sostanziali del codice.</span><span class="sxs-lookup"><span data-stu-id="ed400-104">**Major** This is a significant change that affects a large number of apps or that requires substantial modification of code.</span></span>
+
+<span data-ttu-id="ed400-105">**Secondario** Una modifica che influisce su un numero ridotto di app o che richiede variazioni marginali del codice.</span><span class="sxs-lookup"><span data-stu-id="ed400-105">**Minor** This is a change that affects a small number of apps or that requires minor modification of code.</span></span>
+
+<span data-ttu-id="ed400-106">**Caso limite** Una modifica che influisce sulle app in scenari molto specifici e non comuni.</span><span class="sxs-lookup"><span data-stu-id="ed400-106">**Edge case** This is a change that affects apps under very specific scenarios that are not common.</span></span>
+
+<span data-ttu-id="ed400-107">**Trasparente** Una modifica che non ha effetti evidenti sullo sviluppatore o sull'utente dell'app.</span><span class="sxs-lookup"><span data-stu-id="ed400-107">**Transparent** This is a change that has no noticeable effect on the app's developer or user.</span></span> <span data-ttu-id="ed400-108">L'app non dovrebbe richiedere variazioni a causa di questa modifica.</span><span class="sxs-lookup"><span data-stu-id="ed400-108">The app should not require modification because of this change.</span></span>
