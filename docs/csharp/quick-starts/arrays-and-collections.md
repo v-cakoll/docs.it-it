@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>Guida introduttiva per C#: raccolte
 
@@ -54,7 +54,7 @@ Sostituire `<name>` con il proprio nome. Salvare **Program.cs**. Digitare `dotne
 
 Questo codice consente di creare un elenco di stringhe, aggiungere tre nomi all'elenco e stampare i nomi in lettere maiuscole. Vengono usati i concetti appresi in guide introduttive precedenti per scorrere l'elenco in ciclo.
 
-Il codice per visualizzare i nomi usa **stringhe interpolate**.  Anteponendo il carattere `$` a `string`, è possibile incorporare il codice C# nella dichiarazione della stringa. La stringa effettiva sostituisce il codice C# con il valore generato. In questo esempio, `{name.ToUpper()}` viene sostituito con ogni nome, convertito in lettere maiuscole, perché è stato chiamato il metodo <xref:System.String.ToUpper%2A>.
+Il codice per visualizzare i nomi usa la funzionalità di [interpolazione di stringhe](../language-reference/tokens/interpolated.md).  Anteponendo il carattere `$` a `string`, è possibile incorporare il codice C# nella dichiarazione della stringa. La stringa effettiva sostituisce il codice C# con il valore generato. In questo esempio, `{name.ToUpper()}` viene sostituito con ogni nome, convertito in lettere maiuscole, perché è stato chiamato il metodo <xref:System.String.ToUpper%2A>.
 
 L'esplorazione continua nelle prossime lezioni.
 

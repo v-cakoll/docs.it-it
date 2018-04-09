@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolazione di stringhe in C# #
 
@@ -122,4 +122,4 @@ Per impostazione predefinita, una stringa interpolata usa le impostazioni cultur
 
 ## <a name="conclusion"></a>Conclusione 
 
-In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6. Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati. Per altre informazioni, vedere l'argomento [Stringhe interpolate](../../csharp//language-reference/keywords/interpolated-strings.md).
+In questa esercitazione è stato illustrato come usare le funzionalità di interpolazione di stringhe di C# 6. Si tratta fondamentalmente di un modo sintetico di scrivere semplici istruzioni `String.Format`, con alcune raccomandazioni per gli usi più avanzati. Per altre informazioni, vedere [Interpolazione di stringhe](../../csharp//language-reference/tokens/interpolated.md).

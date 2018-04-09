@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -67,10 +67,15 @@ Gli analizzatori possono essere caricati in [Visual Studio Marketplace](https://
 
 Ulteriori informazioni sui concetti di .NET Compiler Platform SDK sono disponibili in questi quattro argomenti:
 
+ - [Esplorare il codice con il visualizzatore di sintassi](syntax-visualizer.md)
  - [Informazioni sul modello delle API del compilatore](compiler-api-model.md)
  - [Utilizzare la sintassi](work-with-syntax.md)
  - [Utilizzare la semantica](work-with-semantics.md)
  - [Utilizzare un'area di lavoro](work-with-workspace.md)
+ 
+Per iniziare, è necessario installare **.NET Compiler Platform SDK**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Stringhe interpolate
 
@@ -166,5 +166,4 @@ L'output è simile al seguente:
     
 È possibile continuare con la guida introduttiva [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 
-Per altre informazioni sull'uso delle stringhe interpolate, vedere l'argomento [Stringhe interpolate](../language-reference/keywords/interpolated-strings.md) nei Riferimenti per C#.
-
+Per altre informazioni sulle stringhe interpolate, vedere l'argomento [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) nei Riferimenti per C#.

@@ -1,12 +1,13 @@
 ---
 title: Come il runtime individua gli assembly
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
 Per distribuire correttamente l'applicazione .NET Framework, è necessario comprendere in che modo Common Language Runtime individua e associa gli assembly che costituiscono l'applicazione. Per impostazione predefinita, il runtime tenta di eseguire l'associazione con la versione esatta di un assembly con cui è stata compilata l'applicazione. Questo comportamento predefinito può essere sottoposto a override dalle impostazioni del file di configurazione.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Il nome, ovvero il nome dell'assembly di riferimento.  
   
--   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomain.AppendPrivatePath%2A> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
+-   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Individuazione tramite probe delle directory Application Base e Culture  
  Il runtime avvia sempre l'individuazione tramite probe nella base dell'applicazione, che può essere un URL o la directory radice dell'applicazione in un computer. Se l'assembly di riferimento non viene trovato nella base dell'applicazione e non viene fornita alcuna informazione sulle impostazioni cultura, il runtime cerca il nome dell'assembly in tutte le sottodirectory. Le directory di cui viene eseguita l'individuazione tramite probe includono:  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Altri percorsi con individuazione tramite probe  
  Il percorso dell'assembly può essere determinato anche usando il contesto di associazione corrente. Questa situazione si verifica spesso quando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> viene usato in scenari di interoperabilità COM. Se un assembly usa il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> per fare riferimento a un altro assembly, il percorso dell'assembly chiamante viene considerato come un suggerimento su dove trovare l'assembly di riferimento. Se viene trovata una corrispondenza, l'assembly viene caricato. Se non viene trovata alcuna corrispondenza, il runtime continua con la semantica di ricerca, quindi esegue una query in Windows Installer per richiedere l'assembly. Se non vengono forniti assembly corrispondenti alla richiesta di associazione, viene generata un'eccezione. Questa eccezione è <xref:System.TypeLoadException> nel codice gestito, se è stato fatto riferimento a un tipo, oppure <xref:System.IO.FileNotFoundException> se l'assembly in fase di caricamento non è stato trovato.  
   
- Ad esempio, se Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da http://www.code.microsoft.com/utils, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi esegue l'individuazione tramite probe per l'assembly in http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
+ Se ad esempio Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da http://www.code.microsoft.com/utils, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi verifica la presenza dell'assembly in http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

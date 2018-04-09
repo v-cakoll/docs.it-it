@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introduzione all'analisi semantica
 
 In questa esercitazione si presuppone una certa familiarità con l'API Syntax. L'articolo [Introduzione all'analisi della sintassi](syntax-analysis.md) offre informazioni introduttive sufficienti.
 
 In questa esercitazione verranno esplorate le API **Symbol** e **Binding**. Queste API offrono informazioni sul _significato semantico_ di un programma e consentono di porre domande sui tipi rappresentati da qualsiasi simbolo nel programma e ottenere risposte.
+
+È necessario installare **.NET Compiler Platform SDK**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Informazioni su compilazioni e simboli
 
@@ -31,9 +35,6 @@ Come <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 ## <a name="querying-symbols"></a>Esecuzione di query sui simboli
 
 In questa esercitazione, viene esaminato ancora una volta il programma "Hello World". In questo caso si esegue una query sui simboli nel programma per scoprire quali tipi rappresentano questi simboli. Verrà eseguita una query per recuperare i tipi in uno spazio dei nomi e si imparerà a trovare i metodi disponibili per un tipo.
-
-> [!IMPORTANT]
-> Per gli esempi seguenti è richiesta l'installazione di **.NET Compiler SDK** come parte di Visual Studio 2017. È possibile trovare .NET Compiler SDK come ultimo componente facoltativo nell'elenco del carico di lavoro **Sviluppo di estensioni di Visual Studio**. I modelli non vengono installati senza questo componente.
 
 È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

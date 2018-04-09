@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introduzione all'analisi della sintassi
 
@@ -43,6 +43,10 @@ L'API Syntax crea una struttura ad albero con la radice che rappresenta l'unità
 
 Questa breve descrizione offre una panoramica del tipo di informazioni accessibili tramite l'API Syntax. L'API Syntax non è altro che un'API formale che descrive i costrutti di codice familiari, già noti da C#. Le funzionalità complete includono informazioni sulla modalità di formattazione del codice, inclusi spazi vuoti, interruzioni di riga e rientri. Usando queste informazioni è possibile rappresentare completamente il codice nel modo in cui viene scritto e letto dai programmatori umani o dal compilatore. L'uso di questa struttura consente di interagire con il codice sorgente su un livello molto significativo. Non si tratta più di semplici stringhe di testo, ma di dati che rappresentano la struttura di un programma C#.
 
+Per iniziare, è necessario installare **.NET Compiler Platform SDK**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Informazioni sugli alberi della sintassi
 
 È possibile usare l'API Syntax per qualsiasi analisi della struttura di codice C#. L'**API Syntax** espone i parser, gli alberi della sintassi e le utilità per l'analisi e costruzione di alberi della sintassi. Si tratta del modo in cui si cercano elementi di sintassi specifici nel codice o si legge il codice per un programma.
@@ -67,9 +71,6 @@ Anche se è possibile trovare qualsiasi elemento in un file di codice usando le 
 ## <a name="traversing-trees"></a>Attraversamento degli alberi
 
 È possibile esaminare i nodi in un albero della sintassi in due modi. È possibile attraversare l'albero per esaminare ogni nodo oppure è possibile eseguire query per recuperare elementi o nodi specifici.
-
-> [!IMPORTANT]
-> Per gli esempi seguenti è richiesta l'installazione di **.NET Compiler Platform SDK** come parte di Visual Studio 2017. È possibile trovare .NET Compiler SDK come ultimo componente facoltativo nell'elenco del carico di lavoro **Sviluppo di estensioni di Visual Studio**. I modelli non vengono installati senza questo componente.
 
 ### <a name="manual-traversal"></a>Attraversamento manuale
 

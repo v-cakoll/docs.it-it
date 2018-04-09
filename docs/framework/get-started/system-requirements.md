@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>Requisiti di sistema di .NET Framework
 
@@ -35,13 +35,7 @@ Nelle tabelle presenti in questo argomento sono indicati i requisiti hardware, s
 
 Gli ambienti di sviluppo che consentono di sviluppare app per .NET Framework dispongono di un set di requisiti separato.
 
-> [!IMPORTANT]
-> Tutte le versioni di .NET Framework successive a .NET Framework 4 sono aggiornamenti sul posto, quindi in un sistema può essere presente una singola versione 4.x.
-> Inoltre, specifiche versioni di .NET Framework sono preinstallate in alcune versioni del sistema operativo Windows. Vale a dire che:
->
-> * Se nel computer è già installata una versione successiva, non è possibile installare una versione 4.x precedente.
-> * Se nel sistema operativo è preinstallata una versione particolare di .NET, non è possibile installare una versione 4.x precedente nello stesso computer.
-> * Se si installa una versione successiva, non è necessario disinstallare prima la versione precedente.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Per informazioni su download e collegamenti, vedere [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Installazione di .NET Framework per sviluppatori).
 
@@ -101,7 +95,7 @@ Per l'installazione di .NET Framework è necessario avere privilegi di amministr
 
  **Note:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] include [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], pertanto non è necessario installarlo separatamente. Analogamente, in [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] è incluso [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- In [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] è incluso [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], pertanto non è necessario installarlo separatamente. Analogamente, in [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] è incluso [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
 - .NET Framework ha supporto limitato per il ruolo Server Core con Windows Server 2008 R2 SP1 o versioni successive. Per un elenco di API non supportate, vedere [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx) (Funzionalità .NET di Server Core).
 

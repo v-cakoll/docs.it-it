@@ -1,6 +1,6 @@
 ---
-title: "Proprietà"
-description: "Informazioni sulle proprietà di C#, tra cui funzionalità per la convalida, valori calcolati, valutazione lazy e notifiche di modifica di proprietà."
+title: Proprietà
+description: Informazioni sulle proprietà di C#, tra cui funzionalità per la convalida, valori calcolati, valutazione lazy e notifiche di modifica di proprietà.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Proprietà
 
@@ -76,7 +76,7 @@ public class Person
 }
 ```
 
-Se l'implementazione di una proprietà corrisponde a un'espressione singola, è possibile usare *membri nel corpo dell'espressione* per il getter o il setter:
+Se l'implementazione di una proprietà corrisponde a un'espressione singola, è possibile usare *membri con corpo di espressione* per il getter o il setter:
 
 ```csharp
 public class Person
@@ -149,7 +149,7 @@ public class Person
 
 L'accesso alla proprietà `FirstName` potrà quindi essere eseguito da qualsiasi codice, ma la proprietà potrà essere assegnata soltanto da altro codice della classe `Person`.
 
-È possibile aggiungere qualsiasi modificatore di accesso restrittivo alle funzioni di accesso set o get. Il modificatore di accesso inserito nella singola funzione di accesso deve essere più restrittivo del modificatore di accesso della definizione della proprietà. Il codice precedente è valido poiché la proprietà `FirstName` è `public` e la funzione di accesso set è `private`. Non è possibile dichiarare una proprietà `private` con una funzione di accesso `public`. Dichiarazioni di proprietà possono essere dichiarate anche `protected`, `internal`, `protected internal`, `private protected` o addirittura `private`.   
+È possibile aggiungere qualsiasi modificatore di accesso restrittivo alle funzioni di accesso set o get. Il modificatore di accesso inserito nella singola funzione di accesso deve essere più restrittivo del modificatore di accesso della definizione della proprietà. Il codice precedente è valido poiché la proprietà `FirstName` è `public` e la funzione di accesso set è `private`. Non è possibile dichiarare una proprietà `private` con una funzione di accesso `public`. Le dichiarazioni di proprietà possono anche essere dichiarate `protected`, `internal`, `protected internal`, `private protected` o anche `private`.   
 
 È anche consentito inserire il modificatore più restrittivo nella funzione di accesso `get`. Ad esempio, è possibile avere una proprietà `public` e limitare la funzione di accesso `get` a `private`. Questo scenario viene usato raramente.
 
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-L'esempio precedente usa la sintassi di *interpolazione della stringa* per creare la stringa formattata per il nome completo.
+L'esempio precedente usa la funzionalità di [interpolazione delle stringhe](../csharp/language-reference/tokens/interpolated.md) per creare la stringa formattata per il nome completo.
 
 È anche possibile usare *membri con corpo di espressione* che consentono di creare la proprietà calcolata `FullName` in modo più conciso:
 
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-I *membri con corpo di espressione* usano la sintassi di *espressione lambda* per definire un metodo che contiene una singola espressione. In questo caso, l'espressione restituisce il nome completo per l'oggetto person.
+I *membri con corpo di espressione* usano la sintassi delle *espressioni lambda* per definire un metodo che contiene una singola espressione. In questo caso, l'espressione restituisce il nome completo per l'oggetto person.
 
 ### <a name="lazy-evaluated-properties"></a>Proprietà con valutazione lazy
 

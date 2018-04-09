@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -63,7 +63,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |[< (minore di)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore di quella a destra.|  
 |[<= (minore di o uguale a)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra ha un valore minore o uguale a quella a destra.|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Determina se un'espressione restituisce un valore incluso in un intervallo specificato.|  
-|[!= (diverso da)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra è diversa da quella a destra.|  
+|[\!= (diverso da)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Consente di confrontare due espressioni per determinare se l'espressione a sinistra è diversa da quella a destra.|  
 |[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Determina se una determinata stringa di caratteri corrisponde a un modello specificato.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operatori logici e di espressione Case  
@@ -72,7 +72,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |[& & (AND logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND logico.|  
-|[! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
+|[\! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
 |[&#124;&#124;(OR logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR logico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Valuta un set di espressioni booleane per determinare il risultato.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Il risultato di un [quando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clausola quando restituisce true.|  

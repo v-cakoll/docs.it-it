@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 Le stringhe di formato numerico standard vengono usate per formattare tipi numerici comuni. Una stringa di formato numerico standard usa il formato `Axx`, dove:  
@@ -48,7 +48,7 @@ Le stringhe di formato numerico standard sono supportate:
  
 - Dalla [funzionalità di formattazione composita](../../../docs/standard/base-types/composite-formatting.md) di .NET usata da alcuni metodi `Write` e `WriteLine` delle classi <xref:System.Console> e <xref:System.IO.StreamWriter>, dal metodo <xref:System.String.Format%2A?displayProperty=nameWithType> e dal metodo <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La funzionalità di formattazione composta consente di includere la rappresentazione di stringa di più elementi dati in un'unica stringa per specificare la larghezza di un campo e per allinearvi i numeri all'interno. Per altre informazioni, vedere [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Dalle [stringhe interpolate](../../csharp/language-reference/keywords/interpolated-strings.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
+- Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
  
 > [!TIP]
 >  È possibile scaricare l' [utilità di formattazione](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
@@ -89,6 +89,8 @@ Le stringhe di formato numerico standard sono supportate:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Può essere passato come argomento `formatString` in un elemento espressione interpolata di una stringa interpolata. Per altre informazioni, vedere l'argomento [Interpolazione di stringhe](../../csharp/language-reference/tokens/interpolated.md) nelle informazioni di riferimento di C# o l'argomento [Stringhe interpolate](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) nelle informazioni di riferimento di Visual Basic.  
   
  Nelle sezioni seguenti vengono fornite informazioni dettagliate su ognuna delle stringhe di formato numerico standard.  
   

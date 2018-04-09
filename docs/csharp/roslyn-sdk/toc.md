@@ -3,7 +3,7 @@
 ## [Utilizzare la sintassi](work-with-syntax.md)
 ## [Utilizzare la semantica](work-with-semantics.md)
 ## [Utilizzare un'area di lavoro](work-with-workspace.md)
-
+## [Esplorare il codice con il visualizzatore di sintassi](syntax-visualizer.md)
 ## Guide introduttive
 ### [Analisi della sintassi](get-started/syntax-analysis.md)
 ### [Analisi semantica](get-started/semantic-analysis.md)

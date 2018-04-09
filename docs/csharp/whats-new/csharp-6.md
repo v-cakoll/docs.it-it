@@ -1,6 +1,6 @@
 ---
-title: "Novità di c# 6 - Guida per c#"
-description: "Informazioni sulle nuove funzionalità di C# versione 6"
+title: Novità di C# 6 - Guida a C#
+description: Informazioni sulle nuove funzionalità di C# versione 6
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -56,7 +56,7 @@ La sintassi per le proprietà implementate automaticamente, in genere definite "
 
 Tuttavia, la sintassi semplice ha limitato i tipi di progetti che è possibile supportare usando le proprietà automatiche. C# 6 migliora le funzionalità delle proprietà automatiche in modo che sia possibile usarle in più situazioni. Non è necessario ricorrere spesso alla sintassi più dettagliata per la dichiarazione e la modifica manuale del campo sottostante.
 
-La nuova sintassi illustrati gli scenari per le proprietà di sola lettura e per l'inizializzazione di archiviazione della variabile dietro una proprietà automatica.
+La nuova sintassi consente di gestire scenari per le proprietà di sola lettura e per l'inizializzazione dell'archiviazione delle variabili dietro una proprietà automatica.
 
 ### <a name="read-only-auto-properties"></a>Proprietà automatiche di sola lettura
 
@@ -105,17 +105,17 @@ C# 6 consente di assegnare un valore iniziale per la memoria usata da una propri
 
 Il membro `Grades` viene inizializzato dove è dichiarato. Ciò rende più semplice eseguire l'inizializzazione esattamente una sola volta. L'inizializzazione fa parte della dichiarazione di proprietà e rende più semplice l'equivalenza tra l'allocazione di memoria e l'interfaccia pubblica per gli oggetti `Student`.
 
-Inizializzatori di proprietà utilizzabile con le proprietà di lettura/scrittura, nonché le proprietà di sola lettura, come illustrato di seguito.
+Gli inizializzatori di proprietà possono essere usati con proprietà di lettura/scrittura, nonché con proprietà di sola lettura, come illustrato di seguito.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Membri di funzione con corpo di espressione
 
-Il corpo di molti membri che si scrivono è costituito da un'unica istruzione che può essere rappresentata come un'espressione. È possibile ridurre la sintassi scrivendo in alternativa un membro con corpo di espressione. Funziona per i metodi e proprietà di sola lettura. Ad esempio, un override di `ToString()` è spesso un ottimo candidato:
+Il corpo di molti membri che si scrivono è costituito da un'unica istruzione che può essere rappresentata come un'espressione. È possibile ridurre la sintassi scrivendo in alternativa un membro con corpo di espressione. Funziona per i metodi e le proprietà di sola lettura. Ad esempio, un override di `ToString()` è spesso un ottimo candidato:
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-È inoltre possibile utilizzare membri densi espressione in nonché le proprietà di sola lettura:
+È possibile usare membri con corpo di espressione anche nelle proprietà di sola lettura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -209,17 +209,17 @@ Verificare che il lato sinistro venga valutato una sola volta consente inoltre d
 
 ## <a name="string-interpolation"></a>Interpolazione di stringhe
 
-C# 6 contiene una nuova sintassi per la composizione di stringhe da una stringa di formato e di espressioni che possono essere valutate per produrre altri valori di stringa.
+C# 6 contiene una nuova sintassi per la composizione di stringhe da una stringa di formato e di espressioni che vengono valutate per produrre altri valori di stringa.
 
 Di solito era necessario usare parametri posizionali in un metodo come `string.Format`:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Con C# 6 la nuova funzionalità di interpolazione delle stringhe consente di incorporare le espressioni nella stringa di formato. Basta far precedere la stringa da `$`:
+Con C# 6 la nuova funzionalità di [interpolazione delle stringhe](../language-reference/tokens/interpolated.md) consente di incorporare le espressioni nella stringa di formato. Basta far precedere la stringa da `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-In questo esempio sono state usate espressioni variabili per le espressioni sostituite. È possibile espandere questa sintassi per usare qualsiasi espressione. Ad esempio, è possibile calcolare la media dei voti di uno studente come parte dell'interpolazione:
+Questo esempio usa espressioni di proprietà per le espressioni sostituite. È possibile espandere questa sintassi per usare qualsiasi espressione. Ad esempio, è possibile calcolare la media dei voti di uno studente come parte dell'interpolazione:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ Eseguendo l'esempio precedente si può vedere che l'output per `Grades.Average()
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-La riga di codice precedente formatterà il valore per `Grades.Average()` come numero a virgola mobile con due cifre decimali.
+La riga di codice precedente formatta il valore per `Grades.Average()` come numero a virgola mobile con due cifre decimali.
 
 Il carattere `:` viene sempre interpretato come separatore tra l'espressione da formattare e la stringa di formato. Questo può causare problemi quando l'espressione usa il carattere `:` in altro modo, ad esempio come operatore condizionale:
 
@@ -250,21 +250,16 @@ ma illustra in modo efficace la portata della funzionalità. Qualsiasi espressio
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolazione delle stringhe e impostazioni cultura specifiche
 
 Tutti gli esempi illustrati nella sezione precedente formattano le stringhe usando la lingua e le impostazioni cultura correnti del computer in cui viene eseguito il codice. Spesso può essere necessario formattare la stringa prodotta usando impostazioni cultura specifiche.
-L'oggetto prodotto da un'interpolazione di stringhe è un tipo con conversione implicita a <xref:System.String> o <xref:System.FormattableString>.
+A tale scopo, sfruttare il fatto che l'oggetto prodotto da un'interpolazione di stringhe può essere convertito in modo implicito in <xref:System.FormattableString>.
 
-Il tipo <xref:System.FormattableString> contiene la stringa di formato e i risultati della valutazione degli argomenti prima della conversione degli stessi in stringhe. È possibile usare i metodi pubblici di <xref:System.FormattableString> per specificare le impostazioni cultura quando si formatta una stringa. Ad esempio, il codice seguente produce una stringa utilizzando il tedesco come lingua e impostazioni cultura. Verrà usato il carattere ',' come separatore decimale e il carattere '.' come separatore delle migliaia.
+L'istanza di <xref:System.FormattableString> contiene la stringa di formato e i risultati della valutazione delle espressioni prima della conversione di queste in stringhe. È possibile usare i metodi pubblici di <xref:System.FormattableString> per specificare le impostazioni cultura quando si formatta una stringa. L'esempio seguente, ad esempio, produce una stringa con impostazioni cultura tedesche. Usa il carattere ',' come separatore decimale e il carattere '.' come separatore delle migliaia.
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> L'esempio precedente non è supportato in .NET Core versione 1.0.1. È supportato solo in .NET Framework.
-
-In generale, le espressioni di interpolazione di stringhe producono stringhe come output. Tuttavia, per avere un maggiore controllo sulle impostazioni cultura usate per formattare la stringa, è possibile definire un output specifico.  Se è spesso necessario usare questa funzionalità, è possibile creare metodi pratici, come i metodi di estensione, per abilitare la formattazione semplice con impostazioni cultura specifiche.
+Per altre informazioni, vedere [Interpolazione di stringhe](../language-reference/tokens/interpolated.md).
 
 ## <a name="exception-filters"></a>Filtri eccezioni
 

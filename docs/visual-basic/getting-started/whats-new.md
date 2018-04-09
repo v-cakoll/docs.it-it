@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
 
@@ -81,7 +81,7 @@ Visual Basic 2017 ha aggiunto il supporto del carattere di sottolineatura (`_`) 
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Per utilizzare il carattere di sottolineatura come separatore iniziale, è necessario aggiungere l'elemento seguente al progetto Visual Basic (\*. vbproj) file:
+Per usare il carattere di sottolineatura come separatore iniziale, è necessario aggiungere l'elemento seguente al file di progetto (\*.vbproj) di Visual Basic:
 
 ```xml
 <PropertyGroup>
@@ -91,15 +91,15 @@ Per utilizzare il carattere di sottolineatura come separatore iniziale, è neces
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[**Tupla denominato inferenza**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Inferenza di tupla denominata**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Quando si assegna il valore di elementi di tupla provenienti da variabili, Visual Basic deduce il nome degli elementi di tupla dai nomi di variabili corrispondenti; non è necessario assegnare esplicitamente un nome a un elemento di tupla. L'esempio seguente usa l'inferenza per creare una tupla con tre elementi denominati, `state`, `stateName`, e `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-**Opzioni aggiuntive del compilatore**  
+**Nuove opzioni del compilatore**  
 
-Visual Basic compilatore da riga di comando supporta ora il [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) e [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opzioni del compilatore per controllare l'output di assembly di riferimento. **-refout** definisce la directory di output dell'assembly di riferimento, e **- refonly** specifica che solo un assembly di riferimento deve essere l'output di compilazione.
+Il compilatore della riga di comando di Visual Basic ora supporta le opzioni [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) per il controllo dell'output degli assembly di riferimento. **-refout** definisce la directory di output dell'assembly di riferimento, mentre **-refonly** specifica che il risultato della compilazione può essere solo un assembly di riferimento.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +154,7 @@ Per altre informazioni, vedere [Reference Return Values](../programming-guide/la
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  È possibile ottenere il nome di stringa non qualificato di un tipo o di un membro, da usare in un messaggio di errore senza definire una stringa a livello di codice.  In questo modo il codice sarà corretto anche durante il refactoring.  Questa funzionalità è utile anche per l'associazione di collegamenti MVC (Modello-Vista-Controller) e la generazione di eventi di modifica di proprietà.  
   
-[Interpolazione di stringhe](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolazione di stringhe](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  È possibile usare espressioni di interpolazione di stringhe per costruire stringhe.  Un'espressione di stringa interpolata è simile a una stringa di modello che contiene espressioni.  In relazione agli argomenti, è più facile comprendere una stringa interpolata che la [formattazione composita](../../standard/base-types/composite-format.md).  
   
 [Indicizzazione e accesso ai membri condizionali null](../../csharp/language-reference/operators/null-conditional-operators.md)  

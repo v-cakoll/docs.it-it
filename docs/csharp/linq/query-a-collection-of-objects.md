@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 74d6c1f080c3e70867f5d2f074315bd1d8486bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a62e5c6324d15376f1b42ad078eeb883b05ef14f
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="query-a-collection-of-objects"></a>Eseguire query in una raccolta di oggetti
 In questo esempio viene illustrato come eseguire una query semplice su un elenco di oggetti `Student`. Ogni oggetto `Student` contiene informazioni di base sullo studente e un elenco che rappresenta i voti dello studente in quattro esami.  
@@ -31,4 +31,4 @@ In questo esempio viene illustrato come eseguire una query semplice su un elenco
 
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di query LINQ](index.md)  
- [Stringhe interpolate](../language-reference/keywords/interpolated-strings.md)
+ [Interpolazione di stringhe](../language-reference/tokens/interpolated.md)
