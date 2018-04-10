@@ -1,5 +1,5 @@
 ---
-title: "Trasferire in modalità lift-and-shift i processi DevOps delle app esistenti"
+title: Trasferire in modalità lift-and-shift i processi DevOps delle app esistenti
 description: Modernizzare le applicazioni .NET esistenti con il cloud di Azure e i contenitori di Windows.
 author: CESARDELATORRE
 ms.author: wiwagn

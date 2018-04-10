@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sugli elementi Panel
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="panels-overview"></a>Cenni preliminari sugli elementi Panel
-<xref:System.Windows.Controls.Panel>gli elementi sono componenti che controllano il rendering degli elementi, ovvero le dimensioni e le dimensioni, la posizione e la disposizione del contenuto figlio. Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce una serie di predefiniti <xref:System.Windows.Controls.Panel> elementi, nonché la possibilità di costruire personalizzato <xref:System.Windows.Controls.Panel> elementi.  
+<xref:System.Windows.Controls.Panel> gli elementi sono componenti che consentono di controllare il rendering degli elementi, ovvero le dimensioni e le dimensioni, la posizione e la disposizione del contenuto figlio. Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce una serie di predefiniti <xref:System.Windows.Controls.Panel> elementi, nonché la possibilità di costruire personalizzato <xref:System.Windows.Controls.Panel> elementi.  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Classe Panel  
- <xref:System.Windows.Controls.Panel>è la classe di base per supportano tutti gli elementi che forniscono un layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Derivato <xref:System.Windows.Controls.Panel> gli elementi vengono utilizzati per posizionare e disporre gli elementi in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e il codice.  
+ <xref:System.Windows.Controls.Panel> è la classe base per tutti gli elementi che forniscono un layout supportano in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Derivato <xref:System.Windows.Controls.Panel> gli elementi vengono utilizzati per posizionare e disporre gli elementi in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e il codice.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include una suite completa di implementazioni di elementi Panel derivati che abilitano numerosi layout complessi. Tali classi derivate espongono proprietà e metodi che consentono di implementare la maggior parte degli scenari di [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] standard. Gli sviluppatori che non riescono a trovare un comportamento di disposizione degli elementi figlio che soddisfa le proprie esigenze è possibile creare nuovi layout eseguendo l'override di <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> e <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metodi. Per altre informazioni sui comportamenti di layout personalizzati, vedere [Elementi Panel personalizzati](#Panels_custom_panel_elements).  
   
@@ -56,11 +58,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="panel-common-members"></a>Membri comuni degli elementi Panel  
  Tutti <xref:System.Windows.Controls.Panel> gli elementi supportano la base di ridimensionamento e posizionamento proprietà definite da <xref:System.Windows.FrameworkElement>, tra cui <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, e <xref:System.Windows.FrameworkElement.LayoutTransform%2A>. Per ulteriori informazioni sulle proprietà definite da posizionamento <xref:System.Windows.FrameworkElement>, vedere [allineamento, margini e spaziatura interna Panoramica](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md).  
   
- <xref:System.Windows.Controls.Panel>espone le proprietà aggiuntive che sono di importanza cruciale nella comprensione e l'utilizzo di layout. Il <xref:System.Windows.Controls.Panel.Background%2A> proprietà viene utilizzata per riempire l'area tra i limiti di un elemento panel derivato con un <xref:System.Windows.Media.Brush>. <xref:System.Windows.Controls.Panel.Children%2A>rappresenta una raccolta di elementi figlio che la <xref:System.Windows.Controls.Panel> è costituita da. <xref:System.Windows.Controls.Panel.InternalChildren%2A>rappresenta il contenuto del <xref:System.Windows.Controls.Panel.Children%2A> insieme più i membri generati dall'associazione dati. Entrambi sono costituiti da un <xref:System.Windows.Controls.UIElementCollection> di elementi figlio ospitati nel controllo padre <xref:System.Windows.Controls.Panel>.  
+ <xref:System.Windows.Controls.Panel> espone le proprietà aggiuntive che sono di importanza cruciale nella comprensione e l'utilizzo di layout. Il <xref:System.Windows.Controls.Panel.Background%2A> proprietà viene utilizzata per riempire l'area tra i limiti di un elemento panel derivato con un <xref:System.Windows.Media.Brush>. <xref:System.Windows.Controls.Panel.Children%2A> rappresenta la raccolta figlio di elementi che la <xref:System.Windows.Controls.Panel> è costituita da. <xref:System.Windows.Controls.Panel.InternalChildren%2A> rappresenta il contenuto del <xref:System.Windows.Controls.Panel.Children%2A> insieme più i membri generati dal data binding. Entrambi sono costituiti da un <xref:System.Windows.Controls.UIElementCollection> di elementi figlio ospitati nel controllo padre <xref:System.Windows.Controls.Panel>.  
   
  Panel espone inoltre un <xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType> proprietà che può essere usato per ottenere un ordine a più livelli in una classe associata <xref:System.Windows.Controls.Panel>. I membri di un pannello <xref:System.Windows.Controls.Panel.Children%2A> insieme con un valore più alto <xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType> valore visualizzato davanti a quelli con un basso <xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType> valore. Questo è particolarmente utile per i pannelli, ad esempio <xref:System.Windows.Controls.Canvas> e <xref:System.Windows.Controls.Grid> che consente di condividere lo stesso spazio delle coordinate gli elementi figlio.  
   
- <xref:System.Windows.Controls.Panel>definisce inoltre la <xref:System.Windows.Controls.Panel.OnRender%2A> metodo, che può essere utilizzato per eseguire l'override del comportamento di presentazione predefinito di un <xref:System.Windows.Controls.Panel>.  
+ <xref:System.Windows.Controls.Panel> definisce inoltre le <xref:System.Windows.Controls.Panel.OnRender%2A> metodo, che può essere usato per eseguire l'override del comportamento di presentazione predefinito un <xref:System.Windows.Controls.Panel>.  
   
 #### <a name="attached-properties"></a>Proprietà associate  
  Gli elementi Panel derivati usano ampiamente le proprietà associate. Una proprietà associata è un tipo specializzato di proprietà di dipendenza che non dispone della proprietà "wrapper" di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] convenzionale. Le proprietà associate presentano una sintassi specializzata in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], illustrata in molti esempi seguenti.  
@@ -81,10 +83,10 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.StackPanel>|Yes|Dispone gli elementi figlio su una sola riga che può essere orientata orizzontalmente o verticalmente.|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|No|Gestisce il layout dei pulsanti in un <xref:System.Windows.Controls.TabControl>.|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|No|Dispone il contenuto all'interno di un <xref:System.Windows.Controls.ToolBar> controllo.|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|No|<xref:System.Windows.Controls.Primitives.UniformGrid>viene utilizzato per disporre gli elementi figlio in una griglia con tutte le celle di uguali dimensioni.|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|No|<xref:System.Windows.Controls.Primitives.UniformGrid> viene utilizzato per disporre gli elementi figlio in una griglia con tutte le celle di uguali dimensioni.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|No|Implementa una classe di base per i pannelli in grado di virtualizzare la raccolta di elementi figlio relativa.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Yes|Dispone e virtualizza il contenuto su una singola riga orientato orizzontalmente o verticalmente.|  
-|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel>Posiziona gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva sul bordo della casella contenitore. Ordinamento successivo avviene in modo sequenziale dall'alto verso il basso o da destra a sinistra, a seconda del valore del <xref:System.Windows.Controls.WrapPanel.Orientation%2A> proprietà.|  
+|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel> Posiziona gli elementi figlio in sequenza da sinistra a destra, del contenuto di rilievo alla riga successiva il bordo della casella contenitore. Ordinamento successivo avviene in modo sequenziale dall'alto verso il basso o da destra a sinistra, a seconda del valore del <xref:System.Windows.Controls.WrapPanel.Orientation%2A> proprietà.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>Elementi Panel dell'interfaccia utente  
@@ -96,8 +98,8 @@ ms.lasthandoff: 12/22/2017
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Vincolato al contenuto|Vincolato al contenuto|  
 |<xref:System.Windows.Controls.DockPanel>|Vincolato|Vincolato|  
-|<xref:System.Windows.Controls.StackPanel>(Verticale)|Vincolato|Vincolato al contenuto|  
-|<xref:System.Windows.Controls.StackPanel>(Con orientamento orizzontale)|Vincolato al contenuto|Vincolato|  
+|<xref:System.Windows.Controls.StackPanel> (Verticale)|Vincolato|Vincolato al contenuto|  
+|<xref:System.Windows.Controls.StackPanel> (Con orientamento orizzontale)|Vincolato al contenuto|Vincolato|  
 |<xref:System.Windows.Controls.Grid>|Vincolato|Vincolato, ad eccezione dei casi in cui <xref:System.Windows.GridUnitType.Auto> si applicano a righe e colonne|  
 |<xref:System.Windows.Controls.WrapPanel>|Vincolato al contenuto|Vincolato al contenuto|  
   
@@ -107,10 +109,10 @@ ms.lasthandoff: 12/22/2017
 ### <a name="canvas"></a>Canvas  
  Il <xref:System.Windows.Controls.Canvas> elemento consente il posizionamento del contenuto in base alle assoluto *x* e *y*coordinate. Gli elementi possono essere disegnati in una posizione univoca. Se gli elementi occupano le stesse coordinate, l'ordine in cui vengono disegnati è determinato dall'ordine di visualizzazione nel markup.  
   
- <xref:System.Windows.Controls.Canvas>fornisce il supporto di layout più flessibile di qualsiasi <xref:System.Windows.Controls.Panel>. Proprietà Height e Width vengono utilizzate per definire l'area dell'area di disegno e gli elementi all'interno di vengono assegnati le coordinate assolute relative all'area dell'elemento padre <xref:System.Windows.Controls.Canvas>. Quattro proprietà associate, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, consentono un controllo accurato di posizionamento di un oggetto all'interno di un <xref:System.Windows.Controls.Canvas>, consentendo allo sviluppatore di posizionare e disporre gli elementi con precisione sullo schermo.  
+ <xref:System.Windows.Controls.Canvas> fornisce il supporto di qualsiasi layout più flessibile <xref:System.Windows.Controls.Panel>. Proprietà Height e Width vengono utilizzate per definire l'area dell'area di disegno e gli elementi all'interno di vengono assegnati le coordinate assolute relative all'area dell'elemento padre <xref:System.Windows.Controls.Canvas>. Quattro proprietà associate, <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, consentono un controllo accurato di posizionamento di un oggetto all'interno di un <xref:System.Windows.Controls.Canvas>, consentendo allo sviluppatore di posizionare e disporre gli elementi con precisione sullo schermo.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>Proprietà ClipToBounds in un elemento Canvas  
- <xref:System.Windows.Controls.Canvas>gli elementi figlio è possibile posizionare in qualsiasi posizione sullo schermo, anche in corrispondenza delle coordinate che sono di fuori di un proprio definito <xref:System.Windows.FrameworkElement.Height%2A> e <xref:System.Windows.FrameworkElement.Width%2A>. Inoltre, <xref:System.Windows.Controls.Canvas> non è interessata dalle dimensioni degli elementi figlio. Di conseguenza, è possibile che un elemento figlio estenda altri elementi all'esterno del rettangolo delimitatore dell'elemento padre <xref:System.Windows.Controls.Canvas>. Il comportamento predefinito di un <xref:System.Windows.Controls.Canvas> è che gli elementi figlio da disegnare all'esterno dei limiti dell'elemento padre <xref:System.Windows.Controls.Canvas>. Se questo comportamento è inaccettabile, il <xref:System.Windows.UIElement.ClipToBounds%2A> può essere impostata su `true`. In questo modo <xref:System.Windows.Controls.Canvas> per ritagliare le relative dimensioni. <xref:System.Windows.Controls.Canvas>è l'unico elemento di layout che consente agli elementi figlio di essere disegnato di fuori dei limiti.  
+ <xref:System.Windows.Controls.Canvas> possibile posizionare gli elementi figlio in qualsiasi posizione sullo schermo, anche in corrispondenza delle coordinate che sono di fuori di un proprio definito <xref:System.Windows.FrameworkElement.Height%2A> e <xref:System.Windows.FrameworkElement.Width%2A>. Inoltre, <xref:System.Windows.Controls.Canvas> non è interessata dalle dimensioni degli elementi figlio. Di conseguenza, è possibile che un elemento figlio estenda altri elementi all'esterno del rettangolo delimitatore dell'elemento padre <xref:System.Windows.Controls.Canvas>. Il comportamento predefinito di un <xref:System.Windows.Controls.Canvas> è che gli elementi figlio da disegnare all'esterno dei limiti dell'elemento padre <xref:System.Windows.Controls.Canvas>. Se questo comportamento è inaccettabile, il <xref:System.Windows.UIElement.ClipToBounds%2A> può essere impostata su `true`. In questo modo <xref:System.Windows.Controls.Canvas> per ritagliare le relative dimensioni. <xref:System.Windows.Controls.Canvas> è l'unico elemento di layout che consente agli elementi figlio di essere disegnato di fuori dei limiti.  
   
  Questo comportamento viene illustrato graficamente in [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050) (Esempio di confronto di proprietà Width).  
   
@@ -151,13 +153,13 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>Grid  
- Il <xref:System.Windows.Controls.Grid> elemento combina le funzionalità di posizionamento assoluto e controllo dati tabulari. Oggetto <xref:System.Windows.Controls.Grid> consente di eseguire facilmente gli elementi di stile e posizione. <xref:System.Windows.Controls.Grid>Consente di definire i raggruppamenti flessibile righe e colonne e fornisce anche un meccanismo per la condivisione di informazioni sul ridimensionamento tra più <xref:System.Windows.Controls.Grid> elementi.  
+ Il <xref:System.Windows.Controls.Grid> elemento combina le funzionalità di posizionamento assoluto e controllo dati tabulari. Oggetto <xref:System.Windows.Controls.Grid> consente di eseguire facilmente gli elementi di stile e posizione. <xref:System.Windows.Controls.Grid> Consente di definire flessibile raggruppamenti di righe e colonne e fornisce anche un meccanismo per condividere informazioni sulle dimensioni tra più <xref:System.Windows.Controls.Grid> elementi.  
   
 #### <a name="how-is-grid-different-from-table"></a>Differenza tra gli elementi Grid e Table  
- <xref:System.Windows.Documents.Table>e <xref:System.Windows.Controls.Grid> condividono alcune funzionalità comuni, ma ognuno è adatto per scenari diversi. Oggetto <xref:System.Windows.Documents.Table> è progettato per l'utilizzo all'interno del contenuto di flusso (vedere [Cenni preliminari sul documento flusso](../../../../docs/framework/wpf/advanced/flow-document-overview.md) per ulteriori informazioni sul contenuto di flusso). Gli elementi Grid sono particolarmente adatti all'interno di moduli (in generale in un qualsiasi punto all'esterno del contenuto dinamico). All'interno di un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supporta contenuti comportamenti flusso come impaginazione, riflusso di colonne e selezione del contenuto durante una <xref:System.Windows.Controls.Grid> non. A <xref:System.Windows.Controls.Grid> d'altra parte è più adatta all'esterno di un <xref:System.Windows.Documents.FlowDocument> per diversi motivi, tra cui <xref:System.Windows.Controls.Grid> aggiunge gli elementi basati su un indice di riga e colonna <xref:System.Windows.Documents.Table> non. Il <xref:System.Windows.Controls.Grid> elemento consente la sovrapposizione del contenuto figlio, che consente più di un elemento presente in un singolo "cella". <xref:System.Windows.Documents.Table>non supporta la sovrapposizione. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati relative all'area della relativa "cella". <xref:System.Windows.Documents.Table>non supporta questa funzionalità. Infine, un <xref:System.Windows.Controls.Grid> è più semplice rispetto a un <xref:System.Windows.Documents.Table>.  
+ <xref:System.Windows.Documents.Table> e <xref:System.Windows.Controls.Grid> condividono alcune funzionalità comuni, ma ognuno è adatto per scenari diversi. Oggetto <xref:System.Windows.Documents.Table> è progettato per l'utilizzo all'interno del contenuto di flusso (vedere [Cenni preliminari sul documento flusso](../../../../docs/framework/wpf/advanced/flow-document-overview.md) per ulteriori informazioni sul contenuto di flusso). Gli elementi Grid sono particolarmente adatti all'interno di moduli (in generale in un qualsiasi punto all'esterno del contenuto dinamico). All'interno di un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> supporta contenuti comportamenti flusso come impaginazione, riflusso di colonne e selezione del contenuto durante una <xref:System.Windows.Controls.Grid> non. A <xref:System.Windows.Controls.Grid> d'altra parte è più adatta all'esterno di un <xref:System.Windows.Documents.FlowDocument> per diversi motivi, tra cui <xref:System.Windows.Controls.Grid> aggiunge gli elementi basati su un indice di riga e colonna <xref:System.Windows.Documents.Table> non. Il <xref:System.Windows.Controls.Grid> elemento consente la sovrapposizione del contenuto figlio, che consente più di un elemento presente in un singolo "cella". <xref:System.Windows.Documents.Table> non supporta la sovrapposizione. Gli elementi figlio di un <xref:System.Windows.Controls.Grid> possono essere posizionati relative all'area della relativa "cella". <xref:System.Windows.Documents.Table> non supporta questa funzionalità. Infine, un <xref:System.Windows.Controls.Grid> è più semplice rispetto a un <xref:System.Windows.Documents.Table>.  
   
 #### <a name="sizing-behavior-of-columns-and-rows"></a>Comportamento di ridimensionamento di righe e colonne  
- Colonne e righe definite all'interno di un <xref:System.Windows.Controls.Grid> possono sfruttare <xref:System.Windows.GridUnitType.Star> ridimensionamento per distribuire proporzionalmente lo spazio rimanente. Quando <xref:System.Windows.GridUnitType.Star> è selezionata per l'altezza o larghezza di una riga o colonna, tale colonna o riga riceve una proporzione ponderata dello spazio disponibile rimanente. È in contrasto con <xref:System.Windows.GridUnitType.Auto>, che verrà distribuito lo spazio in modo uniforme in base alle dimensioni del contenuto all'interno di una colonna o riga. Questo valore viene espresso come `*` o come `2*` quando si usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Nel primo caso la riga o la colonna riceverebbe una volta lo spazio disponibile, nel secondo caso lo riceverebbe due volte e così via. Combinando questa tecnica per distribuire proporzionalmente spazio con un <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> valore `Stretch` è possibile suddividere lo spazio di layout per percentuale di spazio su schermo. <xref:System.Windows.Controls.Grid>è il pannello di layout solo in grado di distribuire spazio in questo modo.  
+ Colonne e righe definite all'interno di un <xref:System.Windows.Controls.Grid> possono sfruttare <xref:System.Windows.GridUnitType.Star> ridimensionamento per distribuire proporzionalmente lo spazio rimanente. Quando <xref:System.Windows.GridUnitType.Star> è selezionata per l'altezza o larghezza di una riga o colonna, tale colonna o riga riceve una proporzione ponderata dello spazio disponibile rimanente. È in contrasto con <xref:System.Windows.GridUnitType.Auto>, che verrà distribuito lo spazio in modo uniforme in base alle dimensioni del contenuto all'interno di una colonna o riga. Questo valore viene espresso come `*` o come `2*` quando si usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Nel primo caso la riga o la colonna riceverebbe una volta lo spazio disponibile, nel secondo caso lo riceverebbe due volte e così via. Combinando questa tecnica per distribuire proporzionalmente spazio con un <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> valore `Stretch` è possibile suddividere lo spazio di layout per percentuale di spazio su schermo. <xref:System.Windows.Controls.Grid> è il pannello di layout solo in grado di distribuire spazio in questo modo.  
   
 #### <a name="defining-and-using-a-grid"></a>Definizione e uso di un elemento Grid  
  L'esempio seguente illustra come creare una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] analoga a quella presente nella finestra Esegui disponibile nel menu Start di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
@@ -199,17 +201,17 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fornisce inoltre una variante del <xref:System.Windows.Controls.StackPanel> elemento automaticamente "" virtualizza il contenuto figlio con associazione a dati. In questo contesto il termine virtualizzare si riferisce a una tecnica grazie alla quale, a partire da un numero più elevato di elementi dei dati, viene generato un subset di elementi in base agli elementi visibili sullo schermo. La generazione di un elevato numero di elementi dell'interfaccia utente, quando solo alcuni possono essere visualizzati sullo schermo in un momento specifico, richiede un consumo intensivo di risorse in termini sia di memoria sia di processore. <xref:System.Windows.Controls.VirtualizingStackPanel>(tramite la funzionalità fornita da <xref:System.Windows.Controls.VirtualizingPanel>) calcola gli elementi visibili e funziona con il <xref:System.Windows.Controls.ItemContainerGenerator> da un <xref:System.Windows.Controls.ItemsControl> (ad esempio <xref:System.Windows.Controls.ListBox> o <xref:System.Windows.Controls.ListView>) per creare elementi solo per gli elementi visibili.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce inoltre una variazione del <xref:System.Windows.Controls.StackPanel> elemento che automaticamente "virtualizza" contenuto figlio associato a dati. In questo contesto il termine virtualizzare si riferisce a una tecnica grazie alla quale, a partire da un numero più elevato di elementi dei dati, viene generato un subset di elementi in base agli elementi visibili sullo schermo. La generazione di un elevato numero di elementi dell'interfaccia utente, quando solo alcuni possono essere visualizzati sullo schermo in un momento specifico, richiede un consumo intensivo di risorse in termini sia di memoria sia di processore. <xref:System.Windows.Controls.VirtualizingStackPanel> (tramite la funzionalità fornita da <xref:System.Windows.Controls.VirtualizingPanel>) calcola gli elementi visibili e interagisce con il <xref:System.Windows.Controls.ItemContainerGenerator> da un <xref:System.Windows.Controls.ItemsControl> (ad esempio <xref:System.Windows.Controls.ListBox> o <xref:System.Windows.Controls.ListView>) per creare elementi solo per gli elementi visibili.  
   
  Il <xref:System.Windows.Controls.VirtualizingStackPanel> elemento verrà automaticamente impostato come gli elementi host per i controlli, ad esempio il <xref:System.Windows.Controls.ListBox>. Quando insieme con associazione a un tipo di dati di hosting, il contenuto viene virtualizzato automaticamente, purché il contenuto è entro i limiti di un <xref:System.Windows.Controls.ScrollViewer>. In questo modo le prestazioni ottenute nell'hosting di molti elementi figlio vengono significativamente migliorate.  
   
- Il markup seguente viene illustrato come utilizzare un <xref:System.Windows.Controls.VirtualizingStackPanel> come host di elementi. Il <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty%2A?displayProperty=nameWithType> proprietà associata deve essere impostata su `true` (predefinito) per eseguire la virtualizzazione.  
+ Il markup seguente viene illustrato come utilizzare un <xref:System.Windows.Controls.VirtualizingStackPanel> come host di elementi. Il <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty?displayProperty=nameWithType> proprietà associata deve essere impostata su `true` (predefinito) per eseguire la virtualizzazione.  
   
  [!code-xaml[VirtualizingStackPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
   
 <a name="Panels_overview_WrapPanel"></a>   
 ### <a name="wrappanel"></a>WrapPanel  
- <xref:System.Windows.Controls.WrapPanel>viene utilizzato per posizionare gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva quando raggiunge il bordo del contenitore padre. Il contenuto può essere orientato orizzontalmente o verticalmente. <xref:System.Windows.Controls.WrapPanel>è utile per il flusso semplice [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenari. e consente anche di applicare un ridimensionamento uniforme a tutti i propri elementi figlio.  
+ <xref:System.Windows.Controls.WrapPanel> Consente di posizionare gli elementi figlio in sequenza da sinistra a destra, il contenuto di rilievo alla riga successiva quando raggiunge il bordo del contenitore padre. Il contenuto può essere orientato orizzontalmente o verticalmente. <xref:System.Windows.Controls.WrapPanel> è utile per il flusso semplice [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenari. e consente anche di applicare un ridimensionamento uniforme a tutti i propri elementi figlio.  
   
  Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Controls.WrapPanel> per visualizzare <xref:System.Windows.Controls.Button> controlli che eseguono il wrapping quando raggiungono il bordo del relativo contenitore.  
   
@@ -224,7 +226,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>Elementi Panel annidati  
- <xref:System.Windows.Controls.Panel>per produrre layout complessi, gli elementi possono essere annidati all'interno di altro. Ciò può rivelarsi molto utile in situazioni in cui un <xref:System.Windows.Controls.Panel> è ideale per una parte di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ma potrebbe non soddisfare le esigenze di una parte diversa del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ <xref:System.Windows.Controls.Panel> gli elementi possono essere annidati all'interno di altro per produrre layout complessi. Ciò può rivelarsi molto utile in situazioni in cui un <xref:System.Windows.Controls.Panel> è ideale per una parte di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ma potrebbe non soddisfare le esigenze di una parte diversa del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Non esiste alcun limite concreto al livello di annidamento che l'applicazione può supportare, ma è preferibile limitare l'uso dei pannelli a quelli effettivamente necessari per il layout desiderato. In molti casi, un <xref:System.Windows.Controls.Grid> elemento può essere usato invece panelli annidati a causa della flessibilità come un contenitore di layout. In questo modo le prestazioni dell'applicazione possono aumentare, grazie all'assenza di elementi non necessari nell'albero.  
   
@@ -259,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
  Il <xref:System.Windows.Window.SizeToContent%2A> proprietà fornisce un meccanismo che consente agli sviluppatori di applicazioni per prevedere le esigenze della localizzata [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Utilizzo di <xref:System.Windows.SizeToContent.WidthAndHeight> valore di questa proprietà, un elemento padre <xref:System.Windows.Window> sempre ridimensionato dinamicamente per adattarsi al contenuto e non è vincolato da restrizioni artificiali di altezza o larghezza.  
   
- <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Grid>, e <xref:System.Windows.Controls.StackPanel> rappresentano tutte le opzioni appropriate per localizzabile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. <xref:System.Windows.Controls.Canvas>è tuttavia, non è un'ottima scelta, poiché determina il contenuto esatto, rendendo difficile da localizzare.  
+ <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Grid>, e <xref:System.Windows.Controls.StackPanel> sono tutte le opzioni appropriate per localizzabile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. <xref:System.Windows.Controls.Canvas> è tuttavia, non è un'ottima scelta, poiché determina il contenuto esatto, rendendo difficile da localizzare.  
   
  Per altre informazioni sulla creazione di applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] localizzabili, vedere [Use Automatic Layout Overview](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md) (Cenni preliminari sull'uso del layout automatico).  
   
@@ -269,7 +271,7 @@ ms.lasthandoff: 12/22/2017
  [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
  [Esempio di raccolta di controlli WPF](http://go.microsoft.com/fwlink/?LinkID=160053)  
  [Panoramica su allineamento, margini e spaziatura interna](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Creare un esempio di pannello personalizzato di disposizione del contenuto](http://go.microsoft.com/fwlink/?LinkID=159979)  
+ [Creare un campione di pannello personalizzato di disposizione del contenuto](http://go.microsoft.com/fwlink/?LinkID=159979)  
  [Cenni preliminari sulle proprietà associate](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
  [Cenni preliminari sull'utilizzo del layout automatico](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [Ottimizzazione delle prestazioni: layout e progettazione](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

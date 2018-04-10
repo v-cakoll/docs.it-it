@@ -1,6 +1,6 @@
 ---
-title: "Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi"
-description: "Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi"
+title: Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
+description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Progettazione e sviluppo di applicazioni .NET basate su più contenitori e microservizi
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn

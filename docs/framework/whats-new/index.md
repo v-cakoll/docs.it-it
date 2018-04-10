@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e8107fb22fcc8afee8723c77868b0c1e5a404e3f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 <a name="introduction"></a> Questo articolo offre un riepilogo dei principali nuovi miglioramenti e funzionalità introdotti nelle versioni seguenti di .NET Framework:  
@@ -514,7 +514,8 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **Migliore supporto per l'uso di più regole di adattamento all'ora legale tramite la classe DataContractJsonSerializer** I clienti possono ora usare un'impostazione di configurazione dell'applicazione per determinare se la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supporta più regole di adattamento per un singolo fuso orario. È una funzionalità che prevede il consenso esplicito. Per abilitarla aggiungere la seguente impostazione nel file di configurazione dell'applicazione:
+ **Miglioramento del supporto per più regole di regolazione dell'ora legale tramite la classe DataContractJsonSerializer**   
+ I clienti possono usare un'impostazione di configurazione dell'applicazione per determinare se la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supporta più regole di regolazione per un singolo fuso orario. È una funzionalità che prevede il consenso esplicito. Per abilitarla aggiungere la seguente impostazione nel file di configurazione dell'applicazione:
 
 ```xml
 <runtime>
@@ -526,32 +527,8 @@ Quando questa funzionalità è abilitata, un oggetto <xref:System.Runtime.Serial
 
 Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle regolazioni per il fuso orario, vedere [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).
 
-**Supporto per mantenere un'ora UTC durante la serializzazione e la deserializzazione con la classe XMLSerializer** In genere, quando si usa la classe <xref:System.Xml.Serialization.XmlSerializer> per serializzare un valore <xref:System.DateTime> UTC, viene creata una stringa di data e ora serializzata che mantiene la data e l'ora, ma presuppone che l'ora sia locale.  Ad esempio, se si crea un'istanza di data e ora UTC chiamando il codice seguente:
-
-```csharp
-DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
-```
-
-```vb
-Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
-```
-
-Il risultato è la stringa di ora serializzata "03:00:00.0000000-08:00" per un sistema otto ore indietro rispetto all'ora UTC.  E i valori serializzati vengono sempre deserializzati come valori di data e ora locali.
-
- È possibile usare un'impostazione di configurazione dell'applicazione per determinare se <xref:System.Xml.Serialization.XmlSerializer> mantiene le informazioni sul fuso orario UTC durante la serializzazione e deserializzazione dei valori di <xref:System.DateTime>:
-
-```xml 
-<runtime>
-     <AppContextSwitchOverrides 
-          value="Switch.System.Runtime.Serialization.DisableSerializeUTCDateTimeToTimeAndDeserializeUTCTimeToUTCDateTime=false" />
-</runtime>
-```
-
-Quando questa funzionalità è abilitata, un oggetto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usa il tipo <xref:System.TimeZoneInfo> anziché il tipo <xref:System.TimeZone> per deserializzare i dati di data e ora. <xref:System.TimeZoneInfo> supporta più regole di regolazione, quindi consente di lavorare con i dati cronologici relativi al fuso orario, al contrario di <xref:System.TimeZone>.
-
-Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle regolazioni per il fuso orario, vedere [Panoramica sul fuso orario](../../../docs/standard/datetime/time-zone-overview.md).
-
- **Migliore corrispondenza di NetNamedPipeBinding** WCF offre una nuova impostazione per le app, che può essere configurata nelle applicazioni client per garantire sempre la connessione al servizio in ascolto sull'URI che corrisponde meglio a quello richiesto dalle applicazioni. Con questa impostazione impostata su `false` (impostazione predefinita), i client che usano <xref:System.ServiceModel.NetNamedPipeBinding> sono in grado di tentare la connessione a un servizio in ascolto su un URI che è una sottostringa dell'URI richiesto.
+ **Ricerca più accurata con NetNamedPipeBinding**   
+ WCF offre una nuova impostazione di applicazione che può essere specificata sulle applicazioni client in modo da assicurare che si connettano sempre al servizio in ascolto sull'URI che meglio corrisponde a quello richiesto. Con questa impostazione impostata su `false` (impostazione predefinita), i client che usano <xref:System.ServiceModel.NetNamedPipeBinding> sono in grado di tentare la connessione a un servizio in ascolto su un URI che è una sottostringa dell'URI richiesto.
 
  Ad esempio, un client tenta di connettersi a un servizio in ascolto su `net.pipe://localhost/Service1`, ma un altro servizio in esecuzione nello stesso computer con privilegi di amministratore è in ascolto su `net.pipe://localhost`. Con l'impostazione di applicazione impostata su `false`, il client tenterebbe di connettersi al servizio errato. Dopo aver impostato l'impostazione di applicazione su `true`, il client si connetterà sempre al servizio più pertinente.
 

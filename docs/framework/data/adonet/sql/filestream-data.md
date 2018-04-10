@@ -1,24 +1,26 @@
 ---
 title: Dati FILESTREAM
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 898fb6072742c745e7e86d2ea543803dc65ae014
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 L'attributo di archiviazione FILESTREAM è per i dati (BLOB) binari archiviati in una colonna varbinary(max). Prima di FILESTREAM, l'archiviazione dei dati binari richiedeva una gestione speciale. I dati non strutturati, come documenti di testo, immagini e video, sono spesso archiviati fuori dal database e questo ne rende complessa la gestione.  
@@ -160,7 +162,7 @@ namespace FileStreamTest
                         string path = reader.GetString(0);  
                         byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
   
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
                         {  
                             // Seek to the end of the file  
                             fileStream.Seek(0, SeekOrigin.End);  
@@ -175,42 +177,7 @@ namespace FileStreamTest
   
         }  
     }  
-} using (SqlConnection connection = new SqlConnection(  
-    connStringBuilder.ToString()))  
-{  
-    connection.Open();  
-  
-    SqlCommand command = new SqlCommand("", connection);  
-    command.CommandText = "select Top(1) Photo.PathName(), "  
-    + "GET_FILESTREAM_TRANSACTION_CONTEXT () from employees";  
-  
-    SqlTransaction tran = connection.BeginTransaction(  
-        System.Data.IsolationLevel.ReadCommitted);  
-    command.Transaction = tran;  
-  
-    using (SqlDataReader reader = command.ExecuteReader())  
-    {  
-        while (reader.Read())  
-        {  
-            // Get the pointer for file  
-            string path = reader.GetString(0);  
-            byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-            FileStream fileStream = new SqlFileStream(path,  
-                (byte[])reader.GetValue(1),  
-                FileAccess.ReadWrite,  
-                FileOptions.SequentialScan, 0);  
-  
-            // Seek to the end of the file  
-            fs.Seek(0, SeekOrigin.End);  
-  
-            // Append a single byte   
-            fileStream.WriteByte(0x01);  
-            fileStream.Close();  
-        }  
-    }  
-    tran.Commit();  
-}  
+}
 ```  
   
  Per un altro esempio, vedere [come archiviare e recuperare dati binari in una colonna del flusso di file](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
@@ -220,11 +187,11 @@ namespace FileStreamTest
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Progettazione e implementazione di un'archiviazione FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Vengono forniti collegamenti alla documentazione relativa a FILESTREAM e ad argomenti correlati.|  
+|[Progettazione e implementazione di archiviazione FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Vengono forniti collegamenti alla documentazione relativa a FILESTREAM e ad argomenti correlati.|  
 |[Panoramica di FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Viene descritto quando usare l'archiviazione FILESTREAM e come questa consente l'integrazione del Motore di database di SQL Server con un file system NTFS.|  
 |[Introduzione all'archiviazione FILESTREAM](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Viene descritto come abilitare FILESTREAM in un'istanza di SQL Server, come creare un database e una tabella per archiviare i dati FILESTREAM e come modificare le righe che contengono dati FILESTREAM.|  
 |[Utilizzo dell'archiviazione FILESTREAM nelle applicazioni Client](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Vengono descritte le funzioni dell'API Win32 per l'uso dei dati FILESTREAM.|  
-|[FILESTREAM e altre funzionalità SQL Server](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|Vengono illustrate considerazioni, linee guida e limitazioni per l'uso di dati FILESTREAM con le altre funzionalità di SQL Server.|  
+|[FILESTREAM e altre funzionalità di SQL Server](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|Vengono illustrate considerazioni, linee guida e limitazioni per l'uso di dati FILESTREAM con le altre funzionalità di SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

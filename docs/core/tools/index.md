@@ -1,6 +1,6 @@
 ---
 title: Strumenti dell'interfaccia della riga di comando di .NET Core
-description: "Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core."
+description: Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

@@ -1,13 +1,13 @@
 ---
 title: Utilizzo dei certificati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in genere si utilizzano i certificati digitali X.509. In particolare, questi certificati vengono utilizzati per autenticare client e server nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come utilizzarle in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'utilizzo di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e dei certificati.  
   
- In breve, un certificato digitale è una parte di un *infrastruttura a chiave pubblica* (PKI), che è un sistema di certificati digitali, autorità di certificazione e altre autorità di registrazione che verificano e autenticano la validità di ogni parte coinvolta in una transazione elettronica tramite l'utilizzo di crittografia a chiave pubblica. Un'autorità di certificazione rilascia certificati e ogni certificato ha un set di campi che contengono dati, ad esempio *soggetto* (l'entità a cui viene rilasciato il certificato), le date di validità (quando il certificato è valido), (l'autorità emittente entità che ha emesso il certificato) e una chiave pubblica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ognuna di queste proprietà viene elaborata come un'attestazione <xref:System.IdentityModel.Claims.Claim>. Esistono due tipi di attestazioni: di identità e di diritto. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Certificati x. 509 vedere [certificati x. 509 a chiave pubblica](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] attestazioni e l'autorizzazione in WCF vedere [gestione attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]implementazione di un'infrastruttura PKI, vedere [Windows Server 2008 R2 - Servizi certificati](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ In breve, un certificato digitale è una parte di un *infrastruttura a chiave pubblica* (PKI), che è un sistema di certificati digitali, autorità di certificazione e altre autorità di registrazione che verificano e autenticano la validità di ogni parte coinvolta in una transazione elettronica tramite l'utilizzo di crittografia a chiave pubblica. Un'autorità di certificazione rilascia certificati e ogni certificato ha un set di campi che contengono dati, ad esempio *soggetto* (l'entità a cui viene rilasciato il certificato), le date di validità (quando il certificato è valido), (l'autorità emittente entità che ha emesso il certificato) e una chiave pubblica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ognuna di queste proprietà viene elaborata come un'attestazione <xref:System.IdentityModel.Claims.Claim>. Esistono due tipi di attestazioni: di identità e di diritto. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Vedere i certificati X.509 [certificati a chiave pubblica X.509](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] attestazioni e l'autorizzazione in WCF vedere [gestione attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] implementazione di un'infrastruttura PKI, vedere [Windows Server 2008 R2 - Servizi certificati](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Una delle funzionalità principali di un certificato è consentire l'autenticazione dell'identità del proprietario del certificato presso altre entità. Contiene un certificato di *chiave pubblica* del proprietario, mentre il proprietario conserva la chiave privata. La chiave pubblica può essere utilizzata per crittografare i messaggi inviati al proprietario del certificato. In quanto unico detentore della chiave privata, solo il proprietario è in grado di decrittografare questi messaggi.  
   
  I certificati devono essere rilasciati da un autorità di certificazione, che spesso è un'emittente di certificati di terze parti. Nei domini Windows è disponibile un'autorità di certificazione utilizzabile per rilasciare certificati ai computer appartenenti al dominio.  
   
 ## <a name="viewing-certificates"></a>Visualizzazione dei certificati  
- Quando si utilizzano i certificati, spesso è necessario visualizzarli e analizzarne le proprietà. A tale scopo è possibile ricorrere allo snap-in Microsoft Management Console (MMC), uno strumento di facile utilizzo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Quando si utilizzano i certificati, spesso è necessario visualizzarli e analizzarne le proprietà. A tale scopo è possibile ricorrere allo snap-in Microsoft Management Console (MMC), uno strumento di facile utilizzo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Archivi certificati  
  I certificati vengono memorizzati in appositi archivi. Sono disponibili due posizioni principali di archiviazione, ognuna delle quali è composta da più sottoarchivi. Gli amministratori di un computer possono visualizzare entrambi gli archivi principali mediante lo snap-in MMC. Gli altri utenti, invece, sono in grado di visualizzare soltanto l'archivio utente corrente.  
@@ -55,7 +55,7 @@ Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../
   
 -   **Personale**. questo archivio viene utilizzato per i certificati associati a un utente di un computer. In genere questo archivio viene utilizzato per i certificati rilasciati mediante uno dei certificati di autorità di certificazione contenuti nell'archivio Autorità di certificazione radice disponibile nell'elenco locale. In alternativa, questo archivio può contenere certificati autocertificati ritenuti attendibili da un'applicazione.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli archivi certificati, vedere [archivi certificati](http://go.microsoft.com/fwlink/?LinkId=88912).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gli archivi certificati, vedere [archivi certificati](http://go.microsoft.com/fwlink/?LinkId=88912).  
   
 ### <a name="selecting-a-store"></a>Scelta di un archivio  
  La scelta della posizione in cui archiviare un certificato dipende dalla modalità di esecuzione del servizio o del client. In particolare, la scelta si basa sulle regole di carattere generale seguenti:  
@@ -65,7 +65,7 @@ Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../
 -   Se il servizio o il client è un'applicazione che viene eseguito con un account utente, utilizzare il **utente corrente** archiviare.  
   
 ### <a name="accessing-stores"></a>Accesso agli archivi  
- Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato in Internet Information Services (IIS), il processo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è in esecuzione nell'account [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso utilizzando lo strumento WinHttpCertConfig.exe, vedere [procedura: creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzo di certificati client con IIS, vedere [come chiamare un servizio Web utilizzando un certificato client per l'autenticazione in un'applicazione Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
+ Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato in Internet Information Services (IIS), il processo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è in esecuzione nell'account [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso utilizzando lo strumento WinHttpCertConfig.exe, vedere [procedura: creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzo di certificati client con IIS, vedere [come chiamare un servizio Web usando un certificato client per l'autenticazione in un'applicazione Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Catena di trust e autorità di certificazione  
  I certificati vengono creati in una gerarchia dove ogni singolo certificato è collegato alla CA che ha emesso il certificato. Questo collegamento è per il certificato della CA. Il certificato della CA collega quindi la CA che ha emesso il certificato della CA originale. Questo processo si ripete fino a raggiungere il certificato della CA radice. Il certificato della CA radice è considerato naturalmente attendibile.  
@@ -87,16 +87,16 @@ Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../
   
  La proprietà può anche essere impostata in configurazione. Gli elementi seguenti vengono utilizzati per specificare la modalità di convalida:  
   
--   [\<autenticazione >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticazione personalizzata  
  La proprietà `CertificateValidationMode` consente inoltre di personalizzare la modalità di autenticazione dei certificati. Per impostazione predefinita, il livello è impostato su `ChainTrust`. Per usare il valore <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> è necessario impostare anche l'attributo `CustomCertificateValidatorType` sull'assembly e sul tipo usati per convalidare il certificato. Per creare un validator personalizzato è necessario ereditare una classe dalla classe astratta <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
   
- Quando si crea un autenticatore personalizzato è fondamentale eseguire l'override del metodo <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Per un esempio di autenticazione personalizzata, vedere il [Validator del certificato x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) esempio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Credenziale personalizzata e convalida delle credenziali](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Quando si crea un autenticatore personalizzato è fondamentale eseguire l'override del metodo <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Per un esempio di autenticazione personalizzata, vedere il [Validator del certificato x. 509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) esempio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Credenziale personalizzata e convalida delle credenziali](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Utilizzo dello strumento Makecert.exe per compilare una catena di certificati  
  Lo strumento di creazione dei certificati Makecert.exe crea certificati X.509 e coppie di chiavi privata/pubblica. La chiave privata può essere salvata su disco e quindi utilizzata per rilasciare e firmare nuovi certificati, simulando in questo modo una gerarchia di certificati concatenati. Questo strumento deve essere utilizzato esclusivamente come risorsa ausiliare durante la fase di sviluppo dei servizi. È pertanto necessario evitare di utilizzarlo per creare i certificati da utilizzare nella distribuzione definitiva. Quando si sviluppa un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], attenersi ai passaggi seguenti per compilare una catena di trust tramite lo strumento Makecert.exe.  
@@ -115,7 +115,7 @@ Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../
  Quando si utilizzano i certificati spesso sorgono dubbi su quale certificato scegliere e sul motivo per cui sceglierlo. La soluzione a questi dubbi varia a seconda che la programmazione riguardi un client o un servizio. Le informazioni seguenti rappresentano una linea guida generale e non forniscono una risposta esauriente a questi dubbi.  
   
 ### <a name="service-certificates"></a>Certificati di servizio  
- Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti quando un client esegue l'autenticazione di un server consiste nel confrontare il valore di **soggetto** campo per l'identificatore URI (Uniform Resource) usato per contattare il servizio: deve corrispondere il DNS di entrambi. Ad esempio, se l'URI del servizio è "http://www.contoso.com/endpoint/" il **soggetto** campo deve contenere anche il valore "www.contoso.com".  
+ Lo scopo principale dei certificati di servizio è autenticare il server presso i client. Uno dei primi controlli svolti quando un client esegue l'autenticazione di un server consiste nel confrontare il valore di **soggetto** campo per l'identificatore URI (Uniform Resource) usato per contattare il servizio: deve corrispondere il DNS di entrambi. Se, ad esempio, l'URI del servizio è "http://www.contoso.com/endpoint/" la **soggetto** campo deve contenere anche il valore "www.contoso.com".  
   
  Si noti che il campo può contenere più valori, ognuno avente un prefisso iniziale che ne indica il valore. Nella maggior parte dei casi viene utilizzato il prefisso iniziale "CN" per indicare un nome comune. Ad esempio, "CN = www.contoso.com". È anche possibile che il **soggetto** campo sia vuoto, nel qual caso il **nome alternativo soggetto** campo può contenere il **nome DNS** valore.  
   
@@ -153,15 +153,15 @@ Per programmare le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../
  [!code-vb[c_WorkingWithCertificates#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_workingwithcertificates/vb/source.vb#1)]  
   
 ### <a name="multiple-certificates-with-the-same-value"></a>Certificati aventi lo stesso valore  
- Un archivio può contenere più certificati aventi lo stesso nome del soggetto. Ciò significa che se si specifica che il `x509FindType` è <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>e più di un certificato con lo stesso valore, viene generata l'eccezione becausethereisno distinguere quale certificato è obbligatorio. Per risolvere questo problema, impostare la proprietà `x509FindType` su <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. Il campo dell'identificazione personale ("Thumbprint") contiene infatti un valore univoco che può essere utilizzato per individuare un certificato specifico all'interno di un archivio. Tuttavia, ciò comporta uno svantaggio: se il certificato viene revocato o rinnovato, il metodo `SetCertificate` ha esito negativo poiché in questi casi l'identificazione personale viene rispettivamente eliminata o alterata. Oppure, se il certificato non è più valido, l'autenticazione ha esito negativo. Per risolvere questo problema è possibile impostare il parametro `x590FindType` su <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> e specificare quindi nome dell'emittente. Se non è richiesto alcun emittente specifico, è anche possibile impostare uno degli altri valori dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>, ad esempio <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
+ Un archivio può contenere più certificati aventi lo stesso nome del soggetto. Ciò significa che se si specifica che il `x509FindType` viene <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>e una o più certificati con lo stesso valore, viene generata un'eccezione perché non esiste alcun modo per distinguere quale certificato è obbligatorio. Per risolvere questo problema, impostare la proprietà `x509FindType` su <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. Il campo dell'identificazione personale ("Thumbprint") contiene infatti un valore univoco che può essere utilizzato per individuare un certificato specifico all'interno di un archivio. Tuttavia, ciò comporta uno svantaggio: se il certificato viene revocato o rinnovato, il metodo `SetCertificate` ha esito negativo poiché in questi casi l'identificazione personale viene rispettivamente eliminata o alterata. Oppure, se il certificato non è più valido, l'autenticazione ha esito negativo. Per risolvere questo problema è possibile impostare il parametro `x590FindType` su <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> e specificare quindi nome dell'emittente. Se non è richiesto alcun emittente specifico, è anche possibile impostare uno degli altri valori dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>, ad esempio <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
   
 ## <a name="certificates-in-configuration"></a>Impostazione dei certificati in configurazione  
  I certificati possono anche essere impostati in configurazione. Se si sta creando un servizio, vengono specificate credenziali, inclusi i certificati, sotto il [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Quando si programma un client, i certificati sono specificati all'interno di [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapping di un certificato a un account utente  
- Una funzionalità di IIS e di Active Directory è la possibilità di eseguire il mapping di un certificato a un account utente di Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la funzionalità, vedere [il mapping dei certificati per gli account utente](http://go.microsoft.com/fwlink/?LinkId=88917).  
+ Una funzionalità di IIS e di Active Directory è la possibilità di eseguire il mapping di un certificato a un account utente di Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la funzionalità, vedere [eseguire il mapping dei certificati per account utente di](http://go.microsoft.com/fwlink/?LinkId=88917).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizza il mapping di Active Directory, vedere [Mapping di certificati Client con il Mapping servizio Directory](http://go.microsoft.com/fwlink/?LinkId=88918).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizza il mapping di Active Directory, vedere [Mapping certificati Client con il Mapping del servizio Directory](http://go.microsoft.com/fwlink/?LinkId=88918).  
   
  Se questa funzionalità è abilitata è possibile impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> della classe <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> su `true`. Nella configurazione, è possibile impostare il `mapClientCertificateToWindowsAccount` attributo del [ \<autenticazione >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento `true`, come illustrato nel codice seguente.  
   

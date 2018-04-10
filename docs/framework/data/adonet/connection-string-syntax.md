@@ -1,24 +1,26 @@
 ---
 title: Sintassi delle stringhe di connessione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -42,7 +44,7 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  I generatori di stringhe di connessione consentono di costruire stringhe di connessione sintatticamente valide in fase di esecuzione, pertanto non è necessario concatenare manualmente i valori delle stringhe di connessione nel codice. Per ulteriori informazioni, vedere [generatori di stringhe di connessione](../../../../docs/framework/data/adonet/connection-string-builders.md).  
-  
+
 ## <a name="windows-authentication"></a>Autenticazione di Windows  
  Si consiglia di utilizzare l'autenticazione di Windows (talvolta detto *la sicurezza integrata*) per connettersi alle origini dati che la supportano. La sintassi usata nella stringa di connessione varia a seconda del provider. La tabella seguente illustra la sintassi dell'autenticazione di Windows usata con i provider di dati .NET Framework.  
   
@@ -57,9 +59,13 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
 >  `Integrated Security=true` genera un'eccezione se usata con il provider `OleDb`.  
   
 ## <a name="sqlclient-connection-strings"></a>Stringhe di connessione SqlClient  
- La sintassi per una stringa di connessione <xref:System.Data.SqlClient.SqlConnection> è documentata nella proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. È possibile usare la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> per ottenere o impostare una stringa di connessione per un database di SQL Server. Per eseguire la connessione a una versione precedente di SQL Server, è necessario usare il provider di dati .NET Framework per OleDb (<xref:System.Data.OleDb>). La maggior parte delle parole chiave delle stringhe di connessione sono inoltre mappate alle proprietà dell'oggetto <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
-  
- Ognuno dei seguenti formati di sintassi utilizzeranno l'autenticazione di Windows per connettersi al **AdventureWorks** database in un server locale.  
+La sintassi per una stringa di connessione <xref:System.Data.SqlClient.SqlConnection> è documentata nella proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. È possibile usare la proprietà <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> per ottenere o impostare una stringa di connessione per un database di SQL Server. Per eseguire la connessione a una versione precedente di SQL Server, è necessario usare il provider di dati .NET Framework per OleDb (<xref:System.Data.OleDb>). La maggior parte delle parole chiave delle stringhe di connessione sono inoltre mappate alle proprietà dell'oggetto <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+
+> [!IMPORTANT]
+>  L'impostazione predefinita per il `Persist Security Info` la parola chiave è `false`. Impostandola su `true` o `yes`, è possibile ottenere informazioni sensibili, compresi l'ID utente e la password, dalla connessione dopo che questa è stata aperta. Mantenere `Persist Security Info` impostato su `false` per garantire che un'origine non attendibile non ha accesso a informazioni della stringa di connessione riservate.  
+
+### <a name="windows-authentication-with-sqlclient"></a>Autenticazione di Windows con SqlClient 
+ Ognuno dei seguenti formati di sintassi utilizza l'autenticazione di Windows per connettersi ai **AdventureWorks** database in un server locale.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>Account di accesso di SQL Server  
+### <a name="sql-server-authentication-with-sqlclient"></a>Autenticazione di SQL Server con SqlClient   
  L'autenticazione di Windows è il sistema consigliato per le connessioni a SQL Server. Se tuttavia è necessario usare l'autenticazione di SQL Server, usare la sintassi seguente per specificare un nome utente e una password. In questo esempio per rappresentare un nome utente e una password validi vengono usati asterischi.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  L'impostazione predefinita per il `Persist Security Info` la parola chiave è `false`. Impostandola su `true` o `yes`, è possibile ottenere informazioni sensibili, compresi l'ID utente e la password, dalla connessione dopo che questa è stata aperta. Mantenere `Persist Security Info` impostato su `false` per garantire che un'origine non attendibile non ha accesso a informazioni della stringa di connessione riservate.  
-  
- Per connettersi a un'istanza denominata di SQL Server, utilizzare il *nome server ome istanza* sintassi.  
+
+Quando si connettersi al Database SQL di Azure o Azure SQL Data warehouse e specificare un account di accesso nel formato `user@servername`, assicurarsi che il `servername` valore l'account di accesso corrisponde al valore fornito per `Server=`.
+
+> [!NOTE]
+>  L'autenticazione di Windows ha la precedenza sugli account di accesso di SQL Server. Se si specifica sia Integrated Security=true sia un nome utente e una password, questi ultimi saranno ignorati e sarà usata l'autenticazione di Windows.  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Connettersi a un'istanza denominata di SQL Server
+Per connettersi a un'istanza denominata di SQL Server, utilizzare il *nome server ome istanza* sintassi.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- È anche possibile impostare la proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> di `SqlConnectionStringBuilder` sul nome dell'istanza quando si compila una stringa di connessione. La proprietà <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> di un oggetto <xref:System.Data.SqlClient.SqlConnection> è di sola lettura.  
-  
-> [!NOTE]
->  L'autenticazione di Windows ha la precedenza sugli account di accesso di SQL Server. Se si specifica sia Integrated Security=true sia un nome utente e una password, questi ultimi saranno ignorati e sarà usata l'autenticazione di Windows.  
+ 
+È anche possibile impostare la proprietà <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> di `SqlConnectionStringBuilder` sul nome dell'istanza quando si compila una stringa di connessione. La proprietà <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> di un oggetto <xref:System.Data.SqlClient.SqlConnection> è di sola lettura.  
   
 ### <a name="type-system-version-changes"></a>Modifiche alla versione del sistema di tipi  
  La parola chiave `Type System Version` in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> specifica la rappresentazione lato client dei tipi di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Per altre informazioni sulla parola chiave <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, vedere `Type System Version`.  

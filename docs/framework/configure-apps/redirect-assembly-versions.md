@@ -1,12 +1,13 @@
 ---
 title: Reindirizzamento delle versioni di assembly
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - assembly binding, redirection
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24343e1ee2e95cbeb7613d3b22dd7cdac848903b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Reindirizzamento delle versioni di assembly
 È possibile reindirizzare i riferimenti delle associazioni in fase di compilazione agli assembly di .NET Framework, di terze parti o specifici dell'app. È possibile reindirizzare l'app per l'uso di una diversa versione di un assembly in diversi modi: con i criteri editore, tramite un file di configurazione dell'app o mediante il file di configurazione del computer. In questo articolo viene illustrato il funzionamento dell'associazione di assembly in .NET Framework e come può essere configurato.  
@@ -56,12 +58,11 @@ ms.lasthandoff: 01/19/2018
   
 ```xml  
 <dependentAssembly>  
-        <assemblyIdentity name="someAssembly"  
-          publicKeyToken="32ab4ba45e0a69a1"  
-          culture="en-us" />  
-  
-        <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
-      </dependentAssembly>  
+  <assemblyIdentity name="someAssembly"  
+    publicKeyToken="32ab4ba45e0a69a1"  
+    culture="en-us" />  
+  <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
+</dependentAssembly>  
 ```  
   
 ### <a name="relying-on-automatic-binding-redirection"></a>Reindirizzamento di associazione automatico  
@@ -170,7 +171,7 @@ ms.lasthandoff: 01/19/2018
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)  
- [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configurazione di App .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schema delle impostazioni di runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Procedura: creare criteri editore](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

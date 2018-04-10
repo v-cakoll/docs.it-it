@@ -1,6 +1,6 @@
 ---
 title: Operatori [C#]
-ms.date: 03/09/2017
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-operators"></a>Operatori [C#]
 C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione. È possibile eseguire l'[overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.  
@@ -101,7 +101,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
  [x / y](../../../csharp/language-reference/operators/division-operator.md): divisione. Se gli operandi sono numeri interi, il risultato è un numero intero troncato verso zero (ad esempio, `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md): modulo. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r`   
+ [x % y](../../../csharp/language-reference/operators/remainder-operator.md): resto. Se gli operandi sono numeri interi, restituisce il resto della divisione di x per y.  Se `q = x / y` e `r = x % y`, allora `x = q * y + r`   
   
 ## <a name="additive-operators"></a>Operatori additivi  
  Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.  
@@ -187,7 +187,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
  [x -= y](../../../csharp/language-reference/operators/division-assignment-operator.md): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md): assegnazione modulo. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.  
+ [x %= y](../../../csharp/language-reference/operators/remainder-assignment-operator.md): assegnazione di resto. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.  
   
  [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md): assegnazione dell'operatore AND. Applica AND al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.  
   

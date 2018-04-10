@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>Introduzione a C# #
 
@@ -43,10 +43,6 @@ Sono disponibili gli argomenti seguenti:
    Visual Studio Code è un editor di codice gratuito ottimizzato per la compilazione e il debug di applicazioni cloud e Web moderne. Supporta IntelliSense ed è disponibile per Linux, macOS e Windows.
 
    Questo argomento illustra come creare ed eseguire una semplice applicazione Hello World con Visual Studio Code e .NET Core.
-
-* [Risorse aggiuntive per programmatori Visual C#](additional-resources.md)
-
-   Vengono forniti i collegamenti a siti Web e newsgroup in cui trovare le risposte ai problemi più comuni.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

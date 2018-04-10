@@ -4,17 +4,17 @@ description: Informazioni sui simboli e operatori utilizzati nel linguaggio di p
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
@@ -34,9 +34,9 @@ Nella tabella seguente sono descritti i simboli usati nel linguaggio F#, vengono
 |`"""`|[Stringhe](../strings.md)|Delimita una stringa di testo letterale. È diverso da `@"..."` in quanto si può indicare un carattere di virgolette usando una virgoletta singola nella stringa.|
 |`#`|[Direttive per il compilatore](../compiler-directives.md)<br /><br />[Tipi flessibili](../flexible-types.md)|<ul><li>Prefisso di una direttiva del preprocessore o del compilatore, ad esempio `#light`.<br /></li><li>Se usato con un tipo, indica un *tipo flessibile*, che fa riferimento a un tipo o a uno dei relativi tipi derivati.<br /></li><ul/>|
 |`$`|Non sono disponibili altre informazioni.|<ul><li>Usato internamente per determinati nomi di variabile e funzione generati dal compilatore.<br /></li><ul/>|
-|`%`|[Operatori aritmetici](arithmetic-operators.md)<br /><br />[Citazioni di codice](../code-quotations.md)|<ul><li>Calcola il modulo integer.<br /></li><li>Usato per lo splicing delle espressioni in citazioni di codice tipizzato.<br /></li><ul/>|
+|`%`|[Operatori aritmetici](arithmetic-operators.md)<br /><br />[Citazioni di codice](../code-quotations.md)|<ul><li>Calcola il resto intero.<br /></li><li>Usato per lo splicing delle espressioni in citazioni di codice tipizzato.<br /></li><ul/>|
 |`%%`|[Citazioni di codice](../code-quotations.md)|<ul><li>Usato per lo splicing delle espressioni in citazioni di codice non tipizzato.<br /></li><ul/>|
-|`%?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola il modulo di integer, quando la parte destra è un tipo nullable.<br /></li><ul/>|
+|`%?`|[Operatori nullable](nullable-operators.md)|<ul><li>Calcola il resto intero, quando la parte destra è un tipo nullable.<br /></li><ul/>|
 |`&`|[Espressioni match](../match-expressions.md)|<ul><li>Calcola l'indirizzo di un valore modificabile, da usare quando si interagisce con altri linguaggi.<br /></li><li>Usato nei modelli AND.<br /></li><ul/>|
 |`&&`|[Operatori booleani](boolean-operators.md)|<ul><li>Calcola l'operazione AND booleana.<br /></li><ul/>|
 |`&&&`|[Operatori bit per bit](bitwise-operators.md)|<ul><li>Calcola l'operazione AND bit per bit.<br /></li><ul/>|
@@ -127,7 +127,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |--------|-------------|
 |`as`|A destra|
 |`when`|A destra|
-|<code>&#124;</code>(barra verticale)|Sinistro|
+|<code>&#124;</code> (barra verticale)|Sinistro|
 |`;`|A destra|
 |`let`|Non associativo|
 |`function`, `fun`, `match`, `try`|Non associativo|
@@ -138,7 +138,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`or`, <code>&#124;&#124;</code>|Sinistro|
 |`&`, `&&`|Sinistro|
 |`:>`, `:?>`|A destra|
-|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *Op*,`&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
 |`^`*op*<br /><br />(incluso `^^^`)|A destra|
 |`::`|A destra|
 |`:?`|Non associativa|
@@ -146,7 +146,7 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`*`*op*, `/`*op*, `%`*op*|Sinistra|
 |`**`*op*|Destra|
 |`f x` (applicazione di funzione)|Sinistro|
-|<code>&#124;</code>(criteri di ricerca)|A destra|
+|<code>&#124;</code> (criteri di ricerca)|A destra|
 |operatori di prefisso (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sinistro|
 |`.`|A sinistra|
 |`f(x)`|Sinistro|

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Uso di F# in Azure
 
@@ -121,7 +121,7 @@ Le macchine virtuali di Azure possono essere distribuite e gestite a livello di 
 
 Analogamente, le altre risorse di Azure possono essere anche distribuite e gestite dagli script F# usando gli stessi componenti. Ad esempio, è possibile creare gli account di archiviazione, distribuire servizi Cloud di Azure, creare istanze di Azure Cosmos DB e gestire hub di notifica in WMI di Azure a livello di codice da script F #.
 
-L'uso di script F# per distribuire e gestire risorse non è in genere necessario. Ad esempio, le risorse di Azure possono anche essere distribuite dalle descrizioni dei modelli JSON che possono essere parametrizzati. Vedere [Procedure consigliate per la creazione di modelli di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) che include esempi, quali i [modelli di avvio rapido di Azure](https://azure.microsoft.com/documentation/templates/).
+L'uso di script F# per distribuire e gestire risorse non è in genere necessario. Ad esempio, le risorse di Azure possono anche essere distribuite dalle descrizioni dei modelli JSON che possono essere parametrizzati. Vedere [Procedure consigliate per la creazione di modelli di Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) che include esempi, quali i [modelli di avvio rapido di Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Altre risorse
 
