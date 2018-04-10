@@ -1,6 +1,6 @@
 ---
 title: Strumenti aggiuntivi per .NET Core
-description: "Panoramica degli strumenti aggiuntivi che supportano ed estendono la funzionalità di .NET Core."
+description: Panoramica degli strumenti aggiuntivi che supportano ed estendono la funzionalità di .NET Core.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

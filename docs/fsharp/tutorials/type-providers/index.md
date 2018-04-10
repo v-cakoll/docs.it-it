@@ -1,6 +1,6 @@
 ---
 title: Provider di tipi
-description: "Informazioni su come un provider di tipi F # è un componente che fornisce tipi, proprietà e metodi da utilizzare nei programmi."
+description: 'Informazioni su come un provider di tipi F # è un componente che fornisce tipi, proprietà e metodi da utilizzare nei programmi.'
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart

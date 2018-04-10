@@ -1,6 +1,6 @@
 ---
 title: Riferimenti per il linguaggio F#
-description: "Trovare informazioni funzionalità del linguaggio F # da questo riferimento a token di lingua, concetti, tipi, espressioni e argomenti costrutto supportati dal compilatore."
+description: 'Trovare informazioni funzionalità del linguaggio F # da questo riferimento a token di lingua, concetti, tipi, espressioni e argomenti costrutto supportati dal compilatore.'
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart

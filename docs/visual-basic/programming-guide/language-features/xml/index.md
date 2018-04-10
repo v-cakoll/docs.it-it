@@ -1,6 +1,6 @@
 ---
 title: XML in Visual Basic
-description: "Informazioni su come usare XML e LINQ per le funzionalità XML nel codice Visual Basic."
+description: Informazioni su come usare XML e LINQ per le funzionalità XML nel codice Visual Basic.
 ms.date: 10/20/2017
 ms.prod: .net
 ms.technology:

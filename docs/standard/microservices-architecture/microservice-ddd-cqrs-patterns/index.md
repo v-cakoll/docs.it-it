@@ -1,6 +1,6 @@
 ---
-title: "Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS"
-description: "Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS"
+title: Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
+description: Architettura di microservizi .NET per le applicazioni .NET incluse in contenitori | Gestione della complessità aziendale in un microservizio con i modelli DDD e CQRS
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn

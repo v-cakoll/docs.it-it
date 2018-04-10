@@ -1,6 +1,6 @@
 ---
 title: Esercitazioni su C#
-description: "Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#."
+description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

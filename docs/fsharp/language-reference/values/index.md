@@ -1,6 +1,6 @@
 ---
 title: Valori (F#)
-description: "Informazioni su come valori in F # sono quantità di un tipo specifico."
+description: 'Informazioni su come valori in F # sono quantità di un tipo specifico.'
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
