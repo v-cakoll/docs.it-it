@@ -1,6 +1,6 @@
 ---
 title: Panoramica della programmazione asincrona
-description: "Informazioni che illustrano che la programmazione asincrona è una tecnica fondamentale che semplifica la gestione di pesanti operazioni I/O simultanee su diversi core."
+description: Informazioni che illustrano che la programmazione asincrona è una tecnica fondamentale che semplifica la gestione di pesanti operazioni I/O simultanee su diversi core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

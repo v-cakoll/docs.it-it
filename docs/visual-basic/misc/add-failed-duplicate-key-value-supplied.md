@@ -8,7 +8,7 @@ ms.topic: article
 f1_keywords:
 - vbrCollection_DuplicateKey
 ms.assetid: 7b1d6e6c-a69d-4713-a19d-ae1534a60464
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7b573cb6a761a0e18d7dd767a8d5ed3173110fca
