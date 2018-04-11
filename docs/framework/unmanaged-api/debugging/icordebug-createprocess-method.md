@@ -1,13 +1,13 @@
 ---
 title: Metodo ICorDebug::CreateProcess
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>Metodo ICorDebug::CreateProcess
 Avvia un processo e il relativo thread primario sotto il controllo del debugger.  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Note  
  I parametri di questo metodo sono identici a quelli di Win32 `CreateProcess` metodo.  
   
- Per abilitare il debug in modalità mista non gestito, impostare `dwCreationFlags` a DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se si desidera utilizzare solo il debug gestito, non impostare questi flag.  
+ Per abilitare il debug in modalità mista non gestito, impostare `dwCreationFlags` su DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se si desidera utilizzare solo il debug gestito, non impostare questi flag.  
   
  Se il debugger e il processo di debug (il processo associato) condividono un'unica console, e se il debug di interoperabilità viene usato, è possibile che il processo mantenere attivi i blocchi di console e arrestare in corrispondenza di un evento di debug. Il debugger verrà quindi bloccare qualsiasi tentativo di utilizzare la console. Per evitare questo problema, impostare il flag CREATE_NEW_CONSOLE `dwCreationFlags` parametro.  
   
@@ -106,11 +106,11 @@ HRESULT CreateProcess (
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** CorDebug.idl, Cordebug. H  
+ **Intestazione:** Cordebug. idl, Cordebug. H  
   
- **Libreria:** CorGuids.lib  
+ **Libreria:** CorGuids. lib  
   
- **Versioni di .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interfaccia ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

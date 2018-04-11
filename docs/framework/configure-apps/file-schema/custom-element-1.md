@@ -16,17 +16,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8ee722c7d5db9d58ab1a91f4b1299912981510af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Elemento personalizzato per SingleTagSectionHandler
 
 Definisce le impostazioni in una sezione di configurazione personalizzato definito da un <section> elemento e viene utilizzato il <xref:System.Configuration.SingleTagSectionHandler> classe.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName >*
+&nbsp;&nbsp;*\<sectionName>*
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,7 +46,7 @@ Gli attributi e valori di attributo sono definiti dall'utente.
 
 ## <a name="child-elements"></a>Elementi figlio
 
-nessuno
+Nessuno
 
 ## <a name="remarks"></a>Note
 
