@@ -15,7 +15,7 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: ''
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -52,7 +52,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
 1.  **Server IIS locale**  
   
-     Quando si crea un servizio dati che è un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] eseguito su Internet Information Services (IIS), si consiglia di sviluppare e testare il servizio dati tramite IIS sul computer locale. L'esecuzione del servizio dati su IIS facilita l'esecuzione della traccia delle richieste HTTP durante l'esecuzione il debug. Consente inoltre di determinare in anticipo i diritti necessari richiesti da IIS per accedere a file, database e altre risorse richieste dal servizio dati. Per eseguire il servizio dati su IIS, è necessario assicurarsi che IIS e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] siano installati e configurati correttamente e che l'accesso sia stato concesso agli account IIS nel file system e nei database. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+     Quando si crea un servizio dati che è un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] eseguito su Internet Information Services (IIS), si consiglia di sviluppare e testare il servizio dati tramite IIS sul computer locale. L'esecuzione del servizio dati su IIS facilita l'esecuzione della traccia delle richieste HTTP durante l'esecuzione il debug. Consente inoltre di determinare in anticipo i diritti necessari richiesti da IIS per accedere a file, database e altre risorse richieste dal servizio dati. Per eseguire il servizio dati su IIS, è necessario assicurarsi che IIS e [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] siano installati e configurati correttamente e che l'accesso sia stato concesso agli account IIS nel file system e nei database. Per altre informazioni, vedere [Procedura: sviluppare un servizio WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
     > [!NOTE]
     >  È necessario eseguire [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] con i diritti di amministratore per abilitare l'ambiente di sviluppo alla configurazione del server IIS locale.  
@@ -119,7 +119,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione, vedere [Panoramica della distribuzione Web per Visual Studio e ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
-    >  Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+    >  Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [Procedura: sviluppare un servizio WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
@@ -128,7 +128,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione  
  Quando si distribuisce un servizio dati è opportuno considerare quanto segue:  
   
--   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] è in grado di creare automaticamente script (file con estensione sql) per effettuare questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Per ulteriori informazioni, vedere [NIB: procedura: distribuire un Database con un progetto di applicazione Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , è possibile eseguire questa operazione usando **Database Publishing Wizard** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per altre informazioni, vedere [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] è in grado di creare automaticamente script (file con estensione sql) per effettuare questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Per ulteriori informazioni, vedere [NIB: procedura: distribuire un Database con un progetto di applicazione Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un sito Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , è possibile eseguire questa operazione usando **Database Publishing Wizard** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Per altre informazioni, vedere [distribuzione di un Database tramite Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Poiché [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base, è possibile usare Windows Server AppFabric per il monitoraggio di un servizio dati distribuito a IIS che è in esecuzione su Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ll'uso di Windows Server AppFabric per monitorare un servizio dati, vedere il post sul [monitoraggio di WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
