@@ -1,17 +1,19 @@
 ---
-title: "Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati &#39; &lt;defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia2&gt;&#39;"
+title: Accesso alla proprietà predefinita è ambiguo tra i membri di interfaccia ereditati &#39; &lt;defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia1&gt;&#39; e &#39;&lt; defaultpropertyname&gt;&#39; dell'interfaccia &#39;&lt; nomeinterfaccia2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
-helpviewer_keywords: BC30686
+helpviewer_keywords:
+- BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2

@@ -1,12 +1,14 @@
 ---
-title: "Non è accessibile overload &#39; &lt;NomeMetodo&gt;&#39; può essere chiamato con questi argomenti: &lt;elenco&gt;"
+title: 'Non è accessibile overload &#39; &lt;NomeMetodo&gt;&#39; può essere chiamato con questi argomenti: &lt;elenco&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrAmbiguousCall_ExactMatch2
+f1_keywords:
+- vbrAmbiguousCall_ExactMatch2
 ms.assetid: 78d4c7ed-5e18-47d4-948d-fa8b24e47214
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 01f8cb116d301c590756e5b85f217a4c47311ac4
