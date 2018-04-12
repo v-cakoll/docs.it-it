@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>Utilizzare la sintassi
 
@@ -25,7 +25,7 @@ L'**albero della sintassi** è una struttura dei dati fondamentale esposta dalle
 
 Gli alberi della sintassi sono la struttura primaria usata per compilazione, analisi codice, binding, refactoring, funzionalità dell'IDE e generazione di codice. Nessuna parte del codice sorgente può essere compresa senza prima essere identificata e categorizzata in uno dei numerosi elementi di linguaggio strutturali noti. 
 
-Per gli alberi della sintassi esistono tre attributi chiave. Il primo attributo è che gli alberi della sintassi contengono tutte le informazioni di origine con la massima fedeltà. Questo significa che l'albero della sintassi contiene tutti le informazioni disponibili nel testo di origine, tutti i costrutti grammaticali, ogni token lessicale e tutto il resto, inclusi spazi vuoti, commenti e direttive del preprocessore. Ad esempio, ogni valore letterale nell'origine viene rappresentato esattamente nel modo in cui è stato digitato. Gli alberi della sintassi rappresentano anche gli errori nel codice sorgente, quando il programma è incompleto o non corretto, rappresentando i token ignorati o mancanti nell'albero della sintassi.  
+Per gli alberi della sintassi esistono tre attributi chiave. Il primo attributo è che gli alberi della sintassi contengono tutte le informazioni di origine con la massima fedeltà. Questo significa che l'albero della sintassi contiene tutte le informazioni disponibili nel testo di origine, tutti i costrutti grammaticali, ogni token lessicale e tutto il resto, inclusi spazi vuoti, commenti e direttive del preprocessore. Ad esempio, ogni valore letterale nell'origine viene rappresentato esattamente nel modo in cui è stato digitato. Gli alberi della sintassi rappresentano anche gli errori nel codice sorgente, quando il programma è incompleto o non corretto, rappresentando i token ignorati o mancanti nell'albero della sintassi.  
 
 Ciò rende possibile il secondo attributo degli alberi della sintassi. Un albero della sintassi ottenuto dal parser può produrre il testo esatto da cui è stato analizzato. Da qualsiasi nodo della sintassi, è possibile ottenere la rappresentazione testuale del sottoalbero con radice in corrispondenza di tale nodo. Questo significa che gli alberi della sintassi possono essere usati come strumento per costruire e modificare il testo di origine. Con la creazione di un albero si crea in modo implicito il testo equivalente e modificando un albero della sintassi, creando un nuovo albero dalle modifiche di un albero esistente, si modifica in effetti il testo. 
 
@@ -69,7 +69,7 @@ A differenza dei nodi e dei token di sintassi, per gli elementi semplici della s
 
 Ogni nodo, token o elemento semplice conosce la propria posizione all'interno del testo di origine e il numero di caratteri di cui è costituito. Una posizione del testo è rappresentata come intero a 32 bit, ovvero un indice `char` in base zero. Un oggetto <xref:Microsoft.CodeAnalysis.Text.TextSpan> rappresenta la posizione di inizio e il conteggio di caratteri, entrambi rappresentati come valori integer. Se <xref:Microsoft.CodeAnalysis.Text.TextSpan> ha lunghezza zero, fa riferimento a una posizione tra due caratteri.
 
-Ogni nodo dispone di due <xref:Microsoft.CodeAnalysis.Text.TextSpan> proprietà: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Ogni nodo ha due proprietà <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> corrisponde all'intervallo di testo dall'inizio del primo token nel sottoalbero del nodo alla fine dell'ultimo token. Questo intervallo non include alcun elemento semplice iniziale o finale.
 
@@ -89,7 +89,7 @@ Il nodo dell'istruzione all'interno del blocco ha un intervallo indicato da sing
 
 ## <a name="kinds"></a>Tipi
 
-Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente mediante l'accesso di <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> i metodi di estensione.
+Ogni nodo, token o elemento semplice ha una proprietà <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> di tipo <xref:System.Int32?displayProperty=nameWithType>, che identifica l'elemento di sintassi esatto rappresentato. È possibile eseguire il cast di questo valore in un'enumerazione specifica del linguaggio. Ogni linguaggio, C# o VB, include una singola enumerazione `SyntaxKind` (rispettivamente <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) che elenca tutti i nodi, i token e gli elementi semplici possibili nella grammatica. Questa conversione può essere eseguita automaticamente mediante l'accesso ai metodi di estensione <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 La proprietà <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> consente di risolvere facilmente eventuali ambiguità per i tipi di nodi della sintassi che condividono la stessa classe di nodo. Per i token e gli elementi semplici, questa proprietà è l'unico modo per distinguere un tipo di elemento da un alto. 
 

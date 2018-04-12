@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introduzione all'analisi della sintassi
 
@@ -41,7 +41,7 @@ Esaminando il testo del programma precedente si riconoscono elementi noti. L'int
 
 L'API Syntax crea una struttura ad albero con la radice che rappresenta l'unità di compilazione. I nodi nell'albero rappresentano le direttive using, la dichiarazione dello spazio dei nomi e tutti gli altri elementi del programma. La struttura ad albero continua fino ai livelli più bassi: la stringa "Hello World!" è un **token letterale di stringa** che è un discendente di un **argomento**. L'API Syntax consente l'accesso alla struttura del programma. È possibile eseguire query per ottenere specifiche procedure consigliate per la scrittura del codice, ripercorrere l'intera struttura ad albero per comprendere il codice e creare nuovi alberi modificando quello esistente.
 
-Questa breve descrizione offre una panoramica del tipo di informazioni accessibili tramite l'API Syntax. L'API Syntax non è altro che un'API formale che descrive i costrutti di codice familiari, già noti da C#. Le funzionalità complete includono informazioni sulla modalità di formattazione del codice, inclusi spazi vuoti, interruzioni di riga e rientri. Usando queste informazioni è possibile rappresentare completamente il codice nel modo in cui viene scritto e letto dai programmatori umani o dal compilatore. L'uso di questa struttura consente di interagire con il codice sorgente su un livello molto significativo. Non si tratta più di semplici stringhe di testo, ma di dati che rappresentano la struttura di un programma C#.
+Questa breve descrizione offre una panoramica del tipo di informazioni accessibili tramite l'API Syntax. L'API Syntax non è altro che un'API formale che descrive i costrutti di codice familiari, già noti da C#. Le funzionalità complete includono informazioni sulla formattazione del codice, inclusi spazi vuoti, interruzioni di riga e rientri. Usando queste informazioni è possibile rappresentare completamente il codice nel modo in cui viene scritto e letto dai programmatori umani o dal compilatore. L'uso di questa struttura consente di interagire con il codice sorgente su un livello molto significativo. Non si tratta più di semplici stringhe di testo, ma di dati che rappresentano la struttura di un programma C#.
 
 Per iniziare, è necessario installare **.NET Compiler Platform SDK**:
 
@@ -74,7 +74,7 @@ Anche se è possibile trovare qualsiasi elemento in un file di codice usando le 
 
 ### <a name="manual-traversal"></a>Attraversamento manuale
 
-È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > I tipi di albero della sintassi usano l'ereditarietà per descrivere i diversi elementi della sintassi validi in posizioni diverse nel programma. L'uso di queste API spesso significa eseguire il cast di proprietà o membri di raccolte in tipi derivati specifici. Negli esempi seguenti, l'assegnazione e i cast sono istruzioni separate, con variabili tipizzate in modo esplicito. È possibile leggere il codice per visualizzare i tipi restituiti dell'API e il tipo di runtime degli oggetti restituiti. In pratica, è più comune usare variabili tipizzate in modo implicito e basarsi sui nomi delle API per descrivere il tipo di oggetti in corso di analisi.
@@ -164,7 +164,7 @@ Questo esempio implementa un <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWal
 
 Creare un nuovo progetto C# **Stand-Alone Code Analysis Tool** (Strumento di analisi del codice autonomo) e denominarlo "**SyntaxWalker**."
 
-È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). L'esempio su GitHub contiene entrambi i progetti descritti in questa esercitazione.
+È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). L'esempio su GitHub contiene entrambi i progetti descritti in questa esercitazione.
 
 Come nell'esempio precedente, è possibile definire una costante stringa per contenere il testo del programma che verrà analizzato:
 
