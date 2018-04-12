@@ -1,12 +1,14 @@
 ---
-title: "Eseguire il cast dal tipo &#39; &lt;NomeTipo1&gt;&#39; nel tipo &#39;&lt; NomeTipo2&gt;&#39; non è valido"
+title: Eseguire il cast dal tipo &#39; &lt;NomeTipo1&gt;&#39; nel tipo &#39;&lt; NomeTipo2&gt;&#39; non è valido
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrInvalidCast_FromTo
+f1_keywords:
+- vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d97aeac3618cb2b9d37ee14ec080d135f1bc5901

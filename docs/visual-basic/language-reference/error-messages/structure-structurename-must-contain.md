@@ -2,16 +2,18 @@
 title: Struttura &#39; &lt;nomestruttura&gt;&#39; deve contenere una variabile membro di almeno un'istanza o dichiarazione di evento almeno un'istanza non contrassegnata &#39; Custom &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30941
 - vbc30941
-helpviewer_keywords: BC30941
+helpviewer_keywords:
+- BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b28dd59271bdaca52072710ea797fae6e9168eab

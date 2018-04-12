@@ -1,17 +1,19 @@
 ---
-title: "La prima istruzione di questo &#39; Sub nuovo &#39; deve essere una chiamata esplicita a &#39; MyBase. New &#39; o &#39; MyClass. New &#39; Poiché il &#39; &lt;nomecostruttore&gt;&#39; la classe di base &#39;&lt; nomeclassebase&gt;&#39; &#39;&lt; nomeclassederivata&gt;&#39; è contrassegnato come obsoleto: &#39;&lt; messaggio di errore&gt;&#39;"
+title: 'La prima istruzione di questo &#39; Sub nuovo &#39; deve essere una chiamata esplicita a &#39; MyBase. New &#39; o &#39; MyClass. New &#39; Poiché il &#39; &lt;nomecostruttore&gt;&#39; la classe di base &#39;&lt; nomeclassebase&gt;&#39; &#39;&lt; nomeclassederivata&gt;&#39; è contrassegnato come obsoleto: &#39;&lt; messaggio di errore&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30920
 - bc30920
-helpviewer_keywords: BC30920
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8882acd947251d85804fbefd54267ce078e31b95
