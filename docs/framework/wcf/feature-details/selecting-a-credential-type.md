@@ -1,16 +1,16 @@
 ---
 title: Selezione di un tipo di credenziale
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -23,9 +23,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
-*Credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'attestazione di identità o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o una regione. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
+*Credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'attestazione di identità o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
   
- In molti paesi e regioni, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
+ In molti paesi e aree geografiche, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
   
  Quando si presenta una credenziale, è necessario presentare sia i dati sia la prova di possesso dei dati. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta vari tipi di credenziali, basati su sistemi di sicurezza sia a livello di trasporto sia a livello di messaggio. Si considerino ad esempio due tipi di credenziali supportati in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: nome utente e certificati (X.509).  
   

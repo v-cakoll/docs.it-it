@@ -11,7 +11,7 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -58,7 +58,7 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
 ### <a name="language-attribute"></a>Attributo Language  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene utilizzato [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) per rappresentare l'attributo language dell'elemento.  Per sfruttare il <xref:System.Globalization.CultureInfo> (classe), il valore dell'attributo lingua deve essere uno dei nomi di impostazioni cultura predefiniti da <xref:System.Globalization.CultureInfo>. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) è ereditabile nell'albero di elementi (in base alle regole XML, non necessariamente a causa dell'ereditarietà della proprietà di dipendenza) e il valore predefinito è una stringa vuota se non viene assegnato in modo esplicito.  
   
- L'attributo language è molto utile per specificare i dialetti. Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera. Anche il cinese, giapponese e coreano condividere i punti di codice nella [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideografiche sono diverse e che utilizzano diversi tipi di carattere.  
+ L'attributo language è molto utile per specificare le lingue regionali. Il francese, ad esempio, ha ortografia, vocabolario e pronuncia diversi in Francia, Quebec, Belgio e Svizzera. Anche il cinese, giapponese e coreano condividere i punti di codice nella [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ma le forme ideografiche sono diverse e che utilizzano diversi tipi di carattere.  
   
  Nell'esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] esempio Usa il `fr-CA` attributo language per specificare la lingua francese canadese.  
   
