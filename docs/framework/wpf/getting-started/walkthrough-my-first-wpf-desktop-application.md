@@ -1,12 +1,13 @@
 ---
-title: 'Procedura dettagliata: La prima applicazione desktop WPF'
-ms.custom: 
+title: 'Procedura dettagliata: Prima applicazione desktop WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
-caps.latest.revision: "71"
+caps.latest.revision: 71
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3725e96b514b0204f10f6b5c45ed2bbec1d892de
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: La prima applicazione desktop WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Prima applicazione desktop WPF
 Questa procedura dettagliata viene fornita un'introduzione allo sviluppo di un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applicazione che include gli elementi che sono comuni alla maggior parte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] markup, codice, le definizioni di applicazioni, controlli, layout, Data binding e stili. 
   
- In questa procedura dettagliata è illustrato lo sviluppo di un semplice [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione usando la procedura seguente. 
+In questa procedura dettagliata è illustrato lo sviluppo di un semplice [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione usando la procedura seguente. 
   
 -   Definizione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per progettare l'aspetto dell'applicazione [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. 
   
@@ -43,9 +45,9 @@ Questa procedura dettagliata viene fornita un'introduzione allo sviluppo di un [
   
 -   Associazione di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ai dati sia popolare il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] da dati e di mantenere i dati e [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sincronizzato. 
   
- Al termine della procedura dettagliata, verrà creata un'autonoma [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applicazione che consente agli utenti di visualizzare i report di spesa per gli utenti selezionati. L'applicazione sarà costituita da più [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pagine in cui sono ospitate in una finestra del browser stile. 
+Al termine della procedura dettagliata, verrà creata un'autonoma [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applicazione che consente agli utenti di visualizzare i report di spesa per gli utenti selezionati. L'applicazione sarà costituita da più [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pagine in cui sono ospitate in una finestra del browser stile. 
   
- Il codice di esempio che consente di compilare in questa procedura dettagliata è disponibile sia per [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] e [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] in [Introduzione alla compilazione di applicazioni WPF](http://go.microsoft.com/fwlink/?LinkID=160008). 
+Il codice di esempio che consente di compilare in questa procedura dettagliata è disponibile sia per [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] e [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] in [Introduzione alla compilazione di applicazioni WPF](http://go.microsoft.com/fwlink/?LinkID=160008). 
 
 ## <a name="prerequisites"></a>Prerequisiti  
 
@@ -54,12 +56,12 @@ Questa procedura dettagliata viene fornita un'introduzione allo sviluppo di un [
 Per ulteriori informazioni sull'installazione della versione più recente di Visual Studio, vedere [installare Visual Studio](/visualstudio/install/install-visual-studio).
   
 ## <a name="creating-the-application-project"></a>Creazione del progetto di applicazione  
- In questa sezione si crea l'infrastruttura dell'applicazione che include una definizione dell'applicazione, due pagine e un'immagine. 
+In questa sezione si crea l'infrastruttura dell'applicazione che include una definizione dell'applicazione, due pagine e un'immagine. 
   
 1. Creare un nuovo progetto di applicazione WPF in Visual Basic o Visual C# denominato `ExpenseIt`. Per altre informazioni, vedere [Procedura: Creare un nuovo progetto di applicazione WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
-    >  Questa procedura dettagliata Usa il <xref:System.Windows.Controls.DataGrid> controllo che è disponibile in .NET Framework 4. È possibile che il progetto è destinato a .NET Framework 4 o versione successiva. Per ulteriori informazioni, vedere[procedura: destinare una versione di .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
+    >  Questa procedura dettagliata Usa il <xref:System.Windows.Controls.DataGrid> controllo che è disponibile in .NET Framework 4. È possibile che il progetto è destinato a .NET Framework 4 o versione successiva. Per altre informazioni, vedere [Procedura: Destinare una versione di .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
   
 2. Aprire Application.xaml (Visual Basic) o App.xaml (C#). 
   
@@ -79,7 +81,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 4. Modifica il <xref:System.Windows.Window> elemento da un <xref:System.Windows.Navigation.NavigationWindow>. 
   
-     Questa applicazione passerà a contenuto diverso a seconda dell'interazione dell'utente. Pertanto, il principale <xref:System.Windows.Window> deve essere modificato in un <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow>eredita tutte le proprietà di <xref:System.Windows.Window>. Il <xref:System.Windows.Navigation.NavigationWindow> elemento nel file XAML crea un'istanza di <xref:System.Windows.Navigation.NavigationWindow> classe. Per altre informazioni, vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
+     Questa applicazione passerà a contenuto diverso a seconda dell'interazione dell'utente. Pertanto, il principale <xref:System.Windows.Window> deve essere modificato in un <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> eredita tutte le proprietà di <xref:System.Windows.Window>. Il <xref:System.Windows.Navigation.NavigationWindow> elemento nel file XAML crea un'istanza di <xref:System.Windows.Navigation.NavigationWindow> classe. Per altre informazioni, vedere [Cenni preliminari sulla navigazione](../../../../docs/framework/wpf/app-development/navigation-overview.md). 
   
 5. Modificare le proprietà seguenti nel <xref:System.Windows.Navigation.NavigationWindow> elemento:  
   
@@ -113,7 +115,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-vb[ExpenseIt#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]  
   
 ## <a name="adding-files-to-the-application"></a>Aggiunta di file all'applicazione  
- In questa sezione si aggiungono due pagine e un'immagine all'applicazione. 
+In questa sezione si aggiungono due pagine e un'immagine all'applicazione. 
   
 1. Aggiungere una nuova pagina (WPF) al progetto denominato `ExpenseItHome.xaml`. Per ulteriori informazioni, vedere [procedura: aggiungere nuovi elementi a un progetto WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
@@ -171,12 +173,12 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Aggiungere al progetto un'immagine denominata watermark.png. È possibile creare un'immagine personalizzata oppure copiare il file dal codice di esempio. Per ulteriori informazioni, vedere [NIB: procedura: aggiungere elementi esistenti a un progetto](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Aggiungere un'immagine denominata *watermark* al progetto. È possibile creare un'immagine personalizzata oppure copiare il file dal codice di esempio. Per altre informazioni, vedere [procedura: aggiungere elementi esistenti a un progetto](/previous-versions/visualstudio/visual-studio-2008/9f4t9t92(v=vs.90)). 
 
 ## <a name="building-and-running-the-application"></a>Compilazione e l'esecuzione dell'applicazione  
- In questa sezione viene compilata ed eseguita l'applicazione. 
+In questa sezione viene compilata ed eseguita l'applicazione. 
   
-1. Compilare ed eseguire l'applicazione premendo F5 o selezionare **Avvia debug** dal **Debug** menu. 
+1. Compilare ed eseguire l'applicazione premendo F5 o selezionando **Avvia debug** dal **Debug** menu. 
   
      Nella figura seguente viene illustrata l'applicazione con il <xref:System.Windows.Navigation.NavigationWindow> pulsanti. 
   
@@ -185,7 +187,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
 2. Chiudere l'applicazione per tornare alla [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. 
   
 ## <a name="creating-the-layout"></a>Creazione del layout  
- Il layout consente di posizionare in modo ordinato [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi e gestisce le dimensioni e posizione degli elementi quando un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene ridimensionato. In genere si crea un layout tramite uno dei controlli di layout seguenti:  
+Il layout consente di posizionare in modo ordinato [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi e gestisce le dimensioni e posizione degli elementi quando un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene ridimensionato. In genere si crea un layout tramite uno dei controlli di layout seguenti:  
   
 -   <xref:System.Windows.Controls.Canvas>  
   
@@ -199,12 +201,12 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- Ognuno di questi controlli di layout supporta un tipo speciale di layout per i relativi elementi figlio. È possibile ridimensionare le pagine ExpenseIt e ogni pagina contiene elementi disposti in orizzontale e in verticale accanto ad altri elementi. Di conseguenza, il <xref:System.Windows.Controls.Grid> è l'elemento di layout ideale per l'applicazione. 
+Ognuno di questi controlli di layout supporta un tipo speciale di layout per i relativi elementi figlio. È possibile ridimensionare le pagine ExpenseIt e ogni pagina contiene elementi disposti in orizzontale e in verticale accanto ad altri elementi. Di conseguenza, il <xref:System.Windows.Controls.Grid> è l'elemento di layout ideale per l'applicazione. 
   
 > [!NOTE]
 >  Per ulteriori informazioni su <xref:System.Windows.Controls.Panel> elementi, vedere [Panoramica pannelli](../../../../docs/framework/wpf/controls/panels-overview.md). Per ulteriori informazioni sul layout, vedere [Layout](../../../../docs/framework/wpf/advanced/layout.md). 
   
- Nella sezione crei una sola colonna di tabella con tre righe e un margine di 10 pixel mediante l'aggiunta di definizioni di colonna e riga di <xref:System.Windows.Controls.Grid> in ExpenseItHome. Xaml. 
+Nella sezione crei una sola colonna di tabella con tre righe e un margine di 10 pixel mediante l'aggiunta di definizioni di colonna e riga di <xref:System.Windows.Controls.Grid> in ExpenseItHome. Xaml. 
   
 1. Aprire ExpenseItHome.xaml. 
   
@@ -221,17 +223,17 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-xaml[ExpenseIt#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]  
   
 ## <a name="adding-controls"></a>Aggiunta di controlli  
- In questa sezione, la home page [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene aggiornato per visualizzare un elenco di persone che gli utenti possono selezionare per mostrare la nota spese per una persona selezionata. I controlli sono oggetti dell'interfaccia utente che consentono agli utenti di interagire con l'applicazione. Per altre informazioni, vedere [Controlli](../../../../docs/framework/wpf/controls/index.md). 
+In questa sezione, la home page [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene aggiornato per visualizzare un elenco di persone che gli utenti possono selezionare per mostrare la nota spese per una persona selezionata. I controlli sono oggetti dell'interfaccia utente che consentono agli utenti di interagire con l'applicazione. Per altre informazioni, vedere [Controlli](../../../../docs/framework/wpf/controls/index.md). 
   
- Per creare questa [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], gli elementi seguenti sono aggiunti a ExpenseItHome. XAML:  
+Per creare questa [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], gli elementi seguenti sono aggiunti a ExpenseItHome. XAML:  
   
--   <xref:System.Windows.Controls.ListBox>(per l'elenco di utenti). 
+-   <xref:System.Windows.Controls.ListBox> (per un elenco di persone). 
   
--   <xref:System.Windows.Controls.Label>(per l'intestazione di elenco). 
+-   <xref:System.Windows.Controls.Label> (per l'intestazione dell'elenco). 
   
--   <xref:System.Windows.Controls.Button>(per fare clic per visualizzare la nota spese per la persona che sia selezionata nell'elenco). 
+-   <xref:System.Windows.Controls.Button> (possibile fare clic per visualizzare la nota spese per la persona che sia selezionata nell'elenco). 
   
- Ogni controllo viene posizionato in una riga del <xref:System.Windows.Controls.Grid> impostando il <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> proprietà associata. Per ulteriori informazioni sulle proprietà associate, vedere [collegato Cenni preliminari sulle proprietà](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
+Ogni controllo viene posizionato in una riga del <xref:System.Windows.Controls.Grid> impostando il <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> proprietà associata. Per ulteriori informazioni sulle proprietà associate, vedere [collegato Cenni preliminari sulle proprietà](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
   
 1. Aprire ExpenseItHome.xaml. 
   
@@ -241,12 +243,12 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 3. Compilare ed eseguire l'applicazione. 
   
- La figura seguente mostra i controlli creati da XAML in questa sezione. 
+La figura seguente mostra i controlli creati da XAML in questa sezione. 
   
- ![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 ## <a name="adding-an-image-and-a-title"></a>Aggiunta di un'immagine e un titolo  
- In questa sezione, la home page [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene aggiornato con un'immagine e un titolo della pagina. 
+In questa sezione, la home page [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene aggiornato con un'immagine e un titolo della pagina. 
   
 1. Aprire ExpenseItHome.xaml. 
   
@@ -272,9 +274,9 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 7. Compilare ed eseguire l'applicazione. 
   
- La figura seguente mostra i risultati di questa sezione. 
+La figura seguente mostra i risultati di questa sezione. 
   
- ![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 ## <a name="adding-code-to-handle-events"></a>Aggiungere il codice per gestire gli eventi  
   
@@ -292,7 +294,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-vb[ExpenseIt#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]  
   
 ## <a name="creating-the-ui-for-expensereportpage"></a>Creazione dell'interfaccia utente per ExpenseReportPage  
- ExpenseReportPage.xaml visualizza la nota spese per la persona selezionata nel file ExpenseItHome.xaml. In questa sezione verranno aggiunti i controlli e crea il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per ExpenseReportPage. Xaml. In questa sezione vengono inoltre aggiunti i colori di sfondo e del riempimento ai diversi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi. 
+ExpenseReportPage.xaml visualizza la nota spese per la persona selezionata nel file ExpenseItHome.xaml. In questa sezione verranno aggiunti i controlli e crea il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per ExpenseReportPage. Xaml. In questa sezione vengono inoltre aggiunti i colori di sfondo e del riempimento ai diversi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi. 
   
 1. Aprire ExpenseReportPage.xaml. 
   
@@ -311,12 +313,12 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
      Viene visualizzata la pagina della nota spese. 
   
- La figura seguente mostra il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi aggiunti alla ExpenseReportPage. Xaml. Notare che il pulsante di navigazione all'indietro è abilitato. 
+La figura seguente mostra il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementi aggiunti alla ExpenseReportPage. Xaml. Notare che il pulsante di navigazione all'indietro è abilitato. 
   
- ![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+![Schermata dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
 ## <a name="styling-controls"></a>Stile di controlli  
- L'aspetto dei diversi elementi spesso può essere uguale per tutti gli elementi dello stesso tipo in un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usa gli stili per rendere l'aspetto riutilizzabile tra più elementi. La possibilità di riutilizzo consente di semplificare [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] creazione e la gestione. Per ulteriori informazioni sugli stili, vedere [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md). In questa sezione vengono sostituiti con gli stili gli attributi per elemento definiti nei passaggi precedenti. 
+L'aspetto dei diversi elementi spesso può essere uguale per tutti gli elementi dello stesso tipo in un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usa gli stili per rendere l'aspetto riutilizzabile tra più elementi. La possibilità di riutilizzo consente di semplificare [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] creazione e la gestione. Per ulteriori informazioni sugli stili, vedere [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md). In questa sezione vengono sostituiti con gli stili gli attributi per elemento definiti nei passaggi precedenti. 
   
 1. Aprire Application.xaml o App.xaml. 
   
@@ -334,7 +336,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
     -  `listHeaderStyle`: per formattare i controlli <xref:System.Windows.Controls.Border> dell'intestazione dell'elenco. 
   
-    -  `listHeaderTextStyle`: Per formattare l'intestazione di elenco <xref:System.Windows.Controls.Label>. 
+    -  `listHeaderTextStyle`: Per formattare l'intestazione dell'elenco <xref:System.Windows.Controls.Label>. 
   
     -  `buttonStyle`: Per formattare il <xref:System.Windows.Controls.Button> in ExpenseItHome. Xaml. 
   
@@ -361,7 +363,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
      Dopo aver aggiunto il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in questa sezione, l'applicazione abbia lo stesso aspetto era prima che venga aggiornato con gli stili. 
   
 ## <a name="binding-data-to-a-control"></a>Associazione dati a un controllo  
- In questa sezione si crea il [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] dati associati ai vari controlli. 
+In questa sezione si crea il [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] dati associati ai vari controlli. 
   
 1. Aprire ExpenseItHome.xaml. 
   
@@ -386,7 +388,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
      Questo codice XAML associa il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> proprietà del <xref:System.Windows.Controls.ListBox> all'origine dati e applica il modello di dati come il <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>. 
   
 ## <a name="connecting-data-to-controls"></a>Connessione dati a controlli  
- In questa sezione, scritto il codice per recuperare l'elemento corrente che sia selezionata nell'elenco di utenti nella pagina ExpenseItHome. XAML e passa il relativo riferimento al costruttore di `ExpenseReportPage` durante la creazione di istanze. `ExpenseReportPage` imposta il contesto dei dati con l'elemento passato, a cui verranno associati i controlli definiti in ExpenseReportPage.xaml. 
+In questa sezione, scritto il codice per recuperare l'elemento corrente che sia selezionata nell'elenco di utenti nella pagina ExpenseItHome. XAML e passa il relativo riferimento al costruttore di `ExpenseReportPage` durante la creazione di istanze. `ExpenseReportPage` imposta il contesto dei dati con l'elemento passato, a cui verranno associati i controlli definiti in ExpenseReportPage.xaml. 
   
 1. Aprire ExpenseReportPage.xaml.vb o ExpenseReportPage.xaml.cs. 
   
@@ -403,7 +405,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
     [!code-vb[ExpenseIt#27](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]  
   
 ## <a name="styling-data-with-data-templates"></a>Lo stile dati con i modelli di dati  
- In questa sezione, si aggiorna il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per ciascun elemento nei dati associati gli elenchi con i modelli di dati. 
+In questa sezione, si aggiorna il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] per ciascun elemento nei dati associati gli elenchi con i modelli di dati. 
   
 1. Aprire ExpenseReportPage.xaml. 
   
@@ -427,7 +429,7 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
  ![Schermate dell'esempio ExpenseIt](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Questo esempio illustra una funzionalità specifica di WPF e, di conseguenza, non segue le procedure consigliate per lo sviluppo di applicazioni. Per una descrizione completa di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] applicazione consigliate per lo sviluppo, vedere gli argomenti seguenti come appropriato:  
+Questo esempio illustra una funzionalità specifica di WPF e, di conseguenza, non segue le procedure consigliate per lo sviluppo di applicazioni. Per una descrizione completa di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] applicazione consigliate per lo sviluppo, vedere gli argomenti seguenti come appropriato:  
   
 -   Accessibilità: [Procedure consigliate per l'accesso facilitato](../../../../docs/framework/ui-automation/accessibility-best-practices.md)  
   
@@ -437,8 +439,8 @@ Per ulteriori informazioni sull'installazione della versione più recente di Vis
   
 -   Prestazioni: [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
   
-## <a name="whats-next"></a>Novità  
- È ora una serie di tecniche a disposizione per la creazione di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] utilizzando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. È stata acquisita una conoscenza approfondita dei blocchi di compilazione di base di un controllo con associazione a dati [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] dell'applicazione. Questo argomento non è esaustivo, ma intende fornire all'utente le informazioni e gli strumenti per approfondire autonomamente le numerose opzioni di cui dispone, che vanno oltre le tecniche descritte nell'argomento. 
+## <a name="whats-next"></a>Argomenti successivi  
+È ora una serie di tecniche a disposizione per la creazione di un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] utilizzando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. È stata acquisita una conoscenza approfondita dei blocchi di compilazione di base di un controllo con associazione a dati [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] dell'applicazione. Questo argomento non è esaustivo, ma intende fornire all'utente le informazioni e gli strumenti per approfondire autonomamente le numerose opzioni di cui dispone, che vanno oltre le tecniche descritte nell'argomento. 
   
  Per altre informazioni sull'architettura WPF e i modelli di programmazione, vedere gli argomenti seguenti:  
   

@@ -1,18 +1,18 @@
 ---
 title: Gestire gli ambienti di produzione Docker
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
-keywords: Docker, microservizi, ASP.NET, contenitore
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>Gestire gli ambienti di produzione Docker
 
@@ -31,7 +31,7 @@ Nella tabella 6-1: strumenti di gestione di Docker
 
 | Strumenti di gestione      | Descrizione           | Orchestrators correlati |
 |-----------------------|-----------------------|-----------------------|
-| Il servizio contenitore\(gestione dell'interfaccia utente nel portale di Azure) | [Il servizio contenitore](https://azure.microsoft.com/en-us/services/container-service/) offre una semplice ottenere avviato modo per [distribuire un cluster di contenitore in Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) in base a più diffusi orchestrators come controller di dominio/OS Mesosphere, Kubernetes e Docker Swarm. <br /><br /> Il servizio contenitore consente di ottimizzare la configurazione di tali piattaforme. È sufficiente selezionare le dimensioni, il numero di host e la scelta degli strumenti di orchestrator e il servizio contenitore gestisce tutto il resto. | Controller di dominio mesosphere/OS <br /><br /> Kubernetes <br /><br /> Sciame docker |
+| Il servizio contenitore\(gestione dell'interfaccia utente nel portale di Azure) | [Il servizio contenitore](https://azure.microsoft.com/en-us/services/container-service/) offre una semplice ottenere avviato modo per [distribuire un cluster di contenitore in Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) in base a più diffusi orchestrators come controller di dominio/OS Mesosphere, Kubernetes e Docker Swarm. <br /><br /> Il servizio contenitore consente di ottimizzare la configurazione di tali piattaforme. È sufficiente selezionare le dimensioni, il numero di host e la scelta degli strumenti di orchestrator e il servizio contenitore gestisce tutto il resto. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Piano di controllo universale docker\(locale o cloud) | [Piano di controllo universale docker](https://docs.docker.com/v1.11/ucp/overview/) è la soluzione di gestione aziendale del cluster da Docker. Consente di gestire l'intero cluster da un'unica posizione. <br /><br /> Piano di controllo universale docker è incluso come parte del prodotto commerciale denominato Data Center di Docker offrendo Docker Swarm, Docker Universal piano di controllo e registro attendibile Docker. <br /><br /> Data Center di docker può essere installato in locale o il provisioning da un cloud pubblico come Azure. | Docker Swarm\(supportate dal servizio di contenitore) |
 | Cloud docker\(noto anche come Tutum; cloud SaaS) | [Cloud docker](https://docs.docker.com/docker-cloud/) è un servizio di gestione ospitato (SaaS) che offre funzionalità di orchestrazione e un registro di sistema di Docker build e di prova per le immagini dell'applicazione Dockerized, strumenti che consentono di configurare e gestire l'infrastruttura host e le funzionalità di distribuzione per automatizzare la distribuzione delle immagini per l'infrastruttura concreta. È possibile connettere l'account Cloud Docker SaaS per l'infrastruttura nel servizio di contenitore in esecuzione di un cluster di Docker Swarm. | Docker Swarm\(supportate dal servizio di contenitore) |
 | Maratona mesosphere\(locale o cloud) | [Maratona](https://mesosphere.github.io/marathon/docs/marathon-ui.html) è una piattaforma di orchestrazione e utilità di pianificazione di contenitore in grado di produzione per del Mesosphere controller di dominio/OS e Apache Mesos. <br /><br /> Funziona con Mesos (controller di dominio o sistema operativo è basato su Apache Mesos) al controllo con esecuzione prolungata dei servizi e fornisce un [interfaccia utente web per processo e gestione dei contenitori](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Fornisce uno strumento di gestione dell'interfaccia utente web | Controller di dominio/OS mesosphere\(basato su Apache Mesos; supportato dal servizio di contenitore) |

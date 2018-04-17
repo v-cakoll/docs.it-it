@@ -1,20 +1,20 @@
 ---
-title: Stato e i dati nelle applicazioni di Docker
+title: Stato e dati nelle applicazioni di Docker
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
-keywords: Docker, microservizi, ASP.NET, contenitore
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>Stato e i dati nelle applicazioni di Docker
+# <a name="state-and-data-in-docker-applications"></a>Stato e dati nelle applicazioni di Docker
 
 Una primitiva di contenitori è immutabilità. Rispetto a una macchina virtuale, i contenitori non interrompersi quando un problema comune. Una macchina virtuale potrebbe non riuscire in varie forme da processi di messaggi non recapitabili, overload della CPU o un disco pieno o non riuscito. Ancora, è probabile che la macchina virtuale sia disponibile e unità RAID sono comuni per assicurare che gli errori di unità mantengono i dati.
 
@@ -54,4 +54,4 @@ Origini dati remote e memorizza nella cache come Database SQL, DocumentDB o una 
 
 
 >[!div class="step-by-step"]
-[Previous] (monolithic-applications.md) [Next] (soa-applications.md)
+[Precedente] (monolitico applications.md) [Avanti] (applications.md soa)

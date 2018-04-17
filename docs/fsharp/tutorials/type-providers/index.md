@@ -1,53 +1,51 @@
 ---
 title: Provider di tipi
 description: 'Informazioni su come un provider di tipi F # è un componente che fornisce tipi, proprietà e metodi da utilizzare nei programmi.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/02/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 248fb2db2364cdad53e701603fd2cada33498701
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-providers"></a>Provider di tipi
 
-> [!NOTE]
-Questa guida è stata scritta a partire da F# 3.0 e verrà aggiornata.  Per provider di tipo multipiattaforma aggiornati, vedere [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
+Un provider di tipi F# è un componente che fornisce tipi, proprietà e metodi da utilizzare in un programma. Provider di tipi generano i cosiddetti **forniti tipi**, che vengono generati dal compilatore F #, basati su un'origine dati esterna.
 
-Un provider di tipi F# è un componente che fornisce tipi, proprietà e metodi da utilizzare in un programma. I provider di tipi sono una parte significativa per il supporto di F# 3.0, per una programmazione con informazioni. La chiave per la programmazione con informazioni è eliminare le barriere per utilizzare le diverse risorse trovate in Internet e negli ambienti aziendali moderni. Una barriera significativa per includere una risorsa di informazioni in un programma è la necessità di rappresentare tali informazioni come tipi, proprietà e metodi da utilizzare nell'ambiente di un linguaggio di programmazione. La scrittura manuale di questi tipi richiede molto tempo ed è difficile da gestire. Un'alternativa comune prevede l'utilizzo di un generatore di codice per aggiungere file al progetto. Tuttavia, i tipi convenzionali per la generazione di codice non si adattano alle modalità esplorative di programmazione supportate da F#, perché il codice generato deve essere sostituito ogni volta che viene modificato un riferimento al servizio.
+Ad esempio, un Provider di tipi F # per SQL può generare tipi che rappresentano le tabelle e colonne in un database relazionale. In realtà, questo è ciò che il [SQLProvider](https://fsprojects.github.io/SQLProvider/) tipo Provider non.
 
-I tipi forniti dal provider di tipi F# sono in genere basati su origini di informazioni esterne. Ad esempio, un tipo di provider F# per SQL fornirà tipi, proprietà e metodi necessari per utilizzare direttamente le tabelle di ogni database SQL al quale è necessario accedere. Analogamente, un tipo di provider per i servizi Web WSDL fornirà i tipi, proprietà e metodi che è necessario utilizzare direttamente con qualsiasi servizio Web WSDL.
+Forniti che tipi dipendono dai parametri di input per un Provider di tipi. Input di questo tipo può essere un'origine dati di esempio (ad esempio un file di schema JSON), un URL che punta direttamente a un servizio esterno o una stringa di connessione a un'origine dati. Un Provider di tipi può inoltre garantire che i gruppi di tipi siano espandibili solamente su richiesta; ovvero, vengono espansi se i tipi vengono effettivamente fatto riferimento dal programma. Questo consente di utilizzare l'integrazione diretta su richiesta di spazi di informazioni su larga scala fortemente tipizzati, come i mercati di dati online.
 
-Il set di tipi, proprietà e metodi forniti da un provider di tipi F# possono dipendere dai parametri indicati nel codice del programma. Ad esempio, un provider di tipi può fornire tipi diversi in base a una stringa di connessione o un URL di servizio. In questo modo, lo spazio di informazioni disponibile tramite la stringa di connessione o un URL viene integrato direttamente nel programma. Un provider di tipi può inoltre garantire che i gruppi di tipi siano espandibili solamente su richiesta, ovvero vengono espansi se ai tipi viene effettivamente fatto riferimento dal programma. Questo consente di utilizzare l'integrazione diretta su richiesta di spazi di informazioni su larga scala fortemente tipizzati, come i mercati di dati online.
+## <a name="generative-and-erased-type-providers"></a>Provider di tipi vedere Generative e cancellate
 
-F# contiene diversi provider di tipi incorporati per servizi dati Internet e aziendali di uso comune. Questi tipi di provider forniscono un accesso semplice e regolare a database relazionali SQL, OData basati sulla rete e servizi WSDL e supportano l'utilizzo di query LINQ F# rispetto a tali origini dati.
+Provider di tipi sono disponibili in due forme: vedere Generative e cancellate.
 
-Se necessario, è possibile creare provider di tipi personalizzati o fare riferimento a provider di tipi creati da altri. Ad esempio, si supponga che l'organizzazione abbia un servizio dati che fornisce un numero elevato e crescente di set di dati denominati, ciascuno con il proprio schema dati stabile. È possibile scegliere di creare un provider di tipi che legge gli schemi ed elenca gli ultimi set di dati disponibili per il programmatore, in una modalità fortemente tipizzata.
+Vedere Generative provider di tipi di generare tipi che possono essere scritti come tipi .NET nell'assembly in cui vengono generati. In questo modo possono essere utilizzati dal codice in altri assembly. Ciò significa che la rappresentazione dell'origine dati tipizzata in genere deve essere uno che è possibile rappresentare con i tipi .NET.
 
+Cancellazione provider di tipi di generare tipi che possono essere utilizzati solo nell'assembly o nel progetto da che vengono generati. I tipi sono effimero; vale a dire, essi non vengono scritti in un assembly e non può essere utilizzati dal codice in altri assembly. Possono contenere *ritardato* membri, consentendo ai tipi utilizza fornita da uno spazio di informazioni potenzialmente infinito. Sono utili per l'utilizzo di un piccolo subset di un'origine dati di grandi dimensioni e interconnessi.
 
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="commonly-used-type-providers"></a>Comunemente utilizzati i provider di tipi
 
+Le seguenti librerie ampiamente diffuso contengono i provider di tipi per usi diversi:
 
-|Titolo|Descrizione|
-|-----|-----------|
-|[Walkthrough: Accessing a SQL Database by Using Type Providers](accessing-a-sql-database.md) (Procedura dettagliata: accesso a un database SQL tramite provider di tipi)|Viene illustrato come usare il provider di tipi SqlDataConnection per accedere alle tabelle e alle stored procedure di un database SQL, in base a una stringa di connessione per una connessione diretta a un database. L'accesso utilizza un mapping LINQ to SQL.|
-|[Walkthrough: Accessing a SQL Database by Using Type Providers and Entities](accessing-a-sql-database-entities.md) (Procedura dettagliata: accesso a un database SQL tramite entità e provider di tipi)|Illustra come usare il provider di tipi SqlEntityConnection per accedere alle tabelle e alle stored procedure di un database SQL, in base a una stringa di connessione per una connessione diretta a un database. L'accesso usa un mapping LINQ to Entities. Questo metodo può essere usato con qualsiasi database, ma nell'esempio viene illustrato SQL Server.|
-|[Walkthrough: Accessing an OData Service by Using Type Providers](accessing-an-odata-service.md) (Procedura dettagliata: accesso a un servizio OData tramite provider di tipi)|Illustra come usare il provider di tipi ODataService per accedere a un servizio OData in una modalità fortemente tipizzata in base all'URL di un servizio.|
-|[Walkthrough: Accessing a Web Service by Using Type Providers](accessing-a-web-service.md) (Procedura dettagliata: accesso a un servizio Web tramite provider di tipi)|Illustra come usare il provider di tipi WsdlService per accedere a un servizio web WSDL in una modalità fortemente tipizzata in base a un URL del servizio.|
-|[Walkthrough: Generating F&#35; Types from a DBML File](generating-fsharp-types-from-dbml.md) (Procedura dettagliata: generazione di tipi F&#35; da un file DBML)|Illustra come usare il provider di tipi DbmlFile per accedere alle tabelle e alle stored procedure di un database SQL, in base a un file DBML che fornisce una specifica dello schema del database LINQ to SQL.|
-|[Walkthrough: Generating F&#35; Types from an EDMX Schema File](generating-fsharp-types-from-edmx.md) (Procedura dettagliata: generazione di tipi F&#35; da un file di schema EDMX)|Viene illustrato come utilizzare il provider di tipi EdmxFile per accedere alle tabelle e alle stored procedure di un database SQL, in base a un file EDMX che fornisce una specifica dello schema Entity Framework.|
-|[Tutorial: Creating a Type Provider](creating-a-type-provider.md) (Esercitazione: creazione di un provider di tipi)|Vengono fornite informazioni sulla scrittura di provider di tipi personalizzati.|
-|[Type Provider Security](type-provider-security.md) (Sicurezza dei provider di tipi)|Vengono fornite informazioni sulle considerazioni relative alla sicurezza quando si sviluppano provider di tipi.|
-|[Risoluzione dei problemi relativi ai provider di tipi](troubleshooting-type-providers.md)|Vengono fornite informazioni sui problemi comuni che possono verificarsi quando si usano provider di tipi e sono inclusi suggerimenti per le soluzioni.|
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) include i provider di tipi per JSON, XML, CSV e HTML documento formati e le risorse.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornisce accesso fortemente tipizzato per i database relazione di mapping degli oggetti e LINQ F # query rispetto a tali origini dati.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) dispone di un set di provider di tipi per la fase di compilazione selezionata durante l'incorporamento di T-SQL in F #.
+- [Provider di tipi di archiviazione Azure](https://fsprojects.github.io/AzureStorageTypeProvider/) fornisce tipi per i BLOB di Azure, tabelle e code, consentendo di accedere a tali risorse senza la necessità di specificare i nomi delle risorse come stringhe nell'intero programma.
+- [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) contiene il **GraphQLProvider**, che fornisce i tipi basati su un server GraphQL specificato dall'URL.
+
+Se necessario, è possibile [creare i propri provider di tipi personalizzato](creating-a-type-provider.md), o fare riferimento a provider di tipi che sono stati creati da altri utenti. Ad esempio, si supponga che l'organizzazione abbia un servizio dati che fornisce un numero elevato e crescente di set di dati denominati, ciascuno con il proprio schema dati stabile. È possibile scegliere di creare un provider di tipi che legge gli schemi ed elenca gli ultimi set di dati disponibili per il programmatore, in una modalità fortemente tipizzata.
 
 ## <a name="see-also"></a>Vedere anche
+[Esercitazione: Creare un Provider di tipi](creating-a-type-provider.md)
+
 [Riferimenti per il linguaggio F#](../../language-reference/index.md)
 
 [Visual F#](../../index.md)

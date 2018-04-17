@@ -1,18 +1,18 @@
 ---
 title: Monitorare i servizi delle applicazioni nei contenitori
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
-keywords: Docker, microservizi, ASP.NET, contenitore
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorare i servizi delle applicazioni nei contenitori
 
@@ -42,10 +42,10 @@ Quando si esegue il [immagine di Application Insights Docker](https://hub.docker
 
 Per creare una risorsa di Application Insights, seguire le istruzioni riportate nell'elenco che segue gli articoli. Portale di Azure verrà creato lo script necessario per l'utente.
 
--   **Monitoraggio delle applicazioni di Docker in Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **Monitoraggio delle applicazioni di Docker in Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Application Insights Docker immagine Hub Docker e Github:**  
-[https://hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) e <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) e <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Configurare Application Insights per ASP.NET:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,7 +97,7 @@ Figura 6-3: di metriche delle prestazioni di host Docker illustrato da Operation
 
 Salvataggio di query è anche una funzionalità standard di Operations Management Suite e consentono di mantenere le query è stato individuato utile e individuare le tendenze nel sistema.
 
-**Altre informazioni** per trovare informazioni sull'installazione e configurazione di Docker soluzione contenitore in [Operations Management Suite](http://microsoft.com/oms), passare a <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
+**Altre informazioni** per trovare informazioni sull'installazione e configurazione di Docker soluzione contenitore [Operations Management Suite](http://microsoft.com/oms), andare a <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
 [Precedente] (gestire-produzione-docker-environments.md) [Avanti] (... /Key-takeaways/index.MD)

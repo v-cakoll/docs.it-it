@@ -1,12 +1,9 @@
 ---
 title: copia e blocco
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 Durante il marshalling il gestore di marshalling di interoperabilità può copiare o bloccare i dati interessati. Tramite l'operazione di copia, una copia dei dati viene spostata da una posizione della memoria a un'altra. La figura seguente illustra le differenze esistenti tra la copia di un tipo valore e quella di un tipo passato per riferimento dalla memoria gestita a quella non gestita.  
   
- ![Tipi valore passati per valore e per riferimento](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![Tipi valore passati per valore e per riferimento](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 Tipi di valore passati per valore e per riferimento  
   
  Il marshalling degli argomenti del metodo passati per valore a codice non gestito viene eseguito come marshalling di valori sullo stack. Il processo di copia è diretto. Gli argomenti passati per riferimento vengono passati come puntatori allo stack. Anche i tipi riferimento vengono passati per valore e per riferimento. Come illustrato nella figura seguente, i tipi riferimento passati per valore vengono copiati o bloccati.  
   
- ![Interoperabilità COM](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![Interoperabilità COM](./media/interopmarshalpin.gif "interopmarshalpin")  
 Tipi riferimento passati per valore e per riferimento  
   
  Con il blocco, i dati vengono temporaneamente bloccati nella posizione di memoria corrente, impedendone quindi il riposizionamento da parte del Garbage Collector di Common Language Runtime. I dati vengono bloccati dal gestore di marshalling per ridurre il sovraccarico dell'operazione di copia e migliorare le prestazioni. In base al tipo, si stabilisce se i dati verranno copiati o bloccati nel corso del processo di marshalling.  Per oggetti come <xref:System.String>, il blocco viene eseguito automaticamente durante il marshalling. È tuttavia possibile bloccare la memoria manualmente tramite la classe <xref:System.Runtime.InteropServices.GCHandle>.  
   
 ## <a name="formatted-blittable-classes"></a>Classi copiabili da BLT formattate  
- Le classi [copiabili da BLT](../../../docs/framework/interop/blittable-and-non-blittable-types.md) formattate hanno un layout fisso (formattato) e una rappresentazione dei dati comune sia nella memoria gestita che in quella non gestita. Quando questi tipi richiedono il marshalling, un puntatore all'oggetto nell'heap viene passato direttamente al chiamato, il quale può modificare il contenuto della posizione di memoria a cui il puntatore fa riferimento.  
+ Le classi [copiabili da BLT](blittable-and-non-blittable-types.md) formattate hanno un layout fisso (formattato) e una rappresentazione dei dati comune sia nella memoria gestita che in quella non gestita. Quando questi tipi richiedono il marshalling, un puntatore all'oggetto nell'heap viene passato direttamente al chiamato, il quale può modificare il contenuto della posizione di memoria a cui il puntatore fa riferimento.  
   
 > [!NOTE]
 >  Il chiamato può modificare il contenuto della memoria se il parametro è contrassegnato con Out o In/Out. Al contrario, deve evitare di modificare il contenuto quando il parametro è contrassegnato con In per il marshalling, vale a dire con l'impostazione predefinita per i tipi copiabili da BLT formattati. La modifica di un oggetto In genera problemi quando la stessa classe viene esportata in una libreria dei tipi e usata per effettuare chiamate su più apartment.  
   
 ## <a name="formatted-non-blittable-classes"></a>Classi non copiabili da BLT formattate  
- Le classi [non copiabili da BLT](../../../docs/framework/interop/blittable-and-non-blittable-types.md) formattate hanno un layout fisso (formattato) ma la rappresentazione dei dati è diversa nella memoria gestita e in quella non gestita. Può essere necessaria la trasformazione dei dati nelle condizioni seguenti:  
+ Le classi [non copiabili da BLT](blittable-and-non-blittable-types.md) formattate hanno un layout fisso (formattato) ma la rappresentazione dei dati è diversa nella memoria gestita e in quella non gestita. Può essere necessaria la trasformazione dei dati nelle condizioni seguenti:  
   
 -   Se si esegue il marshalling di una classe non copiabile da BLT per valore, il chiamato riceve un puntatore a una copia della struttura dei dati.  
   
@@ -87,7 +84,7 @@ Tipi riferimento passati per valore e per riferimento
  Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=nameWithType> viene passato per valore, un riferimento al buffer interno di **StringBuilder** viene passato dal gestore di marshalling direttamente al chiamante. Il chiamante e il chiamato devono concordare sulla dimensione del buffer. Il chiamante è responsabile della creazione di uno **StringBuilder** di lunghezza adeguata. Il chiamato deve prendere le precauzioni necessarie per garantire che il buffer non risulti sovraccarico. **StringBuilder** è un'eccezione alla regola in base alla quale i tipi di riferimento passati per valore vengono passati come parametri In per impostazione predefinita, dato che viene sempre passato come parametro In/Out.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Gestione della memoria con il marshalling di interoperabilità](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Attributi direzionali](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+ [Comportamento di marshalling predefinito](default-marshaling-behavior.md)  
+ [Gestione della memoria con il marshalling di interoperabilità](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Marshalling di interoperabilità](interop-marshaling.md)

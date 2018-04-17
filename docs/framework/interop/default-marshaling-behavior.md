@@ -1,13 +1,9 @@
 ---
 title: comportamento predefinito del marshalling
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
 Il marshalling di interoperabilità opera sulle regole che stabiliscono il comportamento dei dati associati a parametri del metodo durante il passaggio tra memoria gestita e non gestita. Queste regole predefinite controllano tali attività di marshalling come le trasformazioni dei tipi di dati, il fatto che un oggetto chiamato possa modificare i dati passati e restituire tali modifiche al chiamante e le circostanze in cui il gestore di marshalling fornisce ottimizzazioni delle prestazioni.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  Se, tuttavia, si definisce il metodo come prototipo di platform invoke, si sostituisce ogni tipo **BSTR** con un tipo <xref:System.String> e si chiama `MethodOne`, Common Language Runtime prova a liberare `b` due volte. È possibile modificare il comportamento di marshalling usando tipi <xref:System.IntPtr> invece di tipi **String**.  
   
- Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Il runtime usa sempre il metodo **CoTaskMemFree** per liberare memoria. Se la memoria che si sta usando non è stata allocata con il metodo **CoTaskMemAlloc**, è necessario usare un tipo **IntPtr** e liberare la memoria manualmente mediante il metodo appropriato. Analogamente, è possibile fare in modo che la memoria non venga liberata automaticamente in situazioni in cui la memoria non deve mai essere liberata, ad esempio quando si usa la funzione **GetCommandLine** da Kernel32.dll, che restituisce un puntatore alla memoria del kernel. Per informazioni dettagliate su come liberare manualmente la memoria, vedere [Esempio di buffer](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshalling predefinito per le classi  
- È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'altra interfaccia, vedere [Introduzione all'interfaccia della classe](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ È possibile effettuare il marshalling delle classi solo tramite l'interoperabilità COM e solo come interfacce. In alcuni casi l'interfaccia usata per effettuare il marshalling della classe è nota come interfaccia di classe. Per informazioni sull'override dell'interfaccia di classe con un'interfaccia di propria scelta, vedere [Introduzione all'interfaccia della classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passaggio di classi a COM  
  Quando una classe gestita viene passata a COM, il marshalling di interoperabilità esegue automaticamente il wrapping della classe con un proxy COM e passa l'interfaccia di classe creata dal proxy alla chiamata al metodo COM. Il proxy delega quindi tutte le chiamate sull'interfaccia di classe all'oggetto gestito. Il proxy espone anche altre interfacce non implementate in modo esplicito dalla classe. Il proxy implementa automaticamente interfacce come **IUnknown** e **IDispatch** per conto della classe.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Marshalling predefinito per i tipi di valore  
- La maggior parte dei tipi valore, ad esempio numeri a virgola mobile e interi, è [copiabile da BLT](../../../docs/framework/interop/blittable-and-non-blittable-types.md) e non richiede di effettuare il marshalling. Altri tipi [non copiabili da BLT](../../../docs/framework/interop/blittable-and-non-blittable-types.md) hanno rappresentazioni diverse nella memoria gestita e non gestita e richiedono il marshalling. Altri tipi ancora richiedono la formattazione esplicita oltre i limiti di interoperabilità.  
+ La maggior parte dei tipi valore, ad esempio numeri a virgola mobile e interi, è [copiabile da BLT](blittable-and-non-blittable-types.md) e non richiede di effettuare il marshalling. Altri tipi [non copiabili da BLT](blittable-and-non-blittable-types.md) hanno rappresentazioni diverse nella memoria gestita e non gestita e richiedono il marshalling. Altri tipi ancora richiedono la formattazione esplicita oltre i limiti di interoperabilità.  
   
  Questo argomento fornisce le informazioni seguenti sui tipi di valore formattati:  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)  
- [Marshalling predefinito per le matrici](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Marshalling predefinito per gli oggetti](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Marshalling predefinito per le stringhe](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)  
+ [Copia e blocco](copying-and-pinning.md)  
+ [Marshalling predefinito per le matrici](default-marshaling-for-arrays.md)  
+ [Marshalling predefinito per gli oggetti](default-marshaling-for-objects.md)  
+ [Marshalling predefinito per le stringhe](default-marshaling-for-strings.md)

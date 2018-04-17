@@ -1,28 +1,26 @@
 ---
-title: "Marshalling di interoperabilità"
-ms.custom: 
+title: Marshalling di interoperabilità
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cb22c708221fcc80962fd7da6e26c3720173d824
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -51,12 +49,12 @@ ms.lasthandoff: 01/19/2018
   
 -   L'interoperabilità COM, che consente l'interazione del codice gestito con oggetti COM (Component Object Model) mediante interfacce.  
   
- Il marshalling di interoperabilità viene usato sia da platform invoke che dall'interoperabilità COM per spostare con precisione gli argomenti dei metodi tra chiamante e chiamato e viceversa, se necessario. Come mostrato nella figura seguente, una chiamata al metodo di platform invoke viene effettuata dal codice gestito al codice non gestito e mai viceversa, ad eccezione del caso in cui sono coinvolte [funzioni di callback](../../../docs/framework/interop/callback-functions.md). Benché il flusso delle chiamate platform invoke possa andare solo dal codice gestito a quello non gestito, il flusso dei dati può essere in entrambe le direzioni, come parametri di input o di output. Le chiamate al metodo di interoperabilità COM possono scorrere in entrambe le direzioni.  
+ Il marshalling di interoperabilità viene usato sia da platform invoke che dall'interoperabilità COM per spostare con precisione gli argomenti dei metodi tra chiamante e chiamato e viceversa, se necessario. Come mostrato nella figura seguente, una chiamata al metodo di platform invoke viene effettuata dal codice gestito al codice non gestito e mai viceversa, ad eccezione del caso in cui sono coinvolte [funzioni di callback](callback-functions.md). Benché il flusso delle chiamate platform invoke possa andare solo dal codice gestito a quello non gestito, il flusso dei dati può essere in entrambe le direzioni, come parametri di input o di output. Le chiamate al metodo di interoperabilità COM possono scorrere in entrambe le direzioni.  
   
- ![Platform invoke](../../../docs/framework/interop/media/interopmarshaling.png "interopmarshaling")  
+ ![Platform invoke](./media/interopmarshaling.png "interopmarshaling")  
 Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM  
   
- Al livello inferiore, lo stesso servizio di marshalling di interoperabilità viene usato da entrambi i meccanismi. Alcuni tipi di dati sono tuttavia supportati esclusivamente dall'interoperabilità COM o da platform invoke. Per informazioni dettagliate, vedere [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md).  
+ Al livello inferiore, lo stesso servizio di marshalling di interoperabilità viene usato da entrambi i meccanismi. Alcuni tipi di dati sono tuttavia supportati esclusivamente dall'interoperabilità COM o da platform invoke. Per informazioni dettagliate, vedere [Comportamento di marshalling predefinito](default-marshaling-behavior.md).  
   
  [Torna all'inizio](#top)  
   
@@ -67,7 +65,7 @@ Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM
  In COM è anche disponibile un gestore che esegue il marshalling dei dati tra apartment COM o diversi processi COM. Quando le chiamate tra codice gestito e non gestito sono effettuate all'interno dello stesso apartment COM, il gestore di marshalling di interoperabilità è il solo a essere coinvolto. Quando si effettuano chiamate tra codice gestito e non gestito in un diverso apartment COM o processo, sono coinvolti sia il gestore di marshalling COM che quello di interoperabilità.  
   
 ### <a name="com-clients-and-managed-servers"></a>Server gestiti e client COM  
- Un server gestito esportato con una libreria dei tipi registrata da [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) include una voce `ThreadingModel` del Registro di sistema impostata su `Both`. Questo valore indica che il server può essere attivato in un apartment a thread singolo (Single-Threaded Apartment, STA) o in un apartment con multithreading (Multithreaded Apartment, MTA). L'oggetto server viene creato nello stesso apartment del chiamante, come indicato nella tabella riportata di seguito.  
+ Un server gestito esportato con una libreria dei tipi registrata da [Regasm.exe (strumento di registrazione di assembly)](../tools/regasm-exe-assembly-registration-tool.md) include una voce `ThreadingModel` del Registro di sistema impostata su `Both`. Questo valore indica che il server può essere attivato in un apartment a thread singolo (Single-Threaded Apartment, STA) o in un apartment con multithreading (Multithreaded Apartment, MTA). L'oggetto server viene creato nello stesso apartment del chiamante, come indicato nella tabella riportata di seguito.  
   
 |Client COM|Server .NET|Requisiti di marshalling|  
 |----------------|-----------------|-----------------------------|  
@@ -76,7 +74,7 @@ Flusso delle chiamate con i metodi di platform invoke e di interoperabilità COM
   
  Poiché il client e il server si trovano nello stesso apartment, tutto il marshalling dei dati viene gestito automaticamente dal servizio di marshalling di interoperabilità. L'illustrazione seguente mostra il servizio di marshalling di interoperabilità tra gli heap gestiti e non gestiti all'interno dello stesso apartment di tipo COM.  
   
- ![Marshalling di interoperabilità](../../../docs/framework/interop/media/interopheap.gif "interopheap")  
+ ![Marshalling di interoperabilità](./media/interopheap.gif "interopheap")  
 Processo di marshalling nello stesso apartment  
   
  Se si intende esportare un server gestito, ricordare che il client COM determina l'apartment del server. Un server gestito chiamato da un client COM inizializzato in un MTA deve garantire la thread safety.  
@@ -93,7 +91,7 @@ Processo di marshalling nello stesso apartment
   
  Quando un client gestito e un server non gestito si trovano nello stesso apartment, tutto il marshalling dei dati viene eseguito dal servizio di marshalling di interoperabilità. Tuttavia, quando il client e il server vengono inizializzati in apartment diversi, è necessario anche il marshalling COM. L'illustrazione riportata di seguito mostra gli elementi di una chiamata su diversi apartment.  
   
- ![Marshalling COM](../../../docs/framework/interop/media/singleprocessmultapt.gif "singleprocessmultapt")  
+ ![Marshalling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 Chiamata su diversi apartment tra un client .NET e un oggetto COM  
   
  Per effettuare il marshalling su diversi apartment, procedere come indicato di seguito:  
@@ -105,7 +103,7 @@ Chiamata su diversi apartment tra un client .NET e un oggetto COM
     > [!NOTE]
     >  Dopo avere impostato il thread di un client C# su STA, occorre effettuare il marshalling su diversi apartment per le chiamate ai componenti COM MTA.  
   
- Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Threading gestito e non gestito](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Per istruzioni sulla selezione esplicita di un modello di apartment, vedere [Threading gestito e non gestito](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100)).  
   
  [Torna all'inizio](#top)  
   
@@ -119,13 +117,13 @@ Chiamata su diversi apartment tra un client .NET e un oggetto COM
   
  Nell'illustrazione seguente viene mostrato come il marshalling di interoperabilità e il marshalling COM forniscano canali di comunicazione attraverso i limiti dell'host e del processo.  
   
- ![Marshalling COM](../../../docs/framework/interop/media/interophost.gif "interophost")  
+ ![Marshalling COM](./media/interophost.gif "interophost")  
 Marshalling su diversi processi  
   
 ### <a name="preserving-identity"></a>Mantenimento dell'identità  
  In Common Language Runtime l'identità di riferimenti gestiti e non gestiti viene mantenuta. L'illustrazione riportata di seguito mostra il flusso di riferimenti non gestiti diretti (prima riga) e di riferimenti gestiti diretti (ultima riga) attraverso i limiti dell'host e del processo.  
   
- ![COM callable wrapper e runtime callable wrapper](../../../docs/framework/interop/media/interopdirectref.gif "interopdirectref")  
+ ![COM callable wrapper e runtime callable wrapper](./media/interopdirectref.gif "interopdirectref")  
 Passaggio dei riferimenti attraverso i limiti dell'host e del processo  
   
  In questa illustrazione:  
@@ -142,10 +140,10 @@ Passaggio dei riferimenti attraverso i limiti dell'host e del processo
 ### <a name="managed-remoting"></a>Servizi remoti gestiti  
  Tra i servizi di runtime vengono inoltre forniti servizi remoti gestiti, utilizzabili per stabilire un canale di comunicazione tra gli oggetti gestiti attraverso i limiti dell'host e del processo. I servizi remoti gestiti possono contenere un firewall tra i componenti di comunicazione, come mostrato nell'illustrazione riportata di seguito.  
   
- ![SOAP o TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel  
   
- È possibile incanalare tramite SOAP alcune chiamate non gestite, ad esempio quelle tra i [componenti serviti](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) e COM.  
+ Alcune chiamate non gestiti è possibile incanalare tramite SOAP, ad esempio le chiamate tra i componenti serviti e COM.  
   
  [Torna all'inizio](#top)  
   
@@ -154,15 +152,15 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|  
-|[Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|  
-|[Dati di marshalling con interoperabilità COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|  
-|[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|  
-|[Procedura: Eseguire il mapping di HRESULT ed eccezioni](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Descrive come mappare le eccezioni personalizzate agli oggetti HRESULT e illustra le relazioni di mapping tra ogni oggetto HRESULT e la classe di eccezioni corrispondente in .NET Framework.|  
-|[Interoperabilità tramite tipi generici](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
-|[Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)|Descrive i servizi di interoperabilità forniti da Common Language Runtime.|  
-|[Interoperabilità COM avanzata](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|  
-|[Considerazioni di progettazione per l'interoperabilità](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
+|[Comportamento di marshalling predefinito](default-marshaling-behavior.md)|Descrive le regole usate dal servizio di marshalling di interoperabilità per effettuare il marshalling dei dati.|  
+|[Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)|Descrive come dichiarare i parametri dei metodi e passare gli argomenti alle funzioni esportate dalle librerie non gestite.|  
+|[Dati di marshalling con interoperabilità COM](marshaling-data-with-com-interop.md)|Descrive come personalizzare i wrapper COM per modificare il comportamento di marshalling.|  
+|[Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descrive come eseguire la migrazione da DCOM a WCF.|  
+|[Procedura: Eseguire il mapping di HRESULT ed eccezioni](how-to-map-hresults-and-exceptions.md)|Descrive come mappare le eccezioni personalizzate agli oggetti HRESULT e illustra le relazioni di mapping tra ogni oggetto HRESULT e la classe di eccezioni corrispondente in .NET Framework.|  
+|[Interoperabilità tramite tipi generici](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Descrive le azioni supportate quando si usano tipi generici per l'interoperabilità COM.|  
+|[Interoperabilità con codice non gestito](index.md)|Descrive i servizi di interoperabilità forniti da Common Language Runtime.|  
+|[Interoperabilità COM avanzata](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|Contiene collegamenti per accedere ad altre informazioni sull'inclusione di componenti COM nell'applicazione .NET Framework.|  
+|[Considerazioni di progettazione per l'interoperabilità](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fornisce suggerimenti per la scrittura di componenti COM integrati.|  
   
  [Torna all'inizio](#top)  
   

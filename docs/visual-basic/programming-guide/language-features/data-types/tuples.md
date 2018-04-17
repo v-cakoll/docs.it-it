@@ -1,10 +1,10 @@
 ---
 title: Tuple in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
@@ -68,7 +68,7 @@ Per abilitare i nomi degli elementi interred tupla, è necessario definire la ve
 
 Il numero di versione può essere qualsiasi versione del compilatore Visual Basic a partire da 15.3. Anziché a livello di codice una specifica versione del compilatore, è inoltre possibile specificare "Più recente" come valore di `LangVersion` per la compilazione con la versione più recente del compilatore Visual Basic installato nel sistema.
 
-In alcuni casi, il compilatore Visual Basic non è possibile dedurre il nome dell'elemento tupla dal nome del candidato, e il campo di tupla può fare riferimento solo utilizzando il nome predefinito, ad esempio `Item1`, `Item2`e così via. tra cui:
+In alcuni casi, il compilatore Visual Basic non è possibile dedurre il nome dell'elemento tupla dal nome del candidato, e il campo di tupla può fare riferimento solo utilizzando il nome predefinito, ad esempio `Item1`, `Item2`e così via. Sono inclusi:
 
 - Il nome candidato è identico al nome di un membro di tupla, ad esempio `Item3`, `Rest`, o `ToString`.
 
@@ -78,9 +78,9 @@ Quando l'inferenza del nome di campo non riesce, non genera un errore del compil
   
 ## <a name="tuples-versus-structures"></a>Tuple e strutture
 
-Una tupla di Visual Basic è un tipo di valore che rappresenta un'istanza di uno dell'un **System.ValueTuple** tipi generici. Ad esempio, il `holiday` tupla definita nell'esempio precedente è un'istanza del <xref:System.ValueTuple%603> struttura. È progettato per essere un semplice contenitore di dati. Poiché la tupla mira a semplificare creare un oggetto con più elementi di dati, mancano alcune delle funzionalità che potrebbe avere una struttura personalizzata. tra cui:
+Una tupla di Visual Basic è un tipo di valore che rappresenta un'istanza di uno dell'un **System.ValueTuple** tipi generici. Ad esempio, il `holiday` tupla definita nell'esempio precedente è un'istanza del <xref:System.ValueTuple%603> struttura. È progettato per essere un semplice contenitore di dati. Poiché la tupla mira a semplificare creare un oggetto con più elementi di dati, mancano alcune delle funzionalità che potrebbe avere una struttura personalizzata. Sono inclusi:
 
-- Membri del cliente. È possibile definire la propria proprietà, metodi o eventi per una tupla.
+- Membri personalizzati. È possibile definire la propria proprietà, metodi o eventi per una tupla.
 
 - Convalida. È possibile convalidare i dati assegnati ai campi.
 

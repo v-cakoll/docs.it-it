@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di un provider di tipi (F#)'
+title: 'Esercitazione: Creare un Provider di tipi (F #)'
 description: 'Informazioni su come creare propri provider di tipi F # in F # 3.0 esaminando i diversi provider di tipo semplice per illustrare i concetti di base.'
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>Esercitazione: Creazione di un Provider di tipi
+# <a name="tutorial-create-a-type-provider"></a>Esercitazione: Creare un Provider di tipi
 
 Il meccanismo di provider in F # è una parte significativa del supporto per la programmazione avanzata di informazioni. In questa esercitazione viene illustrato come creare i propri provider di tipo con lo sviluppo di diversi provider di tipo semplice per illustrare i concetti di base. Per ulteriori informazioni sul meccanismo di provider di tipo in F #, vedere [provider di tipi](index.md).
 

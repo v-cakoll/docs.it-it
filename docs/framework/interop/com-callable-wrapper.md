@@ -1,12 +1,9 @@
 ---
 title: COM Callable Wrapper
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,23 +16,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 270d7e85491f0f4ada797910d4fc12c1a14be625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 Quando un client COM chiama un oggetto .NET, Common Language Runtime crea l'oggetto gestito e un COM Callable Wrapper (CCW) per l'oggetto. Incapaci di fare riferimento diretto a un oggetto .NET, i client COM usano il CCW come un proxy per l'oggetto gestito.  
   
  Il runtime crea esattamente un CCW per ciascun oggetto gestito, indipendentemente dal numero di client COM che ne richiedono i servizi. Come mostrato nella figura seguente, più client COM possono mantenere un riferimento allo stesso CCW che espone l'interfaccia INew. Il CCW mantiene a sua volta un solo riferimento all'oggetto gestito che implementa l'interfaccia ed è sottoposto alla procedura di Garbage Collection. Sia i client COM che i client .NET possono effettuare contemporaneamente richieste sullo stesso oggetto gestito.  
   
- ![COM Callable Wrapper](../../../docs/framework/interop/media/ccw.gif "CCW")  
+ ![COM Callable Wrapper](./media/ccw.gif "CCW")  
 Accesso a oggetti .NET tramite COM Callable Wrapper  
   
  I COM Callable Wrapper sono invisibili alle altre classi in esecuzione in .NET Framework. Il loro scopo principale è effettuare il marshalling delle chiamate tra il codice gestito e quello non gestito. Tuttavia, i CCW gestiscono anche l'identità e la durata degli oggetti gestiti di cui eseguono il wrapping.  
@@ -46,13 +43,14 @@ Accesso a oggetti .NET tramite COM Callable Wrapper
 ## <a name="object-lifetime"></a>Durata dell'oggetto  
  Diversamente dal client .NET di cui esegue il wrapping, il CCW è destinatario di riferimenti conteggiati in modo tradizionale (COM). Quando il conteggio dei riferimenti al CCW raggiunge lo zero, il wrapper rilascia il proprio riferimento all'oggetto gestito. Gli oggetti gestiti senza più riferimenti vengono raccolti durante la successiva procedura di Garbage Collection.  
   
-## <a name="simulating-com-interfaces"></a>Simulazione di interfacce COM  
- Il [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) (CCW) espone ai client COM tutti i tipi di dati, i valori restituiti e le interfacce pubbliche visibili a COM in modo conforme al meccanismo di interazione COM basato sulle interfacce. Per un client COM, richiamare i metodi di un oggetto .NET Framework non è diverso dal richiamare i metodi di un oggetto COM.  
+## <a name="simulating-com-interfaces"></a>Simulazione di interfacce COM
+
+CCW espone tutte pubblico, interfacce visibili a COM, i tipi di dati e valori restituiti ai client COM in modo che sia coerente con l'applicazione COM di interazione basata sull'interfaccia. Per un client COM, richiamare i metodi di un oggetto .NET Framework non è diverso dal richiamare i metodi di un oggetto COM.  
   
  Per assicurare questo approccio naturale, il CCW crea interfacce COM tradizionali quali **IUnknown** e **IDispatch**. Come mostrato nella figura seguente, il CCW mantiene un solo riferimento all'oggetto .NET di cui esegue il wrapping. Il client COM e l'oggetto .NET interagiscono tramite il proxy e lo stub del CCW.  
   
- ![Interfacce COM](../../../docs/framework/interop/media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-Interfacce COM e COM Callable Wrapper  
+ ![Interfacce COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
+Interfacce COM e COM callable wrapper  
   
  Oltre a esporre le interfacce che sono esplicitamente implementate da una classe dell'ambiente gestito, .NET Framework fornisce per l'oggetto un'implementazione delle interfacce COM elencate nella tabella che segue. Una classe .NET può eseguire l'override del comportamento predefinito fornendo la propria implementazione di queste interfacce. Il runtime, tuttavia, fornisce sempre l'implementazione delle interfacce **IUnknown** e **IDispatch**.  
   
@@ -69,15 +67,15 @@ Interfacce COM e COM Callable Wrapper
   
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
-|L'interfaccia della classe (_*nomeclasse*)|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
+|I (\_*classname*) interfaccia di classe|Interfaccia, esposta dal runtime e non definita esplicitamente, che espone tutte le interfacce, i metodi, le proprietà e i campi pubblici esplicitamente esposti su un oggetto gestito.|  
 |**IConnectionPoint** e **IconnectionPointContainer**|Interfaccia per oggetti che originano eventi basati su delegati (un'interfaccia per la registrazione di sottoscrittori di eventi).|  
 |**IdispatchEx**|Interfaccia fornita dal runtime se la classe implementa **IExpando**. L'interfaccia **IDispatchEx** è un'estensione dell'interfaccia **IDispatch** che, diversamente da **IDispatch**, consente l'enumerazione, l'aggiunta, l'eliminazione e la chiamata dei membri con distinzione tra maiuscole e minuscole.|  
 |**IEnumVARIANT**|Interfaccia per classi Collection che enumera gli oggetti della raccolta se la classe implementa **IEnumerable**.|  
   
 ## <a name="introducing-the-class-interface"></a>Introduzione all'interfaccia della classe  
- L'interfaccia della classe, che non è definita esplicitamente nel codice gestito, è un'interfaccia che espone tutte le proprietà, i campi, gli eventi e i metodi pubblici esplicitamente esposti dall'oggetto .NET. Tale interfaccia può essere duale o solo dispatch. L'interfaccia della classe riceve il nome dalla classe .NET stessa, preceduto da un carattere di sottolineatura. Per la classe Mammal, ad esempio l'interfaccia della classe sarà _Mammal.  
+ L'interfaccia della classe, che non è definita esplicitamente nel codice gestito, è un'interfaccia che espone tutte le proprietà, i campi, gli eventi e i metodi pubblici esplicitamente esposti dall'oggetto .NET. Tale interfaccia può essere duale o solo dispatch. L'interfaccia della classe riceve il nome dalla classe .NET stessa, preceduto da un carattere di sottolineatura. Per la classe Mammal, ad esempio, l'interfaccia della classe è \_Mammal.  
   
- Per le classi derivate, l'interfaccia della classe espone anche tutti i metodi, le proprietà e i campi pubblici della classe base. La classe derivata espone anche un'interfaccia della classe per ciascuna classe base. Se ad esempio la classe Mammal estende la classe MammalSuperclass, che a sua volta estende la classe System.Object, l'oggetto .NET esporrà ai client COM tre interfacce della classe denominate _Mammal, _MammalSuperclass e _Object.  
+ Per le classi derivate, l'interfaccia della classe espone anche tutti i metodi, le proprietà e i campi pubblici della classe base. La classe derivata espone anche un'interfaccia della classe per ciascuna classe base. Ad esempio, se la classe Mammal estende la classe MammalSuperclass, che a sua volta estende System. Object, l'oggetto espone oggetti .NET ai client COM tre classe interfacce denominate \_Mammal, \_MammalSuperclass, e \_oggetto.  
   
  Si consideri ad esempio la classe .NET seguente:  
   
@@ -104,7 +102,7 @@ public class Mammal
 }  
 ```  
   
- Il client COM può ottenere un puntatore a un'interfaccia della classe denominata `_Mammal`, descritta nella libreria dei tipi generata dall'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Se la classe `Mammal` implementa una o più interfacce, queste appariranno sotto la coclasse.  
+ Il client COM può ottenere un puntatore a un'interfaccia della classe denominata `_Mammal`, descritta nella libreria dei tipi generata dall'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md). Se la classe `Mammal` implementa una o più interfacce, queste appariranno sotto la coclasse.  
   
 ```  
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]  
@@ -156,7 +154,7 @@ public class LoanApp : IExplicit {
   
  Il valore **ClassInterfaceType.None** impedisce la generazione dell'interfaccia della classe quando i metadati della classe vengono esportati in una libreria dei tipi. Nel precedente esempio, i client COM possono accedere alla classe `LoanApp` solo tramite l'interfaccia `IExplicit`.  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitare la memorizzazione nella cache degli identificatori dispatch (DispId).  
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>Evitare la memorizzazione nella cache degli identificatori dispatch (DISPID)
  L'uso dell'interfaccia della classe è ammissibile per i client basati su script, i client Microsoft Visual Basic 6.0 o qualsiasi client ad associazione tardiva che non inserisce nella cache i DispId dei membri di interfaccia. I DispId identificano i membri di interfaccia per abilitare l'associazione tardiva.  
   
  Per l'interfaccia della classe, la generazione dei DispId è basata sulla posizione dei membri nell'interfaccia. Se si cambia l'ordine dei membri e si esporta la classe in una libreria dei tipi, si altereranno i DispId generati nell'interfaccia della classe.  
@@ -187,9 +185,7 @@ public class LoanApp : IAnother {
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Wrapper COM](../../../docs/framework/interop/com-wrappers.md)  
- [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Simulazione di interfacce COM](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
- [Qualificazione di tipi .NET per l'interoperabilità](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)
+ [Wrapper COM](com-wrappers.md)  
+ [Esposizione di componenti .NET Framework a COM](exposing-dotnet-components-to-com.md)  
+ [Qualificazione di tipi .NET per l'interoperabilità](qualifying-net-types-for-interoperation.md)  
+ [Runtime Callable Wrapper](runtime-callable-wrapper.md)

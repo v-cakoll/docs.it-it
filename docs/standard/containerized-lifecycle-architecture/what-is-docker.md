@@ -1,18 +1,18 @@
 ---
-title: "Che cos'è Docker?"
+title: Che cos'è Docker?
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
-keywords: Docker, microservizi, ASP.NET, contenitore
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-docker"></a>Che cos'è Docker?
 
@@ -30,11 +30,11 @@ Per ospitare i contenitori in ambienti di sviluppo e gli strumenti di sviluppo a
 
 Per eseguire [contenitori di Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), sono disponibili due tipi di runtime:
 
--   **Contenitore di Windows Server** questo runtime fornisce isolamento dell'applicazione attraverso una tecnologia di isolamento dei processi e dello spazio dei nomi. Un contenitore di Windows Server condivide un kernel con l'host contenitore e tutti i contenitori in esecuzione nell'host.
+-   **Contenitore di Windows Server** questo runtime fornisce isolamento dell'applicazione attraverso una tecnologia di isolamento dei processi e dello spazio dei nomi. Un contenitore Windows Server condivide un kernel con l'host del contenitore e con tutti i contenitori in esecuzione nell'host.
 
--   **Contenitore di Hyper-V** espande l'isolamento fornito dai contenitori di Windows Server eseguendo ciascun contenitore in una macchina virtuale altamente ottimizzata. In questa configurazione il kernel dell'host contenitore non viene condiviso con i contenitori di Hyper-V, che fornisce un migliore isolamento.
+-   **Contenitore di Hyper-V** espande l'isolamento fornito dai contenitori di Windows Server eseguendo ciascun contenitore in una macchina virtuale altamente ottimizzata. In questa configurazione, il kernel dell'host dei contenitori non è condiviso con i contenitori Hyper-V per fornire un isolamento migliore.
 
-Le immagini per questi contenitori vengono create nello stesso modo e funzionano allo stesso. La differenza consiste nella creazione del contenitore dall'immagine, l'esecuzione di un contenitore di Hyper-V richiede un parametro aggiuntivo. Per informazioni dettagliate, vedere [contenitori di Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
+Le immagini per questi contenitori vengono create nello stesso modo e funzionano allo stesso. La differenza consiste nella creazione del contenitore dall'immagine, l'esecuzione di un contenitore di Hyper-V richiede un parametro aggiuntivo. Per informazioni dettagliate, vedere [Contenitori Hyper-V](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Confronto tra contenitori di Docker con le macchine virtuali
 
@@ -44,7 +44,7 @@ Poiché i contenitori richiedono molto meno risorse (ad esempio, non richiedono 
 
 Come effetto collaterale dell'esecuzione di sullo stesso kernel, meno isolamento rispetto a macchine virtuali.
 
-L'obiettivo principale di un'immagine è che rende l'ambiente (dipendenze) uguali tra le diverse distribuzioni. Ciò significa che è possibile eseguire il debug nel computer e quindi distribuirla in un altro computer con lo stesso ambiente garantito.
+L'obiettivo principale di un'immagine è rendere l'ambiente (dipendenze) uguale su distribuzioni diverse. Questo significa che è possibile eseguirne il debug nel computer corrente e quindi distribuirla in un altro computer con lo stesso ambiente garantito.
 
 Un'immagine contenitore è un modo per un'app o un servizio del pacchetto e distribuirlo in modo affidabile e riproducibile. In questo senso, Docker non solo una tecnologia, è anche una filosofia e un processo.
 
@@ -56,4 +56,4 @@ Figura 1-3: confronto di macchine virtuali tradizionali ai contenitori di Docker
 
 
 >[!div class="step-by-step"]
-[Precedente] [Avanti] (docker terminology.md) (index.md)
+[Indietro] (index.md) [Avanti] (docker-terminology.md)

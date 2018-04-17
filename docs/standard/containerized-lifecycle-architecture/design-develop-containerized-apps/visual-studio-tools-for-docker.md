@@ -1,18 +1,18 @@
 ---
 title: Con Visual Studio Tools per Docker (Visual Studio in Windows)
 description: Ciclo di vita delle applicazioni Docker in contenitori con piattaforma e strumenti Microsoft
-keywords: Docker, microservizi, ASP.NET, contenitore
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Con Visual Studio Tools per Docker (Visual Studio in Windows)
 
@@ -26,7 +26,7 @@ Con le versioni più recenti di Docker per Windows, è più semplice che mai, pe
 
 Se si utilizza Visual Studio 2015, è necessario disporre di Update 3 o versione successiva con Visual Studio Tools per Docker.
 
-**Altre informazioni:** per istruzioni sull'installazione di Visual Studio, visitare [https://www.visualstudio.com/ \ edizioni dei prodotti/Visual Studio-2015-prodotto](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Altre informazioni:** per istruzioni sull'installazione di Visual Studio, passare alla [ https://www.visualstudio.com/\ edizioni dei prodotti/vs-2015-prodotto](https://www.visualstudio.com/products/vs-2015-product-editions).
 
 Per visualizzare ulteriori informazioni sull'installazione di Visual Studio Tools per Docker, passare a <http://aka.ms/vstoolsfordocker> e <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
@@ -70,7 +70,7 @@ Figura 4-28: file compose.yml di docker è ora visualizzato in Esplora soluzioni
 
 Compilare, eseguire il debug, aggiornare e aggiornare le App in un contenitore Docker locale: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-Distribuire un contenitore ASP.NET in un host Docker remoto: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+Distribuire un contenitore di ASP.NET in un host Docker remoto: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 
 >[!div class="step-by-step"]

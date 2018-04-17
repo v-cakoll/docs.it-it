@@ -1,13 +1,9 @@
 ---
 title: Marshalling predefinito per gli oggetti
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
 I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Marshalling di varianti ByRef  
  Anche se le varianti in sé possono essere passate in base al valore o al riferimento, è anche possibile usare il flag **VT_BYREF** con qualsiasi variante per indicare che i contenuti della variante verranno passati in base al riferimento invece che al valore. La differenza tra il marshalling delle varianti in base al riferimento e il marshalling di una variante con il flag **VT_BYREF** impostato può risultare poco chiara. La figura seguente illustra le differenze.  
   
- ![Variante passata allo stack](../../../docs/framework/interop/media/interopvariant.gif "Variante di interoperabilità")  
+ ![Variante passata allo stack](./media/interopvariant.gif "Variante di interoperabilità")  
 Varianti passate per valore e per riferimento  
   
  **Comportamento predefinito per il marshalling di oggetti e varianti per valore**  
@@ -342,7 +337,7 @@ Varianti passate per valore e per riferimento
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Attributi direzionali](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)
+ [Comportamento di marshalling predefinito](default-marshaling-behavior.md)  
+ [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)  
+ [Attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Copia e blocco](copying-and-pinning.md)

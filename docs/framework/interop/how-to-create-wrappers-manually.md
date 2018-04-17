@@ -1,12 +1,9 @@
 ---
 title: 'Procedura: creare wrapper manualmente'
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - wrappers, creating manually
@@ -16,11 +13,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ac7afdd85037d50bdda9fae0a33896dc441bce5
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 0f610a3e1ed6ba554818945d651c00508e0c87cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>Procedura: creare wrapper manualmente
 Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, è consigliabile iniziare con una libreria dei tipi o un file IDL esistente. Se non si ha il file IDL o non è possibile generare un file di libreria dei tipi, simulare i tipi COM mediante la creazione di dichiarazioni gestite e l'esportazione dell'assembly risultante in una libreria dei tipi.  
@@ -29,7 +26,7 @@ Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, �
   
 1.  Dichiarare i tipi in un linguaggio conformi a Common Language Specification (CLS) e compilare il file.  
   
-2.  Esportare l'assembly contenente i tipi con l'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+2.  Esportare l'assembly contenente i tipi con l'[utilità di esportazione della libreria dei tipi (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md).  
   
 3.  Usare la libreria dei tipi COM esportata come base per la dichiarazione dei tipi gestiti orientati a COM.  
   
@@ -37,7 +34,7 @@ Se si decide di dichiarare manualmente i tipi COM nel codice sorgente gestito, �
   
 1.  Se si dispone di un file IDL o di un file di libreria dei tipi, decidere quali classi e interfacce includere nell'RCW personalizzato. È possibile escludere i tipi che non si intende usare direttamente o indirettamente nell'applicazione.  
   
-2.  Creare un file di origine in un linguaggio conforme a Common Language Specification e dichiarare i tipi. Per una descrizione completa del processo di conversione dell'importazione, vedere [Riepilogo della conversione della libreria dei tipi in assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958). In pratica, quando si crea un RCW personalizzato si esegue manualmente la conversione dei tipi fornita dall'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Nell'esempio riportato nella sezione seguente vengono illustrati i tipi di un file della libreria dei tipi o IDL e i tipi corrispondenti nel codice C#.  
+2.  Creare un file di origine in un linguaggio conforme a Common Language Specification e dichiarare i tipi. Per una descrizione completa del processo di conversione dell'importazione, vedere [Riepilogo della conversione della libreria dei tipi in assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)). In pratica, quando si crea un RCW personalizzato si esegue manualmente la conversione dei tipi fornita dall'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md). Nell'esempio riportato nella sezione seguente vengono illustrati i tipi di un file della libreria dei tipi o IDL e i tipi corrispondenti nel codice C#.  
   
 3.  Dopo aver completato le dichiarazioni, compilare il file come si compila qualunque altro codice sorgente gestito.  
   
@@ -109,9 +106,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzazione dei Runtime Callable Wrapper](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [Tipi di dati COM](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
- [Procedura: modificare assembly di interoperabilità](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [Riepilogo della conversione da libreria dei tipi ad assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+ [Personalizzazione dei Runtime Callable Wrapper](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
+ [Tipi di dati COM](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
+ [Procedura: modificare assembly di interoperabilità](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
+ [Riepilogo della conversione da libreria dei tipi ad assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../tools/tlbexp-exe-type-library-exporter.md)

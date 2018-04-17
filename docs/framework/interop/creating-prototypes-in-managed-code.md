@@ -1,12 +1,9 @@
 ---
 title: Creazione di prototipi nel codice gestito
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
-Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
   
  Per accedere a una funzione DLL non gestita dal codice gestito, è necessario conoscere il nome della funzione e il nome della DLL che la esporta. Con queste informazioni, è possibile iniziare a scrivere la definizione gestita per una funzione non gestita implementata in una DLL. È anche possibile modificare il modo in cui platform invoke crea la funzione ed effettua il marshalling dei dati da e verso la funzione.  
   
@@ -44,7 +42,7 @@ Questo argomento descrive come accedere alle funzioni non gestite e introduce di
 >  Le funzioni API Win32 che allocano una stringa consentono di liberare la stringa usando un metodo come `LocalFree`. Platform invoke gestisce tali parametri in modo diverso. Per le chiamate di platform invoke, il parametro deve essere di tipo `IntPtr` anziché di tipo `String`. Usare i metodi forniti dalla classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> per convertire manualmente il tipo in una stringa e liberarlo manualmente.  
   
 ## <a name="declaration-basics"></a>Nozioni di base sulle dichiarazioni  
- Le definizioni gestite di funzioni non gestite sono dipendenti dal linguaggio, come è possibile vedere negli esempi seguenti. Per esempi di codice più completi, vedere [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md).  
+ Le definizioni gestite di funzioni non gestite sono dipendenti dal linguaggio, come è possibile vedere negli esempi seguenti. Per esempi di codice più completi, vedere [Esempi di platform invoke](platform-invoke-examples.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -231,11 +229,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Specifica di un punto di ingresso](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Specifica di un set di caratteri](../../../docs/framework/interop/specifying-a-character-set.md)  
- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Considerazioni sulla sicurezza di Platform Invoke](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [Identificazione delle funzioni nelle DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Creazione di una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+ [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)  
+ [Specifica di un punto di ingresso](specifying-an-entry-point.md)  
+ [Specifica di un set di caratteri](specifying-a-character-set.md)  
+ [Esempi di platform invoke](platform-invoke-examples.md)  
+ [Considerazioni sulla sicurezza di Platform Invoke](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)  
+ [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)  
+ [Chiamata a una funzione di DLL](calling-a-dll-function.md)

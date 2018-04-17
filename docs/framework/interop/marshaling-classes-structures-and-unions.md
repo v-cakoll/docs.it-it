@@ -1,12 +1,9 @@
 ---
 title: Marshalling di classi, strutture e unioni
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc7141bb8fce5d5e1c2420a48d6081fa89aa0d53
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, proprietà ed eventi nonché metodi statici e non statici. Una differenza fondamentale è data dal fatto che le strutture sono tipi di valore e le classi sono tipi di riferimento.  
@@ -77,7 +74,7 @@ In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, 
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture, ovvero: **MYPERSON**, **MYPERSON2**, **MYPERSON3** e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
+ [PinvokeLib](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture, ovvero: **MYPERSON**, **MYPERSON2**, **MYPERSON3** e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
   
 ```  
 typedef struct _MYPERSON  
@@ -107,7 +104,7 @@ typedef struct _MYARRAYSTRUCT
   
  Le strutture gestite `MyPerson`,`MyPerson2`, `MyPerson3` e `MyArrayStruct` hanno le caratteristiche seguenti:  
   
--   `MyPerson` contiene solo membri stringa. Le stringhe vengono impostate sul formato ANSI dal campo [CharSet](../../../docs/framework/interop/specifying-a-character-set.md), quando viene passato alla funzione non gestita.  
+-   `MyPerson` contiene solo membri stringa. Le stringhe vengono impostate sul formato ANSI dal campo [CharSet](specifying-a-character-set.md), quando viene passato alla funzione non gestita.  
   
 -   `MyPerson2` contiene un tipo **IntPtr** alla struttura `MyPerson`. Il tipo **IntPtr** sostituisce il puntatore originale alla struttura non gestita poiché nelle applicazioni .NET Framework non vengono usati i puntatori a meno che il codice non sia contrassegnato come **unsafe**.  
   
@@ -138,7 +135,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile (esempio)  
- In questo esempio viene illustrato come passare una struttura che contiene una seconda struttura incorporata a una funzione non gestita. Viene inoltre illustrato come usare l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per dichiarare una matrice a lunghezza fissa all'interno della struttura. Nell'esempio gli elementi della struttura incorporata vengono aggiunti alla struttura padre. Per un esempio di struttura incorporata non appiattita, vedere [Esempio di strutture](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
+ In questo esempio viene illustrato come passare una struttura che contiene una seconda struttura incorporata a una funzione non gestita. Viene inoltre illustrato come usare l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per dichiarare una matrice a lunghezza fissa all'interno della struttura. Nell'esempio gli elementi della struttura incorporata vengono aggiunti alla struttura padre. Per un esempio di struttura incorporata non appiattita, vedere [Esempio di strutture](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100)).  
   
  Nell'esempio FindFile viene usata la seguente funzione non gestita, illustrata con la relativa dichiarazione di funzione originale:  
   
@@ -191,7 +188,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) è una libreria non gestita personalizzata contenente un'implementazione per la funzione elencata in precedenza e due unioni, **MYUNION** e **MYUNION2**. Le unioni contengono i seguenti elementi:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) è una libreria non gestita personalizzata contenente un'implementazione per la funzione elencata in precedenza e due unioni, **MYUNION** e **MYUNION2**. Le unioni contengono i seguenti elementi:  
   
 ```  
 union MYUNION  
@@ -251,7 +248,7 @@ typedef struct _SYSTEMTIME {
   
  In questo esempio la classe `SystemTime` contiene gli elementi della struttura originale rappresentati come membri di classe. L'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> è impostato in modo da garantire che i membri vengano inseriti in memoria in sequenza, nell'ordine in cui appaiono.  
   
- La classe `LibWrap` contiene un prototipo gestito del metodo `GetSystemTime`, che passa la classe `SystemTime` come parametro in/out per impostazione predefinita. Il parametro deve essere dichiarato con gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> perché le classi, che sono tipi di riferimento, per impostazione predefinita vengono passate come parametri in. Affinché il chiamante riceva i risultati, è necessario applicare questi [attributi direzionali](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2) in modo esplicito. Con la classe `App` si crea una nuova istanza della classe `SystemTime` e si accede ai relativi campi di dati.  
+ La classe `LibWrap` contiene un prototipo gestito del metodo `GetSystemTime`, che passa la classe `SystemTime` come parametro in/out per impostazione predefinita. Il parametro deve essere dichiarato con gli attributi <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> perché le classi, che sono tipi di riferimento, per impostazione predefinita vengono passate come parametri in. Affinché il chiamante riceva i risultati, è necessario applicare questi [attributi direzionali](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) in modo esplicito. Con la classe `App` si crea una nuova istanza della classe `SystemTime` e si accede ai relativi campi di dati.  
   
 ### <a name="code-samples"></a>Esempi di codice  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +260,7 @@ typedef struct _SYSTEMTIME {
   
  L'esempio dimostra come chiamare una funzione nativa usando la classe <xref:System.Runtime.InteropServices.Marshal> e usando codice di tipo unsafe.  
   
- Questo esempio usa funzioni wrapper e operazioni platform invoke definite in [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614), disponibili anche nei file di origine. Vengono usate la funzione `TestOutArrayOfStructs` e la struttura `MYSTRSTRUCT2`. La struttura contiene gli elementi seguenti:  
+ Questo esempio usa funzioni wrapper e operazioni platform invoke definite in [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)), disponibili anche nei file di origine. Vengono usate la funzione `TestOutArrayOfStructs` e la struttura `MYSTRSTRUCT2`. La struttura contiene gli elementi seguenti:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -298,7 +295,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [Tipi di dati di Platform Invoke](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Marshalling di stringhe](../../../docs/framework/interop/marshaling-strings.md)  
- [Marshalling di matrici di tipi](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+ [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md)  
+ [Tipi di dati di Platform Invoke](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [Marshalling di stringhe](marshaling-strings.md)  
+ [Marshalling di matrici di tipi](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
