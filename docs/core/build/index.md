@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>Compilare .NET Core dal codice sorgente
 
@@ -24,7 +24,7 @@ Questo articolo offre materiale sussidiario agli sviluppatori che vogliono compi
 
 ## <a name="build-the-clr-from-source"></a>Compilare Common Language Runtime (CLR) dal codice sorgente
 
-Il codice sorgente per .NET CoreCLR è reperibile [nel repository `dotnet/coreclr` su GitHub](https://github.com/dotnet/coreclr/).
+Il codice sorgente per .NET CoreCLR è reperibile nel repository [dotnet/coreclr](https://github.com/dotnet/coreclr/) su GitHub.
 
 La compilazione attualmente dipende dai prerequisiti seguenti:
 * [Git](https://git-scm.com/)
@@ -32,7 +32,7 @@ La compilazione attualmente dipende dai prerequisiti seguenti:
 * [Python](https://www.python.org/)
 * un compilatore C++.
 
-Dopo aver installato questi prerequisiti è possibile compilare CLR effettuando una chiamata allo script di compilazione (`build.cmd` in Windows o `build.sh` in Linux e macOS) alla base del [repositori CoreCLR](https://github.com/dotnet/coreclr/).
+Dopo aver installato questi prerequisiti è possibile compilare CLR richiamando lo script di compilazione (`build.cmd` in Windows o `build.sh` in Linux e macOS) alla base del repository [dotnet/coreclr](https://github.com/dotnet/coreclr/).
 
 L'installazione dei componenti varia in base al sistema operativo. Vedere le istruzioni di compilazione per il sistema operativo specifico:
 
@@ -82,12 +82,12 @@ Esistono due tecniche di base per l'uso del nuovo runtime:
  2. **Usare corerun.exe per eseguire un'applicazione con le DLL non in pacchetto**.
     Questo archivio definisce anche un host semplice denominato corerun.exe che NON accetta dipendenze in NuGet.
     Si dovrà indicare all'host dove si ottengono le DLL necessarie in uso e raccogliere le DLL manualmente.
-    Questa tecnica viene usata da tutti i test nel [repository CoreCLR](https://github.com/dotnet/coreclr) ed è utile in un ciclo rapido di "modifica-compilazione-debug" locale, ad esempio per gli unit test preliminari.
+    Questa tecnica viene usata da tutti i test nel repository [dotnet/coreclr](https://github.com/dotnet/coreclr) ed è utile in un ciclo rapido di "modifica-compilazione-debug" locale, ad esempio per gli unit test preliminari.
     Vedere l'argomento relativo all'[esecuzione delle app .NET Core con CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) per informazioni dettagliate sull'uso di questa tecnica.
 
 ## <a name="build-the-cli-from-source"></a>Compilare l'interfaccia della riga di comando dal codice sorgente
 
-Il codice sorgente per l'interfaccia della riga di comando di .NET Core è reperibile [nell'archivio `dotnet/cli` su GitHub](https://github.com/dotnet/cli/).
+Il codice sorgente per l'interfaccia della riga di comando di .NET Core è reperibile nel repository [dotnet/cli](https://github.com/dotnet/cli/) su GitHub.
 
 Per compilare l'interfaccia della riga di comando di .NET Core, i seguenti componenti devono essere installati nel computer.
 
