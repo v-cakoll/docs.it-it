@@ -1,12 +1,13 @@
 ---
 title: Protezione di WCF Data Services
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,11 +16,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -78,7 +80,7 @@ context.Credentials = _
  Gli intercettori consentono di intercettare le richieste delle risorse del servizio dati prima che vengano elaborate dal servizio dati. Per ulteriori informazioni, vedere [intercettori](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md). Gli intercettori consentono di concedere l'autorizzazione in base all'utente autenticato che effettua la richiesta. [!INCLUDE[crexample](../../../../includes/crexample-md.md)]come limitare l'accesso alle risorse del servizio dati in base a un'identità utente autenticato, vedere [procedura: intercettare messaggi del servizio dati](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>Restrizione dell'accesso all'archivio dati persistente e alle risorse locali  
- È opportuno concedere agli account usati per accedere all'archivio persistente solo i diritti in un database o nel file system sufficienti a supportare i requisiti del servizio dati. Quando viene usata l'autenticazione anonima, questo è l'account usato per eseguire l'applicazione hosting. Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md). Quando viene usata la rappresentazione, agli utenti autenticati deve essere concesso l'accesso alle risorse, generalmente come parte di un gruppo di Windows.  
+ È opportuno concedere agli account usati per accedere all'archivio persistente solo i diritti in un database o nel file system sufficienti a supportare i requisiti del servizio dati. Quando viene usata l'autenticazione anonima, questo è l'account usato per eseguire l'applicazione hosting. Per altre informazioni, vedere [Procedura: sviluppare un servizio WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md). Quando viene usata la rappresentazione, agli utenti autenticati deve essere concesso l'accesso alle risorse, generalmente come parte di un gruppo di Windows.  
   
 ## <a name="other-security-considerations"></a>Altre considerazioni sulla sicurezza  
   
