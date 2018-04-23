@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ace19ea8b8a1986466cdc851a1e8bb1c55f9709f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-quickstart-collections"></a>Guida introduttiva per C#: raccolte
 
@@ -215,7 +215,7 @@ Salvare il file e digitare `dotnet run` per visualizzare i risultati.
 
 ## <a name="complete-challenge"></a>Completare l'esercizio
 
-È possibile visualizzare una soluzione di esempio [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23)
+È possibile visualizzare una soluzione di esempio [esaminando il codice di esempio completato su GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)
 
 A ogni iterazione del ciclo, gli ultimi due interi nell'elenco vengono sommati e il valore risultante viene aggiunto all'elenco. Il ciclo viene ripetuto fino ad aggiungere 20 elementi all'elenco.
 

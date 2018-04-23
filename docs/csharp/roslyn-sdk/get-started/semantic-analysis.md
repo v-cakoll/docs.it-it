@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introduzione all'analisi semantica
 
@@ -36,7 +36,7 @@ Come <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 
 In questa esercitazione, viene esaminato ancora una volta il programma "Hello World". In questo caso si esegue una query sui simboli nel programma per scoprire quali tipi rappresentano questi simboli. Verrà eseguita una query per recuperare i tipi in uno spazio dei nomi e si imparerà a trovare i metodi disponibili per un tipo.
 
-È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
+È possibile visualizzare il codice completato per l'esempio nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > I tipi di albero della sintassi usano l'ereditarietà per descrivere i diversi elementi della sintassi validi in posizioni diverse nel programma. L'uso di queste API spesso significa eseguire il cast di proprietà o membri di raccolte in tipi derivati specifici. Negli esempi seguenti, l'assegnazione e i cast sono istruzioni separate, con variabili tipizzate in modo esplicito. È possibile leggere il codice per visualizzare i tipi restituiti dell'API e il tipo di runtime degli oggetti restituiti. In pratica, è più comune usare variabili tipizzate in modo implicito e basarsi sui nomi delle API per descrivere il tipo di oggetti in corso di analisi.

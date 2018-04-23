@@ -3,17 +3,17 @@ title: Comando dotnet new - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet new consente di creare nuovi progetti .NET Core in base al modello specificato.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -42,7 +42,7 @@ dotnet new [-h|--help]
 
 ## <a name="description"></a>Descrizione
 
-Il comando `dotnet new` rappresenta un modo pratico per inizializzare un progetto .NET Core valido. 
+Il comando `dotnet new` rappresenta un modo pratico per inizializzare un progetto .NET Core valido.
 
 Questo comando chiama il [motore del modello](https://github.com/dotnet/templating) per creare gli elementi su disco in base alle opzioni e al modello specificati.
 
@@ -122,6 +122,9 @@ Elenca i modelli contenenti il nome specificato. Se richiamato per il comando `d
 
 Linguaggio del modello da creare. Il linguaggio accettato varia a seconda del modello. Vedere i valori predefiniti nella sezione [Argomenti](#arguments). Non è valido per alcuni modelli.
 
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+
 `-n|--name <OUTPUT_NAME>`
 
 Nome dell'output creato. Se non viene specificato alcun nome, viene usato il nome della directory corrente.
@@ -159,6 +162,9 @@ Elenca i modelli contenenti il nome specificato. Se richiamato per il comando `d
 `-lang|--language {C#|F#}`
 
 Linguaggio del modello da creare. Il linguaggio accettato varia a seconda del modello. Vedere i valori predefiniti nella sezione [Argomenti](#arguments). Non è valido per alcuni modelli.
+
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -304,7 +310,7 @@ Per ogni modello di progetto potrebbero essere disponibili opzioni aggiuntive. I
 
 Creare un progetto di applicazione console F# nella directory corrente:
 
-`dotnet new console -lang f#`
+`dotnet new console -lang F#`
 
 Creare un progetto di libreria di classi .NET Standard nella directory specificata, disponibile solo con .NET Core 2.0 SDK o versioni successive:
 

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -64,7 +64,7 @@ L'esempio seguente illustra l'uso del metodo <xref:System.DateTime.Parse%2A?disp
 > Tutti gli esempi C# in questo articolo vengono eseguiti nel browser. Premere il pulsante **Run** (Esegui) per visualizzare l'output. È anche possibile modificarli per sperimentare.
 
 > [!NOTE]
-> Questi esempi sono disponibili nel repository docs di GitHub sia per [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) che per [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions). In alternativa, è possibile scaricare il progetto come file ZIP per [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) o [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
+> Questi esempi sono disponibili nel repository docs di GitHub sia per [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) che per [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). In alternativa, è possibile scaricare il progetto come file ZIP per [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) o [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

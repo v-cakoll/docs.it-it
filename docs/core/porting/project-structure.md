@@ -1,7 +1,7 @@
 ---
 title: Organizzare il progetto per il supporto di .NET Framework e .NET Core
 description: Indicazioni per i responsabili di progetti che desiderano compilare la propria soluzione affiancando .NET Framework e .NET Core.
-keywords: ".NET, .NET Core, .NET Framework, layout di progetto, più framework"
+keywords: .NET, .NET Core, .NET Framework, layout di progetto, più framework
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.workload: dotnetcore
-ms.openlocfilehash: 08fe18233c13410f0fb970020bce090d3345ca84
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2392c6e477138e21dc98055fe7ecca84789f07af
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organizzare il progetto per il supporto di .NET Framework e .NET Core
 
@@ -76,14 +77,14 @@ Per altre indicazioni relative alla migrazione a .NET Core, vedere la [documenta
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Progetto esistente"
-[example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
+[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
 
 [example-csproj]: media/project-structure/project.csproj.png "Creare un file csproj con più framework come destinazione"
-[example-csproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
+[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
+[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 
 [example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Progetto .NET Core con una libreria di classi portabile esistente in un'altra cartella"
-[example-csproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj-keep-existing/
+[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
 
 [option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
 [option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project

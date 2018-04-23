@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Introduzione alle classi
 
@@ -215,6 +215,6 @@ Digitare `dotnet run` per visualizzare i risultati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se necessario, è possibile visualizzare il codice sorgente per questa guida introduttiva nel [repository GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
+Se necessario, è possibile visualizzare il codice sorgente per questa guida introduttiva nel [repository GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
 
 Sono state completate tutte le guide introduttive. Per continuare con la formazione, è possibile provare queste [esercitazioni](../tutorials/index.md).

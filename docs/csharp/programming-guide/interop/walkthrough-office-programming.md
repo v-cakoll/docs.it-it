@@ -13,19 +13,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
 Visual Studio offre funzionalità di C# e Visual Basic che migliorano la programmazione di Microsoft Office. Tra le utili funzionalità di C# sono disponibili gli argomenti denominati e facoltativi e i valori restituiti di tipo `dynamic`. Nella programmazione COM è possibile omettere la parola chiave `ref` e accedere alle proprietà indicizzate. Le funzionalità di Visual Basic includono le proprietà implementate automaticamente, le istruzioni nelle espressioni lambda e gli inizializzatori di insieme.
 
-Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da distribuire gli assembly che interagiscono con i componenti COM senza distribuire assembly di interoperabilità primari (PIA) al computer dell'utente. Per altre informazioni, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Entrambi i linguaggi consentono di incorporare informazioni sul tipo, in modo da distribuire gli assembly che interagiscono con i componenti COM senza distribuire assembly di interoperabilità primari (PIA) al computer dell'utente. Per altre informazioni, vedere [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
 In questa procedura dettagliata queste funzionalità vengono illustrate nel contesto della programmazione di Office, ma molte di esse sono utili anche nella programmazione generale. Nella procedura dettagliata si usa un componente aggiuntivo di Excel per creare una cartella di lavoro di Excel. A questo punto si crea un documento di Word contenente un collegamento alla cartella di lavoro. Infine, si visualizzerà come la dipendenza dell'assembly di interoperabilità primario può essere abilitata e disabilitata.  
   
@@ -210,8 +209,8 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
  [Espressioni lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [Espressioni lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Procedura: Usare proprietà indicizzate nella programmazione dell'interoperabilità COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
  [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Interoperabilità](../../../csharp/programming-guide/interop/index.md)

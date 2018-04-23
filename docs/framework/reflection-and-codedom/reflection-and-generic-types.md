@@ -1,12 +1,13 @@
 ---
 title: Reflection e tipi generici
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>Reflection e tipi generici
 <a name="top"></a> Dal punto di vista della reflection, un tipo ordinario si differenzia da un tipo generico perché quest'ultimo è associato a un insieme di parametri di tipo, se è una definizione di tipo generico, o a un insieme di argomenti di tipo, se è un tipo costruito. Un metodo generico si differenzia da un metodo ordinario esattamente nello stesso modo.  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>Come stabilire se un tipo o un metodo è generico  
- Quando si esamina un tipo sconosciuto rappresentato da un'istanza di <xref:System.Type>tramite la reflection, usare la proprietà <xref:System.Type.IsGenericType%2A> per stabilire se il tipo sconosciuto è generico. Se il tipo è generico, restituisce `true` . In modo analogo, quando si esamina un metodo sconosciuto rappresentato da un'istanza della classe <xref:System.Reflection.MethodInfo> , usare la proprietà <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> per stabilire se il metodo è generico.  
+ Quando si esamina un tipo sconosciuto rappresentato da un'istanza di <xref:System.Type>tramite la reflection, usare la proprietà <xref:System.Type.IsGenericType%2A> per stabilire se il tipo sconosciuto è generico. Se il tipo è generico, restituisce `true` . In modo analogo, quando si esamina un metodo sconosciuto rappresentato da un'istanza della classe <xref:System.Reflection.MethodInfo> , usare la proprietà <xref:System.Reflection.MethodBase.IsGenericMethod%2A> per stabilire se il metodo è generico.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>Come stabilire se un oggetto rappresenta una definizione di metodo o di tipo generico  
- Usare la proprietà <xref:System.Type.IsGenericTypeDefinition%2A> per stabilire se un oggetto <xref:System.Type> rappresenta una definizione di tipo generico e il metodo <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> per determinare se un oggetto <xref:System.Reflection.MethodInfo> rappresenta una definizione di metodo generico.  
+ Usare la proprietà <xref:System.Type.IsGenericTypeDefinition%2A> per stabilire se un oggetto <xref:System.Type> rappresenta una definizione di tipo generico e il metodo <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> per determinare se un oggetto <xref:System.Reflection.MethodInfo> rappresenta una definizione di metodo generico.  
   
  Le definizioni di metodo e di tipo generico costituiscono i modelli a partire dai quali vengono creati i tipi istanziabili. I tipi generici nella libreria di classi .NET Framework, ad esempio <xref:System.Collections.Generic.Dictionary%602>, sono definizioni di tipo generico.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Come stabilire se un tipo o un metodo è aperto o chiuso  
- Un tipo o un metodo generico è chiuso se tutti i relativi parametri di tipo, inclusi tutti i parametri di tipo di tutti i tipi di inclusione, sono stati sostituiti da tipi istanziabili. È possibile creare un'istanza di un tipo generico solo se è chiuso. Se un tipo è aperto, la proprietà <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> restituisce `true` . Per i metodi, la stessa funzione viene eseguita dal metodo <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> .  
+ Un tipo o un metodo generico è chiuso se tutti i relativi parametri di tipo, inclusi tutti i parametri di tipo di tutti i tipi di inclusione, sono stati sostituiti da tipi istanziabili. È possibile creare un'istanza di un tipo generico solo se è chiuso. Se un tipo è aperto, la proprietà <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> restituisce `true` . Per i metodi, la stessa funzione viene eseguita dal metodo <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> .  
   
  [Torna all'inizio](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>Invarianti  
- Per una tabella di condizioni non variabili associate a termini comuni nella reflection per tipi generici, vedere <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Per altri termini correlati ai metodi generici, vedere <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>.  
+ Per una tabella di condizioni non variabili associate a termini comuni nella reflection per tipi generici, vedere <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Per altri termini correlati ai metodi generici, vedere <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
   
  [Torna all'inizio](#top)  
   

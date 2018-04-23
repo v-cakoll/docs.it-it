@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 403a286e9b1168b9e913b3cb2764e7fe262017d4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="iterators"></a>Iterators
 
@@ -29,7 +29,7 @@ Si creeranno anche metodi iteratori, cioè metodi che producono un iteratore per
 
 Il linguaggio C# offre funzionalità per entrambi gli scenari. In questo articolo viene offerta una panoramica di tali funzionalità.
 
-Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile eseguire l'applicazione e verificare lo stato di avanzamento. È anche possibile [visualizzare o scaricare l'esempio completato](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) per questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile eseguire l'applicazione e verificare lo stato di avanzamento. È anche possibile [visualizzare o scaricare l'esempio completato](https://github.com/dotnet/samples/blob/master/csharp/iterators) per questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Iterazione con foreach
 

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informazioni sul modello di .NET Compiler Platform SDK
 
@@ -22,15 +22,15 @@ I compilatori elaborano il codice scritto seguendo regole strutturate spesso div
 
 .NET Compiler Platform SDK espone l'analisi del codice dei compilatori C# e Visual Basic tramite un livello API che rispecchia una pipeline del compilatore tradizionale.
 
-![Passaggi della pipeline del compilatore per l'elaborazione del codice sorgente come codice oggetti](media/compiler-pipeline.png)
+![Passaggi della pipeline del compilatore per l'elaborazione del codice sorgente come codice oggetti](media/compiler-api-model/compiler-pipeline.png)
 
 Ogni fase della pipeline è un componente separato. Innanzitutto, la fase di analisi suddivide in token e analizza il testo di origine convertendolo in sintassi conforme alla grammatica del linguaggio. In secondo luogo, la fase di dichiarazione analizza l'origine e i metadati importati per formare simboli denominati. La fase di associazione abbina poi gli identificatori nel codice ai simboli. La fase di creazione, infine, genera un assembly con tutte le informazioni raccolte dal compilatore.
 
-![L'API della pipeline del compilatore consente l'accesso a ogni passaggio incluso nella pipeline](media/compiler-pipeline-api.png)
+![L'API della pipeline del compilatore consente l'accesso a ogni passaggio incluso nella pipeline](media/compiler-api-model/compiler-pipeline-api.png)
 
 In modo corrispondente a ciascuna di queste fasi, .NET Compiler Platform SDK espone un modello a oggetti che consente l'accesso alle informazioni in tale fase. La fase di analisi espone un albero della sintassi, la fase di dichiarazione espone una tabella di simboli gerarchici, la fase di associazione espone il risultato dell'analisi semantica del compilatore e la fase di emit è un'API che produce codici byte IL.
 
-![Servizi di linguaggio disponibili dall'API del compilatore in ogni fase della pipeline del compilatore](media/compiler-pipeline-lang-svc.png)
+![Servizi di linguaggio disponibili dall'API del compilatore in ogni fase della pipeline del compilatore](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Ogni compilatore combina questi componenti come singola unità completa.
 
@@ -40,7 +40,7 @@ Queste API sono le stesse usate da Visual Studio. Ad esempio, le funzionalità p
 
 .NET Compiler Platform SDK è costituto da due livelli principali di API: le API del compilatore e le API delle aree di lavoro.
 
-![Livelli delle API rappresentati dalle API della pipeline del compilatore](media/api-layers.png)
+![Livelli delle API rappresentati dalle API della pipeline del compilatore](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>API del compilatore
 

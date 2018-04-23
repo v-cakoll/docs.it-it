@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>Compilazione di alberi delle espressioni
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 Il codice per creare l'albero delle espressioni per la funzione fattoriale è più lungo, più complesso, e include numerose etichette e istruzioni di interruzione che è preferibile evitare nelle quotidiane attività di codifica. 
 
-Per questa sezione è stato anche aggiornato il codice visitatore, per visitare ogni nodo in questo albero delle espressioni e scrivere le informazioni relative ai nodi creati in questo esempio. È possibile [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) dal repository GitHub dotnet/docs. Provare a compilare ed eseguire da soli gli esempi. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Per questa sezione è stato anche aggiornato il codice visitatore, per visitare ogni nodo in questo albero delle espressioni e scrivere le informazioni relative ai nodi creati in questo esempio. È possibile [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dal repository GitHub dotnet/docs. Provare a compilare ed eseguire da soli gli esempi. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Analisi delle API
 

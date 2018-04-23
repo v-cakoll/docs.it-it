@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemi potenziali nel parallelismo di dati e attività
 In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> possono offrire miglioramenti significativi delle prestazioni nei normali cicli sequenziali. Le operazioni necessarie per parallelizzare il ciclo comportano tuttavia delle complessità che possono determinare problemi che in un codice sequenziale sono meno frequenti o addirittura assenti. In questo argomento sono elencati alcuni suggerimenti da tenere presenti quando si scrivono cicli paralleli.  
@@ -93,4 +93,4 @@ In molti casi, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=name
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)  
  [Problemi potenziali dell'utilizzo di PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Documento contenente una panoramica dei modelli per la programmazione parallela, ovvero come comprendere e applicare modelli paralleli con .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Documento contenente una panoramica dei modelli per la programmazione parallela, ovvero come comprendere e applicare modelli paralleli con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>Utilizzare un'area di lavoro
 
@@ -40,7 +40,7 @@ Anche un documento è una parte del modello di soluzione globale non modificabil
 
 Il diagramma seguente è una rappresentazione delle correlazioni tra l'area di lavoro, l'ambiente host, gli strumenti e le modalità di modifica.
 
-![Relazioni tra i diversi elementi di un'area di lavoro che contiene progetti e file di origine](media/workspace-obj-relations.png)
+![Relazioni tra i diversi elementi di un'area di lavoro che contiene progetti e file di origine](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Riepilogo
 

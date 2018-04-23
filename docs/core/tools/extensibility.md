@@ -1,7 +1,7 @@
 ---
-title: "Modello di estendibilità dell'interfaccia della riga di comando di .NET Core"
-description: "Informazioni sull'estendibilità degli strumenti dell'interfaccia della riga di comando (CLI)."
-keywords: "interfaccia della riga di comando, estendibilità, comandi personalizzati, .NET Core"
+title: Modello di estendibilità dell'interfaccia della riga di comando di .NET Core
+description: Informazioni sull'estendibilità degli strumenti dell'interfaccia della riga di comando (CLI).
+keywords: interfaccia della riga di comando, estendibilità, comandi personalizzati, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modello di estendibilità degli strumenti CLI di .NET Core
 
@@ -82,8 +83,8 @@ Poiché gli strumenti sono applicazioni portabili, per eseguire uno strumento l'
 
 Gli strumenti di questo tipo hanno un grafico delle dipendenze completamente separato da quello del progetto che li usa. Il processo di ripristino ripristina innanzitutto le dipendenze del progetto, quindi ogni strumento e le relative dipendenze.
 
-Esempi più dettagliati e differenti combinazioni sono disponibili in [.NET Core CLI repo](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects) (Archivio .NET Core dell'interfaccia della riga di comando).
-Nello stesso archivio è possibile vedere anche l'[implementazione degli strumenti usati](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages).
+Esempi più dettagliati e differenti combinazioni sono disponibili in [.NET Core CLI repo](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects) (Archivio .NET Core dell'interfaccia della riga di comando).
+Nello stesso archivio è possibile vedere anche l'[implementazione degli strumenti usati](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages).
 
 ### <a name="custom-targets"></a>Destinazioni personalizzate
 NuGet è in grado di [creare pacchetti di destinazioni MSBuild personalizzate e file props](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Con il passaggio all'uso di MSBuild per gli strumenti CLI di .NET Core, lo stesso meccanismo di estendibilità è ora applicabile ai progetti .NET Core. È opportuno usare questo tipo di estendibilità quando si vuole estendere il processo di compilazione, quando si vuole accedere a qualsiasi elemento di tale processo, ad esempio i file generati, quando si vuole esaminare la configurazione in cui viene chiamata la compilazione e così via.
