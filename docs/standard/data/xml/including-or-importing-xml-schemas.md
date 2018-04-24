@@ -1,30 +1,30 @@
 ---
 title: Inclusione o importazione di schemi XML
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ee43ddbcd038574fbff3ae487fbebbbd2643656
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusione o importazione di schemi XML
 Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />`. Questi elementi dello schema fanno riferimento ad altri schemi XML che possono essere usati per integrare la struttura dello schema che li include o importa. Nell'API del modello SOM (Schema Object Model), a questi elementi sono associate le classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>.  
@@ -108,7 +108,7 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
 </schema>  
 ```  
   
- Per altre informazioni sugli elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />` e sulle classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>, vedere il documento [W3C XML Schema](http://www.w3.org/XML/Schema) e la documentazione di riferimento sulle classi dello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>.  
+ Per altre informazioni sugli elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />` e sulle classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>, vedere il documento [W3C XML Schema](https://www.w3.org/XML/Schema) e la documentazione di riferimento sulle classi dello spazio dei nomi <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  

@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>Librerie di classi .NET
 
-Le librerie di classi rappresentano il concetto di [libreria condivisa](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) di .NET. Consentono di componentizzare funzionalità utili in moduli che possono essere usati da più applicazioni. Possono anche servire per caricare le funzionalità non necessarie o sconosciute all'avvio dell'applicazione. Le librerie di classi vengono descritte con il [formato di file assembly .NET](assembly-format.md).
+Le librerie di classi rappresentano il concetto di [libreria condivisa](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) di .NET. Consentono di componentizzare funzionalità utili in moduli che possono essere usati da più applicazioni. Possono anche servire per caricare le funzionalità non necessarie o sconosciute all'avvio dell'applicazione. Le librerie di classi vengono descritte con il [formato di file assembly .NET](assembly-format.md).
 
 È possibile usare tre tipi di librerie di classi:
 
@@ -43,7 +43,7 @@ Le librerie portabili sono supportate su più implementazioni di .NET. Anche que
 
 Quando si crea una libreria portabile,è necessario scegliere una configurazione per la piattaforma. I set di piattaforme da supportare sono ad esempio .NET Framework 4.5+, Windows Phone 8.0+. Più piattaforme si decide di supportare, minore sarà il numero di API e di presupposti della piattaforma possibili e più basso sarà il denominatore comune. All'inizio questa caratteristica può creare confusione, poiché si può pensare che aver più piattaforme sia spesso la soluzione migliore. In realtà si capirà poi che le API disponibili diminuiranno se si sceglie di supportare più piattaforme.
 
-Molti sviluppatori di librerie hanno scelto di usare le librerie portabili anziché creare librerie specifiche della piattaforma partendo da un'unica origine e applicando direttive di compilazione condizionale. Esistono [diversi approcci](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) per accedere alle funzionalità specifiche della piattaforma in librerie portabili. La tecnica [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) è l'approccio più adottato.
+Molti sviluppatori di librerie hanno scelto di usare le librerie portabili anziché creare librerie specifiche della piattaforma partendo da un'unica origine e applicando direttive di compilazione condizionale. Esistono [diversi approcci](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) per accedere alle funzionalità specifiche della piattaforma in librerie portabili. La tecnica [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) è l'approccio più adottato.
 
 ### <a name="net-standard-class-libraries"></a>Librerie di classi .NET Standard
 

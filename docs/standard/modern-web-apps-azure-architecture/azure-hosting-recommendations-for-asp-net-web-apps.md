@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eccb57e5ccf9162a6e6ce11434e644682881debc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Consigli relativi all'hosting di Azure per le applicazioni Web ASP.NET Core
 
@@ -118,16 +119,16 @@ La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagra
 **Riferimenti - Consigli relativi all'hosting di Azure**
 
 -   Architetture delle soluzioni Azure\
-    <https://azure.microsoft.com/it-it/solutions/architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guida per gli sviluppatori per Microsoft Azure\
-    <https://azure.microsoft.com/it-it/campaigns/developer-guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Che cos'è il servizio app di Azure?\
-    <https://docs.microsoft.com/it-it/azure/app-service/app-service-web-overview>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Confronto tra Servizio app di Azure, Macchine virtuali, Service Fabric e Servizi cloud\
-    <https://docs.microsoft.com/it-it/azure/app-service/choose-web-site-cloud-service-vm>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Indietro] (development-process-for-azure.md)

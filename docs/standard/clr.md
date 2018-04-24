@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 In .NET Framework viene fornito un ambiente di runtime, denominato Common Language Runtime, in cui viene eseguito il codice e nel quale sono offerti servizi che facilitano il processo di sviluppo.  
@@ -87,7 +87,7 @@ In .NET Framework viene fornito un ambiente di runtime, denominato Common Langua
 |-----------|-----------------|  
 |[Processo di esecuzione gestita](../../docs/standard/managed-execution-process.md)|Vengono descritti i passaggi necessari per essere in condizione di sfruttare i vantaggi di Common Language Runtime.|  
 |[Gestione automatica della memoria](../../docs/standard/automatic-memory-management.md)|Viene descritta la modalità usata dal Garbage Collector per allocare e liberare memoria.|  
-|[NIB: Cenni preliminari su .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Vengono descritti i concetti principali di .NET Framework quali Common Type System, l'interoperabilità tra più linguaggi, l'esecuzione gestita, i domini delle applicazioni e gli assembly.|  
+|[NIB: Cenni preliminari su .NET Framework](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Vengono descritti i concetti principali di .NET Framework quali Common Type System, l'interoperabilità tra più linguaggi, l'esecuzione gestita, i domini delle applicazioni e gli assembly.|  
 |[Common Type System](../../docs/standard/base-types/common-type-system.md)|Vengono descritte le modalità di dichiarazione, utilizzo e gestione dei tipi nell'ambiente di esecuzione in supporto all'integrazione tra i linguaggi.|  
   
 ## <a name="see-also"></a>Vedere anche  

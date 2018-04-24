@@ -1,12 +1,12 @@
 ---
 title: 'Procedura: leggere testo da un file'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6fbf9c910847986af1c02b5848c81266009e2e07
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e1058879d4af8aac12baf24d10a0c22894351e6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-read-text-from-a-file"></a>Procedura: leggere testo da un file
 Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e in modo asincrono da un file di testo usando .NET per le applicazioni desktop. In entrambi gli esempi, quando si crea l'istanza della classe <xref:System.IO.StreamReader>, si immette il percorso relativo o assoluto del file. Negli esempi si presuppone che il file denominato TestFile.txt sia nella stessa cartella dell'applicazione.  
@@ -53,7 +53,7 @@ Negli esempi seguenti viene illustrato come leggere il testo in modo sincrono e 
  <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [Procedura: creare una visualizzazione directory](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [Quickstart: Reading and writing files (Guida introduttiva: Lettura e scrittura di file)](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Procedura: Eseguire la conversione tra flussi di .NET Framework e flussi di Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

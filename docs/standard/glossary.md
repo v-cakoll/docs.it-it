@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>Glossario .NET
 
@@ -150,7 +150,7 @@ In precedenza, Mono implementava le API di dimensioni maggiori di .NET Framework
 
 Mono viene in genere usato con un compilatore JIT, ma include anche un compilatore statico completo (compilazione Ahead Of Time), usato in piattaforme quali iOS.
 
-Per altre informazioni su Mono, vedere la [documentazione Mono](http://www.mono-project.com/docs/).
+Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 

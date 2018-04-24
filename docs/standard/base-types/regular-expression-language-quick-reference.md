@@ -1,12 +1,12 @@
 ---
 title: Linguaggio di espressioni regolari - Riferimento rapido
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguaggio di espressioni regolari - Riferimento rapido
 <a name="top"></a> Un'espressione regolare è un modello per cui il motore delle espressioni regolari tenta di trovare una corrispondenza nel testo di input. Un modello è costituito da uno o più i valori letterali carattere, operatori o costrutti.  Per una breve introduzione, vedere [Espressioni regolari di .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Queste informazioni sono disponibili in due formati scaricabili e stampabili come riferimento:  
   
- [Download in formato Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Download in formato PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Download in formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Download in formato PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Caratteri di escape  
@@ -149,7 +149,7 @@ ms.lasthandoff: 12/23/2017
 |`+?`|Trova la corrispondenza dell'elemento precedente una o più volte, ma il minor numero di volte possibile.|`"be+?"`|"be" in "been", "be" in "bent"|  
 |`??`|Trova la corrispondenza dell'elemento precedente zero volte o una volta, ma il minor numero di volte possibile.|`"rai??n"`|"ran", "rain"|  
 |`{` *n* `}?`|Trova la corrispondenza con l'elemento precedente esattamente *n* volte.|`",\d{3}?"`|",043" in "1,043.6", ",876", ",543" e ",210" in "9,876,543,210"|  
-|`{` *n* `,}?`|Trova la corrispondenza con l'elemento precedente almeno *n* volte, ma il minor numero di volte possibile.|`"\d{2,}?"`|"166", "29", "1930"|  
+|`{` *n* `,}?`|Trova la corrispondenza dell'elemento precedente almeno *n* volte, ma il minor numero di volte possibile.|`"\d{2,}?"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}?`|Trova la corrispondenza con l'elemento precedente tra *n* e *m* volte, ma il minor numero di volte possibile.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" in "193024"|  
   
  [Torna all'inizio](#top)  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Espressioni regolari](regular-expressions.md)  
  [Classi di espressioni regolari](the-regular-expression-object-model.md)  
  [Esempi di espressioni regolari](regular-expression-examples.md)  
- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -1,29 +1,29 @@
 ---
 title: Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripting dei fogli di stile XSLT con &lt;msxsl:script&gt;
 La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato mediante l'elemento `script`.  
@@ -55,7 +55,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> supporta lo scripting incorporato m
   
  Per ottenere l'evidenza dall'assembly, usare `this.GetType().Assembly.Evidence`. Per ottenere l'evidenza da un URI (Uniform Resource Identifier), usare `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityZone> e [Set di autorizzazioni denominati](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Se si usano i metodi <xref:System.Xml.Xsl.XslTransform.Load%2A> che accettano un tipo <xref:System.Xml.XmlResolver> e non dispongono del parametro `Evidence`, l'impostazione predefinita per l'area di sicurezza dell'assembly è Attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityZone> e [Set di autorizzazioni denominati](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  È possibile dichiarare le funzioni all'interno dell'elemento `msxsl:script`. Nella tabella seguente sono illustrati gli spazi dei nomi supportati per impostazione predefinita. È possibile usare classi che non sono comprese negli spazi dei nomi elencati. Tuttavia, è necessario che tali classi siano complete.  
   

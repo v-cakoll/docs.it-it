@@ -1,12 +1,12 @@
 ---
 title: Tipi di raccolte comunemente utilizzate
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collections [.NET Framework], generic
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127813e52b6e72f896ebe4f5017651467f748a04
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commonly-used-collection-types"></a>Tipi di raccolte comunemente utilizzate
 I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio tabelle hash, code, stack, contenitori, dizionari ed elenchi.  
@@ -40,7 +40,7 @@ I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio ta
   
  Le raccolte possono variare a seconda di come vengono archiviati gli elementi, la modalità di ordinamento, la modalità di ricerca e confronto. La classe <xref:System.Collections.Queue> e la classe generica <xref:System.Collections.Generic.Queue%601> forniscono elenchi first-in-first-out, mentre la classe <xref:System.Collections.Stack> e la classe generica <xref:System.Collections.Generic.Stack%601> forniscono elenchi last-in-first-out. La classe <xref:System.Collections.SortedList> e la classe generica <xref:System.Collections.Generic.SortedList%602> rappresentano versioni ordinate della classe <xref:System.Collections.Hashtable> e della classe generica <xref:System.Collections.Generic.Dictionary%602>. Gli elementi di una <xref:System.Collections.Hashtable> o <xref:System.Collections.Generic.Dictionary%602> sono accessibili solo con la chiave dell'elemento, ma gli elementi di una <xref:System.Collections.SortedList> o <xref:System.Collections.ObjectModel.KeyedCollection%602> sono accessibili con la chiave oppure con l'indice dell'elemento. Gli indici di tutte le raccolte sono a base zero, ad eccezione di <xref:System.Array>, che consente matrici non a base zero.  
   
- La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli standard `foreach` e forniscono funzioni di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ La funzionalità LINQ to Objects consente di usare le query LINQ per accedere agli oggetti in memoria purché il tipo dell'oggetto implementi <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Le query LINQ forniscono un modello comune per l'accesso ai dati, sono in genere più concise e leggibili dei cicli standard `foreach` e forniscono funzioni di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) e [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   

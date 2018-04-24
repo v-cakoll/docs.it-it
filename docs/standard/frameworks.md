@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>Framework di destinazione
 
@@ -141,4 +141,4 @@ I framework di destinazione seguenti sono deprecati. I pacchetti che hanno come 
 [Controllo delle versioni di .NET Core](~/docs/core/versions/index.md)  
 [dotnet/standard GitHub repository](https://github.com/dotnet/standard) (Repository dotnet/standard di GitHub)  
 [NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools) (Repository di GitHub per strumenti NuGet)  
-[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profili di framework in .NET)
+[Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profili di framework in .NET)

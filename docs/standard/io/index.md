@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi `System.IO` contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
@@ -51,7 +51,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
   
  Oltre a usare queste classi, gli utenti di Visual Basic possono usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> per l'I/O di file.  
   
- Vedere [Procedura: copiare le directory](../../../docs/standard/io/how-to-copy-directories.md), [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Vedere [Procedura: copiare le directory](../../../docs/standard/io/how-to-copy-directories.md), [Procedura: creare una visualizzazione directory](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Flussi  
  La classe di base astratta <xref:System.IO.Stream> supporta la lettura e la scrittura di byte. Tutte le classi che rappresentano flussi ereditano dalla classe <xref:System.IO.Stream>. La classe <xref:System.IO.Stream> e le relative classi derivate forniscono una rappresentazione comune degli archivi e delle origini dati, separando così il programmatore dai dettagli specifici del sistema operativo e dei dispositivi sottostanti.  

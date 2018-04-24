@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicazione in un'architettura di microservizi
 
@@ -25,7 +25,7 @@ Non c'è un'unica soluzione ma ce ne sono diverse. Una soluzione prevede per qua
 
 Un'applicazione basata su microservizi è un sistema distribuito in esecuzione in più processi o servizi, in genere anche in più server o host. Ogni istanza del servizio è in genere un processo. Di conseguenza, i servizi devono interagire usando un protocollo di comunicazione tra più processi, ad esempio HTTP, AMQP o un protocollo binario come TCP, a seconda della natura di ogni servizio.
 
-La community dei microservizi promuove la filosofia di "[endpoint intelligenti e tubi porta-dati (smart endpoints and dumb pipes)](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)". Questo slogan incoraggia una progettazione che sia quanto più disaccoppiata possibile tra i microservizi e quanto più coesa possibile all'interno di un singolo microservizio. Come spiegato in precedenza, ogni microservizio possiede i propri dati e la propria logica di dominio. Ma i microservizi che compongono un'applicazione end-to-end sono in genere semplicemente coreografati mediante le comunicazioni REST anziché i protocolli complessi come WS-\* e le comunicazioni flessibili basate sugli eventi anziché gli agenti di orchestrazione di processi aziendali centralizzati.
+La community dei microservizi promuove la filosofia di "[endpoint intelligenti e tubi porta-dati (smart endpoints and dumb pipes)](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)". Questo slogan incoraggia una progettazione che sia quanto più disaccoppiata possibile tra i microservizi e quanto più coesa possibile all'interno di un singolo microservizio. Come spiegato in precedenza, ogni microservizio possiede i propri dati e la propria logica di dominio. Ma i microservizi che compongono un'applicazione end-to-end sono in genere semplicemente coreografati mediante le comunicazioni REST anziché i protocolli complessi come WS-\* e le comunicazioni flessibili basate sugli eventi anziché gli agenti di orchestrazione di processi aziendali centralizzati.
 
 I due protocolli comunemente usati sono richiesta/risposta HTTP con API delle risorse (soprattutto per l'esecuzione di query) e messaggistica asincrona lightweight per l'aggiornamento della comunicazione tra più microservizi. Questi protocolli vengono descritti più dettagliatamente nelle sezioni seguenti.
 
@@ -43,7 +43,7 @@ Il secondo asse definisce se la comunicazione ha un singolo destinatario o più 
 
 -   Singolo destinatario. Ogni richiesta deve essere elaborata da esattamente un destinatario o servizio. Un esempio di questo tipo di comunicazione è il [Command pattern](https://en.wikipedia.org/wiki/Command_pattern).
 
--   Più destinatari. Ogni richiesta può essere elaborata da zero a più destinatari. Questo tipo di comunicazione deve essere asincrono. Un esempio è il meccanismo di [pubblicazione/sottoscrizione](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) usato in schemi come l'[architettura basata su eventi](http://microservices.io/patterns/data/event-driven-architecture.html). Questo meccanismo si basa su un'interfaccia del bus di eventi o su un broker di messaggi per la propagazione degli aggiornamenti dei dati tra più microservizi tramite eventi; viene in genere implementato tramite un bus di servizio o un elemento simile come il [bus di servizio di Azure](https://azure.microsoft.com/services/service-bus/) mediante [argomenti e sottoscrizioni](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+-   Più destinatari. Ogni richiesta può essere elaborata da zero a più destinatari. Questo tipo di comunicazione deve essere asincrono. Un esempio è il meccanismo di [pubblicazione/sottoscrizione](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) usato in schemi come l'[architettura basata su eventi](https://microservices.io/patterns/data/event-driven-architecture.html). Questo meccanismo si basa su un'interfaccia del bus di eventi o su un broker di messaggi per la propagazione degli aggiornamenti dei dati tra più microservizi tramite eventi; viene in genere implementato tramite un bus di servizio o un elemento simile come il [bus di servizio di Azure](https://azure.microsoft.com/services/service-bus/) mediante [argomenti e sottoscrizioni](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Un'applicazione basata su microservizi userà spesso una combinazione di questi stili di comunicazione. Il tipo più comune è la comunicazione con singolo destinatario con un protocollo sincrono come HTTP/HTTPS quando si richiama un servizio HTTP API Web normale. I microservizi usano in genere anche i protocolli di messaggistica per la comunicazione asincrona tra microservizi.
 
@@ -91,15 +91,15 @@ Quando un client usa la comunicazione di tipo richiesta/risposta, si presuppone 
 
 Uno stile architetturale diffuso per la comunicazione di tipo richiesta/risposta è [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Questo approccio è basato sul protocollo [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) a cui è strettamente collegato adottando verbi HTTP come GET, POST e PUT. REST è l'approccio di comunicazione architetturale usato più di frequente quando si creano i servizi. È possibile implementare i servizi REST quando si sviluppano i servizi API Web ASP.NET Core.
 
-L'uso di servizi REST HTTP come linguaggio di definizione dell'interfaccia offre un valore aggiunto. Ad esempio, se si usano i [metadati Swagger](http://swagger.io/) per descrivere l'API del servizio, è possibile usare gli strumenti che generano gli stub client in grado di individuare e usare direttamente i servizi.
+L'uso di servizi REST HTTP come linguaggio di definizione dell'interfaccia offre un valore aggiunto. Ad esempio, se si usano i [metadati Swagger](https://swagger.io/) per descrivere l'API del servizio, è possibile usare gli strumenti che generano gli stub client in grado di individuare e usare direttamente i servizi.
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **Martin Fowler. Richardson Maturity Model.** Una descrizione del modello REST.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Il sito ufficiale.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Comunicazione push e in tempo reale basata su HTTP
 

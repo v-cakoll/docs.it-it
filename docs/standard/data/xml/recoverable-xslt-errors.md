@@ -1,26 +1,26 @@
 ---
 title: Errori XSLT risolvibili
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Errori XSLT risolvibili
 Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse aree in cui il provider dell'implementazione può decidere come gestire una determinata situazione. Queste aree si considerano come aree di comportamento discretionary. Nella sezione 7.3 Creating Processing Instructions della raccomandazione XSLT 1.0, ad esempio, viene specificato che la creazione di nodi diversi da nodi di tipo text durante la creazione di un'istanza del contenuto di `xsl:processing-instruction` costituisce un errore. Per alcuni problemi, la raccomandazione XSLT 1.0 fornisce una linea d'azione nel caso in cui il processore tenti di risolvere l'errore. Per l'errore illustrato nella sezione 7.3 viene spiegato che il problema può essere risolto ignorando i nodi e il relativo contenuto.  
@@ -32,7 +32,7 @@ Nella raccomandazione W3C, XSL Transformations (XSLT) Version 1.0, sono incluse 
   
 -   "Errore" indica che è stata generata un'eccezione per questa condizione.  
   
--   I riferimenti alle sezioni sono reperibili nei documenti [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](http://www.w3.org/TR/xslt) e [W3C XSL Transformations (XSLT) Version 1.0 Specification Errata](http://www.w3.org/1999/11/REC-xslt-19991116-errata/) (informazioni in lingua inglese).  
+-   I riferimenti alle sezioni sono reperibili nei documenti [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](http://www.w3.org/TR/xslt) e [W3C XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (informazioni in lingua inglese).  
   
 |Condizione XSLT|Sezione|Comportamento di XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

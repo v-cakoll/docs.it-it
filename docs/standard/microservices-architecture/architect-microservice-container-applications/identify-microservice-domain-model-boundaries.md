@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificare i limiti del modello di dominio per ogni microservizio
 
 L'obiettivo durante l'identificazione dei limiti e delle dimensioni del modello per ogni microservizio non è quello di ottenere la separazione più granulare possibile, nonostante sia consigliabile, se possibile, tendere a microservizi di piccole dimensioni, ma piuttosto quello di ottenere la separazione più significativa guidata dalla propria conoscenza del dominio. L'accento viene posto non sulle dimensioni, ma piuttosto sulle funzionalità aziendali. Per di più, se è necessaria una chiara coesione per una determinata area dell'applicazione basata su un numero elevato di dipendenze, si evince la necessità di un singolo microservizio. La coesione è un modo per identificare come suddividere o raggruppare i microservizi. In definitiva, mentre si acquisiscono altre informazioni sul dominio, occorre adattare le dimensioni del microservizio in modo iterativo. Trovare le dimensioni giuste non è un processo facile.
 
-[Sam Newman](http://samnewman.io/), promotore riconosciuto dei microservizi e autore del libro [Building Microservices](http://samnewman.io/books/building_microservices/), evidenzia la necessità di progettare i propri microservizi in base allo schema Bounded Context (BC), cioè una parte della progettazione basata su domini, già introdotta in precedenza. In alcuni casi, un BC potrebbe essere composto da diversi servizi fisici, ma non viceversa.
+[Sam Newman](https://samnewman.io/), promotore riconosciuto dei microservizi e autore del libro [Building Microservices](https://samnewman.io/books/building_microservices/), evidenzia la necessità di progettare i propri microservizi in base allo schema Bounded Context (BC), cioè una parte della progettazione basata su domini, già introdotta in precedenza. In alcuni casi, un BC potrebbe essere composto da diversi servizi fisici, ma non viceversa.
 
 Un modello di dominio con entità di dominio specifiche si applica all'interno di un BC o microservizio concreto. Un BC delimita l'applicabilità di un modello di dominio e offre ai membri del team di sviluppo una comprensione chiara e condivisa di ciò che deve essere coeso e di ciò che può essere sviluppato in modo indipendente. Sono gli stessi obiettivi per i microservizi.
 

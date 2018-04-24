@@ -1,12 +1,12 @@
 ---
 title: Codifica dei caratteri in .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>Codifica dei caratteri in .NET
 I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei caratteri è un sistema che abbina ogni carattere di un set di caratteri supportato a un valore che lo rappresenta. Il codice Morse, ad esempio, è una codifica dei caratteri che abbina ogni carattere dell'alfabeto romano a una serie di punti e linee utilizzabili per la trasmissione su linee telegrafiche. La codifica dei caratteri per i computer abbina ogni carattere di un set di caratteri supportato a un valore numerico che lo rappresenta. La codifica dei caratteri presenta due componenti distinti:  
@@ -70,7 +70,7 @@ I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei
 > [!NOTE]
 >  Lo standard Unicode assegna un punto di codice (un numero) e un nome a ciascun carattere in ogni script supportato. Ad esempio, il carattere "A" è rappresentato dal punto di codice U+0041 e dal nome "LATIN CAPITAL LETTER A". Le codifiche Unicode Transformation Format (UTF) definiscono i modi per codificare quel punto di codice in una sequenza di uno o più byte. Uno schema di codifica Unicode semplifica lo sviluppo di applicazioni internazionali, perché consente di rappresentare in una sola codifica i caratteri di qualsiasi set di caratteri. Gli sviluppatori di applicazioni non devono più tenere traccia dello schema di codifica usato per produrre i caratteri per una lingua o un sistema di scrittura specifico e i dati possono essere condivisi tra i sistemi a livello internazionale senza essere danneggiati.  
 >   
->  .NET supporta tre codifiche definite dallo standard Unicode: UTF-8, UTF-16 e UTF-32. Per altre informazioni, vedere lo standard Unicode nella [home page di Unicode](http://www.unicode.org/).  
+>  .NET supporta tre codifiche definite dallo standard Unicode: UTF-8, UTF-16 e UTF-32. Per altre informazioni, vedere lo standard Unicode nella [home page di Unicode](https://www.unicode.org/).  
   
  È possibile recuperare informazioni su tutte le codifiche disponibili in .NET chiamando il metodo <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET supporta i sistemi di codifica dei caratteri elencati nella tabella seguente.  
   
@@ -157,7 +157,7 @@ I caratteri sono entità astratte rappresentabili in molti modi. La codifica dei
  Le strategie di fallback con mapping più appropriato sono diverse a seconda delle tabelle codici. Ad esempio, per alcune tabelle codici, dei caratteri latini a larghezza intera viene eseguito il mapping ai caratteri latini a metà larghezza più comuni. Per altre tabelle codici, questo mapping non viene eseguito. Anche se si adotta una strategia aggressiva basata sul mapping più appropriato, per alcuni caratteri in alcune codifiche non è concepibile un mapping appropriato. Ad esempio, per un ideogramma cinese non esistono mapping ragionevoli alla tabella codici 1252. In questo caso, viene usata una stringa di sostituzione. Per impostazione predefinita, questa stringa è semplicemente un punto interrogativo (QUESTION MARK, U+003F).  
   
 > [!NOTE]
->  Le strategie di fallback con mapping più appropriato non sono documentate in dettaglio. Diverse tabelle codici sono tuttavia documentate nel sito Web di [Unicode Consortium](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Esaminare il file **readme.txt** in tale cartella per una descrizione di come interpretare i file di mapping.
+>  Le strategie di fallback con mapping più appropriato non sono documentate in dettaglio. Diverse tabelle codici sono tuttavia documentate nel sito Web di [Unicode Consortium](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Esaminare il file **readme.txt** in tale cartella per una descrizione di come interpretare i file di mapping.
   
  L'esempio seguente usa la tabella codici 1252 (la tabella codici di Windows per le lingue dell'Europa occidentale) per illustrare il mapping più appropriato e i relativi svantaggi. Viene usato il metodo <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> per recuperare un oggetto di codifica per la tabella codici 1252. Per impostazione predefinita, usa il mapping più appropriato per i caratteri Unicode che non supporta. L'esempio crea un'istanza di una stringa che contiene tre caratteri non ASCII, CIRCLED LATIN CAPITAL LETTER S (U+24C8), SUPERSCRIPT FIVE (U+2075) e INFINITY (U+221E), separati da spazi. Come mostra l'output del seguente esempio, quando la stringa viene codificata, i tre caratteri originali diversi dallo spazio vengono sostituiti da QUESTION MARK (U+003F), DIGIT FIVE (U+0035) e DIGIT EIGHT (U+0038). DIGIT EIGHT è una sostituzione del tutto inadeguata per il carattere INFINITY non supportato e QUESTION MARK indica che non è disponibile alcun mapping per il carattere originale.  
   

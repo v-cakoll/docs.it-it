@@ -1,12 +1,12 @@
 ---
 title: Dati numerici in .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>Dati numerici in .NET Framework
 .NET Framework supporta le primitive numeriche integrali e a virgola mobile standard oltre a <xref:System.Numerics.BigInteger>, un tipo integrale senza limite teorico superiore o inferiore, <xref:System.Numerics.Complex>, un tipo che rappresenta numeri complessi, e un set di tipi di vettore abilitati per SIMD nello spazio dei nomi <xref:System.Numerics>.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
   
  I tipi di vettore abilitati per SIMD sono implementati in IL, dunque è possibile usarli su hardware e compilatori JIT non abilitati per SIMD. Per sfruttare le istruzioni SIMD, le app a 64 bit devono essere compilate con il nuovo compilatore JIT a 64 bit per codice gestito, incluso con .NET Framework 4.6, che aggiunge il supporto SIMD quando le app sono destinate a processori x64.  
   
- È anche possibile scaricare SIMD come [pacchetto NuGet](http://www.nuget.org/packages/System.Numerics.Vectors).  Il pacchetto NuGet include anche una struttura <xref:System.Numerics.Vector%601> generica che consente di creare un vettore di qualsiasi tipo numerico primitivo. I tipi numerici primitivi includono tutti i tipi numerici dello spazio dei nomi <xref:System> ad eccezione di <xref:System.Decimal>. La struttura <xref:System.Numerics.Vector%601> fornisce anche una libreria di metodi utili che è possibile chiamare quando si usano i vettori.  
+ È anche possibile scaricare SIMD come [pacchetto NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  Il pacchetto NuGet include anche una struttura <xref:System.Numerics.Vector%601> generica che consente di creare un vettore di qualsiasi tipo numerico primitivo. I tipi numerici primitivi includono tutti i tipi numerici dello spazio dei nomi <xref:System> ad eccezione di <xref:System.Decimal>. La struttura <xref:System.Numerics.Vector%601> fornisce anche una libreria di metodi utili che è possibile chiamare quando si usano i vettori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti di base sulle applicazioni](../../docs/standard/application-essentials.md)

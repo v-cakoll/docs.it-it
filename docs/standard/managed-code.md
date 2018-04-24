@@ -1,6 +1,6 @@
 ---
 title: Informazioni sul codice gestito
-description: "Informazioni che spiegano che il codice gestito è codice la cui esecuzione è gestita da un runtime, ovvero CRL (Common Language Runtime)."
+description: Informazioni che spiegano che il codice gestito è codice la cui esecuzione è gestita da un runtime, ovvero CRL (Common Language Runtime).
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>Informazioni sul codice gestito
 
 Quando si lavora con .NET Framework, viene spesso usato il termine "codice gestito". Questo documento illustra il significato di questo termine e fornisce informazioni aggiuntive.
 
-Detto in parole povere, il codice gestito è un codice la cui esecuzione è gestita da un runtime. In questo caso il runtime in questione è denominato **CLR (Common Language Runtime)** indipendentemente dall'implementazione ([Mono](http://www.mono-project.com/), .NET Framework o .NET Core). Il CLR è responsabile dell'acquisizione del codice gestito, della compilazione dello stesso in codice macchina e quindi della sua esecuzione. Aspetto ancora più importante, il runtime offre diversi servizi importanti, ad esempio la gestione automatica della memoria, i limiti di sicurezza, l'indipendenza dai tipi e così via.
+Detto in parole povere, il codice gestito è un codice la cui esecuzione è gestita da un runtime. In questo caso il runtime in questione è denominato **CLR (Common Language Runtime)** indipendentemente dall'implementazione ([Mono](https://www.mono-project.com/), .NET Framework o .NET Core). Il CLR è responsabile dell'acquisizione del codice gestito, della compilazione dello stesso in codice macchina e quindi della sua esecuzione. Aspetto ancora più importante, il runtime offre diversi servizi importanti, ad esempio la gestione automatica della memoria, i limiti di sicurezza, l'indipendenza dai tipi e così via.
 
 Il modo in cui viene eseguito un programma C/C++, denominato anche "codice non gestito", è opposto a quanto sopra esposto. Nel "mondo non gestito", il programmatore è responsabile di tutte le attività relative al codice. Il programma effettivo è essenzialmente un file binario che il sistema operativo carica in memoria e avvia. Tutti gli altri aspetti, dalla gestione della memoria alle considerazioni sulla sicurezza, sono a carico del programmatore.
 

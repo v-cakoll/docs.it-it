@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-programming-in-net"></a>Programmazione parallela in .NET
 Un numero elevato di personal computer e workstation è dotato di due o quattro core (ovvero CPU) che consentono l'esecuzione simultanea di più thread. Ci si aspetta di qui a breve che i computer saranno dotati di un numero di core significativamente più elevato. Per sfruttare l'hardware di oggi e quello del futuro, è possibile parallelizzare il codice per distribuire il lavoro su più processori. In passato la parallelizzazione richiedeva la modifica di basso livello di thread e blocchi. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] migliorano il supporto per la programmazione parallela fornendo un nuovo runtime, nuovi tipi di librerie di classi e i nuovi strumenti diagnostici. Tali funzionalità semplificano lo sviluppo parallelo consentendo di scrivere codice parallelo efficiente, con granularità fine e scalabile in un linguaggio naturale senza dover usare direttamente i thread o il pool di thread. Nell'illustrazione seguente viene fornita una panoramica dettagliata dell'architettura di programmazione parallela in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
@@ -44,4 +44,4 @@ Un numero elevato di personal computer e workstation è dotato di due o quattro 
   
 ## <a name="see-also"></a>Vedere anche  
  [Documento contenente una panoramica dei modelli per la programmazione parallela, ovvero come comprendere e applicare modelli paralleli con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [Esempi di programmazione parallela con .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [Esempi di programmazione parallela con .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

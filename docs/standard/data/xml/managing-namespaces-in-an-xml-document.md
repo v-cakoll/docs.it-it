@@ -1,26 +1,26 @@
 ---
 title: Gestione di spazi dei nomi in un documento XML
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 211d4f2ee3f47e1defdc8a3bd4fc81618fa3fefd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gestione di spazi dei nomi in un documento XML
 Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e degli elementi di un documento XML a URI personalizzati e predefiniti. Per creare queste associazioni, è possibile definire i prefissi per gli URI dello spazio dei nomi e usare i prefissi in questione per qualificare i nomi degli attributi e degli elementi nei dati XML. Con gli spazi dei nomi è possibile evitare i conflitti tra i nomi degli elementi e degli attributi e consentire la gestione e la convalida degli elementi e degli attributi con lo stesso nome in modi diversi.  
@@ -70,10 +70,10 @@ Tramite gli spazi dei nomi XML è possibile associare i nomi degli attributi e d
 ## <a name="managing-namespaces"></a>Gestione degli spazi dei nomi  
  Tramite la classe <xref:System.Xml.XmlNamespaceManager> viene archiviata una raccolta di URI dello spazio dei nomi e i relativi prefissi consentendo all'utente di cercare, aggiungere e rimuovere spazi dei nomi da questa raccolta. In determinati contesti, questa classe viene richiesta per migliorare le prestazioni di elaborazione del codice XML. Ad esempio, la classe <xref:System.Xml.Xsl.XsltContext> usa <xref:System.Xml.XmlNamespaceManager> per fornire il supporto XPath.  
   
- Il gestore dello spazio dei nomi non esegue convalide sugli spazi dei nomi, ma si presuppone che i prefissi e gli spazi dei nomi siano già stati verificati e siano conformi alla specifica [W3C Namespaces](http://www.w3.org/TR/REC-xml-names/).  
+ Il gestore dello spazio dei nomi non esegue convalide sugli spazi dei nomi, ma si presuppone che i prefissi e gli spazi dei nomi siano già stati verificati e siano conformi alla specifica [W3C Namespaces](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
->  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) non usa <xref:System.Xml.XmlNamespaceManager> per la gestione degli spazi dei nomi. Per informazioni sulla gestione di spazi dei nomi quando si usa LINQ to XML, vedere [Utilizzo degli spazi dei nomi XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) nella documentazione di LINQ.  
+>  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) non usa <xref:System.Xml.XmlNamespaceManager> per la gestione degli spazi dei nomi. Per informazioni sulla gestione di spazi dei nomi quando si usa LINQ to XML, vedere [Utilizzo degli spazi dei nomi XML](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) nella documentazione di LINQ.  
   
  Di seguito sono riportate alcune attività di gestione e ricerca eseguibili con la classe <xref:System.Xml.XmlNamespaceManager>. Per altre informazioni ed esempi, seguire i collegamenti alla pagina di riferimento per ogni metodo o proprietà.  
   

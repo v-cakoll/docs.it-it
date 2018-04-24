@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Stringhe di formato numerico standard
 Le stringhe di formato numerico standard vengono usate per formattare tipi numerici comuni. Una stringa di formato numerico standard usa il formato `Axx`, dove:  
@@ -51,7 +51,7 @@ Le stringhe di formato numerico standard sono supportate:
 - Dalle [stringhe interpolate](../../csharp/language-reference/tokens/interpolated.md) in c# e Visual Basic, che forniscono una sintassi semplificata rispetto alle stringhe di formato composito.
  
 > [!TIP]
->  È possibile scaricare l' [utilità di formattazione](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
+>  È possibile scaricare l'[utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o di data e ora e di visualizzare la stringa di risultato.  
   
 <a name="table"></a> La tabella seguente descrive gli identificatori di formato numerico standard e visualizza l'output di esempio prodotto da ogni identificatore di formato. Vedere la sezione [Note](#NotesStandardFormatting) per informazioni aggiuntive sull'uso di stringhe di formato numerico standard e la sezione [Esempio](#example) per un'illustrazione completa dell'uso.  
   
@@ -361,5 +361,5 @@ Per i valori <xref:System.Double> e <xref:System.Single> l'identificatore di for
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  [Procedura: Aggiungere zeri iniziali a un numero](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Esempio: Utilità di formattazione in .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [Esempio: Utilità di formattazione in .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Formattazione composita](../../../docs/standard/base-types/composite-formatting.md)

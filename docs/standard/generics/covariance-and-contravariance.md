@@ -1,12 +1,12 @@
 ---
 title: Covarianza e controvarianza nei generics
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 595b637ac12b6ecd8633bb8f48a54d722bc84f49
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza e controvarianza nei generics
 <a name="top"></a> La covarianza e la controvarianza sono termini che fanno riferimento alla possibilità di usare un tipo più derivato (più specifico) o un tipo meno derivato (meno specifico) di quanto specificato in origine. I parametri di tipo generico supportano la covarianza e la controvarianza per offrire la massima flessibilità nell'assegnazione e nell'utilizzo dei tipi generici. Quando si fa riferimento a un sistema di tipi, la covarianza, la controvarianza e l'invarianza hanno le seguenti definizioni. Negli esempi si presuppone una classe di base denominata `Base` e una classe derivata denominata `Derived`.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/12/2018
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Varianza nei delegati generici e non generici  
  Nel codice precedente la firma di `MyMethod` corrisponde esattamente alla firma del delegato generico costruito: `Func<Base, Derived>` (`Func(Of Base, Derived)` in Visual Basic). Nell'esempio viene illustrato che è possibile archiviare questo delegato generico in variabili o parametri del metodo che presentano tipi di parametro più derivati e tipi restituiti meno derivati, purché tutti i tipi delegati vengano costruiti a partire dal tipo delegato generico <xref:System.Func%602>.  
   
- Questo è un punto importante. Gli effetti della covarianza e della controvarianza nei parametri di tipo dei delegati generici sono simili agli effetti della covarianza e della controvarianza nel normale binding di delegati (vedere [Varianza nei delegati](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Tuttavia, la varianza nell'associazione di delegati funziona con tutti i tipi delegati, non solo con quelli generici aventi parametri di tipo variante. Inoltre, la varianza nell'associazione di delegati consente l'associazione di un metodo a qualsiasi delegato con tipi di parametro più restrittivi e un tipo restituito meno restrittivo, mentre l'assegnazione di delegati generici funziona solo se entrambi i tipi di delegati sono costruiti a partire dalla stessa definizione di tipo generico.  
+ Questo è un punto importante. Gli effetti della covarianza e della controvarianza nei parametri di tipo dei delegati generici sono simili agli effetti della covarianza e della controvarianza nel normale binding di delegati (vedere [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Tuttavia, la varianza nell'associazione di delegati funziona con tutti i tipi delegati, non solo con quelli generici aventi parametri di tipo variante. Inoltre, la varianza nell'associazione di delegati consente l'associazione di un metodo a qualsiasi delegato con tipi di parametro più restrittivi e un tipo restituito meno restrittivo, mentre l'assegnazione di delegati generici funziona solo se entrambi i tipi di delegati sono costruiti a partire dalla stessa definizione di tipo generico.  
   
  Nell'esempio seguente sono mostrati gli effetti combinati della varianza nell'associazione di delegati e della varianza nei parametri di tipo generico. Nell'esempio viene definita una gerarchia di tre tipi, da quello meno derivato (`Type1`) a quello più derivato (`Type3`). La varianza nella normale associazione di delegati viene utilizzata per associare un metodo con un tipo di parametro `Type1` e un tipo restituito `Type3` a un delegato generico con un tipo di parametro `Type2` e un tipo restituito `Type2`. Il delegato generico risultante viene quindi assegnato a un'altra variabile il cui tipo delegato generico presenta un parametro di tipo `Type3` e un tipo restituito `Type1`, utilizzando la covarianza e la controvarianza di parametri di tipo generico. Per la seconda assegnazione è necessario che sia il tipo della variabile sia quello del delegato vengano costruiti a partire dalla stessa definizione di tipo generico, in questo caso <xref:System.Func%602>.  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 03/12/2018
   
  Visual Basic e C# non consentono di violare le regole per l'utilizzo di parametri di tipo covariante e controvariante o aggiungere annotazioni di covarianza e controvarianza ai parametri relativi a tipi diversi da interfacce e delegati. L' [assembler MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md) non esegue tali controlli. Tuttavia, se si tenta di caricare un tipo che viola le regole, viene generato un oggetto <xref:System.TypeLoadException> .  
   
- Per informazioni e codici di esempio, vedere [Varianza nelle interfacce generiche](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Per informazioni e codici di esempio, vedere [Varianza nelle interfacce generiche](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
   
  [Torna all'inizio](#top)  
   
@@ -201,4 +201,4 @@ ms.lasthandoff: 03/12/2018
 ## <a name="see-also"></a>Vedere anche  
  [Covarianza e controvarianza (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [Covarianza e controvarianza (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Varianza nei delegati](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+ [Varianza nei delegati](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

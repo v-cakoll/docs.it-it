@@ -1,12 +1,12 @@
 ---
 title: Suggerimenti per lo sviluppo di applicazioni internazionali
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Suggerimenti per lo sviluppo di applicazioni internazionali
 In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo di applicazioni internazionali.  
@@ -102,7 +102,7 @@ In questa sezione vengono forniti alcuni suggerimenti da seguire per lo sviluppo
   
 4.  Specificare i valori per gli attributi requestEncoding, responseEncoding, fileEncoding, culture e uiCulture nei seguenti tre punti in un'applicazione ASP.NET:  
   
-    -   Nella sezione di globalizzazione di un file Web.config. Questo file è esterno all'applicazione ASP.NET. Per altre informazioni, vedere l'[elemento \<globalization>](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Nella sezione di globalizzazione di un file Web.config. Questo file è esterno all'applicazione ASP.NET. Per altre informazioni, vedere l'[elemento \<globalization>](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   In un'istruzione di pagina. Si noti che quando in un'applicazione viene visualizzata una pagina, il file è già stato letto, pertanto non è più possibile specificare fileEncoding e requestEncoding. In un'istruzione di pagina è possibile specificare solo uiCulture, Culture e responseEncoding.  
   

@@ -1,12 +1,12 @@
 ---
 title: Espressioni regolari di .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>Espressioni regolari .NET
 Le espressioni regolari ("regular expression") garantiscono un metodo efficace e flessibile per elaborare del testo. L'ampia notazione per la formulazione dei criteri di ricerca fornita dalle espressioni regolari consente di analizzare rapidamente grandi quantità di testo per trovare combinazioni di caratteri specifiche, per convalidare il testo verificandone la corrispondenza con un modello predefinito, ad esempio un indirizzo di posta elettronica, per estrarre, modificare, sostituire o eliminare sottostringhe di testo e per aggiungere le stringhe estratte a una raccolta per generare un rapporto. Per numerose applicazioni che gestiscono stringhe o che analizzano grandi blocchi di testo, le espressioni regolari rappresentano uno strumento indispensabile.  
@@ -63,8 +63,8 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
   
  Per altre informazioni sul linguaggio delle espressioni regolari, vedere [Linguaggio di espressioni regolari - Riferimento rapido](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) o scaricare e stampare una delle brochure seguenti:  
   
- [Riferimento rapido in formato Word (DOCX)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Riferimento rapido in formato PDF (PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Riferimento rapido in formato Word (DOCX)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Riferimento rapido in formato PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>Esempi di espressioni regolari  
  La classe <xref:System.String> include numerosi metodi di ricerca e sostituzione di stringhe che è possibile usare quando si vogliono individuare stringhe letterali in una stringa più grande. Le espressioni regolari sono utili per lo più quando si vuole individuare una di diverse sottostringhe in una stringa più grande o quando si vogliono identificare dei modelli in una stringa, come illustrato negli esempi seguenti.  
@@ -131,5 +131,5 @@ Le espressioni regolari ("regular expression") garantiscono un metodo efficace e
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Espressioni regolari - Guida di riferimento rapido (download in formato Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Espressioni regolari - Guida di riferimento rapido (download in formato PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

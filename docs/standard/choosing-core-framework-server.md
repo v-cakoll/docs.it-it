@@ -9,11 +9,11 @@ ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Scelta di .NET Core o .NET Framework per le app server
 
@@ -42,7 +42,7 @@ Nelle sezioni seguenti sono descritti in modo più dettagliato i motivi indicati
 
 Usare .NET Core se l'applicazione (Web/servizio) deve essere eseguita su più piattaforme (Windows, Linux e macOS).
 
-.NET Core supporta i sistemi operativi indicati in precedenza come workstation di sviluppo. Visual Studio fornisce un ambiente di sviluppo integrato (IDE) per Windows e macOS. È anche possibile usare Visual Studio Code, che viene eseguito in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. La maggior parte degli editor di terze parti, ad esempio Sublime, Emacs e VI, è compatibile con .NET Core. Questi editor di terze parti accedono alla funzionalità IntelliSense dell'editor tramite [Omnisharp](http://www.omnisharp.net/). È inoltre possibile evitare di usare gli editor di codice ricorrendo direttamente agli [strumenti dell'interfaccia della riga di comando di .NET Core](../core/tools/index.md), disponibili per tutte le piattaforme supportate.
+.NET Core supporta i sistemi operativi indicati in precedenza come workstation di sviluppo. Visual Studio fornisce un ambiente di sviluppo integrato (IDE) per Windows e macOS. È anche possibile usare Visual Studio Code, che viene eseguito in macOS, Linux e Windows. Visual Studio Code supporta infatti .NET Core, incluse le funzionalità IntelliSense e di debug. La maggior parte degli editor di terze parti, ad esempio Sublime, Emacs e VI, è compatibile con .NET Core. Questi editor di terze parti accedono alla funzionalità IntelliSense dell'editor tramite [Omnisharp](https://www.omnisharp.net/). È inoltre possibile evitare di usare gli editor di codice ricorrendo direttamente agli [strumenti dell'interfaccia della riga di comando di .NET Core](../core/tools/index.md), disponibili per tutte le piattaforme supportate.
 
 ### <a name="microservices-architecture"></a>Architettura di microservizi
 

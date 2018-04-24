@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 Una stringa di formato di data e ora definisce la rappresentazione di testo di un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> risultante da un'operazione di formattazione. Può anche definire la rappresentazione di un valore di data e ora richiesto in un'operazione di analisi per convertire correttamente la stringa in una data e ora. Una stringa di formato personalizzata è costituita da uno o più identificatori di formato di data e ora personalizzati. Qualsiasi stringa diversa da una [stringa di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) viene interpretata come stringa di formato di data e ora personalizzato.  
@@ -35,7 +35,7 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
  Le stringhe di formato data e ora personalizzate possono essere usate sia con valori <xref:System.DateTime> sia con valori <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  È possibile scaricare l'[utilità di formattazione](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o data e ora e di visualizzare la stringa di risultato.  
+>  È possibile scaricare l'[utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o data e ora e di visualizzare la stringa di risultato.  
   
 <a name="table"></a> Nelle operazioni di formattazione, le stringhe di formato di data e ora personalizzate possono essere usate con il metodo `ToString` di un'istanza di data e ora o con un metodo che supporta la formattazione composita. Nell'esempio seguente vengono illustrati entrambi gli usi.  
   
@@ -702,4 +702,4 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
  [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Esempio: Utilità di formattazione in .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Esempio: Utilità di formattazione in .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

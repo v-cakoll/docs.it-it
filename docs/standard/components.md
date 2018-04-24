@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>Componenti dell'architettura .NET
 
@@ -61,7 +61,7 @@ In precedenza, Mono implementava le API di dimensioni maggiori di .NET Framework
 
 Mono viene in genere usato con un compilatore JIT, ma include anche un compilatore statico completo (compilazione Ahead Of Time), usato in piattaforme quali iOS.
 
-Per altre informazioni su Mono, vedere la [documentazione Mono](http://www.mono-project.com/docs/).
+Per altre informazioni su Mono, vedere la [documentazione Mono](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Piattaforma UWP (Universal Windows Platform)
 
@@ -86,7 +86,7 @@ Un runtime è l'ambiente di esecuzione per un programma gestito. Il sistema oper
 - Sistema del progetto .NET (basato su file con estensione *csproj*, *vbproj* e *fsproj*)
 - [MSBuild](/visualstudio/msbuild/msbuild), il motore di compilazione usato per compilare i progetti
 - [NuGet](/nuget/), il gestore di pacchetti Microsoft per .NET
-- Strumenti open source di orchestrazione della compilazione, ad esempio [CAKE](http://cakebuild.net/) e [FAKE](https://fake.build/)
+- Strumenti open source di orchestrazione della compilazione, ad esempio [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Vedere anche
 [Scelta di .NET Core o .NET Framework per le app server](choosing-core-framework-server.md)   

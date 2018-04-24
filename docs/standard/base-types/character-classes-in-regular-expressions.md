@@ -1,12 +1,12 @@
 ---
 title: Classi di caratteri nelle espressioni regolari
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 
+caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classi di caratteri nelle espressioni regolari
 <a name="Top"></a> Una classe di caratteri definisce un set di caratteri, di cui uno qualsiasi può verificarsi in una stringa di input per trovare una corrispondenza. Il linguaggio delle espressioni regolari di .NET supporta le classi di caratteri seguenti:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
  .NET supporta espressioni di sottrazione di classi di caratteri che consentono di definire un set di caratteri come risultato dell'esclusione di una classe di caratteri da un'altra classe di caratteri. Per altre informazioni, vedere [Sottrazione di classi di caratteri](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). Da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], si basano sullo [standard Unicode, versione 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Le classi di caratteri che corrispondono a caratteri in base alla categoria, ad esempio [\w](#WordCharacter) per la corrispondenza con caratteri alfanumerici o [\p{}](#CategoryOrBlock) per la corrispondenza con una categoria Unicode, si basano sulla classe <xref:System.Globalization.CharUnicodeInfo> per offrire informazioni sulle categorie di caratteri.  A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], le categorie di caratteri si basano sullo [standard Unicode, versione 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], si basano sullo [standard Unicode, versione 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Gruppo di caratteri positivi: [ ]  
@@ -408,7 +408,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Categorie generali Unicode supportate  
- In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](http://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
+ In Unicode sono definite le categorie generali elencate nella tabella riportata di seguito. Per altre informazioni, vedere gli argomenti correlati "UCD File Format" (Formato di file UCD) e "General Category Values" (Valori di categoria generale) in [Unicode Character Database](https://www.unicode.org/reports/tr44/) (Database di caratteri Unicode).  
   
 |Category|Descrizione|  
 |--------------|-----------------|  

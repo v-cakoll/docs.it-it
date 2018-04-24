@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Uso dei dati nelle app ASP.NET Core
 
@@ -206,7 +207,7 @@ Il primo oggetto DbContext è \_catalogContext e il secondo oggetto DbContext si
 > - **Entity Framework Core: dati correlati**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Avoid Lazy Loading Entities in ASP.NET Applications** (Evitare il caricamento lazy di entità in applicazioni ASPNET)  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core o micro ORM?
 
@@ -270,7 +271,7 @@ Un altro aspetto complesso che i database NoSQL devono gestire è il controllo d
 
 Nei database NoSQL è possibile archiviare più versioni di oggetti, requisito che non è solitamente supportato dai database relazionali a schema fisso. Tuttavia, in questo caso il codice dell'applicazione deve tenere conto dell'esistenza delle versioni precedenti degli oggetti, aumentando così la complessità.
 
-In genere nei database NoSQL non vengono applicate le [ACID](http://en.wikipedia.org/wiki/ACID), vale a dire che sono vantaggiosi rispetto ai database relazionali in termini sia di prestazioni che di scalabilità. Sono database ideali per data set e oggetti di dati di dimensioni molto grandi che non sono particolarmente adatti per essere archiviati in strutture tabella normalizzate. Non esiste un motivo per cui un'applicazione non possa usare sia i database relazionali sia i database NoSQL a seconda dell'utilità.
+In genere nei database NoSQL non vengono applicate le [ACID](https://en.wikipedia.org/wiki/ACID), vale a dire che sono vantaggiosi rispetto ai database relazionali in termini sia di prestazioni che di scalabilità. Sono database ideali per data set e oggetti di dati di dimensioni molto grandi che non sono particolarmente adatti per essere archiviati in strutture tabella normalizzate. Non esiste un motivo per cui un'applicazione non possa usare sia i database relazionali sia i database NoSQL a seconda dell'utilità.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 

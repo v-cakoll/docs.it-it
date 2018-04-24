@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementazione del livello di persistenza dell'infrastruttura con Entity Framework Core
 
@@ -342,7 +342,7 @@ L'algoritmo Hi/Lo descrive un meccanismo per generare ID sicuri sul lato client 
 
 -   Genera un identificatore leggibile, a differenza delle tecniche che usano GUID.
 
-Entity Framework Core supporta l'algoritmo [Hi/Lo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) con il metodo ForSqlServerUseSequenceHiLo, come illustrato nell'esempio precedente.
+Entity Framework Core supporta l'algoritmo [Hi/Lo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) con il metodo ForSqlServerUseSequenceHiLo, come illustrato nell'esempio precedente.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Mapping di campi anziché di proprietà
 
@@ -467,7 +467,7 @@ Anche se non è consigliabile restituire espressioni IQueryable da un repository
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Encapsulated Collections in Entity Framework Core**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core) (Raccolte incapsulate in Entity Framework Core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core) (Raccolte incapsulate in Entity Framework Core)
 
 -   **Proprietà shadow **
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

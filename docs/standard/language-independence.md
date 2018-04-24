@@ -16,11 +16,11 @@ ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2745bc67c926f50c28f5fdfb122ee94a85f020ec
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > La prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, vale a dire componenti che possono essere usati da applicazioni scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#cross-language-interoperability) nella seconda parte di questo articolo. 
 
-È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+È necessario che gli oggetti espongano ai chiamanti solo le funzionalità comuni a tutti i linguaggi, affinché sia garantita un'interazione completa con altri oggetti scritti in uno qualsiasi dei linguaggi. Questo set comune di funzionalità è definito dalle specifiche CLS (Common Language Specification), un set di regole che si applicano agli assembly generati. Le specifiche CLS (Common Language Specification) sono definite nella partizione I, clausole da 7 a 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Se il componente è conforme alle specifiche CLS (Common Language Specification), ne è garantita la conformità a CLS ed è possibile accedervi dal codice negli assembly scritti in qualsiasi linguaggio di programmazione che supporti CLS. È possibile determinare se il componente è conforme alle specifiche CLS (Common Language Specification) in fase di compilazione applicando l'attributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) al codice sorgente. Per altre informazioni, vedere [Attributo CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -73,7 +73,7 @@ Contenuto dell'articolo:
 
 ## <a name="cls-compliance-rules"></a>Regole di conformità a CLS
 
-In questa sezione vengono illustrate le regole per creare un componente conforme a CLS. Per un elenco completo delle regole, vedere la partizione I, clausola 11 dello [standard ECMA-335 di Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+In questa sezione vengono illustrate le regole per creare un componente conforme a CLS. Per un elenco completo delle regole, vedere la partizione I, clausola 11 dello [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > Nelle specifiche CLS (Common Language Specification) viene illustrata ciascuna regola per la conformità a CLS applicata ai consumer (sviluppatori che accedono a livello di codice a un componente conforme a CLS), ai framework (sviluppatori che usano un compilatore di linguaggio per creare librerie conformi a CLS) e alle estensioni (sviluppatori che creano uno strumento quale un compilatore di linguaggio o un parser di codice per la creazione di componenti conformi a CLS). Questo articolo è incentrato sulle regole che si applicano ai framework. Si noti, tuttavia, che alcune delle regole applicate alle estensioni possono essere applicate anche agli assembly creati usando [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -158,7 +158,7 @@ L'interfaccia pubblica di una libreria è costituita dagli elementi seguenti:
 
 * Parametri e tipi restituiti di metodi pubblici di classi pubbliche e parametri e tipi restituiti di metodi accessibili alle classi derivate. 
 
-Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è stato copiato alla lettera dallo [standard ECMA-335 di Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole. 
+Le regole per la conformità a CLS sono elencate nella tabella riportata di seguito. Il testo delle regole è stato copiato alla lettera dallo [standard ECMA-335 di Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright 2012 di Ecma International. Nelle sezioni seguenti sono disponibili informazioni più dettagliate su queste regole. 
 
 Category | Vedere | Regola | Numero regola
 -------- | --- | ---- | -----------
@@ -617,7 +617,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode 3.0, rapporto tecnico 15, allegato 7](http://www.unicode.org/reports/tr15/tr15-18.html). Vale a dire che:
+Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode 3.0, rapporto tecnico 15, allegato 7](https://www.unicode.org/reports/tr15/tr15-18.html). Vale a dire che:
 
 * Il primo carattere di un identificatore può essere qualsiasi carattere Unicode, una lettera maiuscola, una lettera minuscola, tutte iniziali maiuscole, una lettera di modificatore, un'altra lettera o un numero rappresentato dalla lettera. Per informazioni sulle categorie di caratteri Unicode, vedere l'enumerazione [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory). 
 
