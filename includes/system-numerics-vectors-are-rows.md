@@ -1,0 +1,1 @@
+Per le trasformazioni con matrice, le istanze <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> e <xref:System.Numerics.Vector4> sono rappresentate come righe: un vettore *v* viene trasformato da una matrice *M* con la moltiplicazione *vM*.
