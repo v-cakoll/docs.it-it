@@ -1,2 +1,0 @@
-> [!NOTE]
->  Le funzioni e gli oggetti inclusi nello spazio dei nomi N:Microsoft.VisualBasic.Compatibility.VB6?qualifyHint=False&autoUpgrade=True vengono usati con gli strumenti per l'aggiornamento da Visual Basic 6.0 a Visual Basic 2008. Nella maggior parte dei casi queste funzioni e questi oggetti duplicano funzionalità disponibili in altri spazi dei nomi di .NET Framework e sono necessari solo quando il modello di codice di Visual Basic 6.0 è notevolmente diverso rispetto all'implementazione di .NET Framework.

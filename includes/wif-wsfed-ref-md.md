@@ -1,1 +1,0 @@
-Per altre informazioni sul messaggio rappresentato da questa classe, vedere la sezione 13 della specifica [Web Services Federation Language (WS-Federation) Version 1.2](http://go.microsoft.com/fwlink/?LinkID=210152) (http://go.microsoft.com/fwlink/?LinkID=210152).
