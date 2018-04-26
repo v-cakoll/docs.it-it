@@ -1,6 +1,6 @@
 ---
 title: stackalloc (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 04/12/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,52 +10,66 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4b9c5328bfa1b0fc9a7751763c7d728096886905
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c4cde254bb6a5601d10619c4a3bd2f00f1f146d3
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="stackalloc-c-reference"></a><span data-ttu-id="433b4-102">stackalloc (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="433b4-102">stackalloc (C# Reference)</span></span>
-<span data-ttu-id="433b4-103">La parola chiave `stackalloc` viene usata in un contesto di codice unsafe per allocare un blocco di memoria nello stack.</span><span class="sxs-lookup"><span data-stu-id="433b4-103">The `stackalloc` keyword is used in an unsafe code context to allocate a block of memory on the stack.</span></span>  
-  
-```csharp  
-int* block = stackalloc int[100];  
-```  
-  
-## <a name="remarks"></a><span data-ttu-id="433b4-104">Note</span><span class="sxs-lookup"><span data-stu-id="433b4-104">Remarks</span></span>  
- <span data-ttu-id="433b4-105">La parola chiave è valida solo per gli inizializzatori di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="433b4-105">The keyword is valid only in local variable initializers.</span></span> <span data-ttu-id="433b4-106">Il codice seguente causa errori di compilazione.</span><span class="sxs-lookup"><span data-stu-id="433b4-106">The following code causes compiler errors.</span></span>  
-  
-```csharp  
-int* block;  
-// The following assignment statement causes compiler errors. You  
-// can use stackalloc only when declaring and initializing a local   
-// variable.  
-block = stackalloc int[100];  
-```  
-  
- <span data-ttu-id="433b4-107">Poiché vengono usati tipi puntatore, `stackalloc` richiede un contesto [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="433b4-107">Because pointer types are involved, `stackalloc` requires [unsafe](../../../csharp/language-reference/keywords/unsafe.md) context.</span></span> <span data-ttu-id="433b4-108">Per altre informazioni, vedere [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="433b4-108">For more information, see [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span></span>  
-  
- <span data-ttu-id="433b4-109">La parola chiave `stackalloc` è come [_alloca](/cpp/c-runtime-library/reference/alloca) nella libreria di runtime del linguaggio C.</span><span class="sxs-lookup"><span data-stu-id="433b4-109">`stackalloc` is like [_alloca](/cpp/c-runtime-library/reference/alloca) in the C run-time library.</span></span>  
-  
- <span data-ttu-id="433b4-110">Nell'esempio seguente vengono calcolati e visualizzati i primi 20 numeri della sequenza di Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="433b4-110">The following example calculates and displays the first 20 numbers in the Fibonacci sequence.</span></span> <span data-ttu-id="433b4-111">Ogni numero corrisponde alla somma dei due numeri precedenti.</span><span class="sxs-lookup"><span data-stu-id="433b4-111">Each number is the sum of the previous two numbers.</span></span> <span data-ttu-id="433b4-112">Nel codice, un blocco di memoria di dimensioni sufficienti a contenere 20 elementi di tipo `int` viene allocato nello stack, non nell'heap.</span><span class="sxs-lookup"><span data-stu-id="433b4-112">In the code, a block of memory of sufficient size to contain 20 elements of type `int` is allocated on the stack, not the heap.</span></span> <span data-ttu-id="433b4-113">L'indirizzo del blocco è archiviato nel puntatore `fib`.</span><span class="sxs-lookup"><span data-stu-id="433b4-113">The address of the block is stored in the pointer `fib`.</span></span> <span data-ttu-id="433b4-114">Questa memoria non viene sottoposta alla procedura di Garbage Collection e non deve quindi essere bloccata con [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).</span><span class="sxs-lookup"><span data-stu-id="433b4-114">This memory is not subject to garbage collection and therefore does not have to be pinned (by using [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)).</span></span> <span data-ttu-id="433b4-115">La durata del blocco di memoria è limitata alla durata del metodo che lo definisce.</span><span class="sxs-lookup"><span data-stu-id="433b4-115">The lifetime of the memory block is limited to the lifetime of the method that defines it.</span></span> <span data-ttu-id="433b4-116">Non è possibile liberare la memoria prima della restituzione del metodo.</span><span class="sxs-lookup"><span data-stu-id="433b4-116">You cannot free the memory before the method returns.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="433b4-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="433b4-117">Example</span></span>  
- [!code-csharp[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
-  
-## <a name="security"></a><span data-ttu-id="433b4-118">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="433b4-118">Security</span></span>  
- <span data-ttu-id="433b4-119">Il codice di tipo unsafe è meno sicuro delle alternative di tipo safe.</span><span class="sxs-lookup"><span data-stu-id="433b4-119">Unsafe code is less secure than safe alternatives.</span></span> <span data-ttu-id="433b4-120">Tuttavia, l'uso di `stackalloc` attiva automaticamente le funzionalità di rilevazione del sovraccarico del buffer in Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="433b4-120">However, the use of `stackalloc` automatically enables buffer overrun detection features in the common language runtime (CLR).</span></span> <span data-ttu-id="433b4-121">Se viene rilevato un sovraccarico del buffer, il processo viene terminato il più rapidamente possibile per ridurre al minimo la possibilità che venga eseguito codice dannoso.</span><span class="sxs-lookup"><span data-stu-id="433b4-121">If a buffer overrun is detected, the process is terminated as quickly as possible to minimize the chance that malicious code is executed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="433b4-122">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="433b4-122">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="433b4-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="433b4-123">See Also</span></span>  
- [<span data-ttu-id="433b4-124">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="433b4-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="433b4-125">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="433b4-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="433b4-126">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="433b4-126">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="433b4-127">Parole chiave per gli operatori</span><span class="sxs-lookup"><span data-stu-id="433b4-127">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [<span data-ttu-id="433b4-128">Codice unsafe e puntatori</span><span class="sxs-lookup"><span data-stu-id="433b4-128">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+# <a name="stackalloc-c-reference"></a><span data-ttu-id="a43bd-102">stackalloc (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="a43bd-102">stackalloc (C# Reference)</span></span>
+<span data-ttu-id="a43bd-103">La parola chiave `stackalloc` viene usata in un contesto di codice unsafe per allocare un blocco di memoria nello stack.</span><span class="sxs-lookup"><span data-stu-id="a43bd-103">The `stackalloc` keyword is used in an unsafe code context to allocate a block of memory on the stack.</span></span>
+
+```csharp
+int* block = stackalloc int[100];
+```
+
+## <a name="remarks"></a><span data-ttu-id="a43bd-104">Note</span><span class="sxs-lookup"><span data-stu-id="a43bd-104">Remarks</span></span>
+
+<span data-ttu-id="a43bd-105">La parola chiave è valida solo per gli inizializzatori di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="a43bd-105">The keyword is valid only in local variable initializers.</span></span> <span data-ttu-id="a43bd-106">Il codice seguente causa errori di compilazione.</span><span class="sxs-lookup"><span data-stu-id="a43bd-106">The following code causes compiler errors.</span></span>
+
+```csharp
+int* block;
+// The following assignment statement causes compiler errors. You
+// can use stackalloc only when declaring and initializing a local
+// variable.
+block = stackalloc int[100];
+```
+
+<span data-ttu-id="a43bd-107">A partire da C# 7.3, è possibile usare la sintassi dell'inizializzatore di matrice per le matrici `stackalloc`.</span><span class="sxs-lookup"><span data-stu-id="a43bd-107">Beginning with C# 7.3, you can use array initializer syntax for `stackalloc` arrays.</span></span> <span data-ttu-id="a43bd-108">Tutte le dichiarazioni seguenti dichiarano una matrice con tre elementi i cui valori sono i numeri interi `1`, `2` e `3`:</span><span class="sxs-lookup"><span data-stu-id="a43bd-108">All the following declarations declare an array with three elements whose values are the integers `1`, `2`, and `3`:</span></span>
+
+```csharp
+// Valid starting with C# 7.3
+int* first = stackalloc int[3] { 1, 2, 3 };
+int* second = stackalloc int[] { 1, 2, 3 };
+int* third = stackalloc[] { 1, 2, 3 };
+```
+
+<span data-ttu-id="a43bd-109">Poiché vengono usati tipi puntatore, `stackalloc` richiede un contesto [unsafe](unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="a43bd-109">Because pointer types are involved, `stackalloc` requires an [unsafe](unsafe.md) context.</span></span> <span data-ttu-id="a43bd-110">Per altre informazioni, vedere [Codice unsafe e puntatori](../../programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="a43bd-110">For more information, see [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md)</span></span> 
+
+<span data-ttu-id="a43bd-111">La parola chiave `stackalloc` è come [_alloca](/cpp/c-runtime-library/reference/alloca) nella libreria di runtime del linguaggio C.</span><span class="sxs-lookup"><span data-stu-id="a43bd-111">`stackalloc` is like [_alloca](/cpp/c-runtime-library/reference/alloca) in the C run-time library.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="a43bd-112">Esempi</span><span class="sxs-lookup"><span data-stu-id="a43bd-112">Examples</span></span>
+
+<span data-ttu-id="a43bd-113">Nell'esempio seguente vengono calcolati e visualizzati i primi 20 numeri della sequenza di Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="a43bd-113">The following example calculates and displays the first 20 numbers in the Fibonacci sequence.</span></span> <span data-ttu-id="a43bd-114">Ogni numero corrisponde alla somma dei due numeri precedenti.</span><span class="sxs-lookup"><span data-stu-id="a43bd-114">Each number is the sum of the previous two numbers.</span></span> <span data-ttu-id="a43bd-115">Nel codice, un blocco di memoria di dimensioni sufficienti a contenere 20 elementi di tipo `int` viene allocato nello stack, non nell'heap.</span><span class="sxs-lookup"><span data-stu-id="a43bd-115">In the code, a block of memory of sufficient size to contain 20 elements of type `int` is allocated on the stack, not the heap.</span></span> <span data-ttu-id="a43bd-116">L'indirizzo del blocco è archiviato nel puntatore `fib`.</span><span class="sxs-lookup"><span data-stu-id="a43bd-116">The address of the block is stored in the pointer `fib`.</span></span> <span data-ttu-id="a43bd-117">Questa memoria non viene sottoposta alla procedura di Garbage Collection e non deve quindi essere bloccata con [fixed](fixed-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a43bd-117">This memory is not subject to garbage collection and therefore does not have to be pinned (by using [fixed](fixed-statement.md)).</span></span> <span data-ttu-id="a43bd-118">La durata del blocco di memoria è limitata alla durata del metodo che lo definisce.</span><span class="sxs-lookup"><span data-stu-id="a43bd-118">The lifetime of the memory block is limited to the lifetime of the method that defines it.</span></span> <span data-ttu-id="a43bd-119">Non è possibile liberare la memoria prima della restituzione del metodo.</span><span class="sxs-lookup"><span data-stu-id="a43bd-119">You cannot free the memory before the method returns.</span></span>
+
+[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
+
+<span data-ttu-id="a43bd-120">L'esempio seguente inizializza una matrice `stackalloc` di interi su una maschera di bit con un bit impostato in ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="a43bd-120">The following example initializes a `stackalloc` array of integers to a bit mask with one bit set in each element.</span></span> <span data-ttu-id="a43bd-121">Questo esempio dimostra la nuova sintassi dell'inizializzatore disponibile a partire da C# 7.3:</span><span class="sxs-lookup"><span data-stu-id="a43bd-121">This demonstrates the new initializer syntax available starting in C# 7.3:</span></span>
+
+[!code-csharp[csrefKeywordsOperator#15](../../../../samples/snippets/csharp/keywords/StackAllocExamples.cs#2)]
+
+## <a name="security"></a><span data-ttu-id="a43bd-122">Sicurezza</span><span class="sxs-lookup"><span data-stu-id="a43bd-122">Security</span></span>
+
+<span data-ttu-id="a43bd-123">Il codice di tipo unsafe è meno sicuro delle alternative di tipo safe.</span><span class="sxs-lookup"><span data-stu-id="a43bd-123">Unsafe code is less secure than safe alternatives.</span></span> <span data-ttu-id="a43bd-124">Tuttavia, l'uso di `stackalloc` attiva automaticamente le funzionalità di rilevazione del sovraccarico del buffer in Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="a43bd-124">However, the use of `stackalloc` automatically enables buffer overrun detection features in the common language runtime (CLR).</span></span> <span data-ttu-id="a43bd-125">Se viene rilevato un sovraccarico del buffer, il processo viene terminato il più rapidamente possibile per ridurre al minimo la possibilità che venga eseguito codice dannoso.</span><span class="sxs-lookup"><span data-stu-id="a43bd-125">If a buffer overrun is detected, the process is terminated as quickly as possible to minimize the chance that malicious code is executed.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="a43bd-126">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="a43bd-126">C# Language Specification</span></span>
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="a43bd-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a43bd-127">See Also</span></span>
+ [<span data-ttu-id="a43bd-128">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="a43bd-128">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="a43bd-129">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="a43bd-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a43bd-130">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="a43bd-130">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="a43bd-131">Parole chiave per gli operatori</span><span class="sxs-lookup"><span data-stu-id="a43bd-131">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [<span data-ttu-id="a43bd-132">Codice unsafe e puntatori</span><span class="sxs-lookup"><span data-stu-id="a43bd-132">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
