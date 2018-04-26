@@ -1,57 +1,88 @@
 ---
 title: Classi (Guida per programmatori C#)
-ms.date: 07/20/2015
+description: Informazioni sui tipi di classe e su come crearli
+ms.date: 04/05/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="classes-c-programming-guide"></a>Classi (Guida per programmatori C#)
-Una *classe* è un costrutto che consente di creare tipi personalizzati raggruppando insieme variabili di altri tipi, metodi e eventi. Una classe è simile a un progetto. Definisce i dati e il comportamento di un tipo. Se la classe non è dichiarata come statica, il codice client può usarla creando *oggetti* o *istanze* che vengono assegnate a una variabile. La variabile rimane in memoria fino a quando tutti i riferimenti non escono dall'ambito. In questa fase, CLR la contrassegna come idonea per Garbage Collection. Se la classe viene dichiarata come [statica](../../../csharp/language-reference/keywords/static.md), viene mantenuta in memoria solo una copia e il codice client può accedervi solo tramite la classe stessa, non con una *variabile di istanza*. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
-  
- Diversamente da struct, le classi supportano l'*ereditarietà*, una caratteristica fondamentale della programmazione orientata a oggetti. Per altre informazioni, vedere [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+Una *classe* è un costrutto che consente di creare tipi personalizzati raggruppando insieme variabili di altri tipi, metodi e eventi. Una classe è simile a un progetto. Definisce i dati e il comportamento di un tipo. Se la classe non è dichiarata come statica, il codice client può creare *istanze* della classe. Queste istanze sono *oggetti* che vengono assegnati a una variabile. L'istanza di una classe rimane in memoria fino a quando tutti i riferimenti non escono dall'ambito. In questa fase, CLR la contrassegna come idonea per Garbage Collection. Se la classe viene dichiarata come [statica](../../../csharp/language-reference/keywords/static.md), non è possibile creare istanze e il codice client può accedervi solo tramite la classe stessa. Per altre informazioni, vedere [Classi statiche e membri di classi statiche](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+
+## <a name="reference-types"></a>Tipi riferimento  
+Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md) è un *tipo di riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [Null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un'istanza della classe usando l'operatore [new](../../../csharp/language-reference/keywords/new.md) o fino a quando non le viene assegnato un oggetto creato altrove, come illustrato nell'esempio seguente:
+
+```csharp
+MyClass mc = new MyClass();
+MyClass mc2 = mc;
+```
+
+Quando viene creato l'oggetto, la memoria viene allocata nell'heap gestito e la variabile mantiene solo un riferimento al percorso dell'oggetto. I tipi nell'heap gestito richiedono un overhead quando vengono allocati e recuperati dalla funzionalità di gestione automatica della memoria di CLR, nota come *Garbage Collection*. La Garbage Collection è tuttavia anche altamente ottimizzata e, nella maggior parte degli scenari, non causa un problema di prestazioni. Per altre informazioni sulla Garbage Collection, vedere [Gestione automatica della memoria e Garbage Collection](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Dichiarazione di classi  
- Le classi vengono dichiarate usando la parola chiave [class](../../../csharp/language-reference/keywords/class.md), come illustrato nell'esempio seguente:  
-  
- [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
-  
- La parola chiave `class` è preceduta dal livello di accesso. Poiché in questo caso viene usata la parola chiave [public](../../../csharp/language-reference/keywords/public.md), chiunque può creare oggetti da questa classe. Il nome della classe segue la parola chiave `class`. Il resto della definizione è il corpo della classe, in cui vengono definiti il comportamento e i dati. I campi, le proprietà, i metodi e gli eventi in una classe vengono collettivamente definiti *membri della classe*.  
+ Le classi vengono dichiarate usando la parola chiave [class](../../../csharp/language-reference/keywords/class.md), come illustrato nell'esempio seguente:
+
+ ```csharp
+ public class Customer
+ {
+    // Fields, properties, methods and events go here...
+ }
+```
+
+ La parola chiave `class` è preceduta dal livello di accesso. Poiché in questo caso viene usata la parola chiave [public](../../../csharp/language-reference/keywords/public.md), chiunque può creare istanze di questa classe. Il nome della classe segue la parola chiave `class`. Il resto della definizione è il corpo della classe, in cui vengono definiti il comportamento e i dati. I campi, le proprietà, i metodi e gli eventi in una classe vengono collettivamente definiti *membri della classe*.  
   
 ## <a name="creating-objects"></a>Creazione di oggetti  
  Anche se vengono talvolta usati in modo intercambiabile, una classe e un oggetto sono elementi diversi. Una classe definisce un tipo di oggetto, ma non è un oggetto. Un oggetto è un'entità concreta ed è basato su una classe. Talvolta si fa riferimento all'oggetto come istanza di una classe.  
   
  Gli oggetti possono essere creati tramite la parola chiave [new](../../../csharp/language-reference/keywords/new.md) seguita dal nome della classe su cui si baserà l'oggetto, nel modo seguente:  
-  
- [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+
+ ```csharp
+ Customer object1 = new Customer();
+ ```
   
  Quando viene creata un'istanza di una classe, viene passato al programmatore un riferimento all'oggetto. Nell'esempio precedente, `object1` è un riferimento a un oggetto basato su `Customer`. Questo riferimento indica il nuovo oggetto, ma non contiene i dati dell'oggetto. Infatti, è possibile creare un riferimento all'oggetto senza creare un oggetto:  
   
- [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+  ```csharp
+  Customer object2;
+  ```
   
  Non è consigliabile creare riferimenti a oggetti come questo che non fanno riferimento a un oggetto reale perché il tentativo di accedere a un oggetto tramite tale riferimento avrà esito negativo in fase di esecuzione. Tuttavia, tale riferimento può essere creato per fare riferimento a un oggetto, creando un nuovo oggetto oppure assegnandolo a un oggetto esistente, come illustrato di seguito:  
+
+ ```csharp
+ Customer object3 = new Customer();
+ Customer object4 = object3;
+ ```
   
- [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
-  
- Questo codice crea due riferimenti a oggetti che fanno entrambi riferimento allo stesso oggetto. Tutte le modifiche effettuate all'oggetto tramite `object3` si rifletteranno tuttavia nei successivi usi di `object4`. Poiché gli oggetti che si basano su classi vengono indicati tramite riferimenti, le classi sono note come tipi di riferimento.  
+ Questo codice crea due riferimenti a oggetti che fanno entrambi riferimento allo stesso oggetto. Tutte le modifiche effettuate all'oggetto tramite `object3` si riflettono tuttavia nei successivi usi di `object4`. Poiché gli oggetti che si basano su classi vengono indicati tramite riferimenti, le classi sono note come tipi di riferimento.  
   
 ## <a name="class-inheritance"></a>Ereditarietà di classe  
+
+ Le classi supportano completamente l'*ereditarietà*, una caratteristica fondamentale nella programmazione orientata a oggetti. Quando si crea una classe, è possibile ereditare da qualsiasi altra interfaccia o classe non definita come [sealed](../../../csharp/language-reference/keywords/sealed.md) e le altre classi possono ereditare dalla classe appena creata ed eseguire l'override dei metodi virtuali della classe.
+
  L'ereditarietà si ottiene usando una *derivazione*, vale a dire che una classe viene dichiarata usando una *classe di base* da cui eredita dati e comportamento. Una classe di base viene specificata tramite l'aggiunta di due punti e il nome della classe di base dopo il nome della classe derivata, nel modo seguente:  
+
+ ```csharp
+ public class Manager : Employee
+ {
+     // Employee fields, properties, methods and events are inherited
+     // New Manager fields, properties, methods and events go here...
+ }
+ ```
   
- [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
-  
- Quando una classe dichiara una classe di base, eredita tutti i membri della classe di base, a eccezione dei costruttori.  
+ Quando una classe dichiara una classe di base, eredita tutti i membri della classe di base, a eccezione dei costruttori. Per altre informazioni, vedere [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
   
  Diversamente da C++, una classe di C# può ereditare direttamente solo da una classe di base. Tuttavia, poiché una classe di base può ereditare da un'altra classe, una classe può ereditare indirettamente più classi di base. Una classe può anche implementare direttamente più di un'interfaccia. Per altre informazioni, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).  
   
@@ -63,7 +94,7 @@ Una *classe* è un costrutto che consente di creare tipi personalizzati raggrupp
  Nell'esempio seguente vengono definiti una classe pubblica che contiene un singolo campo, un metodo e un metodo speciale denominato costruttore. Per altre informazioni, vedere [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md). Viene quindi creata un'istanza alla classe con la parola chiave `new`.  
   
 ## <a name="example"></a>Esempio  
- [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+ [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

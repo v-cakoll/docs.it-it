@@ -2,20 +2,21 @@
 title: Generics e reflection (Guida per programmatori C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generics e reflection (Guida per programmatori C#)
 Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici. Per altre informazioni, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,15 +39,15 @@ Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi gene
 |<xref:System.Type.DeclaringMethod%2A>|Restituisce il metodo generico che ha definito il parametro di tipo generico corrente oppure Null se il parametro di tipo non è stato definito da un metodo generico.|  
 |<xref:System.Type.MakeGenericType%2A>|Sostituisce gli elementi di una matrice di tipi ai parametri di tipo della definizione di tipo generico corrente e restituisce un oggetto <xref:System.Type> che rappresenta il tipo costruito risultante.|  
   
- Per abilitare le informazioni di runtime per i tipi generici, sono stati aggiunti anche nuovi membri alla classe <xref:System.Reflection.MethodInfo>. Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection per i metodi generici, vedere le note sulla proprietà <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
+ Inoltre, i membri della classe <xref:System.Reflection.MethodInfo> abilitano le informazioni di runtime per i tipi generici. Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection per i metodi generici, vedere le note sulla proprietà <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
 |System.Reflection.MemberInfo Member Name|Descrizione|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Restituisce true se un metodo è generico.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Restituisce true se un metodo è generico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Restituisce una matrice di oggetti Type che rappresentano gli argomenti di tipo di un metodo generico costruito oppure i parametri di tipo di una definizione di un metodo generico.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Restituisce la definizione di un metodo generico sottostante per il metodo costruito corrente.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Restituisce true se il metodo o uno dei tipi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Restituisce true se l'oggetto <xref:System.Reflection.MethodInfo> corrente rappresenta la definizione di un metodo generico.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Restituisce true se il metodo o uno dei tipi che lo contengono comprendono parametri di tipo per cui non sono stati indicati tipi specifici.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Restituisce true se l'oggetto <xref:System.Reflection.MethodInfo> corrente rappresenta la definizione di un metodo generico.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Sostituisce con gli elementi di una matrice di tipi i parametri di tipo della definizione di metodo generica corrente e restituisce un oggetto <xref:System.Reflection.MethodInfo> che rappresenta il metodo costruito risultante.|  
   
 ## <a name="see-also"></a>Vedere anche  

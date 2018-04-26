@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
 
@@ -34,7 +34,7 @@ Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e pr
 
 ## <a name="getting-started"></a>Per iniziare
 
-In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) per questo argomento nel repository dotnet/docs su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) per questo argomento nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Avviare Visual Studio Code. Premere <kbd>CTRL</kbd> + <kbd> \` </kbd> (carattere virgoletta aperta o apice inverso) oppure selezionare **Visualizza > Terminale integrato** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
 

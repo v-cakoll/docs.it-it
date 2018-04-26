@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedure consigliate per Transport Layer Security (TLS) con .NET Framework
 
@@ -114,7 +114,7 @@ Se **non** si usa un binding personalizzato **e** si imposta il binding WCF tram
 
 Controllare il codice per assicurarsi di non impostare una versione specifica di TLS o SSL usando le sezioni seguenti:
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Per .NET Framework 4.6 - 4.6.2 e non WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Per .NET Framework 4.6 - 4.6.2 e non WCF
 
 Impostare l'opzione `DontEnableSystemDefaultTlsVersions` `AppContext` su `false`. Vedere [Configurazione della sicurezza tramite opzioni di AppContext](#configuring-security-via-appcontext-switches).
 

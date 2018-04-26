@@ -1,28 +1,28 @@
 ---
 title: Guida di sviluppo per .NET Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>Guida di sviluppo per .NET Framework
 Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere e distribuire app .NET Framework. In questa sezione vengono fornite informazioni sulle aree tecnologiche, ad esempio programmazione dinamica, interoperabilità, estendibilità, gestione della memoria e threading.  
@@ -49,7 +49,7 @@ Questa sezione descrive come creare, configurare, sottoporre a debug, proteggere
  [Applicazioni dei servizi di Windows](../../docs/framework/windows-services/index.md)  
  Viene illustrato come usare Visual Studio e .NET Framework per creare un'app che viene installata come servizio e che avvia, arresta e diversamente controlla il proprio comportamento.  
   
- [Elaborazione parallela e concorrenza](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Elaborazione parallela, concorrenza e programmazione asincrona in .NET](../../docs/standard/parallel-processing-and-concurrency.md)  
  Vengono fornite informazioni sul threading gestito, sulla programmazione parallela e sui modelli di progettazione della programmazione asincrona.  
   
  [Programmazione di rete in .NET Framework](../../docs/framework/network-programming/index.md)  

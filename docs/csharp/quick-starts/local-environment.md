@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="local-environment"></a>Ambiente locale
 
@@ -35,19 +35,25 @@ Gli altri comandi da usare sono [`dotnet build`](../../core/tools/dotnet-build.m
 
 Nella guida introduttiva [Numeri in C#](numbers-in-csharp-local.md) si apprenderà come i computer archiviano i numeri e come eseguire calcoli con tipi numerici diversi. Verranno illustrati i concetti di base degli arrotondamenti e le procedure per eseguire calcoli matematici con C#. 
 
-La guida introduttiva presuppone che sia stata completata l'esercitazione [Hello World](hello-world.yml).
+Questa guida introduttiva presuppone che sia stata completata la lezione [Hello World](hello-world.yml).
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Rami e cicli](branches-and-loops-local.md)
 
 La guida introduttiva [Rami e cicli](branches-and-loops-local.md) illustra le nozioni di base per la selezione di percorsi di esecuzione del codice diversi in base ai valori archiviati nelle variabili. Si apprenderanno i concetti fondamentali del flusso di controllo, ovvero i meccanismi in base ai quali i programmi prendono decisioni e scelgono azioni diverse. 
 
-In questa lezione per principianti si presuppone che siano state completate le lezioni [Hello World](hello-world.yml) e [Numeri in C#](numbers-in-csharp-local.md).
+Questa guida introduttiva presuppone che siano state completate le lezioni [Hello World](hello-world.yml) e [Numeri in C#](numbers-in-csharp-local.md).
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[Interpolazione di stringhe](interpolated-strings-local.md)
+
+La guida introduttiva [Interpolazione di stringhe](interpolated-strings-local.md) illustra come inserire valori in una stringa. Verrà illustrato come creare una stringa interpolata con espressioni C# incorporate e come controllare l'aspetto del testo dei risultati dell'espressione nella stringa di risultato.
+
+In questa guida introduttiva si presuppone che siano state completate le lezioni [Hello World](hello-world.yml), [Numeri in C#](numbers-in-csharp-local.md) e [Rami e cicli](branches-and-loops-local.md).
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[Raccolte di elenchi](arrays-and-collections.md)
 
 La lezione [Raccolte di elenchi](arrays-and-collections.md) offre una panoramica delle raccolte di tipo List che consentono di archiviare sequenze di dati. Si apprenderà come aggiungere e rimuovere elementi, eseguire la ricerca di elementi e ordinare gli elenchi. Verranno esaminati diversi tipi di elenchi. 
 
-Questa guida introduttiva di base presuppone che siano state completate le guide introduttive elencate in precedenza.
+Questa guida introduttiva presuppone che siano state completate le lezioni elencate in precedenza.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introduzione alle classi](introduction-to-classes.md)
 

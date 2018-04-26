@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Esecuzione di applicazioni console in contenitori Windows
 
@@ -25,7 +25,7 @@ L'applicazione console di esempio è un esempio semplice che prende un argomento
 
 Oltre alla risposta, `Environment.MachineName` è stato aggiunto per illustrare la differenza tra l'esecuzione dell'applicazione in locale e in un contenitore di Windows. Quando si esegue l'applicazione localmente, deve essere restituito il nome del computer locale mentre, durante l'esecuzione in un contenitore di Windows, viene restituito l'id di sessione del contenitore.
 
-L'[esempio completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) è disponibile nel repository dotnet/docs su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) è disponibile nel repository dotnet/samples su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 È necessario avere familiarità con alcuni termini di Docker prima di iniziare lo spostamento dell'applicazione in un contenitore.
 

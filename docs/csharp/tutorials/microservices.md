@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservizi ospitati in Docker
 
@@ -32,7 +32,7 @@ Verranno inoltre illustrate alcune funzionalità del linguaggio C#:
 * Elaborazione delle richieste HTTP in ingresso e generazione della risposta HTTP
 * Uso dei tipi valore nullable
 
-È possibile [visualizzare o scaricare l'app di esempio](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) per questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+È possibile [visualizzare o scaricare l'app di esempio](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) per questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Vantaggi offerti dall'uso di Docker
 
@@ -98,7 +98,7 @@ Dopo aver compilato l'applicazione, eseguirla dalla riga di comando:
 dotnet run
 ```
 
-La configurazione predefinita è in ascolto su http://localhost:5000. È possibile aprire un browser e passare a tale pagina, dove viene visualizzato un messaggio "Hello World!" .
+La configurazione predefinita è in ascolto su `http://localhost:5000`. È possibile aprire un browser e passare a tale pagina, dove viene visualizzato un messaggio "Hello World!" .
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Composizione di un'applicazione ASP.NET Core
 

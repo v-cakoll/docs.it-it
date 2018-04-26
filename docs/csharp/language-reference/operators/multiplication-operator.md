@@ -1,6 +1,6 @@
 ---
 title: '* Operatore (Riferimenti per C#)'
-ms.date: 07/20/2015
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -14,18 +14,18 @@ ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07d06d668ba43ebc3f4fae394d7b6641b122f4a6
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="-operator-c-reference"></a>Operatore * (Riferimenti per C#)
-L'operatore di moltiplicazione (`*`), che calcola il prodotto degli operandi.  L'operatore di dereferenziazione, che consente la lettura e scrittura in un puntatore.  
+L'operatore di moltiplicazione (`*`) calcola il prodotto degli operandi. Tutti i tipi numerici hanno operatori di moltiplicazione predefiniti.  
+
+`*` funge anche da operatore di dereferenziazione, che consente la lettura e scrittura in un puntatore.
   
 ## <a name="remarks"></a>Note  
- Tutti i tipi numerici hanno operatori di moltiplicazione predefiniti.  
-  
  L'operatore `*` viene anche usato per dichiarare i tipi di puntatore e dereferenziare i puntatori. Questo operatore può essere usato solo in contesti non sicuri, che sono identificati dall'uso della parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md) e richiedono l'opzione [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) del compilatore.  L'operatore di dereferenziazione è noto anche come operatore di riferimento indiretto.  
   
  I tipi definiti dall'utente possono eseguire l'overload dell'operatore `*` (vedere [operator](../../../csharp/language-reference/keywords/operator.md)). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione corrispondente, se presente.  

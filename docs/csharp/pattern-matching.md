@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca #
 
@@ -112,27 +112,27 @@ Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiunti
 
 Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di casi degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`le dichiarazioni in `case` espressioni
+## <a name="var-declarations-in-case-expressions"></a>Dichiarazioni `var` nelle espressioni `case`
 
-L'introduzione di `var` come una delle espressioni match introduce le nuove regole per la corrispondenza.
+L'introduzione di `var` come una delle espressioni di corrispondenza introduce nuove regole per i criteri di ricerca.
 
-La prima regola è che il `var` dichiarazione segue le regole di inferenza del tipo normale: il tipo viene dedotto il tipo statico dell'espressione switch. Da questa regola, il tipo corrisponde sempre.
+La prima regola è che la dichiarazione `var` segue le normali regole di inferenza del tipo: il tipo viene dedotto come tipo statico dell'espressione switch. In base a questa regola, il tipo corrisponde sempre.
 
-La seconda regola è che un `var` dichiarazione di non includere il controllo null che includono altre espressioni di tipo modello. Pertanto, la variabile può essere null e un controllo null è necessario in questo caso.
+La seconda regola è che una dichiarazione `var` non include il controllo Null incluso in altre espressioni di criterio del tipo. Questo significa che la variabile può essere Null e in questo caso è necessario il controllo Null.
 
-Le due regole che indicano in molti casi, un `var` dichiarazione in un `case` espressione corrisponde alle stesse condizioni un `default` espressione.
-Perché è preferibile a qualsiasi case non predefinita di `default` caso, il `default` caso non verrà mai eseguita.
+Queste due regole indicano che, in molti casi, una dichiarazione `var` in un'espressione `case` corrisponde alle stesse condizioni di un'espressione `default`.
+Dato che qualsiasi case non predefinito è preferibile al case `default`, il case `default` non verrà mai eseguito.
 
 > [!NOTE]
-> Il compilatore non genera un avviso in questi casi in cui un `default` case è stato scritto, ma non verrà mai eseguita. Questo comportamento è coerente con l'attuale `switch` comportamento dell'istruzione in cui sono stati elencati tutti i casi possibili.
+> Il compilatore non genera un avviso nei casi in cui è stato scritto un case `default` che non verrà mai eseguito. Ciò è coerente con il comportamento corrente dell'istruzione `switch` in cui sono stati elencati tutti i case possibili.
 
-La terza regola introduce viene utilizzato in un `var` case può essere utile. Si supponga che si sta eseguendo un criterio di ricerca in cui l'input è una stringa e si sta cercando valori comando noto. È possibile scrivere simile al seguente:
+La terza regola introduce gli usi per cui può essere utile un case `var`. Si supponga di eseguire una corrispondenza di criterio in cui l'input è una stringa e si stanno cercando valori di comando noti. È possibile scrivere codice simile al seguente:
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-Il `var` caso corrispondenze `null`, una stringa vuota o qualsiasi stringa che contiene solo spazi vuoti. Si noti che il codice precedente utilizza il `?.` operatore per assicurare che non accidentalmente genera un <xref:System.NullReferenceException>. Il `default` case gestisce qualsiasi altro valore di stringa non riconosciute dal parser comando.
+Il case `var` corrisponde a `null`, una stringa vuota o qualsiasi stringa che contiene solo spazi vuoti. Si noti che il codice precedente usa l'operatore `?.` per assicurarsi che non venga generata accidentalmente un'eccezione <xref:System.NullReferenceException>. Il case `default` gestisce qualsiasi altro valore stringa non riconosciuto dal parser dei comandi.
 
-Questo è un esempio in cui si desidera considerare un `var` caso l'espressione che è diverso da quello di un `default` espressione.
+Questo è un esempio in cui si può prendere in considerazione l'uso di un'espressione case `var` distinta da un'espressione `default`.
 
 ## <a name="conclusions"></a>Conclusioni
 

@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>Panoramica della programmazione asincrona
 
@@ -41,4 +41,14 @@ Il codice asincrono ha le caratteristiche seguenti:
 
 ## <a name="whats-next"></a>Argomenti successivi
 
-Per un approfondimento dei concetti della programmazione asincrona, vedere [La programmazione asincrona in dettaglio](async-in-depth.md) e [Task-based asynchronous programming](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md) (Programmazione asincrona basata su attività).
+Per altre informazioni, vedere l'argomento [La programmazione asincrona in dettaglio](async-in-depth.md).
+
+L'argomento [Modelli di programmazione asincrona](/asynchronous-programming-patterns/index.md) offre una panoramica dei tre modelli di programmazione asincroni supportati in .NET:  
+  
+-   [Asynchronous Programming Model (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (Modello di programmazione asincrona, APM - legacy)  
+  
+-   [Event-based Asynchronous Pattern (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi - legacy)  
+  
+-   [Task-based Asynchronous Pattern (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività - Consigliato per nuove attività di sviluppo)  
+
+Per altre informazioni sul modello di programmazione basato su attività consigliato, vedere l'argomento [Programmazione asincrona basata su attività](parallel-programming/task-based-asynchronous-programming.md).

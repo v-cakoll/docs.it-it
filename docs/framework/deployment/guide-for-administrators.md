@@ -1,7 +1,7 @@
 ---
 title: Guida alla distribuzione di .NET Framework per amministratori
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -165,7 +165,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 8.  Completare la procedura guidata.  
   
- Il pacchetto contiene ora tutte le informazioni necessarie per la distribuzione invisibile di .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che siano installati nel punto di distribuzione. Vedere la sezione "Monitoraggio del contenuto" di [Operazioni e manutenzione per la gestione dei contenuti in Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) nella libreria della documentazione di Configuration Manager.  
+ Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che siano installati nel punto di distribuzione. Vedere la sezione "Monitoraggio del contenuto" di [Operazioni e manutenzione per la gestione dei contenuti in Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) nella libreria della documentazione di Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Distribuire il pacchetto  
@@ -230,11 +230,16 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
   
 ### <a name="log-file-locations"></a>Percorsi dei file di log  
- Durante l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] vengono generati i seguenti file di log:  
+ Durante l'installazione di .NET Framework vengono generati i seguenti file di log:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *versione*\*.txt  
+ %temp%\Microsoft .NET Framework *versione*\*.html  
   
- È possibile usare lo [strumento di raccolta dei log](http://www.microsoft.com/download/details.aspx?id=12493) per raccogliere i file di log di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e creare un file di archivio (CAB) compresso che riduce le dimensioni dei file.  
+ dove *versione* è la versione di .NET Framework che si sta installando, ad esempio 4.5 o 4.7.2.  
+ 
+ È anche possibile specificare la directory in cui vengono scritti i file di log usando l'opzione della riga di comando `/log` nel comando di installazione di .NET Framework. Per altre informazioni, vedere la [Guida alla distribuzione di .NET Framework per sviluppatori](deployment-guide-for-developers.md#command-line-options). 
+ 
+ È possibile usare lo [strumento di raccolta dei log](https://www.microsoft.com/download/details.aspx?id=12493) per raccogliere i file di log di .NET Framework e creare un file CAB compresso che riduce le dimensioni dei file.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Codici restituiti  

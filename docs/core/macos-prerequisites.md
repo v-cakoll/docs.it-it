@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4bad51e7d0d705ea730382edf80850bca15c5e7a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Prerequisiti per .NET Core in macOS
 
@@ -65,9 +66,9 @@ Scaricare e installare .NET Core SDK da [.NET Downloads](https://www.microsoft.c
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>Aumentare il limite massimo di file aperti
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Aumentare il limite massimo di file aperti (versioni di .NET Core prima di .NET Core SDK 2.0.2) 
 
-Il limite di file aperti predefinito per macOS potrebbe non essere sufficiente per alcuni carichi di lavoro di .NET Core, ad esempio il ripristino di progetti o l'esecuzione di unit test.
+Nelle versioni precedenti di .NET Core (prima di .NET Core SDK 2.0.2) il limite di file aperti predefinito per macOS potrebbe non essere sufficiente per alcuni carichi di lavoro di .NET Core, ad esempio il ripristino di progetti o l'esecuzione di unit test.
 
 È possibile aumentare questo limite seguendo questa procedura:
 

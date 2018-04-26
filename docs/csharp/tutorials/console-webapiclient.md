@@ -1,6 +1,6 @@
 ---
 title: Creare un client REST usando .NET Core
-description: "Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#."
+description: Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 8cca71b9b8e09fd26f80d53618a3f1e278e28390
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -31,7 +31,7 @@ Si creerà un'applicazione che invia richieste HTTP a un servizio REST su GitHub
 
 In questa esercitazione verranno create anche numerose funzionalità.
 
-Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) di questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) di questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Prerequisiti
 È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core). Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
@@ -63,7 +63,7 @@ La maggior parte degli editor di codice offre funzioni di completamento per le d
 Dopo aver apportato queste modifiche, eseguire nuovamente `dotnet restore` ([vedere la nota](#dotnet-restore-note)) per consentire l'installazione del pacchetto nel sistema.
 
 ## <a name="making-web-requests"></a>Esecuzione di richieste Web
-Si è ora pronti per iniziare a recuperare dati dal Web. In questa applicazione si leggeranno informazioni dall'[API GitHub](https://developer.github.com/v3/). In particolare, si leggeranno informazioni sui progetti nell'ambito di [.NET Foundation](http://www.dotnetfoundation.org/). Si inizierà inviando all'API GitHub la richiesta di recuperare informazioni sui progetti. L'endpoint usato sarà: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Poiché si vuole recuperare tutte le informazioni su questi progetti, si userà una richiesta HTTP GET.
+Si è ora pronti per iniziare a recuperare dati dal Web. In questa applicazione si leggeranno informazioni dall'[API GitHub](https://developer.github.com/v3/). In particolare, si leggeranno informazioni sui progetti nell'ambito di [.NET Foundation](http://www.dotnetfoundation.org/). Si inizierà inviando all'API GitHub la richiesta di recuperare informazioni sui progetti. L'endpoint che verrà usato è: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Poiché si vuole recuperare tutte le informazioni su questi progetti, si userà una richiesta HTTP GET.
 Anche il browser usa richieste HTTP GET ed è quindi possibile incollare l'URL nel browser per visualizzare le informazioni che si riceveranno ed elaboreranno.
 
 Per eseguire richieste Web, usare la classe <xref:System.Net.Http.HttpClient>. Come tutte le API .NET moderne, <xref:System.Net.Http.HttpClient> supporta solo metodi asincroni per le API a esecuzione prolungata.
@@ -380,7 +380,7 @@ Dopo aver aggiunto un'altra istruzione di output alla console, sarà possibile c
 Console.WriteLine(repo.LastPush);
 ```
 
-La versione dell'app dovrebbe ora corrispondere all'[esempio completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+La versione dell'app dovrebbe ora corrispondere all'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Conclusione
 

@@ -1,6 +1,6 @@
 ---
 title: Indicizzatori
-description: "Informazioni sugli indicizzatori C# e su come implementano proprietà indicizzate, ovvero proprietà a cui si fa riferimento usando uno o più argomenti."
+description: Informazioni sugli indicizzatori C# e su come implementano proprietà indicizzate, ovvero proprietà a cui si fa riferimento usando uno o più argomenti.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="indexers"></a>Indexers (Indicizzatori)
+# <a name="indexers"></a>Indicizzatori
 
 Gli *indicizzatori* sono simili alle proprietà e per molti aspetti si basano sulle stesse funzionalità del linguaggio delle [proprietà](properties.md). Gli indicizzatori consentono proprietà *indicizzate*, ovvero proprietà a cui si fa riferimento tramite uno o più argomenti, che forniscono un indice per una raccolta di valori.
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-Da questo esempio iniziale è possibile rendersi conto della relazione tra la sintassi relativa alle proprietà e a quella relativa agli indicizzatori. Questa analogia si estende alla maggior parte delle regole della sintassi degli indicizzatori. Gli indicizzatori possono avere modificatori di accesso valido (pubblica, protetta interna, protetti, interna, privata o privata protetta). Possono essere sealed, virtual o abstract. Come per le proprietà, in un indicizzatore è possibile specificare modificatori di accesso diversi per le funzioni di accesso get e set.
+Da questo esempio iniziale è possibile rendersi conto della relazione tra la sintassi relativa alle proprietà e a quella relativa agli indicizzatori. Questa analogia si estende alla maggior parte delle regole della sintassi degli indicizzatori. Agli indicizzatori si possono applicare tutti i modificatori di accesso validi (public, protected internal, protected, internal, private o private protected). Possono essere sealed, virtual o abstract. Come per le proprietà, in un indicizzatore è possibile specificare modificatori di accesso diversi per le funzioni di accesso get e set.
 È anche possibile specificare indicizzatori di sola lettura (omettendo la funzione di accesso set) o indicizzatori di sola scrittura (omettendo la funzione di accesso get).
 
 È possibile applicare agli indicizzatori quasi tutto ciò che si apprende dall'uso delle proprietà. L'unica eccezione a tale regola è costituita dalle *proprietà implementate automaticamente*. Il compilatore non è sempre in grado di generare l'archiviazione corretta per un indicizzatore.
@@ -51,7 +51,7 @@ La differenza tra indicizzatori e proprietà è costituita dalla presenza negli 
 Si definiscono *indicizzatori* in un tipo se l'API corrispondente modella una raccolta per cui si definiscono gli argomenti. Gli indicizzatori possono essere mappati direttamente o meno ai tipi di raccolta che fanno parte di .NET Framework Core. Oltre alla modellazione di una raccolta, il tipo può avere altre responsabilità.
 Gli indicizzatori consentono di fornire l'API corrispondente all'astrazione del tipo senza esporre nei minimi dettagli la modalità di archiviazione o di calcolo dei valori per tale astrazione.
 
-Di seguito è riportata la descrizione dettagliata di alcuni scenari comuni per l'uso di *indicizzatori*. È possibile accedere alla [cartella degli esempi per gli indicizzatori](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Di seguito è riportata la descrizione dettagliata di alcuni scenari comuni per l'uso di *indicizzatori*. È possibile accedere alla [cartella degli esempi per gli indicizzatori](https://github.com/dotnet/samples/tree/master/csharp/indexers). Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrici e vettori
 
