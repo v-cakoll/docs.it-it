@@ -1,12 +1,12 @@
 ---
 title: Procedure consigliate per le espressioni regolari in .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 59ec9ead0fd010baccaadb1eda0f469b7b4dcb46
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedure consigliate per le espressioni regolari in .NET
 <a name="top"></a> Il motore delle espressioni regolari in .NET è uno strumento potente e completo che consente di elaborare il testo in base alle corrispondenze dei modelli invece che in base al confronto e alla corrispondenza con il testo letterale. Nella maggior parte dei casi, la corrispondenza dei modelli viene applicata in modo rapido ed efficiente. In alcuni casi, tuttavia, il motore delle espressioni regolari può risultare molto lento. In casi estremi, può anche sembrare che il motore non risponda durante l'elaborazione di un input relativamente piccolo per ore o perfino giorni.  
