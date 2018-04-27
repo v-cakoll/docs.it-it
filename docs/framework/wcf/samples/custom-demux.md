@@ -1,33 +1,35 @@
 ---
 title: Demux personalizzato
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="custom-demux"></a><span data-ttu-id="b31aa-102">Demux personalizzato</span><span class="sxs-lookup"><span data-stu-id="b31aa-102">Custom Demux</span></span>
-<span data-ttu-id="b31aa-103">Questo esempio viene illustrato come le intestazioni dei messaggi MSMQ possono essere mappate a diverse operazioni del servizio in modo che [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizi che utilizzano <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> non sono limitati all'uso di un'operazione di servizio come illustrato nel [Accodamento messaggi Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) esempi.</span><span class="sxs-lookup"><span data-stu-id="b31aa-103">This sample demonstrates how MSMQ message headers can be mapped to different service operations so that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services that use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> are not limited to using one service operation as demonstrated in the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) and [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) samples.</span></span>  
+# <a name="custom-demux"></a><span data-ttu-id="b8ed3-102">Demux personalizzato</span><span class="sxs-lookup"><span data-stu-id="b8ed3-102">Custom Demux</span></span>
+<span data-ttu-id="b8ed3-103">Questo esempio viene illustrato come le intestazioni dei messaggi MSMQ possono essere mappate a diverse operazioni del servizio in modo che [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizi che utilizzano <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> non sono limitati all'uso di un'operazione di servizio come illustrato nel [Accodamento messaggi Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) e [Windows Communication Foundation a Accodamento messaggi](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) esempi.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-103">This sample demonstrates how MSMQ message headers can be mapped to different service operations so that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services that use <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> are not limited to using one service operation as demonstrated in the [Message Queuing to Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) and [Windows Communication Foundation to Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) samples.</span></span>  
   
- <span data-ttu-id="b31aa-104">Il servizio, in questo esempio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="b31aa-104">The service in this sample is a self-hosted console application to enable you to observe the service that receives queued messages.</span></span>  
+ <span data-ttu-id="b8ed3-104">Il servizio, in questo esempio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-104">The service in this sample is a self-hosted console application to enable you to observe the service that receives queued messages.</span></span>  
   
- <span data-ttu-id="b31aa-105">Il contratto di servizio è `IOrderProcessor` e definisce un servizio unidirezionale adatto per l'uso con le code.</span><span class="sxs-lookup"><span data-stu-id="b31aa-105">The service contract is `IOrderProcessor`, and defines a one-way service that is suitable for use with queues.</span></span>  
-  
-```  
+ <span data-ttu-id="b8ed3-105">Il contratto di servizio è `IOrderProcessor` e definisce un servizio unidirezionale adatto per l'uso con le code.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-105">The service contract is `IOrderProcessor`, and defines a one-way service that is suitable for use with queues.</span></span>  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
- <span data-ttu-id="b31aa-106">Un messaggio MSMQ non dispone di un'intestazione Action.</span><span class="sxs-lookup"><span data-stu-id="b31aa-106">An MSMQ message does not have an Action header.</span></span> <span data-ttu-id="b31aa-107">Non è possibile eseguire automaticamente il mapping di messaggi MSMQ diversi su contratti dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="b31aa-107">It is not possible to map different MSMQ messages to operation contracts automatically.</span></span> <span data-ttu-id="b31aa-108">Pertanto, può essere presente un solo contratto dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="b31aa-108">Therefore, there can be only one operation contract.</span></span> <span data-ttu-id="b31aa-109">Per superare questa limitazione il servizio implementa il metodo <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> dell'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.</span><span class="sxs-lookup"><span data-stu-id="b31aa-109">To overcome this limitation, the service implements the <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> method of the <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface.</span></span> <span data-ttu-id="b31aa-110">Il metodo <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> consente al servizio di eseguire il mapping di una determinata intestazione del messaggio con una particolare operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-110">The <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> method enables the service to map a given header of the message to a particular service operation.</span></span> <span data-ttu-id="b31aa-111">In questo esempio, l'intestazione dell'etichetta del messaggio è mappata sulle operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-111">In this sample, the message's label header is mapped to the service operations.</span></span> <span data-ttu-id="b31aa-112">Il parametro `Name` del contratto dell'operazione determina quale operazione del servizio deve essere distribuita per una determinata etichetta del messaggio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-112">The `Name` parameter of the operation contract determines which service operation must be dispatched for a given message label.</span></span> <span data-ttu-id="b31aa-113">Ad esempio, se l'intestazione dell'etichetta del messaggio contiene "SubmitPurchaseOrder", viene richiamata l'operazione del servizio "SubmitPurchaseOrder".</span><span class="sxs-lookup"><span data-stu-id="b31aa-113">For example, if the message's label header contains "SubmitPurchaseOrder", the "SubmitPurchaseOrder" service operation is invoked.</span></span>  
-  
-```  
+```
+
+ <span data-ttu-id="b8ed3-106">Un messaggio MSMQ non dispone di un'intestazione Action.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-106">An MSMQ message does not have an Action header.</span></span> <span data-ttu-id="b8ed3-107">Non è possibile eseguire automaticamente il mapping di messaggi MSMQ diversi su contratti dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-107">It is not possible to map different MSMQ messages to operation contracts automatically.</span></span> <span data-ttu-id="b8ed3-108">Pertanto, può essere presente un solo contratto dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-108">Therefore, there can be only one operation contract.</span></span> <span data-ttu-id="b8ed3-109">Per superare questa limitazione il servizio implementa il metodo <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> dell'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-109">To overcome this limitation, the service implements the <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> method of the <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> interface.</span></span> <span data-ttu-id="b8ed3-110">Il metodo <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> consente al servizio di eseguire il mapping di una determinata intestazione del messaggio con una particolare operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-110">The <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> method enables the service to map a given header of the message to a particular service operation.</span></span> <span data-ttu-id="b8ed3-111">In questo esempio, l'intestazione dell'etichetta del messaggio è mappata sulle operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-111">In this sample, the message's label header is mapped to the service operations.</span></span> <span data-ttu-id="b8ed3-112">Il parametro `Name` del contratto dell'operazione determina quale operazione del servizio deve essere distribuita per una determinata etichetta del messaggio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-112">The `Name` parameter of the operation contract determines which service operation must be dispatched for a given message label.</span></span> <span data-ttu-id="b8ed3-113">Ad esempio, se l'intestazione dell'etichetta del messaggio contiene "SubmitPurchaseOrder", viene richiamata l'operazione del servizio "SubmitPurchaseOrder".</span><span class="sxs-lookup"><span data-stu-id="b8ed3-113">For example, if the message's label header contains "SubmitPurchaseOrder", the "SubmitPurchaseOrder" service operation is invoked.</span></span>  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
- <span data-ttu-id="b31aa-114">Il servizio deve implementare il metodo <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> dell'interfaccia <xref:System.ServiceModel.Description.IContractBehavior> come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-114">The service must implement the <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> method of the <xref:System.ServiceModel.Description.IContractBehavior> interface as shown in the following sample code.</span></span> <span data-ttu-id="b31aa-115">Questo applica l'`OperationSelector` personalizzato al runtime di distribuzione del framework del servizio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-115">This applies the custom `OperationSelector` to the service framework dispatch runtime.</span></span>  
-  
-```  
+```
+
+ <span data-ttu-id="b8ed3-114">Il servizio deve implementare il metodo <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> dell'interfaccia <xref:System.ServiceModel.Description.IContractBehavior> come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-114">The service must implement the <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> method of the <xref:System.ServiceModel.Description.IContractBehavior> interface as shown in the following sample code.</span></span> <span data-ttu-id="b8ed3-115">Questo applica l'`OperationSelector` personalizzato al runtime di distribuzione del framework del servizio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-115">This applies the custom `OperationSelector` to the service framework dispatch runtime.</span></span>  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
- <span data-ttu-id="b31aa-116">Prima di arrivare a OperationSelector, un messaggio deve passare attraverso il <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> del dispatcher.</span><span class="sxs-lookup"><span data-stu-id="b31aa-116">A message must pass through the dispatcher's <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> before getting to the OperationSelector.</span></span> <span data-ttu-id="b31aa-117">Per impostazione predefinita un messaggio viene rifiutato se non è possibile trovare la relativa azione in alcun contratto implementato dal servizio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-117">By default a message is rejected if its action cannot be found on any contract implemented by the service.</span></span> <span data-ttu-id="b31aa-118">Per evitare questo controllo, viene implementato un <xref:System.ServiceModel.Description.IEndpointBehavior> denominato `MatchAllFilterBehavior`, che consente il passaggio di tutti i messaggi attraverso il `ContractFilter` applicando <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> nel modo seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-118">To avoid this check, we implement an <xref:System.ServiceModel.Description.IEndpointBehavior> named `MatchAllFilterBehavior`, which allows any message to pass through the `ContractFilter` by applying the <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> as follows.</span></span>  
-  
-```  
+```
+
+ <span data-ttu-id="b8ed3-116">Prima di arrivare a OperationSelector, un messaggio deve passare attraverso il <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> del dispatcher.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-116">A message must pass through the dispatcher's <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> before getting to the OperationSelector.</span></span> <span data-ttu-id="b8ed3-117">Per impostazione predefinita un messaggio viene rifiutato se non è possibile trovare la relativa azione in alcun contratto implementato dal servizio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-117">By default a message is rejected if its action cannot be found on any contract implemented by the service.</span></span> <span data-ttu-id="b8ed3-118">Per evitare questo controllo, viene implementato un <xref:System.ServiceModel.Description.IEndpointBehavior> denominato `MatchAllFilterBehavior`, che consente il passaggio di tutti i messaggi attraverso il `ContractFilter` applicando <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> nel modo seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-118">To avoid this check, we implement an <xref:System.ServiceModel.Description.IEndpointBehavior> named `MatchAllFilterBehavior`, which allows any message to pass through the `ContractFilter` by applying the <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> as follows.</span></span>  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
- <span data-ttu-id="b31aa-119">Quando il servizio riceve un messaggio, l'operazione del servizio appropriata viene distribuita usando le informazioni fornite dall'intestazione dell'etichetta.</span><span class="sxs-lookup"><span data-stu-id="b31aa-119">When a message is received by the service, the appropriate service operation is dispatched using the information provided by the label header.</span></span> <span data-ttu-id="b31aa-120">Il corpo del messaggio viene deserializzato in un oggetto `PurchaseOrder`, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-120">The body of the message is deserialized into a `PurchaseOrder` object, as shown in the following sample code.</span></span>  
-  
-```  
+ <span data-ttu-id="b8ed3-119">Quando il servizio riceve un messaggio, l'operazione del servizio appropriata viene distribuita usando le informazioni fornite dall'intestazione dell'etichetta.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-119">When a message is received by the service, the appropriate service operation is dispatched using the information provided by the label header.</span></span> <span data-ttu-id="b8ed3-120">Il corpo del messaggio viene deserializzato in un oggetto `PurchaseOrder`, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-120">The body of the message is deserialized into a `PurchaseOrder` object, as shown in the following sample code.</span></span>  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
- <span data-ttu-id="b31aa-121">Il servizio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-121">The service is self-hosted.</span></span> <span data-ttu-id="b31aa-122">Quando si usa MSMQ, la coda usata deve essere creata in anticipo.</span><span class="sxs-lookup"><span data-stu-id="b31aa-122">When using the MSMQ, the queue that is used must be created in advance.</span></span> <span data-ttu-id="b31aa-123">Questa operazione può essere eseguita manualmente o mediante il codice.</span><span class="sxs-lookup"><span data-stu-id="b31aa-123">This can be done manually or through code.</span></span> <span data-ttu-id="b31aa-124">In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e la crea se necessario.</span><span class="sxs-lookup"><span data-stu-id="b31aa-124">In this sample, the service contains code to check for the existence of the queue and creates it if the queue does not exist.</span></span> <span data-ttu-id="b31aa-125">Il nome della coda viene letto dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="b31aa-125">The queue name is read from the configuration file.</span></span>  
-  
-```  
+```
+
+ <span data-ttu-id="b8ed3-121">Il servizio è indipendente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-121">The service is self-hosted.</span></span> <span data-ttu-id="b8ed3-122">Quando si usa MSMQ, la coda usata deve essere creata in anticipo.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-122">When using the MSMQ, the queue that is used must be created in advance.</span></span> <span data-ttu-id="b8ed3-123">Questa operazione può essere eseguita manualmente o mediante il codice.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-123">This can be done manually or through code.</span></span> <span data-ttu-id="b8ed3-124">In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e la crea se necessario.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-124">In this sample, the service contains code to check for the existence of the queue and creates it if the queue does not exist.</span></span> <span data-ttu-id="b8ed3-125">Il nome della coda viene letto dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-125">The queue name is read from the configuration file.</span></span>  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,12 +117,12 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
- <span data-ttu-id="b31aa-126">Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="b31aa-126">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span>  
+```
+
+ <span data-ttu-id="b8ed3-126">Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-126">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b31aa-127">Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso.</span><span class="sxs-lookup"><span data-stu-id="b31aa-127">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="b31aa-128">Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema msmq.formatname e viene usato "localhost" per il computer locale.</span><span class="sxs-lookup"><span data-stu-id="b31aa-128">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint address specifies a msmq.formatname scheme, and uses localhost for the local computer.</span></span> <span data-ttu-id="b31aa-129">Di seguito viene indicato lo schema di un indirizzo di coda formattato correttamente in base alle linee guida sull'indirizzamento dei nomi del formato MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b31aa-129">What follows the scheme is a properly formatted queue address according to the MSMQ Format name addressing guidelines.</span></span>  
+>  <span data-ttu-id="b8ed3-127">Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-127">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="b8ed3-128">Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema msmq.formatname e viene usato "localhost" per il computer locale.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-128">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint address specifies a msmq.formatname scheme, and uses localhost for the local computer.</span></span> <span data-ttu-id="b8ed3-129">Di seguito viene indicato lo schema di un indirizzo di coda formattato correttamente in base alle linee guida sull'indirizzamento dei nomi del formato MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-129">What follows the scheme is a properly formatted queue address according to the MSMQ Format name addressing guidelines.</span></span>  
   
 ```xml  
 <appSettings>  
@@ -130,11 +132,11 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="b31aa-130">In questo esempio richiede l'installazione di [Accodamento](http://go.microsoft.com/fwlink/?LinkId=95143).</span><span class="sxs-lookup"><span data-stu-id="b31aa-130">This sample requires the installation of [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143).</span></span>  
+>  <span data-ttu-id="b8ed3-130">In questo esempio richiede l'installazione di [Accodamento](http://go.microsoft.com/fwlink/?LinkId=95143).</span><span class="sxs-lookup"><span data-stu-id="b8ed3-130">This sample requires the installation of [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143).</span></span>  
   
- <span data-ttu-id="b31aa-131">Avviare il servizio ed eseguire il client.</span><span class="sxs-lookup"><span data-stu-id="b31aa-131">Start the service and run the client.</span></span>  
+ <span data-ttu-id="b8ed3-131">Avviare il servizio ed eseguire il client.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-131">Start the service and run the client.</span></span>  
   
- <span data-ttu-id="b31aa-132">Sul client viene visualizzato l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-132">The following output is seen on the client.</span></span>  
+ <span data-ttu-id="b8ed3-132">Sul client viene visualizzato l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-132">The following output is seen on the client.</span></span>  
   
 ```  
 Placed the order:Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6  
@@ -148,7 +150,7 @@ Canceled the Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="b31aa-133">Nel servizio deve essere visualizzato l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-133">The following output must be seen on the service.</span></span>  
+ <span data-ttu-id="b8ed3-133">Nel servizio deve essere visualizzato l'output seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-133">The following output must be seen on the service.</span></span>  
   
 ```  
 The service is ready.  
@@ -163,47 +165,47 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b31aa-134">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="b31aa-134">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b8ed3-134">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="b8ed3-134">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="b31aa-135">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b31aa-135">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="b8ed3-135">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8ed3-135">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="b31aa-136">Se il servizio viene eseguito prima, verificherà la presenza della coda.</span><span class="sxs-lookup"><span data-stu-id="b31aa-136">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="b31aa-137">Se la coda non è presente, il servizio ne creerà una.</span><span class="sxs-lookup"><span data-stu-id="b31aa-137">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="b31aa-138">È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b31aa-138">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="b31aa-139">Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.</span><span class="sxs-lookup"><span data-stu-id="b31aa-139">Follow these steps to create a queue in Windows 2008.</span></span>  
+2.  <span data-ttu-id="b8ed3-136">Se il servizio viene eseguito prima, verificherà la presenza della coda.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-136">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="b8ed3-137">Se la coda non è presente, il servizio ne creerà una.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-137">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="b8ed3-138">È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-138">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="b8ed3-139">Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-139">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  <span data-ttu-id="b31aa-140">Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b31aa-140">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+    1.  <span data-ttu-id="b8ed3-140">Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8ed3-140">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  <span data-ttu-id="b31aa-141">Espandere il **funzionalità** scheda.</span><span class="sxs-lookup"><span data-stu-id="b31aa-141">Expand the **Features** tab.</span></span>  
+    2.  <span data-ttu-id="b8ed3-141">Espandere il **funzionalità** scheda.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-141">Expand the **Features** tab.</span></span>  
   
-    3.  <span data-ttu-id="b31aa-142">Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.</span><span class="sxs-lookup"><span data-stu-id="b31aa-142">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
+    3.  <span data-ttu-id="b8ed3-142">Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-142">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  <span data-ttu-id="b31aa-143">Controllare il **transazionale** casella.</span><span class="sxs-lookup"><span data-stu-id="b31aa-143">Check the **Transactional** box.</span></span>  
+    4.  <span data-ttu-id="b8ed3-143">Controllare il **transazionale** casella.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-143">Check the **Transactional** box.</span></span>  
   
-    5.  <span data-ttu-id="b31aa-144">Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.</span><span class="sxs-lookup"><span data-stu-id="b31aa-144">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
+    5.  <span data-ttu-id="b8ed3-144">Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-144">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  <span data-ttu-id="b31aa-145">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b31aa-145">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="b8ed3-145">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8ed3-145">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="b31aa-146">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b31aa-146">To run the sample in a single- or cross- computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="b8ed3-146">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8ed3-146">To run the sample in a single- or cross- computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="b31aa-147">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="b31aa-147">To run the sample across computers</span></span>  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="b8ed3-147">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="b8ed3-147">To run the sample across computers</span></span>  
   
-1.  <span data-ttu-id="b31aa-148">Copiare i file del programma servizio dalla cartella \service\bin\, presente nella cartella specifica del linguaggio, nel computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="b31aa-148">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
+1.  <span data-ttu-id="b8ed3-148">Copiare i file del programma servizio dalla cartella \service\bin\, presente nella cartella specifica del linguaggio, nel computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-148">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
   
-2.  <span data-ttu-id="b31aa-149">Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.</span><span class="sxs-lookup"><span data-stu-id="b31aa-149">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
+2.  <span data-ttu-id="b8ed3-149">Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-149">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-3.  <span data-ttu-id="b31aa-150">Nel file Client.exe.config modificare orderQueueName per specificare il nome del computer del servizio anziché ".".</span><span class="sxs-lookup"><span data-stu-id="b31aa-150">In the Client.exe.config file, change the orderQueueName to specify the service computer name instead of ".".</span></span>  
+3.  <span data-ttu-id="b8ed3-150">Nel file Client.exe.config modificare orderQueueName per specificare il nome del computer del servizio anziché ".".</span><span class="sxs-lookup"><span data-stu-id="b8ed3-150">In the Client.exe.config file, change the orderQueueName to specify the service computer name instead of ".".</span></span>  
   
-4.  <span data-ttu-id="b31aa-151">Sul computer del servizio eseguire Service.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b31aa-151">On the service computer, launch Service.exe from a command prompt.</span></span>  
+4.  <span data-ttu-id="b8ed3-151">Sul computer del servizio eseguire Service.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-151">On the service computer, launch Service.exe from a command prompt.</span></span>  
   
-5.  <span data-ttu-id="b31aa-152">Sul computer client avviare Client.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b31aa-152">On the client computer, launch Client.exe from a command prompt.</span></span>  
+5.  <span data-ttu-id="b8ed3-152">Sul computer client avviare Client.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-152">On the client computer, launch Client.exe from a command prompt.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="b31aa-153">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="b31aa-153">The samples may already be installed on your computer.</span></span> <span data-ttu-id="b31aa-154">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="b31aa-154">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b8ed3-153">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-153">The samples may already be installed on your computer.</span></span> <span data-ttu-id="b8ed3-154">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-154">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="b31aa-155">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b31aa-155">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b31aa-156">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="b31aa-156">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b8ed3-155">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b8ed3-155">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b8ed3-156">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="b8ed3-156">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## <a name="see-also"></a><span data-ttu-id="b31aa-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b31aa-157">See Also</span></span>  
- [<span data-ttu-id="b31aa-158">Accodamento in WCF</span><span class="sxs-lookup"><span data-stu-id="b31aa-158">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [<span data-ttu-id="b31aa-159">Accodamento messaggi</span><span class="sxs-lookup"><span data-stu-id="b31aa-159">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=95143)
+## <a name="see-also"></a><span data-ttu-id="b8ed3-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8ed3-157">See Also</span></span>  
+ [<span data-ttu-id="b8ed3-158">Accodamento in WCF</span><span class="sxs-lookup"><span data-stu-id="b8ed3-158">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [<span data-ttu-id="b8ed3-159">Accodamento messaggi</span><span class="sxs-lookup"><span data-stu-id="b8ed3-159">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=95143)

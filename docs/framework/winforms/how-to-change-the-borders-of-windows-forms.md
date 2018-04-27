@@ -1,13 +1,13 @@
 ---
 title: 'Procedura: modificare i bordi di Windows Form'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,28 +16,28 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e977617f16ef882ad0dcfe1a96a6e8af73d2ae48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 936d9d67454a272e79990f2e1b432391ecdc26a5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a><span data-ttu-id="57d7f-102">Procedura: modificare i bordi di Windows Form</span><span class="sxs-lookup"><span data-stu-id="57d7f-102">How to: Change the Borders of Windows Forms</span></span>
-<span data-ttu-id="57d7f-103">Quando si stabiliscono l'aspetto e il comportamento di Windows Form, è possibile scegliere tra diversi stili bordo.</span><span class="sxs-lookup"><span data-stu-id="57d7f-103">You have several border styles to choose from when you are determining the appearance and behavior of your Windows Forms.</span></span> <span data-ttu-id="57d7f-104">Modificando la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A>, è possibile controllare il comportamento di ridimensionamento del form.</span><span class="sxs-lookup"><span data-stu-id="57d7f-104">By changing the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property, you can control the resizing behavior of the form.</span></span> <span data-ttu-id="57d7f-105">Inoltre, l'impostazione di <xref:System.Windows.Forms.Form.FormBorderStyle%2A> influisce sul modo in cui la barra del titolo viene visualizzata e su quali pulsanti possono apparire sulla barra stessa.</span><span class="sxs-lookup"><span data-stu-id="57d7f-105">In addition, setting the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> affects how the caption bar is displayed as well as what buttons might appear on it.</span></span> <span data-ttu-id="57d7f-106">Per altre informazioni, vedere <xref:System.Windows.Forms.FormBorderStyle>.</span><span class="sxs-lookup"><span data-stu-id="57d7f-106">For more information, see <xref:System.Windows.Forms.FormBorderStyle>.</span></span>  
+# <a name="how-to-change-the-borders-of-windows-forms"></a><span data-ttu-id="dbdd6-102">Procedura: modificare i bordi di Windows Form</span><span class="sxs-lookup"><span data-stu-id="dbdd6-102">How to: Change the Borders of Windows Forms</span></span>
+<span data-ttu-id="dbdd6-103">Quando si stabiliscono l'aspetto e il comportamento di Windows Form, è possibile scegliere tra diversi stili bordo.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-103">You have several border styles to choose from when you are determining the appearance and behavior of your Windows Forms.</span></span> <span data-ttu-id="dbdd6-104">Modificando la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A>, è possibile controllare il comportamento di ridimensionamento del form.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-104">By changing the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property, you can control the resizing behavior of the form.</span></span> <span data-ttu-id="dbdd6-105">Inoltre, l'impostazione di <xref:System.Windows.Forms.Form.FormBorderStyle%2A> influisce sul modo in cui la barra del titolo viene visualizzata e su quali pulsanti possono apparire sulla barra stessa.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-105">In addition, setting the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> affects how the caption bar is displayed as well as what buttons might appear on it.</span></span> <span data-ttu-id="dbdd6-106">Per altre informazioni, vedere <xref:System.Windows.Forms.FormBorderStyle>.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-106">For more information, see <xref:System.Windows.Forms.FormBorderStyle>.</span></span>  
   
- <span data-ttu-id="57d7f-107">In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] è disponibile supporto completo per questa attività.</span><span class="sxs-lookup"><span data-stu-id="57d7f-107">There is extensive support for this task in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span></span>  
+ <span data-ttu-id="dbdd6-107">In Visual Studio è disponibile supporto completo per questa attività.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-107">There is extensive support for this task in Visual Studio.</span></span>  
   
- <span data-ttu-id="57d7f-108">Vedere anche [procedura: modificare i bordi di Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="57d7f-108">See also [How to: Change the Borders of Windows Forms Using the Designer](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="dbdd6-108">Vedere anche [procedura: modificare i bordi di Windows Form utilizzando la finestra di progettazione](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="dbdd6-108">See also [How to: Change the Borders of Windows Forms Using the Designer](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).</span></span>  
   
-### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a><span data-ttu-id="57d7f-109">Per impostare lo stile bordo di Windows Form a livello di codice</span><span class="sxs-lookup"><span data-stu-id="57d7f-109">To set the border style of Windows Forms programmatically</span></span>  
+### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a><span data-ttu-id="dbdd6-109">Per impostare lo stile bordo di Windows Form a livello di codice</span><span class="sxs-lookup"><span data-stu-id="dbdd6-109">To set the border style of Windows Forms programmatically</span></span>  
   
--   <span data-ttu-id="57d7f-110">Impostare la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A> sullo stile desiderato.</span><span class="sxs-lookup"><span data-stu-id="57d7f-110">Set the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property to the style you want.</span></span> <span data-ttu-id="57d7f-111">Esempio di codice seguente imposta lo stile del bordo del form `DlgBx1` a <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span><span class="sxs-lookup"><span data-stu-id="57d7f-111">The following code example sets the border style of form `DlgBx1` to <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span></span>  
+-   <span data-ttu-id="dbdd6-110">Impostare la proprietà <xref:System.Windows.Forms.Form.FormBorderStyle%2A> sullo stile desiderato.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-110">Set the <xref:System.Windows.Forms.Form.FormBorderStyle%2A> property to the style you want.</span></span> <span data-ttu-id="dbdd6-111">Esempio di codice seguente imposta lo stile del bordo del form `DlgBx1` a <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-111">The following code example sets the border style of form `DlgBx1` to <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.</span></span>  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/22/2017
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     <span data-ttu-id="57d7f-112">Vedere anche [procedura: creare finestre di dialogo in fase di progettazione](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="57d7f-112">Also see [How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).</span></span>  
+     <span data-ttu-id="dbdd6-112">Vedere anche [procedura: creare finestre di dialogo in fase di progettazione](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="dbdd6-112">Also see [How to: Create Dialog Boxes at Design Time](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).</span></span>  
   
-     <span data-ttu-id="57d7f-113">Inoltre, se si è scelto un stile del bordo per il modulo che fornisce facoltativo **Riduci a icona** e **Ingrandisci** pulsanti, è possibile specificare se si desidera che uno o entrambi i pulsanti debbano essere funzionali.</span><span class="sxs-lookup"><span data-stu-id="57d7f-113">Additionally, if you have chosen a border style for the form that provides optional **Minimize** and **Maximize** buttons, you can specify whether you want either or both of these buttons to be functional.</span></span> <span data-ttu-id="57d7f-114">Questi pulsanti sono utili quando si desidera controllare da vicino l'esperienza utente.</span><span class="sxs-lookup"><span data-stu-id="57d7f-114">These buttons are useful when you want to closely control the user experience.</span></span> <span data-ttu-id="57d7f-115">Il **Riduci a icona** e **Ingrandisci** pulsanti sono abilitati per impostazione predefinita e le relative funzionalità viene modificato tramite il **proprietà** finestra.</span><span class="sxs-lookup"><span data-stu-id="57d7f-115">The **Minimize** and **Maximize** buttons are enabled by default, and their functionality is manipulated through the **Properties** window.</span></span>  
+     <span data-ttu-id="dbdd6-113">Inoltre, se si è scelto un stile del bordo per il modulo che fornisce facoltativo **Riduci a icona** e **Ingrandisci** pulsanti, è possibile specificare se si desidera che uno o entrambi i pulsanti debbano essere funzionali.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-113">Additionally, if you have chosen a border style for the form that provides optional **Minimize** and **Maximize** buttons, you can specify whether you want either or both of these buttons to be functional.</span></span> <span data-ttu-id="dbdd6-114">Questi pulsanti sono utili quando si desidera controllare da vicino l'esperienza utente.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-114">These buttons are useful when you want to closely control the user experience.</span></span> <span data-ttu-id="dbdd6-115">Il **Riduci a icona** e **Ingrandisci** pulsanti sono abilitati per impostazione predefinita e le relative funzionalità viene modificato tramite il **proprietà** finestra.</span><span class="sxs-lookup"><span data-stu-id="dbdd6-115">The **Minimize** and **Maximize** buttons are enabled by default, and their functionality is manipulated through the **Properties** window.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57d7f-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="57d7f-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="dbdd6-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dbdd6-116">See Also</span></span>  
  <xref:System.Windows.Forms.FormBorderStyle>  
  <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>  
- [<span data-ttu-id="57d7f-117">Guida introduttiva a Windows Form</span><span class="sxs-lookup"><span data-stu-id="57d7f-117">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+ [<span data-ttu-id="dbdd6-117">Guida introduttiva a Windows Form</span><span class="sxs-lookup"><span data-stu-id="dbdd6-117">Getting Started with Windows Forms</span></span>](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
