@@ -1,0 +1,11 @@
+### <a name="incorrect-implementation-of-memberdescriptorequals"></a>Implementazione non corretta di MemberDescriptor.Equals
+
+|   |   |
+|---|---|
+|Dettagli|L'implementazione originale del metodo &quot;Equals&quot; confronta due diverse proprietà stringa per gli oggetti da confrontare: la stringa del nome di categoria con la stringa di descrizione. La correzione consente di confrontare la &quot;categoria&quot; del primo oggetto con la &quot;categoria&quot; del secondo e la &quot;descrizione&quot; con la &quot;descrizione&quot;. Il valore di configurazione MemberDescriptorEqualsReturnsFalseIfEquivalent può essere impostato su true per rifiutare esplicitamente il nuovo comportamento per la destinazione 4.6.2 o su false per abilitare questa correzione quando si usa come destinazione una versione del framework precedente alla 4.6.2.|
+|Suggerimento|Se l'applicazione dipende dal fatto che MemberDescriptor.Equals restituisca a volte false quando i descrittori sono equivalenti e si usa come destinazione la versione 4.6.2 di .NET Framework, sono disponibili varie opzioni:<ol><li>Apportare modifiche al codice per confrontare i campi &quot;categoria&quot; e &quot;descrizione&quot; manualmente oltre a eseguire il metodo Equals.</li><li>Rifiutare esplicitamente questa modifica aggiungendo il valore seguente al file app.config:</li></ol><pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Se l'applicazione è destinata alla versione 4.6.1 o a versioni precedenti di .NET Framework e si vuole abilitare questa modifica, è possibile impostare l'opzione di compatibilità su false aggiungendo il valore seguente al file app.config:<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Ambito|Microsoft Edge|
+|Versione|4.6.2|
+|Tipo|Ridestinazione|
+|API interessate|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|
+

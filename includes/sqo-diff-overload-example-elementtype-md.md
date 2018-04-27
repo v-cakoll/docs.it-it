@@ -1,0 +1,2 @@
+> [!NOTE]
+>  In questo esempio di codice viene usato un overload di questo metodo diverso da quello specifico descritto in questo argomento. Per estendere l'esempio a questo argomento, sostituire gli elementi della sequenza di origine con elementi del tipo numerico appropriato.

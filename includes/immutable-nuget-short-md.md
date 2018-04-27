@@ -1,0 +1,1 @@
+**Pacchetto NuGet**: [System.Collections.Immutable](http://go.microsoft.com/fwlink/?LinkId=318047) ([informazioni sulle raccolte non modificabili e su come installarle](/dotnet/api/system.collections.immutable#Remarks))

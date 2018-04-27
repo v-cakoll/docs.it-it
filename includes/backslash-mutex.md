@@ -1,0 +1,1 @@
+La barra rovesciata (\\) è un carattere riservato in un nome di mutex. Non usare una barra rovesciata (\\) in un nome del mutex, se non come specificato nella nota sull'uso dei mutex nelle sessioni di Terminal Server. In caso contrario, potrebbe essere generata una <xref:System.IO.DirectoryNotFoundException>, anche se il nome del mutex rappresenta un file esistente.

@@ -1,1 +1,1 @@
-Il membro supporta l'infrastruttura .NET Framework e non è possibile utilizzarlo direttamente dal codice.
+Questo membro supporta l'infrastruttura .NET Framework e non è possibile usarlo direttamente dal codice.

@@ -1,1 +1,1 @@
-Questo tipo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.
+Questo tipo supporta l'infrastruttura .NET Framework e non è possibile usarlo direttamente dal codice.
