@@ -1,40 +1,42 @@
 ---
 title: Guida introduttiva Tutorial1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], getting started
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c66e7d8f610126e2702a6c593a93ee496108ecf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
 Gli argomenti contenuti in questa sezione intendono fornire una rapida descrizione dell'esperienza di programmazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Vengono ideati per essere completati secondo l'ordine dell'elenco posto nella parte inferiore di questo argomento. Nel corso di questa esercitazione vengono fornite informazioni introduttive sui passaggi necessari per creare applicazioni di servizio e client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un servizio espone uno o più endpoint, ciascuno dei quali espone una o più operazioni del servizio. Il *endpoint* di un servizio specifica un indirizzo in cui è possibile trovare il servizio, un'associazione che contiene le informazioni che descrivono come un client deve comunicare con il servizio e un contratto che definisce la funzionalità viene fornita dal servizio ai propri client.  
   
- Seguendo la sequenza degli argomenti di questa esercitazione si otterrà un servizio funzionante e un client che chiama il servizio. Nei primi tre argomenti viene descritto come definire e implementare un contratto di servizio, nonché come ospitare il servizio. Il servizio creato è self-hosted all'interno di un'applicazione console. I servizi possono anche essere ospitati in Internet Information Services (IIS). [!INCLUDE[crabout](../../../includes/crabout-md.md)]come eseguire questa operazione, vedere [procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Il servizio viene configurato nel codice; tuttavia, i servizi possono essere configurati anche all'interno di un file di configurazione. [!INCLUDE[crabout](../../../includes/crabout-md.md)]utilizzo di un file di configurazione vedere [la configurazione di servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Seguendo la sequenza degli argomenti di questa esercitazione si otterrà un servizio funzionante e un client che chiama il servizio. Nei primi tre argomenti viene descritto come definire e implementare un contratto di servizio, nonché come ospitare il servizio. Il servizio creato è self-hosted all'interno di un'applicazione console. I servizi possono anche essere ospitati in Internet Information Services (IIS). [!INCLUDE[crabout](../../../includes/crabout-md.md)] come eseguire questa operazione, vedere [procedura: ospitare un servizio WCF in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Il servizio viene configurato nel codice; tuttavia, i servizi possono essere configurati anche all'interno di un file di configurazione. [!INCLUDE[crabout](../../../includes/crabout-md.md)] utilizzo di un file di configurazione vedere [configurazione di servizi tramite file di configurazione](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
  Nei tre argomenti successivi viene descritto come creare un proxy client, configurare l'applicazione client e usare il proxy client per chiamare l'operazione del servizio esposta da quest'ultimo. I servizi pubblicano i metadati che definiscono le informazioni necessarie a un'applicazione client per comunicare con il servizio. In [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] il processo di accesso a questi metadati viene automatizzato e i metadati vengono usati per creare e configurare l'applicazione client per il servizio. Se non si utilizza [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], è possibile utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per creare e configurare l'applicazione client per il servizio.  
   
- In tutti gli argomenti di questa sezione si presuppone l'uso di Visual Studio 2011 come ambiente di sviluppo. Se si sta usando un altro ambiente di sviluppo, ignorare le istruzioni specifiche di [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+ In tutti gli argomenti di questa sezione si presuppone l'uso di Visual Studio 2011 come ambiente di sviluppo. Se si utilizza un altro ambiente di sviluppo, ignorare le istruzioni specifiche di Visual Studio.  
   
 > [!NOTE]
->  Se si esegue [!INCLUDE[wv](../../../includes/wv-md.md)] o versioni successive del sistema operativo Windows, è necessario avviare [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] selezionando il menu Start e facendo clic con il pulsante destro Visual Studio 2011 e poi **Esegui come amministratore**. Per avviare sempre Visual Studio 2011 come amministratore, è possibile creare un collegamento, fare clic con il pulsante destro scelta rapida, scegliere Proprietà, selezionare il **compatibilità** e selezionare il **Esegui questo programma come amministratore** casella di controllo. Quando si avvia Visual Studio 2011 con questo collegamento, verrà sempre eseguito con diritti di amministratore.  
+>  Se si esegue [!INCLUDE[wv](../../../includes/wv-md.md)] o versioni successive del sistema operativo Windows, è necessario avviare Visual Studio passare al menu Start e facendo clic con il pulsante destro Visual Studio 2011 e selezionando **Esegui come amministratore**. Per avviare sempre Visual Studio 2011 come amministratore, è possibile creare un collegamento, fare clic con il pulsante destro scelta rapida, scegliere Proprietà, selezionare il **compatibilità** e selezionare il **Esegui questo programma come amministratore** casella di controllo. Quando si avvia Visual Studio 2011 con questo collegamento, verrà sempre eseguito con diritti di amministratore.  
   
  Per le applicazioni di esempio che possono essere scaricate sul disco rigido e l'esecuzione, vedere gli argomenti in [degli esempi di Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). In questo argomento, vedere, in particolare, il [Introduzione](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   

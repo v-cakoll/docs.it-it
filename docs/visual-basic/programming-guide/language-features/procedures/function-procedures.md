@@ -1,11 +1,12 @@
 ---
 title: Routine Function (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Routine Function (Visual Basic)
-A `Function` procedure è una serie di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] istruzioni racchiuso il `Function` e `End Function` istruzioni. Il `Function` routine esegue un'attività e quindi restituisce il controllo al codice chiamante. Quando restituisce il controllo, restituisce inoltre un valore al codice chiamante.  
+Un `Function` stored procedure è una serie di istruzioni di Visual Basic racchiuse tra il `Function` e `End Function` istruzioni. Il `Function` routine esegue un'attività e quindi restituisce il controllo al codice chiamante. Quando restituisce il controllo, restituisce inoltre un valore al codice chiamante.  
   
  Ogni volta che la routine viene chiamata, le relative istruzioni vengono eseguite, a partire dalla prima istruzione eseguibile dopo il `Function` istruzione e terminando con il primo `End Function`, `Exit Function`, o `Return` rilevata istruzione.  
   
@@ -91,11 +92,11 @@ End Function
   
  La sintassi per una chiamata a un `Function` procedura è la seguente:  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *espressione*  `) Then`  
+ `If ((` *nomefunzione* `[(` *argumentlist* `)] / 3) <=` *espressione*  `) Then`  
   
- Quando si chiama un `Function` routine, non è necessario utilizzare il valore restituito. In caso contrario, vengono eseguite tutte le azioni della funzione, ma il valore restituito viene ignorato. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>è spesso definito in questo modo.  
+ Quando si chiama un `Function` routine, non è necessario utilizzare il valore restituito. In caso contrario, vengono eseguite tutte le azioni della funzione, ma il valore restituito viene ignorato. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> è spesso definito in questo modo.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Illustrazione di dichiarazione e chiamata  
  Le operazioni seguenti `Function` procedure calcola il lato più lungo, ovvero l'ipotenusa, di un triangolo rettangolo, in base ai valori per i due lati.  

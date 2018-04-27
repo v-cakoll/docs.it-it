@@ -1,36 +1,38 @@
 ---
 title: Specifica di valori XML come parametri
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
-Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. L'operazione è semplicissima in quanto le colonne XML in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] accettano valori di parametro esattamente come altri tipi di dati.  
+Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. Non esistono effettivamente alcun trucchi; Colonne XML in SQL Server accettano i valori dei parametri nel esattamente come altri tipi di dati.  
   
 ## <a name="example"></a>Esempio  
  La seguente applicazione console crea una nuova tabella nel **AdventureWorks** database. La nuova tabella include una colonna denominata **SalesID** e una colonna XML denominato **SalesInfo**.  
   
 > [!NOTE]
->  Il **AdventureWorks** database di esempio non è installato per impostazione predefinita quando si installa [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
+>  Il **AdventureWorks** database di esempio non è installato per impostazione predefinita quando si installa SQL Server. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
   
  Nell'esempio viene preparato un oggetto <xref:System.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella. Un file salvato fornisce i dati XML necessari per il **SalesInfo** colonna.  
   

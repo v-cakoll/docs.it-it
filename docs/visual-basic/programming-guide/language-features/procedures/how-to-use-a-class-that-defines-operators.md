@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: utilizzare una classe che definisce gli operatori (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Procedura: utilizzare una classe che definisce gli operatori (Visual Basic)
-Se si utilizza una classe o struttura che definisce i propri operatori, è possibile accedere a tali operatori da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Se si utilizza una classe o struttura che definisce i propri operatori, è possibile accedere a tali operatori da Visual Basic.  
   
  La definizione di un operatore in una classe o struttura viene definita anche *overload* l'operatore.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di accedere alla struttura SQL <xref:System.Data.SqlTypes.SqlString>, che definisce gli operatori di conversione ([CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md)) in entrambe le direzioni tra una stringa SQL e un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stringa. Utilizzare `CType(` *espressione stringa SQL*, `String)` per convertire una stringa SQL per un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] stringa, e `CType(` *espressione stringa Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` da convertire in altra direzione.  
+ Nell'esempio seguente consente di accedere alla struttura SQL <xref:System.Data.SqlTypes.SqlString>, che definisce gli operatori di conversione ([CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md)) in entrambe le direzioni tra una stringa SQL e una stringa di Visual Basic. Uso `CType(` *espressione stringa SQL*, `String)` per convertire una stringa SQL in una stringa in Visual Basic, e `CType(` *espressione stringa Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` da convertire in altra direzione.  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   

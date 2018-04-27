@@ -1,23 +1,24 @@
 ---
-title: "Utilizzo di delegati di attività"
-ms.custom: 
+title: Utilizzo di delegati di attività
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  
@@ -37,7 +38,7 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]inizializzatori di oggetto, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](http://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] gli inizializzatori di oggetti, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](http://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto usando un inizializzatore di oggetto](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per il <xref:System.Activities.Statements.Catch%601> azione dell'attività è un <xref:System.Activities.Statements.WriteLine> attività e i dettagli dell'eccezione vengono propagati mediante il `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -62,7 +63,7 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Per usare l'attività `TextGenerator` con l'attività `WriteRandomText`, specificarla come proprietà <xref:System.Activities.ActivityDelegate.Handler%2A>.  
+ Per usare l'attività `TextGenerator` con l'attività `WriteFillerText`, specificarla come proprietà <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

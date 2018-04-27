@@ -13,11 +13,11 @@ ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>Errore di accesso al percorso/file
 Durante un'operazione di accesso ai file o l'accesso al disco, il sistema operativo non può stabilire una connessione tra il percorso e il nome del file.  
@@ -30,7 +30,7 @@ Durante un'operazione di accesso ai file o l'accesso al disco, il sistema operat
   
 3.  Assicurarsi che si non tenta di aprire un file di sola lettura in sequenziale `Output` o `Append` modalità. In questo caso, aprire il file in `Input` modalità o modificare l'attributo di sola lettura del file.  
   
-4.  Assicurarsi che non si ha provato a modificare un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] progetto all'interno di un database o un documento.  
+4.  Assicurarsi che non si ha provato a modificare un progetto di Visual Basic all'interno di un database o un documento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

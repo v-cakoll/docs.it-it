@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sulla stampa
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Cenni preliminari sulla stampa
-Con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] gli sviluppatori di applicazioni che usano [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] dispongono di molteplici nuove [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di stampa e di gestione del sistema di stampa. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+Con Microsoft .NET Framework, gli sviluppatori di applicazioni utilizzando [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] hanno un ampio set nuovo di stampa e sistema di gestione stampa [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alcuni dei miglioramenti apportati al sistema di stampa sono anche disponibili agli sviluppatori che creano applicazioni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e a quelli che usano codice non gestito. Questa nuova funzionalità è basata sul nuovo formato di file [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e sul percorso di stampa [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
@@ -46,11 +48,11 @@ Con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] gli 
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Percorso di stampa XPS  
- Il percorso di stampa [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] è una nuova funzionalità di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] che ridefinisce la gestione della stampa nelle applicazioni [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Poiché [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] può sostituire un linguaggio di presentazione del documento, ad esempio RTF, un formato di spooler di stampa, ad esempio WMF, e un linguaggio di descrizione della pagina, ad esempio PCL o Postscript, il nuovo percorso di stampa mantiene il formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dalla pubblicazione dell'applicazione all'elaborazione finale nel dispositivo o nel driver di stampa.  
+ Il [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] è un nuovo percorso di stampa [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funzionalità che consente di ridefinire la modalità di gestione stampa nelle applicazioni Windows. Poiché [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] può sostituire un linguaggio di presentazione del documento, ad esempio RTF, un formato di spooler di stampa, ad esempio WMF, e un linguaggio di descrizione della pagina, ad esempio PCL o Postscript, il nuovo percorso di stampa mantiene il formato [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dalla pubblicazione dell'applicazione all'elaborazione finale nel dispositivo o nel driver di stampa.  
   
  Il percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] è basato sul modello del driver della stampante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) e offre agli sviluppatori numerosi vantaggi quali stampa [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] ("what you see is what you get"), supporto del colore migliorato e prestazioni di stampa più elevate. Per altre informazioni su XPSDrv, vedere il [Windows Driver Development Kit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).  
   
- Il funzionamento dello spooler di stampa per i documenti [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] è essenzialmente lo stesso delle versioni precedenti di [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Tuttavia, è ora previsto il supporto del percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] oltre al percorso di stampa [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] esistente. Il nuovo percorso di stampa usa a livello nativo un file di spooling [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Anche se i driver della stampante in modalità utente scritti per le versioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continueranno a funzionare, è necessario disporre di un driver della stampante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) per usare il percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ L'operazione dello spooler di stampa per [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] documenti corrisponde essenzialmente come nelle versioni precedenti di Windows. Tuttavia, è ora previsto il supporto del percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] oltre al percorso di stampa [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] esistente. Il nuovo percorso di stampa usa a livello nativo un file di spooling [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Anche se i driver della stampante in modalità utente scritti per le versioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continueranno a funzionare, è necessario disporre di un driver della stampante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) per usare il percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
  I vantaggi derivanti dall'uso del percorso di stampa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sono significativi e includono:  
   

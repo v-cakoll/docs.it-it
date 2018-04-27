@@ -1,11 +1,12 @@
 ---
 title: Durata in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Durata in Visual Basic
 Il *durata* di un elemento dichiarato è il periodo di tempo durante il quale essa è disponibile per l'utilizzo. Le variabili sono gli unici elementi che hanno una durata. A tale scopo, il compilatore considera i parametri di routine e funzione restituisce come case speciale di variabili. La durata di una variabile rappresenta il periodo di tempo durante i quali può contenere un valore. Il valore può cambiare nel corso della sua durata, ma contiene sempre un valore.  
@@ -41,7 +42,7 @@ Il *durata* di un elemento dichiarato è il periodo di tempo durante il quale es
  Le variabili dichiarate all'interno di un blocco all'interno di una stored procedure (ad esempio un `For` ciclo) vengono inizializzati su una voce con la procedura. Queste inizializzazioni effettive verrà mai eseguito il blocco o meno.  
   
 ## <a name="end-of-lifetime"></a>Fine della durata  
- Al termine di una stored procedure, i valori delle variabili locali non vengono mantenuti, e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] recupera la memoria. Alla successiva che si chiama la routine, tutte le variabili locali vengono ricreate e reinizializzate.  
+ Al termine di una stored procedure, i valori delle variabili locali non vengono mantenuti e Visual Basic recupera la memoria. Alla successiva che si chiama la routine, tutte le variabili locali vengono ricreate e reinizializzate.  
   
  Al termine di un'istanza di una classe o struttura, delle sue variabili perdono la memoria e i relativi valori. Ogni nuova istanza della classe o struttura crea e reinizializza delle sue variabili. Tuttavia, `Shared` le variabili vengono mantenute fino a quando l'esecuzione dell'applicazione.  
   
@@ -55,7 +56,7 @@ Il *durata* di un elemento dichiarato è il periodo di tempo durante il quale es
 |In un'istanza di una classe, non `Shared` (stored procedure è un membro di istanza)|La prima volta che la routine viene chiamata sull'istanza specifica|Quando l'istanza viene rilasciata per l'operazione di garbage collection (GC)|  
   
 ## <a name="static-variables-of-the-same-name"></a>Variabili statiche con lo stesso nome  
- È possibile dichiarare le variabili statiche con lo stesso nome in più di una stored procedure. In tal caso, il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] il compilatore considera ognuna di queste variabili per un elemento distinto. L'inizializzazione di una di queste variabili non influenza i valori delle altre. Lo stesso vale se si definisce una routine con un set di overload e dichiara una variabile statica con lo stesso nome in ogni overload.  
+ È possibile dichiarare le variabili statiche con lo stesso nome in più di una stored procedure. In questo caso, il compilatore Visual Basic considera ognuna di queste variabili per un elemento distinto. L'inizializzazione di una di queste variabili non influenza i valori delle altre. Lo stesso vale se si definisce una routine con un set di overload e dichiara una variabile statica con lo stesso nome in ogni overload.  
   
 ## <a name="containing-elements-for-static-variables"></a>Contenente gli elementi per le variabili statiche  
  È possibile dichiarare una variabile locale statica all'interno di una classe, vale a dire, all'interno di una routine in tale classe. Tuttavia, è possibile dichiarare una variabile locale statica all'interno di una struttura, come un membro di struttura o come una variabile locale di una stored procedure all'interno della struttura.  

@@ -1,11 +1,12 @@
 ---
-title: "Procedura: inserire un valore in una proprietà (Visual Basic)"
-ms.custom: 
+title: 'Procedura: inserire un valore in una proprietà (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 44e7c4a92ea3d087c12e74aa2ede33a52c8730cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f00303b290e324612ad3ac7af673690b4cf4e15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Procedura: inserire un valore in una proprietà (Visual Basic)
 Archiviare un valore in una proprietà inserendo il nome della proprietà sul lato sinistro di un'istruzione di assegnazione.  
   
- La proprietà `Set` procedure archivia un valore, ma non chiamare in modo esplicito, in base al nome. Utilizzare la proprietà, esattamente come si utilizzerebbe una variabile. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]effettua le chiamate alle routine della proprietà.  
+ La proprietà `Set` procedure archivia un valore, ma non chiamare in modo esplicito, in base al nome. Utilizzare la proprietà, esattamente come si utilizzerebbe una variabile. Visual Basic effettua le chiamate alle routine della proprietà.  
   
 ### <a name="to-store-a-value-in-a-property"></a>Per archiviare un valore in una proprietà  
   
 1.  Utilizzare il nome della proprietà sul lato sinistro di un'istruzione di assegnazione.  
   
-     Nell'esempio seguente imposta il valore della [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `TimeOfDay` proprietà mezzogiorno, la chiamata in modo implicito il `Set` procedura.  
+     Nell'esempio seguente imposta il valore di Visual Basic `TimeOfDay` proprietà a mezzogiorno, chiamata di implicitamente relativo `Set` stored procedure.  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   

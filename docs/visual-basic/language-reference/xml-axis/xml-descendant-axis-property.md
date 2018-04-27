@@ -19,11 +19,11 @@ ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0f3c42b5134b058c010ca4c7a5ee7c24627c65fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1dc5fe1addb089f3de9b4d5054f34a578b491fb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Proprietà axis descendant XML (Visual Basic)
 Fornisce l'accesso ai discendenti di uno dei seguenti: un <xref:System.Xml.Linq.XElement> oggetto, un <xref:System.Xml.Linq.XDocument> oggetto, una raccolta di <xref:System.Xml.Linq.XElement> oggetti o una raccolta di <xref:System.Xml.Linq.XDocument> oggetti.  
@@ -46,7 +46,7 @@ object...<descendant>
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|`prefix`|Parametro facoltativo. Prefisso dello spazio dei nomi XML per il nodo discendente. Deve essere uno spazio dei nomi XML globale definito utilizzando un `Imports` istruzione.|  
+|`prefix`|Facoltativo. Prefisso dello spazio dei nomi XML per il nodo discendente. Deve essere uno spazio dei nomi XML globale definito utilizzando un `Imports` istruzione.|  
 |`name`|Obbligatorio. Nome locale del nodo discendente. Vedere [i nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
@@ -58,7 +58,7 @@ object...<descendant>
 ## <a name="remarks"></a>Note  
  È possibile utilizzare una proprietà axis discendente XML per accedere a nodi discendenti in base al nome da un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> oggetto, o da una raccolta di <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> oggetti. Utilizzare il codice XML `Value` proprietà per accedere al valore del primo nodo discendente nella raccolta restituita. Per ulteriori informazioni, vedere [proprietà Value XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore converte le proprietà axis descendant in chiamate al <xref:System.Xml.Linq.XContainer.Descendants%2A> metodo.  
+ Il compilatore Visual Basic converte le proprietà axis descendant in chiamate al <xref:System.Xml.Linq.XContainer.Descendants%2A> metodo.  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
  Il nome in una proprietà axis descendant può utilizzare solo spazi dei nomi XML dichiarati globalmente con il `Imports` istruzione. È possibile utilizzare spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per ulteriori informazioni, vedere [istruzione Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  

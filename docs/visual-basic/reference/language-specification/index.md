@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Specifica del linguaggio Visual Basic
-Le specifiche del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] costituiscono una fonte autorevole dalla quale è possibile ottenere le risposte a tutte le domande sulla grammatica e sulla sintassi di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Contengono informazioni dettagliate sul linguaggio, inclusi molti punti non trattati nella documentazione di riferimento di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+La specifica del linguaggio Visual Basic è l'origine autorevole per le risposte a tutte le domande sulla grammatica di Visual Basic e la sintassi. Contiene informazioni dettagliate sul linguaggio, inclusi molti punti non trattati nella documentazione di riferimento di Visual Basic.  
   
  La specifica è disponibile nell'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=188623).  
   
@@ -32,4 +32,4 @@ Le segnalazioni dei problemi relativi alla specifica devono essere create nell'a
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
-[Successivo](../../../../_vblang/spec/introduction.md)
+[avanti](../../../../_vblang/spec/introduction.md)

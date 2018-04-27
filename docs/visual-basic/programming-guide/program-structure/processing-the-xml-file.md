@@ -14,11 +14,11 @@ ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d44f58951d99f1b4b551af75dc0a0e895e337e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86dae99f2d17a506a27cf491a76083df618ba27b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Elaborazione del file XML (Visual Basic)
 Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. (Per informazioni su come contrassegnare il codice, vedere [tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md).) La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono utilizzare la stringa di ID per identificare il corrispondente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento metadati/reflection.  
@@ -34,12 +34,12 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
 |Carattere|Descrizione|  
 |---|---|  
 |N|namespace<br /><br /> È possibile aggiungere commenti di documentazione a uno spazio dei nomi, ma è possibile creare riferimenti CREF ad essi, in cui è supportato.|  
-|T|tipo: `Class`, `Module`, `Interface`, `Structure`, `Enum`,`Delegate`|  
-|F|campo:`Dim`|  
+|T|tipo: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|campo: `Dim`|  
 |P|proprietà: `Property` (incluse le proprietà predefinite)|  
-|M|metodo: `Sub`, `Function`, `Declare`,`Operator`|  
-|E|evento:`Event`|  
-|!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] il compilatore genera informazioni di errore per i collegamenti che non possono essere risolti.|  
+|M|metodo: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|Evento: `Event`|  
+|!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore Visual Basic genera informazioni di errore per i collegamenti che non possono essere risolti.|  
   
 -   La seconda parte di `String` è il nome completo dell'elemento, iniziando dalla radice dello spazio dei nomi. Il nome dell'elemento, i relativi tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento stesso contiene punti, vengono sostituiti con il simbolo di cancelletto (#). Si presuppone che nessun elemento contiene un simbolo di cancelletto direttamente nel nome. Ad esempio, il nome completo del `String` costruttore sarebbe `System.String.#ctor`.  
   

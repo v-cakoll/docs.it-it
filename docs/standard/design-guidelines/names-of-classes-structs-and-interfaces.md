@@ -1,12 +1,13 @@
 ---
 title: Nomi di classi, struct e interfacce
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type names, guidelines
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7c76fccec77454cb4551e427e254fe84d9a60299
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bcb3d1c636c8f846be8290738f322f36e09c9dad
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomi di classi, struct e interfacce
 Convenzioni di denominazione che seguono si applicano per la denominazione di tipo generale.  
@@ -39,13 +40,13 @@ Convenzioni di denominazione che seguono si applicano per la denominazione di ti
   
  Consente di distinguere i nomi dei tipi di metodi, denominati con frasi di verbo.  
   
- **✓ SI** nome interfacce aggettivale frasi o occasionalmente con sostantivi o sintagmi nominali.  
+ **✓ SI** nome interfacce Frasario frasi o in alcuni casi con sostantivi o sintagmi nominali.  
   
  Sostantivi e sintagmi nominali devono essere utilizzate raramente e potrebbero indicare che il tipo deve essere una classe astratta e non un'interfaccia.  
   
- **X non** ai nomi delle classi di un prefisso (ad esempio, "C").  
+ **X non** ai nomi delle classi un prefisso (ad esempio, "C").  
   
- **Provare a ✓** il nome della classe derivata con il nome della classe di base.  
+ **✓ Provare a** terminare il nome della classe derivata con il nome della classe base.  
   
  Questo è molto leggibile e illustra chiaramente la relazione. Sono riportati alcuni esempi di questo codice: `ArgumentOutOfRangeException`, che è un tipo di `Exception`, e `SerializableAttribute`, che è un tipo di `Attribute`. Tuttavia, è importante utilizzare valutando questa linea guida; ad esempio, il `Button` classe è un tipo di `Control` evento, sebbene `Control` non viene visualizzato nel relativo nome.  
   
@@ -58,7 +59,7 @@ Convenzioni di denominazione che seguono si applicano per la denominazione di ti
 ## <a name="names-of-generic-type-parameters"></a>Nomi dei parametri di tipo generico  
  I generics sono stati aggiunti a .NET Framework 2.0. La funzionalità introdotto un nuovo tipo di identificatore denominato *parametro di tipo*.  
   
- **✓ SI** denominare i parametri di tipo generico con nomi descrittivi a meno che non è completamente chiara di un nome di lettera singola e un nome descrittivo non aggiunge valore.  
+ **✓ SI** denominare i parametri di tipo generico con nomi descrittivi a meno che non è completamente non necessitano di spiegazione un nome di lettera singola e un nome descrittivo non aggiunge valore.  
   
  **Provare a ✓** utilizzando `T` come nome del parametro di tipo per tipi con un parametro di tipo lettera singola.  
   
@@ -76,19 +77,19 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 }  
 ```  
   
- **Provare a ✓** che indica i vincoli posizionati su un parametro di tipo del nome del parametro.  
+ **✓ Provare a** che indica i vincoli posizionati su un parametro di tipo del nome del parametro.  
   
  Ad esempio, un parametro vincolato a `ISession` potrebbe essere denominata `TSession`.  
   
 ## <a name="names-of-common-types"></a>Nomi di tipi comuni  
- **✓ SI** seguire le linee guida descritte nella tabella seguente per la denominazione di tipi derivati da o implementare determinati tipi di .NET Framework.  
+ **✓ SI** seguire le linee guida descritte nella tabella seguente, la denominazione dei tipi derivati da o implementare determinati tipi di .NET Framework.  
   
 |Base Type|Linee guida di tipo derivato implementazione|  
 |---------------|------------------------------------------|  
-|`System.Attribute`|**✓ SI** aggiungere il suffisso "Attribute" ai nomi delle classi di attributo personalizzato.|  
-|`System.Delegate`|**✓ SI** aggiungere il suffisso "EventHandler" ai nomi dei delegati utilizzato negli eventi.<br /><br /> **✓ SI** aggiungere il suffisso "Callback" ai nomi dei delegati diversi da quelli usati come gestori eventi.<br /><br /> **X non** aggiungere il suffisso "Delegato" a un delegato.|  
-|`System.EventArgs`|**✓ SI** aggiungere il suffisso "EventArgs".|  
-|`System.Enum`|**X non** derivano da questa classe; usare la parola chiave supportata dal linguaggio di invece; ad esempio, in c#, utilizzare il `enum` (parola chiave).<br /><br /> **X non** aggiungere il suffisso "Enum" o "Flag".|  
+|`System.Attribute`|**✓ SI** aggiungere il suffisso "Attribute" ai nomi delle classi di attributi personalizzati.|  
+|`System.Delegate`|**✓ SI** aggiungere il suffisso "EventHandler" ai nomi dei delegati vengono utilizzati negli eventi.<br /><br /> **✓ SI** aggiungere il suffisso "Callback" ai nomi dei delegati diversi da quelli usati come gestori eventi.<br /><br /> **X non** aggiungere il suffisso "Delegato" a un delegato.|  
+|`System.EventArgs`|**✓ SI** aggiungere il suffisso "EventArgs."|  
+|`System.Enum`|**X non** derivano da questa classe; usare la parola chiave supportata dal linguaggio di invece; ad esempio, in c#, usare il `enum` (parola chiave).<br /><br /> **X non** aggiungere il suffisso "Enum" o "Flag".|  
 |`System.Exception`|**✓ SI** aggiungere il suffisso "Exception".|  
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ SI** aggiungere il suffisso "Dizionario". Si noti che `IDictionary` è un tipo specifico della raccolta, ma questa linea guida ha la precedenza su più generale delle linee guida di raccolte che segue.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ SI** aggiungere il suffisso "Collection".|  
@@ -100,17 +101,17 @@ public interface ISessionChannel<TSession> where TSession : ISession{
   
  **✓ SI** utilizzare un nome di tipo singolare per un'enumerazione, a meno che i relativi valori sono i campi di bit.  
   
- **✓ SI** utilizzare un nome di tipo plurale per un'enumerazione con i campi di bit come valori, l'acronimo di enumerazione di flag.  
+ **✓ SI** utilizzi un nome di tipo plurale per un'enumerazione con i campi di bit come valori, collettivamente indicati come enumerazione di flag.  
   
- **X non** utilizzare un suffisso "Enum" nei nomi di tipo enum.  
+ **X non** utilizzare un suffisso "Enum" nei nomi dei tipi enum.  
   
  **X non** utilizzare "Flag" o nomi di tipo suffissi "Flags" nell'enumerazione.  
   
- **X non** usare un prefisso ai nomi di valore di enumerazione (ad esempio, "ad" per le enumerazioni ADO.), "rtf" per le enumerazioni RTF e così via.  
+ **X non** usare un prefisso ai nomi di valore di enumerazione (ad esempio, "ad" per le enumerazioni di ADO.), "rtf" per le enumerazioni RTF e così via.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

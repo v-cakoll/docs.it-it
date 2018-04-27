@@ -1,23 +1,24 @@
 ---
 title: Ricezione memorizzata nel buffer
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Ricezione memorizzata nel buffer
 In questo esempio viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in [!INCLUDE[wf](../../../../includes/wf-md.md)]. La ricezione memorizzata nel buffer consente a un autore di creare un flusso di lavoro senza dover preoccuparsi dell'ordine con cui vengono ricevuti i messaggi. La funzionalità di ricezione memorizzata nel buffer memorizza localmente nel buffer i messaggi e li recapita quando il flusso di lavoro è pronto per riceverli.  
@@ -47,7 +48,7 @@ In questo esempio viene illustrato come impostare e configurare la funzionalità
   
  Il servizio espone inoltre i metadati per il servizio tramite l'oggetto <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- Analogamente, l'endpoint client viene configurato usando l'oggetto <xref:System.ServiceModel.NetMsmqBinding>. Viene generato il codice client e la configurazione utilizzando il **Aggiungi riferimento al servizio** funzionalità di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. L'esempio seguente rappresenta l'endpoint client generato nel file App.config.  
+ Analogamente, l'endpoint client viene configurato usando l'oggetto <xref:System.ServiceModel.NetMsmqBinding>. Il codice client e la configurazione viene generato utilizzando la **Aggiungi riferimento al servizio** funzionalità di Visual Studio. L'esempio seguente rappresenta l'endpoint client generato nel file App.config.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -89,13 +90,13 @@ In questo esempio viene illustrato come impostare e configurare la funzionalità
   
 6.  Aprire Gestione [!INCLUDE[iis60](../../../../includes/iis60-md.md)].  
   
-7.  Passare a **Server**, **siti**, **sito Web predefinito**, **privata**, **LoanService** e selezionare  **Opzioni avanzate**  
+7.  Passare a **Server**, **siti**, **Default Web site**, **privata**, **LoanService** e selezionare  **Opzioni avanzate**  
   
 8.  Modifica il **protocolli abilitati** da **http**, **NET. MSMQ**.  
   
 #### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
-1.  Passare a http://localhost/private/loanservice/service1.xamlx per assicurarsi che il servizio sia in esecuzione.  
+1.  Passare a http://localhost/private/loanservice/service1.xamlx per garantire che il servizio sia in esecuzione.  
   
 2.  Premere F5 per eseguire l'applicazione LoanClient. Una volta completato il flusso di lavoro, è necessario salvare un file out.txt nella directory C:\Inbox in cui è contenuto il risultato dello scambio di messaggi.  
   

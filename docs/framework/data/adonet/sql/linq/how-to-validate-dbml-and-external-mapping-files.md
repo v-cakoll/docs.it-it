@@ -1,27 +1,29 @@
 ---
 title: 'Procedura: convalidare file di mapping esterni e DBML'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedura: convalidare file di mapping esterni e DBML
-I file di mapping esterno e i file con estensione dbml modificati devono essere convalidati in base alle rispettive definizioni dello schema. In questo argomento vengono descritti i passaggi per l'implementazione del processo di convalida per gli utenti di [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+I file di mapping esterno e i file con estensione dbml modificati devono essere convalidati in base alle rispettive definizioni dello schema. In questo argomento fornisce agli utenti di Visual Studio con i passaggi per implementare il processo di convalida.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ I file di mapping esterno e i file con estensione dbml modificati devono essere 
      Determinare se sono stati generati errori, avvisi o messaggi. In caso contrario, il file XML è valido per la definizione dello schema.  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>Metodo alternativo per fornire la definizione dello schema  
- Se per qualche motivo XSD appropriato file non viene visualizzato nel **schemi XML** nella finestra di dialogo è possibile scaricare il file XSD da un argomento della Guida. I passaggi seguenti consentono di salvare il file scaricato nel formato Unicode richiesto dall'editor XML di [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+ Se per qualche motivo XSD appropriato file non viene visualizzato nel **schemi XML** nella finestra di dialogo è possibile scaricare il file XSD da un argomento della Guida. I passaggi seguenti consentono di salvare il file scaricato in formato Unicode richiesto dall'Editor XML di Visual Studio.  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Per copiare un file di definizione dello schema da un argomento della Guida  
   

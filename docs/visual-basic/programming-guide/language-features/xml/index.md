@@ -9,15 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 1b3fc9a716bdc7c369aa7c5c9c2ed118debd2785
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11918a9bca7cc71129db17a6a41f3508b1fe66df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-in-visual-basic"></a>XML in Visual Basic
 
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] offre supporto integrato per il linguaggio, che consente l'interazione con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+Visual Basic fornisce il supporto lingua integrato che consente di interagire con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Descrive in che modo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supporta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Cenni preliminari su LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|Viene descritto come Visual Basic supporta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|Descrive come creare oggetti valore letterale XML usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Modifica di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Descrive come caricare e analizzare codice XML usando Visual Basic.|  
 |[Accesso a XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Descrive le proprietà Axis XML e i metodi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per l'accesso a elementi e attributi XML.|  

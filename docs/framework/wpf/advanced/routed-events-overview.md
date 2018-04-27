@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sugli eventi indirizzati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>Cenni preliminari sugli eventi indirizzati
 Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'argomento definisce la terminologia correlata agli eventi indirizzati, descrive in che modo questi eventi sono indirizzati lungo un albero di elementi, riepiloga le modalità di gestione degli eventi indirizzati e spiega come creare eventi indirizzati personalizzati.
@@ -127,12 +129,12 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`è il nome del gestore implementato che contiene il codice che gestisce il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. `b1SetColor`deve avere la stessa firma di <xref:System.Windows.RoutedEventHandler> delegato, ossia il delegato del gestore eventi per il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Il primo parametro di tutti i delegati dei gestori di eventi indirizzati specifica l'elemento a cui viene aggiunto il gestore eventi, mentre il secondo parametro specifica i dati per l'evento.  
+ `b1SetColor` è il nome del gestore implementato che contiene il codice che gestisce il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. `b1SetColor` deve avere la stessa firma il <xref:System.Windows.RoutedEventHandler> delegato, ossia il delegato del gestore eventi per il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento. Il primo parametro di tutti i delegati dei gestori di eventi indirizzati specifica l'elemento a cui viene aggiunto il gestore eventi, mentre il secondo parametro specifica i dati per l'evento.  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>è il delegato del gestore eventi indirizzati di base. Per gli eventi indirizzati specializzati per determinati controlli o scenari, i delegati da usare per i gestori di eventi indirizzati possono anche essere più specializzati, in modo da poter trasmettere dati di eventi specializzati. In uno scenario comune di input, ad esempio, è possibile gestire un <xref:System.Windows.UIElement.DragEnter> dell'evento indirizzato. Il gestore deve implementare il <xref:System.Windows.DragEventHandler> delegato. Utilizzando il delegato più specifico, è possibile elaborare il <xref:System.Windows.DragEventArgs> nel gestore e leggere la <xref:System.Windows.DragEventArgs.Data%2A> proprietà che contiene il payload degli Appunti dell'operazione di trascinamento.  
+ <xref:System.Windows.RoutedEventHandler> è il delegato del gestore eventi indirizzati di base. Per gli eventi indirizzati specializzati per determinati controlli o scenari, i delegati da usare per i gestori di eventi indirizzati possono anche essere più specializzati, in modo da poter trasmettere dati di eventi specializzati. In uno scenario comune di input, ad esempio, è possibile gestire un <xref:System.Windows.UIElement.DragEnter> dell'evento indirizzato. Il gestore deve implementare il <xref:System.Windows.DragEventHandler> delegato. Utilizzando il delegato più specifico, è possibile elaborare il <xref:System.Windows.DragEventArgs> nel gestore e leggere la <xref:System.Windows.DragEventArgs.Data%2A> proprietà che contiene il payload degli Appunti dell'operazione di trascinamento.  
   
  Per un esempio completo di come aggiungere un gestore eventi a un elemento usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vedere [Gestire un evento indirizzato](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
@@ -141,18 +143,18 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- L'esempio successivo mostra la sintassi dell'operatore [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] ([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] ha una sintassi dell'operatore leggermente diversa a causa della gestione della dereferenziazione):  
+ Il successivo esempio viene illustrato il linguaggio c# sintassi dell'operatore (Visual Basic è leggermente diverso a causa della gestione della dereferenziazione):  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  Per un esempio di come aggiungere un gestore eventi nel codice, vedere [Aggiungere un gestore eventi mediante codice](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
   
- Se si usa [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)], è anche possibile usare la parola chiave `Handles` per aggiungere gestori come parte delle dichiarazioni dei gestori. Per altre informazioni, vedere [Visual Basic e la gestione degli eventi WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Se si utilizza Visual Basic, è inoltre possibile utilizzare il `Handles` (parola chiave) per aggiungere gestori come parte delle dichiarazioni di gestore. Per altre informazioni, vedere [Visual Basic e la gestione degli eventi WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Concetto di gestito  
- Tutti gli eventi indirizzati condividono un'evento dati classe base comune, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs>definisce il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà, che accetta un valore booleano. Lo scopo del <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà consiste nel consentire a qualsiasi gestore di evento lungo la route per contrassegnare l'evento indirizzato come *gestito*, impostando il valore di <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. Dopo essere stati elaborati dal gestore in corrispondenza di un elemento lungo la route, i dati di evento condivisi vengono nuovamente segnalati a ogni listener lungo la route.  
+ Tutti gli eventi indirizzati condividono un'evento dati classe base comune, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> definisce il <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà, che accetta un valore booleano. Lo scopo del <xref:System.Windows.RoutedEventArgs.Handled%2A> proprietà consiste nel consentire a qualsiasi gestore di evento lungo la route per contrassegnare l'evento indirizzato come *gestito*, impostando il valore di <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true`. Dopo essere stati elaborati dal gestore in corrispondenza di un elemento lungo la route, i dati di evento condivisi vengono nuovamente segnalati a ogni listener lungo la route.  
   
  Il valore di <xref:System.Windows.RoutedEventArgs.Handled%2A> influisce sul modo in cui un evento indirizzato viene segnalato o elaborato nel tragitto ulteriormente lungo la route. Se <xref:System.Windows.RoutedEventArgs.Handled%2A> è `true` nell'evento dati di un evento indirizzato, i gestori che sono in attesa per l'evento indirizzato su altri elementi non sono in genere non è più richiamati per quell'istanza particolare evento. Ciò vale sia per i gestori associati in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che per i gestori aggiunti da sintassi di associazione dei gestori eventi specifiche del linguaggio, come `+=` o `Handles`. Per scenari più comuni di gestore, il contrassegno di un evento come gestito impostando <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` sarà "stop" routing per una route di tunneling o di bubbling, nonché per qualsiasi evento gestito in un punto della route da un gestore di classe.  
   
@@ -200,7 +202,7 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- In questo caso, il listener dell'elemento padre in cui viene aggiunto il gestore è un <xref:System.Windows.Controls.StackPanel>. Tuttavia, viene aggiunto un gestore per un evento indirizzato che è stato dichiarato e verrà generato dal <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> in realtà, ma è disponibile per <xref:System.Windows.Controls.Button> tramite ereditarietà). <xref:System.Windows.Controls.Button>"proprietario", l'evento, ma i gestori di consente di sistema dell'evento indirizzato per qualsiasi evento indirizzato a qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> listener dell'istanza che è altrimenti possibile allegare i listener per un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] evento. Lo spazio dei nomi xmlns predefinito per questi nomi completi di attributo di evento è in genere lo spazio dei nomi xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predefinito, ma è anche possibile specificare spazi dei nomi con prefisso per eventi indirizzati personalizzati. Per altre informazioni su xmlns, vedere [Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ In questo caso, il listener dell'elemento padre in cui viene aggiunto il gestore è un <xref:System.Windows.Controls.StackPanel>. Tuttavia, viene aggiunto un gestore per un evento indirizzato che è stato dichiarato e verrà generato dal <xref:System.Windows.Controls.Button> classe (<xref:System.Windows.Controls.Primitives.ButtonBase> in realtà, ma è disponibile per <xref:System.Windows.Controls.Button> tramite ereditarietà). <xref:System.Windows.Controls.Button> "proprietario", l'evento, ma i gestori di consente di sistema dell'evento indirizzato per qualsiasi evento indirizzato da collegare a qualsiasi <xref:System.Windows.UIElement> oppure <xref:System.Windows.ContentElement> listener dell'istanza che è stato possibile collegare in caso contrario, i listener per un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] evento. Lo spazio dei nomi xmlns predefinito per questi nomi completi di attributo di evento è in genere lo spazio dei nomi xmlns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predefinito, ma è anche possibile specificare spazi dei nomi con prefisso per eventi indirizzati personalizzati. Per altre informazioni su xmlns, vedere [Spazi dei nomi XAML e mapping dello spazio dei nomi per XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Eventi di input WPF  
@@ -210,7 +212,7 @@ Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla
   
  Come dimostrazione del funzionamento dell'elaborazione degli eventi di input, considerare l'esempio di evento di input seguente. Nell'albero della figura seguente `leaf element #2` è l'origine di un evento `PreviewMouseDown` e quindi di un evento `MouseDown`.  
   
- ![Diagramma del routing degli eventi](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![Diagramma del routing evento](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 Bubbling e tunneling degli eventi di input  
   
  L'ordine di elaborazione degli eventi è il seguente:  

@@ -1,31 +1,33 @@
 ---
-title: "Supporto SqlClient per disponibilità elevata, ripristino di emergenza"
-ms.custom: 
+title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab233fca7754f154166778646acba8d8df7de83
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
-In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità dei gruppi di disponibilità AlwaysOn è stata aggiunta in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per ulteriori informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
   
- È ora possibile specificare il listener di un gruppo di disponibilità (AG) (disponibilità elevata, ripristino di emergenza) o l'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 nella proprietà di connessione. Se un'applicazione di SqlClient è connessa a un database AlwaysOn che esegue il failover, la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per continuare a funzionare dopo il failover.  
+ È ora possibile specificare il listener del gruppo di disponibilità di un (disponibilità elevata, ripristino di emergenza) del gruppo di disponibilità (AG) o istanza del Cluster di SQL Server 2012 Failover nella proprietà di connessione. Se un'applicazione di SqlClient è connessa a un database AlwaysOn che esegue il failover, la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per continuare a funzionare dopo il failover.  
   
- Se non si stabilisce la connessione a un listener gruppo di disponibilità o all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 e se sono associati più indirizzi IP a un nome host, SqlClient scorrerà in sequenza tutti gli indirizzi IP associati alla voce DNS. Ciò può richiedere molto tempo se il primo indirizzo IP restituito dal server DNS non è associato a una scheda di interfaccia di rete (NIC). Quando si stabilisce la connessione a un listener gruppo di disponibilità o all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, SqlClient tenta di connettersi a tutti gli indirizzi IP in parallelo e se un tentativo di connessione riesce, il driver rimuove tutti i tentativi di connessione in sospeso.  
+ Se non ci si connette a un listener del gruppo di disponibilità o un Cluster di failover di SQL Server 2012 e se più indirizzi IP sono associati un nome host, SqlClient scorrerà tutti gli indirizzi IP associati alla voce DNS. Ciò può richiedere molto tempo se il primo indirizzo IP restituito dal server DNS non è associato a una scheda di interfaccia di rete (NIC). Quando ci si connette a un listener del gruppo di disponibilità o un Cluster di failover di SQL Server 2012, SqlClient tenta di stabilire connessioni a tutti gli indirizzi IP in parallelo e se un tentativo di connessione ha esito positivo, il driver eliminerà tutte le connessioni in sospeso tentativi.  
   
 > [!NOTE]
 >  L'aumento del timeout di connessione e l'implementazione di una logica di ripetizione dei tentativi di connessione aumenterà la probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché una connessione può avere esito negativo a causa di un failover, è necessario implementare la logica di ripetizione dei tentativi di connessione, in modo che una connessione non riuscita venga ripetuta finché non avrà esito positivo.  
@@ -46,23 +48,23 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
 >  Impostazione `MultiSubnetFailover` a `true` non è necessario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) o versioni successive.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
- Specificare sempre `MultiSubnetFailover=True` quando si stabilisce la connessione a un listener gruppo di disponibilità di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 o all'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. `MultiSubnetFailover` abilita il failover più veloce per tutti gruppi di disponibilità o per l'istanza del cluster di failover in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, riducendo notevolmente il tempo di failover per le topologie AlwaysOn con una o più subnet. Durante il failover di più subnet, il client tenterà di stabilire connessioni in parallelo. Durante il failover di una subnet, riproverà continuamente la connessione TCP.  
+ Specificare sempre `MultiSubnetFailover=True` quando ci si connette a un listener del gruppo di disponibilità di SQL Server 2012 o un Cluster di failover di SQL Server 2012. `MultiSubnetFailover` Consente di attivare un failover più veloce per tutti i gruppi di disponibilità e o istanza del Cluster di Failover in SQL Server 2012 e sarà ridurre significativamente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante il failover di più subnet, il client tenterà di stabilire connessioni in parallelo. Durante il failover di una subnet, riproverà continuamente la connessione TCP.  
   
- La proprietà di connessione `MultiSubnetFailover` indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 e che SqlClient tenterà di connettersi al database sull'istanza principale di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], tentando di connettersi a tutti gli indirizzi IP. Quando si specifica `MultiSubnetFailover=True` per una connessione, il client ripete i tentativi di connessione TCP più velocemente degli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In questo modo viene abilitata la riconnessione più veloce dopo il failover di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn ed è applicabile sia ai gruppi di disponibilità che alle istanze del cluster di failover con più subnet.  
+ Il `MultiSubnetFailover` proprietà di connessione indica che l'applicazione viene distribuita in un gruppo di disponibilità o un Cluster di failover di SQL Server 2012 e che SqlClient tenterà di connettersi al database nell'istanza di SQL Server primaria tentando di connettersi a tutti gli indirizzi IP. Quando si specifica `MultiSubnetFailover=True` per una connessione, il client ripete i tentativi di connessione TCP più velocemente degli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In questo modo viene abilitata la riconnessione più veloce dopo il failover di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn ed è applicabile sia ai gruppi di disponibilità che alle istanze del cluster di failover con più subnet.  
   
  Per altre informazioni sulle parole chiave della stringa di connessione in SqlClient, vedere <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- L'utilizzo di `MultiSubnetFailover=True` quando si stabilisce la connessione a un elemento diverso da un listener gruppo di disponibilità o da un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, può avere un impatto negativo sulle prestazioni e non è supportato.  
+ Specifica di `MultiSubnetFailover=True` quando ci si connette a un elemento diverso da un listener del gruppo di disponibilità o un Cluster di failover di SQL Server 2012 può comportare un impatto negativo sulle prestazioni e non è supportata.  
   
- Usare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o in un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012:  
+ Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o Cluster di failover di SQL Server 2012:  
   
 -   Usare la proprietà di connessione `MultiSubnetFailover` quando ci si connette a una o più subnet per ottenere un miglioramento delle prestazioni di entrambi.  
   
 -   Per connettersi a un gruppo di disponibilità, specificare il listener gruppo di disponibilità come server nella stringa di connessione.  
   
--   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] con più di 64 indirizzi IP genera un errore di connessione.  
+-   La connessione a SQL Server configurata con più di 64 indirizzi IP istanza causerà un errore di connessione.  
   
--   Il comportamento di un'applicazione che usa la proprietà di connessione `MultiSubnetFailover` non verrà modificato in base al tipo di autenticazione, ovvero autenticazione di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], autenticazione Kerberos o autenticazione di Windows.  
+-   Comportamento di un'applicazione che utilizza il `MultiSubnetFailover` proprietà di connessione non viene modificata in base al tipo di autenticazione: autenticazione di SQL Server, l'autenticazione Kerberos o autenticazione di Windows.  
   
 -   Aumentare il valore di `Connect Timeout` per adattarlo al tempo di failover e ridurre i tentativi di connessione dell'applicazione.  
   
@@ -79,7 +81,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
  Una connessione non riuscirà se una replica primaria è configurata per rifiutare i carichi di lavoro di sola lettura e la stringa di connessione contiene `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aggiornamento per l'uso di cluster con più subnet dal mirroring del database  
- Si verificherà un errore di connessione (<xref:System.ArgumentException>) se nella stringa di connessione sono presenti le parole chiave di connessione `MultiSubnetFailover` e `Failover Partner` o se vengono usati `MultiSubnetFailover=True` e un protocollo diverso da TCP. Si verificherà inoltre un errore (<xref:System.Data.SqlClient.SqlException>) se si usa `MultiSubnetFailover` e [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] restituisce una risposta di un partner di failover che ne indica l'appartenenza a una coppia di mirroring del database.  
+ Si verificherà un errore di connessione (<xref:System.ArgumentException>) se nella stringa di connessione sono presenti le parole chiave di connessione `MultiSubnetFailover` e `Failover Partner` o se vengono usati `MultiSubnetFailover=True` e un protocollo diverso da TCP. Errore (<xref:System.Data.SqlClient.SqlException>) si verificherà anche se `MultiSubnetFailover` viene utilizzato e SQL Server restituisce una risposta di partner di failover che si tratta di parte di una coppia di mirroring del database.  
   
  Se si aggiorna un'applicazione SqlClient che attualmente usa il mirroring del database in uno scenario con più subnet, è necessario rimuovere la proprietà di connessione `Failover Partner` e sostituirla con `MultiSubnetFailover` impostata su `True` e sostituire il nome del server nella stringa di connessione con un listener gruppo di disponibilità. Se in una stringa di connessione si usa `Failover Partner` e `MultiSubnetFailover=True`, il driver genererà un errore. Se tuttavia in una stringa di connessione si usa `Failover Partner` e `MultiSubnetFailover=False` (o `ApplicationIntent=ReadWrite`), l'applicazione utilizzerà il mirroring del database.  
   

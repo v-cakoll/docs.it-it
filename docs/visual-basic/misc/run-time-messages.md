@@ -2,23 +2,24 @@
 title: Messaggi di run-time di Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 14258d0cb19b62ec93672998039b8d59a1943fb2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-run-time-messages"></a>Messaggi di run-time di Visual Basic
-Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] che si verificano in fase di esecuzione.  
+In questa sezione contiene i messaggi di errore di Visual Basic che si verificano in fase di esecuzione.  
   
  [\<indirizzo > non è un indirizzo di file remoto valido](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
@@ -82,9 +83,9 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Argomento '\<NomeArgomento >' deve essere compreso tra 0 e 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argomento '\<NomeArgomento >' deve essere compreso nell'intervallo da 1 a 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [Argomento '\<NomeArgomento >' deve essere compreso tra 1 e 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Argomento '\<nomeargomento1 >' deve essere minore o uguale alla lunghezza dell'argomento '\<nomeargomento2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [Argomento '\<argumentname1 >' deve essere minore o uguale alla lunghezza dell'argomento '\<argumentname2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
  [L'argomento 'Access' non è valido. I valori validi per la modalità Append sono 'OpenAccess.Write' e 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
@@ -114,7 +115,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [L'argomento 'Period' deve essere minore o uguale all'argomento 'Life'](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Valore dell'argomento '\<nomepercorso >' contiene caratteri non vengono in un nome di percorso](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [Valore dell'argomento '\<nomepercorso >' contiene caratteri non validi in un nome di percorso](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [Argomenti non validi](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -150,7 +151,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Impossibile convertire il valore iniziale di tipo '\<type1 >' e valore di incremento di tipo '\<type2 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Impossibile convertire il valore iniziale di tipo '\<type1 >', il valore limite di '\<type2 >' e valore di incremento di '\<Tipo3 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [Impossibile convertire il valore iniziale di tipo '\<type1 >', il valore limite di '\<type2 >' e valore di incremento di '\<type3 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [Impossibile creare il componente ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -168,7 +169,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Eseguire il cast da stringa "\<stringa >" al tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Eseguire il cast dal tipo '\<NomeTipo1 >' nel tipo '\<NomeTipo2 >' non è valido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [Eseguire il cast dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >' non è valido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
  [Classe\<NomeClasse >' non implementa l'interfaccia ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
@@ -212,7 +213,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [La codifica non può essere impostata su Nothing](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Errore durante il caricamento di DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [Errore di caricamento della DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [Il numero di errore deve essere compreso tra 0 e 65535](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
@@ -238,7 +239,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [File i/o di una struttura con campo '\<nomecampo >' di tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [I/o file con tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [File i/o con tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [Impossibile ottenere informazioni su un file inesistente](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -246,7 +247,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Il file è troppo grande per essere letto in una matrice byte](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [Nome file o nome di classe non trovato durante un'operazione di automazione (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [Nome del file o nome di classe non trovato durante un'operazione di automazione (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [Impossibile trovare il file (errore di run-time Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -274,7 +275,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Errore interno (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Si è verificato un errore interno \<percorso >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [Si è verificato un errore interno in \<percorso >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Errore interno nel runtime di Microsoft Visual Basic](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -282,7 +283,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Impossibile eliminare la chiave perché contiene sottochiavi](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [Assegnazione ad associazione tardiva a un campo di tipo di valore '\<nomeTipo >' non è valida quando '\<nome >' è il risultato di un'espressione ad associazione tardiva](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ [Assegnazione con associazione tardiva a un campo di tipo di valore '\<nomeTipo >' non è valida quando '\<nome >' è il risultato di un'espressione con associazione tardiva](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
  [La lunghezza dell'argomento '\<NomeArgomento >' deve essere maggiore di zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
@@ -292,7 +293,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Riga \<numero > non è possibile leggere perché supera la dimensione massima consentita.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [ID delle impostazioni locali '\<nome >' non è supportata nel sistema](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [ID delle impostazioni locali '\<nome >' non è supportata nel sistema in uso](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
  [Variabile di controllo del ciclo di tipo '\<nomeTipo >' non implementa l'interfaccia 'IComparable'](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
@@ -306,7 +307,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [My](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [L'argomento denominato '\<NomeArgomento >' specificato più volte.](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [L'argomento denominato '\<NomeArgomento >' specificato più volte](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [Impossibile trovare l'argomento denominato (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -316,15 +317,15 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione di narrowing](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione di narrowing: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [Di overload non accessibile "\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione di narrowing: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione widening: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [Di overload non accessibile "\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione widening: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [Di overload non accessibile "\<NomeMetodo >' può essere chiamato con questi argomenti: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
  [Nessun membro predefinito trovato per il tipo '\<nomeTipo >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [Nessun file corrispondente a '\<nomefile >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [Nessun file corrispondente '\<nomefile >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
  [Nessun metodo '\<NomeMetodo >' può accettare un argomento di tipo '\<nomeTipo >' per il parametro '\<nomeparametro >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
@@ -352,7 +353,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Solo i primi otto caratteri di un nome di log personalizzato sono significativi](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
   
- [Operatore non è valido per '\<nome1 >' e '\<nome2 >'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
+ [Operatore non è valido per '\<nome1 >' e '\<name2 >'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
  [Operatore non è valido per il tipo '\<nomeTipo >'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
@@ -360,9 +361,9 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Memoria insufficiente (errore di runtime di Visual Basic)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [(Visual Basic) di spazio dello stack](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [Spazio dello stack (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Spazio di stringa (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [Spazio (Visual Basic) di stringa insufficiente](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [Overflow (errore di run-time Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
@@ -378,7 +379,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [Errore della stampante](../../visual-basic/misc/printer-error.md)  
   
- [Chiamata di routine o argomento non è valido (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
+ [Chiamata di routine o argomento non valido (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
  [Processo\<NomeProcesso >' non è stato trovato](../../visual-basic/misc/process-processname-was-not-found.md)  
   
@@ -404,7 +405,7 @@ Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb
   
  [L'operando Preserve 'ReDim' non può essere Nothing](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [Chiave del Registro di sistema '\<NomeChiave >' non è stato possibile creare.](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [Chiave del Registro di sistema '\<NomeChiave >' non è stato possibile creare](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
  [Chiave del Registro di sistema '\<NomeChiave >' non è stato trovato](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   

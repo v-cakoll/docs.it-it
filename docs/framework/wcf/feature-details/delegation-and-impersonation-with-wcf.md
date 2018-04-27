@@ -1,12 +1,13 @@
 ---
 title: Delega e rappresentazione con WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -68,7 +70,7 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  La misura in cui il servizio può eseguire la rappresentazione del client dipende dai privilegi di cui dispone l'account del servizio quando tenta la rappresentazione, dal tipo di rappresentazione utilizzato ed eventualmente dall'ambito di rappresentazione consentito dal client.  
   
 > [!NOTE]
->  Quando il client e il servizio sono in esecuzione nello stesso computer e il client è in esecuzione con un account del sistema (ad esempio `Local System` o `Network Service`), il client non può essere rappresentato quando viene stabilita una sessione protetta con token del contesto di sicurezza con stato. Un'applicazione Windows Form o console viene in genere eseguita con l'account attualmente connesso e quindi l'account può essere rappresentato per impostazione predefinita. Tuttavia, quando il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospitata in [!INCLUDE[iis601](../../../../includes/iis601-md.md)] o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], il client viene eseguito con l'account `Network Service` per impostazione predefinita. Tutte le associazioni fornite dal sistema che supportano le sessioni protette utilizzano un token del contesto di sicurezza (SCT) senza stato per impostazione predefinita. Tuttavia, se il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e si utilizzano sessioni protette con token SCT con stato, non è possibile eseguire la rappresentazione del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso di token SCT con stato in una sessione protetta, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Quando il client e il servizio sono in esecuzione nello stesso computer e il client è in esecuzione con un account del sistema (ad esempio `Local System` o `Network Service`), il client non può essere rappresentato quando viene stabilita una sessione protetta con token del contesto di sicurezza con stato. Un'applicazione Windows Form o console viene in genere eseguita con l'account attualmente connesso e quindi l'account può essere rappresentato per impostazione predefinita. Tuttavia, quando il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospitata in [!INCLUDE[iis601](../../../../includes/iis601-md.md)] o [!INCLUDE[iisver](../../../../includes/iisver-md.md)], il client viene eseguito con l'account `Network Service` per impostazione predefinita. Tutte le associazioni fornite dal sistema che supportano le sessioni protette utilizzano un token del contesto di sicurezza (SCT) senza stato per impostazione predefinita. Tuttavia, se il client è una pagina [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e si utilizzano sessioni protette con token SCT con stato, non è possibile eseguire la rappresentazione del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso di token SCT con stato in una sessione protetta, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Rappresentazione in un metodo del servizio: modello dichiarativo  
  La maggior parte degli scenari di rappresentazione implicano l'esecuzione del metodo del servizio nel contesto del chiamante. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una funzionalità di rappresentazione che semplifica questa operazione consentendo all'utente di specificare il requisito di rappresentazione nell'attributo <xref:System.ServiceModel.OperationBehaviorAttribute> . Ad esempio, nel codice seguente, l'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rappresenta il chiamante prima di eseguire il metodo `Hello` . Qualsiasi tentativo di accedere a risorse native nel metodo `Hello` ha esito positivo solo se l'elenco di controllo di accesso (ACL) della risorsa consente al chiamante i privilegi di accesso. Per attivare la rappresentazione, impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.ImpersonationOption>, ovvero <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> o <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, come illustrato nell'esempio seguente.  
@@ -82,13 +84,13 @@ La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l
  L'infrastruttura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può rappresentare il chiamante solo se il chiamante viene autenticato con credenziali di cui è possibile eseguire il mapping a un account utente di Windows. Se il servizio è configurato per l'autenticazione con una credenziale di cui non è possibile eseguire il mapping a un account di Windows, il metodo del servizio non viene eseguito.  
   
 > [!NOTE]
->  In [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se viene creato un token SCT con stato, la rappresentazione ha esito negativo, generando <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+>  In [!INCLUDE[wxp](../../../../includes/wxp-md.md)], se viene creato un token SCT con stato, la rappresentazione ha esito negativo, generando <xref:System.InvalidOperationException>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Scenari non supportati](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Rappresentazione in un metodo del servizio: modello imperativo  
  Talvolta, per funzionare, non è necessario che un chiamante rappresenti l'intero metodo del servizio, ma solo una parte. In questo caso, è possibile ottenere l'identità Windows del chiamante nel metodo del servizio ed eseguire la rappresentazione in modo imperativo. A tale scopo, utilizzare la proprietà <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> della classe <xref:System.ServiceModel.ServiceSecurityContext> per restituire un'istanza della classe <xref:System.Security.Principal.WindowsIdentity> e chiamare il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> prima di utilizzare l'istanza.  
   
 > [!NOTE]
->  Assicurarsi di usare l'istruzione [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` o l'istruzione C# `using` per ripristinare automaticamente l'azione di rappresentazione. Se non si utilizza l'istruzione o se si utilizza un linguaggio di programmazione diverso da [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o C#, accertarsi di ripristinare il livello di rappresentazione. In caso contrario, si stabilisce la base per attacchi Denial of service e di elevazione del privilegio.  
+>  Assicurarsi di utilizzare Visual Basic`Using` istruzione o c# `using` istruzione per ripristinare automaticamente l'azione di rappresentazione. Se non si utilizza l'istruzione o se si usa un linguaggio di programmazione diverso da Visual Basic o c#, accertarsi di ripristinare il livello di rappresentazione. In caso contrario, si stabilisce la base per attacchi Denial of service e di elevazione del privilegio.  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  

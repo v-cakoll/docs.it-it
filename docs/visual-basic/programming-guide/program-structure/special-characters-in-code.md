@@ -1,11 +1,12 @@
 ---
 title: Caratteri speciali nel codice (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caratteri speciali nel codice (Visual Basic)
-In alcuni casi è necessario usare caratteri speciali nel codice, ovvero i caratteri non alfabetici o numerici. La punteggiatura e caratteri speciali di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] set di caratteri sono diversi utilizzi, dall'organizzazione del testo di programma alla definizione di attività eseguite dal compilatore o del programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione.  
+In alcuni casi è necessario usare caratteri speciali nel codice, ovvero i caratteri non alfabetici o numerici. La punteggiatura e caratteri speciali nel set di caratteri Visual Basic presenti diversi utilizzi, dall'organizzazione del testo di programma alla definizione di attività che esegue il compilatore o dal programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione.  
   
 ## <a name="parentheses"></a>Tra parentesi  
  Utilizzare le parentesi quando si definisce una routine, ad esempio un `Sub` o `Function`. Tutti gli elenchi di argomenti di stored procedure è necessario racchiudere tra parentesi. È inoltre utilizzare parentesi per raggruppare variabili o argomenti in gruppi logici, soprattutto per ignorare l'ordine predefinito di precedenza degli operatori in un'espressione complessa. Questa condizione è illustrata nell'esempio seguente.  
@@ -56,7 +57,7 @@ In alcuni casi è necessario usare caratteri speciali nel codice, ovvero i carat
  Dopo l'esecuzione del codice precedente, il valore di `d` è 8,225 e il valore di `e` è 3. Il calcolo di `d` utilizza la precedenza predefinita di `/` su `+` ed equivale a `d = b + (c / a)`. Le parentesi nel calcolo del `e` ignorare l'ordine predefinito.  
   
 ## <a name="separators"></a>Separatori  
- Separatori si cosa suggerisce il nome stesso: consentono di separare le sezioni di codice. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], il carattere separatore sia i due punti (`:`). Utilizzare i separatori quando si desidera includere più istruzioni in una singola riga anziché righe separate. Questo consente di risparmiare spazio e migliora la leggibilità del codice. Nell'esempio seguente mostra tre istruzioni separate da virgola.  
+ Separatori si cosa suggerisce il nome stesso: consentono di separare le sezioni di codice. In Visual Basic, il carattere di separazione è i due punti (`:`). Utilizzare i separatori quando si desidera includere più istruzioni in una singola riga anziché righe separate. Questo consente di risparmiare spazio e migliora la leggibilità del codice. Nell'esempio seguente mostra tre istruzioni separate da virgola.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

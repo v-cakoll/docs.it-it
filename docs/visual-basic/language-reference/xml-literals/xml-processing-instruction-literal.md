@@ -17,11 +17,11 @@ ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ce0f2d0dff80072beefdb4f84643ea28e2cf165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d2df93a46d426358988b3ad7f3161c7ae0c7b9e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Valore letterale istruzione di elaborazione XML (Visual Basic)
 Un valore letterale che rappresenta un <xref:System.Xml.Linq.XProcessingInstruction> oggetto.  
@@ -40,7 +40,7 @@ Un valore letterale che rappresenta un <xref:System.Xml.Linq.XProcessingInstruct
  Obbligatorio. Assegnare un nome che indica l'applicazione le destinazioni di istruzione di elaborazione. Non può iniziare con "xml" o "XML".  
   
  `piData`  
- Parametro facoltativo. Stringa che indica come l'applicazione di destinazione da `piName` deve elaborare il documento XML.  
+ Facoltativo. Stringa che indica come l'applicazione di destinazione da `piName` deve elaborare il documento XML.  
   
  `?>`  
  Obbligatorio. Indica la fine dell'istruzione di elaborazione.  
@@ -59,9 +59,9 @@ Un valore letterale che rappresenta un <xref:System.Xml.Linq.XProcessingInstruct
  È possibile assegnare una valore letterale istruzione di elaborazione di XML a una variabile o includerlo in un valore letterale documento XML.  
   
 > [!NOTE]
->  Un valore letterale XML può estendersi su più righe senza caratteri di continuazione di riga. Ciò consente di copiare il contenuto da un documento XML e incollarlo direttamente in un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programma.  
+>  Un valore letterale XML può estendersi su più righe senza caratteri di continuazione di riga. In questo modo è possibile copiare il contenuto da un documento XML e incollarlo direttamente in un programma Visual Basic.  
   
- Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore converte il valore letterale istruzione di elaborazione di XML a una chiamata al <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> costruttore.  
+ Il compilatore Visual Basic converte il valore letterale istruzione di elaborazione di XML in una chiamata al <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> costruttore.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea un'istruzione di elaborazione che identifica un foglio di stile per un documento XML.  

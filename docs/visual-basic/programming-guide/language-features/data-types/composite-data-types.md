@@ -1,11 +1,12 @@
 ---
 title: Tipi di dati compositi (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,25 +18,25 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipi di dati compositi (Visual Basic)
-Oltre ai tipi di dati elementare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce, è possibile unire gli elementi di tipi diversi per creare *tipi di dati compositi* quali classi, matrici e strutture. È possibile compilare i tipi di dati composti da tipi di base e da altri tipi compositi. Ad esempio, è possibile definire una matrice di elementi di struttura o una struttura con i membri della matrice.  
+Oltre a disponibili in Visual Basic di tipi di dati elementare è anche possibile assemblare gli elementi di tipi diversi per creare *tipi di dati composti* come strutture, matrici e le classi. È possibile compilare i tipi di dati composti da tipi di base e da altri tipi compositi. Ad esempio, è possibile definire una matrice di elementi di struttura o una struttura con i membri della matrice.  
   
-## <a name="data-types"></a>Riepilogo dei tipi di dati  
+## <a name="data-types"></a>Tipi di dati  
  Un tipo composito è diverso dal tipo di dati di uno qualsiasi dei relativi componenti. Ad esempio, una matrice di `Integer` elementi non è il `Integer` tipo di dati.  
   
  In genere i dati di tipo matrice sono rappresentato utilizzando il tipo di elemento, tra parentesi e virgole in base alle esigenze. Ad esempio, una matrice unidimensionale di `String` elementi è rappresentato come `String()`e una matrice bidimensionale di `Boolean` elementi è rappresentato come `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Tipi di struttura  
- Non vi è alcun tipo di dati singolo che comprende tutte le strutture. Ogni definizione di una struttura rappresenta invece un tipo di dati univoco, anche se due strutture definiscono elementi identici nello stesso ordine. Tuttavia, se si creano due o più istanze della stessa struttura, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ritiene possano essere dello stesso tipo di dati.  
+ Non vi è alcun tipo di dati singolo che comprende tutte le strutture. Ogni definizione di una struttura rappresenta invece un tipo di dati univoco, anche se due strutture definiscono elementi identici nello stesso ordine. Tuttavia, se si creano due o più istanze della stessa struttura, Visual Basic vengono considerate dello stesso tipo di dati.  
   
 ## <a name="tuples"></a>Tuple
 

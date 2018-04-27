@@ -2,9 +2,10 @@
 title: Istruzione Try...Catch...Finally (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Istruzione Try...Catch...Finally (Visual Basic)
 Fornisce un modo per gestire alcuni o tutti i possibili errori che possono verificarsi in un determinato blocco di codice, codice in esecuzione.  
@@ -70,17 +71,17 @@ End Try
 ## <a name="remarks"></a>Note  
  Se si prevede che una particolare eccezione potrebbe verificarsi durante una particolare sezione di codice, inserire il codice in un `Try` blocco e utilizzare un `Catch` blocco per mantenere il controllo e gestire l'eccezione, se si verifica.  
   
- Oggetto `Try…Catch` costituita da un `Try` blocco seguito da uno o più `Catch` clausole che specificano i gestori per eccezioni diverse. Quando viene generata un'eccezione un `Try` blocco [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Cerca il `Catch` istruzione che gestisce l'eccezione. Se un oggetto corrispondente `Catch` istruzione non viene trovata, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] esamina il metodo che ha chiamato il metodo corrente, e così via lungo lo stack di chiamate. Se non `Catch` blocco viene trovato, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Visualizza un messaggio di eccezione non gestita all'utente e interrompe l'esecuzione del programma.  
+ Oggetto `Try…Catch` costituita da un `Try` blocco seguito da uno o più `Catch` clausole che specificano i gestori per eccezioni diverse. Quando viene generata un'eccezione un `Try` bloccare, Visual Basic cerca il `Catch` istruzione che gestisce l'eccezione. Se un oggetto corrispondente `Catch` istruzione non viene trovata, Visual Basic esamina il metodo che ha chiamato il metodo corrente, e così via fino allo stack di chiamate. Se nessuna `Catch` blocco viene trovato, viene visualizzato un messaggio di eccezione non gestita all'utente di Visual Basic e interrompe l'esecuzione del programma.  
   
  È possibile utilizzare più `Catch` istruzione in un `Try…Catch` istruzione. In tal caso, l'ordine dei `Catch` clausole è importante in quanto vengono esaminate nell'ordine. Intercettare le eccezioni più specifiche prima di quelle meno specifiche.  
   
  Le operazioni seguenti `Catch` sono quelle meno specifiche condizioni dell'istruzione e intercetterà tutte le eccezioni che derivano dalla <xref:System.Exception> classe. È in genere necessario utilizzare una di queste variazioni come l'ultimo `Catch` blocco il `Try...Catch...Finally` struttura, dopo il rilevamento si prevede che tutte le eccezioni specifiche. Flusso di controllo non può mai raggiungere un `Catch` blocco che segue una di queste variazioni.  
   
--   Il `type` è `Exception`, ad esempio:`Catch ex As Exception`  
+-   Il `type` è `Exception`, ad esempio: `Catch ex As Exception`  
   
--   L'istruzione non ha alcun `exception` variabile, ad esempio:`Catch`  
+-   L'istruzione non ha alcun `exception` variabile, ad esempio: `Catch`  
   
- Quando un `Try…Catch…Finally` istruzione è annidata in un'altra `Try` blocco [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] esamina innanzitutto ogni `Catch` istruzione in più interna `Try` blocco. Se non corrisponde ad alcuna `Catch` istruzione viene trovata, la ricerca procede al `Catch` istruzioni esterna `Try…Catch…Finally` blocco.  
+ Quando un `Try…Catch…Finally` istruzione è annidata in un'altra `Try` innanzitutto esaminato ogni blocco, Visual Basic `Catch` istruzione in più interna `Try` blocco. Se non corrisponde ad alcuna `Catch` istruzione viene trovata, la ricerca procede al `Catch` istruzioni esterna `Try…Catch…Finally` blocco.  
   
  Le variabili locali di un `Try` blocco non sono disponibili in un `Catch` bloccarsi, in quanto rappresentano blocchi separati. Se si desidera utilizzare una variabile in più di un blocco, dichiarare la variabile all'esterno di `Try...Catch...Finally` struttura.  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>Argomento di eccezione  
  Il `Catch` blocco `exception` argomento è un'istanza di <xref:System.Exception> classe o una classe che deriva dal `Exception` classe. Il `Exception` istanza della classe corrisponde all'errore che si è verificato durante il `Try` blocco.  
   
- Le proprietà del `Exception` oggetto consentono di identificare la causa e la posizione di un'eccezione. Ad esempio, il <xref:System.Exception.StackTrace%2A> proprietà sono elencati i metodi chiamati che ha causato l'eccezione, consentendo di individuare dove si è verificato l'errore nel codice. <xref:System.Exception.Message%2A>Restituisce un messaggio che descrive l'eccezione. <xref:System.Exception.HelpLink%2A>Restituisce un collegamento a un file della Guida associato. <xref:System.Exception.InnerException%2A>Restituisce il `Exception` oggetto che ha causato l'eccezione corrente o restituisce `Nothing` se è presente alcun originale `Exception`.  
+ Le proprietà del `Exception` oggetto consentono di identificare la causa e la posizione di un'eccezione. Ad esempio, il <xref:System.Exception.StackTrace%2A> proprietà sono elencati i metodi chiamati che ha causato l'eccezione, consentendo di individuare dove si è verificato l'errore nel codice. <xref:System.Exception.Message%2A> Restituisce un messaggio che descrive l'eccezione. <xref:System.Exception.HelpLink%2A> Restituisce un collegamento a un file della Guida associato. <xref:System.Exception.InnerException%2A> Restituisce il `Exception` oggetto che ha causato l'eccezione corrente, oppure restituisce `Nothing` se è presente alcun originale `Exception`.  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>Considerazioni sull'uso di un blocco Try... Istruzione catch  
  Utilizzare un `Try…Catch` istruzione solo per segnalare la presenza di eventi anomali o imprevisti. Per motivi includono:  
@@ -134,7 +135,7 @@ End Try
   
  Un `Await` espressione non può essere all'interno di un `Catch` blocco o `Finally` blocco.  
   
-## <a name="iterators"></a>Iteratori  
+## <a name="iterators"></a>Iterators  
  Una funzione iterator o `Get` della funzione di accesso esegue un'iterazione personalizzata su una raccolta. Un iteratore Usa un [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) istruzione per restituire ogni elemento della raccolta uno alla volta. Per chiamare una funzione iterator un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
  Oggetto `Yield` istruzione può essere presenti in un `Try` blocco. Oggetto `Try` blocco che contiene un `Yield` istruzione possono essere presenti `Catch` blocchi e può avere un `Finally` blocco. Vedere la sezione "provare a blocchi in Visual Basic" [iteratori](../../programming-guide/concepts/iterators.md) per un esempio.  

@@ -1,12 +1,13 @@
 ---
 title: Nomi di spazi dei nomi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bc298ad41884bfda84771a729990ebb4e6f776b7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f6a3b90dbc0dab0bb3a6a951dea45f59fc3ea1b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="names-of-namespaces"></a>Nomi di spazi dei nomi
 Come con altre linee guida di denominazione, l'obiettivo per la denominazione degli spazi dei nomi consiste nel creare chiarezza sufficiente per il programmatore utilizzando il framework di sapere immediatamente che cos'è probabilmente il contenuto dello spazio dei nomi. Il modello seguente specifica la regola generale per la denominazione degli spazi dei nomi:  
@@ -38,15 +39,15 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ SI** prefissi di spazi dei nomi con un nome della società per evitare che gli spazi dei nomi di società differenti abbiano lo stesso nome.  
+ **✓ SI** spazi dei nomi con un nome della società per evitare gli spazi dei nomi di società diverse da con lo stesso nome del prefisso.  
   
  **✓ SI** utilizzare un nome stabile e indipendente dalla versione del prodotto nel secondo livello di uno spazio dei nomi.  
   
- **X non** utilizzare gerarchie organizzative come base per i nomi nelle gerarchie dello spazio dei nomi, perché i nomi dei gruppi all'interno delle aziende tendono a essere di breve durata. Organizzare la gerarchia di spazi dei nomi intorno a gruppi di tecnologie correlate.  
+ **X non** utilizzare gerarchie organizzative come base per i nomi nelle gerarchie dello spazio dei nomi, perché i nomi dei gruppi all'interno di aziende tendono a essere di breve durata. Organizzare la gerarchia di spazi dei nomi intorno a gruppi di tecnologie correlate.  
   
- **✓ SI** con periodi di utilizzare il sistema Pascal e spazio dei nomi separato componenti (ad esempio, `Microsoft.Office.PowerPoint`). Se il marchio viene utilizzata maiuscole e minuscole, è opportuno seguire le maiuscole e minuscole definite dal produttore, anche se esso devia dal maiuscole e minuscole normale spazio dei nomi.  
+ **✓ SI** utilizzare il sistema Pascal e i componenti di spazio dei nomi separato con punti (ad esempio, `Microsoft.Office.PowerPoint`). Se il marchio viene utilizzata maiuscole e minuscole, è opportuno seguire le maiuscole e minuscole definite dal produttore, anche se esso devia dal maiuscole e minuscole normale spazio dei nomi.  
   
- **Provare a ✓** utilizzando nomi plurali dove appropriato.  
+ **✓ Provare a** usando nomi plurali ove appropriato.  
   
  Ad esempio, utilizzare `System.Collections` anziché `System.Collection`. Marchi e gli acronimi sono tuttavia eccezioni a questa regola. Ad esempio, utilizzare `System.IO` anziché `System.IOs`.  
   
@@ -76,11 +77,11 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
   
      Questo gruppo contiene spazi dei nomi che raramente vengono importati durante lo sviluppo di applicazioni comuni. Ad esempio, `.Design` gli spazi dei nomi sono utilizzati principalmente durante lo sviluppo di programmazione degli strumenti. Come evitare conflitti con i tipi in questi spazi dei nomi non è critico.  
   
--   **Spazi dei nomi core**  
+-   **Spazi dei nomi dei componenti di base**  
   
      Spazi dei nomi principali includono tutti `System` spazi dei nomi, esclusi gli spazi dei nomi dei modelli di applicazione e gli spazi dei nomi dell'infrastruttura. Spazi dei nomi principali includono, ad esempio, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
   
-     **X non** assegnare tipi di nomi in conflitto con qualsiasi tipo di base degli spazi dei nomi.  
+     **X non** consentono di tipi di nomi in conflitto con qualsiasi tipo negli spazi dei nomi dei componenti di base.  
   
      Ad esempio, non utilizzare mai `Stream` come nome di tipo. Genererebbe un conflitto con <xref:System.IO.Stream?displayProperty=nameWithType>, molto usati tipo.  
   
@@ -88,13 +89,13 @@ Come con altre linee guida di denominazione, l'obiettivo per la denominazione de
   
      Questa categoria include tutti gli spazi dei nomi con i primi due nodi dello spazio dei nomi stesso `(<Company>.<Technology>*`), ad esempio `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. È importante che i tipi appartenenti a una singola tecnologia non siano in conflitto tra loro.  
   
-     **X non** assegnare i nomi dei tipi che possano entrare in conflitto con altri tipi all'interno di una singola tecnologia.  
+     **X non** assegnare nomi dei tipi che possano entrare in conflitto con altri tipi all'interno di una singola tecnologia.  
   
-     **X non** introdurre conflitti di nomi tra i tipi negli spazi dei nomi di tecnologia e uno spazio dei nomi del modello di applicazione (a meno che non è la tecnologia da utilizzare con il modello di applicazione).  
+     **X non** introdurre conflitti di nomi tra i tipi negli spazi dei nomi di tecnologia e uno spazio dei nomi del modello di applicazione (a meno che la tecnologia non deve essere utilizzato con il modello di applicazione).  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

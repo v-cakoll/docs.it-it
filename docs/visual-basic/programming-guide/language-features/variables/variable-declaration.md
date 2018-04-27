@@ -1,12 +1,13 @@
 ---
 title: Dichiarazione di variabili in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Dichiarazione di variabili in Visual Basic
 Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzione di dichiarazione delle variabili è di [Dim (istruzione)](../../../../visual-basic/language-reference/statements/dim-statement.md). La posizione e il contenuto è possibile determinare le caratteristiche della variabile.  
@@ -41,7 +42,7 @@ Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzio
 ## <a name="declaration-levels"></a>Livelli di dichiarazione  
   
 ### <a name="local-and-member-variables"></a>Locale e le variabili membro  
- Oggetto *variabile locale* è una variabile dichiarata all'interno di una stored procedure. Oggetto *variabile membro* è un membro di un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] digitare; è dichiarato a livello di modulo, all'interno di una classe, struttura o modulo, ma non all'interno di eventuali procedure interne per tale classe, struttura o modulo.  
+ Oggetto *variabile locale* è una variabile dichiarata all'interno di una stored procedure. Un *variabile membro* è un membro di un tipo di Visual Basic; è dichiarato a livello di modulo, all'interno di una classe, struttura o modulo, ma non all'interno di tutte le procedure interne di tale classe, struttura o modulo.  
   
 ### <a name="shared-and-instance-variables"></a>Condivise e le variabili di istanza  
  In una classe o struttura, la categoria di una variabile membro dipende o meno è condiviso. Se è dichiarata con la [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) (parola chiave), è un *variabile condivisa*, ed esiste una copia singola condivisa tra tutte le istanze della classe o struttura.  
@@ -51,15 +52,15 @@ Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzio
 ## <a name="declaring-data-type"></a>Dichiarazione del tipo di dati  
  Il [come](../../../../visual-basic/language-reference/statements/as-clause.md) clausola nell'istruzione di dichiarazione consente di definire il tipo di dati o un tipo di oggetto della variabile che si sta dichiarando. È possibile specificare i tipi seguenti di una variabile:  
   
--   Tipo di dati di un tipo elementari, ad esempio `Boolean`, `Long`, o`Decimal`  
+-   Digitare un dati elementari, ad esempio `Boolean`, `Long`, o `Decimal`  
   
 -   Un tipo di dati composta, ad esempio una matrice o una struttura  
   
 -   Un tipo di oggetto o una classe, definito nell'applicazione o in un'altra applicazione  
   
--   Oggetto [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, ad esempio <xref:System.Windows.Forms.Label> o<xref:System.Windows.Forms.TextBox>  
+-   Un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class, ad esempio <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.TextBox>  
   
--   Tipo di un'interfaccia, ad esempio <xref:System.IComparable> o<xref:System.IDisposable>  
+-   Un tipo di interfaccia, ad esempio <xref:System.IComparable> o <xref:System.IDisposable>  
   
  È possibile dichiarare più variabili in un'unica istruzione senza dover ripetere il tipo di dati. Nelle istruzioni seguenti, le variabili `i`, `j`, e `k` vengono dichiarati come tipo `Integer`, `l` e `m` come `Long`, e `x` e `y` come `Single`:  
   
@@ -73,7 +74,7 @@ Dim l, m As Long, x, y As Single
  Per ulteriori informazioni sui tipi di dati, vedere [tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Per ulteriori informazioni sugli oggetti, vedere [oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [programmazione con i componenti](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
 ## <a name="local-type-inference"></a>Inferenza del tipo di variabile locale  
- *L'inferenza del tipo* viene utilizzato per determinare i tipi di dati delle variabili locali dichiarate senza un `As` clausola. Il compilatore deduce il tipo della variabile dal tipo dell'espressione di inizializzazione. In questo modo è possibile dichiarare variabili senza dichiarare in modo esplicito un tipo. Nell'esempio seguente, entrambi `num1` e `num2` sono fortemente tipizzati come integer.  
+ *L'inferenza del tipo* viene utilizzata per determinare i tipi di dati delle variabili locali dichiarate senza un `As` clausola. Il compilatore deduce il tipo della variabile dal tipo dell'espressione di inizializzazione. In questo modo è possibile dichiarare variabili senza dichiarare in modo esplicito un tipo. Nell'esempio seguente, entrambi `num1` e `num2` sono fortemente tipizzati come integer.  
   
  [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   

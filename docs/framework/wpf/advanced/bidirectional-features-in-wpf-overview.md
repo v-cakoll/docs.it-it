@@ -1,32 +1,34 @@
 ---
-title: "Cenni preliminari sulle funzionalità bidirezionali di WPF"
-ms.custom: 
+title: Cenni preliminari sulle funzionalità bidirezionali di WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Cenni preliminari sulle funzionalità bidirezionali di WPF
 A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ha molte funzionalità che supportano lo sviluppo rapido di contenuto bidirezionale, ad esempio, misto dati da sinistra a destra e a destra per sinistra nello stesso documento. Allo stesso tempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crea un'esperienza eccellente per gli utenti che richiedono funzionalità bidirezionali come l'arabo ed ebraico gli utenti.  
   
- Le sezioni seguenti illustrano molte funzionalità bidirezionali con i relativi esempi in cui viene descritto come ottenere la migliore visualizzazione di contenuto bidirezionale. La maggior parte degli esempi utilizza [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], anche se è possibile applicare facilmente i concetti di [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] o [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] codice.  
+ Le sezioni seguenti illustrano molte funzionalità bidirezionali con i relativi esempi in cui viene descritto come ottenere la migliore visualizzazione di contenuto bidirezionale. La maggior parte degli esempi utilizza [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], anche se è possibile applicare facilmente i concetti relativi al codice c# o Microsoft Visual Basic.  
   
 
   
@@ -70,7 +72,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> è un versatile [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento che può contenere una combinazione di testo, tabelle, immagini e altri elementi. Gli esempi nelle sezioni seguenti usano questo elemento.  
   
- Aggiunta di testo a un <xref:System.Windows.Documents.FlowDocument> può essere eseguita in più modi. È un modo semplice per eseguire questa operazione tramite un <xref:System.Windows.Documents.Paragraph> che è un elemento a livello di blocco utilizzato per raggruppare il contenuto, ad esempio testo. Per aggiungere testo agli elementi di livello in linea, utilizzare gli esempi <xref:System.Windows.Documents.Span> e <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>è un elemento di contenuto del flusso di livello inline utilizzato per raggruppare altri elementi inline, mentre un <xref:System.Windows.Documents.Run> è un flusso di livello inline contenuto elemento destinato a contenere una sequenza di testo non formattato. Oggetto <xref:System.Windows.Documents.Span> può contenere più <xref:System.Windows.Documents.Run> elementi.  
+ Aggiunta di testo a un <xref:System.Windows.Documents.FlowDocument> può essere eseguita in più modi. È un modo semplice per eseguire questa operazione tramite un <xref:System.Windows.Documents.Paragraph> che è un elemento a livello di blocco utilizzato per raggruppare il contenuto, ad esempio testo. Per aggiungere testo agli elementi di livello in linea, utilizzare gli esempi <xref:System.Windows.Documents.Span> e <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> è un elemento di contenuto del flusso di livello in linea utilizzato per raggruppare altri elementi in linea, mentre un <xref:System.Windows.Documents.Run> è un flusso di livello in linea del contenuto elemento destinato a contenere una parte di testo non formattato. Oggetto <xref:System.Windows.Documents.Span> può contenere più <xref:System.Windows.Documents.Run> elementi.  
   
  Nel primo esempio di documento contiene un documento con un numero di rete condividono nomi; ad esempio `\\server1\folder\file.ext`. Indipendentemente dal fatto che questo collegamento di rete si trovi in un documento in arabo o in inglese, si vuole che venga sempre visualizzato nello stesso modo. La figura seguente illustra il collegamento in un arabo <xref:System.Windows.FlowDirection.RightToLeft> documento.  
   
@@ -131,7 +133,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>FlowDirection con elementi non di testo  
- <xref:System.Windows.FlowDirection>definisce non solo orientamento del testo in un elemento testuale, ma anche la direzione del flusso di quasi tutti gli altri [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento. Nell'immagine seguente viene illustrata una <xref:System.Windows.Controls.ToolBar> che utilizza un oggetto orizzontale <xref:System.Windows.Media.LinearGradientBrush> per disegnare lo sfondo.  
+ <xref:System.Windows.FlowDirection> definisce non solo orientamento del testo in un elemento testuale, ma anche la direzione del flusso di quasi tutti gli altri [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento. Nell'immagine seguente viene illustrata una <xref:System.Windows.Controls.ToolBar> che utilizza un oggetto orizzontale <xref:System.Windows.Media.LinearGradientBrush> per disegnare lo sfondo.  
   
  **Immagine che mostra una barra degli strumenti con sfumatura da sinistra a destra**  
   
@@ -169,7 +171,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  [!code-xaml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
   
- **Nota** nei file di download è incluso un **ms_logo** file. Nel codice si presuppone che il file con estensione jpg non si trovi all'interno del progetto ma in un'altra posizione nell'unità C:\. È necessario copiare il file con estensione jpg dai file di progetto nell'unità C:\ oppure modificare il codice affinché la ricerca venga eseguita all'interno del progetto. A tale scopo, modificare `Source="file://c:/ms_logo.jpg"` a `Source="ms_logo.jpg"`.  
+ **Nota** è incluso nei file di download un' **ms_logo** file. Nel codice si presuppone che il file con estensione jpg non si trovi all'interno del progetto ma in un'altra posizione nell'unità C:\. È necessario copiare il file con estensione jpg dai file di progetto nell'unità C:\ oppure modificare il codice affinché la ricerca venga eseguita all'interno del progetto. A tale scopo, modificare `Source="file://c:/ms_logo.jpg"` a `Source="ms_logo.jpg"`.  
   
  **Percorsi**  
   
@@ -215,13 +217,13 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Questa proprietà specifica il tipo di sostituzione numerica da eseguire. Accetta uno dei seguenti <xref:System.Windows.Media.NumberSubstitutionMethod> valori di enumerazione.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Il metodo di sostituzione è determinato in base alle impostazioni cultura del numero <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> proprietà. Questa è l'impostazione predefinita.  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: Il metodo di sostituzione viene determinato in base alle impostazioni cultura del numero <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> proprietà. Questa è l'impostazione predefinita.  
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Se il numero delle impostazioni cultura sono una lingua araba o Farsi, specifica che le cifre dipendono dal contesto.  
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: I numeri vengono sempre visualizzati come cifre europee.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: I numeri vengono sottoposti a rendering utilizzando le cifre nazionali per impostazioni cultura del numero, come specificato dalle impostazioni cultura <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: Numeri sono sottoposti a rendering utilizzando le cifre nazionali per impostazioni cultura del numero, come specificato dalle impostazioni cultura <xref:System.Globalization.CultureInfo.NumberFormat%2A>.  
   
 -   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: I numeri vengono visualizzati utilizzando le cifre tradizionali per impostazioni cultura del numero. Per la maggior parte delle impostazioni cultura, queste sono le stesse <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>. Tuttavia, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> risultati cifre latine per alcune impostazioni cultura arabe, mentre questo valore in cifre arabe per tutte le lingue arabe.  
   
@@ -251,7 +253,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- Nel corrispondente [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] il codice, impostare il `Language` proprietà, ad esempio, per `"ar-SA"`.  
+ Nel corrispondente codice c#, impostare il `Language` proprietà, ad esempio, per `"ar-SA"`.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>rappresenta le impostazioni cultura correnti usate dal thread corrente in fase di esecuzione.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> rappresenta le impostazioni cultura correnti usate dal thread corrente in fase di esecuzione.  
   
  Il finale [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] esempio dovrebbe essere simile all'esempio seguente.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- Il finale [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] esempio dovrebbe essere simile al seguente.  
+ L'esempio c# finale dovrebbe essere simile al seguente.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

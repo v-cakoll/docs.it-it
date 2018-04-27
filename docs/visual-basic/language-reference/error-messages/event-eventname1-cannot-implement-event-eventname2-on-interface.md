@@ -1,9 +1,9 @@
 ---
-title: "Evento &#39; &lt;nomeevento1&gt;&#39; non può implementare l'evento &#39;&lt; nomeevento2&gt;&#39; interfaccia &#39;&lt; interfaccia&gt;&#39; perché i relativi tipi delegati &#39;&lt; Delegate1&gt;&#39; e &#39;&lt; delegate2&gt;&#39; non corrispondono"
+title: Evento &#39; &lt;eventname1&gt; &#39; non può implementare l'evento &#39; &lt;eventname2&gt; &#39; sull'interfaccia &#39; &lt;interfaccia&gt; &#39; perché i relativi tipi delegati &#39; &lt;delegate1&gt; &#39; e &#39; &lt;delegate2&gt; &#39; non corrispondono
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-caps.latest.revision: 
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b0fcbbf8a6e23270e4dcbf9d813c773e1522a92a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 41f5984458eb17db04f20b292a0d80783093dcb4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a>Evento &#39; &lt;nomeevento1&gt;&#39; non può implementare l'evento &#39;&lt; nomeevento2&gt;&#39; interfaccia &#39;&lt; interfaccia&gt;&#39; perché i relativi tipi delegati &#39;&lt; Delegate1&gt;&#39; e &#39;&lt; delegate2&gt;&#39; non corrispondono
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]non è possibile implementare un evento perché il tipo delegato dell'evento non corrisponde al tipo di delegato dell'evento nell'interfaccia. Questo errore può insorgere quando si definiscono più eventi in un'interfaccia e si prova a implementarli assieme con lo stesso evento. Un evento può implementare due o più eventi solo se tutti gli eventi implementati vengono dichiarati usando la sintassi `As` e se tutti specificano lo stesso tipo delegato.  
+# <a name="event-39lteventname1gt39-cannot-implement-event-39lteventname2gt39-on-interface-39ltinterfacegt39-because-their-delegate-types-39ltdelegate1gt39-and-39ltdelegate2gt39-do-not-match"></a>Evento &#39; &lt;eventname1&gt; &#39; non può implementare l'evento &#39; &lt;eventname2&gt; &#39; sull'interfaccia &#39; &lt;interfaccia&gt; &#39; perché i relativi tipi delegati &#39; &lt;delegate1&gt; &#39; e &#39; &lt;delegate2&gt; &#39; non corrispondono
+Visual Basic non può implementare un evento perché il tipo delegato dell'evento non corrisponde al tipo delegato dell'evento nell'interfaccia. Questo errore può insorgere quando si definiscono più eventi in un'interfaccia e si prova a implementarli assieme con lo stesso evento. Un evento può implementare due o più eventi solo se tutti gli eventi implementati vengono dichiarati usando la sintassi `As` e se tutti specificano lo stesso tipo delegato.  
   
  **ID errore:** BC31423  
   

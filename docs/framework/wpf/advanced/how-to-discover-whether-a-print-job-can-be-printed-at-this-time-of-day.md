@@ -1,12 +1,13 @@
 ---
 title: "Procedura: individuare se è possibile eseguire o meno un processo di stampa all'orario indicato"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: individuare se è possibile eseguire o meno un processo di stampa all'orario indicato
 Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati orari del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo le 17.00. Tale reparto avrebbe una coda diversa per la manutenzione della stampante di altri reparti utilizzare. La coda per gli altri reparti verrebbe impostata per essere disponibile dopo le 17.00, mentre coda quella per il reparto può essere impostata per essere sempre disponibile.  
   
  Inoltre, è possono impostare i processi di stampa se stessi come printable solo all'interno di un intervallo di tempo specificato.  
   
- Il <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> classi esposti nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] consentono di controllare in remoto se un determinato processo di stampa è possibile stampare su una determinata coda al momento corrente.  
+ Il <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> classi esposti nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per controllare in modalità remota se un processo di stampato specificato può essere eseguito su una determinata coda al momento corrente.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito è riportato un esempio che è possibile diagnosticare i problemi di un processo di stampa.  
@@ -79,7 +81,7 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- Il **TimeConverter** metodo, come illustrato nell'esempio di codice riportato di seguito, non utilizzare alcun metodo introdotto con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], pertanto la discussione è breve. Il metodo ha un'attività di conversione doppie: deve accettare un numero intero che esprime minuti dopo la mezzanotte e convertirlo in un momento leggibile e questo deve convertire l'ora locale. Esegue questa operazione creando innanzitutto un <xref:System.DateTime> oggetto che viene impostato sulla mezzanotte ora UTC, quindi viene utilizzato il <xref:System.DateTime.AddMinutes%2A> metodo per aggiungere i minuti che sono stati passati al metodo. Restituisce un nuovo <xref:System.DateTime> esprime l'ora originale è stato passato al metodo. Il <xref:System.DateTime.ToLocalTime%2A> metodo converte quindi l'ora locale.  
+ Il **TimeConverter** (presentata nell'esempio di codice riportato di seguito) metodo non usa metodi introdotti con Microsoft .NET Framework, pertanto la discussione è breve. Il metodo ha un'attività di conversione doppie: deve accettare un numero intero che esprime minuti dopo la mezzanotte e convertirlo in un momento leggibile e questo deve convertire l'ora locale. Esegue questa operazione creando innanzitutto un <xref:System.DateTime> oggetto che viene impostato sulla mezzanotte ora UTC, quindi viene utilizzato il <xref:System.DateTime.AddMinutes%2A> metodo per aggiungere i minuti che sono stati passati al metodo. Restituisce un nuovo <xref:System.DateTime> esprime l'ora originale è stato passato al metodo. Il <xref:System.DateTime.ToLocalTime%2A> metodo converte quindi l'ora locale.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

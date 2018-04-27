@@ -1,27 +1,29 @@
 ---
 title: Procedure consigliate per comunicazioni in coda
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedure consigliate per comunicazioni in coda
 In questo argomento vengono illustrate le procedure consigliate per le comunicazioni in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
@@ -31,7 +33,7 @@ In questo argomento vengono illustrate le procedure consigliate per le comunicaz
   
  È inoltre possibile scegliere di non incorrere nell'onere delle scritture su disco impostando la proprietà <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> su `false`.  
   
- La protezione ha implicazioni sulle prestazioni. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Considerazioni sulle prestazioni](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ La protezione ha implicazioni sulle prestazioni. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Considerazioni sulle prestazioni](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Messaggistica in coda end-to-end affidabile  
  Nelle sezioni seguenti vengono descritte le procedure consigliate per scenari che richiedono messaggistica affidabile end-to-end.  
@@ -47,21 +49,21 @@ In questo argomento vengono illustrate le procedure consigliate per le comunicaz
   
  La disattivazione delle code dei messaggi non recapitabili per la comunicazione affidabile end-to-end non è consigliata.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Errori nel trasferimento usando le code di messaggi non recapitabili per gestire messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Utilizzo non recapitabili per gestire errori di trasferimento messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Utilizzo della gestione dei messaggi non elaborabili  
  La gestione dei messaggi non elaborabili consente il ripristino dopo un errore per proseguire l'elaborazione dei messaggi.  
   
  Quando si utilizza la funzionalità di gestione dei messaggi non elaborabili, verificare che la proprietà <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> sia impostata sul valore appropriato. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Drop> significa che i dati vanno persi. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Fault> genera invece errori nell'host del servizio quando viene rilevato un messaggio non elaborabile. Se si utilizza MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> è l'opzione migliore per evitare perdite di dati e per spostare il messaggio non elaborabile. Se si utilizza MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> costituisce l'approccio consigliato. Il campo <xref:System.ServiceModel.ReceiveErrorHandling.Move> sposta un messaggio non elaborabile fuori dalla coda consentendo al servizio di proseguire nell'elaborazione di nuovi messaggi. Il servizio dei messaggi non elaborabili è in grado quindi di elaborare separatamente il messaggio non elaborabile.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Raggiungimento di velocità effettive elevate  
  Per raggiungere velocità effettive elevate in un singolo endpoint, utilizzare gli elementi seguenti:  
   
--   Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][L'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Concorrenza. La concorrenza aumenta la velocità effettiva, ma può anche provocare conflitti nelle risorse condivise. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Concorrenza. La concorrenza aumenta la velocità effettiva, ma può anche provocare conflitti nelle risorse condivise. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Limitazione. Per ottenere prestazioni ottimali, limitare il numero di messaggi nella pipeline del dispatcher. Per un esempio di come eseguire questa operazione, vedere [limitazione](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -71,18 +73,18 @@ In questo argomento vengono illustrate le procedure consigliate per le comunicaz
   
  Quando si utilizzano le farm, è necessario sapere che le letture transazionali remote non sono supportate in MSMQ 3.0. MSMQ 4.0 supporta le letture transazionali remote.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][L'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [le differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) e [le differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Accodamento con unità di semantica del lavoro  
  In alcuni scenari i messaggi raggruppati in una coda possono essere correlati insieme e, pertanto, il loro ordine è significativo. In tali scenari, viene elaborato un gruppo di messaggi correlati come singola unità. Ciò significa che tutti i messaggi vengono elaborati correttamente oppure che nessun di essi viene elaborato. Per implementare tale comportamento, utilizzare sessioni con code.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Il raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Correlazione di messaggi request/reply  
  Sebbene le code siano tipicamente unidirezionali, in alcuni scenari è necessario determinare una correlazione tra una risposta ricevuta a una richiesta inviata precedentemente. Se tale correlazione viene richiesta, è consigliato applicare al messaggio la propria intestazione del messaggio SOAP contenente informazioni sulla correlazione. In genere, il mittente allega questa intestazione al messaggio e il destinatario, dopo aver elaborato il messaggio e aver risposto con un messaggio nuovo in una coda di risposte, allega l'intestazione del messaggio del mittente contenente le informazioni sulla correlazione così che il mittente possa identificare il messaggio di risposta con il messaggio di richiesta.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integrazione con applicazioni non WCF  
- Utilizzare `MsmqIntegrationBinding` in caso di integrazione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o di client con servizi o client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'applicazione non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere un'applicazione MSMQ scritta utilizzando System.Messaging, COM+, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o C++.  
+ Utilizzare `MsmqIntegrationBinding` in caso di integrazione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o di client con servizi o client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Non -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applicazione può essere un'applicazione MSMQ scritta utilizzando System. Messaging, COM+, Visual Basic o C++.  
   
  Quando si utilizza `MsmqIntegrationBinding`, è necessario sapere che:  
   

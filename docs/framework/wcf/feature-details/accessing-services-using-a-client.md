@@ -1,27 +1,29 @@
 ---
 title: Accesso ai servizi tramite client
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e011eb2f22abdc06a35fb7f656e180a4537245d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5258f2eaf9ca60dc43ff8182c058d9c68043200f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per comunicare con i servizi. Il [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md) argomento viene fornita una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  
@@ -44,14 +46,14 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
  Oggetto *datagramma* canale è un canale in cui tutti i messaggi sono correlati. Con un canale di datagramma, l'eventuale esito negativo di un'operazione di input o di output non ha di norma alcun effetto sulla successiva operazione ed è possibile riutilizzare lo stesso canale. Ne consegue che i canali di datagramma non hanno in genere esito negativo.  
   
- *Con sessione* i canali sono invece canali con una connessione a altro endpoint. I messaggi in una sessione su uno dei lati vengono sempre correlati alla stessa sessione sull'altro lato. Inoltre, perché una sessione possa essere considerata riuscita, entrambi i partecipanti a essa devono concordare sul fatto che i requisiti della conversazione siano stati soddisfatti. In caso contrario, il canale con sessione può avere esito negativo.  
+ *Con sessione* canali, sono invece canali con una connessione a altro endpoint. I messaggi in una sessione su uno dei lati vengono sempre correlati alla stessa sessione sull'altro lato. Inoltre, perché una sessione possa essere considerata riuscita, entrambi i partecipanti a essa devono concordare sul fatto che i requisiti della conversazione siano stati soddisfatti. In caso contrario, il canale con sessione può avere esito negativo.  
   
  Aprire i client in modo esplicito o implicito chiamando la prima operazione.  
   
 > [!NOTE]
 >  Tentare di rilevare esplicitamente i canali con sessione in errore non è in genere utile, poiché il momento in cui si riceve la notifica dipende dall'implementazione della sessione. Poiché, ad esempio, la classe <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (con la sessione affidabile disattivata) fa emergere la sessione della connessione TCP, se si è in ascolto dell'evento <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> sul servizio o sul client, è probabile che si riceva una notifica immediata in caso di errore di rete. Le sessioni affidabili (stabilite da associazioni in cui la classe <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> è attivata) sono però progettate per isolare i servizi da piccoli errori di rete. Se la sessione può essere ristabilita entro un periodo di tempo ragionevole, la stessa associazione, configurata per sessioni affidabili, potrebbe non generare errori fino a quando l'interruzione non dura per un periodo di tempo più lungo.  
   
- La maggior parte delle associazioni fornite dal sistema (che espongono canali al livello di applicazione) usa sessioni per impostazione predefinita, diversamente dall'associazione <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Utilizzano sessioni](../../../../docs/framework/wcf/using-sessions.md).  
+ La maggior parte delle associazioni fornite dal sistema (che espongono canali al livello di applicazione) usa sessioni per impostazione predefinita, diversamente dall'associazione <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Utilizzo di sessioni](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>Utilizzo corretto delle sessioni  
  Le sessioni offrono un modo per sapere se l'intero scambio di messaggi è completo e se entrambi i lati lo considerano riuscito. È consigliabile che un'applicazione chiamante apra il canale, lo utilizzi e lo chiuda all'interno di un unico blocco try. Se un canale di sessione è aperto, il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> viene chiamato una volta e la chiamata viene restituita correttamente, la sessione ha esito positivo. Per esito positivo si intende, in questo caso, che tutto il recapito garantisce che l'associazione specificata è stata soddisfatta e che l'altro lato non ha chiamato <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> sul canale prima di chiamare <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
@@ -62,7 +64,7 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
  La gestione di eccezioni nelle applicazioni client è semplice. Se un canale viene aperto, usato e chiuso all'interno di un blocco try, la conversazione ha avuto esito positivo, a meno che non venga generata un'eccezione. In genere, se viene generata un'eccezione, la conversazione viene interrotta.  
   
 > [!NOTE]
->  Non è consigliabile usare l'istruzione `using` (`Using` in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), poiché la fine dell'istruzione `using` può causare eccezioni che possono mascherare altre eccezioni che potrebbe essere necessario conoscere. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Evitare problemi con l'istruzione Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  Utilizzare la `using` istruzione (`Using` in Visual Basic) non è consigliata. poiché la fine dell'istruzione `using` può causare eccezioni che possono mascherare altre eccezioni che potrebbe essere necessario conoscere. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Evitare i problemi con l'istruzione Using](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  Nell'esempio di codice seguente viene illustrato il modello client consigliato usando un blocco try/catch e non l'istruzione `using`.  
   
@@ -74,16 +76,16 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
  I canali di datagramma non hanno mai esito negativo anche se si verificano eccezioni quando vengono chiusi. Inoltre, i client non duplex la cui autenticazione mediante conversazione protetta non riesce generano di norma un'eccezione <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Tuttavia, se il client duplex che usa una conversazione protetta non viene autenticato, riceve un'eccezione <xref:System.TimeoutException?displayProperty=nameWithType>.  
   
- Per ulteriori informazioni sull'utilizzo delle informazioni sull'errore a livello di applicazione, vedere [specifica e gestione degli errori in contratti e servizi](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Le eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md) descrive le eccezioni previste e illustra come gestirli. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come gestire gli errori durante lo sviluppo di canali, vedere [gestisce eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Per ulteriori informazioni sull'utilizzo delle informazioni sull'errore a livello di applicazione, vedere [specifica e gestione degli errori in contratti e servizi](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Le eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md) descrive le eccezioni previste e illustra come gestirli. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come gestire gli errori quando si sviluppano i canali, vedere [gestisce eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Blocco dei client e prestazioni  
- Quando un'applicazione chiama in modo sincrono un'operazione request-reply, il client si blocca fino a quando non viene ricevuto un valore restituito o non viene generata un'eccezione (ad esempio, <xref:System.TimeoutException?displayProperty=nameWithType>). Si tratta di un comportamento simile al comportamento locale. Quando un'applicazione richiama in modo sincrono un'operazione su un oggetto client o un canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il client non viene restituito fino a quando il livello del canale non riesce a scrivere i dati nella rete o fino a quando non viene generata un'eccezione. Sebbene il modello di scambio di messaggi unidirezionale (specificato contrassegnando un'operazione con la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> impostata su `true`) possa aumentare la capacità di risposta di alcuni client, le operazioni unidirezionali possono anche creare blocchi, a seconda dell'associazione e dei messaggi già inviati. Le operazioni unidirezionali riguardano esclusivamente lo scambio di messaggi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Servizi unidirezionali](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Quando un'applicazione chiama in modo sincrono un'operazione request-reply, il client si blocca fino a quando non viene ricevuto un valore restituito o non viene generata un'eccezione (ad esempio, <xref:System.TimeoutException?displayProperty=nameWithType>). Si tratta di un comportamento simile al comportamento locale. Quando un'applicazione richiama in modo sincrono un'operazione su un oggetto client o un canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il client non viene restituito fino a quando il livello del canale non riesce a scrivere i dati nella rete o fino a quando non viene generata un'eccezione. Sebbene il modello di scambio di messaggi unidirezionale (specificato contrassegnando un'operazione con la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> impostata su `true`) possa aumentare la capacità di risposta di alcuni client, le operazioni unidirezionali possono anche creare blocchi, a seconda dell'associazione e dei messaggi già inviati. Le operazioni unidirezionali riguardano esclusivamente lo scambio di messaggi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Servizi unidirezionali](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
  I grandi blocchi di dati possono rallentare l'elaborazione dei client, indipendentemente dal modello di scambio di messaggi. Per comprendere come gestire questi problemi, vedere [dati di grandi dimensioni e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
  Se l'applicazione deve eseguire altre operazioni durante il completamento di un'operazione, è consigliabile creare una coppia di metodi asincroni sull'interfaccia di contratto del servizio implementata dal client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare il `/async` attivare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per un esempio, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]miglioramento delle prestazioni di client, vedere [applicazioni Client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] miglioramento delle prestazioni di client, vedere [le applicazioni Client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Abilitazione dell'utente alla selezione dinamica di credenziali  
  L'interfaccia <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> consente alle applicazioni di visualizzare un'interfaccia utente che consente all'utente di scegliere le credenziali con cui viene creato un canale prima dell'avvio dei timer di timeout.  

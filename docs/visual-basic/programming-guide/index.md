@@ -13,28 +13,28 @@ ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 72234f4707e891abd00744db8cebe04114865522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5f71267bb1bcbe5b3e3e47cea193488ac4e1596d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-programming-guide"></a>Guida per programmatori Visual Basic
-Analogamente a qualsiasi linguaggio di programmazione moderno, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supporta molti costrutti di programmazione ed elementi di linguaggio comuni. Questa guida illustra tutti gli elementi di programmazione principali disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Come con qualsiasi linguaggio di programmazione moderno, Visual Basic supporta molti costrutti di programmazione comuni e gli elementi del linguaggio. Questa guida descrive tutti gli elementi principali della programmazione con Visual Basic.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Struttura del programma e convenzioni di scrittura del codice](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Include documentazione sulla struttura di base e sulle convenzioni di codice di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ad esempio le convenzioni di denominazione, i commenti nel codice e le limitazioni presenti in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Contiene la documentazione sulle convenzioni di struttura e il codice di base di Visual Basic, ad esempio le convenzioni di denominazione, i commenti nel codice e le limitazioni di Visual Basic.  
   
  [Funzionalità del linguaggio Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
- Contiene collegamenti ad argomenti che presentano e illustrano funzionalità importanti di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], inclusi LINQ e valori letterali XML.  
+ Sono disponibili collegamenti ad argomenti che presentano e illustrano funzionalità importanti di Visual Basic, inclusi LINQ e valori letterali XML.  
   
  [Interoperabilità COM](../../visual-basic/programming-guide/com-interop/index.md)  
- Illustra i problemi di interoperabilità associati alla creazione e all'uso di oggetti COM (Component Object Model) con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Vengono descritti i problemi di interoperabilità associati alla creazione e all'uso di oggetti COM (Component Object Model) con Visual Basic.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Riferimenti per il linguaggio Visual Basic](../../visual-basic/language-reference/index.md)  
- Include informazioni di riferimento su diversi aspetti della programmazione con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fornisce informazioni di riferimento su diversi aspetti della programmazione di Visual Basic.  
   
  [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Include informazioni sull'uso del compilatore da riga di comando di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], sulle opzioni del compilatore e sullo strumento di aggiornamento parole chiave.
+ Offre informazioni sull'utilizzo al compilatore da riga di comando di Visual Basic, le opzioni del compilatore e lo strumento di aggiornamento parole chiave.

@@ -1,11 +1,12 @@
 ---
 title: Operatori aritmetici in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatori aritmetici in Visual Basic
 Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritmetiche che comportano il calcolo di valori numerici rappresentati da valori letterali, variabili, altre espressioni, funzione e chiamate a proprietà e costanti. Anche classificati con operatori aritmetici sono gli operatori di spostamento di bit, che operano a livello dei singoli bit degli operandi e spostare degli schemi di bit a sinistra o a destra.  
@@ -65,7 +66,7 @@ Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritme
   
 |Tipo di dati dividendo|Tipo di dati divisore|Valore del dividendo|Risultato|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(non un numero definito matematicamente)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (non un numero definito matematicamente)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,9 +99,9 @@ Operatori aritmetici consentono di eseguire molte delle comuni operazioni aritme
 ## <a name="type-safety"></a>Indipendenza dai tipi  
  Gli operandi in genere devono essere dello stesso tipo. Ad esempio, se si esegue un'addizione con un `Integer` variabile, è necessario aggiungerlo a un altro `Integer` variabile ed è necessario assegnare il risultato a una variabile di tipo `Integer` anche.  
   
- Un modo per garantire una buona indipendente dai tipi scrittura di codice consiste nell'utilizzare il [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Se si imposta `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] esegue automaticamente *indipendente dai tipi* conversioni. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Double` variabile, l'operazione viene eseguita in genere, perché un `Integer` valore può essere convertito in `Double` senza perdita di dati. Conversioni di tipo-unsafe, d'altra parte, provocare un errore del compilatore con `Option Strict On`. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Integer` variabile, un errore del compilatore risultati, perché un `Double` variabile non può essere convertita in modo implicito nel tipo `Integer`.  
+ Un modo per garantire una buona indipendente dai tipi scrittura di codice consiste nell'utilizzare il [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Se si imposta `Option Strict On`, Visual Basic esegue automaticamente *indipendente dai tipi* conversioni. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Double` variabile, l'operazione viene eseguita in genere, perché un `Integer` valore può essere convertito in `Double` senza perdita di dati. Conversioni di tipo-unsafe, d'altra parte, provocare un errore del compilatore con `Option Strict On`. Ad esempio, se si tenta di aggiungere un `Integer` variabile a un `Double` variabile e assegnare il valore a un `Integer` variabile, un errore del compilatore risultati, perché un `Double` variabile non può essere convertita in modo implicito nel tipo `Integer`.  
   
- Se si imposta `Option Strict Off`, tuttavia, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consente conversioni implicite verso un abbiano luogo, anche se possono comportare la perdita di dati o di precisione imprevista. Per questo motivo, è consigliabile utilizzare `Option Strict On` durante la scrittura di codice di produzione. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Se si imposta `Option Strict Off`, tuttavia, Visual Basic consente conversioni implicite verso un abbiano luogo, anche se possono comportare la perdita di dati o di precisione imprevista. Per questo motivo, è consigliabile utilizzare `Option Strict On` durante la scrittura di codice di produzione. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori aritmetici](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

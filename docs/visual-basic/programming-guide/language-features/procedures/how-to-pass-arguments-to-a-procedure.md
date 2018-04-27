@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: passare argomenti a una routine (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: passare argomenti a una routine (Visual Basic)
 Quando si chiama una routine, si seguono il nome della routine con un elenco di argomenti tra parentesi. Viene fornito un argomento corrispondente a ogni parametro obbligatorio definito dalla routine e, facoltativamente, è possibile specificare argomenti per il `Optional` parametri. Se non si specifica un `Optional` parametro nella chiamata di, è necessario includere una virgola per contrassegnarne la posizione nell'elenco di argomenti, se viene fornito alcun argomento successivo.  
@@ -45,7 +46,7 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
   
 5.  Se si omette un argomento per un `Optional` parametro ed è presente un altro parametro dopo di esso nell'elenco di parametri, è possibile contrassegnare la posizione dell'argomento omesso da una virgola aggiuntiva nell'elenco di argomenti.  
   
-     L'esempio seguente chiama il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> (funzione).  
+     Nell'esempio seguente chiama Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> (funzione).  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
   
      La seconda virgola nell'elenco di argomenti contrassegna la posizione del secondo argomento omesso e l'ultima stringa viene passato per il terzo parametro facoltativo di `MsgBox`, ovvero il testo da visualizzare nella barra del titolo.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
+
  [Routine Sub](./sub-procedures.md)  
  [Routine Function](./function-procedures.md)  
  [Routine Property](./property-procedures.md)  
@@ -63,4 +65,4 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
  [Routine ricorsive](./recursive-procedures.md)  
  [Overload della routine](./procedure-overloading.md)  
  [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Programmazione orientata ad oggetti](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)  

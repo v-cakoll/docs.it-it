@@ -1,23 +1,24 @@
 ---
 title: Ritardo durevole in XAMLX
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>Ritardo durevole in XAMLX
 In questo esempio viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
@@ -34,7 +35,7 @@ In questo esempio viene illustrato come usare un ritardo durevole, ovvero un rit
 ## <a name="discussion"></a>Discussione  
  Il flusso di lavoro di esempio contiene due messaggi in un file locale separati da un ritardo. Quando viene attivato il ritardo, il flusso di lavoro viene scaricato e attende 5 secondi nell'archivio di istanze del flusso di lavoro prima di essere ricaricato in memoria.  
   
- Il file con estensione xamlx è un servizio flusso di lavoro ospitato in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] viene usato Cassini che usa un host del servizio del flusso di lavoro per ospitare il flusso di lavoro.  
+ Il file con estensione xamlx è un servizio flusso di lavoro che è ospitato in Visual Studio. Visual Studio viene usato Cassini che usa un servizio flusso di lavoro host per ospitare il flusso di lavoro.  
   
  Oltre a ospitare il flusso di lavoro, l'host del servizio flusso di lavoro gestisce le istanze del flusso di lavoro caricandole e scaricandole. Per avviare un'istanza della definizione di [!INCLUDE[wf](../../../../includes/wf-md.md)] (nell'host del servizio flusso di lavoro), impostare un client che invia un messaggio all'attività <xref:System.ServiceModel.Activities.Receive> nel flusso di lavoro. Questo oggetto <xref:System.ServiceModel.Activities.Receive> dispone della proprietà <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> impostata su `true` in modo che possa creare una nuova istanza del flusso di lavoro dopo aver ricevuto un messaggio.  
   

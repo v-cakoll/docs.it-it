@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Per quanto riguarda le applicazioni ottimizzato su cloud?
 
@@ -72,7 +73,7 @@ Ma anche negli scenari in cui microservizi offrono potente funzionalità indipen
 
 A causa della complessità di un'architettura di microservizi, solo a scenari specifici e a determinati tipi di applicazioni sono adatti per le applicazioni basate su microservizio. Sono incluse le applicazioni di grandi e complesse con più evoluzione sottosistemi. In questi casi, è opportuno investire in un'architettura più complessa di software, per una maggiore flessibilità a lungo termine e la manutenzione dell'applicazione più efficiente. Ma per scenari meno complessi, potrebbe essere meglio continuare con un approccio monolitico applicazione o si avvicina di più semplice a più livelli.
 
-Come nota finale, anche a rischio di essere ricorrenti su questo concetto, non deve si osserva l'utilizzo di microservizi nelle applicazioni come "secondo o nulla*.*" È possibile estendere e sviluppare applicazioni monolitiche esistente aggiungendo nuovi scenari di piccole dimensioni basati su microservizi. Non è necessario iniziare da zero per iniziare a lavorare con un approccio architetturale microservizi. In effetti, è consigliabile che evolvono dall'utilizzo di un'applicazione monolitica o a più livelli esistente aggiungendo nuovi scenari. Infine, è possibile suddividere l'applicazione in componenti autonomi o microservizi. È possibile avviare l'evoluzione monolitiche applicazioni in una direzione di microservizi dettagliate.
+Come nota finale, anche a rischio di essere ricorrenti su questo concetto, non deve si osserva l'utilizzo di microservizi nelle applicazioni come "secondo o nulla *.*" È possibile estendere e sviluppare applicazioni monolitiche esistente aggiungendo nuovi scenari di piccole dimensioni basati su microservizi. Non è necessario iniziare da zero per iniziare a lavorare con un approccio architetturale microservizi. In effetti, è consigliabile che evolvono dall'utilizzo di un'applicazione monolitica o a più livelli esistente aggiungendo nuovi scenari. Infine, è possibile suddividere l'applicazione in componenti autonomi o microservizi. È possibile avviare l'evoluzione monolitiche applicazioni in una direzione di microservizi dettagliate.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Modalità di utilizzo di servizio App di Azure per modernizzazione app .NET esistenti
 

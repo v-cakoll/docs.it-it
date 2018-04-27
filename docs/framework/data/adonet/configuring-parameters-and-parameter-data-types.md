@@ -1,27 +1,29 @@
 ---
 title: Configurazione dei parametri e tipi di dati dei parametri
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati dei parametri
 Gli oggetti comando usano i parametri per passare valori a istruzioni o stored procedure SQL, fornendo la verifica e la convalida dei tipi. A differenza del testo dei comandi, l'input dei parametri viene trattato come valore letterale, non come codice eseguibile. In questo modo è possibile difendersi da attacchi SQL injection, in cui l'autore di un attacco inserisce un comando che compromette la sicurezza del server in un'istruzione SQL.  
@@ -90,7 +92,7 @@ Gli oggetti comando usano i parametri per passare valori a istruzioni o stored p
 >  Le conversioni da Decimal in altri tipi sono conversioni di restrizione che arrotondano il valore Decimal al valore integer più vicino che tende allo zero. Se non è possibile rappresentare il risultato della conversione nel tipo di destinazione, verrà generata un'eccezione <xref:System.OverflowException> .  
   
 > [!NOTE]
->  Quando si invia un valore di parametro null al server, è necessario specificare <xref:System.DBNull>, invece di `null` (`Nothing` in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). Il valore null nel sistema è un oggetto vuoto senza un valore. <xref:System.DBNull> viene usato per rappresentare i valori null. Per altre informazioni sui valori null di database, vedere [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Quando si invia un valore di parametro null al server, è necessario specificare <xref:System.DBNull>, non `null` (`Nothing` in Visual Basic). Il valore null nel sistema è un oggetto vuoto senza un valore. <xref:System.DBNull> viene usato per rappresentare i valori null. Per altre informazioni sui valori null di database, vedere [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Informazioni sui parametri  
  I parametri possono anche essere derivati da una stored procedure usando la classe `DbCommandBuilder` . Le classi `SqlCommandBuilder` e `OleDbCommandBuilder` forniscono un metodo statico, `DeriveParameters`, che popola automaticamente la raccolta di parametri di un oggetto comando con le informazioni provenienti da una stored procedure. Si noti che `DeriveParameters` sovrascrive qualsiasi informazione esistente sui parametri per il comando.  

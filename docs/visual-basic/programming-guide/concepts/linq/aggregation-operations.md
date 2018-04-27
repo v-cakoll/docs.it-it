@@ -1,22 +1,23 @@
 ---
 title: Operazioni di aggregazione (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operazioni di aggregazione (Visual Basic)
 Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori. Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.  
@@ -41,13 +42,13 @@ Un'operazione di aggregazione calcola un singolo valore da una raccolta di valor
   
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
   
-### <a name="average"></a>Average  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Average` clausola [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per il calcolo della temperatura media in una matrice di numeri che rappresentano le temperature.  
+### <a name="average"></a>Media  
+ Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Average` clausola in Visual Basic per il calcolo della temperatura media in una matrice di numeri che rappresentano le temperature.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Conteggio  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Count` clausola [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
+ Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Count` clausola in Visual Basic per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   

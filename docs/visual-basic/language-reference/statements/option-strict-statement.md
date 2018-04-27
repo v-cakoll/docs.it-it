@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni implicite dei dati a conversioni di ampliamento solo, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Errori di conversione di Narrowing implicite  
  Questi errori si verificano in presenza di una conversione implicita verso un tipo di dati più piccolo.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]convertire molti tipi di dati in altri tipi di dati. Quando il valore di un tipo di dati viene convertito in un tipo di dati con precisione inferiore o una capacità inferiore, possono verificarsi perdite di dati. Se tale conversione non riesce, si verifica un errore di run-time. `Option Strict`garantisce la notifica in fase di compilazione di queste conversioni verso un in modo che possano essere evitate. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) e [conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic è possibile convertire altri tipi di dati di molti tipi di dati. Quando il valore di un tipo di dati viene convertito in un tipo di dati con precisione inferiore o una capacità inferiore, possono verificarsi perdite di dati. Se tale conversione non riesce, si verifica un errore di run-time. `Option Strict` assicura notifica in fase di compilazione di queste conversioni di narrowing in modo che possano essere evitate. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) e [conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Le conversioni che possono causare errori includono conversioni implicite che si verificano nelle espressioni. Per altre informazioni, vedere i seguenti argomenti:  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  Nel **compilare** scheda, impostare il valore **Option Strict** casella.  
   
-###  <a name="conditions"></a>Per impostare le configurazioni di avviso nell'IDE  
+###  <a name="conditions"></a> Per impostare le configurazioni di avviso nell'IDE  
  Quando si utilizza il [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo sulle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina Compila** ha impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Queste impostazioni sono le seguenti:  
   
 -   **Conversione implicita**  

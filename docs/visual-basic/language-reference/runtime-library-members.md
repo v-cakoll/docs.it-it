@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membri della libreria di runtime di Visual Basic
-Il `Microsoft.VisualBasic` spazio dei nomi contiene le classi, moduli, costanti ed enumerazioni che costituiscono il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] della libreria di runtime. Questi membri raccolta forniscono procedure, le proprietà e valori costanti che è possibile utilizzare nel codice. Ogni modulo e la classe rappresenta una particolare categoria di funzionalità.  
+Il `Microsoft.VisualBasic` dello spazio dei nomi contiene le classi, moduli, costanti ed enumerazioni che costituiscono la libreria di runtime di Visual Basic. Questi membri raccolta forniscono procedure, le proprietà e valori costanti che è possibile utilizzare nel codice. Ogni modulo e la classe rappresenta una particolare categoria di funzionalità.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft.VisualBasic.Collection  
   
@@ -197,7 +197,7 @@ Il `Microsoft.VisualBasic` spazio dei nomi contiene le classi, moduli, costanti 
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft. VisualBasic costanti ed enumerazioni  
- Il `Microsoft.VisualBasic` spazio dei nomi fornisce costanti ed enumerazioni come parte di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] libreria run-time. Nel codice, è possibile utilizzare questi valori costanti. Ciascuna enumerazione rappresenta una particolare categoria di funzionalità. Per ulteriori informazioni, vedere [costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Il `Microsoft.VisualBasic` dello spazio dei nomi fornisce costanti ed enumerazioni come parte della libreria di runtime di Visual Basic. Nel codice, è possibile utilizzare questi valori costanti. Ciascuna enumerazione rappresenta una particolare categoria di funzionalità. Per ulteriori informazioni, vedere [costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md)  

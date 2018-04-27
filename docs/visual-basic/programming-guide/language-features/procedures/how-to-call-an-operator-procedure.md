@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: chiamare una routine di operatore (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: chiamare una routine di operatore (Visual Basic)
 Utilizzare il simbolo dell'operatore in un'espressione per chiamare una routine di operatore. Nel caso di un operatore di conversione, si chiama il [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo di dati.  
   
- Routine di operatore non si chiama in modo esplicito. È sufficiente utilizzare l'operatore, o `CType` funzione in un'istruzione di assegnazione o un'espressione, esattamente come si utilizza in genere un operatore. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]effettua la chiamata di routine di operatore.  
+ Routine di operatore non si chiama in modo esplicito. È sufficiente utilizzare l'operatore, o `CType` funzione in un'istruzione di assegnazione o un'espressione, esattamente come si utilizza in genere un operatore. Visual Basic effettua la chiamata di routine di operatore.  
   
  La definizione di un operatore in una classe o struttura viene definita anche *overload* l'operatore.  
   
@@ -47,7 +48,7 @@ Utilizzare il simbolo dell'operatore in un'espressione per chiamare una routine 
   
 2.  Verificare che i tipi di dati gli operandi siano appropriati per la conversione e nell'ordine corretto.  
   
-3.  `CType`chiama la routine di operatore di conversione e restituisce il valore convertito.  
+3.  `CType` chiama la routine di operatore di conversione e restituisce il valore convertito.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea due <xref:System.TimeSpan> strutture, li somma e archivia il risultato in un terzo <xref:System.TimeSpan> struttura. Il <xref:System.TimeSpan> struttura definisce le routine di operatore per eseguire l'overload diversi operatori standard.  

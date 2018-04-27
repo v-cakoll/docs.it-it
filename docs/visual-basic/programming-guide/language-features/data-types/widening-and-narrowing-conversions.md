@@ -1,11 +1,12 @@
 ---
 title: Conversioni di ampliamento e restrizione (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversioni di ampliamento e restrizione (Visual Basic)
 Una considerazione importante con una conversione del tipo è se il risultato della conversione è compreso nell'intervallo del tipo di dati di destinazione.  
@@ -59,7 +60,7 @@ Una considerazione importante con una conversione del tipo è se il risultato de
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |Qualsiasi tipo enumerato ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Il tipo integrale sottostante e qualsiasi tipo a cui viene ampliato al tipo sottostante.|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|Matrice `Char`|`Char`matrice,`String`|  
+|Matrice `Char`|`Char` matrice, `String`|  
 |Qualsiasi tipo|[Oggetto](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Qualsiasi tipo derivato|Qualsiasi tipo da cui deriva di base <sup>3</sup>.|  
 |Qualsiasi tipo|Qualsiasi interfaccia implementata.|  
@@ -67,9 +68,9 @@ Una considerazione importante con una conversione del tipo è se il risultato de
   
  <sup>1</sup> per definizione, ogni tipo di dati viene ampliato a se stessa.  
   
- <sup>2</sup> le conversioni da `Integer`, `UInteger`, `Long`, `ULong`, o `Decimal` a `Single` o `Double` possono comportare una perdita di precisione, ma non in ordine di grandezza. In questo senso non comportano la perdita di informazioni.  
+ <sup>2</sup> le conversioni dai `Integer`, `UInteger`, `Long`, `ULong`, o `Decimal` a `Single` o `Double` possono comportare una perdita di precisione, ma mai in ordine di grandezza. In questo senso non comportano la perdita di informazioni.  
   
- <sup>3</sup> può apparire sorprendente che una conversione da un tipo derivato a uno dei tipi di base è una conversione di ampliamento. La giustificazione è che il tipo derivato contiene tutti i membri del tipo di base, pertanto viene qualificato come un'istanza del tipo di base. Nella direzione opposta, il tipo di base non contiene tutti i nuovi membri definiti dal tipo derivato.  
+ <sup>3</sup> potrebbe sembrare sorprendente che una conversione da un tipo derivato a uno dei tipi di base è una conversione di ampliamento. La giustificazione è che il tipo derivato contiene tutti i membri del tipo di base, pertanto viene qualificato come un'istanza del tipo di base. Nella direzione opposta, il tipo di base non contiene tutti i nuovi membri definiti dal tipo derivato.  
   
  Le conversioni di ampliamento sempre esito positivo in fase di esecuzione e non comportano perdita di dati. È sempre possibile eseguirle in modo implicito, se il [istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) imposta il tipo di controllo passa a `On` o `Off`.  
   
@@ -82,7 +83,7 @@ Una considerazione importante con una conversione del tipo è se il risultato de
   
 -   Conversioni da qualsiasi tipo numerico a qualsiasi tipo enumerato (`Enum`)  
   
--   Le conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico, `Boolean`, o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+-   Le conversioni in entrambe le direzioni tra [stringa](../../../../visual-basic/language-reference/data-types/string-data-type.md) e qualsiasi tipo numerico `Boolean`, o [Data](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
 -   Le conversioni da un tipo di dati o un oggetto di tipo a un tipo derivato da esso  
   
@@ -97,11 +98,11 @@ Una considerazione importante con una conversione del tipo è se il risultato de
 ## <a name="exceptions-during-conversion"></a>Eccezioni durante la conversione  
  Poiché le conversioni di ampliamento sempre esito positivo, non generano eccezioni. In genere, le conversioni di restrizione quando hanno esito negativo, generano le eccezioni seguenti:  
   
--   <xref:System.InvalidCastException>: se è definita alcuna conversione tra i due tipi  
+-   <xref:System.InvalidCastException> ovvero se è definita alcuna conversione tra i due tipi  
   
--   <xref:System.OverflowException>-(solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
+-   <xref:System.OverflowException> : (solo tipi integrali) se il valore convertito è troppo grande per il tipo di destinazione  
   
- Se una classe o struttura definisce un [CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md) come un operatore di conversione da o verso tale classe o struttura, che `CType` può generare qualsiasi eccezione che considera appropriate. Inoltre, che `CType` potrebbe chiamare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] funzioni o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metodi, che a sua volta potrebbe potenzialmente generare un'ampia gamma di eccezioni.  
+ Se una classe o struttura definisce un [CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md) come un operatore di conversione da o verso tale classe o struttura, che `CType` può generare qualsiasi eccezione che considera appropriate. Inoltre, che `CType` potrebbe chiamare funzioni di Visual Basic o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] metodi, che a sua volta è stato possibile generare una varietà di eccezioni.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Modifiche apportate durante le conversioni di tipo riferimento  
  Una conversione da un *tipo di riferimento* copia solo il puntatore al valore. Il valore stesso non viene copiato né modificato in alcun modo. L'unico elemento che è possibile modificare è il tipo di dati della variabile contenente il puntatore del mouse. Nell'esempio seguente, il tipo di dati viene convertito dalla classe derivata alla relativa classe base, ma non viene modificato l'oggetto che entrambe le variabili a questo puntano.  

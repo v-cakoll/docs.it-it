@@ -1,11 +1,12 @@
 ---
 title: 'Procedura dettagliata: chiamata delle API di Windows (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procedura dettagliata: chiamata delle API di Windows (Visual Basic)
 API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sistema operativo Windows. Usarli per eseguire attività quando è difficile scrivere routine equivalenti. Ad esempio, Windows fornisce una funzione denominata `FlashWindowEx` che consente di rendere la barra del titolo di un'applicazione alternare sfumature chiare e scure.  
   
  Il vantaggio di utilizzare le API di Windows nel codice è che è possibile salvare fase di sviluppo perché contengono molte utili funzionalità che sono già scritto e in attesa di essere utilizzato. Lo svantaggio è che le API di Windows può essere difficile e di lavoro con grossi in caso di errori.  
   
- Le API di Windows rappresentano una categoria speciale di interoperabilità. Le API di Windows non utilizzano codice gestito, non dispongono di librerie dei tipi e utilizzare i tipi di dati sono diversi da quelli utilizzati in Visual Studio. A causa di tali differenze, e poiché le API di Windows non sono oggetti COM, l'interoperabilità con le API di Windows e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] viene eseguito mediante platform invoke, PInvoke o. Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in una DLL. Per ulteriori informazioni, vedere [utilizzo di funzioni DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md). È possibile utilizzare PInvoke in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utilizzando il `Declare` istruzione o l'applicazione di `DllImport` attributo a una routine vuota.  
+ Le API di Windows rappresentano una categoria speciale di interoperabilità. Le API di Windows non utilizzano codice gestito, non dispongono di librerie dei tipi e utilizzare i tipi di dati sono diversi da quelli utilizzati in Visual Studio. A causa di tali differenze, e poiché le API di Windows non sono oggetti COM, l'interoperabilità con le API di Windows e [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] viene eseguito mediante platform invoke, PInvoke o. Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in una DLL. Per ulteriori informazioni, vedere [utilizzo di funzioni DLL non gestite](../../../framework/interop/consuming-unmanaged-dll-functions.md). È possibile utilizzare PInvoke in Visual Basic, utilizzando il `Declare` istruzione o l'applicazione di `DllImport` attributo a una routine vuota.  
   
- Chiamate API Windows sono una parte importante di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programmazione in passato, ma in genere non sono necessarie con Visual Basic .NET. Quando possibile, è necessario utilizzare codice gestito dal [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per eseguire attività, anziché le chiamate all'API di Windows. Questa procedura dettagliata vengono fornite informazioni per i casi in cui tramite le API di Windows è necessaria.  
+ Chiamate API Windows sono una parte importante di programmazione in Visual Basic, ma in genere non sono necessarie con Visual Basic .NET. Quando possibile, è necessario utilizzare codice gestito dal [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per eseguire attività, anziché le chiamate all'API di Windows. Questa procedura dettagliata vengono fornite informazioni per i casi in cui tramite le API di Windows è necessaria.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -49,7 +50,7 @@ API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sist
   
 2.  Aprire un nuovo progetto applicazione Windows, fare clic su **New** sul **File** menu e quindi fare clic su **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Selezionare **applicazione Windows** dall'elenco di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelli di progetto. Viene visualizzato il nuovo progetto.  
+3.  Selezionare **applicazione Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
   
 4.  Aggiungere il seguente `Declare` funzione in una classe o modulo in cui si desidera utilizzare la DLL:  
   
@@ -66,13 +67,13 @@ API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sist
   
  Specificare il `Lib` (parola chiave), seguito dal nome e percorso della DLL che contiene la funzione che si sta chiamando. Non è necessario specificare il percorso del file che si trovano nella directory di sistema di Windows.  
   
- Utilizzare il `Alias` parola chiave se il nome della funzione di cui si esegue una chiamata non è valido [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nome della stored procedure o in conflitto con il nome di altri elementi dell'applicazione. `Alias`indica il nome reale della funzione chiamata.  
+ Utilizzare il `Alias` parola chiave se il nome della funzione chiamata non è un nome di routine di Visual Basic valido o è in conflitto con il nome di altri elementi nell'applicazione. `Alias` indica il nome reale della funzione chiamata.  
   
 #### <a name="argument-and-data-type-declarations"></a>Dichiarazioni di tipi di dati e di argomento  
- Dichiarare gli argomenti e i relativi tipi di dati. Può essere difficile perché i tipi di dati che utilizza Windows non corrispondono ai tipi di dati di Visual Studio. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]gran parte del lavoro per consentire la conversione di argomenti di tipi di dati compatibili, un processo denominato *marshalling*. È possibile controllare in modo esplicito la modalità di marshalling di argomenti utilizzando il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo definito nel <xref:System.Runtime.InteropServices> dello spazio dei nomi.  
+ Dichiarare gli argomenti e i relativi tipi di dati. Può essere difficile perché i tipi di dati che utilizza Windows non corrispondono ai tipi di dati di Visual Studio. Visual Basic vengono eseguite molte delle operazioni mediante la conversione di argomenti ai tipi di dati compatibili, un processo denominato *marshalling*. È possibile controllare in modo esplicito la modalità di marshalling di argomenti utilizzando il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo definito nel <xref:System.Runtime.InteropServices> dello spazio dei nomi.  
   
 > [!NOTE]
->  Le versioni precedenti di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consentivano di dichiarare i parametri `As Any`, vale a dire i dati di qualsiasi dato tipo può essere utilizzato. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]richiede l'utilizzo di un tipo di dati specifico per tutti i `Declare` istruzioni.  
+>  Le versioni precedenti di Visual Basic consentivano di dichiarare parametri `As Any`, vale a dire i dati di qualsiasi dato tipo può essere utilizzato. Visual Basic è necessario utilizzare un tipo di dati specifico per tutti `Declare` istruzioni.  
   
 #### <a name="windows-api-constants"></a>Costanti di API Windows  
  Alcuni argomenti sono combinazioni di costanti. Ad esempio, il `MessageBox` API descritta in questa procedura dettagliata accetta un argomento integer denominato `Typ` che determina come appare la finestra di messaggio. È possibile determinare il valore numerico di queste costanti esaminando il `#define` istruzioni nel file winuser. H. I valori numerici vengono in genere visualizzati in formato esadecimale, pertanto è consigliabile utilizzare un calcolatore per aggiungerli e convertire in decimale. Ad esempio, se si desidera combinare le costanti per lo stile di punto esclamativo `MB_ICONEXCLAMATION` 0x00000030 e Sì/alcuno stile `MB_YESNO` 0x00000004, è possibile aggiungere i numeri e ottenere un risultato di 0x00000034 o 52 decimali. Anche se è possibile utilizzare direttamente il risultato decimale, è preferibile dichiarare questi valori come costanti nell'applicazione e di riunirle utilizzando il `Or` operatore.  
@@ -100,7 +101,7 @@ API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sist
 3.  Premere F5 per eseguire il progetto. Viene visualizzata la finestra di messaggio con entrambe **Sì** e **n** pulsanti di risposta. Fare clic su uno.  
   
 #### <a name="data-marshaling"></a>Marshalling dei dati  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Converte i tipi di dati dei parametri e valori restituiti per le chiamate API di Windows, ma si possono utilizzare automaticamente il `MarshalAs` attributo per specificare in modo esplicito i tipi di dati non gestiti che prevede un'API. Per ulteriori informazioni sul marshalling di interoperabilità, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
+ Visual Basic converte automaticamente i tipi di dati dei parametri e valori restituiti per le chiamate API di Windows, ma è possibile utilizzare il `MarshalAs` attributo per specificare in modo esplicito i tipi di dati non gestiti che è prevista un'API. Per ulteriori informazioni sul marshalling di interoperabilità, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Per utilizzare Declare e MarshalAs in una chiamata API  
   
@@ -115,7 +116,7 @@ API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sist
      [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## <a name="api-calls-using-dllimport"></a>Chiamate API con DllImport  
- Il `DllImport` attributo fornisce un metodo alternativo di chiamata delle funzioni nelle DLL senza librerie dei tipi. `DllImport`è quasi equivalente all'utilizzo di un `Declare` istruzione ma offre maggiore controllo sulle modalità di chiamata delle funzioni.  
+ Il `DllImport` attributo fornisce un metodo alternativo di chiamata delle funzioni nelle DLL senza librerie dei tipi. `DllImport` è quasi equivalente all'utilizzo di un `Declare` istruzione ma offre maggiore controllo sul modo in cui le funzioni vengono chiamate.  
   
  È possibile utilizzare `DllImport` con la maggior parte delle API di Windows chiama, purché la chiamata fa riferimento a un oggetto condiviso (detto anche *statico*) metodo. Non è possibile utilizzare i metodi che richiedono un'istanza di una classe. A differenza di `Declare` istruzioni `DllImport` chiamate non è possibile utilizzare il `MarshalAs` attributo.  
   
@@ -123,7 +124,7 @@ API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sist
   
 1.  Aprire un nuovo progetto applicazione Windows, fare clic su **New** sul **File** menu e quindi fare clic su **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  Selezionare **applicazione Windows** dall'elenco di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelli di progetto. Viene visualizzato il nuovo progetto.  
+2.  Selezionare **applicazione Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
   
 3.  Aggiungere un pulsante denominato `Button2` al form di avvio.  
   

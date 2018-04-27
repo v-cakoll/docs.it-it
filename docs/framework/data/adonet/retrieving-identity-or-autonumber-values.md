@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recupero di identità o di valori numerati automaticamente
 Per chiave primaria di un database relazionale si intende una colonna o una combinazione di colonne che contengono sempre valori univoci. Se si conosce il valore della chiave primaria, è possibile individuare la riga che lo contiene. Nei motori dei database relazionali, ad esempio SQL Server, Oracle e Microsoft Access/Jet, è supportata la creazione di colonne a incremento automatico che è possibile impostare come chiavi primarie. Tali valori vengono generati dal server quando si aggiungono righe a una tabella. In SQL Server viene impostata la proprietà Identity di una colonna, in Oracle viene creata una sequenza, mentre in Microsoft Access viene creata una colonna Contatore.  
@@ -35,7 +35,7 @@ Per chiave primaria di un database relazionale si intende una colonna o una comb
  Alcuni motori di database, ad esempio il motore di database Jet di Microsoft Access, non supportano parametri di output e non sono in grado di elaborare più istruzioni in un unico batch. Quando si usa il motore di database Jet, è possibile recuperare il nuovo valore del campo Contatore generato per una riga inserita eseguendo un comando SELECT distinto in un gestore eventi per l'evento `RowUpdated` di `DataAdapter`.  
   
 > [!NOTE]
->  In alternativa a un valore a incremento automatico, è possibile usare il metodo <xref:System.Guid.NewGuid%2A> di un oggetto <xref:System.Guid> per generare nel computer client un GUID che può essere copiato nel server a ogni nuova riga inserita. Il metodo `NewGuid` genera un valore binario a 16 byte per la cui creazione viene usato un algoritmo che consente con buona probabilità di evitare valori duplicati. In un database SQL Server un GUID viene archiviato in una colonna `uniqueidentifier` che SQL Server è in grado di generare automaticamente usando la funzione Transact-SQL `NEWID()`. L'utilizzo di un GUID come chiave primaria può influire negativamente sulle prestazioni. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] fornisce il supporto per la funzione `NEWSEQUENTIALID()` che genera un GUID sequenziale di cui non viene garantita l'univocità a livello globale ma che può essere indicizzato in modo più efficiente.  
+>  In alternativa a un valore a incremento automatico, è possibile usare il metodo <xref:System.Guid.NewGuid%2A> di un oggetto <xref:System.Guid> per generare nel computer client un GUID che può essere copiato nel server a ogni nuova riga inserita. Il metodo `NewGuid` genera un valore binario a 16 byte per la cui creazione viene usato un algoritmo che consente con buona probabilità di evitare valori duplicati. In un database SQL Server un GUID viene archiviato in una colonna `uniqueidentifier` che SQL Server è in grado di generare automaticamente usando la funzione Transact-SQL `NEWID()`. L'utilizzo di un GUID come chiave primaria può influire negativamente sulle prestazioni. SQL Server fornisce il supporto per il `NEWSEQUENTIALID()` (funzione), che genera un GUID sequenziale che non è garantita per essere globalmente univoco ma che può essere indicizzato in modo più efficiente.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Recupero dei valori delle colonne Identity di SQL Server  
  Quando si usa Microsoft SQL Server, è possibile creare una stored procedure con un parametro di output in modo che venga restituito il valore della colonna Identity per una riga inserita. Nella tabella seguente sono descritte le tre funzioni Transact-SQL disponibili in SQL Server che è possibile usare per recuperare i valori delle colonne Identity.  

@@ -1,28 +1,28 @@
 ---
 title: Progettazione e implementazione di servizi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-and-implementing-services"></a>Progettazione e implementazione di servizi
 In questa sezione viene illustrato come definire e implementare [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contratti. Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
@@ -68,7 +68,7 @@ In questa sezione viene illustrato come definire e implementare [!INCLUDE[indigo
  Per ulteriori informazioni sulla progettazione di contratti, vedere [progettazione contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md). Per ulteriori informazioni sull'implementazione dei contratti, vedere [contratti di servizio che implementa](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 ### <a name="messages-up-front-and-center"></a>Orientamento ai messaggi  
- L'utilizzo di interfacce, classi e metodi gestiti per modellare le operazioni di servizio è piuttosto semplice se si utilizzano abitualmente firme dei metodi in stile RPC (Remote Procedure Call), in cui il passaggio di parametri in un metodo e la restituzione di valori costituiscono la forma standard per richiedere la funzionalità di un oggetto o di un altro tipo di codice. I programmatori che, ad esempio, utilizzano linguaggi gestiti come [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e C++ COM possono applicare le proprie conoscenze sull'approccio in stile RPC (utilizzando oggetti o interfacce) alla creazione di contratti di servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza incorrere in problemi inerenti ai sistemi con oggetti distribuiti in stile RPC. L'orientamento ai servizi offre il vantaggio di una programmazione orientata ai messaggi, ad accoppiamento debole, mantenendo comunque la semplicità della programmazione RPC.  
+ L'utilizzo di interfacce, classi e metodi gestiti per modellare le operazioni di servizio è piuttosto semplice se si utilizzano abitualmente firme dei metodi in stile RPC (Remote Procedure Call), in cui il passaggio di parametri in un metodo e la restituzione di valori costituiscono la forma standard per richiedere la funzionalità di un oggetto o di un altro tipo di codice. Ad esempio, i programmatori che utilizzano linguaggi gestiti quali Visual Basic e C++ COM possono applicare le proprie conoscenze lo stile RPC approccio (se utilizzando oggetti o interfacce) per la creazione di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i contratti di servizio senza incorrere in problemi oggetto sistemi distribuiti a inerente nello stile RPC. L'orientamento ai servizi offre il vantaggio di una programmazione orientata ai messaggi, ad accoppiamento debole, mantenendo comunque la semplicità della programmazione RPC.  
   
  Molti programmatori preferiscono utilizzare interfacce di programmazione di applicazioni orientate ai messaggi, ad esempio le code di messaggi come Microsoft MSMQ, gli spazi dei nomi <xref:System.Messaging> di .NET Framework o l'invio di XML non strutturato nelle richieste HTTP, solo per citarne alcune. Per ulteriori informazioni sulla programmazione a livello di messaggio, vedere [con contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md), [canale del servizio a livello di programmazione](../../../docs/framework/wcf/extending/service-channel-level-programming.md), e [l'interoperabilità con applicazioni POX](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   

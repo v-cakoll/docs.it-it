@@ -1,24 +1,26 @@
 ---
 title: Filtri avanzati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Filtri avanzati
 Nell'esempio viene descritto un servizio di routing di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto. L'esempio adatta l'esempio standard relativo alla calcolatrice di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per comunicazioni tramite il servizio di routing. In questo esempio viene illustrato come definire la logica di routing basata sul contenuto tramite l'utilizzo di filtri messaggi e tabelle dei filtri messaggi.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Il terzo filtro è un oggetto <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Corrisponde a qualsiasi messaggio visualizzato in un endpoint con un indirizzo che corrisponde al prefisso dell'indirizzo fornito (o alla prima parte di tale indirizzo). In questo esempio il prefisso dell'indirizzo è definito come "http://localhost/routingservice/router/rounding/". Ciò significa che per qualsiasi messaggio in arrivo indirizzato a "http://localhost/routingservice/router/rounding/*" viene individuata una corrispondenza da parte di tale filtro. In questo caso, si tratta di messaggi visualizzati nell'endpoint del servizio di calcolo che esegue l'arrotondamento e che dispone dell'indirizzo "http://localhost/routingservice/router/rounding/calculator".  
+ Il terzo filtro è un oggetto <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Corrisponde a qualsiasi messaggio visualizzato in un endpoint con un indirizzo che corrisponde al prefisso dell'indirizzo fornito (o alla prima parte di tale indirizzo). In questo esempio il prefisso dell'indirizzo è definito come "http://localhost/routingservice/router/rounding/". Ciò significa che qualsiasi messaggio in arrivo indirizzati a "http://localhost/routingservice/router/rounding/*" corrispondenti a questo filtro. In questo caso, è messaggi visualizzati nell'endpoint arrotondamento calcolatrice che dispone dell'indirizzo "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Per aprire **Esplora**selezionare **Esplora** dal **visualizzazione** menu.  
   
-3.  Premere F5 o CTRL+MAIUSC+B in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Premere F5 o CTRL + MAIUSC + B in Visual Studio.  
   
     1.  Se si desidera avviare automaticamente i progetti necessari quando si preme F5, la soluzione e scegliere **proprietà**. Selezionare il **progetto di avvio** nodo **proprietà comuni** nel riquadro a sinistra. Selezionare il **più progetti di avvio** pulsante di opzione e impostare tutti i progetti per il **avviare** azione.  
   

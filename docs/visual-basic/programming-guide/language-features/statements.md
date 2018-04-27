@@ -1,11 +1,12 @@
 ---
 title: Istruzioni in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,21 +22,21 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Istruzioni in Visual Basic
-Un'istruzione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è un'istruzione completa. Può contenere parole chiave, operatori, variabili, costanti ed espressioni. Ogni istruzione appartiene a una delle categorie seguenti:  
+Un'istruzione in Visual Basic è un'istruzione completa. Può contenere parole chiave, operatori, variabili, costanti ed espressioni. Ogni istruzione appartiene a una delle categorie seguenti:  
   
--   **Istruzioni di dichiarazione**, quali nome di una variabile, una costante o una stored procedure e può inoltre specificare un tipo di dati.  
+-   **Istruzioni di dichiarazione**, nome di una variabile, una costante o una routine che possono anche specificare un tipo di dati.  
   
--   **Le istruzioni eseguibili**, che consentono di avviare azioni. Queste istruzioni è possono chiamare un metodo o una funzione, ed è possibile eseguire il ciclo o creare rami tramite blocchi di codice. Includono istruzioni eseguibili **istruzioni di assegnazione**, che consentono di assegnare un valore o un'espressione a una variabile o costante.  
+-   **Le istruzioni eseguibili**, che avviano le azioni. Queste istruzioni è possono chiamare un metodo o una funzione, ed è possibile eseguire il ciclo o creare rami tramite blocchi di codice. Includono istruzioni eseguibili **istruzioni di assegnazione**, che consentono di assegnare un valore o un'espressione a una variabile o costante.  
   
  In questo argomento viene descritta ogni categoria. Inoltre, in questo argomento viene descritto come combinare più istruzioni in una singola riga e come continuare a un'istruzione su più righe.  
   
@@ -53,7 +54,7 @@ Un'istruzione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è un'istruzione co
  La terza dichiarazione è il `Dim` istruzione che dichiara la variabile `thisWidget`. Il tipo di dati è un oggetto specifico, vale a dire un oggetto creato dalla `Widget` classe. È possibile dichiarare una variabile di qualsiasi tipo di dati elementare o di qualsiasi tipo di oggetto che viene esposto nell'applicazione in uso.  
   
 ### <a name="initial-values"></a>Valori iniziali  
- Quando viene eseguito il codice contenente un'istruzione di dichiarazione, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] riserva la memoria necessaria per l'elemento dichiarato. Se l'elemento contiene un valore, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Inizializza il valore predefinito per il tipo di dati. Per ulteriori informazioni, vedere "Comportamento" in [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Quando viene eseguito il codice contenente un'istruzione di dichiarazione, Visual Basic riserva la memoria necessaria per l'elemento dichiarato. Se l'elemento contiene un valore, Visual Basic lo inizializza sul valore predefinito per il tipo di dati. Per ulteriori informazioni, vedere "Comportamento" in [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  È possibile assegnare un valore iniziale a una variabile come parte della relativa dichiarazione, come illustrato nell'esempio seguente.  
   
@@ -121,9 +122,9 @@ Un'istruzione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è un'istruzione co
 ### <a name="type-conversions-in-assignment-statements"></a>Conversioni di tipo nelle istruzioni di assegnazione  
  Il valore assegnato a una variabile, una proprietà o un elemento della matrice deve essere di un tipo di dati appropriato all'elemento di destinazione. In generale, è consigliabile generare un valore dello stesso tipo di dati a quelli dell'elemento di destinazione. Tuttavia, alcuni tipi possono essere convertiti in altri tipi durante l'assegnazione.  
   
- Per informazioni sulla conversione tra tipi di dati, vedere [conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). In breve, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automaticamente converte un valore di un determinato tipo in qualsiasi altro tipo a cui viene ampliato. Oggetto *conversione di ampliamento* è più grande sempre ha esito positivo in fase di esecuzione e non comporta la perdita di tutti i dati. Ad esempio, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] converte un `Integer` valore `Double` quando appropriato, in quanto `Integer` ampliarsi nel tipo `Double`. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Per informazioni sulla conversione tra tipi di dati, vedere [conversioni di tipi in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). In breve, Visual Basic converte automaticamente un valore di un determinato tipo in qualsiasi altro tipo a cui viene ampliato. Oggetto *conversione di ampliamento* è più grande sempre ha esito positivo in fase di esecuzione e non comporta la perdita di tutti i dati. Ad esempio, Visual Basic converte un' `Integer` valore per `Double` quando appropriato, in quanto `Integer` può ampliarsi nel tipo `Double`. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- *Conversioni di restrizione* (quelli che non sono di ampliamento) comportano rischi di errore in fase di esecuzione o di perdita di dati. È possibile eseguire una conversione di narrowing in modo esplicito utilizzando una funzione di conversione del tipo, oppure è possibile indicare al compilatore di eseguire tutte le conversioni in modo implicito impostando `Option Strict Off`. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
+ *Conversioni di restrizione* (quelli che non sono di ampliamento) eseguire un rischio di errore in fase di esecuzione, o di perdita di dati. È possibile eseguire una conversione di narrowing in modo esplicito utilizzando una funzione di conversione del tipo, oppure è possibile indicare al compilatore di eseguire tutte le conversioni in modo implicito impostando `Option Strict Off`. Per ulteriori informazioni, vedere [conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
 ## <a name="putting-multiple-statements-on-one-line"></a>Inserimento di più istruzioni in una sola riga  
  È possibile inserire più istruzioni in una singola riga, separata da due punti (`:`) caratteri. Questa condizione è illustrata nell'esempio seguente.  
@@ -158,7 +159,7 @@ Un'istruzione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è un'istruzione co
 |Dopo il `From` parola chiave in un inizializzatore di raccolta.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Aggiunta di commenti  
- Codice sorgente non è sempre chiara interpretazione, anche per il programmatore che lo ha scritto. Per documentare il codice, di conseguenza, la maggior parte dei programmatori sfruttare il libero commenti incorporati. I commenti nel codice possono spiegare una routine o una particolare istruzione agli utenti la lettura o l'utilizzo in un secondo momento. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Ignora i commenti durante la compilazione, e non influiscono sul codice compilato.  
+ Codice sorgente non è sempre chiara interpretazione, anche per il programmatore che lo ha scritto. Per documentare il codice, di conseguenza, la maggior parte dei programmatori sfruttare il libero commenti incorporati. I commenti nel codice possono spiegare una routine o una particolare istruzione agli utenti la lettura o l'utilizzo in un secondo momento. Visual Basic i commenti vengono ignorati durante la compilazione e non influiscano sul codice compilato.  
   
  Le righe di commento iniziano con un apostrofo (`'`) o `REM` seguiti da uno spazio. Possono essere aggiunti in qualsiasi punto nel codice, ad eccezione all'interno di una stringa. Per aggiungere un commento a un'istruzione, inserire un apostrofo o `REM` dopo l'istruzione, seguito dal commento. I commenti possono andare anche una riga separata. L'esempio seguente illustra queste possibilità.  
   

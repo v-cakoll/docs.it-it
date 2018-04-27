@@ -1,9 +1,9 @@
 ---
-title: "Necessario riferimento all'assembly &#39; &lt;assemblyidentity&gt;&#39; tipo di contenitore &#39;&lt; TypeName&gt;&#39; ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra progetti &#39;&lt; nomeprogetto1&gt;&#39; e &#39;&lt; nomeprogetto2&gt;&#39;"
+title: Necessario riferimento all'assembly &#39; &lt;assemblyidentity&gt; &#39; contenente il tipo &#39; &lt;typename&gt;&#39;, ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra i progetti &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 69b1184d47e427bd985c3b18135d4a0ac4d91410
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necessario riferimento all'assembly &#39; &lt;assemblyidentity&gt;&#39; tipo di contenitore &#39;&lt; TypeName&gt;&#39; ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra progetti &#39;&lt; nomeprogetto1&gt;&#39; e &#39;&lt; nomeprogetto2&gt;&#39;
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necessario riferimento all'assembly &#39; &lt;assemblyidentity&gt; &#39; contenente il tipo &#39; &lt;typename&gt;&#39;, ma non è stato possibile trovare un riferimento appropriato a causa dell'ambiguità tra i progetti &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
 In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'interfaccia, un'enumerazione o un delegato, definito all'esterno del progetto. Tuttavia, sono presenti riferimenti di progetto a più assembly che definiscono quel tipo.  
   
  I progetti citati generano assembly con lo stesso nome. Pertanto, il compilatore non può determinare l'assembly da usare per il tipo a cui si accede.  
   
- Per accedere a un tipo definito in un altro assembly, il compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deve avere un riferimento a quell'assembly. Deve trattarsi di un riferimento unico, non ambiguo, che non generi riferimenti circolari tra i progetti.  
+ Per accedere a un tipo definito in un altro assembly, il compilatore Visual Basic deve includere un riferimento a tale assembly. Deve trattarsi di un riferimento unico, non ambiguo, che non generi riferimenti circolari tra i progetti.  
   
  **ID errore:** BC30969  
   

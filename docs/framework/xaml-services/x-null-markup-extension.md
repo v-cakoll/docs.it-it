@@ -20,17 +20,17 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f176598db00c57159bf351ea5d9ec428c5c04bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xnull-markup-extension"></a>Estensione del markup x:Null
 Specifica `null` come valore per un membro XAML.  
@@ -42,7 +42,7 @@ Specifica `null` come valore per un membro XAML.
 ```  
   
 ## <a name="remarks"></a>Note  
- La parola chiave per un riferimento null in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] e [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] è null. Il [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] è la parola chiave per un riferimento null `Nothing`, ma si utilizza sempre `{x:Null}` come l'utilizzo XAML indipendentemente dal linguaggio di codice è possibile associare il codice XAML.  
+ La parola chiave per un riferimento null nel linguaggio c# e [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] è null. La parola chiave di Microsoft Visual Basic per un riferimento null viene `Nothing`, ma si utilizza sempre `{x:Null}` come l'utilizzo della sintassi XAML indipendentemente dal linguaggio di codice è possibile associare il codice XAML.  
   
  Il `x:Null` estensione di markup non contiene proprietà impostabili.  
   

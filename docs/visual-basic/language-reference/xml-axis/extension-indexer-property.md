@@ -18,11 +18,11 @@ ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Proprietà dell'indicizzatore di estensione (Visual Basic)
 Fornisce l'accesso ai singoli elementi di una raccolta.  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>Note  
  È possibile utilizzare la proprietà dell'indicizzatore di estensione per accedere ai singoli elementi in una raccolta. Questa proprietà dell'indicizzatore è in genere utilizzata nell'output di una proprietà axis XML. L'elemento figlio XML e proprietà axis descendant XML restituiscono raccolte di <xref:System.Xml.Linq.XElement> oggetti o un valore di attributo.  
   
- Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore converte le proprietà dell'indicizzatore di estensione per le chiamate al `ElementAtOrDefault` metodo. A differenza di un indicizzatore di matrice, il `ElementAtOrDefault` restituisce `Nothing` se l'indice non compreso nell'intervallo. Questo comportamento è utile quando non è possibile determinare facilmente il numero di elementi in una raccolta.  
+ Il compilatore Visual Basic converte le proprietà dell'indicizzatore di estensione per le chiamate al `ElementAtOrDefault` metodo. A differenza di un indicizzatore di matrice, il `ElementAtOrDefault` restituisce `Nothing` se l'indice non compreso nell'intervallo. Questo comportamento è utile quando non è possibile determinare facilmente il numero di elementi in una raccolta.  
   
  Questa proprietà dell'indicizzatore è simile a una proprietà di estensione per le raccolte che implementano <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>: viene utilizzato solo se la raccolta non ha un indicizzatore o una proprietà predefinita.  
   

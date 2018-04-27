@@ -18,18 +18,18 @@ ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce0cb7cba8f05b488d47f99da51b0b5de75eb15
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4ec3ab191942e47d5025a0e641085b0f507088c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-in-visual-basic"></a>Flusso di controllo in Visual Basic
 Se non vengono applicate regole, un programma procede attraverso le relative istruzioni dall'inizio alla fine. Alcuni programmi molto semplici possono essere scritti con solo questo flusso unidirezionale. Tuttavia, l'efficacia e l'utilità di un linguaggio di programmazione sono in gran parte correlate alla possibilità di modificare l'ordine di esecuzione con cicli e istruzioni di controllo.  
   
- Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Con le strutture di controllo, è possibile scrivere codice [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] in grado di prendere decisioni o ripetere azioni. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.  
+ Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Utilizza strutture di controllo, è possibile scrivere codice di Visual Basic che prende decisioni o che si ripete azioni. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  Descrive le strutture di controllo usate per la creazione di rami.  
   

@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: calcolare valori numerici (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Procedura: calcolare valori numerici (Visual Basic)
 È possibile calcolare valori numerici tramite l'utilizzo di espressioni numeriche. Oggetto *espressione numerica* è un'espressione che contiene i valori letterali, costanti e variabili che rappresentano valori numerici e operatori che agiscono su quei valori.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
      Le prime tre righe mostrano un valore letterale, una costante e una variabile. Ognuno di essi costituisce un'espressione numerica valida da se stesso. L'ultima riga mostra una combinazione di una variabile con due valori letterali.  
   
-     Si noti che un'espressione numerica non forma completa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] istruzione stessa. È necessario utilizzare l'espressione come parte di un'istruzione completa.  
+     Si noti che un'espressione numerica non forma un'istruzione completa di Visual Basic da se stesso. È necessario utilizzare l'espressione come parte di un'istruzione completa.  
   
 #### <a name="to-store-a-numeric-value"></a>Per archiviare un valore numerico  
   

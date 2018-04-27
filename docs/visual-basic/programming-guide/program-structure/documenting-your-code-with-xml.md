@@ -1,31 +1,32 @@
 ---
 title: Documentazione del codice tramite XML (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ddb1f366002c4f0c675c591d83aab1b31ef8f602
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentazione del codice tramite XML (Visual Basic)
-In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], è possibile documentare il codice tramite XML  
+In Visual Basic, è possibile documentare il codice tramite XML  
   
 ## <a name="xml-documentation-comments"></a>Commenti relativi alla documentazione XML  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornisce un modo semplice per creare automaticamente la documentazione XML per i progetti. È possibile generare automaticamente uno scheletro XML per i tipi e membri e quindi fornire i riepiloghi, documentazione descrittiva per ogni parametro e altre note. Con il programma di installazione appropriato, la documentazione XML viene generata automaticamente in un file XML con lo stesso nome del progetto e l'estensione XML. Per altre informazioni, vedere [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Visual Basic fornisce un modo semplice per creare automaticamente la documentazione XML per i progetti. È possibile generare automaticamente uno scheletro XML per i tipi e membri e quindi fornire i riepiloghi, documentazione descrittiva per ogni parametro e altre note. Con il programma di installazione appropriato, la documentazione XML viene generata automaticamente in un file XML con lo stesso nome del progetto e l'estensione XML. Per altre informazioni, vedere [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
  Il file XML può essere utilizzato o manipolazione come XML. Questo file si trova nella stessa directory del file di .exe o DLL di output del progetto.  
   

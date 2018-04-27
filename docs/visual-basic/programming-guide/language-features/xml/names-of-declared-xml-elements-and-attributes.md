@@ -1,12 +1,13 @@
 ---
 title: Nomi di elementi e attributi XML dichiarati (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 846a028e076873d1978f751fdb70e93c7c6a81af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07666ead0770c8055a62f75cb481648b0c72ef8b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nomi di elementi e attributi XML dichiarati (Visual Basic)
-Questo argomento vengono fornite [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] linee guida per denominare gli elementi XML e attributi nei valori letterali XML.  In un valore letterale XML, è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, i due punti e un nome locale. Per ulteriori informazioni sui prefissi dello spazio dei nomi XML, vedere [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+In questo argomento vengono fornite linee guida di Visual Basic per denominare gli elementi XML e attributi nei valori letterali XML.  In un valore letterale XML, è possibile specificare un nome locale o un nome completo. Un nome completo è costituito da un prefisso dello spazio dei nomi XML, i due punti e un nome locale. Per ulteriori informazioni sui prefissi dello spazio dei nomi XML, vedere [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Regole  
- Un nome locale di un elemento o attributo in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devono essere conformi alle regole seguenti.  
+ Un nome locale di un elemento o attributo in Visual Basic deve essere conformi alle regole seguenti.  
   
 -   Può iniziare con uno spazio dei nomi. Deve iniziare con un carattere alfabetico o un carattere di sottolineatura (`_`).  
   
@@ -48,7 +49,7 @@ Questo argomento vengono fornite [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lin
  Tuttavia, il nome non deve essere breve in modo che non adeguatamente descrive l'elemento o come utilizzato dal codice. Questo è importante per la leggibilità del codice. Se un altro utente sta tentando di capire, o se manualmente cercata è molto tempo dopo che è stata scritta, i nomi di elemento appropriato possono risparmiare tempo.  
   
 ## <a name="case-sensitivity-in-names"></a>Distinzione maiuscole/minuscole nei nomi  
- I nomi degli elementi XML vengono tra maiuscole e minuscole. Ciò significa che quando il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore confronta due nomi che differiscono solo i case in ordine alfabetico, li interpreta come diversi nomi. Ad esempio, vengono interpretati `ABC` e `abc` come riferiti a elementi distinti.  
+ I nomi degli elementi XML vengono tra maiuscole e minuscole. Ciò significa che quando il compilatore Visual Basic Confronta due nomi che differiscono solo i case in ordine alfabetico, li interpreta come nomi diversi. Ad esempio, vengono interpretati `ABC` e `abc` come riferiti a elementi distinti.  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
  Quando si crea il valore letterale elemento XML, è possibile specificare il prefisso dello spazio dei nomi XML per il nome dell'elemento. Per ulteriori informazioni, vedere [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  

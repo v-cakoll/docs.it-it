@@ -1,11 +1,12 @@
 ---
-title: "Procedura: ottenere un valore da una proprietà (Visual Basic)"
-ms.custom: 
+title: 'Procedura: ottenere un valore da una proprietà (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,29 +15,29 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Procedura: ottenere un valore da una proprietà (Visual Basic)
 Per recuperare un valore della proprietà di includere il nome della proprietà in un'espressione.  
   
- La proprietà `Get` procedura recupera il valore, ma non chiamare in modo esplicito, in base al nome. Utilizzare la proprietà, esattamente come si utilizzerebbe una variabile. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]effettua le chiamate alle routine della proprietà.  
+ La proprietà `Get` procedura recupera il valore, ma non chiamare in modo esplicito, in base al nome. Utilizzare la proprietà, esattamente come si utilizzerebbe una variabile. Visual Basic effettua le chiamate alle routine della proprietà.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>Per recuperare un valore da una proprietà  
   
 1.  Utilizzare il nome della proprietà in un'espressione esattamente come si utilizzerebbe un nome di variabile. È possibile utilizzare una proprietà in qualsiasi punto è possibile utilizzare una variabile o costante.  
   
-     -oppure-  
+     oppure  
   
      Utilizzare il nome della proprietà seguente uguali (`=`) eseguire l'accesso in un'istruzione di assegnazione.  
   
-     Nell'esempio seguente viene letto il valore della [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` proprietà, la chiamata in modo implicito il `Get` stored procedure.  
+     Nell'esempio seguente legge il valore di Visual Basic `Now` proprietà, in modo implicito chiamando il relativo `Get` stored procedure.  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   

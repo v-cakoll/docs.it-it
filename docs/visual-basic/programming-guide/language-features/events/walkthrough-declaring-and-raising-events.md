@@ -1,11 +1,12 @@
 ---
 title: Dichiarazione e generazione di eventi (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Procedura dettagliata: dichiarazione e generazione di eventi (Visual Basic)
 Questa procedura dettagliata viene illustrato come dichiarare e generare eventi per una classe denominata `Widget`. Dopo aver completato i passaggi, è possibile leggere l'argomento correlato, [procedura dettagliata: gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), cui viene illustrato come utilizzare gli eventi da `Widget` oggetti da fornire informazioni sullo stato in un'applicazione.  
@@ -36,7 +37,7 @@ Questa procedura dettagliata viene illustrato come dichiarare e generare eventi 
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Per compilare l'esempio di codice per questo argomento  
   
-1.  Aprire una nuova [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] applicazione Windows di progetto e creare un form denominato `Form1`.  
+1.  Aprire un nuovo progetto applicazione Windows Visual Basic e creare un form denominato `Form1`.  
   
 2.  Aggiungere due pulsanti e un'etichetta a `Form1`.  
   
@@ -61,7 +62,7 @@ Questa procedura dettagliata viene illustrato come dichiarare e generare eventi 
 > [!NOTE]
 >  È possibile dichiarare argomenti dell'evento, come avviene gli argomenti di routine, con le eccezioni seguenti: non possono contenere eventi `Optional` o `ParamArray` argomenti e gli eventi non hanno valori restituiti.  
   
- Il `PercentDone` evento viene generato dal `LongTask` metodo la `Widget` classe. `LongTask`accetta due argomenti: il periodo di tempo il metodo finge di eseguire le operazioni e l'intervallo di tempo minimo prima `LongTask` pause per generare il `PercentDone` evento.  
+ Il `PercentDone` evento viene generato dal `LongTask` metodo la `Widget` classe. `LongTask` accetta due argomenti: il periodo di tempo il metodo finge di eseguire le operazioni e l'intervallo di tempo minimo prima che `LongTask` pause per generare il `PercentDone` evento.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Per generare l'evento PercentDone  
   
@@ -79,7 +80,7 @@ Questa procedura dettagliata viene illustrato come dichiarare e generare eventi 
   
  In questo esempio si potrebbe individua un difetto di un altro. Il `Timer` proprietà restituisce il numero di secondi trascorsi dalla mezzanotte; pertanto, l'applicazione si blocca se è stato avviato prima di mezzanotte. Un approccio più precisa per misurare il tempo necessario tenere in considerazione o evitarli del tutto, utilizzando le proprietà, ad esempio `Now`.  
   
- Ora che la `Widget` classe può generare eventi, è possibile spostare la successiva procedura dettagliata. [Procedura dettagliata: Gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) viene illustrato come utilizzare `WithEvents` per associare un gestore eventi con il `PercentDone` evento.  
+ Ora che la `Widget` classe può generare eventi, è possibile spostare la successiva procedura dettagliata. [Procedura dettagliata: Gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) illustra come usare `WithEvents` per associare un gestore eventi con il `PercentDone` evento.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>  

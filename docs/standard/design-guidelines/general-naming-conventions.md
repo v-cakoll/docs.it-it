@@ -1,12 +1,12 @@
 ---
 title: Convenzioni di denominazione generali
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87f866210667905566d75bfed22ba7b9a521abdc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="general-naming-conventions"></a>Convenzioni di denominazione generali
 Questa sezione descrive convenzioni di denominazione generali correlate alla scelta delle parole, le linee guida sull'utilizzo di abbreviazioni e acronimi e indicazioni su come evitare di utilizzare nomi specifici della lingua.  
@@ -41,11 +41,11 @@ Questa sezione descrive convenzioni di denominazione generali correlate alla sce
   
  Ad esempio, una proprietà denominata `HorizontalAlignment` è più inglese-leggibile `AlignmentHorizontal`.  
   
- **✓ SI** preferire la leggibilità di brevità.  
+ **✓ SI** privilegiare la leggibilità ragioni di brevità.  
   
  Il nome della proprietà `CanScrollHorizontally` è migliore `ScrollableX` (un riferimento all'asse x).  
   
- **X non** utilizzare altri caratteri non alfanumerici, trattini o caratteri di sottolineatura.  
+ **X non** utilizzare caratteri di sottolineatura, trattini o altri caratteri non alfanumerici.  
   
  **X non** utilizzare la notazione ungherese.  
   
@@ -58,10 +58,10 @@ Questa sezione descrive convenzioni di denominazione generali correlate alla sce
   
  Ad esempio, utilizzare `GetWindow` anziché `GetWin`.  
   
- **X non** utilizzare acronimi che non sono molto diffusa e persino in tal caso, solo quando necessario.  
+ **X non** utilizzare acronimi che non sono molto diffusa e anche se sono solo quando necessario.  
   
 ## <a name="avoiding-language-specific-names"></a>Evitare nomi specifici della lingua  
- **✓ SI** utilizzare nomi significativi anziché parole chiave specifiche della lingua per i nomi dei tipi.  
+ **✓ SI** utilizzare nomi significativi anziché le parole chiave specifiche della lingua per i nomi dei tipi.  
   
  Ad esempio, `GetLength` è un nome più significativo rispetto a `GetInt`.  
   
@@ -93,21 +93,21 @@ Questa sezione descrive convenzioni di denominazione generali correlate alla sce
   
  Ciò consente di evidenziare la relazione tra le API.  
   
- **✓ SI** preferisce aggiungere un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.  
+ **✓ SI** preferisce aggiunta di un suffisso anziché un prefisso per indicare una nuova versione di un'API esistente.  
   
  Questo modo viene agevolata individuazione durante l'esplorazione di documentazione, o l'utilizzo di Intellisense. La versione precedente dell'API verrà organizzata vicino a nuove API, poiché la maggior parte dei browser e Intellisense Mostra gli identificatori in ordine alfabetico.  
   
- **Provare a ✓** utilizzando un identificatore di nuovo, ma è significativo, anziché aggiungere un prefisso o suffisso.  
+ **✓ Provare a** utilizzando un identificatore di nuovo, ma significativo, anziché aggiungere un prefisso o suffisso.  
   
- **✓ SI** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è l'unico nome appropriato (ad esempio, se si tratta di uno standard del settore) e se si aggiungono significativo qualsiasi suffisso (o la modifica del nome) non è un'app opzione ropriate.  
+ **✓ SI** utilizzare un suffisso numerico per indicare una nuova versione di un'API esistente, in particolare se il nome dell'API esistente è l'unico nome appropriato (ad esempio, se è uno standard del settore) e se si aggiungono qualsiasi significativo suffisso (o la modifica del nome) non è un'app opzione ropriate.  
   
  **X non** utilizzare "Ex" (o una simile) suffisso di un identificatore per distinguerlo da una versione precedente dell'API stessa.  
   
- **✓ SI** utilizza il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit (un valore long integer) anziché un intero a 32 bit. È necessario adottare questo approccio quando è presente l'API di 32 bit esistente. non eseguire l'operazione per la nuove API con solo una versione a 64 bit.  
+ **✓ SI** utilizzano il suffisso "64" quando si introduce le versioni delle API che operano su un valore integer a 64 bit (un valore long integer) anziché un intero a 32 bit. È necessario adottare questo approccio quando è presente l'API di 32 bit esistente. non eseguire l'operazione per la nuove API con solo una versione a 64 bit.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

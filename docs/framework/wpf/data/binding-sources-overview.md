@@ -1,28 +1,30 @@
 ---
 title: Cenni preliminari sulle origini di associazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
@@ -55,7 +57,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 ### <a name="other-characteristics"></a>Altre caratteristiche  
  L'elenco seguente indica altri punti importanti.  
   
--   Se si vuole creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve disporre di un costruttore predefinito. In alcuni linguaggi [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)], ad esempio [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], il costruttore predefinito può essere creato automaticamente.  
+-   Se si vuole creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve disporre di un costruttore predefinito. In alcuni [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguaggi come c#, il costruttore predefinito potrebbe essere creato automaticamente.  
   
 -   Le proprietà usate come proprietà di origine del binding per un binding devono essere proprietà pubbliche della classe. Non è possibile accedere alle proprietà dell'interfaccia definite in modo esplicito a scopo di associazione né alle proprietà protette, private, interne o virtuali prive di un'implementazione di base.  
   
@@ -79,7 +81,7 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
   
  WPF non esegue mai direttamente l'associazione a una raccolta. Se si specifica una raccolta come origine del binding, WPF esegue effettivamente il binding alla visualizzazione predefinita della raccolta stessa. Per informazioni sulle visualizzazioni predefinite, vedere [Panoramica sul data binding](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Se si dispone di uno scenario avanzato e si desidera implementare la propria raccolta, è consigliabile utilizzare il <xref:System.Collections.IList> interfaccia. <xref:System.Collections.IList>fornisce una raccolta non generica di oggetti che è possibile accedere singolarmente tramite indice, che può migliorare le prestazioni.  
+ Se si dispone di uno scenario avanzato e si desidera implementare la propria raccolta, è consigliabile utilizzare il <xref:System.Collections.IList> interfaccia. <xref:System.Collections.IList> fornisce una raccolta non generica di oggetti che è possibile accedere singolarmente tramite indice potrebbe migliorare le prestazioni.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Requisiti di autorizzazione in un data binding  

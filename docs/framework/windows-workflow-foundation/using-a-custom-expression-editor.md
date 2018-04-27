@@ -1,30 +1,31 @@
 ---
 title: Utilizzo di un editor espressioni personalizzato
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilizzo di un editor espressioni personalizzato
 È possibile implementare un editor di espressioni personalizzato per fornire un'esperienza di modifica delle espressioni più dettagliata o più semplice. Esistono diversi scenari in cui è opportuno usare un editor di espressioni personalizzato:  
   
 -   Per fornire supporto per IntelliSense e altre funzionalità di modifica dettagliate in una finestra di progettazione flussi di lavoro riallocata. Questa funzionalità deve essere fornita perché l'editor di espressioni [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] predefinito non può essere usato in applicazioni riallocate.  
   
--   Per semplificare l'esperienza di modifica delle espressioni per gli utenti che si occupano di analisi aziendali, in modo che debbano, ad esempio, obbligatorio imparare a usare [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o gestire espressioni [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+-   Per semplificare l'esperienza per gli utenti di analista aziendale, di modifica delle espressioni in modo che debbano non, ad esempio, obbligatorio per informazioni su Visual Basic o gestiscono le espressioni Visual Basic.  
   
  Per implementare un editor di espressioni personalizzato sono necessari tre passaggi di base:  
   

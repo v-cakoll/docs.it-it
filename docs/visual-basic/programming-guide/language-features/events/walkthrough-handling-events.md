@@ -1,11 +1,12 @@
 ---
 title: Gestione degli eventi (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procedura dettagliata: gestione di eventi (Visual Basic)
 Questo è il secondo dei due argomenti che illustrano l'utilizzo degli eventi. Il primo argomento, [procedura dettagliata: dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), viene illustrato come dichiarare e generare eventi. Questa sezione Usa il modulo e una classe da tale procedura dettagliata per mostrare come gestire gli eventi quando si verificano.  
   
- Il `Widget` esempio di classe vengono utilizzate istruzioni di gestione degli eventi tradizionali. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]sono disponibili altre tecniche per l'utilizzo di eventi. Come esercizio, è possibile modificare questo esempio per utilizzare il `AddHandler` e `Handles` istruzioni.  
+ Il `Widget` esempio di classe vengono utilizzate istruzioni di gestione degli eventi tradizionali. Visual Basic fornisce altre tecniche per l'utilizzo di eventi. Come esercizio, è possibile modificare questo esempio per utilizzare il `AddHandler` e `Handles` istruzioni.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Per gestire l'evento PercentDone della classe Widget  
   
@@ -66,7 +67,7 @@ Questo è il secondo dei due argomenti che illustrano l'utilizzo degli eventi. I
  Se l'utente fa clic il **Annulla** pulsante durante `LongTask` è in esecuzione, il `Button2_Click` evento viene eseguito non appena il `DoEvents` istruzione consente l'elaborazione degli eventi. La variabile a livello di classe `mblnCancel` è impostato su `True`e `mWidget_PercentDone` evento, quindi esegue il test e imposta il `ByRef Cancel` argomento `True`.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Una variabile WithEvents la connessione a un oggetto  
- `Form1`è ora configurato per gestire un `Widget` eventi dell'oggetto. È comunque per trovare un `Widget` in un punto.  
+ `Form1` è ora configurato per gestire un `Widget` agli eventi dell'oggetto. È comunque per trovare un `Widget` in un punto.  
   
  Quando si dichiara una variabile `WithEvents` in fase di progettazione non è associato alcun oggetto. Oggetto `WithEvents` variabile è come qualsiasi altra variabile di oggetto. È necessario creare un oggetto e assegnare un riferimento a esso con il `WithEvents` variabile.  
   
@@ -80,7 +81,7 @@ Questo è il secondo dei due argomenti che illustrano l'utilizzo degli eventi. I
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Quando si esegue questo codice, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crea un `Widget` dell'oggetto e i relativi eventi alle routine evento associate a `mWidget`. Da quel momento, ogni volta che il `Widget` genera relativo `PercentDone` evento, il `mWidget_PercentDone` evento procedure viene eseguita.  
+ Quando viene eseguito questo codice, Visual Basic crea un `Widget` dell'oggetto e si connette relativi eventi alle routine evento associate `mWidget`. Da quel momento, ogni volta che il `Widget` genera relativo `PercentDone` evento, il `mWidget_PercentDone` evento procedure viene eseguita.  
   
 #### <a name="to-call-the-longtask-method"></a>Chiamare il metodo LongTask  
   
@@ -90,7 +91,7 @@ Questo è il secondo dei due argomenti che illustrano l'utilizzo degli eventi. I
   
  Prima di `LongTask` metodo viene chiamato, l'etichetta che consente di visualizzare la percentuale di completamento deve essere inizializzati e il livello di classe `Boolean` flag di annullamento del metodo deve essere impostato su `False`.  
   
- `LongTask`viene chiamato con una durata di attività di 12,2 secondi. Il `PercentDone` evento viene generato una volta ogni un terzo di secondo. Ogni volta che viene generato l'evento, il `mWidget_PercentDone` evento procedure viene eseguita.  
+ `LongTask` viene chiamato con una durata dell'attività di 12,2 secondi. Il `PercentDone` evento viene generato una volta ogni un terzo di secondo. Ogni volta che viene generato l'evento, il `mWidget_PercentDone` evento procedure viene eseguita.  
   
  Quando `LongTask` viene eseguita, `mblnCancel` viene testato per verificare se `LongTask` è stato completato correttamente, o se è stato arrestato perché `mblnCancel` è stato impostato su `True`. La percentuale di completamento viene aggiornata solo nel primo caso.  
   

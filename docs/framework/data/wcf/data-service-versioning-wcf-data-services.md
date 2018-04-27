@@ -1,28 +1,30 @@
 ---
 title: Controllo delle versioni del servizio dati (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d795008e014deaa126dac1bb978ac825f2536208
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Controllo delle versioni del servizio dati (WCF Data Services)
 Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di creare servizi dati in modo che i client possono accedere ai dati come risorse usando URI basati su un modello di dati. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta inoltre la definizione di operazioni del servizio. Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare questi servizi dati per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Quando si apportano modifiche a un servizio dati esistente, è necessario valutare se definire una nuova versione del servizio dati e il modo migliore per ridurre l'impatto sulle applicazioni client esistenti. In questo argomento vengono fornite informazioni su quando e come creare una nuova versione di un servizio dati. Viene inoltre descritto il modo in cui in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] viene gestito uno scambio tra client e servizi dati che supportano versioni diverse del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -48,9 +50,9 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
 |Set di entità|-Rimuovere i set di entità|-Aggiungere un tipo derivato<br />-Modificare il tipo di base<br />-Aggiungere set di entità|  
 |Personalizzazione di feed|-Modificare il mapping di proprietà di entità||  
   
- <sup>1</sup> può dipendere da quanto un'applicazione client si basa alla ricezione di un codice di errore specifico.  
+ <sup>1</sup> può dipendere da quanto un'applicazione client si basa sul ricevimento di un codice di errore specifico.  
   
- <sup>2</sup> è possibile impostare il <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> proprietà `true` per fare in modo che il client ignori qualsiasi nuova proprietà inviata dal servizio dati che non sono definite nel client. Tuttavia, quando vengono eseguiti inserimenti, le proprietà non incluse dal client nella richiesta POST vengono impostate sui valori predefiniti. Per gli aggiornamenti, qualsiasi dato esistente in una proprietà sconosciuto al client potrebbe essere sovrascritto da valori predefiniti. In questo caso, è necessario inviare l'aggiornamento come una richiesta MERGE (impostazione predefinita). Per ulteriori informazioni, vedere [gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
+ <sup>2</sup> è possibile impostare il <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> proprietà `true` in modo che il client ignori qualsiasi nuova proprietà inviata dal servizio dati che non sono definiti nel client. Tuttavia, quando vengono eseguiti inserimenti, le proprietà non incluse dal client nella richiesta POST vengono impostate sui valori predefiniti. Per gli aggiornamenti, qualsiasi dato esistente in una proprietà sconosciuto al client potrebbe essere sovrascritto da valori predefiniti. In questo caso, è necessario inviare l'aggiornamento come una richiesta MERGE (impostazione predefinita). Per ulteriori informazioni, vedere [gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
 ### <a name="how-to-version-a-data-service"></a>Come controllare le versioni di un servizio dati  
  Se necessario, una nuova versione del servizio dati viene definita creando una nuova istanza del servizio con un contratto di servizio o un modello di dati aggiornato. Questo nuovo servizio viene quindi esposto tramite un nuovo endpoint dell'URI che lo differenzia dalla versione precedente. Ad esempio:  
@@ -64,7 +66,7 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
 ## <a name="odata-protocol-versions"></a>Versioni del protocollo OData  
  Nuove versioni di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vengono rilasciati, le applicazioni client potrebbero non essere utilizzando la stessa versione del [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocollo supportato dal servizio dati. È possibile che un'applicazione client meno recente acceda a un servizio dati che supporta una versione più recente di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Un'applicazione client può inoltre usare una versione più recente di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client, che supporta una versione più recente di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] rispetto a quello del servizio dati che si accede.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]sfrutta il supporto fornito da [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per gestire tali scenari di controllo delle versioni. È inoltre disponibile il supporto per la generazione e l'utilizzo di metadati del modello di dati per creare le classi del servizio dati client quando il client utilizza una versione diversa di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] rispetto al servizio dati utilizzato. Per ulteriori informazioni, vedere [OData: controllo delle versioni protocollo](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sfrutta il supporto fornito da [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] per gestire tali scenari di controllo delle versioni. È inoltre disponibile il supporto per la generazione e l'utilizzo di metadati del modello di dati per creare le classi del servizio dati client quando il client utilizza una versione diversa di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] rispetto al servizio dati utilizzato. Per ulteriori informazioni, vedere [OData: controllo delle versioni protocollo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ### <a name="version-negotiation"></a>Negoziazione della versione  
  Il servizio dati può essere configurato per definire la versione più recente del [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocollo che verrà utilizzato dal servizio, indipendentemente dalla versione richiesta dal client. È possibile eseguire questa operazione specificando un <xref:System.Data.Services.Common.DataServiceProtocolVersion> valore per il <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> proprietà del <xref:System.Data.Services.DataServiceBehavior> utilizzato dal servizio dati. Per ulteriori informazioni, vedere [configurazione del servizio dati](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
@@ -75,14 +77,14 @@ Il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] consente di c
   
 |Versione del protocollo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|Supporto introdotto in…|  
 |-----------------------------------------------------------------------------------|----------------------------|  
-|Versione 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]versione 3|  
-|Versione 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-L'aggiornamento di [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. È possibile scaricare e installare l'aggiornamento di [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]versione 4|  
+|Versione 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] versione 3|  
+|Versione 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-L'aggiornamento di [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. È possibile scaricare e installare l'aggiornamento di [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] versione 4|  
 |Versione 3|-È possibile scaricare e installare una versione preliminare che supporta [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] versione 3 dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Versioni di metadati  
- Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la versione 1.1 di CSDL per rappresentare un modello di dati. Questo comportamento viene applicato sempre nel caso di modelli di dati basati su un provider di reflection o un provider del servizio dati personalizzato. Tuttavia, quando il modello di dati è definito tramite [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], viene restituita la stessa versione di CSDL usata da [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. La versione del linguaggio CSDL è determinata dallo spazio dei nomi del [elemento dello Schema](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]la specifica [ \[MC-CSDL\]: formato di File di definizione dello Schema concettuale](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Per impostazione predefinita, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la versione 1.1 di CSDL per rappresentare un modello di dati. Questo comportamento viene applicato sempre nel caso di modelli di dati basati su un provider di reflection o un provider del servizio dati personalizzato. Tuttavia, quando il modello di dati è definito tramite [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], viene restituita la stessa versione di CSDL usata da [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. La versione del linguaggio CSDL è determinata dallo spazio dei nomi del [elemento dello Schema](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la specifica [ \[MC-CSDL\]: formato di File di definizione dello Schema concettuale](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
- L'elemento `DataServices` dei metadati restituiti contiene inoltre un attributo `DataServiceVersion` che corrisponde al valore dell'intestazione `DataServiceVersion` nel messaggio di risposta. Le applicazioni client, ad esempio il **Aggiungi riferimento al servizio** nella finestra di dialogo [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], usare queste informazioni per generare classi del servizio dati client che funzionano correttamente con la versione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che funge da host del servizio dati. Per ulteriori informazioni, vedere [OData: controllo delle versioni protocollo](http://go.microsoft.com/fwlink/?LinkId=186071).  
+ L'elemento `DataServices` dei metadati restituiti contiene inoltre un attributo `DataServiceVersion` che corrisponde al valore dell'intestazione `DataServiceVersion` nel messaggio di risposta. Le applicazioni client, ad esempio il **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio, usare queste informazioni per generare il servizio dati client classi che funzionano correttamente con la versione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] che funge da host del servizio dati. Per ulteriori informazioni, vedere [OData: controllo delle versioni protocollo](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

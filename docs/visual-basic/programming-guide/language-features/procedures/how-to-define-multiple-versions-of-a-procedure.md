@@ -1,11 +1,12 @@
 ---
-title: "Procedura: definire più versioni di una routine (Visual Basic)"
-ms.custom: 
+title: 'Procedura: definire più versioni di una routine (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: definire più versioni di una routine (Visual Basic)
 È possibile definire una routine in più versioni da *overload* utilizzando lo stesso nome ma un elenco di parametri diversi per ogni versione. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguere per nome.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Anteporre il `Sub` o `Function` (parola chiave) in ogni dichiarazione con il [overload](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave). È possibile omettere `Overloads` nelle dichiarazioni, ma se si include in una qualsiasi delle dichiarazioni, è necessario includerlo in ogni dichiarazione.  
   
-3.  Dopo ogni istruzione di dichiarazione, scrivere il codice di procedure per gestire il caso specifico in cui il codice chiamante fornisce argomenti corrispondenti elenco di parametri di quella versione. Non si dispone di test per i parametri che è stato fornito il codice chiamante. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]passa il controllo per la versione corrispondente della routine.  
+3.  Dopo ogni istruzione di dichiarazione, scrivere il codice di procedure per gestire il caso specifico in cui il codice chiamante fornisce argomenti corrispondenti elenco di parametri di quella versione. Non si dispone di test per i parametri che è stato fornito il codice chiamante. Visual Basic passa il controllo per la versione corrispondente della routine.  
   
 4.  Terminare ogni versione della routine con il `End Sub` o `End Function` istruzione nel modo appropriato.  
   

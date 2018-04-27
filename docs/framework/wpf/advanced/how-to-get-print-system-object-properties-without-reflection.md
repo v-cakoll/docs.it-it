@@ -1,13 +1,13 @@
 ---
-title: "Procedura: ottenere le proprietà di un oggetto di sistema di stampa senza ricorrere alla reflection"
-ms.custom: 
+title: 'Procedura: ottenere le proprietà di un oggetto di sistema di stampa senza ricorrere alla reflection'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d93919f691b51d5f177b074e5d9cef2c140458e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1aa6025c2b8a00dd170a674a1bdea25d76a9a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procedura: ottenere le proprietà di un oggetto di sistema di stampa senza ricorrere alla reflection
 Uso della reflection per descrivere le proprietà (e i tipi di tali proprietà) su un oggetto può rallentare le prestazioni dell'applicazione. Il <xref:System.Printing.IndexedProperties> dello spazio dei nomi fornisce un modo per ottenere queste informazioni utilizzando la reflection.  
@@ -33,7 +33,7 @@ Uso della reflection per descrivere le proprietà (e i tipi di tali proprietà) 
 ## <a name="example"></a>Esempio  
  Come indicato di seguito sono riportati i passaggi di questa procedura.  
   
-1.  Creare un'istanza del tipo. Nell'esempio seguente, il tipo è il <xref:System.Printing.PrintQueue> tipo fornito con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], ma codice quasi identico dovrebbe funzionare per i tipi derivati da <xref:System.Printing.PrintSystemObject>.  
+1.  Creare un'istanza del tipo. Nell'esempio seguente, il tipo è il <xref:System.Printing.PrintQueue> tipo fornito con Microsoft .NET Framework, ma codice quasi identico dovrebbe funzionare per i tipi che derivano da <xref:System.Printing.PrintSystemObject>.  
   
 2.  Creare un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> dalla proprietà del tipo <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. Il <xref:System.Collections.DictionaryEntry.Value%2A> proprietà di ciascuna voce del dizionario è un oggetto di uno dei tipi derivati da <xref:System.Printing.IndexedProperties.PrintProperty>.  
   

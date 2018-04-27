@@ -1,11 +1,12 @@
 ---
 title: Routine di operatore (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
-Una routine di operatore è una serie di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] istruzioni che definiscono il comportamento di un operatore (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *l'overload degli operatori*.  
+Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *l'overload degli operatori*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Quando definire una routine di operatore  
  Dopo aver definito una classe o struttura, è possibile dichiarare variabili di tipo di quella classe o struttura. In alcuni casi tale variabile deve far parte di un'operazione come parte di un'espressione. A tale scopo, deve essere un operando di un operatore.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Definisce gli operatori solo sui tipi di dati più importanti. È possibile definire il comportamento di un operatore quando uno o entrambi gli operandi sono del tipo di classe o struttura.  
+ Visual Basic definisce gli operatori solo sui tipi di dati più importanti. È possibile definire il comportamento di un operatore quando uno o entrambi gli operandi sono del tipo di classe o struttura.  
   
  Per ulteriori informazioni, vedere [Operator (istruzione)](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
@@ -52,7 +53,7 @@ Una routine di operatore è una serie di [!INCLUDE[vbprvb](~/includes/vbprvb-md.
 ## <a name="declaration-syntax"></a>Sintassi di dichiarazione  
  La sintassi per dichiarare una routine di operatore è come segue:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *tipo di dati*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *simbolooperatore* `(` *operand1*`[,`*operand2* `]) As` *datatype*   
   
  `' Statements of the operator procedure.`  
   

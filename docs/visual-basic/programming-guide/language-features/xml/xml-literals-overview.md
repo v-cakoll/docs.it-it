@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sui valori letterali XML (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML literals [Visual Basic], about XML literals
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59ce79995025692428263120f9c21c7baf5cf231
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1bc3bed1a7046e6f3c31828fbf17be877e66f146
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Cenni preliminari sui valori letterali XML (Visual Basic)
-Un *valore letterale XML* consente di incorporare direttamente XML il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] codice. Sintassi del valore letterale XML rappresenta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti ed è simile alla sintassi XML 1.0. Questo rende più semplice creare elementi e documenti XML a livello di programmazione perché il codice ha la stessa struttura del XML finale.  
+Un' *valore letterale XML* consente di incorporare XML direttamente nel codice Visual Basic. Sintassi del valore letterale XML rappresenta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti ed è simile alla sintassi XML 1.0. Questo rende più semplice creare elementi e documenti XML a livello di programmazione perché il codice ha la stessa struttura del XML finale.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Compila i valori letterali XML in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]fornisce un modello a oggetti semplice per la creazione e modifica di XML e questo modello si integra bene con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
+ Visual Basic compila i valori letterali XML in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornisce un modello a oggetti semplice per la creazione e modifica di XML e questo modello si integra bene con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.  
   
- È possibile incorporare un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] espressione in un valore letterale XML. In fase di esecuzione, l'applicazione crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto per ogni tipo di valore letterale, includendo i valori delle espressioni incorporate. Consente di specificare il contenuto dinamico all'interno di un valore letterale XML. Per ulteriori informazioni, vedere [espressioni incorporate in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ È possibile incorporare un'espressione Visual Basic in un valore letterale XML. In fase di esecuzione, l'applicazione crea un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto per ogni tipo di valore letterale, includendo i valori delle espressioni incorporate. Consente di specificare il contenuto dinamico all'interno di un valore letterale XML. Per ulteriori informazioni, vedere [espressioni incorporate in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
  Per ulteriori informazioni sulle differenze tra la sintassi del valore letterale XML e la sintassi XML 1.0, vedere [valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
 ## <a name="simple-literals"></a>Valori letterali semplici  
- È possibile creare un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto del [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] codice digitando o incollando XML valido. Restituisce un valore letterale elemento XML un <xref:System.Xml.Linq.XElement> oggetto. Per ulteriori informazioni, vedere [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). L'esempio seguente crea un elemento XML che dispone di diversi elementi figlio.  
+ È possibile creare un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto nel codice Visual Basic digitando o incollando il codice XML valido. Restituisce un valore letterale elemento XML un <xref:System.Xml.Linq.XElement> oggetto. Per ulteriori informazioni, vedere [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). L'esempio seguente crea un elemento XML che dispone di diversi elementi figlio.  
   
  [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
@@ -42,7 +43,7 @@ Un *valore letterale XML* consente di incorporare direttamente XML il [!INCLUDE[
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
->  Sintassi del valore letterale XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] non è identica a quella nella specifica XML 1.0. Per ulteriori informazioni, vedere [valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+>  Sintassi del valore letterale XML in Visual Basic non è identica a quella nella specifica XML 1.0. Per ulteriori informazioni, vedere [valori letterali XML e specifica XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
 ## <a name="line-continuation"></a>Continuazione di riga  
  Un valore letterale XML può estendersi su più righe senza utilizzare caratteri di continuazione di riga (sequenza spazio-carattere di sottolineatura-invio). Questo rende più semplice confrontare i valori letterali XML in codice con i documenti XML.  
@@ -59,7 +60,7 @@ Un *valore letterale XML* consente di incorporare direttamente XML il [!INCLUDE[
  [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>Come il compilatore crea gli oggetti da valori letterali XML  
- Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore converte i valori letterali XML in chiamate a equivalente [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] costruttori per creare il [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto. Ad esempio, il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore tradurrà l'esempio di codice seguente in una chiamata al <xref:System.Xml.Linq.XProcessingInstruction> costruttore per l'istruzione in versione XML, le chiamate al <xref:System.Xml.Linq.XElement> costruttore per il `<contact>`, `<name>`e `<phone>`elementi e chiamate di <xref:System.Xml.Linq.XAttribute> costruttore per il `type` attributo. Nell'esempio seguente, in particolare, base agli attributi di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore chiamerà il <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> costruttore due volte. Il primo passerà il valore `type` per il `name` parametro e il valore `home` per il `value` parametro. Il secondo passerà anche il valore `type` per il `name` parametro, ma il valore `work` per il `value` parametro.  
+ Il compilatore Visual Basic converte i valori letterali XML in chiamate all'equivalente [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] costruttori per creare il [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto. Ad esempio, il compilatore Visual Basic convertirà l'esempio di codice seguente in una chiamata ai <xref:System.Xml.Linq.XProcessingInstruction> costruttore per l'istruzione in versione XML, le chiamate al <xref:System.Xml.Linq.XElement> costruttore per il `<contact>`, `<name>`, e `<phone>` gli elementi e chiamate per il <xref:System.Xml.Linq.XAttribute> costruttore per il `type` attributo. In particolare, dati gli attributi nell'esempio seguente, il compilatore Visual Basic chiamerà il <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> costruttore due volte. Il primo passerà il valore `type` per il `name` parametro e il valore `home` per il `value` parametro. Il secondo passerà anche il valore `type` per il `name` parametro, ma il valore `work` per il `value` parametro.  
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   

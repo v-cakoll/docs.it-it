@@ -1,12 +1,12 @@
 ---
 title: Overload dell'operatore
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - operators [.NET Framework], overloads
@@ -14,33 +14,33 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1d17aa00ce551d951b0e178304632572abf592b6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 42a28f34dda77ecff47f0765335fc29e4418529e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operator-overloads"></a>Overload dell'operatore
 Overload degli operatori consente ai tipi di framework di vengono visualizzati come se fossero primitive di linguaggio predefinito.  
   
  Anche se è consentito e utili in alcuni casi, gli overload degli operatori deve essere utilizzata con cautela. Esistono molti casi, in operatore che l'overload è stato eccessivo, ad esempio l'avvio di finestre di progettazione framework come utilizzare gli operatori per le operazioni che devono essere metodi semplici. Le linee guida seguenti consentono di decidere quando e come utilizzare l'overload degli operatori.  
   
- **X evitare** la definizione di overload degli operatori, tranne nei tipi che è possibile ad esempio i tipi primitivi (predefiniti).  
+ **X evitare** definizione overload degli operatori, tranne nei tipi che dovrebbero risultare come tipi primitivi (predefiniti).  
   
- **Provare a ✓** definire overload dell'operatore in un tipo che deve essere un tipo primitivo.  
+ **✓ Provare a** definizione overload degli operatori in un tipo che deve essere, ad esempio un tipo primitivo.  
   
  Ad esempio, <xref:System.String?displayProperty=nameWithType> è `operator==` e `operator!=` definito.  
   
- **✓ SI** definire overload degli operatori in strutture che rappresentano numeri (ad esempio <xref:System.Decimal?displayProperty=nameWithType>).  
+ **✓ SI** definire gli overload degli operatori in strutture che rappresentano numeri (ad esempio <xref:System.Decimal?displayProperty=nameWithType>).  
   
- **X non** essere mentre overload dell'operatore.  
+ **X non** essere mentre quando si definiscono gli overload degli operatori.  
   
  Overload dell'operatore è utile nei casi in cui è immediatamente ovvio il risultato dell'operazione sarà. Ad esempio, è opportuno essere in grado di sottrarre uno <xref:System.DateTime> da un altro `DateTime` e ottenere un <xref:System.TimeSpan>. Tuttavia, non è appropriata per utilizzare l'operatore union logico per le query di unione due database, o utilizzare l'operatore di spostamento per scrivere in un flusso.  
   
@@ -50,7 +50,7 @@ Overload degli operatori consente ai tipi di framework di vengono visualizzati c
   
  Ad esempio, se si esegue l'overload di `operator==`, inoltre, è necessario eseguire l'overload di `operator!=`. Analogamente, se esegue l'overload di `operator<`, è inoltre necessario eseguire l'overload di `operator>`e così via.  
   
- **Provare a ✓** fornendo i metodi con nomi descrittivi che corrispondono a ogni operatore di overload.  
+ **✓ Provare a** fornendo i metodi con nomi descrittivi che corrispondono a ogni operatore di overload.  
   
  Molti linguaggi non supportano l'overload degli operatori. Per questo motivo, è consigliabile che i tipi di overload degli operatori includono un metodo secondario con un nome specifico di dominio appropriato che fornisce una funzionalità equivalente.  
   
@@ -103,9 +103,9 @@ Overload degli operatori consente ai tipi di framework di vengono visualizzati c
 ### <a name="conversion-operators"></a>Operatori di conversione  
  Gli operatori di conversione sono gli operatori unari che consentono la conversione da un tipo a un altro. Gli operatori devono essere definiti come membri statici in cui l'operando o il tipo restituito. Esistono due tipi di operatori di conversione: implicite ed esplicite.  
   
- **X non** forniscono un operatore di conversione se tale conversione non è chiaramente prevista dagli utenti finali.  
+ **X non** forniscono un operatore di conversione se tale conversione non è previsto chiaramente dagli utenti finali.  
   
- **X non** definire operatori di conversione di fuori di dominio di un tipo.  
+ **X non** definire operatori di conversione di fuori di dominio del tipo.  
   
  Ad esempio, <xref:System.Int32>, <xref:System.Double>, e <xref:System.Decimal> sono tutti i tipi numerici, mentre <xref:System.DateTime> non. Pertanto, non deve essere presente nessun operatore di conversione per convertire un `Double(long)` per un `DateTime`. In questo caso è preferibile utilizzare un costruttore.  
   
@@ -117,11 +117,11 @@ Overload degli operatori consente ai tipi di framework di vengono visualizzati c
   
  È molto difficile per gli utenti finali a comprendere ciò che accade, poiché potrebbero non essere consapevoli che una conversione viene eseguita.  
   
- **✓ SI** generare <xref:System.InvalidCastException?displayProperty=nameWithType> se una chiamata a un operatore cast comporta una perdita di dati conversione e il contratto dell'operatore non consente conversioni perdita di dati.  
+ **✓ SI** throw <xref:System.InvalidCastException?displayProperty=nameWithType> se una chiamata a un operatore cast comporta una perdita di dati conversione e il contratto dell'operatore non consente conversioni perdita di dati.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  

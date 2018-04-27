@@ -1,11 +1,12 @@
 ---
 title: Passaggio di argomenti per valore e per riferimento (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passaggio di argomenti per valore e per riferimento (Visual Basic)
-In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], è possibile passare un argomento a una routine *dal valore* o *per riferimento*. Questo è noto come il *meccanismo di passaggio*, e determina se la routine può modificare l'elemento di programmazione sottostante all'argomento nel codice chiamante. La dichiarazione di routine determina il meccanismo di passaggio per ogni parametro specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave).  
+In Visual Basic, è possibile passare un argomento a una routine *dal valore* oppure *riferimento*. Questo è noto come il *meccanismo di passaggio*, e determina se la routine può modificare l'elemento di programmazione sottostante all'argomento nel codice chiamante. La dichiarazione di routine determina il meccanismo di passaggio per ogni parametro specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave).  
   
 ## <a name="distinctions"></a>Differenze  
  Quando si passa un argomento a una stored procedure, occorre considerare diverse distinzioni diversi che interagiscono tra loro:  
@@ -45,7 +46,7 @@ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], è possibile passare un argoment
   
 -   **Protezione**. Nella scelta tra i due meccanismi di passaggio, il criterio più importante è l'esposizione delle variabili chiamanti da modificare. Il vantaggio di passare un argomento `ByRef` è che la routine può restituire un valore al codice chiamante tramite l'argomento. Il vantaggio di passare un argomento `ByVal` è che esso impedisce che la variabile viene modificato dalla procedura.  
   
--   **Prestazioni**. Anche se il meccanismo di passaggio può influire sulle prestazioni del codice, la differenza è in genere trascurabile. Unica eccezione è un tipo di valore passato `ByVal`. In questo caso, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copia il contenuto di tutti i dati dell'argomento. Pertanto, per un tipo di valori di grandi dimensioni, ad esempio una struttura, può essere più efficiente passare `ByRef`.  
+-   **Prestazioni**. Anche se il meccanismo di passaggio può influire sulle prestazioni del codice, la differenza è in genere trascurabile. Unica eccezione è un tipo di valore passato `ByVal`. In questo caso, Visual Basic copia il contenuto di tutti i dati dell'argomento. Pertanto, per un tipo di valori di grandi dimensioni, ad esempio una struttura, può essere più efficiente passare `ByRef`.  
   
      Per i tipi di riferimento, solo il puntatore ai dati viene copiati (quattro byte sulle piattaforme a 32 bit, otto byte sulle piattaforme a 64 bit). Pertanto, è possibile passare gli argomenti di tipo `String` o `Object` dal valore senza compromettere le prestazioni.  
   
@@ -54,7 +55,7 @@ In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], è possibile passare un argoment
   
  Se un parametro è dichiarato con `ByRef`, il codice chiamante può forzare il meccanismo `ByVal` racchiudendo il nome dell'argomento tra parentesi nella chiamata. Per ulteriori informazioni, vedere [procedura: forzare un argomento sia passati per valore](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Il valore predefinito in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gli argomenti vengono passati per valore.  
+ Il valore predefinito in Visual Basic consiste nel passare gli argomenti per valore.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Quando passare un argomento per valore  
   

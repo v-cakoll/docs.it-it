@@ -1,11 +1,12 @@
 ---
 title: Differenze tra il passaggio di un argomento per valore e per riferimento (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3efd4f41184287cdcd3d499712a857bee997c1a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8f733b4fd50612292c0c4ac7195304d99ae2dbea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Differenze tra il passaggio di un argomento per valore e per riferimento (Visual Basic)
 Quando si passano a uno o più argomenti a una routine, ciascun argomento corrisponde a un elemento di programmazione sottostante nel codice chiamante. È possibile passare il valore di questo elemento sottostante o un riferimento a esso. Questo è noto come il *meccanismo di passaggio*.  
   
 ## <a name="passing-by-value"></a>passaggio per valore  
- Si passa un argomento *dal valore* specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) (parola chiave) per il parametro corrispondente nella definizione della routine. Quando si utilizza questo meccanismo di passaggio, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copia il valore dell'elemento di programmazione sottostante in una variabile locale nella routine. Il codice della routine non hanno accesso all'elemento sottostante nel codice chiamante.  
+ Si passa un argomento *dal valore* specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) (parola chiave) per il parametro corrispondente nella definizione della routine. Quando si utilizza il meccanismo di passaggio, Visual Basic copia il valore dell'elemento di programmazione sottostante in una variabile locale nella routine. Il codice della routine non hanno accesso all'elemento sottostante nel codice chiamante.  
   
 ## <a name="passing-by-reference"></a>Il passaggio per riferimento  
- Si passa un argomento *per riferimento* specificando il [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave) per il parametro corrispondente nella definizione della routine. Quando si utilizza questo meccanismo di passaggio, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce la procedura di un riferimento diretto all'elemento di programmazione sottostante nel codice chiamante.  
+ Si passa un argomento *per riferimento* specificando il [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave) per il parametro corrispondente nella definizione della routine. Quando si utilizza il meccanismo di passaggio, Visual Basic fornisce la procedura di un riferimento diretto all'elemento di programmazione sottostante nel codice chiamante.  
   
 ## <a name="passing-mechanism-and-element-type"></a>Meccanismo di passaggio e tipo di elemento  
- La scelta del meccanismo di passaggio non è lo stesso come la classificazione del tipo di elemento sottostante. Il passaggio per valore o riferimento si riferisce a cosa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce al codice della routine. Un tipo di valore o riferimento fa riferimento a un elemento di programmazione come archiviato in memoria.  
+ La scelta del meccanismo di passaggio non è lo stesso come la classificazione del tipo di elemento sottostante. Passaggio per valore o per riferimento si riferisce a quali Visual Basic fornisce al codice della routine. Un tipo di valore o riferimento fa riferimento a un elemento di programmazione come archiviato in memoria.  
   
  Tuttavia, il meccanismo di passaggio e il tipo di elemento sono correlati tra loro. Il valore di un tipo riferimento è un puntatore ai dati in un' posizione in memoria. Ciò significa che quando si passa un tipo di riferimento per valore, il codice della stored procedure dispone di un puntatore ai dati dell'elemento sottostante, anche se non può accedere l'elemento sottostante. Ad esempio, se l'elemento è una variabile di matrice, il codice della routine non ha accesso alla variabile stessa, ma possa accedere ai membri di matrice.  
   
@@ -42,7 +43,7 @@ Quando si passano a uno o più argomenti a una routine, ciascun argomento corris
   
  Per un elemento modificabile, nella tabella seguente viene riepilogata l'interazione tra il tipo di elemento e il meccanismo di passaggio.  
   
-|Tipo di elemento|Passato`ByVal`|Passato`ByRef`|  
+|Tipo di elemento|Passato `ByVal`|Passato `ByRef`|  
 |------------------|--------------------|--------------------|  
 |Tipo di valore (contiene un solo valore)|La routine non è possibile modificare la variabile o i relativi membri.|La procedura è possibile modificare la variabile e i relativi membri.|  
 |Tipo di riferimento (contiene un puntatore a un'istanza di classe o struttura)|La procedura non è possibile modificare la variabile, ma può modificare i membri dell'istanza a cui fa riferimento.|La procedura è possibile modificare la variabile e i membri dell'istanza a cui fa riferimento.|  

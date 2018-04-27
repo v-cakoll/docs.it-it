@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f07fc7988c4329397e464f05d334648e98cb129d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-netcf"></a>-netcf
 Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact-md.md)].  
@@ -32,12 +32,12 @@ Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `-netcf` opzione cause di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore di destinazione di [!INCLUDE[Compact](~/includes/compact-md.md)] anziché la versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funzionalità di linguaggio che è presente solo nella versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è disabilitato.  
+ Il `-netcf` opzione, il compilatore Visual Basic alla destinazione di [!INCLUDE[Compact](~/includes/compact-md.md)] anziché la versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funzionalità di linguaggio che è presente solo nella versione completa [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] è disabilitato.  
   
  Il `-netcf` opzione è progettata per essere utilizzato con [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Le funzionalità del linguaggio per disabilitato `-netcf` sono le stesse funzionalità di linguaggio non presente nel file di destinazione con `-sdkpath`.  
   
 > [!NOTE]
->  Il `-netcf` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando. Il `-netcf` opzione viene impostata quando un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene caricato il progetto di dispositivo.  
+>  Il `-netcf` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando. Il `-netcf` opzione viene impostata quando viene caricato un progetto di dispositivo di Visual Basic.  
   
  Il `-netcf` opzione consente di modificare le funzionalità del linguaggio seguenti:  
   
@@ -53,7 +53,7 @@ Imposta il compilatore in modo che punti a [!INCLUDE[Compact](~/includes/compact
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Utilizzo delle parole chiave di Visual Basic 6.0 che sono stati rimossi da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] genera un errore diverso quando `-netcf` viene utilizzato. Questo riguarda i messaggi di errore per le parole chiave seguenti:  
+-   Utilizzo di parole chiave di Visual Basic 6.0 che sono stati rimossi da Visual Basic genera un errore diverso quando `-netcf` viene utilizzato. Questo riguarda i messaggi di errore per le parole chiave seguenti:  
   
     -   `Open`  
   

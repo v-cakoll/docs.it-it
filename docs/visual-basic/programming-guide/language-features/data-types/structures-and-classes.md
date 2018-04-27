@@ -1,11 +1,12 @@
 ---
 title: Strutture e classi (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strutture e classi (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unifica la sintassi per le strutture e classi, con il risultato che entrambe le entità supportano la maggior parte delle stesse funzionalità. Tuttavia, esistono anche differenze importanti tra le classi e strutture.  
+Visual Basic unifica la sintassi per le strutture e classi, con il risultato che entrambe le entità supportano la maggior parte delle stesse funzionalità. Tuttavia, esistono anche differenze importanti tra le classi e strutture.  
   
  Classi hanno il vantaggio di essere tipi di riferimento, passando un riferimento è più efficiente del passaggio di una variabile di struttura con tutti i relativi dati. D'altra parte, le strutture non richiedono l'allocazione di memoria nell'heap globale.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Istanze e variabili  
  Poiché le strutture sono tipi di valore, ogni variabile di struttura in modo permanente è associato a un'istanza di struttura individuale. Tuttavia, le classi sono tipi di riferimento e una variabile oggetto può fare riferimento a diverse istanze di classi in momenti diversi. Questa differenza influisce sull'utilizzo di strutture e classi nei modi seguenti:  
   
--   **Inizializzazione.** Una variabile di struttura include implicitamente un'inizializzazione degli elementi utilizzando il costruttore della struttura senza parametri. Pertanto, `Dim s As struct1` equivale a `Dim s As struct1 = New struct1()`.  
+-   **inizializzazione.** Una variabile di struttura include implicitamente un'inizializzazione degli elementi utilizzando il costruttore della struttura senza parametri. Pertanto, `Dim s As struct1` equivale a `Dim s As struct1 = New struct1()`.  
   
 -   **Assegnazione di variabili.** Quando si assegna una variabile di struttura a un altro o passa un argomento di routine di un'istanza di struttura, i valori correnti di tutti gli elementi variabile vengono copiati nella nuova struttura. Quando si assegna una variabile oggetto a un altro o passarla una variabile oggetto a una routine, viene copiato solo il puntatore di riferimento.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Elementi della struttura, tuttavia, sono isolati all'interno della relativa istanza. In base ai valori non vengono riflesse in altre variabili di struttura, anche in altre istanze dello stesso `Structure` dichiarazione.  
   
--   **Uguaglianza.** Test di uguaglianza di due strutture deve essere eseguito con un elemento per elemento test. È possono confrontare due variabili di oggetto con il <xref:System.Object.Equals%2A> metodo. <xref:System.Object.Equals%2A>indica se le due variabili puntano alla stessa istanza.  
+-   **Uguaglianza.** Test di uguaglianza di due strutture deve essere eseguito con un elemento per elemento test. È possono confrontare due variabili di oggetto con il <xref:System.Object.Equals%2A> metodo. <xref:System.Object.Equals%2A> indica se le due variabili puntano alla stessa istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

@@ -1,24 +1,26 @@
 ---
 title: Scrittura dinamica sicura in SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Scrittura dinamica sicura in SQL Server
 Per SQL injection si intende il processo mediante il quale un utente malintenzionato immette istruzioni Transact-SQL anziché input valido. Se l'input viene passato direttamente al server senza essere convalidato e se l'applicazione esegue inavvertitamente il codice inserito, è possibile che l'attacco danneggi o elimini permanentemente i dati.  
@@ -68,7 +70,7 @@ Per SQL injection si intende il processo mediante il quale un utente malintenzio
  Quando viene eseguita una stored procedure firmata con un certificato, le autorizzazioni concesse all'utente del certificato vengono unite con quelle del chiamante. Il contesto di esecuzione rimane lo stesso. L'utente del certificato non rappresenta il chiamante. L'implementazione della firma delle stored procedure richiede l'esecuzione di numerosi passaggi. Una stored procedure deve essere firmata nuovamente a ogni modifica.  
   
 ### <a name="cross-database-access"></a>Accesso tra database  
- Il concatenamento della proprietà tra database non funziona nei casi in cui vengono eseguite istruzioni SQL create in modo dinamico. Per aggirare questo problema, in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] è possibile creare una stored procedure che accede ai dati di un altro database e firmare la procedura con un certificato disponibile in entrambi i database. In questo modo si fornisce agli utenti l'accesso alle risorse del database usate dalla procedura senza concedere loro l'accesso o le autorizzazioni per il database.  
+ Il concatenamento della proprietà tra database non funziona nei casi in cui vengono eseguite istruzioni SQL create in modo dinamico. È possibile risolvere il problema in SQL Server creando una stored procedure che accede ai dati in un altro database e firmare la procedura con un certificato esistente in entrambi i database. In questo modo si fornisce agli utenti l'accesso alle risorse del database usate dalla procedura senza concedere loro l'accesso o le autorizzazioni per il database.  
   
 ## <a name="external-resources"></a>Risorse esterne  
  Per altre informazioni, vedere le risorse seguenti.  
@@ -76,7 +78,7 @@ Per SQL injection si intende il processo mediante il quale un utente malintenzio
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Stored procedure](http://go.microsoft.com/fwlink/?LinkId=98233) e [attacchi SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) nella documentazione Online di SQL Server|Viene descritto come creare stored procedure e come funziona SQL Injection.|  
-|[Nuovi attacchi di troncamento SQL e come evitarli](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) in MSDN Magazine.|Viene descritto come delimitare caratteri e stringhe, SQL injection e modifiche da attacchi di troncamento.|  
+|[Nuovi attacchi di troncamento SQL e su come evitarli](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) in MSDN Magazine.|Viene descritto come delimitare caratteri e stringhe, SQL injection e modifiche da attacchi di troncamento.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

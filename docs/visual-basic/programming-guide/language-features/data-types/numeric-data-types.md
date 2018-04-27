@@ -1,11 +1,12 @@
 ---
 title: Tipi di dati numerici (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -29,32 +30,32 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipi di dati numerici (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornisce diversi *tipi di dati numerici* per gestire i numeri in diverse rappresentazioni. *Integrale* tipi rappresentano solo numeri interi (positivi, negativi e zero), e *non integrali* tipi rappresentano numeri con entrambi numero intero e frazione.  
+Visual Basic fornisce diversi *tipi di dati numerici* per gestire i numeri in diverse rappresentazioni. *Integrale* tipi rappresentano solo numeri interi (positivi, negativi e zero), e *non integrali* tipi rappresentano numeri con entrambi numero intero e frazione.  
   
- Per una tabella che mostra un confronto side-by-side del [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipi di dati, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Per una tabella che mostra un confronto side-by-side dei tipi di dati Visual Basic, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="integral-numeric-types"></a>Tipi numerici integrali  
- *Tipi di dati integrali* sono quelli che rappresentano soltanto numeri senza parti frazionarie.  
+ *Tipi di dati integrali* sono quelli che rappresentano solo i numeri senza parti frazionarie.  
   
  Il *firmato* sono tipi di dati integrali [tipo di dati SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8 bit), [tipo di dati Short](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16 bit), [tipo di dati Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32 bit) e [ Tipo di dati long](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64 bit). Se una variabile memorizza sempre numeri interi anziché numeri frazionari, dichiararla come uno di questi tipi.  
   
  Il *senza segno* tipi integrali sono [tipo di dati Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8 bit), [tipo di dati UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16 bit), [tipo di dati UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32 bit) e [ Tipo di dati ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64 bit). Se una variabile contiene dati binari o dati di natura sconosciuta, dichiararla come uno di questi tipi.  
   
 ### <a name="performance"></a>Prestazioni  
- Operazioni aritmetiche sono più veloci con tipi integrali che con altri tipi di dati. Sono più veloci con il `Integer` e `UInteger` tipi [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Operazioni aritmetiche sono più veloci con tipi integrali che con altri tipi di dati. Sono più veloci con il `Integer` e `UInteger` tipi in Visual Basic.  
   
 ### <a name="large-integers"></a>Numeri interi grandi  
- Se è necessario includere un numero intero maggiore di `Integer` può contenere il tipo di dati, è possibile utilizzare il `Long` invece del tipo di dati. `Long`le variabili possono contenere numeri compresi tra -9.223.372.036.854.775.808 e 9.223.372.036.854.775.807. Operazioni con `Long` sono leggermente più lente con `Integer`.  
+ Se è necessario includere un numero intero maggiore di `Integer` può contenere il tipo di dati, è possibile utilizzare il `Long` invece del tipo di dati. `Long` le variabili possono contenere numeri compresi tra -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Operazioni con `Long` sono leggermente più lente con `Integer`.  
   
  Se sono necessari valori di dimensioni ancora maggiori, è possibile utilizzare il [tipo di dati Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). È possibile archiviare numeri compresi tra -79.228.162.514.264.337.593.543.950.335 e 79.228.162.514.264.337.593.543.950.335 in un `Decimal` variabile se non si utilizzano tutte le posizioni decimali. Tuttavia, le operazioni con `Decimal` numeri sono molto più lenti con qualsiasi altro tipo di dati numerici.  
   
@@ -65,11 +66,11 @@ ms.lasthandoff: 11/21/2017
  Se si è certi che la variabile non deve mai contenere un numero negativo, è possibile utilizzare il *tipi senza segno*`Byte`, `UShort`, `UInteger`, e `ULong`. Ognuno di questi tipi di dati può contenere un numero intero positivo due volte più grande come corrispondente tipo con segno (`SByte`, `Short`, `Integer`, e `Long`). In termini di prestazioni, un tipo senza segno è esattamente efficiente quanto il tipo con segno corrispondente. In particolare, `UInteger` condivide con `Integer` sono più efficiente di tutti i tipi di dati numerici di base.  
   
 ## <a name="nonintegral-numeric-types"></a>Tipi numerici non integrali  
- *Tipi di dati non integrali* sono quelli che rappresentano numeri integer sia parti frazionarie.  
+ *Tipi di dati non integrale* sono quelli che rappresentano numeri con entrambi numero intero e frazione.  
   
  I tipi di dati numerici non integrali sono `Decimal` (a virgola fissa a 128 bit), [singolo tipo di dati](../../../../visual-basic/language-reference/data-types/single-data-type.md) (a virgola mobile a 32 bit) e [tipo di dati Double](../../../../visual-basic/language-reference/data-types/double-data-type.md) (a virgola mobile a 64 bit). Si tratta di tipi tutti firmati. Se una variabile può contenere una frazione, dichiararla come uno di questi tipi.  
   
- `Decimal`non è un tipo di dati a virgola mobile. `Decimal`i numeri hanno un valore integer binario e un fattore di scala integer che specifica quale parte del valore è una frazione decimale.  
+ `Decimal` non è un tipo di dati a virgola mobile. `Decimal` numeri contengono un valore integer binario e un fattore di scala integer che specifica quale parte del valore è una frazione decimale.  
   
  È possibile utilizzare `Decimal` variabili per valori di valuta. Il vantaggio è la precisione dei valori. Il `Double` tipo di dati è più veloce e richiede una minore quantità di memoria, ma è soggetto a errori di arrotondamento. Il `Decimal` tipo di dati mantiene la massima precisione a 28 cifre decimali.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  Valori numerici non integrali possono essere espresso come mmmEeee, ovvero mmm il *mantissa* (le cifre significative) e apparecchiature elettriche ed elettroniche è il *esponente* (una potenza di 10). I valori più alti positivo dei tipi non integrali sono 7.9228162514264337593543950335 + 28 per `Decimal`, 3, 4028235E + 38 per `Single`e 1.79769313486231570 e + 308 per `Double`.  
   
 ### <a name="performance"></a>Prestazioni  
- `Double`è la più efficiente dei tipi di dati frazionari, perché i processori disponibili sulle attuali piattaforme eseguono operazioni a virgola mobile e precisione doppia. Tuttavia, le operazioni con `Double` non sono veloci come con i tipi integrali, ad esempio `Integer`.  
+ `Double` è la più efficiente dei tipi di dati frazionari, poiché i processori in piattaforme corrente eseguono operazioni a virgola mobile a precisione doppia. Tuttavia, le operazioni con `Double` non sono veloci come con i tipi integrali, ad esempio `Integer`.  
   
 ### <a name="small-magnitudes"></a>Grandezza di piccole dimensioni  
  Per i numeri con la grandezza più piccolo possibile (il più vicino a 0), `Double` le variabili possono contenere numeri - 4.94065645841246544-324 per i valori negativi e 4, 94065645841246544E-324 per i valori positivi.  

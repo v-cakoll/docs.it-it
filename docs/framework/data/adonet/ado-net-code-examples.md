@@ -2,22 +2,24 @@
 title: Esempi di codice ADO.NET
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>Esempi di codice ADO.NET
 Gli elenchi di codice inclusi in questo argomento illustrano come recuperare dati da un database usando le tecnologie ADO.NET seguenti:
@@ -46,7 +48,7 @@ Gli elenchi di codice inclusi in questo argomento illustrano come recuperare dat
 Gli elenchi di codice seguenti illustrano come recuperare i dati da un database usando i provider di dati ADO.NET. I dati vengono restituiti in un `DataReader`. Per ulteriori informazioni, vedere [recupero di dati mediante DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-Nel codice di questo esempio si presume che sia possibile effettuare la connessione al database di esempio `Northwind` in Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Tramite il codice viene creato un oggetto <xref:System.Data.SqlClient.SqlCommand> per selezionare le righe dalla tabella Products e viene aggiunto un oggetto <xref:System.Data.SqlClient.SqlParameter> per limitare i risultati alle righe in cui UnitPrice è maggiore del valore del parametro specificato, in questo caso 5. Il <xref:System.Data.SqlClient.SqlConnection> viene aperto all'interno di un `using` che assicura che le risorse sono chiuso ed eliminate quando il codice esce dal blocco. Il comando viene eseguito dal codice tramite un oggetto <xref:System.Data.SqlClient.SqlDataReader> e i risultati vengono visualizzati nella finestra della console.
+Nel codice in questo esempio si presuppone che sia possibile connettersi al `Northwind` database di esempio in Microsoft SQL Server. Tramite il codice viene creato un oggetto <xref:System.Data.SqlClient.SqlCommand> per selezionare le righe dalla tabella Products e viene aggiunto un oggetto <xref:System.Data.SqlClient.SqlParameter> per limitare i risultati alle righe in cui UnitPrice è maggiore del valore del parametro specificato, in questo caso 5. Il <xref:System.Data.SqlClient.SqlConnection> viene aperto all'interno di un `using` che assicura che le risorse sono chiuso ed eliminate quando il codice esce dal blocco. Il comando viene eseguito dal codice tramite un oggetto <xref:System.Data.SqlClient.SqlDataReader> e i risultati vengono visualizzati nella finestra della console.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -354,6 +356,6 @@ End Class
  [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Creazione di applicazioni dati](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Esecuzione di query su Entity Data Model (Entity Framework attività)](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
+ [Esecuzione di query su un Entity Data Model (Entity Framework attività)](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
  [Procedura: eseguire una Query che restituisce gli oggetti di tipo anonimo](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)  

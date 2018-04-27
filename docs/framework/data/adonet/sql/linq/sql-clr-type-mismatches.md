@@ -1,27 +1,29 @@
 ---
 title: Tipi SQL-CLR non corrispondenti
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Tipi SQL-CLR non corrispondenti
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente di automatizzare la maggior parte delle operazioni di conversione tra il modello a oggetti e SQL Server. Alcune situazioni impediscono tuttavia che la conversione venga eseguita esattamente. Tali chiavi mancate corrispondenze tra i tipi di common language runtime (CLR) e i tipi di database di SQL Server sono riepilogate nelle sezioni seguenti. È possibile trovare altre informazioni sui mapping di tipo specifico e traduzione funzione [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -51,9 +53,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
 -   Mancate corrispondenze in SQL Server:  
   
-    -   **I tipi di carattere a lunghezza fissa**. Transact-SQL viene fatta distinzione tra categorie Unicode e non Unicode e include tre tipi distinti in ogni categoria: lunghezza fissa `nchar` / `char`, di lunghezza variabile `nvarchar` / `varchar`, e con una dimensione maggiore `ntext` / `text`. I tipi di carattere a lunghezza fissa possono essere mappati al tipo <xref:System.Char?displayProperty=nameWithType> CLR per il recupero di caratteri, ma in realtà non corrispondono esattamente allo stesso tipo sia in termini di conversione che di comportamento.  
+    -   **Tipi di carattere a lunghezza fissa**. Transact-SQL viene fatta distinzione tra categorie Unicode e non Unicode e include tre tipi distinti in ogni categoria: lunghezza fissa `nchar` / `char`, di lunghezza variabile `nvarchar` / `varchar`, e con una dimensione maggiore `ntext` / `text`. I tipi di carattere a lunghezza fissa possono essere mappati al tipo <xref:System.Char?displayProperty=nameWithType> CLR per il recupero di caratteri, ma in realtà non corrispondono esattamente allo stesso tipo sia in termini di conversione che di comportamento.  
   
-    -   **Bit**. Anche se nel dominio `bit` è presente lo stesso numero di valori di `Nullable<Boolean>`, i due tipi sono diversi. `Bit`accetta valori `1` e `0` anziché `true` / `false`e non può essere usato come equivalente delle espressioni booleane.  
+    -   **Bit**. Anche se nel dominio `bit` è presente lo stesso numero di valori di `Nullable<Boolean>`, i due tipi sono diversi. `Bit` accetta valori `1` e `0` anziché `true` / `false`e non può essere usato come equivalente delle espressioni booleane.  
   
     -   **Timestamp**. A differenza del tipo <xref:System.TimeSpan?displayProperty=nameWithType> CLR, il tipo `TIMESTAMP` SQL Server rappresenta un numero di 8 byte generato dal database, univoco per ogni aggiornamento e non basato sulla differenza tra valori <xref:System.DateTime>.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  Nel caso precedente è possibile ottenere un comportamento equivalente nella generazione di codice SQL, tuttavia la conversione potrebbe non riflettere esattamente l'intenzione.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]non impone c# `null` o [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. La semantica riflette la semantica SQL secondo quanto definito nelle impostazioni di connessione o del server. Due valori null sono considerati non uguali secondo le impostazioni di SQL Server predefinite, anche se è possibile modificare tali impostazioni per modificare la semantica. Indipendentemente da questa premessa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server nella conversione della query.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone c# `null` o Visual Basic `nothing` la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. La semantica riflette la semantica SQL secondo quanto definito nelle impostazioni di connessione o del server. Due valori null sono considerati non uguali secondo le impostazioni di SQL Server predefinite, anche se è possibile modificare tali impostazioni per modificare la semantica. Indipendentemente da questa premessa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server nella conversione della query.  
   
  Un confronto con il valore letterale `null` (`nothing`) viene convertito nella versione SQL appropriata (`is null` o `is not null`).  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Questo comportamento dell'operatore `Like` si applica solo a C#; la parola chiave `Like` di Visual Basic rimane invariata.  
   
--   L'overflow viene sempre controllato in SQL, ma deve essere specificato in modo esplicito in C# (non in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) per evitare wraparound. Date le colonne di valori integer C1, C2 e C3, se C1+C2 viene archiviato in C3 (aggiorna il set T C3 = C1 + C2).  
+-   Overflow viene sempre controllato in SQL che però deve essere specificato in modo esplicito nel linguaggio c# (non in Visual Basic) per evitare wraparound. Date le colonne di valori integer C1, C2 e C3, se C1+C2 viene archiviato in C3 (aggiorna il set T C3 = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   In SQL viene eseguito l'arrotondamento aritmetico simmetrico, mentre in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] viene usato un particolare tipo di arrotondamento. Per ulteriori dettagli, vedere l'articolo della Knowledge Base 196652.  
   
--   Per impostazione predefinita, in SQL non viene fatta distinzione tra maiuscole e minuscole nelle operazioni di confronto tra stringhe di caratteri per le impostazioni locali comuni. In Visual Basic e in C#, invece, viene fatta distinzione tra maiuscole e minuscole. Ad esempio, `s == "Food"` (`s = "Food"` in [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) e `s == "Food"` possono restituire risultati diversi se `s` è `food`.  
+-   Per impostazione predefinita, in SQL non viene fatta distinzione tra maiuscole e minuscole nelle operazioni di confronto tra stringhe di caratteri per le impostazioni locali comuni. In Visual Basic e in C#, invece, viene fatta distinzione tra maiuscole e minuscole. Ad esempio `s == "Food"` (`s = "Food"` in Visual Basic) e `s == "Food"` può restituire risultati diversi se `s` è `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

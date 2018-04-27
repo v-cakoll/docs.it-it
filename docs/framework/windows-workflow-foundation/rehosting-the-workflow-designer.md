@@ -1,28 +1,29 @@
 ---
-title: "Riallocazione dell'utilità di progettazione del flusso di lavoro"
-ms.custom: 
+title: Riallocazione dell'utilità di progettazione del flusso di lavoro
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba0308505f54b7c96259af5d797dd7c1957e6a92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a37c37aa34db8f04a354d3b6e323c414b4c0ee07
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rehosting-the-workflow-designer"></a>Riallocazione dell'utilità di progettazione del flusso di lavoro
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] può essere ospitato nuovamente in ambienti esterni a [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] per creare, modificare e monitorare i flussi di lavoro.  
   
- Il tipo <xref:System.Activities.Presentation.WorkflowDesigner> è un wrapper dell'area di disegno, della griglia delle proprietà e di altri elementi ed espone un modello di programmazione di base per gestire la maggior parte degli scenari di riallocazione della finestra di progettazione. L'hosting dell'oggetto <xref:System.Activities.Presentation.WorkflowDesigner> in un'applicazione [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] è uno scenario di riallocazione comune per [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].  
+ Il tipo <xref:System.Activities.Presentation.WorkflowDesigner> è un wrapper dell'area di disegno, della griglia delle proprietà e di altri elementi ed espone un modello di programmazione di base per gestire la maggior parte degli scenari di riallocazione della finestra di progettazione. Hosting di <xref:System.Activities.Presentation.WorkflowDesigner> applicazione all'interno di Windows Presentation Foundation (WPF) è uno scenario di riallocazione comune per [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Attività 1: Creare una nuova applicazione Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  

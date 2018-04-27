@@ -1,29 +1,30 @@
 ---
 title: Tipi di dati vari (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Tipi di dati vari (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornisce diversi tipi di dati che non sono orientati verso i numeri o caratteri. In alternativa, occuparsi di dati speciali, ad esempio Sì/no valori, valori data/ora e oggetto indirizzi.  
+Visual Basic fornisce diversi tipi di dati che non sono orientati verso i numeri o caratteri. In alternativa, occuparsi di dati speciali, ad esempio Sì/no valori, valori data/ora e oggetto indirizzi.  
   
- Per una tabella che mostra un confronto side-by-side del [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipi di dati, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Per una tabella che mostra un confronto side-by-side dei tipi di dati Visual Basic, vedere [tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="boolean-type"></a>Tipo booleano  
  Il [tipo di dati Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) è un valore senza segno viene interpretato come `True` o `False`. La larghezza dei dati dipende dalla piattaforma di implementazione. Se una variabile può contenere solo valori di due stati, ad esempio true/false, sì/no o on/off, dichiararla come `Boolean`.  

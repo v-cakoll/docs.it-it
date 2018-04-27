@@ -1,12 +1,13 @@
 ---
 title: Provider di flusso (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e la serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -61,7 +63,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
  È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]un servizio dati che utilizza il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere il post [serie Provider di flusso di dati Services: implementazione di un Provider di flusso (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Per un esempio di un servizio dati che utilizza il [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provider ed espone una risorsa multimediale, vedere il post [serie Provider di flusso di dati Services: implementazione di un Provider di flusso (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Provider di reflection**  
  Per indicare che un'entità è un elemento entry di collegamento multimediale, aggiungere <xref:System.Data.Services.Common.HasStreamAttribute> alla classe che definisce il tipo di entità nel provider di reflection.  
@@ -122,7 +124,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
     -   Nel modello di dati non devono essere incluse le proprietà binarie che sono risorse multimediali. Tutte le proprietà esposte in un modello di dati vengono restituite nell'elemento entry di un feed di risposta.  
   
-    -   Per migliorare le prestazioni con flussi binari di grandi dimensioni, è consigliabile creare una classe del flusso personalizzata per archiviare i dati binari nel database. Questa classe viene restituita dall'implementazione di <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e invia i dati binari al database in blocchi. Per un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database, è consigliabile utilizzare un flusso di dati FILESTREAM nel database quando i dati binari sono maggiori di 1 MB.  
+    -   Per migliorare le prestazioni con flussi binari di grandi dimensioni, è consigliabile creare una classe del flusso personalizzata per archiviare i dati binari nel database. Questa classe viene restituita dall'implementazione di <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> e invia i dati binari al database in blocchi. Per un database di SQL Server, è consigliabile usare una classe FILESTREAM per trasmettere dati nel database quando i dati binari sono maggiori di 1MB.  
   
     -   Assicurarsi che il database sia stato progettato per archiviare flussi binari di grandi dimensioni che devono essere ricevuti dal servizio dati.  
   

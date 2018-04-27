@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Uso di Strumentazione gestione Windows (WMI) per la diagnostica
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="enabling-wmi"></a>Abilitazione di WMI  
- WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]il SDK di WMI, vedere [Strumentazione gestione Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  
+ WMI è l'implementazione Microsoft dello standard WBEM (Web-Based Enterprise Management). [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] il SDK di WMI, vedere [Strumentazione gestione Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM è uno standard industriale che definisce la modalità in cui le applicazioni espongono la strumentazione della gestione a strumenti di gestione esterni.  
   
  Un provider WMI è un componente che espone la strumentazione in fase di esecuzione attraverso un'interfaccia compatibile con WBEM. È costituito da un set di oggetti WMI che hanno coppie di valore/attributo. Le coppie possono essere costituite da un numero qualsiasi di tipi semplici. Gli strumenti di gestione sono in grado di connettersi ai servizi attraverso l'interfaccia in fase di esecuzione. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] espone attributi di servizi quali indirizzi, associazioni, comportamenti e listener.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  Questa voce di configurazione espone un'interfaccia WMI. Le applicazioni di gestione possono ora connettersi usando questa interfaccia e accedere la strumentazione di gestione dell'applicazione.  
   
 ## <a name="accessing-wmi-data"></a>Accesso ai dati WMI  
- L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce API WMI per script, applicazioni [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)], applicazioni C++ e [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Per ulteriori informazioni, vedere [mediante WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ L'accesso ai dati WMI può essere eseguito in molti modi diversi. Microsoft fornisce le API di WMI per gli script, le applicazioni Visual Basic, applicazioni C++ e [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Per ulteriori informazioni, vedere [mediante WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Se si usano i metodi forniti da .NET Framework per accedere ai dati WMI a livello di programmazione, tenere presente che questi metodi possono generare eccezioni nel momento in cui viene stabilita la connessione. La connessione non viene stabilita durante la costruzione dell'istanza <xref:System.Management.ManagementObject>, ma alla prima richiesta che comporta uno scambio di dati effettivo. Per intercettare le possibili eccezioni è pertanto necessario usare un blocco `try..catch`.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  La proprietà `OutgoingChannel` dell'istanza `Service` non conta i canali aperti da un servizio per la connessione a un altro servizio se il client [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nel servizio di destinazione non viene creato all'interno del metodo `Service`.  
   
- **Attenzione** WMI supporta solo un <xref:System.TimeSpan> valore fino a 3 cifre decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
+ **Attenzione** WMI supporta soltanto un <xref:System.TimeSpan> valore fino a 3 cifre decimali. Ad esempio, se il servizio imposta una delle proprietà su <xref:System.TimeSpan.MaxValue>, quando viene visualizzato in WMI il valore viene troncato dopo 3 cifre decimali.  
   
 ## <a name="security"></a>Sicurezza  
  Poiché il provider WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] consente la rilevazione di servizi in un ambiente, nel concedere l'accesso all'ambiente è necessario prestare particolare attenzione. Se si consentono deroghe all'accesso al solo amministratore (impostazione predefinita), è possibile che l'accesso a dati sensibili presenti nell'ambiente sia consentito anche a utenti meno attendibili. In particolare, se le autorizzazioni all'accesso WMI remoto vengono concesse indistintamente, possono verificarsi attacchi flood. Se un processo viene sovraccaricato da un numero eccessivo di richieste WMI, è possibile che si verifichi una riduzione delle prestazioni.  
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- In questo modo, è possibile ottenere il SID dell'utente corrente, ma non è possibile usare tale metodo per ottenere il SID per utenti arbitrari. Un altro metodo per ottenere il SID consiste nell'utilizzare il [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) dello strumento di [strumenti di Windows 2000 Resource Kit per attività amministrative](http://go.microsoft.com/fwlink/?LinkId=178660). Questo strumento confronta il SID di due utenti (locale o di dominio) e, come conseguenza secondaria, stampa i due SID nella riga di comando. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][SID noto](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ In questo modo, è possibile ottenere il SID dell'utente corrente, ma non è possibile usare tale metodo per ottenere il SID per utenti arbitrari. Un altro metodo per ottenere il SID consiste nell'utilizzare il [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) dello strumento di [strumenti di Windows 2000 Resource Kit per attività amministrative](http://go.microsoft.com/fwlink/?LinkId=178660). Questo strumento confronta il SID di due utenti (locale o di dominio) e, come conseguenza secondaria, stampa i due SID nella riga di comando. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [SID noto](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Accesso a istanze di oggetti WMI remote  
  Per accedere a istanze WMI di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in un computer remoto, è necessario abilitare la riservatezza pacchetto negli strumenti usati per l'accesso. Nella sezione seguente viene descritta la procedura per accedere a istanze WMI usando WMI CIM Studio, Tester di Strumentazione gestione Windows e .NET SDK 2.0.  
@@ -170,7 +170,7 @@ Whoami /user
   
  **Strumenti Files\WMI %windir%\Programmi\File\\**  
   
-1.  Nel **Connetti allo spazio dei nomi:** finestra **root\ServiceModel** e fare clic su **OK.**  
+1.  Nel **Connetti allo spazio dei nomi:** finestra, digitare **root\ServiceModel** e fare clic su **OK.**  
   
 2.  Nel **WMI CIM Studio Login** finestra, fare clic su di **Opzioni >>** pulsante per espandere la finestra. Selezionare **riservatezza pacchetto** per **livello di autenticazione**, fare clic su **OK**.  
   

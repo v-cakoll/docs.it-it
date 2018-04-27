@@ -1,24 +1,26 @@
 ---
 title: Generazione degli esempi Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Generazione degli esempi Windows Communication Foundation
 Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere compilati utilizzando Visual Studio 2010 o tramite il **msbuild** comando dalla riga di comando. Entrambe le procedure sono descritte in questo argomento.  
@@ -39,7 +41,7 @@ Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere
   
 1.  Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 o Windows Server 2008 R2 e si esegue [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], è necessario eseguire [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] con privilegi elevati. A tale scopo, fare doppio clic sull'icona del menu Start e quindi fare clic su **Esegui come amministratore**.  
   
-2.  Dal **File** menu [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], fare clic su **aprire**, quindi fare clic su **progetto/soluzione**. Passare alla sottodirectory specifica del linguaggio della directory in cui si è installato l'esempio e fare doppio clic sull'icona del file con estensione sln per aprire la soluzione in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+2.  Dal **File** menu di Visual Studio, fare clic su **Apri**, quindi fare clic su **progetto/soluzione**. Passare alla sottodirectory specifica del linguaggio della directory in cui si è installato l'esempio e fare doppio clic sull'icona del file con estensione sln per aprire la soluzione in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
 3.  Nel **compilare** dal menu **Ricompila soluzione**. I file di programma client vengono compilati in client\bin, mentre i file del programma del servizio vengono compilati in service\bin. Se il servizio viene ospitato su IIS, i file del programma del servizio vengono inoltre copiati nella directory servicemodelsamples e nella sottodirectory \bin.  
   
@@ -50,10 +52,10 @@ Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere
  I file batch Setup.exe e Cleanup.exe e gli script devono essere eseguiti da un prompt dei comandi di Visual Studio. Diversi file di installazione e pulizia eseguono attività che richiedono privilegi amministrativi e devono essere avviati con privilegi di questo tipo.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Importanti informazioni di sicurezza sugli endpoint dei metadati  
- Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto. Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pubblicazione dei metadati del servizio, vedere il [il comportamento di pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) esempio. Vedere il [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio per un esempio di protezione di un endpoint di metadati.  
+ Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Per rendere più semplice la sperimentazione con gli esempi, quasi tutti gli esempi espongono un endpoint di pubblicazione dei metadati non protetto. Tali endpoint sono potenzialmente disponibili per utenti anonimi non autenticati e bisogna fare attenzione prima di distribuirli per garantire che la pubblicazione dei metadati di un servizio sia appropriata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] pubblicazione dei metadati del servizio, vedere la [comportamento della pubblicazione dei metadati](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) esempio. Vedere il [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio per un esempio di protezione di un endpoint di metadati.  
   
 ## <a name="exception-handling"></a>Gestione delle eccezioni  
- In genere questi esempi non includono la gestione delle eccezioni per focalizzare il codice sull'argomento dell'esempio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gestione delle eccezioni, vedere il [previsto eccezioni](../../../../docs/framework/wcf/samples/expected-exceptions.md) esempio.  
+ In genere questi esempi non includono la gestione delle eccezioni per focalizzare il codice sull'argomento dell'esempio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gestione delle eccezioni, vedere la [eccezioni previsto](../../../../docs/framework/wcf/samples/expected-exceptions.md) esempio.  
   
 ## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Rigenerazione client e configurazione con Svcutil  
  È possibile utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rigenerare il codice client e la configurazione per la maggior parte degli esempi. Alcuni esempi richiedono una configurazione manuale. Ad esempio, se si utilizza Svcutil.exe per rigenerare la configurazione per un esempio che utilizza credenziali del certificato client, si devono specificare manualmente le credenziali precedentemente configurate. Alcuni esempi utilizzano opzioni Svcutil.exe specifiche per influire sul codice generato, queste opzioni sono specificate in argomenti di esempio appositi.  
@@ -74,7 +76,7 @@ Il [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] esempi possono essere
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Sostituire http://localhost:8000/ServiceModelSamples/service .svc/mex con l'indirizzo dell'endpoint mex del servizio indipendente.  
+     Sostituire http://localhost:8000/ServiceModelSamples/service.svc/mex con l'indirizzo dell'endpoint mex del servizio indipendente.  
   
      Per generare il client in un tipo Visual Basic, utilizzare il comando seguente.  
   

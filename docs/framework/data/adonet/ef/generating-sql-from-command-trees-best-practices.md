@@ -1,24 +1,26 @@
 ---
 title: Procedure consigliate per la generazione di SQL dagli alberi dei comandi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Procedure consigliate per la generazione di SQL dagli alberi dei comandi
 Gli alberi dei comandi di query di output sono molto simili alle query esprimibili in SQL. Per generare SQL da un albero dei comandi di output, tuttavia i writer del provider devono affrontare alcune difficoltà comuni. In questo argomento vengono illustrate tali difficoltà, mentre nell'argomento successivo il provider di esempio mostra come risolverle.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  È possibile riutilizzare le espressioni nella struttura ad albero dei comandi di query passata da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Non presupporre che ogni espressione sia visualizzata solo una volta nella struttura ad albero dei comandi di query.  
   
 ## <a name="mapping-primitive-types"></a>Mapping di tipi primitivi  
- Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Evitare inoltre di eseguire il mapping a tipi che non possono essere usati per molte operazioni, come i tipi BLOB (ad esempio, `ntext` in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Quando si esegue il mapping di tipi concettuali (EDM) ai tipi di provider, è necessario eseguire il mapping al tipo più ampio (Int32), in modo che sia possibile adattare tutti i valori possibili. Inoltre, evitare di mapping a tipi che non può essere usato per molte operazioni, come i tipi BLOB (ad esempio, `ntext` in SQL Server).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generazione SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

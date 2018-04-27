@@ -1,11 +1,12 @@
 ---
 title: Risoluzione dei problemi relativi alle routine (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Risoluzione dei problemi relativi alle routine (Visual Basic)
 Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'utilizzo delle procedure.  
@@ -47,7 +48,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
   
  L'istruzione `allOnes(i) = 1` genera un errore del compilatore perché sembra chiamare `allOnes` con un argomento di tipo di dati errato (un singleton `Integer` anziché un `Integer` matrice). L'istruzione `Return allOnes()` genera un errore del compilatore perché sembra chiamare `allOnes` senza alcun argomento.  
   
- **Approccio corretto:** per essere in grado di modificare gli elementi di una matrice che deve essere restituito, definire una matrice interna come una variabile locale. Nell'esempio seguente viene compilata senza errori.  
+ **Approccio corretto:** per essere in grado di modificare gli elementi di una matrice che deve essere restituita, definire una matrice interna come una variabile locale. Nell'esempio seguente viene compilata senza errori.  
   
  [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
@@ -56,7 +57,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
   
 -   **Variabile sottostante**. Per consentire la procedura per sostituire il valore dell'elemento variabile sottostante, la procedura è necessario dichiarare il parametro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Inoltre, il codice chiamante non deve racchiudere l'argomento tra parentesi, perché che eseguirà l'override di `ByRef` meccanismo di passaggio.  
   
--   **Fare riferimento agli elementi di tipo**. Se si dichiara un parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la routine non è possibile modificare l'elemento variabile sottostante. Tuttavia, se l'argomento è un tipo riferimento, la procedura può modificare i membri dell'oggetto a cui fa riferimento, anche se Impossibile sostituire il valore della variabile. Ad esempio, se l'argomento è una variabile di matrice, la procedura non è possibile assegnare una nuova matrice a esso, ma è possibile modificare uno o più dei relativi elementi. Gli elementi modificati vengono riflesse nella variabile di matrice sottostante nel codice chiamante.  
+-   **Fare riferimento a elementi di tipo**. Se si dichiara un parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la routine non è possibile modificare l'elemento variabile sottostante. Tuttavia, se l'argomento è un tipo riferimento, la procedura può modificare i membri dell'oggetto a cui fa riferimento, anche se Impossibile sostituire il valore della variabile. Ad esempio, se l'argomento è una variabile di matrice, la procedura non è possibile assegnare una nuova matrice a esso, ma è possibile modificare uno o più dei relativi elementi. Gli elementi modificati vengono riflesse nella variabile di matrice sottostante nel codice chiamante.  
   
  L'esempio seguente definisce due procedure che accettano una variabile di matrice per valore e operano sui relativi elementi. Procedura `increase` aggiunge semplicemente uno per ogni elemento. Procedura `replace` assegna una nuova matrice al parametro `a()` , quindi aggiunge uno per ogni elemento. Tuttavia, la riassegnazione non influiscono sulla variabile di matrice sottostante nel codice chiamante perché `a()` è dichiarato `ByVal`.  
   
@@ -72,7 +73,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
   
  Il secondo `MsgBox` chiamata viene visualizzato "dopo Replace (n): 11, 21, 31, 41". Poiché `n` viene passato `ByVal`, `replace` non è possibile modificare la variabile `n` assegnando una nuova matrice. Quando `replace` crea una nuova istanza di matrice `k` e assegnarlo alla variabile locale `a`, perde il riferimento a `n` passato al codice chiamante. Quando incrementa i membri di `a`, solo la matrice locale `k` è interessato.  
   
- **Approccio corretto:** per essere in grado di modificare un elemento variabile sottostante, passato per riferimento. Nell'esempio seguente mostra la modifica nella dichiarazione di `replace` che consente di sostituire una matrice con un altro nel codice chiamante.  
+ **Approccio corretto:** per essere in grado di modificare un elemento variabile sottostante, passarlo come riferimento. Nell'esempio seguente mostra la modifica nella dichiarazione di `replace` che consente di sostituire una matrice con un altro nel codice chiamante.  
   
  [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
@@ -83,11 +84,11 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
   
  I seguenti elementi, anche se si riferiscono all'elenco di parametri, non sono componenti di firma di una routine:  
   
--   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e`Static`  
+-   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
   
 -   Nomi dei parametri  
   
--   Parole chiave di modificatori di parametro, ad esempio `ByRef` e`Optional`  
+-   Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
   
 -   Il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
   
@@ -99,7 +100,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
  Se si esegue l'overload di una routine con una o più [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) parametri o un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro, è necessario evitare la duplicazione del *overload impliciti*. Per informazioni, vedere [considerazioni sull'overload procedure](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>La chiamata a una versione errata di una routine di overload  
- Se una procedura dispone di diverse versioni di overload, è necessario avere familiarità con tutti i relativi elenchi di parametri e comprendere come [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] risolve le chiamate tra gli overload. In caso contrario è possibile chiamare un overload diverso da quello previsto.  
+ Se una stored procedure dispone di diverse versioni di overload, si deve avere familiarità con tutti i relativi elenchi di parametri e comprendere la modalità di risoluzione delle chiamate tra gli overload di Visual Basic. In caso contrario è possibile chiamare un overload diverso da quello previsto.  
   
  Dopo aver stabilito quale eseguire l'overload che si desidera chiamare, assicurarsi di osservare le seguenti regole:  
   
@@ -124,7 +125,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi durante l'ut
   
  Nella seconda chiamata, il compilatore non è possibile eliminare uno degli overload sulla base di restrizione. Viene eliminato il terzo overload per lo stesso motivo della prima chiamata, poiché è possibile chiamare il secondo overload con un ampliamento minore dei tipi di argomento. Tuttavia, il compilatore non è possibile risolvere tra il primo e secondo overload. Ognuno presenta un tipo di parametro definito che viene ampliato al tipo corrispondente in altro (`Byte` a `Short`, ma `Single` a `Double`). Pertanto, il compilatore genera un errore di risoluzione dell'overload.  
   
- **Approccio corretto:** per essere in grado di chiamare una routine di overload senza ambiguità, utilizzare [funzione CType](../../../../visual-basic/language-reference/functions/ctype-function.md) in modo che corrisponda ai tipi di dati di argomenti per i tipi di parametro. Nell'esempio seguente viene illustrata una chiamata a `z` che forza la risoluzione per il secondo overload.  
+ **Approccio corretto:** per essere in grado di chiamare una routine di overload senza ambiguità, utilizzare [CType (funzione)](../../../../visual-basic/language-reference/functions/ctype-function.md) in modo che corrisponda ai tipi di dati di argomenti per i tipi di parametro. Nell'esempio seguente viene illustrata una chiamata a `z` che forza la risoluzione per il secondo overload.  
   
  [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   

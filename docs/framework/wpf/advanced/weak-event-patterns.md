@@ -1,34 +1,36 @@
 ---
 title: Modelli di eventi deboli
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
-Nelle applicazioni, è possibile che i gestori associati alle origini eventi verranno eliminati, in coordinamento con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicata per eventi specifici e implementando un'interfaccia nei listener di tale evento. Questo modello di progettazione è noto come il *modello di eventi deboli*.  
+Nelle applicazioni, è possibile che i gestori associati alle origini eventi verranno eliminati, in coordinamento con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, è necessario specificarne una classe di gestione dedicato per particolari eventi implementando un'interfaccia nei listener per quell'evento. Questo modello di progettazione è noto come il *modello di eventi deboli*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>Per implementare il modello di eventi deboli?  
- Ascolto di eventi può causare perdite di memoria. La tecnica standard per l'ascolto di un evento consiste nell'utilizzare la sintassi specifica del linguaggio che associa un gestore a un evento su un'origine. Ad esempio, in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], che la sintassi è: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ Ascolto di eventi può causare perdite di memoria. La tecnica standard per l'ascolto di un evento consiste nell'utilizzare la sintassi specifica del linguaggio che associa un gestore a un evento su un'origine. In c#, ad esempio, la sintassi è: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Questa tecnica consente di creare un riferimento forte dall'origine evento per il listener di eventi. Associare un gestore eventi per un listener causa in genere, il listener per la durata che è influenzata dalla durata dell'oggetto di origine (a meno che il gestore dell'evento è stato rimosso in modo esplicito). Ma in determinate circostanze, è possibile la durata dell'oggetto del listener sia controllata da altri fattori, ad esempio, se attualmente a cui appartiene la struttura ad albero visuale dell'applicazione e non dalla durata dell'origine. Ogni volta che la durata dell'oggetto di origine si estende oltre la durata dell'oggetto del listener, lo schema di eventi normali comporta una perdita di memoria: il listener viene mantenuto attivo più a lungo del previsto.  
   

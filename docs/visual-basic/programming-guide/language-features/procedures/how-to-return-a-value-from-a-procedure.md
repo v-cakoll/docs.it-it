@@ -1,25 +1,26 @@
 ---
 title: 'Procedura: restituire un valore da una routine (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce7aa0942be413986cb010963753447ea18cdf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: affcb25951a6647604286bc91dcaec8898fe2e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedura: restituire un valore da una routine (Visual Basic)
 Oggetto `Function` routine restituisce un valore al codice chiamante tramite l'esecuzione di un `Return` istruzione o l'individuazione un `Exit Function` o `End Function` istruzione.  
@@ -44,7 +45,7 @@ Oggetto `Function` routine restituisce un valore al codice chiamante tramite l'e
   
 1.  In almeno un punto di `Function` procedure, assegnare un valore al nome della stored procedure.  
   
-2.  Quando si esegue un `Exit Function` o `End Function` istruzione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] restituisce l'ultimo valore assegnato al nome della stored procedure.  
+2.  Quando si esegue un' `Exit Function` o `End Function` istruzione, Visual Basic restituisce l'ultimo valore assegnato al nome della stored procedure.  
   
 3.  Una routine può includere più di un'istruzione `Exit Function` ed è possibile combinare istruzioni `Return` e `Exit Function` nella stessa routine.  
   

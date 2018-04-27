@@ -1,11 +1,12 @@
 ---
-title: "Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic"
-ms.custom: 
+title: 'Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic
-Oggetto *proprietà predefinita* è una proprietà di classe o struttura che il codice può accedere senza specificarla. Quando la chiamata di codice i nomi di una classe o struttura ma non una proprietà e il contesto consente l'accesso a una proprietà, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene risolto l'accesso a tale classe o una proprietà predefinita della struttura, se disponibile.  
+Oggetto *proprietà predefinita* è una proprietà di classe o struttura che il codice può accedere senza specificarla. Quando si chiama codice nomi una classe o struttura ma non una proprietà e il contesto consente l'accesso a una proprietà, Visual Basic viene risolto l'accesso a tale classe o una proprietà predefinita della struttura, se disponibile.  
   
  Una classe o struttura può contenere al massimo una proprietà predefinita. Tuttavia, è possibile eseguire l'overload di una proprietà predefinita e più di una versione di esso.  
   

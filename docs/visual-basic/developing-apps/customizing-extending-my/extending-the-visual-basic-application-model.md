@@ -11,11 +11,11 @@ ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello di applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati, come l'applicazione viene avviato e arrestato.  
@@ -25,11 +25,11 @@ ms.lasthandoff: 11/21/2017
   
  La figura seguente illustra la sequenza di chiamate del modello di applicazione in una normale applicazione Windows Form di Visual Basic. La sequenza inizia quando il `Sub Main` chiamate di procedure di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metodo.  
   
- ![Modello di applicazione Visual Basic &#45; &#45; Eseguire](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Modello di applicazione Visual Basic &#45; &#45; eseguire](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Il modello di applicazione Visual Basic fornisce inoltre il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> eventi. Il grafico seguente viene illustrato il meccanismo per la generazione di questi eventi.  
   
- ![Modello di applicazione Visual Basic &#45; &#45; Successivamente istanza](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Modello di applicazione Visual Basic &#45; &#45; istanza accanto](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Eccezione non gestita del modello di applicazione Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Consente a una finestra di progettazione generare il codice che inizializza la schermata iniziale.  
   
-         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si seleziona una schermata per l'applicazione nel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Progettazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà per una nuova istanza della schermata iniziale modulo.  
+         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si seleziona una schermata per l'applicazione in Visual Basic **Progettazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che consente di impostare il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà in una nuova istanza del form schermata .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornisce un punto di estendibilità per la generazione di `Startup` evento. La sequenza di avvio dell'applicazione viene interrotta se questa funzione restituisce `False`.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fornisce un modo per una finestra di progettazione generare il codice che inizializza il form principale.  
   
-         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Tuttavia, quando si seleziona un modulo principale per l'applicazione nel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Progettazione progetti**, sostituisce la finestra di progettazione di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà in una nuova istanza del form principale .  
+         Per impostazione predefinita, questo metodo non esegue alcuna operazione. Tuttavia, quando si seleziona un modulo principale per l'applicazione in Visual Basic **Progettazione progetti**, la finestra di progettazione esegue l'override il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodo con un metodo che consente di impostare il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> proprietà in una nuova istanza del form principale.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Se l'applicazione dispone di una schermata iniziale e è aperto, questo metodo chiude la schermata iniziale.  
   
@@ -85,15 +85,15 @@ ms.lasthandoff: 11/21/2017
  Il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> chiamate al costruttore il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà per determinare quali motore di rendering del testo da utilizzare per i form dell'applicazione. Per impostazione predefinita, il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> restituisce proprietà `False`, che indica che il motore di rendering del testo GDI utilizzabile, ovvero l'impostazione predefinita in [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. È possibile eseguire l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> proprietà da restituire `True`, che indica che verrà utilizzato il motore di rendering di testo GDI+, ovvero l'impostazione predefinita in Visual Basic .NET 2002 e Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configurazione dell'applicazione  
- Come parte di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modello di applicazione, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornisce proprietà protette per configurare l'applicazione. Queste proprietà devono essere impostate nel costruttore della classe di implementazione.  
+ Come parte del modello di applicazione Visual Basic il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fornisce proprietà protette che consentono di configurare l'applicazione. Queste proprietà devono essere impostate nel costruttore della classe di implementazione.  
   
  In un progetto Windows Form predefinito, il **progettazione** consente di creare codice per impostare le proprietà con le impostazioni della finestra di progettazione. Le proprietà vengono utilizzate solo durante l'avvio dell'applicazione; impostarle dopo l'avvio dell'applicazione non ha alcun effetto.  
   
 |Proprietà|Determina|L'impostazione nel riquadro applicazione di creazione progetti|  
 |---|---|---|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Se l'applicazione viene eseguito come applicazione a istanza singola o a più istanze.|**Rendi a istanza singola** casella di controllo|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.IsSingleInstance%2A>|Se l'applicazione viene eseguito come applicazione a istanza singola o a più istanze.|**Rendere l'applicazione a istanza singola** casella di controllo|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.EnableVisualStyles%2A>|Se l'applicazione utilizzerà gli stili di visualizzazione che corrispondono a Windows XP.|**Abilitare gli stili visivi XP** casella di controllo|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se l'applicazione salva automaticamente le modifiche delle impostazioni utente dell'applicazione alla chiusura dell'applicazione.|**Salva My. Settings al momento della chiusura** casella di controllo|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Se l'applicazione salva automaticamente le modifiche delle impostazioni utente dell'applicazione alla chiusura dell'applicazione.|**Salva My. Settings all'arresto** casella di controllo|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Cosa provoca l'interruzione, ad esempio quando si chiude il form di avvio o chiusura dell'ultimo form dell'applicazione.|**Modalità di arresto** elenco|  
   
 ## <a name="see-also"></a>Vedere anche  

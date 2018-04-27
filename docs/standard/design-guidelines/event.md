@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-design"></a>Progettazione di eventi
 Gli eventi sono la forma più diffuse di callback (costrutti che consentono il framework per effettuare chiamate nel codice utente). Altri meccanismi di callback che includono membri accettando delegati, i membri virtuali e basata sull'interfaccia plug-in. Dati da studi di usabilità indicano che la maggior parte degli sviluppatori hanno maggiore familiarità con gli eventi che utilizzano altri meccanismi di callback. Gli eventi sono perfettamente integrati con Visual Studio e molti linguaggi.  
@@ -38,17 +38,17 @@ Gli eventi sono la forma più diffuse di callback (costrutti che consentono il f
   
  **✓ SI** utilizzare <xref:System.EventHandler%601?displayProperty=nameWithType> anziché creare manualmente nuovi delegati da utilizzare come gestori eventi.  
   
- **✓ Provare a** utilizza una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si è assolutamente certi l'evento non sarà mai necessario eseguire tutti i dati per il metodo gestione eventi, nel qual caso è possibile utilizzare il `EventArgs` digitare direttamente.  
+ **✓ CONSIDERARE** utilizzando una sottoclasse di <xref:System.EventArgs> come argomento dell'evento, a meno che non si è assolutamente certi l'evento non sarà mai necessario eseguire tutti i dati per il metodo gestione eventi, nel qual caso è possibile utilizzare il `EventArgs` digitare direttamente.  
   
  Se si fornisce un'API tramite `EventArgs` direttamente, non sarà in grado di aggiungere tutti i dati da eseguire con l'evento senza interrompere la compatibilità. Se si utilizza una sottoclasse, anche se inizialmente completamente vuote, sarà possibile aggiungere proprietà alla sottoclasse quando necessario.  
   
- **✓ SI** utilizzare un metodo virtuale protetto per generare ciascun evento. Questa opzione è disponibile solo per eventi non statici su classi non sealed, non per le strutture, le classi sealed o eventi statici.  
+ **✓ SI** utilizzare un metodo virtuale protetto per la generazione di ogni evento. Questa opzione è disponibile solo per eventi non statici su classi non sealed, non per le strutture, le classi sealed o eventi statici.  
   
  Lo scopo del metodo è fornire un modo per una classe derivata per gestire l'evento utilizzando una sostituzione. Si esegue l'override è un modo più flessibile, più veloce e più semplice gestire gli eventi di classe di base nelle classi derivate. Per convenzione, il nome del metodo deve iniziare con "On" e con il nome dell'evento.  
   
  La classe derivata è possibile scegliere di non chiamare l'implementazione di base del metodo nel relativo override. Preparare per questo oggetto, non includendo qualsiasi elaborazione nel metodo che è necessario per la classe base funzionare correttamente.  
   
- **✓ SI** accettare un parametro al metodo protetto che genera un evento.  
+ **✓ SI** deve accettare un parametro al metodo protetto che genera un evento.  
   
  Il parametro deve essere denominato `e` e deve essere digitato come la classe di argomenti dell'evento.  
   
@@ -60,7 +60,7 @@ Gli eventi sono la forma più diffuse di callback (costrutti che consentono il f
   
  È necessario passare `EventArgs.Empty` se non si desidera passare tutti i dati per il metodo di gestione dell'evento. È previsto che questo parametro non deve essere null.  
   
- **Provare a ✓** la generazione di eventi che è possibile annullare l'utente finale. Questo vale solo per gli eventi precedenti.  
+ **✓ Provare a** generazione di eventi a cui l'utente finale può essere annullato. Questo vale solo per gli eventi precedenti.  
   
  Utilizzare <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o la relativa sottoclasse come argomento dell'evento per consentire all'utente di annullare gli eventi.  
   
@@ -71,15 +71,15 @@ Gli eventi sono la forma più diffuse di callback (costrutti che consentono il f
   
  Un gestore eventi è possibile richiamare metodi, anche su più oggetti di gestione di più eventi. Se i metodi di gestione degli eventi sono stati consentiti per restituire un valore, non vi sarà più valori restituiti per ogni chiamata a un evento.  
   
- **✓ SI** utilizzare `object` come il tipo del primo parametro del gestore eventi e lo chiama `sender`.  
+ **✓ SI** usare `object` come tipo del primo parametro del gestore dell'evento e chiamarlo `sender`.  
   
- **✓ SI** utilizzare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come il tipo del secondo parametro del gestore eventi e lo chiama `e`.  
+ **✓ SI** usare <xref:System.EventArgs?displayProperty=nameWithType> o la relativa sottoclasse come il tipo del secondo parametro del gestore dell'evento e chiamarlo `e`.  
   
  **X non** avere più di due parametri sui gestori eventi.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida di progettazione dei membri](../../../docs/standard/design-guidelines/member.md)  

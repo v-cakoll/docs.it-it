@@ -1,32 +1,33 @@
 ---
 title: Riferimenti a elementi dichiarati (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Riferimenti a elementi dichiarati (Visual Basic)
-Quando il codice fa riferimento a un elemento dichiarato, il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore corrisponde al nome nel riferimento alla dichiarazione appropriata di tale nome. Se più di un elemento viene dichiarato con lo stesso nome, è possibile controllare quale di questi elementi viene riferimento *qualificazione* il relativo nome.  
+Quando il codice fa riferimento a un elemento dichiarato, il compilatore Visual Basic corrisponde al nome nel riferimento alla dichiarazione appropriata di tale nome. Se più di un elemento viene dichiarato con lo stesso nome, è possibile controllare quale di questi elementi viene riferimento *qualificazione* il relativo nome.  
   
  Il compilatore tenta di ottenere un riferimento al nome di una dichiarazione del nome di *ambito più ristretto*. Ciò significa inizia con il codice di riferimento e procede verso l'esterno tra i livelli successivi di contenente gli elementi.  
   
- L'esempio seguente mostra i riferimenti a due variabili con lo stesso nome. Nell'esempio vengono dichiarate due variabili, ogni denominata `totalCount`, con diversi livelli di ambito nel modulo `container`. Quando la procedura `showCount` Visualizza `totalCount` senza qualifica il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore risolve il riferimento alla dichiarazione con l'ambito più ristretto, ovvero la dichiarazione locale all'interno di `showCount`. Quando è qualificato `totalCount` con il modulo contenente `container`, il compilatore risolve il riferimento alla dichiarazione con ambito più ampio.  
+ L'esempio seguente mostra i riferimenti a due variabili con lo stesso nome. Nell'esempio vengono dichiarate due variabili, ogni denominata `totalCount`, con diversi livelli di ambito nel modulo `container`. Quando la procedura `showCount` consente di visualizzare `totalCount` senza qualifica, il compilatore Visual Basic risolve il riferimento alla dichiarazione con ambito più ristretto, ovvero la dichiarazione locale all'interno di `showCount`. Quando è qualificato `totalCount` con il modulo contenente `container`, il compilatore risolve il riferimento alla dichiarazione con ambito più ampio.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  Per evitare ambiguità dei nomi, è possibile assegnare tutti gli elementi di nomi univoci. È possibile quindi creare riferimento a qualsiasi elemento senza dover qualificare il nome con un spazio dei nomi, modulo o classe. È anche possibile ridurre le probabilità di errore che fa riferimento a un elemento non corretto.  
   
 ## <a name="shadowing"></a>Shadowing  
- Quando due elementi di programmazione condividono lo stesso nome, è possibile nascondere uno di essi, o *shadow*, l'altro. Un elemento nascosto non è disponibile per riferimento; Quando il codice utilizza invece il nome di elemento nascosto, il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore risolve tale nome nell'elemento di shadowing. Per una spiegazione più dettagliata con esempi, vedere [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Quando due elementi di programmazione condividono lo stesso nome, è possibile nascondere uno di essi, o *shadow*, l'altro. Un elemento nascosto non è disponibile per riferimento; al contrario, quando il codice utilizza il nome dell'elemento nascosto, il compilatore Visual Basic risolve nell'elemento di shadowing. Per una spiegazione più dettagliata con esempi, vedere [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

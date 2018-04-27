@@ -1,9 +1,10 @@
 ---
-title: 'Procedura: Localizzare un''applicazione'
+title: "Procedura: Localizzare un'applicazione"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Procedura: Localizzare un'applicazione
 Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
@@ -88,7 +90,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilare lo strumento LocBaml  
   
-1.  Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Scaricare il [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] i file dal [strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Scaricare i file c# dal [strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Eseguire il file di progetto (LocBaml.csproj) per compilare lo strumento dalla riga di comando:  
   
@@ -98,17 +100,17 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 4.  Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:  
   
-    -   **analizzare** o **-p:** analizza Baml, risorse, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] per generare un file con estensione csv o txt.  
+    -   **analizzare** oppure **-p** analizza Baml, risorse, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] file per generare un file con estensione csv o txt.  
   
-    -   **generare** o **-g** genera un file binario localizzato utilizzando un file convertito.  
+    -   **generare** oppure **-g** genera un file binario localizzato utilizzando un file convertito.  
   
-    -   **out** o **-o** {*directoryfile*] **:** nome file di Output.  
+    -   **out** oppure **-o** {*directoryfile*] **:** nome file di Output.  
   
-    -   **impostazioni cultura** o **- cul** {*delle impostazioni cultura*] **:** internazionali degli assembly di output.  
+    -   **impostazioni cultura** oppure **- cul** {*impostazioni cultura*] **:** delle impostazioni locali degli assembly di output.  
   
-    -   **conversione** o **- trans** {*Translation. csv*] **:** file tradotto o localizzato.  
+    -   **traduzione** oppure **- trans** {*Translation. csv*] **:** tradotto o file txt localizzato.  
   
-    -   **asmpath** o **- asmpath:** {*directoryfile*] **:** se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario specificare il  **asmpath** all'assembly del controllo personalizzato.  
+    -   **asmpath** oppure **- asmpath:** {*directoryfile*] **:** se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario fornire il  **asmpath** all'assembly di controllo personalizzato.  
   
     -   **nologo:** non visualizza loghi o informazioni sul copyright.  
   
@@ -195,7 +197,7 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
   
 7.  Per testare il nuovo assembly satellite, è necessario modificare le impostazioni cultura con cui verrà eseguita l'applicazione. Questa operazione può essere eseguita in due modi:  
   
-    -   Modificare le impostazioni internazionali del sistema operativo (**avviare** &#124; **Pannello di controllo** &#124; **Internazionali e della lingua**).  
+    -   Modificare le impostazioni internazionali del sistema operativo (**avviare** &#124; **Pannello di controllo** &#124; **internazionali e della lingua**).  
   
     -   Aggiungere il codice seguente al file App.xaml.cs nell'applicazione:  
   

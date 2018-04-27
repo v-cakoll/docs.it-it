@@ -1,11 +1,12 @@
 ---
 title: Considerazioni sull'overload di routine (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considerazioni sull'overload di routine (Visual Basic)
 Quando si esegue l'overload di una stored procedure, è necessario utilizzare un altro *firma* per ogni versione di overload. In genere significa che ogni versione è necessario specificare un elenco di parametri diversi. Per ulteriori informazioni, vedere "Firma diversa" in [overload di routine](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Quando si esegue l'overload di una stored procedure, è necessario utilizzare un
 ## <a name="alternatives-to-overloaded-versions"></a>Alternative per le versioni di overload  
  Talvolta è alternative alle versioni di overload, in particolare quando la presenza di argomenti è facoltativa o il relativo numero è variabile.  
   
- Tenere presente che gli argomenti facoltativi non sono necessariamente supportati da tutti i linguaggi, e matrici di parametri sono limitate a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Se si sta scrivendo una routine che possa essere chiamato dal codice scritto in una delle diverse lingue, la massima flessibilità offerta di versioni di overload.  
+ Tenere presente che gli argomenti facoltativi non sono necessariamente supportati da tutti i linguaggi e le matrici di parametri sono limitate a Visual Basic. Se si sta scrivendo una routine che possa essere chiamato dal codice scritto in una delle diverse lingue, la massima flessibilità offerta di versioni di overload.  
   
 ### <a name="overloads-and-optional-arguments"></a>Gli overload e gli argomenti facoltativi  
  Quando il codice chiamante può facoltativamente specificare o omettere uno o più argomenti, è possibile definire più versioni di overload o utilizzare parametri facoltativi.  
@@ -104,7 +105,7 @@ Quando si esegue l'overload di una stored procedure, è necessario utilizzare un
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Overload impliciti per un parametro ParamArray  
  Il compilatore considera una routine con un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro venga specificato un numero infinito di overload, che differiscono tra loro per ciò che il codice chiamante passa alla matrice di parametri, come indicato di seguito:  
   
--   Quando il codice chiamante non fornisce un argomento a un overload di`ParamArray`  
+-   Quando il codice chiamante non fornisce un argomento a un overload di `ParamArray`  
   
 -   Quando il codice chiamante fornisce una matrice unidimensionale di un overload di `ParamArray` tipo di elemento  
   

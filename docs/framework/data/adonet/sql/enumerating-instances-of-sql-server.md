@@ -1,36 +1,38 @@
 ---
 title: Enumerazione di istanze di SQL Server (ADO.NET)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7a47a3e342887a1dce3912a06ab49a88b7b9b615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerazione di istanze di SQL Server (ADO.NET)
-Con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] alle applicazioni è consentito trovare istanze di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco di riepilogo a discesa contenente tutti i server disponibili nella **connessione Proprietà** la finestra di dialogo. I risultati visualizzati non sono sempre completi.  
+SQL Server consente alle applicazioni di individuare le istanze di SQL Server all'interno della rete corrente. Mediante la classe <xref:System.Data.Sql.SqlDataSourceEnumerator> queste informazioni vengono esposte allo sviluppatore dell'applicazione che in tal modo dispone di una <xref:System.Data.DataTable> contenente dati relativi a tutti i server visibili. La tabella restituita contiene un elenco di istanze del server disponibile in rete che corrisponde all'elenco fornito quando un utente tenta di creare una nuova connessione ed espande l'elenco di riepilogo a discesa contenente tutti i server disponibili nella **connessione Proprietà** la finestra di dialogo. I risultati visualizzati non sono sempre completi.  
   
 > [!NOTE]
->  Come nel caso della maggior parte dei servizi Windows, è consigliabile eseguire il servizio Visualizzatore SQL con meno privilegi possibile. Per altre informazioni sul servizio Visualizzatore SQL e su come gestirne il comportamento, vedere la documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+>  Come nel caso della maggior parte dei servizi Windows, è consigliabile eseguire il servizio Visualizzatore SQL con meno privilegi possibile. Per ulteriori informazioni sul servizio Visualizzatore SQL e su come gestirne il comportamento, vedere la documentazione online di SQL Server.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Recupero di un'istanza di enumeratore  
- Per recuperare la tabella che contiene le informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] disponibili, è innanzitutto necessario recuperare un enumeratore usando la proprietà condivisa/statica <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A>:  
+ Per recuperare la tabella che contiene le informazioni sulle istanze di SQL Server disponibili, è innanzitutto necessario recuperare un enumeratore utilizzando la proprietà condivisa/statica <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A>:  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -59,20 +61,20 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nome del server.|  
 |**NomeIstanza**|Nome dell'istanza del server. Resta vuoto se il server è in esecuzione come istanza predefinita.|  
 |**IsClustered**|Indica se il server è parte di un cluster.|  
-|**Version**|Versione del server. Ad esempio:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Version**|Versione del server. Ad esempio:<br /><br /> -9.00. x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitazioni delle enumerazioni  
  È possibile elencare o non elencare tutti i server disponibili. L'elenco può variare in base a fattori come i timeout e il traffico di rete. Pertanto l'elenco può risultare diverso durante due chiamate consecutive. Verranno elencati solo i server nella stessa rete. Normalmente i pacchetti di broadcast non passeranno dai router. Per questo motivo è possibile che l'utente non visualizzi un server elencato, ma tale server resterà stabile durante le chiamate.  
   
- Per i server elencati potrebbero essere disponibili anche informazioni aggiuntive quali `IsClustered` e la versione, a seconda del metodo con cui si è ottenuto l'elenco. I server elencati tramite il servizio Visualizzatore di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] presenteranno maggiori dettagli rispetto a quelli rilevati tramite l'infrastruttura Windows, che consente di elencare solo i nomi.  
+ Per i server elencati potrebbero essere disponibili anche informazioni aggiuntive quali `IsClustered` e la versione, a seconda del metodo con cui si è ottenuto l'elenco. I server elencati tramite il servizio Visualizzatore di SQL Server presenteranno maggiori dettagli rispetto a quelli rilevati tramite l'infrastruttura Windows, che consente di elencare solo i nomi.  
   
 > [!NOTE]
 >  L'enumerazione di server è disponibile solo in caso di attendibilità totale. Gli assembly eseguiti in un ambiente di attendibilità parziale non saranno in grado di usare la funzionalità, anche se dispongono dell'autorizzazione CAS (Code Access Security, Sicurezza dall'accesso di codice) <xref:System.Data.SqlClient.SqlClientPermission>.  
   
- In [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], invece, vengono fornite informazioni per <xref:System.Data.Sql.SqlDataSourceEnumerator> tramite l'uso di un servizio Windows esterno denominato Visualizzatore SQL. Questo servizio è abilitato per impostazione predefinita, ma gli amministratori possono disattivarlo o disabilitarlo per rendere l'istanza del server invisibile a questa classe.  
+ SQL Server vengono fornite informazioni per il <xref:System.Data.Sql.SqlDataSourceEnumerator> tramite l'utilizzo di un servizio Windows esterno denominato Visualizzatore SQL. Questo servizio è abilitato per impostazione predefinita, ma gli amministratori possono disattivarlo o disabilitarlo per rendere l'istanza del server invisibile a questa classe.  
   
 ## <a name="example"></a>Esempio  
- L'applicazione console riportata di seguito consente di recuperare informazioni su tutte le istanze di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] visibili e di visualizzarle nella finestra della console.  
+ L'applicazione console riportata di seguito consente di recuperare informazioni su tutte le istanze di SQL Server visibili e di visualizzarle nella finestra della console.  
   
 ```vb  
 Imports System.Data.Sql  

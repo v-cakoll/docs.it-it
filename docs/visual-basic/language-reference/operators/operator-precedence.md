@@ -2,9 +2,10 @@
 title: Precedenza tra gli operatori in Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedenza tra gli operatori in Visual Basic
 Quando vengono eseguite operazioni diverse in un'espressione, ogni parte viene valutata e risolta in un ordine predeterminato definito *precedenza degli operatori*.  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  La prima espressione valuta la divisione 96 / 8 (che restituisce 12) e quindi la divisione 12 / 4, che restituisce 3. Poiché il compilatore valuta le operazioni per `n1` da sinistra a destra, la valutazione è lo stesso quando tale ordine è indicato in modo esplicito per `n2`. Entrambi `n1` e `n2` producono un risultato di tre. Al contrario, `n3` il risultato di 48, perché le parentesi forzano il compilatore può valutare 8 / 4 prima.  
   
- Questo comportamento, gli operatori sono definiti a *lasciato associativa* in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ A causa di questo comportamento, gli operatori vengono definiti da *lasciato associativa* in Visual Basic.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Si esegue l'override di precedenza e associatività  
- È possibile utilizzare parentesi per forzare alcune parti di un'espressione da valutare prima degli altri. Questo consente di ignorare l'ordine di precedenza sia l'associazione a sinistra. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]esegue sempre le operazioni che vengono racchiusi tra parentesi prima di quelli all'esterno. Tuttavia, all'interno delle parentesi, viene mantenuta la precedenza e associatività, a meno di utilizzare le parentesi all'interno delle parentesi. Questa condizione è illustrata nell'esempio seguente.  
+ È possibile utilizzare parentesi per forzare alcune parti di un'espressione da valutare prima degli altri. Questo consente di ignorare l'ordine di precedenza sia l'associazione a sinistra. Visual Basic esegue sempre le operazioni che sono racchiusi tra parentesi prima di quelli all'esterno. Tuttavia, all'interno delle parentesi, viene mantenuta la precedenza e associatività, a meno di utilizzare le parentesi all'interno delle parentesi. Questa condizione è illustrata nell'esempio seguente.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

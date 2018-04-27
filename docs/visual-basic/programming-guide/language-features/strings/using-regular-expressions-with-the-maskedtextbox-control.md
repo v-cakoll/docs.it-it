@@ -1,31 +1,32 @@
 ---
 title: Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic
 In questo esempio viene illustrato come convertire espressioni regolari semplice da utilizzare con il <xref:System.Windows.Forms.MaskedTextBox> controllo.  
   
 ## <a name="description-of-the-masking-language"></a>Descrizione del linguaggio per la  
- Lo standard <xref:System.Windows.Forms.MaskedTextBox> maschera linguaggio si basa su quello utilizzato per il `Masked Edit` controllo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 e dovrebbe essere noto agli utenti di eseguire la migrazione da questa piattaforma.  
+ Lo standard <xref:System.Windows.Forms.MaskedTextBox> maschera linguaggio si basa su quello utilizzato per il `Masked Edit` controllare in Visual Basic 6.0 e dovrebbe essere noto agli utenti la migrazione da tale piattaforma.  
   
  Il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà del <xref:System.Windows.Forms.MaskedTextBox> controllo specifica la maschera di input da utilizzare. La maschera deve essere una stringa composta da uno o più elementi di maschera dalla tabella seguente.  
   

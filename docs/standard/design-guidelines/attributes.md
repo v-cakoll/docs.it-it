@@ -19,14 +19,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 89e892a379c7540cf67488471ae5281a4c4b86f4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169586091f0e7e094e0231f9e247e8907371ec4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes"></a>Attributi
-<xref:System.Attribute?displayProperty=nameWithType>è una classe di base utilizzata per definire gli attributi personalizzati.  
+<xref:System.Attribute?displayProperty=nameWithType> una classe di base consente di definire attributi personalizzati.  
   
  Gli attributi sono le annotazioni possono essere aggiunti a elementi di programmazione, ad esempio assembly, tipi, membri e parametri. Essi vengono archiviate nei metadati dell'assembly e accessibile in fase di esecuzione usando l'API di reflection. Ad esempio, il Framework definisce il <xref:System.ObsoleteAttribute>, che può essere applicato a un tipo o un membro per indicare che il tipo o membro è stato deprecato.  
   
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/23/2017
   
  **✓ SI** denominare le classi di attributo personalizzato con il suffisso "Attributo".  
   
- **✓ SI** applicare il <xref:System.AttributeUsageAttribute> per gli attributi personalizzati.  
+ **✓ SI** applica il <xref:System.AttributeUsageAttribute> per gli attributi personalizzati.  
   
- **✓ SI** fornire proprietà impostabili per gli argomenti facoltativi.  
+ **✓ SI** forniscono le proprietà impostabili per gli argomenti facoltativi.  
   
  **✓ SI** forniscono proprietà solo get per gli argomenti obbligatori.  
   
@@ -54,11 +54,11 @@ ms.lasthandoff: 12/23/2017
   
  Presenza di un solo costruttore chiaramente comunica all'utente cui gli argomenti sono obbligatori e facoltativi.  
   
- **✓ SI** bloccare le classi di attributo personalizzato, se possibile. In questo modo la ricerca per l'attributo più velocemente.  
+ **✓ SI** proteggere le classi di attributo personalizzato, se possibile. In questo modo la ricerca per l'attributo più velocemente.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

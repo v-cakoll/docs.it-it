@@ -1,28 +1,28 @@
 ---
-title: "Configurazione delle funzionalità di traccia"
-ms.custom: 
+title: Configurazione delle funzionalità di traccia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -66,7 +66,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 ```  
   
 > [!NOTE]
->  Per modificare il file di configurazione di un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] progetto di servizio in [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], fare clic con il pulsante destro file di configurazione dell'applicazione, Web. config per applicazioni ospitate da Web o appname.exe applicazione self-hosted in  **Esplora soluzioni**. Scegliere quindi il **Modifica configurazione WCF** menu di scelta rapida. Verrà avviata la [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione per [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizi mediante un'interfaccia utente grafica.  
+>  Per modificare il file di configurazione di un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizio di progetto in Visual Studio, fare clic con il pulsante destro file di configurazione dell'applicazione, Web. config per applicazioni ospitate da Web o appname. exe per l'applicazione self-hosted in  **Esplora soluzioni**. Scegliere quindi il **Modifica configurazione WCF** menu di scelta rapida. Verrà avviata la [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), che consente di modificare le impostazioni di configurazione per [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizi mediante un'interfaccia utente grafica.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurazione delle origini di traccia per la generazione di tracce  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] definisce un'origine di traccia per ogni assembly. I listener definiti per tale origine accedono alle tracce generate all'interno di un assembly. Vengono definite le origini di traccia seguenti:  
@@ -146,7 +146,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Creazione definita dall'utente, le origini di traccia, vedere [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Creazione definita dall'utente origini di traccia, vedere [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurazione dei listener di traccia per l'utilizzo di tracce  
  In fase di esecuzione, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornisce dati di traccia ai listener che elaborano i dati. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornisce vari listener predefiniti per <xref:System.Diagnostics>, diversi a livello del formato utilizzato per l'output. È inoltre possibile aggiungere tipi di listener personalizzati.  
@@ -155,7 +155,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  È possibile configurare un listener di traccia personalizzato per l'invio di tracce in transito, ad esempio a un database remoto. I distributori di applicazioni devono applicare un apposito controllo di accesso nei log di traccia del computer remoto.  
   
- È inoltre possibile configurare un listener di traccia a livello di programmazione. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Procedura: creare e inizializzare listener di traccia](http://go.microsoft.com/fwlink/?LinkId=94648) e [la creazione di un listener di traccia personalizzato](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ È inoltre possibile configurare un listener di traccia a livello di programmazione. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Procedura: creare e inizializzare listener di traccia](http://go.microsoft.com/fwlink/?LinkId=94648) e [creazione di un listener di traccia personalizzato](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Poiché `System.Diagnostics.XmlWriterTraceListener` non è thread-safe, è possibile che l'origine di traccia blocchi le risorse in modo esclusivo durante la restituzione di tracce. Quando molti thread restituiscono tracce a un'origine configurata per l'utilizzo di questo listener, può verificarsi un conflitto di risorse con conseguente calo delle prestazioni. Per risolvere il problema, è necessario implementare un listener personalizzato di tipo thread-safe.  
@@ -187,7 +187,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  L'attributo `propagateActivity` indica se l'attività deve essere propagata ad altri endpoint che partecipano nello scambio di messaggi. Impostando questo valore su `true`, è possibile osservare file di traccia generati da due endpoint qualsiasi e notare come un set di tracce in un endpoint venga propagato a un set di tracce in un altro endpoint.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]traccia delle attività e propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] la traccia di attività e propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Entrambi `propagateActivity` e `ActivityTracing` booleani valori validi per la proprietà TraceSource System. ServiceModel. Il `ActivityTracing` valore si applica anche a qualsiasi origine di traccia, tra cui [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o quelli definiti dall'utente.  
   

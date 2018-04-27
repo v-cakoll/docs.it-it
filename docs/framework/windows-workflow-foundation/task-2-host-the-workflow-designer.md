@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Attività 2: ospitare l'utilità di progettazione del flusso di lavoro
-In questo argomento viene descritta la procedura per ospitare un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].  
+In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
   
  La procedura consente di configurare il **griglia** controllo che contiene la finestra di progettazione a livello di codice crea un'istanza del <xref:System.Activities.Presentation.WorkflowDesigner> che contiene un valore predefinito <xref:System.Activities.Statements.Sequence> attività registra i metadati della finestra di progettazione per fornire supporto della finestra di progettazione per le attività predefinite tutte e che ospita il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] nel [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] dell'applicazione.  
   

@@ -1,11 +1,12 @@
 ---
 title: Strutture di controllo annidate (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Strutture di controllo annidate (Visual Basic)
 È possibile inserire le istruzioni di controllo all'interno di altre istruzioni di controllo, ad esempio un `If...Then...Else` blocco all'interno di un `For...Next` ciclo. Un'istruzione di controllo posizionata all'interno di un'altra istruzione di controllo è detta *nidificata*.  
   
 ## <a name="nesting-levels"></a>Livelli di annidamento  
- Strutture di controllo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] possono essere nidificati fino a un numero di livelli. È pratica comune per rendere più leggibile strutture annidate rientrare il corpo di ciascuna di esse. L'editor di sviluppo integrato (IDE) di ambiente automaticamente esegue questa operazione.  
+ Strutture di controllo in Visual Basic possono essere nidificate fino a un numero di livelli. È pratica comune per rendere più leggibile strutture annidate rientrare il corpo di ciascuna di esse. L'editor di sviluppo integrato (IDE) di ambiente automaticamente esegue questa operazione.  
   
  Nell'esempio seguente, la procedura `sumRows` per sommare positivo gli elementi di ogni riga della matrice.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Diagramma grafico di annidamento non valida](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Annidamento non valido di per e con strutture  
   
- Il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilatore rileva tale controllo sovrapposto strutture e segnala un errore in fase di compilazione.  
+ Il compilatore Visual Basic rileva le strutture di controllo sovrapposte e segnala un errore in fase di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

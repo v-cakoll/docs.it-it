@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: chiamare una routine di overload (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff5967c1b09ad59f249297b1cf0a4ed900faf4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5eca03de6b6dd2ca2b992196b1ae224f8fbf5068
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procedura: chiamare una routine di overload (Visual Basic)
 Il vantaggio di overload di una routine è la flessibilità della chiamata. Il codice chiamante può ottenere le informazioni che necessarie per passare alla procedura e quindi chiamare un singolo nome di routine indipendentemente dagli argomenti passaggio.  
@@ -32,7 +33,7 @@ Il vantaggio di overload di una routine è la flessibilità della chiamata. Il c
   
 2.  Chiamata di routine di scrittura in modo normale, presentazione dei dati nell'elenco di argomenti. Assicurarsi che gli argomenti corrispondere l'elenco di parametri in una delle versioni definite per la routine.  
   
-3.  Non è necessario determinare la versione della routine da chiamare. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]passa il controllo di versione che corrisponde all'elenco di argomenti.  
+3.  Non è necessario determinare la versione della routine da chiamare. Visual Basic passa il controllo per la versione corrispondente all'elenco di argomenti.  
   
      L'esempio seguente chiama il `post` routine è dichiarata [procedura: definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md). Viene ottenuto l'identificazione del cliente, che determina se è un `String` o `Integer`e quindi chiama la stessa procedura in entrambi i casi.  
   

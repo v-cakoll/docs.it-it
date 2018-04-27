@@ -2,25 +2,26 @@
 title: Riepilogo di directory e file (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7df9d0de955e6d9a225373d3711948886cff4c97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Riepilogo di directory e file (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]parole chiave del linguaggio e i membri della libreria di runtime sono organizzati in base allo scopo e utilizzano.  
+Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e utilizzano.  
   
  Utilizzando il `My` funzionalità garantisce una maggiore produttività e delle prestazioni nelle operazioni dei / o file rispetto all'utilizzo di questi membri. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   

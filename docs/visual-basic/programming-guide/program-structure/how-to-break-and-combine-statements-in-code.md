@@ -31,11 +31,11 @@ ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedura: Interrompere e combinare istruzioni nel codice (Visual Basic)
 Quando si scrive codice, è possibile creare in alcuni casi istruzioni molto lunghe che richiedono uno scorrimento orizzontale nell'Editor di codice. Anche se ciò non influiscono sulla modalità di esecuzione del codice, rende difficile per se stessi o altri utenti leggere il codice come appare sul monitor. In questi casi, è consigliabile suddividere una lunga istruzione in più righe.  
@@ -59,7 +59,7 @@ Quando si scrive codice, è possibile creare in alcuni casi istruzioni molto lun
   
      È possibile continuare un commento con un carattere di continuazione di riga. Il compilatore non esamina i caratteri in un commento per un significato speciale. Per commenti su più righe, ripetere il simbolo di commento (`'`) per ogni riga.  
   
- Anche se il metodo consigliato consiste nell'inserire ogni istruzione su una riga separata [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consente inoltre di inserire più istruzioni sulla stessa riga.  
+ Anche se il metodo consigliato consiste nell'inserire ogni istruzione su una riga distinta, Visual Basic consente inoltre di inserire più istruzioni sulla stessa riga.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Per inserire più istruzioni sulla stessa riga  
   

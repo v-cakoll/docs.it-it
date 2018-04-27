@@ -1,12 +1,13 @@
 ---
 title: Utilizzo di dati binari (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Utilizzo di dati binari (WCF Data Services)
 Il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client consente di recuperare e aggiornare i dati binari da un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in uno dei modi seguenti:  
@@ -33,10 +35,10 @@ Il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client c
   
 -   Come flusso separato di risorse binarie. Si tratta del metodo consigliato per l'accesso e la modifica di dati di oggetti binari di grandi dimensioni (BLOB) che possono rappresentare una foto, un video o qualsiasi altro tipo di dati codificati binari.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementa il flusso di dati binari tramite HTTP, come definito nel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. In questo meccanismo, dati binari vengano considerati come una risorsa multimediale separata dalle ma correlati a un'entità, che viene chiamata una voce di collegamento multimediale. Per ulteriori informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementa il flusso di dati binari tramite HTTP come definito nel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. In questo meccanismo, dati binari vengano considerati come una risorsa multimediale separata dalle ma correlati a un'entità, che viene chiamata una voce di collegamento multimediale. Per ulteriori informazioni, vedere [Provider di flusso](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Per un esempio dettagliato di come creare un [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] applicazione client che consente di scaricare i file di immagine binari da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servizio che archivia foto, vedere il post [dati servizi Streaming Provider serie-parte 2: l'accesso a un supporto Flusso di risorsa dal Client](http://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio di dati di foto di flusso rappresentato nel post di blog, vedere il [Streaming di esempio di servizio dati foto](http://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.  
+>  Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che consente di scaricare i file di immagine binari da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servizio che archivia foto, vedere il post [dati servizi Streaming Provider serie parti 2: l'accesso a un flusso di risorsa multimediale dal Client](http://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio di dati di foto di flusso rappresentato nel post di blog, vedere il [Streaming di esempio di servizio dati foto](http://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.  
   
 ## <a name="entity-metadata"></a>Metadati dell'entità  
  Un'entità che dispone di un flusso di risorsa multimediale correlato viene indicata nei metadati del servizio dati dall'attributo `HasStream` applicato a un tipo di entità che è la voce di collegamento multimediale. Nell'esempio seguente, il `PhotoInfo` entità è una voce di collegamento multimediale che dispone di una risorsa multimediale correlata, indicata dal `HasStream` attributo.  
@@ -49,7 +51,7 @@ Il [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client c
  La libreria client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] fornisce i metodi per l'accesso ai flussi di risorse binarie da un servizio dati basato su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Quando si scarica una risorsa multimediale, è possibile usare l'URI della risorsa multimediale od ottenere un flusso binario contenente i dati della risorsa multimediale. È possibile caricare i dati della risorsa multimediale anche come un flusso binario.  
   
 > [!TIP]
->  Per un esempio dettagliato di come creare un [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] applicazione client che consente di scaricare i file di immagine binari da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servizio che archivia foto, vedere il post [dati servizi Streaming Provider serie-parte 2: l'accesso a un supporto Flusso di risorsa dal Client](http://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio di dati di foto di flusso rappresentato nel post di blog, vedere il [Streaming di esempio di servizio dati foto](http://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.  
+>  Per un esempio dettagliato di come creare un'applicazione client Windows Presentation Foundation (WPF) che consente di scaricare i file di immagine binari da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servizio che archivia foto, vedere il post [dati servizi Streaming Provider serie parti 2: l'accesso a un flusso di risorsa multimediale dal Client](http://go.microsoft.com/fwlink/?LinkId=201637). Per scaricare il codice di esempio per il servizio di dati di foto di flusso rappresentato nel post di blog, vedere il [Streaming di esempio di servizio dati foto](http://go.microsoft.com/fwlink/?LinkId=198988) in MSDN Code Gallery.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Recupero dell'URI del flusso binario  
  Quando si recuperano determinati tipi di risorse multimediali, ad esempio immagini e altri file multimediali, è spesso più semplice usare l'URI della risorsa multimediale nell'applicazione anziché gestire il flusso di dati binari. Per ottenere l'URI di un flusso di risorsa associato a una data voce di collegamento multimediale, è necessario chiamare il metodo <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> sull'istanza <xref:System.Data.Services.Client.DataServiceContext> che tiene traccia dell'entità. Nell'esempio seguente viene mostrato come chiamare il metodo <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> per ottenere l'URI di un flusso di risorsa multimediale usato per creare una nuova immagine nel client:  

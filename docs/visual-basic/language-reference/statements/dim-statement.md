@@ -2,9 +2,10 @@
 title: Istruzione Dim (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Istruzione Dim (Visual Basic)
 Dichiara e alloca spazio di archiviazione per una o più variabili.  
@@ -57,11 +58,11 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -77,23 +78,23 @@ Dim [ WithEvents ] variablelist
   
 -   `Shared`  
   
-     Parametro facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Static`  
   
-     Parametro facoltativo. Vedere [statico](../../../visual-basic/language-reference/modifiers/static.md).  
+     Facoltativo. Vedere [statico](../../../visual-basic/language-reference/modifiers/static.md).  
   
 -   `ReadOnly`  
   
-     Parametro facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WithEvents`  
   
-     Parametro facoltativo. Specifica che si tratta di variabili oggetto che fanno riferimento a istanze di una classe che può generare eventi. Vedere [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
+     Facoltativo. Specifica che si tratta di variabili oggetto che fanno riferimento a istanze di una classe che può generare eventi. Vedere [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
   
 -   `variablelist`  
   
@@ -108,11 +109,11 @@ Dim [ WithEvents ] variablelist
     |Parte|Descrizione|  
     |---|---|  
     |`variablename`|Obbligatorio. Nome della variabile. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-    |`boundslist`|Parametro facoltativo. Elenco dei limiti di ciascuna dimensione della variabile di matrice.|  
-    |`New`|Parametro facoltativo. Crea una nuova istanza della classe quando il `Dim` istruzione viene eseguita.|  
-    |`datatype`|Parametro facoltativo. Tipo di dati della variabile.|  
-    |`With`|Parametro facoltativo. Introduce l'elenco di inizializzatori di oggetto.|  
-    |`propertyname`|Parametro facoltativo. Il nome di una proprietà nella classe crei un'istanza di.|  
+    |`boundslist`|Facoltativo. Elenco dei limiti di ciascuna dimensione della variabile di matrice.|  
+    |`New`|Facoltativo. Crea una nuova istanza della classe quando il `Dim` istruzione viene eseguita.|  
+    |`datatype`|Facoltativo. Tipo di dati della variabile.|  
+    |`With`|Facoltativo. Introduce l'elenco di inizializzatori di oggetto.|  
+    |`propertyname`|Facoltativo. Il nome di una proprietà nella classe crei un'istanza di.|  
     |`propinitializer`|Necessario dopo avere `propertyname` =. L'espressione viene valutata e assegnata al nome della proprietà.|  
     |`initializer`|Facoltativo se `New` non è specificato. Espressione che viene valutata e assegnata alla variabile quando viene creato.|  
   
@@ -251,17 +252,17 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Per ulteriori informazioni sui valori letterali di matrice, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Tipi di dati predefiniti e valori  
+##  <a name="default"></a> Tipi di dati predefiniti e valori  
  Nella tabella seguente vengono descritti i risultati di varie combinazioni della specifica del tipo di dati e dell'inizializzatore in un'istruzione `Dim`.  
   
 |Tipo di dati specificato?|Inizializzatore specificato?|Esempio|Risultato|  
 |---|---|---|---|  
 |No|No|`Dim qty`|Se [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) è off (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|No|Sì|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è (impostazione predefinita), digitare la variabile accetta i dati dell'inizializzatore. Vedere [inferenza](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|No|Yes|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è (impostazione predefinita), digitare la variabile accetta i dati dell'inizializzatore. Vedere [inferenza](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Vedere la tabella più avanti in questa sezione.|  
-|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|Yes|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
- Se si specifica un tipo di dati ma non si specifica un inizializzatore, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] la variabile viene inizializzata sul valore predefinito per il tipo di dati. Nella tabella seguente mostra il valore predefinito di valori di inizializzazione.  
+ Se si specifica un tipo di dati ma non si specifica un inizializzatore, Visual Basic Inizializza la variabile sul valore predefinito per il tipo di dati. Nella tabella seguente mostra il valore predefinito di valori di inizializzazione.  
   
 |Tipo di dati|Valore predefinito|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Dichiarazione di routine|Variabile inizializzata|Variabile arresta esistente|  
 |---|---|---|  
 |In un modulo|La prima volta che viene chiamata la procedura|Arresto dell'esecuzione del programma|  
-|In una classe o struttura, procedura è`Shared`|La prima volta la procedura viene chiamata su un'istanza specifica o nella classe o struttura stessa|Arresto dell'esecuzione del programma|  
-|Non è in una classe o struttura, procedure`Shared`|La prima volta che la routine viene chiamata su una specifica istanza|Quando l'istanza viene rilasciata per l'operazione di garbage collection (GC)|  
+|In una classe o struttura, procedura è `Shared`|La prima volta la procedura viene chiamata su un'istanza specifica o nella classe o struttura stessa|Arresto dell'esecuzione del programma|  
+|In una classe o struttura, non è stored procedure `Shared`|La prima volta che la routine viene chiamata su una specifica istanza|Quando l'istanza viene rilasciata per l'operazione di garbage collection (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Gli attributi e modificatori  
  È possibile applicare gli attributi solo per le variabili membro, non per le variabili locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le variabili locali.  

@@ -1,23 +1,24 @@
 ---
 title: Processo di assunzione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Processo di assunzione
 In questo esempio viene illustrato come implementare un processo aziendale tramite attività di messaggistica e due flussi di lavoro ospitati come servizi flusso di lavoro e appartenenti all'infrastruttura IT di una società fittizia denominata Contoso, Inc.  
@@ -124,12 +125,12 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |Servizi flusso di lavoro|Il diagramma di flusso con la definizione del processo è ospitato in un servizio (in questo esempio il servizio è ospitato in un'applicazione console).|HiringRequestService|  
 |Attività di messaggistica|Il diagramma di flusso usa le attività di messaggistica per gli scopi seguenti:<br /><br /> -Per ottenere informazioni da parte dell'utente (per ricevere le decisioni e le informazioni correlate in ogni passaggio di approvazione).<br />-Per interagire con altri servizi esistenti (InboxService e OrgDataService, usati tramite riferimenti al servizio).|HiringRequestService|  
 |Correlazione basata sul contenuto|I messaggi di approvazione sono correlati alla proprietà ID della richiesta di assunzione:<br /><br /> -Quando viene avviato un processo, l'handle di correlazione viene inizializzato con l'ID della richiesta.<br />-Approvazione messaggi correlati al relativo ID (il primo parametro di ogni messaggio di approvazione è l'ID della richiesta).|HiringRequestService / ResumeRequestService|  
-|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`: Questa attività crea un oggetto personalizzato <xref:System.Activities.Tracking.TrackingRecord> (utilizzando <xref:System.Activities.NativeActivityContext.Track%2A>). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Questa attività riceve un elenco di ID tipo di posizione e restituisce un elenco di persone con tale posizione in Contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`: Questa attività Salva le informazioni di un `HiringRequest` (utilizzando `HiringRequestRepository.Save`). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Attività personalizzate (dichiarative e basate sul codice)|Nell'esempio sono presenti diverse attività personalizzate:<br /><br /> -   `SaveActionTracking`Questa attività genera un oggetto personalizzato <xref:System.Activities.Tracking.TrackingRecord> (tramite <xref:System.Activities.NativeActivityContext.Track%2A>). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Questa attività riceve un elenco di ID tipo di posizione e restituisce un elenco di persone con tale posizione in Contoso. L'attività è stata creata in modo dichiarativo (usando la finestra di progettazione delle attività).<br />-   `SaveHiringRequestInfo`Questa attività Salva le informazioni di un `HiringRequest` (tramite `HiringRequestRepository.Save`). L'attività è stata creata usando codice imperativo che estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Persistenza di SQL Server fornita dal sistema|L'istanza di <xref:System.ServiceModel.Activities.WorkflowServiceHost> che ospita la definizione del processo del diagramma di flusso è configurata per usare la persistenza di SQL Server fornita dal sistema.|HiringRequestService / ResumeRequestService|  
 |Rilevamento personalizzato|Nell'esempio è incluso un partecipante del rilevamento personalizzato che salva la cronologia di un processo `HiringRequestProcess` (quest'ultimo registra l'azione eseguita nonché l'autore e il momento dell'esecuzione). Il codice sorgente si trova nella cartella Tracking di HiringRequestService.|HiringRequestService|  
 |Rilevamento ETW|Il rilevamento ETW fornito dal sistema viene configurato nel file App.config nel servizio HiringRequestService.|HiringRequestService|  
 |Composizione di attività|La definizione del processo usa la composizione libera di <xref:System.Activities.Activity>. Il diagramma di flusso contiene diverse attività Sequence e Parallel che a loro volta ne contengono altre e così via.|HiringRequestService|  
-|Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601>viene utilizzato per registrare nella posta in arrivo del CEO e dei responsabili delle risorse Umane in parallelo (in attesa per il passaggio di approvazione delle risorse Umane due responsabili).<br />-   <xref:System.Activities.Statements.Parallel>viene usato per eseguire alcune attività di pulizia nei passaggi di completamento e rifiuto.|HiringRequestService|  
+|Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601> Consente di registrare nella posta in arrivo del CEO e dei responsabili delle risorse Umane in parallelo (in attesa per il passaggio di approvazione due responsabili).<br />-   <xref:System.Activities.Statements.Parallel> viene usato per eseguire alcune attività di pulizia nei passaggi di completamento e rifiuto.|HiringRequestService|  
 |Annullamento del modello|Nel diagramma di flusso viene usato <xref:System.Activities.Statements.CancellationScope> per applicare l'annullamento (in questo caso eseguendo attività di pulizia).|HiringRequestService|  
 |Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse umane di Contoso.|HiringRequestService|  
 |Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute nel file ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
@@ -141,13 +142,13 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 ## <a name="data-storage"></a>Archivio dati  
  I dati vengono archiviati in un database di SQL Server denominato `ContosoHR` (lo script per la creazione di questo database si trova nella cartella `DbSetup`), mentre le istanze di flusso di lavoro vengono archiviate in un database di SQL Server denominato `InstanceStore` (gli script per la creazione per l'archivio di istanze sono parte della distribuzione di [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Entrambi i database vengono creati eseguendo lo script Setup.cmd da un prompt dei comandi di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Entrambi i database vengono creati eseguendo script Setup. cmd da un prompt dei comandi di Visual Studio.  
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
   
 #### <a name="to-create-the-databases"></a>Per creare i database  
   
-1.  Aprire il prompt dei comandi di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Aprire il prompt dei comandi di Visual Studio.  
   
 2.  Passare alla cartella dell'esempio.  
   
@@ -157,7 +158,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Per configurare la soluzione per l'esecuzione  
   
-1.  Eseguire [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] come amministratore. Aprire HiringRequest.sln.  
+1.  Eseguire Visual Studio come amministratore. Aprire HiringRequest.sln.  
   
 2.  Fare doppio clic sulla soluzione in **Esplora** e selezionare **proprietà**.  
   
@@ -221,7 +222,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
   
-1.  Accertarsi di eseguire [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] con privilegi di amministratore.  
+1.  Verificare che si esegue Visual Studio con privilegi di amministratore.  
   
 2.  Se non è possibile compilare la soluzione, verificare l'elemento seguente:  
   
@@ -237,7 +238,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
         2.  Fare doppio clic su **Contoso** e selezionare **Aggiorna riferimenti Web/servizio**.  
   
-        3.  Premere CTRL+MAIUSC+B per ricompilare la soluzione in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Ricompilare la soluzione premendo CTRL + MAIUSC + B in Visual Studio.  
   
 ## <a name="uninstalling"></a>Disinstallazione  
   

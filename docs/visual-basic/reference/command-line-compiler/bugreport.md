@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 766a4252fd77be95e2641239cba53a4d90e0cb1d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 097435a3d8acda6325b27abaf3ca0fd2839d344e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-bugreport"></a>-bugreport
 Crea un file che è possibile utilizzare quando si invia una segnalazione bug.  
@@ -54,7 +54,7 @@ Crea un file che è possibile utilizzare quando si invia una segnalazione bug.
 > [!IMPORTANT]
 >  Il `-bugreport` opzione produce un file che contiene informazioni potenzialmente riservate. Ora corrente, la versione del compilatore, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] versione, versione del sistema operativo, nome utente, gli argomenti della riga di comando con cui è stato eseguito il compilatore, tutto il codice sorgente e il formato binario di qualsiasi assembly a cui viene fatto riferimento. Questa opzione è possibile accedere mediante le opzioni della riga di comando nel file Web. config per una compilazione sul lato server di un [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] dell'applicazione. Per evitare questo problema, modificare il file Machine. config per impedire agli utenti di compilazione sul server.  
   
- Se questa opzione viene utilizzata con `-errorreport:prompt`, `-errorreport:queue`, o `-errorreport:send`, e nell'applicazione viene rilevato un errore interno del compilatore, le informazioni contenute in `file` viene inviato a Microsoft Corporation. Tali informazioni consentiranno tecnici Microsoft di identificare la causa dell'errore e potrebbe contribuire a migliorare la versione successiva di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Per impostazione predefinita, nessuna informazione viene inviata a Microsoft. Tuttavia, quando si compila un'applicazione utilizzando `-errorreport:queue`, cui è abilitata per impostazione predefinita, l'applicazione recupera i report degli errori. Quindi, quando l'amministratore del computer si connette, il sistema di segnalazione errori consente di visualizzare una finestra popup che consente all'amministratore di inoltrare a Microsoft i report degli errori che si sono verificati dopo l'accesso.  
+ Se questa opzione viene utilizzata con `-errorreport:prompt`, `-errorreport:queue`, o `-errorreport:send`, e nell'applicazione viene rilevato un errore interno del compilatore, le informazioni contenute in `file` viene inviato a Microsoft Corporation. Tali informazioni consentiranno tecnici Microsoft di identificare la causa dell'errore e potrebbero contribuire a migliorare la prossima versione di Visual Basic. Per impostazione predefinita, nessuna informazione viene inviata a Microsoft. Tuttavia, quando si compila un'applicazione utilizzando `-errorreport:queue`, cui è abilitata per impostazione predefinita, l'applicazione recupera i report degli errori. Quindi, quando l'amministratore del computer si connette, il sistema di segnalazione errori consente di visualizzare una finestra popup che consente all'amministratore di inoltrare a Microsoft i report degli errori che si sono verificati dopo l'accesso.  
   
 > [!NOTE]
 >  Il `/bugreport` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo quando esegue la compilazione dalla riga di comando.  

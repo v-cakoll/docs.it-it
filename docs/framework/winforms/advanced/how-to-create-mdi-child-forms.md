@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: creare form figlio MDI'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: creare form figlio MDI
 Form figlio MDI sono un elemento fondamentale di [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), come questi moduli sono il fulcro dell'interazione dell'utente.  
@@ -47,7 +49,7 @@ Form figlio MDI sono un elemento fondamentale di [Multiple-Document Interface (M
   
 4.  In **Esplora**, fare clic sul progetto, scegliere **Aggiungi**, quindi selezionare **Aggiungi nuovo elemento**.  
   
-5.  Nel **Aggiungi nuovo elemento** nella finestra di dialogo **Windows Form** (in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) o **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) dal **modelli** riquadro. Nel **nome** casella, come nome del form **Form2**. Fare clic su di **aprire** pulsante per aggiungere il form al progetto.  
+5.  Nel **Aggiungi nuovo elemento** finestra di dialogo **Windows Form** (in Visual Basic o Visual c#) o **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) dal  **Modelli** riquadro. Nel **nome** casella, come nome del form **Form2**. Fare clic su di **aprire** pulsante per aggiungere il form al progetto.  
   
     > [!NOTE]
     >  Il form figlio MDI creato in questo passaggio è un Windows Form standard. Dispone pertanto di una proprietà <xref:System.Windows.Forms.Form.Opacity%2A> che consente di controllare la trasparenza del form. La proprietà <xref:System.Windows.Forms.Form.Opacity%2A>, tuttavia, è stata progettata per le finestre di primo livello. Per evitare problemi di disegno, non usarla con i form figlio MDI.  

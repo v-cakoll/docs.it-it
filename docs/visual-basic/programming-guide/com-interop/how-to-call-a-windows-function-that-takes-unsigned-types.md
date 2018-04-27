@@ -1,11 +1,12 @@
 ---
 title: 'Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedura: chiamare una funzione Windows che accetta tipi senza segno (Visual Basic)
-Se si utilizza una classe, modulo o una struttura con membri dei tipi di valore integer senza segno, è possibile accedere a questi membri con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Se si utilizza una classe, modulo o struttura che dispone di membri di tipi integer senza segno, è possibile accedere a questi membri con Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Per chiamare una funzione Windows che accetta un tipo senza segno  
   
-1.  Utilizzare un [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) indicare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] la libreria che contiene la funzione, che cos'è il nome nella libreria, qual è la sequenza di chiamata e come eseguire la conversione di stringhe per la chiamata.  
+1.  Utilizzare un [istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md) indicare a Visual Basic la libreria che contiene la funzione, quali il nome è in tale raccolta, qual è la sequenza di chiamata e come convertire le stringhe, la chiamata.  
   
 2.  Nel `Declare` istruzione, utilizzare `UInteger`, `ULong`, `UShort`, o `Byte` come appropriato per ogni parametro con un tipo senza segno.  
   

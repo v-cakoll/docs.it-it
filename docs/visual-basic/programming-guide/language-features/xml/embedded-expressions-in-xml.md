@@ -1,13 +1,13 @@
 ---
 title: Espressioni incorporate in XML (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Espressioni incorporate in XML (Visual Basic)
 Espressioni incorporate consentono di creare valori letterali XML che contengono espressioni vengono valutate in fase di esecuzione. La sintassi di un'espressione incorporata è `<%=` `expression` `%>`, che è la stessa sintassi utilizzata in [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -43,14 +43,14 @@ Espressioni incorporate consentono di creare valori letterali XML che contengono
 ## <a name="embedded-expression-location-and-validation"></a>Convalida e il percorso di espressione incorporata  
  Espressioni incorporate può essere utilizzata solo determinati percorsi all'interno di espressioni valore letterale XML. Può restituire la posizione nell'espressione controlla quali tipi di espressione e come `Nothing` viene gestita. Nella tabella seguente vengono descritti i percorsi consentiti e i tipi di espressioni incorporate.  
   
-|Posizione nel valore letterale|Tipo dell'espressione|Gestione di`Nothing`|  
+|Posizione nel valore letterale|Tipo dell'espressione|Gestione di `Nothing`|  
 |---|---|---|  
-|Nome dell'elemento XML|<xref:System.Xml.Linq.XName>|Errore|  
-|Contenuto dell'elemento XML|`Object`o una matrice di`Object`|Ignorato|  
-|Nome attributo dell'elemento XML|<xref:System.Xml.Linq.XName>|Errore, a meno che non è il valore dell'attributo`Nothing`|  
+|Nome dell'elemento XML|<xref:System.Xml.Linq.XName>|Error|  
+|Contenuto dell'elemento XML|`Object` o una matrice di `Object`|Ignorato|  
+|Nome attributo dell'elemento XML|<xref:System.Xml.Linq.XName>|Errore, a meno che non è il valore dell'attributo `Nothing`|  
 |Valore di attributo dell'elemento XML|`Object`|Dichiarazione di attributo ignorata.|  
-|Attributo dell'elemento XML|<xref:System.Xml.Linq.XAttribute>o una raccolta di<xref:System.Xml.Linq.XAttribute>|Ignorato|  
-|Elemento radice del documento XML|<xref:System.Xml.Linq.XElement>una raccolta di uno o <xref:System.Xml.Linq.XElement> oggetto e un numero arbitrario di <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment> oggetti|Ignorato|  
+|Attributo dell'elemento XML|<xref:System.Xml.Linq.XAttribute> o una raccolta di <xref:System.Xml.Linq.XAttribute>|Ignorato|  
+|Elemento radice del documento XML|<xref:System.Xml.Linq.XElement> o una raccolta di uno <xref:System.Xml.Linq.XElement> oggetto e un numero arbitrario di <xref:System.Xml.Linq.XProcessingInstruction> e <xref:System.Xml.Linq.XComment> oggetti|Ignorato|  
   
 -   Esempio di un'espressione incorporata in un nome di un elemento XML:  
   
@@ -83,7 +83,7 @@ Espressioni incorporate consentono di creare valori letterali XML che contengono
  Per ulteriori informazioni sull'utilizzo di un'espressione incorporata in un particolare tipo di valore letterale, vedere [valore letterale di documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML elemento Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Regole di ambito  
- Il compilatore converte ogni valore letterale XML in una chiamata al costruttore per il tipo di valore letterale appropriato. Le espressioni incorporate in un valore letterale XML contenuto in formato letterale vengono passate come argomenti al costruttore. Ciò significa che tutti [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] elementi di programmazione disponibili per un valore letterale XML sono inoltre disponibili per le espressioni incorporate.  
+ Il compilatore converte ogni valore letterale XML in una chiamata al costruttore per il tipo di valore letterale appropriato. Le espressioni incorporate in un valore letterale XML contenuto in formato letterale vengono passate come argomenti al costruttore. Ciò significa che tutti i Visual Basic elementi di programmazione disponibili per un valore letterale XML sono inoltre disponibili per le espressioni incorporate.  
   
  All'interno di un valore letterale XML, è possibile accedere lo spazio dei nomi XML prefissi dichiarati con la `Imports` istruzione. È possibile dichiarare un nuovo prefisso dello spazio dei nomi XML o nascondere un prefisso dello spazio dei nomi XML esistente, in un elemento utilizzando il `xmlns` attributo. Il nuovo spazio dei nomi è disponibile per i nodi figlio di tale elemento, ma non a valori letterali XML in espressioni incorporate.  
   

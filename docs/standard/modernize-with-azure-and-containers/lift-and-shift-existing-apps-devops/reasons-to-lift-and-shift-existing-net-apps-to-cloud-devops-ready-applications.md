@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>Motivi di accuratezza e MAIUSC esistente app .NET per applicazioni Cloud pronto DevOps
 
@@ -48,7 +49,7 @@ Figura 4-2 illustra i concetti di base facoltativi di un'applicazione Cloud pron
 
 > ![Concetti di base di un'applicazione Cloud pronto DevOps](./media/image2.png)
 >
-> **Figura 4-2.** Concetti di base di un'applicazione Cloud pronto DevOps
+> **Figura 4-2**. Concetti di base di un'applicazione Cloud pronto DevOps
 
 Per riepilogare, un'applicazione Cloud pronto DevOps è un approccio per la compilazione e la gestione delle applicazioni che sfrutta i vantaggi del cloud computing di modello, quando si utilizza una combinazione di contenitori, infrastruttura cloud gestita, le tecniche di applicazione resilienti, monitoraggio, il recapito continuo e DevOps, senza la necessità di riprogettare e sia necessario riscrivere le applicazioni esistenti.
 

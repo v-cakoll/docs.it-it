@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>Dati FILESTREAM
 L'attributo di archiviazione FILESTREAM è per i dati (BLOB) binari archiviati in una colonna varbinary(max). Prima di FILESTREAM, l'archiviazione dei dati binari richiedeva una gestione speciale. I dati non strutturati, come documenti di testo, immagini e video, sono spesso archiviati fuori dal database e questo ne rende complessa la gestione.  
@@ -28,13 +28,13 @@ L'attributo di archiviazione FILESTREAM è per i dati (BLOB) binari archiviati i
 > [!NOTE]
 >  Per usare i dati FILESTREAM con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  
   
- Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] i dati vengono archiviati nel file system NTFS locale anziché nel file di database. Sebbene vengano archiviati separatamente, è possibile usare le stesse istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] supportate per l'uso di dati varbinary(max) archiviati nel database.  
+ Se si specifica l'attributo FILESTREAM in una colonna varbinary(max), in SQL Server i dati vengono archiviati nel file system NTFS locale anziché nel file di database. Sebbene vengano archiviati separatamente, è possibile usare le stesse istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] supportate per l'uso di dati varbinary(max) archiviati nel database.  
   
 ## <a name="sqlclient-support-for-filestream"></a>Supporto di SqlClient per FILESTREAM  
- Il provider di dati [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], <xref:System.Data.SqlClient>, supporta la lettura e la scrittura nei dati FILESTREAM usando la classe <xref:System.Data.SqlTypes.SqlFileStream> definita nello spazio dei nomi <xref:System.Data.SqlTypes>. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.  
+ Il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Provider di dati per SQL Server <xref:System.Data.SqlClient>, supporta la lettura e scrittura di dati FILESTREAM usando la <xref:System.Data.SqlTypes.SqlFileStream> classe definita nel <xref:System.Data.SqlTypes> dello spazio dei nomi. `SqlFileStream` eredita dalla classe <xref:System.IO.Stream> che fornisce metodi per la lettura e la scrittura nei flussi di dati. La lettura da un flusso comporta il trasferimento dei dati dal flusso in una struttura di dati, ad esempio una matrice di byte. La scrittura comporta il trasferimento dei dati dalla struttura di dati in un flusso.  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>Creazione di una tabella [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]  
- Le istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse della documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] sono disponibili alla fine di questo argomento.  
+### <a name="creating-the-sql-server-table"></a>Creazione di una tabella SQL Server  
+ Le istruzioni [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] seguenti consentono di creare una tabella denominata employees e di inserire una riga di dati. Dopo avere abilitato l'archiviazione FILESTREAM, è possibile usare questa tabella insieme agli esempi di codice seguenti. I collegamenti alle risorse nella documentazione Online di SQL Server si trovano alla fine di questo argomento.  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  Per un altro esempio, vedere [come archiviare e recuperare dati binari in una colonna del flusso di file](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>Risorse nella documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]  
- La documentazione completa per FILESTREAM è disponibile nelle sezioni seguenti della documentazione online di [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="resources-in-sql-server-books-online"></a>Risorse nella documentazione online di SQL Server  
+ Nelle sezioni seguenti nella documentazione Online di SQL Server si trova la documentazione completa per FILESTREAM.  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

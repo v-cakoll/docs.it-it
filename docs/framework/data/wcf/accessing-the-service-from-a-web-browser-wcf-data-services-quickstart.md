@@ -1,30 +1,32 @@
 ---
 title: Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
-In questa attività si avvierà [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e, in modo facoltativo, verrà disabilitata la lettura dei feed nel browser. Si verrà quindi recuperare il documento di definizione del servizio, nonché accedere alle risorse del servizio dati inviando richieste GET HTTP attraverso un browser Web alle risorse esposte.  
+In questa attività si avvierà [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] da Visual Studio e si disabiliterà facoltativamente la lettura di feed nel browser. Si verrà quindi recuperare il documento di definizione del servizio, nonché accedere alle risorse del servizio dati inviando richieste GET HTTP attraverso un browser Web alle risorse esposte.  
   
 > [!NOTE]
->  Per impostazione predefinita, in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] viene assegnato automaticamente un numero di porta all'URI `localhost` sul computer in uso. In questa attività viene usato il numero di porta `12345` negli URI di esempio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come impostare un numero di porta specifico nel [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] progetto vedere [creazione del servizio dati](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Per impostazione predefinita, Visual Studio assegna automaticamente un numero di porta all'URI `localhost` del computer in uso. In questa attività viene usato il numero di porta `12345` negli URI di esempio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come impostare un numero di porta specifico in, vedere il progetto Visual Studio [creazione del servizio dati](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Per richiedere il documento di servizio predefinito usando Internet Explorer  
   
@@ -35,7 +37,7 @@ In questa attività si avvierà [!INCLUDE[ssAstoria](../../../../includes/ssasto
     > [!NOTE]
     >  Se nel browser non è possibile visualizzare il feed come dati XML non elaborati, dovrebbe ancora essere possibile visualizzarlo come codice sorgente per la pagina.  
   
-2.  In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] premere F5 per avviare il debug dell'applicazione.  
+2.  In Visual Studio premere F5 per avviare il debug dell'applicazione.  
   
 3.  Aprire un browser sul computer locale. Nella barra degli indirizzi digitare l'URI seguente:  
   

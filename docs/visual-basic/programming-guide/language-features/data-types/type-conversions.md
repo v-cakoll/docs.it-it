@@ -1,11 +1,12 @@
 ---
 title: Conversioni di tipi in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -16,24 +17,24 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b46d813b4fcadd975d87b235e9f3350a365949fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: f1487d98f37e7ef00982de365d0d164435f84567
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversioni di tipi in Visual Basic
 Il processo di modifica di un valore da un tipo di dati a un altro tipo viene chiamato *conversione*. Le conversioni possono essere *widening* o *restrizione*, a seconda della capacità di dati dei tipi interessati. Sono inoltre *implicita* o *esplicita*, a seconda della sintassi nel codice sorgente.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  Vengono illustrate le conversioni classificate in base che il tipo di destinazione può contenere i dati.  
   
  [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Vengono illustrate le conversioni classificate in base al fatto [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vengano eseguite automaticamente.  
+ Vengono illustrate le conversioni classificate in base al fatto che Visual Basic vengano eseguite automaticamente.  
   
  [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Viene illustrata la conversione tra stringhe e numerici, `Boolean`, o i valori di data e ora.  
@@ -46,10 +47,10 @@ Il processo di modifica di un valore da un tipo di dati a un altro tipo viene ch
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Introduce il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipi di dati e viene descritto come utilizzarli.  
+ Introduce i tipi di dati Visual Basic e viene descritto come utilizzarli.  
   
  [Tipi di dati](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Vengono elencati i tipi di dati di base forniti da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Elenca i tipi di dati di base forniti da Visual Basic.  
   
  [Risoluzione dei problemi relativi ai tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  Vengono illustrati alcuni problemi comuni che possono verificarsi quando si utilizzano tipi di dati.

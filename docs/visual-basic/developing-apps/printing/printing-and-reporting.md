@@ -2,23 +2,24 @@
 title: Stampa e generazione di rapporti (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1bcb8d0101bb558d64208ff8b2df72238a968adb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Stampa e generazione di rapporti (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]offre diverse opzioni per la stampa e i report. Gli argomenti seguenti forniscono informazioni generali e collegamenti per la relativa documentazione relativa a stampa e creazione di report.  
+Visual Basic offre diverse opzioni per la stampa e i report. Gli argomenti seguenti forniscono informazioni generali e collegamenti per la relativa documentazione relativa a stampa e creazione di report.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Componente PrintForm](../../../visual-basic/developing-apps/printing/printform-component.md)  
  Viene fornita una panoramica di `PrintForm` componente che consente di stampare il contenuto di un form.  
   

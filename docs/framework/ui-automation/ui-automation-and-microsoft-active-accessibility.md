@@ -1,12 +1,13 @@
 ---
 title: Automazione interfaccia utente e Microsoft Active Accessibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automazione interfaccia utente e Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>Linguaggi di programmazione  
- Il sistema[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] è basato su [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] , con il supporto per interfacce duali, ed è pertanto programmabile in C/C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]e linguaggi di scripting. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] inclusa la libreria di provider lato client per i controlli standard, è scritto in codice gestito, quindi le applicazioni client di automazione interfaccia utente vengono programmate più facilmente usando [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] o [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]. I provider di automazione interfaccia utente, che corrispondono a implementazioni di interfaccia, possono essere scritti in codice gestito o in C/C++.  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] basa il [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] con il supporto per interfacce duali ed è pertanto programmabile in C/C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]e linguaggi di scripting. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (inclusa la libreria di provider lato client per i controlli standard) viene scritto in codice gestito e le applicazioni client di automazione interfaccia utente vengono programmate più facilmente usando c# o Visual Basic .NET. I provider di automazione interfaccia utente, che corrispondono a implementazioni di interfaccia, possono essere scritti in codice gestito o in C/C++.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Supporto in Windows Presentation Foundation  
@@ -81,21 +83,21 @@ ms.lasthandoff: 12/22/2017
   
 |Ruolo di[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] |Tipo di controllo di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
-|ROLE_SYSTEM_PUSHBUTTON|Pulsante|  
-|ROLE_SYSTEM_CLIENT|Calendario|  
+|ROLE_SYSTEM_PUSHBUTTON|Button|  
+|ROLE_SYSTEM_CLIENT|Calendar|  
 |ROLE_SYSTEM_CHECKBUTTON|Casella di controllo|  
 |ROLE_SYSTEM_COMBOBOX|Casella combinata|  
 |ROLE_SYSTEM_CLIENT|Personalizzato|  
 |ROLE_SYSTEM_LIST|Griglia dei dati|  
 |ROLE_SYSTEM_LISTITEM|Elemento dei dati|  
 |ROLE_SYSTEM_DOCUMENT|Document|  
-|ROLE_SYSTEM_TEXT|Modifica|  
+|ROLE_SYSTEM_TEXT|Edit|  
 |ROLE_SYSTEM_GROUPING|Raggruppa|  
 |ROLE_SYSTEM_LIST|Intestazione|  
 |ROLE_SYSTEM_COLUMNHEADER|Voce di intestazione|  
-|ROLE_SYSTEM_LINK|Collegamento ipertestuale|  
-|ROLE_SYSTEM_GRAPHIC|Immagine|  
-|ROLE_SYSTEM_LIST|Elenco|  
+|ROLE_SYSTEM_LINK|Hyperlink|  
+|ROLE_SYSTEM_GRAPHIC|Image|  
+|ROLE_SYSTEM_LIST|List|  
 |ROLE_SYSTEM_LISTITEM|Elemento dell'elenco|  
 |ROLE_SYSTEM_MENUPOPUP|Menu|  
 |ROLE_SYSTEM_MENUBAR|Barra dei menu|  
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
 |EVENT_OBJECT_SELECTIONWITHIN|Nessun equivalente|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Vari eventi di modifica di proprietà|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>e <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modificato|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modificato|  
 |EVENT_SYSTEM_ALERT|Nessun equivalente|  
 |EVENT_SYSTEM_CAPTUREEND|Nessun equivalente|  
 |EVENT_SYSTEM_CAPTURESTART|Nessun equivalente|  

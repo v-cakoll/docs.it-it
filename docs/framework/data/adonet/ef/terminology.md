@@ -1,24 +1,26 @@
 ---
 title: Terminologia relativa a Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Terminologia relativa a Entity Framework
 In questo argomento definisce termini spesso riferimenti a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentazione. Vengono forniti collegamenti agli argomenti rilevanti in cui sono disponibili altre informazioni.  
@@ -55,7 +57,7 @@ In questo argomento definisce termini spesso riferimenti a [!INCLUDE[adonet_ef](
 |associazione indipendente|Associazione tra entità rappresentata e rilevata da un oggetto indipendente.|  
 |key|Attributo di un tipo di entità che specifica la proprietà o il set di proprietà usato per identificare istanze univoche del tipo di entità. Rappresentato nel livello oggetti dalla classe <xref:System.Data.EntityKey>.<br /><br /> Per ulteriori informazioni, vedere [elemento Key (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) e [chiave di entità](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |caricamento differito|Quando gli oggetti sono restituiti da una query, gli oggetti correlati non vengono caricati contemporaneamente. Vengono invece caricati automaticamente quando viene eseguito l'accesso alla proprietà di navigazione.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintassi della query che definisce un set di operatori di query che consentono di esprimere in modo diretto e dichiarativo operazioni di attraversamento, filtro e proiezione in [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] e [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Per ulteriori informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintassi della query che definisce un set di operatori di query che consentono operazioni di attraversamento, filtro e proiezione esprimere in modo diretto e dichiarativo in Visual c# e Visual Basic.<br /><br /> Per ulteriori informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapping|Specifica delle corrispondenze tra gli elementi di un modello concettuale e quelli di un modello di archiviazione.<br /><br /> Per ulteriori informazioni, vedere [specifica MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |file con estensione msl|File XML che contiene il mapping tra il modello concettuale e quello di archiviazione espresso nel linguaggio MSL.|  
 |Mapping Specification Language (MSL)|Linguaggio basato su XML usato per eseguire il mapping di elementi definiti in un modello concettuale a elementi in un modello di archiviazione.<br /><br /> Per ulteriori informazioni, vedere [specifica MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ In questo argomento definisce termini spesso riferimenti a [!INCLUDE[adonet_ef](
 |più set di entità per tipo|Possibilità di definire un tipo di entità in più set di entità.<br /><br /> Per ulteriori informazioni, vedere [elemento EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) e [procedura: definire un modello con più set di entità per tipo](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |proprietà di navigazione|Proprietà di un tipo di entità che rappresenta una relazione con un altro tipo di entità, secondo quanto definito da un'associazione. Le proprietà di navigazione vengono usate per restituire oggetti correlati come <xref:System.Data.Objects.DataClasses.EntityCollection%601> o <xref:System.Data.Objects.DataClasses.EntityReference%601>, a seconda della molteplicità dell'altra entità finale che prende parte all'associazione.<br /><br /> Per ulteriori informazioni, vedere [elemento NavigationProperty (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) e [proprietà di navigazione](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |percorso della query|Rappresentazione di stringa di un percorso che specifica quali oggetti correlati restituire quando viene eseguita una query di oggetto. Per definire un percorso della query è possibile chiamare il metodo <xref:System.Data.Objects.ObjectQuery%601.Include%2A> su un oggetto <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Per ulteriori informazioni, vedere [durante il caricamento di oggetti correlati](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|contesto di oggetto|Rappresenta il contenitore di entità definito nel modello concettuale. Contiene una connessione all'origine dati sottostante e fornisce servizi come il rilevamento delle modifiche e la risoluzione di identità. Un contesto dell'oggetto è rappresentato da un'istanza dell'oggetto <xref:System.Data.Objects.ObjectContext> o della classe `DbContext`.<br /><br /> `DbContext`fa parte di [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 non fa parte di .NET Framework, ma si basa su .NET Framework 4.5. Entity Framework 5.0 è disponibile come il ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pacchetto. Per ulteriori informazioni, vedere [versioni di Entity Framework e il controllo delle versioni](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|contesto di oggetto|Rappresenta il contenitore di entità definito nel modello concettuale. Contiene una connessione all'origine dati sottostante e fornisce servizi come il rilevamento delle modifiche e la risoluzione di identità. Un contesto dell'oggetto è rappresentato da un'istanza dell'oggetto <xref:System.Data.Objects.ObjectContext> o della classe `DbContext`.<br /><br /> `DbContext` fa parte il [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 non fa parte di .NET Framework, ma si basa su .NET Framework 4.5. Entity Framework 5.0 è disponibile come il ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pacchetto. Per ulteriori informazioni, vedere [versioni di Entity Framework e il controllo delle versioni](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |livello oggetti|I tipi di entità e le definizioni del contesto degli oggetti usate da Entity Framework.|  
 |query di oggetto|Query eseguita all'interno di un contesto dell'oggetto su un modello concettuale che restituisce dati come oggetti.<br /><br /> Per ulteriori informazioni, vedere [le query di oggetto](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |mapping relazionale a oggetti|Tecnica per la trasformazione dei dati di un database relazionale in tipi di dati che possono essere usati nelle applicazioni software orientate a oggetti.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fornisce servizi di mapping relazionale a oggetti eseguendo il mapping dei dati relazionali definiti nel modello di archiviazione ai tipi di dati definiti nel modello concettuale.<br /><br /> Per ulteriori informazioni, vedere [modellazione e Mapping](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

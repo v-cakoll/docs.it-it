@@ -1,12 +1,12 @@
 ---
 title: Convenzioni per l'utilizzo di maiuscole e minuscole
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 248a787c8858d62e77725d159e9826fabfa37ee1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
 Le linee guida fornite in questo capitolo disporre un metodo semplice per l'utilizzo di case che, quando applicato in modo coerente, verificare gli identificatori per i tipi, membri e parametri di facile lettura.  
@@ -55,7 +55,7 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
   
  **✓ SI** utilizzare il sistema Pascal per tutti i membri, tipo e spazio dei nomi nomi pubblici composta da più parole.  
   
- **✓ SI** utilizzare camel per i nomi di parametro.  
+ **✓ SI** utilizzare camel per i nomi dei parametri.  
   
  Nella tabella seguente descrive le regole di utilizzo delle maiuscole per diversi tipi di identificatori.  
   
@@ -74,7 +74,7 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Le parole composte con iniziale maiuscole e termini comuni  
  La maggior parte dei termini composti vengono considerati come singole parole per scopi di lettere maiuscole/minuscole.  
   
- **X non** tutte iniziali maiuscole nella cosiddette parole composte di forma chiusa.  
+ **X non** tutte iniziali maiuscole in cosiddette parole composte forma chiusa.  
   
  Queste sono le parole composte scritte come una parola singola, ad esempio endpoint. Allo scopo di linee guida di maiuscole e minuscole, considerare una chiuso parola composta come una singola parola. Utilizzare un dizionario corrente per determinare se una parola composta è scritto in forma chiusa.  
   
@@ -109,11 +109,11 @@ Le linee guida fornite in questo capitolo disporre un metodo semplice per l'util
 ## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole  
  Linguaggi che è possono eseguire in Common Language Runtime non è richiesta per supportare distinzione maiuscole/minuscole, anche se alcuni. Anche se supporta la lingua, altri linguaggi che potrebbero accedere il framework non. Le API che sono accessibili dall'esterno, pertanto, possono basarsi su case da solo per distinguere tra i due nomi nello stesso contesto.  
   
- **X non** si presume che tutti i linguaggi di programmazione tra maiuscole e minuscole. Ma non lo sono. I nomi non possono differire dalle maiuscole o minuscole da solo.  
+ **X non** presupporre che tutti i linguaggi di programmazione siano distinzione maiuscole / minuscole. Ma non lo sono. I nomi non possono differire dalle maiuscole o minuscole da solo.  
   
  *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  

@@ -1,30 +1,31 @@
 ---
 title: 'Procedura: analizzare una stringa (Visual Basic)'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0fd7c7adcfbd7e2136d1a652017d470634016b9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Procedura: analizzare una stringa (Visual Basic)
 In questo argomento viene illustrato come creare un albero XML in c#.  
   
 ## <a name="example"></a>Esempio  
- È possibile analizzare una stringa in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utilizzando il `XElement.Parse` metodo. Tuttavia, è preferibile utilizzare valori letterali XML, come illustrato nel codice seguente, in quanto i valori letterali XML prive di stessi problemi di prestazioni di analisi XML da una stringa.  
+ È possibile analizzare una stringa in Visual Basic usando il `XElement.Parse` metodo. Tuttavia, è preferibile utilizzare valori letterali XML, come illustrato nel codice seguente, in quanto i valori letterali XML prive di stessi problemi di prestazioni di analisi XML da una stringa.  
   
- Usando valori letterali XML, è possibile copiare e incollare l'XML nel programma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Usando i valori letterali XML, è semplicemente possibile copiare e incollare il XML nel programma Visual Basic.  
   
 > [!NOTE]
 >  L'analisi di testo o il caricamento di un documento XML da un file di testo è un processo meno efficiente della costruzione funzionale. Se si inizializza un albero XML dal codice, il tempo CPU richiesto per la costruzione funzionale è inferiore rispetto all'analisi di testo.  

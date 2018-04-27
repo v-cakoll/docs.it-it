@@ -2,24 +2,25 @@
 title: Costanti ed enumerazioni (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Costanti ed enumerazioni (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fornisce una serie di costanti ed enumerazioni per gli sviluppatori predefinite. Costanti di archiviano i valori che rimangono costanti durante l'esecuzione di un'applicazione. Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi.  
+Visual Basic fornisce una serie di costanti ed enumerazioni per gli sviluppatori predefinite. Costanti di archiviano i valori che rimangono costanti durante l'esecuzione di un'applicazione. Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi.  
   
 ## <a name="constants"></a>Costanti  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 |`DEBUG`|Oggetto `Boolean` valore che può essere impostata nel **le proprietà del progetto** la finestra di dialogo. Per impostazione predefinita, la configurazione di Debug per un progetto definisce `DEBUG`. Quando `DEBUG` è definito, <xref:System.Diagnostics.Debug> generano l'output per i metodi della classe di **Output** finestra. Quando non è definito, <xref:System.Diagnostics.Debug> non vengono compilati i metodi della classe e non viene generato alcun output di Debug.|  
 |`TARGET`|Stringa che rappresenta il tipo di output per il progetto o l'impostazione della riga di comando **/destinazione** opzione. I valori possibili di `TARGET` sono:<br /><br /> -"winexe" per un'applicazione Windows.<br />-"exe" per un'applicazione console.<br />-"library" per una libreria di classi.<br />-"modulo" per un modulo.<br />-La **/destinazione** opzione può essere impostata [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente di sviluppo integrato. Per ulteriori informazioni, vedere [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Oggetto `Boolean` valore che può essere impostata nel **le proprietà del progetto** la finestra di dialogo. Per impostazione predefinita, definiscono tutte le configurazioni per un progetto `TRACE`. Quando `TRACE` è definito, <xref:System.Diagnostics.Trace> generano l'output per i metodi della classe di **Output** finestra. Quando non è definito, <xref:System.Diagnostics.Trace> non vengono compilati i metodi di classe e nessun `Trace` viene generato l'output.|  
-|`VBC_VER`|Un numero che rappresenta il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] versione, in *principali*. *secondaria* formato. Il numero di versione per [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] è 8.0.|  
+|`VBC_VER`|Numero che rappresenta la versione di Visual Basic, in *principali*. *secondaria* formato. Il numero di versione per [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] è 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Costanti di visualizzazione e stampa  
  Quando si chiama stampa e visualizzare le funzioni, è possibile utilizzare le seguenti costanti nel codice al posto dei valori effettivi.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |`vbVerticalTab`|Non è utile in Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Enumerazioni  
- Nella tabella seguente elenca e descrive le enumerazioni fornite da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Nella tabella seguente elenca e descrive le enumerazioni fornite da Visual Basic.  
   
 |Enumerazione|Descrizione|  
 |---|---|  

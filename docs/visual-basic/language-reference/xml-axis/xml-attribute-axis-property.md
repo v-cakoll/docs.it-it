@@ -1,9 +1,9 @@
 ---
-title: "Proprietà axis dell'attributo XML (Visual Basic)"
+title: Proprietà axis dell'attributo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Proprietà axis dell'attributo XML (Visual Basic)
 Fornisce l'accesso al valore di un attributo per un <xref:System.Xml.Linq.XElement> oggetto o al primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti.  
@@ -44,18 +44,18 @@ object.@<attribute>
  Obbligatorio. Indica l'inizio di una proprietà axis dell'attributo.  
   
  <  
- Parametro facoltativo. Indica l'inizio del nome dell'attributo quando `attribute` non è un identificatore valido nel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Facoltativo. Indica l'inizio del nome dell'attributo quando `attribute` non è un identificatore valido in Visual Basic.  
   
  `attribute`  
  Obbligatorio. Nome dell'attributo a cui accedere, nel formato [`prefix`:]`name`.  
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|`prefix`|Parametro facoltativo. Prefisso dello spazio dei nomi XML per l'attributo. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.|  
+|`prefix`|Facoltativo. Prefisso dello spazio dei nomi XML per l'attributo. Deve essere uno spazio dei nomi XML globale definito usando un'istruzione `Imports`.|  
 |`name`|Obbligatorio. Nome locale dell'attributo. Vedere [i nomi di elementi e attributi XML dichiarati](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
- Parametro facoltativo. Indica la fine del nome dell'attributo quando `attribute` non è un identificatore valido nel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Facoltativo. Indica la fine del nome dell'attributo quando `attribute` non è un identificatore valido in Visual Basic.  
   
 ## <a name="return-value"></a>Valore restituito  
  Stringa che contiene il valore di `attribute`. Se il nome dell'attributo non esiste, `Nothing` viene restituito.  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  Quando si fa riferimento a un attributo XML utilizzando l'identificatore @, viene restituito il valore dell'attributo sotto forma di stringa e non è necessario specificare in modo esplicito il <xref:System.Xml.Linq.XAttribute.Value%2A> proprietà.  
   
- Le regole di denominazione per gli attributi XML differiscono dalle regole di denominazione per [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] gli identificatori. Per accedere a un attributo XML con un nome che non è un valido identificatore Visual Basic, racchiudere il nome tra parentesi acute (\< e >).  
+ Le regole di denominazione per gli attributi XML sono diversi dalle regole di denominazione per gli identificatori di Visual Basic. Per accedere a un attributo XML con un nome che non è un valido identificatore Visual Basic, racchiudere il nome tra parentesi acute (\< e >).  
   
 ## <a name="xml-namespaces"></a>Spazi dei nomi XML  
  Il nome di una proprietà axis dell'attributo può utilizzare solo i prefissi dello spazio dei nomi XML dichiarati globalmente con il `Imports` istruzione. Non può usare prefissi degli spazi dei nomi XML dichiarati localmente all'interno di valori letterali dell'elemento XML. Per ulteriori informazioni, vedere [istruzione Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa la sintassi di parentesi uncinate per ottenere il valore dell'attributo XML denominato `number-type`, che non è un identificatore valido nel [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ L'esempio seguente usa la sintassi di parentesi uncinate per ottenere il valore dell'attributo XML denominato `number-type`, che non è un identificatore valido in Visual Basic.  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

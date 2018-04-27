@@ -1,27 +1,29 @@
 ---
 title: Domande frequenti
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -31,7 +33,7 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
 ## <a name="cannot-connect"></a>Impossibile connettersi  
  D. Non è possibile connettersi al database.  
   
- Un  Assicurarsi che la stringa di connessione sia corretta e che l'istanza [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] sia in esecuzione. Tenere inoltre presente che [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] richiede che sia abilitato il protocollo Named Pipes. Per ulteriori informazioni, vedere [apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ Un  Verificare che la stringa di connessione sia corretta e che l'istanza di SQL Server sia in esecuzione. Tenere inoltre presente che [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] richiede che sia abilitato il protocollo Named Pipes. Per ulteriori informazioni, vedere [apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Perdita delle modifiche al database  
  D. Quando si riesegue l'applicazione dopo avere apportato una modifica ai dati presenti nel database, la modifica va persa.  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Modello provider  
  D. È disponibile un modello provider pubblico?  
   
- Un  Non è disponibile alcun un modello provider pubblico. Attualmente, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta solo [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ Un  Non è disponibile alcun un modello provider pubblico. In questo momento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta SQL Server e [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] solo.  
   
 ## <a name="sql-injection-attacks"></a>Attacchi SQL injection  
  D. Come viene protetto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dagli attacchi SQL injection?  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Esaminare il valore <xref:System.Data.Linq.Mapping.UpdateCheck> predefinito (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) per determinare se questo valore è corretto per l'applicazione.  
   
     > [!CAUTION]
-    >  Se si usa [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], è possibile che le modifiche vengano sovrascritte.  
+    >  Se si utilizza il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio, le modifiche potrebbero essere sovrascritti.  
   
 ## <a name="aptca"></a>APTCA  
  D. System.Data.Linq è contrassegnato per l'uso da codice parzialmente attendibile?  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  Un  Non tentare di riutilizzare le istanze di <xref:System.Data.Linq.DataContext>. Ogni oggetto <xref:System.Data.Linq.DataContext> conserva lo stato (inclusa una cache delle identità) per una determinata sessione di modifica/query. Per ottenere nuove istanze basate sullo stato corrente del database, usare un nuovo oggetto <xref:System.Data.Linq.DataContext>.  
   
- È tuttavia possibile usare il pool di connessioni [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sottostante. Per ulteriori informazioni, vedere [SQL Server Connection Pooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ È tuttavia possibile usare il pool di connessioni [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sottostante. Per altre informazioni, vedere [Pool di connessioni SQL Server (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Il secondo oggetto DataContext non viene aggiornato  
  D. Un'istanza di <xref:System.Data.Linq.DataContext> è stata usata per archiviare i valori nel database. Tuttavia, un secondo oggetto <xref:System.Data.Linq.DataContext> nello stesso database non riflette i valori aggiornati. La seconda istanza <xref:System.Data.Linq.DataContext> sembra restituire i valori memorizzati nella cache.  

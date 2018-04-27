@@ -1,24 +1,26 @@
 ---
 title: Funzioni stringa canoniche
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>Funzioni stringa canoniche
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] include funzioni canoniche string.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|Restituisce una stringa che contiene l'oggetto `string2` aggiunto a `string1`.<br /><br /> **Argomenti**<br /><br /> `string1`: la stringa alla quale è aggiunto `string2`.<br /><br /> `string2`: la stringa aggiunta a `string1`.<br /><br /> **Valore restituito**<br /><br /> Oggetto `String`. Se la lunghezza della stringa del valore restituito è superiore alla lunghezza massima consentita, si verificherà un errore.<br /><br /> **Esempio**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|Restituisce `true` se `target` è contenuto in `string`.<br /><br /> **Argomenti**<br /><br /> `string`: la stringa nella quale viene eseguita la ricerca.<br /><br /> `target`: la stringa di destinazione che viene cercata.<br /><br /> **Valore restituito**<br /><br /> `true` se `target` è contenuto in `string`; in caso contrario, `false`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|Restituisce `true` se `target` termina con `string`.<br /><br /> **Argomenti**<br /><br /> `string`: la stringa nella quale viene eseguita la ricerca.<br /><br /> `target`: la stringa di destinazione che viene cercata alla fine di `string`.<br /><br /> **Valore restituito**<br /><br /> `True` se `string` termina con `target`; in caso contrario, `false`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**Nota:** se si utilizza il [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] provider di dati, questa funzione restituisce `false` se la stringa viene archiviata in una colonna stringa di lunghezza fissa e `target` è una costante. In questo caso, la ricerca viene eseguita nell'intera stringa, inclusa la spaziatura interna finale. Una possibile soluzione alternativa consiste nel tagliare la stringa a lunghezza, come nell'esempio seguente: `EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|Restituisce `true` se `target` termina con `string`.<br /><br /> **Argomenti**<br /><br /> `string`: la stringa nella quale viene eseguita la ricerca.<br /><br /> `target`: la stringa di destinazione che viene cercata alla fine di `string`.<br /><br /> **Valore restituito**<br /><br /> `True` se `string` termina con `target`; in caso contrario, `false`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **Nota:** se si utilizza il provider di dati di SQL Server, questa funzione restituisce `false` se la stringa viene archiviata in una colonna stringa di lunghezza fissa e `target` è una costante. In questo caso, la ricerca viene eseguita nell'intera stringa, inclusa la spaziatura interna finale. Una possibile soluzione alternativa consiste nel tagliare la stringa a lunghezza, come nell'esempio seguente: `EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|Restituisce la posizione di `target` in `string` o 0 se non viene trovato. Restituisce 1 per indicare l'inizio di `string`. La numerazione dell'indice inizia da 1.<br /><br /> **Argomenti**<br /><br /> `target`: la stringa che viene cercata.<br /><br /> `string`: la stringa nella quale viene eseguita la ricerca.<br /><br /> **Valore restituito**<br /><br /> Oggetto `Int32`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|Restituisce i primi caratteri `length` dal lato sinistro di `string`. Se la lunghezza di `string` è inferiore a `length`, viene restituita la stringa intera.<br /><br /> **Argomenti**<br /><br /> `string`: valore `String`.<br /><br /> `length`: `Int16`,`Int32`, `Int64` o `Byte`. `length` non può essere minore di zero.<br /><br /> **Valore restituito**<br /><br /> Oggetto `String`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|Restituisce la lunghezza (`Int32`), espressa in caratteri, della stringa.<br /><br /> **Argomenti**<br /><br /> `string`: valore `String`.<br /><br /> **Valore restituito**<br /><br /> Oggetto `Int32`.<br /><br /> **Esempio**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

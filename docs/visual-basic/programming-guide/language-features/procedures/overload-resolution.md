@@ -1,11 +1,12 @@
 ---
 title: Risoluzione dell'overload (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>Risoluzione dell'overload (Visual Basic)
-Quando il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene rilevata una chiamata a una routine che viene definita in diverse versioni di overload, il compilatore deve decidere quale overload da chiamare. A tale scopo, eseguire la procedura seguente:  
+Quando il compilatore Visual Basic rileva una chiamata a una routine definito in diverse versioni di overload, il compilatore deve decidere quale overload da chiamare. A tale scopo, eseguire la procedura seguente:  
   
 1.  **Accessibilità.** Elimina tutti gli overload con un livello di accesso che impedisce la chiamata al codice chiamante.  
   
@@ -38,7 +39,7 @@ Quando il [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene rilevata una chiamat
   
 4.  **Conversioni di restrizione.** Eliminazione di eventuali overload che richiede una conversione dai tipi di argomento chiamante per i tipi di parametro definito. È true se il controllo dei tipi di passare ([istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) è `On` o `Off`.  
   
-5.  **Widening minimi.** Il compilatore considera gli overload rimanenti nelle coppie. Per ogni coppia, confronta i tipi di dati dei parametri definiti. Se i tipi in uno degli overload tutti vengono ampliati ai tipi corrispondenti negli altri, il compilatore elimina quest'ultimo. Vale a dire, viene mantenuto l'overload che richiede il minor grado di ampliamento.  
+5.  **Minore di ampliamento.** Il compilatore considera gli overload rimanenti nelle coppie. Per ogni coppia, confronta i tipi di dati dei parametri definiti. Se i tipi in uno degli overload tutti vengono ampliati ai tipi corrispondenti negli altri, il compilatore elimina quest'ultimo. Vale a dire, viene mantenuto l'overload che richiede il minor grado di ampliamento.  
   
 6.  **Singolo candidato.** Vengono presi in considerazione gli overload nelle coppie finché l'unico overload rimane e viene risolta la chiamata all'overload. Se il compilatore non è possibile ridurre gli overload a uno solo, viene generato un errore.  
   

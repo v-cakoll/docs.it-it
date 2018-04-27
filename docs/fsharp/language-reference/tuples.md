@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Tuple
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperabilità con c# Tuple
 
-Il linguaggio c# 7 introdotti Tuple.  Le tuple in c# sono strutture e sono equivalenti alle tuple struct in F #.  Se è necessario interoperare con c#, è necessario utilizzare tuple struct.
+C# 7.0 introdotti tuple per la lingua.  Le tuple in c# sono strutture e sono equivalenti alle tuple struct in F #.  Se è necessario interoperare con c#, è necessario utilizzare tuple struct.
 
 Si tratta di un'operazione semplice.  Si supponga, ad esempio, che è necessario passare una tupla a una classe c# e quindi utilizzare il risultato, che è anche una tupla:
 
@@ -119,7 +119,7 @@ Le tuple di riferimento e Struct Tuples dispone di una rappresentazione sottosta
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costitutive.  Di seguito è riportato un esempio:
+È necessario criteri di corrispondenza per una tupla e costruire l'altro con le parti costitutive.  Ad esempio:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -130,7 +130,7 @@ Le tuple vengono compilate in oggetti di uno dei vari tipi generici, tutti i `Sy
 
 ### <a name="compiled-form-of-struct-tuples"></a>Form compilato di tuple Struct
 
-Struct Tuple (ad esempio, `struct (x, y)`), sono completamente diversi da tuple di riferimento.  Vengono compilate nel <xref:System.ValueTuple> tipo, dal grado, o il numero di parametri di tipo di overload.  Sono equivalenti a [c# 7 Tuple](../../csharp/tuples.md) e [Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interagire in modalità bidirezionale.
+Struct Tuple (ad esempio, `struct (x, y)`), sono completamente diversi da tuple di riferimento.  Vengono compilate nel <xref:System.ValueTuple> tipo, dal grado, o il numero di parametri di tipo di overload.  Sono equivalenti a [c# 7.0 Tuple](../../csharp/tuples.md) e [Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)e interagire in modalità bidirezionale.
 
 ## <a name="see-also"></a>Vedere anche
 [Riferimenti per il linguaggio F#](index.md)

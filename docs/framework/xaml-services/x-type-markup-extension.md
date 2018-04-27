@@ -1,12 +1,13 @@
 ---
 title: Estensione del markup x:Type
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>Estensione del markup x:Type
 CLR fornisce <xref:System.Type> oggetto che rappresenta il tipo sottostante per un tipo XAML specificato.  
@@ -55,7 +57,7 @@ CLR fornisce <xref:System.Type> oggetto che rappresenta il tipo sottostante per 
 |`typeNameValue`|Obbligatorio. Un nome di tipo risolvibile in nomi XAML predefinito corrente; o specificato mappati prefisso se `prefix` viene fornito.|  
   
 ## <a name="remarks"></a>Note  
- Il `x:Type` estensione di markup è una funzione simile per la `typeof()` operatore in [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] o `GetType` operatore in [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ Il `x:Type` estensione di markup è una funzione simile per il `typeof()` operatore in c# o `GetType` operatore in Microsoft Visual Basic.  
   
  Il `x:Type` estensione di markup fornisce un comportamento di conversione da stringa per le proprietà che accettano il tipo <xref:System.Type>. L'input è un tipo XAML. La relazione tra il tipo di sintassi XAML per gli input e output CLR <xref:System.Type> è che l'output <xref:System.Type> è il <xref:System.Xaml.XamlType.UnderlyingType%2A> dell'input <xref:System.Xaml.XamlType>, dopo avere cercato necessari <xref:System.Xaml.XamlType> basato sul contesto dello schema XAML e il <xref:System.Windows.Markup.IXamlTypeResolver>servizio fornisce il contesto.  
   
@@ -67,7 +69,7 @@ CLR fornisce <xref:System.Type> oggetto che rappresenta il tipo sottostante per 
   
  Il `x:Type` estensione di markup può essere utilizzato nella sintassi dell'elemento oggetto. In questo caso, se si specifica il valore di <xref:System.Windows.Markup.TypeExtension.TypeName%2A> proprietà è necessaria per inizializzare correttamente l'estensione.  
   
- Il `x:Type` estensione di markup può essere utilizzato anche come attributo dettagliato; tuttavia questo utilizzo non è comune: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ Il `x:Type` estensione di markup può essere utilizzate anche come attributo dettagliato, tuttavia questo utilizzo non è tipico: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>Note sull'utilizzo WPF  
   
@@ -82,7 +84,7 @@ CLR fornisce <xref:System.Type> oggetto che rappresenta il tipo sottostante per 
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 fornisce supporto aggiuntivo per tipi generici e modifica il comportamento della funzionalità di `x:TypeArguments` e `x:Type` per fornire questo supporto.  
   
--   `x:TypeArguments`e può essere l'elemento oggetto associato per un'istanza di oggetto generico su elementi diversi dalla radice. Per ulteriori informazioni, vedere la sezione "XAML 2009" di [direttiva X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` e può essere l'elemento oggetto associato per un'istanza di oggetto generico su elementi diversi dalla radice. Per ulteriori informazioni, vedere la sezione "XAML 2009" di [direttiva X:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 supporta una sintassi per specificare il vincolo del tipo generico nel markup. Può essere utilizzato da `x:TypeArguments`, da `x:Type`, o dalle due funzionalità in combinazione.  
   

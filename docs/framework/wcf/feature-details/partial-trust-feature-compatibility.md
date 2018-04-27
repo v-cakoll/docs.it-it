@@ -1,24 +1,26 @@
 ---
-title: "Compatibilità con la funzionalità di trust parziale"
-ms.custom: 
+title: Compatibilità con la funzionalità di trust parziale
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta un sottoinsieme limitato di funzionalità. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -103,7 +105,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
   
 -   Verificare che, se l'applicazione viene distribuita come completamente attendibile, gli utenti non possano modificare le impostazioni di sicurezza per l'accesso al codice per eseguire l'applicazione in ambiente parzialmente attendibile. In tal caso, il comportamento non viene eseguito e non viene generata alcuna eccezione. A tale scopo, vedere il **levelfinal** tramite [Caspol.exe (strumento di criteri di sicurezza di accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] di comportamento comune, vedere [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Per un esempio di un comportamento comune, vedere [procedura: blocco all'endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configurazione  
  Con una sola eccezione, il codice in ambiente parzialmente attendibile può caricare sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo nel file `app.config` locale. Per caricare sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che fanno riferimento a sezioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in machine.config o in un file web.config radice è necessario ConfigurationPermission(Unrestricted). Senza questa autorizzazione, i riferimenti a sezioni di configurazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (comportamenti, associazioni) esterni al file di configurazione locale generano un'eccezione al momento del caricamento della configurazione.  
