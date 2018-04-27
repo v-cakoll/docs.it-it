@@ -1,24 +1,26 @@
 ---
 title: Code di messaggi non recapitabili
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. È basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -50,21 +52,21 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
  L'applicazione client può leggere i messaggi nella coda di messaggi non recapitabili e ritentare l'invio del messaggio o correggere l'errore che ha causato l'inserimento del messaggio originale nella coda dei messaggi non recapitabili e inviare il messaggio. Nell'esempio, il client visualizza un messaggio di errore.  
   
  Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Il codice del servizio nell'esempio è costituito il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  La comunicazione con il servizio avviene all'interno dell'ambito di una transazione. Il servizio legge messaggi dalla coda, esegue l'operazione e quindi visualizza i risultati dell'operazione. L'applicazione crea anche una coda per i messaggi non recapitabili.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  La configurazione del client specifica una durata breve per il raggiungimento del servizio da parte del messaggio. Se il messaggio non può essere trasmesso entro la durata specificata, scade e viene spostato nella coda di messaggi non recapitabili.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  La coda di messaggi non recapitabili è una coda client ed è locale per il gestore delle code client.  
   
  L'implementazione del servizio messaggi non recapitabili verifica la ragione del mancato recapito di un messaggio e adotta misure correttive. La ragione di un errore di messaggio viene acquisita in due enumerazioni, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> e <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. È possibile recuperare la <xref:System.ServiceModel.Channels.MsmqMessageProperty> dal <xref:System.ServiceModel.OperationContext> come illustrato nel codice di esempio seguente:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  I messaggi nella coda di messaggi non recapitabili sono indirizzati al servizio che sta elaborando il messaggio. Di conseguenza, quando il servizio messaggi non recapitabili legge messaggi dalla coda, il livello canale di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] trova la mancata corrispondenza negli endpoint e non distribuisce il messaggio. In questo caso, il messaggio è indirizzato al servizio di elaborazione ordini ma viene ricevuto dal servizio messaggi non recapitabili. Per ricevere un messaggio indirizzato a un altro endpoint, in `ServiceBehavior` viene specificato un filtro degli indirizzi con il quale confrontare qualsiasi indirizzo. Questo è necessario per elaborare correttamente i messaggi che vengono letti dalla coda di messaggi non recapitabili.  
   
  In questo esempio, il servizio messaggi non recapitabili reinvia il messaggio se la ragione dell'errore è che il messaggio è scaduto. Per tutte le altre ragioni, visualizza l'errore di recapito, come illustrato nel codice di esempio seguente:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  Nell'esempio seguente viene illustrata la configurazione per un messaggio non recapitabile.  
   
 ```xml  

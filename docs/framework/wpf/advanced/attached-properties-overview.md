@@ -1,13 +1,13 @@
 ---
-title: "Cenni preliminari sulle proprietà associate"
-ms.custom: 
+title: Cenni preliminari sulle proprietà associate
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>Cenni preliminari sulle proprietà associate
 Una proprietà associata è un concetto definito da XAML. Una proprietà associata deve essere usata come un tipo di proprietà globale che è possibile impostare su qualsiasi oggetto. In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] le proprietà associate sono in genere definite come un tipo specializzato di proprietà di dipendenza che non dispone della proprietà "wrapper" convenzionale.  
@@ -67,7 +67,7 @@ Una proprietà associata è un concetto definito da XAML. Una proprietà associa
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>Esempio di proprietà associata definita dall'elemento padre  
  Lo scenario più tipico in cui [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definisce una proprietà associata è quello in cui un elemento padre supporta una raccolta di elementi figlio e implementa inoltre un comportamento tale che le specifiche del comportamento vengono segnalate singolarmente per ogni elemento figlio.  
   
- <xref:System.Windows.Controls.DockPanel>definisce il <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> , proprietà associata e <xref:System.Windows.Controls.DockPanel> dispone di codice a livello di classe come parte della logica di rendering (in particolare, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> e <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Oggetto <xref:System.Windows.Controls.DockPanel> istanza sempre controlla se uno dei relativi elementi figlio immediati ha impostato un valore per <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. In questo caso, tali valori diventano l'input per la logica di rendering applicata a quel particolare elemento figlio. Annidati <xref:System.Windows.Controls.DockPanel> istanze ogni trattare le proprie raccolte di elementi figlio diretti, ma questo comportamento è specifico dell'implementazione come <xref:System.Windows.Controls.DockPanel> processi <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valori. In teoria, è possibile che alcune proprietà associate abbiano effetto su elementi più distanti dell'elemento padre immediato. Se il <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> proprietà associata è impostata su un elemento che non ha alcun <xref:System.Windows.Controls.DockPanel> viene generato l'elemento padre per eseguire un'azione, nessun errore o eccezione. Ciò significa semplicemente che è stato impostato un valore della proprietà globale, ma presente alcun elemento <xref:System.Windows.Controls.DockPanel> padre che possa utilizzare le informazioni.  
+ <xref:System.Windows.Controls.DockPanel> definisce il <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> associata, e <xref:System.Windows.Controls.DockPanel> dispone di codice a livello di classe come parte della logica di rendering (in particolare, <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> e <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>). Oggetto <xref:System.Windows.Controls.DockPanel> istanza sempre controlla se uno dei relativi elementi figlio immediati ha impostato un valore per <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. In questo caso, tali valori diventano l'input per la logica di rendering applicata a quel particolare elemento figlio. Annidati <xref:System.Windows.Controls.DockPanel> istanze ogni trattare le proprie raccolte di elementi figlio diretti, ma questo comportamento è specifico dell'implementazione come <xref:System.Windows.Controls.DockPanel> processi <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> valori. In teoria, è possibile che alcune proprietà associate abbiano effetto su elementi più distanti dell'elemento padre immediato. Se il <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> proprietà associata è impostata su un elemento che non ha alcun <xref:System.Windows.Controls.DockPanel> viene generato l'elemento padre per eseguire un'azione, nessun errore o eccezione. Ciò significa semplicemente che è stato impostato un valore della proprietà globale, ma presente alcun elemento <xref:System.Windows.Controls.DockPanel> padre che possa utilizzare le informazioni.  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>Proprietà associate nel codice  
@@ -106,7 +106,7 @@ Una proprietà associata è un concetto definito da XAML. Una proprietà associa
  Definire la proprietà associata come proprietà di dipendenza dichiarando un `public` `static` `readonly` campo di tipo <xref:System.Windows.DependencyProperty>. Per definire questo campo, utilizzare il valore restituito del <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metodo. Il nome del campo deve corrispondere al nome della proprietà associata, a cui viene aggiunta la stringa `Property`, secondo il modello [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stabilito per la denominazione dei campi di identificazione in base alle proprietà che rappresentano. Il provider della proprietà associata deve inoltre fornire metodi `Get`*NomeProprietà* e `Set`*NomeProprietà* statici come funzioni di accesso per la proprietà associata. In caso contrario, il sistema di proprietà non sarà in grado di usare la proprietà associata.  
   
 > [!NOTE]
->  Se si omette la funzione di accesso get della proprietà associata, il data binding per la proprietà non funzionerà negli strumenti di progettazione, ad esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] e in Expression Blend.  
+>  Se si omette funzione di accesso get della proprietà associata, associazione dati per la proprietà non funzionerà negli strumenti di progettazione, ad esempio Visual Studio ed Expression Blend.  
   
 #### <a name="the-get-accessor"></a>Funzione di accesso Get  
  La firma per la funzione di accesso `Get`*NomeProprietà* deve essere:  

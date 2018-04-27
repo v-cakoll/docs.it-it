@@ -1,29 +1,30 @@
 ---
-title: "Introduzione all'interoperabilità COM (Visual Basic)"
-ms.custom: 
+title: Introduzione all'interoperabilità COM (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduzione all'interoperabilità COM (Visual Basic)
 Il modello COM (Component Object) consente a un oggetto esporne la funzionalità per gli altri componenti e applicazioni host. Mentre gli oggetti COM sono stati fondamentali della programmazione per molti anni Windows, le applicazioni progettate per common language runtime (CLR) offrono numerosi vantaggi.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]Infine, le applicazioni sostituiranno quelle sviluppate con COM. Fino ad allora, potrebbe essere necessario utilizzare o creare oggetti COM tramite [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Interoperabilità COM, o *l'interoperabilità COM*, consente di utilizzare gli oggetti COM esistenti durante la fase di transizione per il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] con gradualità.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Infine, le applicazioni sostituiranno quelle sviluppate con COM. Fino ad allora, è possibile utilizzare o creare oggetti COM con Visual Studio. Interoperabilità COM, o *l'interoperabilità COM*, consente di utilizzare gli oggetti COM esistenti durante la fase di transizione per il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] con gradualità.  
   
  Tramite il [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per creare componenti COM, è possibile utilizzare l'interoperabilità COM senza registrazione. Ciò consente di controllare la versione della DLL è abilitato quando sono installato in un computer più versioni e consente agli utenti finali di utilizzare XCOPY o FTP per copiare l'applicazione in una directory appropriata nel computer in cui può essere eseguito. Per ulteriori informazioni, vedere [interoperabilità COM senza registrazione](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
@@ -49,7 +50,7 @@ Il modello COM (Component Object) consente a un oggetto esporne la funzionalità
  Per ulteriori informazioni sugli assembly e manifesti dell'assembly, vedere [assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Importazione ed esportazione di librerie dei tipi  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]include un'utilità, Tlbimp, che consente di importare le informazioni da una libreria dei tipi in un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È possibile generare le librerie dei tipi da assembly tramite l'utilità Tlbexp.  
+ Visual Studio include un'utilità, Tlbimp, che consente di importare le informazioni da una libreria dei tipi in un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione. È possibile generare le librerie dei tipi da assembly tramite l'utilità Tlbexp.  
   
  Per informazioni su Tlbimp e Tlbexp, vedere [Tlbimp.exe (utilità di importazione di tipo libreria)](../../../framework/tools/tlbimp-exe-type-library-importer.md) e [Tlbexp.exe (Type Library Exporter)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
@@ -57,7 +58,7 @@ Il modello COM (Component Object) consente a un oggetto esporne la funzionalità
  Assembly di interoperabilità sono [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] gli assembly che bridge tra gestito e codice, membri dell'oggetto COM mapping equivalente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] membri gestiti. Assembly di interoperabilità creati da Visual Basic .NET gestiscono molti dei dettagli relativi all'utilizzo con oggetti COM, ad esempio il marshalling di interoperabilità.  
   
 ## <a name="interoperability-marshaling"></a>Il marshalling di interoperabilità  
- Tutti [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni condividono un set di tipi comuni che consentono l'interoperabilità tra gli oggetti, indipendentemente dal linguaggio di programmazione utilizzato. I parametri e valori restituiti di oggetti COM talvolta utilizzano tipi di dati diversi da quelli usati nel codice gestito. *Il marshalling di interoperabilità* è il processo di parametri di creazione di pacchetti e i valori restituiti in tipi di dati equivalenti durante lo spostamento da e verso oggetti COM. Per ulteriori informazioni, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
+ Tutti [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni condividono un set di tipi comuni che consentono l'interoperabilità tra gli oggetti, indipendentemente dal linguaggio di programmazione utilizzato. I parametri e valori restituiti di oggetti COM talvolta utilizzano tipi di dati diversi da quelli usati nel codice gestito. *Il marshalling di interoperabilità* è il processo di creazione del pacchetto parametri e valori restituiti nei tipi di dati equivalente durante lo spostamento da e verso oggetti COM. Per ulteriori informazioni, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)  

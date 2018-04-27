@@ -1,36 +1,36 @@
 ---
 title: Cenni preliminari sul controllo SplitContainer (Windows Form)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Cenni preliminari sul controllo SplitContainer (Windows Form)
 Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere considerato un oggetto composto, poiché è costituito da due pannelli separati da una barra mobile. Quando il puntatore del mouse viene posizionato sopra la barra, assume una forma diversa per indicare che la barra è mobile.  
   
 > [!IMPORTANT]
->  Nel **della casella degli strumenti**, <xref:System.Windows.Forms.SplitContainer> controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo della versione precedente di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. È consigliabile usare il controllo <xref:System.Windows.Forms.SplitContainer> anziché il controllo <xref:System.Windows.Forms.Splitter>. Il <xref:System.Windows.Forms.Splitter> classe è ancora inclusa nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per la compatibilità con le applicazioni esistenti, ma si consiglia di utilizzare il <xref:System.Windows.Forms.SplitContainer> controllo per i nuovi progetti.  
+>  Nel **casella degli strumenti**, <xref:System.Windows.Forms.SplitContainer> controllo sostituisce il <xref:System.Windows.Forms.Splitter> controllo che era presente nella versione precedente di Visual Studio. È consigliabile usare il controllo <xref:System.Windows.Forms.SplitContainer> anziché il controllo <xref:System.Windows.Forms.Splitter>. Il <xref:System.Windows.Forms.Splitter> classe è ancora inclusa nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per la compatibilità con le applicazioni esistenti, ma si consiglia di utilizzare il <xref:System.Windows.Forms.SplitContainer> controllo per i nuovi progetti.  
   
  Con il <xref:System.Windows.Forms.SplitContainer> (controllo), è possibile creare complesse interfacce utente, in cui una selezione in un pannello determina quali oggetti vengono visualizzati in un pannello di. Questa disposizione è particolarmente efficace per la visualizzazione e la ricerca di informazioni. Con due pannelli consente aggregare informazioni nelle aree e la barra di "barra di divisione," semplifica agli utenti di ridimensionare i pannelli.  
   
@@ -59,10 +59,10 @@ Il controllo <xref:System.Windows.Forms.SplitContainer> Windows Form può essere
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore alla barra di divisione mobile.|  
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
 |Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Determina lo spessore, in pixel, della barra di divisione.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>evento|Si verifica quando la barra di divisione viene spostato.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>evento|Si verifica quando la barra di divisione è stato spostato.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Evento|Si verifica quando la barra di divisione viene spostato.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Evento|Si verifica quando la barra di divisione è stato spostato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.SplitContainer>  
  [Controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Esempio di controllo SplitContainer](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+ [Esempio SplitContainer (controllo)](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

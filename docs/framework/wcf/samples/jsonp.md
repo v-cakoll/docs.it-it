@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-In questo esempio viene illustrato come supportare JSONP (JSON with Padding) nei servizi WCF REST. JSONP è una convenzione usata per richiamare script tra domini mediante la generazione di tag script nel documento corrente. Il risultato viene restituito in una funzione di callback specificata. JSONP si basa sul concetto che tag quali \<script src = "http:/ /..." > grado di valutare script da ogni dominio e lo script recuperato da tali tag venga valutato all'interno di un ambito in cui potrebbero già essere definite altre funzioni.  
+In questo esempio viene illustrato come supportare JSONP (JSON with Padding) nei servizi WCF REST. JSONP è una convenzione usata per richiamare script tra domini mediante la generazione di tag script nel documento corrente. Il risultato viene restituito in una funzione di callback specificata. JSONP si basa sul concetto che tag quali `<script src="http://..." >` grado di valutare script da ogni dominio e che lo script recuperato da tali tag venga valutato all'interno di un ambito in cui altre funzioni possono essere già definite.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
  Generazione di script tra domini con JSONP.  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  Aprire la soluzione per l'esempio relativo a JSONP.  
   
-2.  Premere F5 per avviare un collegamento ipertestuale "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx nel browser.  
+2.  Premere F5 per avviare `http://localhost:26648/JSONPClientPage.aspx` nel browser.  
   
 3.  Si noti che dopo il caricamento della pagina, gli input di testo per "Name" e "Address" vengono popolati dai valori.  Questi valori vengono forniti da una chiamata al servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al termine del rendering della pagina da parte del browser.

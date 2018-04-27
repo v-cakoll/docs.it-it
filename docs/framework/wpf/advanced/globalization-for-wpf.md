@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>Globalizzazione per WPF
 In questo argomento vengono presentati i problemi da prendere in considerazione quando si scrive [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applicazioni per il mercato globale. Gli elementi di programmazione di globalizzazione sono definiti [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.  
@@ -180,7 +180,7 @@ Nell'esempio seguente viene illustrato un riferimento a carattere esadecimale. S
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>Uso di ClickOnce con applicazioni localizzate  
- ClickOnce è una nuova tecnologia di distribuzione di Windows Form che verrà forniti [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. che consente l'installazione e l'aggiornamento di applicazioni Web. Quando un'applicazione distribuita con ClickOnce è localizzata, può essere visualizzata solo nelle impostazioni cultura localizzate. Ad esempio, se un'applicazione distribuita è localizzata in giapponese, può essere visualizzato solo nella versione giapponese [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] non in lingua inglese [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]. Ciò costituisce un problema perché è uno scenario comune per gli utenti giapponesi eseguire una versione inglese di [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ ClickOnce è una nuova tecnologia di distribuzione di Windows Form che verrà forniti [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. che consente l'installazione e l'aggiornamento di applicazioni Web. Quando un'applicazione distribuita con ClickOnce è localizzata, può essere visualizzata solo nelle impostazioni cultura localizzate. Ad esempio, se un'applicazione distribuita è localizzata in giapponese, può essere visualizzato solo nella versione giapponese [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] non in lingua inglese di Windows. Ciò costituisce un problema perché è uno scenario comune per gli utenti giapponesi eseguire una versione inglese di Windows.  
   
  Per risolvere il problema, è necessario impostare l'attributo di fallback su una lingua neutra. Uno sviluppatore di applicazioni può facoltativamente rimuovere risorse dall'assembly principale e specificare che le risorse sono disponibili in un assembly satellite corrispondente a impostazioni cultura specifiche. A questo scopo, utilizzare il <xref:System.Resources.NeutralResourcesLanguageAttribute>. Il costruttore del <xref:System.Resources.NeutralResourcesLanguageAttribute> classe presenta due firme, uno che accetta un <xref:System.Resources.UltimateResourceFallbackLocation> parametro per specificare il percorso in cui il <xref:System.Resources.ResourceManager> deve estrarre le risorse di fallback: assembly principale o un assembly satellite. L'esempio seguente mostra come usare l'attributo. Per il percorso di fallback finale, il codice provoca il <xref:System.Resources.ResourceManager> per cercare le risorse nella sottodirectory "de" della directory dell'assembly attualmente in esecuzione.  
   

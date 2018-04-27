@@ -1,23 +1,24 @@
 ---
 title: Processo di acquisto aziendale
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.  
@@ -58,7 +59,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descrizione del processo  
- In questo esempio viene illustrata un'implementazione di un programma [!INCLUDE[wf](../../../../includes/wf-md.md)] per raccogliere le proposte dei fornitori per una società generica.  
+ In questo esempio viene illustrata un'implementazione di un programma di Windows Workflow Foundation (WF) per raccogliere le proposte dei fornitori per una società generica.  
   
 1.  Un dipendente della società X crea una richiesta di proposta (RDP).  
   
@@ -137,7 +138,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |Form|Descrizione|  
 |-|-|  
 |NewRfp|Crea e invia una nuova richiesta di proposte.|  
-|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:** potrebbe essere necessario fare clic su di **aggiornamento** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificare una richiesta di proposta.|  
+|ShowProposals|Mostra tutte le richieste di proposte attive e completate. **Nota:** potrebbe essere necessario scegliere il **aggiornare** pulsante nell'interfaccia utente per visualizzare le modifiche in tale schermata dopo aver creato o modificato una richiesta di proposta.|  
 |SubmitProposal|Ottiene una proposta da un fornitore in una richiesta di proposte concreta. Questa finestra viene usata solo dai fornitori.|  
 |ViewRfp|Mostra tutte le informazioni relative a una richiesta di proposte (proposte ricevute, date, valori e altre informazioni). Questa finestra viene usata solo dall'autore della richiesta di proposte.|  
   
@@ -167,7 +168,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 -   **Crea nuova RDP**: crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: aggiorna l'elenco di attive e completate nella finestra principale.  
+-   **Aggiorna**: aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
 -   **Visualizzazione**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata).  
   
@@ -177,7 +178,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 -   **Crea RDP**: crea una nuova richiesta di proposte (RDP) e avvia un flusso di lavoro del processo di acquisto.  
   
--   **Aggiorna**: aggiorna l'elenco di attive e completate nella finestra principale.  
+-   **Aggiorna**: aggiorna l'elenco di RDP attive e completate nella finestra principale.  
   
 -   **Visualizza RDP**: Mostra il contenuto di una RDP esistente. I fornitori possono inviare le proposte (se invitati o se la RDP non è completata)  
   

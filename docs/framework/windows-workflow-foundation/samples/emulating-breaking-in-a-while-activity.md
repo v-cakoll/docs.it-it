@@ -1,34 +1,35 @@
 ---
-title: "Emulazione di interruzione in un'attività While"
-ms.custom: 
+title: Emulazione di interruzione in un'attività While
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emulazione di interruzione in un'attività While
 In questo esempio viene illustrato come interrompere il meccanismo di ciclo delle attività seguenti: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> e <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Tale operazione è utile poiché in [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.  
+ Ciò è utile perché Windows Workflow Foundation (WF) non è inclusa alcuna attività per interrompere l'esecuzione di questi cicli.  
   
 ## <a name="scenario"></a>Scenario  
  Nell'esempio viene rilevato il primo fornitore affidabile in un elenco di fornitori (istanze della classe `Vendor`). Ogni fornitore dispone di un oggetto `ID`, di un oggetto `Name` e di un valore di affidabilità numerico che determina l'affidabilità del fornitore. Nell'esempio viene creata un'attività personalizzata denominata `FindReliableVendor` che riceve due parametri di input (un elenco di fornitori e un valore di affidabilità minimo) e restituisce il primo fornitore dell'elenco che corrisponde ai criteri forniti.  
   
 ## <a name="breaking-a-loop"></a>Interruzione di un ciclo  
- In [!INCLUDE[wf](../../../../includes/wf-md.md)] non è inclusa alcuna attività per interrompere un ciclo. Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili. Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
+ Windows Workflow Foundation (WF) non include un'attività per interrompere un ciclo. Nell'esempio di codice viene eseguita l'interruzione di un ciclo tramite un'attività <xref:System.Activities.Statements.If> e diverse variabili. Nell'esempio, l'attività <xref:System.Activities.Statements.While> viene interrotta dopo che alla variabile `reliableVendor` viene assegnato un valore diverso da `null`.  
   
  Nell'esempio di codice seguente viene illustrato il modo in cui l'esempio interrompe un ciclo while.  
   

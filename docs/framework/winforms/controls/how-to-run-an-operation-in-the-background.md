@@ -27,18 +27,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d17b2b982def283021bbd5d0ba7ab1e40ecf4e4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9e672215ac7b381175303c62f24c3881a2cce693
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Procedura: eseguire un'operazione in background
 Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare ritardi nella risposta dell'interfaccia utente, è possibile usare la classe <xref:System.ComponentModel.BackgroundWorker> per eseguire l'operazione in un altro thread.  
   
  L'esempio di codice seguente illustra come eseguire in background un'operazione che richiede molto tempo. Nel form sono presenti i pulsanti **Avvia** e **Annulla**. Fare clic sul pulsante **Avvia** per eseguire un'operazione asincrona. Fare clic sul pulsante **Annulla** per interrompere l'esecuzione dell'operazione asincrona. Il risultato di ciascuna operazione viene visualizzato in una finestra di messaggio <xref:System.Windows.Forms.MessageBox>.  
   
- In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] è disponibile supporto completo per questa attività.  
+ In Visual Studio è disponibile supporto completo per questa attività.  
   
  Vedere anche [Procedura dettagliata: Esecuzione di un'operazione in background](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).  
   
@@ -51,7 +51,7 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
   
 -   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ComponentModel.BackgroundWorker>  

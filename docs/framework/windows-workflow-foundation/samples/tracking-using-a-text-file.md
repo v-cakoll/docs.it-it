@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 32aab8ae875158fed62c70cbc2d7506ba6c8d3c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Rilevamento tramite un file di testo
-In questo esempio viene illustrato come estendere il rilevamento in [!INCLUDE[wf](../../../../includes/wf-md.md)] creando un partecipante di rilevamento personalizzato. I partecipanti di rilevamento sono classi .NET Framework che ricevono record di rilevamento dal runtime man mano che vengono generati. È possibile creare un partecipante di rilevamento per trasportare gli eventi di rilevamento a qualunque destinazione necessaria per lo specifico scenario. Ad esempio, il partecipante di rilevamento Analisi eventi per Windows (ETW) viene fornito come parte di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il partecipante di rilevamento in questo esempio scrive i record in formato XML in un file di testo.  
+In questo esempio viene illustrato come estendere il rilevamento in Windows Workflow Foundation (WF) creando un partecipante del rilevamento personalizzato. I partecipanti di rilevamento sono classi .NET Framework che ricevono record di rilevamento dal runtime man mano che vengono generati. È possibile creare un partecipante di rilevamento per trasportare gli eventi di rilevamento a qualunque destinazione necessaria per lo specifico scenario. Ad esempio, il partecipante di rilevamento Analisi eventi per Windows (ETW) viene fornito come parte di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Il partecipante di rilevamento in questo esempio scrive i record in formato XML in un file di testo.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  Per ottimizzare l'utilità e l'affidabilità del partecipante di rilevamento, è necessario completare alcuni passaggi aggiuntivi per collegare correttamente il partecipante di rilevamento al runtime. Nella tabella seguente vengono descritte le classi usate in questo esempio per creare un partecipante di rilevamento conforme alle procedure consigliate.  
@@ -66,7 +66,7 @@ In questo esempio viene illustrato come estendere il rilevamento in [!INCLUDE[wf
   
 5.  Nel browser viene visualizzata la **StockPriceService** pagina, che contiene l'indirizzo wsdl del servizio locale. Copiare questo indirizzo.  
   
-     L'indirizzo wsdl del servizio locale è, ad esempio, http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Un esempio di indirizzo wsdl del servizio locale è http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Da [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] passare alla cartella [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (la cartella di installazione predefinita è %SystemDrive%\Programmi\Microsoft Visual Studio 10.0). Individuare quindi la sottocartella Common7\IDE\.  
   

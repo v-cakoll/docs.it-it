@@ -1,12 +1,13 @@
 ---
 title: Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-`ShouldSerialize`e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare la <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:  
+`ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non presenta un valore predefinito semplice. Se la proprietà ha un valore predefinito semplice, è consigliabile applicare la <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo. Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:  
   
 -   La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Se una proprietà non ha un `Reset` , non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito specificato nella relativa dichiarazione, il `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Se una proprietà non ha un `Reset` metodo, non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito fornito nella relativa dichiarazione, la `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in Visual Studio.  
   
- Finestre di progettazione, ad esempio [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] utilizzare il `ShouldSerialize` *PropertyName* per verificare se una proprietà è stata modificata rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo un più efficiente generazione di codice. Ad esempio:  
+ Utilizzare le finestre di progettazione, ad esempio Visual Studio il `ShouldSerialize` *PropertyName* metodo per verificare se una proprietà è stato modificato rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo un codice più efficiente generazione. Ad esempio:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

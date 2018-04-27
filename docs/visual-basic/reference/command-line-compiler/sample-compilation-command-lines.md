@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b61ef6facf33fa043cad28a78405a19308a9864f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Esempi di righe di comando compilazione (Visual Basic)
-In alternativa alla compilazione dei programmi Visual Basic dall'interno [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], è possibile compilare dalla riga di comando per generare file di libreria a collegamento dinamico (DLL) o file eseguibile (.exe).  
+Come alternativa alla compilazione dei programmi Visual Basic da Visual Studio, è possibile compilare dalla riga di comando per generare file di libreria a collegamento dinamico (DLL) o file eseguibile (.exe).  
   
  Il compilatore della riga di comando di Visual Basic supporta un set completo di opzioni che controllano l'input e output di file, gli assembly, debug e le opzioni per il preprocessore. Ogni opzione è disponibile in due formati intercambiabili: `-option` e `/option`. Questa documentazione viene visualizzato soltanto il `-option` form.  
   

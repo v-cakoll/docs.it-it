@@ -1,24 +1,26 @@
 ---
 title: Comunicazione bidirezionale
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>Comunicazione bidirezionale
 Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM. In questo esempio viene usata l'associazione `netMsmqBinding`. In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -33,33 +35,33 @@ Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali 
  Questo esempio dimostra la comunicazione bidirezionale usando le code. Il client invia ordini di acquisto alla coda dall'interno dell'ambito di una transazione. Il servizio riceve gli ordini, elabora l'ordine e quindi richiama il client con lo stato dell'ordine dalla coda all'interno dell'ambito di una transazione. Per facilitare la comunicazione bidirezionale il client e il servizio usano entrambi code per accodare gli ordini di acquisto e lo stato degli ordini.  
   
  Il contratto di servizio `IOrderProcessor` definisce operazioni del servizio bidirezionale che sono adeguate all'accodamento. L'operazione del servizio include l'endpoint di risposta al qual e inviare gli stati degli ordini L'endpoint di risposta è URI della coda alla quale restituire lo stato dell'ordine per il client. L'applicazione di elaborazione degli ordini implementa questo contratto.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  Il contratto di risposta per inviare lo stato dell'ordine è specificato dal client. Il client implementa il contratto dello stato dell'ordine. Il servizio usa il proxy generato di questo contratto per restituire lo stato dell'ordine al client.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  L'operazione del servizio elabora l'ordine di acquisto inviato. <xref:System.ServiceModel.OperationBehaviorAttribute> viene applicato all'operazione del servizio per specificare l'inserimento automatico nell'elenco in una transazione usata per ricevere il messaggio dalla coda e il completamento automatico delle transazioni al completamento dell'operazione del servizio. La classe `Orders` incapsula la funzionalità di elaborazione degli ordini. In questo caso, aggiunge l'ordine di acquisto a un dizionario. La transazione che l'operazione del servizio ha inserito nell'elenco è disponibile per le operazioni nella classe `Orders`.  
   
  L'operazione del servizio, oltre a elaborare l'ordine di acquisto inviato risponde al client in merito allo stato dell'ordine.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione System.ServiceModel del file di configurazione.  
   
 > [!NOTE]
 >  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse. Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso. Nell'indirizzo dell'endpoint di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene specificato uno schema net.msmq:, viene usato "localhost" per il computer locale e barre nel percorso. Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
   
  Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene utilizzato il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Il client crea una transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale tutti i messaggi riescono o meno.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  Il codice client implementa il contratto `IOrderStatus` per ricevere lo stato dell'ordine dal servizio. In questo caso, stampa lo stato dell'ordine.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  La coda dello stato degli ordini viene creata nel metodo `Main`. La configurazione del client comprende la configurazione del servizio di stato degli ordini per ospitare il servizio di stato degli ordini, come illustrato nella configurazione di esempio seguente.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  Il servizio per questo esempio crea un'associazione in `OrderProcessorService`. Aggiungere una riga di codice dopo la creazione dell'istanza dell'associazione per impostare la modalità di sicurezza su `None`.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

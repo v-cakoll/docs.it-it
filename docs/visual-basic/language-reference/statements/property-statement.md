@@ -2,9 +2,10 @@
 title: Property Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property Statement
 Dichiara il nome di una proprietà e le routine della proprietà utilizzate per archiviare e recuperare il valore della proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -51,11 +52,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Parametro facoltativo. Elenco di attributi che si applicano a questa proprietà o `Get` o `Set` stored procedure. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Facoltativo. Elenco di attributi che si applicano a questa proprietà o `Get` o `Set` stored procedure. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Parametro facoltativo. Specifica che questa proprietà è la proprietà predefinita per la classe o struttura in cui è definito. Le proprietà predefinite deve accettare parametri e possono essere impostate e recuperate senza specificare il nome della proprietà. Se si dichiara la proprietà come `Default`, non è possibile utilizzare `Private` sulla proprietà né sulle routine della proprietà.  
+     Facoltativo. Specifica che questa proprietà è la proprietà predefinita per la classe o struttura in cui è definito. Le proprietà predefinite deve accettare parametri e possono essere impostate e recuperate senza specificare il nome della proprietà. Se si dichiara la proprietà come `Default`, non è possibile utilizzare `Private` sulla proprietà né sulle routine della proprietà.  
   
 -   `accessmodifier`  
   
@@ -75,7 +76,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     Parametro facoltativo. Può essere uno dei seguenti:  
+     Facoltativo. Può essere uno dei seguenti:  
   
     -   [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,23 +94,23 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Parametro facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Parametro facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
-     Parametro facoltativo. Vedere [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+     Facoltativo. Vedere [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
 -   `Iterator`  
   
-     Parametro facoltativo. Vedere [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Facoltativo. Vedere [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
@@ -117,7 +118,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `parameterlist`  
   
-     Parametro facoltativo. Elenco di nomi di variabili locali che rappresenta i parametri di questa proprietà e gli eventuali parametri aggiuntivi del `Set` stored procedure. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Facoltativo. Elenco di nomi di variabili locali che rappresenta i parametri di questa proprietà e gli eventuali parametri aggiuntivi del `Set` stored procedure. Vedere [elenco parametri](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
@@ -125,7 +126,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     Parametro facoltativo. Indica che questa proprietà implementa una o più proprietà, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa proprietà. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Facoltativo. Indica che questa proprietà implementa una o più proprietà, ciascuno definito in un'interfaccia implementata dalla classe o struttura che contiene questa proprietà. Vedere [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
@@ -144,11 +145,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Get`  
   
-     Parametro facoltativo. Obbligatorio se la proprietà è contrassegnata `WriteOnly`. Avvia un `Get` routine di proprietà viene utilizzata per restituire il valore della proprietà.  
+     Facoltativo. Obbligatorio se la proprietà è contrassegnata `WriteOnly`. Avvia un `Get` routine di proprietà viene utilizzata per restituire il valore della proprietà.  
   
 -   `statements`  
   
-     Parametro facoltativo. Blocco di istruzioni da eseguire all'interno di `Get` o `Set` stored procedure.  
+     Facoltativo. Blocco di istruzioni da eseguire all'interno di `Get` o `Set` stored procedure.  
   
 -   `End Get`  
   
@@ -156,7 +157,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     Parametro facoltativo. Obbligatorio se la proprietà è contrassegnata `ReadOnly`. Avvia un `Set` routine della proprietà utilizzato per archiviare il valore della proprietà.  
+     Facoltativo. Obbligatorio se la proprietà è contrassegnata `ReadOnly`. Avvia un `Set` routine della proprietà utilizzato per archiviare il valore della proprietà.  
   
 -   `End Set`  
   

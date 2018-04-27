@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentazione del codice tramite XML (Visual Basic)
 In Visual Basic, è possibile documentare il codice tramite XML  
@@ -40,7 +40,7 @@ In Visual Basic, è possibile documentare il codice tramite XML
   
     -   L'attributo `cref` può essere associato a qualsiasi tag per fornire un riferimento a un elemento del codice. Il compilatore verifica l'esistenza di questo elemento di codice. Se la verifica ha esito negativo, il compilatore genera un avviso. Il compilatore rispetta inoltre eventuali `Imports` istruzioni durante la ricerca di un tipo di `cref` attributo.  
   
-    -   Il \<riepilogo > tag è utilizzato da IntelliSense nel [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] per visualizzare informazioni aggiuntive su un tipo o membro.  
+    -   Il \<riepilogo > tag è utilizzato da IntelliSense in Visual Studio per visualizzare informazioni aggiuntive sul tipo o membro.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per informazioni dettagliate sulla creazione di un file XML con i commenti della documentazione, vedere gli argomenti seguenti:  

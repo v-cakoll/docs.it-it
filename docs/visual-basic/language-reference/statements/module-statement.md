@@ -2,9 +2,10 @@
 title: Istruzione Module
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Module
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Istruzione Module
 Dichiara il nome di un modulo e introduce la definizione di variabili, proprietà, eventi ed procedure che comprende il modulo.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -40,10 +41,10 @@ End Module
   
 ## <a name="parts"></a>Parti  
  `attributelist`  
- Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Parametro facoltativo. Può essere uno dei seguenti:  
+ Facoltativo. Può essere uno dei seguenti:  
   
 -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -55,7 +56,7 @@ End Module
  Obbligatorio. Nome di questo modulo. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `statements`  
- Parametro facoltativo. Istruzioni che definiscono le variabili, proprietà, eventi, procedure e tipi annidati di questo modulo.  
+ Facoltativo. Istruzioni che definiscono le variabili, proprietà, eventi, procedure e tipi annidati di questo modulo.  
   
  `End Module`  
  Termina il `Module` definizione.  

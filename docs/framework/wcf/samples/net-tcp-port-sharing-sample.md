@@ -1,24 +1,26 @@
 ---
 title: Esempio di condivisione delle porte Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Esempio di condivisione delle porte Net.TCP
 Il protocollo TCP/IP utilizza un numero a 16 bit, definito porta, per differenziare le connessioni a più applicazioni di rete che sono in esecuzione nello stesso computer. Se un'applicazione è in ascolto su una porta, tutto il traffico TCP per quella porta viene indirizzato a tale applicazione. Su quella porta non possono essere contemporaneamente in ascolto altre applicazioni.  
@@ -46,8 +48,8 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
   
 ## <a name="enabling-port-sharing"></a>Abilitazione della condivisione delle porte  
  Nel codice seguente viene illustrata l'abilitazione della condivisione delle porte sul server. Viene avviata un'istanza del servizio `ICalculator` su una porta fissa con un percorso URI casuale. Anche se due servizi possono condividere la stessa porta, gli indirizzi degli endpoint complessivi devono comunque essere univoci affinché il servizio di condivisione porte Net.Tcp possa indirizzare i messaggi all'applicazione corretta.  
-  
-```  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,8 +61,8 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
+```
+
  Quando la condivisione delle porte è abilitata, è possibile eseguire più volte il servizio senza generare un conflitto sul numero della porta. Se si modifica il codice per disabilitare la condivisione delle porte, l'avvio di due copie del servizio comporta l'errore della seconda con un'eccezione <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
@@ -69,8 +71,8 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
   
 ## <a name="running-the-sample"></a>Esecuzione dell'esempio  
  È possibile utilizzare il client di prova per verificare che i messaggi vengano indirizzati correttamente ai servizi che condividono la porta.  
-  
-```  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,8 +114,8 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
+```
+
  Ogni istanza del servizio mostra il relativo numero e indirizzo univoco. Ad esempio, è possibile visualizzare il testo seguente quando si esegue service.exe.  
   
 ```  

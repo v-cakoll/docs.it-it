@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>Ritardo durevole in XAMLX
 In questo esempio viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
@@ -37,7 +37,7 @@ In questo esempio viene illustrato come usare un ritardo durevole, ovvero un rit
   
  Il file con estensione xamlx è un servizio flusso di lavoro che è ospitato in Visual Studio. Visual Studio viene usato Cassini che usa un servizio flusso di lavoro host per ospitare il flusso di lavoro.  
   
- Oltre a ospitare il flusso di lavoro, l'host del servizio flusso di lavoro gestisce le istanze del flusso di lavoro caricandole e scaricandole. Per avviare un'istanza della definizione di [!INCLUDE[wf](../../../../includes/wf-md.md)] (nell'host del servizio flusso di lavoro), impostare un client che invia un messaggio all'attività <xref:System.ServiceModel.Activities.Receive> nel flusso di lavoro. Questo oggetto <xref:System.ServiceModel.Activities.Receive> dispone della proprietà <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> impostata su `true` in modo che possa creare una nuova istanza del flusso di lavoro dopo aver ricevuto un messaggio.  
+ Oltre a ospitare il flusso di lavoro, l'host del servizio flusso di lavoro gestisce le istanze del flusso di lavoro caricandole e scaricandole. Per avviare un'istanza della definizione di Windows Workflow Foundation (WF) (nell'host del servizio del flusso di lavoro), impostare un client che invia un messaggio per il <xref:System.ServiceModel.Activities.Receive> attività nel flusso di lavoro. Questo oggetto <xref:System.ServiceModel.Activities.Receive> dispone della proprietà <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> impostata su `true` in modo che possa creare una nuova istanza del flusso di lavoro dopo aver ricevuto un messaggio.  
   
  Durante l'inizializzazione, viene aggiunto un comportamento di scaricamento di istanze al file di configurazione che specifica all'host del servizio flusso di lavoro il punto in cui scaricare un'istanza nell'archivio di persistenza (database). Per questo esempio, scarica immediatamente l'istanza dopo che il flusso di lavoro diventa inattivo (quando viene attivato il ritardo).  
   

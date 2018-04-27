@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0ee64ae3db9dbf98f2a62397075406c118a867bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37296298bda514d507b8fe65af516de74289d6a0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Personalizzazione della fase di progettazione del flusso di lavoro
 In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli scenari per progettare le attività personalizzate e riallocare [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Pertanto lo sviluppo e la distribuzione sono più semplici e più flessibili. La modifica infrastrutturale principale è che il nuovo modello di programmazione della finestra di progettazione ActivityDesigner viene compilato al momento Windows Presentation Foundation (WPF). In questo modo è possibile definire in modo dichiarativo gli ActivityDesigner e riallocare [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in altre applicazioni in modo semplice. In caso di riallocazione, è possibile sviluppare un editor di espressioni personalizzato per supportare IntelliSense o un dominio di espressioni semplificato. L'integrazione con [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è diventata più semplice grazie all'utilizzo dei servizi flusso di lavoro. Gli ActivityDesigner personalizzati e l'albero degli elementi del modello possono essere usati per migliorare le esperienze in fase di progettazione nelle progettazioni flussi di lavoro riallocate.  
@@ -30,7 +30,7 @@ In [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] sono stati semplificati gli sc
  Viene descritto come creare nuovi ActivityDesigner e modelli personalizzati.  
   
  [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- Viene descritto come riallocare [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] e come visualizzare gli errori di convalida.  
+ Viene descritto come riallocare la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] all'esterno di Visual Studio e come visualizzare gli errori di convalida.  
   
  [Uso di un editor di espressioni personalizzato](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)  
  Viene descritto come implementare un editor di espressioni personalizzato da usare con le progettazioni flussi di lavoro riallocate all'esterno di [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  

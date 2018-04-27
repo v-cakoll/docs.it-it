@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -44,7 +44,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Le particolari azioni eseguite durante un'operazione di trascinamento della selezione sono specifiche dell'applicazione e spesso dipendono dal contesto.  Ad esempio, per impostazione predefinita, trascinando una selezione di file da una cartella a un'altra sullo stesso dispositivo di archiviazione, i file vengono spostati, mentre, per impostazione predefinita, trascinando dei file da una condivisione [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] a una cartella locale, i file vengono copiati.  
   
- Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. È completamente supportato anche il trascinamento della selezione tra applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e altre applicazioni [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ Le funzionalità di trascinamento della selezione fornite da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono estremamente flessibili e personalizzabili, per poter supportare svariati scenari di trascinamento.  Il trascinamento della selezione supporta la manipolazione di oggetti in una sola applicazione o tra applicazioni diverse. Eliminazione tra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni e altre applicazioni di Windows è completamente supportato.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], qualsiasi <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> può partecipare al trascinamento della selezione. Gli eventi e i metodi necessari per le operazioni di trascinamento della selezione vengono definiti nella classe <xref:System.Windows.DragDrop>. Le classi <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> contengono alias per gli eventi associati <xref:System.Windows.DragDrop> in modo che gli eventi appaiano nell'elenco dei membri della classe quando un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> viene ereditato come elemento di base. I gestori eventi associati a questi eventi vengono associati all'evento associato <xref:System.Windows.DragDrop> sottostante e ricevono la stessa istanza di dati dell'evento. Per altre informazioni, vedere l'evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   

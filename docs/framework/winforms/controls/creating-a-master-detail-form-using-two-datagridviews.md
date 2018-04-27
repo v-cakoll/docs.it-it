@@ -1,12 +1,13 @@
 ---
 title: 'Procedura dettagliata: Creazione di un Form Master-Details mediante due controlli DataGridView di Windows Form'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Procedura dettagliata: creazione di un form Master-Details mediante due controlli DataGridView Windows Form
 Uno degli scenari più comuni per l'utilizzo di <xref:System.Windows.Forms.DataGridView> controllo è il *master-Details* form, in cui viene visualizzata una relazione padre-figlio tra due tabelle di database. La selezione di righe nella tabella master, la tabella di dettagli per l'aggiornamento con i dati figlio corrispondente.  
@@ -44,7 +46,7 @@ Uno degli scenari più comuni per l'utilizzo di <xref:System.Windows.Forms.DataG
   
 #### <a name="to-create-a-masterdetail-form"></a>Per creare un form master-details  
   
-1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene due <xref:System.Windows.Forms.DataGridView> e due controlli <xref:System.Windows.Forms.BindingSource> componenti. Il codice seguente fornisce l'inizializzazione di form di base e include un `Main` metodo. Se si utilizza il [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] della finestra di progettazione per creare il form, è possibile utilizzare il finestra di progettazione codice generato anziché il codice, ma assicurarsi di utilizzare i nomi indicati nelle dichiarazioni di variabili.  
+1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene due <xref:System.Windows.Forms.DataGridView> e due controlli <xref:System.Windows.Forms.BindingSource> componenti. Il codice seguente fornisce l'inizializzazione di form di base e include un `Main` metodo. Se si utilizza la finestra di progettazione di Visual Studio per creare il form, è possibile utilizzare il finestra di progettazione codice generato anziché il codice, ma assicurarsi di utilizzare i nomi visualizzati nelle dichiarazioni di variabili qui.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  

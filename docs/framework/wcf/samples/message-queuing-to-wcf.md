@@ -1,24 +1,26 @@
 ---
 title: Accodamento messaggi in Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a4b63dd620d071b875caa255f681bdd5fb867f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6a29c0225117c57079b5048705f58dcde4a06426
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Accodamento messaggi in Windows Communication Foundation
 Questo esempio illustra come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizio. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -28,8 +30,8 @@ Questo esempio illustra come un'applicazione di Accodamento messaggi (MSMQ) può
  Il messaggio MSMQ non contiene informazioni come su quali intestazioni è stato eseguito il mapping ai diversi parametri del contratto dell'operazione. Il parametro è di tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) che contiene il messaggio MSMQ sottostante. Il tipo "T" nella classe <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) rappresenta i dati serializzati nel corpo del messaggio MSMQ. In questo esempio, il tipo `PurchaseOrder` è serializzato nel corpo del messaggio MSMQ.  
   
  Nell'esempio di codice seguente viene mostrato il contratto di servizio del servizio di elaborazione degli ordini.  
-  
-```  
+
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
@@ -38,11 +40,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Il servizio è indipendente. Quando si utilizza il trasporto MSMQ, la coda utilizzata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio verifica l'esistenza della coda e la crea se necessario. Il nome della coda viene letto dal file di configurazione.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get the MSMQ queue name from the application settings in   
@@ -53,11 +55,11 @@ public static void Main()
         MessageQueue.Create(queueName, true);  
     …  
 }  
-```  
-  
+```
+
  Il servizio crea e apre una classe <xref:System.ServiceModel.ServiceHost> per `OrderProcessorService`, come mostra il codice di esempio seguente.  
-  
-```  
+
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
 {  
     serviceHost.Open();  
@@ -66,8 +68,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
     Console.ReadLine();  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.  
   
 > [!NOTE]
@@ -80,8 +82,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
  L'applicazione client è un'applicazione MSMQ che utilizza il metodo <xref:System.Messaging.MessageQueue.Send%2A> per inviare un messaggio durevole e transazionale alla coda, come mostra il codice di esempio seguente.  
-  
-```  
+
+```csharp
 //Connect to the queue.  
 MessageQueue orderQueue = new MessageQueue(ConfigurationManager.AppSettings["orderQueueName"]);  
   
@@ -119,8 +121,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
 Console.WriteLine("Placed the order:{0}", po);  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. Ad esempio è possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  

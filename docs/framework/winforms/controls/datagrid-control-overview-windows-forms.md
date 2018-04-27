@@ -1,13 +1,13 @@
 ---
 title: Cenni preliminari sul controllo DataGrid (Windows Form)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -103,7 +103,7 @@ DataGrid associato a dati con più tabelle
 |Più tabelle correlate.|La griglia può mostrare una visualizzazione albero con cui selezionare le tabelle oppure è possibile specificare che la griglia mostri la tabella padre. I record nella tabella padre consentono agli utenti di passare alle righe figlio correlate.|  
   
 > [!NOTE]
->  Le tabelle in un set di dati vengono correlate con <xref:System.Data.DataRelation>.  Vedere anche [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Relazioni nei dataset](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [Relazioni nei dataset](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Le tabelle in un set di dati vengono correlate con <xref:System.Data.DataRelation>.  Vedere anche [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relazioni nei DataSet](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relazioni nei set di dati](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Quando il controllo <xref:System.Windows.Forms.DataGrid> visualizza una tabella e la proprietà <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> è impostata su `true`, i dati possono essere ripristinati facendo clic sulle intestazioni di colonna. L'utente può inoltre aggiungere righe e modificare le celle.  
   
@@ -137,7 +137,7 @@ La figura seguente mostra gli oggetti inclusi nel controllo DataGrid.
   
  Gli stili colonna sono correlati alle colonne in un set di dati proprio come gli stili tabella sono correlati alle tabelle di dati. Come per ogni tabella può essere definito un solo uno stile per volta, anche per ogni colonna può essere definito un solo stile, in un particolare stile tabella. Questa relazione è definita nella proprietà <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> della colonna.  
   
- Se è stato creato uno stile tabella senza aggiungervi stili di colonna, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] aggiungerà gli stili colonna predefiniti quando il form e la griglia vengono creati in fase di esecuzione. Tuttavia, se è stato creato uno stile tabella a cui sono stati aggiunti degli stili colonna, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] non creerà alcuno stile colonna. Inoltre, sarà necessario definire stili colonna a cui assegnare il nome di mapping per visualizzare nella griglia le colonne desiderate.  
+ Se è stato creato uno stile tabella senza aggiungervi stili di colonna, Visual Studio aggiungerà gli stili colonna predefiniti quando il form e la griglia vengono creati in fase di esecuzione. Tuttavia, se si hanno creato uno stile di tabella e aggiungervi tutti gli stili colonna, Visual Studio non creerà alcuno stile colonna. Inoltre, sarà necessario definire stili colonna a cui assegnare il nome di mapping per visualizzare nella griglia le colonne desiderate.  
   
  Poiché, per specificare le colonne incluse nella griglia dati, è necessario assegnare uno stile colonna e alle colonne non è stato assegnato alcuno stile colonna, è possibile includere nel set di dati le colonne di dati non visualizzate nella griglia. Tuttavia, poiché la colonna di dati è inclusa nel set di dati, è possibile modificare a livello di codice i dati non visualizzati.  
   

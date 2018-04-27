@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa le autorizzazioni per proteggere le risorse e i dati. Il fatto che l'applicazione possa leggere o scrivere dati dipende dalle autorizzazioni concesse all'applicazione. Quando l'applicazione viene eseguita in un ambiente parzialmente attendibile, è possibile che non si riesca ad accedere ai dati oppure potrebbe essere necessario modificare la modalità di accesso ai dati.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  Quando si rileva una restrizione di sicurezza, sono disponibili due opzioni: dichiarare l'autorizzazione (supponendo che sia stata concessa all'applicazione) o usare una versione della funzionalità scritta per operare in caso di attendibilità parziale. Le sezioni seguenti illustrano come usare il file, il database e l'accesso al Registro di sistema da applicazioni in esecuzione in un ambiente parzialmente attendibile.  
   
 > [!NOTE]
->  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si desiderano i vantaggi in termini di sicurezza derivanti dall'esecuzione con l'attendibilità parziale, è necessario cambiare questa impostazione predefinita in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o in uno degli strumenti di [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] (Mage.exe o MageUI.exe). Per ulteriori informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Per impostazione predefinita, gli strumenti che generano distribuzioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] configurano queste distribuzioni in modo che richiedano l'attendibilità totale ai computer su cui sono in esecuzione. Se si decide la maggiore sicurezza vantaggi offerti dall'esecuzione in attendibilità parziale, è necessario modificare questa impostazione predefinita in Visual Studio o uno del [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] strumenti (Mage.exe o MageUI.exe). Per ulteriori informazioni sulla sicurezza di Windows Form e su come determinare il livello di attendibilità appropriato per l'applicazione, vedere [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accesso ai file  
  La classe <xref:System.Security.Permissions.FileIOPermission> controlla l'accesso a file e cartelle in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Per impostazione predefinita, il sistema di sicurezza non concede <xref:System.Security.Permissions.FileIOPermission> agli ambienti con attendibilità parziale, ad esempio la Intranet locale e le aree Internet. Un'applicazione che richiede l'accesso ai file può comunque funzionare in questi ambienti se si modifica la progettazione dell'applicazione o si usano metodi diversi per accedere ai file. Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso agli stessi siti e alle stesse directory, di riconnettersi al sito di origine e di leggere dalla directory di installazione. Per impostazione predefinita, all'area Internet è concesso solo il diritto di riconnettersi al sito di origine.  

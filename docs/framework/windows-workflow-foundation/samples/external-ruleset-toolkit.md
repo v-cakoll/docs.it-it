@@ -1,23 +1,24 @@
 ---
 title: Toolkit di RuleSet esterno
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>Toolkit di RuleSet esterno
 Normalmente quando vengono usate all'interno di un'applicazione del flusso di lavoro, le regole fanno parte dell'assembly. In alcuni scenari, può essere necessario gestire il RuleSet separatamente dall'assembly così che possano essere aggiornati senza ricompilare e distribuire l'assembly del flusso di lavoro. In questo esempio viene illustrato come gestire e modificare il RuleSet in un database e accedere ai RuleSet da un flusso di lavoro durante il runtime. Abilita l'esecuzione di istanze del flusso di lavoro per incorporare automaticamente le modifiche del RuleSet.  
@@ -55,7 +56,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
 ## <a name="ruleset-tool"></a>Strumento di RuleSet  
  Nella Figura 2 è mostrata una schermata dello strumento di RuleSet. Dal **archivio regole** menu, è possibile caricare gli oggetti ruleSet disponibili dal database e salvare tali oggetti modificati nuovamente nell'archivio. Un file di configurazione dell'applicazione fornisce una stringa di connessione al database per il database di RuleSet. Quando si avvia lo strumento, carica automaticamente RuleSet dal database configurato.  
   
- ![Output di esempio di Toolkit RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
+ ![Output dell'esempio di Toolkit RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")  
   
  Figura 2: browser di RuleSet  
   
@@ -67,9 +68,9 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
  Figura 3: editor di RuleSet  
   
- Si tratta di un nuovo hosting del dialogo dell’editor che fa parte del componente aggiuntivo di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Windows Workflow Foundation. Fornisce la stessa funzionalità, incluso il supporto di Intellisense. Le regole vengono create in base a un tipo di destinazione (ad esempio un flusso di lavoro) che è associato al RuleSet nello strumento; Quando fa clic su **Sfoglia** nella finestra di dialogo principale dello strumento di **del flusso di lavoro/selettore del tipo** viene visualizzata la finestra, come illustrato nella figura 4.  
+ Si tratta di una riallocazione della finestra di dialogo editor che fa parte del componente aggiuntivo di Visual Studio di Windows Workflow Foundation. Fornisce la stessa funzionalità, incluso il supporto di Intellisense. Le regole vengono create in base a un tipo di destinazione (ad esempio un flusso di lavoro) che è associato al RuleSet nello strumento; Quando fa clic su **Sfoglia** nella finestra di dialogo principale dello strumento di **del flusso di lavoro/selettore del tipo** viene visualizzata la finestra, come illustrato nella figura 4.  
   
- ![Flusso di lavoro &#47; Tipo di selezione](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Flusso di lavoro &#47;digitare selezione](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Figura 4: Flusso di lavoro/Selettore del tipo  
   
@@ -83,7 +84,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
  Figura 5: errori di convalida  
   
- Dal **dati** menu nello strumento, è possibile importare ed esportare RuleSet. Quando fa clic su **importazione**, viene visualizzata una finestra di dialogo di selezione di file da cui è possibile selezionare un file con estensione rules. Può trattarsi di un file inizialmente creato in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] oppure no. Il file con estensione rules deve contenere un'istanza `RuleDefinitions` serializzata contenente una raccolta di condizioni e una raccolta di RuleSet. Lo strumento non usa la raccolta di condizioni, ma usa il formato `RuleDefinitions`.rules per consentire l'interazione con l'ambiente [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+ Dal **dati** menu nello strumento, è possibile importare ed esportare RuleSet. Quando fa clic su **importazione**, viene visualizzata una finestra di dialogo di selezione di file da cui è possibile selezionare un file con estensione rules. Può supportare o potrebbe non essere un file inizialmente creato in Visual Studio. Il file con estensione rules deve contenere un'istanza `RuleDefinitions` serializzata contenente una raccolta di condizioni e una raccolta di RuleSet. Lo strumento non utilizza la raccolta di condizioni, ma usa il `RuleDefinitions` formato con estensione rules per consentire l'interazione con l'ambiente di Visual Studio.  
   
  Dopo aver selezionato un file con estensione rules, un **selettore RuleSet** viene visualizzata la finestra (vedere Figura 6). È possibile usare la finestra di dialogo per selezionare gli oggetti RuleSet dal file che si desidera importare (l'impostazione predefinita specifica tutti gli oggetti RuleSet). I RuleSet nel file con estensione rules non hanno numeri di versione, in quanto il loro controllo delle versioni all’interno di un progetto WF corrisponde alla versione dell'assembly. Durante il processo di importazione, lo strumento assegna automaticamente il numero di versione principale disponibile successivo (che è possibile modificare dopo l'importazione); è possibile visualizzare i numeri di versione assegnato il **selettore RuleSet** elenco.  
   
@@ -141,7 +142,7 @@ Normalmente quando vengono usate all'interno di un'applicazione del flusso di la
   
 9. Un file di configurazione dell'applicazione viene aggiunto al progetto flusso di lavoro per specificare la stringa di connessione per il database che deve essere usato dal servizio. Deve trattarsi della stessa stringa di connessione usata dallo strumento di RuleSet che punta al database contenente la tabella di RuleSet.  
   
-10. È ora possibile eseguire il progetto `RuleSetToolkitUsageSample` nello stesso modo in cui si eseguirebbe qualsiasi altra applicazione console del flusso di lavoro. Premere F5 o Ctrl+F5 all'interno di [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] o eseguire direttamente il file RuleSetToolkitUsageSample.exe.  
+10. È ora possibile eseguire il progetto `RuleSetToolkitUsageSample` nello stesso modo in cui si eseguirebbe qualsiasi altra applicazione console del flusso di lavoro. Premere F5 o CTRL+F5 all'interno di Visual Studio o eseguire direttamente il file RuleSetToolkitUsageSample.exe.  
   
     > [!NOTE]
     >  È necessario chiudere lo strumento di RuleSet per ricompilare l'esempio di utilizzo, in quanto lo strumento carica l'assembly dell'esempio di utilizzo.

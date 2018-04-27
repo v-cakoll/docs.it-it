@@ -1,29 +1,30 @@
 ---
 title: 'Procedura: creare un partecipante del rilevamento personalizzato'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: creare un partecipante del rilevamento personalizzato
-Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. In [!INCLUDE[wf](../../../includes/wf-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
+Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. Windows Workflow Foundation (WF) include un partecipante del rilevamento standard che scrive record di rilevamento come eventi Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
   
 > [!NOTE]
 >  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti. Per completare questo argomento, è necessario completare prima gli argomenti precedenti. Per scaricare una versione completa o visualizzare una procedura dettagliata video dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
 -   [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>Per creare il partecipante del rilevamento personalizzato  
+###  <a name="BKMK_CustomTrackingParticipant"></a> Per creare il partecipante del rilevamento personalizzato  
   
 1.  Fare doppio clic su **NumberGuessWorkflowHost** in **Esplora** e scegliere **Aggiungi**, **classe**. Tipo `StatusTrackingParticipant` nel **nome** casella e fare clic su **Aggiungi**.  
   
@@ -114,7 +115,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
      Se non è specificato alcun profilo di rilevamento, viene usato il profilo di rilevamento predefinito. Quando viene usato il profilo di rilevamento predefinito, i record di rilevamento vengono generati per tutti gli elementi `ActivityStates`. Dal momento che è necessario acquisire il testo solo una volta durante il ciclo di vita dell'attività `WriteLine`, si estrae solo il testo dello stato `ActivityStates.Executing`. In [per creare il profilo di rilevamento e registrare il partecipante del rilevamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), viene creato un profilo di rilevamento che specifica che solo `WriteLine` `ActivityStates.Executing` vengono generati record di rilevamento.  
   
-###  <a name="BKMK_TrackingProfile"></a>Per creare il profilo di rilevamento e registrare il partecipante del rilevamento  
+###  <a name="BKMK_TrackingProfile"></a> Per creare il profilo di rilevamento e registrare il partecipante del rilevamento  
   
 1.  Fare doppio clic su **WorkflowHostForm** in **Esplora** e scegliere **Visualizza codice**.  
   
@@ -235,7 +236,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>Per visualizzare le informazioni di rilevamento  
+###  <a name="BKMK_DisplayTracking"></a> Per visualizzare le informazioni di rilevamento  
   
 1.  Fare doppio clic su **WorkflowHostForm** in **Esplora** e scegliere **Visualizza codice**.  
   
@@ -330,7 +331,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Per compilare ed eseguire l'applicazione  
+###  <a name="BKMK_BuildAndRun"></a> Per compilare ed eseguire l'applicazione  
   
 1.  Premere CTRL+MAIUSC+B per compilare l'applicazione.  
   
@@ -355,4 +356,4 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
 **La stima è troppo alta.**   
 **Immettere un numero compreso tra 1 e 10**   
 **La stima è troppo alta.**   
-**Immettere un numero compreso tra 1 e 10** oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contiene informazioni sul tentativo finale del flusso di lavoro. Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro. Nel passaggio successivo dell'esercitazione, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), esistente `WriteLine` le attività sono state modificate per visualizzare i tentativi dell'utente e un ulteriore `WriteLine` attività viene aggiunta che Consente di visualizzare i risultati finali. Dopo queste modifiche sono integrate, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro nello stesso momento.
+**Immettere un numero compreso tra 1 e 10** oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contengono informazioni sul tentativo finale del flusso di lavoro. Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro. Nel passaggio successivo dell'esercitazione, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), esistente `WriteLine` le attività sono state modificate per visualizzare i tentativi dell'utente e un ulteriore `WriteLine` attività viene aggiunta che Consente di visualizzare i risultati finali. Dopo queste modifiche sono integrate, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro nello stesso momento.

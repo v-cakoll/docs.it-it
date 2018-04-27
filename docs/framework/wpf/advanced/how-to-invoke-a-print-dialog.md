@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: richiamare una finestra di dialogo di stampa'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 65ea65e13d3217466eeacdac4c386cc02c68b29a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Procedura: richiamare una finestra di dialogo di stampa
 Per fornire la possibilità di stampa dall'applicazione, è possibile semplicemente creare e aprire un <xref:System.Windows.Controls.PrintDialog> oggetto.  
@@ -38,7 +40,7 @@ Per fornire la possibilità di stampa dall'applicazione, è possibile sempliceme
  Dopo avere aperto la finestra di dialogo, è possibile che gli utenti saranno in grado di selezionare le stampanti installate nel computer. Hanno inoltre la possibilità di selezionare il [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319) per creare un [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] file anziché la stampa.  
   
 > [!NOTE]
->  Il <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controllo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], illustrata in questo argomento, non deve essere confuso con il <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> componente di [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)].  
+>  Il <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controllo di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], cui è descritto in questo argomento, non deve essere confuso con il <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> componente di Windows Form.  
   
  In teoria, è possibile utilizzare il <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> metodo senza mai aprire la finestra di dialogo. In tal senso, il controllo può essere utilizzato come un componente di stampa non visibili. Ma per motivi di prestazioni, sarebbe preferibile utilizzare il di <xref:System.Printing.PrintQueue.AddJob%2A> metodo o una delle numerose <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metodi il <xref:System.Windows.Xps.XpsDocumentWriter>. Per ulteriori informazioni, vedere [a livello di programmazione i file di stampa XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md) e.  
   

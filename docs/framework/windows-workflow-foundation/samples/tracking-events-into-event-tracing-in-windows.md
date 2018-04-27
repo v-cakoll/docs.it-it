@@ -1,31 +1,32 @@
 ---
 title: Eventi di rilevamento in Traccia eventi per Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
-In questo esempio viene illustrato come abilitare il rilevamento di [!INCLUDE[wf](../../../../includes/wf-md.md)] in un servizio flusso di lavoro e creare gli eventi di rilevamento in ETW (Traccia eventi per Windows). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+In questo esempio viene illustrato come abilitare la traccia in un servizio flusso di lavoro Windows Workflow Foundation (WF) e generare gli eventi di rilevamento in ETW traccia eventi per Windows (). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Il flusso di lavoro nell'esempio riceve una richiesta, assegna il reciproco dei dati di input alla variabile di input e restituisce di nuovo il reciproco al client. Quando i dati di input sono pari a 0, si verifica un'eccezione di divisione per zero non gestita che causa l'interruzione del flusso di lavoro. Con il rilevamento abilitato, il record di rilevamento errori viene creato in ETW consentendo la risoluzione dell'errore in un secondo momento. Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento. Il profilo di rilevamento viene definito nel file Web.config e fornito come parametro di configurazione al partecipante del rilevamento ETW. Quest'ultimo viene configurato nel file Web.config del servizio flusso di lavoro e viene applicato al servizio come comportamento del servizio. In questo esempio gli eventi di rilevamento vengono visualizzati nel registro eventi tramite Visualizzatore eventi.  
   
 ## <a name="workflow-tracking-details"></a>Dettagli relativi al rilevamento del flusso di lavoro  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] fornisce un'infrastruttura di rilevamento per tenere traccia dell'esecuzione di un'istanza del flusso di lavoro. L'esecuzione del rilevamento crea un'istanza del flusso di lavoro per generare eventi correlati al ciclo di vita del flusso di lavoro, eventi dalle attività del flusso di lavoro ed eventi personalizzati. Nella tabella seguente sono indicati in dettaglio i componenti primari dell'infrastruttura di rilevamento.  
+ Windows Workflow Foundation fornisce un'infrastruttura di rilevamento per tenere traccia dell'esecuzione di un'istanza del flusso di lavoro. L'esecuzione del rilevamento crea un'istanza del flusso di lavoro per generare eventi correlati al ciclo di vita del flusso di lavoro, eventi dalle attività del flusso di lavoro ed eventi personalizzati. Nella tabella seguente sono indicati in dettaglio i componenti primari dell'infrastruttura di rilevamento.  
   
 |Componente|Descrizione|  
 |---------------|-----------------|  
@@ -65,7 +66,7 @@ In questo esempio viene illustrato come abilitare il rilevamento di [!INCLUDE[wf
   
 5.  Nel client di prova WCF selezionare **Aggiungi servizio** dal **File** menu.  
   
-     Aggiungere l'indirizzo dell'endpoint nella casella di input. L'impostazione predefinita è http://localhost:53797/SampleWorkflowService.xamlx.  
+     Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è http://localhost:53797/SampleWorkflowService.xamlx.  
   
 6.  Aprire l'applicazione Visualizzatore eventi.  
   

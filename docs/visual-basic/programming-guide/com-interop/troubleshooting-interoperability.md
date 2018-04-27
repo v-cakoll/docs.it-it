@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Risoluzione dei problemi relativi all'interoperabilità (Visual Basic)
 Durante l'interazione tra COM e il codice gestito del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], si potrebbe verificarsi uno o più dei seguenti problemi comuni.  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  È possibile trovare informazioni quali la descrizione dell'errore, HRESULT e l'origine degli errori COM esaminando il contenuto dell'oggetto eccezione.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemi relativi al controllo ActiveX  
- La maggior parte dei controlli ActiveX che funzionano con Visual Basic 6.0 funzionano con Visual Basic .NET senza problemi. Le eccezioni principali sono controlli contenitore o i controlli contenenti visivamente altri controlli. Alcuni esempi di controlli precedenti che non funzionano correttamente con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] sono i seguenti:  
+ La maggior parte dei controlli ActiveX che funzionano con Visual Basic 6.0 funzionano con Visual Basic .NET senza problemi. Le eccezioni principali sono controlli contenitore o i controlli contenenti visivamente altri controlli. Come indicato di seguito sono riportati alcuni esempi di controlli precedenti che non funzionano correttamente con Visual Studio:  
   
 -   Controllo Microsoft Forms 2.0 Frame  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Schede Sheridan  
   
- Sono disponibili solo alcune soluzioni per problemi di controlli ActiveX non supportati. È possibile migrare i controlli esistenti a [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] se si è proprietari del codice sorgente originale. In caso contrario, è possibile controllare con fornitori di software per l'aggiornamento. Versioni compatibili con NET dei controlli da sostituire non supportati controlli ActiveX.  
+ Sono disponibili solo alcune soluzioni per problemi di controlli ActiveX non supportati. Se si è proprietari del codice sorgente originale, è possibile migrare i controlli esistenti a Visual Studio. In caso contrario, è possibile controllare con fornitori di software per l'aggiornamento. Versioni compatibili con NET dei controlli da sostituire non supportati controlli ActiveX.  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> Passaggio di proprietà di sola lettura di controlli ByRef  
  Visual Basic .NET talvolta genera errori COM, ad esempio, "Error 0x800A017F CTL_E_SETNOTSUPPORTED" quando si passano `ReadOnly` le proprietà di alcuni controlli ActiveX meno recenti come `ByRef` parametri per le altre routine. Chiamate di routine simili da Visual Basic 6.0 non generano un errore e i parametri vengono considerati come se passati per valore. Il messaggio di errore di Visual Basic .NET indica che si sta tentando di modificare una proprietà che non dispone di una proprietà `Set` stored procedure.  

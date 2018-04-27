@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5949ee1931b9ab9adf1f14b921432cae531cebd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient per Entity Framework
 Contenuto della sezione viene descritto il provider di dati .NET Framework per SQL Server (SqlClient), che consente a Entity Framework di funzionare su Microsoft SQL Server.  
@@ -42,7 +42,7 @@ Contenuto della sezione viene descritto il provider di dati .NET Framework per S
 |2000|2005|2008|  
   
 > [!NOTE]
->  A partire da [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, il [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) non supportano SQL Server 2000.  
+>  A partire da Visual Studio 2010, il [strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) non supportano SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nome dello spazio dei nomi del provider   
  Tutti i provider devono specificare uno spazio dei nomi. Questa proprietà consente a Entity Framework di individuare quale prefisso viene usato dal provider per costrutti specifici, ad esempio tipi e funzioni. Lo spazio dei nomi per i manifesti del provider SqlClient è `SqlServer`. Per ulteriori informazioni sugli spazi dei nomi, vedere [gli spazi dei nomi](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

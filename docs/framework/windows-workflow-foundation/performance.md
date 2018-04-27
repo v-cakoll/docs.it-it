@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94eca5c2aad919fe46fa75626954e10bb68f1110
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 Dustin Metzgar  
@@ -27,7 +27,7 @@ Dustin Metzgar
   
  Microsoft Corporation, settembre 2010  
   
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] include una revisione sostanziale di [!INCLUDE[wf](../../../includes/wf-md.md)] con notevoli investimenti per migliorarne le prestazioni.  Questa nuova revisione introduce modifiche significative in termini di progettazione rispetto alle versioni precedenti di [!INCLUDE[wf1](../../../includes/wf1-md.md)], fornite insieme a .NET Framework 3.0 e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. L'architettura del modello di programmazione, del runtime e degli strumenti è stata completamente riprogettata al fine di migliorare notevolmente prestazioni e usabilità. In questo argomento vengono illustrate le principali caratteristiche delle prestazioni di tali revisioni confrontandole con quelle della versione precedente.  
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] include una revisione principale di Windows Workflow Foundation (WF) con notevoli investimenti per migliorarne le prestazioni.  Questa nuova revisione introduce modifiche significative in termini di progettazione rispetto alle versioni precedenti di [!INCLUDE[wf1](../../../includes/wf1-md.md)], fornite insieme a .NET Framework 3.0 e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. L'architettura del modello di programmazione, del runtime e degli strumenti è stata completamente riprogettata al fine di migliorare notevolmente prestazioni e usabilità. In questo argomento vengono illustrate le principali caratteristiche delle prestazioni di tali revisioni confrontandole con quelle della versione precedente.  
   
  Le prestazioni dei singoli componenti del flusso di lavoro sono notevolmente aumentate in WF4 rispetto a WF3.  Pertanto il divario tra i servizi di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] codificati manualmente e i servizi del flusso di lavoro di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è minimo.  La latenza del flusso di lavoro è stata notevolmente ridotta in WF4.  Le prestazioni della persistenza sono aumentate di un fattore di 2,5 - 3,0.  Il sovraccarico del monitoraggio dell'integrità tramite il rilevamento del flusso di lavoro è stato notevolmente ridotto.  Questi sono i principali motivi per cui è consigliabile eseguire la migrazione a WF4 o adottarlo nelle applicazioni.  
   
@@ -192,7 +192,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Come illustrato nella sezione precedente, "confronto delle prestazioni a livello di componente" è stata una riduzione significativa nel sovraccarico tra WF3 e WF4.  I servizi flusso di lavoro di[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ora corrispondono all'incirca alle prestazioni dei servizi di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] codificati manualmente, tuttavia dispongono ancora di tutti i vantaggi del runtime di [!INCLUDE[wf1](../../../includes/wf1-md.md)].  In questo scenario di test viene confrontato un servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con un servizio del flusso di lavoro di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in WF4.  
   
 ### <a name="online-store-service"></a>Servizio di negozio online  
- Uno dei punti di forza di [!INCLUDE[wf2](../../../includes/wf2-md.md)] è la possibilità di comporre i processi usando più servizi.  Per questo esempio, supponiamo che ci sia un servizio di negozio online che orchestra due chiamate del servizio per l'acquisto di un ordine.  Il primo passaggio è convalidare l'ordine usando un servizio di convalida dell'ordine.  Il secondo passaggio è compilare l'ordine usando un servizio magazzino.  
+ Una volta comprese le potenzialità di Windows Workflow Foundation è la possibilità di comporre i processi usando più servizi.  Per questo esempio, supponiamo che ci sia un servizio di negozio online che orchestra due chiamate del servizio per l'acquisto di un ordine.  Il primo passaggio è convalidare l'ordine usando un servizio di convalida dell'ordine.  Il secondo passaggio è compilare l'ordine usando un servizio magazzino.  
   
  I due servizi di back-end, ovvero il servizio di convalida dell'ordine e il servizio magazzino, rimangono invariati per entrambi i test.  La parte che cambia è il servizio di negozio online che esegue l'orchestrazione.  In un caso, il servizio è codificato manualmente come servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Nell'altro, viene scritto come servizio del flusso di lavoro di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] in WF4. Durante l'esecuzione del test, le funzionalità specifiche di [!INCLUDE[wf1](../../../includes/wf1-md.md)], ad esempio il rilevamento e la persistenza, sono disattivate.  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  Il monitoraggio dell'integrità ha un impatto di circa il 3% sulla velocità effettiva.  Il costo del profilo di base corrisponde a circa l'8%.  
   
 ## <a name="interop"></a>Interoperabilità  
- WF4 è una riscrittura pressoché completa di [!INCLUDE[wf1](../../../includes/wf1-md.md)] e pertanto i flussi di lavoro e le attività di WF3 non sono direttamente compatibili con WF4.  Molti clienti che hanno adottato [!INCLUDE[wf2](../../../includes/wf2-md.md)] anticipata conterrà le definizioni del flusso di lavoro internamente o da terze parti e le attività personalizzate di WF3.  Un modo per facilitare la transizione a WF4 è usare l'attività Interop, che è in grado di eseguire le attività di WF3 da un flusso di lavoro di WF4.  Si consiglia di usare l'attività <xref:System.Activities.Statements.Interop> solo quando necessario. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la migrazione a WF4, vedere la [materiale sussidiario sulla migrazione di WF4](http://go.microsoft.com/fwlink/?LinkID=153313).  
+ WF4 è una riscrittura pressoché completa di [!INCLUDE[wf1](../../../includes/wf1-md.md)] e pertanto i flussi di lavoro e le attività di WF3 non sono direttamente compatibili con WF4.  Molti clienti che hanno adottato Windows Workflow Foundation in anticipo avrà le definizioni del flusso di lavoro interne o di terze parti e le attività personalizzate per WF3.  Un modo per facilitare la transizione a WF4 è usare l'attività Interop, che è in grado di eseguire le attività di WF3 da un flusso di lavoro di WF4.  Si consiglia di usare l'attività <xref:System.Activities.Statements.Interop> solo quando necessario. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la migrazione a WF4, vedere la [materiale sussidiario sulla migrazione di WF4](http://go.microsoft.com/fwlink/?LinkID=153313).  
   
 ### <a name="environment-setup"></a>Impostazione dell'ambiente  
  ![Ambiente di Test delle prestazioni del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

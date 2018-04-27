@@ -1,12 +1,13 @@
 ---
 title: data binding e Windows Form
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>data binding e Windows Form
 Nei Windows Form è possibile effettuare associazioni non solo alle origini dati tradizionali, ma anche a quasi ogni struttura che contiene dati. È possibile effettuare associazioni a una matrice di valori che verranno calcolati in fase di esecuzione, letti da un file o derivati dai valori di altri controlli.  
@@ -48,7 +50,7 @@ Nei Windows Form è possibile effettuare associazioni non solo alle origini dati
   
 |Tipo di data binding|Descrizione|  
 |--------------------------|-----------------|  
-|Data binding semplice|Capacità di un controllo di eseguire l'associazione a un singolo elemento di dati, ad esempio il valore di una colonna in una tabella di dataset. Questo tipo di associazione viene solitamente usata per controlli quali <xref:System.Windows.Forms.TextBox> o <xref:System.Windows.Forms.Label>, vale a dire controlli che in genere visualizzano un unico valore. In realtà è possibile associare qualsiasi proprietà di un controllo a un campo di un database. In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] è disponibile un supporto completo per questa funzionalità.<br /><br /> Per altre informazioni, vedere:<br /><br /> -   [Interfacce correlate al Data Binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Procedura: esplorare dati in Windows Form](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Procedura: creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Data binding semplice|Capacità di un controllo di eseguire l'associazione a un singolo elemento di dati, ad esempio il valore di una colonna in una tabella di dataset. Questo tipo di associazione viene solitamente usata per controlli quali <xref:System.Windows.Forms.TextBox> o <xref:System.Windows.Forms.Label>, vale a dire controlli che in genere visualizzano un unico valore. In realtà è possibile associare qualsiasi proprietà di un controllo a un campo di un database. È disponibile supporto completo per questa funzionalità in Visual Studio.<br /><br /> Per altre informazioni, vedere:<br /><br /> -   [Interfacce correlate al Data Binding](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Procedura: esplorare dati in Windows Form](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Procedura: creare un controllo con associazione semplice in un Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Data binding complesso|Capacità di un controllo di eseguire l'associazione a più di un elemento di dati, in genere a più record di un database. L'associazione complessa viene detta anche associazione basata su elenchi. Tra i controlli di esempio che supportano l'associazione complessa sono annoverati i controlli <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> e <xref:System.Windows.Forms.ComboBox>. Per un esempio di data binding complesso, vedere [procedura: associare un controllo ComboBox Windows Form o controllo ListBox ai dati](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>Componente BindingSource  

@@ -1,23 +1,24 @@
 ---
 title: InvokeMethod
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b90ebec929b310442cde2be8d96386e016a9bbb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f988f206fbd84b7b7d47fb3bd540420601ba30c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invokemethod"></a>InvokeMethod
 In questo esempio vengono illustrate le diverse modalità di utilizzo dell'attività <xref:System.Activities.Statements.InvokeMethod> per richiamare metodi di una classe.  
@@ -52,7 +53,7 @@ In questo esempio vengono illustrate le diverse modalità di utilizzo dell'attiv
 12. Recuperare un valore da un'istanza di un oggetto.  
   
 ## <a name="to-use-this-sample"></a>Per usare questo esempio  
- Questo esempio è fornito in due versioni. La prima versione di questo esempio, che si trova nella cartella CodedWorkflow\CS, illustra l'uso di <xref:System.Activities.Statements.InvokeMethod> tramite codice C# usando il modello di programmazione [!INCLUDE[wf](../../../../includes/wf-md.md)]. La seconda versione, che si trova nella cartella DesignerWorkflow\CS, illustra l'uso di <xref:System.Activities.Statements.InvokeMethod> tramite XAML.  
+ Questo esempio è fornito in due versioni. La prima versione di questo esempio illustra l'uso di <xref:System.Activities.Statements.InvokeMethod> tramite codice c# usando il modello di programmazione di Windows Workflow Foundation (WF) ed è disponibile nella cartella codedworkflow\cs. La seconda versione, che si trova nella cartella DesignerWorkflow\CS, illustra l'uso di <xref:System.Activities.Statements.InvokeMethod> tramite XAML.  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>Per eseguire l'esempio di flusso di lavoro codificato  
   

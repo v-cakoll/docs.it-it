@@ -1,24 +1,26 @@
 ---
 title: Serializzazione JSON
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d87dd0f22473015ba51d7be996106a57c4708a67
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c4e7e15fdbe01a6d91658f4771ac72a0024e0ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="json-serialization"></a>Serializzazione JSON
 In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> per serializzare e deserializzare i dati nel formato JSON (JavaScript Object Notation). Questo motore della serializzazione converte i dati JSON in istanze dei tipi [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e li riconverte in dati JSON. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> supporta gli stessi tipi dell'oggetto <xref:System.Runtime.Serialization.DataContractSerializer>. Il formato dati JSON è particolarmente utile quando si creano applicazioni Web di tipo AJAX (Asynchronous JavaScript and XML). Il supporto AJAX in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è ottimizzato per l'utilizzo con ASP.NET AJAX tramite il controllo ScriptManager. Per esempi di come utilizzare [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con ASP.NET AJAX, vedere il [esempi AJAX](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
@@ -27,41 +29,41 @@ In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serializ
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
  Nell'esempio viene utilizzato un contratto dati `Person` per illustrare la serializzazione e la deserializzazione.  
-  
-```  
-[DataContract]  
-    class Person  
-    {  
-        [DataMember]  
-        internal string name;  
-  
-        [DataMember]  
-        internal int age;  
-    }  
-```  
-  
+
+```csharp
+[DataContract]
+class Person
+{
+    [DataMember]
+    internal string name;
+
+    [DataMember]
+    internal int age;
+}
+```
+
  Per serializzare un'istanza di tipo `Person` in formato JSON, creare prima l'elemento <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e utilizzare il metodo `WriteObject` per scrivere i dati JSON in un flusso.  
-  
-```  
-Person p = new Person();  
-//Set up Person object...  
-MemoryStream stream1 = new MemoryStream();  
-DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
-ser.WriteObject(stream1, p);  
-```  
-  
- Il flusso di memoria contiene dati JSON validi.  
+
+```csharp
+Person p = new Person();
+//Set up Person object...
+MemoryStream stream1 = new MemoryStream();
+DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));
+ser.WriteObject(stream1, p);
+```
+
+ Il flusso di memoria contiene dati JSON validi.
   
 ```json  
 {"age":42,"name":"John"}  
 ```  
   
  Nell'esempio viene illustrata la deserializzazione da dati JSON a un oggetto. Si ritorna quindi all'inizio del flusso e si chiama `ReadObject`.  
-  
-```  
-Person p2 = (Person)ser.ReadObject(stream1);  
-```  
-  
+
+```csharp
+Person p2 = (Person)ser.ReadObject(stream1);
+```
+
  Esaminando l'oggetto `p2` si evince che i dati JSON sono stati deserializzati correttamente.  
   
 > [!IMPORTANT]

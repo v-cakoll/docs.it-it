@@ -1,24 +1,26 @@
 ---
 title: Eccezioni previste
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 728f13fcf265c20c480d34388001d528ce43190e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="expected-exceptions"></a>Eccezioni previste
 In questo esempio viene illustrato come rilevare le eccezioni previste quando si utilizza un client tipizzato. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice. In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
@@ -36,7 +38,7 @@ In questo esempio viene illustrato come rilevare le eccezioni previste quando si
   
  Il codice che chiama un metodo di comunicazione client deve rilevare `TimeoutException` e `CommunicationException`. Un modo per gestire tali errori consiste nell'interrompere il client e riportare l'errore di comunicazione.  
   
-```  
+```csharp   
 try  
 {  
     ...  

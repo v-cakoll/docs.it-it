@@ -1,12 +1,13 @@
 ---
 title: Strumento Editor di configurazione (SvcConfigEditor.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Strumento Editor di configurazione (SvcConfigEditor.exe)
 L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente ad amministratori e sviluppatori di creare e modificare le impostazioni di configurazione per i servizi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tramite un'interfaccia utente grafica. Con questo strumento è possibile gestire le impostazioni di associazioni, comportamenti, servizi e diagnostica [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] senza la necessità di modificare direttamente i file di configurazione XML.  
@@ -115,14 +117,14 @@ L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo
   
 1.  Fare clic su di **Host** nodo.  
   
-2.  Fare clic su di **New...** pulsante di **gli indirizzi di Base** sezione.  
+2.  Fare clic sul **New...** pulsante di **gli indirizzi di Base** sezione.  
   
 3.  Immettere l'indirizzo URI di base nella finestra di dialogo.  
   
 4.  Fare clic su **OK**.  
   
 > [!NOTE]
->  Non è possibile modificare il valore di [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+>  Non è possibile modificare il valore di [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) all'interno di questo strumento. Per aggiungere o modificare questo elemento è necessario utilizzare un editor di testo o Visual Studio.  
   
 ### <a name="client"></a>Client  
  Il **Client** nodo consente di visualizzare tutti gli endpoint client nel file di configurazione. Ogni nodo secondario nella struttura corrisponde a un sottoelemento di <`client`> elemento nel file di configurazione.  
@@ -152,9 +154,9 @@ L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Creazione di una nuova configurazione di endpoint standard  
  Per creare una nuova configurazione di endpoint standard, è possibile procedere nei modi seguenti:  
   
--   Fare doppio clic su di **Endpoint Standard** nodo e selezionare **configurazione nuovo Endpoint Standard...** Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
+-   Fare doppio clic sui **Standardendpointelement** nodo e selezionare **configurazione nuovo Endpoint Standard...** Selezionare il tipo di associazione nella finestra di dialogo e fare clic su **OK**.  
   
--   Selezionare il **Endpoint Standard** nodo e fare clic su **configurazione nuovo Endpoint Standard...** nel **riquadro** in basso a sinistra della finestra.  
+-   Selezionare il **Standardendpointelement** nodo e fare clic su **configurazione nuovo Endpoint Standard...** nel **riquadro** in basso a sinistra della finestra.  
   
  Il **creando un nuovo Endpoint Standard** la finestra di dialogo Visualizza ed elenca registrati tutti i tipi di endpoint standard.  
   
@@ -378,7 +380,7 @@ L'Editor di configurazione dei servizi (SvcConfigEditor.exe) di [!INCLUDE[indigo
 ### <a name="creating-a-new-com-configuration"></a>Creazione di una nuova configurazione COM+  
  Prima di creare una nuova configurazione COM+, verificare che l'applicazione COM+ sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).  
   
-1.  Selezionare **File** -> menu **integrazione** -> **dell'applicazione COM+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Il **integrazione guidata COM+** viene quindi avviata.  
+1.  Selezionare **File** -> menu **integrazione** -> **l'applicazione COM+.** Questa operazione determina la chiusura del file attualmente aperto. Se il file corrente contiene dati non salvati, verrà visualizzata la finestra di dialogo Salva. Il **integrazione guidata COM+** viene quindi avviata.  
   
 2.  Nella prima pagina selezionare l'applicazione COM+ nell'albero. Se risulta impossibile individuare l'applicazione COM+ nell'albero, verificare che sia stata installata in Servizi componenti e registrata nella Global Assembly Cache (GAC).  
   

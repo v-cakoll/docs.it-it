@@ -1,35 +1,36 @@
 ---
-title: "Attività dell'entità"
-ms.custom: 
+title: Attività dell'entità
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>Attività dell'entità
-In questo esempio viene illustrato come usare ADO.NET Entity Framework con [!INCLUDE[wf2](../../../../includes/wf2-md.md)] per semplificare l'accesso ai dati.  
+In questo esempio viene illustrato come utilizzare ADO.NET Entity Framework con Windows Workflow Foundation per semplificare l'accesso ai dati.  
   
- ADO.NET Entity Framework consente agli sviluppatori di usare dati nel formato oggetti, proprietà e relazioni specifici di dominio, quali Customers, Orders, Order Details e le relazioni tra queste entità. A tale scopo, ADO.NET Entity Framework dispone di un livello di astrazione che consente la programmazione in un modello di applicazione concettuale anziché programmando direttamente in uno schema di archiviazione relazionale. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework, vedere [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework consente agli sviluppatori di usare dati nel formato oggetti, proprietà e relazioni specifici di dominio, quali Customers, Orders, Order Details e le relazioni tra queste entità. A tale scopo, ADO.NET Entity Framework dispone di un livello di astrazione che consente la programmazione in un modello di applicazione concettuale anziché programmando direttamente in uno schema di archiviazione relazionale. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework, vedere [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  In questo esempio viene usato il database `Northwind` e sono inclusi script per la creazione e la rimozione di tale database `Northwind` (Setup.cmd e Cleanup.cmd). I progetti in questo esempio includono un modello Entity Data Model basato sul database `Northwind`. Il modello può essere trovato aprendo il file `Northwind.edmx` incluso nel progetto. Si tratta del modello che definisce la forma degli oggetti a cui è possibile accedere tramite ADO.NET Entity Framework.  
   
  In questo esempio sono incluse le attività seguenti:  
   
--   `EntitySQLQuery`: `EntitySQLQuery` questa attività consente di recuperare oggetti dal database in base a una stringa di query Entity SQL. Entity SQL è un linguaggio indipendente dall'archiviazione simile a SQL e consente di specificare query in base al modello concettuale e alle entità che sono parte del modello o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Linguaggio Entity SQL, vedere [linguaggio Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: `EntitySQLQuery` questa attività consente di recuperare oggetti dal database in base a una stringa di query Entity SQL. Entity SQL è un linguaggio indipendente dall'archiviazione simile a SQL e consente di specificare query in base al modello concettuale e alle entità che sono parte del modello o del dominio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Linguaggio Entity SQL, vedere [linguaggio Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: questa attività consente di recuperare oggetti dal database in base a un predicato o query LINQ.  
   

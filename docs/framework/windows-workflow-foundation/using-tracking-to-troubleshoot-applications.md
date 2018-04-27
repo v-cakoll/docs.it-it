@@ -1,29 +1,30 @@
 ---
 title: Utilizzo del rilevamento per la risoluzione dei problemi relativi alle applicazioni
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Utilizzo del rilevamento per la risoluzione dei problemi relativi alle applicazioni
-[!INCLUDE[wf](../../../includes/wf-md.md)] consente di rilevare informazioni correlate al flusso di lavoro per fornire dettagli nell'esecuzione di un'applicazione o un servizio di [!INCLUDE[wf2](../../../includes/wf2-md.md)]. Gli host [!INCLUDE[wf2](../../../includes/wf2-md.md)] possono acquisire gli eventi del flusso di lavoro durante l'esecuzione di un'istanza del flusso di lavoro. Se il flusso di lavoro genera errori o eccezioni, è possibile usare i dettagli di rilevamento di [!INCLUDE[wf2](../../../includes/wf2-md.md)] per risolvere i problemi relativi all'elaborazione.  
+Windows Workflow Foundation (WF) consente di tenere traccia delle informazioni correlate al flusso di lavoro per fornire dettagli nell'esecuzione di un servizio o applicazione Windows Workflow Foundation. Gli host di Windows Workflow Foundation sono in grado di acquisire gli eventi del flusso di lavoro durante l'esecuzione di un'istanza del flusso di lavoro. Se il flusso di lavoro genera errori o eccezioni, è possibile utilizzare i dettagli di rilevamento per la risoluzione dei problemi dell'elaborazione di Windows Workflow Foundation.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Risoluzione dei problemi relativi a un'attività WF tramite il rilevamento di WF  
- Per rilevare gli errori all'interno dell'elaborazione di un'attività [!INCLUDE[wf2](../../../includes/wf2-md.md)], è possibile abilitare il rilevamento con un apposito profilo che esegue query per un oggetto <xref:System.Activities.Tracking.ActivityStateRecord> con lo stato Faulted. La query corrispondente viene specificata nel codice seguente:  
+ Per rilevare gli errori all'interno dell'elaborazione di un'attività di Windows Workflow Foundation, è possibile abilitare il rilevamento con un profilo di rilevamento che esegue una query per un <xref:System.Activities.Tracking.ActivityStateRecord> con lo stato Faulted. La query corrispondente viene specificata nel codice seguente:  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- Quando un'istanza del flusso di lavoro rileva un'eccezione non gestita, viene generato un oggetto <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> se è stato abilitato il rilevamento [!INCLUDE[wf2](../../../includes/wf2-md.md)].  
+ Quando un'istanza del flusso di lavoro rileva un'eccezione non gestita, una <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> oggetto viene emessa se è stato abilitato il rilevamento di Windows Workflow Foundation.  
   
- Questo record di rilevamento contiene i dettagli dell'errore nel formato di stack dell'eccezione. Include dettagli dell'origine dell'errore (ad esempio l'attività) che si è verificato e ha comportato l'eccezione non gestita. Per sottoscrivere gli eventi dell'errore da un servizio [!INCLUDE[wf2](../../../includes/wf2-md.md)], abilitare il rilevamento aggiungendo un partecipante di rilevamento, configurandolo con un profilo di rilevamento che esegue query per `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>e `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Questo record di rilevamento contiene i dettagli dell'errore nel formato di stack dell'eccezione. Include dettagli dell'origine dell'errore (ad esempio, l'attività) che contiene errori e ha generato l'eccezione non gestita. Per sottoscrivere gli eventi di errore da Windows Workflow Foundation, abilitare il rilevamento aggiungendo un partecipante del rilevamento. configurandolo con un profilo di rilevamento che esegue query per `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>e `WorkflowInstanceQuery (state="UnhandledException")`.  
   
  Se il rilevamento viene abilitato usando il partecipante del rilevamento ETW, gli eventi dell'errore vengono creati in una sessione ETW. Questi eventi possono essere visualizzati usando il Visualizzatore eventi Si trova sotto il nodo **Visualizzatore eventi -> applicazioni e servizi -> Microsoft -> Windows -> Server applicazioni-applicazioni** nel canale analitico.  
   

@@ -1,23 +1,24 @@
 ---
-title: "Attività di promozione proprietà"
-ms.custom: 
+title: Attività di promozione proprietà
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Attività di promozione proprietà
 In questo esempio viene fornita una soluzione end-to-end che integra direttamente la funzionalità di promozione <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nella creazione di flussi di lavoro. Vengono forniti inoltre una raccolta di elementi di configurazione, attività ed estensioni del flusso di lavoro che semplificano l'uso della funzionalità di promozione. Nell'esempio è contenuto infine un semplice flusso di lavoro che dimostra come usare la raccolta.  
@@ -74,7 +75,7 @@ In questo esempio viene fornita una soluzione end-to-end che integra direttament
   
 -   **PropertyPromotionActivity** è una libreria di classi che contiene gli elementi di configurazione, le attività del flusso di lavoro e le estensioni del flusso di lavoro che il **CounterServiceApplication** utilizza.  
   
--   **PropertyPromotionActivitySQLSample.sql** crea e aggiunge la vista [dbo]. [ CounterService] al database.  
+-   **Propertypromotionactivitysqlsample** crea e aggiunge la vista [dbo]. [ CounterService] al database.  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
@@ -109,7 +110,7 @@ go
  L'ordine degli elementi di `promotedValue` è correlato alla posizione delle proprietà promosse nella visualizzazione `InstancePromotedProperties`. `Count` è il primo elemento di `promotedValue`. Di conseguenza, tale elemento viene mappato alla colonna `Value1` nella vista `InstancePromotedProperties`. `LastIncrementedAt` è il secondo elemento di `promotedValue`. Di conseguenza, tale elemento viene mappato alla colonna `Value2` nella vista `InstancePromotedProperties`.  
   
 #### <a name="using-the-promotevalue-activity"></a>Utilizzo dell'attività PromoteValue  
- Esaminare il file CounterService.xamlx nella finestra di progettazione di [!INCLUDE[wf2](../../../../includes/wf2-md.md)]. Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.  
+ Esaminare il file Counterservice in Progettazione Windows Workflow Foundation. Si noti che sono presenti due attività speciali nella definizione WF, ovvero `PromoteValue<DateTime>` e `PromoteValue<Int32>`.  
   
  All'attività `PromoteValue<Int32>` è associato il membro `Name` definito come `Count`. che corrisponde al primo elemento `promotedValue` nella configurazione e per cui il relativo elemento `Value` è definito come variabile del flusso di lavoro `Counter`. Quando il flusso di lavoro è persistente, la variabile del flusso di lavoro `Counter` viene resa persistente come proprietà promossa nella colonna `Value1` della vista `InstancePromotedProperties`.  
   

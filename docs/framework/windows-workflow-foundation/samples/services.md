@@ -1,26 +1,27 @@
 ---
 title: Services1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 924368f5de4c5698c439a6c8744a15babd62d762
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f53c3ee686c4117a621eac43ede1035a83a08e46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="services"></a>Servizi
-Contenuto della sezione sono inclusi i collegamenti agli esempi che illustrano la funzionalità del servizio [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+In questa sezione contiene collegamenti a esempi che illustrano la funzionalità servizio di Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Ritardo assoluto](../../../../docs/framework/windows-workflow-foundation/samples/absolute-delay.md)  
@@ -42,7 +43,7 @@ Contenuto della sezione sono inclusi i collegamenti agli esempi che illustrano l
  Viene illustrato come tipi utente diversi possono essere usati nelle attività di messaggistica (servizi WF). Il servizio di esempio è un semplice servizio di approvazione spese ed espone tre operazioni.  
   
  [Duplex durevole](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- Viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in Windows Workflow Foundation (WF).  
   
  [Correlazione basata sul contenuto](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  Viene illustrato come è possibile usare le attività di messaggistica (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>e <xref:System.ServiceModel.Activities.ReceiveReply>) con una e con più correlazioni basate sul contenuto.  
@@ -54,7 +55,7 @@ Contenuto della sezione sono inclusi i collegamenti agli esempi che illustrano l
  Viene illustrato come usare un ritardo durevole, ovvero un ritardo che rende persistente il flusso di lavoro in un dispositivo durevole durante il ritardo.  
   
  [Ricezione memorizzata nel buffer](../../../../docs/framework/windows-workflow-foundation/samples/buffered-receive.md)  
- Viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ Viene illustrato come impostare e configurare la funzionalità di ricezione memorizzata nel buffer in Windows Workflow Foundation (WF).  
   
  [Attivazione XAML](../../../../docs/framework/windows-workflow-foundation/samples/xaml-activation.md)  
  Viene illustrato come ospitare un flusso di lavoro dichiarativo in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  

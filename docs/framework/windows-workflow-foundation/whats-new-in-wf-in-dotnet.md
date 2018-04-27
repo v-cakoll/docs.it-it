@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b57cf990f9fdf987f4cc414cb42db6cf9fe0da21
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Novità&#39;s New in Windows Workflow Foundation in .NET 4.5
-In [!INCLUDE[wf](../../../includes/wf-md.md)] di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono disponibili numerose nuove funzionalità, ad esempio attività, funzionalità di progettazione e modelli di sviluppo di flussi di lavoro. Molte, ma non tutte, le nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] le nuove funzionalità che sono supportate, vedere [supporto per le nuove funzionalità di Workflow Foundation 4.5 nella finestra di progettazione di flusso di lavoro riallocate](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] migrazione .NET 3.0 e 3.5 di .NET del flusso di lavoro alle applicazioni di utilizzare la versione più recente, vedere [materiale sussidiario sulla migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduce molte nuove funzionalità, ad esempio nuove attività, funzionalità di progettazione e modelli di sviluppo del flusso di lavoro. Molte, ma non tutte, le nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sono supportate nella finestra di progettazione del flusso di lavoro ospitata nuovamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] le nuove funzionalità che sono supportate, vedere [supporto per le nuove funzionalità di Workflow Foundation 4.5 nella finestra di progettazione di flusso di lavoro riallocate](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] migrazione .NET 3.0 e 3.5 di .NET del flusso di lavoro alle applicazioni di utilizzare la versione più recente, vedere [materiale sussidiario sulla migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). In questo argomento viene fornita una panoramica delle nuove funzionalità del flusso di lavoro introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
->  Le nuove funzionalità di [!INCLUDE[wf2](../../../includes/wf2-md.md)] introdotte in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono disponibili per progetti destinati a versioni precedenti del framework. Se un progetto destinato a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] viene reindirizzato a una versione precedente del framework, si possono verificare diversi problemi.  
+>  Le nuove funzionalità di Windows Workflow Foundation introdotte [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] non sono disponibili per i progetti destinati a versioni precedenti del framework. Se un progetto destinato a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] viene reindirizzato a una versione precedente del framework, si possono verificare diversi problemi.  
 >   
 >  -   Le espressioni c# verranno sostituite con il messaggio nella finestra di progettazione **valore impostato in XAML**.  
 > -   Si verificheranno molti errori di compilazione, incluso il seguente errore.  

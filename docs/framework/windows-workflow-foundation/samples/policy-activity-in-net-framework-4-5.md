@@ -1,26 +1,27 @@
 ---
-title: "Attività Policy in .NET Framework 4.5"
-ms.custom: 
+title: Attività Policy in .NET Framework 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 66968503d2f481647d999854358a246b4d963475
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Attività Policy in .NET Framework 4.5
-L'attività Policy4 consente di usare gli oggetti [!INCLUDE[wf2](../../../../includes/wf2-md.md)] di [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] in <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) direttamente da [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) tramite il motore fornito in WF 3.5. Usando questa attività, è possibile creare ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> di WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] motore per le regole di WF 3.5, incluso in Windows Workflow Foundation, vedere Introduzione al motore per le regole di Windows Workflow Foundation. Per ulteriori informazioni sulla migrazione di regole di WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], leggere [materiale sussidiario sulla migrazione](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+L'attività Policy4 consente a Windows Workflow Foundation in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> oggetti da usare in Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) direttamente tramite il motore regole di business che viene fornito in WF 3.5. Usando questa attività, è possibile creare ed eseguire un oggetto <xref:System.Workflow.Activities.Rules.RuleSet> di WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] motore per le regole di WF 3.5, incluso in Windows Workflow Foundation, vedere Introduzione al motore per le regole di Windows Workflow Foundation. Per ulteriori informazioni sulla migrazione di regole di WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], leggere [materiale sussidiario sulla migrazione](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -35,9 +36,9 @@ L'attività Policy4 consente di usare gli oggetti [!INCLUDE[wf2](../../../../inc
   
 |Nome progetto|Descrizione|File principali|  
 |------------------|-----------------|----------------|  
-|Policy4|Contiene l'attività Policy4 e la relativa finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Policy4**: definizione dell'attività Policy4.<br /><br /> **Policydesigner**: finestra di progettazione personalizzata per l'attività Policy4. Usa l'editor delle regole ([classe RuleSetDialog](http://go.microsoft.com/fwlink/?LinkId=150378)) da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motore regole di business.|  
-|ImperativeCodeClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione Policy4 e il codice C# imperativo (non viene usata alcuna finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)]).|**ApplyDiscount**: File con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definizioni delle regole.<br /><br /> **Cs**: tipo che rappresenta un ordine del cliente. Le regole vengono applicate agli oggetti di questo tipo.<br /><br /> **Program.cs**: configura ed esegue un flusso di lavoro che dispone di un'attività Policy4 per applicare le regole definite in ApplyDiscount alle istanze degli oggetti Order.<br /><br /> **App. config**: file di configurazione con il percorso del file di regole.|  
-|DesignerClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione Policy4 nella finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1**: flusso di lavoro sequenza che usa un'attività Policy4 per eseguire valutazioni delle regole.<br /><br /> `Program.cs`: esegue un'istanza del flusso di lavoro definito in Sequence1.xaml.|  
+|Policy4|Contiene l'attività Policy4 e la relativa finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Policy4.cs**: definizione dell'attività Policy4.<br /><br /> **Policydesigner**: finestra di progettazione personalizzata per l'attività Policy4. Usa l'editor delle regole ([classe RuleSetDialog](http://go.microsoft.com/fwlink/?LinkId=150378)) da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motore regole di business.|  
+|ImperativeCodeClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione Policy4 e il codice C# imperativo (non viene usata alcuna finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)]).|**ApplyDiscount**: File con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definizioni delle regole.<br /><br /> **Order.cs**: tipo che rappresenta un ordine del cliente. Le regole vengono applicate agli oggetti di questo tipo.<br /><br /> **Program.cs**: configura ed esegue un flusso di lavoro che dispone di un'attività Policy4 per applicare le regole definite in ApplyDiscount alle istanze degli oggetti Order.<br /><br /> **App. config**: file di configurazione con il percorso del file delle regole.|  
+|DesignerClientSample|Applicazione client di esempio che configura ed esegue un flusso di lavoro tramite un'applicazione Policy4 nella finestra di progettazione di [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: flusso di lavoro sequenza che usa un'attività Policy4 per eseguire valutazioni delle regole.<br /><br /> `Program.cs`: esegue un'istanza del flusso di lavoro definito in Sequence1.xaml.|  
   
 ## <a name="the-policy4-activity"></a>Attività Policy4  
  L'attività Policy4 è una classe che deriva dall'oggetto <xref:System.Activities.NativeActivity%601> che consente ai flussi di lavoro di eseguire oggetti RuleSet di [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. L'esempio di codice seguente è una definizione semplificata del modello a oggetti pubblico dell'attività.  

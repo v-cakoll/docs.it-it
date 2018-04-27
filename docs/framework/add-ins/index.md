@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Componenti aggiuntivi ed estensibilità
 <a name="top"></a> I componenti aggiuntivi forniscono funzionalità o servizi estesi per un'applicazione host. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] offre un modello di programmazione che gli sviluppatori possono usare per sviluppare componenti aggiuntivi e attivarli nella propria applicazione host. Ciò avviene attraverso la costruzione di una pipeline di comunicazione tra l'host e il componente aggiuntivo. Il modello viene implementato usando i tipi inclusi negli spazi dei nomi <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>e <xref:System.AddIn.Contract> .  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  L'illustrazione seguente mostra la pipeline.  
   
- ![Aggiungi &#45; nel modello di pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Aggiungere&#45;nel modello di pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline del componente aggiuntivo  
   
  Gli assembly per questi segmenti non devono trovarsi nello stesso dominio applicazione. È possibile caricare un componente aggiuntivo nel suo nuovo dominio applicazione, in uno esistente o persino in quello dell'host. È possibile caricare più componenti aggiuntivi nello stesso dominio applicazione, in modo che condividano le risorse e i contesti di sicurezza.  
@@ -116,7 +116,7 @@ Pipeline del componente aggiuntivo
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Descrive la pipeline di comunicazione dei segmenti dall'applicazione host al componente aggiuntivo. Fornisce esempi di codice in argomenti con procedure dettagliate che descrivono come costruire la pipeline e implementare segmenti nella pipeline in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Descrive la pipeline di comunicazione dei segmenti dall'applicazione host al componente aggiuntivo. Vengono forniti esempi di codice negli argomenti di questa procedura dettagliata che descrivono come costruire la pipeline e implementare segmenti nella pipeline in Visual Studio.|  
 |[Domini applicazione e assembly](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Descrive la relazione tra domini applicazione, che forniscono un limite di isolamento per sicurezza, affidabilità e controllo delle versioni, e assembly.|  
   
  [Torna all'inizio](#top)  

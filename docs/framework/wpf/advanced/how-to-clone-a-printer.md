@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: duplicare una stampante'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ffb9f5ab8e7b768d888f5f2800fae668e47bfc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-clone-a-printer"></a>Procedura: duplicare una stampante
-A un certo punto, la maggior parte delle aziende acquisterà più stampanti dello stesso modello. In genere, questi vengono installati con le impostazioni di configurazione praticamente identico. Installazione di ogni stampante può richiedere molto tempo e soggetta a errori. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> dello spazio dei nomi e <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposta con [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] consente di installare immediatamente qualsiasi numero di code di stampa aggiuntive che vengono clonati da una coda di stampa esistente.  
+A un certo punto, la maggior parte delle aziende acquisterà più stampanti dello stesso modello. In genere, questi vengono installati con le impostazioni di configurazione praticamente identico. Installazione di ogni stampante può richiedere molto tempo e soggetta a errori. Il <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> spazio dei nomi e il <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe esposta con Microsoft .NET Framework consente di installare immediatamente qualsiasi numero di code di stampa aggiuntive che vengono clonati da una coda di stampa esistente.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente, viene duplicata una seconda coda di stampa da una coda di stampa esistente. Il secondo è diverso dal primo solo nel relativo nome, percorso, porta e lo stato condiviso. Come indicato di seguito sono riportati i passaggi principali per eseguire questa operazione.  

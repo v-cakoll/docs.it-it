@@ -1,24 +1,26 @@
 ---
 title: Associazioni MSMQ transazionali
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>Associazioni MSMQ transazionali
 Questo esempio illustra come eseguire comunicazioni in coda transazionali utilizzando Accodamento messaggi (MSMQ).  
@@ -33,19 +35,19 @@ Questo esempio illustra come eseguire comunicazioni in coda transazionali utiliz
  In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione. I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.  
   
  Il contratto del servizio è `IOrderProcessor`, come mostrato nel codice di esempio seguente. L'interfaccia definisce un servizio unidirezionale adatto per l'utilizzo con le code.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`. Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo. Garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda. Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima dell'invio in modo che se l'operazione non riesce, il messaggio va perduto. Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene utilizzata per leggere il messaggio dalla coda, come dimostrato nel codice seguente.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio contiene il codice necessario per verificare l'esistenza della coda e crearla se necessario. Il nome della coda viene letto dal file di configurazione. L'indirizzo di base viene utilizzato il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il proxy al servizio.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  Il nome della coda utilizza un punto (.) per il computer locale e barre rovesciate come separatori all'interno del percorso quando la coda viene creata utilizzando <xref:System.Messaging>. L'endpoint [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizza l'indirizzo della coda con uno schema net.msmq, utilizza "localhost" per indicare il computer locale e barre nel percorso.  
   
  Il client crea un ambito di transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Per verificare che le transazioni stiano funzionando, modificare il client impostando l'ambito della transazione come commento, come mostra il codice di esempio seguente, ricompilare la soluzione ed eseguire il client.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  Poiché la transazione non è stata completata, i messaggi non vengono inviati alla coda.  
   
  Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  

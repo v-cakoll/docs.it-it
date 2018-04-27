@@ -1,28 +1,28 @@
 ---
 title: Sessioni affidabili WS
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-caps.latest.revision: 
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d7b28968a77f03a622c67acdb58e239593199a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-reliable-session"></a>Sessioni affidabili WS
 Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni affidabili forniscono supporto per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. L'esempio implementa le sessioni per mantenere lo stato del client e specifica assicurazioni di recapito nell'ordine.  
@@ -65,13 +65,13 @@ Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni 
 ```  
   
  La classe dell'implementazione del servizio implementa l'istanza <xref:System.ServiceModel.InstanceContextMode.PerSession> per gestire un'istanza della classe separata per ciascun client, come mostra il codice di esempio seguente.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)] public class CalculatorService : ICalculator  
 {  
     ...  
 }  
-```  
+```
   
  Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Premere INVIO nella finestra del client per arrestare il client.  
   

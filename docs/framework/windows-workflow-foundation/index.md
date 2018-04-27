@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca790f97eb677414655b583e46cb693506ed0cc2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
-Contenuto della sezione vengono descritti il modello di programmazione, gli esempi e gli strumenti di [!INCLUDE[wf](../../../includes/wf-md.md)].  
+In questa sezione viene descritto il modello di programmazione, esempi e strumenti di Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Guida alla documentazione dei flussi di lavoro di Windows](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
@@ -40,16 +40,16 @@ Contenuto della sezione vengono descritti il modello di programmazione, gli esem
  Vengono descritte le nuove funzionalità di Windows Workflow Foundation in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]  
   
  [Panoramica dei concetti relativi al flusso di lavoro di Windows](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
- Set di argomenti in cui vengono descritti i concetti principali di [!INCLUDE[wf2](../../../includes/wf2-md.md)].  
+ Un set di argomenti in cui sono illustrati i concetti fondamentali alla base Windows Workflow Foundation.  
   
  [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- Set di argomenti di procedure dettagliate che introducono alla programmazione di applicazioni [!INCLUDE[wf2](../../../includes/wf2-md.md)].  
+ Un set di procedure dettagliate che introducono alla programmazione di applicazioni di Windows Workflow Foundation.  
   
  [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  Set di nozioni di base che è necessario acquisire per diventare programmatori [!INCLUDE[wf1](../../../includes/wf1-md.md)] qualificati.  
   
  [Estensione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)  
- Set di argomenti in cui viene descritto come estendere o personalizzare [!INCLUDE[wf2](../../../includes/wf2-md.md)] per soddisfare le proprie esigenze.  
+ Un set di argomenti viene descritto come estendere o personalizzare Windows Workflow Foundation in base alle esigenze.  
   
  [Glossario di Windows Workflow Foundation per .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md)  
  Viene definito un elenco di termini specifici di WF.  

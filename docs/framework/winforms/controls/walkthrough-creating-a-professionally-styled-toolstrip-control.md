@@ -1,12 +1,13 @@
 ---
 title: 'Procedura dettagliata: creazione di un controllo ToolStrip professionale'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 18ffb09e581b830329a0d32f11ae09d8b0f68788
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procedura dettagliata: creazione di un controllo ToolStrip professionale
 È possibile assegnare l'applicazione <xref:System.Windows.Forms.ToolStrip> controlla l'aspetto professionale e un comportamento, scrivere la propria classe derivata dal <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, è necessario:  
   
--   Disporre di autorizzazioni sufficienti creare ed eseguire progetti di applicazione Windows Form nel computer in cui [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] è installato.  
+-   Disporre di autorizzazioni sufficienti creare ed eseguire progetti di applicazione Windows Form nel computer in cui è installato Visual Studio.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Creazione di un progetto libreria di controlli Windows  
  Il primo passaggio consiste nel creare il progetto libreria di controlli.  
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/19/2018
     |--------------|-----------|  
     |nome|`mailStackButton`|  
     |CheckOnClick|true|  
-    |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |Oggetto CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  

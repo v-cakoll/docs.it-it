@@ -1,27 +1,29 @@
 ---
-title: 'Procedura dettagliata: localizzazione di un''applicazione ibrida'
-ms.custom: 
+title: "Procedura dettagliata: localizzazione di un'applicazione ibrida"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Procedura dettagliata: localizzazione di un'applicazione ibrida
 Questa procedura dettagliata viene illustrato come localizzare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementi in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-basato su un'applicazione ibrida.  
@@ -123,7 +125,7 @@ Questa procedura dettagliata viene illustrato come localizzare [!INCLUDE[TLA2#tl
   
 #### <a name="to-assign-resource-identifiers"></a>Per assegnare identificatori di risorsa  
   
-1.  Dal Menu Start, aprire il [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] prompt dei comandi.  
+1.  Dal Menu Start, aprire il prompt dei comandi di Visual Studio.  
   
 2.  Per assegnare identificatori di risorsa al contenuto localizzabile, usare il comando seguente.  
   
@@ -150,7 +152,7 @@ Questa procedura dettagliata viene illustrato come localizzare [!INCLUDE[TLA2#tl
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  Aprire il file TEMP. csv con [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] o un altro editor di testo. Sostituire la stringa `"Hello"` con la relativa traduzione spagnola, `"Hola"`.  
+3.  Aprire il file TEMP. csv con Visual Studio o un altro editor di testo. Sostituire la stringa `"Hello"` con la relativa traduzione spagnola, `"Hola"`.  
   
 4.  Salvare il file temp.csv.  
   

@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ecf45e4d40c305c5e324d3ab8469ff24f5a092ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="scenario"></a>Scenario
-Contenuto della sezione sono contenuti esempi di scenari di [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+In questa sezione contiene esempi di scenari di Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Libreria di attività](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
@@ -40,7 +40,7 @@ Contenuto della sezione sono contenuti esempi di scenari di [!INCLUDE[wf](../../
  Viene illustrato come implementare uno scenario StopWatch semplice usando una combinazione di attività <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Pick>.  
   
  [Integrazione di WPF e WF in XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Viene illustrato come creare un'applicazione che utilizza Windows Presentation Foundation (WPF) e [!INCLUDE[wf](../../../../includes/wf-md.md)] funzionalità in un unico documento XAML. Per eseguire questa operazione, nell'esempio vengono usati [!INCLUDE[wf](../../../../includes/wf-md.md)] e l'estensibilità XAML.  
+ Viene illustrato come creare un'applicazione che usa le funzionalità di Windows Presentation Foundation (WPF) e Windows Workflow Foundation (WF) in un unico documento XAML. A tale scopo, l'esempio utilizza l'estendibilità di Windows Workflow Foundation (WF) + + e XAML.  
   
  [Toolkit di RuleSet esterno](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Viene illustrato come gestire e modificare oggetti RuleSet in un database e accedere a tali oggetti da un flusso di lavoro in fase di esecuzione.

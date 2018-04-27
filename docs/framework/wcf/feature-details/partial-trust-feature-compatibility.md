@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supporta un sottoinsieme limitato di funzionalità. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -154,7 +154,7 @@ Se eseguito in ambiente parzialmente attendibile,[!INCLUDE[indigo1](../../../../
 >  Per evitare il flooding dei file di traccia con errori duplicati, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] disabilita la traccia della risorsa o dell'azione dopo il primo errore di sicurezza. Viene generata una traccia di eccezione per ogni accesso alla risorsa non riuscito, la prima volta che viene eseguito il tentativo di accedere alla risorsa o eseguire l'azione.  
   
 ## <a name="wcf-service-host"></a>Host servizio WCF  
- L'host del servizio[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'attendibilità parziale. Se si desidera utilizzare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in attendibilità parziale, non utilizzare il modello Progetto Libreria di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] per compilare il servizio. Creare invece un nuovo sito Web in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] scegliendo il modello di sito Web del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in grado di ospitare il servizio in un server Web in cui è supportato l'attendibilità parziale di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ L'host del servizio[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non supporta l'attendibilità parziale. Se si desidera utilizzare un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio in attendibilità parziale, non utilizzare il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello progetto libreria di servizi in Visual Studio per compilare il servizio. Al contrario, creare un nuovo sito Web in Visual Studio scegliendo il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sito Web modello di servizio che possa ospitare il servizio in un server Web in cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è supportato l'attendibilità parziale.  
   
 ## <a name="other-limitations"></a>Altre limitazioni  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è generalmente soggetto alle considerazioni di sicurezza imposte dall'applicazione host. Ad esempio, se [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è ospitato in un'applicazione browser XAML (XBAP, XAML Browser Application), è soggetto alle limitazioni XBAP, come descritto in [Sicurezza con attendibilità parziale in WPF](http://go.microsoft.com/fwlink/?LinkId=89138).  

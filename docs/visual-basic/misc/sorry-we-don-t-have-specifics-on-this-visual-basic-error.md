@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Al momento, non abbiamo&#39;ha informazioni specifiche sull'errore Visual Basic
 Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibile cercare il numero dell'errore e il testo del messaggio per trovare informazioni sul Web. In alternativa, è possibile chiedere ad altri sviluppatori che usano uno di questi forum:  
@@ -3068,7 +3068,7 @@ Siamo spiacenti, ma non abbiamo informazioni specifiche sull'errore. È possibil
  Forum dedicato a domande e problemi relativi all'aggiornamento a Visual Basic e l'utilizzo delle funzionalità di interoperabilità.  
   
  [IDE di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Forum dedicato a domande relative all'uso dell'ambiente [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Forum dedicato a domande relative all'utilizzo nell'ambiente di Visual Studio.  
   
  [Informazioni generali su Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
  Forum dedicato a domande e problemi relativi a Visual Basic che non sono trattati in altri forum.  

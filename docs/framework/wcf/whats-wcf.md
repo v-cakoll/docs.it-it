@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Informazioni su Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è un framework per la compilazione di applicazioni orientate ai servizi. Grazie a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]è possibile inviare dati come messaggi asincroni da un endpoint del servizio a un altro. Un endpoint del servizio può appartenere a un servizio disponibile in modo continuo ospitato da IIS oppure essere un servizio ospitato in un'applicazione. Un endpoint può essere un client di un servizio che richiede dati da un endpoint del servizio. Il messaggio può essere semplice come una parola o come un singolo carattere inviato in formato XML o complesso come un flusso di dati binari. Di seguito vengono indicati alcuni scenari di esempio:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Messaggi durevoli**  
   
-     Per messaggio durevole si intende un messaggio che non viene mai perso a causa di un'interruzione della comunicazione. I messaggi presenti in un modello di questo tipo vengono sempre salvati in un database. Se si verifica un'interruzione, quando la connessione viene ripristinata è possibile riprendere lo scambio dei messaggi. È inoltre possibile creare un messaggio durevole utilizzando [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Per messaggio durevole si intende un messaggio che non viene mai perso a causa di un'interruzione della comunicazione. I messaggi presenti in un modello di questo tipo vengono sempre salvati in un database. Se si verifica un'interruzione, quando la connessione viene ripristinata è possibile riprendere lo scambio dei messaggi. È anche possibile creare un messaggio durevole utilizzando Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transazioni**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integrazione di WCF con altre tecnologie  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è una piattaforma estremamente flessibile. Grazie a questa notevole flessibilità, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] viene usato anche in diversi altri prodotti Microsoft. Dopo aver acquisito familiarità con i concetti fondamentali di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], è possibile sfruttarne la conoscenza per utilizzare uno di tali prodotti.  
   
- La prima tecnologia associata a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è stata Windows Workflow Foundation (WF). I flussi di lavoro semplificano lo sviluppo di applicazioni incapsulando i passaggi nel flusso di lavoro come "attività". Nella prima versione di [!INCLUDE[wf2](../../../includes/wf2-md.md)], lo sviluppatore doveva creare un host per il flusso di lavoro. La versione successiva di [!INCLUDE[wf2](../../../includes/wf2-md.md)] è stata integrata con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo modo era possibile ospitare qualsiasi flusso di lavoro in un servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] scegliendo automaticamente WF/WCF come tipo di progetto in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ La prima tecnologia associata a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è stata Windows Workflow Foundation (WF). I flussi di lavoro semplificano lo sviluppo di applicazioni incapsulando i passaggi nel flusso di lavoro come "attività". Nella prima versione di Windows Workflow Foundation, lo sviluppatore doveva creare un host del flusso di lavoro. La prossima versione di Windows Workflow Foundation è stata integrata con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo modo era possibile ospitare qualsiasi flusso di lavoro in un servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] scegliendo automaticamente WF/WCF come tipo di progetto in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] viene inoltre utilizzato in Microsoft BizTalk Server R2 come tecnologia di comunicazione. BizTalk è progettato per ricevere e trasformare i dati da un formato standardizzato in un altro. I messaggi devono essere recapitati nel MessageBox centrale di BizTalk in cui il messaggio può essere trasformato tramite un mapping rigoroso o tramite una delle funzionalità di BizTalk, ad esempio il motore del flusso di lavoro. A questo punto in BizTalk è possibile utilizzare l'adattatore line-of-business di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] per recapitare i messaggi al MessageBox.  
   

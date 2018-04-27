@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Eventi (Visual Basic)
-Sebbene sia possibile rappresentare graficamente un progetto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come una serie di procedure eseguite in sequenza, in realtà, la maggior parte dei programmi è basata su eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
+Anche se è possibile rappresentare graficamente un progetto di Visual Studio come una serie di procedure eseguite in una sequenza, in realtà, la maggior parte dei programmi sono basato sugli eventi, ovvero il flusso di esecuzione è determinato da occorrenze esterne denominate *eventi*.  
   
  Un evento è un segnale che informa un'applicazione che si è verificato qualcosa di importante. Ad esempio, quando un utente fa clic su un controllo in un form, il form può generare un evento `Click` e chiamare una routine che gestisce l'evento. Gli eventi consentono anche le comunicazioni tra attività separate. Si supponga, ad esempio, che un'applicazione esegua un'attività di ordinamento separatamente dall'applicazione principale. Se un utente annulla l'ordinamento, l'applicazione può inviare un evento di annullamento per segnalare la necessità di interrompere il processo di ordinamento.  
   

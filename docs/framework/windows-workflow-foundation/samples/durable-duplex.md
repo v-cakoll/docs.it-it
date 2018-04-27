@@ -1,29 +1,30 @@
 ---
 title: Duplex durevole
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>Duplex durevole
-In questo esempio viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in [!INCLUDE[wf](../../../../includes/wf-md.md)]. Un scambio durevole di messaggi duplex è un scambio di messaggi bidirezionale che si verifica in un lungo periodo di tempo. È possibile che la durata dello scambio di messaggi sia superiore alla durata del canale di comunicazione e alla durata in memoria delle istanze del servizio.  
+In questo esempio viene illustrato come impostare e configurare lo scambio durevole di messaggi duplex usando le attività di messaggistica in Windows Workflow Foundation (WF). Un scambio durevole di messaggi duplex è un scambio di messaggi bidirezionale che si verifica in un lungo periodo di tempo. È possibile che la durata dello scambio di messaggi sia superiore alla durata del canale di comunicazione e alla durata in memoria delle istanze del servizio.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- In questo esempio due servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementati tramite [!INCLUDE[wf2](../../../../includes/wf2-md.md)] vengono configurati per l'uso di un scambio durevole di messaggi duplex. Lo scambio durevole di messaggi duplex è composta da due messaggi unidirezionali inviati tramite MSMQ e correlati usando [scambio del contesto .NET](http://go.microsoft.com/fwlink/?LinkID=166059). I messaggi vengono inviati tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive>. Lo scambio del contesto di .NET viene usato per specificare l'indirizzo di callback nei messaggi inviati. Entrambi i servizi sono ospitati tramite i servizi Attivazione processo Windows (WAS) e sono configurati per abilitare la persistenza delle istanze dei servizi.  
+ In questo esempio, due [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servizi implementati utilizzando Windows Workflow Foundation configurati con un scambio durevole di messaggi duplex. Lo scambio durevole di messaggi duplex è composta da due messaggi unidirezionali inviati tramite MSMQ e correlati usando [scambio del contesto .NET](http://go.microsoft.com/fwlink/?LinkID=166059). I messaggi vengono inviati tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send> e <xref:System.ServiceModel.Activities.Receive>. Lo scambio del contesto di .NET viene usato per specificare l'indirizzo di callback nei messaggi inviati. Entrambi i servizi sono ospitati tramite i servizi Attivazione processo Windows (WAS) e sono configurati per abilitare la persistenza delle istanze dei servizi.  
   
  Il primo servizio (Service1.xamlx) invia una richiesta al servizio di invio (Service2.xamlx) per l'esecuzione di un'operazione. Al termine, per indicare che l'operazione è stata completata, Service2.xamlx restituisce una notifica a Service1.xamlx. Un'applicazione console del flusso di lavoro configura le code su cui i servizi sono in ascolto e invia il messaggio di avvio per l'attivazione di Service1.xamlx. Una volta che Service1.xamlx ha ricevuto da Service2.xamlx la notifica che l'operazione richiesta è stata completata, il risultato viene salvato da Service1.xamlx in un file XML. In attesa del messaggio di callback, Service1.xamlx salva in modo permanente lo stato dell'istanza usando l'oggetto <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> predefinito. Service2.xamlx salva in modo permanente lo stato dell'istanza come parte del completamento dell'operazione richiesta da Service1.xamlx.  
   

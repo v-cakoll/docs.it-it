@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Esecuzione del debug dei flussi di lavoro
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre diverse opzioni per eseguire il debug dei flussi di lavoro in esecuzione dall'ambiente di sviluppo. Il debug dei flussi di lavoro può essere eseguito nell'utilità di progettazione, in XAML e nel codice.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  Il debug del flusso di lavoro è supportato anche usando l'infrastruttura di Visual Studio per la connessione a un processo. In questo modo, l'autore del flusso di lavoro può eseguire il debug di un flusso di lavoro in esecuzione in un ambiente host diverso, ad esempio Internet Information Services (IIS) 7.0.  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] debug remoto funziona nello stesso modo del debug remoto per gli altri componenti di Visual Studio. Per informazioni sul debug remoto, vedere [procedura: attivare il debug remoto](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Debug remoto di Windows Workflow Foundation (WF) funziona nello stesso modo del debug remoto per gli altri componenti di Visual Studio. Per informazioni sul debug remoto, vedere [procedura: attivare il debug remoto](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Se l'applicazione del flusso di lavoro è destinata x86 architettura ed è ospitato in un computer che esegue un sistema operativo a 64 bit, il debug remoto non funzionerà a meno che non è installato Visual Studio nel computer remoto o la destinazione per l'applicazione del flusso di lavoro viene modificata in **Qualsiasi CPU**.  

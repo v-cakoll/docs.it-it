@@ -1,12 +1,13 @@
 ---
-title: 'Procedura dettagliata: creazione di un''applicazione estendibile'
-ms.custom: 
+title: "Procedura dettagliata: creazione di un'applicazione estendibile"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Procedura dettagliata: creazione di un'applicazione estendibile
 Questa procedura dettagliata viene descritto come creare una pipeline per un componente aggiuntivo che esegue funzioni calcolatrice semplice. Viene illustrato uno scenario reale; invece, vengono illustrate le funzionalità di base di una pipeline e un componente aggiuntivo può come fornire servizi per un host.  
@@ -61,14 +63,14 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, sono necessari i seguenti elementi:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Visual Studio.  
   
 ## <a name="creating-a-visual-studio-solution"></a>Creazione di una soluzione di Visual Studio  
- Utilizzare una soluzione di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] per contenere i progetti dei segmenti di pipeline.  
+ Usare una soluzione in Visual Studio per contenere i progetti dei segmenti di pipeline.  
   
 #### <a name="to-create-the-pipeline-solution"></a>Per creare la soluzione di pipeline  
   
-1.  In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], creare un nuovo progetto denominato `Calc1Contract`. Come base il **libreria di classi** modello.  
+1.  In Visual Studio, creare un nuovo progetto denominato `Calc1Contract`. Come base il **libreria di classi** modello.  
   
 2.  Denominare la soluzione `CalculatorV1`.  
   
@@ -364,8 +366,8 @@ Questa procedura dettagliata viene descritto come creare una pipeline per un com
 4.  Tipo **uscire** e premere il **invio** tasto per chiudere l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Procedura dettagliata: Abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
  [Procedura dettagliata: Passaggio di raccolte tra componenti aggiuntivi e host](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [Requisiti di sviluppo pipeline](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Contratti, viste e le schede](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Sviluppo pipeline](../../../docs/framework/add-ins/pipeline-development.md)

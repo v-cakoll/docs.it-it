@@ -16,16 +16,16 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e518a18787a7faa1d3e501d5941fae70daf8b9d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f57b07d03297347561b6b2e2634038aa1f29bc40
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procedura: personalizzare classi di entità mediante l'Editor del codice
 Gli sviluppatori che usano Visual Studio è possono utilizzare il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per creare o personalizzare le classi di entità.  
   
- È anche possibile usare l'editor di codice [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]per scrivere codice di mapping o per personalizzare codice già generato. Per ulteriori informazioni, vedere [Mapping basato sugli attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ È anche possibile utilizzare l'editor di codice di Visual Studio per scrivere il proprio codice di mapping o per personalizzare il codice che è già stato generato. Per ulteriori informazioni, vedere [Mapping basato sugli attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
  Negli argomenti di questa sezione viene descritto come personalizzare il modello a oggetti.  
   

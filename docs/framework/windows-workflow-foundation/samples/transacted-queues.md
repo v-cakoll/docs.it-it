@@ -1,26 +1,27 @@
 ---
 title: Code transazionali
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>Code transazionali
-In questo esempio viene illustrato come integrare code e transazioni in [!INCLUDE[wf](../../../../includes/wf-md.md)] per creare servizi affidabili e scalabili. Oggetto <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` viene utilizzato nel flusso di lavoro client per inviare messaggi a una coda in una transazione tramite la <xref:System.ServiceModel.NetMsmqBinding>. Un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> viene usato nel server per ricevere messaggi dalla coda e aggiornare lo stato del flusso di lavoro nella stessa transazione.  
+In questo esempio viene illustrato come integrare code e transazioni in Windows Workflow Foundation (WF) per creare servizi affidabili e scalabili. Oggetto <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` viene utilizzato nel flusso di lavoro client per inviare messaggi a una coda in una transazione tramite la <xref:System.ServiceModel.NetMsmqBinding>. Un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> viene usato nel server per ricevere messaggi dalla coda e aggiornare lo stato del flusso di lavoro nella stessa transazione.  
   
 ## <a name="demonstrates"></a>Dimostrazione  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> e correlazione basata sul contenuto.  

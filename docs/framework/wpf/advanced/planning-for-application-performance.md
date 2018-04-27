@@ -1,27 +1,29 @@
 ---
 title: Pianificazione delle prestazioni dell'applicazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Pianificazione delle prestazioni dell'applicazione
 La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capacità di sviluppare una strategia di prestazioni. La pianificazione è la prima fase dello sviluppo di qualsiasi prodotto. In questo argomento vengono descritte alcune regole molto semplice per definire una strategia per prestazioni ottimali.  
@@ -36,12 +38,12 @@ La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capaci
  Mantenere sempre il ciclo di misurazione, analisi, perfezionamento e correzione durante il ciclo di sviluppo di applicazioni. A partire dall'inizio alla fine del ciclo di sviluppo, è necessario misurare le prestazioni dell'applicazione in un ambiente stabile e affidabile. È consigliabile evitare variabilità causata da fattori esterni. Ad esempio, durante il test delle prestazioni, si deve disabilitare antivirus o qualsiasi altro aggiornamento automatico, ad esempio SMS, in modo da non influenzare i risultati del test. Dopo aver misurato le prestazioni dell'applicazione, è necessario identificare le modifiche che generano i miglioramenti principali. Dopo aver modificato l'applicazione, avviare nuovamente il ciclo.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Verificare un processo iterativo di ottimizzazione delle prestazioni  
- È necessario conoscere il costo relativo di ogni funzionalità che verranno utilizzate. Ad esempio, l'uso della reflection in [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] viene in genere prestazioni con utilizzo intensivo in termini di risorse di elaborazione, pertanto si desidera utilizzarlo con cautela. Ciò non significa evitare l'uso della reflection, solo che è necessario prestare attenzione a bilanciare i requisiti di prestazioni dell'applicazione con le esigenze di prestazioni delle funzionalità utilizzate.  
+ È necessario conoscere il costo relativo di ogni funzionalità che verranno utilizzate. Ad esempio, l'uso della reflection in Microsoft .NET Framework è in genere prestazioni elevate in termini di risorse di elaborazione, pertanto si desidera utilizzarlo con cautela. Ciò non significa evitare l'uso della reflection, solo che è necessario prestare attenzione a bilanciare i requisiti di prestazioni dell'applicazione con le esigenze di prestazioni delle funzionalità utilizzate.  
   
 ## <a name="build-towards-graphical-richness"></a>Compilare verso ricchezza grafica  
  Una tecnica chiave per la creazione di un approccio scalabile per raggiungere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le prestazioni dell'applicazione consiste nel compilare verso la ricchezza di con interfaccia grafica e complessità. Iniziare sempre con le risorse che richiedono prestazioni almeno per raggiungere gli obiettivi di scenario. Una volta raggiungere questi obiettivi, compilare verso ricchezza grafica con altre funzionalità con utilizzo intensivo di prestazioni, sempre tenendo presenti gli obiettivi dello scenario. Tenere presente che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è una piattaforma molto articolata e offre numerose funzionalità grafiche. Utilizzo delle prestazioni con utilizzo intensivo di funzionalità può influire negativamente sulle prestazioni complessive dell'applicazione.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i controlli sono intrinsecamente estensibili, consentendo la personalizzazione estesa dell'aspetto, mentre non modifica il comportamento di controllo. Sfruttare gli stili, modelli di dati e modelli di controllo, è possibile creare e sviluppare in modo incrementale un personalizzabile [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] che si adatta ai requisiti di prestazioni.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i controlli sono intrinsecamente estensibili, consentendo diffusa personalizzazione dell'aspetto, mentre non modifica il comportamento di controllo. Sfruttare gli stili, modelli di dati e modelli di controllo, è possibile creare e sviluppare in modo incrementale un personalizzabile [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] che si adatta ai requisiti di prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

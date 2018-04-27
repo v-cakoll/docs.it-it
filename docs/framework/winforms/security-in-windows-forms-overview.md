@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sulla sicurezza in Windows Form
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Cenni preliminari sulla sicurezza in Windows Form
 Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], qualsiasi codice in esecuzione sul computer di un utente aveva gli stessi diritti o le stesse autorizzazioni di accesso alle risorse che aveva un utente del computer. Se ad esempio all'utente era consentito l'accesso al file system o a un database, anche il codice aveva accesso al file system o al database. Anche se ciò può essere accettabile per il codice contenuto negli eseguibili installati esplicitamente dall'utente nel computer locale, non è altrettanto accettabile per quanto riguarda il codice potenzialmente dannoso proveniente da Internet o da una Intranet locale. A questo tipo di codice, infatti, non deve essere consentito l'accesso alle risorse del computer dell'utente senza autorizzazione esplicita.  
@@ -60,7 +62,7 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
   
  Quando si richiedono autorizzazioni facoltative, è necessario gestire le eccezioni di sicurezza che verranno generate nel caso in cui l'applicazione esegua un'azione che richiede autorizzazioni non concesse. La corretta gestione dell'eccezione <xref:System.Security.SecurityException> assicurerà che l'esecuzione dell'applicazione non venga interrotta. L'eccezione può essere usata dall'applicazione per determinare se è necessario disabilitare una funzionalità per l'utente. Un'applicazione, ad esempio, può disabilitare l'opzione di menu **Salva** se l'autorizzazione necessaria non viene concessa.  
   
- In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Sia in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK che in [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] sono disponibili strumenti per il calcolo delle autorizzazioni richieste da un'applicazione, rispettivamente lo strumento da riga di comando MT.exe e la funzionalità Elabora autorizzazioni di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ In alcuni casi, è difficile sapere se è stata effettuata l'asserzione di tutte le autorizzazioni appropriate. È possibile, ad esempio, che una chiamata a metodo che a prima vista potrebbe sembrare innocua, a un certo punto dell'esecuzione richieda l'accesso al file system. Se l'applicazione non viene distribuita con tutte le autorizzazioni necessarie, è possibile che l'esecuzione risulti corretta nel proprio computer ma non dopo la distribuzione. Entrambi i [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] sono disponibili strumenti per il calcolo delle autorizzazioni richieste da un'applicazione: MT.exe dei comandi dello strumento di riga e la funzionalità Elabora autorizzazioni di Visual Studio, rispettivamente.  
   
  Negli argomenti riportati di seguito vengono illustrate le funzionalità di sicurezza aggiuntive di Windows Form.  
   
@@ -86,12 +88,12 @@ Prima del rilascio di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
   
  La tecnologia più adatta dipenderà dallo specifico ambiente di distribuzione. Per altre informazioni, vedere [Scelta di una strategia di distribuzione ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- Per impostazione predefinita, le applicazioni [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] distribuite con gli strumenti di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK (Mage.exe e MageUI.exe) sono configurate per l'esecuzione su un computer client con attendibilità totale. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. A questo scopo, è possibile usare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o lo strumento di [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK (MageUI.exe) al momento della configurazione della distribuzione. Per altre informazioni sull'uso di MageUI.exe, vedere la procedura dettagliata relativa alla distribuzione di un'applicazione ClickOnce dalla riga di comando.  Per altre informazioni su come impostare le autorizzazioni per una zona personalizzata, vedere [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Per impostazione predefinita [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] le applicazioni distribuite mediante Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] strumenti SDK (Mage.exe e MageUI.exe) sono configurati per l'esecuzione in un computer client con attendibilità completa. Se si vuole distribuire l'applicazione in un ambiente parzialmente attendibile o assegnando soltanto alcune autorizzazioni aggiuntive, sarà necessario modificare le impostazioni predefinite. È possibile farlo con Visual Studio o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] dello strumento SDK MageUI.exe quando si configura la distribuzione. Per altre informazioni sull'uso di MageUI.exe, vedere la procedura dettagliata relativa alla distribuzione di un'applicazione ClickOnce dalla riga di comando.  Per altre informazioni su come impostare le autorizzazioni per una zona personalizzata, vedere [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) o [Procedura: impostare le autorizzazioni personalizzate per un'applicazione ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Per altre informazioni sugli aspetti di sicurezza di [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e sull'elevazione delle autorizzazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Per altre informazioni sulla distribuzione di applicazioni attendibili, vedere [Panoramica della distribuzione di applicazioni attendibili](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Verifica dell'applicazione  
- Se l'applicazione Windows Form è stata distribuita mediante [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], è possibile abilitare il debug in un ambiente parzialmente attendibile o con un set di autorizzazioni limitato dall'ambiente di sviluppo.  Vedere anche [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Se è stata distribuita l'applicazione Windows Form con Visual Studio, è possibile abilitare il debug in ambiente parzialmente attendibile o un'autorizzazione con restrizioni impostato dall'ambiente di sviluppo.  Vedere anche [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) o [Procedura: eseguire il debug di un'applicazione ClickOnce con autorizzazioni limitate](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza di Windows Form](../../../docs/framework/winforms/windows-forms-security.md)  

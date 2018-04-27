@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurazione dei servizi tramite file di configurazione
 La configurazione di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un file di configurazione assicura la possibilità di fornire dati sul comportamento di endpoint e servizi al momento della distribuzione invece che in fase di progettazione. In questo argomento vengono delineate le principali tecniche disponibili.  
@@ -37,9 +37,9 @@ La configurazione di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config e App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usa il sistema di configurazione System.Configuration di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Quando si configura un servizio in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], usare un file Web.config o App.config per specificare le impostazioni. La scelta del nome del file di configurazione è determinata dall'ambiente host scelto per il servizio. Se si sta usando IIS per ospitare il servizio, usare un file Web.config. Se si sta usando un altro ambiente host, usare un file App.config.  
+ Quando si configura un servizio in Visual Studio, usare un file Web. config o App. config per specificare le impostazioni. La scelta del nome del file di configurazione è determinata dall'ambiente host scelto per il servizio. Se si sta usando IIS per ospitare il servizio, usare un file Web.config. Se si sta usando un altro ambiente host, usare un file App.config.  
   
- In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], il file denominato App.config viene usato per creare il file di configurazione finale. Il nome finale effettivamente usato per la configurazione dipende dal nome dell'assembly. Ad esempio, un assembly denominato "Cohowinery.exe" ha un file di configurazione finale denominato "Cohowinery.exe.config". Tuttavia, è sufficiente modificare il file App.config. Le modifiche apportate al file vengono automaticamente apportate al file di configurazione finale dell'applicazione in fase di compilazione.  
+ In Visual Studio, il file denominato app. config viene usato per creare il file di configurazione finale. Il nome finale effettivamente usato per la configurazione dipende dal nome dell'assembly. Ad esempio, un assembly denominato "Cohowinery.exe" ha un file di configurazione finale denominato "Cohowinery.exe.config". Tuttavia, è sufficiente modificare il file App.config. Le modifiche apportate al file vengono automaticamente apportate al file di configurazione finale dell'applicazione in fase di compilazione.  
   
  Quando si usa un file App.config, il sistema di configurazione unisce il file App.config al contenuto del file Machine.config, al momento dell'avvio dell'applicazione e dell'applicazione della configurazione. Questo meccanismo consente di definire impostazioni a livello di computer nel file Machine.config. Il file App.config può essere usato per eseguire l'override del file Machine.config; è inoltre possibile bloccare le impostazioni nel file Machine.config in modo che vengano usate. Nel caso di Web.config, il sistema di configurazione esegue il merge dei file Web.config in tutte le directory che conducono alla directory dell'applicazione nella configurazione che viene applicata. [!INCLUDE[crabout](../../../includes/crabout-md.md)] lla configurazione e sulle priorità delle impostazioni, vedere gli argomenti nello spazio dei nomi <xref:System.Configuration> .  
   

@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Form
-I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tale scopo, [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] fornisce un ambiente di sviluppo integrato (IDE, Integrated Development Environment) per facilitare la creazione di codice e un folto gruppo di controlli scritti con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
+I form sono l'unità base di un'applicazione e di conseguenza è fondamentale fare molta attenzione alla loro funzione e progettazione. Un form è una sorta di foglio o di lavagna pulita, in cui uno sviluppatore inserisce controlli, al fine di creare un'interfaccia utente e un codice per la modifica dei dati. A tal fine, Visual Studio offre un ambiente di sviluppo integrato (IDE) per semplificare la scrittura di codice, nonché un controllo rich impostare scritta con la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Completando la funzionalità di tali controlli con il codice creato, è possibile sviluppare velocemente e senza difficoltà le soluzioni desiderate.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Guida introduttiva a Windows Form](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

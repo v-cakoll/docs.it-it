@@ -16,11 +16,11 @@ ms.assetid: 23996dca-250f-4320-8211-1560e90172df
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f27fcf3bd1f80b5daf501609c2cd157c209924a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5314702192dd4536f1d49c3ac8b26214d06b786b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-output-to-memory"></a>Impossibile scrivere l'output in memoria
 Si è verificato un problema durante la scrittura dell'output in memoria.  
@@ -31,7 +31,7 @@ Si è verificato un problema durante la scrittura dell'output in memoria.
   
 1.  Ripetere la compilazione del programma, per controllare se l'errore si verifica di nuovo.  
   
-2.  Se l'errore si ripresenta, salvare il lavoro e riavviare [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Se l'errore si ripresenta, salvare il lavoro e riavviare Visual Studio.  
   
 3.  Se l'errore si ripete, reinstallare Visual Basic.  
   

@@ -2,23 +2,24 @@
 title: Personalizzazione degli oggetti disponibili in My (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizzazione degli oggetti disponibili in My (Visual Basic)
-Questo argomento viene descritto come è possibile controllare quali `My` gli oggetti sono abilitati tramite l'impostazione del progetto `_MYTYPE` costante di compilazione condizionale. Il [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ambiente di sviluppo integrato (IDE) consente di mantenere il `_MYTYPE` costante di compilazione condizionale per un progetto in sincronia con il tipo di progetto.  
+Questo argomento viene descritto come è possibile controllare quali `My` gli oggetti sono abilitati tramite l'impostazione del progetto `_MYTYPE` costante di compilazione condizionale. IDE di Visual Studio Integrated Development ambiente () consente di mantenere il `_MYTYPE` costante di compilazione condizionale per un progetto sincronizzata con il tipo di progetto.  
   
 ## <a name="predefined-mytype-values"></a>Valori predefiniti di MyType  
  È necessario utilizzare il `/define` per impostare l'opzione del compilatore di `_MYTYPE` costante di compilazione condizionale. Quando si specifica il valore per il `_MYTYPE` costante, è necessario racchiudere il valore stringa in una barra rovesciata/virgolette (\\") le sequenze. Ad esempio, è possibile utilizzare:  
@@ -36,7 +37,7 @@ Questo argomento viene descritto come è possibile controllare quali `My` gli og
 |Web|"Web".|  
 |Libreria di controlli Web|"WebControl"|  
 |Applicazione Windows|"WindowsForms"|  
-|Applicazione di Windows, quando si avvia con personalizzato`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Applicazione di Windows, quando si avvia con personalizzato `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Libreria di controlli Windows|"Windows"|  
 |Servizio Windows|"Console"|  
 |Empty|"Vuoto"|  
@@ -49,14 +50,14 @@ Questo argomento viene descritto come è possibile controllare quali `My` gli og
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|Non definito|"Windows"|TRUE|  
-|"Custom"|Non definito|Non definito|Non definito|Non definito|Non definito|  
-|"Vuoto"|Non definito|Non definito|Non definito|Non definito|Non definito|  
-|"Web".|Non definito|"Web".|FALSE|"Web".|FALSE|  
-|"WebControl"|Non definito|"Web".|FALSE|"Web".|TRUE|  
-|"Windows" o ""|"Windows"|"Windows"|Non definito|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|TRUE|"Windows"|TRUE|  
+|"Console"|"Console"|"Windows"|Undefined|"Windows"|true|  
+|"Custom"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"Vuoto"|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|"Web".|Undefined|"Web".|false|"Web".|false|  
+|"WebControl"|Undefined|"Web".|false|"Web".|true|  
+|"Windows" o ""|"Windows"|"Windows"|Undefined|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
  Per impostazione predefinita, le costanti di compilazione condizionale non definite risolte in `FALSE`. Quando si compila il progetto per eseguire l'override del comportamento predefinito, è possibile specificare valori per le costanti non definite.  
   

@@ -1,24 +1,26 @@
 ---
 title: Download di database di esempio (LINQ to DataSet)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Download di database di esempio (LINQ to DataSet)
 Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentazione utilizzano il database di esempio AdventureWorks. È possibile scaricare gratuitamente questo prodotto dal sito di download Microsoft. Negli esempi e nelle procedure dettagliate riportate nella documentazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] viene utilizzato SQL Server come archivio dati. Anziché SQL Server è tuttavia possibile usare come archivio dati SQL Server Express Edition, disponibile gratuitamente.  
@@ -74,7 +76,7 @@ Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includ
      Se i file sono stati installati in un'unità o una directory diversa, è necessario modificare i percorsi prima di eseguire la stored procedure `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Download di SQL Server Express Edition  
- Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sezione utilizzare SQL Server 2005 come archivio dati, ma può essere modificato per utilizzare invece SQL Server Express Edition. SQL Server Express Edition è disponibile gratuitamente e può essere ridistribuito con le applicazioni. Se si usa [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition è incluso nelle edizioni Pro e superiori.  
+ Gli esempi e procedure dettagliate di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sezione utilizzare SQL Server 2005 come archivio dati, ma può essere modificato per utilizzare invece SQL Server Express Edition. SQL Server Express Edition è disponibile gratuitamente e può essere ridistribuito con le applicazioni. Se si utilizza Visual Studio, SQL Server Express Edition è incluso nelle edizioni Pro e superiori.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Per scaricare e installare SQL Server Express Edition  
   

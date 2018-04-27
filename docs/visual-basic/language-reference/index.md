@@ -17,11 +17,11 @@ ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f65df8469ecfbc1296963f95eefbb29068f1cb57
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8cc41f5d4f60b1ed5ee81128d0ab9a53728ceb65
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-language-reference"></a>Riferimenti al linguaggio Visual Basic
 In questa sezione fornisce informazioni di riferimento per i vari aspetti del linguaggio Visual Basic.  
@@ -92,4 +92,4 @@ In questa sezione fornisce informazioni di riferimento per i vari aspetti del li
  Vengono fornite informazioni dettagliate su tutte le aree del linguaggio Visual Basic.  
   
  [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Descrive come usare il compilatore da riga di comando come alternativa per compilare programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
+ Viene descritto come usare il compilatore della riga di comando come alternativa alla compilazione dei programmi dall'interno l'ambiente di sviluppo integrato (IDE) di Visual Studio.

@@ -1,12 +1,13 @@
 ---
-title: 'Procedura dettagliata: memorizzazione dei dati di un''applicazione nella cache di un''applicazione WPF'
-ms.custom: 
+title: "Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando si accede nuovamente i dati, le applicazioni possono ottenere i dati dalla cache anziché recuperarli dall'origine dati originale. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -67,7 +69,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
 #### <a name="to-create-a-wpf-application"></a>Per creare un'applicazione WPF  
   
-1.  Avviare [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Avviare Visual Studio.  
   
 2.  Nel **File** menu, fare clic su **New**, quindi fare clic su **nuovo progetto**.  
   
@@ -86,7 +88,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
 7.  Fare clic su **OK**.  
   
-     Verrà visualizzata la finestra di progettazione WPF in **progettazione** consente di visualizzare e visualizza il file MainWindow. Xaml. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]Crea il **progetto** cartella, il file Application. XAML e il file MainWindow. Xaml.  
+     Verrà visualizzata la finestra di progettazione WPF in **progettazione** consente di visualizzare e visualizza il file MainWindow. Xaml. Visual Studio crea il **progetto** cartella, il file Application. XAML e il file MainWindow. Xaml.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Destinati a .NET Framework e aggiungere un riferimento all'assembly di memorizzazione nella cache  
  Per impostazione predefinita, sono destinate le applicazioni WPF di [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Utilizzare il <xref:System.Runtime.Caching> dello spazio dei nomi in un'applicazione WPF, l'applicazione deve avere come destinazione il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (non il [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.  
@@ -307,7 +309,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
      Il contenuto memorizzato nella cache dal file di testo viene visualizzato in una finestra di messaggio. Si noti il timestamp sul file.  
   
-3.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente**.**  
+3.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente **.**  
   
      Il timestamp è invariato. Indica che viene visualizzato il contenuto memorizzato nella cache.  
   
@@ -317,7 +319,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
   
 5.  In un editor di testo aprire il file di testo che è stato creato. Ancora, non apportare modifiche.  
   
-6.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente**.**  
+6.  Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente **.**  
   
      Di nuovo il timestamp.  
   

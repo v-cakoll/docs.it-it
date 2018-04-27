@@ -1,27 +1,29 @@
 ---
 title: Supporto per automazione interfaccia utente dei controlli standard
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af46a984f1b4c2577daee120752590ff18b9d1d8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Supporto per automazione interfaccia utente dei controlli standard
 > [!NOTE]
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 |Nome di classe|Tipo di controllo|  
 |----------------|------------------|  
-|Button|Button|  
+|Button|Pulsante|  
 |Button|RadioButton|  
 |Button|Group|  
 |Button|CheckBox|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |msctls_trackbar32|Slider|  
 |msctls_updown32|Spinner|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tab|  
+|SysTabControl32|Scheda|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -82,8 +84,8 @@ ms.lasthandoff: 12/22/2017
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|Separatore|  
-|tooltips_class32|ToolTip|  
-|#32774|ToolTip|  
+|tooltips_class32|Descrizione comando|  
+|#32774|Descrizione comando|  
 |ReBarWindow32|ToolBar|  
 |SysTreeView32|Tree|  
 |SysTreeView32|TreeItem|  
@@ -96,18 +98,18 @@ ms.lasthandoff: 12/22/2017
 |----------------|------------------|  
 |SysAnimate32|Image|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Custom|  
+|SysDateTimePick32|Custom (Personalizzati)|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
 |VBBubble|Tooltip|  
 |ScrollBar (se usato come controllo autonomo)|Slider|  
-|SuperGrid|Custom|  
+|SuperGrid|Custom (Personalizzati)|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controlli per Windows Form  
- I controlli[!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tramite provider lato client in UIAutomationClientsideProviders.dll. Questo assembly viene automaticamente registrato per l'uso con applicazioni client di automazione interfaccia utente.  
+ Controlli Windows Form sono esposti a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tramite provider lato client in UIAutomationClientsideProviders. Questo assembly viene automaticamente registrato per l'uso con applicazioni client di automazione interfaccia utente.  
   
- In genere, i controlli [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] che sono wrapper gestiti per i controlli comuni [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] sono supportati da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. I controlli seguenti sono supportati.  
+ In genere, i controlli Windows Form che sono wrapper gestiti per [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controlli comuni supportati da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. I controlli seguenti sono supportati.  
   
 |Nome di classe|  
 |----------------|  
@@ -141,7 +143,7 @@ ms.lasthandoff: 12/22/2017
 |TextBox|  
 |Timer|  
 |ToolBar|  
-|ToolTip|  
+|Descrizione comando|  
 |Trackbar|  
 |TreeView|  
 |VscrollBar|  

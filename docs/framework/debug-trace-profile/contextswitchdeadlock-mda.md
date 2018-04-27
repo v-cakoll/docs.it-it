@@ -1,12 +1,13 @@
 ---
 title: MDA contextSwitchDeadlock
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>MDA contextSwitchDeadlock
 L'assistente al debug gestito `contextSwitchDeadlock` viene attivato quando viene rilevato un deadlock durante un tentativo di transizione del contesto COM.  
@@ -54,7 +56,7 @@ L'assistente al debug gestito `contextSwitchDeadlock` viene attivato quando vien
  Per stabilire se l'assistente al debug gestito è stato falsamente abilitato, disabilitare tutti i punti di interruzione, riavviare l'applicazione e consentirne l'esecuzione senza interruzioni. Se l'assistente al debug gestito non è attivata, è probabile che l'attivazione iniziale fosse falsa. In questo caso, disabilitare l'assistente al debug gestito per evitare interferenze con la sessione di debug.  
   
 > [!NOTE]
->  L'assistente al debug gestito si trova nel set predefinito per [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] e versioni successive. Quando il processo di hosting è abilitato in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], non è possibile disabilitare gli assistenti al debug gestito che si trovano nel set predefinito. Poiché il processo di hosting è abilitato per impostazione predefinita, sarà necessario disabilitarlo in modo esplicito. Per informazioni su come disabilitare gli assistenti al debug gestito, vedere "Abilitazione e disabilitazione degli assistenti al debug gestito" in [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  L'assistente al debug gestito si trova nel set predefinito per [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] e versioni successive. Quando il processo di hosting è abilitato in Visual Studio, è possibile disabilitare assistenti al debug gestito sono nel set predefinito. Poiché il processo di hosting è abilitato per impostazione predefinita, sarà necessario disabilitarlo in modo esplicito. Per informazioni su come disabilitare gli assistenti al debug gestito, vedere "Abilitazione e disabilitazione degli assistenti al debug gestito" in [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Risoluzione  
  Seguire le regole COM relative alla distribuzione di messaggi di apartment a thread singolo.  

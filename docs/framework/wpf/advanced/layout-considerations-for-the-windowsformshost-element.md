@@ -1,12 +1,13 @@
 ---
 title: Considerazioni sul layout per l'elemento WindowsFormsHost
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,33 +17,34 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
 Questo argomento viene descritto come <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interagisce con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supportano una logica diversa, ma è simile, per il ridimensionamento e posizionamento di elementi in un form o nella pagina. Quando si crea un'interfaccia utente ibrida (UI) che ospita [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento integra i due schemi di layout.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supportano una logica diversa, ma simile, per il ridimensionamento e posizionamento di elementi in un form o nella pagina. Quando si crea un'interfaccia utente ibrida (UI) che ospita [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento integra i due schemi di layout.  
   
 ## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>Differenze tra Windows Form e WPF di Layout  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Usa risoluzione e dal layout. Tutti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le dimensioni di layout vengono specificate mediante *device independent pixel*. Un pixel indipendenti dal dispositivo è uno novanta-sesto di pollice le dimensioni e indipendente dalla risoluzione, pertanto si ottengono risultati simili indipendentemente dal fatto se si esegue il rendering di un monitoraggio 72 dpi o una stampante 19.200 dpi.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizza il layout indipendente dalla risoluzione. Tutti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le dimensioni di layout vengono specificate mediante *device independent pixel*. Un pixel indipendenti dal dispositivo è uno novanta-sesto di pollice le dimensioni e indipendente dalla risoluzione, pertanto si ottengono risultati simili indipendentemente dal fatto se si esegue il rendering di un monitoraggio 72 dpi o una stampante 19.200 dpi.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]si basa anche sulle *layout dinamico*. Ciò significa che un elemento dell'interfaccia utente dispone di un form o una pagina in base al relativo contenuto, del contenitore di layout padre e le dimensioni dello schermo disponibili. Layout dinamico facilita la localizzazione, regolare automaticamente le dimensioni e la posizione degli elementi dell'interfaccia utente quando le stringhe che contengono modifica lunghezza.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] si basa anche sulle *layout dinamico*. Ciò significa che un elemento dell'interfaccia utente dispone di un form o una pagina in base al relativo contenuto, del contenitore di layout padre e le dimensioni dello schermo disponibili. Layout dinamico facilita la localizzazione, regolare automaticamente le dimensioni e la posizione degli elementi dell'interfaccia utente quando le stringhe che contengono modifica lunghezza.  
   
  Layout in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] è dipendente dal dispositivo e più probabili sono statici. In genere, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli vengono posizionati in modo assoluto in un form utilizzando le dimensioni specificate in pixel hardware. Tuttavia, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supporta alcune funzionalità di layout dinamico, come riepilogato nella tabella seguente.  
   
 |Funzionalità di layout|Descrizione|  
 |--------------------|-----------------|  
 |Ridimensionamento automatico|Alcuni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli ridimensionati automaticamente per visualizzare correttamente il contenuto. Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
-|Ancoraggio e aggancio|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]i controlli supportano il posizionamento e ridimensionamento in base al contenitore padre. Per altre informazioni, vedere <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Ancoraggio e aggancio|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli supportano il posizionamento e ridimensionamento in base al contenitore padre. Per altre informazioni, vedere <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Ridimensionamento automatico|Controlli contenitore ridimensionare se stessi e i relativi elementi figlio in base alla risoluzione del dispositivo di output o la dimensione, in pixel, del tipo di carattere contenitore predefinito. Per ulteriori informazioni, vedere [il ridimensionamento automatico in Windows Form](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Contenitori di layout|Il <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel> controlli dispongono i controlli figlio e si ridimensionano in base al relativo contenuto.|  
   
@@ -55,7 +57,7 @@ Questo argomento viene descritto come <xref:System.Windows.Forms.Integration.Win
   
 -   Nella maggior parte dei casi, i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non supportano il ridimensionamento proporzionale. Anche se le dimensioni complessive del controllo vengono ridimensionate, i controlli figlio e gli elementi componente del controllo potrebbero non venire ridimensionati come previsto. Questa limitazione dipende dal modo in cui ogni controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supporta il ridimensionamento. Inoltre, non è possibile ridimensionare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli fino a una dimensione pari a 0 pixel.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]i controlli supportano il ridimensionamento automatico, in cui il form viene ridimensionato automaticamente e i relativi controlli in base alla dimensione del carattere. In un'interfaccia utente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], modificando le dimensioni del carattere non si ridimensiona l'intero layout, anche se è possibile che vengano ridimensionati dinamicamente singoli elementi.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli supportano la scalabilità automatica, in cui il form viene ridimensionato automaticamente e i relativi controlli in base alla dimensione del carattere. In un'interfaccia utente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], modificando le dimensioni del carattere non si ridimensiona l'intero layout, anche se è possibile che vengano ridimensionati dinamicamente singoli elementi.  
   
 ### <a name="z-order"></a>Ordine Z  
  In un'interfaccia utente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è possibile modificare l'ordine z degli elementi per controllare il comportamento di sovrapposizione. Un controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ospitato viene disegnato in un elemento HWND separato, in modo che venga disegnato sempre sopra gli elementi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -74,13 +76,13 @@ Questo argomento viene descritto come <xref:System.Windows.Forms.Integration.Win
   
  Tutti gli altri casi richiedono il ridimensionamento del sistema di coordinate. Il controllo ospitato non è stato ridimensionato. Al contrario, il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento tenta di ridimensionare il controllo ospitato e tutti i relativi controlli figlio. Poiché [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non supporta completamente la scalabilità, la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento ridimensiona il grado supportato da determinati controlli.  
   
- Eseguire l'override di <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> metodo per fornire il comportamento di ridimensionamento personalizzato per il controllo [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] controllo.  
+ Eseguire l'override di <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> metodo per fornire il comportamento di ridimensionamento personalizzato per il controllo Windows Form.  
   
  Oltre a scalabilità, la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento gestisce i casi di arrotondamento e overflow come descritto nella tabella seguente.  
   
 |Problema di conversione|Descrizione|  
 |----------------------|-----------------|  
-|Rounding|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]dimensioni in pixel indipendenti dal dispositivo vengono specificate come `double`, e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dimensioni in pixel hardware vengono specificate come `int`. Nei casi in cui `double`-le dimensioni basate su vengono convertite in `int`-basato su dimensioni, il <xref:System.Windows.Forms.Integration.WindowsFormsHost> utilizza l'elemento arrotondamento standard, in modo che i valori frazionari minore di 0,5 vengono arrotondati per difetto a 0.|  
+|Rounding|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dimensioni in pixel indipendenti dal dispositivo vengono specificate come `double`, e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] dimensioni in pixel hardware vengono specificate come `int`. Nei casi in cui `double`-le dimensioni basate su vengono convertite in `int`-basato su dimensioni, il <xref:System.Windows.Forms.Integration.WindowsFormsHost> utilizza l'elemento arrotondamento standard, in modo che i valori frazionari minore di 0,5 vengono arrotondati per difetto a 0.|  
 |Overflow|Quando il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento converte da `double` valori `int` overflow di valori, è possibile. I valori maggiori di <xref:System.Int32.MaxValue> sono impostate su <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Proprietà relative al layout  
@@ -90,7 +92,7 @@ Questo argomento viene descritto come <xref:System.Windows.Forms.Integration.Win
  Le modifiche di layout in hosting [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo vengono propagate a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per attivare gli aggiornamenti del layout. Il <xref:System.Windows.UIElement.InvalidateMeasure%2A> metodo <xref:System.Windows.Forms.Integration.WindowsFormsHost> assicura che le modifiche di layout nel controllo ospitato determinano il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l'esecuzione del motore di layout.  
   
 ### <a name="continuously-sized-windows-forms-controls"></a>Dimensioni in modo continuo controlli Windows Form  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]i controlli che supportano il ridimensionamento continuo completamente interagiscono con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento utilizza il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodi come di consueto per ridimensionare e disporre di hosting [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli che supportano il ridimensionamento continuo completamente interagiscono con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento utilizza il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodi come di consueto per ridimensionare e disporre di hosting [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo.  
   
 ### <a name="sizing-algorithm"></a>Algoritmo di ridimensionamento  
  Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento Usa la procedura seguente per ridimensionare il controllo ospitato:  
@@ -113,6 +115,6 @@ Questo argomento viene descritto come <xref:System.Windows.Forms.Integration.Win
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Procedura dettagliata: Disposizione di controlli Windows Form in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [Disposizione di Windows Form controlli nell'esempio WPF](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [Disposizione dei Windows Form controlli nell'esempio di WPF](http://go.microsoft.com/fwlink/?LinkID=159971)  
  [Mapping di proprietà di Windows Form e WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
  [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

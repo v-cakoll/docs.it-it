@@ -1,24 +1,26 @@
 ---
 title: Client di test WCF (WcfTestClient.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client di test WCF (WcfTestClient.exe)
 Client di test [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClient.exe) è un strumento GUI che consente agli utenti di immettere parametri di test, inviare l'input immesso al servizio e visualizzare la risposta restituita dal servizio. In combinazione con Host servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre una funzione di test del servizio trasparente.  
@@ -64,7 +66,7 @@ Client di test [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClie
   
  Per visualizzare il XML del messaggio, fare clic su **XML**. Per inviarli al servizio, fare clic su **Invoke**.  
   
- Per un parametro di set di dati, fare clic su di **...** accanto al pulsante **modifica...** per modificarlo in una nuova finestra che mostra la griglia dati. Si noti l'aspetto del **copia DataSet** e **Incolla DataSet** pulsanti. Se lo schema dell'oggetto the DataSet non è noto alla prima modifica, il DataGrid sarà vuoto. È necessario incollare un oggetto DataSet object con lo stesso schema nell'oggetto corrente nel DataGrid (tenere presente che è necessario copiare lo schema da un'altra posizione prima di incollare). È inoltre possibile copiare un oggetto set di dati per l'utilizzo futuro facendo il **copia DataSet** pulsante.  
+ Per un parametro di set di dati, fare clic sul **...** accanto alla **modifica...** per modificarlo in una nuova finestra che mostra la griglia dati. Si noti l'aspetto del **copia DataSet** e **Incolla DataSet** pulsanti. Se lo schema dell'oggetto the DataSet non è noto alla prima modifica, il DataGrid sarà vuoto. È necessario incollare un oggetto DataSet object con lo stesso schema nell'oggetto corrente nel DataGrid (tenere presente che è necessario copiare lo schema da un'altra posizione prima di incollare). È inoltre possibile copiare un oggetto set di dati per l'utilizzo futuro facendo il **copia DataSet** pulsante.  
   
  La risposta del servizio viene visualizzata sotto i parametri del test.  
   
@@ -172,9 +174,9 @@ Client di test [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (WcfTestClie
 ## <a name="closing-wcf-test-client"></a>Chiusura di Client di test WCF  
  È possibile chiudere CLient di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nei seguenti modi:  
   
--   Nel **File** menu, fare clic su **uscita**. In alternativa, nel [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finestra principale del Client di Test, fare clic su **Chiudi**. Entrambe le azioni determinano inoltre l'arresto di Host automatico servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e l'interruzione del processo di debug di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] se Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è stato avviato da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Nel **File** menu, fare clic su **uscita**. In alternativa, nel [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] finestra principale del Client di Test, fare clic su **Chiudi**. Entrambe le azioni determinano inoltre l'arresto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automatico servizio e arrestare il debug di Visual Studio elaborare se [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova è stato avviato da Visual Studio.  
   
--   Fare doppio clic su di **Host servizio WCF** sull'icona nell'area di notifica e quindi fare clic su **uscita.** Questo chiude sia Host automatico servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] che Client di test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e arresta il processo di debug di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Fare doppio clic sui **Host servizio WCF** sull'icona nell'area di notifica e quindi fare clic su **uscita.** Questo chiude sia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host automatico servizio e [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client di prova e si arresta il debug di Visual Studio elaborare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

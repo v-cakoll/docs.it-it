@@ -2,7 +2,8 @@
 title: Supporto bidirezionale per le applicazioni Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Supporto bidirezionale per le applicazioni Windows Forms
-È possibile usare [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] per creare applicazioni basate su Windows che supportano lingue bidirezionali (da destra a sinistra) come l'arabo e l'ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
+È possibile utilizzare Visual Studio per creare applicazioni basate su Windows che supportano lingue (da destra a sinistra) bidirezionali, ad esempio arabo e l'ebraico. Sono inclusi form standard, finestre di dialogo, form MDI e tutti i controlli che è possibile usare in questi form, ovvero tutti gli oggetti nello spazio dei nomi <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Supporto delle impostazioni cultura  
  Le impostazioni cultura e le impostazioni cultura dell'interfaccia utente determinano il funzionamento di un'applicazione rispetto a date, orari, valuta e altre informazioni. Il supporto per le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per le lingue bidirezionali è uguale a quello per le altre lingue.   Vedere anche [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  

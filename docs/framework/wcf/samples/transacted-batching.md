@@ -1,24 +1,26 @@
 ---
 title: Batch transazionale.
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Batch transazionale.
 Questo esempio dimostra come raggruppare letture transazionali usando Accodamento messaggi (MSMQ). Il batch transazionale è una funzionalità di ottimizzazione delle prestazioni per le letture transazionali nella comunicazione in coda.  
@@ -142,8 +144,8 @@ Questo esempio dimostra come raggruppare letture transazionali usando Accodament
  Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`. Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo. In questo esempio, viene usato un database di base per archiviare le informazioni sull'ordine di acquisto contenute nel messaggio. L'ambito della transazione garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda. Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima che venga inviato in modo che se l'operazione non riesce, il messaggio va perduto. Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene usata per leggere il messaggio dalla coda come dimostrato nel codice seguente.  
   
  Notare che `ReleaseServiceInstanceOnTransactionComplete` è impostato su `false`. Si tratta di un requisito importante per il raggruppamento. La proprietà `ReleaseServiceInstanceOnTransactionComplete` in `ServiceBehaviorAttribute` indica che cosa fare con l'istanza del servizio dopo che la transazione è stata completata. Per impostazione predefinita, l'istanza del servizio viene rilasciata al completa della transazione. L'aspetto centrale del raggruppamento è l'uso di una singola transazione per la lettura e l'invio di molti messaggi nella coda. Di conseguenza, il rilascio dell'istanza del servizio comporta il completamento della transazione vanificando in modo prematuro l'effettivo uso del raggruppamento. Se questa proprietà è impostata su `true` e all'endpoint viene aggiunto il comportamento del batch transazionale, il comportamento di convalida batch genera un'eccezione.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  La classe `Orders` incapsula l'elaborazione dell'ordine. Nell'esempio, aggiorna il database con le informazioni dell'ordine di acquisto.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  Il comportamento batch e la relativa configurazione sono specificati nella configurazione dell'applicazione del servizio.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  La scelta della dimensione di batch dipende dall'applicazione. Se la dimensione di batch è troppo piccola, è possibile che non si ottengano le prestazioni desiderate. Se invece la dimensione di batch è troppo grande, le prestazioni potrebbero risentirne in modo negativo. Ad esempio, la transazione potrebbe persistere più a lungo e attivare dei blocchi sul database oppure potrebbe passare in una situazione di deadlock, determinando la restituzione del batch e la relativa rielaborazione.  
   
  Il client crea un ambito di transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi. È possibile osservare un output mobile mentre i messaggi vengono letti in un batch ed elaborati.  
   
 ```  

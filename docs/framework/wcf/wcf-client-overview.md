@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 Contenuto della sezione vengono descritte le operazioni svolte delle applicazioni client e vengono fornite istruzioni su come configurare, creare e usare un client [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], nonché su come proteggere le applicazioni client.  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Per illustrare l'uso di una classe <xref:System.ServiceModel.ClientBase%601>, si supponga che il contratto di servizio seguente sia stato generato da un'applicazione di servizio.  
   
 > [!NOTE]
->  Se per creare il client [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] si usa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], quando al progetto viene aggiunto un riferimento a servizi gli oggetti vengono caricati automaticamente nel Visualizzatore oggetti.  
+>  Se si utilizza Visual Studio per creare il [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, gli oggetti vengono caricati automaticamente nel Visualizzatore oggetti quando si aggiunge un riferimento al servizio al progetto.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Se non si usa [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], esaminare il codice del contratto generato per individuare il tipo che estende la classe <xref:System.ServiceModel.ClientBase%601> e l'interfaccia del contratto di servizio `ISampleService`. In questo caso il tipo ha l'aspetto del codice seguente:  
+ Se non si utilizza Visual Studio, esaminare il codice del contratto generato per trovare il tipo che estende <xref:System.ServiceModel.ClientBase%601> e l'interfaccia di contratto di servizio `ISampleService`. In questo caso il tipo ha l'aspetto del codice seguente:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

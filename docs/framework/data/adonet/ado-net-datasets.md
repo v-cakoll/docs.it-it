@@ -1,24 +1,26 @@
 ---
 title: Dataset ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>Dataset ADO.NET
 L'oggetto <xref:System.Data.DataSet> è fondamentale per il supporto di scenari di dati disconnessi e distribuiti con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Il **set di dati** è una rappresentazione residente in memoria dei dati che fornisce un modello di programmazione relazionale coerente indipendentemente dall'origine dati. È possibile usarlo con numerose origini dati diverse, con dati XML o per la gestione di dati locali all'applicazione. Il **DataSet** rappresenta un set completo di dati, incluse le tabelle correlate, vincoli e relazioni tra tabelle. La figura seguente mostra il **DataSet** modello a oggetti.  
@@ -49,10 +51,10 @@ Modello a oggetti DataSet
  È possibile compilare un **DataSet** da un flusso o documento XML. È possibile utilizzare il flusso o documento XML per fornire al **DataSet** dati, le informazioni sullo schema o entrambi. Le informazioni fornite dal documento o flusso XML possono essere combinate con i dati o informazioni sullo schema già presenti nel **DataSet**. Per altre informazioni, vedere [Uso di XML in un set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="extendedproperties"></a>ExtendedProperties  
- Il **DataSet**, **DataTable**, e **DataColumn** hanno un **ExtendedProperties** proprietà. **ExtendedProperties** è un **PropertyCollection** in cui è possibile inserire informazioni personalizzate, ad esempio l'istruzione SELECT utilizzata per generare il set di risultati o l'ora di generazione quando i dati. Il **ExtendedProperties** insieme viene conservata con le informazioni sullo schema per il **DataSet**.  
+ Il **DataSet**, **DataTable**, e **DataColumn** hanno un **ExtendedProperties** proprietà. **ExtendedProperties** è un **PropertyCollection** in cui è possibile inserire informazioni personalizzate, quali l'istruzione SELECT che è stato utilizzato per generare il set di risultati o l'ora in cui è stati generati i dati. Il **ExtendedProperties** insieme viene conservata con le informazioni sullo schema per il **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fornisce funzionalità di esecuzione delle query integrate nel linguaggio per dati disconnessi archiviati in un oggetto DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]utilizza standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sintassi e fornisce la verifica della sintassi in fase di compilazione, la tipizzazione statica e il supporto IntelliSense quando si utilizza il [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fornisce funzionalità di esecuzione delle query integrate nel linguaggio per dati disconnessi archiviati in un oggetto DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] lo standard [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sintassi e fornisce il controllo della sintassi in fase di compilazione, tipizzazione statica e il supporto IntelliSense quando si utilizza l'IDE di Visual Studio.  
   
  Per altre informazioni, vedere [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

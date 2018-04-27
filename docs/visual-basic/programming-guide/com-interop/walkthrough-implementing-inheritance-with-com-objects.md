@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procedura dettagliata: implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)
 È possibile derivare classi Visual Basic da `Public` classi di oggetti COM, anche quelli creati in versioni precedenti di Visual Basic. Le proprietà e metodi delle classi ereditate da oggetti COM possono essere sottoposto a override o sottoposti a overload solo come proprietà e metodi di qualsiasi altra classe di base possono essere sottoposto a override o di overload. Ereditarietà dagli oggetti COM è utile quando si dispone di una libreria di classe esistente che non si desidera ricompilare.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 04/26/2018
     >  Sebbene sia possibile esporre anche una classe creata con Visual Basic come un oggetto COM, non è un oggetto COM true e non può essere utilizzato in questa procedura dettagliata. Per informazioni dettagliate, vedere [interoperabilità COM nelle applicazioni .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Assembly di interoperabilità  
- Nella procedura seguente, si creerà un assembly di interoperabilità, che funge da ponte tra il codice non gestito (ad esempio un oggetto COM) e il codice gestito [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilizza. L'assembly di interoperabilità che Visual Basic crea gestisce molti dettagli dell'utilizzo di oggetti COM, ad esempio *marshalling di interoperabilità*, il processo di creazione del pacchetto parametri e valori restituiti in dati equivalente tipi quando passano a e dagli oggetti COM. Il riferimento nell'applicazione Visual Basic che punta all'assembly di interoperabilità, non all'oggetto COM.  
+ Nella procedura seguente, si creerà un assembly di interoperabilità, che agisce da ponte tra il codice non gestito (ad esempio un oggetto COM) e il codice gestito che viene utilizzato da Visual Studio. L'assembly di interoperabilità che Visual Basic crea gestisce molti dettagli dell'utilizzo di oggetti COM, ad esempio *marshalling di interoperabilità*, il processo di creazione del pacchetto parametri e valori restituiti in dati equivalente tipi quando passano a e dagli oggetti COM. Il riferimento nell'applicazione Visual Basic che punta all'assembly di interoperabilità, non all'oggetto COM.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Per utilizzare un oggetto COM con Visual Basic 2005 e versioni successive  
   

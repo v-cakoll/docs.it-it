@@ -1,26 +1,27 @@
 ---
 title: Variabili e argomenti
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
-In [!INCLUDE[wf](../../../includes/wf-md.md)] le variabili rappresentano l'archivio di dati mentre gli argomenti il flusso di dati all'interno e all'esterno di un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
+In Windows Workflow Foundation (WF), le variabili rappresentano l'archiviazione dei dati mentre gli argomenti il flusso di dati dentro e fuori da un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
   
 ## <a name="variables"></a>Variabili  
  Le variabili sono percorsi di archiviazione per i dati e vengono dichiarate come parte della definizione di un flusso di lavoro. Le variabili accettano valori in fase di esecuzione che vengono poi archiviati come parte dello stato di un'istanza del flusso di lavoro. Una definizione di variabile specifica il tipo di variabile e, facoltativamente, il nome. Nel codice seguente viene mostrato come dichiarare una variabile, assegnarvi un valore usando un'attività <xref:System.Activities.Statements.Assign%601>, quindi come visualizzare il relativo valore nella console usando un'attività <xref:System.Activities.Statements.WriteLine>.  
@@ -77,7 +78,7 @@ Variable<string> var = new Variable<string>
   
 2.  Quando viene chiamato il metodo <xref:System.Activities.InOutArgument%601.Set%2A>, il valore viene impostato immediatamente dal runtime.  
   
-3.  Facoltativamente gli argomenti possono avere il proprio <xref:System.Activities.Argument.EvaluationOrder%2A> specificato. <xref:System.Activities.Argument.EvaluationOrder%2A> è un valore in base zero che specifica l'ordine in cui viene valutato l'argomento. Per impostazione predefinita, l'ordine di valutazione dell'argomento non è specificato e corrisponde al valore <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Impostare la proprietà <xref:System.Activities.Argument.EvaluationOrder%2A> su un valore maggiore o uguale a zero per specificare un ordine di valutazione per questo argomento. [!INCLUDE[wf2](../../../includes/wf2-md.md)] gli argomenti vengono valutati in base a un ordine di valutazione specificato crescente. Si noti che gli argomenti con un ordine di valutazione non specificato vengono valutati prima di quelli aventi un ordine di valutazione specificato.  
+3.  Facoltativamente gli argomenti possono avere il proprio <xref:System.Activities.Argument.EvaluationOrder%2A> specificato. <xref:System.Activities.Argument.EvaluationOrder%2A> è un valore in base zero che specifica l'ordine in cui viene valutato l'argomento. Per impostazione predefinita, l'ordine di valutazione dell'argomento non è specificato e corrisponde al valore <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Impostare la proprietà <xref:System.Activities.Argument.EvaluationOrder%2A> su un valore maggiore o uguale a zero per specificare un ordine di valutazione per questo argomento. Windows Workflow Foundation valuta gli argomenti con un ordine di valutazione specificato crescente. Si noti che gli argomenti con un ordine di valutazione non specificato vengono valutati prima di quelli aventi un ordine di valutazione specificato.  
   
  Un autore di attività può usare un meccanismo fortemente tipizzato per esporre gli argomenti. A tale scopo, vengono dichiarate proprietà di tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> e <xref:System.Activities.InOutArgument%601>. In questo modo un autore di attività può stabilire un contratto specifico sui dati in ingresso o in uscita da un'attività.  
   
@@ -151,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]utilizzo di argomenti, variabili ed espressioni di codice, vedere [la creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo codice](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) e [argomenti necessari e gruppi di Overload](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] ll'uso di argomenti, variabili ed espressioni nel codice, vedere [creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) e [argomenti necessari e gruppi di Overload](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

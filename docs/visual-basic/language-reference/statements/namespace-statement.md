@@ -2,8 +2,8 @@
 title: Istruzione Namespace
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90eb33bdbc01afc983869c919f9d7b2feab44037
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="namespace-statement"></a>Istruzione Namespace
 Dichiara il nome di uno spazio dei nomi e fa sì che il codice sorgente che segue la dichiarazione deve essere compilato all'interno di tale spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```vb  
 Namespace [Global.] { name | name.name }  
     [ componenttypes ]  
 End Namespace  
@@ -40,13 +40,13 @@ End Namespace
   
 ## <a name="parts"></a>Parti  
  Global  
- Parametro facoltativo. Consente di definire uno spazio dei nomi lo spazio dei nomi radice del progetto. Vedere [gli spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Facoltativo. Consente di definire uno spazio dei nomi lo spazio dei nomi radice del progetto. Vedere [gli spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
  Obbligatorio. Un nome univoco che identifica lo spazio dei nomi. Deve essere un valido identificatore Visual Basic. Per ulteriori informazioni, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Parametro facoltativo. Elementi che costituiscono lo spazio dei nomi. Queste includono, ma non sono limitate a, enumerazioni, strutture, interfacce, classi, moduli, i delegati e altri spazi dei nomi.  
+ Facoltativo. Elementi che costituiscono lo spazio dei nomi. Queste includono, ma non sono limitate a, enumerazioni, strutture, interfacce, classi, moduli, i delegati e altri spazi dei nomi.  
   
  `End Namespace`  
  Termina un `Namespace` blocco.  
