@@ -1,57 +1,58 @@
 ---
-title: "Attività 1: creare una nuova applicazione Windows Presentation Foundation"
-ms.custom: 
+title: 'Attività 1: creare una nuova applicazione Windows Presentation Foundation'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd21013331e19fa9e18ad7cbee0a7bb07abaf3d2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="5cff1-102">Attività 1: creare una nuova applicazione Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="5cff1-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
-<span data-ttu-id="5cff1-103">In questa attività verrà creata un'applicazione [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] vuota tramite il modello di Visual Studio dell'applicazione WPF e verranno aggiunti riferimenti agli assembly del flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] appropriati.</span><span class="sxs-lookup"><span data-stu-id="5cff1-103">In this task, you will create an empty [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a><span data-ttu-id="3164e-102">Attività 1: creare una nuova applicazione Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="3164e-102">Task 1: Create a New Windows Presentation Foundation Application</span></span>
+<span data-ttu-id="3164e-103">In questa attività è creare un'applicazione Windows Presentation Foundation (WPF) vuota usando il modello di Visual Studio dell'applicazione WPF e aggiungere i riferimenti appropriati [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] gli assembly del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="3164e-103">In this task, you will create an empty Windows Presentation Foundation (WPF) application by using the WPF Application Visual Studio template and add references to the appropriate [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow assemblies.</span></span>  
   
-### <a name="to-create-the-wpf-application-project"></a><span data-ttu-id="5cff1-104">Per creare il progetto applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="5cff1-104">To create the WPF Application project</span></span>  
+### <a name="to-create-the-wpf-application-project"></a><span data-ttu-id="3164e-104">Per creare il progetto applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="3164e-104">To create the WPF Application project</span></span>  
   
-1.  <span data-ttu-id="5cff1-105">Aprire [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] e scegliere il **File** dal menu **New**e quindi fare clic su **progetto**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-105">Open [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] and on the **File** menu, point to **New**, and then click **Project**.</span></span>  
+1.  <span data-ttu-id="3164e-105">Aprire Visual Studio e scegliere il **File** dal menu **New**, quindi fare clic su **progetto**.</span><span class="sxs-lookup"><span data-stu-id="3164e-105">Open Visual Studio and on the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2.  <span data-ttu-id="5cff1-106">Nel **nuovo progetto** finestra di dialogo Seleziona **Visual c#** o **Visual Basic** dal **modelli installati** riquadro sul lato sinistro di la casella.</span><span class="sxs-lookup"><span data-stu-id="5cff1-106">In the **New Project** dialog box, select either **Visual C#** or **Visual Basic** from the **Installed Templates** pane on the left side of the box.</span></span> <span data-ttu-id="5cff1-107">Se la lingua di preferenza non viene visualizzato, cercarlo in **altri linguaggi**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-107">If the language of your choice does not appear, look under **Other Languages**.</span></span>  
+2.  <span data-ttu-id="3164e-106">Nel **nuovo progetto** finestra di dialogo Seleziona **Visual c#** o **Visual Basic** dal **modelli installati** riquadro sul lato sinistro di la casella.</span><span class="sxs-lookup"><span data-stu-id="3164e-106">In the **New Project** dialog box, select either **Visual C#** or **Visual Basic** from the **Installed Templates** pane on the left side of the box.</span></span> <span data-ttu-id="3164e-107">Se la lingua di preferenza non viene visualizzato, cercarlo in **altri linguaggi**.</span><span class="sxs-lookup"><span data-stu-id="3164e-107">If the language of your choice does not appear, look under **Other Languages**.</span></span>  
   
-3.  <span data-ttu-id="5cff1-108">Selezionare **Windows** nel **modelli installati** riquadro.</span><span class="sxs-lookup"><span data-stu-id="5cff1-108">Select **Windows** in the **Installed Templates** pane.</span></span>  
+3.  <span data-ttu-id="3164e-108">Selezionare **Windows** nel **modelli installati** riquadro.</span><span class="sxs-lookup"><span data-stu-id="3164e-108">Select **Windows** in the **Installed Templates** pane.</span></span>  
   
-4.  <span data-ttu-id="5cff1-109">Nel riquadro superiore, verificare che (il valore predefinito) **.NET Framework 4** è stata selezionata nella casella di riepilogo a discesa, quindi fare clic **applicazione WPF**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-109">In the top pane, confirm that (the default value) **.NET Framework 4** has been selected in the drop-down list box, and then select **WPF Application**.</span></span>  
+4.  <span data-ttu-id="3164e-109">Nel riquadro superiore, verificare che (il valore predefinito) **.NET Framework 4** è stata selezionata nella casella di riepilogo a discesa, quindi fare clic **applicazione WPF**.</span><span class="sxs-lookup"><span data-stu-id="3164e-109">In the top pane, confirm that (the default value) **.NET Framework 4** has been selected in the drop-down list box, and then select **WPF Application**.</span></span>  
   
-5.  <span data-ttu-id="5cff1-110">Impostare il nome del progetto **HostingApplication** nella parte inferiore della finestra.</span><span class="sxs-lookup"><span data-stu-id="5cff1-110">Set the name of the project to **HostingApplication** at the bottom of the window.</span></span>  
+5.  <span data-ttu-id="3164e-110">Impostare il nome del progetto **HostingApplication** nella parte inferiore della finestra.</span><span class="sxs-lookup"><span data-stu-id="3164e-110">Set the name of the project to **HostingApplication** at the bottom of the window.</span></span>  
   
-6.  <span data-ttu-id="5cff1-111">Impostare il nome della soluzione **RehostingTheDesigner**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-111">Set the solution name to **RehostingTheDesigner**.</span></span>  
+6.  <span data-ttu-id="3164e-111">Impostare il nome della soluzione **RehostingTheDesigner**.</span><span class="sxs-lookup"><span data-stu-id="3164e-111">Set the solution name to **RehostingTheDesigner**.</span></span>  
   
-7.  <span data-ttu-id="5cff1-112">Fare clic su **OK** per creare il progetto di applicazione.</span><span class="sxs-lookup"><span data-stu-id="5cff1-112">Click **OK** to create the application project.</span></span> [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]<span data-ttu-id="5cff1-113"> consente di creare un'interfaccia utente WPF di base per l'applicazione e dispone di file XAML e code-behind appropriati.</span><span class="sxs-lookup"><span data-stu-id="5cff1-113"> creates a basic WPF UI for your application and includes the appropriate XAML and code-behind files.</span></span>  
+7.  <span data-ttu-id="3164e-112">Fare clic su **OK** per creare il progetto di applicazione.</span><span class="sxs-lookup"><span data-stu-id="3164e-112">Click **OK** to create the application project.</span></span> <span data-ttu-id="3164e-113">Visual Studio crea una UI WPF di base per l'applicazione e include il XAML appropriato e un file code-behind.</span><span class="sxs-lookup"><span data-stu-id="3164e-113">Visual Studio creates a basic WPF UI for your application and includes the appropriate XAML and code-behind files.</span></span>  
   
-8.  <span data-ttu-id="5cff1-114">Aggiungere riferimenti a **WorkflowModel** assembly.</span><span class="sxs-lookup"><span data-stu-id="5cff1-114">Add references to **WorkflowModel** assemblies.</span></span> <span data-ttu-id="5cff1-115">A tale scopo, in **Esplora**, fare doppio clic su di **HostingApplication** del progetto e selezionare **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-115">To do this, in **Solution Explorer**, right-click the **HostingApplication** project and select **Add Reference**.</span></span>  
+8.  <span data-ttu-id="3164e-114">Aggiungere riferimenti a **WorkflowModel** assembly.</span><span class="sxs-lookup"><span data-stu-id="3164e-114">Add references to **WorkflowModel** assemblies.</span></span> <span data-ttu-id="3164e-115">A tale scopo, in **Esplora**, fare doppio clic su di **HostingApplication** del progetto e selezionare **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="3164e-115">To do this, in **Solution Explorer**, right-click the **HostingApplication** project and select **Add Reference**.</span></span>  
   
-9. <span data-ttu-id="5cff1-116">Nel **Aggiungi riferimento** la finestra di dialogo, fare clic su di **.NET** scheda, tenere premuto il tasto CTRL, selezionare gli assembly seguenti e quindi fare clic su **OK**:</span><span class="sxs-lookup"><span data-stu-id="5cff1-116">In the **Add Reference** dialog box, click the **.NET** tab, hold down the CTRL key, select the following assemblies, and then click **OK**:</span></span>  
+9. <span data-ttu-id="3164e-116">Nel **Aggiungi riferimento** la finestra di dialogo, fare clic su di **.NET** scheda, tenere premuto il tasto CTRL, selezionare gli assembly seguenti e quindi fare clic su **OK**:</span><span class="sxs-lookup"><span data-stu-id="3164e-116">In the **Add Reference** dialog box, click the **.NET** tab, hold down the CTRL key, select the following assemblies, and then click **OK**:</span></span>  
   
-    -   <span data-ttu-id="5cff1-117">System.Activities</span><span class="sxs-lookup"><span data-stu-id="5cff1-117">System.Activities</span></span>  
+    -   <span data-ttu-id="3164e-117">System.Activities</span><span class="sxs-lookup"><span data-stu-id="3164e-117">System.Activities</span></span>  
   
-    -   <span data-ttu-id="5cff1-118">System.Activities.Presentation</span><span class="sxs-lookup"><span data-stu-id="5cff1-118">System.Activities.Presentation</span></span>  
+    -   <span data-ttu-id="3164e-118">System.Activities.Presentation</span><span class="sxs-lookup"><span data-stu-id="3164e-118">System.Activities.Presentation</span></span>  
   
-    -   <span data-ttu-id="5cff1-119">System.Activities.Core.Presentation</span><span class="sxs-lookup"><span data-stu-id="5cff1-119">System.Activities.Core.Presentation</span></span>  
+    -   <span data-ttu-id="3164e-119">System.Activities.Core.Presentation</span><span class="sxs-lookup"><span data-stu-id="3164e-119">System.Activities.Core.Presentation</span></span>  
   
-10. <span data-ttu-id="5cff1-120">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="5cff1-120">Click **OK**.</span></span>  
+10. <span data-ttu-id="3164e-120">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="3164e-120">Click **OK**.</span></span>  
   
-11. <span data-ttu-id="5cff1-121">Vedere [attività 2: ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) per imparare a ospitare il disegno della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="5cff1-121">See [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) to learn how to host the workflow designer design canvas.</span></span>  
+11. <span data-ttu-id="3164e-121">Vedere [attività 2: ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) per imparare a ospitare il disegno della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="3164e-121">See [Task 2: Host the Workflow Designer](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) to learn how to host the workflow designer design canvas.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cff1-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cff1-122">See Also</span></span>  
- [<span data-ttu-id="5cff1-123">Riallocazione di Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="5cff1-123">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="5cff1-124">Attività 2: Ospitare Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="5cff1-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a><span data-ttu-id="3164e-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3164e-122">See Also</span></span>  
+ [<span data-ttu-id="3164e-123">Riallocazione di Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="3164e-123">Rehosting the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="3164e-124">Attività 2: Ospitare Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="3164e-124">Task 2: Host the Workflow Designer</span></span>](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
