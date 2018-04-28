@@ -1,20 +1,17 @@
 ---
 title: Record (F#)
 description: 'Informazioni su come record F # rappresentano aggregazioni semplici di valori denominati, facoltativamente con membri.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Record
 
@@ -33,7 +30,7 @@ type [accessibility-modifier] typename = {
 ```
 
 ## <a name="remarks"></a>Note
-Nella sintassi precedente, *typename* è il nome del tipo di record, *label1* e *label2* sono nomi dei valori, detti *etichette*, e *type1* e *type2* sono i tipi di questi valori. *elenco dei membri* elenco facoltativo di membri per il tipo.  È possibile utilizzare il `[<Struct>]` attributo per creare un record di struct, anziché un record che è un tipo riferimento.
+Nella sintassi precedente, *typename* è il nome del tipo di record, *label1* e *label2* sono nomi dei valori, detti *etichette*, e *type1* e *type2* sono i tipi di questi valori. *elenco di membri* è l'elenco dei membri per il tipo di parametro facoltativo.  È possibile utilizzare il `[<Struct>]` attributo per creare un record di struct, anziché un record che è un tipo riferimento.
 
 Di seguito sono riportati alcuni esempi.
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>Differenze tra i record e classi
 I campi del record differiscono dalle classi in automaticamente sono esposti come proprietà e sono utilizzate per la creazione e la copia di record. La costruzione di record è diversa anche dalla costruzione di classi. In un tipo di record, è possibile definire un costruttore. Al contrario, la sintassi di costruzione descritta in questo argomento si applica. Le classi non dispongono di alcuna relazione diretta tra i parametri del costruttore, campi e proprietà.
 
-Come tipi di unione e struttura, record hanno una semantica di uguaglianza strutturale. Le classi dispongono di riferimento semantica di uguaglianza. Esempio di codice seguente viene illustrato questo.
+Come tipi di unione e struttura, record hanno una semantica di uguaglianza strutturale. Le classi dispongono di riferimento semantica di uguaglianza. Nell'esempio di codice seguente viene illustrata questa possibilità.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 

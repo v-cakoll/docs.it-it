@@ -1,20 +1,17 @@
 ---
 title: Criteri di ricerca [F#]
 description: 'Informazioni su come i modelli vengono utilizzati in F # per confrontare i dati con strutture logiche, scomporre i dati in parti costituenti o estrarre informazioni dai dati.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca
 
@@ -36,12 +33,12 @@ Ogni modello funge da una regola per la trasformazione di input in qualche modo.
 
 Pattern supportati sono indicati nella tabella seguente. In fase di esecuzione, l'input viene verificato rispetto a ognuno dei modelli seguenti nell'ordine elencato nella tabella e modelli vengono applicate in modo ricorsivo, dalla prima all'ultimo come appaiono nel codice e da sinistra a destra per i modelli per ogni riga.
 
-|Nome|Descrizione|Esempio|
+|nome|Descrizione|Esempio|
 |----|-----------|-------|
 |Criterio costante|Qualsiasi numerica, carattere, o valore letterale stringa, una costante di enumerazione o un identificatore di valore letterale definito|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modello identificatore|Valore case di unione discriminata, un'etichetta di eccezione o un case (modello attivo)|`Some(x)`<br /><br />`Failure(msg)`|
 |Modello variabile|*identifier*|`a`|
-|`as`modello|*modello* come *identificatore*|`(a, b) as tuple1`|
+|`as` modello|*pattern* come *identificatore*|`(a, b) as tuple1`|
 |O un modello|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |E modello|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Modello costruttore|*Identificatore* :: *-identificatore dell'elenco*|`h :: t`|
@@ -51,8 +48,8 @@ Pattern supportati sono indicati nella tabella seguente. In fase di esecuzione, 
 |Tupla (modello)|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
 |Modello di record|{ *identifier1* = *pattern_1*;.... *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Caratteri jolly|_|`_`|
-|Modello con un'annotazione di tipo|*modello* : *tipo*|`a : int`|
-|Modello del test di tipo|:? *tipo* [come *identificatore* ]|`:? System.DateTime as dt`|
+|Modello con un'annotazione di tipo|*pattern* : *tipo*|`a : int`|
+|Modello del test di tipo|:? *tipo di* [come *identificatore* ]|`:? System.DateTime as dt`|
 |Modello null|Null|`null`|
 
 ## <a name="constant-patterns"></a>Modelli costanti

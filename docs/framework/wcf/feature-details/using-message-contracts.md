@@ -1,13 +1,13 @@
 ---
 title: Utilizzo dei contratti di messaggio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
-Quando compilano applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], in genere gli sviluppatori prestano particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non devono preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Specificando nei contratti di servizio di trasferimento dei dati](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Quando compilano applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], in genere gli sviluppatori prestano particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non devono preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [che specifica di trasferimento dei dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Talvolta, tuttavia, il controllo completo della struttura di un messaggio SOAP è importante quanto quello del suo contenuto. Questo è particolarmente vero quando l'interoperabilità è importante o per controllare in modo specifico problemi di sicurezza a livello di messaggio o di parte di esso. In questi casi, è possibile creare un *contratto di messaggio* che consente di specificare la struttura del messaggio SOAP preciso richiesto.  
   
  In questo argomento viene illustrato come utilizzare i vari attributi del contratto di messaggio per creare un contratto di messaggio specifico per l'operazione.  
   
 ## <a name="using-message-contracts-in-operations"></a>Utilizzo dei contratti di messaggio nelle operazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]supporta operazioni modellate sul *stile di remote procedure call (RPC)* o *stile di messaggistica*. In un'operazione in stile RPC, è possibile utilizzare qualsiasi tipo serializzabile e si ha accesso alle funzionalità disponibili alle chiamate locali, ad esempio più parametri e i parametri `ref` e `out`. In questo stile, la forma di serializzazione scelta controlla la struttura dei dati nei messaggi sottostanti e il runtime [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea i messaggi stessi per supportare l'operazione. Ciò consente agli sviluppatori che non hanno dimestichezza con SOAP e messaggi SOAP di creare rapidamente e facilmente applicazioni di servizio e di utilizzarle.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta operazioni modellate sul *stile call (RPC) RPC* o il *stile di messaggistica*. In un'operazione in stile RPC, è possibile utilizzare qualsiasi tipo serializzabile e si ha accesso alle funzionalità disponibili alle chiamate locali, ad esempio più parametri e i parametri `ref` e `out`. In questo stile, la forma di serializzazione scelta controlla la struttura dei dati nei messaggi sottostanti e il runtime [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea i messaggi stessi per supportare l'operazione. Ciò consente agli sviluppatori che non hanno dimestichezza con SOAP e messaggi SOAP di creare rapidamente e facilmente applicazioni di servizio e di utilizzarle.  
   
  Nell'esempio di codice seguente viene illustrata un'operazione di servizio modellata sullo stile RPC.  
   
@@ -44,7 +44,7 @@ Quando compilano applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratti dati, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contratti dati, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Talvolta è tuttavia necessario controllare esattamente la modalità di trasmissione in rete della struttura del messaggio SOAP. Lo scenario più comune è l'inserimento di intestazioni SOAP personalizzate. Un altro scenario comune è quello della definizione di proprietà di sicurezza per le intestazioni e il corpo del messaggio, ovvero, quando è necessario decidere se questi elementi devono essere firmati digitalmente e crittografati. Infine, alcuni stack SOAP di terze parti richiedono che i messaggi abbiano un formato specifico. Questo controllo è fornito da operazioni in stile messaggistica.  
   
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  La presenza di più di una parte del corpo del messaggio in messaggi non incapsulati non è conforme a WS-I Basic Profile 1.1 e non è consigliata quando si progettano nuovi contratti di messaggio. In certi scenari di interoperabilità, può tuttavia essere necessario avere più di una parte del corpo del messaggio non incapsulato. Se si ha intenzione di trasmettere più di un pezzo di dati in un corpo del messaggio, è consigliato utilizzare la modalità predefinita (incapsulata). La presenza di più di un'intestazione del messaggio nei messaggi non incapsulati è completamente accettabile.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Utilizzo di tipi personalizzati nei contratti di messaggio  
- Ogni singola intestazione del messaggio e parte del corpo del messaggio viene serializzata (trasformata in XML) utilizzando il motore di serializzazione scelto per il contratto di servizio in cui il messaggio è utilizzato. Il motore di serializzazione predefinito, `XmlFormatter`, è in grado di gestire qualsiasi tipo che abbia un contratto dati, in modo esplicito (con <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implicito (se si tratta di un tipo primitivo, con <xref:System.SerializableAttribute?displayProperty=nameWithType> e così via). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tramite contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Ogni singola intestazione del messaggio e parte del corpo del messaggio viene serializzata (trasformata in XML) utilizzando il motore di serializzazione scelto per il contratto di servizio in cui il messaggio è utilizzato. Il motore di serializzazione predefinito, `XmlFormatter`, è in grado di gestire qualsiasi tipo che abbia un contratto dati, in modo esplicito (con <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) o implicito (se si tratta di un tipo primitivo, con <xref:System.SerializableAttribute?displayProperty=nameWithType> e così via). Per altre informazioni, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Nell'esempio precedente, i tipi `Operation` e `BankingTransactionData` devono avere un contratto dati e `transactionDate` è serializzabile perché <xref:System.DateTime> è un primitivo e, di conseguenza, ha un contratto dati implicito.  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Quando si riceve un messaggio e quindi lo si invia nuovamente all'origine, il roundtrip delle impostazioni degli attributi SOAP viene eseguito solo per le intestazioni di tipo <xref:System.ServiceModel.MessageHeader%601>.  
   
 ## <a name="order-of-soap-body-parts"></a>Ordine delle parti del corpo SOAP  
- In alcune circostanze, potrebbe essere necessario controllare l'ordine delle parti del corpo. Per impostazione predefinita, l'ordine degli elementi del corpo è alfabetico ma può essere controllato dalla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Questa proprietà ha la stessa semantica della proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, a parte il comportamento negli scenari di ereditarietà. Nei contratti di messaggio, i membri del corpo di tipo base non sono ordinati prima dei membri del corpo di tipo derivato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ In alcune circostanze, potrebbe essere necessario controllare l'ordine delle parti del corpo. Per impostazione predefinita, l'ordine degli elementi del corpo è alfabetico ma può essere controllato dalla proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>. Questa proprietà ha la stessa semantica della proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, a parte il comportamento negli scenari di ereditarietà. Nei contratti di messaggio, i membri del corpo di tipo base non sono ordinati prima dei membri del corpo di tipo derivato. Per ulteriori informazioni, vedere [ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Nell'esempio seguente, `amount` normalmente verrebbe per primo perché è primo alfabeticamente. La proprietà <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> l'inserisce tuttavia nella terza posizione.  
   

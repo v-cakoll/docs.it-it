@@ -1,27 +1,29 @@
 ---
 title: Serializzazione e deserializzazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>Serializzazione e deserializzazione
 In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuovo motore di serializzazione, ovvero <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> esegue la conversione tra oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e XML in entrambe le direzioni. In questo argomento viene illustrato il funzionamento del serializzatore.  
@@ -85,12 +87,12 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
  Questi valori possono essere passati come stringhe o come istanze della classe <xref:System.Xml.XmlDictionaryString> per consentire la loro ottimizzazione utilizzando il formato XML binario.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>Impostazione della quota massima di oggetti  
- Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `maxItemsInObjectGraph` . Tale parametro determina il numero massimo di oggetti serializzati o deserializzati dal serializzatore in una singola chiamata al metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Questo metodo legge sempre un oggetto radice che, tuttavia, potrebbe contenere altri oggetti come membri dei propri dati. Tali oggetti possono a loro volta contenere altri oggetti, e così via. Il valore predefinito è 65536. Si noti che, in caso di serializzazione o deserializzazione di matrici, ogni elemento della matrice viene considerato come un oggetto separato. Inoltre, poiché per alcuni oggetti è possibile una vasta rappresentazione in memoria, tale quota da sola potrebbe non essere sufficiente per impedire attacchi di tipo Denial of Service. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Se è necessario aumentare la quota oltre il valore predefinito, è importante aumentarla sia sul lato di invio (serializzazione) sia su quello di ricezione (deserializzazione) poiché si applica sia durante la lettura che durante la scrittura dei dati.  
+ Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `maxItemsInObjectGraph` . Tale parametro determina il numero massimo di oggetti serializzati o deserializzati dal serializzatore in una singola chiamata al metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Questo metodo legge sempre un oggetto radice che, tuttavia, potrebbe contenere altri oggetti come membri dei propri dati. Tali oggetti possono a loro volta contenere altri oggetti, e così via. Il valore predefinito è 65536. Si noti che, in caso di serializzazione o deserializzazione di matrici, ogni elemento della matrice viene considerato come un oggetto separato. Inoltre, poiché per alcuni oggetti è possibile una vasta rappresentazione in memoria, tale quota da sola potrebbe non essere sufficiente per impedire attacchi di tipo Denial of Service. Per altre informazioni, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Se è necessario aumentare la quota oltre il valore predefinito, è importante aumentarla sia sul lato di invio (serializzazione) sia su quello di ricezione (deserializzazione) poiché si applica sia durante la lettura che durante la scrittura dei dati.  
   
 ### <a name="round-trips"></a>Percorsi di andata e ritorno  
  Si verifica un *percorso di andata e ritorno* quando un oggetto viene deserializzato e serializzato di nuovo in un'unica operazione. Pertanto, passa da XML a un'istanza dell'oggetto e torna indietro in un flusso XML.  
   
- Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `ignoreExtensionDataObject` , la cui impostazione predefinita è `false` . In questa modalità predefinita, è possibile inviare i dati su un percorso di andata e ritorno da una versione più recente di un contratto dati a una versione precedente e di nuovo indietro alla versione più recente senza alcuna perdita, a condizione che il contratto dati implementi l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> . Si supponga, ad esempio, che la versione 1 del contratto dati `Person` contenga i membri dati `Name` e `PhoneNumber` e che la versione 2 aggiunga un membro `Nickname` . Se `IExtensibleDataObject` viene implementato, durante l'invio di informazioni dalla versione 2 alla versione 1 i dati `Nickname` vengono memorizzati ed emessi di nuovo alla successiva serializzazione; i dati non vengono persi nel percorso di andata e ritorno. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) e [il controllo delle versioni del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `ignoreExtensionDataObject` , la cui impostazione predefinita è `false` . In questa modalità predefinita, è possibile inviare i dati su un percorso di andata e ritorno da una versione più recente di un contratto dati a una versione precedente e di nuovo indietro alla versione più recente senza alcuna perdita, a condizione che il contratto dati implementi l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> . Si supponga, ad esempio, che la versione 1 del contratto dati `Person` contenga i membri dati `Name` e `PhoneNumber` e che la versione 2 aggiunga un membro `Nickname` . Se `IExtensibleDataObject` viene implementato, durante l'invio di informazioni dalla versione 2 alla versione 1 i dati `Nickname` vengono memorizzati ed emessi di nuovo alla successiva serializzazione; i dati non vengono persi nel percorso di andata e ritorno. Per altre informazioni, vedere [contratti dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) e [controllo delle versioni del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Problemi di sicurezza e validità dello schema in caso di percorsi di andata e ritorno  
  I percorsi di andata e ritorno possono avere implicazioni di sicurezza. La deserializzazione e memorizzazione di grandi quantità di dati estranei, ad esempio, possono rappresentare un rischio per la sicurezza. Possono esservi problemi di sicurezza quando vengono emessi di nuovo dati che non è assolutamente possibile verificare, specie se implicano firme digitali. Nello scenario precedente, ad esempio, l'endpoint della versione 1 potrebbe firmare un valore `Nickname` che contiene dati dannosi. Infine, potrebbero verificarsi problemi di validità dello schema poiché un endpoint potrebbe desiderare di emettere sempre dati strettamente conformi al contratto dichiarato e nessun valore aggiuntivo. Nell'esempio precedente, il contratto dell'endpoint della versione 1 asserisce che emette solo `Name` e `PhoneNumber`e, se viene utilizzata la convalida dello schema, l'emissione del valore `Nickname` aggiuntivo causa l'insuccesso della convalida.  
@@ -152,7 +154,7 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
 >  Quando la modalità `preserveObjectReferences` è attivata, è particolarmente importante impostare il valore `maxItemsInObjectGraph` sulla quota corretta. A causa del modo in cui le matrici sono gestite in questa modalità, è facile per l'autore di un attacco costruire un piccolo messaggio dannoso che comporta un grande consumo di memoria limitato solo dalla quota `maxItemsInObjectGraph` .  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Specifica di un surrogato del contratto dati  
- Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `dataContractSurrogate` che può essere impostato su `null`. In caso contrario, è possibile utilizzarlo per specificare un *surrogato del contratto dati*che è un tipo che implementa l'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> . È quindi possibile utilizzare l'interfaccia per personalizzare il processo di serializzazione e di deserializzazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Alcuni overload del costruttore `DataContractSerializer` hanno un parametro `dataContractSurrogate` che può essere impostato su `null`. In caso contrario, è possibile utilizzarlo per specificare un *surrogato del contratto dati*che è un tipo che implementa l'interfaccia <xref:System.Runtime.Serialization.IDataContractSurrogate> . È quindi possibile utilizzare l'interfaccia per personalizzare il processo di serializzazione e di deserializzazione. Per altre informazioni, vedere [surrogati del contratto dati](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Serializzazione  
  Le informazioni seguenti si applicano a qualsiasi classe che eredita da <xref:System.Runtime.Serialization.XmlObjectSerializer>, incluse le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.NetDataContractSerializer> .  
@@ -265,7 +267,7 @@ In[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un nuov
   
 -   I metodi <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> e <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> sono alias per i metodi <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> e <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Hanno la funzione di fornire un modello di programmazione più coerente con la serializzazione SOAP o binaria.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Queste funzionalità, vedere [serializzazione binaria](../../../../docs/standard/serialization/binary-serialization.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Queste funzionalità, vedere [serializzazione binaria](../../../../docs/standard/serialization/binary-serialization.md).  
   
  I formati XML utilizzati da `NetDataContractSerializer` e `DataContractSerializer` in genere non sono compatibili. Ciò significa che non è consentito eseguire la serializzazione con uno di questi serializzatori e la deserializzazione con l'altro.  
   

@@ -1,20 +1,17 @@
 ---
 title: Sequenze (F#)
 description: 'Informazioni su come usare le sequenze di F #, quando si dispone di grandi dimensioni, raccolta ordinata di dati, ma non necessariamente prevede di utilizzare tutti gli elementi.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>Sequenze
 
@@ -90,7 +87,7 @@ L'output è
 0 10 20 30 40
 ```
 
-Utilizzando [ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) e [ofList &#60;' T &#62; Funzione](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), è possibile creare sequenze di matrici ed elenchi. Tuttavia, è possibile inoltre convertire matrici ed elenchi sequenze tramite un operatore cast. Nel codice seguente sono illustrate due tecniche.
+Utilizzando [ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) e [ofList&#60;|&#62; funzione](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), è possibile creare sequenze di matrici ed elenchi. Tuttavia, è possibile inoltre convertire matrici ed elenchi sequenze tramite un operatore cast. Nel codice seguente sono illustrate due tecniche.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ Utilizzando [SEQ](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq. unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) genera una sequenza da una funzione di calcolo che accetta uno stato e lo trasforma per produrre ogni elemento successivo nella sequenza. Lo stato è semplicemente un valore che viene utilizzato per calcolare ogni elemento e può essere modificato da ogni elemento viene calcolata. Il secondo argomento `Seq.unfold` è il valore iniziale viene utilizzato per avviare la sequenza. `Seq.unfold`utilizza un tipo di opzione per lo stato, che consente di terminare la sequenza restituendo il `None` valore. Il codice seguente mostra due esempi di sequenze, `seq1` e `fib`, che vengono generati da un `unfold` operazione. Il primo, `seq1`, è una semplice sequenza con numeri fino a 100. Il secondo, `fib`, utilizza `unfold` per calcolare la sequenza di Fibonacci. Poiché ogni elemento nella sequenza di Fibonacci è la somma di due numeri di Fibonacci precedenti, il valore di stato è una tupla costituita da due numeri precedenti nella sequenza. Il valore iniziale è `(1,1)`, i primi due numeri nella sequenza.
+[Seq. unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) genera una sequenza da una funzione di calcolo che accetta uno stato e lo trasforma per produrre ogni elemento successivo nella sequenza. Lo stato è semplicemente un valore che viene utilizzato per calcolare ogni elemento e può essere modificato da ogni elemento viene calcolata. Il secondo argomento `Seq.unfold` è il valore iniziale viene utilizzato per avviare la sequenza. `Seq.unfold` utilizza un tipo di opzione per lo stato, che consente di terminare la sequenza restituendo il `None` valore. Il codice seguente mostra due esempi di sequenze, `seq1` e `fib`, che vengono generati da un `unfold` operazione. Il primo, `seq1`, è una semplice sequenza con numeri fino a 100. Il secondo, `fib`, utilizza `unfold` per calcolare la sequenza di Fibonacci. Poiché ogni elemento nella sequenza di Fibonacci è la somma di due numeri di Fibonacci precedenti, il valore di stato è una tupla costituita da due numeri precedenti nella sequenza. Il valore iniziale è `(1,1)`, i primi due numeri nella sequenza.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -127,7 +124,7 @@ Sequenze supportano le funzionalità disponibili con gli elenchi: [SEQ](https://
 
 
 ## <a name="obtaining-subsequences"></a>Acquisizione di sottosequenze
-[Seq. Filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) e [SEQ](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) sono analoghi alle funzioni corrispondenti sono disponibili per gli elenchi, ad eccezione del fatto che i filtri e la scelta non è disponibile fino a quando non vengono valutati gli elementi della sequenza.
+[Seq. Filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) e [SEQ](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) sono analoghi alle funzioni corrispondenti che sono disponibili per gli elenchi, ad eccezione del fatto che i filtri e la scelta non vengano eseguite fino a quando non vengono valutati gli elementi della sequenza.
 
 [Seq. truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) crea una sequenza da un'altra sequenza, ma limita la sequenza a un numero specificato di elementi. [Seq. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) crea una nuova sequenza che contiene solo un numero specificato di elementi dall'inizio di una sequenza. Se esistono meno elementi nella sequenza di maggiore di quello specificato per richiedere, `Seq.take` genera un `System.InvalidOperationException`. La differenza tra `Seq.take` e `Seq.truncate` che `Seq.truncate` non produce un errore se il numero di elementi è inferiore al numero specificato.
 
@@ -184,7 +181,7 @@ Moving average:
 ```
 
 ## <a name="operations-with-multiple-sequences"></a>Operazioni con più sequenze
-[Seq.zip](https://msdn.microsoft.com/library/0a5df8bf-0d48-44ce-bff4-e8ef1df5bca4) e [zip3](https://msdn.microsoft.com/library/ef13bebb-22ae-4eb9-873b-87dd29154d16) utilizzano due o tre sequenze e producono una sequenza di tuple. Queste funzioni sono simili alle funzioni corrispondenti disponibili per [Elenca](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d). Non sussiste alcuna funzionalità corrispondente per separare una sequenza in due o più sequenze. Se questa funzionalità è necessaria per una sequenza, la sequenza convertita in un elenco e utilizzare [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
+[Seq. zip](https://msdn.microsoft.com/library/0a5df8bf-0d48-44ce-bff4-e8ef1df5bca4) e [Seq.zip3](https://msdn.microsoft.com/library/ef13bebb-22ae-4eb9-873b-87dd29154d16) accetta due o tre sequenze e genera una sequenza di tuple. Queste funzioni sono simili alle funzioni corrispondenti disponibili per [Elenca](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d). Non sussiste alcuna funzionalità corrispondente per separare una sequenza in due o più sequenze. Se questa funzionalità è necessaria per una sequenza, la sequenza convertita in un elenco e utilizzare [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
 
 
 ## <a name="sorting-comparing-and-grouping"></a>Ordinamento, confronto e raggruppamento
@@ -198,7 +195,7 @@ Il codice seguente illustra l'uso di `Seq.compareWith`.
 
 Nel codice precedente, solo il primo elemento è calcolato ed esaminato e il risultato è -1.
 
-[Seq. countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) accetta una funzione che genera un valore denominato un *chiave* per ogni elemento. Chiamare questa funzione su ogni elemento, viene generata una chiave per ogni elemento. `Seq.countBy`Restituisce quindi una sequenza che contiene i valori di chiave e un conteggio del numero di elementi che ha generato ogni valore della chiave.
+[Seq. countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) accetta una funzione che genera un valore denominato un *chiave* per ogni elemento. Chiamare questa funzione su ogni elemento, viene generata una chiave per ogni elemento. `Seq.countBy` Restituisce quindi una sequenza che contiene i valori di chiave e un conteggio del numero di elementi che ha generato ogni valore della chiave.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ L'output è indicato di seguito.
 
 L'output precedente mostra che non vi sono 34 elementi della sequenza originale che ha generato la chiave 1, 33 valori che ha generato la chiave 2 e 33 valori che ha generato il tasto 0.
 
-È possibile raggruppare gli elementi di una sequenza chiamando [GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`accetta una sequenza e una funzione che genera una chiave da un elemento. La funzione viene eseguita su ogni elemento della sequenza. `Seq.groupBy`Restituisce una sequenza di tuple in cui il primo elemento di ogni tupla è la chiave e il secondo è una sequenza di elementi che producono la chiave.
+È possibile raggruppare gli elementi di una sequenza chiamando [GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` accetta una sequenza e una funzione che genera una chiave da un elemento. La funzione viene eseguita su ogni elemento della sequenza. `Seq.groupBy` Restituisce una sequenza di tuple, dove il primo elemento di ogni tupla è la chiave e il secondo è una sequenza di elementi che producono la chiave.
 
 Esempio di codice seguente viene illustrato l'utilizzo di `Seq.groupBy` per partizionare la sequenza di numeri da 1 a 100 in tre gruppi di valori di chiave distinct 0, 1 e 2.
 
@@ -224,7 +221,7 @@ L'output è indicato di seguito.
 
 È possibile creare una sequenza che elimina gli elementi duplicati chiamando [SEQ](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Oppure è possibile utilizzare [distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), che accetta una funzione di generazione chiavi a essere chiamato su ogni elemento. La sequenza risulta contiene elementi della sequenza originale che dispongono di chiavi univoche. vengono rimossi gli elementi successivi che producono una chiave duplicata per un elemento precedente.
 
-Esempio di codice seguente viene illustrato l'utilizzo di `Seq.distinct`. `Seq.distinct`viene illustrata la generazione delle sequenze che rappresentano numeri binari e quindi mostrando che gli unici elementi distinti sono 0 e 1.
+Esempio di codice seguente viene illustrato l'utilizzo di `Seq.distinct`. `Seq.distinct` viene dimostrata la generazione delle sequenze che rappresentano numeri binari e quindi che mostrano che gli elementi distinti solo 0 e 1.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ Il codice seguente illustra `Seq.distinctBy` a partire da una sequenza che conti
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>Sola lettura e memorizzata nella cache delle sequenze
-[Seq. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) crea una copia di sola lettura di una sequenza. `Seq.readonly`è utile quando si dispone di una raccolta di lettura / scrittura, ad esempio una matrice, e non si desidera modificare la raccolta originale. Questa funzione può essere utilizzata per mantenere l'incapsulamento dei dati. Nell'esempio di codice seguente viene creato un tipo che contiene una matrice. Una proprietà espone la matrice, ma anziché restituire una matrice, restituisce una sequenza che viene creata dalla matrice utilizzando `Seq.readonly`.
+[Seq. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) crea una copia di sola lettura di una sequenza. `Seq.readonly` è utile quando si dispone di una raccolta di lettura / scrittura, ad esempio una matrice, e non si desidera modificare la raccolta originale. Questa funzione può essere utilizzata per mantenere l'incapsulamento dei dati. Nell'esempio di codice seguente viene creato un tipo che contiene una matrice. Una proprietà espone la matrice, ma anziché restituire una matrice, restituisce una sequenza che viene creata dalla matrice utilizzando `Seq.readonly`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 
@@ -243,7 +240,7 @@ Il codice seguente illustra `Seq.distinctBy` a partire da una sequenza che conti
 ## <a name="performing-computations-on-sequences"></a>Esecuzione di calcoli sulle sequenze
 Semplici operazioni aritmetiche sono analoghe a quelle di elenchi, ad esempio [Seq. Average](https://msdn.microsoft.com/library/609d793b-c70f-4e36-9ab4-d928056d65b8), [Seq.sum](https://msdn.microsoft.com/library/01208515-4880-4358-91f5-af34f66dc77a), [averageBy](https://msdn.microsoft.com/library/47c855c1-2dbd-415a-885e-b909d9d3e4f8), [sumBy](https://msdn.microsoft.com/library/68cca78c-94ed-4a45-9b8d-34d2c5f2b1b1)e così via.
 
-[Seq. fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3), [reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9), e [SEQ](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) sono analoghi alle funzioni corrispondenti disponibili per gli elenchi. Le sequenze supportano un subset delle variazioni di queste funzioni complete che elenca il supporto. Per ulteriori informazioni ed esempi, vedere [Elenca](lists.md).
+[Seq. fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3), [reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9), e [SEQ](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) sono analoghi alle funzioni corrispondenti che sono disponibili per gli elenchi. Le sequenze supportano un subset delle variazioni di queste funzioni complete che elenca il supporto. Per ulteriori informazioni ed esempi, vedere [Elenca](lists.md).
 
 ## <a name="see-also"></a>Vedere anche
 [Riferimenti per il linguaggio F#](index.md)

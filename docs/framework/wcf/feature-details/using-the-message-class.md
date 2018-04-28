@@ -1,27 +1,29 @@
 ---
 title: Utilizzo della classe Message
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Utilizzo della classe Message
 La classe <xref:System.ServiceModel.Channels.Message> è essenziale per [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Tutte le comunicazioni tra client e servizi implicano in ultima istanza l'invio e la ricezione di istanze di <xref:System.ServiceModel.Channels.Message>.  
@@ -172,7 +174,7 @@ La classe <xref:System.ServiceModel.Channels.Message> è essenziale per [!INCLUD
   
  Recuperare una particolare intestazione usando il metodo <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A>. Questo metodo accetta il nome e lo spazio dei nomi dell'intestazione da cercare e restituisce l'indice. Se l'intestazione ricorre più di una volta, verrà generata un'eccezione. Se l'intestazione non viene trovata, verrà restituito -1.  
   
- Nel modello di intestazione SOAP, le intestazioni possono avere un valore `Actor` che specifica il destinatario desiderato dell'intestazione. L'overload `FindHeader` più elementare ricerca solo le intestazioni indirizzate al destinatario finale del messaggio. Tuttavia, un altro overload consente di specificare quali valori `Actor` sono inclusi nella ricerca. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la specifica SOAP.  
+ Nel modello di intestazione SOAP, le intestazioni possono avere un valore `Actor` che specifica il destinatario desiderato dell'intestazione. L'overload `FindHeader` più elementare ricerca solo le intestazioni indirizzate al destinatario finale del messaggio. Tuttavia, un altro overload consente di specificare quali valori `Actor` sono inclusi nella ricerca. Per altre informazioni, vedere la specifica SOAP.  
   
  Viene fornito un metodo <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> per copiare intestazioni da una raccolta <xref:System.ServiceModel.Channels.MessageHeaders> a una matrice di oggetti <xref:System.ServiceModel.Channels.MessageHeaderInfo>.  
   

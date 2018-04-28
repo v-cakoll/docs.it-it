@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Utilizzo di WorkflowInvoker e WorkflowApplication
 Windows Workflow Foundation (WF) fornisce diversi metodi di hosting di flussi di lavoro. <xref:System.Activities.WorkflowInvoker> offre un modo semplice per richiamare un flusso di lavoro come se fosse una chiamata a un metodo e può essere usato solo per i flussi di lavoro che non usano la persistenza. <xref:System.Activities.WorkflowApplication> fornisce un modello più dettagliato per l'esecuzione di flussi di lavoro che include la notifica degli eventi del ciclo di vita, il controllo di esecuzione, la ripresa del segnalibro e la persistenza. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce il supporto per le attività di messaggistica e viene principalmente usato con i servizi flusso di lavoro. In questo argomento viene illustrato l'hosting del flusso di lavoro con <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Hosting di flussi di lavoro con <xref:System.ServiceModel.Activities.WorkflowServiceHost>, vedere [servizi flussi di lavoro](../../../docs/framework/wcf/feature-details/workflow-services.md) e [Panoramica di servizi flusso di lavoro che ospita](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) fornisce diversi metodi di hosting di flussi di
 > [!NOTE]
 >  L'eccezione <xref:System.TimeoutException> viene generata solo se l'intervallo di timeout scade e il flusso di lavoro diventa inattivo durante l'esecuzione. Un flusso di lavoro il cui completamento richiede più tempo rispetto all'intervallo di timeout specificato viene completato correttamente se non diventa inattivo.  
   
- L'elemento <xref:System.Activities.WorkflowInvoker> fornisce anche versioni asincrone del metodo di richiamo. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> e <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ L'elemento <xref:System.Activities.WorkflowInvoker> fornisce anche versioni asincrone del metodo di richiamo. Per altre informazioni, vedere <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> e <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Impostazione degli argomenti di input di un flusso di lavoro  
  I dati possono essere passati in un flusso di lavoro tramite un dizionario di parametri di input, con chiavi in base al nome dell'argomento, che sono mappati agli argomenti di input del flusso di lavoro. In questo esempio viene richiamato un oggetto <xref:System.Activities.Statements.WriteLine> e il valore del relativo argomento <xref:System.Activities.Statements.WriteLine.Text%2A> viene specificato usando il dizionario di parametri di input.  

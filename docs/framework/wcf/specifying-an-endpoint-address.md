@@ -1,13 +1,13 @@
 ---
 title: Specifica di un indirizzo endpoint
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] si verifica tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -33,7 +33,7 @@ Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indi
 ## <a name="definition-of-an-endpoint-address"></a>Definizione di un indirizzo endpoint  
  In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], una classe <xref:System.ServiceModel.EndpointAddress> modella un riferimento endpoint (EPR), come definito nello standard WS-Addressing.  
   
- L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, l'URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" è costituito dalle quattro parti seguenti:  
+ L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, questo URI, "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" include le quattro parti seguenti:  
   
 -   Schema: http:  
   
@@ -49,7 +49,7 @@ Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indi
   
  Esistono due modo per specificare gli indirizzi degli endpoint per un servizio in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. È possibile specificare un indirizzo assoluto per ogni endpoint associato al servizio o fornire un indirizzo di base per la classe <xref:System.ServiceModel.ServiceHost> di un servizio e quindi specificare un indirizzo per ogni endpoint associato a questo servizio, che viene definito come relativo all'indirizzo di base. È possibile utilizzare entrambe le procedure per specificare gli indirizzi degli endpoint per un servizio nella configurazione o nel codice. Se non si specifica un indirizzo relativo, il servizio utilizza l'indirizzo di base. È inoltre possibile avere più indirizzi di base per un servizio, ma per ogni servizio è consentito un solo indirizzo di base per ogni trasporto. Se sono presenti più endpoint, ognuno dei quali è configurato con un'associazione diversa, i relativi indirizzi devono essere univoci. Gli endpoint che utilizzano la stessa associazione ma contratti diversi possono utilizzare lo stesso indirizzo.  
   
- Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][La distribuzione di un servizio WCF ospitato in servizi di Internet Information](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Quando si ospita il servizio in IIS, non si gestisce l'istanza di <xref:System.ServiceModel.ServiceHost>. Nel caso di un servizio ospitato in IIS, l'indirizzo di base è sempre l'indirizzo specificato nel file con estensione svc. Per gli endpoint del servizio ospitato in IIS è quindi necessario utilizzare sempre indirizzi relativi. Fornire un indirizzo endpoint completo può provocare errori nella fase di distribuzione del servizio. Per altre informazioni, vedere [distribuzione di un servizio WCF ospitato](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definizione degli indirizzi endpoint nella configurazione  
  Per definire un endpoint in un file di configurazione, utilizzare il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
@@ -58,7 +58,7 @@ Tutta la comunicazione con un servizio [!INCLUDE[indigo1](../../../includes/indi
   
  Quando il <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> metodo viene chiamato (ovvero, quando l'applicazione host tenta di avviare il servizio), il sistema cerca un [ \<servizio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento con un nome di attributo che specifica "UE. Samples.HelloService". Se il [ \<servizio >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento viene trovato, il sistema carica la classe specificata e crea gli endpoint utilizzando le definizioni di endpoint specificate nel file di configurazione. Questo meccanismo consente di caricare e avviare un servizio con due righe di codice, mentre tiene le informazioni sull'associazione e l'indirizzamento fuori dal codice. Il vantaggio di tale approccio è che queste modifiche possono essere apportate senza dover ricompilare o ridistribuire l'applicazione.  
   
- Le intestazioni facoltative vengono dichiarate un [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Di seguito è riportato un esempio degli elementi utilizzati per specificare gli endpoint di un servizio in un file di configurazione in cui vengono distinte due intestazioni: client "Gold" all'indirizzo http://tempuri1.org/ e client "Standard" all'indirizzo http://tempuri2.org/. Il client chiama il servizio deve avere appropriato [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.  
+ Le intestazioni facoltative vengono dichiarate un [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ecco un esempio degli elementi utilizzati per specificare gli endpoint per un servizio in un file di configurazione che distingue tra due intestazioni: client "Gold" da http://tempuri1.org/ e i client "Standard" http://tempuri2.org/. Il client chiama il servizio deve avere appropriato [ \<intestazioni >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) nel file di configurazione.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   

@@ -1,27 +1,24 @@
 ---
 title: Firme (F#)
 description: 'Informazioni su come utilizzare un file di firma F # per contenere le informazioni sulle firme pubbliche di un set di F # elementi di programma, ad esempio moduli, tipi e spazi dei nomi.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 76c84a62-b2f6-44ec-8238-e687e2f7d18e
-ms.openlocfilehash: d0f71c6472852268303a2d3af2e4b0a3c256704e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="signatures"></a>Firme
 
 Un file della firma contiene informazioni sulle firme pubbliche di un set di elementi del programma F#, ad esempio i tipi, gli spazi dei nomi e i moduli. Può essere usato per specificare l'accessibilità di questi elementi del programma.
 
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 Per ogni file di codice F# è disponibile un *file della firma*, ossia un file con lo stesso nome del file di codice, ma con l'estensione fsi invece che fs. I file della firma possono essere aggiunti anche alla riga di comando di compilazione se si usa direttamente la riga di comando. Per distinguere tra file di codice e file della firma, a volte i file di codice vengono chiamati *file di implementazione*. In un progetto il file della firma deve precedere il file di codice associato.
 
 Un file della firma descrive gli spazi dei nomi, i moduli, i tipi e i membri nel file di implementazione corrispondente. Le informazioni in un file della firma vengono usate per specificare le parti di codice nel file di implementazione corrispondente a cui è possibile accedere dal codice esterno al file di implementazione e le parti interne al file di implementazione. Gli spazi dei nomi, i moduli e i tipi inclusi nel file della firma devono essere un subset degli spazi dei nomi, dei moduli e dei tipi inclusi nel file di implementazione. Con le eccezioni descritte più avanti in questo argomento, gli elementi del linguaggio non elencati nel file della firma vengono considerati privati per il file di implementazione. Se non vengono trovati file della firma nel progetto o nella riga di comando, viene usata l'opzione di accessibilità predefinita.

@@ -1,20 +1,17 @@
 ---
 title: Citazioni di codice (F#)
-description: "Informazioni su F # citazioni di codice, una funzionalità del linguaggio che consente di generare e utilizzare le espressioni di codice F # a livello di codice."
-keywords: visual f#, f#, programmazione funzionale
+description: 'Informazioni su F # citazioni di codice, una funzionalità del linguaggio che consente di generare e utilizzare le espressioni di codice F # a livello di codice.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>Citazioni di codice
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Esempio
 
 ### <a name="description"></a>Descrizione
-È inoltre possibile utilizzare i tre criteri attivi nel [ExprShape (modulo)](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) attraversare gli alberi delle espressioni con un numero inferiore di criteri attivo. Questi criteri attivi possono essere utili quando si desidera attraversare una struttura ad albero, ma non è necessario tutte le informazioni nella maggior parte dei nodi. Quando si utilizzano questi criteri, qualsiasi espressione F # corrisponde a uno dei tre criteri seguenti: `ShapeVar` se l'espressione è una variabile, `ShapeLambda` se l'espressione è un'espressione lambda, o `ShapeCombination` se l'espressione è diversa. Se si passano attraverso un albero delle espressioni usando i criteri attivi come nell'esempio di codice precedente, è necessario utilizzare molti più criteri per gestire tutti i possibili tipi F # espressione e il codice sarà più complesso. Per ulteriori informazioni, vedere [ExprShape.ShapeVar &#124; ShapeLambda &#124; Criterio attivo ShapeCombination](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
+È inoltre possibile utilizzare i tre criteri attivi nel [ExprShape (modulo)](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) attraversare gli alberi delle espressioni con un numero inferiore di criteri attivo. Questi criteri attivi possono essere utili quando si desidera attraversare una struttura ad albero, ma non è necessario tutte le informazioni nella maggior parte dei nodi. Quando si utilizzano questi criteri, qualsiasi espressione F # corrisponde a uno dei tre criteri seguenti: `ShapeVar` se l'espressione è una variabile, `ShapeLambda` se l'espressione è un'espressione lambda, o `ShapeCombination` se l'espressione è diversa. Se si passano attraverso un albero delle espressioni usando i criteri attivi come nell'esempio di codice precedente, è necessario utilizzare molti più criteri per gestire tutti i possibili tipi F # espressione e il codice sarà più complesso. Per altre informazioni, vedere [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination (modello attivo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
 Esempio di codice seguente è utilizzabile come base per attraversamenti più complessi. In questo codice, viene creato un albero delle espressioni per un'espressione che include una chiamata di funzione `add`. Il [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) (modello attivo) viene utilizzato per rilevare qualsiasi chiamata a `add` nell'albero delle espressioni. Questo criterio attivo assegna gli argomenti della chiamata al `exprList` valore. In questo caso, sono disponibili solo due, pertanto vengono estratti e la funzione viene chiamata in modo ricorsivo sugli argomenti. I risultati vengono inseriti in una quotation di codice che rappresenta una chiamata a `mul` usando l'operatore di splicing (`%%`). Il `println` funzione dell'esempio precedente viene utilizzata per visualizzare i risultati.
 

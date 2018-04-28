@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: configurare una porta con un certificato SSL'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedura: configurare una porta con un certificato SSL
-Quando si crea un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] indipendente con la classe <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto, è necessario configurare anche una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Quando si crea un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] indipendente con la classe <xref:System.ServiceModel.WSHttpBinding> che usa la protezione del trasporto, è necessario configurare anche una porta con un certificato X.509. Se non si intende creare un servizio indipendente, è possibile ospitare il servizio in Internet Information Services (IIS). Per altre informazioni, vedere [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Per configurare una porta, lo strumento da usare dipende dal sistema operativo eseguito nel computer.  
   
- Se viene eseguito [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe. Con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], questo strumento è installato. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). Il [documentazione di Windows Support Tools](http://go.microsoft.com/fwlink/?LinkId=94840) viene illustrata la sintassi dello strumento Httpcfg.exe.  
+ Se viene eseguito [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], usare lo strumento HttpCfg.exe. Con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], questo strumento è installato. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). Il [documentazione di Windows Support Tools](http://go.microsoft.com/fwlink/?LinkId=94840) viene illustrata la sintassi dello strumento Httpcfg.exe.  
   
  Se viene eseguito [!INCLUDE[wv](../../../../includes/wv-md.md)], usare lo strumento Netsh.exe già installato.  
   
@@ -66,9 +68,9 @@ Quando si crea un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Per ottenere l'identificazione personale di un certificato  
   
-1.  Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Usare lo snap-in MMC Certificati per individuare un certificato X.509 che abbia come scopo previsto l'autenticazione client. Per ulteriori informazioni, vedere [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Accedere all'identificazione personale del certificato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2.  Accedere all'identificazione personale del certificato. Per ulteriori informazioni, vedere [procedura: recuperare l'identificazione personale del certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 3.  Copiare l'identificazione personale del certificato in un editor di testo, ad esempio Blocco note.  
   

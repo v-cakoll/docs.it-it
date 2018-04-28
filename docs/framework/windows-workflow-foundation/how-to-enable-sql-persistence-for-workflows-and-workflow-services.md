@@ -1,31 +1,32 @@
 ---
 title: 'Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
 In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.  
   
- Windows Server AppFabric semplifica il processo di configurazione della persistenza. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configurazione salvataggio permanente di AppFabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server AppFabric semplifica il processo di configurazione della persistenza. Per altre informazioni, vedere [persistenza configurazione AppFabric](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  Prima di usare tale funzionalità, creare un database usato dalla funzionalità per rendere persistenti le istanze del flusso di lavoro. Il programma di installazione di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] copia i file di script SQL associati alla funzionalità di archivio di istanze del flusso di lavoro SQL nella cartella %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN. Eseguire questi file di script in un database di SQL Server 2005 o SQL Server 2008 che si desidera venga usato dall'archivio di istanze del flusso di lavoro SQL per rendere persistenti le istanze del flusso di lavoro. Eseguire innanzitutto il file SqlWorkflowInstanceStoreSchema.sql, quindi il file SqlWorkflowInstanceStoreLogic.sql.  
   
@@ -40,7 +41,7 @@ In questo argomento viene descritto come configurare la funzionalità di archivi
 >   
 >  System.Data.SqlClient.SqlException: Impossibile trovare la stored procedure 'System.Activities.DurableInstancing.CreateLockOwner'  
   
- Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)]proprietà dell'archivio di istanze del flusso di lavoro SQL, vedere [le proprietà del flusso di lavoro archivio di istanze SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
+ Nelle sezioni seguenti viene descritto come abilitare la persistenza per i flussi di lavoro e i relativi servizi usando l'archivio di istanze del flusso di lavoro SQL. [!INCLUDE[crabout](../../../includes/crabout-md.md)] proprietà dell'archivio di istanze del flusso di lavoro SQL, vedere [delle proprietà del flusso di lavoro archivio di istanze SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Abilitazione della persistenza per i flussi di lavoro indipendenti che usano l'oggetto WorkflowApplication  
  È possibile abilitare la persistenza per i flussi di lavoro indipendenti che usano l'oggetto <xref:System.Activities.WorkflowApplication> a livello di codice tramite il modello a oggetti <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. Nella procedura seguente sono inclusi i passaggi per eseguire questa operazione.  

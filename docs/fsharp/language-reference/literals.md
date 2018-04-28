@@ -1,20 +1,17 @@
 ---
 title: Valori letterali (F#)
 description: 'Informazioni sui tipi di valore letterale in F # linguaggio di programmazione.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Valori letterali
 
@@ -39,15 +36,15 @@ La tabella seguente illustra i tipi di valore letterale in F #. Caratteri che ra
 |uint64|numero di naturale senza segno a 64 bit|UL|`86UL`|
 |float32 singolo,|numero a virgola mobile a 32 bit|F o f|`4.14F` o `4.14f`|
 |||LF|`0x00000000lf`|
-|float; Double|numero a virgola mobile a 64 bit|nessuno|`4.14`o `2.3E+32` o`2.3e+32`|
+|float; Double|numero a virgola mobile a 64 bit|none|`4.14` o `2.3E+32` o `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|numero intero non è limitato a una rappresentazione a 64 bit|I|`9999999999999999999999999999I`|
 |decimal|numero frazionario rappresentato come un punto fisso o un numero razionale|M o m|`0.7833M` o `0.7833m`|
-|Char|Carattere Unicode|nessuno|`'a'`|
-|Stringa|Stringa Unicode|nessuno|`"text\n"`<br /><br />oppure<br /><br />`@"c:\filename"`<br /><br />oppure<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />oppure<br /><br />`"string1" + "string2"`<br /><br />Vedere anche [stringhe](Strings.md).|
+|Char|Carattere Unicode|none|`'a'`|
+|Stringa|Stringa Unicode|none|`"text\n"`<br /><br />oppure<br /><br />`@"c:\filename"`<br /><br />oppure<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />oppure<br /><br />`"string1" + "string2"`<br /><br />Vedere anche [stringhe](Strings.md).|
 |byte|Carattere ASCII|B|`'a'B`|
 |byte[]|Stringa ASCII|B|`"text"B`|
-|String o byte]|stringa verbatim|prefisso @|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|String o byte]|stringa verbatim|prefisso @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Note
 Le stringhe Unicode possono contenere codifiche esplicite che è possibile specificare utilizzando `\u` seguito da un codice esadecimale a 16 bit o codifiche UTF-32 che è possibile specificare utilizzando `\U` seguito da un codice esadecimale a 32 bit che rappresenta un Unicode coppia di surrogati.

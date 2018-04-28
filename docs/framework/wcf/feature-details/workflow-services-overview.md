@@ -1,27 +1,29 @@
 ---
 title: Panoramica dei servizi flusso di lavoro
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-services-overview"></a>Panoramica dei servizi flusso di lavoro
-I servizi flusso di lavoro sono servizi basati su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementati mediante flussi di lavoro. Si tratta di flussi di lavoro che usano le attività di messaggistica per inviare e ricevere messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 introduce una serie di attività di messaggistica che consentono di inviare e ricevere messaggi da un flusso di lavoro. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]attività di messaggistica e come possono essere utilizzati per implementare modelli di scambio di messaggi diversi, vedere [delle attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+I servizi flusso di lavoro sono servizi basati su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementati mediante flussi di lavoro. Si tratta di flussi di lavoro che usano le attività di messaggistica per inviare e ricevere messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 introduce una serie di attività di messaggistica che consentono di inviare e ricevere messaggi da un flusso di lavoro. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] attività di messaggistica e come possono essere utilizzati per implementare modelli di scambio di messaggi diversi, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Vantaggi derivanti dall'utilizzo dei servizi flusso di lavoro  
  Con l'aumento del livello di distribuzione delle applicazioni, i singoli servizi divengono responsabili delle chiamate ad altri servizi per la ripartizione di parte del carico di lavoro. L'implementazione di queste chiamate come operazioni asincrone introduce un livello di complessità nel codice. La gestione degli errori aggiunge ulteriore complessità con la gestione delle eccezioni e fornendo informazioni di rilevamento dettagliate. Alcuni servizi presentano spesso un'esecuzione prolungata e possono impegnare risorse di sistema utili in attesa dell'input. A causa di questi problemi, le applicazioni distribuite risultano spesso molto complesse e difficili da scrivere e gestire. I flussi di lavoro rappresentano un metodo naturale per esprimere la coordinazione del lavoro asincrono, soprattutto per quanto riguarda le chiamate ai servizi esterni. I flussi di lavoro risultano inoltre efficaci nel rappresentare processi aziendali con esecuzione prolungata. Sono queste qualità che rendono il flusso di lavoro una risorsa essenziale per la compilazione di servizi in un ambiente distribuito.  
@@ -69,7 +71,7 @@ I servizi flusso di lavoro sono servizi basati su [!INCLUDE[indigo2](../../../..
   
  I servizi flusso di lavoro ospitati in un'applicazione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] o in un servizio Windows gestito creano un'istanza della classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> e la passano a un'istanza di <xref:System.ServiceModel.Activities.WorkflowService> che contiene la definizione del flusso di lavoro all'interno della proprietà <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Una definizione del flusso di lavoro contenente le attività di messaggistica viene esposta come servizio flusso di lavoro.  
   
- Per ospitare un servizio flusso di lavoro in IIS o WAS, posizionare il file con estensione xamlx contenente la definizione del servizio flusso di lavoro in una directory virtuale. Un endpoint predefinito (utilizzando <xref:System.ServiceModel.BasicHttpBinding>) viene creato automaticamente [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md). È anche possibile posizionare un file Web.config nella directory virtuale per specificare specifici endpoint. Se la definizione del flusso di lavoro si trova in un assembly, è possibile posizionare un file con estensione svc nella directory virtuale e l'assembly del flusso di lavoro nella directory App_Code. Il file con estensione svc deve specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro. Nell'esempio seguente viene mostrato come specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro.  
+ Per ospitare un servizio flusso di lavoro in IIS o WAS, posizionare il file con estensione xamlx contenente la definizione del servizio flusso di lavoro in una directory virtuale. Un endpoint predefinito (mediante <xref:System.ServiceModel.BasicHttpBinding>) viene creato automaticamente per altre informazioni, vedere [configurazione semplificata](../../../../docs/framework/wcf/simplified-configuration.md). È anche possibile posizionare un file Web.config nella directory virtuale per specificare specifici endpoint. Se la definizione del flusso di lavoro si trova in un assembly, è possibile posizionare un file con estensione svc nella directory virtuale e l'assembly del flusso di lavoro nella directory App_Code. Il file con estensione svc deve specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro. Nell'esempio seguente viene mostrato come specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro.  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  

@@ -1,23 +1,24 @@
 ---
 title: Eccezioni
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Eccezioni
 I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.TryCatch> per gestire le eccezioni generate durante l'esecuzione di un flusso di lavoro. Queste eccezioni possono essere gestite o generate una seconda volta usando l'attività <xref:System.Activities.Statements.Rethrow>. Le attività della sezione <xref:System.Activities.Statements.TryCatch.Finally%2A> vengono eseguite quando viene completata la sezione <xref:System.Activities.Statements.TryCatch.Try%2A> o <xref:System.Activities.Statements.TryCatch.Catches%2A>. I flussi di lavoro ospitato da un <xref:System.Activities.WorkflowApplication> istanza consente inoltre di <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> gestore eventi per gestire le eccezioni non gestite da un <xref:System.Activities.Statements.TryCatch> attività.  
@@ -36,11 +37,11 @@ I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.
 ## <a name="handling-exceptions"></a>Gestione delle eccezioni  
  Se un'eccezione viene generata da un'attività ma non viene gestita, il comportamento predefinito prevede l'interruzione dell'istanza del flusso di lavoro. Se presente, un gestore personalizzato <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> può eseguire l'override di questo comportamento predefinito. Questo gestore consente all'autore dell'host del flusso di lavoro di fornire la gestione appropriata, ad esempio la registrazione personalizzata, l'interruzione, l'annullamento o la chiusura del flusso di lavoro.  Se un flusso di lavoro genera un'eccezione che non viene gestita, viene chiamato il gestore <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>. Esistono tre azioni possibili restituite da <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> che determinano il risultato finale del flusso di lavoro.  
   
--   **Annulla** -un'istanza del flusso di lavoro annullata è una valida uscita per l'esecuzione di un branch. È possibile modellare il comportamento di annullamento, ad esempio usando un'attività CancellationScope. Il gestore Completed viene richiamato al completamento del processo di annullamento. Un flusso di lavoro annullato si trova nello stato di annullato.  
+-   **Annulla** -un'istanza del flusso di lavoro annullata è una valida uscita di un'esecuzione del ramo. È possibile modellare il comportamento di annullamento, ad esempio usando un'attività CancellationScope. Il gestore Completed viene richiamato al completamento del processo di annullamento. Un flusso di lavoro annullato si trova nello stato di annullato.  
   
--   **Terminare** -un'istanza del flusso di lavoro terminata non può essere ripreso o riavviata.  Ciò attiva l'evento Completed in cui è possibile immettere un'eccezione come motivo del termine dell'istanza. Il gestore Terminated viene richiamato al completamento del processo di chiusura. Un flusso di lavoro terminato si trova nello stato di non riuscito.  
+-   **Terminare** -un'istanza del flusso di lavoro terminato non può essere ripresa o riavviata.  Ciò attiva l'evento Completed in cui è possibile immettere un'eccezione come motivo del termine dell'istanza. Il gestore Terminated viene richiamato al completamento del processo di chiusura. Un flusso di lavoro terminato si trova nello stato di non riuscito.  
   
--   **Interrompere** -un'istanza del flusso di lavoro interrotto può essere ripreso solo se è stato configurato per essere persistente.  Senza la persistenza, un flusso di lavoro non può essere ripreso.  Nel momento in cui un flusso di lavoro viene interrotto, qualsiasi lavoro eseguito (in memoria) dall'ultimo di punto di persistenza verrà perso. Per un flusso di lavoro interrotto, viene richiamato il gestore Aborted usando l'eccezione come motivo di quando è stato completato il processo di interruzione. Tuttavia, a differenza dei gestori Cancelled e Terminated, il gestore Completed non viene richiamato. Un flusso di lavoro interrotto si trova nello stato di interrotto.  
+-   **Interrompere** -un'istanza di flusso di lavoro interrotto può essere ripresa solo se è stato configurato per essere persistenti.  Senza la persistenza, un flusso di lavoro non può essere ripreso.  Nel momento in cui un flusso di lavoro viene interrotto, qualsiasi lavoro eseguito (in memoria) dall'ultimo di punto di persistenza verrà perso. Per un flusso di lavoro interrotto, viene richiamato il gestore Aborted usando l'eccezione come motivo di quando è stato completato il processo di interruzione. Tuttavia, a differenza dei gestori Cancelled e Terminated, il gestore Completed non viene richiamato. Un flusso di lavoro interrotto si trova nello stato di interrotto.  
   
  Nell'esempio seguente viene richiamato un flusso di lavoro che genera un'eccezione. L'eccezione non viene gestita dal flusso di lavoro e viene richiamato il gestore <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>. Gli argomenti <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> vengono controllati per fornire informazioni sull'eccezione e il flusso di lavoro viene terminato.  
   
@@ -58,7 +59,7 @@ I flussi di lavoro possono usare l'attività <xref:System.Activities.Statements.
 -   L'eccezione non è gestita da un'attività <xref:System.Activities.Statements.TryCatch> di livello superiore, ignora la radice del flusso di lavoro e il flusso di lavoro è configurato per l'annullamento anziché per la chiusura o l'interruzione. I flussi di lavoro ospitati usando <xref:System.Activities.WorkflowApplication> possono configurare queste operazioni gestendo <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> e restituendo <xref:System.Activities.UnhandledExceptionAction.Cancel>. Un esempio di gestione di <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> è stato fornito in precedenza in questo argomento. I servizi flusso di lavoro possono configurare queste operazioni usando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> e specificando <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Per un esempio di configurazione <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, vedere [estensibilità Host del servizio del flusso di lavoro](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Gestione delle eccezioni e compensazione  
- La gestione delle eccezioni si verifica durante l'esecuzione di un'attività, mentre la compensazione si verifica dopo il corretto completamento di un'attività. La gestione delle eccezioni consente di eseguire una pulizia dopo che l'attività genera l'eccezione, mentre la compensazione permette di annullare il lavoro correttamente completato di un'attività portata a termine in precedenza. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Compensazione](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ La gestione delle eccezioni si verifica durante l'esecuzione di un'attività, mentre la compensazione si verifica dopo il corretto completamento di un'attività. La gestione delle eccezioni consente di eseguire una pulizia dopo che l'attività genera l'eccezione, mentre la compensazione permette di annullare il lavoro correttamente completato di un'attività portata a termine in precedenza. Per altre informazioni, vedere [compensazione](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Activities.Statements.TryCatch>  

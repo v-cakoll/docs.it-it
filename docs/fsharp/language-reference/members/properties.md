@@ -1,20 +1,17 @@
 ---
-title: "Proprietà (F#)"
-description: "Informazioni sulle proprietà, F # che sono membri che rappresentano i valori associati a un oggetto."
-keywords: visual f#, f#, programmazione funzionale
+title: Proprietà (F#)
+description: 'Informazioni sulle proprietà, F # che sono membri che rappresentano i valori associati a un oggetto.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>Proprietà
 
@@ -74,7 +71,7 @@ Per le proprietà di lettura/scrittura, che hanno entrambi un `get` e `set` (met
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Private i valori che vengono chiamati i dati per le proprietà di attesa *archivi di backup*. Se il compilatore crea automaticamente l'archivio di backup, utilizzare le parole chiave `member val`, omettere l'identificatore di Self-Service, quindi specificare un'espressione per inizializzare la proprietà. Se la proprietà è modificabile, includere `with get, set`. Ad esempio, il seguente tipo di classe include due proprietà implementate automaticamente. `Property1`è di sola lettura e viene inizializzato per l'argomento fornito al costruttore primario, e `Property2` è una proprietà impostabile inizializzata in una stringa vuota:
+Private i valori che vengono chiamati i dati per le proprietà di attesa *archivi di backup*. Se il compilatore crea automaticamente l'archivio di backup, utilizzare le parole chiave `member val`, omettere l'identificatore di Self-Service, quindi specificare un'espressione per inizializzare la proprietà. Se la proprietà è modificabile, includere `with get, set`. Ad esempio, il seguente tipo di classe include due proprietà implementate automaticamente. `Property1` è di sola lettura e viene inizializzato all'argomento fornito per il costruttore primario, e `Property2` è una proprietà impostabile inizializzata su una stringa vuota:
 
 ```fsharp
 type MyClass(property1 : int) =

@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6cf6910dd370c32120487681829e72ad2681efbe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)
 Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il codice del modello di servizi da documenti di metadati e documenti di metadati dal codice di modello di servizi.  
@@ -74,7 +74,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 ### <a name="code-generation"></a>Generazione codice  
  Lo strumento Svcutil.exe è in grado di generare codice per contratti di servizio, client e tipi di dati dai documenti di metadati. Questi documenti di metadati possono essere salvati in modo permanente o recuperati online. Il recupero online segue il protocollo WS-Metadata Exchange o il protocollo DISCO (per i dettagli vedere la sezione Download dei metadati).  
   
- È possibile utilizzare lo strumento SvcUtil.exe per generare i contratti di servizio e dati in base a un documento WSDL predefinito. Utilizzare l'opzione /serviceContract e specificare un URL o un percorso di file in cui il documento WSDL possa essere scaricato o trovato. In questo modo vengono generati i contratti di servizio e dati definiti nel documento WSDL che può quindi essere utilizzato per implementare un servizio conforme. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Procedura: recuperare i metadati e implementare un servizio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ È possibile utilizzare lo strumento SvcUtil.exe per generare i contratti di servizio e dati in base a un documento WSDL predefinito. Utilizzare l'opzione /serviceContract e specificare un URL o un percorso di file in cui il documento WSDL possa essere scaricato o trovato. In questo modo vengono generati i contratti di servizio e dati definiti nel documento WSDL che può quindi essere utilizzato per implementare un servizio conforme. Per altre informazioni, vedere [procedura: recuperare metadati e implementare un servizio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  Per un servizio con un endpoint BasicHttpContextbinding, Svcutil.exe genera un BasicHttpBinding con l'attributo `allowCookies` impostato su `true`. I cookie vengono utilizzati come contesto sul server. Se si desidera gestire il contesto sul client quando il servizio utilizza cookie, è possibile modificare la configurazione per utilizzare un elemento di associazione del contesto.  
   
@@ -92,7 +92,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |/async|Genera firme di metodi sincrone e asincrone.<br /><br /> Impostazione predefinita: generare solo firme di metodi sincrone.<br /><br /> Forma abbreviata: `/a`|  
-|/collectionType:\<type>|Specifica il tipo di raccolta elenco per un client WCF.<br/><br /> Valore predefinito: tipo di raccolta è System. Array. <br /><br /> Forma abbreviata: `/ct`|  
+|/CollectionType:\<tipo >|Specifica il tipo di raccolta elenco per un client WCF.<br/><br /> Valore predefinito: tipo di raccolta è System. Array. <br /><br /> Forma abbreviata: `/ct`|  
 |/config:\<configFile>|Specifica il nome file per il file di configurazione generato.<br /><br /> Impostazione predefinita: output.config|  
 |/dataContractOnly|Genera solo codice per tipi di contratto dati. I tipi di contratto di servizio non vengono generati.<br /><br /> Per questa opzione è necessario specificare soltanto file di metadati locali.<br /><br /> Forma abbreviata: `/dconly`|  
 |/enableDataBinding|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi di contratto dati per consentire l'associazione dati.<br /><br /> Forma abbreviata: `/edb`|  
@@ -235,7 +235,7 @@ Lo strumento ServiceModel Metadata Utility Tool viene utilizzato per generare il
 ## <a name="maximum-nametable-character-count-quota"></a>Quota per il numero massimo di caratteri della tabella dei nomi.  
  Quando si utilizza svcutil per generare metadati per un servizio, è possibile che venga visualizzato il messaggio seguente:  
   
- Errore: Impossibile ottenere i metadati da http://localhost:8000/somesservice/mex. Quota per il numero massimo di caratteri della tabella dei nomi (16384) superata durante la lettura dei dati XML. La tabella dei nomi è una struttura dati utilizzata per memorizzare le stringhe trovate durante l'elaborazione dei dati XML. Documenti XML lunghi con nomi di elementi, nomi di attributi e valori di attributi non ripetuti possono comportare il superamento della quota. Tale quota può essere incrementata modificando la proprietà MaxNameTableCharCount dell'oggetto XmlDictionaryReaderQuotas utilizzato durante la creazione del lettore XML.  
+ Errore: Impossibile ottenere i metadati da http://localhost:8000/somesservice/mex la quota di conteggio carattere massimo della tabella dei nomi (16384) superata durante la lettura dei dati XML. La tabella dei nomi è una struttura dati utilizzata per memorizzare le stringhe trovate durante l'elaborazione dei dati XML. Documenti XML lunghi con nomi di elementi, nomi di attributi e valori di attributi non ripetuti possono comportare il superamento della quota. Tale quota può essere incrementata modificando la proprietà MaxNameTableCharCount dell'oggetto XmlDictionaryReaderQuotas utilizzato durante la creazione del lettore XML.  
   
  Questo errore può essere causato dalla restituzione di un file WSDL di grandi dimensioni da parte di un servizio quando vengono richiesti i relativi metadati. Il problema deriva dal superamento della quota di caratteri per lo strumento svcutil.exe. Questo valore viene impostato per contribuire a impedire attacchi di tipo Denial of Service (DoS). Questa quota può essere aumentata specificando il seguente file di configurazione per svcutil.  
   

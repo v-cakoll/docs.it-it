@@ -1,23 +1,24 @@
 ---
 title: Procedure consigliate per la persistenza
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Procedure consigliate per la persistenza
 In questo documento vengono descritte le procedure consigliate per la progettazione e la configurazione del flusso di lavoro al fine di mantenerne la persistenza.  
@@ -31,7 +32,7 @@ In questo documento vengono descritte le procedure consigliate per la progettazi
   
  Se il flusso di lavoro è occupato per un periodo di tempo prolungato, si consiglia di rendere persistente la relativa istanza regolarmente durante tutto il periodo. A tale scopo, aggiungere le attività <xref:System.Activities.Statements.Persist> durante tutta la sequenza di operazioni che tengono occupata l'istanza del flusso di lavoro. In questo modo il riciclo del dominio applicazione o eventuali errori nell'host o nel computer non provocano l'esecuzione del rollback del sistema all'inizio del periodo in cui il flusso di lavoro è occupato. Tenere presente che l'aggiunta di attività <xref:System.Activities.Statements.Persist> al flusso di lavoro potrebbe provocare una riduzione delle prestazioni.  
   
- Windows Server AppFabric consente di semplificare notevolmente la configurazione e l'uso della persistenza. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistenza di Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric consente di semplificare notevolmente la configurazione e l'uso della persistenza. Per altre informazioni, vedere [la persistenza dell'infrastruttura di App di Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configurazione dei parametri di scalabilità  
  I requisiti relativi alla scalabilità e alle prestazione determinano le impostazioni dei parametri seguenti:  

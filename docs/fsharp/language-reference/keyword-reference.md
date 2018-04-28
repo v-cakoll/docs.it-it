@@ -1,20 +1,17 @@
 ---
 title: Riferimento per parole chiave (F#)
 description: 'Trovare collegamenti a informazioni su tutte le parole chiave del linguaggio F #.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>Riferimento per parole chiave
 
@@ -27,7 +24,7 @@ Nella tabella seguente mostra tutte le parole chiave F # in ordine alfabetico, i
 |Parola chiave|Collegamento|Descrizione|
 |-------|----|-----------|
 |`abstract`|[Membri](members/index.md)<br /><br />[Classi astratte](abstract-classes.md)|Indica un metodo che non dispone di implementazione del tipo in cui viene dichiarato o che è virtuale e si dispone di un'implementazione predefinita.|
-|`and`|[`let`Associazioni](functions/let-bindings.md)<br /><br />[Membri](members/index.md)<br /><br />[Vincoli](generics/constraints.md)|Usato nelle associazioni ricorsive reciproche, nelle dichiarazioni di proprietà e con più vincoli sui parametri generici.|
+|`and`|[`let` Associazioni](functions/let-bindings.md)<br /><br />[Membri](members/index.md)<br /><br />[Vincoli](generics/constraints.md)|Usato nelle associazioni ricorsive reciproche, nelle dichiarazioni di proprietà e con più vincoli sui parametri generici.|
 |`as`|[Classi](classes.md)<br /><br />[Criteri di ricerca](Pattern-Matching.md)|Utilizzato per assegnare un nome di oggetto di oggetto della classe corrente. Viene utilizzato anche per assegnare un nome a un intero modello all'interno di un criterio di ricerca.|
 |`assert`|[Asserzioni](assertions.md)|Utilizzato per verificare il codice durante il debug.|
 |`base`|[Classi](classes.md)<br /><br />[Ereditarietà](inheritance.md)|Utilizzato come nome dell'oggetto della classe base.|
@@ -46,7 +43,7 @@ Nella tabella seguente mostra tutte le parole chiave F # in ordine alfabetico, i
 |`extern`|[Funzioni esterne](functions/external-functions.md)|Indica che un elemento del programma dichiarato è definito in un altro file binario o assembly.|
 |`false`|[Tipi primitivi](primitive-types.md)|Utilizzato come valori letterali booleani.|
 |`finally`|[Eccezioni: espressione `try...finally`](exception-handling/the-try-finally-expression.md)|Utilizzata in combinazione con `try` per introdurre un blocco di codice che viene eseguita indipendentemente dal fatto che si verifica un'eccezione.|
-|`fixed`|[Predefinito](fixed.md)|Consentono di "aggiungere" puntatore dello stack per impedire che venga raccolto nel garbage collector.|
+|`fixed`|[predefinito](fixed.md)|Consentono di "aggiungere" puntatore dello stack per impedire che venga raccolto nel garbage collector.|
 |`for`|[Cicli: espressione `for...to`](loops-for-to-expression.md)<br /><br />[Espressione Loops: for...in](loops-for-in-expression.md)|Utilizzato in costrutti di ciclo.|
 |`fun`|[Espressioni lambda: I `fun` (parola chiave)](functions/lambda-expressions-the-fun-keyword.md)|Usato nelle espressioni lambda, anche note come funzioni anonime.|
 |`function`|[Espressioni match](match-expressions.md)<br /><br />[Espressioni lambda: Parola chiave fun](functions/lambda-expressions-the-fun-keyword.md)|Utilizzato come alternativa alla più breve il `fun` (parola chiave) e un `match` espressione in un'espressione lambda con i criteri di ricerca in un singolo argomento.|
@@ -58,7 +55,7 @@ Nella tabella seguente mostra tutte le parole chiave F # in ordine alfabetico, i
 |`interface`|[Interfacce](interfaces.md)|Utilizzato per dichiarare e implementare interfacce.|
 |`internal`|[Controllo di accesso](access-control.md)|Utilizzato per specificare che un membro è visibile all'interno di un assembly, ma non al suo esterno.|
 |`lazy`|[Calcoli differiti](lazy-computations.md)|Consente di specificare un calcolo che deve essere eseguita solo se è necessario un risultato.|
-|`let`|[`let`Associazioni](functions/let-bindings.md)|Utilizzato per associare o un nome a un valore o funzione.|
+|`let`|[`let` Associazioni](functions/let-bindings.md)|Utilizzato per associare o un nome a un valore o funzione.|
 |`let!`|[Flussi di lavoro asincroni](asynchronous-workflows.md)<br /><br />[Espressioni di calcolo](computation-expressions.md)|Utilizzata nei flussi di lavoro asincroni per associare un nome al risultato di un calcolo asincrono o, in altre espressioni di calcolo, utilizzati per associare un nome a un risultato, che è del tipo di calcolo.|
 |`match`|[Espressioni match](match-expressions.md)|Utilizzato per ramo confrontando un valore a un modello.|
 |`member`|[Membri](members/index.md)|Usato per dichiarare una proprietà o metodo in un tipo di oggetto.|
@@ -83,7 +80,7 @@ Nella tabella seguente mostra tutte le parole chiave F # in ordine alfabetico, i
 |`then`|[Espressioni condizionali: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Costruttori](members/constructors.md)|Utilizzata nelle espressioni condizionali.<br /><br />Questo campo viene usato anche per eseguire gli effetti collaterali dopo la costruzione di oggetti.|
 |`to`|[Cicli: espressione `for...to`](loops-for-to-expression.md)|Utilizzato `for` cicli per indicare un intervallo.|
 |`true`|[Tipi primitivi](primitive-types.md)|Utilizzato come valori letterali booleani.|
-|`try`|[Eccezioni: Try... con Expression](exception-handling/the-try-with-expression.md)<br /><br />[Eccezioni: Try... finally espressione](exception-handling/the-try-finally-expression.md)|Utilizzato per introdurre un blocco di codice che potrebbe generare un'eccezione. Utilizzata in combinazione con `with` o `finally`.|
+|`try`|[Eccezioni: Try... with espressione](exception-handling/the-try-with-expression.md)<br /><br />[Eccezioni: Try... finally espressione](exception-handling/the-try-finally-expression.md)|Utilizzato per introdurre un blocco di codice che potrebbe generare un'eccezione. Utilizzata in combinazione con `with` o `finally`.|
 |`type`|[Tipi F#](fsharp-types.md)<br /><br />[Classi](classes.md)<br /><br />[Record](records.md)<br /><br />[Strutture](structures.md)<br /><br />[Enumerazioni](enumerations.md)<br /><br />[Unioni discriminate](discriminated-unions.md)<br /><br />[Abbreviazioni dei tipi](type-abbreviations.md)<br /><br />[Unità di misura](units-of-measure.md)|Utilizzato per dichiarare una classe, record, struttura, unione discriminata, tipo di enumerazione, unità di misura o l'abbreviazione di tipo.|
 |`upcast`|[Cast e conversioni](casting-and-conversions.md)|Consente di convertire in un tipo di livello superiore nella catena di ereditarietà.|
 |`use`|[Gestione delle risorse: parola chiave `use` ](resource-management-the-use-keyword.md)|Utilizzare invece di `let` per i valori che richiedono `Dispose` da chiamare per liberare risorse.|

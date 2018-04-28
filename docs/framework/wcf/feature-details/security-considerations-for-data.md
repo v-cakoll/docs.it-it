@@ -1,27 +1,29 @@
 ---
 title: Considerazioni sulla protezione per i dati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>Considerazioni sulla protezione per i dati
 Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]è necessario considerare varie di categorie di minacce. Nella tabella seguente sono elencate le più importanti categorie di minacce correlate all'elaborazione dati. In[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono forniti gli strumenti per mitigare queste minacce.  
@@ -44,7 +46,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
  È necessario assicurarsi che non vi sia codice dannoso collegato ai vari punti di estendibilità. Soprattutto in caso di esecuzione con attendibilità parziale, nella gestione di tipi provenienti da assembly parzialmente attendibili o nella creazione di componenti utilizzati da codici parzialmente attendibili. Per ulteriori informazioni, vedere "Minacce legate all'attendibilità parziale" in una sezione successiva .  
   
- Si noti che in caso di esecuzione con attendibilità parziale, l'infrastruttura di serializzazione del contratto dati supporta solo un sottoinsieme limitato del modello di programmazione del contratto dati - ad esempio, tipi o membri dati privati che utilizzano l'attributo <xref:System.SerializableAttribute> non sono supportati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
+ Si noti che in caso di esecuzione con attendibilità parziale, l'infrastruttura di serializzazione del contratto dati supporta solo un sottoinsieme limitato del modello di programmazione del contratto dati - ad esempio, tipi o membri dati privati che utilizzano l'attributo <xref:System.SerializableAttribute> non sono supportati. Per altre informazioni, vedere [attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md).  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>Come evitare l'Information Disclosure (Rivelazione di informazioni) non intenzionale  
  Quando si progettano tipi serializzabili tenendo conto della protezione, l'Information Disclosure può costituire un problema.  
@@ -121,7 +123,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 ### <a name="slow-stream-attacks"></a>Attacchi che rallentano il flusso  
  Una categoria di attacchi Denial of Service basati sul flusso non comporta l'utilizzo di memoria, bensì un rallentamento del mittente o del destinatario dei dati. In attesa dell'invio o della ricezione dei dati si esauriscono risorse quali thread e connessioni disponibili. Questa situazione può verificarsi in seguito a un attacco dannoso o per effetto di un mittente/destinatario legittimo su una connessione di rete lenta.  
   
- Per mitigare questi attacchi, impostare correttamente i timeout di trasporto. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Le quote del trasporto](../../../../docs/framework/wcf/feature-details/transport-quotas.md). In secondo luogo non utilizzare mai operazioni `Read` o `Write` sincrone quando si utilizzano i flussi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Per mitigare questi attacchi, impostare correttamente i timeout di trasporto. Per altre informazioni, vedere [le quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md). In secondo luogo non utilizzare mai operazioni `Read` o `Write` sincrone quando si utilizzano i flussi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="using-xml-safely"></a>Utilizzo sicuro di XML  
   
@@ -177,7 +179,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
  Le proprietà <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`, e `MaxArrayLength` limitano esclusivamente l'utilizzo della memoria. Di solito non sono necessarie per mitigare eventuali minacce in scenari non basati sul flusso in quanto l'utilizzo della memoria è già limitato da `MaxReceivedMessageSize`. `MaxReceivedMessageSize` tuttavia conteggia i byte prima dell'espansione. Quando viene utilizzata la codifica binaria, l'utilizzo della memoria potrebbe superare la quota `MaxReceivedMessageSize`, essendo limitato solo da un fattore di <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>. Per questa ragione, è importante impostare sempre tutte le quote del lettore (specialmente <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>) quando si utilizza la codifica binaria.  
   
- Se la codifica binaria viene utilizzata con <xref:System.Runtime.Serialization.DataContractSerializer>, è possibile abusare dell'interfaccia `IExtensibleDataObject` per sferrare un attacco di espansione del dizionario. Questa interfaccia essenzialmente fornisce un'archiviazione illimitata per i dati arbitrari che non fanno parte del contratto. Se non è possibile impostare quote sufficientemente basse perché `MaxSessionSize` moltiplicato per `MaxReceivedMessageSize` non crei problemi, disattivare la funzione `IExtensibleDataObject` se si utilizza la codifica binaria. Impostare la proprietà `IgnoreExtensionDataObject` su `true` nell'attributo `ServiceBehaviorAttribute` . In alternativa, non implementare l'interfaccia `IExtensibleDataObject` . [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Se la codifica binaria viene utilizzata con <xref:System.Runtime.Serialization.DataContractSerializer>, è possibile abusare dell'interfaccia `IExtensibleDataObject` per sferrare un attacco di espansione del dizionario. Questa interfaccia essenzialmente fornisce un'archiviazione illimitata per i dati arbitrari che non fanno parte del contratto. Se non è possibile impostare quote sufficientemente basse perché `MaxSessionSize` moltiplicato per `MaxReceivedMessageSize` non crei problemi, disattivare la funzione `IExtensibleDataObject` se si utilizza la codifica binaria. Impostare la proprietà `IgnoreExtensionDataObject` su `true` nell'attributo `ServiceBehaviorAttribute` . In alternativa, non implementare l'interfaccia `IExtensibleDataObject` . Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="quotas-summary"></a>Riepilogo delle quote  
  La tabella seguente contiene un riepilogo delle linee guida per le quote.  
@@ -259,7 +261,7 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   Quando <xref:System.Runtime.Serialization.DataContractSerializer> deserializza gran parte delle classi, i costruttori non sono in esecuzione. Non basarsi pertanto su una gestione dello stato eseguita nel costruttore.  
   
--   Utilizzare richiamate per assicurare che l'oggetto sia in uno stato valido. La richiamata contrassegnata con l'attributo <xref:System.Runtime.Serialization.OnDeserializedAttribute> è particolarmente utile in quanto viene eseguita dopo che la deserializzazione è stata completata e ha quindi la possibilità di esaminare e correggere lo stato complessivo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Callback di serializzazione a tolleranza di versione](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+-   Utilizzare richiamate per assicurare che l'oggetto sia in uno stato valido. La richiamata contrassegnata con l'attributo <xref:System.Runtime.Serialization.OnDeserializedAttribute> è particolarmente utile in quanto viene eseguita dopo che la deserializzazione è stata completata e ha quindi la possibilità di esaminare e correggere lo stato complessivo. Per altre informazioni, vedere [callback di serializzazione a tolleranza di versione](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
 -   Non progettare tipi di contratto dati che si affidano a un ordine particolare per la chiamata dei metodi Setter sulla proprietà.  
   
@@ -267,10 +269,10 @@ Quando si utilizzano dati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   Non affidarsi alla proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> dell'attributo `DataMemberAttribute` per garantire la presenza di dati per quanto riguarda la sicurezza dello stato. I dati potrebbero sempre essere `null`, `zero` o `invalid`.  
   
--   Non considerare mai attendibile un oggetto grafico deserializzato da un'origine dati non attendibile senza prima convalidarlo. Ogni singolo oggetto può essere in uno stato coerente, ma l'oggetto grafico nell'insieme potrebbe non esserlo, inoltre, anche se la modalità di mantenimento è disattivata, se l'oggetto grafico viene deserializzato può contenere più riferimenti allo stesso oggetto o riferimenti circolari. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][La serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Non considerare mai attendibile un oggetto grafico deserializzato da un'origine dati non attendibile senza prima convalidarlo. Ogni singolo oggetto può essere in uno stato coerente, ma l'oggetto grafico nell'insieme potrebbe non esserlo, inoltre, anche se la modalità di mantenimento è disattivata, se l'oggetto grafico viene deserializzato può contenere più riferimenti allo stesso oggetto o riferimenti circolari. Per ulteriori informazioni, vedere [la serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>Utilizzo sicuro di NetDataContractSerializer  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> è un motore di serializzazione che utilizza l'accoppiamento stretto ai tipi. È simile a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Vale a dire che determina quale sia il tipo di cui creare un'istanza leggendo l'assembly [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e il nome del tipo dai dati in arrivo. Sebbene faccia parte di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non è possibile inserire questo motore di serializzazione come plug-in, per farlo è necessario scrivere codice personalizzato. `NetDataContractSerializer` viene fornito soprattutto per agevolare la migrazione dalla comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione pertinente in [Serialization and Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> è un motore di serializzazione che utilizza l'accoppiamento stretto ai tipi. È simile a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Vale a dire che determina quale sia il tipo di cui creare un'istanza leggendo l'assembly [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e il nome del tipo dai dati in arrivo. Sebbene faccia parte di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non è possibile inserire questo motore di serializzazione come plug-in, per farlo è necessario scrivere codice personalizzato. `NetDataContractSerializer` viene fornito soprattutto per agevolare la migrazione dalla comunicazione remota di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per altre informazioni, vedere la sezione rilevante corrispondente in [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
  Poiché il messaggio stesso può indicare che è possibile caricare qualsiasi tipo, il meccanismo <xref:System.Runtime.Serialization.NetDataContractSerializer> non è protetto intrinsecamente e deve essere utilizzato solo con dati attendibili. È possibile renderlo sicuro scrivendo un gestore di associazione con limitazione del tipo (utilizzando la proprietà <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> ) che consenta di caricare esclusivamente tipi sicuri.  
   

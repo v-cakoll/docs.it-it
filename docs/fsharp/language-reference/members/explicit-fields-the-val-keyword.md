@@ -1,20 +1,17 @@
 ---
 title: 'Campi espliciti: parola chiave val (F#)'
-description: 'Informazioni su F # ''val'' parola chiave, che viene utilizzata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su F # 'val' parola chiave, che viene utilizzata per dichiarare un percorso per archiviare un valore in un tipo classe o struttura senza inizializzare il tipo."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campi espliciti: parola chiave val
 
@@ -49,7 +46,7 @@ Per un campo modificabile, la rappresentazione compilata .NET è un campo .NET.
 
 
 >[!WARNING] 
-`Note`Lo spazio dei nomi .NET Framework `System.ComponentModel` contiene un attributo con lo stesso nome. Per altre informazioni sull'attributo, vedere `System.ComponentModel.DefaultValueAttribute`.
+`Note` Lo spazio dei nomi .NET Framework `System.ComponentModel` contiene un attributo con lo stesso nome. Per altre informazioni sull'attributo, vedere `System.ComponentModel.DefaultValueAttribute`.
 
 
 Nel codice seguente viene illustrato l'uso di campi espliciti e, per il confronto, un'associazione `let` in una classe che dispone di un costruttore primario. Si noti che il campo associato `let` `myInt1` è privato. Quando si fa riferimento al campo associato `let` `myInt1` da un metodo membro, l'autoidentificatore `this` non è necessario. Ma quando si fa riferimento ai campi espliciti `myInt2` e `myString`, l'autoidentificatore è obbligatorio.

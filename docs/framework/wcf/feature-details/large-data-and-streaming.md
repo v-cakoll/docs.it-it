@@ -1,29 +1,29 @@
 ---
 title: Dati di grandi dimensioni e flussi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazioni basate su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
   
 ## <a name="basic-considerations"></a>Considerazioni di base  
  Per fornire informazioni di base sugli aspetti seguenti per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], in questa sezione vengono evidenziate alcune preoccupazioni e considerazioni generali per le codifiche, i dati binari e i flussi che in genere riguardano le infrastrutture di sistemi connessi.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Di conseguenza, la scelta tra formato testo e formato binario non può essere basata semplicemente sul fatto che i messaggi binari sono sempre più piccoli dei messaggi in formato testo-XML.  
   
- Un chiaro vantaggio dei messaggi in formato testo-XML è che sono basati su standard e offrono la più ampia scelta di opzioni di interoperabilità e supporto di piattaforme. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Codifiche" più avanti in questo argomento.  
+ Un chiaro vantaggio dei messaggi in formato testo-XML è che sono basati su standard e offrono la più ampia scelta di opzioni di interoperabilità e supporto di piattaforme. Per altre informazioni, vedere la sezione "Codifiche" più avanti in questo argomento.  
   
 ### <a name="binary-content"></a>Contenuto binario  
  Un'area in cui le codifiche binarie sono superiori alle codifiche basate su testo, per quanto concerne la dimensione del messaggio risultante, è costituita dai dati binari di grandi dimensioni quali immagini, video, clip audio o qualsiasi altro tipo di dati opachi binari che devono essere scambiati tra servizi e utenti. Per adattare questi tipi di dati nel testo XML, l'approccio comune è di codificarli utilizzando la codifica Base64.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Un messaggio SOAP MTOM viene modificato rispetto alla versione non codificata in modo che tag di elemento speciali, riferiti alle relative parti MIME, sostituiscano gli elementi originali nel messaggio che conteneva dati binari. Di conseguenza, il messaggio SOAP fa riferimento al contenuto binario puntando alle parti MIME inviate con il messaggio stesso, ma contiene solo dati di testo XML. Poiché questo modello è perfettamente allineato al diffuso modello SMTP, sono disponibili numerosi strumenti di supporto per codificare e decodificare i messaggi MTOM su molte piattaforme. Questa scelta diventa quindi estremamente interoperativa.  
   
- Lo standard MTOM, come la codifica Base64, comporta un sovraccarico indispensabile per il formato MIME, pertanto i vantaggi dell'utilizzo di MTOM sono visibili solo quando la dimensione dei dati binari supera 1 KB. A causa del sovraccarico, i messaggi con codifica MTOM potrebbero essere più grandi dei messaggi con codifica Base64 per i dati binari, se il payload binario rimane sotto tale soglia. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Codifiche" più avanti in questo argomento.  
+ Lo standard MTOM, come la codifica Base64, comporta un sovraccarico indispensabile per il formato MIME, pertanto i vantaggi dell'utilizzo di MTOM sono visibili solo quando la dimensione dei dati binari supera 1 KB. A causa del sovraccarico, i messaggi con codifica MTOM potrebbero essere più grandi dei messaggi con codifica Base64 per i dati binari, se il payload binario rimane sotto tale soglia. Per altre informazioni, vedere la sezione "Codifiche" più avanti in questo argomento.  
   
 ### <a name="large-data-content"></a>Contenuto costituito da dati di grandi dimensioni  
  A parte il footprint in rete, il payload precedentemente menzionato di 500 MB crea un significativo problema locale anche per il servizio e il client. Per impostazione predefinita, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elabora i messaggi in *la modalità con buffer*. Questo vuole dire che l'intero contenuto di un messaggio è presente in memoria prima di essere inviato o dopo essere stato ricevuto. Sebbene questa strategia si riveli valida per la maggior parte degli scenari e necessaria per le funzionalità di messaggistica quali firme digitali e recapito affidabile, i messaggi di grandi dimensioni potrebbero esaurire le risorse di un sistema.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Non sono disponibili per intero al momento dell'avvio del trasferimento.  
   
- Per i dati che non presentano questi vincoli, in genere è consigliabile inviare sequenze di messaggi nell'ambito di una sessione, anziché un solo grande messaggio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Flusso di dati" più avanti in questo argomento.  
+ Per i dati che non presentano questi vincoli, in genere è consigliabile inviare sequenze di messaggi nell'ambito di una sessione, anziché un solo grande messaggio. Per altre informazioni, vedere la sezione "Flusso di dati" più avanti in questo argomento.  
   
  Durante l'invio di grandi quantità di dati è necessario impostare il `maxAllowedContentLength` impostazione di IIS (per ulteriori informazioni vedere [limiti richiesta di configurazione di IIS Server](http://go.microsoft.com/fwlink/?LinkId=253165)) e `maxReceivedMessageSize` impostazioni dell'associazione (ad esempio [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Il `maxAllowedContentLength` proprietà valore predefinito è 28,6 MB e `maxReceivedMessageSize` proprietà valore predefinito è 64 KB.  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Di conseguenza, limitare le dimensioni massime del messaggio in arrivo non è sufficiente in questo caso. È necessaria la proprietà `MaxBufferSize` per vincolare la memoria utilizzata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per la memorizzazione nel buffer. È importante impostare questa proprietà su un valore sicuro (o lasciare il valore predefinito) per il flusso. Ad esempio, si supponga che il servizio debba ricevere file di dimensioni fino a 4 GB e debba archiviarli sul disco locale. Si supponga inoltre che la memoria sia vincolata in modo da poter memorizzare nel buffer solo 64 KB di dati per volta. In tal caso, è necessario impostare `MaxReceivedMessageSize` su 4 GB e `MaxBufferSize` su 64 KB. Inoltre, nell'implementazione del servizio è necessario verificare di poter eseguire solo la lettura dal flusso in ingresso in blocchi di 64 KB, impedendo la lettura del blocco successivo prima che il precedente sia stato scritto su disco ed eliminato dalla memoria.  
   
- È inoltre importante comprendere che questa quota limita solo la memorizzazione nel buffer effettuata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e non protegge da altre memorizzazioni nel buffer effettuate durante l'implementazione del servizio o del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Considerazioni aggiuntive sulla sicurezza, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ È inoltre importante comprendere che questa quota limita solo la memorizzazione nel buffer effettuata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e non protegge da altre memorizzazioni nel buffer effettuate durante l'implementazione del servizio o del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considerazioni aggiuntive sulla sicurezza, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione o ai server proxy e agli altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per un servizio, è necessario modificare il file di configurazione per impostare la modalità di trasferimento per i servizi che si intende utilizzare con i flussi. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  

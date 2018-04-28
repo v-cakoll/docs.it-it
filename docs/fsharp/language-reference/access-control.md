@@ -1,35 +1,32 @@
 ---
 title: Controllo di accesso (F#)
-description: 'Informazioni su come controllare l''accesso a elementi di programmazione, ad esempio tipi, metodi e funzioni, il linguaggio di programmazione F #.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su come controllare l'accesso a elementi di programmazione, ad esempio tipi, metodi e funzioni, il linguaggio di programmazione F #."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Controllo di accesso
 
-*Controllo di accesso* fa riferimento a una dichiarazione che i client possono utilizzare alcuni elementi di programma, ad esempio tipi, metodi e funzioni.
+*Il controllo degli accessi* fa riferimento alla dichiarazione quali client possono utilizzare alcuni elementi di programma, ad esempio i tipi, metodi e funzioni.
 
 
 ## <a name="basics-of-access-control"></a>Nozioni di base del controllo di accesso
 In F #, identificatori del controllo di accesso `public`, `internal`, e `private` può essere applicato ai moduli, tipi, metodi, le definizioni di valore, funzioni, proprietà e i campi espliciti.
 
 
-- `public`indica che l'entità sia accessibile da tutti i chiamanti.
+- `public` indica che l'entità sia accessibile da tutti i chiamanti.
 
-- `internal`indica che l'entità è possibile accedere solo dallo stesso assembly.
+- `internal` indica che l'entità sia accessibile solo dallo stesso assembly.
 
-- `private`indica che l'entità è possibile accedere solo dal tipo o modulo che lo contiene.
+- `private` indica che l'entità sia accessibile solo dal tipo o modulo che lo contiene.
 
 
 >[!NOTE] 

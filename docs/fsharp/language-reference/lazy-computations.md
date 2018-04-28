@@ -1,24 +1,21 @@
 ---
 title: Calcoli differiti (F#)
 description: 'Informazioni su come F # differiti possono migliorare le prestazioni delle App e librerie.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>Calcoli differiti
 
-*Calcoli differiti* sono calcoli che non vengono valutati immediatamente, ma solo quando il risultato è necessario. Questo può contribuire a migliorare le prestazioni del codice.
+*Calcoli differiti* sono calcoli che non vengono valutati immediatamente, ma solo quando è necessario il risultato. Questo può contribuire a migliorare le prestazioni del codice.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,7 +29,7 @@ Nella sintassi precedente, *espressione* è codice che viene valutato solo quand
 
 Calcoli differiti consentono di migliorare le prestazioni limitando l'esecuzione di un calcolo in solo nelle situazioni in cui è necessario un risultato.
 
-Per forzare il calcolo da eseguire, chiamare il metodo `Force`. `Force`Determina l'esecuzione a essere eseguita solo una volta. Le chiamate successive a `Force` restituire lo stesso risultato, ma non eseguire il codice.
+Per forzare il calcolo da eseguire, chiamare il metodo `Force`. `Force` Determina l'esecuzione deve essere eseguita solo una volta. Le chiamate successive a `Force` restituire lo stesso risultato, ma non eseguire il codice.
 
 Il codice seguente viene illustrato l'utilizzo di calcolo lazy e l'utilizzo di `Force`. In questo codice, il tipo di `result` è `Lazy<int>`e `Force` metodo restituisce un `int`.
 

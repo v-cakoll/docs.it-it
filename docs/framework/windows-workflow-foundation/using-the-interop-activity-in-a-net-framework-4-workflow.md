@@ -1,23 +1,24 @@
 ---
-title: "Utilizzo dell'attività di interoperabilità in un flusso di lavoro di .NET Framework 4"
-ms.custom: 
+title: Utilizzo dell'attività di interoperabilità in un flusso di lavoro di .NET Framework 4
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Utilizzo dell'attività di interoperabilità in un flusso di lavoro di .NET Framework 4
 Le attività create tramite [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] o [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] possono essere usate nel flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] mediante l'attività <xref:System.Activities.Statements.Interop>. In questo argomento viene fornita una panoramica sull'utilizzo dell'attività <xref:System.Activities.Statements.Interop>.  
@@ -304,7 +305,7 @@ Rule3: IF this.DiscountPercent > 0
   
 14. Trascinare un **interoperabilità** attività dal **migrazione** sezione il **della casella degli strumenti** e rilasciarlo nel **sequenza** attività.  
   
-15. Fare clic sul **interoperabilità** attività di **fare clic per cercare...** etichetta, digitare **DiscountCalculator** nel **nome del tipo** casella e fare clic su **OK**.  
+15. Fare clic sui **interoperabilità** attività nel **fare clic per cercare...** etichetta, digitare **DiscountCalculator** nel **nome del tipo** casella e fare clic su **OK**.  
   
     > [!NOTE]
     >  Quando l'attività <xref:System.Activities.Statements.Interop> viene aggiunta al flusso di lavoro e il tipo `DiscountCalculator` viene specificato come la relativa proprietà <xref:System.Activities.Statements.Interop.ActivityType%2A>, l'attività <xref:System.Activities.Statements.Interop> espone tre argomenti <xref:System.Activities.ArgumentDirection.In> e tre argomenti <xref:System.Activities.ArgumentDirection.Out> che rappresentano le tre proprietà pubbliche dell'attività `DiscountCalculator`. Il <xref:System.Activities.ArgumentDirection.In> argomenti con lo stesso nome delle tre proprietà pubbliche e i tre <xref:System.Activities.ArgumentDirection.Out> argomenti hanno gli stessi nomi con **Out** aggiunto al nome della proprietà. Nei passaggi seguenti gli argomenti del flusso di lavoro creati in precedenza vengono associati agli argomenti dell'attività <xref:System.Activities.Statements.Interop>.  
@@ -369,11 +370,11 @@ Rule3: IF this.DiscountPercent > 0
   
 |Funzionalità delle regole|Documentazione|  
 |-------------------|-------------------|  
-|Panoramica sulle regole|[Introduzione al motore regole di Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[Uso di RuleSet in flussi di lavoro](http://go.microsoft.com/fwlink/?LinkId=178516) e<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Panoramica sulle regole|[Introduzione al motore di regole di Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
+|RuleSet|[Uso di RuleSet in flussi di lavoro](http://go.microsoft.com/fwlink/?LinkId=178516) e <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |Valutazione delle regole|[Valutazione delle regole di RuleSet](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|Concatenamento di regole|[Controllo del concatenamento diretto](http://go.microsoft.com/fwlink/?LinkId=178518) e [concatenamento diretto di regole](http://go.microsoft.com/fwlink/?LinkId=178519)|  
+|Concatenamento di regole|[Controllo del concatenamento](http://go.microsoft.com/fwlink/?LinkId=178518) e [concatenamento diretto di regole](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Elaborazione di raccolte nelle regole|[Elaborazione di raccolte nelle regole](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Utilizzo dell'attività PolicyActivity|[Utilizzo dell'attività PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) e<xref:System.Workflow.Activities.PolicyActivity>|  
+|Utilizzo dell'attività PolicyActivity|[Utilizzo dell'attività PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) e <xref:System.Workflow.Activities.PolicyActivity>|  
   
- I flussi di lavoro creati in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] non usano tutte le funzionalità delle regole fornite da [!INCLUDE[wf1](../../../includes/wf1-md.md)], ad esempio le condizioni di attività dichiarative e le attività condizionali quali <xref:System.Workflow.Activities.ConditionedActivityGroup> e <xref:System.Workflow.Activities.ReplicatorActivity>. Se necessario, questa funzionalità è disponibile per i flussi di lavoro creati tramite [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Materiale sussidiario sulla migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ I flussi di lavoro creati in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] non usano tutte le funzionalità delle regole fornite da [!INCLUDE[wf1](../../../includes/wf1-md.md)], ad esempio le condizioni di attività dichiarative e le attività condizionali quali <xref:System.Workflow.Activities.ConditionedActivityGroup> e <xref:System.Workflow.Activities.ReplicatorActivity>. Se necessario, questa funzionalità è disponibile per i flussi di lavoro creati tramite [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] e [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Per altre informazioni, vedere [materiale sussidiario sulla migrazione](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

@@ -1,24 +1,26 @@
 ---
 title: Accodamento in WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 Contenuto della sezione viene descritto come usare la comunicazione in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,12 +51,12 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
  Le code MSMQ possono essere protette anche usando un'identità di Windows registrata con il servizio directory Active Directory. Quando si installa MSMQ, è possibile installare l'integrazione di Active Directory, che richiede che il computer faccia parte di una rete di dominio Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, vedere [l'installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è l'associazione in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce per due [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint per comunicare tramite MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
   
- La classe `NetMsmqBinding` manifesta i principali concetti di accodamento descritti fino ad ora nella forma di proprietà sulle associazioni. Queste proprietà, a loro volta, comunicano a MSMQ come trasferire e recapitare i messaggi. Nelle sezioni seguenti vengono descritte le categorie di proprietà. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] gli argomenti concettuali in cui vengono descritte specifiche proprietà in modo più completo.  
+ La classe `NetMsmqBinding` manifesta i principali concetti di accodamento descritti fino ad ora nella forma di proprietà sulle associazioni. Queste proprietà, a loro volta, comunicano a MSMQ come trasferire e recapitare i messaggi. Nelle sezioni seguenti vengono descritte le categorie di proprietà. Per altre informazioni, vedere gli argomenti concettuali che descrivono le proprietà specifiche più completo.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>Proprietà ExactlyOnce e Durable  
  Le proprietà `ExactlyOnce` e `Durable` incidono sulla modalità di trasferimento dei messaggi tra le code:  
@@ -77,17 +79,17 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
  L'associazione dispone di due proprietà interessanti:  
   
--   `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l'interpretazione di queste proprietà, vedere [utilizzando code per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l'interpretazione di queste proprietà, vedere [utilizzando code per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: questa proprietà è l'indirizzo URI (Uniform Resource Identifier) della coda di messaggi non recapitabili specifica dell'applicazione. Questa operazione è necessaria se `DeadLetterQueue`.`Custom` viene scelto.  
   
 #### <a name="poison-message-handling-properties"></a>Proprietà di gestione dei messaggi non elaborabili  
- Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Queste proprietà, vedere [la gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Queste proprietà, vedere [messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Proprietà di sicurezza  
- MSMQ espone il proprio modello di sicurezza, che prevede ad esempio l'applicazione di elenchi di controllo di accesso (ACL) su una coda o l'invio di messaggi autenticati. La classe `NetMsmqBinding` espone queste proprietà di sicurezza come parte delle proprie impostazioni di sicurezza del trasporto. Nell'associazione sono presenti due proprietà per la sicurezza del trasporto: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Le impostazioni in queste proprietà dipendono dalla modalità di configurazione di MSMQ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ espone il proprio modello di sicurezza, che prevede ad esempio l'applicazione di elenchi di controllo di accesso (ACL) su una coda o l'invio di messaggi autenticati. La classe `NetMsmqBinding` espone queste proprietà di sicurezza come parte delle proprie impostazioni di sicurezza del trasporto. Nell'associazione sono presenti due proprietà per la sicurezza del trasporto: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Le impostazioni in queste proprietà dipendono dalla modalità di configurazione di MSMQ. Per altre informazioni, vedere [proteggere i messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Oltre alla sicurezza del trasporto, il messaggio SOAP effettivo stesso può essere protetto usando la sicurezza dei messaggi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Protezione dei messaggi mediante la sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Oltre alla sicurezza del trasporto, il messaggio SOAP effettivo stesso può essere protetto usando la sicurezza dei messaggi. Per altre informazioni, vedere [sicurezza la protezione dei messaggi tramite messaggio](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
  Anche `MsmqTransportSecurity` espone due proprietà, `MsmqEncryptionAlgorithm` e `MsmqHashAlgorithm`. Si tratta di enumerazioni di algoritmi diversi da scegliere per la crittografia del trasferimento da coda a coda di messaggi e l'hash delle firme.  
   
@@ -100,7 +102,7 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
 -   `QueueTransferProtocol`: enumerazione del protocollo da usare per i trasferimenti di messaggi da coda a coda. MSMQ implementa un protocollo di trasferimento da coda a coda nativo e un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messaging Protocol). SRMP viene usato quando si usa il trasporto HTTP per i trasferimenti da coda a coda. Viene invece usato il protocollo SRMP protetto quando si usa HTTPS per i trasferimenti da coda a coda.  
   
--   `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Servizio endpoint e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory`: valore booleano che indica se è necessario usare Active Directory per la risoluzione degli indirizzi delle code. Per impostazione predefinita, questa funzionalità è disattivata. Per altre informazioni, vedere [gli endpoint del servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  La classe `MsmqIntegrationBinding` viene usata quando si desidera che un endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunichi con un'applicazione MSMQ esistente scritta in C, C++, COM o con API System.Messaging.  

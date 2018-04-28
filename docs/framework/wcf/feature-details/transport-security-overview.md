@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>Panoramica sulla sicurezza del trasporto
 I meccanismi di sicurezza del trasporto di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dipendono dall'associazione e dal trasporto utilizzati. Ad esempio, quando si utilizza la classe <xref:System.ServiceModel.WSHttpBinding>, il trasporto è HTTP e il meccanismo principale per la sicurezza del trasporto è SSL (Secure Sockets Layer) su HTTP, comunemente noto come HTTP. In questo argomento vengono illustrati i principali meccanismi di sicurezza del trasporto utilizzati nelle associazioni fornite dal sistema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -72,10 +72,10 @@ I meccanismi di sicurezza del trasporto di [!INCLUDE[indigo1](../../../../includ
  Questo tipo corrisponde al metodo di autenticazione integrata di Windows di IIS. In caso di impostazione su questo valore, si prevede inoltre che il server sia in un dominio Windows che utilizza il protocollo Kerberos come controller di dominio. Se il server non è in un dominio con supporto Kerberos o se il sistema Kerberos ha esito negativo, è possibile utilizzare il valore NTLM (NT LAN Manager) descritto nella sezione successiva. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [autenticazione integrata di Windows in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Consente al server di utilizzare NTLM per l'autenticazione se il protocollo Kerberos ha esito negativo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configurazione di IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [forzatura dell'autenticazione NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'autenticazione di Windows include l'autenticazione NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Consente al server di utilizzare NTLM per l'autenticazione se il protocollo Kerberos ha esito negativo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configurazione di IIS in [!INCLUDE[iis601](../../../../includes/iis601-md.md)], vedere [forzatura dell'autenticazione NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'autenticazione di Windows include l'autenticazione NTLM. Per altre informazioni, vedere [IIS 7.0 Beta: configurazione dei certificati del Server in IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- La classe <xref:System.ServiceModel.WSHttpBinding> è progettata per essere interoperabile con i servizi che implementano le specifiche WS - *. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS. Per creare un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza SSL, utilizzare IIS per ospitarla. In alternativa, se si sta creando un'applicazione indipendente, utilizzare lo strumento HttpCfg.exe per associare un certificato X.509 a una porta specifica in un computer. Il numero della porta viene specificato all'interno dell'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come indirizzo dell'endpoint. Quando si utilizza la modalità di trasporto, l'indirizzo dell'endpoint deve includere il protocollo HTTPS; in caso contrario verrà generata un'eccezione in fase di esecuzione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ La classe <xref:System.ServiceModel.WSHttpBinding> è progettata per essere interoperabile con i servizi che implementano le specifiche WS - *. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS. Per creare un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza SSL, utilizzare IIS per ospitarla. In alternativa, se si sta creando un'applicazione indipendente, utilizzare lo strumento HttpCfg.exe per associare un certificato X.509 a una porta specifica in un computer. Il numero della porta viene specificato all'interno dell'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come indirizzo dell'endpoint. Quando si utilizza la modalità di trasporto, l'indirizzo dell'endpoint deve includere il protocollo HTTPS; in caso contrario verrà generata un'eccezione in fase di esecuzione. Per altre informazioni, vedere [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  L'autenticazione client, impostare la proprietà <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> della classe <xref:System.ServiceModel.HttpTransportSecurity> su uno dei valori di enumerazione di <xref:System.ServiceModel.HttpClientCredentialType>. I valori di enumerazione corrispondono ai tipi di credenziali client per <xref:System.ServiceModel.BasicHttpBinding> e sono progettati per essere ospitati nei servizi IIS.  
   

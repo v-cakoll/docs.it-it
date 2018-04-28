@@ -1,13 +1,13 @@
 ---
-title: "Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio"
-ms.custom: 
+title: 'Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: usare le funzionalità di sicurezza a livello di trasporto e le credenziali a livello di messaggio
-L'utilizzo integrato delle funzionalità di sicurezza a livello di trasporto e delle credenziali a livello di messaggio consente di sfruttare le migliori funzionalità delle modalità di sicurezza a livello di trasporto e di messaggio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l'impostazione della modalità di sicurezza, vedere [procedura: impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+L'utilizzo integrato delle funzionalità di sicurezza a livello di trasporto e delle credenziali a livello di messaggio consente di sfruttare le migliori funzionalità delle modalità di sicurezza a livello di trasporto e di messaggio di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] impostazione della modalità di sicurezza, vedere [procedura: impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Nel caso del protocollo HTTP, il meccanismo è Secure Sockets Layer (SSL) su HTTP (HTTPS). Nel caso del protocollo TCP, invece, il meccanismo è SSL su TCP oppure Windows.  
   
@@ -38,11 +38,11 @@ L'utilizzo integrato delle funzionalità di sicurezza a livello di trasporto e d
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Per utilizzare l'associazione WSHttpBinding con un certificato allo scopo di fornire la protezione a livello di trasporto (in codice)  
   
-1.  Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Usare lo strumento HttpCfg.exe per associare un certificato SSL a una porta del computer. Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostare la proprietà <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> su <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Impostare la proprietà <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> su un valore appropriato. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [La selezione di un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Nel codice seguente viene utilizzato il valore <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
+3.  Impostare la proprietà <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> su un valore appropriato. (Per altre informazioni, vedere [selezionando un tipo di credenziale](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Nel codice seguente viene utilizzato il valore <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
   
 4.  Creare un'istanza della classe <xref:System.Uri> con un indirizzo di base appropriato. Si noti che l'indirizzo deve utilizzare lo schema "HTTPS" e deve contenere il nome effettivo del computer e il numero della porta a cui il certificato SSL è associato. In alternativa è possibile impostare l'indirizzo di base in configurazione.  
   
@@ -97,7 +97,7 @@ L'utilizzo integrato delle funzionalità di sicurezza a livello di trasporto e d
   
 #### <a name="to-use-the-wshttpbinding"></a>Per utilizzare l'associazione WSHttpBinding  
   
-1.  Configurare il computer con un certificato SSL associato a una porta. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Non è necessario impostare un <`transport`> valore dell'elemento con questa configurazione.  
+1.  Configurare il computer con un certificato SSL associato a una porta. (Per altre informazioni, vedere [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Non è necessario impostare un <`transport`> valore dell'elemento con questa configurazione.  
   
 2.  Specificare il tipo di credenziale client della protezione a livello di messaggio. L'esempio seguente imposta il `clientCredentialType` attributo di <`message`> elemento `UserName`.  
   

@@ -1,24 +1,26 @@
 ---
 title: Serializzazione JSON autonoma
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Serializzazione JSON autonoma
 JSON (JavaScript Object Notation) è un formato dati progettato specificatamente per essere utilizzato dal codice JavaScript in esecuzione su pagine Web all'interno del browser. JSON è il formato dati predefinito utilizzato dai servizi ASP.NET AJAX creati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -38,9 +40,9 @@ JSON (JavaScript Object Notation) è un formato dati progettato specificatamente
 |<xref:System.Enum>|Number|Vedere "Enumerazioni e JSON" più avanti in questo argomento.|  
 |<xref:System.Boolean>|Booleano|--|  
 |<xref:System.String>, <xref:System.Char>|Stringa|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Stringa|Il formato di questi tipi in JSON è lo stesso che in XML (fondamentalmente TimeSpan nel formato durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella sua forma di stringa naturale, ad esempio "http://www.example.com") Per informazioni dettagliate, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Stringa|Il formato di questi tipi in JSON è analogo a quello in XML (in pratica, TimeSpan nel formato durata ISO 8601, GUID nel formato "12345678-ABCD-ABCD-ABCD-1234567890AB" e URI nella sua forma di stringa naturale come "http://www.example.com"). Per informazioni dettagliate, vedere [riferimento dello Schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|  
 |<xref:System.Xml.XmlQualifiedName>|Stringa|Il formato è "nome:spazio dei nomi" (tutto ciò che si trova prima del primo segno di due punti è il nome). Il nome o lo spazio dei nomi potrebbero non essere presenti. Se non esiste alcuno spazio dei nomi, è possibile omettere anche i due punti.|  
-|<xref:System.Array>di tipo<xref:System.Byte>|Matrice di numeri|Ogni numero rappresenta il valore di un byte.|  
+|<xref:System.Array> di tipo <xref:System.Byte>|Matrice di numeri|Ogni numero rappresenta il valore di un byte.|  
 |<xref:System.DateTime>|DateTime o String|Vedere Date/Ore e JSON più avanti in questo argomento.|  
 |<xref:System.DateTimeOffset>|Tipo complesso|Vedere Date/Ore e JSON più avanti in questo argomento.|  
 |Tipi XML e ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrici di <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|Stringa|Vedere la sezione relativa ai tipi XML e a JSON in questo argomento.|  
@@ -51,7 +53,7 @@ JSON (JavaScript Object Notation) è un formato dati progettato specificatamente
 |Valore `Null` per qualsiasi tipo.|Null|Anche i tipi nullable sono supportati e mappati a JSON, così come i tipi non-nullable.|  
   
 ### <a name="enumerations-and-json"></a>Enumerazioni e JSON  
- In JSON, i valori dei membri dell'enumerazione vengono trattati come numeri, a differenza di quanto accade nei contratti dati, nei quali questi vengono inclusi come nomi dei membri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il contratto dati trattamento, vedere [tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ In JSON, i valori dei membri dell'enumerazione vengono trattati come numeri, a differenza di quanto accade nei contratti dati, nei quali questi vengono inclusi come nomi dei membri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] il contratto dati trattamento, vedere [tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Con `public enum Color {red, green, blue, yellow, pink}`, ad esempio, la serializzazione di `yellow` produce il numero 3 e non la stringa "yellow".  
   
@@ -117,7 +119,7 @@ JSON (JavaScript Object Notation) è un formato dati progettato specificatamente
  Per dettagli sul funzionamento della serializzazione polimorfica e una discussione su alcune delle restrizioni che è necessario rispettare durante il suo utilizzo, vedere la sezione Informazioni avanzate più avanti in questo argomento.  
   
 ### <a name="versioning"></a>Controllo delle versioni  
- Le funzionalità di controllo delle versioni dei contratti dati, inclusa l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sono pienamente supportate in JSON. Inoltre, nella maggior parte di casi è possibile deserializzare un tipo in un formato (ad esempio XML) e quindi serializzarlo in un altro formato (ad esempio JSON), conservando comunque i dati in un elemento <xref:System.Runtime.Serialization.IExtensibleDataObject>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Poiché JSON non è ordinato, le informazioni relative all'ordine andranno perse. Inoltre, JSON non supporta più coppie chiave/valore con lo stesso nome di chiave. Infine, tutte le operazioni su <xref:System.Runtime.Serialization.IExtensibleDataObject> sono intrinsecamente polimorfiche. ovvero i relativi tipi derivati sono assegnati a <xref:System.Object>, il tipo di base per tutti i tipi.  
+ Le funzionalità di controllo delle versioni dei contratti dati, inclusa l'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> sono pienamente supportate in JSON. Inoltre, nella maggior parte di casi è possibile deserializzare un tipo in un formato (ad esempio XML) e quindi serializzarlo in un altro formato (ad esempio JSON), conservando comunque i dati in un elemento <xref:System.Runtime.Serialization.IExtensibleDataObject>. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Poiché JSON non è ordinato, le informazioni relative all'ordine andranno perse. Inoltre, JSON non supporta più coppie chiave/valore con lo stesso nome di chiave. Infine, tutte le operazioni su <xref:System.Runtime.Serialization.IExtensibleDataObject> sono intrinsecamente polimorfiche. ovvero i relativi tipi derivati sono assegnati a <xref:System.Object>, il tipo di base per tutti i tipi.  
   
 ## <a name="json-in-urls"></a>JSON negli URL  
  Quando si utilizzano endpoint ASP.NET AJAX con il verbo HTTP GET (utilizzando l'attributo <xref:System.ServiceModel.Web.WebGetAttribute>), nell'URL della richiesta vengono visualizzati i parametri in arrivo anziché il corpo del messaggio. JSON è supportato anche nell'URL della richiesta, pertanto se si esegue un'operazione che accetta un `Int` chiamato "number" e un `Person` tipo complesso denominato "p", l'URL potrebbe assomigliare all'URL seguente.  
@@ -192,13 +194,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  I membri dati denominati "__type" non sono consentiti a causa di un potenziale conflitto con il suggerimento relative al tipo.  
   
 #### <a name="reducing-the-size-of-type-hints"></a>Riduzione delle dimensioni del suggerimento relativo al tip006F  
- Per ridurre le dimensioni dei messaggi JSON, il prefisso dello spazio dei nomi del contratto dati predefinito () viene sostituito dal carattere "#". (Per rendere reversibile questa sostituzione, viene utilizzata una regola di escape: se lo spazio dei nomi inizia con "#" o "\\" caratteri, verrà aggiunto un ulteriore "\\" caratteri). Pertanto, se "Circle" è un tipo nello spazio dei nomi .NET "MyApp.Shapes", il relativo spazio dei nomi del contratto dati sarà http://schemas.datacontract.org/2004/07/MyApp. Le forme e la rappresentazione JSON appaiono nel modo seguente.  
+ Per ridurre le dimensioni di JSON i messaggi, il prefisso di spazio dei nomi del contratto dati predefinito (http://schemas.datacontract.org/2004/07/) viene sostituito con il carattere "#". (Per rendere reversibile questa sostituzione, viene utilizzata una regola di escape: se lo spazio dei nomi inizia con "#" o "\\" caratteri, verrà aggiunto un ulteriore "\\" caratteri). Pertanto, se "Circle" è un tipo nello spazio dei nomi .NET "MyApp. Shapes", lo spazio dei nomi contratto di dati predefinito è http://schemas.datacontract.org/2004/07/MyApp. Le forme e la rappresentazione JSON appaiono nel modo seguente.  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- Sia i nomi troncati (#MyApp.Shapes) che quelli completi (http://schemas.datacontract.org/2004/07/MyApp.Shapes) vengono riconosciuti durante la deserializzazione.  
+ Sia troncato (#MyApp.Shapes) e la versione completa (http://schemas.datacontract.org/2004/07/MyApp.Shapes) nomi vengono riconosciuti durante la deserializzazione.  
   
 #### <a name="type-hint-position-in-json-objects"></a>Posizione del suggerimento relativo ai tipi negli oggetti JSON  
  Il suggerimento relativo ai tipi deve essere visualizzato innanzitutto nella rappresentazione JSON. Questo è il solo caso in cui l'ordine delle coppie chiave/valore è importante nell'elaborazione di JSON. Di seguito viene riportato un esempio di modalità non valida per specificare un suggerimento relativo ai tipi.  
@@ -256,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  Se deserializzata di nuovo in <xref:System.Object>:  
   
--   `Shape`deve essere nell'elenco dei tipi noti. Con <xref:System.Collections.Generic.List%601> di tipo `Shape` in tipi noti non ha alcun effetto. Si noti che non è necessario aggiungere `Shape` ai tipi noti durante la serializzazione in questo caso, questa operazione viene eseguita automaticamente.  
+-   `Shape` deve essere nell'elenco dei tipi noti. Con <xref:System.Collections.Generic.List%601> di tipo `Shape` in tipi noti non ha alcun effetto. Si noti che non è necessario aggiungere `Shape` ai tipi noti durante la serializzazione in questo caso, questa operazione viene eseguita automaticamente.  
   
 -   La raccolta viene deserializzata come un <xref:System.Array> di tipo <xref:System.Object> contenente `Shape` istanze.  
   

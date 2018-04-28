@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
-*Credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'attestazione di identità o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
+*Le credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
   
  In molti paesi e aree geografiche, la patente di guida costituisce un esempio di credenziale. Oltre a contenere dati che descrivono l'identità e le capacità di un individuo, una patente contiene una prova di possesso, ovvero la foto del titolare. La patente viene inoltre rilasciata da un'autorità attendibile, in genere un apposito ente governativo e, allo scopo di impedire manomissioni e falsificazioni, viene sigillata ed eventualmente corredata di ologramma.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|Consente lo scambio di messaggi SOAP all'interno di un contesto di sicurezza stabilito mediante una credenziale Windows.|  
 |Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i nomi utente non possono essere usati in nessuna operazione di crittografia, come la generazione di una firma o la crittografia di dati. Quando si usano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assicura che il trasporto sia protetto.|  
 |Certificato|Consente al servizio di richiedere che il client venga autenticato tramite un certificato X.509.|  
-|Token emesso|Un tipo di token personalizzato, configurato in base a un criterio di sicurezza. Il tipo di token predefinito è Security Assertions Markup Language (SAML). Il token viene emesso da un servizio token di sicurezza. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Token emesso|Un tipo di token personalizzato, configurato in base a un criterio di sicurezza. Il tipo di token predefinito è Security Assertions Markup Language (SAML). Il token viene emesso da un servizio token di sicurezza. Per ulteriori informazioni, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modello di negoziazione delle credenziali del servizio  
  *Negoziazione* è il processo di definizione di un trust tra un client e un servizio mediante lo scambio di credenziali. Il processo viene eseguito in maniera iterativa tra il client e il servizio in modo da divulgare solo le informazioni necessarie per il passaggio successivo nel processo di negoziazione. In pratica, il risultato finale è il recapito della credenziale di un servizio al client da usare nelle operazioni successive.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Il metodo per l'impostazione del valore della credenziale differisce leggermente se si programma un servizio o un client.  
   
 ### <a name="setting-service-credentials"></a>Impostazione delle credenziali del servizio  
- Se si sta usando la modalità di trasporto e si usa HTTP come trasporto, è necessario usare Internet Information Services (IIS) o configurare la porta con un certificato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cenni preliminari sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) e [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Se si sta usando la modalità di trasporto e si usa HTTP come trasporto, è necessario usare Internet Information Services (IIS) o configurare la porta con un certificato. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza di trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) e [sicurezza del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Per fornire le credenziali a un servizio tramite il codice, creare un'istanza della classe <xref:System.ServiceModel.ServiceHost> e specificare la credenziale appropriata usando la classe <xref:System.ServiceModel.Description.ServiceCredentials>, a cui si accede tramite la proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  
   

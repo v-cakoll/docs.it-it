@@ -1,27 +1,29 @@
 ---
-title: "Modalità di autenticazione di SecurityBindingElement"
-ms.custom: 
+title: Modalità di autenticazione di SecurityBindingElement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modalità di autenticazione di SecurityBindingElement
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili varie modalità per l'autenticazione reciproca di client e servizi. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione. In questo argomento vengono brevemente descritte le 18 modalità di autenticazione.  
@@ -60,7 +62,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili vari
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  Utilizzare l'elemento di associazione per creare l'associazione personalizzata. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3.  Utilizzare l'elemento di associazione per creare l'associazione personalizzata. Per altre informazioni, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Descrizione delle modalità  
   
@@ -89,7 +91,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili vari
  In questa modalità di autenticazione il client viene autenticato presso il servizio mediante un ticket Kerberos. Questo stesso ticket viene inoltre usato per autenticare il server. L'elemento di associazione di sicurezza è un elemento `SymmetricSecurityBindingElement` restituito dal metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>. In alternativa, impostare l'attributo `authenticationMode` su `Kerberos`.  
   
 > [!NOTE]
->  Per utilizzare questa modalità di autenticazione, l'account del servizio deve essere associato a un nome dell'entità servizio (SPN). A tale scopo, eseguire il servizio sotto l'account Servizio di rete o sotto l'account di sistema locale. In alternativa, utilizzare lo strumento SetSpn.exe per creare un SPN per l'account del servizio. In entrambi i casi, il client deve utilizzare il SPN corretto nel [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, o tramite il <xref:System.ServiceModel.EndpointAddress> costruttore. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Servizio di autenticazione e identità](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Per utilizzare questa modalità di autenticazione, l'account del servizio deve essere associato a un nome dell'entità servizio (SPN). A tale scopo, eseguire il servizio sotto l'account Servizio di rete o sotto l'account di sistema locale. In alternativa, utilizzare lo strumento SetSpn.exe per creare un SPN per l'account del servizio. In entrambi i casi, il client deve utilizzare il SPN corretto nel [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, o tramite il <xref:System.ServiceModel.EndpointAddress> costruttore. Per ulteriori informazioni, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 > [!NOTE]
 >  Quando si utilizza la modalità di autenticazione `Kerberos`, i livelli di rappresentazione <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> e <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> non sono supportati.  
@@ -98,7 +100,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili vari
  In questa modalità di autenticazione il client viene autenticato presso il servizio mediante un ticket Kerberos. Il token Kerberos viene considerato a livello SOAP come un token di supporto di verifica dell'autenticità, ovvero un token che firma la firma del messaggio. Il servizio viene autenticato tramite un certificato X.509 a livello di trasporto. L'elemento di associazione di sicurezza è un elemento `TransportSecurityBindingElement` restituito dal metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>. In alternativa, impostare l'attributo `authenticationMode` su `KerberosOverTransport`.  
   
 > [!NOTE]
->  Per utilizzare questa modalità di autenticazione, l'account del servizio deve essere associato a un SPN. A tale scopo, eseguire il servizio sotto l'account Servizio di rete o sotto l'account di sistema locale. In alternativa, utilizzare lo strumento SetSpn.exe per creare un SPN per l'account del servizio. In entrambi i casi, il client deve utilizzare il SPN corretto nel [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, o tramite il <xref:System.ServiceModel.EndpointAddress> costruttore. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Servizio di autenticazione e identità](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Per utilizzare questa modalità di autenticazione, l'account del servizio deve essere associato a un SPN. A tale scopo, eseguire il servizio sotto l'account Servizio di rete o sotto l'account di sistema locale. In alternativa, utilizzare lo strumento SetSpn.exe per creare un SPN per l'account del servizio. In entrambi i casi, il client deve utilizzare il SPN corretto nel [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, o tramite il <xref:System.ServiceModel.EndpointAddress> costruttore. Per ulteriori informazioni, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  In questa modalità di autenticazione il client viene autenticato mediante un certificato X.509 che a livello SOAP viene considerato come un token di supporto di verifica dell'autenticità, ovvero un token che firma la firma del messaggio. Anche il servizio viene autenticato tramite l'uso di un certificato X.509 L'elemento di associazione di sicurezza è un elemento `SymmetricSecurityBindingElement` restituito dal metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>. In alternativa, impostare l'attributo `authenticationMode` su `MutualCertificate`.  

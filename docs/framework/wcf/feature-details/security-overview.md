@@ -1,27 +1,29 @@
 ---
 title: Sicurezza Overview1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è una piattaforma di programmazione distribuita basata su messaggi SOAP. La protezione dei messaggi tra i client e i servizi è pertanto essenziale per garantire la protezione dei dati. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basato sull'infrastruttura di sicurezza esistente e sugli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -87,26 +89,26 @@ ms.lasthandoff: 12/22/2017
  Il sistema di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si suddivide in tre aree funzionali: sicurezza del trasferimento, controllo di accesso e controllo. Nelle sezioni seguenti vengono descritte brevemente queste aree funzionali e vengono forniti collegamenti per altre informazioni.  
   
 ### <a name="transfer-security"></a>Sicurezza del trasferimento  
- La sicurezza del trasferimento comprende tre funzioni di sicurezza principali: integrità, riservatezza e autenticazione. *Integrità* è la possibilità di rilevare se un messaggio è stato alterato. *Riservatezza* è la possibilità di rendere illeggibile da qualsiasi utente diverso dal destinatario desiderato; un messaggio a questo risultato viene ottenuto tramite la crittografia. *Autenticazione* è in grado di verificare un'attestazione di identità. Nel complesso queste tre funzioni consentono di garantire che i messaggi vengano inviati in modo protetto da un punto a un altro.  
+ La sicurezza del trasferimento comprende tre funzioni di sicurezza principali: integrità, riservatezza e autenticazione. *Integrità* consiste nella possibilità di rilevare se un messaggio è stato alterato. *Riservatezza* consiste nella possibilità di rendere illeggibile da chiunque, eccetto il destinatario desiderato. a un messaggio questo risultato viene ottenuto tramite la crittografia. *Autenticazione* consiste nella possibilità di verificare un'identità attestata. Nel complesso queste tre funzioni consentono di garantire che i messaggi vengano inviati in modo protetto da un punto a un altro.  
   
 #### <a name="transport-and-message-security-modes"></a>Modalità di sicurezza del trasporto e dei messaggi  
  Vengono utilizzati due meccanismi principali per implementare la sicurezza del trasferimento in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: *trasporto* modalità di sicurezza e *messaggio* modalità di sicurezza.  
   
 -   *Modalità di sicurezza del trasporto* utilizza un protocollo a livello di trasporto, ad esempio HTTPS, per garantire la protezione di trasferimento. La modalità di sicurezza del trasporto ha il vantaggio di essere ampiamente diffusa, disponibile su più piattaforme e meno complessa dal punto di vista computazionale. Ha tuttavia lo svantaggio di proteggere i messaggi solo da punto a punto.  
   
--   *Modalità di sicurezza messaggio*, invece, utilizza WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
+-   *Modalità di sicurezza dei messaggi*, invece, utilizza WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Queste differenze, vedere [protezione dei servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Queste differenze, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Una terza modalità di sicurezza usa entrambe le modalità precedenti e sfrutta i vantaggi di entrambe. Questa modalità è detta `TransportWithMessageCredential`. In questa modalità la sicurezza del messaggio viene usata per autenticare il client e la sicurezza del trasporto viene usata per autenticare il server e fornire riservatezza e integrità dei messaggi. La modalità di sicurezza `TransportWithMessageCredential` è infatti veloce quasi quanto la modalità di sicurezza del trasporto e fornisce estensibilità per l'autenticazione client ugualmente alla modalità di sicurezza del messaggio. A differenza della modalità di sicurezza del messaggio, tuttavia, non fornisce la sicurezza end-to-end completa.  
   
 ### <a name="access-control"></a>Controllo di accesso  
- *Controllo di accesso* è noto anche come autorizzazione. *Autorizzazione* consente agli utenti diversi di disporre di privilegi diversi per visualizzare i dati. Ad esempio, poiché i file relativi alle risorse umane di un'azienda contengono dati riservati sui dipendenti, la visualizzazione di questi dati è consentita soltanto ai dirigenti, che possono tuttavia visualizzare soltanto i dati relativi ai propri subalterni. In questo caso, il controllo di accesso è basato sia sul ruolo ("dirigente") che sull'identità specifica del dirigente (per impedire a un dirigente di accedere ai record relativi ai subalterni di un altro dirigente).  
+ *Il controllo degli accessi* è noto anche come autorizzazione. *Autorizzazione* consente agli utenti diversi di disporre di privilegi diversi per visualizzare i dati. Ad esempio, poiché i file relativi alle risorse umane di un'azienda contengono dati riservati sui dipendenti, la visualizzazione di questi dati è consentita soltanto ai dirigenti, che possono tuttavia visualizzare soltanto i dati relativi ai propri subalterni. In questo caso, il controllo di accesso è basato sia sul ruolo ("dirigente") che sull'identità specifica del dirigente (per impedire a un dirigente di accedere ai record relativi ai subalterni di un altro dirigente).  
   
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le funzionalità di controllo di accesso vengono fornite attraverso l'integrazione con common language runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e attraverso un set di API noto come il *modello di identità*. Per ulteriori informazioni sul controllo di accesso e autorizzazione basata sulle attestazioni, vedere [estensione sicurezza](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Controllo  
- *Il controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate di programmazione, vedere [come: eventi di protezione controllo](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *Il controllo* è la registrazione degli eventi di sicurezza nel registro eventi di Windows. È possibile registrare eventi relativi alla sicurezza, ad esempio le operazioni di autenticazione riuscite o non riuscite. Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Per informazioni dettagliate di programmazione, vedere [come: eventi di protezione controllo](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

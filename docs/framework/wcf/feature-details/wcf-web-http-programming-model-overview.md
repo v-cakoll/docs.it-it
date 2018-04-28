@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Panoramica sul modello di programmazione HTTP Web WCF
 Il modello di programmazione HTTP Web di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce gli elementi di base necessari per compilare servizi HTTP Web in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. I servizi HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono progettati per consentire l'accesso alla tipologia più ampia di possibili client (inclusi i browser Web senza alcun framework client aggiuntivo) e sono caratterizzati dai requisiti univoci seguenti:  
@@ -33,13 +33,13 @@ Il modello di programmazione HTTP Web di [!INCLUDE[indigo1](../../../../includes
   
  Il modello di programmazione HTTP Web di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estende la portata di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per supportare scenari di tipo Web, ad esempio servizi HTTP Web, servizi AJAX e JSON e feed ATOM/RSS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Servizi AJAX e JSON, vedere [integrazione AJAX e supporto JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Diffusione, vedere [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Non sono previste restrizioni aggiuntive sui tipi di dati che possono essere restituiti da un servizio HTTP Web. Qualsiasi tipo serializzabile può essere restituito da un'operazione del servizio HTTP Web. Poiché le operazioni del servizio HTTP Web possono essere richiamate da un Web browser, esiste una limitazione per i tipi di dati che possono essere specificati in un URL. Per ulteriori informazioni su quali tipi sono supportati per impostazione predefinita, vedere il **parametri di stringa di Query UriTemplate e URL** sezione riportata di seguito. È possibile modificare il comportamento predefinito fornendo l'implementazione T:System.ServiceModel.Dispatcher.QueryStringConverter che specifica come convertire i parametri specificati in un URL nel tipo di parametro effettivo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Non sono previste restrizioni aggiuntive sui tipi di dati che possono essere restituiti da un servizio HTTP Web. Qualsiasi tipo serializzabile può essere restituito da un'operazione del servizio HTTP Web. Poiché le operazioni del servizio HTTP Web possono essere richiamate da un Web browser, esiste una limitazione per i tipi di dati che possono essere specificati in un URL. Per ulteriori informazioni su quali tipi sono supportati per impostazione predefinita, vedere il **parametri di stringa di Query UriTemplate e URL** sezione riportata di seguito. È possibile modificare il comportamento predefinito fornendo l'implementazione T:System.ServiceModel.Dispatcher.QueryStringConverter che specifica come convertire i parametri specificati in un URL nel tipo di parametro effettivo. Per altre informazioni, vedere <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
   
 > [!CAUTION]
 >  I servizi creati nel modello di programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non utilizzano messaggi SOAP. Per questo motivo le funzionalità di sicurezza disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non possono essere utilizzate. È tuttavia possibile implementare la sicurezza basata sul trasporto ospitando il servizio con HTTPS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  L'installazione dell'estensione WebDAV per IIS può causare la restituzione di un errore HTTP 405 da parte dei servizi HTTP Web quando tramite l'estensione WebDAV viene effettuato il tentativo di gestire tutte le richieste PUT. Per risolvere questo problema è possibile disinstallare l'estensione WebDAV o disabilitarla per il sito Web. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS e WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  L'installazione dell'estensione WebDAV per IIS può causare la restituzione di un errore HTTP 405 da parte dei servizi HTTP Web quando tramite l'estensione WebDAV viene effettuato il tentativo di gestire tutte le richieste PUT. Per risolvere questo problema è possibile disinstallare l'estensione WebDAV o disabilitarla per il sito Web. Per altre informazioni, vedere [IIS e WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>Elaborazione di URI con UriTemplate e UriTemplateTable  
  I modelli URI forniscono una sintassi efficiente per esprimere grandi set di URI strutturalmente simili. Nel modello seguente, ad esempio, viene espresso il set di tutti gli URI di tre segmenti che iniziano con "a" e terminano con "c", a prescindere dal valore del segmento intermedio: a/{segment}/c  

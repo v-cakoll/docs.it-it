@@ -1,20 +1,17 @@
 ---
 title: 'Eccezioni: espressione try...with (F#)'
-description: 'Informazioni su come utilizzare l''espressione ''try... with'' di F # per la gestione delle eccezioni.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su come utilizzare l'espressione 'try... with' di F # per la gestione delle eccezioni."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>Eccezioni: espressione try...with
 
@@ -44,12 +41,12 @@ Le eccezioni possono essere eccezioni .NET, o possono essere eccezioni F #. È p
 È possibile utilizzare un'ampia gamma di modelli per filtrare in base al tipo di eccezione e altre condizioni. le opzioni sono riepilogate nella tabella seguente.
 
 
-|Criterio|Descrizione|
+|Modello|Descrizione|
 |-------|-----------|
 |:? *tipo di eccezione*|Corrisponde al tipo di eccezione .NET specificato.|
 |:? *tipo di eccezione* come *identificatore*|Corrisponde al tipo di eccezione .NET specificato, ma consente l'eccezione di un valore denominato.|
 |*nome di eccezione*(*argomenti*)|Corrisponde a un tipo di eccezione F # e associa gli argomenti.|
-|*identifier*|Corrisponde a qualsiasi eccezione e associa il nome dell'oggetto eccezione. Equivalente a **:? System. Exception come***identificatore*|
+|*identifier*|Corrisponde a qualsiasi eccezione e associa il nome dell'oggetto eccezione. Equivalente a **:? System. Exception come * * * identificatore*|
 |*Identificatore* quando *condizione*|Consente di ricercare qualsiasi eccezione se la condizione è true.|
 
 ## <a name="examples"></a>Esempi

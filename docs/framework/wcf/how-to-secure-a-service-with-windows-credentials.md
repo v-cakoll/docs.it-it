@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: proteggere un servizio con credenziali di Windows
 Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio che si trova in un dominio di Windows e viene chiamato dai client nello stesso dominio. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Questo scenario, vedere [protezione del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
@@ -87,7 +87,7 @@ Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Per usare un'associazione in un client con codice  
   
-1.  Usare lo strumento SvcUtil.exe per generare il codice del proxy tramite i metadati del servizio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Il codice proxy generato eredita dalla classe <xref:System.ServiceModel.ClientBase%601>, che assicura che ogni client disponga delle proprietà, dei costruttori e dei metodi necessari per comunicare con un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo esempio, il codice generato include la classe `CalculatorClient` che implementa l'interfaccia `ICalculator`, consentendo la compatibilità con il codice del servizio.  
+1.  Usare lo strumento SvcUtil.exe per generare il codice del proxy tramite i metadati del servizio. Per altre informazioni, vedere [procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Il codice proxy generato eredita dalla classe <xref:System.ServiceModel.ClientBase%601>, che assicura che ogni client disponga delle proprietà, dei costruttori e dei metodi necessari per comunicare con un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. In questo esempio, il codice generato include la classe `CalculatorClient` che implementa l'interfaccia `ICalculator`, consentendo la compatibilità con il codice del servizio.  
   
 2.  Il codice di questa procedura viene inserito all'inizio del metodo `Main` del programma client.  
   
@@ -140,7 +140,7 @@ Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Per usare un'associazione in un client con configurazione  
   
-1.  Usare lo strumento SvcUtil.exe per generare il codice proxy e il file di configurazione tramite i metadati del servizio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Usare lo strumento SvcUtil.exe per generare il codice proxy e il file di configurazione tramite i metadati del servizio. Per altre informazioni, vedere [procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Sostituire il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione del file di configurazione generato con il codice di configurazione nella sezione precedente.  
   

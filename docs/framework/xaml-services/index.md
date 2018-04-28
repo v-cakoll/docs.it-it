@@ -20,11 +20,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-services"></a>Servizi XAML
 In questo argomento vengono descritte le funzionalità di un set di tecnologie noto come XAML di .NET Framework di servizi. La maggior parte dei servizi e le API descritte si trovano nell'assembly System. XAML, che è un assembly è stato introdotto con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set di assembly di .NET core. I servizi includono lettori e writer, le classi dello schema e supporto dello schema, le factory, assegnazione di attributi di classi, supporto intrinseco del linguaggio XAML e altre funzionalità del linguaggio XAML.  
@@ -49,7 +49,7 @@ In questo argomento vengono descritte le funzionalità di un set di tecnologie n
  Se sta cercando materiale introduttivo su XAML come linguaggio, è possibile provare a [Panoramica di XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Tale argomento sono illustrate XAML per un gruppo di destinatari che è una novità per [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e anche all'utilizzo di markup XAML e funzionalità del linguaggio XAML. Un altro documento utile è il materiale introduttivo nel [specifiche del linguaggio XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Servizi XAML di .NET framework e System. XAML nell'architettura di .NET  
- Nelle versioni precedenti di [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], il supporto per funzionalità del linguaggio XAML è stato implementato dal framework che si basa [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) e pertanto variare il relativo comportamento e l'API usata a seconda del framework specifico si utilizzassero. Questo incluso il codice XAML parser e il relativo oggetto grafico meccanismo di creazione, intrinseci del linguaggio XAML, supporto della serializzazione e così via.  
+ Nelle versioni precedenti di [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], il supporto per funzionalità del linguaggio XAML è stato implementato dal framework che si basa [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e pertanto variare nel relativo comportamento e l'API usata a seconda del framework specifico si utilizzassero. Questo incluso il codice XAML parser e il relativo oggetto grafico meccanismo di creazione, intrinseci del linguaggio XAML, supporto della serializzazione e così via.  
   
  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], servizi XAML di .NET Framework e l'assembly System. Xaml definiscono la maggior parte degli elementi necessari per il supporto delle funzionalità del linguaggio XAML. Questo include classi di base per i reader XAML e writer XAML. La funzionalità più importante aggiunta ai servizi XAML .NET Framework che non era presente in una qualsiasi delle implementazioni specifiche del framework XAML è una rappresentazione del sistema di tipo per il codice XAML. La rappresentazione del sistema di tipo XAML è presentato in orientata agli oggetti in modo che si concentra sulle funzionalità di XAML senza le dipendenze sulle funzionalità specifiche del Framework.  
   
