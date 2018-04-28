@@ -1,20 +1,17 @@
 ---
 title: Overload degli operatori (F#)
-description: 'Informazioni su come eseguire l''overload di operatori aritmetici in una classe o un tipo di record e a livello globale in F #.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su come eseguire l'overload di operatori aritmetici in una classe o un tipo di record e a livello globale in F #."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 019277ed-f649-4fa5-ad43-097865f449d9
-ms.openlocfilehash: 76ddab5339e11d71bb326b60d727017eb838ccf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
@@ -106,7 +103,7 @@ Altre combinazioni di caratteri dell'operatore che non sono elencati di seguito 
 
 
 
-|Carattere dell'operatore|Nome|
+|Carattere dell'operatore|nome|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|
@@ -131,7 +128,7 @@ Altre combinazioni di caratteri dell'operatore che non sono elencati di seguito 
 |`]`|`RBrack`|
 
 ## <a name="prefix-and-infix-operators"></a>Prefisso e gli operatori infissi
-*Prefisso* gli operatori devono essere inseriti davanti a uno o più operandi, analogamente a una funzione. *Infisso* gli operatori devono essere racchiuse tra i due operandi.
+*Prefisso* gli operatori devono essere inseriti davanti a un operando o operandi, analogamente a una funzione. *Infisso* gli operatori devono essere racchiuse tra i due operandi.
 
 Solo determinati operatori possono essere utilizzati come gli operatori prefisso. Alcuni operatori sono sempre gli operatori prefisso, altri possono essere infisso o prefisso e il resto è sempre operatori infisso. Gli operatori che iniziano con `!`, ad eccezione di `!=`e l'operatore `~`, o ripetuti sequenze di`~`, sono sempre gli operatori prefisso. Gli operatori `+`, `-`, `+.`, `-.`, `&`, `&&`, `%`, e `%%` può essere operatori prefisso o operatori infissi. La versione di prefisso di questi operatori è distinguere dalla versione di infisso aggiungendo un `~` all'inizio di un operatore prefisso quando è definito. Il `~` non viene utilizzato quando si utilizza l'operatore, solo quando è definito.
 

@@ -1,33 +1,35 @@
 ---
 title: Considerazioni sulla sicurezza con metadati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Considerazioni sulla sicurezza con metadati
 Quando si usano le funzionalità dei metadati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], considerare le implicazioni di sicurezza della pubblicazione, del recupero e dell'utilizzo dei metadati del servizio.  
   
 ## <a name="when-to-publish-metadata"></a>Quando pubblicare metadati  
- I servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non pubblicano metadati per impostazione predefinita. Per pubblicare i metadati per un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio in modo esplicito, è necessario abilitare la pubblicazione dei metadati aggiungendo gli endpoint dei metadati del servizio (vedere [pubblicazione dei metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Se si lascia disabilitata la pubblicazione dei metadati, si riduce la superficie di attacco del servizio e il rischio di diffusione non intenzionale di informazioni. Non tutti i servizi devono pubblicare metadati. Se non è necessario pubblicare metadati, considerare l'ipotesi di lasciare la funzione disattivata. Si noti che è comunque possibile generare codice client e i metadati direttamente gli assembly del servizio usando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizza Svcutil.exe per esportare i metadati, vedere [procedura: usare Svcutil.exe per esportare metadati da codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ I servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non pubblicano metadati per impostazione predefinita. Per pubblicare i metadati per un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio in modo esplicito, è necessario abilitare la pubblicazione dei metadati aggiungendo gli endpoint dei metadati del servizio (vedere [pubblicazione dei metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Se si lascia disabilitata la pubblicazione dei metadati, si riduce la superficie di attacco del servizio e il rischio di diffusione non intenzionale di informazioni. Non tutti i servizi devono pubblicare metadati. Se non è necessario pubblicare metadati, considerare l'ipotesi di lasciare la funzione disattivata. Si noti che è comunque possibile generare codice client e i metadati direttamente gli assembly del servizio usando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzo Svcutil.exe per esportare i metadati, vedere [procedura: utilizzare Svcutil.exe per esportare metadati da codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Pubblicazione di metadati tramite un'associazione sicura  
- Le associazioni di metadati predefinite fornite da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non sono protette e consentono l'accesso anonimo ai metadati. I metadati di servizio pubblicati da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contengono una descrizione dettagliata del servizio e potrebbero contenere, in modo intenzionale o non intenzionale, informazioni riservate. I metadati del servizio possono, ad esempio, contenere informazioni su operazioni dell'infrastruttura non destinate ad essere trasmesse pubblicamente. Per proteggere metadati del servizio dall'accesso non autorizzato, è possibile usare un'associazione protetta per l'endpoint dei metadati. Gli endpoint dei metadati rispondono alle richieste HTTP/GET che possono usare SSL (Secure Sockets Layer) per proteggere i metadati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: proteggere endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Le associazioni di metadati predefinite fornite da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non sono protette e consentono l'accesso anonimo ai metadati. I metadati di servizio pubblicati da un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contengono una descrizione dettagliata del servizio e potrebbero contenere, in modo intenzionale o non intenzionale, informazioni riservate. I metadati del servizio possono, ad esempio, contenere informazioni su operazioni dell'infrastruttura non destinate ad essere trasmesse pubblicamente. Per proteggere metadati del servizio dall'accesso non autorizzato, è possibile usare un'associazione protetta per l'endpoint dei metadati. Gli endpoint dei metadati rispondono alle richieste HTTP/GET che possono usare SSL (Secure Sockets Layer) per proteggere i metadati. Per altre informazioni, vedere [procedura: proteggere endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  La sicurezza degli endpoint dei metadati offre inoltre ai richiedenti un modo sicuro per recuperare i metadati del servizio, senza rischi di manomissioni o spoofing.  
   

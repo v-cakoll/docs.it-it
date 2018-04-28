@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>Sicurezza del flusso di lavoro
 Windows Workflow Foundation (WF) è integrato con varie tecnologie diverse, ad esempio Microsoft SQL Server e [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. L'interazione con queste tecnologie può introdurre problemi di sicurezza nel flusso di lavoro, se eseguito in modo errato.  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF) è integrato con varie tecnologie diverse, ad e
   
 -   Quando si usano numerose attività figlio, percorsi, segnalibri, estensioni host o ambiti o quando si usano segnalibri con payload di notevoli dimensioni, la memoria può esaurirsi o si può allocare eccessivo spazio del database durante la persistenza. Questa situazione può essere attenuata con la sicurezza a livello di oggetto e a livello di database.  
   
--   Quando si usa l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'archivio di istanze deve essere protetto. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Procedure consigliate SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Quando si usa l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'archivio di istanze deve essere protetto. Per altre informazioni, vedere [procedure consigliate di SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   I dati sensibili nell'archivio di istanze devono essere crittografati. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Crittografia di sicurezza SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   I dati sensibili nell'archivio di istanze devono essere crittografati. Per altre informazioni, vedere [crittografia di sicurezza di SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Poiché la stringa di connessione del database è spesso inclusa in un file di configurazione, è necessario usare la sicurezza a livello di Windows (ACL) per assicurarsi che il file di configurazione (in genere Web.Config) sia protetto e che le informazioni sull'accesso e sulla password non siano incluse nella stringa di connessione. Tra il database e il server Web dovrebbe invece essere usata l'autenticazione di Windows.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Considerazioni su WorkflowServiceHost  
   
--   Gli endpoint [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usati nei flussi di lavoro devono essere protetti. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Panoramica della sicurezza WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Gli endpoint [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usati nei flussi di lavoro devono essere protetti. Per altre informazioni, vedere [Cenni preliminari sulla sicurezza WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   È possibile implementare l'autorizzazione a livello host usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Vedere [procedura: creare un gestore autorizzazioni personalizzato per un servizio](http://go.microsoft.com/fwlink/?LinkId=192228) per informazioni dettagliate. Ciò è dimostrato anche nell'esempio seguente: [protezione dei servizi del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

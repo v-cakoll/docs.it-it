@@ -1,20 +1,17 @@
 ---
 title: Eventi (F#)
-description: 'Informazioni su come gli eventi F # consentono di associare chiamate di funzione alle azioni utente, che sono importanti nella programmazione dell''interfaccia utente grafica.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su come gli eventi F # consentono di associare chiamate di funzione alle azioni utente, che sono importanti nella programmazione dell'interfaccia utente grafica."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>Eventi
 
@@ -33,9 +30,9 @@ Il tipo del metodo `Add` è `('a -> unit) -> unit`. Il metodo del gestore eventi
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>Creazione di eventi personalizzati
-Gli eventi F # sono rappresentati da F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent`è un'interfaccia che combina la funzionalità di altre due interfacce, `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo eventi](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+Gli eventi F # sono rappresentati da F # [evento](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe che implementa il [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interfaccia. `IEvent` è un'interfaccia che combina la funzionalità di altre due interfacce, a sua volta `System.IObservable<'T>` e [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Gli oggetti `Event` dispongono pertanto di funzionalità equivalenti a quelle dei delegati in altri linguaggi, nonché della funzionalità aggiuntiva di `IObservable`, grazie a cui gli eventi F# supportano il filtraggio degli eventi e l'utilizzo delle espressioni lambda e delle funzioni di prima classe F# come gestori eventi. Questa funzionalità viene fornita nel [modulo eventi](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
-Per creare un evento in una classe che agisca come qualsiasi altro evento .NET Framework, aggiungere alla classe un'associazione `let` che definisce un oggetto `Event` come campo in una classe. È possibile specificare il tipo di argomento dell'evento desiderato come argomento di tipo oppure lasciare vuoto il valore affinché il tipo appropriato venga dedotto dal compilatore. È inoltre necessario definire un membro dell'evento che espone l'evento come evento CLI. Il membro deve disporre di [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attributo. Viene dichiarato come una proprietà e la relativa implementazione corrisponde a una chiamata per il [pubblica](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) proprietà dell'evento. Gli utenti della classe possono utilizzare il metodo `Add` dell'evento pubblicato per aggiungere un gestore. L'argomento del metodo `Add` può essere un'espressione lambda. È possibile utilizzare la proprietà `Trigger` dell'evento per generare l'evento passando un argomento alla funzione del gestore. Questo aspetto è illustrato nell'esempio di codice seguente. In questo esempio, l'argomento del tipo dedotto per l'evento è una tupla, che rappresenta gli argomenti per l'espressione lambda.
+Per creare un evento in una classe che agisca come qualsiasi altro evento .NET Framework, aggiungere alla classe un'associazione `let` che definisce un oggetto `Event` come campo in una classe. È possibile specificare il tipo di argomento dell'evento desiderato come argomento tipo oppure lasciare vuoto il valore affinché il tipo appropriato venga dedotto dal compilatore. È inoltre necessario definire un membro dell'evento che espone l'evento come evento CLI. Il membro deve disporre di [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attributo. Viene dichiarato come una proprietà e la relativa implementazione corrisponde a una chiamata per il [pubblica](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) proprietà dell'evento. Gli utenti della classe possono utilizzare il metodo `Add` dell'evento pubblicato per aggiungere un gestore. L'argomento del metodo `Add` può essere un'espressione lambda. È possibile utilizzare la proprietà `Trigger` dell'evento per generare l'evento passando un argomento alla funzione del gestore. Questo aspetto è illustrato nell'esempio di codice seguente. In questo esempio, l'argomento tipo dedotto per l'evento è una tupla, che rappresenta gli argomenti per l'espressione lambda.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Modulo Control. event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control. event &#60;' T &#62; Classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control. event&#60;|&#62; (classe)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control. event &#60;' Delegato ' Args &#62; Classe](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control. event&#60;'Delegate' Args&#62; (classe)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

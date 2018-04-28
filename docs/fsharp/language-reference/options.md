@@ -1,20 +1,17 @@
 ---
 title: Opzioni (F#)
-description: 'Informazioni su come utilizzare l''opzione di F # tipi quando un valore effettivo potrebbero non essere disponibile per una variabile o un valore denominato.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Informazioni su come utilizzare l'opzione di F # tipi quando un valore effettivo potrebbero non essere disponibile per una variabile o un valore denominato."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
-ms.openlocfilehash: 537ba69aecc1ab489de63d67c5f9ff857afb4a28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ce9be0793c86d8d588fb4f905394bd2383c262e1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="options"></a>Opzioni
 
@@ -61,7 +58,7 @@ Il tipo di opzione supporta le proprietà e i metodi seguenti.
 |[Valore](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Restituisce il valore sottostante, o genera un `System.NullReferenceException` se il valore è `None`.|
 
 ## <a name="option-module"></a>Option (modulo)
-È disponibile un modulo, [opzione](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c), che contiene funzioni utili per eseguire operazioni su Opzioni. Alcune funzioni ripetono la funzionalità delle proprietà, ma sono utili nei contesti in cui è necessaria una funzione. [Option. isSome](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79) e [IsNone](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819) sono funzioni di modulo che verificano se un'opzione non contiene un valore. [Option.Get](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea) Ottiene il valore, se presente. Se è presente alcun valore, verrà generata `System.ArgumentException`.
+È disponibile un modulo, [opzione](https://msdn.microsoft.com/library/e615e4d3-bbbb-49ba-addc-6061ea2e2f4c), che contiene funzioni utili per eseguire operazioni su Opzioni. Alcune funzioni ripetono la funzionalità delle proprietà, ma sono utili nei contesti in cui è necessaria una funzione. [Option. isSome](https://msdn.microsoft.com/library/41ad0857-5672-4326-84b5-c33dc43dcf79) e [Option. IsNone](https://msdn.microsoft.com/library/73db6a53-15e7-40a6-94f9-a0049e5f4819) sono entrambe le funzioni di modulo che verificano se un'opzione non contiene un valore. [Option. Get](https://msdn.microsoft.com/library/803e9fcb-6edd-4910-808c-25f08cbc55ea) Ottiene il valore, se presente. Se è presente alcun valore, verrà generata `System.ArgumentException`.
 
 Il [Bind](https://msdn.microsoft.com/library/c3406192-24ac-49b5-bc3b-8f805187f1c0) funzione esegue una funzione sul valore, se è presente un valore. La funzione accetta un solo argomento e il tipo di parametro deve essere il tipo di opzione. Il valore restituito della funzione è un altro tipo di opzione.
 
