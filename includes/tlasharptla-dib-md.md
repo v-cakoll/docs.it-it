@@ -1,1 +1,1 @@
-bitmap indipendente dal dispositivo (DIB)
+<span data-ttu-id="61830-101">bitmap indipendente dal dispositivo (DIB)</span><span class="sxs-lookup"><span data-stu-id="61830-101">device-independent bitmap (DIB)</span></span>
