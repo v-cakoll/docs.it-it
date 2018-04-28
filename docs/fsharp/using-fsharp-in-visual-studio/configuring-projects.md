@@ -1,20 +1,17 @@
 ---
 title: 'Configurazione di progetti (F #)'
 description: 'Informazioni su come utilizzare la finestra di progettazione del progetto quando si lavora con progetti F # in Visual Studio.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configurazione di progetti in Visual Studio
 
@@ -28,9 +25,9 @@ Il **progettazione** e il relativo utilizzo generale vengono descritti dettaglia
 
 |Pagina di Progettazione progetti|Collegamenti correlati|Descrizione|
 |---------------------|-------------|-----------|
-|`Application`|[Pagina applicazione, Progettazione progetti &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Consente di specificare le impostazioni a livello di applicazione e proprietà, ad esempio se si sta creando una libreria o un file eseguibile, la versione di .NET Framework è destinata l'applicazione e informazioni in cui il file di risorse dell'applicazione Usa viene archiviati.|
-|`Build`|[Compilare una pagina, Progettazione progetti &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di controllare la modalità con cui il codice viene compilato.|
-|`Build Events`|[Compila pagina eventi, Progettazione progetti &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di specificare i comandi da eseguire prima o dopo una compilazione.|
+|`Application`|[Pagina applicazione, Progettazione progetti &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Consente di specificare le impostazioni a livello di applicazione e proprietà, ad esempio se si sta creando una libreria o un file eseguibile, la versione di .NET Framework è destinata l'applicazione e informazioni in cui il file di risorse dell'applicazione Usa viene archiviati.|
+|`Build`|[Pagina compilazione, Progettazione progetti &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di controllare la modalità con cui il codice viene compilato.|
+|`Build Events`|[Pagina eventi di compilazione, Progettazione progetti &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Consente di specificare i comandi da eseguire prima o dopo una compilazione.|
 |`Debug`|[Pagina Debug, Creazione progetti](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Consente di controllare l'esecuzione dell'applicazione durante il debug. Sono incluse la riga di comando da utilizzare e qual è la directory dell'applicazione iniziale e qualsiasi speciale che si desidera abilitare, ad esempio SQL e codice nativo modalità di debug.|
 |`Reference Paths`|[Gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project)|Consente di specificare la posizione in cui cercare gli assembly che dipende dal codice.|
 

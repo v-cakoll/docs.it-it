@@ -1,30 +1,32 @@
 ---
 title: Attacchi di tipo replay
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="replay-attacks"></a>Attacchi di tipo replay
 Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene respinto, i computer colpiti elaborano il flusso come se i messaggi fossero legittimi. Ciò determina una serie di conseguenze negative, ad esempio la creazione di ordini ridondanti di un articolo.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Vulnerabilità delle associazioni agli attacchi di tipo reflection  
- *Attacchi di tipo reflection* sono riproduzioni dei messaggi di un mittente proveniente dal destinatario come risposta. Lo standard *rilevamento riproduzione* nel [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] meccanismo non gestiscono automaticamente questo.  
+ *Attacchi di tipo reflection* sono riproduzioni di messaggi a un mittente proveniente dal destinatario della risposta. Lo standard *rilevamento riproduzione* nel [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] meccanismo non gestiscono automaticamente questo.  
   
  In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], tuttavia, gli attacchi di tipo reflection vengono respinti per impostazione predefinita. Infatti, il modello dei servizi di tale piattaforma prevede l'aggiunta di un ID di messaggio firmato ai messaggi di richiesta nonché un'intestazione firmata `relates-to` nei messaggi di risposta. Risulta di conseguenza impossibile riprodurre il messaggio di richiesta come risposta. Negli scenari che prevedono messaggi affidabili gli attacchi di tipo reflection vengono respinti per i motivi seguenti:  
   
@@ -43,7 +45,7 @@ Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato co
   
  Le prevenzioni includono:  
   
--   Usare una modalità di sicurezza dei messaggi che preveda token del contesto di sicurezza con stato. La funzionalità di conversazione protetta può essere attiva o disattivata. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: creare un contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+-   Usare una modalità di sicurezza dei messaggi che preveda token del contesto di sicurezza con stato. La funzionalità di conversazione protetta può essere attiva o disattivata. Per altre informazioni, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 -   Configurare il servizio in modo che utilizzi un meccanismo di sicurezza a livello di trasporto.  
   

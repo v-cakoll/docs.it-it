@@ -1,20 +1,17 @@
 ---
 title: Direttive per il compilatore (F#)
 description: 'Informazioni sulle direttive del preprocessore linguaggio F #, direttive di compilazione condizionale, le direttive di riga e le direttive del compilatore.'
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Direttive per il compilatore
 
@@ -29,7 +26,7 @@ Nella tabella riportata di seguito sono elencate le direttive per il preprocesso
 
 |Direttiva|Descrizione|
 |---------|-----------|
-|`#if` *symbol*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` viene incluso se il *simbolo* è definito.|
+|`#if` *Simbolo*|Supporta la compilazione condizionale. Codice nella sezione dopo il `#if` viene incluso se il *simbolo* è definito.|
 |`#else`|Supporta la compilazione condizionale. Contrassegna una sezione di codice da includere se il simbolo usato nella precedente direttiva `#if` non è definito.|
 |`#endif`|Supporta la compilazione condizionale. Contrassegna la fine di una sezione condizionale di codice.|
 |`#`[riga] *int*,<br/>`#`[riga] *int* *stringa*,<br/>`#`[riga] *int* *stringa verbatim*|Indica la riga e il nome di file del codice sorgente originale per il debug. Questa funzionalità viene fornita per gli strumenti che generano codice sorgente F#.|

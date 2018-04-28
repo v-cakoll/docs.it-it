@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: creare un servizio token di sicurezza'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +16,30 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procedura: creare un servizio token di sicurezza
 Un servizio token di sicurezza implementa il protocollo definito nella specifica WS-Trust. Questo protocollo definisce i formati e i modelli di scambio dei messaggi per il rilascio, il rinnovo, l'annullamento e la convalida di token di sicurezza. Un determinato servizio token di sicurezza fornisce una o più di queste funzionalità. In questo argomento viene descritto lo scenario più comune: l'implementazione del rilascio di token.  
   
 ## <a name="issuing-tokens"></a>Rilascio di token  
- Per l'esecuzione del rilascio del token WS-Trust definisce i formati dei messaggi in base all'elemento dello schema XSD (XML Schema Definition Language) di `RequestSecurityToken` e all'elemento dello schema XSD di `RequestSecurityTokenResponse`. Definisce inoltre gli URI (Uniform Resource Identifiers) dell'azione associati. L'URI dell'azione associato al messaggio `RequestSecurityToken` è http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. L'URI dell'azione associato al messaggio `RequestSecurityTokenResponse` è http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ Per l'esecuzione del rilascio del token WS-Trust definisce i formati dei messaggi in base all'elemento dello schema XSD (XML Schema Definition Language) di `RequestSecurityToken` e all'elemento dello schema XSD di `RequestSecurityTokenResponse`. Definisce inoltre gli URI (Uniform Resource Identifiers) dell'azione associati. L'azione associato all'URI il `RequestSecurityToken` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. L'azione associato all'URI il `RequestSecurityTokenResponse` messaggio http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Struttura del messaggio di richiesta  
  In genere la struttura del messaggio di richiesta consiste negli elementi seguenti:  
   
--   Un URI del tipo di richiesta con valore http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Una richiesta di digitare l'URI con un valore di http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
--   Un URI di tipo token. Per token SAML 1.1 il valore dell'URI è http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Un URI di tipo token. Per i token di sicurezza asserzioni SAML (Markup Language) 1.1, il valore di questo URI è http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
 -   Un valore della dimensione della chiave che indica il numero di bit nella chiave da associare al token rilasciato.  
   
@@ -109,7 +111,7 @@ Un servizio token di sicurezza implementa il protocollo definito nella specifica
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Per altre informazioni, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="creating-response-messages"></a>Creazione dei messaggi di risposta  
  Terminata l'elaborazione della richiesta di rilascio da parte del servizio token di sicurezza e conclusa la costruzione del token da rilasciare unitamente alla chiave di prova, è necessario costruire il messaggio di risposta, che deve comprendere almeno il token richiesto, il token di prova e i riferimenti del token rilasciato. Il token rilasciato è in genere un <xref:System.IdentityModel.Tokens.SamlSecurityToken> creato da <xref:System.IdentityModel.Tokens.SamlAssertion>, come illustrato nell'esempio seguente.  
@@ -122,7 +124,7 @@ Un servizio token di sicurezza implementa il protocollo definito nella specifica
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come creare il token di prova quando il client e il token di sicurezza del servizio sia forniscono materiale della chiave per la chiave condivisa, vedere [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come creare il token di prova quando il client e il token di sicurezza del servizio sia forniscono materiale della chiave per la chiave condivisa, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  I riferimenti del token rilasciato sono costruiti creando istanze della classe <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   

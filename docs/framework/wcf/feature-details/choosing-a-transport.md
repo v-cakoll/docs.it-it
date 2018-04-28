@@ -1,28 +1,28 @@
 ---
 title: Scelta di un trasporto
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="choosing-a-transport"></a>Scelta di un trasporto
 In questo argomento vengono descritti i criteri per scegliere tra i tre i trasporti principali che sono inclusi in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP e named pipe. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include inoltre un trasporto di accodamento messaggi (noto anche come MSMQ), che tuttavia non è illustrato in questo documento.  
@@ -33,17 +33,17 @@ In questo argomento vengono descritti i criteri per scegliere tra i tre i traspo
   
  Se è necessario connettersi a un client o un server esistente, la scelta di utilizzare un particolare trasporto potrebbe essere obbligata. Tuttavia, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] possono essere resi accessibili tramite più endpoint, ognuno con un trasporto diverso. Quando un singolo trasporto non include i destinatari desiderati per il servizio, è consigliabile esporre il servizio su più endpoint. Le applicazioni client possono quindi utilizzare l'endpoint più appropriato.  
   
- Dopo avere scelto un trasporto, è necessario selezionare un'associazione che lo utilizzi. È possibile scegliere un'associazione fornita dal sistema (vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)), è inoltre possibile compilare un'associazione personalizzata (vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)). È inoltre possibile creare un'associazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Creazione delle associazioni definite dall'utente](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Dopo avere scelto un trasporto, è necessario selezionare un'associazione che lo utilizzi. È possibile scegliere un'associazione fornita dal sistema (vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)), è inoltre possibile compilare un'associazione personalizzata (vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md)). È inoltre possibile creare un'associazione. Per ulteriori informazioni, vedere [Creating User-Defined associazioni](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="advantages-of-each-transport"></a>Vantaggi di ogni trasporto  
  Contenuto della sezione vengono illustrati i motivi principali per cui scegliere uno dei tre trasporti principali, incluso un grafico dettagliato per agevolare la scelta.  
   
 ### <a name="when-to-use-http-transport"></a>Quando utilizzare il trasporto HTTP  
- HTTP è un protocollo di richiesta/risposta tra client e server. L'ambito di applicazione più comune è costituito da client del browser Web che comunicano con un server Web. Il client invia una richiesta a un server che è in ascolto dei messaggi di richiesta del client. Quando il server riceve una richiesta, restituisce una risposta che contiene lo stato della richiesta. Se la richiesta ha esito positivo, vengono restituiti dati facoltativi, ad esempio una pagina Web, un messaggio di errore o altre informazioni. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il protocollo HTTP, vedere [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP è un protocollo di richiesta/risposta tra client e server. L'ambito di applicazione più comune è costituito da client del browser Web che comunicano con un server Web. Il client invia una richiesta a un server che è in ascolto dei messaggi di richiesta del client. Quando il server riceve una richiesta, restituisce una risposta che contiene lo stato della richiesta. Se la richiesta ha esito positivo, vengono restituiti dati facoltativi, ad esempio una pagina Web, un messaggio di errore o altre informazioni. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] il protocollo HTTP, vedere [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  Il protocollo HTTP non è basato sulla connessione; quando la risposta è stata inviata, lo stato non viene gestito. Per gestire transazioni a più pagine, l'applicazione deve rendere persistente lo stato necessario.  
   
- In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'associazione di trasporto HTTP è ottimizzata per l'interoperabilità con sistemi legacy diversi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Se tutte le parti in comunicazione utilizzano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le associazioni basate su TCP o sulle named pipe sono più veloci. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding>.  
+ In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'associazione di trasporto HTTP è ottimizzata per l'interoperabilità con sistemi legacy diversi da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Se tutte le parti in comunicazione utilizzano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le associazioni basate su TCP o sulle named pipe sono più veloci. Per altre informazioni, vedere <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding>.  
   
 ### <a name="when-to-use-the-tcp-transport"></a>Quando utilizzare il trasporto TCP  
  TCP è un servizio di recapito basato sulla connessione e orientato al flusso con rilevamento e correzione degli errori end-to-end. *Basato sulla connessione* significa che viene stabilita una sessione di comunicazione tra host prima di scambiare dati. Un host è qualsiasi dispositivo su una rete TCP/IP identificato da un indirizzo IP logico.  
@@ -65,11 +65,11 @@ In questo argomento vengono descritti i criteri per scegliere tra i tre i traspo
   
 |Attributo|Descrizione|Trasporti consigliati|  
 |---------------|-----------------|------------------------|  
-|Diagnostica|La diagnostica consente di rilevare automaticamente problemi di connettività del trasporto. Tutti i trasporti supportano la possibilità di restituire informazioni sull'errore che descrivano le condizioni di connettività. Tuttavia, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non include strumenti di diagnostica per l'analisi dei problemi della rete.|nessuno|  
-|Hosting|Tutti gli endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devono essere ospitati in un'applicazione. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] e versioni precedenti supportano solo l'hosting di applicazioni che utilizzano il trasporto HTTP. In [!INCLUDE[wv](../../../../includes/wv-md.md)] è stato aggiunto il supporto per l'hosting di tutti i trasporti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], inclusi TCP e named pipe. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Hosting in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) e [Hosting nel servizio Attivazione processo Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Diagnostica|La diagnostica consente di rilevare automaticamente problemi di connettività del trasporto. Tutti i trasporti supportano la possibilità di restituire informazioni sull'errore che descrivano le condizioni di connettività. Tuttavia, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non include strumenti di diagnostica per l'analisi dei problemi della rete.|Nessuno|  
+|Hosting|Tutti gli endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devono essere ospitati in un'applicazione. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] e versioni precedenti supportano solo l'hosting di applicazioni che utilizzano il trasporto HTTP. In [!INCLUDE[wv](../../../../includes/wv-md.md)] è stato aggiunto il supporto per l'hosting di tutti i trasporti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], inclusi TCP e named pipe. Per altre informazioni, vedere [Hosting in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) e [Hosting nel servizio Attivazione processo Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Ispezione|L'ispezione è la possibilità di estrarre ed elaborare informazioni dai messaggi durante la trasmissione. Il protocollo HTTP separa le informazioni di routing e di controllo dai dati, semplificando la creazione di strumenti in grado di ispezionare e analizzare i messaggi. I tipi di trasporto facilmente controllabili possono richiedere anche minore capacità di elaborazione nei dispositivi di rete. La possibilità di controllare i messaggi dipende dal livello di sicurezza utilizzato.|HTTP|  
 |Latenza|La latenza è il periodo minimo di tempo richiesto per completare un scambio di messaggi. Tutte le operazioni di rete sono caratterizzate da una latenza maggiore o minore a seconda del trasporto scelto. L'uso della comunicazione duplex o unidirezionale con un trasporto il cui modello di scambio messaggi nativo è richiesta-risposta, ad esempio HTTP, può provocare una latenza aggiuntiva a causa della correlazione forzata dei messaggi. In questa situazione, è consigliabile usare un trasporto il cui modello di scambio messaggi nativo sia duplex, ad esempio TCP.|TCP, Named<br /><br /> Pipe|  
-|Portata|La portata di un trasporto indica la capacità di connessione del trasporto con altri sistemi. Il trasporto di named pipe ha una portata molto limitata, in quanto può connettersi solo a servizi che sono in esecuzione nello stesso computer. I trasporti TCP e HTTP hanno entrambi una portata eccellente e possono penetrare alcune configurazioni basate su NAT e firewall. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Utilizzo di NAT e firewall](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
+|Portata|La portata di un trasporto indica la capacità di connessione del trasporto con altri sistemi. Il trasporto di named pipe ha una portata molto limitata, in quanto può connettersi solo a servizi che sono in esecuzione nello stesso computer. I trasporti TCP e HTTP hanno entrambi una portata eccellente e possono penetrare alcune configurazioni basate su NAT e firewall. Per altre informazioni, vedere [utilizzo di NAT e firewall](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
 |Sicurezza|La protezione è la possibilità di proteggere i messaggi durante il trasferimento garantendo riservatezza, integrità o autenticazione. La riservatezza garantisce che un messaggio non possa essere esaminato, l'integrità protegge un messaggio dalle modifiche e l'autenticazione fornisce garanzie sul mittente o il destinatario del messaggio.<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta la protezione del trasferimento sia a livello di messaggio che a livello di trasporto. La protezione dei messaggi si integra con un trasporto se questo supporta una modalità di trasferimento con memorizzazione nel buffer. Il supporto della protezione del trasporto varia a seconda del trasporto scelto. I trasporti HTTP, TCP e named pipe sono a un livello di parità ragionevole nel supporto della protezione del trasporto.|Tutti|  
 |Velocità effettiva|La velocità effettiva misura la quantità di dati che possono essere trasmessi ed elaborati in uno specifico periodo di tempo. Analogamente alla latenza, il trasporto scelto può influire sulla velocità effettiva per le operazioni del servizio. Per ottimizzare la velocità effettiva di un trasporto, è necessario ottimizzare sia il sovraccarico legato alla trasmissione del contenuto che il tempo trascorso in attesa del completamento dello scambio del messaggio. Sia il trasporti TCP che named pipe aggiungono un sovraccarico minimo al corpo del messaggio e supportano una forma duplex nativa che riduce l'attesa per le risposte del messaggio.|TCP, named pipe|  
 |Strumenti|Gli strumenti rappresentano la possibilità che un protocollo supporti applicazioni di terze parti per lo sviluppo, la diagnosi, l'hosting e altre attività. Lo sviluppo di strumenti e software da utilizzare con il protocollo HTTP comporta un investimento notevole.|HTTP|  

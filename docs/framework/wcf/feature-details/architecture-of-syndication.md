@@ -1,24 +1,26 @@
 ---
 title: Architettura di diffusione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="architecture-of-syndication"></a>Architettura di diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione indipendente dal formato, che consente di scrivere in rete contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -41,7 +43,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Il supporto della diffusione è basato sul modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che definisce l'associazione <xref:System.ServiceModel.WebHttpBinding>, usata insieme a <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili i feed come servizi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione REST, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Il supporto della diffusione è basato sul modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che definisce l'associazione <xref:System.ServiceModel.WebHttpBinding>, usata insieme a <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili i feed come servizi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione REST, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  La specifica Atom 1.0 consente di specificare secondi frazionari in uno qualsiasi dei costrutti data. I secondi frazionari verranno ignorati dall'implementazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durante la fase di serializzazione e deserializzazione.  
@@ -86,7 +88,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
 ## <a name="extensibility"></a>Estendibilità  
   
--   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione della diffusione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevede due modalità di utilizzo di attributi ed estensioni personalizzati: derivazione di una nuova classe e accesso non fortemente tipizzato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Una funzionalità chiave dei protocolli di diffusione è l'estensibilità. Sia Atom 1.0 che RSS 2.0 consentono di aggiungere ai feed di diffusione attributi ed elementi che non sono definiti nelle specifiche. Il modello di programmazione della diffusione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prevede due modalità di utilizzo di attributi ed estensioni personalizzati: derivazione di una nuova classe e accesso non fortemente tipizzato. Per altre informazioni, vedere [estendibilità della diffusione](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

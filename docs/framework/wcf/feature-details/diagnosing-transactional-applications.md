@@ -1,30 +1,32 @@
 ---
 title: Diagnostica di applicazioni transazionali
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
 In questo argomento viene illustrato come utilizzare la funzionalità di gestione e di diagnostica di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per risolvere i problemi di un'applicazione transazionale.  
   
 ## <a name="performance-counters"></a>Contatori di prestazioni  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un set standard di contatori delle prestazioni per misurare le prestazioni delle applicazioni transazionali. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][i contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un set standard di contatori delle prestazioni per misurare le prestazioni delle applicazioni transazionali. Per altre informazioni, vedere [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  I contatori delle prestazioni vengono definiti a tre diversi livelli: servizio, endpoint e operazione come descritto nelle tabelle seguenti.  
   
@@ -56,7 +58,7 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
   
 ## <a name="windows-management-instrumentation"></a>Strumentazione gestione Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un numero di proprietà WMI in sola lettura indica le impostazioni della transazione applicate per un servizio. Nella tabelle seguenti vengono elencate tutte queste impostazioni.  
   
@@ -100,7 +102,7 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
   
 -   Traccia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard  
   
-     Questo tipo di traccia è equivalente alla traccia di qualsiasi applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurazione della traccia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Questo tipo di traccia è equivalente alla traccia di qualsiasi applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per altre informazioni, vedere [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Traccia WS-AtomicTransaction  
   

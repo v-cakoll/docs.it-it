@@ -1,12 +1,13 @@
 ---
 title: Tipi conosciuti di contratto dati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Tipi conosciuti di contratto dati
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> consente di specificare, in anticipo, i tipi che devono essere presi in considerazione durante la deserializzazione. Per un esempio pratico, vedere l'esempio [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  In genere, quando si passano parametri e valori restituiti tra un client e un servizio, entrambi gli endpoint condividono tutti i contratti dati dei dati da trasmettere. Nelle circostanze seguenti, tuttavia, la situazione è diversa:  
   
--   Il contratto dati inviato deriva dal contratto dati previsto. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione sull'ereditarietà in [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md). In tale caso, i dati trasmessi non hanno lo stesso contratto dati previsto dall'endpoint di destinazione.  
+-   Il contratto dati inviato deriva dal contratto dati previsto. Per altre informazioni, vedere la sezione sull'ereditarietà in [equivalenza dei contratti dati](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). In tale caso, i dati trasmessi non hanno lo stesso contratto dati previsto dall'endpoint di destinazione.  
   
 -   Il tipo dichiarato per le informazioni da trasmettere è un'interfaccia, anziché una classe, una struttura o un'enumerazione. Non è pertanto possibile conoscere in anticipo quale tipo che implementa l'interfaccia viene effettivamente inviato e, di conseguenza, l'endpoint di destinazione non è in grado di determinare, in anticipo, il contratto dati per i dati trasmessi.  
   

@@ -1,12 +1,13 @@
 ---
 title: Controllo delle versioni dei contratti dati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>Controllo delle versioni dei contratti dati
 Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati dai servizi. In questo argomento viene illustrato come controllare le versioni dei contratti dati. Vengono descritti i meccanismi di controllo delle versioni dei contratti dati. Per una panoramica completa e istruzioni sul controllo delle versioni, vedere [le procedure consigliate: controllo delle versioni del contratto dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -114,16 +116,16 @@ Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati
   
  Molte delle modifiche che si ritiene non determinino interruzioni, di fatto le provocano nel caso in cui sia richiesta una stretta osservanza dello schema. Nell'esempio precedente, un'istanza `CarV1` con il solo elemento `Model` eseguirebbe la convalida a fronte dello schema `CarV2` che dispone degli elementi `Model` e `Horsepower`, entrambi facoltativi. Non è tuttavia vero il contrario, ovvero un'istanza `CarV2` non riuscirebbe a eseguire la convalida a fronte dello schema `CarV1`.  
   
- Le sequenze di andata e ritorno comportano inoltre alcune considerazioni aggiuntive. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]sezione "Considerazioni sugli schemi" [contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Le sequenze di andata e ritorno comportano inoltre alcune considerazioni aggiuntive. Per altre informazioni, vedere la sezione "Considerazioni sugli schemi" in [contratti dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Altre modifiche consentite  
- L'implementazione dell'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> è una modifica che non determina interruzioni. Il supporto delle sequenze di andata e ritorno, tuttavia, non esiste per versioni del tipo precedenti alla versione nella quale <xref:System.Runtime.Serialization.IExtensibleDataObject> è stato implementato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratti dati compatibili con versioni](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ L'implementazione dell'interfaccia <xref:System.Runtime.Serialization.IExtensibleDataObject> è una modifica che non determina interruzioni. Il supporto delle sequenze di andata e ritorno, tuttavia, non esiste per versioni del tipo precedenti alla versione nella quale <xref:System.Runtime.Serialization.IExtensibleDataObject> è stato implementato. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Enumerazioni  
- L'aggiunta o la rimozione di un membro di enumerazione è una modifica che determina interruzioni. La modifica del nome di un membro di enumerazione determina interruzioni, a meno che il nome del contratto non sia identico a quello della versione precedente utilizzando l'attributo `EnumMemberAtttribute`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ L'aggiunta o la rimozione di un membro di enumerazione è una modifica che determina interruzioni. La modifica del nome di un membro di enumerazione determina interruzioni, a meno che il nome del contratto non sia identico a quello della versione precedente utilizzando l'attributo `EnumMemberAtttribute`. Per altre informazioni, vedere [tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Raccolte  
- La maggior parte delle modifiche di raccolte non determina interruzioni poiché la maggior parte dei tipi di raccolta sono intercambiabili tra loro nel modello del contratto dati. La trasformazione di una raccolta non personalizzata in una personalizzata e viceversa è, tuttavia, una modifica che determina interruzioni. Inoltre, modificare le impostazioni di personalizzazione della raccolta è una modifica sostanziale che implica il cambiamento del nome del contratto dati e dello spazio dei nomi, del nome dell'elemento ripetuto, del nome dell'elemento key e del nome dell'elemento value. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]personalizzazione di raccolte, vedere [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ La maggior parte delle modifiche di raccolte non determina interruzioni poiché la maggior parte dei tipi di raccolta sono intercambiabili tra loro nel modello del contratto dati. La trasformazione di una raccolta non personalizzata in una personalizzata e viceversa è, tuttavia, una modifica che determina interruzioni. Inoltre, modificare le impostazioni di personalizzazione della raccolta è una modifica sostanziale che implica il cambiamento del nome del contratto dati e dello spazio dei nomi, del nome dell'elemento ripetuto, del nome dell'elemento key e del nome dell'elemento value. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lla personalizzazione delle raccolte, vedere [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Ovviamente, la modifica del contratto dati del contenuto di una raccolta, ad esempio il passaggio da un elenco di numeri interi a un elenco di stringhe, è sostanziale.  
   
 ## <a name="see-also"></a>Vedere anche  

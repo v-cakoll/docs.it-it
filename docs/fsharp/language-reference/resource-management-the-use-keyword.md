@@ -1,20 +1,17 @@
 ---
 title: 'Gestione di risorse: parola chiave use (F#)'
-description: 'Scopri di F # parola chiave ''use'' e la funzione ''utilizzando'', che consentono di controllare l''inizializzazione e il rilascio delle risorse.'
-keywords: visual f#, f#, programmazione funzionale
+description: "Scopri di F # parola chiave 'use' e la funzione 'utilizzando', che consentono di controllare l'inizializzazione e il rilascio delle risorse."
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>Gestione di risorse: parola chiave use
 
@@ -44,7 +41,7 @@ Nell'esempio seguente viene illustrato come chiudere automaticamente un file uti
 ## <a name="using-function"></a>funzione
 Il `using` funzione ha il formato seguente:
 
-`using`(*expression1*) *funzione o espressione lambda*
+`using` (*expression1*) *funzione o espressione lambda*
 
 In un `using` espressione *expression1* crea l'oggetto che deve essere eliminato. Il risultato di *expression1* (l'oggetto che deve essere eliminato) diventa un argomento, *valore*a *funzione o lambda*, che è una funzione che prevede un singolo rimanente argomento di tipo che corrisponde al valore prodotto da *expression1*, o un'espressione lambda che prevede un argomento di quel tipo. Al termine dell'esecuzione della funzione, il runtime chiama `Dispose` e libera le risorse (a meno che il valore è `null`, nel qual caso non viene effettuata la chiamata a Dispose).
 
@@ -56,7 +53,7 @@ L'esempio seguente mostra il `using` espressione con una funzione.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-Si noti che la funzione potrebbe essere una funzione che presenta alcuni argomenti già applicati. Esempio di codice seguente viene illustrato questo. Viene creato un file che contiene la stringa `XYZ`.
+Si noti che la funzione potrebbe essere una funzione che presenta alcuni argomenti già applicati. Nell'esempio di codice seguente viene illustrata questa possibilità. Viene creato un file che contiene la stringa `XYZ`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

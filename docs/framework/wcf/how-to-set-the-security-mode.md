@@ -1,12 +1,13 @@
 ---
-title: "Procedura: impostare la modalità di sicurezza"
-ms.custom: 
+title: 'Procedura: impostare la modalità di sicurezza'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: impostare la modalità di sicurezza
 Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] presenta tre modalità di sicurezza in genere disponibili nella maggior parte delle associazioni predefinite: a livello di trasporto ("Transport"), a livello di messaggio ("Message") e "Trasporto con credenziale a livello di messaggio" ("TransportWithMessageCredential"). Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Si noti che non tutte le associazioni predefinite supportano queste modalità. Questo argomento descrive come utilizzare le classi <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> per impostare la modalità, sia a livello di programmazione sia in configurazione.  
   
- [!INCLUDE[crabout](../../../includes/crdefault-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [protezione servizi](../../../docs/framework/wcf/securing-services.md), e [protezione dei servizi e client](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]modalità e il messaggio di trasporto, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [la sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Per altre informazioni, vedere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [protezione Services](../../../docs/framework/wcf/securing-services.md), e [protezione dei servizi e client](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] modalità e il messaggio di trasporto, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Per impostare la modalità di sicurezza in codice  
   
@@ -122,7 +124,7 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 
 ### <a name="using-transportwithmessagecredential"></a>Utilizzo della modalità TransportWithMessageCredential  
  Quando si imposta la modalità di sicurezza su `TransportWithMessageCredential`, il trasporto determina il meccanismo di sicurezza a livello di trasporto effettivamente utilizzato. Ad esempio, il protocollo di trasporto HTTP utilizza il meccanismo Secure Sockets Layer (SSL) su HTTP (HTTPS). Pertanto, l'impostazione della proprietà `ClientCredentialType` di qualsiasi oggetto di sicurezza a livello di trasporto (ad esempio <xref:System.ServiceModel.HttpTransportSecurity>) viene ignorata.  In altre parole, è possibile impostare solo la proprietà `ClientCredentialType` dell'oggetto di sicurezza a livello di messaggio (per l'associazione `WSHttpBinding`, tale proprietà può essere impostata solo per l'oggetto <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Procedura: utilizzare la sicurezza del trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ Per altre informazioni, vedere [procedura: utilizzare sicurezza del trasporto e le credenziali del messaggio](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Configurare una porta con un certificato SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
@@ -131,6 +133,6 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 
  [Sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
- [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
- [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

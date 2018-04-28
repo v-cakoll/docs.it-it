@@ -1,35 +1,37 @@
 ---
 title: Abilitazione dinamica della traccia analitica
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Abilitazione dinamica della traccia analitica
 Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows (ETW). Per tutti i servizi [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] la traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare il file Web.config dell'applicazione o riavviare il servizio. In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.  
   
  È possibile configurare le opzioni di traccia di[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in modo analogo. È ad esempio possibile impostare il livello di gravità da **Error** su **Information** senza interferire con l'applicazione. A tale scopo utilizzare gli strumenti seguenti:  
   
--   **Logman** : strumento da riga di comando per la configurazione, il controllo e l'esecuzione di query sui dati di traccia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) e [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   **Logman** : strumento da riga di comando per la configurazione, il controllo e l'esecuzione di query sui dati di traccia. Per altre informazioni, vedere [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) e [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **EventViewer** : strumento di gestione grafica Windows per visualizzare i risultati della traccia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Servizi WCF e Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=165428).  
+-   **EventViewer** : strumento di gestione grafica Windows per visualizzare i risultati della traccia. Per altre informazioni, vedere [servizi WCF ed Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Perfmon** : strumento di gestione grafica Windows che utilizza contatori per monitorare i contatori di tracce e gli effetti della traccia sulle prestazioni. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Creare manualmente un insieme agenti di raccolta dati](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   **Perfmon** : strumento di gestione grafica Windows che utilizza contatori per monitorare i contatori di tracce e gli effetti della traccia sulle prestazioni. Per altre informazioni, vedere [creare un dati agente di raccolta impostata manualmente](http://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>Parole chiave  
  In caso di utilizzo della classe <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> , i messaggi di traccia di .NET Framework vengono in genere filtrati in base al livello di gravità (ad esempio, Error, Warning e Information). ETW supporta il concetto del livello di gravità, ma introduce un nuovo meccanismo di filtro flessibile mediante parole chiave. Le parole chiave sono costituite da valori testuali arbitrari che consentono agli eventi di traccia di fornire contesto aggiuntivo sul significato dell'evento.  

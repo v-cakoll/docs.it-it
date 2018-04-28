@@ -1,13 +1,13 @@
 ---
 title: Contratti dati compatibili con versioni successive
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratti dati compatibili con versioni successive
-Una caratteristica del sistema di contratti dati di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consiste nel fatto che i contratti possono evolversi nel tempo in modo da non determinare interruzioni. Ovvero, un client con una versione precedente di un contratto dati può comunicare con un servizio dotato di una versione più recente dello stesso contratto dati, oppure un client con una versione più recente di un contratto dati può comunicare con un client dotato di una versione precedente dello stesso contratto dati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedure consigliate: controllo delle versioni del contratto dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Una caratteristica del sistema di contratti dati di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consiste nel fatto che i contratti possono evolversi nel tempo in modo da non determinare interruzioni. Ovvero, un client con una versione precedente di un contratto dati può comunicare con un servizio dotato di una versione più recente dello stesso contratto dati, oppure un client con una versione più recente di un contratto dati può comunicare con un client dotato di una versione precedente dello stesso contratto dati. Per altre informazioni, vedere [procedure consigliate: controllo delle versioni del contratto dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
  È possibile applicare, in base alle esigenze, la maggior parte delle funzionalità di controllo delle versioni quando vengono create versioni nuove di un contratto dati esistente. Tuttavia, una funzionalità di controllo delle versioni, *andata e ritorno*, deve essere compilato nel tipo della prima versione per il corretto funzionamento.  
   

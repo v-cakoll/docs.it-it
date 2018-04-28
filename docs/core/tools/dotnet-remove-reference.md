@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet remove reference - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet remove reference offre un'opzione utile per rimuovere riferimenti da progetto a progetto.
-keywords: dotnet-remove, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 691fd77c7605b6476adc764f20e59b51abd7d914
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0b7fb2788ccc04b54bf02f0387141d501612c16d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 

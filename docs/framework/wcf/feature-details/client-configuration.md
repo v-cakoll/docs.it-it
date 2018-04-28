@@ -1,24 +1,26 @@
 ---
 title: Configurazione del client
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75b594d01c8a9297f3383c2648b3853c2c024b9b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19d1f7630c96f557791f0682fbc0c5d7286c7eb7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="client-configuration"></a>Configurazione del client
 La configurazione client di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere utilizzata per specificare l'indirizzo, l'associazione, il comportamento e il contratto, ovvero le proprietà di base dell'endpoint client utilizzate dai client per connettersi agli endpoint di servizio. Il [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento ha un [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) i cui attributi consentono di configurare l'endpoint di base sull'elemento. Questi attributi sono descritti nella sezione "Configurazione degli endpoint" di questo argomento.  
@@ -93,16 +95,16 @@ La configurazione client di [!INCLUDE[indigo1](../../../../includes/indigo1-md.m
   
  L'attributo `name` facoltativo identifica in modo univoco un endpoint per un dato contratto. In particolare, tale attributo viene utilizzato dal costruttore <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> o dal costruttore <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> per specificare l'endpoint della configurazione client da configurare e da caricare quando viene creato un canale per il servizio. È possibile scegliere come nome di configurazione di endpoint il carattere jolly "*". In questo caso, il metodo <xref:System.ServiceModel.ChannelFactory.ApplyConfiguration%2A> carica qualsiasi configurazione di endpoint contenuta nel file, purché ne sia presente soltanto una. Se sono presenti più configurazioni di endpoint, viene generata un'eccezione. Se questo attributo viene omesso, l'endpoint corrispondente viene utilizzato come endpoint predefinito associato al tipo di contratto specificato. Il valore predefinito dell'attributo `name` è una stringa vuota a cui si fa riferimento con le stesse modalità utilizzate per qualsiasi altro nome.  
   
- Affinché possa essere individuato e identificato, ogni endpoint deve presentare un indirizzo. L'attributo `address` può essere utilizzato per specificare l'URL che indica la posizione dell'endpoint. Tuttavia, l'indirizzo di un endpoint di servizio può anche essere specificato in codice creando un Uniform Resource Identifier (URI) e aggiungendo tale identificatore all'elemento <xref:System.ServiceModel.ServiceHost> tramite uno dei metodi <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Come indicato di introduzione, il [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementi fanno parte di <xref:System.ServiceModel.EndpointAddress> e vengono illustrati anche nel [ Gli indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) argomento.  
+ Affinché possa essere individuato e identificato, ogni endpoint deve presentare un indirizzo. L'attributo `address` può essere utilizzato per specificare l'URL che indica la posizione dell'endpoint. Tuttavia, l'indirizzo di un endpoint di servizio può anche essere specificato in codice creando un Uniform Resource Identifier (URI) e aggiungendo tale identificatore all'elemento <xref:System.ServiceModel.ServiceHost> tramite uno dei metodi <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>. Per altre informazioni, vedere [indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md). Come indicato di introduzione, il [ \<intestazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementi fanno parte di <xref:System.ServiceModel.EndpointAddress> e vengono illustrati anche nel [ Gli indirizzi](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) argomento.  
   
- L'attributo `binding` indica il tipo di associazione che l'endpoint prevede di utilizzare per la connessione a un servizio. Se si prevede di fare riferimento al tipo occorre registrare per quest'ultimo una sezione di configurazione. Nell'esempio precedente, si tratta di [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , che indica che l'endpoint utilizza un <xref:System.ServiceModel.WSHttpBinding>. È tuttavia possibile che l'endpoint utilizzi più di un'associazione di un determinato tipo. Ognuna di queste ha il proprio [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento all'interno dell'elemento di tipo (binding). L'attributo `bindingconfiguration` viene utilizzato per distinguere le associazioni dello stesso tipo. Il valore viene confrontato con il `name` attributo del [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come configurare un client di associazione tramite configurazione, vedere [procedura: specificare un'associazione Client nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
+ L'attributo `binding` indica il tipo di associazione che l'endpoint prevede di utilizzare per la connessione a un servizio. Se si prevede di fare riferimento al tipo occorre registrare per quest'ultimo una sezione di configurazione. Nell'esempio precedente, si tratta di [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , che indica che l'endpoint utilizza un <xref:System.ServiceModel.WSHttpBinding>. È tuttavia possibile che l'endpoint utilizzi più di un'associazione di un determinato tipo. Ognuna di queste ha il proprio [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento all'interno dell'elemento di tipo (binding). L'attributo `bindingconfiguration` viene utilizzato per distinguere le associazioni dello stesso tipo. Il valore viene confrontato con il `name` attributo del [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come configurare un client di associazione utilizzando la configurazione, vedere [procedura: specificare un'associazione Client nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md).  
   
  Il `behaviorConfiguration` attributo viene utilizzato per specificare quali [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) del [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) l'endpoint deve utilizzare. Il valore viene confrontato con il `name` attributo del [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento. Per un esempio di utilizzo della configurazione per specificare i comportamenti client, vedere [configurazione dei comportamenti Client](../../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
  L'attributo `contract` specifica il contratto esposto dall'endpoint. Questo valore fa riferimento alla proprietà <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> dell'attributo <xref:System.ServiceModel.ServiceContractAttribute>. Il valore predefinito è il nome di tipo completo della classe che implementa il servizio.  
   
 ### <a name="configuring-metadata"></a>Configurazione di metadati  
- Il [ \<metadati >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento viene usato per specificare le impostazioni utilizzate per registrare i metadati le estensioni di importazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]estensione del sistema di metadati, vedere[estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Il [ \<metadati >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento viene usato per specificare le impostazioni utilizzate per registrare i metadati le estensioni di importazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] estensione del sistema di metadati, vedere[estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

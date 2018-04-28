@@ -1,20 +1,17 @@
 ---
 title: 'La parola chiave Fixed (F #)'
 description: "Informazioni su come è possibile 'pin' locale nello stack per impedire la raccolta con F # 'fixed' parola chiave."
-keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>La parola chiave Fixed
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 Estende la sintassi delle espressioni per consentire l'estrazione di un puntatore e l'associazione a un nome che ha impedito a essere raccolti o spostato durante l'operazione di garbage collection.  
 
-Un puntatore da un'espressione è stato risolto tramite il `fixed` parola chiave è associata a un identificatore tramite il `use` (parola chiave).  La semantica di ciò è simile alla gestione delle risorse tramite il `use` (parola chiave).  È stato risolto il puntatore si trova nell'ambito, mentre una volta rientra nell'ambito, non è corretto.  `fixed`non può essere utilizzato all'esterno del contesto di un `use` associazione.  È necessario associare il puntatore a un nome con `use`.
+Un puntatore da un'espressione è stato risolto tramite il `fixed` parola chiave è associata a un identificatore tramite il `use` (parola chiave).  La semantica di ciò è simile alla gestione delle risorse tramite il `use` (parola chiave).  È stato risolto il puntatore si trova nell'ambito, mentre una volta rientra nell'ambito, non è corretto.  `fixed` non può essere utilizzata all'esterno del contesto di un `use` associazione.  È necessario associare il puntatore a un nome con `use`.
 
 Utilizzo di `fixed` devono verificarsi all'interno di un'espressione in una funzione o un metodo.  Non può essere utilizzato in un ambito a livello di script o a livello di modulo.
 

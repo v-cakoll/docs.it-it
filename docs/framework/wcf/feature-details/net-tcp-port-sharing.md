@@ -1,27 +1,29 @@
 ---
 title: Condivisione delle porte Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un nuovo protocollo di rete basato su TCP (net.tcp://) per la comunicazione ad alte prestazioni. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduce inoltre un nuovo componente di sistema, il Servizio condivisione porte Net.Tcp, che consente la condivisione delle porte net.tcp tra più processi utente.  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  Quando viene aperto un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che usa la condivisione delle porte net.tcp://, l'infrastruttura di trasporto TCP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non apre direttamente un socket TCP nel processo dell'applicazione. Registra, invece, l'URI (Uniform Resource Identifier) dell'indirizzo di base del servizio presso il Servizio di condivisione porte Net.TCP e attende che quest'ultimo ascolti i messaggi per suo conto.  Il servizio di condivisione delle porte invia i messaggi indirizzati al servizio dell'applicazione non appena arrivano.  
   
 ## <a name="installing-port-sharing"></a>Installazione della condivisione delle porte  
- Il Servizio di condivisione porte Net.TCP è disponibile in tutti i sistemi operativi che supportano [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ma non viene attivato per impostazione predefinita. Per motivi di sicurezza, gli amministratori devono attivare manualmente il Servizio di condivisione porte Net.TCP al primo utilizzo. Il Servizio di condivisione porte Net.TCP espone opzioni di configurazione che consentono di modificare diverse caratteristiche dei socket di rete appartenenti al servizio stesso. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: abilitare il servizio di condivisione delle porte Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Il Servizio di condivisione porte Net.TCP è disponibile in tutti i sistemi operativi che supportano [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], ma non viene attivato per impostazione predefinita. Per motivi di sicurezza, gli amministratori devono attivare manualmente il Servizio di condivisione porte Net.TCP al primo utilizzo. Il Servizio di condivisione porte Net.TCP espone opzioni di configurazione che consentono di modificare diverse caratteristiche dei socket di rete appartenenti al servizio stesso. Per ulteriori informazioni, vedere [procedura: abilitare il servizio di condivisione porta Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Utilizzo della condivisione delle porte Net.tcp in un'applicazione  
  Il modo più semplice per usare la condivisione delle porte net.tcp:// nell'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste nell'esporre un servizio mediante <xref:System.ServiceModel.NetTcpBinding> e nell'attivare il Servizio di condivisione porte Net.TCP mediante la proprietà <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come eseguire questa operazione, vedere [procedura: configurare un servizio WCF di utilizzare la condivisione delle porte](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come eseguire questa operazione, vedere [procedura: configurare un servizio WCF per la condivisione delle porte utilizzare](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Implicazioni di sicurezza della condivisione delle porte  
  Sebbene il Servizio di condivisione porte Net.TCP preveda un livello di elaborazione tra le applicazioni e la rete, le applicazioni che usano la condivisione delle porte dovrebbero comunque essere protette come se fossero direttamente in ascolto sulla rete. In particolare, le applicazioni che usano la condivisione delle porte dovrebbero valutare i privilegi del processo con cui vengono eseguite. Considerare l'ipotesi di eseguire l'applicazione usando l'account predefinito Servizio di rete, che viene eseguito con il set minimo di privilegi del processo necessari per la comunicazione di rete.  

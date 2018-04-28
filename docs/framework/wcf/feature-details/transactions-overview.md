@@ -1,28 +1,30 @@
 ---
 title: Panoramica sulle transazioni di Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Panoramica sulle transazioni di Windows Communication Foundation
 Le transazioni consentono di radunare un set di azioni o operazioni in un'unica unità di esecuzione indivisibile. Una transazione è una raccolta di operazioni con le proprietà seguenti:  
@@ -39,7 +41,7 @@ Le transazioni consentono di radunare un set di azioni o operazioni in un'unica 
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa il supporto per il protocollo WS-AtomicTransaction (WS-AT) che consente alle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di propagare transazioni alle applicazioni interoperative, ad esempio i servizi Web interoperativi creati usando tecnologia di terze parti. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa anche il supporto per il protocollo delle transazioni OLE che può essere usato negli scenari in cui non è necessaria la funzionalità di interoperabilità per abilitare il flusso delle transazioni.  
   
- È possibile usare un file di configurazione dell'applicazione per configurare associazioni che abilitano o disabilitano il flusso delle transazioni, nonché impostare il protocollo delle transazioni desiderato su un'associazione. È inoltre possibile impostare timeout delle transazioni a livello di servizio usando il file di configurazione. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Attivazione del flusso di transazione](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ È possibile usare un file di configurazione dell'applicazione per configurare associazioni che abilitano o disabilitano il flusso delle transazioni, nonché impostare il protocollo delle transazioni desiderato su un'associazione. È inoltre possibile impostare timeout delle transazioni a livello di servizio usando il file di configurazione. Per altre informazioni, vedere [l'abilitazione del flusso di transazione](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
  Gli attributi delle transazioni nello spazio dei nomi <xref:System.ServiceModel> consentono di eseguire le operazioni seguenti:  
   
@@ -49,7 +51,7 @@ Le transazioni consentono di radunare un set di azioni o operazioni in un'unica 
   
 -   Usare gli attributi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> su un metodo del contratto per richiedere, consentire o negare il flusso delle transazioni.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Gli attributi della transazione di ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Per altre informazioni, vedere [gli attributi della transazione di ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  

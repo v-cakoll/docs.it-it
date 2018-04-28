@@ -1,28 +1,28 @@
 ---
 title: Configurazione di HTTP e HTTPS
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>Configurazione di HTTP e HTTPS
 I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTTP/HTTPS vengono configurate tramite Internet Information Services (IIS) o tramite l'utilizzo di uno strumento da riga di comando. Quando un servizio WCF è ospitato in IIS è possibile configurare le impostazioni HTTP o HTTPS in IIS utilizzando lo strumento inetmgr.exe. Se un servizio WCF è indipendente, le impostazioni HTTP o HTTPS vengono configurate tramite uno strumento da riga di comando.  
@@ -31,7 +31,7 @@ I client e i servizi WCF possono comunicare su HTTP e HTTPS. Le impostazioni HTT
   
  Lo strumento utilizzato per configurare le impostazioni HTTP dipende dal sistema operativo in esecuzione nel computer.  
   
- Quando si esegue [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] installa automaticamente questo strumento. Quando si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
+ Quando si esegue [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilizzare lo strumento HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] installa automaticamente questo strumento. Quando si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)], è possibile scaricare lo strumento dalla pagina [strumenti di supporto di Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Per altre informazioni, vedere [Panoramica di Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
  Se si esegue [!INCLUDE[wv](../../../../includes/wv-md.md)] o Windows 7, queste impostazioni si configurano con lo strumento Netsh.exe.  
   
@@ -69,7 +69,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Questo comando aggiunge una prenotazione URL per lo spazio dei nomi URL specificato per l'account DOMAIN\user.  Per ulteriori informazioni sull'utilizzo di comando netsh, digitare "netsh http add urlacl" in un prompt dei comandi e premere immettere.  
   
 ## <a name="configuring-a-firewall-exception"></a>Configurazione di un'eccezione del firewall  
- In caso di un servizio WCF self-hosted che comunica tramite HTTP, è necessario aggiungere un'eccezione alla configurazione del firewall per consentire connessioni in ingresso tramite un particolare URL. Per ulteriori informazioni, vedere [aprire una porta nel Firewall di Windows (Windows 7)](http://go.microsoft.com/fwlink/?LinkId=239961)  
+ In caso di un servizio WCF self-hosted che comunica tramite HTTP, è necessario aggiungere un'eccezione alla configurazione del firewall per consentire connessioni in ingresso tramite un particolare URL. Per altre informazioni, vedere [aprire una porta nel Firewall di Windows (Windows 7)](http://go.microsoft.com/fwlink/?LinkId=239961)  
   
 ## <a name="configuring-ssl-certificates"></a>Configurazione di certificati SSL  
  Il protocollo SSL (Secure Sockets Layer) utilizza certificati nel client e nel server per memorizzare le chiavi di crittografia. Il server fornisce il proprio certificato SSL quando viene stabilita una connessione, in modo che il client possa verificare l'identità del server. Il server può inoltre richiedere un certificato dal client, per fornire l'autenticazione reciproca di entrambi i lati della connessione.  

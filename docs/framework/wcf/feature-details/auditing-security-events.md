@@ -1,35 +1,35 @@
 ---
 title: Controllo degli eventi di sicurezza
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono utilizzare una funzionalità di controllo che consente di registrare gli eventi di sicurezza in base all'esito: è possibile registrare solo gli eventi con esito positivo, solo gli eventi con esito negativo o entrambi. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
   
  La funzionalità di controllo consente a un amministratore di individuare un attacco mentre è ancora in corso o quando è già avvenuto. Tale funzionalità consente inoltre agli sviluppatori di semplificare il debug dei problemi di sicurezza. Ad esempio, se per un errore nella configurazione dei criteri di autorizzazione o di verifica il sistema nega l'accesso a un utente autorizzato, uno sviluppatore può individuare e isolare rapidamente la causa di questo errore esaminando il registro eventi.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Livelli e comportamenti di controllo  
  Esistono due livelli di controllo di sicurezza:  
@@ -41,7 +41,7 @@ Le applicazioni create in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
  È possibile controllare controllo su entrambi i livelli per esito positivo o negativo, che è noto come il *comportamento di controllo*.  
   
 ## <a name="audit-log-location"></a>Posizione del registro di controllo  
- Dopo aver determinato un livello e un comportamento di controllo, è possibile specificare la posizione del registro di controllo. Sono disponibili tre opzioni: Predefinito, Applicazione e Protezione. Quando si specifica l'opzione Predefinito, la posizione effettiva del registro varia in base al sistema utilizzato e alla possibilità di quest'ultimo di supportare la scrittura nel registro di sicurezza. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Sistema operativo" più avanti in questo argomento.  
+ Dopo aver determinato un livello e un comportamento di controllo, è possibile specificare la posizione del registro di controllo. Sono disponibili tre opzioni: Predefinito, Applicazione e Protezione. Quando si specifica l'opzione Predefinito, la posizione effettiva del registro varia in base al sistema utilizzato e alla possibilità di quest'ultimo di supportare la scrittura nel registro di sicurezza. Per altre informazioni, vedere la sezione "Sistema operativo" più avanti in questo argomento.  
   
  Per scrivere nel registro protezione è necessario disporre del privilegio `SeAuditPrivilege`. Per impostazione predefinita, solo gli account Sistema locale e Servizio di rete dispongono di questo privilegio. Per gestire le funzioni del registro protezione `read` e `delete` è necessario disporre del privilegio `SeSecurityPrivilege`. Per impostazione predefinita, solo gli amministratori dispongono di questo privilegio.  
   
@@ -86,10 +86,10 @@ Le applicazioni create in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
 </configuration>  
 ```  
   
- Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] supportano la scrittura nel registro di sicurezza. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Sistema operativo" più avanti in questo argomento.  
+ Se il controllo è attivo e non è stata specificata alcuna posizione `auditLogLocation`, la posizione predefinita del registro è "Protezione" se la piattaforma supporta la scrittura in tale registro. In caso contrario, tale posizione è "Applicazione". Solo i sistemi operativi [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] supportano la scrittura nel registro di sicurezza. Per altre informazioni, vedere la sezione "Sistema operativo" più avanti in questo argomento.  
   
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
- Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]l'articolo del supporto Microsoft nella visualizzazione e gestione dei registri eventi mediante il Visualizzatore eventi in Windows XP, disponibile all'indirizzo [come visualizzare e gestire i registri eventi nel Visualizzatore eventi in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Un utente malintenzionato a conoscenza del fatto che il controllo è attivo può inviare messaggi non validi che comportano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo. Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per altre informazioni, vedere l'articolo di supporto tecnico Microsoft sulla visualizzazione e gestione dei registri eventi tramite Visualizzatore eventi in Windows XP disponibile all'indirizzo [come visualizzare e gestire i registri eventi nel Visualizzatore eventi in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Gli eventi di controllo scritti nel registro applicazioni in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sono visualizzabili da qualsiasi utente autenticato.  
   

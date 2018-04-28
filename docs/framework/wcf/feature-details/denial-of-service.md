@@ -1,28 +1,28 @@
 ---
 title: Denial of Service (Negazione del servizio)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d5f67790abad5dcf6311de1817b4ea093e703d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -57,7 +57,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="auditing-event-log-can-be-filled"></a>Possibilità di riempimento del registro eventi di controllo  
  Se un utente malintenzionato comprende che è attivato il controllo, può inviare messaggi non validi che causano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo.  
   
- Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzando il Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=186123). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzando il Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=186123). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Possibili blocchi del servizio causati da implementazioni non valide di IAuthorizationPolicy  
  La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non valida dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare il blocco del servizio.  
@@ -68,13 +68,13 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Se un client appartiene a un gran numero di gruppi (circa 900, anche se il numero effettivo varia a seconda dei gruppi), può verificarsi un problema quando il blocco dell'intestazione di un messaggio supera i 64 kilobyte. In tal caso, è possibile aumentare il dimensione massima Kerberos del token, come descritto nell'articolo di supporto Microsoft "[l'autenticazione Kerberos di Internet Explorer non funziona a causa di un buffer insufficiente, la connessione a IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Può inoltre essere necessario aumentare la dimensione massima dei messaggi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per adattarla al più ampio token Kerberos.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Generazione da parte della registrazione automatica di più certificati per computer con lo stesso nome di soggetto  
- *La registrazione automatica* è la possibilità di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] registreranno automaticamente gli utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
+ *La registrazione automatica* è una funzionalità di [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] registreranno automaticamente gli utenti e computer per i certificati. Quando un computer si trova in un dominio con questa funzionalità attivata, viene automaticamente creato un certificato X.509 con l'obiettivo di eseguire l'autenticazione client, tale certificato viene quindi inserito nell'archivio dei certificati personali del computer locale ogni qualvolta un nuovo computer viene associato alla rete. Tuttavia, la registrazione automatica usa lo stesso nome di soggetto per tutti i certificati creati nella cache.  
   
  Può quindi accadere che l'apertura dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] abbia esito negativo nei domini con la registrazione automatica. Ciò si verifica perché i criteri predefiniti per la ricerca delle credenziali X.509 del servizio potrebbero essere ambigui, dal momento che esistono più certificati con il nome DNS (Domain Name System) completo del computer. Un certificato ha origine dalla registrazione automatica, l'altro potrebbe invece essere un certificato autorilasciato.  
   
  Per risolvere questo problema, fanno riferimento al certificato esatto da usare con un criterio di ricerca più preciso nel [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la funzionalità di registrazione automatica, vedere [la registrazione dei certificati in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la funzionalità di registrazione automatica, vedere [la registrazione dei certificati in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Uso per l'autorizzazione dell'ultimo dei diversi nomi di soggetto alternativi  
  Nel raro caso che un certificato X.509 contenga più nomi di soggetto alternativi e si esegua l'autorizzazione usando il nome di soggetto alternativo, l'autorizzazione potrebbe avere esito negativo.  
@@ -88,7 +88,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Quando un client viene correttamente autenticato da un servizio e viene stabilita una sessione protetta con il servizio, il servizio tiene traccia della sessione fino a quando il client non la annulla o la sessione non scade. Ogni sessione stabilita viene conteggiata a fronte del numero massimo consentito di sessioni attive simultanee con un servizio. Quando viene raggiunto questo limite, i client che tentano di creare una nuova sessione con il servizio in questione vengono rifiutati fino a quando una o più sessioni attive non scadono o non vengono annullate da un client. Un client può avere più sessioni con un servizio e ognuna di esse viene conteggiata per il raggiungimento del limite.  
   
 > [!NOTE]
->  Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sessioni con stato, vedere [procedura: creare un Token del contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le sessioni con state, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Per prevenire il problema, impostare il limite per il numero massimo di sessioni attive e la durata massima di una sessione impostando la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

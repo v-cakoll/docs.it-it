@@ -1,33 +1,35 @@
 ---
 title: Elemento &lt;httpDigest&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>Elemento &lt;httpDigest&gt;
 Specifica una credenziale di tipo digest usata per autenticare il client presso un servizio.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<i comportamenti >  
 \<endpointBehaviors >  
 \<comportamento >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<httpDigest >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -46,18 +48,18 @@ Specifica una credenziale di tipo digest usata per autenticare il client presso 
 |`impersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delegation: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonima: Il server non è possibile rappresentare o identificare il client.<br />-None: Un livello di rappresentazione non è assegnato.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Specifica le credenziali usate per autenticare un client presso un servizio.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Specifica le credenziali usate per autenticare un client presso un servizio.|  
   
 ## <a name="remarks"></a>Note  
  Un digest è un hash determinato mediante un algoritmo e un insieme di input. L'autenticatore e l'autenticato concordano un algoritmo e scambiamo i dati usati come input. Il client può calcolare l'hash e inviarlo al servizio. Il servizio calcola anche l'hash e confronta i valori. Una corrispondenza convalida il client.  
   
- Questa funzionalità deve essere abilitata con Active Directory in Windows e Internet Information Services (IIS). [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][L'autenticazione in IIS 6.0 digest](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Questa funzionalità deve essere abilitata con Active Directory in Windows e Internet Information Services (IIS). Per altre informazioni, vedere [autenticazione del Digest in IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

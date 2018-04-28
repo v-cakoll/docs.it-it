@@ -1,30 +1,32 @@
 ---
 title: 'Procedura: creare una credenziale di supporto'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedura: creare una credenziale di supporto
 È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. In questo argomento viene illustrato come implementare tali credenziali in un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 > [!NOTE]
->  La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Specifiche di sicurezza dei servizi web](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  La specifica per supportare le credenziali è parte della specifica SecurityPolicy-WS. Per altre informazioni, vedere [specifiche di sicurezza di servizi Web](http://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Token di supporto  
  In breve, quando si utilizza la sicurezza dei messaggi, un *credenziale primaria* viene sempre utilizzata per proteggere il messaggio (ad esempio, un certificato x. 509 o un ticket Kerberos).  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |Firmato e di crittografia|I token di supporto crittografati firmati sono token di supporto firmati che vengono anche crittografati quando sono presenti in `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmazione di credenziali di supporto  
- Per creare un servizio che utilizza i token di supporto è necessario creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Procedura: creare un'associazione personalizzata usando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Per creare un servizio che utilizza i token di supporto è necessario creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Per altre informazioni, vedere [procedura: creare un personalizzato Binding Using SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Quando si crea un'associazione personalizzata, il primo passaggio consiste nel creare un elemento di associazione di sicurezza che può essere di uno dei tre tipi seguenti:  
   
@@ -69,9 +71,9 @@ ms.lasthandoff: 12/22/2017
 #### <a name="scopes"></a>Ambiti  
  Esistono due ambiti per le credenziali di supporto:  
   
--   *Token di supporto endpoint* supportano tutte le operazioni di un endpoint. In altre parole, la credenziale rappresentata dal token di supporto può essere usata ogni volta che vengono richiamate le operazioni di un endpoint.  
+-   *Endpoint token di supporto* supportano tutte le operazioni di un endpoint. In altre parole, la credenziale rappresentata dal token di supporto può essere usata ogni volta che vengono richiamate le operazioni di un endpoint.  
   
--   *Token di supporto operazioni* supporta solo l'operazione di un endpoint specifico.  
+-   *Token di supporto operazioni* supporta solo un'operazione di endpoint specifico.  
   
  Come indicato dai nomi delle proprietà, le credenziali di supporto possono essere obbligatorie o facoltative. In altre parole, se la credenziale di supporto viene usata se presente, anche se non necessaria, l'autenticazione non avrà esito negativo se la credenziale non è presente.  
   

@@ -1,9 +1,7 @@
 ---
 title: Operatore Mod (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 04/24/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -18,14 +16,13 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cf0889cbea609b4555581fbf67cd0cba1ea889d0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
 Divide due numeri e restituisce solo il resto.  
@@ -46,9 +43,31 @@ number1 Mod number2
 ## <a name="supported-types"></a>Tipi supportati  
  Tutti i tipi numerici. Sono inclusi i tipi senza segno a virgola mobile e `Decimal`.  
   
-## <a name="result"></a>Risultato  
- Il risultato è il resto dopo `number1` viene diviso per `number2`. Ad esempio, l'espressione `14 Mod 4` restituisce 2.  
-  
+## <a name="result"></a>Risultato
+
+Il risultato è il resto dopo `number1` viene diviso per `number2`. Ad esempio, l'espressione `14 Mod 4` restituisce 2.  
+
+> [!NOTE]
+> È presente una differenza tra *resto* e *modulus* in matematica, con risultati diversi per i numeri negativi. Il `Mod` operatore in Visual Basic, .NET Framework `op_Modulus` operatore e sottostante [rem]<xref:System.Reflection.Emit.OpCodes.Rem> parte dell'istruzione che eseguire un'operazione di resto.
+
+Il risultato di una `Mod` operazione mantiene il segno del dividendo, `number1`, e pertanto può essere positivo o negativo. Il risultato è sempre nell'intervallo (-`number2`, `number2`), esclusivo. Ad esempio:
+
+```vb
+Public Module Example
+   Public Sub Main()
+      Console.WriteLine($" 8 Mod  3 = {8 Mod 3}")
+      Console.WriteLine($"-8 Mod  3 = {-8 Mod 3}")
+      Console.WriteLine($" 8 Mod -3 = {8 Mod -3}")
+      Console.WriteLine($"-8 Mod -3 = {-8 Mod -3}")
+   End Sub
+End Module
+' The example displays the following output:
+'       8 Mod  3 = 2
+'      -8 Mod  3 = -2
+'       8 Mod -3 = 2
+'      -8 Mod -3 = -2
+```
+
 ## <a name="remarks"></a>Note  
  Se il valore `number1` o `number2` è un valore a virgola mobile, viene restituito il resto della divisione a virgola mobile. Il tipo di dati del risultato è il tipo di dati più piccolo che può contenere tutti i possibili valori risultanti dalla divisione con i tipi di dati di `number1` e `number2`.  
   
@@ -60,7 +79,7 @@ number1 Mod number2
   
 -   Il [/ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, come numero a virgola mobile. Ad esempio, l'espressione `14 / 4` restituisce 3.5.  
   
-## <a name="attempted-division-by-zero"></a>Tentativo di divisione per Zero  
+## <a name="attempted-division-by-zero"></a>Tentativo di divisione per zero  
  Se `number2` restituisce zero, il comportamento del `Mod` operatore dipende dal tipo di dati degli operandi. Una divisione integrale genera un <xref:System.DivideByZeroException> eccezione. Restituisce una divisione a virgola mobile <xref:System.Double.NaN>.  
   
 ## <a name="equivalent-formula"></a>Formula equivalente  
@@ -71,7 +90,7 @@ number1 Mod number2
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>A virgola mobile imprecisione  
- Quando si utilizzano numeri a virgola mobile, tenere presente che non sempre contengono una precisa rappresentazione in memoria. Ciò potrebbe provocare risultati imprevisti da alcune operazioni, ad esempio il confronto di valori e `Mod` operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Quando si lavora con numeri a virgola mobile, tenere presente che è sempre necessario una rappresentazione decimale precisa in memoria. Questo può causare risultati imprevisti da alcune operazioni, ad esempio il confronto di valori e `Mod` operatore. Per ulteriori informazioni, vedere [risoluzione dei problemi dei tipi di dati](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Overload  
  Il `Mod` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il relativo comportamento. Se il codice applica `Mod` a un'istanza di una classe o struttura che include un overload di questo tipo, assicurarsi di comprendere il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

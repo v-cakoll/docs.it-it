@@ -1,24 +1,26 @@
 ---
 title: Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in Internet Information Services (IIS)
 Lo sviluppo e la distribuzione di un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ospitato in Internet Information Services (IIS) sono costituiti dalle attività seguenti:  
@@ -40,13 +42,13 @@ Lo sviluppo e la distribuzione di un servizio [!INCLUDE[indigo1](../../../../inc
   
  Il processo di installazione per [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] registra automaticamente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS, se IIS già è presente sul computer. Se IIS viene installato dopo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], è richiesto un passaggio aggiuntivo per registrare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS e [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. A tal fine, è possibile procedere come segue, a seconda del sistema operativo:  
   
--   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: utilizzare il [strumento di registrazione ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) lo strumento per registrare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS: per usare questo strumento, digitare **ServiceModelReg.exe /i /x** in prompt dei comandi di Visual Studio. Per aprire il prompt dei comandi, fare clic sul pulsante Start, selezionare **Tutti i programmi**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**, quindi **Prompt dei comandi di Visual Studio**.  
+-   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)], Windows 7 e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]: usare il [strumento di registrazione ServiceModel (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) strumento per registrare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con IIS: per usare questo strumento, digitare **ServiceModelReg.exe /i /x** nel Prompt di comandi di Visual Studio. Per aprire il prompt dei comandi, fare clic sul pulsante Start, selezionare **Tutti i programmi**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**, quindi **Prompt dei comandi di Visual Studio**.  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]: installare il sottocomponente Componenti di attivazione di Windows Communication Foundation di [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]. A tale scopo, nel Pannello di controllo, fare clic su **Aggiungi / Rimuovi programmi** e quindi **Aggiungi\/Installazione componenti di Windows**. Verrà avviata l' **Aggiunta guidata componenti di Windows**.  
   
 -   Windows 7:  
   
- È necessario infine verificare che ASP.NET sia configurato per utilizzare .NET Framework 4. Per effettuare questa operazione, eseguire lo strumento ASPNET_Regiis con l'opzione -i. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Strumento di registrazione ASP.NET IIS](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ È necessario infine verificare che ASP.NET sia configurato per utilizzare .NET Framework 4. Per effettuare questa operazione, eseguire lo strumento ASPNET_Regiis con l'opzione -i. Per altre informazioni, vedere [strumento di registrazione ASP.NET IIS](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Creare una nuova applicazione IIS o riutilizzare un'applicazione ASP.NET esistente  
  I servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitati in IIS devono risiedere all'interno di un'applicazione IIS. È possibile creare una nuova applicazione IIS per ospitare esclusivamente servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . In alternativa, è possibile distribuire un servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in un'applicazione esistente che ospita già contenuto [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] , ad esempio pagine ASPX e servizi Web ASP.NET (ASMX). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] queste opzioni, vedere le sezioni "Hosting di WCF affiancato ad ASP.NET" e "Hosting dei servizi WCF in modalità di compatibilità ASP.NET" in [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   Le applicazioni che ospitano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizi all'esterno di IIS possono controllarne l'indirizzo di base dei servizi ospitano passando un set di base dell'indirizzo URI per il <xref:System.ServiceModel.ServiceHost> costruttore o fornendo un [ \<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) elemento di configurazione del servizio. I servizi ospitati in IIS non sono in grado di controllare i propri indirizzi di base che corrispondono agli indirizzi dei rispettivi file con estensione svc.  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Indirizzi endpoint per i servizi ospitati in IIS  
- Quando sono ospitati in IIS, gli indirizzi endpoint sono sempre considerati relativi all'indirizzo del file con estensione svc che rappresenta il servizio. Se, ad esempio, l'indirizzo di base di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è http://localhost/Application1/MyService.svc con la configurazione dell'endpoint seguente.  
+ Quando sono ospitati in IIS, gli indirizzi endpoint sono sempre considerati relativi all'indirizzo del file con estensione svc che rappresenta il servizio. Ad esempio, se l'indirizzo di base di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servizio http://localhost/Application1/MyService.svc con la configurazione dell'endpoint seguente.  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- Tale configurazione fornisce un endpoint che può essere raggiunto all'indirizzo "http://localhost/Application1/MyService.svc/anotherEndpoint".  
+ Ciò fornisce un endpoint che può essere raggiunto al "http://localhost/Application1/MyService.svc/anotherEndpoint".  
   
- In modo analogo, l'elemento di configurazione dell'endpoint che utilizza una stringa vuota come indirizzo relativo fornisce un endpoint raggiungibile all'indirizzo http://localhost/Application1/MyService.svc, che è l'indirizzo di base.  
+ Analogamente, l'elemento di configurazione di endpoint che utilizza una stringa vuota come indirizzo relativo fornisce un endpoint raggiungibile al http://localhost/Application1/MyService.svc, ovvero l'indirizzo di base.  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre indirizzi endpoint relativi. La specifica di un indirizzo endpoint completo (ad esempio, http://localhost/MyService.svc) può comportare errori nella distribuzione del servizio se l'indirizzo endpoint non punta all'applicazione IIS che ospita il servizio che espone l'endpoint. L'utilizzo di indirizzi endpoint relativi per i servizi di hosting evita potenziali conflitti.  
+ Per gli endpoint del servizio ospitati in IIS è necessario utilizzare sempre indirizzi endpoint relativi. Fornisce un indirizzo endpoint completo (ad esempio, http://localhost/MyService.svc) può comportare errori nella distribuzione del servizio se l'indirizzo dell'endpoint non punta all'applicazione IIS che ospita il servizio che espone l'endpoint. L'utilizzo di indirizzi endpoint relativi per i servizi di hosting evita potenziali conflitti.  
   
 ### <a name="available-transports"></a>Trasporti disponibili  
  I servizi[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitati in IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sono limitati all'utilizzo di comunicazioni basate su HTTP. Su queste piattaforme IIS, la configurazione di un servizio ospitato affinché utilizzi un'associazione non HTTP, comporta un errore durante l'attivazione del servizio. Per [!INCLUDE[iisver](../../../../includes/iisver-md.md)], i trasporti supportati includono HTTP, Net.TCP, Net.Pipe, Net.MSMQ e msmq.formatname per la compatibilità delle versioni precedenti con le applicazioni MSMQ esistenti.  

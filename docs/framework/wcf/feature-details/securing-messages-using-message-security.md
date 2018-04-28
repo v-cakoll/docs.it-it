@@ -1,24 +1,26 @@
 ---
 title: Protezione dei messaggi mediante protezione a livello di messaggio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
 Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in caso di utilizzo di <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -52,7 +54,7 @@ Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[in
   
  In considerazione del fatto che le code funzionano spesso in modalità disconnessa, il client e il servizio potrebbero non essere in linea contemporaneamente e potrebbero doversi scambiare i certificati fuori banda. Il client, in particolare, poiché detiene il certificato del servizio (che può essere collegato a un'autorità di certificazione) nell'archivio attendibile, deve appurare di avere stabilito la comunicazione con il servizio corretto. Per autenticare il client, il servizio utilizza il certificato X.509 allegato al messaggio e cerca una corrispondenza con il certificato esistente nell'archivio. Anche in questo caso il certificato deve essere collegato a un'autorità di certificazione.  
   
- Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  
@@ -63,7 +65,7 @@ Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[in
   
  Si noti che in caso di utilizzo di questo tipo di credenziale, il servizio deve essere in esecuzione nell'account SERVIZIO.  
   
- Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Esplorazione Kerberos, il protocollo per Distributed Security in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Il protocollo Kerberos viene utilizzato per impostazione predefinita durante la scelta della credenziale del messaggio. Per altre informazioni, vedere [esplorazione Kerberos, il protocollo per Distributed Security in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Nome utente/password  
  Mediante questa proprietà il client può eseguire l'autenticazione nel server utilizzando una password di nome utente nell'intestazione di sicurezza del messaggio.  

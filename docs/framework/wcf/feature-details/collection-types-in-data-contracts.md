@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -40,7 +40,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Nelle sezioni seguenti vengono descritti dettagliatamente gli ulteriori requisiti relativi ai tipi di raccolte, ad esempio la presenza di un metodo denominato `Add` e di un costruttore predefinito. La presenza di questi requisiti garantisce che i tipi di raccolta possano essere serializzati e deserializzati e implica inoltre che alcune raccolte non sono supportate direttamente, ad esempio l'oggetto <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> generico (perché non dispone di un costruttore predefinito). Per informazioni su come evitare queste restrizioni, tuttavia, vedere la sezione "Utilizzo di tipi di interfacce di raccolta e raccolte di sola lettura" più avanti in questo argomento.  
   
- I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. Per altre informazioni, vedere [i tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] distinzione tra raccolta valida e raccolta non valida, nonché sulla modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione delle raccolte nella sezione "Regole avanzate di inserimento in raccolte" di questo argomento.  
   
@@ -152,7 +152,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sezione "Regole avanzate di inserimento in raccolte" più avanti in questo argomento.  
+ Per altre informazioni, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Personalizzazione del nome dell'elemento ripetuto nelle raccolte di elenco  
  Le raccolte di elenco contengono voci ripetute. Normalmente ogni voce ripetuta è rappresentata come un elemento denominato secondo il nome del contratto dati del tipo contenuto nella raccolta.  

@@ -1,27 +1,29 @@
 ---
 title: 'Procedura: specificare valori di credenziali client'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: specificare valori di credenziali client
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente al servizio di specificare la modalità di autenticazione di un client nel servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Aprire il file di configurazione XML. Se si utilizza lo strumento Svcutil.exe, il nome predefinito del file è Output.config.  
   
-3.  Trovare il  **\<sicurezza >** elemento con la **modalità** attributo (**< modalità di sicurezza =** `MessageOrTransport`  **>**  dove `MessageOrTransport` è impostata su una delle modalità di sicurezza.  
+3.  Trovare il  **\<sicurezza >** elemento con la **modalità** attributo (**< modalità di sicurezza =** `MessageOrTransport` **>** dove `MessageOrTransport` è impostata su una delle modalità di sicurezza.  
   
 4.  Trovare l'elemento figlio che corrisponda al valore della modalità. Ad esempio, se la modalità è impostata su **messaggio**, trovare il  **\<messaggio >** contenuto nell'elemento di  **\<sicurezza >** elemento.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>Esempio: Modalità di trasporto TCP con certificato come credenziale client  
- In questo esempio la modalità di sicurezza viene impostata sulla modalità Trasporto e il valore delle credenziali client su un certificato X.509. Nelle procedure seguenti viene descritto come impostare il valore delle credenziali client sul client nel codice e nella configurazione. Si presuppone che si usa il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per restituire i metadati (codice e la configurazione) dal servizio. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+ In questo esempio la modalità di sicurezza viene impostata sulla modalità Trasporto e il valore delle credenziali client su un certificato X.509. Nelle procedure seguenti viene descritto come impostare il valore delle credenziali client sul client nel codice e nella configurazione. Si presuppone che si usa il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per restituire i metadati (codice e la configurazione) dal servizio. Per altre informazioni, vedere [procedura: creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Per specificare il valore delle credenziali client nel client nel codice  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Aggiungere un [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elemento per il [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
   
-4.  Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]i certificati, vedere [utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] i certificati, vedere [utilizzano i certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -113,10 +115,10 @@ ms.lasthandoff: 12/22/2017
  [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Uso di certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<sicurezza >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
  [\<messaggio >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
- [\<comportamento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
  [\<i comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

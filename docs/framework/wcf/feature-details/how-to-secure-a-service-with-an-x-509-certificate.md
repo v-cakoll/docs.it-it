@@ -1,36 +1,38 @@
 ---
 title: 'Procedura: proteggere un servizio con un certificato X.509'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
 La protezione di un servizio con un certificato X.509 è una tecnica di base utilizzata dalla maggior parte delle associazioni in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
   
- Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzo di certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso di certificati, vedere [utilizzano i certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Per configurare un servizio con un certificato utilizzando codice.  
   
-1.  Creare il contratto di servizio e il servizio implementato. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][La progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1.  Creare il contratto di servizio e il servizio implementato. Per altre informazioni, vedere [progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
 2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità sicura su <xref:System.ServiceModel.SecurityMode.Message>, come illustrato nel codice seguente.  
   

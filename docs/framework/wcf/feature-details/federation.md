@@ -1,12 +1,13 @@
 ---
 title: Federazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>Federazione
 In questo argomento viene illustrato brevemente il concetto di sicurezza federata. Viene inoltre descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la distribuzione di architetture di sicurezza federata. Per un'applicazione di esempio che illustra la federazione, vedere [federazione esempio](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -71,14 +73,14 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
   
  In un'architettura di sicurezza federata, gli utenti dell'organizzazione A sanno che se vogliono accedere al servizio Web dell'organizzazione B devono presentare un token di sicurezza valido dall'STS dell'organizzazione B, che autentica e autorizza il loro accesso al servizio specifico.  
   
- Quando contattano l'STS B, gli utenti ricevono un altro livello di riferimento indiretto dal criterio associato a STS. Devono presentare un token di sicurezza valido da STS A (ovvero, l'area di attendibilità del client) prima che STS B possa rilasciare loro un token di sicurezza. Si tratta di un corollario della relazione di trust stabilita tra le due organizzazioni e implica che l'organizzazione B non deve gestire le identità degli utenti dell'organizzazione A. In pratica, STS B in genere ha `issuerAddress` e `issuerMetadataAddress` nulli. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Procedura: configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). In tal caso, il client consulta criteri locali per individuare STS A. Questa configurazione è denominata *home federazione dell'area di autenticazione* e si adatta meglio perché STS B non è necessario gestire le informazioni relative al servizio token di sicurezza A.  
+ Quando contattano l'STS B, gli utenti ricevono un altro livello di riferimento indiretto dal criterio associato a STS. Devono presentare un token di sicurezza valido da STS A (ovvero, l'area di attendibilità del client) prima che STS B possa rilasciare loro un token di sicurezza. Si tratta di un corollario della relazione di trust stabilita tra le due organizzazioni e implica che l'organizzazione B non deve gestire le identità degli utenti dell'organizzazione A. In pratica, STS B in genere ha `issuerAddress` e `issuerMetadataAddress` nulli. Per altre informazioni, vedere [procedura: configurare un emittente locale](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). In tal caso, il client consulta criteri locali per individuare STS A. Questa configurazione è denominata *home federazione dell'area di autenticazione* e si adatta meglio perché STS B non è necessario gestire le informazioni relative al servizio token di sicurezza A.  
   
  Gli utenti contattano quindi l'STS dell'organizzazione A e ottengono un token di sicurezza presentando le credenziali di autenticazione che utilizzano normalmente per accedere a qualsiasi altra risorsa all'interno dell'organizzazione A. In tal modo, si evita loro di dover conservare più set di credenziali o utilizzare lo stesso set di credenziali in più siti del servizio.  
   
  Una volta ottenuto un token di sicurezza da STS A, gli utenti lo presentano a STS B. L'organizzazione B procede per eseguire l'autorizzazione delle richieste degli utenti e rilascia loro un token di sicurezza preso dal proprio set di token di sicurezza. Gli utenti possono presentare quindi il proprio token alla risorsa dell'organizzazione B e accedere al servizio.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Supporto per la protezione federata in WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]fornisce il supporto di chiavi in mano per la distribuzione di architetture di sicurezza federate tramite il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce il supporto pronte all'uso per la distribuzione di architetture di sicurezza federate tramite il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento fornisce per un'associazione protetta, affidabile, interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per lo stile di comunicazione request / reply, utilizzo di testo e XML come formato di trasmissione per la codifica.  
   
@@ -101,7 +103,7 @@ In questo argomento viene illustrato brevemente il concetto di sicurezza federat
 ## <a name="sample-implementation-using-wcf"></a>Implementazione di esempio utilizzando WCF  
  Nella figura seguente viene illustrata un'implementazione di esempio per un'architettura di sicurezza federata utilizzando il supporto nativo da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- ![Sicurezza di federazione in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Sicurezza delle federazioni in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
 ### <a name="example-myservice"></a>Esempio MyService  
  Il servizio `MyService` espone un singolo endpoint tramite `MyServiceEndpoint`. Nella figura seguente vengono illustrati l'indirizzo, l'associazione e il contratto associati all'endpoint.  
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  In relazione alle attestazioni richieste da `MyService`, è opportuno tenere presente un fattore importante. La seconda figura indica che `MyService` richiede un token SAML con l'attestazione `accessAuthorized`. Per essere più precisi, viene specificato il tipo di attestazione richiesto da `MyService`. Il nome completo di questo tipo di attestazione è http://tempuri.org:accessAuthorized (insieme allo spazio dei nomi associato), utilizzato nel file di configurazione del servizio. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS B.  
+>  In relazione alle attestazioni richieste da `MyService`, è opportuno tenere presente un fattore importante. La seconda figura indica che `MyService` richiede un token SAML con l'attestazione `accessAuthorized`. Per essere più precisi, viene specificato il tipo di attestazione richiesto da `MyService`. Il nome completo di questo tipo di attestazione è http://tempuri.org:accessAuthorized (insieme spazio dei nomi associato), che viene usata in un file di configurazione del servizio. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS B.  
   
  In fase di esecuzione, questo criterio viene imposto dalla classe `MyServiceOperationRequirement` implementata come parte di `MyService`.  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Anche qui, l'attestazione `userAuthenticated` è il tipo di attestazione richiesto da STS B. Il nome completo di questo tipo di attestazione è http://tempuri.org:userAuthenticated (insieme allo spazio dei nomi associato), utilizzato nel file di configurazione STS. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS A.  
+>  Anche in questo caso il `userAuthenticated` attestazione è il tipo di attestazione richiesto da STS B. Il nome completo di questo tipo di attestazione è http://tempuri.org:userAuthenticated (insieme spazio dei nomi associato), che viene usata in un file di configurazione del servizio token di sicurezza. Il valore di questa attestazione indica la sua presenza e si presuppone che sia impostato su `true` da STS A.  
   
  In fase di esecuzione, questo criterio viene imposto dalla classe `STS_B_OperationRequirement` implementata come parte di STS B.  
   

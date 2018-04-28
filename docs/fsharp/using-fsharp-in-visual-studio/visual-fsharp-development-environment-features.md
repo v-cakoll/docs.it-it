@@ -1,20 +1,17 @@
 ---
-title: "Funzionalità dell'ambiente di sviluppo di F#"
-description: "Informazioni su quali funzionalità di Visual Studio 2012 sono supportate in F #."
-keywords: visual f#, f#, programmazione funzionale
+title: Funzionalità dell'ambiente di sviluppo di F#
+description: 'Informazioni su quali funzionalità di Visual Studio 2012 sono supportate in F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Funzionalità dell'ambiente di sviluppo di Visual F#
 
@@ -38,9 +35,9 @@ Nella tabella seguente sono riepilogate le funzionalità delle proprietà di pro
 
 |Impostazione di progetto|Supportate in F #?|Note|
 |---------------|----------------|-----|
-|File di risorse|Sì||
-|Compilazione, debug e le impostazioni di riferimento|Sì||
-|Multitargeting|Sì||
+|File di risorse|Yes||
+|Compilazione, debug e le impostazioni di riferimento|Yes||
+|Multitargeting|Yes||
 |Icona e manifesto|No|Disponibile tramite le opzioni della riga di comando del compilatore.|
 |Servizi Client ASP.NET|No||
 |ClickOnce|No|Utilizzare un progetto client in un altro linguaggio .NET Framework, se applicabile.|
@@ -56,17 +53,17 @@ Le caratteristiche seguenti del Visual Studiocode ed editor di testo sono suppor
 |-------|-----------|----------------|
 |Commento automaticamente|Consente di inviare commenti o rimuovere il commento di sezioni di codice.|Sì|
 |Formatta automaticamente|Riformatta il codice con rientro e stile standard.|No|
-|Segnalibri|Consente di salvare posizioni nell'editor.|Sì|
-|Modificare il rientro|Applicare i rientri o riduce il rientro delle righe selezionate.|Sì|
-|[Ricerca e sostituzione di testo](/visualstudio/ide/finding-and-replacing-text)|Consente di eseguire la ricerca in un file, un progetto o soluzione e potenzialmente modificare testo.|Sì|
+|Segnalibri|Consente di salvare posizioni nell'editor.|Yes|
+|Modificare il rientro|Applicare i rientri o riduce il rientro delle righe selezionate.|Yes|
+|[Ricerca e sostituzione di testo](/visualstudio/ide/finding-and-replacing-text)|Consente di eseguire la ricerca in un file, un progetto o soluzione e potenzialmente modificare testo.|Yes|
 |Passare alla definizione dell'API di .NET Framework|Quando il cursore è posizionato su un'API di .NET Framework, Mostra il codice generato dai metadati di .NET Framework.|No|
-|Passare alla definizione dell'API definita dall'utente|Quando il cursore si trova su un'entità di programma che è definito, sposta il cursore nella posizione nel codice in cui l'entità è definita.|Sì|
-|Vai alla riga|Consente di passare a una riga specifica in un file, dal numero di riga.|Sì|
-|Barre di navigazione nella parte superiore del file|Consente di passare a posizioni nel codice, da, ad esempio, il nome di funzione.|Sì|
-|Struttura Vedere [struttura](/visualstudio/ide/outlining).|Consente di comprimere le sezioni del codice per creare una visualizzazione più compatta.|Sì|
-|Inserimento di tabulazioni|Converte gli spazi in tabulazioni.|Sì|
-|Colorazione dei tipi|Mostra definiti i nomi dei tipi in un colore speciale.|Sì|
-|Ricerca veloce. Vedere Ricerca veloce, finestra Trova e sostituisci.|Consente di eseguire ricerche in un file o progetto.|Sì|
+|Passare alla definizione dell'API definita dall'utente|Quando il cursore si trova su un'entità di programma che è definito, sposta il cursore nella posizione nel codice in cui l'entità è definita.|Yes|
+|Vai alla riga|Consente di passare a una riga specifica in un file, dal numero di riga.|Yes|
+|Barre di navigazione nella parte superiore del file|Consente di passare a posizioni nel codice, da, ad esempio, il nome di funzione.|Yes|
+|Struttura Vedere [struttura](/visualstudio/ide/outlining).|Consente di comprimere le sezioni del codice per creare una visualizzazione più compatta.|Yes|
+|Inserimento di tabulazioni|Converte gli spazi in tabulazioni.|Yes|
+|Colorazione dei tipi|Mostra definiti i nomi dei tipi in un colore speciale.|Yes|
+|Ricerca veloce. Vedere Ricerca veloce, finestra Trova e sostituisci.|Consente di eseguire ricerche in un file o progetto.|Yes|
 
 ## <a name="intellisense-features"></a>Funzionalità di IntelliSense
 Nella tabella seguente sono riepilogate le funzionalità di IntelliSense supportate e non supportate in F #. Per informazioni generali su IntelliSense, vedere [utilizzando IntelliSense](/visualstudio/ide/using-intellisense).
@@ -75,13 +72,13 @@ Nella tabella seguente sono riepilogate le funzionalità di IntelliSense support
 |-------|-----------|----------------|
 |Implementazione automatica delle interfacce|Genera stub di codice per i metodi di interfaccia.|No|
 |Frammenti di codice|Inserisce codice da una libreria di costrutti di codice comuni in argomenti.|No|
-|Completa parola|Consente di risparmiare completando le parole e i nomi durante la digitazione.|Sì|
+|Completa parola|Consente di risparmiare completando le parole e i nomi durante la digitazione.|Yes|
 |Modalità di terminazione primo utilizzo|Quando abilitata, consente al completamento della parola di selezionare la prima corrispondenza durante la digitazione, anziché attendere che è possibile selezionare uno o premere **CTRL + BARRA SPAZIATRICE**.|No|
 |Generazione di elementi di codice|Consente di generare stub di codice per un'ampia gamma di costrutti.|No|
-|Elenca membri|Quando si digita l'operatore di accesso ai membri (.), Visualizza i membri per un tipo.|Sì|
+|Elenca membri|Quando si digita l'operatore di accesso ai membri (.), Visualizza i membri per un tipo.|Yes|
 |Organizzare direttive using/Apri|Organizza gli spazi dei nomi a cui fa riferimento **utilizzando** istruzioni in c# o **aprire** direttive in F #.|No|
-|Informazioni sul parametro|Mostra informazioni utili sui parametri durante la digitazione di una chiamata di funzione.|Sì|
-|Informazioni rapide|Visualizza la dichiarazione completa per qualsiasi identificatore nel codice.|Sì|
+|Informazioni sul parametro|Mostra informazioni utili sui parametri durante la digitazione di una chiamata di funzione.|Yes|
+|Informazioni rapide|Visualizza la dichiarazione completa per qualsiasi identificatore nel codice.|Yes|
 Refactoring del codice F # non è supportato in Visual Studio 2012.
 
 ## <a name="debugging-features"></a>Funzionalità di debug
@@ -90,35 +87,35 @@ Nella tabella seguente vengono riepilogate le funzionalità sono disponibili qua
 |Funzionalità|Descrizione|Supportate in F #?|
 |-------|-----------|----------------|
 |Auto (finestra)|Mostra le variabili automatiche o temporanee.|No|
-|Punti di interruzione|Consente di sospendere l'esecuzione di codice in punti specifici durante il debug.|Sì|
-|Punti di interruzione condizionali|Abilita i punti di interruzione che una condizione che determina se deve interrompere l'esecuzione di test.|Sì|
+|Punti di interruzione|Consente di sospendere l'esecuzione di codice in punti specifici durante il debug.|Yes|
+|Punti di interruzione condizionali|Abilita i punti di interruzione che una condizione che determina se deve interrompere l'esecuzione di test.|Yes|
 |Modifica e continuazione|Consente al codice di essere modificato e compilato come si esegue il debug di un programma in esecuzione senza arrestare e riavviare il debugger.|No|
 |Analizzatore di espressioni|Valuta e l'esecuzione di codice in fase di esecuzione.|No, ma c# analizzatore di espressioni può essere utilizzato, anche se è necessario utilizzare sintassi di c#.|
-|Il debug cronologico|Consente di eseguire codice eseguita in precedenza.|Sì|
-|Finestra Variabili locali|Mostra localmente definiti valori e variabili.|Sì|
-|Esecuzione fino al cursore|Consente di eseguire il codice fino a quando non viene raggiunta la riga che contiene il cursore.|Sì|
-|Esegui istruzione|Consente di spostare l'esecuzione e spostare in qualsiasi chiamata di funzione.|Sì|
-|Esegui istruzione/routine|Consente di spostare l'esecuzione nello stack frame corrente e spostarsi oltre qualsiasi chiamata di funzione.|Sì|
+|Il debug cronologico|Consente di eseguire codice eseguita in precedenza.|Yes|
+|Finestra Variabili locali|Mostra localmente definiti valori e variabili.|Yes|
+|Esecuzione fino al cursore|Consente di eseguire il codice fino a quando non viene raggiunta la riga che contiene il cursore.|Yes|
+|Esegui istruzione|Consente di spostare l'esecuzione e spostare in qualsiasi chiamata di funzione.|Yes|
+|Esegui istruzione/routine|Consente di spostare l'esecuzione nello stack frame corrente e spostarsi oltre qualsiasi chiamata di funzione.|Yes|
 
 ## <a name="additional-tools"></a>Strumenti aggiuntivi
 Nella tabella seguente viene riepilogato il supporto per F # in strumenti di Visual Studio.
 
 |Strumento|Descrizione|Supportate in F #?|
 |----|-----------|----------------|
-|Gerarchia delle chiamate|Consente di visualizzare la struttura annidata della funzione chiamate nel codice.|No|
+|Gerarchia di chiamata|Consente di visualizzare la struttura annidata della funzione chiamate nel codice.|No|
 |Metrica del codice|Raccoglie informazioni sul codice, ad esempio il numero di righe.|No|
 |Visualizzazione classi|Fornisce una visualizzazione basata sul tipo di codice in un progetto.|No|
-|[Finestra Elenco errori](/visualstudio/ide/reference/error-list-window)|Mostra un elenco di errori nel codice.|Sì|
-|[F# Interactive](../tutorials/fsharp-interactive/index.md)|Consente di digitare (o copiare e incollare) F # del codice e di eseguirlo immediatamente, indipendentemente dalla compilazione del progetto. La finestra di F # Interactive è un Read, Evaluate, Print Loop (REPL).|Sì|
+|[Finestra Elenco errori](/visualstudio/ide/reference/error-list-window)|Mostra un elenco di errori nel codice.|Yes|
+|[F# Interactive](../tutorials/fsharp-interactive/index.md)|Consente di digitare (o copiare e incollare) F # del codice e di eseguirlo immediatamente, indipendentemente dalla compilazione del progetto. La finestra di F # Interactive è un Read, Evaluate, Print Loop (REPL).|Yes|
 |Visualizzatore oggetti|Consente di visualizzare i tipi in un assembly.|Tipi F # come appaiono in assembly compilati non vengono visualizzati esattamente come si creano. È possibile esplorare la rappresentazione compilata di tipi F #, ma non è possibile visualizzare i tipi di come vengono visualizzati da F #.|
-|[Finestra di output](/visualstudio/ide/reference/output-window)|Consente di visualizzare l'output di compilazione.|Sì|
-|Analisi delle prestazioni|Fornisce strumenti per misurare le prestazioni del codice.|Sì|
-|Finestra Proprietà|Visualizza e consente la modifica di proprietà dell'oggetto nell'ambiente di sviluppo che ha lo stato attivo.|Sì|
-|[Esplora server](https://msdn.microsoft.com/library/x603htbk.aspx)|Fornisce metodi per interagire con un'ampia gamma di risorse del server.|Sì|
-|Esplora soluzioni|Consente di visualizzare e gestire progetti e file.|Sì|
-|Elenco attività|Consente di gestire gli elementi di lavoro relativi al codice.|Sì|
+|[Finestra di output](/visualstudio/ide/reference/output-window)|Consente di visualizzare l'output di compilazione.|Yes|
+|Analisi delle prestazioni|Fornisce strumenti per misurare le prestazioni del codice.|Yes|
+|Finestra Proprietà|Visualizza e consente la modifica di proprietà dell'oggetto nell'ambiente di sviluppo che ha lo stato attivo.|Yes|
+|[Esplora server](https://msdn.microsoft.com/library/x603htbk.aspx)|Fornisce metodi per interagire con un'ampia gamma di risorse del server.|Yes|
+|Esplora soluzioni|Consente di visualizzare e gestire progetti e file.|Yes|
+|Elenco attività|Consente di gestire gli elementi di lavoro relativi al codice.|Yes|
 |Progetti di test|Fornisce funzionalità che consentono di testare il codice.|No|
-|Casella degli strumenti|Visualizza le schede che contengono oggetti draggable, ad esempio i controlli e sezioni di testo o codice.|Sì|
+|Casella degli strumenti|Visualizza le schede che contengono oggetti draggable, ad esempio i controlli e sezioni di testo o codice.|Yes|
 
 ## <a name="see-also"></a>Vedere anche
  [Introduzione a F # in Visual Studio](../get-started/get-started-visual-studio.md)  

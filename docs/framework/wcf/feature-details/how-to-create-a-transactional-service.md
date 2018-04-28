@@ -1,24 +1,26 @@
 ---
 title: 'Procedura: creare un servizio transazionale'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Procedura: creare un servizio transazionale
 In questo esempio vengono illustrati vari aspetti della creazione di un servizio transazionale e l'utilizzo di una transazione iniziata dal client per coordinare operazioni del servizio.  
@@ -76,7 +78,7 @@ In questo esempio vengono illustrati vari aspetti della creazione di un servizio
     }  
     ```  
   
-3.  Configurare le associazioni nel file di configurazione, specificando che il contesto della transazione deve essere propagato e i protocolli da utilizzare a tale scopo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurazione delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). In particolare, il tipo di associazione è specificato nell'attributo `binding` dell'elemento endpoint. Il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `transactionalOleTransactionsTcpBinding`, come illustrato nell'esempio di configurazione seguente.  
+3.  Configurare le associazioni nel file di configurazione, specificando che il contesto della transazione deve essere propagato e i protocolli da utilizzare a tale scopo. Per altre informazioni, vedere [configurazione delle transazioni ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). In particolare, il tipo di associazione è specificato nell'attributo `binding` dell'elemento endpoint. Il [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento contiene un `bindingConfiguration` attributo che fa riferimento a una configurazione di associazione denominata `transactionalOleTransactionsTcpBinding`, come illustrato nell'esempio di configurazione seguente.  
   
     ```xml  
     <service name="CalculatorService">  

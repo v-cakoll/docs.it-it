@@ -1,21 +1,19 @@
 ---
 title: Introduzione a .NET Core
 description: Risorse per imparare a creare applicazioni .NET Core in Windows, Linux e macOS.
-keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ba4e010f81cea00122fd450f02a75598bb7293b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
@@ -50,7 +48,7 @@ Per un elenco delle distribuzioni e delle versioni Linux supportate, vedere l'ar
 
 ## <a name="os-x--macos"></a>OS X/macOS
 
-Installare .NET Core per [macOS](https://www.microsoft.com/net/core#macos). .NET Core è supportato in OS X El Capitan (versione 10.11) e macOS Sierra (versione 10.12).
+Installare .NET Core per [macOS](https://www.microsoft.com/net/core#macos). .NET Cre è supportato in OS X El Capitan (versione 10.11) e macOS Sierra (versione 10.12).
 
 È possibile iniziare lo sviluppo di app .NET Core seguendo queste esercitazioni dettagliate.
 

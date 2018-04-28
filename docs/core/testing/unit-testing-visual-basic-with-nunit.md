@@ -3,15 +3,17 @@ title: Testing unità con Visual Basic in .NET Core usando il test dotnet e NUni
 description: Informazioni sui concetti relativi agli unit test in .NET Core tramite un'esperienza interattiva per la creazione passo-passo di una soluzione di Visual Basic di esempio con NUnit.
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - vb
-ms.prod: .net-core
-ms.openlocfilehash: 9ddb6dc439e11b394bc71ac30b72310f122da498
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: b275d1da2c46b1ba8376bf0a77b4dcb8d6f76445
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Testing unità di librerie .NET Core di Visual Basic usando il test dotnet e NUnit
 

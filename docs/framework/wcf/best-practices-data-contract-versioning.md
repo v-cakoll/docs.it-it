@@ -1,12 +1,13 @@
 ---
 title: 'Procedure consigliate: controllo delle versioni del contratto dati'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: controllo delle versioni del contratto dati
-In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]contratti dati, vedere gli argomenti di [utilizzando i contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. [!INCLUDE[crabout](../../../includes/crabout-md.md)] contratti dati, vedere gli argomenti in [utilizzando i contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Note sulla convalida dello schema  
  Nella valutazione del controllo delle versioni per il contratto dati, è importante notare che lo schema del contratto dati esportato da [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] non supporta il controllo delle versioni se non per il fatto che gli elementi vengono contrassegnati come facoltativi per impostazione predefinita.  
@@ -46,7 +48,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  Sebbene in questi esempi i nomi sono stati modificati (aggiungendo "2"), è consigliabile modificare gli spazi dei nomi anziché i nomi, aggiungendo un numero di versione o una data ai nuovi spazi dei nomi. Ad esempio, il contratto dati `http://schemas.contoso.com/2005/05/21/PurchaseOrder` diventerebbe il contratto dati `http://schemas.contoso.com/2005/10/14/PurchaseOrder`.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Procedure consigliate: [il controllo delle versioni del servizio](../../../docs/framework/wcf/service-versioning.md).  
+ Per altre informazioni, vedere le procedure consigliate: [servizio di controllo delle versioni](../../../docs/framework/wcf/service-versioning.md).  
   
  In alcuni casi è necessario garantire la rigorosa conformità allo schema per i messaggi inviati dall'applicazione, ma non è possibile basarsi sui messaggi in ingresso per essere rigorosamente conformi allo schema. In questo caso, vi è il rischio che un messaggio in ingresso contenga dati estranei. I valori estranei vengono archiviati e restituiti da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e determinano quindi l'invio di messaggi non validi per lo schema. Per evitare questo problema, è necessario disattivare la funzionalità di creazione di sequenze di andata e ritorno. È possibile ottenere questo risultato in due modi.  
   
@@ -54,7 +56,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
 -   Applicare un attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al contratto di servizio con la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> impostata su `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]sequenze di andata e ritorno, vedere [contratti dati compatibili con versioni](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] sequenze di andata e ritorno, vedere [contratti dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Controllo delle versioni quando la convalida dello schema non è necessaria  
  La rigorosa conformità allo schema è richiesta raramente. Molte piattaforme tollerano elementi aggiuntivi non descritti da un schema. Fino a quando questo è consentito, il set completo di funzionalità descritte [controllo delle versioni del contratto dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) e [contratti dati compatibili con versioni](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) può essere utilizzato. Di seguito sono riportate alcune linee guida consigliate.  
@@ -65,9 +67,9 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
 2.  L'utilizzo dell'ereditarietà insieme ai contratti dati è consentito, purché l'ereditarietà non venga usata come un meccanismo di controllo delle versioni e vengano seguite determinate regole. Se un tipo deriva da un determinato tipo di base, non è possibile fare in modo che derivi da un tipo di base diverso in una versione futura (a meno che abbia lo stesso contratto dati). Esiste un'unica eccezione a questa condizione: è possibile inserire un tipo nella gerarchia tra un tipo di contratto dati e il relativo tipo di base, ma solo se non contiene membri dati con nomi identici a quelli di altri membri in qualsiasi possibile versione degli altri tipi nella gerarchia. In generale, l'uso di membri dati con nomi identici a livelli diversi della stessa gerarchia di ereditarietà può causare gravi problemi di controllo delle versioni e deve essere evitato.  
   
-3.  A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Contratti dati compatibili con versioni](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
+3.  A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
   
-4.  Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]denominazione, vedere [nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] denominazione, vedere [nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  Nelle versioni più recenti, non modificare i nomi di qualsiasi membro dati. Se si modifica il nome del campo, della proprietà o dell'evento sottostante il membro dati, usare la proprietà `Name` di <xref:System.Runtime.Serialization.DataMemberAttribute> per mantenere il nome del membro dati esistente.  
   
@@ -79,7 +81,7 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
     1.  La proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> deve essere sempre impostata sul valore predefinito `false`.  
   
-    2.  Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. [!INCLUDE[crabout](../../../includes/crabout-md.md)]il callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Se un valore predefinito pari a `null` o a zero per il membro non è accettabile, è necessario fornire un metodo di callback mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> per garantire un'impostazione predefinita adeguata qualora il membro non sia presente nel flusso in ingresso. [!INCLUDE[crabout](../../../includes/crabout-md.md)] il callback, vedere [callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  La proprietà `Order` su `DataMemberAttribute` deve essere usata per assicurarsi che tutti i nuovi membri dati aggiunti siano posizionati dopo i membri dati esistenti. La procedura consigliata per eseguire questa operazione consiste nel verificare che la proprietà `Order` non sia impostata per alcun membro dati nella prima versione del contratto dati. La proprietà `Order` di tutti i membri dati aggiunti nella versione 2 del contratto dati deve essere impostata su 2. La proprietà `Order` di tutti i membri dati aggiunti nella versione 3 del contratto dati deve essere impostata su 3 e così via. È consentito avere più membri dati impostati sullo stesso numero di `Order`.  
   

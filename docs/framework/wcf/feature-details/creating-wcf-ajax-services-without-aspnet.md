@@ -1,24 +1,26 @@
 ---
 title: Creazione di servizi WCF AJAX senza ASP.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9e321a3ea972208bb136c76e52168d89da8d162
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Creazione di servizi WCF AJAX senza ASP.NET
 È possibile accedere ai servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX da qualsiasi pagina Web compatibile con JavaScript, senza la necessità di ASP.NET AJAX. In questo argomento viene descritto come tale servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -82,7 +84,7 @@ string[] GetCities(string firstLetters);
   
  Questa operazione è accessibile tramite una richiesta POST HTTP a `http://serviceaddress/endpointaddress/GetCities` e restituire un messaggio XML.  
   
- È possibile usare il Modello di programmazione Web completo per personalizzare questi aspetti di base. Ad esempio, è possibile usare gli attributi <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute> per controllare il verbo HTTP al quale risponde l'operazione o usare la proprietà `UriTemplate` di questi rispettivi attributi per specificare gli URI personalizzati. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]il [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) argomento.  
+ È possibile usare il Modello di programmazione Web completo per personalizzare questi aspetti di base. Ad esempio, è possibile usare gli attributi <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute> per controllare il verbo HTTP al quale risponde l'operazione o usare la proprietà `UriTemplate` di questi rispettivi attributi per specificare gli URI personalizzati. Per altre informazioni, vedere la [modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) argomento.  
   
  Nei servizi AJAX viene spesso usato il formato dati JSON. Per creare un'operazione che restituisce JSON invece di XML, impostare la proprietà <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (o <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) su <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Il [della serializzazione JSON autonoma](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) argomento viene illustrato come predefinito .NET dati e i tipi di contratto mapping dei tipi in JSON.  
   

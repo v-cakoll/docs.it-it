@@ -1,24 +1,26 @@
 ---
 title: Informazioni sull'autenticazione HTTP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-http-authentication"></a>Informazioni sull'autenticazione HTTP
 L'autenticazione è il processo che consente di stabilire se un client è idoneo per accedere a una risorsa. Il protocollo HTTP supporta l'autenticazione come mezzo per negoziare l'accesso a una risorsa protetta.  
@@ -35,7 +37,7 @@ L'autenticazione è il processo che consente di stabilire se un client è idoneo
 |Digest|L'autenticazione digest è uno schema In attesa/Risposta che sostituisce l'autenticazione di base. Il server invia una stringa di dati casuali denominata un *nonce* al client come una richiesta di verifica. Il client risponde con un hash che comprende, fra le altre informazioni, nome utente, password e parametro nonce. La complessità introdotta da questo scambio e l'hash dei dati fanno sì che con questo schema di autenticazione sia più difficile entrare in possesso delle credenziali dell'utente per riutilizzarle.<br /><br /> L'autenticazione digest richiede l'utilizzo di account del dominio Windows. Il digest *dell'area di autenticazione* è il nome di dominio di Windows. Pertanto, è possibile utilizzare un server che esegue un sistema operativo che non supporta domini Windows, ad esempio Windows XP Home Edition, con l'autenticazione Digest. Quando invece il client è in esecuzione in un sistema operativo che non supporta domini Windows, è necessario specificare in modo esplicito un account di dominio durante l'autenticazione.|  
 |NTLM|L'autenticazione NTLM (NT LAN Manager) è uno schema In attesa/Risposta che si presenta come una variante più protetta dell'autenticazione digest. Nello schema NTLM vengono utilizzate le credenziali di Windows, anziché nome utente e password non codificati, per trasformare i dati della richiesta. L'autenticazione NTLM richiede più scambi tra client e server. Il server e gli eventuali proxy devono supportare connessioni permanenti per completare correttamente l'autenticazione.|  
 |Negotiate|L'autenticazione Negotiate sceglie automaticamente tra protocollo Kerberos e autenticazione NTLM a seconda della disponibilità. Il protocollo Kerberos viene utilizzato se disponibile, in caso contrario viene scelta l'autenticazione NTLM. L'autenticazione Kerberos è significativamente migliore di NTLM. È più veloce e consente l'utilizzo reciproco dell'autenticazione e della delega di credenziali ai computer remoti.|  
-|Windows Live ID|Il servizio HTTP Windows sottostante comprende l'autenticazione realizzata con protocolli federati. I trasporti standard HTTP in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], tuttavia, non supportano l'utilizzo di schemi di autenticazione federati, ad esempio Microsoft Windows Live ID. Il supporto di questa funzionalità è attualmente disponibile mediante l'utilizzo della protezione dei messaggi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|Il servizio HTTP Windows sottostante comprende l'autenticazione realizzata con protocolli federati. I trasporti standard HTTP in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], tuttavia, non supportano l'utilizzo di schemi di autenticazione federati, ad esempio Microsoft Windows Live ID. Il supporto di questa funzionalità è attualmente disponibile mediante l'utilizzo della protezione dei messaggi. Per ulteriori informazioni, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Scelta di uno schema di autenticazione  
  Quando si scelgono i potenziali schemi di autenticazione per un server HTTP, è necessario prendere in considerazione alcuni elementi:  

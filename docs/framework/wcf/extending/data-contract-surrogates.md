@@ -1,28 +1,28 @@
 ---
 title: Surrogati del contratto dati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  
@@ -75,7 +75,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
  Il parametro `targetType` fa riferimento al tipo dichiarato del membro. Questo parametro è il tipo surrogato restituito dal metodo <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. Il serializzatore non implica che l'oggetto restituito possa essere assegnato a questo tipo. Il `obj` parametro è l'oggetto da serializzare e verrà convertito nel surrogato, se necessario. Questo metodo deve restituire l'oggetto di input se il surrogato non gestisce l'oggetto. In caso contrario, verrà restituito il nuovo oggetto surrogato. Il surrogato non viene chiamato se l'oggetto è null. In questo metodo è possibile definire numerosi mapping surrogati per istanze diverse.  
   
- Quando si crea una classe <xref:System.Runtime.Serialization.DataContractSerializer>, è possibile fare in modo che conservi i riferimenti all'oggetto. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [La serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) A tale scopo, impostare il parametro `preserveObjectReferences` nel costruttore su `true`. In questo caso, il surrogato viene chiamato solo una volta per un oggetto dal momento che tutte le serializzazioni successive scrivono il riferimento nel flusso. Se il parametro `preserveObjectReferences` è impostato su `false`, il surrogato viene chiamato ogni volta che si verifica un'istanza.  
+ Quando si crea una classe <xref:System.Runtime.Serialization.DataContractSerializer>, è possibile fare in modo che conservi i riferimenti all'oggetto. (Per altre informazioni, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) A tale scopo, impostare il parametro `preserveObjectReferences` nel costruttore su `true`. In questo caso, il surrogato viene chiamato solo una volta per un oggetto dal momento che tutte le serializzazioni successive scrivono il riferimento nel flusso. Se il parametro `preserveObjectReferences` è impostato su `false`, il surrogato viene chiamato ogni volta che si verifica un'istanza.  
   
  Se il tipo dell'istanza serializzata differisce dal tipo dichiarato, le informazioni sul tipo vengono scritte nel flusso, ad esempio `xsi:type`, per consentire la deserializzazione dell'istanza all'altra estremità. Questo processo ha luogo a prescindere dalla circostanza che l'oggetto sia surrogato o no.  
   
@@ -144,7 +144,7 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
 ### <a name="getknowncustomdatatypes-method"></a>Metodo GetKnownCustomDataTypes  
  Questo metodo ottiene dallo schema tipi di dati personalizzati definiti. È facoltativo per l'importazione dello schema.  
   
- Il metodo  viene chiamato all'inizio dell'esportazione e dell'importazione dello schema. Restituisce i tipi di dati personalizzati utilizzati nello schema esportato o importato. Viene passato a <xref:System.Collections.ObjectModel.Collection%601> (il parametro `customDataTypes`), che è una raccolta di tipi. Il metodo aggiunge ulteriori tipi noti a questa raccolta. I tipi di dati personalizzati conosciuti sono indispensabili per attivare la serializzazione e la deserializzazione dei dati personalizzati utilizzando la classe <xref:System.Runtime.Serialization.DataContractSerializer>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Il metodo  viene chiamato all'inizio dell'esportazione e dell'importazione dello schema. Restituisce i tipi di dati personalizzati utilizzati nello schema esportato o importato. Viene passato a <xref:System.Collections.ObjectModel.Collection%601> (il parametro `customDataTypes`), che è una raccolta di tipi. Il metodo aggiunge ulteriori tipi noti a questa raccolta. I tipi di dati personalizzati conosciuti sono indispensabili per attivare la serializzazione e la deserializzazione dei dati personalizzati utilizzando la classe <xref:System.Runtime.Serialization.DataContractSerializer>. Per ulteriori informazioni, vedere [tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementazione di un surrogato  
  Per utilizzare il surrogato del contratto dati all'interno di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è necessario attenersi a una procedura speciale.  

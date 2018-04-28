@@ -1,31 +1,33 @@
 ---
 title: '&lt;serviceMetadata&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b98c637c98c75aab5009f9a2f35b8ce6b90012
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Specifica la pubblicazione dei metadati del servizio e delle informazioni associate.  
   
-\<System. ServiceModel >  
+\<system.serviceModel>  
 \<i comportamenti >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamento >  
 \<serviceMetadata >  
   
@@ -54,22 +56,22 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 |externalMetadataLocation|URI contenente il percorso di un file WSDL. Tale file viene restituito all'utente in risposta a richieste WSDL e MEX al posto del file WSDL generato automaticamente. Se questo attributo non viene impostato, viene restituito il file WSDL predefinito. Il valore predefinito è una stringa vuota.|  
 |httpGetBinding|Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTP GET. Questa impostazione è facoltativa. Se non viene specificata, verranno usate le associazioni predefinite.<br /><br /> Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>. La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
 |httpGetBindingConfiguration|Stringa che imposta il nome dell'associazione specificata nell'attributo `httpGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione. Lo stesso nome deve essere definito nella sezione `<bindings>`.|  
-|httpGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTP GET. Il valore predefinito è `false`.<br /><br /> Se l'attributo httpGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl". Ad esempio, se l'indirizzo del servizio è "http://localhost:8080/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTP GET è "http://localhost:8080/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.|  
+|httpGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTP GET. Il valore predefinito è `false`.<br /><br /> Se l'attributo httpGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl". Ad esempio, se l'indirizzo del servizio è "http://localhost:8080/CalculatorService", l'indirizzo di metadati HTTP/Get è"http://localhost:8080/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.|  
 |httpGetUrl|URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTP GET. Se è specificato un URI relativo, verrà considerato come relativo all'indirizzo di base del servizio.|  
 |httpsGetBinding|Stringa che specifica il tipo dell'associazione che verrà usata per il recupero di metadati tramite HTTPS GET. Questa impostazione è facoltativa. Se non viene specificata, verranno usate le associazioni predefinite.<br /><br /> Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>. La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
 |httpsGetBindingConfiguration|Stringa che imposta il nome dell'associazione specificata nell'attributo `httpsGetBinding` che fa riferimento alle informazioni di configurazione aggiuntive di questa associazione. Lo stesso nome deve essere definito nella sezione `<bindings>`.|  
-|httpsGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTPS GET. Il valore predefinito è `false`.<br /><br /> Se l'attributo httpsGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl". Ad esempio, se l'indirizzo del servizio è "https://localhost:8080/CalculatorService", l'indirizzo di pubblicazione dei metadati tramite una richiesta HTTPS GET è "https://localhost:8080/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.|  
+|httpsGetEnabled|Valore booleano che specifica se pubblicare metadati di servizio per il recupero usando una richiesta HTTPS GET. Il valore predefinito è `false`.<br /><br /> Se l'attributo httpsGetUrl non viene specificato, l'indirizzo di pubblicazione dei metadati è l'indirizzo del servizio seguito da "?wsdl". Ad esempio, se l'indirizzo del servizio è "https://localhost:8080/CalculatorService", l'indirizzo di metadati HTTP/Get è"https://localhost:8080/CalculatorService?wsdl".<br /><br /> Se questa proprietà è `false`, o l'indirizzo del servizio non è basato su HTTP o HTTPS, "? wsdl" viene ignorato.|  
 |httpsGetUrl|URI che specifica l'indirizzo di pubblicazione dei metadati per il recupero usando una richiesta HTTPS GET.|  
 |policyVersion|Stringa che indica la versione della specifica WS-Policy usata. L'attributo è di tipo <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di configurazione consente di controllare le funzionalità di pubblicazione dei metadati di un servizio. Per impedire la rivelazione non intenzionale di metadati del servizio potenzialmente riservati, la configurazione predefinita per i servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] disabilita la pubblicazione dei metadati. Questo comportamento è protetto per impostazione predefinita, ma significa inoltre che non è possibile usare uno strumento di importazione di metadati (ad esempio Svcutil.exe) per generare il codice client necessario per chiamare il servizio, a meno che il comportamento del servizio di pubblicazione dei metadati non venga abilitato in modo esplicito in fase di configurazione. Tale elemento di configurazione consente di abilitare questo comportamento di pubblicazione per il servizio.  
@@ -78,7 +80,7 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
   
  Gli attributi `httpGetBinding` e `httpsGetBinding` facoltativi consentono di configurare le associazioni usate per il recupero di metadati tramite HTTP GET (o HTTPS GET). Se non vengono specificati, per il recupero dei metadati verranno usate le associazioni predefinite (`HttpTransportBindingElement` per HTTP e `HttpsTransportBindingElement` per HTTPS) a seconda dei casi. Si noti che non è possibile usare questi attributi con le associazioni WCF incorporate. Verranno supportate sole le associazioni con elementi di associazione interni che supportano <xref:System.ServiceModel.Channels.IReplyChannel>. La proprietà <xref:System.ServiceModel.Channels.MessageVersion> dell'associazione deve inoltre essere <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   
- Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS (ovvero SSL su HTTP). A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio. ([!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`. Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.  
+ Per ridurre l'esposizione di un servizio agli utenti malintenzionati, questo trasferimento può essere protetto mediante il meccanismo HTTPS (ovvero SSL su HTTP). A tale scopo, è anzitutto necessario associare un certificato X.509 adatto a una porta specifica del computer che ospita il servizio. (Per altre informazioni, vedere [utilizzano i certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) Aggiungere quindi questo elemento alla configurazione del servizio e impostare l'attributo `httpsGetEnabled` su `true`. Impostare infine l'attributo `httpsGetUrl` sull'URL dell'endpoint dei metadati del servizio, come illustrato nell'esempio seguente.  
   
 ```xml
 <behaviors>  
@@ -92,7 +94,7 @@ Specifica la pubblicazione dei metadati del servizio e delle informazioni associ
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente configura un servizio per esporre metadati tramite il \<serviceMetadata > elemento. Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS-MetadataExchange (MEX). Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Nell'endpoint viene usato un indirizzo relativo "mex" che, quando risolto rispetto all'indirizzo di base dei servizi, produce l'indirizzo di endpoint "http://localhost/servicemodelsamples/service.svc/mex".  
+ L'esempio seguente configura un servizio per esporre metadati tramite il \<serviceMetadata > elemento. Viene inoltre configurato un endpoint per esporre il contratto `IMetadataExchange` come un'implementazione di un protocollo WS-MetadataExchange (MEX). Nell'esempio viene usata l'associazione `mexHttpBinding`, ovvero un'utile associazione standard equivalente all'associazione `wsHttpBinding` con la modalità di sicurezza impostata su `None`. Viene usato un indirizzo relativo "MEX" nell'endpoint, che, quando risolto rispetto ai servizi di base indirizzo l'indirizzo di endpoint http://localhost/servicemodelsamples/service.svc/mex.  
   
 ```xml
 <configuration>  

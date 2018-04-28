@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosting in un'applicazione gestita
 I servizi[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere ospitati in qualsiasi applicazione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Il self-hosting dei servizi è l'opzione di hosting più flessibile, poiché richiede la distribuzione di un'infrastruttura minima. Si tratta però dell'opzione meno solida, poiché le applicazioni gestite non forniscono le avanzate funzionalità di gestione e hosting di altre opzioni di hosting disponibili in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], quali Internet Information Services (IIS) e i servizi di Windows.  
   
- Per creare un servizio indipendente, creare e aprire un'istanza di <xref:System.ServiceModel.ServiceHost>, che avvia un servizio di ascolto di messaggi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Procedura: ospitare un servizio WCF in un'applicazione gestita](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Per creare un servizio indipendente, creare e aprire un'istanza di <xref:System.ServiceModel.ServiceHost>, che avvia un servizio di ascolto di messaggi. Per altre informazioni, vedere [procedura: ospitare un servizio WCF in un'applicazione gestita da](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Per un esempio completo su come definire un contratto, implementare il contratto e ospitare un servizio all'interno di un'applicazione gestita, vedere il [esercitazione introduttiva](../../../../docs/framework/wcf/getting-started-tutorial.md) e [indipendente](../../../../docs/framework/wcf/samples/self-host.md).  
   

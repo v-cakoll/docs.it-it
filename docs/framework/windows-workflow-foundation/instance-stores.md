@@ -1,26 +1,27 @@
 ---
 title: Archivio di istanze
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instance-stores"></a>Archivio di istanze
-Un archivio di istanze è un contenitore logico di istanze, ovvero lo spazio in cui vengono archiviati i dati e i metadati dell'istanza. Un archivio di istanze non implica l'archiviazione fisica dedicata e può contenere informazioni durevoli in un database di SQL Server o informazioni sullo stato non durevoli in una memoria. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è disponibile l'archivio di istanze del flusso di lavoro SQL, vale a dire un'implementazione concreta di un archivio di istanze che consente ai flussi di lavoro di rendere persistenti i dati e i metadati dell'istanza in un database di SQL Server 2005 o di SQL Server 2008. Windows Server AppFabric fornisce inoltre un'implementazione concreta di un archivio di istanze. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Archivio di istanze di Windows Server App Fabric, Query e provider del controllo](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
+Un archivio di istanze è un contenitore logico di istanze, ovvero lo spazio in cui vengono archiviati i dati e i metadati dell'istanza. Un archivio di istanze non implica l'archiviazione fisica dedicata e può contenere informazioni durevoli in un database di SQL Server o informazioni sullo stato non durevoli in una memoria. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è disponibile l'archivio di istanze del flusso di lavoro SQL, vale a dire un'implementazione concreta di un archivio di istanze che consente ai flussi di lavoro di rendere persistenti i dati e i metadati dell'istanza in un database di SQL Server 2005 o di SQL Server 2008. Windows Server AppFabric fornisce inoltre un'implementazione concreta di un archivio di istanze. Per altre informazioni, vedere [archivio di istanze di Windows Server App Fabric, Query e provider del controllo](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
   
  L'API di persistenza è l'interfaccia tra un host e un archivio di istanze che consente all'host di inviare richieste di comando (ad esempio <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> e <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>) all'archivio di istanze. L'implementazione concreta di questa API viene definita provider di persistenza. Il provider di persistenza riceve richieste da un host e modifica l'archivio di istanze.  
   

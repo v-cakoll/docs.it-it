@@ -1,12 +1,13 @@
 ---
 title: Debug degli errori di autenticazione di Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debug degli errori di autenticazione di Windows
 Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i processi di sicurezza vengono gestiti dall'interfaccia SSPI (Security Support Provider Interface). Se si verificano errori di sicurezza a livello SSPI, questi vengono riportati da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento viene fornito un framework e un insieme di domande per facilitare la diagnosi degli errori.  
@@ -73,11 +75,11 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
 ### <a name="kerberos-protocol"></a>Protocollo Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problemi SPN/UPN con il protocollo Kerberos  
- Quando si utilizza l'autenticazione di Windows unitamente al protocollo Kerberos diretto o negoziato mediante SSPI, l'URL utilizzato dall'endpoint client deve includere il nome di dominio completo dell'host del servizio presente nell'URL del servizio. Si presuppone che l'account con cui viene eseguito il servizio disponga dell'accesso alla chiave del computer (impostazione predefinita) servizio il nome dell'entità (SPN) che viene creata quando il computer viene aggiunto al dominio Active Directory, che viene eseguito più di frequente dall'esecuzione del servizio tramite il Account del servizio di rete. Se il servizio non ha accesso alla chiave dell'SPN del computer, è necessario fornire l'SPN corretto o il nome dell'entità utente (UPN) dell'account utilizzato per l'esecuzione del servizio nell'identità dell'endpoint del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN e UPN, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Quando si utilizza l'autenticazione di Windows unitamente al protocollo Kerberos diretto o negoziato mediante SSPI, l'URL utilizzato dall'endpoint client deve includere il nome di dominio completo dell'host del servizio presente nell'URL del servizio. Si presuppone che l'account con cui viene eseguito il servizio disponga dell'accesso alla chiave del computer (impostazione predefinita) servizio il nome dell'entità (SPN) che viene creata quando il computer viene aggiunto al dominio Active Directory, che viene eseguito più di frequente dall'esecuzione del servizio tramite il Account del servizio di rete. Se il servizio non ha accesso alla chiave dell'SPN del computer, è necessario fornire l'SPN corretto o il nome dell'entità utente (UPN) dell'account utilizzato per l'esecuzione del servizio nell'identità dell'endpoint del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la modalità [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN e UPN, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  In scenari di bilanciamento del carico, ad esempio Web farm o Web garden, viene comunemente definito un account univoco per ogni applicazione, viene assegnato un SPN a tale account e viene verificato che tutti i servizi dell'applicazione siano eseguiti in tale account.  
   
- Per ottenere un SPN per l'account del servizio, è necessario essere amministratore di dominio di Active Directory. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Supplemento tecnico Kerberos per Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Per ottenere un SPN per l'account del servizio, è necessario essere amministratore di dominio di Active Directory. Per altre informazioni, vedere [supplemento tecnico Kerberos per Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Per il protocollo Kerberos diretto è necessario che il servizio venga eseguito utilizzando un account di tipo computer del dominio  
  Questo si verifica quando la proprietà `ClientCredentialType` è impostata su `Windows` e la proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> è impostata su `false`, come illustrato nel codice seguente.  
@@ -132,7 +134,7 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la rappresentazione, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la rappresentazione, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  In alternativa, il client viene eseguito come un servizio Windows, utilizzando l'account predefinito System.  
   
