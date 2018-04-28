@@ -10,6 +10,5 @@
 ## [Delegati generici](generic-delegates.md)
 ## [Differenze tra modelli C++ e generics C#](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Generics in fase di esecuzione](generics-in-the-run-time.md)
-## [Generics nella libreria di classi .NET Framework](generics-in-the-net-framework-class-library.md)
 ## [Generics e reflection](generics-and-reflection.md)
 ## [Generics e attributi](generics-and-attributes.md)

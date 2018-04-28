@@ -1,90 +1,87 @@
 ---
 title: 'Utilizzo di gestione dei pacchetti con F # per Azure'
 description: 'Utilizzare Paket o Nuget per gestire le dipendenze di Azure di F #'
-keywords: "Visual f #, f #, funzionalità di programmazione, .NET, .NET Core, Azure"
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: da6938c6ee29292571f4269c68a9148c13738422
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="package-management-for-f-azure-dependencies"></a><span data-ttu-id="1ce5c-104">Gestione dei pacchetti per le dipendenze F# di Azure</span><span class="sxs-lookup"><span data-stu-id="1ce5c-104">Package Management for F# Azure Dependencies</span></span>
+# <a name="package-management-for-f-azure-dependencies"></a><span data-ttu-id="7b1d6-103">Gestione dei pacchetti per le dipendenze F# di Azure</span><span class="sxs-lookup"><span data-stu-id="7b1d6-103">Package Management for F# Azure Dependencies</span></span>
 
-<span data-ttu-id="1ce5c-105">Acquisizione di pacchetti per lo sviluppo di Azure è semplice quando si utilizza una gestione pacchetti.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-105">Obtaining packages for Azure development is easy when you use a package manager.</span></span> <span data-ttu-id="1ce5c-106">Esistono due opzioni [Paket](https://fsprojects.github.io/Paket/) e [NuGet](https://www.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="1ce5c-106">The two options are [Paket](https://fsprojects.github.io/Paket/) and [NuGet](https://www.nuget.org/).</span></span>
+<span data-ttu-id="7b1d6-104">Acquisizione di pacchetti per lo sviluppo di Azure è semplice quando si utilizza una gestione pacchetti.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-104">Obtaining packages for Azure development is easy when you use a package manager.</span></span> <span data-ttu-id="7b1d6-105">Esistono due opzioni [Paket](https://fsprojects.github.io/Paket/) e [NuGet](https://www.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="7b1d6-105">The two options are [Paket](https://fsprojects.github.io/Paket/) and [NuGet](https://www.nuget.org/).</span></span>
 
-## <a name="using-paket"></a><span data-ttu-id="1ce5c-107">Utilizzando Paket</span><span class="sxs-lookup"><span data-stu-id="1ce5c-107">Using Paket</span></span>
+## <a name="using-paket"></a><span data-ttu-id="7b1d6-106">Utilizzando Paket</span><span class="sxs-lookup"><span data-stu-id="7b1d6-106">Using Paket</span></span>
 
-<span data-ttu-id="1ce5c-108">Se si utilizza [Paket](https://fsprojects.github.io/Paket/) come la gestione delle dipendenze, è possibile utilizzare il `paket.exe` strumento per aggiungere dipendenze di Azure.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-108">If you're using [Paket](https://fsprojects.github.io/Paket/) as your dependency manager, you can use the `paket.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="1ce5c-109">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-109">For example:</span></span>
+<span data-ttu-id="7b1d6-107">Se si utilizza [Paket](https://fsprojects.github.io/Paket/) come la gestione delle dipendenze, è possibile utilizzare il `paket.exe` strumento per aggiungere dipendenze di Azure.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-107">If you're using [Paket](https://fsprojects.github.io/Paket/) as your dependency manager, you can use the `paket.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="7b1d6-108">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-108">For example:</span></span>
 
     > paket add nuget WindowsAzure.Storage
 
-<span data-ttu-id="1ce5c-110">Oppure, se si utilizza [Mono](https://www.mono-project.com/) per lo sviluppo multipiattaforma con .NET:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-110">Or, if you're using [Mono](https://www.mono-project.com/) for cross-platform .NET development:</span></span>
+<span data-ttu-id="7b1d6-109">Oppure, se si utilizza [Mono](https://www.mono-project.com/) per lo sviluppo multipiattaforma con .NET:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-109">Or, if you're using [Mono](https://www.mono-project.com/) for cross-platform .NET development:</span></span>
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-<span data-ttu-id="1ce5c-111">Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente, modificare il `paket.dependencies` file e scaricare il pacchetto.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-111">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, modify the `paket.dependencies` file, and download the package.</span></span> <span data-ttu-id="1ce5c-112">Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-112">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
+<span data-ttu-id="7b1d6-110">Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente, modificare il `paket.dependencies` file e scaricare il pacchetto.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-110">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, modify the `paket.dependencies` file, and download the package.</span></span> <span data-ttu-id="7b1d6-111">Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-111">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
 
     > paket install
 
-<span data-ttu-id="1ce5c-113">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-113">Or, for Mono development:</span></span>
+<span data-ttu-id="7b1d6-112">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-112">Or, for Mono development:</span></span>
 
     > mono paket.exe install
 
-<span data-ttu-id="1ce5c-114">È possibile aggiornare tutte le dipendenze del pacchetto alla versione più recente simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-114">You can update all your package dependencies to the latest version like this:</span></span>
+<span data-ttu-id="7b1d6-113">È possibile aggiornare tutte le dipendenze del pacchetto alla versione più recente simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-113">You can update all your package dependencies to the latest version like this:</span></span>
 
     > paket update
 
-<span data-ttu-id="1ce5c-115">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-115">Or, for Mono development:</span></span>
+<span data-ttu-id="7b1d6-114">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-114">Or, for Mono development:</span></span>
 
     > mono paket.exe update
 
-## <a name="using-nuget"></a><span data-ttu-id="1ce5c-116">Uso di Nuget</span><span class="sxs-lookup"><span data-stu-id="1ce5c-116">Using Nuget</span></span>
+## <a name="using-nuget"></a><span data-ttu-id="7b1d6-115">Uso di Nuget</span><span class="sxs-lookup"><span data-stu-id="7b1d6-115">Using Nuget</span></span>
 
-<span data-ttu-id="1ce5c-117">Se si utilizza [NuGet](https://www.nuget.org/) come la gestione delle dipendenze, è possibile utilizzare il `nuget.exe` strumento per aggiungere dipendenze di Azure.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-117">If you're using [NuGet](https://www.nuget.org/) as your dependency manager, you can use the `nuget.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="1ce5c-118">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-118">For example:</span></span>
+<span data-ttu-id="7b1d6-116">Se si utilizza [NuGet](https://www.nuget.org/) come la gestione delle dipendenze, è possibile utilizzare il `nuget.exe` strumento per aggiungere dipendenze di Azure.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-116">If you're using [NuGet](https://www.nuget.org/) as your dependency manager, you can use the `nuget.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="7b1d6-117">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-117">For example:</span></span>
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
-<span data-ttu-id="1ce5c-119">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-119">Or, for Mono development:</span></span>
+<span data-ttu-id="7b1d6-118">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-118">Or, for Mono development:</span></span>
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-<span data-ttu-id="1ce5c-120">Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente e il download del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-120">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, and download the package.</span></span> <span data-ttu-id="1ce5c-121">Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-121">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
+<span data-ttu-id="7b1d6-119">Verrà aggiunta `WindowsAzure.Storage` al set di dipendenze di pacchetto per il progetto nella directory corrente e il download del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-119">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, and download the package.</span></span> <span data-ttu-id="7b1d6-120">Se si hanno impostato le dipendenze in precedenza o si lavora con un progetto in cui sono state impostate dipendenze da un altro sviluppatore, è possibile risolvere e installare le dipendenze in locale simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-120">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
 
     > nuget restore 
 
-<span data-ttu-id="1ce5c-122">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-122">Or, for Mono development:</span></span>
+<span data-ttu-id="7b1d6-121">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-121">Or, for Mono development:</span></span>
 
     > mono nuget.exe restore
 
-<span data-ttu-id="1ce5c-123">È possibile aggiornare tutte le dipendenze del pacchetto alla versione più recente simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-123">You can update all your package dependencies to the latest version like this:</span></span>
+<span data-ttu-id="7b1d6-122">È possibile aggiornare tutte le dipendenze del pacchetto alla versione più recente simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-122">You can update all your package dependencies to the latest version like this:</span></span>
 
     > nuget update
 
-<span data-ttu-id="1ce5c-124">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-124">Or, for Mono development:</span></span>
+<span data-ttu-id="7b1d6-123">Oppure, per lo sviluppo Mono:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-123">Or, for Mono development:</span></span>
 
     > mono nuget.exe update
 
-## <a name="referencing-assemblies"></a><span data-ttu-id="1ce5c-125">Assembly di riferimento</span><span class="sxs-lookup"><span data-stu-id="1ce5c-125">Referencing Assemblies</span></span>
+## <a name="referencing-assemblies"></a><span data-ttu-id="7b1d6-124">Assembly di riferimento</span><span class="sxs-lookup"><span data-stu-id="7b1d6-124">Referencing Assemblies</span></span>
 
-<span data-ttu-id="1ce5c-126">Per utilizzare i pacchetti nello script F #, è necessario fare riferimento gli assembly inclusi nei pacchetti utilizzando un `#r` direttiva.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-126">In order to use your packages in your F# script, you need to reference the assemblies included in the packages using a `#r` directive.</span></span> <span data-ttu-id="1ce5c-127">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-127">For example:</span></span>
+<span data-ttu-id="7b1d6-125">Per utilizzare i pacchetti nello script F #, è necessario fare riferimento gli assembly inclusi nei pacchetti utilizzando un `#r` direttiva.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-125">In order to use your packages in your F# script, you need to reference the assemblies included in the packages using a `#r` directive.</span></span> <span data-ttu-id="7b1d6-126">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-126">For example:</span></span>
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-<span data-ttu-id="1ce5c-128">Come si può notare, è necessario specificare il percorso relativo per la DLL e il nome completo della DLL, che potrebbe non essere esattamente lo stesso come il nome del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-128">As you can see, you'll need to specify the relative path to the DLL and the full DLL name, which may not be exactly the same as the package name.</span></span> <span data-ttu-id="1ce5c-129">Il percorso include una versione di framework ed eventualmente un numero di versione del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-129">The path will include a framework version and possibly a package version number.</span></span> <span data-ttu-id="1ce5c-130">Per trovare tutti gli assembly installati, è possibile utilizzare codice simile al seguente su una riga di comando di Windows:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-130">To find all the installed assemblies, you can use something like this on a Windows command line:</span></span>
+<span data-ttu-id="7b1d6-127">Come si può notare, è necessario specificare il percorso relativo per la DLL e il nome completo della DLL, che potrebbe non essere esattamente lo stesso come il nome del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-127">As you can see, you'll need to specify the relative path to the DLL and the full DLL name, which may not be exactly the same as the package name.</span></span> <span data-ttu-id="7b1d6-128">Il percorso include una versione di framework ed eventualmente un numero di versione del pacchetto.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-128">The path will include a framework version and possibly a package version number.</span></span> <span data-ttu-id="7b1d6-129">Per trovare tutti gli assembly installati, è possibile utilizzare codice simile al seguente su una riga di comando di Windows:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-129">To find all the installed assemblies, you can use something like this on a Windows command line:</span></span>
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-<span data-ttu-id="1ce5c-131">O in una shell Unix, simile a questo:</span><span class="sxs-lookup"><span data-stu-id="1ce5c-131">Or in a Unix shell, something like this:</span></span>
+<span data-ttu-id="7b1d6-130">O in una shell Unix, simile a questo:</span><span class="sxs-lookup"><span data-stu-id="7b1d6-130">Or in a Unix shell, something like this:</span></span>
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 
-<span data-ttu-id="1ce5c-132">Questa query fornirà i percorsi per gli assembly installati.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-132">This will give you the paths to the installed assemblies.</span></span> <span data-ttu-id="1ce5c-133">Da qui, è possibile selezionare il percorso corretto per la versione di framework.</span><span class="sxs-lookup"><span data-stu-id="1ce5c-133">From there, you can select the correct path for your framework version.</span></span>
+<span data-ttu-id="7b1d6-131">Questa query fornirà i percorsi per gli assembly installati.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-131">This will give you the paths to the installed assemblies.</span></span> <span data-ttu-id="7b1d6-132">Da qui, è possibile selezionare il percorso corretto per la versione di framework.</span><span class="sxs-lookup"><span data-stu-id="7b1d6-132">From there, you can select the correct path for your framework version.</span></span>
