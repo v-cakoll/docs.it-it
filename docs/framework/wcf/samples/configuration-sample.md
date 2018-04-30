@@ -1,54 +1,56 @@
 ---
 title: Esempio di configurazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9bb0b2acd2aa51765a50b735f218bd92ef11531
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48f153a26181fa549973ec83e413b1294d7c8ce5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="configuration-sample"></a><span data-ttu-id="4eb01-102">Esempio di configurazione</span><span class="sxs-lookup"><span data-stu-id="4eb01-102">Configuration Sample</span></span>
-<span data-ttu-id="4eb01-103">Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.</span><span class="sxs-lookup"><span data-stu-id="4eb01-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
+# <a name="configuration-sample"></a><span data-ttu-id="59a01-102">Esempio di configurazione</span><span class="sxs-lookup"><span data-stu-id="59a01-102">Configuration Sample</span></span>
+<span data-ttu-id="59a01-103">Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.</span><span class="sxs-lookup"><span data-stu-id="59a01-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4eb01-104">L'esempio implementa l'individuazione nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="4eb01-105">Per un esempio che implementa il rilevamento nel codice, vedere [base](../../../../docs/framework/wcf/samples/basic-sample.md).</span><span class="sxs-lookup"><span data-stu-id="4eb01-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
+>  <span data-ttu-id="59a01-104">L'esempio implementa l'individuazione nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="59a01-105">Per un esempio che implementa il rilevamento nel codice, vedere [base](../../../../docs/framework/wcf/samples/basic-sample.md).</span><span class="sxs-lookup"><span data-stu-id="59a01-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4eb01-106">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="4eb01-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="4eb01-107">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="4eb01-107">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="59a01-106">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="59a01-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="59a01-107">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="59a01-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="4eb01-108">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="4eb01-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4eb01-109">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="4eb01-109">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="59a01-108">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="59a01-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="59a01-109">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="59a01-109">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a><span data-ttu-id="4eb01-110">Configurazione del servizio</span><span class="sxs-lookup"><span data-stu-id="4eb01-110">Service Configuration</span></span>  
- <span data-ttu-id="4eb01-111">Il file di configurazione in questo esempio illustra due funzionalità:</span><span class="sxs-lookup"><span data-stu-id="4eb01-111">The configuration file in this sample demonstrates two features:</span></span>  
+## <a name="service-configuration"></a><span data-ttu-id="59a01-110">Configurazione del servizio</span><span class="sxs-lookup"><span data-stu-id="59a01-110">Service Configuration</span></span>  
+ <span data-ttu-id="59a01-111">Il file di configurazione in questo esempio illustra due funzionalità:</span><span class="sxs-lookup"><span data-stu-id="59a01-111">The configuration file in this sample demonstrates two features:</span></span>  
   
--   <span data-ttu-id="4eb01-112">Rendere individuabile il servizio su un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.</span><span class="sxs-lookup"><span data-stu-id="4eb01-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
+-   <span data-ttu-id="59a01-112">Rendere individuabile il servizio su un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.</span><span class="sxs-lookup"><span data-stu-id="59a01-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
   
--   <span data-ttu-id="4eb01-113">Modificare le informazioni correlate all'individuazione per l'endpoint dell'applicazione del servizio e modificare alcune delle impostazioni correlate all'individuazione nell'endpoint standard.</span><span class="sxs-lookup"><span data-stu-id="4eb01-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
+-   <span data-ttu-id="59a01-113">Modificare le informazioni correlate all'individuazione per l'endpoint dell'applicazione del servizio e modificare alcune delle impostazioni correlate all'individuazione nell'endpoint standard.</span><span class="sxs-lookup"><span data-stu-id="59a01-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
   
- <span data-ttu-id="4eb01-114">Per abilitare l'individuazione, è necessario effettuare alcune modifiche nel file di configurazione dell'applicazione per il servizio:</span><span class="sxs-lookup"><span data-stu-id="4eb01-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
+ <span data-ttu-id="59a01-114">Per abilitare l'individuazione, è necessario effettuare alcune modifiche nel file di configurazione dell'applicazione per il servizio:</span><span class="sxs-lookup"><span data-stu-id="59a01-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
   
--   <span data-ttu-id="4eb01-115">È necessario aggiungere un endpoint di individuazione all'elemento `<service>`.</span><span class="sxs-lookup"><span data-stu-id="4eb01-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="4eb01-116">Si tratta di un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.</span><span class="sxs-lookup"><span data-stu-id="4eb01-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="4eb01-117">Si tratta di un endpoint del sistema che il runtime associa al servizio di individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="4eb01-118">Il servizio di individuazione è in ascolto dei messaggi su tale endpoint.</span><span class="sxs-lookup"><span data-stu-id="4eb01-118">The discovery service listens for messages on this endpoint.</span></span>  
+-   <span data-ttu-id="59a01-115">È necessario aggiungere un endpoint di individuazione all'elemento `<service>`.</span><span class="sxs-lookup"><span data-stu-id="59a01-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="59a01-116">Si tratta di un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.</span><span class="sxs-lookup"><span data-stu-id="59a01-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="59a01-117">Si tratta di un endpoint del sistema che il runtime associa al servizio di individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="59a01-118">Il servizio di individuazione è in ascolto dei messaggi su tale endpoint.</span><span class="sxs-lookup"><span data-stu-id="59a01-118">The discovery service listens for messages on this endpoint.</span></span>  
   
--   <span data-ttu-id="4eb01-119">Un comportamento `<serviceDiscovery>` viene aggiunto alla sezione `<serviceBehaviors>`.</span><span class="sxs-lookup"><span data-stu-id="4eb01-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="4eb01-120">Ciò consente al servizio di essere individuato in fase di runtime e l'endpoint di individuazione menzionato in precedenza viene utilizzato per rimanere in ascolto di messaggi `Probe` e `Resolve` di individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="4eb01-121">Con queste due aggiunte, il servizio è individuabile in corrispondenza dell'endpoint di individuazione specificato.</span><span class="sxs-lookup"><span data-stu-id="4eb01-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
+-   <span data-ttu-id="59a01-119">Un comportamento `<serviceDiscovery>` viene aggiunto alla sezione `<serviceBehaviors>`.</span><span class="sxs-lookup"><span data-stu-id="59a01-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="59a01-120">Ciò consente al servizio di essere individuato in fase di runtime e l'endpoint di individuazione menzionato in precedenza viene utilizzato per rimanere in ascolto di messaggi `Probe` e `Resolve` di individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="59a01-121">Con queste due aggiunte, il servizio è individuabile in corrispondenza dell'endpoint di individuazione specificato.</span><span class="sxs-lookup"><span data-stu-id="59a01-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
   
- <span data-ttu-id="4eb01-122">Nel frammento di configurazione seguente viene illustrato un servizio con un endpoint dell'applicazione e un endpoint di individuazione definito:</span><span class="sxs-lookup"><span data-stu-id="4eb01-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
+ <span data-ttu-id="59a01-122">Nel frammento di configurazione seguente viene illustrato un servizio con un endpoint dell'applicazione e un endpoint di individuazione definito:</span><span class="sxs-lookup"><span data-stu-id="59a01-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
   
 ```xml
 <services>  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
       </services>  
 ```  
   
- <span data-ttu-id="4eb01-123">Per sfruttare i vantaggi degli annunci, è necessario aggiungere un endpoint dell'annuncio.</span><span class="sxs-lookup"><span data-stu-id="4eb01-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="4eb01-124">A tale scopo, modificare il file di configurazione come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4eb01-124">To do this, modify the configuration file as shown in the following code.</span></span>  
+ <span data-ttu-id="59a01-123">Per sfruttare i vantaggi degli annunci, è necessario aggiungere un endpoint dell'annuncio.</span><span class="sxs-lookup"><span data-stu-id="59a01-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="59a01-124">A tale scopo, modificare il file di configurazione come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="59a01-124">To do this, modify the configuration file as shown in the following code.</span></span>  
   
 ```xml  
 <serviceDiscovery>  
@@ -74,15 +76,15 @@ ms.lasthandoff: 12/22/2017
           </serviceDiscovery>  
 ```  
   
- <span data-ttu-id="4eb01-125">L'aggiunta di un endpoint dell'annuncio al comportamento del servizio di individuazione crea un client dell'annuncio predefinito per il servizio.</span><span class="sxs-lookup"><span data-stu-id="4eb01-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="4eb01-126">Ciò garantisce che il servizio invii un annuncio online oppure offline rispettivamente quando il servizio viene aperto e chiuso.</span><span class="sxs-lookup"><span data-stu-id="4eb01-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
+ <span data-ttu-id="59a01-125">L'aggiunta di un endpoint dell'annuncio al comportamento del servizio di individuazione crea un client dell'annuncio predefinito per il servizio.</span><span class="sxs-lookup"><span data-stu-id="59a01-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="59a01-126">Ciò garantisce che il servizio invii un annuncio online oppure offline rispettivamente quando il servizio viene aperto e chiuso.</span><span class="sxs-lookup"><span data-stu-id="59a01-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
   
- <span data-ttu-id="4eb01-127">Il file di configurazione va oltre tali semplici passaggi modificando i comportamenti aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="4eb01-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="4eb01-128">È possibile controllare le informazioni correlate all'individuazione tramite endpoint specifici.</span><span class="sxs-lookup"><span data-stu-id="4eb01-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="4eb01-129">Ovvero, un utente può controllare se è possibile individuare un endpoint e può anche contrassegnare tale endpoint con <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> e metadati XML personalizzati.</span><span class="sxs-lookup"><span data-stu-id="4eb01-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="4eb01-130">A tale scopo, l'utente deve aggiungere una proprietà `behaviorConfiguration` all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="4eb01-131">In questo caso, la proprietà seguente viene aggiunta all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-131">In this case, the following property is added to the application endpoint.</span></span>  
+ <span data-ttu-id="59a01-127">Il file di configurazione va oltre tali semplici passaggi modificando i comportamenti aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="59a01-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="59a01-128">È possibile controllare le informazioni correlate all'individuazione tramite endpoint specifici.</span><span class="sxs-lookup"><span data-stu-id="59a01-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="59a01-129">Ovvero, un utente può controllare se è possibile individuare un endpoint e può anche contrassegnare tale endpoint con <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> e metadati XML personalizzati.</span><span class="sxs-lookup"><span data-stu-id="59a01-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="59a01-130">A tale scopo, l'utente deve aggiungere una proprietà `behaviorConfiguration` all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="59a01-131">In questo caso, la proprietà seguente viene aggiunta all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-131">In this case, the following property is added to the application endpoint.</span></span>  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
 ```  
   
- <span data-ttu-id="4eb01-132">Tramite l'elemento di configurazione del comportamento, è possibile controllare gli attributi correlati all'individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="4eb01-133">In questo caso, due ambiti vengono aggiunti all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-133">In this case, two scopes are added to the application endpoint.</span></span>  
+ <span data-ttu-id="59a01-132">Tramite l'elemento di configurazione del comportamento, è possibile controllare gli attributi correlati all'individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="59a01-133">In questo caso, due ambiti vengono aggiunti all'endpoint dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-133">In this case, two scopes are added to the application endpoint.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -98,9 +100,9 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4eb01-134">gli ambiti, vedere [trovare individuazione e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span><span class="sxs-lookup"><span data-stu-id="4eb01-134"> scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
+ <span data-ttu-id="59a01-134">Per ulteriori informazioni sugli ambiti, vedere [trovare individuazione e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span><span class="sxs-lookup"><span data-stu-id="59a01-134">For more information about scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
   
- <span data-ttu-id="4eb01-135">È inoltre possibile controllare dettagli specifici dell'endpoint di individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="4eb01-136">Questa operazione viene effettuata tramite <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span><span class="sxs-lookup"><span data-stu-id="4eb01-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="4eb01-137">In questo esempio, viene modificata la versione del protocollo utilizzata e viene aggiunto un attributo `maxResponseDelay`, come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4eb01-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
+ <span data-ttu-id="59a01-135">È inoltre possibile controllare dettagli specifici dell'endpoint di individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="59a01-136">Questa operazione viene effettuata tramite <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span><span class="sxs-lookup"><span data-stu-id="59a01-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="59a01-137">In questo esempio, viene modificata la versione del protocollo utilizzata e viene aggiunto un attributo `maxResponseDelay`, come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="59a01-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
   
 ```xml  
 <standardEndpoints>  
@@ -110,7 +112,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </standardEndpoints>  
 ```  
   
- <span data-ttu-id="4eb01-138">Di seguito è riportato il file di configurazione completo utilizzato in questo esempio:</span><span class="sxs-lookup"><span data-stu-id="4eb01-138">The following is the complete configuration file used in this example:</span></span>  
+ <span data-ttu-id="59a01-138">Di seguito è riportato il file di configurazione completo utilizzato in questo esempio:</span><span class="sxs-lookup"><span data-stu-id="59a01-138">The following is the complete configuration file used in this example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -167,8 +169,8 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a><span data-ttu-id="4eb01-139">Configurazione del client</span><span class="sxs-lookup"><span data-stu-id="4eb01-139">Client Configuration</span></span>  
- <span data-ttu-id="4eb01-140">Nel file di configurazione dell'applicazione per il client, un oggetto `standardEndpoint` di tipo `dynamicEndpoint` viene impiegato per utilizzare l'individuazione come illustrato nel frammento di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4eb01-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
+## <a name="client-configuration"></a><span data-ttu-id="59a01-139">Configurazione del client</span><span class="sxs-lookup"><span data-stu-id="59a01-139">Client Configuration</span></span>  
+ <span data-ttu-id="59a01-140">Nel file di configurazione dell'applicazione per il client, un oggetto `standardEndpoint` di tipo `dynamicEndpoint` viene impiegato per utilizzare l'individuazione come illustrato nel frammento di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="59a01-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
   
 ```xml  
 <client>  
@@ -182,13 +184,13 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </client>  
 ```  
   
- <span data-ttu-id="4eb01-141">Quando un client sta utilizzando un `dynamicEndpoint`, il runtime esegue automaticamente l'individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="4eb01-142">Durante l'individuazione vengono utilizzate varie impostazioni, ad esempio quelle definite nella sezione `discoveryClientSettings`, in cui viene specificato il tipo di endpoint di individuazione da utilizzare:</span><span class="sxs-lookup"><span data-stu-id="4eb01-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
+ <span data-ttu-id="59a01-141">Quando un client sta utilizzando un `dynamicEndpoint`, il runtime esegue automaticamente l'individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="59a01-142">Durante l'individuazione vengono utilizzate varie impostazioni, ad esempio quelle definite nella sezione `discoveryClientSettings`, in cui viene specificato il tipo di endpoint di individuazione da utilizzare:</span><span class="sxs-lookup"><span data-stu-id="59a01-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
 ```  
   
- <span data-ttu-id="4eb01-143">Criteri di ricerca utilizzati per cercare i servizi:</span><span class="sxs-lookup"><span data-stu-id="4eb01-143">The find criteria used to search for services:</span></span>  
+ <span data-ttu-id="59a01-143">Criteri di ricerca utilizzati per cercare i servizi:</span><span class="sxs-lookup"><span data-stu-id="59a01-143">The find criteria used to search for services:</span></span>  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -203,7 +205,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </findCriteria>  
 ```  
   
- <span data-ttu-id="4eb01-144">L'esempio estende tale funzionalità e modifica i <xref:System.ServiceModel.Discovery.FindCriteria> utilizzati dal client e alcune proprietà dell'`updDiscoveryEndpoint` standard utilizzate per l'individuazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="4eb01-145">I <xref:System.ServiceModel.Discovery.FindCriteria> vengono modificati per utilizzare un ambito e un algoritmo `scopeMatchBy` specifico, oltre a criteri di chiusura personalizzati.</span><span class="sxs-lookup"><span data-stu-id="4eb01-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="4eb01-146">Inoltre, l'esempio mostra anche come un client è in grado di inviare elementi XML utilizzando messaggi `Probe`.</span><span class="sxs-lookup"><span data-stu-id="4eb01-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="4eb01-147">Infine, alcune modifiche vengono apportate a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ad esempio la versione del protocollo utilizzata e impostazioni specifiche dell'UDP, come mostrato nel file di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="4eb01-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
+ <span data-ttu-id="59a01-144">L'esempio estende tale funzionalità e modifica i <xref:System.ServiceModel.Discovery.FindCriteria> utilizzati dal client e alcune proprietà dell'`updDiscoveryEndpoint` standard utilizzate per l'individuazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="59a01-145">I <xref:System.ServiceModel.Discovery.FindCriteria> vengono modificati per utilizzare un ambito e un algoritmo `scopeMatchBy` specifico, oltre a criteri di chiusura personalizzati.</span><span class="sxs-lookup"><span data-stu-id="59a01-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="59a01-146">Inoltre, l'esempio mostra anche come un client è in grado di inviare elementi XML utilizzando messaggi `Probe`.</span><span class="sxs-lookup"><span data-stu-id="59a01-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="59a01-147">Infine, alcune modifiche vengono apportate a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ad esempio la versione del protocollo utilizzata e impostazioni specifiche dell'UDP, come mostrato nel file di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="59a01-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -217,7 +219,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
       </udpDiscoveryEndpoint>  
 ```  
   
- <span data-ttu-id="4eb01-148">Di seguito è riportata la configurazione client completa utilizzata nell'esempio:</span><span class="sxs-lookup"><span data-stu-id="4eb01-148">The following is the complete client configuration used in the sample.</span></span>  
+ <span data-ttu-id="59a01-148">Di seguito è riportata la configurazione client completa utilizzata nell'esempio:</span><span class="sxs-lookup"><span data-stu-id="59a01-148">The following is the complete client configuration used in the sample.</span></span>  
   
 ```xml  
 <configuration>  
@@ -270,14 +272,14 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   </system.serviceModel>  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="4eb01-149">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="4eb01-149">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="59a01-149">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="59a01-149">To use this sample</span></span>  
   
-1.  <span data-ttu-id="4eb01-150">In questo esempio Usa endpoint HTTP e di eseguire questa operazione appropriata, esempio ACL URL deve essere aggiunto vedere [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="4eb01-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="4eb01-151">L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati.</span><span class="sxs-lookup"><span data-stu-id="4eb01-151">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="4eb01-152">È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale.</span><span class="sxs-lookup"><span data-stu-id="4eb01-152">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  <span data-ttu-id="59a01-150">In questo esempio Usa endpoint HTTP e di eseguire questa operazione appropriata, esempio ACL URL deve essere aggiunto vedere [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="59a01-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="59a01-151">L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati.</span><span class="sxs-lookup"><span data-stu-id="59a01-151">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="59a01-152">È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale.</span><span class="sxs-lookup"><span data-stu-id="59a01-152">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  <span data-ttu-id="4eb01-153">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-153">Build the solution.</span></span>  
+2.  <span data-ttu-id="59a01-153">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="59a01-153">Build the solution.</span></span>  
   
-3.  <span data-ttu-id="4eb01-154">Eseguire il servizio eseguibile dalla directory di compilazione.</span><span class="sxs-lookup"><span data-stu-id="4eb01-154">Run the service executable from the build directory.</span></span>  
+3.  <span data-ttu-id="59a01-154">Eseguire il servizio eseguibile dalla directory di compilazione.</span><span class="sxs-lookup"><span data-stu-id="59a01-154">Run the service executable from the build directory.</span></span>  
   
-4.  <span data-ttu-id="4eb01-155">Eseguire il file eseguibile del client.</span><span class="sxs-lookup"><span data-stu-id="4eb01-155">Run the client executable.</span></span> <span data-ttu-id="4eb01-156">Il client è in grado di individuare il servizio.</span><span class="sxs-lookup"><span data-stu-id="4eb01-156">Note that the client is able to locate the service.</span></span>  
+4.  <span data-ttu-id="59a01-155">Eseguire il file eseguibile del client.</span><span class="sxs-lookup"><span data-stu-id="59a01-155">Run the client executable.</span></span> <span data-ttu-id="59a01-156">Il client è in grado di individuare il servizio.</span><span class="sxs-lookup"><span data-stu-id="59a01-156">Note that the client is able to locate the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4eb01-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4eb01-157">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59a01-157">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="59a01-157">See Also</span></span>
