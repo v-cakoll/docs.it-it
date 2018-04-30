@@ -1,34 +1,36 @@
 ---
 title: Utilizzo della rappresentazione con la protezione del trasporto
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizzo della rappresentazione con la protezione del trasporto
-*Rappresentazione* è la possibilità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene illustrato l'utilizzo della sicurezza del trasporto in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la funzionalità della rappresentazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]rappresentazione con la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Rappresentazione* si intende la capacità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene illustrato l'utilizzo della sicurezza del trasporto in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la funzionalità della rappresentazione. Per ulteriori informazioni sulla rappresentazione mediante la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinque livelli di rappresentazione  
  La protezione del trasporto si avvale di cinque livelli di rappresentazione, come descritto nella tabella seguente.  
   
 |Livello di rappresentazione|Descrizione|  
 |-------------------------|-----------------|  
-|nessuno|L'applicazione server non tenta di rappresentare il client.|  
+|Nessuno|L'applicazione server non tenta di rappresentare il client.|  
 |Anonymous|L'applicazione server è in grado di eseguire controlli di accesso a fronte delle credenziali client, ma non riceve alcuna informazione sull'identità del client. Questo livello di rappresentazione è significativo solo per comunicazioni su computer, ad esempio le named pipe. L'utilizzo di `Anonymous` con una connessione remota innalza il livello di rappresentazione a Identify.|  
 |Identify|L'applicazione conosce l'identità del client ed è in grado di eseguire la convalida dell'accesso a fronte delle credenziali client, ma non è in grado di rappresentare il client. Identify è il livello di rappresentazione predefinito utilizzato con le credenziali SSPI in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a meno che il provider di token non fornisca un livello di rappresentazione diverso.|  
 |Impersonate|Oltre a eseguire controlli di accesso, l'applicazione server è in grado di accedere alle risorse nel server come client. L'applicazione server non è in grado di accedere alle risorse su computer remoti tramite l'identità del client poiché il token rappresentato non dispone di credenziali di rete.|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Non è possibile utilizzare le named pipe con livelli di rappresentazione `Impersonate` o `Delegate`. La named pipe non è in grado di imporre la garanzia su computer con questi livelli di rappresentazione.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]named pipe, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Per ulteriori informazioni su named pipe, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Trasporto HTTP  
  Le associazioni che utilizzano il trasporto HTTP (<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.BasicHttpBinding>) supportano diversi schemi di autenticazione, come illustrato in [informazioni sull'autenticazione HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Il livello di rappresentazione supportato dipende dallo schema di autenticazione. Gli elementi seguenti vengono utilizzati con il trasporto HTTP:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Lo schema di autenticazione Kerberos, selezionabile solo tramite negoziazione, può essere utilizzato con qualsiasi livello di rappresentazione supportato.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]il trasporto HTTP, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Per ulteriori informazioni sul trasporto HTTP, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

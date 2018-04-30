@@ -1,23 +1,24 @@
 ---
 title: Modellazione del comportamento di annullamento nei flussi di lavoro
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modellazione del comportamento di annullamento nei flussi di lavoro
 Le attività possono essere annullate all'interno di un flusso di lavoro, ad esempio da un'attività <xref:System.Activities.Statements.Parallel> che annulla i rami incompleti quando la proprietà <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> restituisce `true` oppure all'esterno del flusso di lavoro, se l'host chiama il metodo <xref:System.Activities.WorkflowApplication.Cancel%2A>. Per assicurare la gestione dell'annullamento, gli autori del flusso di lavoro possono usare le attività <xref:System.Activities.Statements.CancellationScope> e <xref:System.Activities.Statements.CompensableActivity> o creare attività personalizzate che forniscono la logica di annullamento. In questo argomento viene fornita una panoramica sull'annullamento nei flussi di lavoro.  
@@ -26,7 +27,7 @@ Le attività possono essere annullate all'interno di un flusso di lavoro, ad ese
  Le transazioni consentono all'applicazione di interrompere, ovvero eseguire il rollback, tutte le modifiche eseguite all'interno della transazione se si verificano errori durante qualsiasi parte del processo di transazione. Tuttavia, non tutte le operazioni che potrebbero dover essere annullate sono appropriate per le transazioni, ad esempio operazioni con esecuzione prolungata o che non implicano risorse transazionali. La compensazione fornisce un modello per annullare operazioni non transazionali completate precedentemente se, in seguito, si verifica un errore nel flusso di lavoro. L'annullamento fornisce agli autori di flussi di lavoro e attività un modello per gestire le operazioni non transazionali che non sono state completate. Se l'attività viene annullata poiché non ne è stata completata l'esecuzione, sarà richiamata la relativa logica di annullamento, se disponibile.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]le transazioni e compensazione, vedere [transazioni](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) e [compensazione](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+>  Per ulteriori informazioni sulle transazioni e compensazione, vedere [transazioni](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) e [compensazione](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="using-cancellationscope"></a>Utilizzo dell'attività CancellationScope  
  L'attività <xref:System.Activities.Statements.CancellationScope> dispone di due sezioni che possono contenere le attività figlio <xref:System.Activities.Statements.CancellationScope.Body%2A> e <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>. Nella proprietà <xref:System.Activities.Statements.CancellationScope.Body%2A> vengono posizionate le attività che costituiscono la logica dell'attività e nella proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> vengono posizionate le attività che forniscono la logica di annullamento per l'attività. Un'attività può essere annullata solo se non è stata completata. Nel caso dell'attività <xref:System.Activities.Statements.CancellationScope>, con completamento si intende il completamento delle attività nella proprietà <xref:System.Activities.Statements.CancellationScope.Body%2A>. Se viene pianificata una richiesta di annullamento e le attività nella proprietà <xref:System.Activities.Statements.CancellationScope.Body%2A> non sono state completate, l'attività <xref:System.Activities.Statements.CancellationScope> sarà contrassegnata come <xref:System.Activities.ActivityInstanceState.Canceled> e saranno eseguite le attività della proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>.  
@@ -40,7 +41,7 @@ Le attività possono essere annullate all'interno di un flusso di lavoro, ad ese
   
  **Avvio del flusso di lavoro.**  
 **Oggetto CancellationHandler richiamato.**   
-**Flusso di lavoro b30ebb30-df46-4d90-a211-e31c38d8db3c annullato.**    
+**Flusso di lavoro b30ebb30-df46-4d90-a211-e31c38d8db3c annullata.**    
 > [!NOTE]
 >  Quando un'attività <xref:System.Activities.Statements.CancellationScope> viene annullata e viene richiamata la proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, l'autore del flusso di lavoro deve determinare lo stato dell'attività prima del relativo annullamento al fine di fornire la logica di annullamento appropriata. La proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> non fornisce alcuna informazione sullo stato dell'attività annullata.  
   
@@ -54,7 +55,7 @@ Le attività possono essere annullate all'interno di un flusso di lavoro, ad ese
 **OnUnhandledException nel flusso di lavoro 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9**   
 **È stata generata un'eccezione ApplicationException.**   
 **Oggetto CancellationHandler richiamato.**   
-**Flusso di lavoro 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 annullato.**    
+**Flusso di lavoro 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 annullata.**    
 ### <a name="canceling-an-activity-from-inside-a-workflow"></a>Annullamento di un'attività dall'interno di un flusso di lavoro  
  Un'attività può essere annullata anche dal relativo elemento padre. Ad esempio, se un'attività <xref:System.Activities.Statements.Parallel> dispone di più rami in esecuzione e la relativa proprietà <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> restituisce `true`, i rami incompleti corrispondenti saranno annullati. In questo esempio viene creata un'attività <xref:System.Activities.Statements.Parallel> che dispone di due rami. La relativa proprietà <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> è impostata su `true`, pertanto l'oggetto <xref:System.Activities.Statements.Parallel> viene completato non appena si verifica la stessa condizione per uno dei relativi rami. In questo esempio viene completato il ramo 2, pertanto il ramo 1 viene annullato.  
   
@@ -62,10 +63,10 @@ Le attività possono essere annullate all'interno di un flusso di lavoro, ad ese
   
  Quando questo flusso di lavoro viene richiamato, nella console viene visualizzato l'output seguente.  
   
- **Creazione del ramo 1.**  
+ **Ramo 1.**  
 **Ramo 2 completato.**   
 **Ramo 1 annullato.**   
-**Flusso di lavoro e0685e24-18ef-4a47-acf3-5c638732f3be completato.**  Le attività vengono annullate anche se un'eccezione viene propagata oltre la radice dell'attività, ma viene gestita a un livello superiore nel flusso di lavoro. In questo esempio la logica principale del flusso di lavoro è costituita da un'attività <xref:System.Activities.Statements.Sequence>. <xref:System.Activities.Statements.Sequence> è specificato come  <xref:System.Activities.Statements.CancellationScope.Body%2A> di un'attività <xref:System.Activities.Statements.CancellationScope> che è contenuta da un'attività <xref:System.Activities.Statements.TryCatch>. Dal corpo dell'attività <xref:System.Activities.Statements.Sequence> viene generata un'eccezione che viene gestita dall'attività padre <xref:System.Activities.Statements.TryCatch>. L'attività <xref:System.Activities.Statements.Sequence> viene quindi annullata.  
+**E0685e24-18ef-4a47-acf3-5c638732f3be del flusso di lavoro completato.**  Le attività vengono annullate anche se un'eccezione viene propagata oltre la radice dell'attività, ma viene gestita a un livello superiore nel flusso di lavoro. In questo esempio la logica principale del flusso di lavoro è costituita da un'attività <xref:System.Activities.Statements.Sequence>. <xref:System.Activities.Statements.Sequence> è specificato come  <xref:System.Activities.Statements.CancellationScope.Body%2A> di un'attività <xref:System.Activities.Statements.CancellationScope> che è contenuta da un'attività <xref:System.Activities.Statements.TryCatch>. Dal corpo dell'attività <xref:System.Activities.Statements.Sequence> viene generata un'eccezione che viene gestita dall'attività padre <xref:System.Activities.Statements.TryCatch>. L'attività <xref:System.Activities.Statements.Sequence> viene quindi annullata.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#39](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#39)]  
   
@@ -74,7 +75,7 @@ Le attività possono essere annullate all'interno di un flusso di lavoro, ad ese
  **Sequenza di avvio.**  
 **Attività Sequence annullata.**   
 **Eccezione rilevata.**   
-**Flusso di lavoro e3c18939-121e-4c43-af1c-ba1ce977ce55 completato.**   
+**E3c18939-121e-4c43-af1c-ba1ce977ce55 del flusso di lavoro completato.**   
 ### <a name="throwing-exceptions-from-a-cancellationhandler"></a>Generazione di eccezioni da un oggetto CancellationHandler  
  Qualsiasi eccezione generata dalla proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> di un'attività <xref:System.Activities.Statements.CancellationScope> è irreversibile per il flusso di lavoro. Se è possibile che le eccezioni escano da una proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, usare un oggetto <xref:System.Activities.Statements.TryCatch> nella proprietà <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> per rilevare e gestire tali eccezioni.  
   

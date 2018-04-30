@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Diffusione di informazioni
 La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono fornite mitigazioni.  
@@ -29,7 +29,7 @@ La diffusione di informazioni consente all'autore di un attacco di acquisire inf
  Se si sta utilizzando la protezione a livello di messaggio su un livello di trasporto HTTP, è necessario sapere che questo tipo di sicurezza non protegge le intestazioni HTTP. L'unico modo per proteggerle è utilizzare il trasporto HTTPS anziché HTTP. L'utilizzo del trasporto HTTPS comporta la crittografia dell'intero messaggio, incluse le intestazioni HTTP, tramite il protocollo Secure Sockets Layer (SSL).  
   
 ## <a name="policy-information"></a>Informazioni sul criterio  
- La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] scenari della federazione, vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
+ La protezione del criterio è importante, specialmente negli scenari di federazioni dove i requisiti di riservatezza dei token emessi o le informazioni sugli emittenti dei token vengono esposti nel criterio. In questi casi, si consiglia di proteggere l'endpoint del criterio del servizio federato per impedire agli autori di attacchi di ottenere informazioni sul servizio, ad esempio il tipo di attestazioni da inserire nel token emesso, o di reindirizzare client a emittenti di token dannosi. L'autore di un attacco, ad esempio, potrebbe individuare coppie di nome utente/password riconfigurando la catena di trust federata in modo tale che termini in un emittente che esegua un attacco di tipo man-in-the-middle. È inoltre consigliabile che i client federati che ottengono le proprie associazioni tramite recupero dei criteri verifichino l'attendibilità degli emittenti nella catena di certificati federata ottenuta. Per ulteriori informazioni sugli scenari di federazione, vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Le immagini della memoria possono rivelare informazioni sulle attestazioni  
  Quando un'applicazione smette di funzionare, i file di log, ad esempio quelli prodotti da Dr. Watson, possono contenere le informazioni sull'attestazione. Tali informazioni non devono essere esportate ad altre entità, ad esempio team di supporto. In caso contrario, vengono esportate anche le informazioni sulle attestazioni che contengono dati privati. È possibile ridurre questo problema non inviando i file di log a entità sconosciute. Per altre informazioni, vedere [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Il codice non specifica un nome di dominio e pertanto verrà utilizzato NTLM.  
   
- NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come identità dell'endpoint viene specificato, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ NTLM viene utilizzato se viene specificato il dominio, ma viene specificato un nome dell'entità servizio non valido tramite la funzionalità di identità endpoint. Per ulteriori informazioni su come identità dell'endpoint viene specificato, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

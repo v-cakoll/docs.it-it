@@ -1,33 +1,33 @@
 ---
 title: Hosting nel servizio di attivazione dei processi di Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting nel servizio di attivazione dei processi di Windows
 Il servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che ospitano servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. Questo consente ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di usare protocolli HTTP e non HTTP, ad esempio Net.TCP, in un ambiente host che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un gran numero di applicazioni in un determinato computer.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la creazione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vedere servizio in esecuzione in WAS, ambiente di hosting [procedura: ospitare un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Per ulteriori informazioni sulla compilazione una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio che viene eseguito in WAS, ambiente di hosting, consultare [procedura: ospitare un servizio WCF in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Il modello di processo WAS prevede diverse funzionalità che consentono una modalità di hosting delle applicazioni più efficace e gestibile e in cui le risorse vengono usate in maniera efficiente:  
   
@@ -39,7 +39,7 @@ Il servizio di attivazione dei processi di Windows (WAS, Windows Process Activat
   
 -   Consente alle applicazioni di sfruttare il modello di processo IIS senza richiedere il footprint di distribuzione di un'installazione IIS completa.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Funzionalità WAS, vedere [IIS 7.0 Beta: amministrazione Web di IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Per ulteriori informazioni sulle funzionalità WAS, vedere [IIS 7.0 Beta: amministrazione Web di IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) funziona con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e processo di attivazione Windows (WAS) per fornire un ambiente per i servizi NET4 WCF e WF di hosting. Tali vantaggi includono la gestione del ciclo di vita del processo, il riciclo del processo, l'hosting condiviso, una rapida protezione dall'errore, la gestione dell'opzione orfano processo, l'attivazione su richiesta e il monitoraggio dello stato. Per informazioni dettagliate, vedere [funzionalità di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) e [concetti di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -53,7 +53,7 @@ Il servizio di attivazione dei processi di Windows (WAS, Windows Process Activat
 |Scenario|Associazioni di sito|Percorso dell'applicazione|URI dell'applicazione di base|  
 |--------------|-------------------|----------------------|---------------------------|  
 |Solo HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP e non HTTP|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
+|HTTP e non HTTP|http: *: 80:\*<br /><br /> NET. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Solo non HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
   
  Possono essere indirizzati anche servizi e risorse all'interno di un'applicazione. All'interno di un'applicazione, le risorse dell'applicazione vengono indirizzate in relazione al percorso dell'applicazione di base. Ad esempio, si presupponga che un sito in un computer contoso.com abbia associazioni di sito per entrambi i protocolli HTTP e Net.TCP. Si presupponga inoltre che il sito contenga un'applicazione ubicata in /Billing, che espone un servizio in GetOrders.svc. Quindi, se il servizio GetOrders.svc espone un endpoint con un indirizzo relativo di SecureEndpoint, l'endpoint del servizio viene esposto nei due URI seguenti:  

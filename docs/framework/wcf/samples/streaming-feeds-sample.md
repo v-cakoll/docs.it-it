@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1eb5d8e0b19bc32ea5158d1614447b76f4924440
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-feeds-sample"></a>Esempio trasmissione feed
 Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel server, l'esempio illustra come rimandare la creazione di oggetti <xref:System.ServiceModel.Syndication.SyndicationItem> singoli all'interno del feed fino a immediatamente prima della scrittura dell'elemento nel flusso della rete.  
@@ -29,7 +29,7 @@ Questo esempio illustra come gestire feed che contengono numerosi elementi. Nel 
   
  Per dimostrare al meglio la funzionalità del flusso di diffusione API, questo esempio utilizza uno scenario piuttosto improbabile nel quale il server espone un feed che contiene un numero infinito di elementi. In questo caso, il server continua a generare nuovi elementi nel feed fino a determinare che il client ha letto un numero specificato di elementi dal feed (10, per impostazione predefinita). Per semplicità, sia il client che il server vengono implementati nello stesso processo e utilizzano un oggetto `ItemCounter` condiviso per tenere traccia del numero di elementi prodotti dal client. Il tipo `ItemCounter` esiste solo allo scopo di consentire allo scenario di esempio di terminare in modo pulito e non è un elemento principale dello schema illustrato.  
   
- Nella dimostrazione viene utilizzato di Visual c# iteratori (usando il `yield``return` costrutto parola chiave). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli iteratori, vedere l'argomento relativo all'utilizzo degli iteratori su MSDN.  
+ Nella dimostrazione viene utilizzato di Visual c# iteratori (usando il `yield``return` costrutto parola chiave). Per ulteriori informazioni sugli iteratori, vedere l'argomento "Utilizzo degli iteratori" su MSDN.  
   
 ## <a name="service"></a>Service  
  Il servizio implementa un contratto <xref:System.ServiceModel.Web.WebGetAttribute> di base che è costituito da un'operazione, come mostra il codice seguente.  

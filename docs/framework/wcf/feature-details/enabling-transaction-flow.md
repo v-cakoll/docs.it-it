@@ -1,28 +1,28 @@
 ---
 title: Attivazione del flusso delle transazioni
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>Attivazione del flusso delle transazioni
 In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili opzioni estremamente flessibili per il controllo del flusso delle transazioni. Le impostazioni del flusso delle transazioni di un servizio possono essere espresse con una determinata combinazione di attributi e configurazione.  
@@ -78,7 +78,7 @@ In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono disponibili opzi
   
  Se nell'associazione il flusso delle transazioni è disattivato ma una delle operazioni di un contratto di servizio richiede una transazione in arrivo, in fase di avvio del servizio viene generata un'eccezione di convalida.  
   
- La maggior parte delle associazioni permanenti fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiene gli attributi `transactionFlow` e `transactionProtocol` che consentono di configurare l'associazione specifica perché accetti transazioni in arrivo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Imposta gli elementi di configurazione, vedere [ \<associazione >](../../../../docs/framework/misc/binding.md).  
+ La maggior parte delle associazioni permanenti fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiene gli attributi `transactionFlow` e `transactionProtocol` che consentono di configurare l'associazione specifica perché accetti transazioni in arrivo. Per ulteriori informazioni sull'impostazione gli elementi di configurazione, vedere [ \<associazione >](../../../../docs/framework/misc/binding.md).  
   
  Gli amministratori o i distributori possono avvalersi del flusso delle transazioni a livello di endpoint per configurare i requisiti del flusso o i vincoli in fase di distribuzione utilizzando il file di configurazione.  
   

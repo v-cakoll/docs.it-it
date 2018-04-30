@@ -1,35 +1,37 @@
 ---
 title: Specifica del comportamento in fase di esecuzione del servizio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
-Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. [!INCLUDE[crabout](../../../includes/crabout-md.md)] lla configurazione dell'applicazione del servizio, vedere [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
+Dopo aver definito un contratto di servizio ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) e implementato tale contratto ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), è possibile configurare il comportamento operativo del runtime del servizio. In questo argomento vengono illustrati i comportamenti dell'operazione e del servizio forniti dal sistema e viene descritto dove trovare ulteriori informazioni per creare nuovi comportamenti. Mentre alcuni comportamenti vengono applicati come attributi, molti vengono applicati utilizzando un file di configurazione dell'applicazione o a livello di codice. Per ulteriori informazioni sulla configurazione dell'applicazione di servizio, vedere [configurazione di servizi](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Panoramica  
  Il contratto definisce gli input, gli output, i tipi di dati e le funzionalità di un servizio di quel tipo. L'implementazione di un contratto di servizio crea una classe che, in caso di configurazione con un'associazione in un indirizzo, adempie al contratto che implementa. Il client conosce le informazioni contrattuali, sull'associazione e sull'indirizzo, senza le quali non potrebbe utilizzare il servizio.  
   
- Le specifiche dell'operazione, ad esempio i problemi di threading o la gestione delle istanze, sono tuttavia opache ai client. Dopo aver implementato il contratto di servizio, è possibile configurare numerose caratteristiche dell'operazione utilizzando i *comportamenti*. I comportamenti sono oggetti che modificano il runtime di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] impostando una proprietà runtime o inserendo un tipo di personalizzazione nel runtime. [!INCLUDE[crabout](../../../includes/crabout-md.md)] lla modifica del runtime mediante la creazione di comportamenti definiti dall'utente, vedere [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Le specifiche dell'operazione, ad esempio i problemi di threading o la gestione delle istanze, sono tuttavia opache ai client. Dopo aver implementato il contratto di servizio, è possibile configurare numerose caratteristiche dell'operazione utilizzando i *comportamenti*. I comportamenti sono oggetti che modificano il runtime di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] impostando una proprietà runtime o inserendo un tipo di personalizzazione nel runtime. Per ulteriori informazioni sulla modifica di runtime creando i comportamenti definiti dall'utente, vedere [estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Gli attributi <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> e <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> sono i comportamenti più utili ed espongono le funzionalità dell'operazione richieste più comunemente. Essendo degli attributi, vengono applicati all'implementazione del servizio o dell'operazione. Altri comportamenti, ad esempio <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, vengono in genere applicati utilizzando un file di configurazione dell'applicazione, anche se è possibile utilizzarli a livello di programmazione.  
   

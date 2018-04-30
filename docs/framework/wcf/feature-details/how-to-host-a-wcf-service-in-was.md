@@ -1,29 +1,31 @@
 ---
 title: 'Procedura: ospitare un servizio WCF in WAS'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: ospitare un servizio WCF in WAS
 In questo argomento vengono delineati i passaggi di base necessari per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ospitato nel servizio di attivazione dei processi di Windows, noto anche come WAS. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'interfaccia dell'adattatore listener per comunicare richieste di attivazione ricevute tramite i protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, named pipe e Accodamento messaggi.  
   
- Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]installazione e configurazione di WAS, vedere [procedura: installare e configurare componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. Per ulteriori informazioni sull'installazione e configurazione WAS, vedere [procedura: installare e configurare i componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  L'attivazione di WAS non è supportata se la pipeline di elaborazione delle richieste del server Web è impostata sulla modalità classica. Se è necessario utilizzare l'attivazione WAS, la pipeline di elaborazione delle richieste del server Web deve essere impostata sulla modalità integrata.  

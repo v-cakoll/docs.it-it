@@ -1,27 +1,29 @@
 ---
 title: 'Procedura: creare credenziali client e del servizio personalizzate'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99ee624ef6198ed67141d3d92e63fb9ba815c4fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procedura: creare credenziali client e del servizio personalizzate
 In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzare credenziali personalizzate dal codice dell'applicazione.  
@@ -35,7 +37,7 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
  Entrambe le classi <xref:System.ServiceModel.Description.ClientCredentials> e <xref:System.ServiceModel.Description.ServiceCredentials> ereditano dalla classe astratta <xref:System.ServiceModel.Security.SecurityCredentialsManager> che definisce il contratto per la restituzione di <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le classi di credenziali e l'integrazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architettura di sicurezza, vedere [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Per ulteriori informazioni sulle classi delle credenziali e la modalità di adattamento nella [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architettura di sicurezza, vedere [architettura di sicurezza](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Le implementazioni predefinite fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supportano i tipi di credenziali forniti dal sistema e creano un gestore del token di sicurezza in grado di gestire quei tipi di credenziali.  
   
@@ -81,11 +83,11 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 1.  Definire una nuova classe derivata da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]provider di token di sicurezza personalizzato, vedere [procedura: creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzato, vedere [procedura: creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]autenticatori del token di sicurezza personalizzato, vedere [procedura: creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni su autenticatori del token di sicurezza personalizzato, vedere [procedura: creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzato, vedere [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzato, vedere [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
@@ -169,11 +171,11 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 1.  Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.  
   
-2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]provider di token di sicurezza personalizzato, vedere [procedura: creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per ulteriori informazioni sui provider di token di sicurezza personalizzato, vedere [procedura: creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]autenticatori del token di sicurezza personalizzato, vedere [procedura: creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) argomento.  
+3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per ulteriori informazioni su autenticatori del token di sicurezza personalizzato, vedere [procedura: creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) argomento.  
   
-4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzato, vedere [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per ulteriori informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzato, vedere [procedura: creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  

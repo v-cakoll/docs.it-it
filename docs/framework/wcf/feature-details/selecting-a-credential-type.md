@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
 *Le credenziali* sono i dati [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le credenziali possono essere di vario tipo, ad esempio token del nome utente e certificati X.509. In questo argomento vengono esaminate le credenziali, come vengono usate in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e come selezionare la credenziale appropriata per l'applicazione.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  È necessario tenere presente un aspetto legato all'impossibilità di cambiare identità (quando viene stabilito il contesto di sicurezza, ovvero il comportamento predefinito). Se si crea un servizio che comunica con un secondo servizio, l'identità usata per aprire il client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al secondo servizio non può essere modificata. Questo diventa un problema se più client possono usare il primo servizio e il servizio rappresenta i client nell'accesso al secondo servizio. Se il servizio riusa lo stesso client per tutti i chiamanti, tutte le chiamate al secondo servizio vengono eseguite con l'identità del primo chiamante usato per aprire il client al secondo servizio. In altre parole, il servizio usa l'identità del primo client per tutti i client che vogliono comunicare con il secondo servizio. Ciò può causare un'elevazione di privilegi. Se questo non è il comportamento desiderato del servizio, è necessario registrare ogni chiamante e creare un nuovo client per il secondo servizio per ogni singolo chiamante e verificare che il servizio usi solo il client corretto per consentire ai diversi chiamanti la comunicazione con il secondo servizio.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Per ulteriori informazioni sulle credenziali e le sessioni protette, vedere [considerazioni sulla sicurezza per le sessioni protette](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

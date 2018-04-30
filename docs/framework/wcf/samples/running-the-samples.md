@@ -1,24 +1,26 @@
 ---
 title: Esecuzione degli esempi di Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Esecuzione degli esempi di Windows Communication Foundation
 Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere eseguiti in un singolo computer o su una configurazione che prevede più computer. Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer. In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio. Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer. Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti. La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
@@ -30,7 +32,7 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1.  Se il servizio è ospitato da IIS, verificare che sia possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc. In risposta, viene visualizzata un pagina di conferma. Se non viene visualizzata la pagina di conferma, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Se il servizio è ospitato da IIS, verificare che è possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc. In risposta, viene visualizzata un pagina di conferma. Se non viene visualizzata la pagina di conferma, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Se il servizio è indipendente, eseguire Service.exe da \service\bin, dalla cartella specifica del linguaggio. L'attività del servizio viene visualizzata nella finestra della console del servizio.  
   
@@ -64,7 +66,7 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
   
     1.  Se il servizio è in esecuzione con un account di dominio, aprire il file di configurazione del client e modificare il valore dell'indirizzo della definizione dell'endpoint perché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
   
-    2.  Se il servizio è in esecuzione con un account di dominio, rigenerare la configurazione client eseguendo Svcutil.exe sul servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]esegue Svcutil.exe, vedere [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Usare il file generato anziché il file di configurazione dell'esempio. Il file di configurazione generato contiene informazioni di identità aggiuntive e tutte le impostazioni necessarie per connettersi all'endpoint del servizio, anche se si tratta di impostazioni predefinite. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]informazioni di identità, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Se il servizio è in esecuzione con un account di dominio, rigenerare la configurazione client eseguendo Svcutil.exe sul servizio. Per ulteriori informazioni sull'esecuzione Svcutil.exe, vedere [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Usare il file generato anziché il file di configurazione dell'esempio. Il file di configurazione generato contiene informazioni di identità aggiuntive e tutte le impostazioni necessarie per connettersi all'endpoint del servizio, anche se si tratta di impostazioni predefinite. Per ulteriori informazioni sulle informazioni di identità, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  Sul computer client, avviare Client.exe da un prompt dei comandi.  
   
@@ -74,7 +76,7 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
   
 2.  Se il servizio è ospitato su IIS:  
   
-    1.  Attivare il servizio inserendo in un browser l'indirizzo http://localhost/servicemodelsamples/service.svc.  
+    1.  Attivare il servizio usando un browser, immettendo l'indirizzo http://localhost/servicemodelsamples/service.svc.  
   
     2.  Nella soluzione, scegliere il **Debug** menu e **Connetti a processo** voce di menu.  
   
@@ -93,4 +95,4 @@ Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono esser
 ## <a name="see-also"></a>Vedere anche  
  [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Esecuzione degli esempi di un gruppo di lavoro e tra più computer](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Suggerimenti di risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

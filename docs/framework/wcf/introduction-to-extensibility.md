@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introduzione all'estendibilità
 Il modello dell'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è progettato per soddisfare la maggior parte dei requisiti di comunicazione di qualsiasi applicazione distribuita. Esistono tuttavia scenari che non sono supportati dal modello di applicazione predefinito né dalle implementazioni fornite dal sistema. Il modello di estendibilità [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] deve supportare scenari personalizzati consentendo di modificare il comportamento del sistema a ogni livello, anche al punto di sostituire l'intero modello di applicazione. In questo argomento vengono illustrate le varie aree di estensione e vengono forniti i collegamenti alle informazioni aggiuntive relative a ogni area.  
@@ -43,7 +43,7 @@ Il modello dell'applicazione [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
  I messaggi dell'applicazione contengono dati destinati a un'operazione client o di servizio creata personalmente o dal cliente. Questi messaggi sono disponibili nel sistema di estensione al livello dell'applicazione in formato messaggio o oggetto, a seconda delle esigenze specifiche.  
   
- Tutti i messaggi passano attraverso il sistema di canali. Solo i messaggi dell'applicazione vengono passati dal sistema di canali nell'applicazione. Per creare una nuova funzionalità a livello di canale, è necessario estendere il sistema di canali. Per creare nuove funzionalità a livello di applicazione, è necessario estendere la fase di esecuzione del servizio o del client (dispatcher e channel factory rispettivamente). [!INCLUDE[crabout](../../../includes/crabout-md.md)] estensione del runtime di applicazione, vedere [estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Tutti i messaggi passano attraverso il sistema di canali. Solo i messaggi dell'applicazione vengono passati dal sistema di canali nell'applicazione. Per creare una nuova funzionalità a livello di canale, è necessario estendere il sistema di canali. Per creare nuove funzionalità a livello di applicazione, è necessario estendere la fase di esecuzione del servizio o del client (dispatcher e channel factory rispettivamente). Per ulteriori informazioni sull'estensione del runtime dell'applicazione, vedere [estensione ServiceHost e il livello del modello di servizio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Estensione della protezione  
  Per creare meccanismi di sicurezza personalizzati, quali token e credenziali, è necessario estendere il sistema di sicurezza. Per altre informazioni, vedere [estensione di sicurezza](../../../docs/framework/wcf/extending/extending-security.md).  

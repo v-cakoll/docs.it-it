@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Panoramica dell'architettura dei metadati
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un'infrastruttura avanzata per esportare, pubblicare, recuperare e importare metadati di servizio. I servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzano i metadati per descrivere come interagire con gli endpoint del servizio affinché strumenti quali Svcutil.exe possano generare automaticamente il codice client per accedere al servizio.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  Per aggiungere endpoint dei metadati che utilizzano il protocollo MEX, aggiungere gli endpoint del servizio all'host del servizio che utilizza il contratto di servizio denominato IMetadataExchange.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] definisce il <xref:System.ServiceModel.Description.IMetadataExchange> interfaccia con il nome del contratto di servizio. Endpoint WS-MetadataExchange, o endpoint MEX, possono utilizzare una delle quattro associazioni predefinite che i metodi factory statici espongono sulla classe <xref:System.ServiceModel.Description.MetadataExchangeBindings> in modo che corrispondano alle associazioni predefinite utilizzate dagli strumenti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio Svcutil.exe. È inoltre possibile configurare gli endpoint dei metadati MEX utilizzando un'associazione personalizzata.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> utilizza un oggetto <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> per esportare i metadati per tutti gli endpoint nel servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] esportazione dei metadati da un servizio, vedere [esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> utilizza un oggetto <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> per esportare i metadati per tutti gli endpoint nel servizio. Per ulteriori informazioni sull'esportazione di metadati da un servizio, vedere [esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> aggiunge all'host del servizio un'istanza di <xref:System.ServiceModel.Description.ServiceMetadataExtension> come estensione. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fornisce l'implementazione per i metadati che pubblicano protocolli. È inoltre possibile utilizzare <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> per ottenere i metadati del servizio in fase di esecuzione accedendo alla proprietà <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A>.  
   

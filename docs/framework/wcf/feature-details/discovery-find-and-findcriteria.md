@@ -1,27 +1,29 @@
 ---
 title: Ricerca di individuazione e FindCriteria
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
-Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]messaggi di individuazione, vedere il [specifica WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per ulteriori informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  La classe <xref:System.ServiceModel.Discovery.DiscoveryClient> fornisce il meccanismo necessario per eseguire operazioni di ricerca e agevola l'esecuzione delle operazioni del client di individuazione. Contiene un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> che esegue una ricerca sincrona (bloccante) scoperta e un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> che viene inizializzato con una ricerca asincrona non bloccante. Entrambi i metodi utilizzano un parametro <xref:System.ServiceModel.Discovery.FindCriteria> e forniscono risultati all'utente tramite un oggetto <xref:System.ServiceModel.Discovery.FindResponse>.  
@@ -39,7 +41,7 @@ Un'operazione di ricerca dell'individuazione viene inizializzata da un client pe
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> esegue un confronto di base tra le stringhe con distinzione tra maiuscole e minuscole.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>corrispondenze da segmenti separati da "/". Una ricerca di http://contoso/building1 corrisponde a un servizio con ambito http://contoso/building/floor1. Non corrisponde a http://contoso/building100, perché gli ultimi due segmenti non corrispondono.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> corrispondenze da segmenti separati da "/". Una ricerca per http://contoso/building1 corrisponde a un servizio con ambito http://contoso/building/floor1. Si noti che non corrisponde http://contoso/building100 perché gli ultimi due segmenti non corrispondono.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> individua la corrispondenza degli ambiti in base ai segmenti utilizzando un URL LDAP.  
   

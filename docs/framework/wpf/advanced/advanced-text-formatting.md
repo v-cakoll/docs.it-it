@@ -1,12 +1,13 @@
 ---
 title: Formattazione del testo avanzata
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15b5d74c7607c59f7a4b568774e3d870138e56a4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-text-formatting"></a>Formattazione del testo avanzata
-Il [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornisce un set affidabile di [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di includere il testo nell'applicazione. Layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Controls.TextBlock>, fornire i più comuni e gli elementi di utilizzo generale per la presentazione del testo. Disegno [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, forniscono un mezzo per includere il testo formattato nei disegni. Al massimo livello avanzato, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un motore per controllare qualsiasi aspetto della presentazione del testo, ad esempio gestione degli archivi di testo, la gestione della formattazione e gestione degli oggetti incorporati di formattazione del testo estensibile.  
+Windows Presentation Foundation (WPF) fornisce un set affidabile di [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di includere il testo nell'applicazione. Layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Controls.TextBlock>, fornire i più comuni e gli elementi di utilizzo generale per la presentazione del testo. Disegno [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, forniscono un mezzo per includere il testo formattato nei disegni. Al massimo livello avanzato, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un motore per controllare qualsiasi aspetto della presentazione del testo, ad esempio gestione degli archivi di testo, la gestione della formattazione e gestione degli oggetti incorporati di formattazione del testo estensibile.  
   
  In questo argomento viene fornita un'introduzione a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] la formattazione del testo. Si concentra sulle implementazione client e dell'utilizzo di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] motore di formattazione del testo.  
   
@@ -49,14 +51,14 @@ Il [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornisce 
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>Uso del formattatore di testo  
- <xref:System.Windows.Media.TextFormatting.TextFormatter>è il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] la formattazione del testo del motore e fornisce servizi per la formattazione e le righe di testo. Il formattatore di testo può gestire diversi formati di carattere del testo e stili di paragrafo e include il supporto per il layout di testo internazionale.  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter> è il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] formattazione del testo del motore e fornisce servizi per la formattazione e righe di testo. Il formattatore di testo può gestire diversi formati di carattere del testo e stili di paragrafo e include il supporto per il layout di testo internazionale.  
   
  A differenza di una tradizionale [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> interagisce con un client di layout di testo tramite un set di metodi di callback. È necessario che il client fornire un'implementazione di questi metodi di <xref:System.Windows.Media.TextFormatting.TextSource> classe. Nel diagramma seguente viene illustrata l'interazione di layout di testo tra l'applicazione client e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagramma del client di layout di testo e TextFormatter](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
 Interazione tra l'applicazione e TextFormatter  
   
- Il formattatore di testo viene utilizzato per recuperare le righe di testo formattato dall'archivio di testo, che è un'implementazione di <xref:System.Windows.Media.TextFormatting.TextSource>. Questa operazione viene eseguita creando innanzitutto un'istanza del formattatore di testo utilizzando il <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> metodo. Questo metodo crea un'istanza del formattatore di testo e imposta i valori massimi di altezza e larghezza della riga. Non appena viene creata un'istanza del formattatore di testo, il processo di creazione della riga è stato avviato chiamando il <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metodo. <xref:System.Windows.Media.TextFormatting.TextFormatter>richiama l'origine del testo per recuperare il testo e i parametri di formattazione per le sequenze di testo che formano una riga.  
+ Il formattatore di testo viene utilizzato per recuperare le righe di testo formattato dall'archivio di testo, che è un'implementazione di <xref:System.Windows.Media.TextFormatting.TextSource>. Questa operazione viene eseguita creando innanzitutto un'istanza del formattatore di testo utilizzando il <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> metodo. Questo metodo crea un'istanza del formattatore di testo e imposta i valori massimi di altezza e larghezza della riga. Non appena viene creata un'istanza del formattatore di testo, il processo di creazione della riga è stato avviato chiamando il <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> metodo. <xref:System.Windows.Media.TextFormatting.TextFormatter> richiama l'origine del testo per recuperare il testo e i parametri di formattazione per le sequenze di testo che costituiscono una riga.  
   
  L'esempio seguente illustra il processo di formattazione di un archivio di testo. Il <xref:System.Windows.Media.TextFormatting.TextFormatter> oggetto viene utilizzato per recuperare le righe di testo dall'archivio di testo e quindi formattare la riga di testo per il disegno nel <xref:System.Windows.Media.DrawingContext>.  
   
@@ -67,7 +69,7 @@ Interazione tra l'applicazione e TextFormatter
 ## <a name="implementing-the-client-text-store"></a>Implementazione dell'archivio di testo del client  
  Quando si estende il motore di formattazione del testo, è necessario implementare e gestire tutti gli aspetti dell'archivio di testo. Non si tratta di un'attività elementare. L'archivio di testo è responsabile del rilevamento delle proprietà delle sequenze di testo, delle proprietà dei paragrafi, degli oggetti incorporati e di altri contenuti simili. Fornisce inoltre il formattatore di testo con singoli <xref:System.Windows.Media.TextFormatting.TextRun> gli oggetti a cui il formattatore utilizza per creare <xref:System.Windows.Media.TextFormatting.TextLine> oggetti.  
   
- Per gestire la virtualizzazione dell'archivio di testo, l'archivio di testo deve essere derivato da <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource>definisce il metodo, che il formattatore utilizza per recuperare le sequenze di testo dall'archivio di testo. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>è il metodo utilizzato dal formattatore di testo per recuperare il testo viene eseguito usato nella formattazione delle righe. La chiamata a <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> viene eseguita ripetutamente dal formattatore di testo fino a quando non si verifica una delle condizioni seguenti:  
+ Per gestire la virtualizzazione dell'archivio di testo, l'archivio di testo deve essere derivato da <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> definisce il metodo che formattatore di testo utilizzato per recuperare le sequenze di testo dall'archivio di testo. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> è il metodo utilizzato dal formattatore di testo per recuperare il testo viene eseguito usato nella formattazione delle righe. La chiamata a <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> viene eseguita ripetutamente dal formattatore di testo fino a quando non si verifica una delle condizioni seguenti:  
   
 -   Oggetto <xref:System.Windows.Media.TextFormatting.TextEndOfLine> o viene restituita una sottoclasse.  
   
@@ -103,7 +105,7 @@ Interazione tra l'applicazione e TextFormatter
   
 <a name="section5"></a>   
 ## <a name="specifying-formatting-properties"></a>Specifica delle proprietà di formattazione  
- <xref:System.Windows.Media.TextFormatting.TextRun>gli oggetti vengono formattati utilizzando le proprietà fornite dall'archivio di testo. Queste proprietà possono essere di due tipi, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>gestisce le proprietà del paragrafo, ad esempio <xref:System.Windows.TextAlignment> e <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties>proprietà che possono essere diverse per ogni eseguito all'interno di un paragrafo, ad esempio il pennello in primo piano, il testo <xref:System.Windows.Media.Typeface>e dimensioni del carattere. Per implementare i paragrafi e testo personalizzato, eseguire i tipi di proprietà, l'applicazione deve creare classi che derivano da <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties> rispettivamente.  
+ <xref:System.Windows.Media.TextFormatting.TextRun> gli oggetti vengono formattati utilizzando le proprietà fornite dall'archivio di testo. Queste proprietà possono essere di due tipi, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> gestire le proprietà che interessano paragrafo, ad esempio <xref:System.Windows.TextAlignment> e <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> proprietà che può essere diverso per ogni testo eseguito all'interno di un paragrafo, ad esempio pennello in primo piano, <xref:System.Windows.Media.Typeface>e dimensioni del carattere. Per implementare i paragrafi e testo personalizzato, eseguire i tipi di proprietà, l'applicazione deve creare classi che derivano da <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties> rispettivamente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità tipografiche di WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  

@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: proteggere un servizio con credenziali di Windows
-Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio che si trova in un dominio di Windows e viene chiamato dai client nello stesso dominio. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Questo scenario, vedere [protezione del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
+Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servizio che si trova in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per ulteriori informazioni su questo scenario, vedere [protezione del trasporto con l'autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere il [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
   
  In questo argomento si presuppone la presenza di un'interfaccia e di un'implementazione del contratto esistente già definite, alle quali vengono aggiunti elementi. È inoltre possibile modificare un servizio e un client esistenti.  
   
@@ -57,7 +57,7 @@ Questo argomento viene illustrato come abilitare sicurezza del trasporto in un [
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Uso dell'associazione in un servizio.  
- Si tratta della seconda procedura, in cui viene illustrato l'uso dell'associazione in un servizio self-hosted. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Vedere servizi host [servizi di Hosting](../../../docs/framework/wcf/hosting-services.md).  
+ Si tratta della seconda procedura, in cui viene illustrato l'uso dell'associazione in un servizio self-hosted. Per ulteriori informazioni sui servizi di hosting, vedere [servizi di Hosting](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Per usare un'associazione in un servizio  
   

@@ -1,24 +1,26 @@
 ---
 title: Protezione dei messaggi in WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>Protezione dei messaggi in WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ha due modalità principali per garantire la protezione (`Transport` e `Message`) e una terza modalità (`TransportWithMessageCredential`) che rappresenta una combinazione delle due. In questo argomento viene illustrata la sicurezza dei messaggi e i motivi per cui è consigliabile utilizzarla.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Supporto di più trasporti. È possibile inviare messaggi protetti sui più trasporti diversi, ad esempio named pipe e TCP, senza dover utilizzare il protocollo per la protezione. Con la protezione a livello di trasporto, tutte le informazioni di sicurezza sono limitate all'ambito di una sola particolare connessione del trasporto e non sono disponibili dal contenuto del messaggio stesso. La sicurezza dei messaggi protegge il messaggio indipendentemente dal trasporto utilizzato per trasmettere il messaggio e il contesto di sicurezza è direttamente incorporato nel messaggio.  
   
--   Supporto per un ampio set di credenziali e attestazioni. La sicurezza dei messaggi è basata sulla specifica WS-Security che fornisce un framework estensibile capace di trasmettere qualsiasi tipo di attestazione all'interno del messaggio SOAP. A differenza della sicurezza del trasporto, il set di meccanismi di autenticazione, o attestazioni, che è possibile utilizzare non è limitato dalle funzionalità di trasporto. La sicurezza dei messaggi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include più tipi di autenticazione e trasmissione delle attestazioni e può essere estesa per supportare tipi aggiuntivi, se necessario. Per questi motivi, ad esempio, un scenario di credenziali federate non è possibile senza la sicurezza dei messaggi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]scenari della federazione WCF supporta, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Supporto per un ampio set di credenziali e attestazioni. La sicurezza dei messaggi è basata sulla specifica WS-Security che fornisce un framework estensibile capace di trasmettere qualsiasi tipo di attestazione all'interno del messaggio SOAP. A differenza della sicurezza del trasporto, il set di meccanismi di autenticazione, o attestazioni, che è possibile utilizzare non è limitato dalle funzionalità di trasporto. La sicurezza dei messaggi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] include più tipi di autenticazione e trasmissione delle attestazioni e può essere estesa per supportare tipi aggiuntivi, se necessario. Per questi motivi, ad esempio, un scenario di credenziali federate non è possibile senza la sicurezza dei messaggi. Per ulteriori informazioni sulla federazione scenari WCF supporta, vedere [federazione e i token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Confronto tra la sicurezza dei messaggi e del trasporto  
   

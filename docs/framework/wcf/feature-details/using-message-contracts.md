@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Utilizzo dei contratti di messaggio
 Quando compilano applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], in genere gli sviluppatori prestano particolare attenzione alle strutture dei dati e alle problematiche di serializzazione e non devono preoccuparsi della struttura dei messaggi in cui sono trasportati i dati. Per queste applicazioni, la creazione dei contratti dati per i parametri o dei valori restituiti è semplice. (Per altre informazioni, vedere [che specifica di trasferimento dei dati nei contratti di servizio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ Quando compilano applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contratti dati, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Un contratto dati è in genere sufficiente per definire lo schema per i messaggi. Nell'esempio precedente, è sufficiente per la maggior parte delle applicazioni se `BankingTransaction` e `BankingTransactionResponse` hanno contratti dati per definire il contenuto dei messaggi SOAP sottostanti. Per ulteriori informazioni sui contratti dati, vedere [utilizzando i contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Talvolta è tuttavia necessario controllare esattamente la modalità di trasmissione in rete della struttura del messaggio SOAP. Lo scenario più comune è l'inserimento di intestazioni SOAP personalizzate. Un altro scenario comune è quello della definizione di proprietà di sicurezza per le intestazioni e il corpo del messaggio, ovvero, quando è necessario decidere se questi elementi devono essere firmati digitalmente e crittografati. Infine, alcuni stack SOAP di terze parti richiedono che i messaggi abbiano un formato specifico. Questo controllo è fornito da operazioni in stile messaggistica.  
   

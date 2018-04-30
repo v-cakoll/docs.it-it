@@ -1,28 +1,28 @@
 ---
 title: Uso di associazioni per configurare servizi e client
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Uso di associazioni per configurare servizi e client
 Le associazioni sono oggetti che specificano i dettagli di comunicazione necessari per connettersi a un endpoint. In particolare, le associazioni contengono le informazioni di configurazione usate per creare il client o il runtime del servizio definendo le specifiche dei trasporti, i formati di trasmissione (codifica del messaggio) e i protocolli da usare per il relativo endpoint o canale client. Per creare un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funzionante, ogni endpoint nel servizio richiede un'associazione. In questo argomento viene illustrato cosa sono le associazioni, come vengono definite e come viene specificata una particolare associazione per un endpoint.  
@@ -53,7 +53,7 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
  Per un elenco completo delle associazioni fornite dal sistema, con le descrizioni, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Associazioni personalizzate  
- Se la raccolta di associazioni fornite dal sistema non include la corretta combinazione di funzionalità richiesta da un'applicazione di servizio, è possibile creare un'associazione <xref:System.ServiceModel.Channels.CustomBinding>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]gli elementi di un <xref:System.ServiceModel.Channels.CustomBinding> binding, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Se la raccolta di associazioni fornite dal sistema non include la corretta combinazione di funzionalità richiesta da un'applicazione di servizio, è possibile creare un'associazione <xref:System.ServiceModel.Channels.CustomBinding>. Per ulteriori informazioni sugli elementi di un <xref:System.ServiceModel.Channels.CustomBinding> binding, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) e [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Uso di associazioni  
  L'utilizzo di associazioni comporta due passaggi di base:  
@@ -65,7 +65,7 @@ Le associazioni sono oggetti che specificano i dettagli di comunicazione necessa
 ## <a name="code-and-configuration"></a>Codice e configurazione  
  È possibile definire o configurare associazioni tramite il codice o la configurazione. Questi due approcci sono indipendenti dal tipo di associazione usato, ad esempio, se si usa un'associazione fornita dal sistema o <xref:System.ServiceModel.Channels.CustomBinding>. In generale, l'uso del codice garantisce il controllo completo sulla definizione di un'associazione durante la compilazione. La configurazione, d'altra parte, consente a un amministratore di sistema o all'utente di un servizio o di un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] di modificare i parametri delle associazioni. Questa flessibilità è spesso utile in quando non è possibile prevedere in alcun modo i requisiti specifici del computer e le condizioni della rete in cui deve essere distribuita un'applicazione [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se le informazioni sull'associazione (e l'indirizzo) vengono separate dal codice, gli amministratori possono modificare i dettagli dell'associazione senza dover compilare o distribuire nuovamente l'applicazione. Si noti che se l'associazione viene definita nel codice, sovrascrive qualsiasi definizione basata sulla configurazione creata nel file di configurazione. Per esempi di questi approcci, vedere gli argomenti seguenti:  
   
--   [Procedura: ospitare un servizio WCF in un'applicazione gestita](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornisce un esempio di creazione di un'associazione nel codice.  
+-   [Procedura: ospitare un servizio WCF in un'applicazione gestita da](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fornisce un esempio di creazione di un'associazione nel codice.  
   
 -   [Procedura: configurare un Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) fornisce un esempio di creazione di un client utilizzando la configurazione.  
   

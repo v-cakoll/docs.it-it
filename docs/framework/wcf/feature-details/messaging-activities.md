@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bbc9fdfff5b5c6ab6e56af12269061f06bb79404
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="messaging-activities"></a>Attività di messaggistica
 Le attività di messaggistica consentono ai flussi di lavoro di inviare e ricevere messaggi WCF. Aggiungendo attività di messaggistica a un flusso di lavoro, è possibile modellare qualsiasi modello di scambio dei messaggi con la complessità desiderata.  
@@ -114,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>Transazioni e attività di messaggistica  
- Quando si effettua una chiamata a un servizio flusso di lavoro potrebbe essere utile propagare una transazione all'operazione del servizio. A tale scopo, inserire l'attività <xref:System.ServiceModel.Activities.Receive> all'interno di un'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. L'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope> contiene un'attività `Receive` e un corpo. La transazione propagata al servizio rimane di ambiente in tutta l'esecuzione del corpo di <xref:System.ServiceModel.Activities.TransactedReceiveScope>. La transazione viene completata quando viene completata l'esecuzione del corpo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] i flussi di lavoro e le transazioni, vedere [transazioni del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
+ Quando si effettua una chiamata a un servizio flusso di lavoro potrebbe essere utile propagare una transazione all'operazione del servizio. A tale scopo, inserire l'attività <xref:System.ServiceModel.Activities.Receive> all'interno di un'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope>. L'attività <xref:System.ServiceModel.Activities.TransactedReceiveScope> contiene un'attività `Receive` e un corpo. La transazione propagata al servizio rimane di ambiente in tutta l'esecuzione del corpo di <xref:System.ServiceModel.Activities.TransactedReceiveScope>. La transazione viene completata quando viene completata l'esecuzione del corpo. Per ulteriori informazioni sulle transazioni e flussi di lavoro, vedere [transazioni del flusso di lavoro](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Come inviare e ricevere errori in Servizi flussi di lavoro](http://go.microsoft.com/fwlink/?LinkId=189151)  

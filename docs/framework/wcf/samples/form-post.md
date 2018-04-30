@@ -1,24 +1,26 @@
 ---
 title: Invio del form
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Invio del form
 In questo esempio viene descritto come estendere il modello di programmazione WCF REST per supportare i nuovi formati delle richieste in entrata. Nell'esempio è inoltre inclusa l'implementazione di un formattatore in grado di deserializzare una richiesta da un invio di form HTML in un tipo di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Nell'esempio viene infine usato un modello T4 per la restituzione di una pagina HTML, il quale fornisce il form HTML che gli utenti possono usare per eseguire il postback al servizio WCF REST.  
@@ -38,7 +40,7 @@ In questo esempio viene descritto come estendere il modello di programmazione WC
   
  Questo progetto di applicazione console estende il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio. Nell'esempio relativo al servizio risorse di base viene illustrato come esporre una risorsa in modo che venga usato il modello di programmazione WCF REST. Nell'esempio relativo al servizio risorse di base una risorsa raccolta di clienti viene esposta in modo tale che i clienti della raccolta possano essere creati, recuperati, aggiornati ed eliminati. Nell'esempio relativo al servizio risorse di base vengono usati esclusivamente due formati per le richieste in entrata supportati a livello nativo, ovvero XML e JSON.  
   
- L'applicazione console in questo esempio relativo all'invio di form usa il formattatore personalizzato incluso nella libreria HtmlFormProcessing che consente agli utenti di creare clienti inviando una richiesta da un invio di form HTML mediante un browser. Consente inoltre di aggiungere un'operazione che restituisce una pagina HTML in cui è incluso il form del quale eseguire il postback al servizio. Questa pagina HTML viene generata usando un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, vedere [la generazione di elementi di modelli di testo T4](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ L'applicazione console in questo esempio relativo all'invio di form usa il formattatore personalizzato incluso nella libreria HtmlFormProcessing che consente agli utenti di creare clienti inviando una richiesta da un invio di form HTML mediante un browser. Consente inoltre di aggiungere un'operazione che restituisce una pagina HTML in cui è incluso il form del quale eseguire il postback al servizio. Questa pagina HTML viene generata usando un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per ulteriori informazioni su T4, vedere [la generazione di elementi di modelli di testo](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   

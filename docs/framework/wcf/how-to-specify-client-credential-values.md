@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: specificare valori di credenziali client
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consente al servizio di specificare la modalità di autenticazione di un client nel servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  Aggiungere un [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elemento per il [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
   
-4.  Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] i certificati, vedere [utilizzano i certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4.  Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  

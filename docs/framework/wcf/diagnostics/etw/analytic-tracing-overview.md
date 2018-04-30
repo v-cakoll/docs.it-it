@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>Panoramica della traccia analitica
 La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows (ETW). ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia. Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio. I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, vedere [Migliorare il debug e l'ottimizzazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ Per ulteriori informazioni su ETW, vedere [migliora il debug e ottimizzazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
  Oltre a utilizzare i registri eventi relativi al sistema Windows, alla sicurezza e alle applicazioni per analizzare l'applicazione, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto altri log nel nodo di livello superiore Registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , log dei messaggi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] a Registri applicazioni e servizi.  
   
@@ -57,7 +57,7 @@ La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/ne
  L'infrastruttura ETW consente l'abilitazione e la configurazione dinamica della traccia mediante strumenti standard di Windows. Per altre informazioni, vedere [in modo dinamico l'abilitazione traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Traccia del flusso di messaggi  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] come abilitare la traccia del flusso di messaggi, vedere [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+ Per ulteriori informazioni su come abilitare la traccia del flusso di messaggi, vedere [configurazione di traccia del flusso di messaggi](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Parole chiave  
  Le parole chiave vengono utilizzate per filtrare messaggi di traccia e definire il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento. Per altre informazioni, vedere [in modo dinamico l'abilitazione traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

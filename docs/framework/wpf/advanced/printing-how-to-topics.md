@@ -1,34 +1,36 @@
 ---
 title: Procedure relative alla stampa
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>Procedure relative alla stampa
 Negli argomenti di questa sezione viene illustrato come utilizzare la stampa e le funzionalità di gestione del sistema di stampa incluse con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nonché il nuovo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] percorso di stampa.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Richiamare una finestra di dialogo di stampa](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- Istruzioni per il markup XAML dichiarare un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Stampa oggetto finestra di dialogo e il codice per richiamare la finestra di dialogo dall'interno un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] dell'applicazione.  
+ Istruzioni per il markup XAML dichiarare un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Stampa oggetto finestra di dialogo o il codice per richiamare la finestra di dialogo dall'interno di un'applicazione Windows Presentation Foundation (WPF).  
   
  [Duplicare una stampante](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  Coda di stampa le istruzioni su come installare una seconda coda di stampa con le stesse proprietà di un oggetto esistente.  

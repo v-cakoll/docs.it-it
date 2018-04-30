@@ -2,7 +2,8 @@
 title: 'Modello a oggetti Ink: confronto di Windows Form e COM con WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modello a oggetti Ink: confronto di Windows Form e COM con WPF
 
-Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma di Windows Form di Tablet PC, la piattaforma COM di Tablet PC e [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] piattaforma.  La condivisione di piattaforme Windows Form e COM un modello a oggetti simili, ma l'oggetto del modello per il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] piattaforma è sostanzialmente diversa.  In questo argomento vengono illustrate le differenze ad alto livello in modo che gli sviluppatori che hanno lavorato con un modello a oggetti comprendere meglio l'altro.  
+Sono disponibili essenzialmente e tre le piattaforme che supportano la penna: la piattaforma di Windows Form di Tablet PC, la piattaforma COM di Tablet PC e la piattaforma Windows Presentation Foundation (WPF).  La condivisione di piattaforme Windows Form e COM un modello a oggetti simili, ma l'oggetto del modello per il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] piattaforma è sostanzialmente diversa.  In questo argomento vengono illustrate le differenze ad alto livello in modo che gli sviluppatori che hanno lavorato con un modello a oggetti comprendere meglio l'altro.  
   
 ## <a name="enabling-ink-in-an-application"></a>Abilitazione dell'input penna in un'applicazione  
  Tutti e tre le piattaforme sono inclusi gli oggetti e i controlli che consentono a un'applicazione ricevere l'input penna.  Le piattaforme Windows Form e COM forniti con [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) e [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) classi.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) e [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) sono controlli che è possibile aggiungere a un'applicazione per raccogliere l'input penna.  Il [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) e [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) può essere collegato a una finestra esistente a windows di abilitare input penna e controlli personalizzati.  
@@ -39,7 +41,7 @@ Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma d
   
 |Per eseguire questa operazione...|Nella piattaforma WPF...|Nelle piattaforme Windows Form/COM...|  
 |-----------------|--------------------------|------------------------------------------|  
-|Aggiungere un controllo input penna abilitato a un'applicazione|Vedere [Getting Started with Ink](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).|Vedere [automatica attestazioni formano l'esempio](http://msdn.microsoft.com/bec4333a-62ca-4254-a39b-04bc2c556992)|  
+|Aggiungere un controllo input penna abilitato a un'applicazione|Vedere [Getting Started with Ink](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).|Vedere [Auto attestazioni formano esempio](http://msdn.microsoft.com/bec4333a-62ca-4254-a39b-04bc2c556992)|  
 |Abilitare l'input penna su un controllo personalizzato|Vedere [la creazione di un input penna di controllo di Input](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).|Vedere [input penna di esempio Appunti](http://msdn.microsoft.com/a0c42f1c-543d-44f8-83d9-fe810de410ff).|  
   
 ## <a name="ink-data"></a>Dati di input penna  
@@ -49,7 +51,7 @@ Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma d
   
  La seguente coppia di illustrazioni confronta i modelli di oggetto dati di input penna.  Nelle piattaforme COM e Windows Form di [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) oggetto limita la durata del [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) oggetti e i pacchetti di stilo appartengono ai singoli tratti.  Due o più tracce possono fanno riferimento allo stesso [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) dell'oggetto, come illustrato nella figura seguente.  
   
- ![Diagramma del modello a oggetti Ink per COM &#47; Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagramma del modello a oggetti Ink per COM&#47;Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Nel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ogni <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> è un oggetto di common language runtime che esiste fino a quando un elemento è un riferimento a esso.  Ogni <xref:System.Windows.Ink.Stroke> riferimenti un <xref:System.Windows.Input.StylusPointCollection> e <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> oggetto, che sono anche oggetti common language runtime.  
   
@@ -64,7 +66,7 @@ Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma d
 |Eseguire l'hit test|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Copiare l'input penna|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Incolla input penna|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Proprietà personalizzate di accesso su una raccolta di tracce|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(le proprietà sono archiviate internamente e accessibili tramite <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, e <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Utilizzare [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Proprietà personalizzate di accesso su una raccolta di tracce|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (le proprietà sono archiviate internamente e accessibili tramite <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, e <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Utilizzare [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Condivisione di input penna tra piattaforme  
  Sebbene le piattaforme dispongono di modelli a oggetti diversi per i dati di input penna, la condivisione dei dati tra le piattaforme è molto semplice. Negli esempi seguenti viene salvato input penna in un'applicazione Windows Form e caricano l'input penna in un'applicazione Windows Presentation Foundation.  
@@ -97,7 +99,7 @@ Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma d
   
  Il diagramma seguente illustra confronta i modelli a oggetti per le classi che generano gli eventi dello stilo. Il modello a oggetti Windows Presentation Foundation Mostra solo gli eventi di bubbling, non le relative controparti evento tunneling.  
   
- ![Diagramma degli eventi Stylus in WPF e Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-stylusevents.png "Ink_StylusEvents")  
+ ![Diagramma degli eventi Stylus in WPF e in Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-stylusevents.png "Ink_StylusEvents")  
   
 ## <a name="pen-data"></a>Dati della penna  
  Tutti e tre le piattaforme consentono di intercettare e modificare i dati da cui deriva una penna di Tablet PC.  Nelle piattaforme COM e Windows Form, questo risultato viene ottenuto creando un [Microsoft.StylusInput.RealTimeStylus](https://msdn.microsoft.com/library/microsoft.stylusinput.realtimestylus(v=vs.100).aspx), la connessione di una finestra o un controllo all'applicazione e la creazione di una classe che implementa il [ Microsoft.StylusInput.IStylusSyncPlugin](https://msdn.microsoft.com/library/microsoft.stylusinput.istylussyncplugin(v=vs.100).aspx) o [Microsoft.StylusInput.IStylusAsyncPlugin](https://msdn.microsoft.com/library/microsoft.stylusinput.istylusasyncplugin(v=vs.100).aspx) interfaccia. Il plug-in personalizzato viene quindi aggiunto alla raccolta di plug-in di [Microsoft.StylusInput.RealTimeStylus](https://msdn.microsoft.com/library/microsoft.stylusinput.realtimestylus(v=vs.100).aspx). Per ulteriori informazioni su questo modello a oggetti, vedere [architettura di StylusInput APIs](http://msdn.microsoft.com/88bab0ab-df9f-4813-9a9f-9a137813f0b4).  
@@ -108,4 +110,4 @@ Sono essenzialmente tre le piattaforme che supportano la penna: la piattaforma d
   
  Nella figura seguente vengono confrontati i modelli a oggetti per le classi che ricevono dati penna nel pool di thread di penna.  
   
- ![Diagramma del modello StylusPlugin WPF e Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-stylusplugins.png "Ink_StylusPlugins")
+ ![Diagramma del modello StylusPlugIn in WPF e Windows Form. ] (../../../../docs/framework/wpf/advanced/media/ink-stylusplugins.png "Ink_StylusPlugins")

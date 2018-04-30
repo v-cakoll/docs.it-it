@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In questo esempio vengono illustrati l'uso e la configurazione delle proprietà promosse nell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare il relativo stato e caricarlo da e verso un database SQL Server o SQL Server Express. La funzionalità di estensibilità dell'archivio consente all'utente di definire le proprietà che vengono archiviate nell'archivio di istanze. Queste proprietà vengono riportate in una visualizzazione di proprietà promosse che consente all'utente di eseguire query relative alle stesse.  
@@ -62,7 +63,7 @@ In questo esempio vengono illustrati l'uso e la configurazione delle proprietà 
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Per verificare che l'esempio funzioni correttamente  
   
-1.  Utilizzare SQL Server Management Studio per visualizzare il contenuto della tabella istanza selezionando **database**, **InstanceStore**e quindi  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in Esplora oggetti, fare doppio clic su **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selezionare  **Selezionare le prime 1000 righe**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, vedere [Introduzione a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Utilizzare SQL Server Management Studio per visualizzare il contenuto della tabella istanza selezionando **database**, **InstanceStore**e quindi  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** in Esplora oggetti, fare doppio clic su **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selezionare  **Selezionare le prime 1000 righe**. Per ulteriori informazioni su SQL Server Management Studio, vedere [Introduzione a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Osservare le istanze del flusso di lavoro elencate.  
   

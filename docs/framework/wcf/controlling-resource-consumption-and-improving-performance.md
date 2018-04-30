@@ -1,30 +1,32 @@
 ---
 title: Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Controllo dell'utilizzo di risorse e miglioramento delle prestazioni
 In questo argomento vengono descritte varie proprietà in aree diverse dell'architettura di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] che controllano l'utilizzo di risorse e incidono sulla misurazione delle prestazioni.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Proprietà che limitano l'utilizzo di risorse in WCF  
- In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vengono applicati vincoli ad alcuni tipi di processi a scopo di sicurezza o di tutela delle prestazioni. I vincoli si presentano in due forme principali: quote e velocità. *Le quote* limiti di volta raggiunti o superati generano un'eccezione immediata in un determinato momento nel sistema. *Limita* sono limiti che non provocano immediatamente di essere generata un'eccezione. Quando viene raggiunto un limite di velocità, invece, l'elaborazione continua rimanendo nei limiti impostati dal valore della velocità. Questa elaborazione limitata potrebbe generare un'eccezione in un altro punto, ma questo dipende dall'applicazione.  
+ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vengono applicati vincoli ad alcuni tipi di processi a scopo di sicurezza o di tutela delle prestazioni. I vincoli si presentano in due forme principali: quote e velocità. *Le quote* limiti di volta raggiunti o superati, generano un'eccezione immediata in un determinato momento nel sistema. *Limita* sono limiti che determinano la generazione immediata di un'eccezione. Quando viene raggiunto un limite di velocità, invece, l'elaborazione continua rimanendo nei limiti impostati dal valore della velocità. Questa elaborazione limitata potrebbe generare un'eccezione in un altro punto, ma questo dipende dall'applicazione.  
   
  Oltre alla distinzione tra quote e velocità, alcune proprietà di limitazione si trovano al livello della serializzazione, alcune al livello del trasporto e alcune al livello dell'applicazione. La proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> della quota, ad esempio, implementata da tutti gli elementi dell'associazione del trasporto forniti dal sistema, è pari a 65.536 byte per impostazione predefinita per impedire a client dannosi di effettuare attacchi Denial of Service contro un servizio provocando un consumo di memoria eccessivo. È in genere possibile migliorare le prestazioni abbassando questo valore.  
   
@@ -55,7 +57,7 @@ In questo argomento vengono descritte varie proprietà in aree diverse dell'arch
  Il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) può migliorare le prestazioni di avvio per queste applicazioni per la generazione del codice di serializzazione necessari dagli assembly compilati per l'applicazione. Per ulteriori informazioni, vedere [procedura: migliorare l'avvio del tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemi di prestazioni quando ASP.NET ospita servizi WCF  
- Quando un servizio WCF viene ospitato da IIS e ASP.NET, le impostazioni di configurazione di IIS e ASP.NET possono influire sulla velocità effettiva e sul footprint di memoria del servizio WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Prestazioni di ASP.NET, vedere [miglioramento delle prestazioni di ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Un'impostazione che potrebbe avere conseguenze impreviste è <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, che è una proprietà di <xref:System.Web.Configuration.ProcessModelSection>. Se l'applicazione dispone di un numero fisso o piccolo di client, l'impostazione di <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> su 2 potrebbe fornire una spinta di velocità effettiva in un computer con multiprocessore con un utilizzo della CPU vicino al 100%. Questo aumento nelle prestazioni ha comunque un costo: determinerà anche un aumento dell'utilizzo della memoria, con conseguente riduzione della scalabilità.  
+ Quando un servizio WCF viene ospitato da IIS e ASP.NET, le impostazioni di configurazione di IIS e ASP.NET possono influire sulla velocità effettiva e sul footprint di memoria del servizio WCF.  Per ulteriori informazioni sulle prestazioni di ASP.NET, vedere [miglioramento delle prestazioni di ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Un'impostazione che potrebbe avere conseguenze impreviste è <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, che è una proprietà di <xref:System.Web.Configuration.ProcessModelSection>. Se l'applicazione dispone di un numero fisso o piccolo di client, l'impostazione di <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> su 2 potrebbe fornire una spinta di velocità effettiva in un computer con multiprocessore con un utilizzo della CPU vicino al 100%. Questo aumento nelle prestazioni ha comunque un costo: determinerà anche un aumento dell'utilizzo della memoria, con conseguente riduzione della scalabilità.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione e diagnostica](../../../docs/framework/wcf/diagnostics/index.md)  

@@ -1,27 +1,29 @@
 ---
 title: Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
 È possibile che i messaggi in coda non vengano recapitati. Tali messaggi con errori vengono registrati in una coda di messaggi non recapitabili. Il mancato recapito può essere dovuto a errori della rete, all'eliminazione di una coda, a una coda completa, a un errore di autenticazione o alla scadenza del tempo disponibile per il recapito.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Per leggere messaggi da una coda di messaggi non recapitabili personalizzata, l'URI deve avere il formato: net.msmq://localhost/private/\<*nome di dlq personalizzato*> dove *nome di dlq personalizzato* è il nome personalizzato coda di messaggi non recapitabili.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come indirizzare le code, vedere [gli endpoint del servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Per ulteriori informazioni su come le code di indirizzo, vedere [gli endpoint del servizio e l'indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  Lo stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sul lato destinatario abbina gli indirizzi sui quali il servizio è in ascolto con l'indirizzo presente sul messaggio. Se gli indirizzi corrispondono, il messaggio viene inviato. In caso contrario, il messaggio non viene inviato. Ciò può provocare problemi in caso di lettura dalla coda di messaggi non recapitabili, perché i messaggi in essa contenuti sono solitamente indirizzati al servizio, non al servizio della coda di messaggi non recapitabili. Pertanto, il servizio che legge dalla coda di messaggi non recapitabili deve installare un `ServiceBehavior` di filtro di indirizzi che indichi allo stack di far corrispondere tutti i messaggi contenuti nella coda indipendentemente dal destinatario. In particolare è necessario aggiungere un `ServiceBehavior` con il parametro <xref:System.ServiceModel.AddressFilterMode.Any> al servizio che legge messaggi dalla coda di messaggi non recapitabili.  
   

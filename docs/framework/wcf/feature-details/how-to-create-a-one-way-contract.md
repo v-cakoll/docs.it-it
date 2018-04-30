@@ -1,32 +1,34 @@
 ---
 title: 'Procedura: creare un contratto unidirezionale'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Procedura: creare un contratto unidirezionale
 In questo argomento vengono illustrati i passaggi di base per creare metodi che utilizzano un contratto unidirezionale. Tali metodi richiamano operazioni in un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] da un client senza però aspettarsi una risposta. Questo tipo di contratto può essere utilizzato, ad esempio, per pubblicare notifiche a numerosi sottoscrittori. È anche possibile utilizzare contratti unidirezionali durante la creazione di un contratto duplex (bidirezionale) che consente ai client e ai server di comunicare fra loro indipendentemente in modo che uno sia in grado di avviare chiamate all'altro. In particolare, questo può consentire al server di eseguire chiamate unidirezionali al client che vengono trattate da quest'ultimo come eventi. Per informazioni dettagliate sulla specifica di metodi bidirezionali, vedere la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> e la classe <xref:System.ServiceModel.OperationContractAttribute>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creazione di un'applicazione client per un contratto duplex, vedere [come: Access Services con unidirezionale e contratti Request / Reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Per un esempio funzionante, vedere il [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
+ Per ulteriori informazioni sulla creazione di un'applicazione client per un contratto duplex, vedere [procedura: servizi di accesso con un contratto unidirezionale e i contratti Request/Reply](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Per un esempio funzionante, vedere il [unidirezionale](../../../../docs/framework/wcf/samples/one-way.md) esempio.  
   
 ### <a name="to-create-a-one-way-contract"></a>Per creare un contratto unidirezionale  
   

@@ -1,23 +1,24 @@
 ---
 title: Elaborazione di ordini con criteri
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Elaborazione di ordini con criteri
 Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcune delle funzionalità principali introdotte nel [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] di Windows Workflow Foundation (WF). Di seguito viene esposta una nuova funzionalità per il motore di regole WF:  
@@ -34,7 +35,7 @@ Nell’esempio dei Criteri di elaborazione degli ordini vengono illustrate alcun
  Nell’esempio viene illustrato un progetto `OrderProcessingPolicy` nel quale viene immesso un ordine del cliente, costituito da un elenco numerato di elementi disponibili e un codice postale. L'ordine viene elaborato correttamente se entrambi le voci sono corrette; in caso contrario, i criteri creano oggetti di errore, usando un operatore `+` di overload e un metodo di estensione predefinito per informare l'utente degli errori.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]metodi di estensione, vedere [C# versione 3.0 Specification](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Per ulteriori informazioni sui metodi di estensione, vedere [c# versione 3.0 Specification](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  L’esempio comprende i progetti seguenti:  
   

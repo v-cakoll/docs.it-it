@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Equivalenza dei contratti dati
 Perché un client possa inviare correttamente dati di un certo tipo a un servizio o perché un servizio possa inviare correttamente dati a un client, non è necessario che il tipo inviato sia presente nell'estremità ricevente. L'unico requisito è che i contratti dati di entrambi i tipi siano equivalenti. (In alcuni casi, equivalenza rigida non è necessaria, come descritto in [controllo delle versioni del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Perché un client possa inviare correttamente dati di un certo tipo a un servizi
 > [!NOTE]
 >  Sia per i nomi e gli spazi dei nomi dei contratti dati sia per i nomi dei membri dati viene fatta distinzione tra maiuscole e minuscole.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nomi di contratto dati e gli spazi dei nomi, nonché i nomi dei membri dati, vedere [nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Per ulteriori informazioni sui nomi di contratto dati e gli spazi dei nomi, nonché i nomi dei membri di dati, vedere [nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Se sullo stesso lato (mittente o ricevitore) sono presenti due tipi e i contratti dati non sono equivalenti (ad esempio, hanno membri dati diversi), è necessario assegnare loro un nome e uno spazio dei nomi differenti. In caso contrario, è possibile che vengano generate eccezioni.  
   

@@ -1,33 +1,35 @@
 ---
 title: '&lt;security&gt; di &lt;customBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; di &lt;customBinding&gt;
 Specifica le opzioni di sicurezza di un'associazione personalizzata.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<customBinding >  
-\<associazione >  
-\<sicurezza >  
+ \<system.serviceModel>  
+\<le associazioni >  
+\<customBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +67,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |defaultAlgorithmSuite|Parametro facoltativo. Imposta la crittografia dei messaggi e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> I valori possibili sono riportati di seguito. Il valore predefinito è `Basic256`.<br /><br /> Questo attributo viene usato con una piattaforma differente che usa un set di algoritmi diverso da quello predefinito. Quando si apportano modifiche a questa impostazione, è necessario essere consapevoli dei punti di forza e dei punti di debolezza degli algoritmi pertinenti. L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
 |includeTimestamp|Valore booleano che specifica se in ogni messaggio vengono inclusi gli indicatori di data e ora. Il valore predefinito è `true`.|  
 |keyEntropyMode|Specifica la modalità di calcolo delle chiavi per la sicurezza dei messaggi. Le chiavi possono essere basate solo sul materiale della chiave client, solo sul materiale della chiave del servizio o su una combinazione di entrambi. I valori validi sono:<br /><br /> -   `ClientEntropy`: La chiave di sessione è basata su dati chiave forniti dal client.<br />-   `ServerEntropy`: La chiave di sessione è basata su dati chiave forniti dal server.<br />-   `CombinedEntropy`: La chiave della sessione è basata su dati chiave forniti dal client e servizio.<br /><br /> Il valore predefinito è `CombinedEntropy`.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|messageProtectionOrder|Imposta l'ordine nel quale gli algoritmi di sicurezza a livello di messaggio vengono applicati al messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -   `SignBeforeEncrypt`: Prima firma, quindi crittografia.<br />-   `SignBeforeEncryptAndEncryptSignature`: Prima firma, crittografia, quindi crittografia della firma.<br />-   `EncryptBeforeSign`: Prima crittografia, quindi sign.<br /><br /> Il valore predefinito dipende dalla versione di WS-Security usata. Il valore predefinito è `SignBeforeEncryptAndEncryptSignature` quando si usa WS-Security 1,1. Il valore predefinito è `SignBeforeEncrypt` quando si usa WS-Security 1.0.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
+|messageProtectionOrder|Imposta l'ordine nel quale gli algoritmi di sicurezza a livello di messaggio vengono applicati al messaggio. Di seguito vengono elencati i valori validi:<br /><br /> -   `SignBeforeEncrypt`: Prima firma, quindi crittografia.<br />-   `SignBeforeEncryptAndEncryptSignature`: Prima firma, crittografia, quindi crittografia della firma.<br />-   `EncryptBeforeSign`: Prima crittografia, quindi firma.<br /><br /> Il valore predefinito dipende dalla versione di WS-Security usata. Il valore predefinito è `SignBeforeEncryptAndEncryptSignature` quando si usa WS-Security 1,1. Il valore predefinito è `SignBeforeEncrypt` quando si usa WS-Security 1.0.<br /><br /> L'attributo è di tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
 |messageSecurityVersion|Parametro facoltativo. Imposta la versione di WS-Security da usare. Di seguito vengono elencati i valori validi:<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> L'impostazione predefinita è WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 e può essere espressa in XML semplicemente come `Default`. L'attributo è di tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Valore booleano che specifica se le chiavi possono essere derivate dalle chiavi di prova originali. Il valore predefinito è `true`.|  
 |requireSecurityContextCancellation|Parametro facoltativo. Valore booleano che specifica se il contesto di sicurezza deve essere annullato e terminato quando non è più necessario. Il valore predefinito è `true`.|  
@@ -103,7 +105,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Specifica un token corrente rilasciato. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Specifica un token corrente rilasciato. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Specifica le impostazioni di sicurezza di un client locale per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Specifica le impostazioni di sicurezza di un servizio locale per questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
@@ -112,10 +114,10 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazione >](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]utilizzo di questo elemento, vedere [le modalità di autenticazione di SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) e [procedura: creare un personalizzato associazione usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Per ulteriori informazioni sull'utilizzo di questo elemento, vedere [modalità di autenticazione di SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) e [procedura: creare un personalizzato Binding Using SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è dimostrato come configurare la sicurezza mediante un'associazione personalizzata. Viene mostrato come usare un'associazione personalizzata per abilitare la sicurezza a livello di messaggio insieme con un trasporto sicuro. Questo è utile quando è necessario un trasporto protetto per trasmettere i messaggi tra client e servizio e simultaneamente i messaggi devono essere protetti a livello di messaggio. Questa configurazione non è supportata dalle associazioni fornite dal sistema.  
@@ -185,6 +187,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Procedura: Creare un'associazione personalizzata usando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Sviluppo e distribuzione di WCF Data Services
 In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribuzione di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per informazioni di base su [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vedere [Introduzione](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) e [Panoramica](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
 3.  **Ambiente di sviluppo Microsoft Azure**  
   
-     Strumenti di Windows Azure per Visual Studio include un set integrato di strumenti per lo sviluppo di servizi di Microsoft Azure in Visual Studio. Con questi strumenti, è possibile sviluppare un servizio dati che può essere distribuito a Microsoft Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Utilizzare questi strumenti quando si utilizza Visual Studio per sviluppare un servizio dati che viene eseguita nella piattaforma Windows Azure. È possibile scaricare gli strumenti di Azure per Visual Studio il [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] llo sviluppo di un servizio dati in esecuzione in Microsoft Azure, vedere il post sulla [distribuzione di un servizio OData in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Strumenti di Windows Azure per Visual Studio include un set integrato di strumenti per lo sviluppo di servizi di Microsoft Azure in Visual Studio. Con questi strumenti, è possibile sviluppare un servizio dati che può essere distribuito a Microsoft Azure ed è possibile testare il servizio dati sul computer locale prima della distribuzione. Utilizzare questi strumenti quando si utilizza Visual Studio per sviluppare un servizio dati che viene eseguita nella piattaforma Windows Azure. È possibile scaricare gli strumenti di Azure per Visual Studio il [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sullo sviluppo di un servizio dati che viene eseguito in Windows Azure, vedere il post [distribuzione di un OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Suggerimenti per lo sviluppo  
  Quando si sviluppa un servizio dati è opportuno considerare quanto segue:  
@@ -116,21 +116,21 @@ In questo argomento vengono fornite informazioni sullo sviluppo e sulla distribu
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione, vedere [Panoramica della distribuzione Web per Visual Studio e ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Per ulteriori informazioni sulle opzioni di distribuzione per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione, vedere [Panoramica della distribuzione Web per Visual Studio e ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Prima di tentare di distribuire il servizio dati a IIS, verificare che sia stata testata la distribuzione a un server Web che esegue IIS. Per altre informazioni, vedere [Procedura: sviluppare un servizio WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
-     È possibile distribuire un servizio dati in Windows Azure utilizzando gli strumenti di Azure per Visual Studio. È possibile scaricare gli strumenti di Azure per Visual Studio il [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lla distribuzione di un servizio dati in Microsoft Azure, vedere il post sulla [distribuzione di un servizio OData in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     È possibile distribuire un servizio dati in Windows Azure utilizzando gli strumenti di Azure per Visual Studio. È possibile scaricare gli strumenti di Azure per Visual Studio il [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Per ulteriori informazioni sulla distribuzione di un servizio dati in Windows Azure, vedere il post [distribuzione di un OData Service in Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Considerazioni sulla distribuzione  
  Quando si distribuisce un servizio dati è opportuno considerare quanto segue:  
   
 -   Quando si distribuisce un servizio dati che usa il provider [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] per accedere a un database SQL Server, è possibile che si debbano propagare anche strutture di dati, dati o entrambi gli elementi con la distribuzione del servizio dati. Visual Studio possa creare automaticamente script (file con estensione SQL) per eseguire questa operazione nel database di destinazione e tali script possono essere inclusi nel pacchetto di distribuzione Web di un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione. Per ulteriori informazioni, vedere [NIB: procedura: distribuire un Database con un progetto di applicazione Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Per un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sito Web, è possibile farlo utilizzando il **Database Publishing Wizard** in Visual Studio. Per altre informazioni, vedere [distribuzione di un Database tramite Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Poiché [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base, è possibile usare Windows Server AppFabric per il monitoraggio di un servizio dati distribuito a IIS che è in esecuzione su Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ll'uso di Windows Server AppFabric per monitorare un servizio dati, vedere il post sul [monitoraggio di WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Poiché [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] include un'implementazione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base, è possibile usare Windows Server AppFabric per il monitoraggio di un servizio dati distribuito a IIS che è in esecuzione su Windows Server. Per ulteriori informazioni sull'utilizzo di Windows Server AppFabric per monitorare un servizio dati, vedere il post [rilevamento WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Hosting del servizio dati](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

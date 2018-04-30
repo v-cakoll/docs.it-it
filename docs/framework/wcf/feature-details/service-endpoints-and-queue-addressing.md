@@ -1,24 +1,26 @@
 ---
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, l'illustrazione seguente mostra la distribuzione standard delle applicazioni [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] in coda.  
@@ -32,7 +34,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  I nomi di percorso sono associati a "FormatNames" per determinare aspetti aggiuntivi dell'indirizzo, compresi il routing e il protocollo di trasferimento. Questo servizio supporta due protocolli di trasferimento: il protocollo MSMQ nativo e il protocollo SOAP Reliable Messaging Protocol (SRMP).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Nomi di percorso e il formato di MSMQ, vedere [sull'accodamento](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Per ulteriori informazioni sui nomi di percorso e il formato MSMQ, vedere [sull'accodamento messaggi](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>Associazione NetMsmqBinding e indirizzamento del servizio  
  Quando si indirizza un messaggio a un servizio, lo schema contenuto nell'URI viene scelto in base al trasporto utilizzato per le comunicazioni. Ogni trasporto in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] presenta uno schema univoco. Lo schema deve riflettere le caratteristiche del trasporto utilizzato per le comunicazioni, ad esempio net.tcp, net.pipe, HTTP e così via.  
@@ -84,7 +86,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
 |Indirizzo di coda basato sugli URI WCF|Impostazione della proprietà UseActiveDirectory|Impostazione della proprietà QueueTransferProtocol|Nomi di formato di MSMQ risultanti|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False (impost. predef.)|Native (impost. predef.)|DIRECT=OS:nome-computer\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://computer/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
 |Net.msmq://\<machine-name>/private/abc|True|Nativo|PUBLIC=guid (GUID della coda)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lettura dei messaggi dalla coda dei messaggi non recapitabili o dalla coda dei messaggi non elaborabili  
@@ -111,7 +113,7 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
   
  Si noti che quando si ricevono messaggi da una coda tramite l'associazione `MsmqIntegrationBinding` è possibile utilizzare soltanto i nomi di formato Direct e, se è stata scelta l'opzione di integrazione con Active Directory, i nomi di formato pubblici e privati. È tuttavia consigliabile utilizzare i nomi di formato Direct. In [!INCLUDE[wv](../../../../includes/wv-md.md)], ad esempio, l'utilizzo di qualsiasi altro nome di formato comporta un errore, poiché il sistema tenta di aprire una coda secondaria che tuttavia può essere aperta solo tramite i nomi di formato Direct.  
   
- Quando si esegue l'indirizzamento tramite il protocollo SRMP utilizzando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Esempio: quando si indirizza una coda abc utilizzando il protocollo SRMP, anziché DIRECT=http://adatum.com/msmq/private$/abc è necessario utilizzare DIRECT=http://adatum.com/private$/abc.  
+ Quando si esegue l'indirizzamento tramite il protocollo SRMP utilizzando l'associazione `MsmqIntegrationBinding` non occorre aggiungere /msmq/ nel nome di formato Direct per consentire ai servizi Internet Information Services (IIS) di eseguire la distribuzione. Ad esempio: quando si indirizza una coda abc utilizzando il protocollo SRMP del protocollo, anziché DIRECT =http://adatum.com/msmq/private$/ abc, è consigliabile utilizzare DIRECT =http://adatum.com/private$/ abc.  
   
  Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché l'associazione `MsmqIntegrationBinding` supporta l'indirizzamento del nome di formato MSMQ in formato libero, è possibile utilizzare un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizza questa associazione per utilizzare le funzionalità di multicast e di lista di distribuzione di MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   

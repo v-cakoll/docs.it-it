@@ -1,31 +1,31 @@
 ---
 title: Controlli per categoria
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e88dc45d640391798a22af7a6a1d34f1acebcc0a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controls-by-category"></a>Controlli per categoria
-I controlli [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] possono essere raggruppati logicamente in diverse categorie, che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
+Controlli Windows Presentation Foundation (WPF) possono essere raggruppati logicamente in diverse categorie. che consentono di selezionare il controllo appropriato per ogni scenario grazie alla possibilità di vedere quali controlli dispongono di modelli di utilizzo o funzionalità simili.  
   
 ## <a name="layout"></a>Layout  
  I controlli di layout consentono di gestire le dimensioni, la posizione e la disposizione degli elementi figlio.  

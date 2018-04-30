@@ -1,28 +1,28 @@
 ---
 title: Configurazione del supporto transazioni WS-Atomic
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurazione del supporto transazioni WS-Atomic
 In questo argomento viene descritto come è possibile configurare il supporto WS-AtomicTransaction (WS-AT) usando l'utilità configurazione WS-AT.  
@@ -34,11 +34,11 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
   
  La finestra della riga di comando può essere aperta nel percorso di installazione di Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lo strumento da riga di comando, vedere [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Per ulteriori informazioni sullo strumento da riga di comando, vedere [utilità configurazione WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
  Se si esegue [!INCLUDE[wxp](../../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], è possibile accedere lo snap-in MMC passando a **controllo pannello/Administrative Tools/Servizi componenti**, il pulsante destro su **risorse del Computer**, e selezione **proprietà**. Si tratta dello stesso percorso in cui è possibile configurare Microsoft Distributed Transaction Coordinator (MSDTC). Le opzioni disponibili per la configurazione sono raggruppate sotto il **WS-AT** scheda. Se si sta eseguendo Windows Vista o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], lo snap-in MMC è reperibile facendo il **avviare** pulsante e immettendo `dcomcnfg.exe` nel **ricerca** casella. Quando la console MMC viene aperta, passare al **risorse del Computer\Distributed Transaction Coordinator/DTC** nodo, fare clic e selezionare **proprietà**. Le opzioni disponibili per la configurazione sono raggruppate sotto il **WS-AT** scheda.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]snap-in, vedere il [Snap-in MMC di configurazione di WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Per ulteriori informazioni sullo snap-in, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Per abilitare l'interfaccia utente dello strumento è prima necessario registrare il file WsatUI.dll, disponibile nel percorso seguente:  
   
@@ -88,7 +88,7 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
 ### <a name="configuring-msdtc-to-use-certificates"></a>Configurazione di MSDTC per l'uso di certificati  
  Poiché il servizio del protocollo WS-AT funge da client e da server, deve sia ascoltare le connessioni in ingresso sia avviare connessioni in uscita. È quindi necessario configurare MSDTC in modo che sappia quali certificati usare per la comunicazione con parti esterne e quali certificati autorizzare quando si accettano comunicazioni in ingresso.  
   
- Per eseguire questa configurazione è possibile usare lo snap-in MMC WS-AT. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Questo strumento, vedere il [Snap-in MMC di configurazione di WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) argomento. Nei passaggi seguenti viene descritto come stabilire un trust tra due computer che eseguono MSDTC.  
+ Per eseguire questa configurazione è possibile usare lo snap-in MMC WS-AT. Per ulteriori informazioni su questo strumento, vedere la [Snap-in MMC di configurazione WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) argomento. Nei passaggi seguenti viene descritto come stabilire un trust tra due computer che eseguono MSDTC.  
   
 1.  Configurare le impostazioni del computer A. Per "Certificato dell'Endpoint" selezionare certA. Per "Certificati autorizzati", selezionare certB.  
   

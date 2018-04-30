@@ -1,24 +1,26 @@
 ---
 title: Configurazione dell'individuazione in un file di configurazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurazione dell'individuazione in un file di configurazione
 Nell'individuazione vengono usati quattro gruppi principali di impostazioni di configurazione. In questo argomento viene illustrato brevemente ciascuno di questi gruppi e vengono mostrati esempi per poterli configurare. Al termine di ogni sezione sarà disponibile un collegamento a documenti più dettagliati su ogni area.  
@@ -148,7 +150,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Per ulteriori informazioni <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Configurazione di elementi di associazione  
  La configurazione degli elementi di associazione è particolarmente interessante nel lato client. È possibile usare la configurazione per specificare i criteri di ricerca usata per individuare servizi da un'applicazione client WCF.  Nell'esempio seguente viene creata un'associazione personalizzata con il canale <xref:System.ServiceModel.Discovery.DiscoveryClient> e vengono specificati criteri di ricerca che includono un tipo e un ambito. Vengono inoltre specificati valori per le proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> e <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>.  
@@ -188,7 +190,7 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]trovare criteri vedere [trovare individuazione e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]visualizzare gli elementi di associazione e l'individuazione, [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Per ulteriori informazioni sui criteri di ricerca, vedere [trovare individuazione e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Per ulteriori informazioni sull'individuazione e gli elementi di associazione, vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Configurazione di endpoint standard  
  Gli endpoint standard sono endpoint con valori predefiniti per una o più proprietà (indirizzo, associazione o contratto) o uno o più valori di proprietà non modificabili. .NET 4 viene fornito con 3 endpoint standard relativi all'individuazione: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> e <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> è un endpoint standard preconfigurato per le operazioni di individuazione su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> è un endpoint standard preconfigurato per l'invio di messaggi di annuncio su un'associazione multicast UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> è un endpoint standard che usa l'individuazione per cercare l'indirizzo endpoint di un servizio individuato in modo dinamico al runtime.  Le associazioni standard vengono specificate con un elemento <`endpoint`> contenente l'attributo kind che specifica il tipo di endpoint standard da aggiungere. Nell'esempio seguente viene illustrato come aggiungere un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e un elemento <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
@@ -280,4 +282,4 @@ Nell'individuazione vengono usati quattro gruppi principali di impostazioni di c
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]endpoint standard vedere [endpoint Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Per ulteriori informazioni sugli endpoint standard vedere [endpoint Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

@@ -1,24 +1,26 @@
 ---
 title: Procedura di installazione singola per gli esempi di Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura di installazione singola per gli esempi di Windows Communication Foundation
 La maggior parte degli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sono ospitati su Internet Information Services (IIS) e vengono eseguiti da una directory virtuale comune. Questa procedura di installazione singola crea una cartella sul disco. Aggiunge inoltre una directory virtuale di IIS denominata **ServiceModelSamples**.  
@@ -30,9 +32,9 @@ La maggior parte degli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedura di installazione singola per esempi WCF  
   
-1.  Assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sia configurato. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come configurare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], vedere [istruzioni di Hosting Internet Information Service](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sia configurato. Per ulteriori informazioni su come configurare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], vedere [istruzioni di Hosting Internet Information Service](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2.  Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Cercare la seguente directory per v 4.0 (o versione successiva): **\Windows\Microsoft.NET\Framework.**  
+2.  Assicurarsi che [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sia installato. Cercare le seguenti directory per v4.0 (o versione successive): **\Windows\Microsoft.NET\Framework.**  
   
 3.  Se [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] non è installato, e il sistema operativo non è Windows Server 2008 SP2 o versione successiva, installare [251798 Hotfix](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
@@ -88,7 +90,7 @@ La maggior parte degli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md
     > [!NOTE]
     >  Per motivi di sicurezza, dopo aver completato gli esempi, rimuovere la definizione di directory virtuale e le autorizzazioni concesse nei passaggi di installazione illustrati in precedenza eseguendo il file batch denominato Cleanupvroot.bat.  
   
-13. Per gli esempi indipendenti (non ospitati in IIS) è necessaria un'autorizzazione per la registrazione degli indirizzi HTTP nel computer in ascolto. L'autorizzazione per una prenotazione dello spazio dei nomi HTTP viene dall'account utente utilizzato per eseguire l'esempio. Per impostazione predefinita, gli account amministratore dispongono delle autorizzazioni per registrare qualsiasi indirizzo HTTP. Agli account non amministratore è necessario concedere l'autorizzazione per gli spazi dei nomi HTTP utilizzati da questi esempi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come configurare le prenotazioni dello spazio dei nomi, vedere [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Per gli esempi indipendenti (non ospitati in IIS) è necessaria un'autorizzazione per la registrazione degli indirizzi HTTP nel computer in ascolto. L'autorizzazione per una prenotazione dello spazio dei nomi HTTP viene dall'account utente utilizzato per eseguire l'esempio. Per impostazione predefinita, gli account amministratore dispongono delle autorizzazioni per registrare qualsiasi indirizzo HTTP. Agli account non amministratore è necessario concedere l'autorizzazione per gli spazi dei nomi HTTP utilizzati da questi esempi. Per ulteriori informazioni su come configurare le prenotazioni dello spazio dei nomi, vedere [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Alcuni esempi richiedono Accodamento messaggi. Vedere [l'installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) per le istruzioni di installazione.  
   

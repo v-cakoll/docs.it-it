@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedura: attivare il rilevamento di attacchi di tipo replay dei messaggi
 Un attacco di tipo replay si verifica quando l'autore dell'attacco copia un flusso di messaggi tra due interessati e lo riproduce nei confronti di uno o più degli interessati. Se l'attacco non viene contrastato, i computer colpiti elaboreranno il flusso come se i messaggi fossero legittimi, determinando una serie di conseguenze negative, ad esempio ordini ridondanti di un elemento.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] rilevamento riproduzione dei messaggi, vedere [rilevamento riproduzione messaggi](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Per ulteriori informazioni sul rilevamento riproduzione messaggio, vedere [rilevamento riproduzione messaggi](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
  Nella procedura seguente vengono illustrate le varie proprietà che è possibile utilizzare per controllare il rilevamento di attacchi di tipo replay utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   

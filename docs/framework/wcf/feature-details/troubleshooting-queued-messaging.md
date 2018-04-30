@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 Contenuto della sezione sono contenute domande frequenti e informazioni per la risoluzione dei problemi relativi all'utilizzo delle code in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Contenuto della sezione sono contenute domande frequenti e informazioni per la r
   
  **Q:** dove posso trovare risposte alle domande frequenti su MSMQ?  
   
- **R:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, vedere [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **R:** per ulteriori informazioni su MSMQ, vedere [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **Q:** perché il servizio genera un `ProtocolException` quando la lettura da una coda contenente sia messaggi della sessione e messaggi del datagramma in coda?  
   

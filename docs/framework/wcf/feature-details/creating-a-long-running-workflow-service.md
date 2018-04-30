@@ -1,24 +1,26 @@
 ---
 title: Creazione di un servizio flusso di lavoro a esecuzione prolungata
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Creazione di un servizio flusso di lavoro a esecuzione prolungata
 In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata. L'esecuzione di tali servizi può durare molto tempo. A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive. In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria. Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.  In questo scenario viene implementato un sistema di ordini molto semplificato.  Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta, consente la restituzione di un ID ordine al client. A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.  Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine. Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine. L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata. In questo argomento si presuppone che l'utente sia in grado di creare progetti e soluzioni di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
@@ -40,7 +42,7 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
   
 2.  Fare clic su di **Connetti** pulsante per accedere all'istanza di SQL Server  
   
-3.  Fare clic destro **database** nella visualizzazione struttura ad albero e selezionare **Nuovo Database...** Per creare un nuovo database denominato `SQLPersistenceStore`.  
+3.  Fare clic con il pulsante destro **database** nella visualizzazione albero e selezionare **Nuovo Database...** Per creare un nuovo database denominato `SQLPersistenceStore`.  
   
 4.  Eseguire il file di script SqlWorkflowInstanceStoreSchema.sql presente nella directory C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en del database SQLPersistenceStore per configurare gli schemi del database necessari.  
   
@@ -82,7 +84,7 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
   
          ![Impostare le proprietà di attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione. Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la modalità di utilizzo dei contratti nel flusso di lavoro servizi vedere [uso di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione. Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive. Per ulteriori informazioni sulle modalità di utilizzo contratti nei servizi del flusso di lavoro, vedere [uso di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Fare clic su di **definire...**  collegare il **ReceiveStartOrder** attività e impostare le proprietà mostrate nell'illustrazione seguente.  Si noti che il **parametri** pulsante di opzione è selezionata, un parametro denominato `p_customerName` è associato il `customerName` variabile. In questo modo il **ricezione** attività per la ricezione di alcuni dati e associarli a variabili locali.  
   
@@ -114,23 +116,23 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
   
     2.  Selezionare il **ricezione** attività e impostare le proprietà mostrate nell'illustrazione seguente:  
   
-         ![Impostare la proprietà dell'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
+         ![Impostare le proprietà dell'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
   
     3.  Fare clic su di **definire...**  collegare il **ReceiveAddItem** attività e aggiungere i parametri riportati nella figura seguente: questa impostazione configura l'attività di ricezione per accettare due parametri, l'ID dell'ordine e l'ID dell'elemento da ordinare.  
   
          ![Specificare i parametri per la seconda ricevano](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Fare clic su di **CorrelateOn** i puntini di sospensione pulsante e immettere `orderIdHandle`. In **query XPath**fare clic sulla freccia a discesa e selezionare `p_orderId`. In questo modo la correlazione viene configurata sulla seconda attività Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sulla correlazione, vedere [correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Fare clic su di **CorrelateOn** i puntini di sospensione pulsante e immettere `orderIdHandle`. In **query XPath**fare clic sulla freccia a discesa e selezionare `p_orderId`. In questo modo la correlazione viene configurata sulla seconda attività Receive. Per ulteriori informazioni sulla correlazione, vedere [correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Impostazione della proprietà CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Trascinare e rilasciare un **se** attività immediatamente dopo il **ReceiveAddItem** attività. Il comportamento di questa attività è uguale a quello di un'istruzione IF.  
   
-        1.  Impostare il **condizione** proprietà`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Impostare il **condizione** proprietà `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Trascinare e rilasciare un **assegnare** attività per il **quindi** sezione e un'altra nella **Else** sezione impostata le proprietà del **assegnare** attività, come illustrato nella figura seguente.  
   
-             ![L'assegnazione del risultato della chiamata al servizio](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")  
+             ![Assegnazione del risultato della chiamata al servizio](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")  
   
              Se la condizione è `true` il **quindi** sezione verrà eseguita. Se la condizione è `false` il **Else** sezione viene eseguita.  
   

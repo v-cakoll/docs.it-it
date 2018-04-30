@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Vincoli dichiarativi
 I vincoli dichiarativi offrono un metodo potente di convalida per un'attività e le relative relazioni con altre attività. I vincoli vengono configurati per un'attività durante il processo di creazione, ma vincoli aggiuntivi possono essere specificati anche dall'host del flusso di lavoro. In questo argomento viene fornita una panoramica sull'utilizzo di vincoli dichiarativi per la convalida delle attività.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Se la proprietà <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> dell'oggetto <xref:System.Activities.Validation.ValidationSettings> è `true`, solo i vincoli aggiuntivi specificati vengono valutati quando la convalida viene richiamata mediante la chiamata al metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Ciò può essere utile per esaminare i flussi di lavoro per configurazioni di convalida specifiche. Si noti tuttavia che quando viene richiamato il flusso di lavoro, la logica di convalida configurata nel flusso di lavoro viene valutata e deve passare per il flusso di lavoro per iniziare correttamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] richiamo della convalida, vedere [richiamare la convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Se la proprietà <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> dell'oggetto <xref:System.Activities.Validation.ValidationSettings> è `true`, solo i vincoli aggiuntivi specificati vengono valutati quando la convalida viene richiamata mediante la chiamata al metodo <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Ciò può essere utile per esaminare i flussi di lavoro per configurazioni di convalida specifiche. Si noti tuttavia che quando viene richiamato il flusso di lavoro, la logica di convalida configurata nel flusso di lavoro viene valutata e deve passare per il flusso di lavoro per iniziare correttamente. Per ulteriori informazioni sulla chiamata della convalida, vedere [richiamare la convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

@@ -1,24 +1,26 @@
 ---
-title: "Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice"
-ms.custom: 
+title: 'Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: aggiungere capacità di individuazione a un client e un servizio WCF a livello di codice
 In questo argomento viene illustrato come rendere individuabile un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. È basato sul [indipendente](http://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
@@ -231,7 +233,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio [!IN
     ```  
   
 ## <a name="example"></a>Esempio  
- Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice si basa sul [indipendente](http://go.microsoft.com/fwlink/?LinkId=145523) esempio, sono elencati solo i file che vengono modificati. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Nell'esempio di Host indipendente, vedere [le istruzioni di installazione](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Di seguito è riportato un elenco del codice per questo esempio. Poiché questo codice si basa sul [indipendente](http://go.microsoft.com/fwlink/?LinkId=145523) esempio, sono elencati solo i file che vengono modificati. Per ulteriori informazioni sull'esempio ospita in modo automatico, vedere [istruzioni di installazione](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

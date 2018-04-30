@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Configurazione delle funzionalità di traccia
 In questo argomento viene illustrato come attivare la funzionalità di traccia, configurare origini di traccia affinché vengano create tracce e impostati livelli di traccia, impostare traccia e propagazione di attività per supportare la correlazione tra tracce end-to-end e configurare i listener di traccia affinché accedano alle tracce.  
@@ -146,7 +146,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Creazione definita dall'utente origini di traccia, vedere [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Per ulteriori informazioni sulla creazione di origini di traccia definita dall'utente, vedere [estensione traccia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurazione dei listener di traccia per l'utilizzo di tracce  
  In fase di esecuzione, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornisce dati di traccia ai listener che elaborano i dati. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fornisce vari listener predefiniti per <xref:System.Diagnostics>, diversi a livello del formato utilizzato per l'output. È inoltre possibile aggiungere tipi di listener personalizzati.  
@@ -187,7 +187,7 @@ In questo argomento viene illustrato come attivare la funzionalità di traccia, 
   
  L'attributo `propagateActivity` indica se l'attività deve essere propagata ad altri endpoint che partecipano nello scambio di messaggi. Impostando questo valore su `true`, è possibile osservare file di traccia generati da due endpoint qualsiasi e notare come un set di tracce in un endpoint venga propagato a un set di tracce in un altro endpoint.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] la traccia di attività e propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Per ulteriori informazioni sulla traccia di attività e della propagazione, vedere [propagazione](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Entrambi `propagateActivity` e `ActivityTracing` booleani valori validi per la proprietà TraceSource System. ServiceModel. Il `ActivityTracing` valore si applica anche a qualsiasi origine di traccia, tra cui [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o quelli definiti dall'utente.  
   

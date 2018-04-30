@@ -1,27 +1,29 @@
 ---
 title: Hosting in un'applicazione di servizio Windows
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosting in un'applicazione di servizio Windows
-I servizi Windows, precedentemente noti come servizi Windows NT, offrono un modello di processo particolarmente adatto ad applicazioni che devono risiedere in un eseguibile a esecuzione prolungata e che non visualizzano alcuna forma di interfaccia utente. La durata del processo di un'applicazione di servizio Windows viene gestita da Gestione controllo servizi (SCM), che consente di avviare, interrompere e sospendere le applicazioni di servizio Windows. È possibile configurare un processo del servizio Windows per l'avvio automatico all'avvio del computer, rendendolo un ambiente host adatto per le applicazioni "always on". [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Applicazioni di servizio Windows, vedere [applicazioni di servizio Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
+I servizi Windows, precedentemente noti come servizi Windows NT, offrono un modello di processo particolarmente adatto ad applicazioni che devono risiedere in un eseguibile a esecuzione prolungata e che non visualizzano alcuna forma di interfaccia utente. La durata del processo di un'applicazione di servizio Windows viene gestita da Gestione controllo servizi (SCM), che consente di avviare, interrompere e sospendere le applicazioni di servizio Windows. È possibile configurare un processo del servizio Windows per l'avvio automatico all'avvio del computer, rendendolo un ambiente host adatto per le applicazioni "always on". Per ulteriori informazioni sulle applicazioni di servizio Windows, vedere [applicazioni di servizio Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Le applicazioni che ospitano servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a esecuzione prolungata condividono molte caratteristiche dei servizi Windows. In particolare, i servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sono eseguibili server a esecuzione prolungata che non interagiscono direttamente con l'utente e non implementano quindi alcuna forma di interfaccia utente. Pertanto, l'hosting di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] all'interno di un'applicazione di servizio Windows è una delle opzioni per la creazione di efficaci applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a esecuzione prolungata.  
   

@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protezione dei messaggi mediante protezione a livello di messaggio
 Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in caso di utilizzo di <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ Contenuto della sezione viene descritta la protezione del messaggio [!INCLUDE[in
   
  In considerazione del fatto che le code funzionano spesso in modalità disconnessa, il client e il servizio potrebbero non essere in linea contemporaneamente e potrebbero doversi scambiare i certificati fuori banda. Il client, in particolare, poiché detiene il certificato del servizio (che può essere collegato a un'autorità di certificazione) nell'archivio attendibile, deve appurare di avere stabilito la comunicazione con il servizio corretto. Per autenticare il client, il servizio utilizza il certificato X.509 allegato al messaggio e cerca una corrispondenza con il certificato esistente nell'archivio. Anche in questo caso il certificato deve essere collegato a un'autorità di certificazione.  
   
- Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Nei computer che eseguono Windows i certificati sono contenuti in vari tipi di archivio. Per ulteriori informazioni sugli archivi diversi, vedere [gli archivi certificati](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>WINDOWS  
  Il tipo di credenziale del messaggio di Windows utilizza il protocollo Kerberos.  

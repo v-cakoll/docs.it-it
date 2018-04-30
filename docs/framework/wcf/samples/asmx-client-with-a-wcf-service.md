@@ -1,24 +1,26 @@
 ---
 title: Client ASMX con un servizio WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Client ASMX con un servizio WCF
 In questo esempio viene illustrato come creare un servizio utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e quindi accedere al servizio da un client non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio un client ASMX.  
@@ -149,7 +151,7 @@ Press <ENTER> to terminate client.
 3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]passaggio e restituzione di dati complessi tipi, vedere: [Data Binding in un Client di Windows Form](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [Data Binding in un Client Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), e [Data Binding in ASP.NET Client](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Per ulteriori informazioni sul passaggio e restituzione di dati complessi tipi, vedere: [Data Binding in un Client di Windows Form](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [Data Binding in un Client Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), e [dati Associazione in un Client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

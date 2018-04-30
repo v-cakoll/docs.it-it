@@ -1,27 +1,29 @@
 ---
 title: Creazione dell'applicazione client .NET Framework (Guida rapida di WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Creazione dell'applicazione client .NET Framework (Guida rapida di WCF Data Services)
 Questo è l'attività finale del [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] avvio rapido. In questa attività verrà aggiunta un'applicazione console alla soluzione, aggiungere un riferimento al [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in questa nuova applicazione client e accesso di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed dall'applicazione client utilizzando le classi del servizio dati client generate e client librerie.  
@@ -89,7 +91,7 @@ Questo è l'attività finale del [!INCLUDE[ssAstoria](../../../../includes/ssast
     >  Questa versione dell'applicazione NorthwindClient non supporta l'aggiunta e l'eliminazione di entità.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- La creazione dell'applicazione client che accede al feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind di esempio è stata completata. È stata inoltre completata la guida rapida di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l'accesso a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazione, vedere [libreria Client di WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ La creazione dell'applicazione client che accede al feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind di esempio è stata completata. È stata inoltre completata la guida rapida di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Per ulteriori informazioni sull'accesso a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed da un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dell'applicazione, vedere [libreria Client di WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>Procedure dettagliate di WPF
 Procedure dettagliate forniscono istruzioni dettagliate per scenari comuni. Ciò le rende un ottimo strumento per iniziare a capire il funzionamento del prodotto o di una particolare area di funzionalità.  
   
- In questo argomento contiene collegamenti a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] procedure dettagliate.  
+ In questo argomento contiene collegamenti alle procedure dettagliate di Windows Presentation Foundation (WPF).  
   
 ## <a name="wpf-designer-walkthroughs"></a>Procedure dettagliate della finestra di progettazione WPF  
   

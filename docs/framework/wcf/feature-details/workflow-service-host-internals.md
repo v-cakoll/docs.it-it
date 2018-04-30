@@ -1,24 +1,26 @@
 ---
 title: Elementi interni dell'host del servizio flusso di lavoro
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84bd0c5b93984e126019699caf64a61183c08f13
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-service-host-internals"></a>Elementi interni dell'host del servizio flusso di lavoro
 <xref:System.ServiceModel.WorkflowServiceHost> fornisce un host per i servizi del flusso di lavoro. Consente di ascoltare i messaggi in arrivo e di indirizzarli all'istanza del servizio di flusso di lavoro appropriata, nonché di controllare lo scaricamento e il salvataggio permanente di flussi di lavoro inattivi e così via. In questo argomento viene descritta l'elaborazione dei messaggi in arrivo da parte di WorkflowServiceHost.  
@@ -35,9 +37,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="workflowservicehost-details"></a>Dettagli relativi a WorkflowServiceHost  
  Il diagramma seguente mostra come <xref:System.ServiceModel.WorkflowServiceHost> gestisce i messaggi più dettagliatamente.  
   
- ![Flusso di messaggi di Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
+ ![Flusso messaggi Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/wfshmessageflow.gif "WFSHMessageFlow")  
   
- In questo diagramma vengono mostrati tre endpoint diversi, ovvero un endpoint applicazione, un endpoint di controllo del flusso di lavoro e un endpoint in cui viene ospitato il flusso di lavoro. I messaggi associati per un'istanza specifica del flusso di lavoro vengono ricevuti dall'endpoint applicazione. Le operazioni di controllo vengono ascoltate dall'endpoint di controllo del flusso di lavoro. I messaggi che causano il caricamento e l'esecuzione di flussi di lavoro non del servizio da parte di <xref:System.ServiceModel.WorkflowServiceHost> vengono ascoltati dall'endpoint in cui è ospitato il flusso di lavoro. Come mostrato nel diagramma, tutti i messaggi vengono elaborati tramite il runtime WCF.  La limitazione delle istanze del servizio del flusso di lavoro viene applicata tramite la proprietà <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Questa proprietà limiterà il numero di istanze simultanee del servizio del flusso di lavoro. Quando questo limite viene superato, qualsiasi richiesta aggiuntiva di nuove istanze del servizio del flusso di lavoro o qualsiasi richiesta di attivazione di istanze persistenti del flusso di lavoro sarà messa in coda. Le richieste in coda vengono elaborate nell'ordine FIFO indipendentemente dal fatto che siano richieste per nuove istanze o per istanze persistenti in esecuzione. Vengono caricate informazioni sui criteri host tramite cui vengono determinati il trattamento delle eccezioni non gestite, nonché lo scaricamento e il salvataggio permanente dei servizi di flusso di lavoro inattivi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]vedere questi argomenti [come: comportamento eccezione non gestita a flusso di lavoro configurare con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) e [procedura: configurare il comportamento inattivo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Le istanze del flusso di lavoro vengono salvate in modo permanente in base ai criteri host e, se necessario, vengono ricaricate. Per ulteriori informazioni sulla persistenza del flusso di lavoro, vedere: [procedura: configurare la persistenza con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [la creazione di un servizio flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), e [persistenza del flusso di lavoro ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ In questo diagramma vengono mostrati tre endpoint diversi, ovvero un endpoint applicazione, un endpoint di controllo del flusso di lavoro e un endpoint in cui viene ospitato il flusso di lavoro. I messaggi associati per un'istanza specifica del flusso di lavoro vengono ricevuti dall'endpoint applicazione. Le operazioni di controllo vengono ascoltate dall'endpoint di controllo del flusso di lavoro. I messaggi che causano il caricamento e l'esecuzione di flussi di lavoro non del servizio da parte di <xref:System.ServiceModel.WorkflowServiceHost> vengono ascoltati dall'endpoint in cui è ospitato il flusso di lavoro. Come mostrato nel diagramma, tutti i messaggi vengono elaborati tramite il runtime WCF.  La limitazione delle istanze del servizio del flusso di lavoro viene applicata tramite la proprietà <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>. Questa proprietà limiterà il numero di istanze simultanee del servizio del flusso di lavoro. Quando questo limite viene superato, qualsiasi richiesta aggiuntiva di nuove istanze del servizio del flusso di lavoro o qualsiasi richiesta di attivazione di istanze persistenti del flusso di lavoro sarà messa in coda. Le richieste in coda vengono elaborate nell'ordine FIFO indipendentemente dal fatto che siano richieste per nuove istanze o per istanze persistenti in esecuzione. Vengono caricate informazioni sui criteri host tramite cui vengono determinati il trattamento delle eccezioni non gestite, nonché lo scaricamento e il salvataggio permanente dei servizi di flusso di lavoro inattivi. Per ulteriori informazioni su questi argomenti, vedere [come: comportamento eccezione non gestita a flusso di lavoro configurare con l'oggetto WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) e [procedura: configurare il comportamento inattivo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md). Le istanze del flusso di lavoro vengono salvate in modo permanente in base ai criteri host e, se necessario, vengono ricaricate. Per ulteriori informazioni sulla persistenza del flusso di lavoro, vedere: [procedura: configurare la persistenza con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md), [la creazione di un servizio flusso di lavoro a esecuzione prolungata](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md), e [persistenza del flusso di lavoro ](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
   
  Nell'immagine seguente viene mostrata la denominazione di WorkflowServiceHost.Open.  
   

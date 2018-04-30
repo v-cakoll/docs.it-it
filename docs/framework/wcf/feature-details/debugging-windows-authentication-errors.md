@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debug degli errori di autenticazione di Windows
 Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i processi di sicurezza vengono gestiti dall'interfaccia SSPI (Security Support Provider Interface). Se si verificano errori di sicurezza a livello SSPI, questi vengono riportati da [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento viene fornito un framework e un insieme di domande per facilitare la diagnosi degli errori.  
@@ -75,7 +75,7 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
 ### <a name="kerberos-protocol"></a>Protocollo Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problemi SPN/UPN con il protocollo Kerberos  
- Quando si utilizza l'autenticazione di Windows unitamente al protocollo Kerberos diretto o negoziato mediante SSPI, l'URL utilizzato dall'endpoint client deve includere il nome di dominio completo dell'host del servizio presente nell'URL del servizio. Si presuppone che l'account con cui viene eseguito il servizio disponga dell'accesso alla chiave del computer (impostazione predefinita) servizio il nome dell'entità (SPN) che viene creata quando il computer viene aggiunto al dominio Active Directory, che viene eseguito più di frequente dall'esecuzione del servizio tramite il Account del servizio di rete. Se il servizio non ha accesso alla chiave dell'SPN del computer, è necessario fornire l'SPN corretto o il nome dell'entità utente (UPN) dell'account utilizzato per l'esecuzione del servizio nell'identità dell'endpoint del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la modalità [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN e UPN, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Quando si utilizza l'autenticazione di Windows unitamente al protocollo Kerberos diretto o negoziato mediante SSPI, l'URL utilizzato dall'endpoint client deve includere il nome di dominio completo dell'host del servizio presente nell'URL del servizio. Si presuppone che l'account con cui viene eseguito il servizio disponga dell'accesso alla chiave del computer (impostazione predefinita) servizio il nome dell'entità (SPN) che viene creata quando il computer viene aggiunto al dominio Active Directory, che viene eseguito più di frequente dall'esecuzione del servizio tramite il Account del servizio di rete. Se il servizio non ha accesso alla chiave dell'SPN del computer, è necessario fornire l'SPN corretto o il nome dell'entità utente (UPN) dell'account utilizzato per l'esecuzione del servizio nell'identità dell'endpoint del client. Per ulteriori informazioni sul [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SPN e UPN, vedere [identità del servizio e l'autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  In scenari di bilanciamento del carico, ad esempio Web farm o Web garden, viene comunemente definito un account univoco per ogni applicazione, viene assegnato un SPN a tale account e viene verificato che tutti i servizi dell'applicazione siano eseguiti in tale account.  
   
@@ -134,7 +134,7 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la rappresentazione, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Per ulteriori informazioni sulla rappresentazione, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  In alternativa, il client viene eseguito come un servizio Windows, utilizzando l'account predefinito System.  
   

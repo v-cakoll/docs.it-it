@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]la memorizzazione nella cache corrisponde al recupero preliminare dei dati. I dati diventano quindi accessibili senza un'ulteriore comunicazione tra processi. La memorizzazione nella cache in genere viene usata dalle applicazioni client di automazione interfaccia utente per recuperare in massa proprietà e pattern di controllo. Le informazioni vengono quindi recuperate dalla cache in base alle necessità. L'applicazione aggiorna periodicamente la cache, in genere come risposta a eventi indicanti che è cambiato qualcosa nell' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
- I vantaggi della memorizzazione nella cache sono molto evidenti con i controlli di [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] e con i controlli personalizzati con provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ I vantaggi della memorizzazione nella cache sono molto evidenti con controlli Windows Presentation Foundation (WPF) e i controlli personalizzati con i provider di automazione interfaccia utente lato server. Il vantaggio è minore quando si accede ai provider lato client, ad esempio i provider predefiniti per i controlli [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
   
  La memorizzazione nella cache si verifica quando l'applicazione attiva un elemento <xref:System.Windows.Automation.CacheRequest> e quindi usa un metodo o una proprietà che restituisce un elemento <xref:System.Windows.Automation.AutomationElement>, ad esempio <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. I metodi del <xref:System.Windows.Automation.TreeWalker> classe rappresentano un'eccezione, la memorizzazione nella cache viene eseguita solo se un <xref:System.Windows.Automation.CacheRequest> è specificato come parametro (ad esempio, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

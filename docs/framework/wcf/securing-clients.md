@@ -1,37 +1,37 @@
 ---
 title: Protezione di client
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>Protezione di client
-In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. [!INCLUDE[crabout](../../../includes/crabout-md.md)]creazione di un servizio protetto, vedere [protezione servizi](../../../docs/framework/wcf/securing-services.md).  
+In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per ulteriori informazioni sulla creazione di un servizio protetto, vedere [protezione Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Il servizio specifica la protezione  
  Le associazioni [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hanno le funzionalità di sicurezza attive per impostazione predefinita, a eccezione di <xref:System.ServiceModel.BasicHttpBinding>. Se il servizio, pertanto, è stato creato utilizzando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], è probabile che implementerà la protezione per assicurare autenticazione, riservatezza e integrità. In tal caso, i metadati forniti dal servizio indicheranno cosa è necessario per stabilire un canale di comunicazione protetto. Se i metadati del servizio non includono requisiti di sicurezza, non esiste alcuna possibilità di imporre uno schema di sicurezza, ad esempio Secure Sockets Layer (SSL) su HTTP, in un servizio. Se, tuttavia, il servizio richiede al client di fornire una credenziale, lo sviluppatore, il distributore o l'amministratore client deve fornire la credenziale effettiva che verrà utilizzata dal client per l'autenticazione al servizio.  
   
 ## <a name="obtaining-metadata"></a>Recupero di metadati  
- Quando si crea un client, eseguire innanzitutto il recupero di metadati per il servizio con il quale il client comunicherà. Questa operazione può essere eseguita in due modi. Innanzitutto, se il servizio pubblica un endpoint di metadati (MEX) di exchange o rende disponibili i metadati tramite HTTP o HTTPS, è possibile scaricare i metadati utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), che genera l'errore sia file di codice per un client, nonché un file di configurazione. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] usando lo strumento, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se il servizio non pubblica un endpoint MEX e non rende disponibili i metadati su HTTP o HTTPS, è necessario contattare il creatore del servizio per ottenere la documentazione che descrive i requisiti di sicurezza e i metadati.  
+ Quando si crea un client, eseguire innanzitutto il recupero di metadati per il servizio con il quale il client comunicherà. Questa operazione può essere eseguita in due modi. Innanzitutto, se il servizio pubblica un endpoint di metadati (MEX) di exchange o rende disponibili i metadati tramite HTTP o HTTPS, è possibile scaricare i metadati utilizzando il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), che genera l'errore sia file di codice per un client, nonché un file di configurazione. (Per ulteriori informazioni sull'uso dello strumento, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Se il servizio non pubblica un endpoint MEX e non rende disponibili i metadati su HTTP o HTTPS, è necessario contattare il creatore del servizio per ottenere la documentazione che descrive i requisiti di sicurezza e i metadati.  
   
 > [!IMPORTANT]
 >  È preferibile che i metadati provengano da un'origine attendibile e che non siano stati alterati. I metadati recuperati utilizzando il protocollo HTTP vengono inviati come testo non crittografato e possono essere alterati. Se il servizio utilizza le proprietà <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> e <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilizzare l'URL fornito dal creatore del servizio per scaricare i dati tramite il protocollo HTTPS.  
@@ -147,7 +147,7 @@ In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], il servizio impone i re
 > [!NOTE]
 >  È impossibile impostare alcuni dei valori della credenziale client utilizzando i file di configurazione dell'applicazione, ad esempio nome utente e password o i valori utente e password di Windows. È possibile specificare tali valori della credenziale solo nel codice.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Imposta la credenziale client, vedere [procedura: specificare i valori di credenziale Client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Per ulteriori informazioni sull'impostazione della credenziale client, vedere [procedura: specificare i valori di credenziale Client](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  `ClientCredentialType` viene ignorato quando `SecurityMode` è impostato su `"TransportWithMessageCredential",` come illustrato nell'esempio di configurazione seguente.  

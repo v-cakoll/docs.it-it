@@ -1,28 +1,28 @@
 ---
 title: Code in Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Code in Windows Communication Foundation
 Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per le code. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce il supporto per l'accodamento basato sul sistema di Accodamento messaggi Microsoft (precedentemente noto come MSMQ) come trasporto e consente gli scenari seguenti:  
@@ -35,7 +35,7 @@ Negli argomenti di questa sezione viene descritto il supporto [!INCLUDE[indigo1]
   
 -   Operazioni disconnesse. Le operazioni di invio, ricezione ed elaborazione possono venire disconnesse durante la comunicazione tramite reti con latenza elevata o con disponibilità limitata, ad esempio nel caso di dispositivi mobili. Le code consentono la continuazione di queste operazioni, anche quando gli endpoint sono disconnessi. Quando la connessione viene ristabilita, la coda inoltra i messaggi all'applicazione ricevente.  
   
- Per utilizzare la funzionalità delle code in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile utilizzare una delle associazioni standard o crearne una personalizzata se una di quelle standard non soddisfa i requisiti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associazioni standard rilevanti e sulla scelta di uno, vedere [come: messaggi di Exchange con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Per utilizzare la funzionalità delle code in un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è possibile utilizzare una delle associazioni standard o crearne una personalizzata se una di quelle standard non soddisfa i requisiti. Per altre informazioni rilevanti associazioni standard e sulla scelta di uno, vedere [procedura: i messaggi di Exchange con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Per ulteriori informazioni sulla creazione di associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica delle code](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

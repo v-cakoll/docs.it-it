@@ -1,33 +1,33 @@
 ---
 title: Creazione di associazioni definite dall'utente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Creazione di associazioni definite dall'utente
 Esistono diversi modi per creare associazioni non fornite dal sistema:  
   
--   Creare un'associazione personalizzata, basata sulla classe <xref:System.ServiceModel.Channels.CustomBinding>, che è un contenitore riempito con elementi di associazione. L'associazione personalizzata viene quindi aggiunta a un endpoint del servizio. È possibile creare l'associazione personalizzata a livello di programmazione o in un file di configurazione dell'applicazione. Per usare un elemento di associazione da un file di configurazione dell'applicazione, è necessario che l'elemento di associazione estenda <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Creare un'associazione personalizzata, basata sulla classe <xref:System.ServiceModel.Channels.CustomBinding>, che è un contenitore riempito con elementi di associazione. L'associazione personalizzata viene quindi aggiunta a un endpoint del servizio. È possibile creare l'associazione personalizzata a livello di programmazione o in un file di configurazione dell'applicazione. Per usare un elemento di associazione da un file di configurazione dell'applicazione, è necessario che l'elemento di associazione estenda <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Per ulteriori informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   È possibile creare una classe derivata da un'associazione standard. È, ad esempio, possibile derivare una classe da <xref:System.ServiceModel.WSHttpBinding> ed eseguire l'override del metodo <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> per ottenere gli elementi di associazione e inserire un elemento di associazione personalizzato o stabilire un particolare valore per la protezione.  
   

@@ -1,13 +1,13 @@
 ---
 title: Cenni preliminari sui pennelli di WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Cenni preliminari sui pennelli di WPF
 Qualsiasi elemento visibile sullo schermo è visibile, perché sono stati disegnati con un pennello. Ad esempio, un pennello viene utilizzato per descrivere lo sfondo di un pulsante, il primo piano del testo e il riempimento di una forma. In questo argomento vengono illustrati i concetti di disegno con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pennelli e vengono forniti esempi. I pennelli consentono di disegnare oggetti [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con colori semplici a tinta unita, fino a set complessi di motivi e immagini.  
@@ -142,7 +142,7 @@ Rettangolo disegnato usando VisualBrush
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Disegnare con pennelli di sistema e predefiniti  
- Per praticità, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornisce un set di pennelli predefiniti e sistema che è possibile utilizzare per disegnare oggetti.  
+ Per praticità, Windows Presentation Foundation (WPF) fornisce un set di pennelli predefiniti e sistema che è possibile utilizzare per disegnare oggetti.  
   
 -   Per un elenco dei pennelli predefiniti disponibili, vedere la <xref:System.Windows.Media.Brushes> classe. Per un esempio che illustra come utilizzare un pennello predefinito, vedere [disegnare un'Area con un colore a tinta unita](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Rettangolo disegnato usando VisualBrush
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Funzionalità comuni dei pennelli  
- <xref:System.Windows.Media.Brush>gli oggetti forniscono un <xref:System.Windows.Media.Brush.Opacity%2A> proprietà che può essere utilizzata per rendere un pennello trasparente o semitrasparente. Un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 0 rende un pennello completamente trasparente, mentre un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 1 lo rende completamente opaco. L'esempio seguente usa il <xref:System.Windows.Media.Brush.Opacity%2A> proprietà per rendere un <xref:System.Windows.Media.SolidColorBrush> pari al 25%.  
+ <xref:System.Windows.Media.Brush> gli oggetti forniscono un <xref:System.Windows.Media.Brush.Opacity%2A> proprietà che può essere usato per rendere un pennello trasparente o semitrasparente. Un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 0 rende un pennello completamente trasparente, mentre un <xref:System.Windows.Media.Brush.Opacity%2A> valore pari a 1 lo rende completamente opaco. L'esempio seguente usa il <xref:System.Windows.Media.Brush.Opacity%2A> proprietà per rendere un <xref:System.Windows.Media.SolidColorBrush> pari al 25%.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
@@ -180,7 +180,7 @@ Rettangolo disegnato usando VisualBrush
  [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973) (Esempio di pennelli)  
- [Esempio di ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [Esempio ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Esempio VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)  
  [Procedure relative alle proprietà](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

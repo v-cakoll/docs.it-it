@@ -1,24 +1,26 @@
 ---
 title: Codificatori personalizzati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
@@ -34,7 +36,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 ## <a name="system-provided-encoders"></a>Codificatori forniti dal sistema  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un insieme di associazioni di sistema progettate per soddisfare gli scenari di applicazione più comuni. Ognuna di queste associazioni combina un trasporto, un codificatore di messaggi e altre opzioni (ad esempio quelle relative alla protezione). In questo argomento vengono illustrate la procedura per estendere i codificatori di messaggi `Text`, `Binary`e `MTOM` inclusi in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e la procedura per creare un codificatore personalizzato. Il codificatore dei messaggi di testo supporta sia la codifica XML semplice che le codifiche SOAP. La modalità di codifica XML semplice del codificatore dei messaggi di testo è denominata POX (Plain Old XML) per distinguerla dalla codifica SOAP basata su testo.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le combinazioni di elementi di associazione forniti dalle associazioni fornite dal sistema, vedere la sezione corrispondente in [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Per ulteriori informazioni sulle combinazioni di elementi di associazione forniti dalle associazioni fornite dal sistema, vedere la sezione corrispondente in [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Come usare i codificatori forniti dal sistema  
  Una codifica viene aggiunta a un'associazione usando una classe derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
@@ -45,7 +47,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi usate per i messaggi XML basati su un sistema binario. Si tratta dell'opzione di codifica più efficiente, ma è anche la meno interoperativa in quanto è supportata soltanto da endpoint [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per un codifica dei messaggi tramite un messaggio Transmission Optimization Mechanism (MTOM). MTOM è una tecnologia efficiente per trasmettere dati binari nei messaggi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: rappresenta l'elemento di associazione che specifica la codifica dei caratteri e la versione dei messaggi utilizzate per un messaggio utilizzando una codifica Message Transmission Optimization Mechanism (MTOM). MTOM è una tecnologia efficiente per trasmettere dati binari nei messaggi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il codificatore MTOM cerca un equilibrio tra efficienza e interoperabilità. La codifica MTOM trasmette la maggior parte del codice XML in formato testo, ma ottimizza grandi blocchi di dati binari trasmettendoli senza introdurre modifiche e senza convertirli in formato testo.  
   
  L'elemento di associazione crea una classe <xref:System.ServiceModel.Channels.MessageEncoderFactory>di tipo Text, Binary o MTOM. La factory crea un'istanza <xref:System.ServiceModel.Channels.MessageEncoderFactory> di tipo Text, Binary o MTOM. In genere è presente una sola istanza. Se tuttavia vengono usate le sessioni, a ogni sessione può essere fornito un codificatore diverso. In questo modo il codificatore dei messaggi in formato binario è in grado di coordinare dizionari dinamici (vedere Infrastruttura XML).  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Accodamento in WCF
 Contenuto della sezione viene descritto come usare la comunicazione in coda in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
  Le code MSMQ possono essere protette anche usando un'identità di Windows registrata con il servizio directory Active Directory. Quando si installa MSMQ, è possibile installare l'integrazione di Active Directory, che richiede che il computer faccia parte di una rete di dominio Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Per ulteriori informazioni su MSMQ, vedere [installazione di Accodamento messaggi (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Il [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) è l'associazione in coda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce per due [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint per comunicare tramite MSMQ. L'associazione, pertanto, espone proprietà specifiche di MSMQ. Tuttavia, non tutte le funzionalità e le proprietà di MSMQ vengono esposte in `NetMsmqBinding`. La classe compatta `NetMsmqBinding` è progettata con un set ottimale di funzionalità che la maggior parte dei clienti dovrebbe trovare sufficiente.  
@@ -79,12 +79,12 @@ Contenuto della sezione viene descritto come usare la comunicazione in coda in [
   
  L'associazione dispone di due proprietà interessanti:  
   
--   `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l'interpretazione di queste proprietà, vedere [utilizzando code per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: questa proprietà è un'enumerazione che indica se è necessaria una coda di messaggi non recapitabili. Nel caso sia necessaria, l'enumerazione contiene anche il tipo di coda di messaggi non recapitabili. I valori sono `None`, `System` e `Custom`. Per ulteriori informazioni sull'interpretazione di queste proprietà, vedere [utilizzando code per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: questa proprietà è l'indirizzo URI (Uniform Resource Identifier) della coda di messaggi non recapitabili specifica dell'applicazione. Questa operazione è necessaria se `DeadLetterQueue`.`Custom` viene scelto.  
   
 #### <a name="poison-message-handling-properties"></a>Proprietà di gestione dei messaggi non elaborabili  
- Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Queste proprietà, vedere [messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Quando il servizio legge un messaggio dalla coda di destinazione in una transazione, è possibile che non riesca a elaborarlo per vari motivi. Il messaggio viene quindi reinserito nella coda per essere nuovamente letto. Per gestire messaggi la cui elaborazione ripetutamente esito negativo, è possibile configurare nell'associazione un set di proprietà di gestione dei messaggi non elaborabili. Sono disponibili quattro proprietà: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` e `ReceiveErrorHandling`. Per ulteriori informazioni su queste proprietà, vedere [messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Proprietà di sicurezza  
  MSMQ espone il proprio modello di sicurezza, che prevede ad esempio l'applicazione di elenchi di controllo di accesso (ACL) su una coda o l'invio di messaggi autenticati. La classe `NetMsmqBinding` espone queste proprietà di sicurezza come parte delle proprie impostazioni di sicurezza del trasporto. Nell'associazione sono presenti due proprietà per la sicurezza del trasporto: `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Le impostazioni in queste proprietà dipendono dalla modalità di configurazione di MSMQ. Per altre informazioni, vedere [proteggere i messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

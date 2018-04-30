@@ -1,24 +1,26 @@
 ---
 title: Risoluzione dei problemi di installazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Risoluzione dei problemi di installazione
 In questo argomento viene descritto come risolvere i problemi di installazione di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -63,19 +65,19 @@ In questo argomento viene descritto come risolvere i problemi di installazione d
   
  Per risolvere il problema descritto in precedenza, è necessario eseguire la procedura seguente.  
   
-1.  Eseguire [WMI Diagnosis Utility, versione 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) per ripristinare il servizio WMI. [!INCLUDE[crabout](../../../includes/crabout-md.md)]con questo strumento, vedere il [utilità WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) argomento.  
+1.  Eseguire [WMI Diagnosis Utility, versione 2.0](http://go.microsoft.com/fwlink/?LinkId=94685) per ripristinare il servizio WMI. Per ulteriori informazioni sull'utilizzo di questo strumento, vedere la [utilità WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686) argomento.  
   
  Ripristinare l'installazione di .NET Framework 3.0 utilizzando il **Aggiungi/Rimuovi programmi** applet si trova **Pannello di controllo**, o disinstallare/reinstallare .NET Framework 3.0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Il ripristino di .NET Framework 3.0 in seguito all'installazione di .NET Framework 3.5 rimuove gli elementi di configurazione introdotti da .NET Framework 3.5 nel file machine.config  
  Il ripristino di .NET Framework 3.0 in seguito all'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], gli elementi di configurazione introdotti da [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] nel file machine.config vengono rimossi. Tuttavia, la config web rimane invariata. La soluzione consiste nel ripristinare [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] in seguito tramite ARP, oppure utilizzare il [strumento di registrazione del servizio di WorkFlow (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con il `/c` passare.  
   
- [Strumento di registrazione del servizio di workFlow (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) è reperibile in %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
+ [Strumento di registrazione del servizio del flusso di lavoro (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) è reperibile in %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configurare IIS correttamente per WCF/WF Webhost dopo aver installato .NET Framework 3.5  
  Quando l'installazione di [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] non riesce a configurare impostazioni di configurazione IIS [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aggiuntive, registra un errore nel log di installazione e continua con l'operazione corrente. Qualsiasi tentativo di eseguire applicazioni WorkflowServices avrà esito negativo in quanto le impostazioni di configurazione richieste risultano mancanti. Ad esempio, il caricamento di xoml o del servizio regole potrebbe avere esito negativo.  
   
- Per risolvere questo problema, utilizzare il [strumento di registrazione del servizio di WorkFlow (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con il `/c` commutatore per configurare correttamente il mapping di script IIS nel computer. [Strumento di registrazione del servizio di workFlow (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) è reperibile in %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
+ Per risolvere questo problema, utilizzare il [strumento di registrazione del servizio di WorkFlow (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con il `/c` commutatore per configurare correttamente il mapping di script IIS nel computer. [Strumento di registrazione del servizio del flusso di lavoro (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) è reperibile in %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Impossibile caricare il tipo ‘System.ServiceModel.Activation.HttpModule’ dall'assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
  Questo errore si verifica se [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] è installato, quindi [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Attivazione HTTP è abilitata. Per risolvere il problema eseguire la riga di comando seguente dal prompt dei comandi di [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  

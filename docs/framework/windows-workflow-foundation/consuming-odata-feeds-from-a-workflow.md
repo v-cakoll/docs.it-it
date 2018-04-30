@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Utilizzo di feed OData da un flusso di lavoro
 WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] che consente di creare servizi che usano Open Data Protocol (OData) per esporre e usare dati sul Web o su rete Intranet tramite la semantica REST (Representational State Transfer). In OData i dati vengono esposti come risorse indirizzabili tramite URI. Un'applicazione può interagire con un servizio dati basato su OData quando è in grado di inviare una richiesta HTTP e di elaborare il feed OData restituito da un servizio dati. In WCF Data Services sono inoltre disponibili librerie client che consentono di programmare in modo più completo quando si usano feed OData da applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . In questo argomento viene fornita una panoramica sull'uso di un feed OData in un flusso di lavoro con e senza librerie client.  
@@ -78,7 +78,7 @@ WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/d
  Nell'esempio seguente viene definita un'attività `ListCustomers` . che esegue una query sul servizio dati Northwind di esempio e restituisce un elemento `List<Customer>` che contiene tutti i clienti del database Northwind. Il lavoro asincrono viene eseguito dal metodo `GetCustomers` che esegue una query sul servizio per tutti i clienti, li copia in un elemento `List<Customer>` e controlla se è stato eseguito il paging dei risultati. In caso affermativo, esegue una query sul servizio per la successiva pagina di risultati, li aggiunge all'elenco e continua fino a quando non sono stati recuperati tutti i dati del cliente.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] esecuzione del paging in WCF Data Services, vedere. [Procedura: caricare risultati di paging (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  Per ulteriori informazioni sul paging in WCF Data Services, vedere. [Procedura: caricare risultati di paging (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Una volta aggiunti tutti i clienti, viene restituito l'elenco. Il metodo `GetCustomers` viene specificato nell'override <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> dell'attività. Poiché il metodo restituisce un valore, viene creato un elemento `Func<string, List<Customer>>` per specificarlo.  
   
@@ -143,4 +143,4 @@ WCF Data Services è un componente di [!INCLUDE[dnprdnshort](../../../includes/d
  **\<link rel = "edit" title = "Order" href="Orders(10643)" / >**  
  **\<link rel = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **tipo = "application/atom + xml; digitare = voce" title = "Customer" href = "Ordina (10643) / cliente" / >**  
-**...**  L'esempio fornisce un metodo a disposizione degli autori delle applicazioni flusso di lavoro per usare i dati non elaborati restituiti da un servizio OData. [!INCLUDE[crabout](../../../includes/crabout-md.md)] l'accesso a WCF Data Services tramite gli URI, vedere [Accesso alle risorse del servizio dati (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) e [OData: convenzioni URI](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  L'esempio fornisce un metodo a disposizione degli autori delle applicazioni flusso di lavoro per usare i dati non elaborati restituiti da un servizio OData. Per ulteriori informazioni sull'accesso a WCF Data Services tramite gli URI, vedere [accesso alle risorse del servizio dati (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) e [OData: convenzioni URI](http://go.microsoft.com/fwlink/?LinkId=185564).

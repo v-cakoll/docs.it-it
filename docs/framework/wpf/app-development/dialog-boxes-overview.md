@@ -1,12 +1,13 @@
 ---
 title: Cenni preliminari sulle finestre di dialogo
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
 Applicazioni autonome sono in genere una finestra principale in cui vengono visualizzati i dati principali in cui viene eseguita l'applicazione ed espone la funzionalità di elaborazione dei dati tramite [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] meccanismi come barre dei menu, barre degli strumenti e le barre di stato. In un'applicazione più complessa sono inoltre disponibili finestre aggiuntive per l'esecuzione delle operazioni riportate di seguito:  
@@ -43,7 +45,7 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
   
  Oggetto *non modale* la finestra di dialogo, d'altra parte, non impedisce a un utente di attivare altre finestre mentre è aperto. Ad esempio, se un utente desidera cercare occorrenze di una determinata parola in un documento, dalla finestra principale verrà spesso aperta una finestra di dialogo in cui l'utente dovrà immettere la parola che desidera cercare. Poiché la ricerca di una parola non impedisce all'utente di modificare il documento, la finestra di dialogo non deve essere modale. Una finestra di dialogo non modale fornisce almeno un **chiudere** per chiudere la finestra di dialogo e può fornire pulsanti aggiuntivi per eseguire funzioni specifiche, ad esempio un **Trova successivo** per trovare la successiva di word che corrisponde ai criteri di ricerca di una parola.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] consente di creare molti tipi di finestre di dialogo, incluse finestre di messaggio, finestre di dialogo comuni e finestre di dialogo personalizzate. In questo argomento vengono illustrate le singole e [esempio finestra di dialogo](http://go.microsoft.com/fwlink/?LinkID=159984) sono disponibili alcuni esempi.  
+ Windows Presentation Foundation (WPF) consente di creare diversi tipi di finestre di dialogo, incluse le finestre di messaggio, finestre di dialogo comuni e finestre di dialogo personalizzate. In questo argomento vengono illustrate le singole e [esempio finestra di dialogo](http://go.microsoft.com/fwlink/?LinkID=159984) sono disponibili alcuni esempi.  
   
  
   
@@ -53,7 +55,7 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
   
  ![Finestra di dialogo Elaboratore di testo](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Per creare una finestra di messaggio, utilizzare la <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox>Consente di configurare il testo della finestra di messaggio, titolo, icona e i pulsanti, utilizzando codice simile al seguente.  
+ Per creare una finestra di messaggio, utilizzare la <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> Consente di configurare il testo della finestra di messaggio, titolo, icona e i pulsanti, utilizzando codice simile al seguente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
   
  Sebbene <xref:System.Windows.MessageBox> può offrire una semplice finestra di dialogo dell'utente, il vantaggio dell'utilizzo <xref:System.Windows.MessageBox> è l'unico tipo di finestra che può essere visualizzata dalle applicazioni in esecuzione in un sandbox di sicurezza parzialmente attendibile (vedere [sicurezza](../../../../docs/framework/wpf/security-wpf.md)), ad esempio [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- Nella maggior parte delle finestre di dialogo vengono visualizzati e raggruppati dati più complessi del risultato di una finestra di messaggio, ad esempio testo, selezione (caselle di controllo), selezione a esclusione reciproca (pulsanti di opzione) e selezione in elenchi (caselle di riepilogo, caselle combinate, elenchi a discesa). Per questo motivo, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fornisce diverse finestre di dialogo comuni e consente di creare finestre di dialogo, sebbene l'utilizzo di entrambe è limitato alle applicazioni in esecuzione con attendibilità totale.  
+ Nella maggior parte delle finestre di dialogo vengono visualizzati e raggruppati dati più complessi del risultato di una finestra di messaggio, ad esempio testo, selezione (caselle di controllo), selezione a esclusione reciproca (pulsanti di opzione) e selezione in elenchi (caselle di riepilogo, caselle combinate, elenchi a discesa). Per tali file, Windows Presentation Foundation (WPF) fornisce diverse finestre di dialogo comuni e consente di creare finestre di dialogo, anche se l'utilizzo di uno è limitato alle applicazioni in esecuzione con attendibilità totale.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Finestre di dialogo comuni  
  In [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] è implementata una varietà di finestre di dialogo riutilizzabili comuni a tutte le applicazioni, incluse le finestre di dialogo per l'apertura, il salvataggio e la stampa di file. Poiché queste finestre di dialogo sono implementate dal sistema operativo, possono essere condivise da tutte le applicazioni eseguite nel sistema operativo, con notevoli vantaggi in termini della coerenza di utilizzo: se un utente utilizza con frequenza una finestra di dialogo basata sul sistema operativo in un'applicazione, non dovrà imparare a utilizzare la stessa finestra in altre applicazioni. Poiché queste finestre di dialogo sono disponibili per tutte le applicazioni e poiché consentono un'esperienza utente coerente, sono note come *finestre di dialogo comuni*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] incapsula le finestre di dialogo comuni di apertura, salvataggio e stampa di file e le espone come classi gestite da utilizzare in applicazioni autonome. Questo argomento fornisce alcuni cenni preliminari su ognuna.  
+ Windows Presentation Foundation (WPF) incapsula i file aperti, salvare file, finestre di dialogo comuni di stampa e li espone come classi gestite da utilizzare in applicazioni autonome. Questo argomento fornisce alcuni cenni preliminari su ognuna.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Finestra di dialogo Apri  
@@ -94,7 +96,7 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
  Per ulteriori informazioni sulla finestra di dialogo Apri file, vedere <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>Consente di recuperare in modo sicuro i nomi di file da applicazioni in esecuzione con attendibilità parziale (vedere [sicurezza](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> Consente di recuperare in modo sicuro i nomi file da applicazioni in esecuzione con attendibilità parziale (vedere [sicurezza](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Finestra di dialogo Salva con nome  
@@ -124,7 +126,7 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Finestre di dialogo personalizzate  
- Sebbene le finestre di dialogo comuni siano utili e debbano essere utilizzate quando possibile, non supportano i requisiti delle finestre di dialogo specifiche di vari domini. In questi casi, è necessario creare finestre di dialogo personalizzate. Come verrà illustrato in seguito, una finestra di dialogo è una finestra con particolari comportamenti. <xref:System.Windows.Window>implementa tali comportamenti e, pertanto, si utilizza <xref:System.Windows.Window> per creare finestre di dialogo modali e non modali personalizzate.  
+ Sebbene le finestre di dialogo comuni siano utili e debbano essere utilizzate quando possibile, non supportano i requisiti delle finestre di dialogo specifiche di vari domini. In questi casi, è necessario creare finestre di dialogo personalizzate. Come verrà illustrato in seguito, una finestra di dialogo è una finestra con particolari comportamenti. <xref:System.Windows.Window> implementa tali comportamenti e, pertanto, si utilizza <xref:System.Windows.Window> per creare finestre di dialogo modali e non modali personalizzate.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Creazione di una finestra di dialogo modale personalizzata  
@@ -307,7 +309,7 @@ Applicazioni autonome sono in genere una finestra principale in cui vengono visu
  A differenza di <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> restituisce immediatamente. Di conseguenza, la finestra chiamante non può stabilire quando la finestra di dialogo non modale viene chiusa e pertanto non sa quando verificare il risultato della finestra di dialogo o quando ottenere dati dalla finestra di dialogo per continuare l'elaborazione. La finestra di dialogo deve quindi disporre di un modo alternativo per restituire dati alla finestra chiamante.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Elaborazione di dati restituiti da una finestra di dialogo non modale  
- In questo esempio, il `FindDialogBox` può restituire uno o più risultati di ricerca alla finestra principale, a seconda del testo cercato senza una frequenza specifica. Come con una finestra di dialogo modale, una finestra di dialogo non modale può restituire risultati utilizzando le proprietà. Tuttavia, la finestra proprietaria della finestra di dialogo deve sapere quando controllare tali proprietà. A tal fine, la finestra di dialogo dovrebbe implementare un evento generato ogni volta che viene trovato il testo. `FindDialogBox`implementa il `TextFoundEvent` a tale scopo, che innanzitutto richiede un delegato.  
+ In questo esempio, il `FindDialogBox` può restituire uno o più risultati di ricerca alla finestra principale, a seconda del testo cercato senza una frequenza specifica. Come con una finestra di dialogo modale, una finestra di dialogo non modale può restituire risultati utilizzando le proprietà. Tuttavia, la finestra proprietaria della finestra di dialogo deve sapere quando controllare tali proprietà. A tal fine, la finestra di dialogo dovrebbe implementare un evento generato ogni volta che viene trovato il testo. `FindDialogBox` implementa il `TextFoundEvent` per questo scopo, che innanzitutto richiede un delegato.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

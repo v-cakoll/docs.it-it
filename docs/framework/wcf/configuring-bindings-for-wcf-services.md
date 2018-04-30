@@ -1,28 +1,28 @@
 ---
 title: Configurazione di associazioni per i servizi Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurazione di associazioni per i servizi Windows Communication Foundation
 Durante la creazione di un'applicazione, è spesso necessario assegnare all'amministratore il compito di prendere alcune decisioni dopo la distribuzione dell'applicazione. Non è in alcun modo possibile, ad esempio, conoscere in anticipo l'indirizzo di un servizio, o URI (Uniform Resource Identifier). Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione.  
@@ -47,13 +47,13 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementi ServiceModel  
- È possibile utilizzare la sezione delimitata dal `system.ServiceModel` elemento per configurare un tipo di servizio con uno o più endpoint, nonché le impostazioni per un servizio. Ogni endpoint può essere quindi configurato con un indirizzo, un contratto e un'associazione. [!INCLUDE[crabout](../../../includes/crabout-md.md)]gli endpoint, vedere [Cenni preliminari sulla creazione di Endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md). Se non è specificato alcun endpoint, il runtime aggiunge gli endpoint predefiniti. [!INCLUDE[crabout](../../../includes/crabout-md.md)] endpoint, associazioni e comportamenti predefiniti, vedere [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ È possibile utilizzare la sezione delimitata dal `system.ServiceModel` elemento per configurare un tipo di servizio con uno o più endpoint, nonché le impostazioni per un servizio. Ogni endpoint può essere quindi configurato con un indirizzo, un contratto e un'associazione. Per ulteriori informazioni sugli endpoint, vedere [Cenni preliminari sulla creazione di Endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md). Se non è specificato alcun endpoint, il runtime aggiunge gli endpoint predefiniti. Per ulteriori informazioni sull'endpoint predefiniti, associazioni e comportamenti, vedere [configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Un'associazione specifica trasporti (HTTP, TCP, pipe, Accodamento messaggi) e protocolli (sicurezza, affidabilità, flussi delle transazioni) e consiste in elementi, ognuno dei quali specifica un aspetto del modo in cui un endpoint comunica con l'esterno.  
   
  Ad esempio, specificando il [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica l'utilizzo di HTTP come trasporto per un endpoint. Ciò consente di associare l'endpoint in fase di esecuzione quando il servizio che utilizza l'endpoint è aperto.  
   
- Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di associazioni predefinite tipi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornisce, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. [!INCLUDE[crabout](../../../includes/crabout-md.md)]associazioni personalizzate, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Le associazioni sono di due tipi: predefinite e personalizzate. Le associazioni predefinite contengono combinazioni utili di elementi utilizzati in scenari comuni. Per un elenco di associazioni predefinite tipi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fornisce, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md). Se nessuna raccolta di associazioni predefinite presenta la combinazione corretta delle funzionalità necessarie per un'applicazione di servizio, è possibile costruire associazioni personalizzate che soddisfino i requisiti dell'applicazione. Per ulteriori informazioni sulle associazioni personalizzate, vedere [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Nei quattro esempi seguenti vengono illustrate le configurazioni di associazione più comuni utilizzate per la configurazione di un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

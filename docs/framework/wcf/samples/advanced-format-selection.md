@@ -1,24 +1,26 @@
 ---
 title: Selezione avanzata del formato
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>Selezione avanzata del formato
 In questo esempio viene descritto come estendere il modello di programmazione REST di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per supportare i nuovi formati di risposta in uscita. Nell'esempio viene inoltre usato un modello T4 per restituire la risposta come pagina XHTML, a dimostrazione di come sia possibile implementare un modello di programmazione dello stile di visualizzazione.  
@@ -32,7 +34,7 @@ In questo esempio viene descritto come estendere il modello di programmazione RE
   
  È opportuno notare il tipo restituito dall'operazione. Il modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supporta a livello nativo solo i formati di risposta XML e JSON quando un'operazione restituisce un tipo diverso da <xref:System.ServiceModel.Channels.Message>. Tuttavia, quando si usa <xref:System.ServiceModel.Channels.Message> come tipo restituito, lo sviluppatore dispone del controllo completo sulla modalità di formattazione del contenuto del messaggio.  
   
- Nell'esempio vengono usati i metodi <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> per serializzare l'elenco di stringhe rispettivamente in messaggi XML, JSON e ATOM. Per il formato di risposta jpeg, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> e l'immagine viene salvata nel flusso. Per la risposta XHTML, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> insieme a un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, vedere [la generazione di elementi di modelli di testo T4](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ Nell'esempio vengono usati i metodi <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> e <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> per serializzare l'elenco di stringhe rispettivamente in messaggi XML, JSON e ATOM. Per il formato di risposta jpeg, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> e l'immagine viene salvata nel flusso. Per la risposta XHTML, viene usato il metodo <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> insieme a un modello T4 pre-elaborato costituito da un file con estensione tt e da un file con estensione cs generato automaticamente. Il file con estensione tt consente a uno sviluppatore di scrivere una risposta in un form del modello contenente variabili e strutture di controllo. Per ulteriori informazioni su T4, vedere [la generazione di elementi di modelli di testo](http://go.microsoft.com/fwlink/?LinkId=166023).  
   
  L'esempio è costituito da un servizio indipendente e da un client in esecuzione in un'applicazione console. Quando l'applicazione console è in esecuzione, il client invia richieste al servizio e scrive nella finestra della console le informazioni pertinenti incluse nelle risposte.  
   

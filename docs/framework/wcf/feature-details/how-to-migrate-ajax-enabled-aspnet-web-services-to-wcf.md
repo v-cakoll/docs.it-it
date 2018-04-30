@@ -1,24 +1,26 @@
 ---
 title: 'Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF
 In questo argomento vengono illustrate le procedure per eseguire la migrazione di un servizio ASP.NET AJAX di base a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile AJAX equivalente. Verrà descritto come creare una versione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funzionalmente equivalente a un servizio ASP.NET.AJAX. I due servizi possono quindi essere utilizzati in modo affiancato, oppure il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato al posto del servizio ASP.NET.AJAX.  
@@ -33,7 +35,7 @@ In questo argomento vengono illustrate le procedure per eseguire la migrazione d
   
  Il codice generato dalle procedure descritte in questo argomento viene fornito nell'esempio riportato dopo le procedure stesse.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]esposizione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio tramite un endpoint compatibile AJAX, vedere il [come: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) argomento.  
+ Per ulteriori informazioni sull'esposizione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio tramite un endpoint compatibile AJAX, vedere la [come: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) argomento.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Per creare e testare l'applicazione del servizio Web ASP.NET  
   
@@ -206,7 +208,7 @@ d.Add("two", 2);
   
 -   [{"Key":"one","Value":1},{"Key":"two","Value":2}] da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {"one": 1, "two": 2} da ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"uno": 1, "due": 2} da ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> è più potente perché può gestire dizionari in cui il tipo di chiave non è una stringa, mentre <xref:System.Web.Script.Serialization.JavaScriptSerializer> non è in grado di farlo. Quest'ultimo, tuttavia, è più favorevole a JSON.  
   
@@ -215,11 +217,11 @@ d.Add("two", 2);
 |Categoria delle differenze|DataContractJsonSerializer|JavaScriptSerializer per ASP.NET AJAX|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |Deserializzazione del buffer vuoto (new byte[0]) in <xref:System.Object> (o <xref:System.Uri> o alcune altre classi).|SerializationException|Null|  
-|Serializzazione di <xref:System.DBNull.Value>|{} (o {"__type":"#System"})|Null|  
+|Serializzazione di <xref:System.DBNull.Value>|{} (o { Type":"#System"})|Null|  
 |Serializzazione dei membri privati di tipi [Serializable].|serializzato|non serializzato|  
 |Serializzazione delle proprietà pubbliche di tipi <xref:System.Runtime.Serialization.ISerializable>.|non serializzato|serializzato|  
 |"Estensioni" di JSON|È conforme alla specifica JSON, che richiede le virgolette per i nomi dei membri di un oggetto ({"a":"hello"}).|Supporta i nomi dei membri di un oggetto senza virgolette ({a:"hello"}).|  
-|Ora UTC (Coordinated Universal Time) <xref:System.DateTime>|Non supporta formato "\\/Date(123456789U)\\/" o "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\\\/)".|Supporta i formati "\\/Date(123456789U)\\/" e "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\ \\/) "come valori DateTime.|  
+|Ora UTC (Coordinated Universal Time) <xref:System.DateTime>|Non supporta formato "\\/Date(123456789U)\\/" o "\\/data\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Formato supporta "\\/Date(123456789U)\\/" e "\\/data\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "come valori di data/ora.|  
 |Rappresentazione di dizionari|Una matrice di KeyValuePair\<K, V >, gestisce tipi di chiave che non sono stringhe.|Come gli oggetti JSON effettivi, ma gestisce solo i tipi di chiave che sono stringhe.|  
 |Caratteri di escape|Sempre con un carattere di escape barra (/); non consente mai caratteri JSON non validi senza carattere di escape, ad esempio "\n".|Con un carattere di escape barra (/) per i valori DateTime.|  
   

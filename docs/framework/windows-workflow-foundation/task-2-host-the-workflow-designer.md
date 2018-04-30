@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d4cc95041e96f5f4bb2d6b50e150c99a57404208
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Attività 2: ospitare l'utilità di progettazione del flusso di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
@@ -108,7 +108,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)] la registrazione di ActivityDesigner, vedere [procedura: creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Per ulteriori informazioni sulla registrazione di ActivityDesigner, vedere [procedura: creare un ActivityDesigner personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  Nel costruttore della classe `MainWindow`, aggiungere chiamate ai metodi dichiarati precedentemente per registrare i metadati per il supporto della finestra di progettazione e per creare l'oggetto <xref:System.Activities.Presentation.WorkflowDesigner>.  
   

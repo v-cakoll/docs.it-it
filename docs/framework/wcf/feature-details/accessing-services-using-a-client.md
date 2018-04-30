@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per comunicare con i servizi. Il [panoramica dei Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md) argomento viene fornita una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  
@@ -76,7 +76,7 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
  I canali di datagramma non hanno mai esito negativo anche se si verificano eccezioni quando vengono chiusi. Inoltre, i client non duplex la cui autenticazione mediante conversazione protetta non riesce generano di norma un'eccezione <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Tuttavia, se il client duplex che usa una conversazione protetta non viene autenticato, riceve un'eccezione <xref:System.TimeoutException?displayProperty=nameWithType>.  
   
- Per ulteriori informazioni sull'utilizzo delle informazioni sull'errore a livello di applicazione, vedere [specifica e gestione degli errori in contratti e servizi](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Le eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md) descrive le eccezioni previste e illustra come gestirli. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come gestire gli errori quando si sviluppano i canali, vedere [gestisce eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Per ulteriori informazioni sull'utilizzo delle informazioni sull'errore a livello di applicazione, vedere [specifica e gestione degli errori in contratti e servizi](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Le eccezioni previste](../../../../docs/framework/wcf/samples/expected-exceptions.md) descrive le eccezioni previste e illustra come gestirli. Per ulteriori informazioni su come gestire gli errori quando si sviluppano i canali, vedere [gestisce eccezioni ed errori](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Blocco dei client e prestazioni  
  Quando un'applicazione chiama in modo sincrono un'operazione request-reply, il client si blocca fino a quando non viene ricevuto un valore restituito o non viene generata un'eccezione (ad esempio, <xref:System.TimeoutException?displayProperty=nameWithType>). Si tratta di un comportamento simile al comportamento locale. Quando un'applicazione richiama in modo sincrono un'operazione su un oggetto client o un canale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il client non viene restituito fino a quando il livello del canale non riesce a scrivere i dati nella rete o fino a quando non viene generata un'eccezione. Sebbene il modello di scambio di messaggi unidirezionale (specificato contrassegnando un'operazione con la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> impostata su `true`) possa aumentare la capacità di risposta di alcuni client, le operazioni unidirezionali possono anche creare blocchi, a seconda dell'associazione e dei messaggi già inviati. Le operazioni unidirezionali riguardano esclusivamente lo scambio di messaggi. Per ulteriori informazioni, vedere [servizi unidirezionale](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
@@ -85,7 +85,7 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
  Se l'applicazione deve eseguire altre operazioni durante il completamento di un'operazione, è consigliabile creare una coppia di metodi asincroni sull'interfaccia di contratto del servizio implementata dal client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il modo più semplice per eseguire questa operazione consiste nell'utilizzare il `/async` attivare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per un esempio, vedere [procedura: chiamare servizio operazioni in modo asincrono](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] miglioramento delle prestazioni di client, vedere [le applicazioni Client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ Per ulteriori informazioni sull'incremento delle prestazioni di client, vedere [le applicazioni Client di livello intermedio](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Abilitazione dell'utente alla selezione dinamica di credenziali  
  L'interfaccia <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> consente alle applicazioni di visualizzare un'interfaccia utente che consente all'utente di scegliere le credenziali con cui viene creato un canale prima dell'avvio dei timer di timeout.  

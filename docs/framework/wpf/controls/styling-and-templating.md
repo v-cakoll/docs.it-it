@@ -1,12 +1,13 @@
 ---
 title: Applicazione di stili e modelli
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Applicazione di stili e modelli
 Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono un insieme di funzionalità (stili, modelli, trigger e storyboard) che gli sviluppatori e i progettisti usano per creare effetti visivamente accattivanti e per conferire al prodotto un aspetto coerente. Gli sviluppatori e i progettisti possono personalizzare ampiamente l'aspetto a livello di applicazione, ma l'uso di un modello di stili e modelli definito è fondamentale per consentire la manutenzione e la condivisione dell'aspetto all'interno di un'applicazione e tra più applicazioni. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre questo modello.  
@@ -181,15 +183,15 @@ Gli stili e i modelli di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlash
  ![Screenshot di esempio di applicazione di uno stile](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger e MultiDataTrigger  
- Oltre a <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger>, esistono altri tipi di trigger. <xref:System.Windows.MultiTrigger>Consente di impostare i valori delle proprietà in base a più condizioni. Utilizzare <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando la proprietà della condizione è associato a dati.  
+ Oltre a <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger>, esistono altri tipi di trigger. <xref:System.Windows.MultiTrigger> Consente di impostare i valori delle proprietà in base a più condizioni. Utilizzare <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando la proprietà della condizione è associato a dati.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Risorse e temi condivisi  
- In una tipica applicazione [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] si possono trovare più risorse di interfaccia utente che vengono applicate in tutta l'applicazione. Nel suo complesso, questo set di risorse può essere considerato il tema dell'applicazione. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]fornisce il supporto per l'assemblaggio risorse interfaccia utente come un tema utilizzando un dizionario risorse che viene incapsulato come la <xref:System.Windows.ResourceDictionary> classe.  
+ Una tipica applicazione Windows Presentation Foundation (WPF) potrebbe essere necessario più le risorse dell'interfaccia utente che vengono applicate in tutta l'applicazione. Nel suo complesso, questo set di risorse può essere considerato il tema dell'applicazione. Windows Presentation Foundation (WPF) fornisce supporto per l'assemblaggio delle risorse di interfaccia utente come un tema usando un dizionario risorse che viene incapsulato come il <xref:System.Windows.ResourceDictionary> classe.  
   
- I temi di [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] vengono definiti tramite il meccanismo di creazione di stili e di modelli che [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] espone per personalizzare gli oggetti visivi di qualsiasi elemento.  
+ I temi di Windows Presentation Foundation (WPF) vengono definiti utilizzando il meccanismo di modelli che espone Windows Presentation Foundation (WPF) e lo stile per la personalizzazione di oggetti visivi di qualsiasi elemento.  
   
- Le risorse del tema di [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] vengono memorizzate in dizionari risorse incorporati. Questi dizionari risorse devono essere incorporati all'interno di un assembly firmato e possono essere incorporati nello stesso assembly come codice o in un assembly affiancato. Nel caso di PresentationFramework.dll, che è l'assembly che contiene i controlli [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], le risorse del tema sono memorizzate in una serie di assembly affiancati.  
+ Le risorse del tema di Windows Presentation Foundation (WPF) vengono archiviate nei dizionari risorse incorporate. Questi dizionari risorse devono essere incorporati all'interno di un assembly firmato e possono essere incorporati nello stesso assembly come codice o in un assembly affiancato. Nel caso di PresentationFramework. dll, all'assembly che contiene controlli Windows Presentation Foundation (WPF), le risorse del tema sono in una serie di assembly side-by-side.  
   
  Il tema diventa l'ultimo posto in cui cercare lo stile di un elemento. In genere, si inizia a cercare la risorsa appropriata nell'albero degli elementi, quindi si cerca nella raccolta delle risorse dell'applicazione e infine si esegue una query nel sistema. Ciò consente agli sviluppatori di applicazioni di ridefinire lo stile per qualsiasi oggetto a livello di albero o di applicazione prima di raggiungere il tema.  
   

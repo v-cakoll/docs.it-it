@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Controllo delle versioni dei contratti dati
 Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati dai servizi. In questo argomento viene illustrato come controllare le versioni dei contratti dati. Vengono descritti i meccanismi di controllo delle versioni dei contratti dati. Per una panoramica completa e istruzioni sul controllo delle versioni, vedere [le procedure consigliate: controllo delle versioni del contratto dati](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati
  L'aggiunta o la rimozione di un membro di enumerazione è una modifica che determina interruzioni. La modifica del nome di un membro di enumerazione determina interruzioni, a meno che il nome del contratto non sia identico a quello della versione precedente utilizzando l'attributo `EnumMemberAtttribute`. Per altre informazioni, vedere [tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Raccolte  
- La maggior parte delle modifiche di raccolte non determina interruzioni poiché la maggior parte dei tipi di raccolta sono intercambiabili tra loro nel modello del contratto dati. La trasformazione di una raccolta non personalizzata in una personalizzata e viceversa è, tuttavia, una modifica che determina interruzioni. Inoltre, modificare le impostazioni di personalizzazione della raccolta è una modifica sostanziale che implica il cambiamento del nome del contratto dati e dello spazio dei nomi, del nome dell'elemento ripetuto, del nome dell'elemento key e del nome dell'elemento value. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lla personalizzazione delle raccolte, vedere [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ La maggior parte delle modifiche di raccolte non determina interruzioni poiché la maggior parte dei tipi di raccolta sono intercambiabili tra loro nel modello del contratto dati. La trasformazione di una raccolta non personalizzata in una personalizzata e viceversa è, tuttavia, una modifica che determina interruzioni. Inoltre, modificare le impostazioni di personalizzazione della raccolta è una modifica sostanziale che implica il cambiamento del nome del contratto dati e dello spazio dei nomi, del nome dell'elemento ripetuto, del nome dell'elemento key e del nome dell'elemento value. Per ulteriori informazioni sulla personalizzazione di raccolte, vedere [tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Ovviamente, la modifica del contratto dati del contenuto di una raccolta, ad esempio il passaggio da un elenco di numeri interi a un elenco di stringhe, è sostanziale.  
   
 ## <a name="see-also"></a>Vedere anche  

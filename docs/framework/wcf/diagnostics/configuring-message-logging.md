@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>Configurazione della registrazione dei messaggi
 In questo argomento viene illustrato come configurare la registrazione dei messaggi per scenari differenti.  
@@ -58,7 +58,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le impostazioni di registrazione dei messaggi, vedere [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Per ulteriori informazioni sulle impostazioni di registrazione di messaggi, vedere [impostazioni consigliate per la traccia e registrazione dei messaggi](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Per specificare il nome e il tipo del listener di traccia che si desidera utilizzare, è possibile utilizzare l'istruzione `add`. Nella configurazione dell'esempio, il listener viene denominato "messages" e come tipo da utilizzare viene aggiunto il listener di traccia standard di .NET Framework, ovvero `System.Diagnostics.XmlWriterTraceListener`. Se si utilizza `System.Diagnostics.XmlWriterTraceListener`, è necessario specificare il percorso e il nome del file di output nel file di configurazione. A tal fine impostare `initializeData` sul nome del file di log. In caso contrario, il sistema genererà un'eccezione. È inoltre possibile implementare un listener personalizzato che genera log in un file predefinito.  
   
@@ -73,7 +73,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Se si desidera disattivare l'origine di traccia, è invece necessario utilizzare gli attributi `logMessagesAtServiceLevel`, `logMalformedMessages` e `logMessagesAtTransportLevel` dell'elemento `messageLogging`. Tali attributi devono essere impostati su `false`. È possibile ottenere questo risultato utilizzando il file di configurazione dell'esempio di codice precedente, attraverso l'interfaccia utente dell'Editor di configurazione o utilizzando WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lo strumento Editor di configurazione, vedere [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Se si desidera disattivare l'origine di traccia, è invece necessario utilizzare gli attributi `logMessagesAtServiceLevel`, `logMalformedMessages` e `logMessagesAtTransportLevel` dell'elemento `messageLogging`. Tali attributi devono essere impostati su `false`. È possibile ottenere questo risultato utilizzando il file di configurazione dell'esempio di codice precedente, attraverso l'interfaccia utente dell'Editor di configurazione o utilizzando WMI. Per ulteriori informazioni sullo strumento Editor di configurazione, vedere [strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Per ulteriori informazioni su WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Livelli di registrazione e opzioni  
  Per i messaggi in ingresso, la registrazione avviene immediatamente dopo che il messaggio è stato formato, immediatamente prima che il messaggio raggiunga il codice utente nel livello di servizio e quando vengono rilevati messaggi in formato non valido.  
@@ -91,7 +91,7 @@ In questo argomento viene illustrato come configurare la registrazione dei messa
  I messaggi registrati a questo livello sono pronti per essere codificati o decodificati prima o dopo il trasporto in transito. Se sono stati definiti dei filtri, vengono registrati solo i messaggi che corrispondono a tali filtri. In caso contrario, vengono registrati tutti i messaggi al livello di trasporto. A questo livello vengono registrati tutti i messaggi dell'infrastruttura, compresi i messaggi di messaggistica affidabile. Per i messaggi trasmessi come flusso, vengono registrate solo le intestazioni. Inoltre, a questo livello i messaggi protetti vengono registrati come crittografati, a meno che non si utilizzi un trasporto protetto come HTTPS.  
   
 ### <a name="malformed-level"></a>Livello dei messaggi in formato non valido  
- I messaggi in formato non valido sono messaggi rifiutati dallo stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in qualsiasi fase dell'elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] questo attributo, vedere la sezione Altre opzioni.  
+ I messaggi in formato non valido sono messaggi rifiutati dallo stack [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in qualsiasi fase dell'elaborazione. I messaggi in formato non valido vengono registrati così come sono, vale a dire crittografati se lo sono, con XML non corretto e così via. `maxSizeOfMessageToLog` definisce le dimensioni del messaggio da registrare come CDATA. Per impostazione predefinita, la proprietà `maxSizeOfMessageToLog` è uguale a 256 K. Per ulteriori informazioni su questo attributo, vedere la sezione altre opzioni.  
   
 ### <a name="other-options"></a>Altre opzioni  
  Oltre ai livelli di registrazione, l'utente può specificare le opzioni seguenti:  

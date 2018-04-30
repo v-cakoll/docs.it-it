@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>Scelta di un filtro
 Quando si configura il servizio di routing, è importante selezionare i filtri messaggi corretti e configurarli per consentire l'individuazione di corrispondenze esatte con i messaggi ricevuti. Se i filtri selezionati non sono sufficientemente precisi o non sono configurati correttamente, i messaggi vengono indirizzati in modo non corretto. Se i filtri sono troppo restrittivi, è possibile che non vengano individuate route valide disponibili per alcuni messaggi.  
@@ -29,7 +29,7 @@ Quando si configura il servizio di routing, è importante selezionare i filtri m
  Se si selezionano filtri utilizzati dal servizio di routing, è importante comprenderne il funzionamento ed essere a conoscenza delle informazioni disponibili all'interno dei messaggi in ingresso. Se ad esempio tutti i messaggi vengono ricevuti sullo stesso endpoint, i filtri Address e EndpointName non sono utili perché tutti i messaggi corrispondono a questi filtri.  
   
 ### <a name="action"></a>Operazione  
- Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. L'esempio seguente definisce un `FilterElement` che utilizza il filtro di azione per individuare i messaggi con un'intestazione action che contiene un valore di "http://namespace/contract/operation/".  
+ Il filtro Action controlla la proprietà <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Se il contenuto dell'intestazione Action nel messaggio corrisponde al valore dei dati specificato nella configurazione del filtro, viene restituito `true`. L'esempio seguente definisce una `FilterElement` che utilizza il filtro Action per individuare i messaggi con un'intestazione action che contiene un valore di "http://namespace/contract/operation/".  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Questo filtro è utile se si è certi che i messaggi in ricezione contengono un determinato valore. Se ad esempio si ospitano due versioni dello stesso servizio e si sa che messaggi indirizzati alla versione più recente del servizio contengono un valore univoco in un'intestazione personalizzata, è possibile creare un filtro che utilizza XPath per passare a questa intestazione e confrontare il valore presente nell'intestazione con un altro specificato nella configurazione del filtro per determinare le corrispondenze.  
   
- Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la tabella dello spazio dei nomi, vedere [filtri dei messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Poiché le query XPath spesso contengono spazi dei nomi univoci, che spesso sono valori stringa lunghi o complessi, il filtro XPath consente di utilizzare la tabella degli spazi dei nomi per definire prefissi univoci per gli spazi dei nomi. Per ulteriori informazioni sulla tabella dello spazio dei nomi, vedere [filtri dei messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Progetta query XPath, vedere [sintassi XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ Per ulteriori informazioni sulla progettazione di query XPath, vedere [sintassi XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtri per messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md)  

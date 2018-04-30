@@ -1,33 +1,33 @@
 ---
 title: Integrazione AJAX e supporto JSON
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>Integrazione AJAX e supporto JSON
 Il supporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per ASP.NET AJAX (Asynchronous JavaScript and XML) e il formato dati JSON (JavaScript Object Notation) consentono ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di esporre operazioni ai client AJAX. I client AJAX sono pagine Web che eseguono codice JavaScript e accedono a questi servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizzando richieste HTTP. Negli argomenti di questa sezione vengono fornite informazioni su questo supporto e su come implementarlo.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET AJAX e l'integrazione con ASP.NET 2.0, vedere [Panoramica di ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).  
+ Per ulteriori informazioni su ASP.NET AJAX e l'integrazione con ASP.NET 2.0, vedere [Panoramica di ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Creazione di servizi WCF per ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

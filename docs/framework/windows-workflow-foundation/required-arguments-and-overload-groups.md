@@ -1,23 +1,24 @@
 ---
 title: Argomenti obbligatori e gruppi di overload
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argomenti obbligatori e gruppi di overload
 Le attività possono essere configurate in modo che venga richiesta l'associazione di determinati argomenti affinché l'attività risulti valida per l'esecuzione. L'attributo `RequiredArgument` viene usato per indicare che determinati argomenti di un'attività sono obbligatori mentre l'attributo `OverloadGroup` viene usato per raggruppare insieme categorie di argomenti obbligatori. Tramite gli attributi, gli autori dell'attività possono fornire configurazioni di convalida di attività semplici o complesse.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **Non è stato fornito alcun valore per un argomento obbligatorio attività 'Operand1'.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Per ulteriori informazioni per il controllo e gestione di errori di convalida e avvisi, vedere [richiamare la convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+>  Per ulteriori informazioni sulla verifica e gestione di errori di convalida e avvisi, vedere [richiamare la convalida delle attività](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Uso di gruppi di overload  
  I gruppi di overload offrono un metodo per indicare le combinazioni di argomenti valide in un'attività. Gli argomenti vengono raggruppati insieme tramite l'oggetto <xref:System.Activities.OverloadGroupAttribute>. A ogni gruppo viene assegnato un nome specificato dall'oggetto <xref:System.Activities.OverloadGroupAttribute>. L'attività è valida quando viene associato un unico set di argomenti in un gruppo di overload. Nell'esempio seguente, tratto dal [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) esempio, un `CreateLocation` è definita la classe.  

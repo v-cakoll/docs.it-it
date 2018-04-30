@@ -1,12 +1,13 @@
 ---
-title: "Procedura: impostare la proprietà ProtectionLevel"
-ms.custom: 
+title: 'Procedura: impostare la proprietà ProtectionLevel'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Procedura: impostare la proprietà ProtectionLevel
-È possibile impostare il livello di protezione applicando un attributo appropriato e impostando la proprietà. È possibile impostare la protezione a livello di servizio su tutte le parti di ogni messaggio. In alternativa è possibile impostare la protezione a livelli granulari in modo crescente, dai metodi alle parti del messaggio. [!INCLUDE[crabout](../../../includes/crabout-md.md)]il `ProtectionLevel` proprietà, vedere [livello di protezione delle informazioni sui](../../../docs/framework/wcf/understanding-protection-level.md).  
+È possibile impostare il livello di protezione applicando un attributo appropriato e impostando la proprietà. È possibile impostare la protezione a livello di servizio su tutte le parti di ogni messaggio. In alternativa è possibile impostare la protezione a livelli granulari in modo crescente, dai metodi alle parti del messaggio. Per ulteriori informazioni sul `ProtectionLevel` proprietà, vedere [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
 >  È possibile impostare i livelli di protezione solo nel codice, non nella configurazione.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Protezione dei messaggi di errore  
- È possibile inviare le eccezioni generate in un servizio a un client come errori SOAP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Creazione fortemente tipizzata errori, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) e [procedura: dichiarare errori nei contratti di servizio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ È possibile inviare le eccezioni generate in un servizio a un client come errori SOAP. Per ulteriori informazioni sulla creazione fortemente tipizzati errori, vedere [specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) e [procedura: dichiarare errori nei contratti di servizio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Per proteggere i messaggi di errore  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Protezione delle parti del messaggio  
- Utilizzare un contratto di messaggio per proteggere le parti di un messaggio. [!INCLUDE[crabout](../../../includes/crabout-md.md)]contratti di messaggio, vedere [con contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Utilizzare un contratto di messaggio per proteggere le parti di un messaggio. Per ulteriori informazioni sui contratti di messaggio, vedere [con contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>Per proteggere il corpo del messaggio  
   

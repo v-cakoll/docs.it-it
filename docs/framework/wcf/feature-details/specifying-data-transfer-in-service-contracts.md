@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Specifica del trasferimento di dati nei contratti di servizio
 La piattaforma [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può essere considerata un'infrastruttura di messaggistica. Le operazioni di servizio possono ricevere, elaborare e inviare messaggi. I messaggi vengono descritti tramite contratti di operazione. Si consideri ad esempio il contratto seguente:  
@@ -453,7 +453,7 @@ End Class
  Sono disponibili diversi modi per personalizzare il processo di serializzazione dei dati.  
   
 ### <a name="changing-server-serialization-settings"></a>Modifica delle impostazioni di serializzazione del server  
- Quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer> predefinito è possibile controllare alcuni aspetti del processo di serializzazione del servizio. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al servizio. In particolare, è possibile utilizzare la proprietà `MaxItemsInObjectGraph` per impostare la quota che limita il numero massimo di oggetti deserializzati dal componente <xref:System.Runtime.Serialization.DataContractSerializer>. È possibile utilizzare la proprietà `IgnoreExtensionDataObject` per disattivare la funzionalità di controllo delle versioni delle sequenze di andata e ritorno. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le quote, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sequenze di andata e ritorno, vedere [contratti dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer> predefinito è possibile controllare alcuni aspetti del processo di serializzazione del servizio. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.ServiceBehaviorAttribute> al servizio. In particolare, è possibile utilizzare la proprietà `MaxItemsInObjectGraph` per impostare la quota che limita il numero massimo di oggetti deserializzati dal componente <xref:System.Runtime.Serialization.DataContractSerializer>. È possibile utilizzare la proprietà `IgnoreExtensionDataObject` per disattivare la funzionalità di controllo delle versioni delle sequenze di andata e ritorno. Per ulteriori informazioni sulle quote, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Per ulteriori informazioni su round trip, vedere [contratti dati compatibili con versioni successive](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Prima di aprire l'host del servizio o creare un canale client, rimuovere il comportamento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> esistente e attivare la classe derivata personalizzata creata nei passaggi precedenti.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] serializzazione concetti avanzati relativi, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Per ulteriori informazioni sui concetti di serializzazione avanzate, vedere [serializzazione e deserializzazione](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Protezione delle applicazioni distribuite
 Il sistema di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] si suddivide in tre aree funzionali principali: protezione di trasferimento, controllo degli accessi e controllo. La protezione di trasferimento, oltre a offrire funzionalità di autenticazione, garantisce integrità e riservatezza. Questa area funzionale utilizza uno dei meccanismi seguenti: protezione a livello di trasporto, protezione a livello di messaggio e `TransportWithMessageCredential`.  
   
- Per una panoramica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza dei messaggi, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le altre due parti della [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per una panoramica di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza dei messaggi, vedere [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md). Per ulteriori informazioni su altri due tipi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sicurezza, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) e [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Scenari di utilizzo della protezione di trasferimento  
  Di seguito sono elencati gli scenari più comuni di utilizzo della protezione di trasferimento di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -44,8 +44,8 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|Integrità|*Integrità* rappresenta la garanzia che dati siano completa e accurati, soprattutto dopo attraversata da un punto a altro e probabilmente letto dalla più attori. L'integrità garantisce che i dati non subiscano manomissioni e in genere si basa sull'utilizzo di firme digitali nei messaggi.|  
-|Riservatezza|*Riservatezza* rappresenta la garanzia che un messaggio non è stato letto da chiunque, eccetto il lettore desiderato. È ad esempio fondamentale garantire la riservatezza dei numeri di carta di credito trasmessi via Internet. La riservatezza spesso si basa sulla crittografia dei dati mediante uno schema chiave pubblica/chiave privata.|  
+|Integrità|*Integrità* rappresenta la garanzia che i dati siano completa e accurato, in particolare dopo che è attraversata da un punto a altro e possibile lettura da parte di molti attori. L'integrità garantisce che i dati non subiscano manomissioni e in genere si basa sull'utilizzo di firme digitali nei messaggi.|  
+|Riservatezza|*Riservatezza* rappresenta la garanzia che un messaggio non è stato letto esclusivamente dall'utente previsto. È ad esempio fondamentale garantire la riservatezza dei numeri di carta di credito trasmessi via Internet. La riservatezza spesso si basa sulla crittografia dei dati mediante uno schema chiave pubblica/chiave privata.|  
 |Autenticazione|*Autenticazione* è la verifica di un'attestazione di identità. Ad esempio, quando si utilizza un conto bancario, è fondamentale garantire che solo il titolare effettivo del conto sia in grado di prelevare fondi. L'autenticazione può essere eseguita in vari modi. Un metodo comune è il sistema utente/password. Un altro metodo è l'utilizzo di un certificato X.509 fornito da terzi.|  
   
 ## <a name="security-modes"></a>Modalità di sicurezza  
@@ -53,7 +53,7 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 |Modalità|Descrizione|  
 |----------|-----------------|  
-|nessuno|Non viene fornita alcuna protezione né a livello di trasporto né a livello di messaggio. Nessuna delle associazioni predefinite utilizzare questa modalità per impostazione predefinita, ad eccezione di [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento o, quando si utilizza codice, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
+|Nessuno|Non viene fornita alcuna protezione né a livello di trasporto né a livello di messaggio. Nessuna delle associazioni predefinite utilizzare questa modalità per impostazione predefinita, ad eccezione di [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento o, quando si utilizza codice, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
 |Trasporto|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto, ad esempio HTTPS.|  
 |Messaggio|Per implementare la funzionalità di autenticazione reciproca e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un sistema di sicurezza basato sui messaggi SOAP. I messaggi SOAP sono protetti in conformità agli standard WS-Security.|  
 |Modalità mista|Per implementare la funzionalità di autenticazione del server e per garantire l'integrità e la riservatezza dei messaggi viene utilizzato un trasporto protetto. Per implementare la funzionalità di autenticazione del client viene invece utilizzato un sistema di sicurezza a livello di messaggio conforme a uno standard di sicurezza, ad esempio WS-Security.<br /><br /> L'enumerazione di questa modalità è `TransportWithMessageCredential`.|  
@@ -70,7 +70,7 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
  Nel secondo tipo di credenziale, il nome del soggetto, il nome alternativo del soggetto o i campi specifici del certificato possono essere utilizzati per rappresentare l'attestazione di identità e/o di funzionalità. La prova di possesso dei dati in questo caso viene fornita tramite una firma creata mediante la chiave privata associata alla credenziale.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmazione della protezione di trasferimento e specificare le credenziali, vedere [associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) e [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Per ulteriori informazioni sulla programmazione della sicurezza del trasferimento e specificare le credenziali, vedere [associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) e [comportamenti di sicurezza](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Tipi di credenziale utilizzati nella protezione client a livello di trasporto  
  La tabella seguente mostra i valori utilizzabili quando si crea un'applicazione che utilizza la protezione a livello di trasporto. I valori riportati possono essere utilizzati nelle impostazioni del codice o delle associazioni.  
@@ -89,7 +89,7 @@ Il sistema di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
   
 |Impostazione|Descrizione|  
 |-------------|-----------------|  
-|nessuno|Consente al servizio di interagire con client anonimi.|  
+|Nessuno|Consente al servizio di interagire con client anonimi.|  
 |WINDOWS|Consente lo scambio di messaggi SOAP all'interno di un contesto autenticato di una credenziale Windows. Viene utilizzato il meccanismo di negoziazione SSPI per scegliere il protocollo Kerberos o il protocollo NTLM come servizio di autenticazione.|  
 |Nome utente|Consente al servizio di richiedere che l'autenticazione del client si basi su una credenziale di tipo nome utente. Si noti che in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] il nome utente non può essere utilizzato in nessuna operazione di crittografia, ad esempio la generazione di una firma o la crittografia di dati. Di conseguenza, quando si utilizzano credenziali di tipo nome utente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] richiede che il trasporto sia protetto.|  
 |Certificato|Consente al servizio di richiedere che l'autenticazione del client si basi su un certificato.|  

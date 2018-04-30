@@ -1,28 +1,28 @@
 ---
 title: Host in Internet Information Services
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b933626c2f3f5ee7121d141d3704376efeb54ba5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-internet-information-services"></a>Host in Internet Information Services
 È possibile ospitare servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] all'interno di un'applicazione Internet Information Services (IIS). Questo modello host è simile al modello usato da [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e dai servizi Web ASMX.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] su [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] prevede un modello di processo avanzato che offre un migliore livello di scalabilità, affidabilità e isolamento dell'applicazione. Questo ambiente è adatto per la distribuzione di produzione di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che usano esclusivamente la comunicazione HTTP.  
   
--   IIS 7.0 su [!INCLUDE[wv](../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 offre lo stesso modello di processo avanzato di [!INCLUDE[iis601](../../../../includes/iis601-md.md)], ma usa il servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service) per consentire l'attivazione e la comunicazione di rete su protocolli diversi da HTTP. Questo ambiente è adatto per lo sviluppo di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che comunicano su qualsiasi protocollo di rete supportato da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (inclusi HTTP, net.tcp, net.pipe e net.msmq). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]È stato, vedere [Hosting nel servizio Attivazione processo Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+-   IIS 7.0 su [!INCLUDE[wv](../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 offre lo stesso modello di processo avanzato di [!INCLUDE[iis601](../../../../includes/iis601-md.md)], ma usa il servizio di attivazione dei processi di Windows (WAS, Windows Process Activation Service) per consentire l'attivazione e la comunicazione di rete su protocolli diversi da HTTP. Questo ambiente è adatto per lo sviluppo di servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che comunicano su qualsiasi protocollo di rete supportato da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (inclusi HTTP, net.tcp, net.pipe e net.msmq). Per ulteriori informazioni su WAS, vedere [Hosting nel servizio Attivazione processo Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 -   [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) funziona con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] e processo di attivazione Windows (WAS) per fornire un ambiente per i servizi NET4 WCF e WF di hosting. Tali vantaggi includono la gestione del ciclo di vita del processo, il riciclo del processo, l'hosting condiviso, una rapida protezione dall'errore, la gestione dell'opzione orfano processo, l'attivazione su richiesta e il monitoraggio dello stato. Per informazioni dettagliate, vedere [funzionalità di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) e [concetti di Hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   I servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitati in IIS usano lo stesso modello di compilazione dinamico di [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], che semplifica lo sviluppo e la distribuzione di servizi ospitati.  
   
- Quando si decide di ospitare servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS, è importante ricordare che IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] si limitano alla sola comunicazione HTTP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]scelta di un ambiente di hosting, vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  
+ Quando si decide di ospitare servizi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] in IIS, è importante ricordare che IIS 5.1 e [!INCLUDE[iis601](../../../../includes/iis601-md.md)] si limitano alla sola comunicazione HTTP. Per ulteriori informazioni sulla scelta di un ambiente di hosting, vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>Distribuzione di un servizio WCF ospitato in IIS  
  Lo sviluppo e la distribuzione di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ospitato in IIS implicano le attività seguenti:  

@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è una piattaforma di programmazione distribuita basata su messaggi SOAP. La protezione dei messaggi tra i client e i servizi è pertanto essenziale per garantire la protezione dei dati. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basato sull'infrastruttura di sicurezza esistente e sugli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *Modalità di sicurezza dei messaggi*, invece, utilizza WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Queste differenze, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ Per ulteriori informazioni su queste differenze, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Una terza modalità di sicurezza usa entrambe le modalità precedenti e sfrutta i vantaggi di entrambe. Questa modalità è detta `TransportWithMessageCredential`. In questa modalità la sicurezza del messaggio viene usata per autenticare il client e la sicurezza del trasporto viene usata per autenticare il server e fornire riservatezza e integrità dei messaggi. La modalità di sicurezza `TransportWithMessageCredential` è infatti veloce quasi quanto la modalità di sicurezza del trasporto e fornisce estensibilità per l'autenticazione client ugualmente alla modalità di sicurezza del messaggio. A differenza della modalità di sicurezza del messaggio, tuttavia, non fornisce la sicurezza end-to-end completa.  
   

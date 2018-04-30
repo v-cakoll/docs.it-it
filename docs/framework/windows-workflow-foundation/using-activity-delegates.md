@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>Utilizzo di delegati di attività
 I delegati di attività consentono agli autori di attività di esporre callback con firme specifiche, per cui gli utenti dell'attività possono fornire gestori in base all'attività. Sono disponibili due tipi di delegati di attività: <xref:System.Activities.ActivityAction%601>, usato per definire i delegati di attività senza un valore restituito, e <xref:System.Activities.ActivityFunc%601>, usato per definire i delegati di attività con un valore restituito.  
@@ -38,7 +38,7 @@ Negli esempi di questo argomento viene usata la sintassi di inizializzazione ogg
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] gli inizializzatori di oggetti, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](http://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto usando un inizializzatore di oggetto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Per ulteriori informazioni sugli inizializzatori di oggetti, vedere [procedura: inizializzare oggetti senza chiamare un costruttore (Guida per programmatori c#)](http://go.microsoft.com/fwlink/?LinkId=161015) e [procedura: dichiarare un oggetto usando un inizializzatore di oggetto](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Nell'esempio seguente, un'attività <xref:System.Activities.Statements.TryCatch> è usata in un flusso di lavoro. Un'eccezione <xref:System.ApplicationException> viene generata dal flusso di lavoro e gestita da un'attività <xref:System.Activities.Statements.Catch%601>. Il gestore per il <xref:System.Activities.Statements.Catch%601> azione dell'attività è un <xref:System.Activities.Statements.WriteLine> attività e i dettagli dell'eccezione vengono propagati mediante il `ex` <xref:System.Activities.DelegateInArgument%601>.  
   

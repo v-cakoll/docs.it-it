@@ -1,24 +1,26 @@
 ---
 title: Servizio di routing
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Servizio di routing
 Il servizio di routing è un intermediario SOAP generico che funge da router dei messaggi. La funzionalità principale del servizio di routing consiste nella capacità di indirizzare messaggi in base al relativo contenuto, il che rende possibile l'inoltro di un messaggio a un endpoint client in base a un valore presente all'interno del messaggio stesso, nell'intestazione o nel corpo.  
@@ -48,7 +50,7 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
  Il servizio di routing fornisce un intermediario SOAP di collegamento, generico e dinamicamente configurabile compatibile con i modelli relativi al canale e al servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e consente di eseguire il routing basato sul contenuto di messaggi basati su SOAP.  
   
 > [!NOTE]
->  Attualmente il servizio di routing non supporta il routing dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST.  Per indirizzare chiamate REST, è consigliabile utilizzare <xref:System.Web.Routing> o [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Attualmente il servizio di routing non supporta il routing dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST.  Per indirizzare chiamate REST, provare a usare <xref:System.Web.Routing> oppure [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Routing basato sul contenuto  
  Il routing basato sul contenuto consiste nella possibilità di indirizzare un messaggio in base a uno o più valori contenuti nel messaggio. Il servizio di routing controlla ogni messaggio e lo indirizza all'endpoint di destinazione in base ai contenuti del messaggio e alla logica di routing creata. Il routing basato sul contenuto rappresenta la base per l'aggregazione e il controllo delle versioni dei servizi, nonché per il routing prioritario.  
@@ -98,12 +100,12 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
   
  Se si verificano eccezioni <xref:System.ServiceModel.CommunicationException> durante un tentativo di invio di un messaggio da parte del servizio di routing, viene eseguita la gestione degli errori.  Queste eccezioni indicano in genere che si è verificato un problema durante il tentativo di comunicare con l'endpoint client definito, ad esempio <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Il codice di gestione degli errori verrà inoltre rilevare e tentare di ripetere l'invio un **TimeoutException** si verifica, ovvero un'altra eccezione comune non derivata da **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gestione degli errori, vedere [Routing Introduzione](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Per ulteriori informazioni sulla gestione degli errori, vedere [Routing Introduzione](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Endpoint di backup  
  Oltre agli endpoint client di destinazione associati a ogni definizione di filtro nella tabella dei filtri, è possibile creare un elenco di endpoint di backup a cui indirizzare il messaggio in caso di errore della trasmissione. Se si verifica un errore ed è definito un elenco di backup per la voce di filtro, il servizio di routing tenterà di inviare il messaggio al primo endpoint presente nell'elenco. Se il tentativo di trasmissione ha esito negativo, il servizio tenterà con l'endpoint successivo e così via finché la trasmissione non avrà esito positivo, restituirà un errore non correlato alla trasmissione o finché tutti gli endpoint nell'elenco di backup non avranno restituito un errore di trasmissione.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gli endpoint di backup, vedere [Routing Introduzione](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Per ulteriori informazioni sugli endpoint di backup, vedere [Routing Introduzione](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Flusso  
  Il servizio di routing può inviare flussi di messaggi se si imposta l'associazione in modo che supporti i flussi.  Tuttavia, in alcune condizioni potrebbe essere necessario memorizzare i messaggi nel buffer:  

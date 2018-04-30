@@ -1,26 +1,26 @@
 ---
 title: Controllo delle versioni dei servizi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Controllo delle versioni dei servizi
 Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro ciclo di vita, potrebbe essere necessario cambiare i servizi (e gli endpoint che espongono) per molteplici ragioni, ad esempio perché cambiano le esigenze aziendali, i requisiti IT o per risolvere altri problemi. Ogni modifica introduce una nuova versione del servizio. In questo argomento viene illustrato come controllare la versione in [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -138,7 +138,7 @@ Dopo la distribuzione iniziale e, potenzialmente, più volte durante il loro cic
  Le modifiche all'indirizzo endpoint e all'associazione sono modifiche che possono determinare interruzioni a meno che i client non siano in grado di scoprire dinamicamente il nuovo indirizzo endpoint o la nuova associazione. Per implementare questa funzionalità è possibile utilizzare un Registro di sistema UDDI (Universal Discovery Description and Integration) e il modello di chiamata UDDI in cui un client tenta di comunicare con un endpoint e, in caso di errore, esegue una query nel registro di sistema UDDI noto, per cercare i metadati dell'endpoint corrente. Il client utilizza quindi l'indirizzo e l'associazione da questi metadati per comunicare con l'endpoint. Se la comunicazione riesce, il client memorizza nella cache le informazioni sull'indirizzo e sull'associazione per utilizzarle in seguito.  
   
 ## <a name="routing-service-and-versioning"></a>Servizio di routing e controllo delle versioni  
- Se le modifiche apportate a un servizio sono in grado di determinare interruzioni e sono necessarie due o più versioni diverse di un servizio in esecuzione contemporanea, è possibile utilizzare il servizio di routing WCF per indirizzare messaggi all'istanza del servizio appropriata. Il servizio di routing WCF utilizza il routing basato sul contenuto, ovvero informazioni contenute nel messaggio, per determinare l'indirizzamento del messaggio stesso. [!INCLUDE[crabout](../../../includes/crabout-md.md)] vedere il servizio di Routing WCF [servizio di Routing](../../../docs/framework/wcf/feature-details/routing-service.md). Per un esempio di come utilizzare il servizio di Routing WCF per il controllo delle versioni di servizio vedere [How To: controllo delle versioni del servizio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Se le modifiche apportate a un servizio sono in grado di determinare interruzioni e sono necessarie due o più versioni diverse di un servizio in esecuzione contemporanea, è possibile utilizzare il servizio di routing WCF per indirizzare messaggi all'istanza del servizio appropriata. Il servizio di routing WCF utilizza il routing basato sul contenuto, ovvero informazioni contenute nel messaggio, per determinare l'indirizzamento del messaggio stesso. Per ulteriori informazioni vedere il servizio di Routing WCF [servizio di Routing](../../../docs/framework/wcf/feature-details/routing-service.md). Per un esempio di come utilizzare il servizio di Routing WCF per il controllo delle versioni di servizio vedere [How To: controllo delle versioni del servizio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Appendice  
  Quando è richiesto un controllo rigoroso delle versioni dei contratti dati, trattare questi ultimi come immutabili e creare nuovi contratti dati quando è necessario apportare modifiche. È necessario creare una nuova classe per ogni nuovo contratto dati, pertanto è richiesto un meccanismo che eviti di prendere il codice esistente scritto secondo la vecchia classe del contratto dati e riscriverli secondo quella nuova del contratto dati.  

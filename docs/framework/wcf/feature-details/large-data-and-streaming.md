@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è un'infrastruttura di comunicazione basata su XML. Poiché i dati XML in genere è codificati in formato testo standard definito nel [specifica XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)connesse, gli architetti e sviluppatori di sistemi in genere riguardano il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo XML comporta problemi speciali per il trasferimento efficiente di dati binari.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Di conseguenza, limitare le dimensioni massime del messaggio in arrivo non è sufficiente in questo caso. È necessaria la proprietà `MaxBufferSize` per vincolare la memoria utilizzata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per la memorizzazione nel buffer. È importante impostare questa proprietà su un valore sicuro (o lasciare il valore predefinito) per il flusso. Ad esempio, si supponga che il servizio debba ricevere file di dimensioni fino a 4 GB e debba archiviarli sul disco locale. Si supponga inoltre che la memoria sia vincolata in modo da poter memorizzare nel buffer solo 64 KB di dati per volta. In tal caso, è necessario impostare `MaxReceivedMessageSize` su 4 GB e `MaxBufferSize` su 64 KB. Inoltre, nell'implementazione del servizio è necessario verificare di poter eseguire solo la lettura dal flusso in ingresso in blocchi di 64 KB, impedendo la lettura del blocco successivo prima che il precedente sia stato scritto su disco ed eliminato dalla memoria.  
   
- È inoltre importante comprendere che questa quota limita solo la memorizzazione nel buffer effettuata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e non protegge da altre memorizzazioni nel buffer effettuate durante l'implementazione del servizio o del client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considerazioni aggiuntive sulla sicurezza, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ È inoltre importante comprendere che questa quota limita solo la memorizzazione nel buffer effettuata da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e non protegge da altre memorizzazioni nel buffer effettuate durante l'implementazione del servizio o del client. Per ulteriori informazioni sulle considerazioni aggiuntive sulla sicurezza, vedere [considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La scelta di utilizzare trasferimenti memorizzati nel buffer o in flussi è una decisione specifica dell'endpoint. Per i trasporti HTTP, la modalità di trasferimento non si propaga attraverso una connessione o ai server proxy e agli altri intermediari. L'impostazione della modalità di trasferimento non si riflette nella descrizione dell'interfaccia del servizio. Dopo aver generato un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per un servizio, è necessario modificare il file di configurazione per impostare la modalità di trasferimento per i servizi che si intende utilizzare con i flussi. Per i trasporti TCP e named pipe, la modalità di trasferimento viene propagata come asserzione di criteri.  

@@ -1,31 +1,31 @@
 ---
 title: Raggruppamento di messaggi in una transazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17d9bd3b58e8320bfe1f62ac56aff59ba52f4374
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="batching-messages-in-a-transaction"></a>Raggruppamento di messaggi in una transazione
-Le applicazioni in coda utilizzano le transazioni per garantire che i messaggi siano corretti e che vengano recapitati in modo affidabile. Tuttavia, le transazioni sono operazioni che richiedono un'elevata quantità di risorse e che pertanto possono comportare una notevole riduzione della velocità effettiva di recapito dei messaggi. Un modo per migliorare questa velocità è configurare un'applicazione affinché legga ed elabori più messaggi in un'unica transazione. Il compromesso è tra prestazioni e ripristino: il numero di messaggi raggruppati in un batch è infatti direttamente proporzionale alla quantità di operazioni di ripristino necessarie in caso di rollback delle transazioni. È importante notare la differenza tra raggruppare i messaggi in una transazione e raggruppare i messaggi in una sessione. Oggetto *sessione* è un raggruppamento di messaggi correlati che vengono elaborati da un'unica applicazione e sottoposte a commit come singola unità. In genere le sessioni vengono utilizzate quando occorre elaborare nello stesso contesto un gruppo di messaggi correlati. Ad esempio, questo tipo di elaborazione viene utilizzato nei siti Web che consentono di fare acquisti in linea. *Batch* vengono utilizzati per elaborare più, non correlata di messaggi in modo che aumenta la velocità effettiva dei messaggi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le sessioni, vedere [raggruppamento dei messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Anche per i messaggi raggruppati in batch l'elaborazione viene eseguita da un'unica applicazione e il commit viene svolto in un'unica operazione. A differenza delle sessioni, tuttavia, fra i messaggi di un batch è possibile che non sussista alcuna correlazione. Il raggruppamento dei messaggi in una transazione è un'ottimizzazione che non influisce sulla modalità di esecuzione dell'applicazione.  
+Le applicazioni in coda utilizzano le transazioni per garantire che i messaggi siano corretti e che vengano recapitati in modo affidabile. Tuttavia, le transazioni sono operazioni che richiedono un'elevata quantità di risorse e che pertanto possono comportare una notevole riduzione della velocità effettiva di recapito dei messaggi. Un modo per migliorare questa velocità è configurare un'applicazione affinché legga ed elabori più messaggi in un'unica transazione. Il compromesso è tra prestazioni e ripristino: il numero di messaggi raggruppati in un batch è infatti direttamente proporzionale alla quantità di operazioni di ripristino necessarie in caso di rollback delle transazioni. È importante notare la differenza tra raggruppare i messaggi in una transazione e raggruppare i messaggi in una sessione. Oggetto *sessione* è un raggruppamento di messaggi correlati che vengono elaborati da un'unica applicazione e sottoposte a commit come singola unità. In genere le sessioni vengono utilizzate quando occorre elaborare nello stesso contesto un gruppo di messaggi correlati. Ad esempio, questo tipo di elaborazione viene utilizzato nei siti Web che consentono di fare acquisti in linea. *Batch* utilizzati per elaborare più, non correlata di messaggi in modo che aumenta la velocità effettiva dei messaggi. Per ulteriori informazioni sulle sessioni, vedere [raggruppamento dei messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Anche per i messaggi raggruppati in batch l'elaborazione viene eseguita da un'unica applicazione e il commit viene svolto in un'unica operazione. A differenza delle sessioni, tuttavia, fra i messaggi di un batch è possibile che non sussista alcuna correlazione. Il raggruppamento dei messaggi in una transazione è un'ottimizzazione che non influisce sulla modalità di esecuzione dell'applicazione.  
   
 ## <a name="entering-batching-mode"></a>Passaggio in modalità batch  
  Il comportamento dell'endpoint <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controlla la funzionalità di batch. Se si aggiunge questo comportamento dell'endpoint a un endpoint di servizio, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] raggruppa i messaggi in una transazione. Non tutti i messaggi richiedono una transazione, solo i messaggi che richiedono una transazione vengono inseriti in un batch e solo i messaggi inviati da operazioni contrassegnate con `TransactionScopeRequired`  =  `true` e `TransactionAutoComplete`  =  `true` sono considerato per un batch. Se tutte le operazioni nel contratto di servizio sono contrassegnate con `TransactionScopeRequired`  =  `false` e `TransactionAutoComplete`  =  `false`, quindi in modalità batch non passa mai.  
@@ -56,7 +56,7 @@ Le applicazioni in coda utilizzano le transazioni per garantire che i messaggi s
 ## <a name="concurrency-and-batching"></a>Esecuzione di più batch simultanei  
  Per aumentare la velocità effettiva è inoltre possibile eseguire più batch contemporaneamente. Per attivare questa funzionalità occorre impostare l'elemento `ConcurrencyMode.Multiple` dell'attributo `ServiceBehaviorAttribute`.  
   
- *Limitazione del servizio* è un comportamento del servizio che viene utilizzato per indicare il numero massimo di chiamate simultanee può essere effettuato nel servizio. Quando viene utilizzato con la funzionalità di batch, questo numero viene interpretato come numero massimo di batch eseguibili simultaneamente. Se non è impostata la limitazione del servizio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imposta come valore predefinito il numero massimo di chiamate simultanee su 16. Pertanto, se viene aggiunto il comportamento dell'invio in batch per impostazione predefinita, può essere attivo un massimo di 16 batch contemporaneamente. Le impostazioni della limitazione di servizio e della funzionalità di batch devono essere scelte in base alla capacità del sistema. Si consideri ad esempio il caso di una coda da 100 messaggi per cui si desidera un batch da 20 messaggi. In tal caso, un limite massimo di chiamate simultanee pari a 16 risulta essere poco conveniente. Infatti, a seconda della velocità effettiva, è possibile che siano attive 16 transazioni. Ovvero, è quasi come non aver attivato la funzionalità di batch. Pertanto, quando si ottimizzano le prestazioni, è consigliabile evitare batch simultanei oppure utilizzarli impostando correttamente le dimensioni della limitazione di servizio.  
+ *Limitazione del servizio* è un comportamento del servizio che consente di indicare il numero massimo di chiamate simultanee possono essere effettuate nel servizio. Quando viene utilizzato con la funzionalità di batch, questo numero viene interpretato come numero massimo di batch eseguibili simultaneamente. Se non è impostata la limitazione del servizio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] imposta come valore predefinito il numero massimo di chiamate simultanee su 16. Pertanto, se viene aggiunto il comportamento dell'invio in batch per impostazione predefinita, può essere attivo un massimo di 16 batch contemporaneamente. Le impostazioni della limitazione di servizio e della funzionalità di batch devono essere scelte in base alla capacità del sistema. Si consideri ad esempio il caso di una coda da 100 messaggi per cui si desidera un batch da 20 messaggi. In tal caso, un limite massimo di chiamate simultanee pari a 16 risulta essere poco conveniente. Infatti, a seconda della velocità effettiva, è possibile che siano attive 16 transazioni. Ovvero, è quasi come non aver attivato la funzionalità di batch. Pertanto, quando si ottimizzano le prestazioni, è consigliabile evitare batch simultanei oppure utilizzarli impostando correttamente le dimensioni della limitazione di servizio.  
   
 ## <a name="batching-and-multiple-endpoints"></a>Impostazione della dimensione di batch in caso di endpoint multipli  
  Un endpoint è costituito da un indirizzo e un contratto. È possibile che più endpoint condividano la stessa associazione. In particolare, è possibile che due endpoint condividano la stessa associazione e lo stesso URI (Uniform Resource Identifier) di attesa, ovvero lo stesso indirizzo di coda. Se due endpoint leggono dalla stessa coda ed entrambi presentano il comportamento di batch transazionale, è possibile che si verifichi un conflitto fra le dimensioni di batch specificate. Per risolvere questo problema è possibile implementare la funzionalità di batch utilizzando la dimensione di batch minore fra quelle specificate nei comportanti di batch transazionale. In questo scenario, se uno degli endpoint non specifica la funzionalità di batch transazionale, nessuno dei due endpoint implementa la funzionalità di batch.  

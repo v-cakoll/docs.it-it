@@ -1,28 +1,28 @@
 ---
 title: Pubblicazione di metadati
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 031a80c52c194f300d7785f05e73eabeebb296b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="publishing-metadata"></a>Pubblicazione di metadati
 I servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pubblicano metadati tramite la pubblicazione di uno o più endpoint dei metadati. La pubblicazione di metadati del servizio rende disponibili i metadati utilizzando protocolli standard, ad esempio le richieste WS-MetadataExchange (MEX) e HTTP/GET. Gli endpoint dei metadati sono simili ad altri endpoint del servizio per indirizzo, associazione e contratto e possono essere aggiunti a un host del servizio tramite configurazione o codice imperativo.  
@@ -30,7 +30,7 @@ I servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pubblicano met
 ## <a name="publishing-metadata-endpoints"></a>Pubblicazione di endpoint dei metadati  
  Per pubblicare endpoint dei metadati per un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], è innanzitutto necessario aggiungere al servizio il comportamento del servizio <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. L'aggiunta di un'istanza <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> consente al servizio di esporre gli endpoint dei metadati. Quando viene aggiunto il comportamento del servizio <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, è possibile esporre gli endpoint dei metadati che supportano il protocollo MEX o che rispondono alle richieste HTTP/GET.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> utilizza un oggetto <xref:System.ServiceModel.Description.WsdlExporter> per esportare i metadati per tutti gli endpoint nel servizio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l'esportazione dei metadati da un servizio, vedere [di esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> utilizza un oggetto <xref:System.ServiceModel.Description.WsdlExporter> per esportare i metadati per tutti gli endpoint nel servizio. Per ulteriori informazioni sull'esportazione di metadati da un servizio, vedere [esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> aggiunge un'istanza <xref:System.ServiceModel.Description.ServiceMetadataExtension> come estensione all'host del servizio. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fornisce l'implementazione per i metadati che pubblicano protocolli. È inoltre possibile utilizzare <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> per ottenere i metadati del servizio in fase di esecuzione accedendo alla proprietà <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   

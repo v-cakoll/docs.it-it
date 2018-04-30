@@ -1,29 +1,31 @@
 ---
 title: Attributi ServiceModel e riferimento a ServiceDescription
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributi ServiceModel e riferimento a ServiceDescription
 Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) che descrivono ogni aspetto di un servizio. In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzato un albero di descrizione per compilare un runtime di servizio valido, per pubblicare asserzioni (metadati) Web Services Description Language (WSDL), XML Schema Definition Language (XSD) e di criteri sul servizio che i client possono utilizzare per connettersi al servizio e utilizzarlo, nonché per generare varie rappresentazioni di codice e di file di configurazione dei valori dell'albero di descrizione.  
   
- In questo argomento viene illustrato come le proprietà relative al contratto vengono ottenute dal contratto di servizio e come vengono implementate e aggiunte alla struttura di descrizione. In alcuni casi, i valori degli attributi vengono convertiti in proprietà di comportamento e il comportamento viene quindi inserito nell'albero di descrizione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come i valori di struttura ad albero di descrizione vengono convertiti nei metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ In questo argomento viene illustrato come le proprietà relative al contratto vengono ottenute dal contratto di servizio e come vengono implementate e aggiunte alla struttura di descrizione. In alcuni casi, i valori degli attributi vengono convertiti in proprietà di comportamento e il comportamento viene quindi inserito nell'albero di descrizione. Per ulteriori informazioni sul modo in cui vengono convertiti i valori di struttura ad albero di descrizione in metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Operazioni di mapping all'albero di descrizione  
  Nelle applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i contratti di servizio vengono modellati da interfacce (o classi) che utilizzano attributi per contrassegnare l'interfaccia o la classe e i relativi metodi come raggruppamento di operazioni. Quando una classe <xref:System.ServiceModel.ServiceHost> viene aperta, eventuali implementazioni e contratti di servizio vengono analizzati e vengono uniti alle informazioni di configurazione in una struttura di descrizione.  
@@ -44,7 +46,7 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> aggiunti a tutte le operazioni <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la gerarchia del livello di protezione, vedere [livello di protezione delle informazioni sui](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. Per ulteriori informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Valore ServiceKnownTypesAttribute|Valore della struttura di descrizione interessato|  
@@ -59,7 +61,7 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |nome|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la gerarchia del livello di protezione, vedere [livello di protezione delle informazioni sui](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> ed eventuali livelli di protezione figlio. Per ulteriori informazioni sulla gerarchia del livello di protezione, vedere [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> per il messaggio di output o di input, a seconda del contratto o del contratto callback.|  
   
 |Valore FaultContractAttribute|Valore dell'albero di descrizione interessato|  
@@ -91,19 +93,19 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
   
 |Valore MessageHeaderAttribute|Valore dell'albero di descrizione interessato|  
 |----------------------------------|-------------------------------------|  
-|Attore|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Spazio dei nomi|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>per l'intestazione corrispondente in<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Attore|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Spazio dei nomi|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> per l'intestazione corrispondente in <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |Valore MessageBodyMemberAttribute|Valore dell'albero di descrizione interessato|  
 |--------------------------------------|-------------------------------------|  
-|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>per la parte corrispondente in<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Spazio dei nomi|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>per la parte corrispondente in<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Ordinamento|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>per la parte corrispondente in<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>per la parte corrispondente in<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> per la parte corrispondente in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Spazio dei nomi|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> per la parte corrispondente in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Ordinamento|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> per la parte corrispondente in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> per la parte corrispondente in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |Valore MessageHeaderArrayAttribute|Valore dell'albero di descrizione interessato|  
 |---------------------------------------|-------------------------------------|  
@@ -120,9 +122,9 @@ Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.
   
 |Valore MessageParameterAttribute|Valore dell'albero di descrizione interessato|  
 |-------------------------------------|-------------------------------------|  
-|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>per la parte corrispondente in<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|nome|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> per la parte corrispondente in <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]come i valori di struttura ad albero di descrizione vengono convertiti nei metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Per ulteriori informazioni sul modo in cui vengono convertiti i valori di struttura ad albero di descrizione in metadati, vedere [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento su ServiceDescription e WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

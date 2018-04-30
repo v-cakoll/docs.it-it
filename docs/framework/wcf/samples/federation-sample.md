@@ -1,30 +1,32 @@
 ---
 title: Esempio di federazione
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>Esempio di federazione
 Nell'esempio viene illustrata la sicurezza federata.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce supporto per la distribuzione di architetture di sicurezza federate tramite `wsFederationHttpBinding`. L'elemento `wsFederationHttpBinding` offre un'associazione sicura, affidabile e interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per la comunicazione request/reply e Text/XML come formato di trasmissione per la codifica. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Federazione in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce supporto per la distribuzione di architetture di sicurezza federate tramite `wsFederationHttpBinding`. L'elemento `wsFederationHttpBinding` offre un'associazione sicura, affidabile e interoperativa che comporta l'utilizzo di HTTP come meccanismo di trasporto sottostante per la comunicazione request/reply e Text/XML come formato di trasmissione per la codifica. Per ulteriori informazioni sulla federazione nel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Lo scenario è costituito da 4 elementi:  
   

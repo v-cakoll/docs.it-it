@@ -1,12 +1,13 @@
 ---
-title: 'Procedura: creare un componente aggiuntivo che costituisce un''interfaccia utente'
-ms.custom: 
+title: "Procedura: creare un componente aggiuntivo che costituisce un'interfaccia utente"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: creare un componente aggiuntivo che costituisce un'interfaccia utente
-In questo esempio viene illustrato come creare un componente aggiuntivo che è un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ed è ospitato da un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma.  
+In questo esempio viene illustrato come creare un componente aggiuntivo che è un Windows Presentation Foundation (WPF) che è ospitato da un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma.  
   
  Il componente aggiuntivo è un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] vale a dire un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controllo utente. Il contenuto del controllo utente è costituito da un unico pulsante che consente di visualizzare una finestra di messaggio. Il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazione autonoma ospita il componente aggiuntivo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] come contenuto della finestra principale dell'applicazione.  
   
@@ -64,7 +66,7 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- Del modello di componente aggiuntivo in un componente aggiuntivo restituisce un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), l'adattatore del componente aggiuntivo di convertire il <xref:System.Windows.FrameworkElement> per un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>deve inoltre essere chiamato in questo modello, anche se è necessario implementare un metodo da cui scrivere il codice per la chiamata. A tale scopo, si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementare il codice che chiama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se il codice che chiama <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> è previsto un <xref:System.AddIn.Contract.INativeHandleContract>. In questo caso il chiamante sarà l'adattatore sul lato host, trattato in una sottosezione successiva.  
+ Del modello di componente aggiuntivo in un componente aggiuntivo restituisce un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), l'adattatore del componente aggiuntivo di convertire il <xref:System.Windows.FrameworkElement> per un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> deve inoltre essere chiamato in questo modello, anche se è necessario implementare un metodo da cui scrivere il codice per la chiamata. A tale scopo, si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementare il codice che chiama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> se il codice che chiama <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> è previsto un <xref:System.AddIn.Contract.INativeHandleContract>. In questo caso il chiamante sarà l'adattatore sul lato host, trattato in una sottosezione successiva.  
   
 > [!NOTE]
 >  È inoltre necessario eseguire l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in questo modello per abilitare la tabulazione tra l'applicazione host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e componente aggiuntivo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Per ulteriori informazioni, vedere "WPF aggiuntivo limitazioni" in [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

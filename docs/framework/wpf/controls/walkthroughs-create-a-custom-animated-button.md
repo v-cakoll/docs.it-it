@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 10d723f8a685d76cc739ac88770aad3e1de982ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un'animazione
-Come suggerisce il nome, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] è ideale per offrire un'esperienza di presentazione avanzata per i clienti. Queste procedure viene illustrato come personalizzare l'aspetto e comportamento di un pulsante (animazioni incluse). Questa personalizzazione viene eseguita utilizzando uno stile e il modello in modo che è possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. Nella figura seguente mostra il pulsante personalizzato che verrà creato.  
+Come suggerisce il nome, è molto utile per offrire esperienze di presentazione avanzata per i clienti Windows Presentation Foundation (WPF). Queste procedure viene illustrato come personalizzare l'aspetto e comportamento di un pulsante (animazioni incluse). Questa personalizzazione viene eseguita utilizzando uno stile e il modello in modo che è possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. Nella figura seguente mostra il pulsante personalizzato che verrà creato.  
   
  ![Pulsante personalizzato che si creeranno](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   

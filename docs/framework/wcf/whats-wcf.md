@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Informazioni su Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] è un framework per la compilazione di applicazioni orientate ai servizi. Grazie a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]è possibile inviare dati come messaggi asincroni da un endpoint del servizio a un altro. Un endpoint del servizio può appartenere a un servizio disponibile in modo continuo ospitato da IIS oppure essere un servizio ospitato in un'applicazione. Un endpoint può essere un client di un servizio che richiede dati da un endpoint del servizio. Il messaggio può essere semplice come una parola o come un singolo carattere inviato in formato XML o complesso come un flusso di dati binari. Di seguito vengono indicati alcuni scenari di esempio:  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Interoperabilità**  
   
-     In[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono implementati i moderni standard del settore per l'interoperabilità dei servizi Web. [!INCLUDE[crabout](../../../includes/crabout-md.md)] gli standard supportati, vedere [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     In[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono implementati i moderni standard del settore per l'interoperabilità dei servizi Web. Per ulteriori informazioni sugli standard supportati, vedere [interoperabilità e integrazione](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Più modelli di messaggio**  
   
-     Per scambiare i messaggi, sono disponibili più modelli. Il modello più comune è di tipo request/reply, in base al quale un endpoint richiede i dati a un altro endpoint che invia la risposta. Sono disponibili altri tipi di modelli in cui ad esempio un singolo endpoint invia un messaggio unidirezionale senza attendere una risposta. Un modello più complesso è costituito da un modello di scambio duplex in base al quale due endpoint stabiliscono una connessione e inviano i dati dall'uno all'altro in modo analogo a un'applicazione di messaggistica immediata. [!INCLUDE[crabout](../../../includes/crabout-md.md)] come implementare modelli di scambio di messaggi diversi usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , vedere [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).  
+     Per scambiare i messaggi, sono disponibili più modelli. Il modello più comune è di tipo request/reply, in base al quale un endpoint richiede i dati a un altro endpoint che invia la risposta. Sono disponibili altri tipi di modelli in cui ad esempio un singolo endpoint invia un messaggio unidirezionale senza attendere una risposta. Un modello più complesso è costituito da un modello di scambio duplex in base al quale due endpoint stabiliscono una connessione e inviano i dati dall'uno all'altro in modo analogo a un'applicazione di messaggistica immediata. Per ulteriori informazioni su come implementare modelli di scambio di messaggi diversi usando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vedere [contratti](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 -   **Metadati del servizio**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **Più trasporti e codifiche**  
   
-     Per inviare i messaggi, è possibile utilizzare uno dei numerosi protocolli di trasporto e codifiche predefiniti. La maggior parte delle comuni protocollo e la codifica è per l'invio di messaggi SOAP utilizzando il protocollo HTTP (HyperText Transfer) per l'utilizzo sul World Wide Web con codifica di testo. In alternativa, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] consente di inviare messaggi tramite TCP, named pipe o MSMQ. Tali messaggi possono essere codificati come testo oppure utilizzando un formato binario ottimizzato.  I dati binari possono essere inviati in modo efficiente tramite lo standard MTOM. Se nessuna delle codifiche o nessuno dei trasporti forniti soddisfa le esigenze, è possibile creare una codifica o un trasporto personalizzato. [!INCLUDE[crabout](../../../includes/crabout-md.md)] i trasporti e codifiche supportate da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vedere [trasporti](../../../docs/framework/wcf/feature-details/transports.md).  
+     Per inviare i messaggi, è possibile utilizzare uno dei numerosi protocolli di trasporto e codifiche predefiniti. La maggior parte delle comuni protocollo e la codifica è per l'invio di messaggi SOAP utilizzando il protocollo HTTP (HyperText Transfer) per l'utilizzo sul World Wide Web con codifica di testo. In alternativa, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] consente di inviare messaggi tramite TCP, named pipe o MSMQ. Tali messaggi possono essere codificati come testo oppure utilizzando un formato binario ottimizzato.  I dati binari possono essere inviati in modo efficiente tramite lo standard MTOM. Se nessuna delle codifiche o nessuno dei trasporti forniti soddisfa le esigenze, è possibile creare una codifica o un trasporto personalizzato. Per ulteriori informazioni sui trasporti e codifiche supportate da [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vedere [trasporti](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Messaggi in coda e affidabili**  
   
-     In[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è supportato lo scambio affidabile di messaggi grazie a sessioni sicure implementate tramite WS-Reliable Messaging e MSMQ. [!INCLUDE[crabout](../../../includes/crabout-md.md)] l supporto della messaggistica in coda e affidabile in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , vedere [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     In[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è supportato lo scambio affidabile di messaggi grazie a sessioni sicure implementate tramite WS-Reliable Messaging e MSMQ. Per ulteriori informazioni sulla messaggistica in coda e affidabili supporto in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vedere [code e sessioni affidabili](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Messaggi durevoli**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **Transazioni**  
   
-     In WCF il supporto delle transazioni viene inoltre realizzato tramite uno dei tre modelli seguenti: WS-AtomicTtransactions, le interfacce API nello spazio dei nomi <xref:System.Transactions> e Microsoft Distributed Transaction Coordinator. [!INCLUDE[crabout](../../../includes/crabout-md.md)] l supporto delle transazioni in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , vedere [Transazioni](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     In WCF il supporto delle transazioni viene inoltre realizzato tramite uno dei tre modelli seguenti: WS-AtomicTtransactions, le interfacce API nello spazio dei nomi <xref:System.Transactions> e Microsoft Distributed Transaction Coordinator. Per ulteriori informazioni sulla transazione supporto in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vedere [transazioni](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
 -   **Supporto AJAX e REST**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **Extensibility**  
   
-     L'architettura di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dispone di un certo numero di punti di estensibilità. Se è necessaria ulteriore capacità, sono disponibili punti di ingresso che consentono di personalizzare il comportamento di un servizio. [!INCLUDE[crabout](../../../includes/crabout-md.md)] punti di estendibilità disponibili, vedere [estensione di WCF](../../../docs/framework/wcf/extending/index.md).  
+     L'architettura di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dispone di un certo numero di punti di estensibilità. Se è necessaria ulteriore capacità, sono disponibili punti di ingresso che consentono di personalizzare il comportamento di un servizio. Per ulteriori informazioni sulle estendibilità disponibili vedere punti [estensione di WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integrazione di WCF con altre tecnologie  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] è una piattaforma estremamente flessibile. Grazie a questa notevole flessibilità, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] viene usato anche in diversi altri prodotti Microsoft. Dopo aver acquisito familiarità con i concetti fondamentali di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], è possibile sfruttarne la conoscenza per utilizzare uno di tali prodotti.  

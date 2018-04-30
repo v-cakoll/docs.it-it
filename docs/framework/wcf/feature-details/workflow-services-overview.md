@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>Panoramica dei servizi flusso di lavoro
-I servizi flusso di lavoro sono servizi basati su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementati mediante flussi di lavoro. Si tratta di flussi di lavoro che usano le attività di messaggistica per inviare e ricevere messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 introduce una serie di attività di messaggistica che consentono di inviare e ricevere messaggi da un flusso di lavoro. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] attività di messaggistica e come possono essere utilizzati per implementare modelli di scambio di messaggi diversi, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+I servizi flusso di lavoro sono servizi basati su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementati mediante flussi di lavoro. Si tratta di flussi di lavoro che usano le attività di messaggistica per inviare e ricevere messaggi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 introduce una serie di attività di messaggistica che consentono di inviare e ricevere messaggi da un flusso di lavoro. Per ulteriori informazioni sulle attività di messaggistica e come possono essere utilizzati per implementare modelli di scambio di messaggi diversi, vedere [attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Vantaggi derivanti dall'utilizzo dei servizi flusso di lavoro  
  Con l'aumento del livello di distribuzione delle applicazioni, i singoli servizi divengono responsabili delle chiamate ad altri servizi per la ripartizione di parte del carico di lavoro. L'implementazione di queste chiamate come operazioni asincrone introduce un livello di complessità nel codice. La gestione degli errori aggiunge ulteriore complessità con la gestione delle eccezioni e fornendo informazioni di rilevamento dettagliate. Alcuni servizi presentano spesso un'esecuzione prolungata e possono impegnare risorse di sistema utili in attesa dell'input. A causa di questi problemi, le applicazioni distribuite risultano spesso molto complesse e difficili da scrivere e gestire. I flussi di lavoro rappresentano un metodo naturale per esprimere la coordinazione del lavoro asincrono, soprattutto per quanto riguarda le chiamate ai servizi esterni. I flussi di lavoro risultano inoltre efficaci nel rappresentare processi aziendali con esecuzione prolungata. Sono queste qualità che rendono il flusso di lavoro una risorsa essenziale per la compilazione di servizi in un ambiente distribuito.  

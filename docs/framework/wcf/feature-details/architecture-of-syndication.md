@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Architettura di diffusione
 L'API di diffusione è progettata per fornire un modello di programmazione indipendente dal formato, che consente di scrivere in rete contenuto diffuso in molteplici formati. Il modello di dati astratto è costituito dalle classi seguenti:  
@@ -43,7 +43,7 @@ L'API di diffusione è progettata per fornire un modello di programmazione indip
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Il supporto della diffusione è basato sul modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che definisce l'associazione <xref:System.ServiceModel.WebHttpBinding>, usata insieme a <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili i feed come servizi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione REST, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Il supporto della diffusione è basato sul modello di programmazione REST di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che definisce l'associazione <xref:System.ServiceModel.WebHttpBinding>, usata insieme a <xref:System.ServiceModel.Description.WebHttpBehavior> per rendere disponibili i feed come servizi. Per ulteriori informazioni sul [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modello di programmazione REST, vedere [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  La specifica Atom 1.0 consente di specificare secondi frazionari in uno qualsiasi dei costrutti data. I secondi frazionari verranno ignorati dall'implementazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] durante la fase di serializzazione e deserializzazione.  

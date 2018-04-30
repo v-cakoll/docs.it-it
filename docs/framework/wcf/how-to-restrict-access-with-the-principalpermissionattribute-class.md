@@ -1,12 +1,13 @@
 ---
-title: 'Procedura: limitare l''accesso tramite la classe PrincipalPermissionAttribute'
-ms.custom: 
+title: "Procedura: limitare l'accesso tramite la classe PrincipalPermissionAttribute"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedura: limitare l'accesso tramite la classe PrincipalPermissionAttribute
 Il controllo dell'accesso alle risorse di un computer appartenente a un dominio Windows è un'attività di sicurezza di base. Ad esempio, solo determinati utenti devono essere in grado di visualizzare i dati riservati, ad esempio le informazioni sulle retribuzioni dei dipendenti. In questo argomento viene descritto come consentire l'accesso a un metodo specifico esclusivamente agli utenti che appartengono a un determinato gruppo. Per un esempio funzionante, vedere [autorizzare l'accesso alle operazioni del servizio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -50,7 +52,7 @@ Il controllo dell'accesso alle risorse di un computer appartenente a un dominio 
   
 ### <a name="to-demand-user-membership"></a>Per richiedere l'appartenenza dell'utente  
   
-1.  Aprire il file di codice di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] contenente il codice del contratto di servizio implementato. [!INCLUDE[crabout](../../../includes/crabout-md.md)]implementazione di un contratto, vedere [contratti di servizio che implementa](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Aprire il file di codice di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] contenente il codice del contratto di servizio implementato. Per ulteriori informazioni sull'implementazione di un contratto, vedere [implementare contratti di servizio](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Applicare l'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> a ogni metodo per cui si desidera che l'accesso sia consentito esclusivamente a un gruppo specifico. Impostare la proprietà <xref:System.Security.Permissions.SecurityAttribute.Action%2A> su <xref:System.Security.Permissions.SecurityAction.Demand> e la proprietà <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> sul nome del gruppo. Ad esempio:  
   

@@ -1,23 +1,24 @@
 ---
 title: Configurazione predefinita
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Configurazione predefinita
 In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di istanze del flusso di lavoro SQL. L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze. Consente a un'istanza di salvare e caricare il proprio stato da e verso un database SQL Server o SQL Server Express.  
@@ -36,7 +37,7 @@ In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di 
   
  Il flusso di lavoro del conteggio è indipendente in un host del servizio flusso di lavoro. Il metodo `Main` del programma crea un'istanza dell'host del servizio flusso di lavoro che ospita il flusso di lavoro del conteggio e definisce gli endpoint in cui quest'ultimo può essere raggiunto. Definisce quindi un comportamento dell'archivio di istanze del flusso di lavoro SQL usato per configurare l'archivio di istanze del flusso di lavoro SQL. Successivamente il programma crea un client che chiama il metodo di avvio del flusso di lavoro del conteggio.  
   
- Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio. Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l'archivio di istanze del flusso di lavoro, vedere [archivio di istanze del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio. Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL. Per ulteriori informazioni sull'archivio di istanze del flusso di lavoro, vedere [archivio di istanze del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  L'esempio è costituito da due parti:  
   

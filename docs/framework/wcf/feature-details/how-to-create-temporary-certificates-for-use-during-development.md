@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: creare certificati temporanei da usare durante lo sviluppo
 Quando si sviluppa un servizio o un client protetto usando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è spesso necessario fornire un certificato X.509 da usare come credenziale. Il certificato in genere fa parte di una catena di certificati con autorità radice contenuta nell'archivio Autorità di certificazione radice attendibile del computer. La catena di certificati consente di definire l'ambito per un set di certificati quando in genere l'autorità radice è dell'organizzazione o dell'unità aziendale. Per emulare questo comportamento in fase di sviluppo, è possibile creare due certificati per soddisfare i requisiti di sicurezza. Il primo è un certificato autofirmato che si trova nell'archivio Autorità di certificazione radice attendibile, mentre il secondo certificato viene creato dal primo e si trova nell'archivio Personale del computer locale o dell'utente corrente. Questo argomento descrive i passaggi per la creazione di questi due certificati mediante lo [strumento di creazione certificati (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), fornito da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
@@ -33,7 +33,7 @@ Quando si sviluppa un servizio o un client protetto usando [!INCLUDE[indigo1](..
 >   
 >  Per impostazione predefinita, il [Makecert.exe (strumento di creazione certificati)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificati la cui autorità radice è denominata "agenzia radice **."** Poiché l'Agenzia radice non è inclusa nell'archivio Autorità di certificazione radice attendibili, i certificati non sono protetti. La creazione di un certificato autofirmato posizionato nell'archivio di Autorità di certificazione radice attendibili consente di creare un ambiente di sviluppo che simula in modo più accurato l'ambiente di distribuzione.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lla creazione e sull'uso di certificati, vedere [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ll'uso di un certificato come credenziale, vedere [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per un'esercitazione sull'uso della tecnologia Microsoft Authenticode, vedere [Panoramica di Authenticode ed esercitazioni](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Per ulteriori informazioni sulla creazione e utilizzo dei certificati, vedere [utilizzano i certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Per ulteriori informazioni sull'utilizzo di un certificato come credenziale, vedere [protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per un'esercitazione sull'uso della tecnologia Microsoft Authenticode, vedere [Panoramica di Authenticode ed esercitazioni](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Per creare un certificato dell'autorità radice autofirmato ed esportare la chiave privata  
   

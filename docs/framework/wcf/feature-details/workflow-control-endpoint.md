@@ -1,24 +1,26 @@
 ---
 title: Endpoint di controllo del flusso di lavoro
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>Endpoint di controllo del flusso di lavoro
 L'endpoint di controllo del flusso di lavoro consente agli sviluppatori di chiamare operazioni di controllo per controllare in remoto le istanze del flusso di lavoro ospitate utilizzando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Questa funzionalità può essere utilizzata per eseguire operazioni di controllo a livello di codice, quali la sospensione, la ripresa e la terminazione.  
@@ -57,10 +59,10 @@ L'endpoint di controllo del flusso di lavoro consente agli sviluppatori di chiam
 |TransactedTerminate|Esegue l'operazione Terminate in una transazione (propagata dal client o creata in locale). Se il sistema gestisce lo stato durevole dell'istanza del flusso di lavoro, quest'ultima deve essere resa persistente durante l'esecuzione di questa operazione.|  
 |TransactedUnsuspend|Esegue l'operazione Unsuspend in una transazione (propagata dal client o creata in locale). Se il sistema gestisce lo stato durevole dell'istanza del flusso di lavoro, quest'ultima deve essere resa persistente durante l'esecuzione di questa operazione.|  
   
- Il contratto <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> non fornisce il modo di creare una nuova istanza del flusso di lavoro, ma solo di gestire istanze del flusso di lavoro esistenti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]in modalità remota la creazione di una nuova istanza del flusso di lavoro, vedere [estensibilità Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ Il contratto <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> non fornisce il modo di creare una nuova istanza del flusso di lavoro, ma solo di gestire istanze del flusso di lavoro esistenti. Per ulteriori informazioni sulla creazione di una nuova istanza del flusso di lavoro in modalità remota, vedere [estensibilità Host del servizio del flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> è un endpoint standard con un contratto fisso, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Se aggiunto a un'istanza di <xref:System.ServiceModel.Activities.WorkflowServiceHost>, questo endpoint può essere quindi utilizzato per inviare operazioni di comando a qualsiasi istanza del flusso di lavoro ospitata dall'istanza dell'host. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]endpoint standard, vedere [endpoint Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> è un endpoint standard con un contratto fisso, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Se aggiunto a un'istanza di <xref:System.ServiceModel.Activities.WorkflowServiceHost>, questo endpoint può essere quindi utilizzato per inviare operazioni di comando a qualsiasi istanza del flusso di lavoro ospitata dall'istanza dell'host. Per ulteriori informazioni sugli endpoint standard, vedere [gli endpoint Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> è una classe che consente di inviare messaggi del controllo a un <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> su un <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Contiene un metodo per ogni operazione supportata dal contratto <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>, ad eccezione delle operazioni transazionali. <xref:System.ServiceModel.Activities.WorkflowControlClient> utilizza la transazione di ambiente per determinare se utilizzare un'operazione transazionale.

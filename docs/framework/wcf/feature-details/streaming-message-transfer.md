@@ -1,24 +1,26 @@
 ---
 title: Trasferimento dei messaggi di flusso
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
 I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportano due modalità di trasferimento dei messaggi:  
@@ -52,7 +54,7 @@ I trasporti di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supportan
   
  Alcune funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio la messaggistica affidabile, le transazioni e la protezione a livello di messaggio SOAP, utilizzano la modalità di trasferimento con memorizzazione nel buffer. L'utilizzo di queste funzionalità può ridurre o eliminare del tutto i vantaggi in termini di prestazioni ottenuti mediante i flussi. Per proteggere un trasporto con flusso, utilizzare soltanto la protezione a livello di trasporto oppure utilizzare la protezione a livello di trasporto insieme a una protezione a livello di messaggio di sola autenticazione.  
   
- Le intestazioni SOAP vengono sempre memorizzate nel buffer, anche quando si utilizza la modalità di trasferimento con flusso. Le intestazioni di un messaggio non devono superare la quota di trasporto indicata da `MaxBufferSize`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Questa impostazione, vedere [delle quote del trasporto](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Le intestazioni SOAP vengono sempre memorizzate nel buffer, anche quando si utilizza la modalità di trasferimento con flusso. Le intestazioni di un messaggio non devono superare la quota di trasporto indicata da `MaxBufferSize`. Per ulteriori informazioni su questa impostazione, vedere [le quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Differenze tra trasferimenti con memorizzazione nel buffer e con flusso  
  Il passaggio dalla modalità di trasferimento con memorizzazione nel buffer alla modalità di trasferimento con flusso comporta la modifica della forma del canale nativo dei trasporti TCP e pipe con nome. Per i trasferimenti con memorizzazione nel buffer, la forma del canale nativo è <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Per i trasferimenti con flusso, i canali nativi sono <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. La modifica della modalità di trasferimento di un'applicazione esistente che utilizza questi trasporti in modo diretto (ovvero non tramite un contratto di servizio) richiede la modifica della forma del canale previsto di channel factory e listener.  

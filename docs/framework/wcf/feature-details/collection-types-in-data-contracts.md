@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -42,7 +42,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  I tipi contenuti nelle raccolte devono essere tipi di contratto dati o devono poter essere serializzati in altro modo. Per altre informazioni, vedere [i tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] distinzione tra raccolta valida e raccolta non valida, nonché sulla modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione delle raccolte nella sezione "Regole avanzate di inserimento in raccolte" di questo argomento.  
+ Per ulteriori informazioni sulle novità e cosa non viene considerata una raccolta valida, nonché sulla modalità di serializzazione delle raccolte, vedere le informazioni sulla serializzazione raccolte nella sezione "Regole avanzate di raccolta" di questo argomento.  
   
 ## <a name="interchangeable-collections"></a>Raccolte intercambiabili  
  Si suppone che tutte le raccolte di elenco dello stesso tipo dispongano dello stesso contratto dati (a meno che non vengano personalizzate con l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , come viene descritto più avanti in questo argomento). Pertanto, ad esempio, i contratti dati seguenti sono equivalenti.  
@@ -91,7 +91,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 ## <a name="customizing-collection-types"></a>Personalizzazione dei tipi di raccolta  
  È possibile personalizzare i tipi di raccolta utilizzando l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , che presenta molti utilizzi.  
   
- Si noti che la personalizzazione dei tipi di raccolta compromette l'intercambiabilità delle raccolte, pertanto si consiglia in genere di evitare l'applicazione di questo attributo quando possibile. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] questo problema, vedere la sezione "Regole avanzate di inserimento in raccolte" più avanti in questo argomento.  
+ Si noti che la personalizzazione dei tipi di raccolta compromette l'intercambiabilità delle raccolte, pertanto si consiglia in genere di evitare l'applicazione di questo attributo quando possibile. Per ulteriori informazioni su questo problema, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
   
 ### <a name="collection-data-contract-naming"></a>Denominazione del contratto dati della raccolta  
  Le regole per la denominazione dei tipi di raccolta sono simili a quelle per la denominazione dei tipi di contratto dati normali, come viene descritto in [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), ad eccezione di alcune importanti differenze:  
@@ -203,7 +203,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] raccolte di dizionario, vedere la sezione "Regole avanzate di inserimento in raccolte" più avanti in questo argomento.  
+ Per altre informazioni sulle raccolte di dizionario, vedere la sezione "Regole avanzate di raccolta" più avanti in questo argomento.  
   
 ## <a name="collections-and-known-types"></a>Raccolte e tipi noti  
  Non è necessario aggiungere tipi di raccolta a tipi noti quando vengono utilizzati polimorficamente in luogo di altre raccolte o di altre interfacce di raccolta. Se ad esempio si dichiara un membro dati di tipo <xref:System.Collections.IEnumerable> e lo si utilizza per inviare un'istanza di <xref:System.Collections.ArrayList>, non è necessario aggiungere <xref:System.Collections.ArrayList> a tipi noti.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   La combinazione di tipi di raccolta (con raccolte di raccolte) è consentita. Le matrici di matrici vengono trattate come raccolte di raccolte. Le matrici multidimensionali non sono supportate.  
   
--   Matrici di byte e matrici di <xref:System.Xml.XmlNode> sono tipi speciali di matrici trattati come primitivi, non come raccolte. La serializzazione di una matrice di byte genera un singolo elemento XML contenente un blocco di dati con codifica Base64 anziché un elemento separato per ogni byte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l modo in cui viene considerata una matrice di <xref:System.Xml.XmlNode> , vedere [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Questi tipi speciali, naturalmente, possono fare parte delle raccolte: una matrice di matrice di byte sfocia in più elementi XML, ognuno dei quali contiene un blocco di dati con codifica Base64.  
+-   Matrici di byte e matrici di <xref:System.Xml.XmlNode> sono tipi speciali di matrici trattati come primitivi, non come raccolte. La serializzazione di una matrice di byte genera un singolo elemento XML contenente un blocco di dati con codifica Base64 anziché un elemento separato per ogni byte. Per altre informazioni su come una matrice di <xref:System.Xml.XmlNode> viene considerato, vedere [tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Questi tipi speciali, naturalmente, possono fare parte delle raccolte: una matrice di matrice di byte sfocia in più elementi XML, ognuno dei quali contiene un blocco di dati con codifica Base64.  
   
 -   Se l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato a un tipo di raccolta, il tipo viene trattato come tipo di contratto dati normale, non come una raccolta.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Il nome predefinito per i contratti dati delle raccolte di elenco, a meno che non venga sottoposto a override utilizzando Name, è la stringa "ArrayOf" associata al nome del contratto dati del tipo contenuto nella raccolta. Il nome del contratto dati per un elenco generico di numeri interi è, ad esempio, "ArrayOfint". È importante ricordare che il nome del contratto dati di `Object` è "anyType", quindi il nome del contratto dati di elenchi non generici come <xref:System.Collections.ArrayList> è "ArrayOfanyType".  
   
- Il nome predefinito per i contratti dati delle raccolte di dizionario, a meno che non venga sottoposto a override utilizzando `Name`, è la stringa "ArrayOfKeyValueOf" associata al nome del contratto dati del tipo di chiave seguito dal nome del contratto dati del tipo di valore. Il nome del contratto dati per un dizionario generico di stringa e numero intero, ad esempio, è "ArrayOfKeyValueOfstringint". Inoltre, se il tipo di chiave o il tipo di valore non sono tipi primitivi, un hash di spazio dei nomi degli spazi dei nomi del contratto dati dei tipi di chiave e valore viene aggiunto al nome. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] gli hash di spazio dei nomi, vedere [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Il nome predefinito per i contratti dati delle raccolte di dizionario, a meno che non venga sottoposto a override utilizzando `Name`, è la stringa "ArrayOfKeyValueOf" associata al nome del contratto dati del tipo di chiave seguito dal nome del contratto dati del tipo di valore. Il nome del contratto dati per un dizionario generico di stringa e numero intero, ad esempio, è "ArrayOfKeyValueOfstringint". Inoltre, se il tipo di chiave o il tipo di valore non sono tipi primitivi, un hash di spazio dei nomi degli spazi dei nomi del contratto dati dei tipi di chiave e valore viene aggiunto al nome. Per ulteriori informazioni su hash di spazio dei nomi, vedere [nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Ogni contratto dati della raccolta di dizionario dispone di un contratto dati complementare che rappresenta una voce del dizionario. Il nome è lo stesso del contratto dati del dizionario, ad eccezione del prefisso "ArrayOf", e lo spazio dei nomi corrisponde a quello del contratto dati del dizionario. Per il contratto dati del dizionario "ArrayOfKeyValueOfstringint", ad esempio, il contratto dati "KeyValueofstringint" rappresenta una voce del dizionario. È possibile personalizzare il nome di questo contratto dati utilizzando la proprietà `ItemName` , come viene descritto nella prossima sezione.  
   

@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Sicurezza con attendibilità parziale in WPF
-<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting sul lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] applicazioni ospitate da browser possono essere avviate dal browser, devono essere conformi a una serie di restrizioni. Per attivare queste limitazioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza di WPF - sicurezza della piattaforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
+<a name="introduction"></a>I n generale, sarebbe opportuno limitare l'accesso diretto alle risorse critiche del sistema da parte delle applicazioni Internet in modo da impedire qualsiasi danno. Per impostazione predefinita, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] e linguaggi di scripting sul lato client non sono in grado di accedere alle risorse di sistema critiche. Poiché le applicazioni ospitate da browser di Windows Presentation Foundation (WPF) possono essere avviate dal browser, devono essere conformi a un insieme simile di restrizioni. Per attivare queste limitazioni, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] si basa su [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] e [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (vedere [strategia di sicurezza di WPF - sicurezza della piattaforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Per impostazione predefinita, le applicazioni ospitate da browser richiedono l'area Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] set di autorizzazioni, indipendentemente dal fatto che vengano avviate da Internet, intranet locale o dal computer locale. Le applicazioni in esecuzione con un set di autorizzazioni incompleto vengono definite applicazioni in esecuzione con attendibilità parziale.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornisce un'ampia gamma di supporto per assicurarsi che così tante funzionalità presto possa essere utilizzato in modo sicuro in attendibilità parziale e insieme a [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], fornisce supporto aggiuntivo per la programmazione con attendibilità parziale.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Supporto con attendibilità parziale della funzionalità WPF  
- Nella tabella seguente sono elencate le funzionalità di alto livello di [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] che sono sicuri entro i limiti del set di autorizzazioni area Internet.  
+ Nella tabella seguente sono elencate le funzionalità generali di Windows Presentation Foundation (WPF) che sono utilizzare entro i limiti del set di autorizzazioni area Internet in modo sicura.  
   
  Tabella 1: Funzionalità WPF sicure in attendibilità parziale  
   

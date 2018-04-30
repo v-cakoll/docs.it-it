@@ -1,12 +1,13 @@
 ---
 title: 'Procedura: caricare assembly nel contesto Reflection-Only'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebf25ec707ddb238431ffad35156b3a8cec7e4b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6ab0224dd0452003f1d43a314d03aaca0fe04fda
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: caricare assembly nel contesto Reflection-Only
 Il contesto di caricamento di sola reflection consente di esaminare gli assembly compilati per altre piattaforme o altre versioni di .NET Framework. Il codice caricato in questo contesto può essere solo esaminato e non eseguito. Di conseguenza, poiché i costruttori non possono essere eseguiti, non è possibile creare oggetti. Non essendo possibile eseguire il codice, le dipendenze non vengono caricate automaticamente. Per esaminarle, è necessario caricarle manualmente.  
@@ -40,7 +42,7 @@ Il contesto di caricamento di sola reflection consente di esaminare gli assembly
     > [!NOTE]
     >  Non è possibile usare il contesto di sola reflection per caricare una versione di mscorlib.dll da una versione di .NET Framework diversa da quella installata nel contesto di esecuzione.  
   
-2.  Se l'assembly contiene dipendenze, queste ultime non verranno caricate dal metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>. Per esaminare le dipendenze, è necessario caricarle manualmente.  
+2.  Se l'assembly contiene dipendenze, queste ultime non verranno caricate dal metodo <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>. Per esaminarle, è necessario caricarle manualmente.  
   
 3.  Determinare se un assembly viene caricato nel contesto di sola reflection usando la proprietà <xref:System.Reflection.Assembly.ReflectionOnly%2A> dell'assembly.  
   

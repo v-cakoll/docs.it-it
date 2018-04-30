@@ -1,24 +1,26 @@
 ---
 title: Correlazione basata sul contenuto
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Correlazione basata sul contenuto
 Quando i servizi flusso di lavoro comunicano con client e altri servizi, sono spesso presenti alcuni dati nei messaggi scambiati che correlano in modo univoco un messaggio a una particolare istanza. La correlazione basata sul contenuto usa questi dati nel messaggio, ad esempio un numero cliente o un ID dell'ordine, per indirizzare messaggi all'istanza del flusso di lavoro appropriata. In questo argomento viene illustrato come usare la correlazione basata sul contenuto nei flussi di lavoro.  
@@ -27,7 +29,7 @@ Quando i servizi flusso di lavoro comunicano con client e altri servizi, sono sp
  La correlazione basata sul contenuto viene usata se un servizio flusso di lavoro dispone di più metodi a cui viene eseguito l'accesso da parte di un solo client e una parte dei dati nei messaggi scambiati identifica l'istanza desiderata.  
   
 > [!NOTE]
->  La correlazione basata sul contenuto risulta utile se non è possibile usare la correlazione del contesto in quanto l'associazione non rientra tra quelle di scambio del contesto supportate. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la correlazione del contesto, vedere [scambio del contesto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  La correlazione basata sul contenuto risulta utile se non è possibile usare la correlazione del contesto in quanto l'associazione non rientra tra quelle di scambio del contesto supportate. Per ulteriori informazioni sulla correlazione del contesto, vedere [lo scambio del contesto](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Ogni attività di messaggistica usata in queste comunicazioni deve specificare il percorso dei dati nel messaggio che identificano in modo univoco l'istanza. A tale scopo viene fornito un elemento <xref:System.ServiceModel.MessageQuerySet>, che usa un elemento <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> o <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, che esegue una query nel messaggio per una o più parti di dati che identificano in modo univoco l'istanza.  
   

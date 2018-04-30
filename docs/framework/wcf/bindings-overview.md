@@ -1,28 +1,28 @@
 ---
 title: Panoramica sulle associazioni di Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti usati per specificare i dettagli di comunicazione necessari per connettersi all'endpoint di un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Ogni endpoint in un servizio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] richiede un'associazione per essere specificato bene. In questo argomento vengono illustrati di tipi di dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] e il modo in cui è possibile specificare un'associazione per un endpoint.  
@@ -40,7 +40,7 @@ Le associazioni sono oggetti usati per specificare i dettagli di comunicazione n
  Determina il protocollo di trasporto sottostante da usare (ad esempio, TCP o HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementi di un'associazione  
- Un'associazione è essenzialmente costituita da un stack ordinato di elementi di associazione, ognuno dei quali specifica parte delle informazioni di comunicazione necessarie per connettersi a un endpoint del servizio. I due livelli più bassi nello stack sono entrambi necessari. Alla base dello stack c'è l'elemento di associazione di trasporto e immediatamente al di sopra di questo c'è l'elemento che contiene le specifiche di codifica dei messaggi. Gli elementi di associazione facoltativi che specificano gli altri protocolli di comunicazione sono disposti sopra questi due elementi obbligatori. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Questi elementi di associazione e l'ordinamento corretto, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Un'associazione è essenzialmente costituita da un stack ordinato di elementi di associazione, ognuno dei quali specifica parte delle informazioni di comunicazione necessarie per connettersi a un endpoint del servizio. I due livelli più bassi nello stack sono entrambi necessari. Alla base dello stack c'è l'elemento di associazione di trasporto e immediatamente al di sopra di questo c'è l'elemento che contiene le specifiche di codifica dei messaggi. Gli elementi di associazione facoltativi che specificano gli altri protocolli di comunicazione sono disposti sopra questi due elementi obbligatori. Per ulteriori informazioni su questi elementi di associazione e l'ordinamento corretto, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
  Le informazioni in un'associazione possono essere complesse e alcune impostazioni potrebbero non essere compatibili con altre. Per questo motivo, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] include un set di associazioni fornite dal sistema. Queste associazioni sono progettate per soddisfare la maggior parte dei requisiti delle applicazioni. Le classi seguenti rappresentano alcuni esempi di associazioni fornite dal sistema:  
@@ -56,7 +56,7 @@ Le associazioni sono oggetti usati per specificare i dettagli di comunicazione n
  Per un elenco completo, con le descrizioni, di tutti i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-purché binding, vedere [associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Uso di associazioni proprie  
- Se nessuna delle associazioni fornite dal sistema ha la giusta combinazione di funzionalità richieste da un'applicazione di servizio, è possibile creare una propria associazione. È possibile ottenere questo risultato in due modi. È possibile creare una nuova associazione da elementi di associazione preesistenti usando un oggetto <xref:System.ServiceModel.Channels.CustomBinding> o è possibile creare un'associazione completamente definita dall'utente derivandola dall'associazione <xref:System.ServiceModel.Channels.Binding>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]crearne una propria associazione tramite questi due approcci, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md) e [Creating User-Defined associazioni](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Se nessuna delle associazioni fornite dal sistema ha la giusta combinazione di funzionalità richieste da un'applicazione di servizio, è possibile creare una propria associazione. È possibile ottenere questo risultato in due modi. È possibile creare una nuova associazione da elementi di associazione preesistenti usando un oggetto <xref:System.ServiceModel.Channels.CustomBinding> o è possibile creare un'associazione completamente definita dall'utente derivandola dall'associazione <xref:System.ServiceModel.Channels.Binding>. Per ulteriori informazioni sulla creazione di una propria associazione usando questi due approcci, vedere [associazioni personalizzate](../../../docs/framework/wcf/extending/custom-bindings.md) e [Creating User-Defined associazioni](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Uso di associazioni  
  L'utilizzo di associazioni comporta due passaggi di base:  

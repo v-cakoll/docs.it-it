@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-In questo esempio viene descritto come ospitare un servizio REST di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizzando route ASP.NET. Il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio viene illustrata una versione indipendente di questo scenario e ne illustra l'implementazione del servizio in modo approfondito. Questo argomento descrive la funzionalità di integrazione ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] routing ASP.NET, vedere <xref:System.Web.Routing>.  
+In questo esempio viene descritto come ospitare un servizio REST di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizzando route ASP.NET. Il [servizio risorse di base](../../../../docs/framework/wcf/samples/basic-resource-service.md) esempio viene illustrata una versione indipendente di questo scenario e ne illustra l'implementazione del servizio in modo approfondito. Questo argomento descrive la funzionalità di integrazione ASP.NET. Per ulteriori informazioni sul Routing di ASP.NET, vedere <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  Il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] presenta una raccolta di clienti in modo orientato alle risorse/REST. In modo analogo a un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basato su SOAP, il servizio può essere ospitato in ASP.NET utilizzando un file con estensione svc. Tuttavia, spesso non si tratta della scelta consigliata per scenari HTTP perché richiede la presenza del file con estensione svc nell'URL del servizio. Inoltre, richiede la distribuzione di un file con estensione svc insieme alla libreria di servizi. È possibile evitare tali limitazioni ospitando il servizio mediante route ASP.NET, come illustrato nel presente esempio.  

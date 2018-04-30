@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>Denial of Service (Negazione del servizio)
 Si verifica un attacco Denial of Service quando un sistema viene sommerso da una quantità di messaggi tale da non poter essere elaborata o da poter essere elaborata solo molto lentamente.  
@@ -57,7 +57,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
 ## <a name="auditing-event-log-can-be-filled"></a>Possibilità di riempimento del registro eventi di controllo  
  Se un utente malintenzionato comprende che è attivato il controllo, può inviare messaggi non validi che causano la scrittura di voci di controllo. Ciò comporta a sua volta la generazione di errori nel sistema di controllo.  
   
- Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzando il Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=186123). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Per ridurre questo problema, impostare la proprietà <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> su `true` e usare le proprietà del Visualizzatore eventi per controllare il comportamento di controllo. Per ulteriori informazioni sull'utilizzo nel Visualizzatore eventi per visualizzare e gestire i registri eventi, vedere [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=186123). Per ulteriori informazioni, vedere [controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Possibili blocchi del servizio causati da implementazioni non valide di IAuthorizationPolicy  
  La chiamata del metodo <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> su un'implementazione non valida dell'interfaccia <xref:System.IdentityModel.Policy.IAuthorizationPolicy> può causare il blocco del servizio.  
@@ -74,7 +74,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
   
  Per risolvere questo problema, fanno riferimento al certificato esatto da usare con un criterio di ricerca più preciso nel [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Usare, ad esempio, l'opzione <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> e specificare il certificato in base all'identificazione personale univoca (hash).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la funzionalità di registrazione automatica, vedere [la registrazione dei certificati in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Per ulteriori informazioni sulla funzionalità di registrazione automatica, vedere [la registrazione dei certificati in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Uso per l'autorizzazione dell'ultimo dei diversi nomi di soggetto alternativi  
  Nel raro caso che un certificato X.509 contenga più nomi di soggetto alternativi e si esegua l'autorizzazione usando il nome di soggetto alternativo, l'autorizzazione potrebbe avere esito negativo.  
@@ -88,7 +88,7 @@ Si verifica un attacco Denial of Service quando un sistema viene sommerso da una
  Quando un client viene correttamente autenticato da un servizio e viene stabilita una sessione protetta con il servizio, il servizio tiene traccia della sessione fino a quando il client non la annulla o la sessione non scade. Ogni sessione stabilita viene conteggiata a fronte del numero massimo consentito di sessioni attive simultanee con un servizio. Quando viene raggiunto questo limite, i client che tentano di creare una nuova sessione con il servizio in questione vengono rifiutati fino a quando una o più sessioni attive non scadono o non vengono annullate da un client. Un client può avere più sessioni con un servizio e ognuna di esse viene conteggiata per il raggiungimento del limite.  
   
 > [!NOTE]
->  Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le sessioni con state, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Se si usano sessioni con stato, non vale quanto detto nel paragrafo precedente. Per ulteriori informazioni sulle sessioni con state, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Per prevenire il problema, impostare il limite per il numero massimo di sessioni attive e la durata massima di una sessione impostando la proprietà <xref:System.ServiceModel.Channels.SecurityBindingElement> della classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

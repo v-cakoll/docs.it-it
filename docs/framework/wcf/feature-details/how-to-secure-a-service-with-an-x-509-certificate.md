@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedura: proteggere un servizio con un certificato X.509
 La protezione di un servizio con un certificato X.509 è una tecnica di base utilizzata dalla maggior parte delle associazioni in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. In questo argomento vengono illustrati i passaggi di configurazione di un servizio indipendente con un certificato X.509.  
   
- Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso di certificati, vedere [utilizzano i certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un prerequisito è un certificato valido utilizzabile per autenticare il server. Il certificato deve essere emesso al server da un autorità di certificazione attendibile. Se il certificato non è valido, nessun client che tenti di utilizzare il servizio lo reputerà attendibile e, di conseguenza, non verrà stabilita nessuna connessione. Per ulteriori informazioni sull'utilizzo dei certificati, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Per configurare un servizio con un certificato utilizzando codice.  
   

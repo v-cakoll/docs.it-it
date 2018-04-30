@@ -23,18 +23,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: impostare la modalità di sicurezza
 Il sistema di sicurezza di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] presenta tre modalità di sicurezza in genere disponibili nella maggior parte delle associazioni predefinite: a livello di trasporto ("Transport"), a livello di messaggio ("Message") e "Trasporto con credenziale a livello di messaggio" ("TransportWithMessageCredential"). Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Si noti che non tutte le associazioni predefinite supportano queste modalità. Questo argomento descrive come utilizzare le classi <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding> per impostare la modalità, sia a livello di programmazione sia in configurazione.  
   
- Per altre informazioni, vedere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [protezione Services](../../../docs/framework/wcf/securing-services.md), e [protezione dei servizi e client](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] modalità e il messaggio di trasporto, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Per altre informazioni, vedere [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sicurezza, vedere [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md), [protezione Services](../../../docs/framework/wcf/securing-services.md), e [protezione dei servizi e client](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Per ulteriori informazioni sulle modalità di trasporto e messaggio, vedere [la sicurezza del trasporto](../../../docs/framework/wcf/feature-details/transport-security.md) e [sicurezza dei messaggi](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Per impostare la modalità di sicurezza in codice  
   

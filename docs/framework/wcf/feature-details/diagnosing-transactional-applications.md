@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostica di applicazioni transazionali
 In questo argomento viene illustrato come utilizzare la funzionalità di gestione e di diagnostica di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per risolvere i problemi di un'applicazione transazionale.  
@@ -58,7 +58,7 @@ In questo argomento viene illustrato come utilizzare la funzionalità di gestion
 |Transazioni propagate al secondo|Numero di transazioni propagate alle operazioni in questo endpoint ogni secondo. Questo contatore viene incrementato ogni volta che è presente una transazione nel messaggio inviato all'endpoint.|  
   
 ## <a name="windows-management-instrumentation"></a>Strumentazione gestione Windows  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espone dati di ispezione di un servizio in fase di esecuzione tramite un provider WMI di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Per ulteriori informazioni sull'accesso ai dati WMI, vedere [tramite Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un numero di proprietà WMI in sola lettura indica le impostazioni della transazione applicate per un servizio. Nella tabelle seguenti vengono elencate tutte queste impostazioni.  
   
