@@ -1,12 +1,8 @@
 ---
-title: Generics in .NET Framework
-ms.custom: ''
+title: Generics in .NET
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>Generics in .NET Framework
+# <a name="generics-in-net"></a>Generics in .NET
+
 <a name="top"></a> I generics consentono di personalizzare un metodo, una classe o una struttura in base ai dati precisi su cui interviene. Ad esempio, invece di usare la classe <xref:System.Collections.Hashtable> , che consente di avere chiavi e valori di ogni tipo, è possibile usare la classe generica <xref:System.Collections.Generic.Dictionary%602> e specificare il tipo concesso per la chiave e quello concesso per il valore. Tra i vantaggi dei generics ci sono una maggiore riutilizzabilità del codice e l'indipendenza dai tipi.  
   
- In questo argomento vengono forniti una panoramica dei generics nel.NET Framework e un riepilogo dei tipi o metodi generici. Include le sezioni seguenti:  
+ In questo argomento vengono forniti una panoramica dei generics in .NET e un riepilogo dei tipi o metodi generici. Include le sezioni seguenti:  
   
 -   [Definizione e utilizzo dei generics](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminologia dei generics  
- I termini seguenti vengono usati per discutere dei generics in .NET Framework:  
+ I termini seguenti vengono usati per discutere dei generics in .NET:  
   
 -   Una *definizione di tipo generico* è una classe, una struttura o una dichiarazione di interfaccia che funge da modello, con segnaposto per i tipi che può contenere o usare. Ad esempio, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> può contenere due tipi: chiavi e valori. Poiché una definizione di tipo generico è solo un modello, non è possibile creare istanze di una classe, una struttura o un'interfaccia che sia una definizione di tipo generico.  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>Libreria di classi e supporto del linguaggio  
- .NET Framework fornisce una serie di classi di raccolte generiche negli spazi dei nomi seguenti:  
+ .NET offre una serie di classi di raccolte generiche negli spazi dei nomi seguenti:  
   
--   Lo spazio dei nomi <xref:System.Collections.Generic> cataloga gran parte dei tipi di raccolte generiche forniti da .NET Framework, come le classi generiche <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602> .  
+-   Lo spazio dei nomi <xref:System.Collections.Generic> contiene la maggior parte dei tipi di raccolte generiche forniti da .NET, come le classi generiche <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602> .  
   
--   Lo spazio dei nomi <xref:System.Collections.ObjectModel> cataloga tipi di raccolte generiche aggiuntive, come la classe generica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , utili per esporre i modelli di oggetto agli utenti delle classi.  
+-   Lo spazio dei nomi <xref:System.Collections.ObjectModel> contiene tipi di raccolte generiche aggiuntive, come la classe generica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, utili per esporre i modelli di oggetto agli utenti delle classi.  
   
  Nello spazio dei nomi <xref:System> sono disponibili interfacce generiche per l'implementazione di confronti di uguaglianza e ordinamento, oltre ai tipi delegati generici per gestori eventi, conversioni e predicati di ricerca.  
   
@@ -172,11 +169,11 @@ ms.lasthandoff: 12/23/2017
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Raccolte generiche in .NET Framework](../../../docs/standard/generics/collections.md)|Vengono descritte le classi di raccolte generiche e altri tipi generici in .NET Framework.|  
+|[Raccolte generiche in .NET](../../../docs/standard/generics/collections.md)|Vengono descritte le classi di raccolte generiche e altri tipi generici in .NET.|  
 |[Delegati generici per la modifica di matrici ed elenchi](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Vengono descritti i delegati generici per conversioni, predicati di ricerca e azioni da eseguire sugli elementi di una matrice o raccolta.|  
 |[Interfacce generiche](../../../docs/standard/generics/interfaces.md)|Vengono descritte le interfacce generiche che forniscono funzionalità comuni a famiglie di tipi generici.|  
 |[Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md)|Vengono descritte la covarianza e controvarianza nei parametri di tipo generico.|  
-|[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornisce informazioni di riepilogo sulle caratteristiche e gli scenari di utilizzo dei tipi di raccolta in .NET Framework, inclusi i tipi generici.|  
+|[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornisce informazioni di riepilogo sulle caratteristiche e gli scenari di utilizzo dei tipi di raccolta in .NET, inclusi i tipi generici.|  
 |[Quando utilizzare raccolte generiche](../../../docs/standard/collections/when-to-use-generic-collections.md)|Vengono descritte le regole generali per determinare quando usare i tipi di raccolte generiche.|  
 |[Procedura: Definire un tipo generico tramite reflection emit](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Viene illustrato come generare assembly dinamici che includono tipi e metodi generici.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Viene descritta la funzionalità generics per gli utenti di Visual Basic, tra cui procedure relative all'utilizzo e alla definizione di tipi generici.|  

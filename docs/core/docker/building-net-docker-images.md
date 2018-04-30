@@ -1,24 +1,22 @@
 ---
 title: Compilazione di immagini Docker per .NET Core
 description: Informazioni sulle immagini Docker e su .NET Core
-keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
 
@@ -163,7 +161,7 @@ cd aspnetapp
 dotnet run
 ```
 
-Dopo l'avvio dell'applicazione, passare a **http://localhost:5000** nel Web browser.
+Dopo l'avvio dell'applicazione, visitare **http://localhost:5000** nel Web browser.
 
 ### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>Compilare ed eseguire l'esempio con Docker per i contenitori Linux
 
@@ -178,7 +176,7 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 > [!NOTE]
 > L'argomento `docker run` '-p' mappa la porta 5000 nel computer locale alla porta 80 nel contenitore (il formato per il mapping delle porte è `host:container`). Per altre informazioni, vedere le informazioni di riferimento su [docker run](https://docs.docker.com/engine/reference/commandline/exec/) per i parametri della riga di comando.
 
-Dopo l'avvio dell'applicazione, passare a **http://localhost:5000** nel Web browser.
+Dopo l'avvio dell'applicazione, visitare **http://localhost:5000** nel Web browser.
 
 ### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>Compilare ed eseguire l'esempio con Docker per i contenitori Windows
 
@@ -191,7 +189,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> È necessario passare direttamente all'**indirizzo IP del contenitore** (in contrapposizione a http://localhost) nel browser quando si usano i contenitori Windows. È possibile ottenere l'indirizzo IP del contenitore con i passaggi seguenti:
+> È necessario passare direttamente all'**indirizzo IP del contenitore** (in contrapposizione a http://localhost)) nel browser quando si usano i contenitori Windows. È possibile ottenere l'indirizzo IP del contenitore con i passaggi seguenti:
 
 * Aprire un altro prompt dei comandi.
 * Eseguire `docker ps` per visualizzare i contenitori in esecuzione. Deve essere presente il contenitore "aspnetcore_sample".

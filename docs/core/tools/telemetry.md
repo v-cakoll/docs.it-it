@@ -1,22 +1,20 @@
 ---
-title: "Telemetria degli strumenti dell’interfaccia della riga di comando di .NET Core"
-description: "Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli."
-keywords: .NET,.NET Core,telemetria
+title: Telemetria degli strumenti dell’interfaccia della riga di comando di .NET Core
+description: Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core che raccolgono informazioni sull'utilizzo per l'analisi, i dati raccolti e il modo in cui disabilitarli.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Telemetria degli strumenti dell’interfaccia della riga di comando di .NET Core
 
@@ -50,8 +48,8 @@ La funzionalità di telemetria degli strumenti dell’interfaccia della riga di 
 La funzionalità raccoglie i dati seguenti:
 
 - Il timestamp della chiamata&#8224;
-- Comando richiamato (ad esempio, "build") &#8224;
-- Indirizzo IP di tre ottetti usato per determinare la posizione geografica&#8224;
+- Comando richiamato (ad esempio, "build") & #8224;
+- Indirizzo IP di tre ottetti usato per determinare la posizione geografica& #8224;
 - `ExitCode` del comando
 - Test Runner usato (per i progetti di test)
 - Sistema operativo e relativa versione&#8224;
@@ -78,15 +76,15 @@ I dati pubblicati sono disponibili su base trimestrale e sono elencati in [dati 
 - Timestamp
 - Occorrenze&#8224;
 - Comando
-- Geografia&#8225;
+- Geografia& #8225;
 - OSFamily
 - IDruntime
 - OSVersion
 - VersioneSDK
 
-&#8224; Nella colonna *Occorrenze* è riportato il conteggio in aggregato dell'utilizzo da parte del comando di metriche di tale riga nel giorno in questione. 
+& #8224; Nella colonna *Occorrenze* è riportato il conteggio in aggregato dell'utilizzo da parte del comando di metriche di tale riga nel giorno in questione. 
 
-&#8225; In genere, nella colonna*Geografia* è riportato il nome di un Paese. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
+& #8225; In genere, nella colonna*Geografia* è riportato il nome di un Paese. In alcuni casi, continente Antartide viene visualizzato in questa colonna, a causa di ricercatori che utilizzano .NET Core in Antartide o dati della posizione non corretti.
 
 ### <a name="example"></a>Esempio
 
@@ -113,7 +111,7 @@ La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di 
 
 Questa licenza viene usata anche dai [pacchetti NuGet .NET](https://www.nuget.org/profiles/dotnetframework) per i quali, tuttavia, la funzionalità di telemetria non è abilitata (vedere la sezione [Ambito](#scope)).
 
-> 2. DATI. Il software può raccogliere informazioni sull'utente e sull'uso del software e inviarle a Microsoft. Microsoft può usare queste informazioni per migliorare i prodotti e i servizi. Per altre informazioni sulla raccolta dei dati, sull'uso nella documentazione della Guida e sull'informativa sulla privacy, vedere http://go.microsoft.com/fwlink/?LinkId=528096. L'uso del software viene considerato come autorizzazione all'applicazione di queste pratiche.
+> 2. DATI. Il software può raccogliere informazioni sull'utente e sull'uso del software e inviarle a Microsoft. Microsoft può usare queste informazioni per migliorare i prodotti e i servizi. Per altre informazioni sulla raccolta dati, sull'uso nella documentazione della Guida e sull'informativa sulla privacy, vedere http://go.microsoft.com/fwlink/?LinkId=528096. L'uso del software viene considerato come autorizzazione all'applicazione di queste pratiche.
 
 ## <a name="disclosure"></a>Divulgazione
 
