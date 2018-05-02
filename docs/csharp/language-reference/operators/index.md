@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>Operatori [C#]
 C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (matematiche, indicizzazione, chiamate di funzione e così via) eseguire in un'espressione. È possibile eseguire l'[overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) di diversi operatori per cambiarne il significato quando vengono applicati a un tipo definito dall'utente.  
@@ -63,7 +63,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md): disabilita il controllo di overflow per le operazioni con numeri interi. Questo è il comportamento predefinito per il compilatore.  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): restituisce il valore predefinito di tipo T, `null` per i tipi di riferimento, zero per i tipi numerici e inserimento di zero/`null` nei membri per i tipi struct.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): genera il valore predefinito del tipo T.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md): dichiara e restituisce un'istanza di delegato.  
   

@@ -18,17 +18,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ae53d5afbca15f8adafed428d4c2141312c972ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5850335a13960df9094c1a6276799de043eb28f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>, che include diverse classi di raccolta sia thread-safe che scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che la raccolta verrà scritta contemporaneamente su più thread. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronizzazione dei thread nelle raccolte di .NET Framework 1.0 e 2.0  
- Le raccolte introdotte in .NET Framework 1.0 sono reperibili nello spazio dei nomi <xref:System.Collections?displayProperty=nameWithType>. Queste raccolte, incluse le raccolte <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable> usate normalmente, supportano la thread safety con la proprietà `Synchronized`, che restituisce un wrapper thread-safe per la raccolta. Il wrapper funziona bloccando l'intera raccolta in ogni operazione di aggiunta o rimozione. Pertanto, ogni thread che tenta di accedere alla raccolta deve attendere il proprio turno per acquisire l'unico blocco. Questa caratteristica non è scalabile e può causare un peggioramento delle prestazioni per le raccolte di grandi dimensioni. Inoltre, la progettazione non è completamente protetta da race condition. Per altre informazioni, vedere la pagina relativa alla [sincronizzazione nelle raccolte generiche](http://go.microsoft.com/fwlink/?LinkID=161130) nel sito Web MSDN.  
+ Le raccolte introdotte in .NET Framework 1.0 sono reperibili nello spazio dei nomi <xref:System.Collections?displayProperty=nameWithType>. Queste raccolte, incluse le raccolte <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable> usate normalmente, supportano la thread safety con la proprietà `Synchronized`, che restituisce un wrapper thread-safe per la raccolta. Il wrapper funziona bloccando l'intera raccolta in ogni operazione di aggiunta o rimozione. Pertanto, ogni thread che tenta di accedere alla raccolta deve attendere il proprio turno per acquisire l'unico blocco. Questa caratteristica non è scalabile e può causare un peggioramento delle prestazioni per le raccolte di grandi dimensioni. Inoltre, la progettazione non è completamente protetta da race condition. Per altre informazioni, vedere la pagina relativa alla [sincronizzazione nelle raccolte generiche](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/).  
   
  Le classi di raccolta introdotte in .NET Framework 2.0 sono reperibili nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. Sono incluse <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e così via. che forniscono maggiore indipendenza dai tipi e migliori prestazioni rispetto alle classi di .NET Framework 1.0. Tuttavia, le classi di raccolta di .NET Framework 2.0 non forniscono la sincronizzazione dei thread. Quando gli elementi vengono aggiunti o rimossi contemporaneamente su più thread, la sincronizzazione deve essere gestita dal codice utente.  
   

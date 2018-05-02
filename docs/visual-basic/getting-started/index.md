@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
 Questa sezione della documentazione fornisce informazioni introduttive per lo sviluppo di applicazione di Visual Basic.  
@@ -55,10 +55,10 @@ Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai p
  Vengono forniti collegamenti a pagine in cui è introdotta la programmazione orientata a oggetti, la creazione di oggetti personalizzati e l'utilizzo degli oggetti per semplificare l'attività di codifica.  
   
  [Esempi](../../visual-basic/sample-applications.md)  
- Vengono forniti i collegamenti ai codici di esempio in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Vengono forniti i collegamenti ai codici di esempio in Visual Basic.  
   
  [Procedure dettagliate](../../visual-basic/walkthroughs.md)  
- Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio Visual Basic.  
   
  [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)  
  Vengono fornite informazioni su come richiedere assistenza e inviare commenti e suggerimenti.  
@@ -66,7 +66,7 @@ Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai p
  [Visual Studio](/visualstudio/)  
  Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/index.md) Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con Visual C#.  
   
  [Visual C++](/cpp/)  
  Vengono forniti collegamenti alla documentazione di Visual C++.  

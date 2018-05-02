@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programmazione asincrona con async e await (C#)
 È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona. Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.  
@@ -98,7 +98,7 @@ Le seguenti caratteristiche riepilogano gli aspetti che rendono l'esempio preced
   
     -   `void` se si sta scrivendo un gestore eventi asincrono.  
 
-    -   Qualsiasi altro tipo che ha un metodo `GetAwaiter` (a partire da C# 7).
+    -   Qualsiasi altro tipo che ha un metodo `GetAwaiter` (a partire da C# 7.0).
   
      Per altre informazioni, vedere la sezione [Tipi restituiti e parametri](#BKMK_ReturnTypesandParameters).  
   
@@ -179,7 +179,7 @@ Specificare <xref:System.Threading.Tasks.Task%601> come tipo restituito se il me
   
 Usare <xref:System.Threading.Tasks.Task> come tipo restituito se il metodo non include un'istruzione return o contiene un'istruzione return che non restituisce un operando.  
 
-A partire da C# 7, è possibile specificare anche altri tipi restituiti, a condizione che il tipo includa un metodo `GetAwaiter`. Un esempio dei tipi in questione è <xref:System.Threading.Tasks.ValueTask%601>. disponibile nel pacchetto NuGet [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
+A partire da C# 7.0, è possibile specificare anche altri tipi restituiti, a condizione che il tipo includa un metodo `GetAwaiter`. Un esempio dei tipi in questione è <xref:System.Threading.Tasks.ValueTask%601>. disponibile nel pacchetto NuGet [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
   
  Di seguito viene illustrato come dichiarare e chiamare un metodo che restituisce <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>.  
   
