@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Formattazione composita
 La funzionalità di formattazione composta di .NET consente di usare come input un elenco di oggetti e una stringa di formato composto. Una stringa di formato composto è costituita da testo fisso alternato a segnaposto indicizzati, denominati elementi di formato, che corrispondono agli oggetti dell'elenco. L'operazione di formattazione produce una stringa risultato costituita dal testo fisso originale alternato alla rappresentazione di stringa degli oggetti dell'elenco.  
@@ -74,12 +74,12 @@ La funzionalità di formattazione composta di .NET consente di usare come input 
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composto "0x{0:X} {0:E} {0:N}", come nell'esempio seguente.  
+ Più elementi di formato possono fare riferimento allo stesso elemento dell'elenco di oggetti specificando lo stesso identificatore di parametro. È ad esempio possibile formattare lo stesso valore numerico in formato esadecimale, scientifico e numerico specificando una stringa di formato composito "0x{0:X} {0:E} {0:N}", come nell'esempio seguente.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Ogni elemento di formato può fare riferimento a un oggetto dell'elenco. Se ad esempio sono presenti tre oggetti, è possibile formattare il secondo, il primo e il terzo oggetto specificando una stringa di formato composto "{1} {0} {2}". Gli oggetti a cui non fa riferimento un elemento di formato vengono ignorati. Se un identificatore di parametro corrisponde a un elemento non incluso nei limiti dell'elenco di oggetti, verrà generata un'eccezione <xref:System.FormatException> in fase di esecuzione.  
+ Ogni elemento di formato può fare riferimento a un oggetto dell'elenco. Se ad esempio sono presenti tre oggetti, è possibile formattare il secondo, il primo e il terzo oggetto specificando una stringa di formato composito come questa: "{1} {0} {2}". Gli oggetti a cui non fa riferimento un elemento di formato vengono ignorati. Se un identificatore di parametro corrisponde a un elemento non incluso nei limiti dell'elenco di oggetti, verrà generata un'eccezione <xref:System.FormatException> in fase di esecuzione.  
   
 ### <a name="alignment-component"></a>Componente di allineamento  
  Il componente facoltativo *alignment* corrisponde a un intero con segno che indica la larghezza preferita del campo formattato. Se il valore di *alignment* è inferiore alla lunghezza della stringa formattata, il componente *alignment* verrà ignorato e come larghezza del campo verrà usata la lunghezza della stringa. I dati formattati verranno allineati a destra se il valore di *alignment* è positivo e a sinistra se il valore di *alignment* è negativo. Per la spaziatura eventualmente necessaria verranno usati spazi vuoti. Se viene specificato il componente *alignment*, la virgola è obbligatoria.  
@@ -137,7 +137,7 @@ La funzionalità di formattazione composta di .NET consente di usare come input 
   
     -   Per un valore di data e ora, se viene chiamato un metodo di formattazione composita con un argomento non Null <xref:System.IFormatProvider>, il runtime richiede un oggetto <xref:System.Globalization.DateTimeFormatInfo> dal relativo metodo <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se non è in grado di fornirne uno, se il valore dell'argomento è `null` o se il metodo di formattazione composita non dispone di un parametro di <xref:System.IFormatProvider>, viene usato l'oggetto <xref:System.Globalization.DateTimeFormatInfo> per le impostazioni cultura del thread corrente.  
   
-    -   Per gli oggetti di altri tipi, se una formattazione composita viene chiamata con un argomento <xref:System.IFormatProvider>, il relativo valore (incluso `null`, se no viene fornito alcun oggetto <xref:System.IFormatProvider>) viene passato direttamente all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  In caso contrario, un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura del thread corrente viene passato all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    -   Per gli oggetti di altri tipi, se un metodo di formattazione composita viene chiamato con un argomento <xref:System.IFormatProvider>, il relativo valore viene passato direttamente all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. In caso contrario, `null` viene passato all'implementazione di <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4.  Viene chiamato il metodo senza parametri `ToString` del tipo, che esegue l'override di <xref:System.Object.ToString?displayProperty=nameWithType> o eredita il comportamento della relativa classe di base. In questo caso la stringa di formato specificata dal componente *formatString* nell'elemento di formato, se presente, viene ignorata.  
   
