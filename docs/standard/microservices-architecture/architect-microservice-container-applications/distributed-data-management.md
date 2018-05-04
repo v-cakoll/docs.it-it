@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemi e soluzioni per la gestione dei dati distribuiti
 
@@ -89,23 +89,23 @@ Per maggiori informazioni sull'uso della comunicazione asincrona, vedere le sezi
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **CAP theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem (Teorema CAP)*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **CAP Theorem**
+    [*https://en.wikipedia.org/wiki/CAP\_teorema*](https://en.wikipedia.org/wiki/CAP_theorem) (Il teorema CAP)
 
--   **Eventual Consistency (Coerenza finale)**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_coerenza*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coerenza finale)
 
--   **Data Consistency Primer (Nozioni di base sulla coerenza dei dati)**
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+-   **Data Consistency Primer**
+    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx) (Primer coerenza dati)
 
 -   **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Vista materializzata**
-    [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+-   **Materialized View**
+    [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view) (Vista materializzata)
 
--   **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing (ACID e BASE: il pH variabile dell'elaborazione delle transazioni di database)**
-    [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+-   **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing**
+    [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/) (BASE: il pH mutevole dell'elaborazione delle transazioni del database)
 
 -   **Transazione di compensazione**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

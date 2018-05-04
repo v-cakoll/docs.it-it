@@ -1,21 +1,22 @@
 ---
 title: LINQ to XML e altre tecnologie XML
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f13e2d64db9265f03aec3fa5da9f171fcb366f72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML e altre tecnologie XML
 In questo argomento viene illustrato un confronto tra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e le seguenti tecnologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML e XmlLite. Queste informazioni possono risultare utili per decidere quale tecnologia usare.  
@@ -49,7 +50,7 @@ In questo argomento viene illustrato un confronto tra [!INCLUDE[sqltecxlinq](~/i
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML e MSXML  
  MSXML è la tecnologia basata su COM per l'elaborazione di codice XML inclusa in Microsoft Windows. Fornisce un'implementazione nativa di DOM (Document Object Model) con supporto per XPath e XSLT. Contiene inoltre il parser SAX2 basato su eventi che non supporta la memorizzazione nella cache.  
   
- MSXML offre prestazioni soddisfacenti, è sicuro per impostazione predefinita nella maggior parte degli scenari ed è accessibile in Internet Explorer per eseguire l'elaborazione XML lato client nelle applicazioni in stile AJAX. Può essere usato da qualsiasi linguaggio di programmazione che supporta COM, tra cui C++, JavaScript e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0.  
+ MSXML offre prestazioni soddisfacenti, è sicuro per impostazione predefinita nella maggior parte degli scenari ed è accessibile in Internet Explorer per eseguire l'elaborazione XML lato client nelle applicazioni in stile AJAX. Può essere usato da qualsiasi linguaggio di programmazione che supporta COM, tra cui C++, JavaScript e Visual Basic 6.0.  
   
  L'utilizzo di MSXML non è consigliato in codice gestito basato sul CLR (Common Language Runtime).  
   

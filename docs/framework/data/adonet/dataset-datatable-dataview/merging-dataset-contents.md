@@ -1,27 +1,15 @@
 ---
 title: Unione di contenuti di dataset
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 26b351b314d82c2b9e602d1ea629bbcf379d9284
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merging-dataset-contents"></a>Unione di contenuti di dataset
 È possibile usare il metodo <xref:System.Data.DataSet.Merge%2A> per unire il contenuto di un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o una matrice <xref:System.Data.DataRow> in un `DataSet` esistente. L'unione di nuovi dati in un `DataSet` esistente è influenzata da diversi fattori e opzioni.  

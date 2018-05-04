@@ -12,14 +12,14 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36a16f1ee037a1379399c7ee2e2c67427eb9d1b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cb05f4f01dd7e19d2034de89ac47304b0731ca01
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opzioni del compilatore C#)
 Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file PE (Portable Executable) di un progetto.  
@@ -35,7 +35,7 @@ Usare l'opzione **-win32manifest** per specificare un file manifesto dell'applic
  Nome e percorso del file manifesto personalizzato.  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, il compilatore [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] incorpora un manifesto dell'applicazione che specifica il livello di esecuzione richiesto "asInvoker". Viene creato il manifesto nella stessa cartella in cui viene compilato l'eseguibile, in genere la cartella bin\Debug o bin\Release quando si utilizza Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto "highestAvailable" o "requireAdministrator", utilizzare questa opzione per specificare il nome del file.  
+ Per impostazione predefinita, il compilatore Visual C# incorpora un manifesto dell'applicazione che specifica il livello di esecuzione richiesto "asInvoker". Viene creato il manifesto nella stessa cartella in cui viene compilato l'eseguibile, in genere la cartella bin\Debug o bin\Release quando si utilizza Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto "highestAvailable" o "requireAdministrator", utilizzare questa opzione per specificare il nome del file.  
   
 > [!NOTE]
 >  Questa opzione e l'opzione [-win32res (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) si escludono a vicenda. Se si tenta di usare entrambe le opzioni nella stessa riga di comando si otterrà un errore di compilazione.  

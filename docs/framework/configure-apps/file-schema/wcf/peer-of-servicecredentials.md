@@ -1,24 +1,12 @@
 ---
 title: '&lt;peer&gt; di &lt;serviceCredentials&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79af459aae2eef0544d713b86e8534635fcdd141
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f50c192639df7b7ed35e863821d5b7a8d62f29bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt; di &lt;serviceCredentials&gt;
 Specifica le credenziali correnti per un nodo peer.  
@@ -26,9 +14,9 @@ Specifica le credenziali correnti per un nodo peer.
  \<system.ServiceModel>  
 \<i comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceCredentials>  
-\<peer>  
+\<peer >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +38,7 @@ Specifica le credenziali correnti per un nodo peer.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Specifica un certificato X.509 da usare per firmare e crittografare i messaggi di servizi peer-to-peer. .|  
+|[\<certificato >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Specifica un certificato X.509 da usare per firmare e crittografare i messaggi di servizi peer-to-peer. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Specifica le opzioni di autenticazione dei mittenti di messaggi.|  
 |[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Specifica le opzioni di autenticazione dei servizi peer.|  
   

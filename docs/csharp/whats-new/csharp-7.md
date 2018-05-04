@@ -1,7 +1,7 @@
 ---
-title: "Novità di C# 7 - Guida a C#"
-description: "Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#."
-keywords: "C#, .NET, .NET Core, funzionalità più recenti, novità"
+title: Novità di C# 7.0 - Guida a C#
+description: Panoramica delle nuove funzionalità incluse nella prossima versione 7 del linguaggio C#.
+keywords: C#, .NET, .NET Core, funzionalità più recenti, novità
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>Novità di C# 7
+# <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
-C# 7 aggiunge diverse nuove funzionalità al linguaggio C#:
+C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
 * [Variabili `out`](#out-variables)
     - È possibile dichiarare valori `out` inline come argomenti al metodo in cui vengono usati.
 * [Tuple](#tuples)
@@ -88,8 +88,8 @@ C# offre una sintassi completa per le classi e gli struct usati per spiegare la 
 I campi non vengono convalidati e non è possibile definire i propri metodi
 
 > [!NOTE]
-> Le tuple erano già disponibili prima di C# 7, ma in modo poco efficiente e senza supporto del linguaggio.
-> Questo significava poter fare riferimento agli elementi delle tuple solo come `Item1`, `Item2` e così via. C# 7 introduce il supporto del linguaggio per le tuple, che consente nomi semantici per i campi di una tupla con tipi di tupla nuovi e più efficienti.
+> Le tuple erano già disponibili prima di C# 7.0, ma in modo poco efficiente e senza supporto del linguaggio.
+> Questo significava poter fare riferimento agli elementi delle tuple solo come `Item1`, `Item2` e così via. C# 7.0 introduce il supporto del linguaggio per le tuple, che consente nomi semantici per i campi di una tupla con tipi di tupla nuovi e più efficienti.
 
 È possibile creare una tupla assegnando ogni membro a un valore:
 
@@ -131,9 +131,6 @@ La dichiarazione per il metodo specifica i nomi per i campi della tupla restitui
 Può rendersi necessario decomprimere i membri di una tupla che sono stati restituiti da un metodo.  In questo caso è possibile dichiarare variabili separate per ogni valore nella tupla. Questa operazione è detta *decostruzione* della tupla:
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 È anche possibile specificare una decostruzione simile per qualsiasi tipo in .NET. L'operazione si esegue scrivendo un metodo `Deconstruct` come membro della classe. Tale metodo `Deconstruct` specifica un set di argomenti `out` per ognuna delle proprietà da estrarre. Considerare questa classe `Point` che specifica un metodo di decostruzione che estrae le coordinate `X` e `Y`:
 
@@ -327,7 +324,7 @@ La stessa tecnica può essere usata con i metodi `async` per garantire che le ec
 
 ## <a name="more-expression-bodied-members"></a>Più membri con corpo di espressione
 
-In C# 6 sono stati introdotti i [membri con corpo di espressione](csharp-6.md#expression-bodied-function-members) per le funzioni membro e le proprietà di sola lettura. C# 7 amplia la gamma di membri consentiti che possono essere implementati come espressioni. In C# 7 è possibile implementare *costruttori*, *finalizzatori* e funzioni di accesso `get` e `set` per *proprietà* e *indicizzatori*. Nel codice riportato di seguito vengono illustrati esempi di ogni tipo di membro:
+In C# 6 sono stati introdotti i [membri con corpo di espressione](csharp-6.md#expression-bodied-function-members) per le funzioni membro e le proprietà di sola lettura. C# 7.0 amplia la gamma di membri consentiti che possono essere implementati come espressioni. In C# 7.0 è possibile implementare *costruttori*, *finalizzatori* e funzioni di accesso `get` e `set` per *proprietà* e *indicizzatori*. Nel codice riportato di seguito vengono illustrati esempi di ogni tipo di membro:
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ Le nuove posizioni per i membri con corpo di espressione rappresentano un import
 
 ## <a name="throw-expressions"></a>Espressioni throw
 
-In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, vi sono costrutti di C# in cui non è possibile usarla. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7 introduce le *espressioni throw*.
+In C# `throw` è sempre stata un'istruzione. Poiché `throw` è un'istruzione, non un'espressione, vi sono costrutti di C# in cui non è possibile usarla. Sono incluse le espressioni condizionali, le espressioni Null ridondanti e alcune espressioni lambda. L'aggiunta di membri con corpo di espressione consente di aggiungere più posizioni in cui le espressioni `throw` possono risultare utili. Per fare in modo che sia possibile scrivere uno di questi costrutti, C# 7.0 introduce le *espressioni throw*.
 
 La sintassi è la stessa che è sempre stata usata per le istruzioni `throw`. L'unica differenza è che ora è possibile l'inserimento in nuove posizioni, ad esempio in un'espressione condizionale:
 
@@ -376,7 +373,7 @@ Come si raccomanda sempre a proposito delle prestazioni, è necessario creare un
 
 ## <a name="numeric-literal-syntax-improvements"></a>Miglioramenti della sintassi dei valori letterali numerici
 
-La lettura non corretta delle costanti numeriche può rendere più difficile la comprensione del codice quando viene letto per la prima volta. Ciò si verifica spesso quando questi numeri vengono usati come maschere di bit o altri elementi simbolici anziché come valori numerici. C# 7 include due nuove funzionalità per semplificare la scrittura dei numeri in modo che siano più leggibili per l'uso previsto: *valori letterali binari* e *separatori di cifre*.
+La lettura non corretta delle costanti numeriche può rendere più difficile la comprensione del codice quando viene letto per la prima volta. Ciò si verifica spesso quando questi numeri vengono usati come maschere di bit o altri elementi simbolici anziché come valori numerici. C# 7.0 include due nuove funzionalità per semplificare la scrittura dei numeri in modo che siano più leggibili per l'uso previsto: *valori letterali binari* e *separatori di cifre*.
 
 Ogni volta che si creano maschere di bit o che una rappresentazione binaria di un numero rende il codice più leggibile, scrivere il numero in formato binario:
 

@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -81,7 +82,7 @@ Per le API Web, ASP.NET Core MVC supporta la [*negoziazione del contenuto*](http
 
 ## <a name="working-with-dependencies"></a>Uso delle dipendenze
 
-ASP.NET Core include il supporto incorporato e usa internamente una tecnica chiamata [inserimento di dipendenze](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). L'inserimento di dipendenze è una tecnica che abilita l'accoppiamento libero tra parti diverse di un'applicazione. L'accoppiamento libero può essere utile perché rende più semplice isolare le parti dell'applicazione per il test o la sostituzione. Rende anche meno probabile che una modifica in una parte dell'applicazione abbia un impatto imprevisto in un'altra posizione nell'applicazione. L'inserimento di dipendenze si basa sul principio di inversione della dipendenza e rappresenta spesso la chiave per ottenere il principio di apertura/chiusura. Quando si valuta il funzionamento dell'applicazione con le dipendenze, prestare attenzione al codice [static cling](http://deviq.com/static-cling/) e ricordare la frase "[New is Glue](http://ardalis.com/new-is-glue)".
+ASP.NET Core include il supporto incorporato e usa internamente una tecnica chiamata [inserimento di dipendenze](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). L'inserimento di dipendenze è una tecnica che abilita l'accoppiamento libero tra parti diverse di un'applicazione. L'accoppiamento libero può essere utile perché rende più semplice isolare le parti dell'applicazione per il test o la sostituzione. Rende anche meno probabile che una modifica in una parte dell'applicazione abbia un impatto imprevisto in un'altra posizione nell'applicazione. L'inserimento di dipendenze si basa sul principio di inversione della dipendenza e rappresenta spesso la chiave per ottenere il principio di apertura/chiusura. Quando si valuta il funzionamento dell'applicazione con le dipendenze, prestare attenzione al codice [static cling](http://deviq.com/static-cling/) e ricordare la frase "[New is Glue](https://ardalis.com/new-is-glue)".
 
 Lo static cling si verifica quando le classi chiamano metodi statici o accedono a proprietà statiche, un'operazione che comporta effetti collaterali o dipendenze nell'infrastruttura. Ad esempio, se è presente un metodo che chiama un metodo statico che a sua volta scrive in un database, il metodo è strettamente accoppiato al database. Qualsiasi elemento che interrompe la chiamata al database interromperà il metodo. Eseguire i test di questi tipi di metodi è notoriamente difficile poiché i test richiedono librerie di simulazione commerciali per simulare le chiamate statiche oppure possono essere eseguiti solo con un database di prova. Le chiamate statiche che non hanno alcuna dipendenza nell'infrastruttura, in particolare quelle che sono completamente senza stato, possono essere eseguite senza problemi e non hanno alcun effetto sull'accoppiamento o la testabilità (oltre all'accoppiamento del codice alla chiamata statica).
 
@@ -283,7 +284,7 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 > ### <a name="references--structuring-applications"></a>Riferimenti - Creazione della struttura delle applicazioni
 > - **Aree**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN - Feature Slices for ASP.NET Core MVC (MSDN - Sezioni di funzionalità per ASP.NET Core MVC)**
+> - **MSDN - Funzionalità Feature Slices per ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtri**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
@@ -400,7 +401,7 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 
 ## <a name="client-communication"></a>Comunicazione con i client
 
-Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
+Oltre a visualizzare le pagine e a rispondere alle richieste di dati tramite le API Web, le app ASP.NET Core possono comunicare direttamente con i client connessi. Questa comunicazione in uscita può usare diverse tecnologie di trasporto, tra cui la più comune sono i WebSocket. ASP.NET ASP.NET Core SignalR è una libreria che semplifica l'aggiunta della funzionalità di comunicazione da server a client in tempo reale alle applicazioni. SignalR supporta diverse tecnologie di trasporto, inclusi i WebSocket, ed elimina molti dei dettagli di implementazione specificati dallo sviluppatore.
 
 ASP.NET Core SignalR è attualmente in fase di sviluppo e sarà disponibile nella prossima versione di ASP.NET Core. Sono tuttavia disponibili altre [librerie WebSocket open source](https://github.com/radu-matei/websocket-manager).
 

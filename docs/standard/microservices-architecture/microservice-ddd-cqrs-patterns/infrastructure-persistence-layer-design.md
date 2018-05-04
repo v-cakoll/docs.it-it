@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Progettazione del livello di persistenza dell'infrastruttura
 
-I componenti di persistenza dei dati forniscono l'accesso ai dati ospitati entro i limiti di un microservizio (vale a dire, il database di un microservizio). Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](http://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti DBContext EF personalizzati.
+I componenti di persistenza dei dati forniscono l'accesso ai dati ospitati entro i limiti di un microservizio (vale a dire, il database di un microservizio). Contengono l'implementazione effettiva di componenti come repository e classi di [unità di lavoro](https://martinfowler.com/eaaCatalog/unitOfWork.html), ad esempio gli oggetti DBContext EF personalizzati.
 
 ## <a name="the-repository-pattern"></a>Schema repository
 
@@ -90,7 +90,7 @@ Un oggetto di accesso ai dati esegue direttamente le operazioni di persistenza e
 
 Per unità di lavoro si intende una singola transazione che coinvolge più operazioni di inserimento, aggiornamento o eliminazione. In altre parole, significa che per un'azione utente specifica (ad esempio, la registrazione in un sito Web), tutte le transazioni di inserimento, aggiornamento ed eliminazione vengono gestite in un'unica transazione. Questa procedura è più efficiente rispetto alla gestione di più transazioni di database in maniera più frammentata.
 
-Queste varie operazioni di persistenza vengono eseguite in un secondo momento in un'unica azione quando indicato dal codice a livello dell'applicazione. La decisione sull'applicazione delle modifiche in memoria all'archiviazione effettiva dei database si basa in genere sullo [schema Unit of Work](http://martinfowler.com/eaaCatalog/unitOfWork.html). In EF lo schema Unit of Work viene implementato come DBContext.
+Queste varie operazioni di persistenza vengono eseguite in un secondo momento in un'unica azione quando indicato dal codice a livello dell'applicazione. La decisione sull'applicazione delle modifiche in memoria all'archiviazione effettiva dei database si basa in genere sullo [schema Unit of Work](https://martinfowler.com/eaaCatalog/unitOfWork.html). In EF lo schema Unit of Work viene implementato come DBContext.
 
 In molti casi, questo schema o il modo di applicare le operazioni nell'archivio può migliorare le prestazioni dell'applicazione riducendo il rischio di incoerenze. Inoltre, riduce il blocco delle transazioni nelle tabelle del database, perché il commit di tutte le operazioni previste viene eseguito come parte di un'unica transazione. Questo approccio è molto più efficiente rispetto all'esecuzione di molte operazioni isolate sul database. Pertanto, l'ORM selezionato è in grado di ottimizzare l'esecuzione nel database raggruppando le varie azioni di aggiornamento all'interno della stessa transazione, anziché eseguire più transazioni separate di dimensioni inferiori.
 
@@ -138,21 +138,21 @@ Nelle sezioni successive, viene illustrato come implementare lo schema Specifica
 
 ### <a name="the-repository-pattern"></a>Schema repository
 
--   **Edward Hieatt and Rob Mee. Modello di repository.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt and Rob Mee. Schema repository.**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **Il modello di Repository**
+-   **Schema repository**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Modello di repository: Un'astrazione dei dati persistenza**
-    [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
+-   **Repository Pattern: A data persistence abstraction**
+    [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/) (Schema repository: un'astrazione sulla persistenza dei dati)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Una cartella di lavoro, inclusa una descrizione del modello di Repository) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Progettazione basata su domini: gestire le complessità nel software).** (Libro; include una discussione sullo schema repository) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Schema Unit of Work
 
--   **Martin Fowler. Unità di modello di lavoro.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Schema Unit of Work.**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,8 +161,8 @@ Nelle sezioni successive, viene illustrato come implementare lo schema Specifica
 
 ### <a name="the-specification-pattern"></a>Schema Specification
 
--   **Il modello specifica.**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+-   **The Specification pattern.**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/) (Schema Specification)
 
 -   **Evans, Eric (2004). Domain Driven Design. Addison-Wesley. p. 224.**
 

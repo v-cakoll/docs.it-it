@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 010ac98f523eca5929100f7c51b8b6ef5d11de30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c3950e11e1a81cf7263e146705c351e3dd8a6e9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sbyte-c-reference"></a>sbyte (Riferimenti per C#)
 
 `sbyte` denota un tipo integrale che archivia valori in base alla dimensione e all'intervallo visualizzato nella tabella seguente.  
   
-|Tipo|Intervallo|Dimensioni|Tipo .NET Framework|  
+|Tipo|Intervallo|Dimensione|Tipo .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|Da -128 a 127|Valore intero con segno a 8 bit|<xref:System.SByte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Valori letterali  
 
-È possibile dichiarare e inizializzare una variabile `sbyte` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario. 
+È possibile dichiarare e inizializzare una variabile `sbyte` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7.0) un valore letterale binario. 
 
 Nell'esempio seguente, i valori interi uguali a 102 rappresentati come valori letterali decimali, esadecimali o binari vengono convertiti da valori [int](../../../csharp/language-reference/keywords/int.md) a valori `sbyte`.    
   
@@ -39,11 +39,11 @@ Nell'esempio seguente, i valori interi uguali a 102 rappresentati come valori le
 > [!NOTE] 
 > Viene usato il prefisso `0x` o `0X` per identificare un valore letterale esadecimale e il prefisso `0b` o `0B` per identificare un valore letterale binario. I valori letterali decimali non hanno prefissi.
 
-A partire da c# 7, alcune funzionalità sono state aggiunte migliorare la leggibilità. 
- - C# 7.0 consente l'utilizzo dei caratteri di sottolineatura, `_`, come un separatore di cifre.
- - Consente di c# 7.2 `_` da utilizzare come separatore di cifre per un valore letterale binario o esadecimale, dopo il prefisso. Un valore letterale decimale non è consentito utilizzare un carattere di sottolineatura.
+A partire da C# 7.0, sono state aggiunte alcune funzionalità che migliorano la leggibilità. 
+ - C# 7.0 consente l'utilizzo del carattere di sottolineatura (`_`) come separatore di cifre.
+ - C# 7.2 consente l'utilizzo di `_` dopo il prefisso, come separatore di cifre per un valore letterale binario o esadecimale. In un valore letterale decimale non è consentito l'utilizzo di un carattere di sottolineatura iniziale.
 
- Di seguito sono illustrati alcuni esempi.
+ Di seguito sono riportati alcuni esempi.
 
 [!code-csharp[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
 
@@ -96,7 +96,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- Si noti inoltre che non avviene alcuna conversione implicita dai tipi a virgola mobile in `sbyte`. Ad esempio, l'istruzione seguente genera un errore del compilatore, a meno che non venga usato un cast esplicito:  
+ Si noti inoltre che non avviene alcuna conversione implicita dai tipi a virgola mobile in `sbyte`. Ad esempio, l'istruzione seguente genera un errore di compilazione, a meno che non venga usato un cast esplicito:  
   
 ```csharp  
 sbyte x = 3.0;         // Error: no implicit conversion from double  

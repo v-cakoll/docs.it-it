@@ -1,13 +1,6 @@
 ---
 title: '&lt;system.Net&gt; elemento (impostazioni di rete)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6140a5a66d39cbee3c2a8477dcab88aaa717e745
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9098ce379cbaf12f589270729018da399f282b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; elemento (impostazioni di rete)
 Contiene le impostazioni di rete che specificano la modalità di connessione alla rete di .NET Framework.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +52,7 @@ Contiene le impostazioni di rete che specificano la modalità di connessione all
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
+|[Configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
 ## <a name="remarks"></a>Note  
  Il [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contiene impostazioni per le classi di <xref:System.Net> e spazi dei nomi figlio correlati. Le impostazioni di configurano i moduli di autenticazione, la gestione della connessione, le impostazioni di posta elettronica, server proxy e i moduli di richiesta Internet per ricevere informazioni dagli host Internet.  

@@ -1,30 +1,21 @@
 ---
-title: Specifica un Assembly &#39; s percorso
-ms.custom: 
+title: Specifica un Assembly&#39;percorso s
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [.NET Framework], applications
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="specifying-an-assembly39s-location"></a>Specifica un Assembly &#39; s percorso
+# <a name="specifying-an-assembly39s-location"></a>Specifica un Assembly&#39;percorso s
 Esistono due modi per specificare il percorso dell'assembly:  
   
 -   Utilizzo di [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
@@ -80,4 +71,4 @@ Esistono due modi per specificare il percorso dell'assembly:
  [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurazione delle app .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configurazione di App .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

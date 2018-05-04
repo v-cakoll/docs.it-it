@@ -1,29 +1,19 @@
 ---
-title: '&lt;System&gt;'
-ms.custom: 
+title: '&lt;IdentityModel&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 03c2fa7fe65650b760937ef06b848152893e023b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca108d7dd0498b0d7c08bb632ab45c7229ff58c5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsystemidentitymodelservicesgt"></a>&lt;System&gt;
+# <a name="ltsystemidentitymodelservicesgt"></a>&lt;IdentityModel&gt;
 Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federation.  
   
- \<System >  
+ \<IdentityModel >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +28,7 @@ Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federati
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- nessuno  
+ Nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -47,7 +37,7 @@ Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federati
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Contiene le impostazioni che configurano il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> moduli HTTP (SAM).|  
   
 ### <a name="parent-elements"></a>Elementi padre  
- nessuno  
+ Nessuno  
   
 ## <a name="remarks"></a>Note  
  Aggiungere un `<system.identityModel.services>` sezione al file di configurazione dell'applicazione per fornire le impostazioni per le WSFAM SAM.  

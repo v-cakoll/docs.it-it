@@ -1,32 +1,20 @@
 ---
-title: '&lt;workflowRuntime&gt;'
-ms.custom: 
+title: '&lt;WorkflowRuntime&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a7c24a6995339ecc5f172f1b6f4d1e1930fd719
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c2bd4e2a8c1ddbdb98878d1d97c7acc41856310
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltworkflowruntimegt"></a>&lt;workflowRuntime&gt;
-Specifica le impostazioni di un'istanza della classe <xref:System.Workflow.Runtime.WorkflowRuntime> per ospitare servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] basati sul flusso di lavoro.  
+# <a name="ltworkflowruntimegt"></a>&lt;WorkflowRuntime&gt;
+Specifica le impostazioni per un'istanza di <xref:System.Workflow.Runtime.WorkflowRuntime> per l'hosting di servizi Windows Communication Foundation (WCF) basati sul flusso di lavoro.  
   
  \<system.ServiceModel>  
 \<i comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<workflowRuntime >  
   
 ## <a name="syntax"></a>Sintassi  

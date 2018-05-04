@@ -1,13 +1,6 @@
 ---
 title: '&lt;performanceCounters&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,23 +8,21 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Specifica le dimensioni della memoria globale condivisa dai contatori delle prestazioni.  
   
  \<configuration>  
 \<System. Diagnostics >  
-\<performanceCounters >  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +54,7 @@ Specifica le dimensioni della memoria globale condivisa dai contatori delle pres
   
  La dimensione della memoria condivisa globale può essere impostata solo con un file di configurazione.  La dimensione predefinita è 524.288, la dimensione massima è 33.554.432 byte e la dimensione minima è corrispondono a 32.768 byte.  Poiché la memoria condivisa globale è condiviso da tutti i processi e le categorie, l'autore del primo specifica le dimensioni.  Se si definiscono le dimensioni nel file di configurazione dell'applicazione, tale dimensione viene utilizzata solo se l'applicazione è la prima applicazione che fa sì che i contatori delle prestazioni per l'esecuzione.  Pertanto la posizione corretta per specificare il `filemappingsize` valore rappresenta il file Machine. config.  Impossibile rilasciare memoria nella memoria globale condivisa da singoli contatori delle prestazioni, dopo un certo periodo esaurimento di memoria condivisa globale se viene creato un numero elevato di istanze di contatore delle prestazioni con nomi diversi.  
   
- Per le dimensioni della memoria condivisa separata, il valore di DWORD FileMappingSize nel Registro di sistema chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome categoria >*\Performance viene fatto riferimento in primo luogo, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore di FileMappingSize non esiste, quindi le dimensioni di memoria condivisa separata sono impostata su un quarto (1/4) dell'impostazione globale nel file di configurazione.  
+ Per le dimensioni della memoria condivisa separata, il valore di DWORD FileMappingSize nel Registro di sistema chiave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome categoria >* \Performance viene fatto riferimento in primo luogo, seguito dal valore specificato per la memoria condivisa globale nel file di configurazione. Se il valore di FileMappingSize non esiste, quindi le dimensioni di memoria condivisa separata sono impostata su un quarto (1/4) dell'impostazione globale nel file di configurazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Diagnostics.PerformanceCounter>  

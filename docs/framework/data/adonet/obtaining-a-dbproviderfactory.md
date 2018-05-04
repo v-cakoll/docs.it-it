@@ -1,27 +1,15 @@
 ---
 title: Recupero di un oggetto DbProviderFactory
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a018447b790dde047bd76e1319a13aa3f77ffc61
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e9cf91559fe164fc42d5f9532428310fa1b16ed
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Recupero di un oggetto DbProviderFactory
 Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory> implica il passaggio delle informazioni su un provider di dati alla classe <xref:System.Data.Common.DbProviderFactories>. Sulla base di queste informazioni, il metodo <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crea una factory del provider fortemente tipizzata. Ad esempio, per creare un oggetto <xref:System.Data.SqlClient.SqlClientFactory>, è possibile passare a `GetFactory` una stringa contenente il nome del provider specificato come "System.Data.SqlClient". L'altro overload di `GetFactory` accetta un oggetto <xref:System.Data.DataRow>. Dopo aver creato la factory del provider, è quindi possibile usarne i metodi per creare altri oggetti. I metodi di un oggetto `SqlClientFactory` includono <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -54,8 +42,7 @@ Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory
 |--------------------|-----------------|--------------------|-----------------|  
 |0|**Name**|Provider di dati SqlClient|Nome leggibile del provider di dati|  
 |1|**Descrizione**|Provider di dati .NET Framework per SQL Server|Descrizione leggibile del provider di dati|  
-|2|**InvariantName**|
-          System.Data.SqlClient|Nome da usare a livello di codice per fare riferimento al provider di dati|  
+|2|**InvariantName**|System.Data.SqlClient|Nome da usare a livello di codice per fare riferimento al provider di dati|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Nome completo della classe factory, che contiene informazioni sufficienti per creare un'istanza dell'oggetto|  
   
  È possibile usare un oggetto `DataTable` per consentire a un utente di selezionare un oggetto <xref:System.Data.DataRow> in fase di esecuzione. È quindi possibile passare l'oggetto `DataRow` selezionato al metodo <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> per creare un oggetto <xref:System.Data.Common.DbProviderFactory> fortemente tipizzato. È possibile passare un oggetto <xref:System.Data.DataRow> selezionato al metodo `GetFactory` per creare l'oggetto `DbProviderFactory` desiderato.  
@@ -110,5 +97,5 @@ Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory
 ## <a name="see-also"></a>Vedere anche  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Utilizzo delle classi di configurazione](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [Utilizzando le classi di configurazione](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

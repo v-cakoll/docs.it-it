@@ -1,26 +1,12 @@
 ---
 title: Riferimento a Entity SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a114bf9b58da255f560564d3fedfee598adb22b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-reference"></a>Riferimento a Entity SQL
 In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. In questo argomento sono riepilogati e raggruppati i [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatori per categoria.  
@@ -31,7 +17,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |Operatore|Usa|  
 |--------------|---------|  
 |[+ (addizione)](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|Addizione.|  
-|"/ (Divide)"|Divisione.|  
+|"/ (Divisione)"|Divisione.|  
 |[% (Modulo)](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|Restituisce il resto di una divisione.|  
 |[* (moltiplicazione)](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|Moltiplicazione.|  
 |[- (negativo)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|Negazione.|  
@@ -72,7 +58,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |[& & (AND logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|AND logico.|  
-|[\! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
+|[! (NOT logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NOT logico.|  
 |[&#124;&#124;(OR logico)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|OR logico.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Valuta un set di espressioni booleane per determinare il risultato.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Il risultato di un [quando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clausola quando restituisce true.|  
@@ -111,9 +97,9 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Estrae un elemento da una raccolta multivalore.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Restituisce una raccolta di tutti i valori distinti dell'espressione di query a sinistra dell'operando EXCEPT che non vengono restituiti anche dall'espressione di query a destra dell'operando EXCEPT.|  
-|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina se una raccolta è vuota.|  
+|[&AMP;#91;NON&AMP;#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Determina se una raccolta è vuota.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Converte una raccolta di raccolte in una raccolta bidimensionale.|  
-|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina se un valore corrisponde a qualsiasi valore in una raccolta.|  
+|[&AMP;#91;NON&AMP;#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Determina se un valore corrisponde a qualsiasi valore in una raccolta.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Restituisce una raccolta di tutti i valori distinti restituiti da entrambe le espressioni di query a sinistra e a destra dell'operando INTERSECT.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Determina se due raccolte includono elementi comuni.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Usato per convertire una raccolta di oggetti in un set restituendo una nuova raccolta da cui sono stati rimossi tutti i duplicati.|  
@@ -126,7 +112,7 @@ In questa sezione sono contenuti gli argomenti di riferimento a [!INCLUDE[esql](
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Consente di convertire un'espressione da un tipo di dati a un altro.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Utilizzato un [funzione](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operazione per dichiarare una raccolta di tipi di entità o tipi complessi.|  
-|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina se il tipo di un'espressione è del tipo specificato o di uno dei sottotipi.|  
+|[È &AMP;#91;NON&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Determina se il tipo di un'espressione è del tipo specificato o di uno dei sottotipi.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Restituisce una raccolta di oggetti da un'espressione di query appartenente a un tipo specifico.|  
 |[Costruttore di tipo denominato](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Usato per creare istanze di tipi di entità o tipi complessi.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Crea un'istanza di un multiset da un elenco di valori.|  

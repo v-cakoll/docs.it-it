@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -59,7 +59,7 @@ Se un sistema usa la coerenza finale definita dagli eventi di integrazione, è c
 
 Come accennato in precedenza nella sezione [Problemi e soluzioni per la gestione dei dati distribuiti](#challenges-and-solutions-for-distributed-data-management), è possibile usare gli eventi di integrazione per implementare attività aziendali che interessano più microservizi. In questo modo, si otterrà la coerenza finale tra tali servizi. Una transazione con coerenza finale è costituita da un insieme di azioni distribuite. A ogni azione, il microservizio correlato aggiorna un'entità di dominio e pubblica un altro evento di integrazione che genera l'azione successiva all'interno della stessa attività aziendale end-to-end.
 
-Un aspetto importante è che potrebbe essere necessario comunicare con più microservizi sottoscritti allo stesso evento. A tale scopo, è possibile usare la messaggistica con pubblicazione/sottoscrizione in base alla comunicazione basata su eventi, come illustrato nella figura 4-19. Questo meccanismo di pubblicazione/sottoscrizione non è esclusivo per l'architettura dei microservizi. È simile al modo in cui devono comunicare i [contesti delimitati](http://martinfowler.com/bliki/BoundedContext.html) in DDD o al modo in cui si propagano gli aggiornamenti dal database di scrittura al database di lettura nello schema di architettura [Command and Query Responsibility Segregation (CQRS)](http://martinfowler.com/bliki/CQRS.html). L'obiettivo è ottenere la coerenza finale tra più origini dati in tutto il sistema distribuito.
+Un aspetto importante è che potrebbe essere necessario comunicare con più microservizi sottoscritti allo stesso evento. A tale scopo, è possibile usare la messaggistica con pubblicazione/sottoscrizione in base alla comunicazione basata su eventi, come illustrato nella figura 4-19. Questo meccanismo di pubblicazione/sottoscrizione non è esclusivo per l'architettura dei microservizi. È simile al modo in cui devono comunicare i [contesti delimitati](https://martinfowler.com/bliki/BoundedContext.html) in DDD o al modo in cui si propagano gli aggiornamenti dal database di scrittura al database di lettura nello schema di architettura [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html). L'obiettivo è ottenere la coerenza finale tra più origini dati in tutto il sistema distribuito.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Un problema durante l'implementazione di un'architettura basata su eventi per pi
 
 -   Uso di una coda transazionale (basata su DTC) come MSMQ. Questo, tuttavia, è un approccio di tipo legacy.
 
--   Uso dell'[estrazione del log delle transazioni](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Uso dell'[estrazione del log delle transazioni](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Uso dello schema [Event Sourcing](https://msdn.microsoft.com/library/dn589792.aspx) completo.
 
@@ -91,26 +91,26 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Event Driven Messaging (Messaggistica basata su eventi)**
+-   **Event Driven Messaging (Messaggistica basata sugli eventi)**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish-Subscribe channel (Canale di pubblicazione/sottoscrizione)**
+-   **Canale di pubblicazione/sottoscrizione**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Udi Dahan. Clarified CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/) (Definizione di CQRS)
 
 -   **Command and Query Responsibility Segregation (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts (Comunicazioni tra contesti delimitati)**
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+-   **Communicating Between Bounded Contexts**
+    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx) (Comunicazione tra contesti delimitati)
 
--   **Eventual consistency (Coerenza finale)**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_coerenza*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coerenza finale)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)**
-    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling**
+    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/) (Refactoring rispetto alla resilienza: valutazione dell'accoppiamento)
 
 
 >[!div class="step-by-step"]

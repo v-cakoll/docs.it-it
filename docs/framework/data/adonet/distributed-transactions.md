@@ -1,24 +1,12 @@
 ---
 title: Transazioni distribuite
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Transazioni distribuite
 Una transazione consiste in una set di attività correlate che costituiscono una singola unità, la quale può riuscire (ovvero viene eseguito il commit della transazione) o non riuscire (il processo viene interrotto). Oggetto *transazione distribuita* è una transazione che influenza varie risorse. Per eseguire il commit di una transazione distribuita è necessario che tutti i partecipanti garantiscano che le eventuali modifiche apportate ai dati siano permanenti. Le modifiche devono essere definitive anche in caso di arresti anomali del sistema o altri eventi imprevisti. Se anche un unico partecipante non è in grado di garantire tale requisito, l'intera transazione verrà annullata e verrà effettuato il rollback di tutte le modifiche apportate ai dati nell'ambito della transazione.  
@@ -44,7 +32,7 @@ Una transazione consiste in una set di attività correlate che costituiscono una
   
  L'inserimento in transazioni distribuite è particolarmente indicato quando si effettua il pool di oggetti business. Se si effettua il pool di un oggetto business con una connessione aperta, l'inserimento automatico nella transazione verrà eseguito solo quando quella connessione è aperta. Se vengono condotte più transazioni usando l'oggetto business di cui si effettua il pool, la connessione aperta per tale oggetto non verrà automaticamente inserita nelle nuove transazioni. In questo caso è possibile disabilitare l'inserimento automatico nelle transazioni per la connessione e inserire tale connessione nelle transazioni usando il metodo `EnlistTransaction`.  
   
- `EnlistTransaction`accetta un singolo argomento di tipo <xref:System.Transactions.Transaction> che rappresenta un riferimento alla transazione esistente. Dopo la chiamata al metodo `EnlistTransaction` della connessione, nella transazione sono incluse tutte le modifiche apportate all'origine dati che usa la connessione. Tramite il passaggio di un valore null, la connessione viene rimossa dalla transazione distribuita corrente. Si noti che la connessione deve essere aperta prima di chiamare il metodo `EnlistTransaction`.  
+ `EnlistTransaction` accetta un singolo argomento di tipo <xref:System.Transactions.Transaction> vale a dire un riferimento alla transazione esistente. Dopo la chiamata al metodo `EnlistTransaction` della connessione, nella transazione sono incluse tutte le modifiche apportate all'origine dati che usa la connessione. Tramite il passaggio di un valore null, la connessione viene rimossa dalla transazione distribuita corrente. Si noti che la connessione deve essere aperta prima di chiamare il metodo `EnlistTransaction`.  
   
 > [!NOTE]
 >  Una volta che è stata inserita esplicitamente in una transazione, una connessione non può essere rimossa né inserita in una transazione diversa fino a quando non è stata completata la prima transazione.  

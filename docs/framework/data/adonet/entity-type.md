@@ -1,24 +1,12 @@
 ---
-title: "tipo di entità"
-ms.custom: 
+title: tipo di entità
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b32f188d09114cdef4327df3aa1a74a304e7c3e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c694f29d36988ea52aeca650cf2bba2c50c91e89
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-type"></a>tipo di entità
 Il *tipo di entità* è il blocco predefinito fondamentale per descrivere la struttura di dati con Entity Data Model (EDM). In un modello concettuale, un tipo di entità rappresenta la struttura di concetti di livello superiore, quale ad esempio clienti o ordini. Un tipo di entità è un modello per le istanze del tipo di entità. Ogni modello contiene le informazioni seguenti:  
@@ -29,7 +17,7 @@ Il *tipo di entità* è il blocco predefinito fondamentale per descrivere la str
   
 -   Dati sotto forma di [proprietà](../../../../docs/framework/data/adonet/property.md). (Facoltative)  
   
--   [Le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) che consentono di navigare da un' [fine](../../../../docs/framework/data/adonet/association-end.md) di un [associazione](../../../../docs/framework/data/adonet/association-type.md) a altra estremità. (facoltativo)  
+-   [Le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) che consentono di navigare da un' [end](../../../../docs/framework/data/adonet/association-end.md) di una [associazione](../../../../docs/framework/data/adonet/association-type.md) a altro lato. (facoltativo)  
   
  In un'applicazione, un'istanza di un tipo di entità rappresenta un oggetto specifico, quale ad esempio un cliente o un ordine specifico. Ogni istanza di un tipo di entità deve avere un univoco [chiave di entità](../../../../docs/framework/data/adonet/entity-key.md) all'interno di un [set di entità](../../../../docs/framework/data/adonet/entity-set.md).  
   

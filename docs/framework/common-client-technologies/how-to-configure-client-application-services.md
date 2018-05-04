@@ -1,28 +1,28 @@
 ---
 title: 'Procedura: configurare i servizi delle applicazioni client'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Procedura: configurare i servizi delle applicazioni client
 In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Creazione progetti** per attivare e configurare i servizi delle applicazioni client. È possibile usare i servizi delle applicazioni client per convalidare gli utenti e recuperare i ruoli utente e le impostazioni da un servizio dell'applicazione [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] esistente. Dopo la configurazione, è possibile accedere ai servizi abilitati nel codice dell'applicazione come descritto in [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Per altre informazioni sui servizi delle applicazioni [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], vedere l'argomento relativo ai [Panoramica sui servizi delle applicazioni ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -111,7 +111,7 @@ In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includ
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Per usare il proprio database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], specificare una stringa di connessione personalizzata. Per informazioni sui formati di stringa di connessione validi, vedere la documentazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questo database non viene generato automaticamente. La stringa di connessione deve fare riferimento a un database esistente che è possibile creare usando le seguenti istruzioni SQL.  
+5.  Per usare il proprio database SQL Server, specificare una stringa di connessione personalizzata. Per informazioni sui formati di stringa di connessione validi, vedere la documentazione di SQL Server. Questo database non viene generato automaticamente. La stringa di connessione deve fare riferimento a un database esistente che è possibile creare usando le seguenti istruzioni SQL.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ In questo argomento viene descritto come usare [!INCLUDE[vsprvs](../../../includ
 ## <a name="using-custom-providers"></a>Utilizzo di provider personalizzati  
  Per impostazione predefinita, la funzionalità dei servizi delle applicazioni client usa i provider nello spazio dei nomi <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. Quando si configura l'applicazione usando la pagina **Servizi** di **Creazione progetti**, i riferimenti ai provider specificati vengono aggiunti al file App.config. Questi provider predefiniti accedono ai provider corrispondenti sul server. I servizi Web sono spesso configurati in modo da accedere ai dati utente tramite provider come <xref:System.Web.Security.SqlMembershipProvider> e <xref:System.Web.Security.SqlRoleProvider>.  
   
- Per usare i provider di servizi personalizzati, in genere è necessario modificare i provider sul lato server in modo che influiscano su tutte le applicazioni client che accedono al server. Tuttavia, è possibile usare i provider non predefiniti sul lato client. È possibile specificare l'autenticazione o i provider di ruoli personalizzati nel file App.config del progetto, come illustrato nella procedura seguente. Per informazioni sulla creazione di autenticazione e provider di ruoli personalizzati, vedere [Implementazione di un provider di appartenenza](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementazione di un provider di ruoli](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). È anche possibile usare un provider di impostazioni personalizzato modificando la classe `Settings` del proprio progetto (accessibile come `Properties.Settings.Default` in C# e `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Per altre informazioni, vedere [Architettura delle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Per usare i provider di servizi personalizzati, in genere è necessario modificare i provider sul lato server in modo che influiscano su tutte le applicazioni client che accedono al server. Tuttavia, è possibile usare i provider non predefiniti sul lato client. È possibile specificare l'autenticazione o i provider di ruoli personalizzati nel file App.config del progetto, come illustrato nella procedura seguente. Per informazioni sulla creazione di autenticazione e provider di ruoli personalizzati, vedere [Implementazione di un provider di appartenenza](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementazione di un provider di ruoli](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). È anche possibile usare un provider di impostazioni personalizzato modificando la classe `Settings` del proprio progetto (accessibile come `Properties.Settings.Default` in C# e `My.Settings` in Visual Basic). Per altre informazioni, vedere [Architettura delle impostazioni delle applicazioni](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>Per configurare i servizi delle applicazioni client in modo da usare provider non predefiniti  
   

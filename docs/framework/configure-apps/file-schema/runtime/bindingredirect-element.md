@@ -1,13 +1,6 @@
 ---
 title: '&lt;bindingRedirect&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect
@@ -16,22 +9,20 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f8cd497871d8a58504cf790f84cc7e5a1d4e39b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08dc7a55b5b0c580f19d137496b9405fa4e18a5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; elemento
 Reindirizza una versione dell'assembly in un'altra.  
   
  \<configuration>  
-\<runtime >  
+\<runtime>  
 \<assemblyBinding >  
 \<dependentAssembly >  
 \<bindingRedirect >  
@@ -52,13 +43,13 @@ newVersion="new assembly version"/>
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |`oldVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly richiesta in origine. Il formato di un numero di versione di assembly è *revisione*. I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.<br /><br /> È inoltre possibile specificare una gamma di versioni nel seguente formato:<br /><br /> *n.n.n. n - n.n.n. n*|  
-|`newVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly da utilizzare invece la versione richiesta originariamente nel formato: *n.n.n. n*<br /><br /> Questo valore può specificare una versione precedente di `oldVersion`.|  
+|`newVersion`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly da usare invece la versione richiesta originariamente nel formato: *n.n.n. n*<br /><br /> Questo valore può specificare una versione precedente di `oldVersion`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|nessuno||  
+|Nessuno||  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

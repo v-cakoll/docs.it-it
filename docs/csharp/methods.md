@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 526cd6d269c7c089f6547fcf243b43e411037d13
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods"></a>Metodi #
 
@@ -263,7 +263,7 @@ Se si contrassegna un metodo con il modificatore [async](language-reference/keyw
 > [!NOTE]
 > Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.
 
-Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. Questa limitazione verrà risolta al rilascio di C# 7 per consentire a un metodo asincrono di [restituire qualsiasi tipo attività](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o `void`. Il tipo restituito `void` viene usato principalmente per definire i gestori eventi in cui è necessario un tipo restituito `void`. Un metodo asincrono che restituisce `void` non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare le eccezioni generate dal metodo. Questa limitazione verrà risolta al rilascio di C# 7.0 per consentire a un metodo asincrono [ di restituire qualsiasi tipo attività](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 Nell'esempio seguente `DelayAsync` è un metodo asincrono con un'istruzione return che restituisce un valore Integer. Poiché si tratta di un metodo asincrono, la dichiarazione del metodo deve avere un tipo restituito di `Task<int>`. Poiché il tipo restituito è `Task<int>`, la valutazione dell'espressione `await` in `DoSomethingAsync` genera un numero intero come dimostra l'istruzione `int result = await delayTask` seguente.
 

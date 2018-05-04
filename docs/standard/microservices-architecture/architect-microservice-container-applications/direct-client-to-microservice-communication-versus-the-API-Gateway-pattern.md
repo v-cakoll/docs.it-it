@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Confronto tra comunicazione da client a microservizio diretta e schema API Gateway
 
@@ -57,7 +57,7 @@ L'API di più microservizi potrebbe non essere progettata adeguatamente per le e
 
 ## <a name="using-an-api-gateway"></a>Utilizzo di un gateway API
 
-Quando si progettano e si compilano applicazioni grandi e complesse basate su microservizi con più app client, si può prendere in considerazione l'uso di un [gateway API](http://microservices.io/patterns/apigateway.html). Si tratta di un servizio che fornisce un singolo punto di ingresso per alcuni gruppi di microservizi. È simile allo [schema Facade](https://en.wikipedia.org/wiki/Facade_pattern) della progettazione orientata a oggetti, ma, in questo caso, fa parte di un sistema distribuito. Lo schema API Gateway è noto anche come "backend for frontend" [(BFF)](http://samnewman.io/patterns/architectural/bff/) perché viene compilato pensando alle esigenze dell'app client.
+Quando si progettano e si compilano applicazioni grandi e complesse basate su microservizi con più app client, si può prendere in considerazione l'uso di un [gateway API](https://microservices.io/patterns/apigateway.html). Si tratta di un servizio che fornisce un singolo punto di ingresso per alcuni gruppi di microservizi. È simile allo [schema Facade](https://en.wikipedia.org/wiki/Facade_pattern) della progettazione orientata a oggetti, ma, in questo caso, fa parte di un sistema distribuito. Lo schema API Gateway è noto anche come "backend for frontend" [(BFF)](https://samnewman.io/patterns/architectural/bff/) perché viene compilato pensando alle esigenze dell'app client.
 
 La figura 4-13 mostra in che modo un gateway API personalizzato può essere inserito in un'architettura basata su microservizi.
 È importante evidenziare che nel diagramma viene usato un solo servizio di gateway API personalizzato per numerose app client di diverso tipo. Ciò può presentare dei rischi significativi perché il servizio API Gateway verrà ampliato e sviluppato in base alle diverse esigenze delle app client. Alla fine, per soddisfare tutte le esigenze, il servizio potrebbe diventare talmente esteso da sembrare un'unica applicazione o servizio monolitico. Ecco perché si consiglia vivamente di suddividere il gateway API in più servizi o in gateway API più piccoli, uno per ogni tipo di fattore di forma, ad esempio.
@@ -110,8 +110,8 @@ In questa guida e nell'applicazione di esempio di riferimento (eShopOnContainers
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Charles Richardson. Pattern: API Gateway / Backend for Front-End (Schema: API Gateway/Backend for Front-End)**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. Pattern: API Gateway / Backend for Front-End**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html) (Modello: Gateway API/Back.end per front-end)
 
 -   **Gestione API di Azure**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ In questa guida e nell'applicazione di esempio di riferimento (eShopOnContainers
 -   **Udi Dahan. Service Oriented Composition (Composizione orientata ai servizi)**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaggistica e microservizi in GOTO 2016)** (video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Messaggistica e microservizi a GOTO 2016)**  (video) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

@@ -1,32 +1,20 @@
 ---
 title: '&lt;reliableSession&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e4c854d9f7e1262a771dadc897878dac20a642e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b8049e2c493a652405a93eed68f05438819aecb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene aggiunto a un'associazione personalizzata, il canale risultante può supportare assicurazioni di recapito una volta esatta.  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<customBinding >  
-\<associazione >  
+ \<system.serviceModel>  
+\<le associazioni >  
+\<customBinding>  
+\<binding>  
 \<reliableSession >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -59,13 +47,13 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
 |reliableMessagingVersion|Un valore valido da <xref:System.ServiceModel.ReliableMessagingVersion> che specifica la versione di WS-ReliableMessaging da usare.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<associazione >](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
 ## <a name="remarks"></a>Note  
  Le sessioni affidabili forniscono funzionalità per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. Questo elemento fornisce inoltre il recapito ordinato dei messaggi (facoltativo). Questa sessione implementata può attraversare intermediari SOAP e di trasporto.  
@@ -138,4 +126,4 @@ Definisce l'impostazione per WS-Reliable Messaging. Quando questo elemento viene
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,26 +1,14 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le operazioni del servizio.  
@@ -28,7 +16,7 @@ Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le
  \<system.ServiceModel>  
 \<i comportamenti >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportamento >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -63,7 +51,7 @@ Specifica impostazioni che abilitano controllo di eventi di sicurezza durante le
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
- Questo elemento di configurazione viene usato per controllare gli eventi di autenticazione di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Quando il controllo è attivato, è possibile controllare tentativi di autenticazione riusciti o con errori (o entrambi). Gli eventi vengono scritti in uno di tre registri eventi (applicazione, sicurezza o predefinito) in base alla versione del sistema operativo. I registri eventi possono essere tutti visualizzati con il Visualizzatore eventi di Windows.  
+ Questo elemento di configurazione viene utilizzato per controllare gli eventi di autenticazione di Windows Communication Foundation (WCF). Quando il controllo è attivato, è possibile controllare tentativi di autenticazione riusciti o con errori (o entrambi). Gli eventi vengono scritti in uno di tre registri eventi (applicazione, sicurezza o predefinito) in base alla versione del sistema operativo. I registri eventi possono essere tutti visualizzati con il Visualizzatore eventi di Windows.  
   
  Per un esempio dettagliato dell'utilizzo di questo elemento di configurazione, vedere [il comportamento di controllo del servizio](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

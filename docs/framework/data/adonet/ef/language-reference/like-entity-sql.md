@@ -1,24 +1,12 @@
 ---
 title: LIKE (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina se un oggetto `String` di caratteri specifico corrisponde a un criterio specificato.  
@@ -46,16 +34,16 @@ match [NOT] LIKE pattern [ESCAPE escape]
  `true` se `string` corrisponde al criterio; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]espressioni che utilizzano l'operatore LIKE vengono valutate in gran parte nello stesso modo delle espressioni che utilizzano l'uguaglianza come criterio di filtro. Tuttavia, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le espressioni che utilizzano l'operatore LIKE possono includere sia valori letterali e caratteri jolly.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le espressioni che utilizzano l'operatore LIKE vengono valutate in gran parte esattamente come le espressioni che utilizzano l'uguaglianza come criterio di filtro. Tuttavia, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le espressioni che utilizzano l'operatore LIKE possono includere sia valori letterali e caratteri jolly.  
   
  Nella tabella seguente viene descritta la sintassi del modello `string`.  
   
 |Carattere jolly|Descrizione|Esempio|  
 |------------------------|-----------------|-------------|  
-|%|Qualsiasi `string` di zero o più caratteri.|`title like '%computer%'`Trova tutti i titoli con la parola `"computer"` nel titolo.|  
-|_ (carattere di sottolineatura)|Qualsiasi carattere singolo.|`firstname like '_ean'`Trova tutti i nomi di primo quattro lettere che terminano con `"ean`, ", ad esempio Dean o Sean.|  
-|[ ]|Qualsiasi carattere singolo compreso nell'intervallo ([a-f]) o nel set ([abcdef]) specificato.|`lastname like '[C-P]arsen'`Consente di trovare i cognomi che terminano con "arsen" e che iniziano con qualsiasi carattere singolo compreso tra C e P, ad esempio Carsen o Larsen.|  
-|[^]|Qualsiasi carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^abcdef]) specificato.|`lastname like 'de[^l]%'`Trova tutti i cognomi che iniziano con "de" e non includono "l" come lettera seguente.|  
+|%|Qualsiasi `string` di zero o più caratteri.|`title like '%computer%'` Trova tutti i titoli con la parola `"computer"` in un punto qualsiasi nel titolo.|  
+|_ (carattere di sottolineatura)|Qualsiasi carattere singolo.|`firstname like '_ean'` Consente di trovare tutti i nomi di primo quattro lettere che terminano con `"ean`, ", ad esempio Dean o Sean.|  
+|[ ]|Qualsiasi carattere singolo compreso nell'intervallo ([a-f]) o nel set ([abcdef]) specificato.|`lastname like '[C-P]arsen'` Trova i cognomi che terminano con "arsen" e che iniziano con qualsiasi carattere singolo compreso tra C e P, ad esempio Carsen o Larsen.|  
+|[^]|Qualsiasi carattere singolo non compreso nell'intervallo ([^a-f]) o nel set ([^abcdef]) specificato.|`lastname like 'de[^l]%'` Trova tutti i cognomi che iniziano con "de" e non includono "l" come lettera seguente.|  
   
 > [!NOTE]
 >  La clausola ESCAPE e l'operatore LIKE [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non possono essere applicati ai valori `System.DateTime` o `System.Guid`.  

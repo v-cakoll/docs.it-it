@@ -1,24 +1,12 @@
 ---
 title: Raccolte di schemi Oracle
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Raccolte di schemi Oracle
 Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di schemi comuni, supporta le seguenti raccolte di schemi specifici:  
@@ -112,10 +100,10 @@ Il provider di dati Microsoft .NET Framework per Oracle, oltre alle raccolte di 
 |LAST_ANALYZED|DateTime|La data più recente in cui è stato analizzato l'indice.|  
 |DEGREE|String|Il numero di thread per ogni istanza per l'analisi dell'indice.|  
 |INSTANCES|String|Il numero di istanze in cui analizzare gli indici.|  
-|PARTITIONED|Stringa|Se l'indice è partizionato (Sì &#124; NO).|  
+|PARTITIONED|Stringa|Indica se l'indice è partizionato (YES &#124; NO).|  
 |TEMPORARY|String|Indica se l'indice è in una tabella temporanea.|  
-|GENERATED|Stringa|Se il nome dell'indice è generato dal sistema (Y &#124; N).|  
-|SECONDARY|Stringa|Se l'indice è un oggetto secondario creato dal metodo ODCIIndexCreate di Oracle9i Data Cartridge (Y &#124; N).|  
+|GENERATED|Stringa|Se il nome dell'indice è generato dal sistema (Y&#124;N).|  
+|SECONDARY|Stringa|Se l'indice è un oggetto secondario creato dal metodo ODCIIndexCreate di Oracle9i Data Cartridge (Y&#124;N).|  
 |BUFFER_POOL|String|Il nome del pool di buffer predefinito da usare per il blocchi dell'indice.|  
 |USER_STATS|String|Indica se le statistiche sono state immesse direttamente dall'utente.|  
 |DURATION|String|Indica la durata di una tabella temporanea. 1) SYS$SESSION: le righe vengono mantenute per la durata della sessione. 2) SYS$TRANSACTION: le righe vengono eliminate dopo COMMIT. 3) Null per una tabella permanente.|  

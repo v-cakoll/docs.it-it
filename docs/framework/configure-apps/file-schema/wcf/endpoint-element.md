@@ -1,31 +1,19 @@
 ---
 title: Elemento &lt;endpoint&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-element"></a>Elemento &lt;endpoint&gt;
 Specifica le proprietà di associazione, contratto e indirizzo di endpoint del servizio usato per esporre servizi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<servizio >  
-\<endpoint >  
+\<endpoint>  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,7 +62,7 @@ Specifica le proprietà di associazione, contratto e indirizzo di endpoint del s
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<servizio >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Sezione di configurazione che definisce un elenco di endpoint ai quali può connettersi un client.|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Sezione di configurazione che definisce un elenco di endpoint ai quali può connettersi un client.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di configurazione dell'endpoint di un servizio.  

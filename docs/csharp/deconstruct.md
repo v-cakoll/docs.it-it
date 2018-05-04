@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi #
 
@@ -24,7 +24,7 @@ Una tupla è un metodo semplice per recuperare più valori da una chiamata a un 
 
 Il recupero di più valori di campi e proprietà da un oggetto può essere altrettanto complesso: è necessario assegnare un valore di campo o proprietà a una variabile, un membro alla volta. 
 
-A partire da C# 7 è possibile recuperare più elementi da una tupla o recuperare più valori di campi, proprietà e valori calcolati da un oggetto in una singola operazione di *decostruzione*. Quando si decostruisce una tupla gli elementi corrispondenti vengono assegnati a singole variabili. Quando si decostruisce un oggetto si assegnano valori selezionati a singole variabili. 
+A partire da C# 7.0 è possibile recuperare più elementi da una tupla o recuperare più valori di campi, proprietà e valori calcolati da un oggetto in una singola operazione di *decostruzione*. Quando si decostruisce una tupla gli elementi corrispondenti vengono assegnati a singole variabili. Quando si decostruisce un oggetto si assegnano valori selezionati a singole variabili. 
 
 ## <a name="deconstructing-a-tuple"></a>Decostruzione di una tupla
 
@@ -34,7 +34,7 @@ In C# è incluso il supporto per la decostruzione di tuple, che consente di deco
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Esistono tre modi per annullare una tupla:
+Esistono tre modi per decostruire una tupla:
 
 - È possibile dichiarare in modo esplicito il tipo di ogni campo all'interno di parentesi. Nell'esempio seguente viene usato questo approccio per decostruire la tupla con 3 elementi restituita dal metodo `QueryCityData`.
 
@@ -50,7 +50,7 @@ Esistono tre modi per annullare una tupla:
 
     Questo approccio è eccessivamente complesso e non è consigliato.
 
-- Infine, è possibile annullare la tupla in variabili che sono già state dichiarate.
+- Infine, è possibile decostruire la tupla in variabili che sono già state dichiarate.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi
 
 Si noti anche che è necessario assegnare ogni elemento della tupla a una variabile. Se si omette un elemento, il compilatore genera l'errore CS8132: "Non è possibile decostruire una tupla di 'x' elementi in 'y' variabili".
 
-Si noti che non è possibile combinare le dichiarazioni e le assegnazioni di variabili esistenti sul lato sinistro di un'eliminazione. Il compilatore genera l'errore CS8184, "un'eliminazione non è possibile combinare dichiarazioni e le espressioni nella finestra di sinistra sul lato". Quando i membri includono variabili esistenti e appena dichiarate.
+Si noti che non è possibile combinare le dichiarazioni e le assegnazioni a variabili esistenti sul lato sinistro di una decostruzione. Questa operazione genera l'errore del compilatore CS8184: "Nella parte sinistra di una decostruzione non è possibile combinare dichiarazioni ed espressioni" quando i membri includono variabili esistenti e appena dichiarate.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Decostruzione degli elementi della tupla con variabili discard
 
-Spesso quando si decostruisce una tupla si è interessati solo ai valori di alcuni elementi. A partire da C# 7 è possibile avvalersi del supporto in C# delle *variabili discard*, variabili di sola scrittura delle quali si è scelto di ignorare i valori. Una variabile discard è indicata da un carattere di sottolineatura ("\_") in un'assegnazione. È possibile rimuovere il numero di valori desiderato; tutti sono rappresentati dalla variabile discard singola `_`.
+Spesso quando si decostruisce una tupla si è interessati solo ai valori di alcuni elementi. A partire da C# 7.0 è possibile avvalersi del supporto in C# delle variabili *discard*, variabili di sola scrittura delle quali si è scelto di ignorare i valori. Una variabile discard è indicata da un carattere di sottolineatura ("\_") in un'assegnazione. È possibile rimuovere il numero di valori desiderato; tutti sono rappresentati dalla variabile discard singola `_`.
 
 L'esempio seguente illustra l'uso delle tuple con le variabili discard. Il metodo `QueryCityDataForYears` restituisce una tupla con 6 elementi con il nome di una città, l'area della città, un anno, la popolazione della città per tale anno, un secondo anno e la popolazione della città per tale anno. L'esempio visualizza la variazione della popolazione tra questi due anni. Tra i dati resi disponibili dalla tupla non interessa l'area della città, mentre il nome della città e le due date sono già noti in fase di progettazione. Di conseguenza interessano soltanto i due valori di popolazione archiviati nella tupla, mentre gli altri valori possono essere gestiti come variabili discard.  
 

@@ -1,29 +1,17 @@
 ---
 title: Elemento &lt;synchronousReceive&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63923121ae96b85bd192899a8d8ad285a3ad5b2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsynchronousreceivegt-element"></a>Elemento &lt;synchronousReceive&gt;
 Questo elemento di configurazione viene usato per specificare il comportamento in fase di esecuzione per la ricezione di messaggi in un servizio o in un'applicazione client. Non prevede attributi o elementi figlio.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<i comportamenti >  
 \<endpointBehaviors >  
 \<comportamento >  
@@ -48,10 +36,10 @@ Questo elemento di configurazione viene usato per specificare il comportamento i
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un comportamento dell'endpoint.|  
   
 ## <a name="remarks"></a>Note  
- Usare questo comportamento per fornire al listener del canale l'istruzione di usare la ricezione sincrona anziché l'impostazione predefinita, ovvero la modalità asincrona. In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] viene emesso un nuovo thread per la distribuzione per ogni canale accettato. Se esistono molti canali, sussiste la possibilità di esaurire i thread.  
+ Usare questo comportamento per fornire al listener del canale l'istruzione di usare la ricezione sincrona anziché l'impostazione predefinita, ovvero la modalità asincrona. Windows Communication Foundation (WCF) genera un nuovo thread per la distribuzione per ogni canale accettato. Se esistono molti canali, sussiste la possibilità di esaurire i thread.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  

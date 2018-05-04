@@ -1,18 +1,18 @@
 ---
 title: Strumento Microsoft WCF Web Service Reference Provider
-description: "Panoramica dello strumento Microsoft WCF Web Service Reference Provider che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come Aggiungi riferimento al servizio per i progetti .NET Framework."
+description: Panoramica dello strumento Microsoft WCF Web Service Reference Provider che aggiunge funzionalità per i progetti .NET Core e ASP.NET Core, come Aggiungi riferimento al servizio per i progetti .NET Framework.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Strumento Microsoft WCF Web Service Reference Provider
 
@@ -20,6 +20,10 @@ Nel corso degli anni, molti sviluppatori di Visual Studio hanno aumentato la pro
 
 > [!IMPORTANT]
 > Si consiglia di fare riferimento solo a servizi provenienti da un'origine attendibile. L'aggiunta di riferimenti da un'origine non attendibile può compromettere la sicurezza. 
+
+## <a name="prerequisites"></a>Prerequisiti
+
+* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) o versioni successive
 
 ## <a name="how-to-use-the-extension"></a>Come usare l'estensione
 

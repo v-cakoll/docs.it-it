@@ -1,24 +1,12 @@
 ---
 title: Cenni preliminari su Entity Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8b07fb9b80d5d0d13967c807198194b3a2228202
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-overview"></a>Cenni preliminari su Entity Framework
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] è un set di tecnologie ADO.NET che supportano lo sviluppo di applicazioni software orientate ai dati. Gli architetti e gli sviluppatori di questo tipo di applicazioni si trovano nella difficile condizione di dover realizzare due obiettivi molto diversi tra loro, ovvero la modellazione delle entità, delle relazioni e della logica dei problemi aziendali che sono preposti a risolvere e al tempo stesso la gestione dei motori dei dati usati per archiviare e recuperare i dati stessi. Dal momento che i dati potrebbero essere distribuiti in più sistemi di archiviazione, ciascuno con i suoi protocolli, è necessario che nelle applicazioni che gestiscono un solo sistema di archiviazione venga rispettato l'equilibrio tra i requisiti del sistema di archiviazione e i requisiti di scrittura di codice dell'applicazione efficiente e gestibile.  
@@ -29,13 +17,13 @@ ms.lasthandoff: 01/19/2018
   
 -   [Realizzazione dei modelli](#LifeToModels)  
   
--   [Mapping di oggetti ai dati](#MappingObjectsToData)  
+-   [Oggetti di mapping ai dati](#MappingObjectsToData)  
   
 -   [L'accesso e modifica dei dati di entità](#AccessingData)  
   
 -   [Provider di dati](#DataProviders)  
   
--   [Strumenti di Entity Data Model](#Tools)  
+-   [Strumenti Entity Data Model](#Tools)  
   
 -   [Informazioni approfondite](#LearnMore)  
   
@@ -73,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Fornisce il supporto di Language-Integrated Query (LINQ) per eseguire query sui tipi di entità che sono definiti in un modello concettuale. Per ulteriori informazioni, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialetto indipendente dall'archiviazione di SQL che interagisce direttamente con le entità nel modello concettuale in grado di supportare [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)]viene utilizzato sia con le query di oggetto e le query eseguite tramite il provider EntityClient. Per ulteriori informazioni, vedere [Entity SQL Panoramica](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialetto indipendente dall'archiviazione di SQL che interagisce direttamente con le entità nel modello concettuale in grado di supportare [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] concetti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] viene utilizzato sia con le query di oggetto e le query eseguite tramite il provider EntityClient. Per ulteriori informazioni, vedere [Entity SQL Panoramica](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] include il provider di dati EntityClient. Tale provider gestisce connessioni, converte query di entità in query specifiche dell'origine dati e restituisce un lettore dati usato da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] per materializzare i dati dell'entità in oggetti. Quando la materializzazione di oggetti non è necessario, il provider EntityClient utilizzabili come standard [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] provider di dati, consentendo alle applicazioni di eseguire [!INCLUDE[esql](../../../../../includes/esql-md.md)] esegue una query e utilizzare il lettore dati di sola lettura restituito. Per ulteriori informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   

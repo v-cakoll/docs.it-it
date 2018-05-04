@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Progettazione di un microservizio orientato a DDD
 
@@ -57,7 +57,7 @@ Si vuole progettare il sistema in modo che ogni livello comunichi solo con deter
 
 ### <a name="the-domain-model-layer"></a>Livello del modello di dominio
 
-L'eccellente libro di Eric Evans sulla [progettazione basata sui domini](http://domainlanguage.com/ddd/) descrive nel modo seguente il livello del modello di dominio e il livello dell'applicazione.
+L'eccellente libro di Eric Evans sulla [progettazione basata sui domini](https://domainlanguage.com/ddd/) descrive nel modo seguente il livello del modello di dominio e il livello dell'applicazione.
 
 **Livello del modello di dominio**: responsabile della rappresentazione di concetti di business, informazioni sulla situazione aziendale e regole di business. A questo livello viene controllato e usato lo stato che riflette la situazione di business, anche se i dettagli tecnici dell'archiviazione vengono delegati all'infrastruttura. Questo livello è il cuore del software di business,
 
@@ -75,7 +75,7 @@ Ciò non significa che sia possibile spostare un modello progettato per un datab
 
 ### <a name="the-application-layer"></a>Livello dell'applicazione
 
-Passando al livello dell'applicazione, è possibile citare nuovamente il libro di Eric Evans sulla [progettazione basata su domini](http://domainlanguage.com/ddd/):
+Passando al livello dell'applicazione, è possibile citare nuovamente il libro di Eric Evans sulla [progettazione basata su domini](https://domainlanguage.com/ddd/):
 
 **Livello dell'applicazione:** definisce i processi che il software dovrà eseguire e indica agli oggetti di dominio espressivi per risolvere i problemi. Le attività di cui è responsabile questo livello sono significative per il business o necessarie per l'interazione con i livelli dell'applicazione di altri sistemi. Questo livello deve essere di ampiezza limitata. Non contiene regole business o informazioni, ma si limita a coordinare le attività e a delegare il lavoro a collaborazioni di oggetti di dominio nel livello immediatamente successivo. Non presenta uno stato che riflette la situazione di business, ma può avere uno stato che riflette l'avanzamento di un'attività per l'utente o il programma.
 
@@ -102,13 +102,13 @@ Questa struttura di livello deve essere indipendente per ogni microservizio. Com
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
 -   **DevIQ. Persistence Ignorance principle**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/) (Principio del mancato riconoscimento della persistenza)
 
 -   **Oren Eini. Infrastructure Ignorance**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance) (Mancato riconoscimento dell'infrastruttura)
 
 -   **Angel Lopez. Layered Architecture In Domain-Driven Design**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)(Architettura a livelli nella progettazione basata su domini)
 
 
 >[!div class="step-by-step"]

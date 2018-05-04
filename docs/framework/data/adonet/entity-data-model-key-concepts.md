@@ -1,24 +1,12 @@
 ---
 title: Concetti chiave di Entity Data Model
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f75a4fc0e529b602aca91aa3cfd2dff35e4fe640
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d92d2a99562c7eac6fef0ba76cd00241d600c265
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model-key-concepts"></a>Concetti chiave di Entity Data Model
 Entity Data Model (EDM) usano tre concetti chiave per descrivere la struttura di dati: *tipo di entità*, *tipo di associazione*, e *proprietà*. Si tratta dei concetti più importanti nella descrizione della struttura di dati in qualsiasi implementazione di EDM.  
@@ -34,7 +22,7 @@ Entity Data Model (EDM) usano tre concetti chiave per descrivere la struttura di
  In un'applicazione, un'istanza di un'associazione rappresenta un'associazione specifica (ad esempio, un'associazione tra un'istanza relativa al cliente e istanze relative all'ordine). Le istanze dell'associazione sono raggruppate logicamente in un [set di associazioni](../../../../docs/framework/data/adonet/association-set.md). Set di associazioni (e [set di entità](../../../../docs/framework/data/adonet/entity-set.md)) sono raggruppati logicamente in un [contenitore di entità](../../../../docs/framework/data/adonet/entity-container.md).  
   
 ## <a name="property"></a>Proprietà  
- [Tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) contengono [proprietà](../../../../docs/framework/data/adonet/property.md) che definiscono la struttura e le caratteristiche. È, ad esempio, possibile che un tipo di entità Customer disponga di proprietà quali CustomerId, Name e Address.  
+ [Tipi di entità](../../../../docs/framework/data/adonet/entity-type.md) contengono [proprietà](../../../../docs/framework/data/adonet/property.md) che definiscono la struttura e caratteristiche. È, ad esempio, possibile che un tipo di entità Customer disponga di proprietà quali CustomerId, Name e Address.  
   
  Le proprietà in un modello concettuale sono analoghe alle proprietà definite su una classe in un programma informatico. Nello stesso modo in cui le proprietà su una classe definiscono la forma della classe e forniscono informazioni su oggetti, le proprietà in un modello concettuale definiscono la forma di un tipo di entità e forniscono informazioni su istanze del tipo di entità.  
   

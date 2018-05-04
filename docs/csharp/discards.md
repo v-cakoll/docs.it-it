@@ -1,6 +1,6 @@
 ---
 title: Variabili discard - Guida di C#
-description: "Descrive il supporto in C# delle variabili discard, che sono variabili non assegnate e rimovibili, e le modalità d'uso di tali variabili."
+description: Descrive il supporto in C# delle variabili discard, che sono variabili non assegnate e rimovibili, e le modalità d'uso di tali variabili.
 keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
 
-A partire dalla versione 7, C# supporta le variabili discard, variabili dummy temporanee intenzionalmente inutilizzate nel codice dell'applicazione. Le variabili discard sono equivalenti alle variabili non assegnate e non hanno un valore. Dato che è presente un'unica variabile discard alla quale potrebbe non essere allocata nessuna archiviazione, le variabili discard possono ridurre le allocazioni di memoria. Dato che rendono chiaro l'obiettivo del codice, ne migliorano la leggibilità e la gestibilità.
+A partire dalla versione 7.0, C# supporta le variabili discard, variabili dummy temporanee intenzionalmente inutilizzate nel codice dell'applicazione. Le variabili discard sono equivalenti alle variabili non assegnate e non hanno un valore. Dato che è presente un'unica variabile discard alla quale potrebbe non essere allocata nessuna archiviazione, le variabili discard possono ridurre le allocazioni di memoria. Dato che rendono chiaro l'obiettivo del codice, ne migliorano la leggibilità e la gestibilità.
 
-Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio, la seguente chiamata al metodo restituisce una tupla con 3 elementi in cui i valori del primo e secondo sono scartati e *area* è una variabile dichiarata in precedenza da impostare per il terzo componente corrispondente restituito da  *GetCityInformation*:
+Per indicare che una variabile è una variabile discard le si assegna come nome il carattere di sottolineatura (`_`). Ad esempio, la chiamata al metodo seguente restituisce una tupla con 3 elementi in cui il primo e il secondo valore sono discard e *area* è una variabile dichiarata in precedenza da impostare in base al corrispondente terzo componente restituito da  *GetCityInformation*:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-In C# 7 le variabili discard sono supportate nelle assegnazioni nei seguenti contesti:
+In C# 7.0 le variabili discard sono supportate nelle assegnazioni nei contesti seguenti:
 
 - [Decostruzione](deconstruct.md) di tuple e oggetti.
 - Criteri di ricerca con [is](language-reference/keywords/is.md) e [switch](language-reference/keywords/switch.md).

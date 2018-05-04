@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>Rami e cicli
 
@@ -249,11 +249,11 @@ Dopo aver esaminato l'istruzione `if` e i costrutti per i cicli nel linguaggio C
 - L'istruzione `if` offre la condizione per stabilire se un numero deve fare parte della somma.
 - Il ciclo `for` può essere utile per ripetere una serie di passaggi per tutti i numeri da 1 a 20.
 
-Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 63. Per vedere una possibile risposta, [visualizzare il codice completo in GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 63. Per vedere una possibile risposta, [visualizzare il codice completo in GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54).
 
 È stata completata la guida introduttiva "Cicli e rami".
 
-È possibile continuare con la guida introduttiva [Stringhe interpolate](interpolated-strings-local.md) nel proprio ambiente di sviluppo.
+È possibile continuare con la guida introduttiva [Interpolazione di stringa](interpolated-strings-local.md) nel proprio ambiente di sviluppo.
 
 Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
 

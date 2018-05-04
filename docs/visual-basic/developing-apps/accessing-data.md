@@ -2,23 +2,24 @@
 title: Accesso ai dati nelle applicazioni Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accesso ai dati nelle applicazioni Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] include numerose nuove funzionalità per semplificare lo sviluppo di applicazioni che accedono ai dati. I moduli associati ai dati per applicazioni Windows vengono creati trascinando elementi dalla [finestra Origine dati](/visualstudio/data-tools/add-new-data-sources) nel modulo. I controlli ai dati si associano trascinando elementi dalla **finestra Origini dati** nei controlli esistenti.  
+Visual Basic include numerose nuove funzionalità per semplificare lo sviluppo di applicazioni che accedono ai dati. I moduli associati ai dati per applicazioni Windows vengono creati trascinando elementi dalla [finestra Origine dati](/visualstudio/data-tools/add-new-data-sources) nel modulo. I controlli ai dati si associano trascinando elementi dalla **finestra Origini dati** nei controlli esistenti.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Accesso ai dati in Visual Studio](/visualstudio/data-tools/)  

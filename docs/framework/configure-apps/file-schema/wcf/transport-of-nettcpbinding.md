@@ -1,34 +1,22 @@
 ---
 title: '&lt;transport&gt; di &lt;netTcpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; di &lt;netTcpBinding&gt;
 Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoint configurato con il [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<netTcpBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<trasporto >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +47,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 |---------------|-----------------|  
 |clientCredentialType|Parametro facoltativo. Specifica il tipo di credenziale da usare se l'autenticazione client viene eseguita usando la sicurezza del trasporto.<br /><br /> -Il valore predefinito è `Windows`.<br />-L'attributo è di tipo <xref:System.ServiceModel.TcpClientCredentialType>.|  
 |protectionLevel|Parametro facoltativo. Definisce il livello di sicurezza del trasporto TCP. La firma dei messaggi riduce il rischio di manomissione da parte di terzi durante il trasferimento. La crittografia fornisce riservatezza a livello di dati durante il trasporto.<br /><br /> Il valore predefinito è `EncryptAndSign`.|  
-|sslProtocols|Valore del flag di enumerazione SslProtocols che specifica gli elementi SslProtocol supportati. Il valore predefinito è Tls &#124; Tls11 &#124; Tls12.|  
+|sslProtocols|Valore del flag di enumerazione SslProtocols che specifica gli elementi SslProtocol supportati. Il valore predefinito è Tls&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Questa enumerazione specifica il momento in cui deve essere applicato l'oggetto <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never – I criteri non vengono mai applicati e la protezione estesa è disabilitata.<br />2.  WhenSupported – I criteri vengono applicati solo se il client supporta la protezione estesa.<br />3.  Always - I criteri vengono sempre applicati. L'autenticazione dei client che non supportano la protezione estesa avrà esito negativo.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Attributo clientCredentialType  
@@ -79,7 +67,7 @@ Definisce il tipo di requisiti di sicurezza a livello di messaggio per un endpoi
 |EncryptAndSign|-I messaggi vengono crittografati e firmati.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

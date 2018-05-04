@@ -18,22 +18,22 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Procedura: specificare un'utilità di pianificazione in un blocco di flussi di dati
-In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Form per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente. method to enable a dataflow block to run on the user-interface thread.
+In questo documento viene illustrato come associare una specifica utilità di pianificazione delle attività quando si utilizza il flusso di dati nell'applicazione. Nell'esempio viene utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> in un'applicazione Windows Form per visualizzare quando le attività del lettore sono attive e quando invece lo è una del writer. Viene inoltre utilizzato il metodo <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> per consentire a un blocco di flussi di dati l'esecuzione nel thread dell'interfaccia utente.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="to-create-the-windows-forms-application"></a>Per creare l'applicazione Windows Forms  
   
-1.  Creare un progetto **Windows Forms Application** [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic. Nei passaggi seguenti il progetto viene denominato `WriterReadersWinForms`.  
+1.  Creare un progetto **Windows Forms Application** Visual C# o Visual Basic. Nei passaggi seguenti il progetto viene denominato `WriterReadersWinForms`.  
   
-2.  Nella finestra di progettazione del form per il form principale, Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), aggiungere quattro controlli <xref:System.Windows.Forms.CheckBox>. Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su **Reader 1** per `checkBox1`, **Reader 2** per `checkBox2`, **Reader 3** per `checkBox3` e **Writer** per `checkBox4`. Impostare la proprietà <xref:System.Windows.Forms.Control.Enabled%2A> per ogni controllo su `False`.  
+2.  Nella finestra di progettazione del form per il form principale, Form1.cs (Form1.vb per Visual Basic), aggiungere quattro controlli <xref:System.Windows.Forms.CheckBox>. Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su **Reader 1** per `checkBox1`, **Reader 2** per `checkBox2`, **Reader 3** per `checkBox3` e **Writer** per `checkBox4`. Impostare la proprietà <xref:System.Windows.Forms.Control.Enabled%2A> per ogni controllo su `False`.  
   
 3.  Aggiungere un controllo <xref:System.Windows.Forms.Timer> al form. Impostare la proprietà <xref:System.Windows.Forms.Timer.Interval%2A> su `2500`.  
   
@@ -44,7 +44,7 @@ In questo documento viene illustrato come associare una specifica utilità di pi
   
 1.  Nel progetto aggiungere un riferimento a System.Threading.Tasks.Dataflow.dll.  
   
-2.  Assicurarsi che in Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) siano contenute le seguenti istruzioni `using` (`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Assicurarsi che in Form1.cs (Form1.vb per Visual Basic) siano contenute le seguenti istruzioni `using` (`Imports` in Visual Basic).  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ In questo documento viene illustrato come associare una specifica utilità di pi
  In questo esempio viene inoltre utilizzata la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> per consentire ad alcuni blocchi di flussi di dati di agire simultaneamente e a un altro blocco di flussi di dati di agire in modo esclusivo rispetto a tutti gli altri blocchi di flussi di dati in esecuzione nello stesso oggetto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>. Questa tecnica è utile quando da parte di più blocchi di flussi di dati viene condivisa una risorsa mentre altri richiedono l'accesso esclusivo a quest'ultima, poiché viene eliminata la necessità di sincronizzare manualmente l'accesso alla risorsa in questione. L'eliminazione della sincronizzazione manuale può rendere il codice più efficiente.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato il codice completo per Form1.cs (Form1.vb per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ L'esempio seguente illustra il codice completo per Form1.cs (Form1.vb per Visual Basic).  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

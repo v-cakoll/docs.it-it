@@ -1,29 +1,17 @@
 ---
 title: '&lt;findCriteria&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f804cdb57355b62db25a559dc3c5db7d4d69369e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
 Elemento di configurazione che fornisce un set di criteri usati da un'applicazione client per la ricerca di un servizio di individuazione. I criteri possono essere raggruppati nei criteri di ricerca (specificando i servizi da cercare) e i criteri di terminazione (quanto tempo deve durare la ricerca).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<standardEndpoints >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -66,7 +54,7 @@ Elemento di configurazione che fornisce un set di criteri usati da un'applicazio
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Raccolta di elementi di configurazione contenenti i nomi dei tipi di contratto del servizio flusso di lavoro.|  
-|\<estensioni > di \<findCriteria >|Raccolta di oggetti di elementi XML che forniscono estensioni.|  
+|\<le estensioni > di \<findCriteria >|Raccolta di oggetti di elementi XML che forniscono estensioni.|  
 |[\<gli ambiti >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Raccolta di oggetti contenenti URI assoluti usati durante un'operazione di ricerca per l'individuazione di uno o più servizi specifici.<br /><br /> Se il servizio specifico viene trovato, significa che è stata trovata una corrispondenza esatta tra l'URI del servizio e l'URI dell'ambito, talvolta con il supporto di regole di ambito che gestiscono i problemi di corrispondenza.|  
   
 ### <a name="parent-elements"></a>Elementi padre  

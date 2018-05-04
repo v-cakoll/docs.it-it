@@ -1,34 +1,22 @@
 ---
 title: Elemento &lt;message&gt; di &lt;ws2007FederationHttpBinding&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 565a0c6027e94954c81c11f96fbd5473dbcd4fdf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;message&gt; di &lt;ws2007FederationHttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<ws2007FederationHttpBinding>  
 \<binding>  
 \<security>  
-\<message>  
+\<messaggio >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,7 +87,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |`algorithmSuite`|Parametro facoltativo. Imposta la crittografia del messaggio, la firma e gli algoritmi di incapsulamento della chiave. Gli algoritmi e le dimensioni della chiave sono determinati dalla classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Questi algoritmi sono associati a quelli specificati nelle specifiche del linguaggio dei criteri di sicurezza (WS-SecurityPolicy).<br /><br /> Nella tabella che segue sono elencati i valori possibili. Il valore predefinito è Basic256.|  
-|`issuedKeyType`|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -SymmetricKey<br />-   PublicKey<br />-BearerKey<br /><br /> L'impostazione predefinita è SymmetricKey. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedKeyType`|Specifica il tipo di chiave da emettere. Di seguito vengono elencati i valori validi:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> L'impostazione predefinita è SymmetricKey. L'attributo è di tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|URI che specifica il tipo di token da emettere. Il valore predefinito è `null`.|  
 |`negotiateServiceCredential`|Valore che specifica se la credenziale del servizio deve essere scambiata come parte della negoziazione o se è disponibile fuori banda. L'impostazione predefinita è `true`, a indicare che la credenziale del servizio viene negoziata.|  
   
@@ -128,7 +116,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Specifica una raccolta di tipi di attestazione per questa associazione. Ciascun elemento è di tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Specifica un endpoint che emette un token di sicurezza. L'elemento è di tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Specifica l'indirizzo dell'endpoint dell'emittente.|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Raccolta di parametri della richiesta di token. Ciascun parametro è un elemento XML.|  
@@ -143,7 +131,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio per il [ \<ws2
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

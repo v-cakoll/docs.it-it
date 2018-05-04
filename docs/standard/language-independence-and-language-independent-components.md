@@ -1,12 +1,12 @@
 ---
 title: Indipendenza del linguaggio e componenti indipendenti dal linguaggio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: f64f39f91ccea7319f395e852b4535f5cba6b0a6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 .NET Framework è indipendente dal linguaggio. In qualità di sviluppatore, è pertanto possibile usare uno dei numerosi linguaggi destinati a .NET Framework, ad esempio C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. È possibile accedere a tipi e membri di librerie di classi sviluppate per .NET Framework senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, l'accesso al componente può essere eseguito da qualsiasi applicazione .NET Framework, indipendentemente dal linguaggio.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/19/2018
 |Membri|[Membri dei tipi di in generale](#members)|I metodi e i campi static globali non sono conformi a CLS.|36|  
 |Membri|--|Il valore di un valore statico letterale viene specificato attraverso l'uso dei metadati di inizializzazione del campo. Un valore letterale conforme a CLS deve disporre di un valore specificato nei metadati di inizializzazione del campo che sia esattamente dello stesso tipo del valore letterale, o del tipo sottostante, se questo valore letterale è un oggetto `enum`.|13|  
 |Membri|[Membri dei tipi di in generale](#members)|Il vincolo vararg non fa parte delle specifiche CLS e l'unica convenzione di chiamata supportata da CLS è la convenzione di chiamata gestita standard.|15|  
-|Convenzioni di denominazione|[Convenzioni di denominazione](#naming)|Gli assembly seguiranno l'allegato 7 del rapporto tecnico 15 di Unicode Standard 3.0 con cui viene controllato il set di caratteri che possono essere usati all'inizio e all'interno degli identificatori, disponibili online all'indirizzo http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Gli identificatori dovranno essere nel formato canonico definito dal modulo di normalizzazione Unicode C. Per fini CLS, due identificatori sono identici se i relativi mapping di minuscole (come specificato dai mapping di minuscole di tipo uno a uno, senza distinzione tra le impostazioni internazionali Unicode) sono uguali. Vale a dire, affinché due identificatori vengano considerati differenti nella specifica CLS, devono presentare differenze che vanno oltre la semplice distinzione tra maiuscole e minuscole. Tuttavia, per eseguire l'override di una definizione non ereditata, per CLI è necessario l'uso della codifica precisa della dichiarazione originale.|4|  
+|Convenzioni di denominazione|[Convenzioni di denominazione](#naming)|Gli assembly seguiranno l'allegato 7 del rapporto tecnico 15 di Unicode Standard 3.0 con cui viene controllato il set di caratteri che possono essere usati all'inizio e all'interno degli identificatori, disponibili online nella pagina http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Gli identificatori dovranno essere nel formato canonico definito dal modulo di normalizzazione Unicode C. Per fini CLS, due identificatori sono identici se i relativi mapping di minuscole (come specificato dai mapping di minuscole di tipo uno a uno, senza distinzione tra le impostazioni internazionali Unicode) sono uguali. Vale a dire, affinché due identificatori vengano considerati differenti nella specifica CLS, devono presentare differenze che vanno oltre la semplice distinzione tra maiuscole e minuscole. Tuttavia, per eseguire l'override di una definizione non ereditata, per CLI è necessario l'uso della codifica precisa della dichiarazione originale.|4|  
 |Overload|[Convenzioni di denominazione](#naming)|Tutti i nomi introdotti in un ambito conforme a CLS devono essere di tipo indipendente e distinto, fatta eccezione per i casi in cui i nomi sono identici e vengono risolti tramite l'overload. Laddove, ad esempio, CTS consente a un unico tipo di usare lo stesso nome per un metodo e per un campo, CLS non lo consente.|5|  
 |Overload|[Convenzioni di denominazione](#naming)|I campi e i tipi annidati devono risultare distinti in base al solo confronto tra identificatori, anche se CTS consente la distinzione di firme distinte. I metodi, le proprietà e gli eventi che hanno lo stesso nome (in base al confronto degli identificatori) dovranno presentare differenze che vanno oltre il tipo restituito, a eccezione di quanto specificato nella regola CLS 39.|6|  
 |Overload|[Overload](#overloads)|È possibile eseguire l'overload solo di proprietà e metodi.|37|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/19/2018
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode 3.0, rapporto tecnico 15, allegato 7](http://www.unicode.org/reports/tr15/tr15-18.html). Vale a dire che:  
+ Gli identificatori del linguaggio di programmazione, ad esempio i nomi degli spazi dei nomi, i tipi e i membri, devono essere conformi allo [standard Unicode 3.0, rapporto tecnico 15, allegato 7](https://www.unicode.org/reports/tr15/tr15-18.html). Vale a dire che:  
   
 -   Il primo carattere di un identificatore può essere qualsiasi carattere Unicode, una lettera maiuscola, una lettera minuscola, tutte iniziali maiuscole, una lettera di modificatore, un'altra lettera o un numero rappresentato dalla lettera. Per informazioni sulle categorie di caratteri Unicode, vedere l'enumerazione <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/19/2018
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- I nomi di tipo generico sono codificati nel formato *name\`n*, dove *name* è il nome del tipo, \` è un valore letterale del carattere e *n* è il numero di parametri dichiarati nel tipo oppure, per i tipi generici annidati, il numero di parametri di tipo appena introdotti. Questa codifica dei nomi di tipo generico è principalmente di interesse per gli sviluppatori che usano la reflection per accedere ai tipi generici conformi a CLS in una libreria.  
+ I nomi di tipo generico sono codificati nel formato *nome\`n*, dove *name* è il nome del tipo, \` è un valore letterale del carattere e *n* è il numero di parametri dichiarati nel tipo oppure, per i tipi generici annidati, il numero di parametri di tipo appena introdotti. Questa codifica dei nomi di tipo generico è principalmente di interesse per gli sviluppatori che usano la reflection per accedere ai tipi generici conformi a CLS in una libreria.  
   
  Se i vincoli vengono applicati a un tipo generico, anche tutti i tipi usati come vincoli devono essere conformi a CLS. Nell'esempio seguente viene definita una classe denominata `BaseClass` che non è conforme a CLS e una classe generica denominata `BaseCollection` il cui parametro di tipo deve derivare da `BaseClass`. Tuttavia, poiché `BaseClass` non è conforme a CLS, viene generato un avviso dal compilatore.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  Per altre informazioni sulla sintassi della riga di comando del compilatore C#, vedere [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Usare quindi lo strumento [Link (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) per compilare i due moduli in un assembly:  
+ Usare quindi lo strumento [Link (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) per compilare i due moduli in un assembly:  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

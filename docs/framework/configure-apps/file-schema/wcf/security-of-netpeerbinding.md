@@ -1,30 +1,20 @@
 ---
 title: '&lt;security&gt; di &lt;netPeerBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-caps.latest.revision: "14"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c8e979768bdc9a8f78fb97c6c7838e44e81b52ac
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7413820f1a1f38b3d533573715267df3b85c9d9a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;security&gt; di &lt;netPeerBinding&gt;
 Definisce le impostazioni di sicurezza di [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), incluso il tipo di autenticazione utilizzato e la sicurezza per il trasporto dei messaggi.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<netPeerBinding>  
 \<binding>  
 \<security>  
@@ -63,7 +53,7 @@ Definisce le impostazioni di sicurezza di [ \<netPeerTcpBinding >](../../../../.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|Definisce il tipo di trasporto per messaggi protetti inviati dai peer configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|Definisce il tipo di trasporto per messaggi protetti inviati dai peer configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

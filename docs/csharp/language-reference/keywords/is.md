@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#) #
 
-Controlla se un oggetto è compatibile con un determinato tipo o (a partire da C# 7) controlla un'espressione rispetto a un criterio.
+Controlla se un oggetto è compatibile con un determinato tipo o (a partire da C# 7.0) controlla un'espressione rispetto a un criterio.
 
 ## <a name="testing-for-type-compatibility"></a>Verifica della compatibilità del tipo ##
 
@@ -60,11 +60,11 @@ La parola chiave `is` genera un avviso in fase di compilazione se è noto che l'
 `expr` può essere qualsiasi espressione che restituisce un valore, ad eccezione di metodi anonimi ed espressioni lambda. Nell'esempio seguente viene usato `is` per valutare il valore restituito di una chiamata al metodo.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-A partire da C# 7, è possibile usare criteri di ricerca con il [criterio del tipo](#type) per scrivere codice più conciso che usa l'istruzione `is`.
+A partire da C# 7.0, è possibile usare criteri di ricerca con il [criterio del tipo](#type) per scrivere codice più conciso che usa l'istruzione `is`.
 
 ## <a name="pattern-matching-with-is"></a>Criteri di ricerca con `is` ##
 
-A partire da C# 7, le istruzioni `is` e [switch](../../../csharp/language-reference/keywords/switch.md) supportano i criteri di ricerca. La parola chiave `is` supporta i criteri seguenti:
+A partire da C# 7.0, le istruzioni `is` e [switch](../../../csharp/language-reference/keywords/switch.md) supportano i criteri di ricerca. La parola chiave `is` supporta i criteri seguenti:
 
 - [Criterio del tipo](#type), che verifica se un'espressione può essere convertita in un tipo specificato e, in tal caso, esegue il cast a una variabile di quel tipo.
 
@@ -112,7 +112,7 @@ Il codice equivalente senza criteri di ricerca richiede un'assegnazione separata
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Criterio costante ###
 
-Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7, è supportato anche dall'istruzione `is`. La sintassi è la seguente:
+Quando si eseguono criteri di ricerca con il criterio costante, `is` verifica se un'espressione è uguale a una costante specificata. In C# 6 e versioni precedenti, il criterio costante è supportato per l'istruzione [switch](switch.md). A partire da C# 7.0, è supportato anche dall'istruzione `is`. La sintassi è la seguente:
 
 ```csharp
    expr is constant

@@ -1,30 +1,20 @@
 ---
-title: '&lt;memorizza nella cache&gt;'
-ms.custom: 
+title: '&lt;Memorizza nella cache&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b9dfa7b2f0952f3f9e224ad51fd4d9c0c263ce04
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9766b826eb7a708b4b4e99b6bd984f9fc76812
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcachesgt"></a>&lt;memorizza nella cache&gt;
+# <a name="ltcachesgt"></a>&lt;Memorizza nella cache&gt;
 Registra le cache usate per i token di sessione e il rilevamento riproduzione token.  
   
- \<System. IdentityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<memorizza nella cache >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -42,7 +32,7 @@ Registra le cache usate per i token di sessione e il rilevamento riproduzione to
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
 ### <a name="attributes"></a>Attributi  
- nessuno  
+ Nessuno  
   
 ### <a name="child-elements"></a>Elementi figlio  
   

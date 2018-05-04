@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmazione asincrona basata su attività
 La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che rappresenta un'operazione asincrona. Per certi versi, un'attività è analoga a un thread o a un elemento di lavoro <xref:System.Threading.ThreadPool>, ma a un livello più generale di astrazione. L'espressione *parallelismo delle attività* fa riferimento a una o più attività indipendenti eseguite contemporaneamente. Le attività forniscono due vantaggi principali:  
@@ -191,7 +191,7 @@ La libreria Task Parallel Library (TPL) si basa sul concetto di *attività*, che
  Quando si resta in attesa di un'attività, si attendono in modo implicito tutti i figli di tale attività creati tramite l'opzione <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>. L'oggetto <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> restituisce immediatamente un valore se l'attività è già stata completata. Qualsiasi eccezione generata da un'attività verrà generata da un metodo <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, anche se il metodo <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> è stato chiamato dopo il completamento dell'attività.  
   
 ## <a name="composing-tasks"></a>Composizione di attività  
- Le classi <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> forniscono numerosi metodi che possono agevolare la composizione di più attività per l'implementazione di modelli comuni e usare meglio le funzionalità di linguaggio asincrone fornite da C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e F#. In questa sezione vengono descritti i metodi <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> e <xref:System.Threading.Tasks.Task.FromResult%2A>.  
+ Le classi <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> forniscono numerosi metodi che possono agevolare la composizione di più attività per l'implementazione di modelli comuni e usare meglio le funzionalità di linguaggio asincrone fornite da C#, Visual Basic e F#. In questa sezione vengono descritti i metodi <xref:System.Threading.Tasks.Task.WhenAll%2A>, <xref:System.Threading.Tasks.Task.WhenAny%2A>, <xref:System.Threading.Tasks.Task.Delay%2A> e <xref:System.Threading.Tasks.Task.FromResult%2A>.  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  Il metodo <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> attende in modo asincrono che terminino più oggetti <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Fornisce le versioni di overload che consentono di attendere i set di attività non uniformi. Ad esempio, è possibile attendere il completamento di più oggetti <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> da una chiamata al metodo.  

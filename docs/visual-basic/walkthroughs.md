@@ -2,7 +2,8 @@
 title: Procedure dettagliate relative al linguaggio Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
 Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
@@ -26,13 +27,13 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Viene illustrato come creare una soluzione asincrona usando [Async](../visual-basic/language-reference/modifiers/async.md) e [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Dichiarazione e generazione di eventi](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Viene illustrato come dichiarare e generare eventi in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Illustra come dichiarare e generare eventi in Visual Basic.  
   
  [Gestione degli eventi](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Spiega come gestire gli eventi usando la parola chiave standard `WithEvents` o le nuove parole chiave `AddHandler` / `RemoveHandler`.  
   
  [Creazione e implementazione di interfacce](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Viene illustrato come dichiarare e implementare le interfacce in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Illustra come dichiarare e implementare le interfacce in Visual Basic.  
   
  [Definizione delle classi](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Descrive la procedura di dichiarazione di una classe e dei relativi campi, proprietà, metodi ed eventi.  
@@ -47,10 +48,10 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Spiega come usare le istruzioni `Declare` e chiamare le API di Windows. Include informazioni sull'uso degli attributi per controllare il marshalling per la chiamata API e su come esporre una chiamata API come metodo di una classe.  
   
  [Creazione di oggetti COM con Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Viene illustrato come creare oggetti COM in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], con e senza il modello di classe COM.  
+ Illustra come creare oggetti COM in Visual Basic, con e senza il modello di classe COM.  
   
  [Implementazione dell'ereditarietà con gli oggetti COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Spiega come usare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Spiega come usare Visual Basic 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in Visual Basic.  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Viene illustrato come creare un'applicazione multithreading che cerca le occorrenze di una parola in un file di testo.  
@@ -77,7 +78,7 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Illustra come usare la classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> per crittografare e decrittografare le stringhe.  
   
  [Modifica di file e cartelle in Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Viene illustrato come usare le funzioni [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
+ Illustra come usare le funzioni Visual Basic per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
  [Modifica di file mediante i metodi .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Viene illustrato come usare i metodi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  

@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; di &lt;authorizationPolicies&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; di &lt;authorizationPolicies&gt;
 Specifica i criteri di autorizzazione per la trasformazione di attestazioni.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<i comportamenti >  
 \<comportamento >  
 \<serviceAuthorization >  
@@ -48,7 +36,7 @@ Specifica i criteri di autorizzazione per la trasformazione di attestazioni.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`policyType`|Attributo stringa obbligatorio.<br /><br /> Il modello di controllo di accesso di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] supporta il provisioning di un set di criteri di autorizzazione come tipi. Questo attributo specifica un criterio di autorizzazione che consente la trasformazione di un set di attestazioni di input in un altro set di attestazioni. Su questa base può essere concesso o negato il controllo di accesso.|  
+|`policyType`|Attributo stringa obbligatorio.<br /><br /> Il modello di controllo degli accessi di Windows Communication Foundation (WCF) supporta il provisioning di un set di criteri di autorizzazione come tipi. Questo attributo specifica un criterio di autorizzazione che consente la trasformazione di un set di attestazioni di input in un altro set di attestazioni. Su questa base può essere concesso o negato il controllo di accesso.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  

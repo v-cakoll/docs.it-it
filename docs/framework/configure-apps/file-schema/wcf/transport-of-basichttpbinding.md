@@ -1,34 +1,22 @@
 ---
 title: '&lt;transport&gt; di &lt;basicHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c6c0cf1b6eef441958931e4d722ba97980e5682
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; di &lt;basicHttpBinding&gt;
 Definisce proprietà che controllano i parametri di autenticazione per il trasporto HTTP.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<basicHttpBinding>  
 \<binding>  
 \<security>  
-\<transport>  
+\<trasporto >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +65,7 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
+|Nessuno|-I messaggi non vengono protetti durante il trasferimento.|  
 |Basic|Specifica l'autenticazione di base come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Digest|Specifica l'autenticazione digest come definita da RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
 |Ntlm|Specifica l'autenticazione NTLM quando possibile e se l'autenticazione di Windows non riesce.|  
@@ -85,7 +73,7 @@ Definisce proprietà che controllano i parametri di autenticazione per il traspo
 |Certificato|Esegue l'autenticazione client mediante un certificato. Questa opzione funziona solo se l'attributo `Mode` dell'elemento `security` padre è impostato su Transport, mentre non funzionerà se viene impostato su TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

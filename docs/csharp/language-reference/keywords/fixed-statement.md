@@ -1,6 +1,6 @@
 ---
 title: Istruzione fixed (Riferimenti per C#)
-ms.date: 07/20/2015
+ms.date: 04/20/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,53 +10,70 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.assetid: 7ea6db08-ad49-4a7a-b934-d8c4acad1c3a
-caps.latest.revision: 24
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13633e71c863b075eede41c9a18419d65350bdb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5dd117461f792ec7a10b740fbad277de52d05623
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
-L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](../../../csharp/language-reference/keywords/unsafe.md). È possibile usare `Fixed` anche per creare [buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
-  
- L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca durante l'esecuzione dell'istruzione. Senza `fixed`, i puntatori alle variabili gestite mobili risulterebbero poco utili poiché il Garbage Collection potrebbe eseguire una rilocazione delle variabili in modo imprevisto. Il compilatore C# consente di assegnare un puntatore a una variabile gestita in un'istruzione `fixed`.  
-  
- [!code-csharp[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
-  
- È possibile inizializzare un puntatore usando una matrice, una stringa, un buffer a dimensione fissa o l'indirizzo di una variabile. Nell'esempio seguente viene illustrato l'uso di indirizzi, matrici e stringhe di una variabile. Per altre informazioni sui buffer a dimensione fissa, vedere [Buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
-  
- [!code-csharp[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
-  
- È possibile inizializzare più puntatori, purché siano tutti dello stesso tipo.  
-  
+
+L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](unsafe.md). È possibile usare `Fixed` anche per creare [buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+
+L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca durante l'esecuzione dell'istruzione. I puntatori alle variabili mobili gestite sono utili solo in un contesto `fixed`. Senza un contesto `fixed`, l'operazione di garbage collection potrebbe spostare le variabili in modo imprevedibile. Il compilatore C# consente di assegnare un puntatore a una variabile gestita in un'istruzione `fixed`.
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
+
+È possibile inizializzare un puntatore usando una matrice, una stringa, un buffer a dimensione fissa o l'indirizzo di una variabile. Nell'esempio seguente viene illustrato l'uso di indirizzi, matrici e stringhe di una variabile. Per altre informazioni sui buffer a dimensione fissa, vedere [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+
+[!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+Se sono dello stesso tipo, è possibile inizializzare più puntatori in un'unica istruzione:
+
 ```csharp
-fixed (byte* ps = srcarray, pd = dstarray) {...}  
+fixed (byte* ps = srcarray, pd = dstarray) {...}
 ```
-  
- Per inizializzare puntatori di tipi diversi, annidare semplicemente le istruzioni `fixed` come illustrato nell'esempio seguente.  
-  
- [!code-csharp[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
-  
- Dopo aver eseguito il codice nell'istruzione, le variabili bloccate vengono sbloccate e sottoposte al Garbage Collection. Di conseguenza, evitare di puntare alle variabili esterne all'istruzione `fixed`.  
-  
-> [!NOTE]
->  I puntatori inizializzati nelle istruzioni fixed non possono essere modificati.  
-  
- Nella modalità di tipo unsafe è possibile allocare la memoria nello stack, che non è necessario bloccare perché non viene sottoposto al Garbage Collection. Per altre informazioni, vedere [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).  
-  
-## <a name="example"></a>Esempio  
- [!code-csharp[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [Buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+
+Per inizializzare puntatori di tipi diversi, annidare semplicemente le istruzioni `fixed` come illustrato nell'esempio seguente.
+
+[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
+
+Dopo aver eseguito il codice nell'istruzione, le variabili bloccate vengono sbloccate e sottoposte al Garbage Collection. Di conseguenza, evitare di puntare alle variabili esterne all'istruzione `fixed`. Le variabili dichiarate nell'istruzione `fixed` rientrano nell'ambito di tale istruzione, semplificandola:
+
+```csharp
+fixed (byte* ps = srcarray, pd = dstarray)
+{
+   ...
+}
+// ps and pd are no longer in scope here.
+```
+
+I puntatori inizializzati nelle istruzioni `fixed` sono variabili di sola lettura. Per modificare il valore puntatore, è necessario dichiarare una seconda variabile e quindi modificarla. La variabile dichiarata nell'istruzione `fixed` non può essere modificata:
+
+```csharp
+fixed (byte* ps = srcarray, pd = dstarray)
+{
+    byte* pSourceCopy = ps;
+    pSourceCopy++; // point to the next element.
+    ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
+}
+```
+
+
+Nella modalità di tipo unsafe è possibile allocare la memoria nello stack, che non è necessario bloccare perché non viene sottoposto al Garbage Collection. Per altre informazioni, vedere [stackalloc](stackalloc.md).
+
+[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
+
+ [Riferimenti per C#](../index.md)  
+ [Guida per programmatori C#](../../programming-guide/index.md)  
+ [Parole chiave di C#](index.md)  
+ [unsafe](unsafe.md)  
+ [Buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

@@ -1,13 +1,6 @@
 ---
 title: Sviluppo pipeline
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Sviluppo pipeline
 La pipeline del componente aggiuntivo è il percorso di segmenti della pipeline che l'applicazione host e il componente aggiuntivo deve utilizzare per comunicare tra loro.  
   
  Nella figura seguente mostra la pipeline di comunicazione e i segmenti.  
   
- ![Aggiungi &#45; nel modello di pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Aggiungere&#45;nel modello di pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline del componente aggiuntivo  
   
  L'applicazione host è un'estremità della pipeline e il componente aggiuntivo è a altra estremità. A partire da ogni entità finale e spostamento verso il centro, l'applicazione host e il componente aggiuntivo dispone di una classe base astratta che definisce una vista del modello a oggetti che sono gli stessi. Questi tipi (classi) costituiscono il segmento della pipeline di visualizzazione e la visualizzazione host del segmento di pipeline del componente aggiuntivo. Il segmento di visualizzazione del componente della pipeline spesso contiene più di una classe astratta, ma la classe da cui il componente aggiuntivo eredita è noto come base per il componente aggiuntivo.  
@@ -45,7 +35,7 @@ Pipeline del componente aggiuntivo
   
  Nella figura seguente mostra i tipi che costituiscono i segmenti della pipeline. I nomi dei tipi illustrati nella figura sono arbitrari, ma tutti i tipi, ad eccezione dell'host e l'host consente di visualizzare gli attributi aggiuntivo richiesto in modo che possano essere individuate dai metodi che costruiscono un archivio di informazioni.  
   
- ![Aggiungi &#45; nel modello con gli attributi obbligatori per i tipi. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Aggiungere&#45;nel modello con gli attributi obbligatori per i tipi. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Pipeline del componente aggiuntivo con tipi  
   
  Nella tabella seguente vengono descritti i segmenti di pipeline per l'attivazione di un componente aggiuntivo. Per ulteriori informazioni su questi segmenti, vedere [contratti, visualizzazioni e adattatori](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Pipeline del componente aggiuntivo con tipi
 ## <a name="pipeline-activation-path"></a>Percorso di attivazione della pipeline  
  Nella figura seguente mostra l'attivazione dei tipi quando viene attivato un componente aggiuntivo. Viene illustrato il passaggio di oggetti all'host, ad esempio i risultati di un calcolo o una raccolta di oggetti. Questo è lo scenario più comune.  
   
- ![Aggiungi &#45; nel modello con il percorso di attivazione. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Aggiungere&#45;nel modello con percorso di attivazione. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Percorso di attivazione dal componente aggiuntivo all'host  
   
  Il percorso di attivazione della pipeline avviene nel modo seguente:  
@@ -89,7 +79,7 @@ Percorso di attivazione dal componente aggiuntivo all'host
   
      Viene descritto un componente aggiuntivo di calcolatrice che esegue l'addizione, sottrazione, moltiplicazione e divisione calcoli per l'host.  
   
--   [Procedura dettagliata: Consentendo la compatibilità con le versioni precedenti come le modifiche di Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Procedura dettagliata: Abilitazione della compatibilità con le versioni precedenti in base alle modifiche dell'Host](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Viene descritto un componente aggiuntivo di calcolo con funzionalità di calcolo avanzate e come mantenere la compatibilità con il componente aggiuntivo prima di calcolatrice.  
   
@@ -98,5 +88,5 @@ Percorso di attivazione dal componente aggiuntivo all'host
      Viene descritto come passare raccolte di dati attraverso la pipeline di uno scenario di archivio della Rubrica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere in scenari di Pipeline](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Componente aggiuntivo per gli scenari di Pipeline](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Componenti aggiuntivi ed estendibilità](../../../docs/framework/add-ins/index.md)

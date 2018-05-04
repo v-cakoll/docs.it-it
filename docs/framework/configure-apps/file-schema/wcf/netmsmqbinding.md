@@ -1,30 +1,18 @@
 ---
 title: '&lt;netMsmqBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Definisce un'associazione in coda adatta per la comunicazione fra computer.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -90,7 +78,7 @@ Definisce un'associazione in coda adatta per la comunicazione fra computer.
 |`retryCycleDelay`|Valore TimeSpan che specifica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente. Il valore definisce solo il tempo di attesa minimo, poiché è possibile che l'attesa effettiva sia più lunga. L'impostazione predefinita è 00:10:00. Per altre informazioni, vedere <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |`sendTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
 |`timeToLive`|Un valore TimeSpan che specifica la durata di validità dei messaggi prima che scadano e vengano inseriti nella coda dei messaggi non recapitabili. L'impostazione predefinita è 1.00:00:00.<br /><br /> L'attributo è impostato per verificare che i messaggi a scadenza non risultino non aggiornati prima di essere elaborati dalle applicazioni riceventi. Un messaggio in una coda che non viene usato dall'applicazione ricevente entro l'intervallo di tempo specificato viene considerato scaduto. I messaggi scaduti vengono inviati a una coda speciale denominata coda dei messaggi non recapitabili. Il percorso della coda dei messaggi non recapitabili viene impostato con l'attributo `DeadLetterQueue` o sul valore appropriato predefinito, in base alle garanzie.|  
-|`usingActiveDirectory`|Valore booleano che specifica se convertire gli indirizzi delle code mediante Active Directory.<br /><br /> Gli indirizzi delle code MSMQ possono essere costituiti da nomi di percorso o da nomi di formato Direct. Con un nome di formato Direct, MSMQ risolve il nome del computer usando DNS, NetBIOS o IP. Con un nome di percorso, MSMQ risolve il nome del computer usando Active Directory.<br /><br /> Per impostazione predefinita, il trasporto in coda del sistema [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] converte l'URI di una coda di messaggi in un nome di formato Direct. L'impostazione della proprietà `UseActiveDirectory` su true consente a un'applicazione di specificare che il trasporto in coda deve risolvere il nome del computer usando Active Directory invece di DNS, NetBIOS o IP.|  
+|`usingActiveDirectory`|Valore booleano che specifica se convertire gli indirizzi delle code mediante Active Directory.<br /><br /> Gli indirizzi delle code MSMQ possono essere costituiti da nomi di percorso o da nomi di formato Direct. Con un nome di formato Direct, MSMQ risolve il nome del computer usando DNS, NetBIOS o IP. Con un nome di percorso, MSMQ risolve il nome del computer usando Active Directory.<br /><br /> Per impostazione predefinita, Windows Communication Foundation (WCF) in coda trasporto Converte l'URI di una coda di messaggi a un nome di formato direct. L'impostazione della proprietà `UseActiveDirectory` su true consente a un'applicazione di specificare che il trasporto in coda deve risolvere il nome del computer usando Active Directory invece di DNS, NetBIOS o IP.|  
 |`useMsmqTracing`|Valore booleano che specifica se i messaggi elaborati da questa associazione devono essere tracciati. Il valore predefinito è `false`. Quando la traccia è attivata, i messaggi di rapporto vengono creati e inviati alla coda dei rapporti ogni volta che il messaggio viene inviato o ricevuto da un computer in cui è installato il sistema di accodamento messaggi.|  
 |`useSourceJournal`|Valore booleano che specifica se le copie dei messaggi elaborati da questa associazione devono essere archiviate nella coda journal di origine. Il valore predefinito è `false`.<br /><br /> Le applicazioni in coda che devono tenere un registro dei messaggi che hanno lasciato la coda in uscita del computer possono copiare i messaggi in una coda journal. Quando un messaggio lascia la coda in uscita e viene ricevuto un riconoscimento che il messaggio è stato ricevuto nel computer di destinazione, una copia del messaggio viene mantenuta nella coda journal del sistema del computer di invio.|  
   

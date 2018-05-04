@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Creazione, evoluzione e controllo delle versioni di API e contratti dei microservizi
 
@@ -33,14 +33,14 @@ Infine, se si usa un'architettura REST, [Hypermedia](https://www.infoq.com/artic
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy (Semplificazione del controllo delle versioni dell'API Web RESTful ASP.NET Core)**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx> (Controllo facilitato delle versioni delle API Web ASP.NET Core RESTful)
 
--   **Controllo delle versioni di un'API Web RESTful**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+-   **Versioning a RESTful web API**
+    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api) (Controllo delle versioni delle API Web)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST (Controllo delle versioni, ipermedia e REST)**
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
+-   **Roy Fielding. Versioning, Hypermedia, and REST**
+    <https://www.infoq.com/articles/roy-fielding-on-versioning> (Controllo delle versioni, ipermedia e REST)
 
 
 >[!div class="step-by-step"]

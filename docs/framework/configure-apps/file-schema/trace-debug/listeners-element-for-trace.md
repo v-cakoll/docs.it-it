@@ -1,31 +1,20 @@
 ---
 title: '&lt;listener&gt; elemento per &lt;traccia&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
 helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;listener&gt; elemento per &lt;traccia&gt;
 Specifica un listener per la raccolta, la memorizzazione e indirizza i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.  
@@ -74,7 +63,7 @@ Specifica un listener per la raccolta, la memorizzazione e indirizza i messaggi.
  Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<listener >** elemento per aggiungere i listener `MyListener` e `MyEventListener` per il **listener** insieme. `MyListener`Crea un file denominato `MyListener.log` e scrive l'output del file. `MyEventListener`Crea una voce nel registro eventi.  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<listener >** elemento per aggiungere i listener `MyListener` e `MyEventListener` per il **listener** insieme. `MyListener` Crea un file denominato `MyListener.log` e scrive l'output al file. `MyEventListener` Crea una voce nel registro eventi.  
   
 ```xml  
 <configuration>  

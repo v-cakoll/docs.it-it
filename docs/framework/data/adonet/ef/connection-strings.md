@@ -1,24 +1,12 @@
 ---
 title: Stringhe di connessione
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>Stringhe di connessione
 Una stringa di connessione contiene informazioni di inizializzazione che vengono passate come parametro da un provider di dati a un'origine dati. La sintassi dipende dal provider di dati e la stringa di connessione viene analizzata durante il tentativo di aprire una connessione. Le stringhe di connessione usate da Entity Framework contengono informazioni che consentono di connettersi al provider di dati ADO.NET sottostante che supporta Entity Framework, nonché informazioni sui file di modello e di mapping richiesti.  
@@ -58,7 +46,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Opzione|Descrizione|  
 |-|-|  
-|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly (\*) per `assemblyFullName`, il runtime di Entity Framework cercherà le risorse nei percorsi seguenti, nell'ordine indicato:<br /><br /> 1.  L'assembly chiamante.<br />2.  Gli assembly a cui si fa riferimento.<br />3.  Gli assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:** quando si usa carattere jolly (*), Entity Framework deve esaminare tutti gli assembly di risorse con il nome corretto. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|  
+|`assemblyFullName`|Nome completo di un assembly con la risorsa incorporata. Include il nome semplice, il nome della versione, la lingua supportata e la chiave pubblica, nel modo seguente:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Le risorse possono essere incorporate in qualsiasi assembly accessibile dall'applicazione.<br /><br /> Se si specifica un carattere jolly (\*) per `assemblyFullName`, il runtime di Entity Framework cercherà le risorse nei percorsi seguenti, nell'ordine indicato:<br /><br /> 1.  L'assembly chiamante.<br />2.  Gli assembly a cui si fa riferimento.<br />3.  Gli assembly nella directory bin di un'applicazione.<br /><br /> Se i file non sono in uno di questi percorsi, verrà generata un'eccezione. **Nota:** quando si usa carattere jolly (*), Entity Framework dispone di effettuare ricerche in tutti gli assembly di risorse con il nome corretto. Per migliorare le prestazioni, specificare il nome dell'assembly anziché il carattere jolly.|  
 |`resourceName`|Nome della risorsa inclusa, ad esempio AdvendtureWorksModel.csdl. I servizi di metadati cercheranno solo i file o le risorse con estensione csdl, ssdl o msl. Se la parola chiave `resourceName` non è specificata, verranno caricate tutte le risorse dei metadati. Le risorse devono disporre di nomi univoci all'interno di un assembly. Se più file con lo stesso nome sono definiti in directory diverse nell'assembly, la parola chiave `resourceName` deve includere la struttura di cartelle prima del nome della risorsa, ad esempio NomeCartella.NomeFile.csdl.<br /><br /> `resourceName` non è obbligatoria quando si specifica un carattere jolly (*) per `assemblyFullName`.|  
   
 > [!NOTE]
@@ -102,12 +90,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Supporto per la &#124; DataDirectory &#124; Stringa di sostituzione e operatore di radice dell'applicazione Web (~)  
- `DataDirectory`e ~ (operatore) vengono utilizzati nel <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte del `Metadata` e `Provider Connection String` parole chiave. <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Supporto per il &#124;DataDirectory&#124; stringa di sostituzione e l'applicazione Web radice operatore (~)  
+ `DataDirectory` e il ~ (operatore) vengono utilizzati nel <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte del `Metadata` e `Provider Connection String` parole chiave. <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.  
   
 |Termine|Descrizione|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Si risolve in un percorso relativo di file di mapping e di metadati. Si tratta del valore impostato attraverso il metodo `AppDomain.SetData("DataDirectory", objValue)`. La stringa di sostituzione `DataDirectory` deve essere circondata dai caratteri barra verticale e non può essere rappresentata da uno spazio vuoto tra il nome e i caratteri barra verticale. Il nome `DataDirectory` non supporta la distinzione tra maiuscole e minuscole.<br /><br /> Se una directory fisica denominata "DataDirectory" deve essere passata come membro dell'elenco di percorsi di metadati, aggiungere uno spazio vuoto su un lato o su entrambi i lati del nome, ad esempio: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Un'applicazione ASP.NET risolve &#124; DataDirectory &#124; per la "\<radice dell'applicazione > / app_data" cartella.|  
+|`&#124;DataDirectory&#124;`|Si risolve in un percorso relativo di file di mapping e di metadati. Si tratta del valore impostato attraverso il metodo `AppDomain.SetData("DataDirectory", objValue)`. La stringa di sostituzione `DataDirectory` deve essere circondata dai caratteri barra verticale e non può essere rappresentata da uno spazio vuoto tra il nome e i caratteri barra verticale. Il nome `DataDirectory` non supporta la distinzione tra maiuscole e minuscole.<br /><br /> Se una directory fisica denominata "DataDirectory" deve essere passata come membro dell'elenco di percorsi di metadati, aggiungere uno spazio vuoto su un lato o su entrambi i lati del nome, ad esempio: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Un'applicazione ASP.NET risolve &#124;DataDirectory&#124; per la "\<radice dell'applicazione > / app_data" cartella.|  
 |~|Si risolve nella radice dell'applicazione Web. Il carattere ~ in una posizione iniziale viene sempre interpretato come l'operatore radice dell'applicazione Web (~), sebbene possa rappresentare una sottodirectory locale valida. Per fare riferimento a questo tipo di sottodirectory locale, l'utente deve passare in modo esplicito `./~`.|  
   
  `DataDirectory` e l'operatore ~ devono essere specificati solo all'inizio di un percorso in quanto non vengono risolti in altre posizioni. Entity Framework tenterà di risolvere `~/data`, ma considererà `/data/~` come un percorso fisico.  

@@ -1,37 +1,52 @@
 ---
 title: Espressioni con valore predefinito (Guida per programmatori C#)
 description: Le espressioni con valore predefinito producono il valore predefinito per qualsiasi tipo riferimento o tipo valore
-ms.date: 08/23/2017
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>espressioni con valore predefinito (guida per programmatori C#)
 
-Un'espressione con valore predefinito produce il valore predefinito per un tipo. Le espressioni con valore predefinito risultano particolarmente utili nelle classi e nei metodi generici. Un problema relativo all'uso dei metodi generici riguarda l'assegnazione di un valore predefinito a un tipo con parametri `T` quando non è noto quanto segue:
+Un'espressione con valore predefinito `default(T)` produce il valore predefinito per un tipo `T`. La tabella seguente mostra i valori generati per vari tipi:
+
+|Tipo|Valore predefinito|
+|---------|---------|
+|Qualsiasi tipo riferimento|`null`|
+|Tipo di valore numerico|Zero|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|Valore prodotto dall'espressione `(E)0`, dove `E` è l'identificatore di enumerazione.|
+|[struct](../../language-reference/keywords/struct.md)|Valore generato impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
+|Tipi nullable|Un'istanza per la quale la proprietà <xref:System.Nullable%601.HasValue%2A> è `false` e la proprietà <xref:System.Nullable%601.Value%2A> non è definita.|
+
+Le espressioni con valore predefinito risultano particolarmente utili nelle classi e nei metodi generici. Un problema relativo all'uso dei metodi generici riguarda l'assegnazione di un valore predefinito a un tipo con parametri `T` quando non è noto quanto segue:
 
 - Se `T` è un tipo riferimento o un tipo valore.
-- Nel caso in cui `T` sia un tipo valore, se è un valore numerico o uno struct definito dall'utente.
+- Se `T` è un tipo valore, se sarà un valore numerico o struct.
 
- Data una variabile `t` di un tipo con parametri `T`, l'istruzione `t = null` è valida solo se `T` è un tipo riferimento. L'assegnazione `t = 0` funziona solo per i tipi di valore numerico ma non per gli struct. La soluzione consiste nell'usare un'espressione con valore predefinito, che restituisce `null` per i tipi di riferimento (tipi di classe e tipi di interfaccia) e zero per i tipi di valore numerico. Per gli struct definiti dall'utente restituisce lo struct inizializzato in base allo schema di bit zero, che produce 0 o `null` per ogni membro, in base al fatto che il tipo del membro sia valore o riferimento. Per i tipi di valore nullable, `default` restituisce <xref:System.Nullable%601?displayProperty=nameWithType>, che viene inizializzato come qualsiasi struct.
+ Data una variabile `t` di un tipo con parametri `T`, l'istruzione `t = null` è valida solo se `T` è un tipo riferimento. L'assegnazione `t = 0` funziona solo per i tipi di valore numerico ma non per gli struct. Per risolvere questo problema, usare un valore predefinito:
+
+```csharp
+T t = default(T);
+```
 
 L'espressione `default(T)` non è limitata a classi e metodi generici. Le espressioni con valore predefinito possono essere usate con qualsiasi tipo gestito. Tutte le espressioni seguenti sono valide:
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- L'esempio seguente dalla classe `GenericList<T>` mostra come usare l'operatore `default(T)` in una classe generica. Per altre informazioni, vedere [Generics Overview](../generics/introduction-to-generics.md) (Panoramica dei generics).
+ L'esempio seguente dalla classe `GenericList<T>` mostra come usare l'operatore `default(T)` in una classe generica. Per altre informazioni, vedere [Introduzione ai generics](../generics/introduction-to-generics.md).
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
@@ -51,7 +66,9 @@ L'esempio seguente mostra molti utilizzi del valore letterale `default` in un'es
 
 ## <a name="see-also"></a>Vedere anche
 
- <xref:System.Collections.Generic>[Guida per programmatori c#](../index.md)  
- [Generics](../generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [Guida per programmatori C#](../index.md)  
+ [Generics (Guida per programmatori C#)](../generics/index.md)  
  [Metodi generici](../generics/generic-methods.md)  
- [Generics](~/docs/standard/generics/index.md)  
+ [Generics in .NET](~/docs/standard/generics/index.md)  
+ [Tabella dei valori predefiniti](../../language-reference/keywords/default-values-table.md)

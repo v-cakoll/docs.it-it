@@ -1,24 +1,12 @@
 ---
 title: Riferimento rapido a Entity SQL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81fd76d09f9cc02e89ac34d5f8fa74bd7f9d92f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-quick-reference"></a>Riferimento rapido a Entity SQL
 In questo argomento viene fornita una guida di riferimento rapido alle query [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Le query in questo argomento sono basate sul modello Sales di AdventureWorks.  
@@ -83,7 +71,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>Costruttori di tipo  
   
 ### <a name="row"></a>ROW  
- [RIGA](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) costruisce un anonimo strutturalmente tipizzati (record) valore come in:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [RIGA](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) costruisce un anonimo strutturalmente tipizzati (record) valore come in: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Esempio:  
   
@@ -119,7 +107,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- [Costruttore di tipo denominato](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) costruisce oggetti (denominati) definito dall'utente, ad esempio `person("abc", 12)`.  
+ [Costruttore di tipo denominato](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) costruisce oggetti definiti dall'utente (denominati), ad esempio `person("abc", 12)`.  
   
  Esempio:  
   
@@ -234,7 +222,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Specifiche del provider Microsoft  
- [Funzioni specifiche del provider Microsoft](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) presenti il `SqlServer` dello spazio dei nomi.  
+ [Funzioni specifiche del provider di Microsoft](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) presenti il `SqlServer` dello spazio dei nomi.  
   
  Esempio:  
   
@@ -305,7 +293,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>Navigazione  
- L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [NAVIGA](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) accetta il tipo di relazione qualificato come \<dello spazio dei nomi >.\< Nome tipo relazione >. Passare restituisce Ref\<T > Se la cardinalità dell'entità finale è 1. Se la cardinalità dell'entità finale è n, la raccolta < Ref\<T >> verranno restituiti.  
+ L' operatore di navigazione delle relazioni consente di eseguire la navigazione in una relazione da un'entità (entità finale di origine) a un'altra (entità finale di destinazione). [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) accetta il tipo di relazione qualificato nel formato \<dello spazio dei nomi >.\< Nome tipo relazione >. Passare restituisce Ref\<T > Se la cardinalità dell'entità finale è 1. Se la cardinalità dell'entità finale è n, la raccolta < Ref\<T >> verranno restituiti.  
   
  Esempio:  
   

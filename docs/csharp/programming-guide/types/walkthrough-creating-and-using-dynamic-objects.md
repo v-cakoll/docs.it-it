@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procedura dettagliata: creazione e utilizzo di oggetti dinamici (C# e Visual Basic)
 
@@ -28,7 +28,7 @@ Gli oggetti dinamici espongono i membri, ad esempio proprietà e metodi, in fase
   
  Gli oggetti dinamici offrono anche un comodo accesso a linguaggi dinamici come IronPython e IronRuby. È possibile usare un oggetto dinamico per fare riferimento a uno script dinamico che viene interpretato in fase di esecuzione.  
   
- Si fa riferimento a un oggetto dinamico usando l'associazione tardiva. In C# specificare il tipo di un oggetto ad associazione tardiva come `dynamic`. In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] specificare il tipo di un oggetto ad associazione tardiva come `Object`. Per altre informazioni, vedere [dynamic](../../../csharp/language-reference/keywords/dynamic.md) e [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Si fa riferimento a un oggetto dinamico usando l'associazione tardiva. In C# specificare il tipo di un oggetto ad associazione tardiva come `dynamic`. In Visual Basic specificare il tipo di un oggetto ad associazione tardiva come `Object`. Per altre informazioni, vedere [dynamic](../../../csharp/language-reference/keywords/dynamic.md) e [Associazione anticipata e tardiva](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  È possibile creare oggetti dinamici personalizzati usando le classi dello spazio dei nomi <xref:System.Dynamic?displayProperty=nameWithType>. Ad esempio, è possibile creare un oggetto <xref:System.Dynamic.ExpandoObject> e specificare i membri di tale oggetto in fase di esecuzione. È anche possibile creare un proprio tipo che eredita la classe <xref:System.Dynamic.DynamicObject>. È quindi possibile eseguire l'override dei membri della classe <xref:System.Dynamic.DynamicObject> per rendere disponibili funzionalità dinamiche in fase di esecuzione.  
   
@@ -127,7 +127,7 @@ Per completare questa procedura, è necessario avere [IronPython](http://ironpyt
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Per creare un'applicazione di esempio che usa l'oggetto dinamico personalizzato  
   
-1.  In **Esplora Soluzioni** fare doppio clic sul file Module1.vb se si usa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] o sul file Program.cs se si usa Visual C#.  
+1.  In **Esplora Soluzioni** fare doppio clic sul file Module1.vb se si usa Visual Basic o sul file Program.cs se si usa Visual C#.  
   
 2.  Aggiungere il seguente codice alla routine Main per creare un'istanza della classe `ReadOnlyFile` per il file TextFile1.txt. Il codice usa l'associazione tardiva per chiamare i membri dinamici e recuperare le righe di testo che contengono la stringa "Customer".  
   
@@ -147,11 +147,11 @@ Il progetto successivo di questa procedura dettagliata accede a una libreria scr
   
 2.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Applicazione console** nel riquadro **Modelli**. Nella casella **Nome** digitare `DynamicIronPythonSample` e quindi fare clic su **OK**. Il nuovo progetto viene creato.  
   
-3.  Se si usa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], fare clic con il pulsante destro del mouse sul progetto DynamicIronPythonSample e quindi fare clic su **Proprietà**. Fare clic sulla scheda **Riferimenti**. Fare clic sul pulsante **Aggiungi**. Se si usa Visual C#, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella **Riferimenti** e quindi fare clic su **Aggiungi riferimento**.  
+3.  Se si usa Visual Basic, fare clic con il pulsante destro del mouse sul progetto DynamicIronPythonSample e quindi fare clic su **Proprietà**. Fare clic sulla scheda **Riferimenti**. Fare clic sul pulsante **Aggiungi**. Se si usa Visual C#, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla cartella **Riferimenti** e quindi fare clic su **Aggiungi riferimento**.  
   
 4.  Nella scheda **Sfoglia** passare alla cartella in cui sono installate le librerie di IronPython. Ad esempio, C:\Programmi\IronPython 2.6 for .NET 4.0. Selezionare le librerie **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Fare clic su **OK**.  
   
-5.  Se si usa [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], modificare il file Module1.vb. Se si usa Visual C#, modificare il file Program.cs.  
+5.  Se si usa Visual Basic, modificare il file Module1.vb. Se si usa Visual C#, modificare il file Program.cs.  
   
 6.  Nella parte superiore del file aggiungere il codice seguente per importare gli spazi dei nomi `Microsoft.Scripting.Hosting` e `IronPython.Hosting` dalle librerie di IronPython.  
   

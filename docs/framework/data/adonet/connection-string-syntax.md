@@ -1,26 +1,12 @@
 ---
 title: Sintassi delle stringhe di connessione
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>Sintassi delle stringhe di connessione
 Ogni provider di dati .NET Framework include un oggetto `Connection` che eredita da <xref:System.Data.Common.DbConnection> oltre a una proprietà <xref:System.Data.Common.DbConnection.ConnectionString%2A> specifica del provider. La sintassi della stringa di connessione specifica per ogni provider è documentata in questa proprietà `ConnectionString`. Nella tabella seguente sono elencati i quattro provider di dati inclusi in .NET Framework.  
@@ -138,9 +124,9 @@ Data Source=MySqlServer\MSSQL1;"
  La proprietà <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> di un oggetto <xref:System.Data.OleDb.OleDbConnection> consente di ottenere o impostare una stringa di connessione per un'origine dati OLE DB quale Microsoft Access. È anche possibile creare una stringa di connessione `OleDb` in fase di esecuzione usando la classe <xref:System.Data.OleDb.OleDbConnectionStringBuilder>.  
   
 ### <a name="oledb-connection-string-syntax"></a>Sintassi della stringa di connessione OleDb  
- È necessario specificare il nome di un provider per una stringa di connessione <xref:System.Data.OleDb.OleDbConnection>. La seguente stringa di connessione consente di connettersi a un database Microsoft Access usando il provider Jet. Si noti che le parole chiave `UserID` e `Password` sono facoltative se il database non è protetto (impostazione predefinita).  
+ È necessario specificare il nome di un provider per una stringa di connessione <xref:System.Data.OleDb.OleDbConnection>. La seguente stringa di connessione consente di connettersi a un database Microsoft Access usando il provider Jet. Si noti che le parole chiave `User ID` e `Password` sono facoltative se il database non è protetto (impostazione predefinita).  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

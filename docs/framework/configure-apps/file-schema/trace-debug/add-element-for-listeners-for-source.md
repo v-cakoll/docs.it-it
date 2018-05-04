@@ -1,14 +1,6 @@
 ---
 title: '&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;origine&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;origine&gt;
 Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.  
@@ -57,7 +46,7 @@ Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.
 |`initializeData`|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata. Oggetto <xref:System.Configuration.ConfigurationException> viene generata se la classe non ha un costruttore che accetta una stringa.|  
 |`name`|Attributo facoltativo.<br /><br /> Specifica il nome del listener.|  
 |`traceOutputOptions`|Attributo facoltativo.<br /><br /> Specifica il <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valore della proprietà per il listener di traccia.|  
-|[attributi]|Attributi facoltativi.<br /><br /> Specifica il valore di attributi specifico del listener identificati per il <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metodo per il listener. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>è univoco per un esempio di attributo aggiuntivo la <xref:System.Diagnostics.DelimitedListTraceListener> classe.|  
+|[attributi]|Attributi facoltativi.<br /><br /> Specifica il valore di attributi specifico del listener identificati per il <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> metodo per il listener. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> è univoco per un esempio di attributo aggiuntivo il <xref:System.Diagnostics.DelimitedListTraceListener> classe.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   

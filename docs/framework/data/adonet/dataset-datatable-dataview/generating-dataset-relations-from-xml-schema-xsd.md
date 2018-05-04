@@ -1,24 +1,12 @@
 ---
 title: Generazione di relazioni tra dataset da XML Schema (XSD)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generazione di relazioni tra dataset da XML Schema (XSD)
 In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre-figlio. Esistono tre modi per rappresentare un **DataSet** relazione all'interno di uno schema di XML Schema definition language (XSD):  
@@ -44,7 +32,7 @@ In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra
 </xs:element>  
 ```  
   
- Il processo di mapping di XML Schema consente di creare tabelle di **DataSet** che corrispondono ai tipi complessi annidati nello schema. Crea inoltre colonne aggiuntive che vengono utilizzate come padre**-**colonne figlio per le tabelle generate. Si noti che questi padre**-**colonne figlio di specificare relazioni, che non equivale a specificare vincoli di chiave esterna o chiave primaria.  
+ Il processo di mapping di XML Schema consente di creare tabelle di **DataSet** che corrispondono ai tipi complessi annidati nello schema. Crea inoltre colonne aggiuntive che vengono utilizzate come padre**-** colonne figlio per le tabelle generate. Si noti che questi padre**-** colonne figlio di specificare relazioni, che non equivale a specificare vincoli di chiave esterna o chiave primaria.  
   
 ## <a name="msdatarelationship-annotation"></a>Annotazione msdata:Relationship  
  Il **msdata: Relationship** annotazione consente di specificare esplicitamente relazioni padre-figlio tra gli elementi dello schema che non sono annidati. L'esempio seguente mostra la struttura del **relazione** elemento.  

@@ -1,26 +1,12 @@
 ---
 title: Raccolte di schemi comuni
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-schema-collections"></a>Raccolte di schemi comuni
 Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun provider gestito .NET Framework. È possibile eseguire query di un provider gestito .NET Framework per determinare l'elenco delle raccolte di schemi supportati chiamando il **GetSchema** metodo senza argomenti oppure con il nome di raccolta di schemi "MetaDataCollections". In questo modo verrà restituito un oggetto <xref:System.Data.DataTable> con un elenco delle raccolte di schemi supportati, il numero delle restrizioni supportate da ciascuna raccolta e il numero di parti identificatore usate. Tutte le colonne richieste vengono descritte in queste raccolte. I provider hanno la possibilità di aggiungere colonne, se necessario. Ad esempio, `SqlClient` e `OracleClient` aggiungono ParameterName alla raccolta delle restrizioni.  
@@ -51,7 +37,7 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
 |IdentifierPattern|string|Un'espressione regolare che corrisponde a un identificatore e dispone di un valore di corrispondenza dell'identificatore. Ad esempio "[A-Za-z0-9_#$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica se per gli identificatori non delimitati viene eseguita la distinzione tra maiuscole e minuscole.|  
 |OrderByColumnsInSelect|bool|Specifica se le colonne nella clausola ORDER BY devono essere presenti nell'elenco di selezione. Il valore true indica che le colonne devono risultare nell'elenco di selezione, mentre il valore false indica che non è necessario.|  
-|ParameterMarkerFormat|string|Una stringa di formato che rappresenta la modalità di formattazione di un parametro.<br /><br /> Se i parametri denominati sono supportati dall'origine dati, il primo segnalibro di questa stringa deve trovarsi nella posizione in cui verrà formattato il nome del parametro.<br /><br /> Se ad esempio l'origine dati prevede che i parametri vengano denominati e presentino il prefisso ":", il risultato sarà ":{0}". Quando si esegue la formattazione con il nome di parametro "p1" la stringa risultante sarà ":p1".<br /><br /> Se l'origine dati prevede che i parametri il prefisso di ' @', ma già includono i nomi, il risultato sarà '{0}' e il risultato della formattazione di un parametro denominato "@p1"sarà"@p1".<br /><br /> Per le origini dati che non prevedono parametri denominati e prevede l'utilizzo del '?' carattere, la stringa di formato può essere specificata come '?', in modo da ignorare il nome del parametro. Per OLE DB viene restituito‘?’.|  
+|ParameterMarkerFormat|string|Una stringa di formato che rappresenta la modalità di formattazione di un parametro.<br /><br /> Se i parametri denominati sono supportati dall'origine dati, il primo segnalibro di questa stringa deve trovarsi nella posizione in cui verrà formattato il nome del parametro.<br /><br /> Ad esempio, se l'origine dati prevede che i parametri vengano denominati e preceduti da un ':' sarebbe ":{0}". Quando si esegue la formattazione con il nome di parametro "p1" la stringa risultante sarà ":p1".<br /><br /> Se l'origine dati prevede che i parametri presentino il prefisso di ' @', ma già incluso nel nome, sarebbe '{0}' e il risultato della formattazione di un parametro denominato "@p1"il risultato sarà"@p1".<br /><br /> Per le origini dati che non prevedono parametri denominati e prevede l'utilizzo del '?' carattere, la stringa di formato può essere specificata come '?', in modo da ignorare il nome del parametro. Per OLE DB viene restituito‘?’.|  
 |ParameterMarkerPattern|string|Un'espressione regolare che corrisponde al marcatore di parametro. Avrà un valore corrispondente per il nome del parametro, se disponibile.<br /><br /> Se ad esempio i parametri denominati sono supportati con un carattere "@" principale incluso nel nome del parametro, il risultato sarà: "(@[A-Za-z0-9_$#]*)".<br /><br /> Tuttavia, se i parametri denominati sono supportati con un ':' come carattere iniziale e non è parte del nome del parametro, il risultato sarà: ": ([A-Za-z0-9 _ $#]\*)".<br /><br /> Se l'origine dati non supporta i parametri nominati, il risultato sarà "?".|  
 |ParameterNameMaxLength|int|La lunghezza massima del nome del parametro in caratteri. In Visual Studio si presuppone che se i nomi di parametri sono supportati, il valore minimo per la lunghezza massima corrisponderà a 30 caratteri.<br /><br /> Se l'origine dati non supporta i parametri denominati, questa proprietà restituisce zero.|  
 |ParameterNamePattern|string|Un'espressione regolare che corrisponde ai nomi di parametro validi. Origini dati diverse hanno regole diverse per i caratteri che è possibile usare con i nomi di parametro.<br /><br /> In Visual Studio si presuppone che se sono supportati i nomi di parametro, i caratteri "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" rappresentano il set di caratteri minimo supportato, valido per i nomi di parametro.|  
@@ -69,8 +55,8 @@ Le raccolte di schemi comuni sono le raccolte di schemi implementati da ciascun 
 |TypeName|string|Il nome del tipo di dati specifico del provider.|  
 |ProviderDbType|int|Il tipo di valore specifico del provider da usare quando si specifica un tipo di parametro. Ad esempio, SqlDbType.Money o OracleType.Blob.|  
 |ColumnSize|long|La lunghezza di una colonna o di un parametro non numerico fa riferimento alla lunghezza massima o definita per questo tipo dal provider.<br /><br /> Per i dati di tipo carattere, rappresenta la lunghezza massima o definita in unità, definita dall'origine dati. In Oracle è possibile specificare una lunghezza, quindi la dimensione della memoria effettiva per determinati tipi di dati carattere. Ciò consente di definire solo la lunghezza in unità per Oracle.<br /><br /> Per i tipi di dati data-ora, rappresenta la lunghezza della rappresentazione stringa (se si suppone la massima precisione consentita del componente in frazioni di secondo).<br /><br /> Se il tipo di dati è numerico, rappresenta il limite superiore sulla massima precisione del tipo di dati.|  
-|CreateFormat|string|Stringa di formato che indica come aggiungere la colonna a un'istruzione di definizione dei dati, come CREATE TABLE. Ciascun elemento nella matrice CreateParameter deve essere rappresentato da un "marcatore di parametro" nella stringa di formato.<br /><br /> Ad esempio, per il tipo di dati SQL DECIMAL sono necessarie una precisione e una scala. In questo caso, la stringa di formato risulterà "DECIMAL({0},{1})".|  
-|CreateParameters|string|I parametri di creazione da specificare durante la creazione di una colonna di questo tipo di dati. Ciascun parametro di creazione viene elencato nella stringa, separato da una virgola nell'ordine in cui deve essere fornito.<br /><br /> Ad esempio, per il tipo di dati SQL DECIMAL sono necessarie una precisione e una scala. In questo caso, i parametri di creazione devono contenere la stringa "precision, scale".<br /><br /> In un comando di testo per creare una colonna DECIMAL con una precisione di 10 e una scala di 2, il valore della colonna CreateFormat può essere DECIMAL({0},{1})" e la specifica completa del tipo sarà DECIMAL(10,2).|  
+|CreateFormat|string|Stringa di formato che indica come aggiungere la colonna a un'istruzione di definizione dei dati, come CREATE TABLE. Ciascun elemento nella matrice CreateParameter deve essere rappresentato da un "marcatore di parametro" nella stringa di formato.<br /><br /> Ad esempio, per il tipo di dati SQL DECIMAL sono necessarie una precisione e una scala. In questo caso, sarebbe la stringa di formato "DECIMAL ({0},{1})".|  
+|CreateParameters|string|I parametri di creazione da specificare durante la creazione di una colonna di questo tipo di dati. Ciascun parametro di creazione viene elencato nella stringa, separato da una virgola nell'ordine in cui deve essere fornito.<br /><br /> Ad esempio, per il tipo di dati SQL DECIMAL sono necessarie una precisione e una scala. In questo caso, i parametri di creazione devono contenere la stringa "precision, scale".<br /><br /> In un comando di testo per creare una colonna DECIMAL con una precisione pari a 10 e una scala di 2, il valore della colonna CreateFormat potrebbe essere DECIMAL ({0},{1}) "e la specifica del tipo completo sarebbe 10,2.|  
 |Tipo di dati|string|Il nome del tipo di dati .NET Framework.|  
 |IsAutoincrementable|bool|true—I valori di questo tipo di dati possono essere a incremento automatico.<br /><br /> false—I valori di questo tipo di dati possono non essere a incremento automatico.<br /><br /> Notare che anche se una colonna di questo tipo di dati può essere a incremento automatico, non significa che tutte le colonne di questo tipo lo siano.|  
 |IsBestMatch|bool|true—Il tipo di dati è la corrispondenza più appropriata tra tutti i tipi di dati nell'archivio e il tipo di dati .NET Framework indicato dal valore nella colonna DataType.<br /><br /> false—Il tipo di dati non rappresenta la corrispondenza più appropriata.<br /><br /> Per ciascun set di righe in cui il valore della colonna DataType è lo stesso, la colonna IsBestMatch è impostata su true in una sola riga.|  

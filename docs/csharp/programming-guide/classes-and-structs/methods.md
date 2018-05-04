@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
 Un metodo è un blocco di codice che contiene una serie di istruzioni. Un programma fa in modo che le istruzioni vengano eseguite chiamando il metodo e specificando gli argomenti del metodo obbligatori. In C#, ogni istruzione eseguita viene attuata nel contesto di un metodo. Il metodo principale è il punto di ingresso per ogni applicazione C# e viene chiamato da Common Language Runtime (CLR) quando viene avviato il programma.  
@@ -64,7 +64,7 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
 ## <a name="return-values"></a>Valori restituiti  
 I metodi possono restituire un valore al chiamante. Se il tipo restituito, il tipo elencato prima del nome del metodo, non è `void`, il metodo può restituire il valore usando la parola chiave `return` . Un'istruzione con la parola chiave `return` seguita da un valore corrispondente al tipo restituito restituirà tale valore al chiamante del metodo. 
 
-Il valore può essere restituito dal chiamante per valore o, a partire dalla versione C# 7, [per riferimento](ref-returns.md). I valori vengono restituiti al chiamante per riferimento se la parola chiave `ref` viene usata nella firma del metodo e se segue ogni parola chiave `return`. La firma del metodo e l'istruzione di restituzione seguenti, ad esempio, indicano che il metodo restituisce al chiamante i nomi di una variabile `estDistance` per riferimento.
+Il valore può essere restituito dal chiamante per valore o, a partire dalla versione C# 7.0, [per riferimento](ref-returns.md). I valori vengono restituiti al chiamante per riferimento se la parola chiave `ref` viene usata nella firma del metodo e se segue ogni parola chiave `return`. La firma del metodo e l'istruzione di restituzione seguenti, ad esempio, indicano che il metodo restituisce al chiamante i nomi di una variabile `estDistance` per riferimento.
 
 ```csharp
 public ref double GetEstimatedDistance()

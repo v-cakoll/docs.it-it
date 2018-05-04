@@ -2,7 +2,7 @@
 title: Rami e cicli
 metadata:
   title: Esercitazione interattiva su rami e cicli - Guide introduttive per C#
-  description: "In questa guida introduttiva sui rami e i cicli si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser."
+  description: In questa guida introduttiva sui rami e i cicli si userà il browser per imparare a usare C# in modo interattivo. Verranno descritte le procedure per scrivere codice C# e visualizzare i risultati della compilazione ed esecuzione del codice direttamente nel browser.
   audience: Developer
   level: Beginner
   ms.custom: mvc
@@ -12,15 +12,16 @@ metadata:
   displayType: two-column
   interactive: csharp
   nextTutorialHref: interpolated-strings
-  nextTutorialTitle: Stringhe interpolate in C#
-  ms.openlocfilehash: 1fad5d5b205c9a02bbb00d3377e3cae59926faf9
-  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+  nextTutorialTitle: Interpolazione di stringhe in C#
+  ms.openlocfilehash: 2b04d2ca42906302f4191b618198d7aeb58b83a6
+  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 02/01/2018
+  ms.lasthandoff: 04/18/2018
 items:
 - durationInMinutes: 1
-  content: "Questa guida introduttiva spiega come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a tali variabili. Si userà il browser per scrivere codice C# in modo interattivo e visualizzare i risultati della compilazione ed esecuzione del codice. Questa guida introduttiva contiene una serie di lezioni che esplorano i costrutti per rami e cicli nel linguaggio C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.\n"
+  content: >
+    Questa guida introduttiva spiega come scrivere codice che esamina le variabili e modifica il percorso di esecuzione in base a tali variabili. Si userà il browser per scrivere codice C# in modo interattivo e visualizzare i risultati della compilazione ed esecuzione del codice. Questa guida introduttiva contiene una serie di lezioni che esplorano i costrutti per rami e cicli nel linguaggio C#. Queste lezioni presentano le nozioni fondamentali del linguaggio C#.
 - title: Prendere decisioni usando l'istruzione if
   durationInMinutes: 4
   content: "Eseguire il codice seguente nella finestra interattiva. A tale scopo, digitare il blocco di codice seguente nella finestra interattiva e fare clic sul pulsante **Esegui**:\n\n```csharp\nint a = 5;\nint b = 6;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10.\");\n```\n\nModificare la dichiarazione di `b` in modo che la somma sia minore di 10: \n\n```csharp\nint b = 3;\n```\n\nFare di nuovo clic sul pulsante **Esegui**. Dato che la risposta è minore a 10, non viene visualizzato nulla. La **condizione** testata è false. Non esiste codice da eseguire perché è stato scritto solo uno dei possibili rami per un'istruzione `if`, ovvero il ramo true.\n\n> [!TIP]\n> Mentre si impara a usare C# (o qualsiasi linguaggio di programmazione) sicuramente si commetteranno errori durante la scrittura del codice. Il **compilatore** troverà questi errori e li segnalerà. Quando l'output contiene messaggi di errore, esaminare attentamente il codice di esempio e il codice nella finestra interattiva per scoprire cosa correggere.\n> Questo esercizio sarà utile per imparare la struttura del codice C#.     \n\nQuesto primo esempio dimostra le potenzialità di `if` e dei tipi booleani. Un valore *booleano* è una variabile che può avere uno di due valori: `true` o `false`. C# definisce un tipo speciale, `bool` per le variabili booleane. L'istruzione `if` controlla il valore di un `bool`. Quando il valore è `true`, viene eseguita l'istruzione che segue `if`. In caso contrario, l'istruzione viene ignorata. \n\nQuesto processo di controllo delle condizioni ed esecuzione di istruzioni in base a queste condizioni offre molte potenzialità. L'esplorazione continua nelle prossime lezioni.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
@@ -35,7 +36,23 @@ items:
   content: "Un'altra istruzione di ciclo comune nel codice C# è il ciclo `for`. Provare questo codice nella finestra interattiva:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nQuesto codice esegue le stesse operazioni di ciclo `while` e `do` già usate. L'istruzione `for` è composta da tre parti che ne controllano il funzionamento. \n\nLa prima parte è l'**inizializzatore for**: `for counter = 0;` dichiara che `counter` è la variabile di ciclo e imposta il valore iniziale su `0`.\n\nLa parte centrale è la **condizione for**: `counter < 10` dichiara che questo ciclo `for` continua l'esecuzione fino a quando il valore del contatore è minore di 10.\n\nLa parte finale è l'**iteratore for**: `counter++` specifica come modificare la variabile di ciclo dopo l'esecuzione del blocco successivo all'istruzione `for`. In questo caso, specifica che `counter` deve essere incrementato di 1 a ogni esecuzione del blocco.\n\nSperimentare da soli questi elementi. Eseguire queste prove:\n\n- Cambiare l'inizializzatore in modo che inizi da un valore diverso.\n- Cambiare la condizione in modo che si interrompa in corrispondenza di un valore diverso.\n\nAl termine, passare alla prossima lezione che prevede la scrittura di codice per usare quanto finora appreso.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Combinare rami e cicli
   durationInMinutes: 12
-  content: "Dopo aver esaminato l'istruzione `if` e i costrutti per i cicli nel linguaggio C#, provare a scrivere codice C# per ottenere la somma di tutti i numeri interi da 1 a 20 divisibili per 3.  Ecco alcuni suggerimenti:\n\n- L'operatore `%` restituisce il resto di un'operazione di divisione.\n- L'istruzione `if` offre la condizione per stabilire se un numero deve fare parte della somma.\n- Il ciclo `for` può essere utile per ripetere una serie di passaggi per tutti i numeri da 1 a 20.\n\nSperimentare e quindi controllare i risultati. Come risposta si riceverà il valore 63.\n\n> [!NOTE]\n> Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Dopo aver esaminato l'istruzione `if` e i costrutti per i cicli nel linguaggio C#, provare a scrivere codice C# per ottenere la somma di tutti i numeri interi da 1 a 20 divisibili per 3.  Ecco alcuni suggerimenti:
+
+
+    - L'operatore `%` restituisce il resto di un'operazione di divisione.
+
+    - L'istruzione `if` offre la condizione per stabilire se un numero deve fare parte della somma.
+
+    - Il ciclo `for` può essere utile per ripetere una serie di passaggi per tutti i numeri da 1 a 20.
+
+
+    Sperimentare e quindi controllare i risultati. Come risposta si riceverà il valore 63.
+
+
+    > [!NOTE]
+
+    > Questa esperienza di scrittura del codice online è in modalità di anteprima. Se si verificano problemi, segnalarli [nel repository dotnet/try](https://github.com/dotnet/try/issues).
 - title: Completare l'esercizio
   durationInMinutes: 1
-  content: "È stata completata la guida introduttiva \"Cicli e rami\". \n\nÈ possibile continuare con queste guide introduttive nel proprio ambiente di sviluppo. Dopo aver acquisito familiarità con le nozioni di base dello [sviluppo locale](local-environment.md), scegliere una guida introduttiva. È possibile provare questo stesso esercizio, passare direttamente alla guida introduttiva seguente o iniziare da capo con la guida introduttiva [Numeri in C#](numbers-in-csharp-local.md).\n\nMaggiori informazioni su questi concetti sono disponibili in questi argomenti:\n\n[Istruzioni if ed else](../language-reference/keywords/if-else.md)   \n[Istruzione while](../language-reference/keywords/while.md)   \n[Istruzione do](../language-reference/keywords/do.md)   \n[Istruzione for](../language-reference/keywords/for.md)\0"
+  content: "È stata completata la guida introduttiva \"Cicli e rami\". \n\nÈ possibile continuare con queste guide introduttive nel proprio ambiente di sviluppo. Dopo aver acquisito familiarità con le nozioni di base dello [sviluppo locale](local-environment.md), scegliere una guida introduttiva. È possibile provare questo stesso esercizio, passare direttamente alla guida introduttiva seguente o iniziare da capo con la guida introduttiva [Numeri in C#](numbers-in-csharp-local.md).\n\nMaggiori informazioni su questi concetti sono disponibili in questi argomenti:\n\n[Istruzioni if ed else](../language-reference/keywords/if-else.md)   \n[Istruzione while](../language-reference/keywords/while.md)   \n[Istruzione do](../language-reference/keywords/do.md)   \n[Istruzione for](../language-reference/keywords/for.md)"

@@ -1,27 +1,15 @@
 ---
 title: Visualizzazione di dati in un oggetto DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Visualizzazione di dati in un oggetto DataTable
 È possibile accedere al contenuto di un <xref:System.Data.DataTable> utilizzando il **righe** e **colonne** insiemi di **DataTable**. È inoltre possibile utilizzare il <xref:System.Data.DataTable.Select%2A> per restituire subset di dati in un **DataTable** in base ai criteri compresi i criteri di ricerca, ordinamento e lo stato della riga. Inoltre, è possibile utilizzare il <xref:System.Data.DataRowCollection.Find%2A> metodo il **DataRowCollection** durante la ricerca di una particolare riga mediante un valore di chiave primaria.  
@@ -36,7 +24,7 @@ ms.lasthandoff: 01/17/2018
 |Valore di DataViewRowState|Descrizione|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Righe correnti, incluse le righe non modificate, aggiunte e modificate.|  
-|**Eliminato**|Riga eliminata.|  
+|**eliminato**|Riga eliminata.|  
 |**ModifiedCurrent**|Una versione corrente, ovvero una versione modificata dei dati originali. (Vedere **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|La versione originale di tutte le righe modificate. La versione corrente è disponibile tramite **ModifiedCurrent**.|  
 |**Aggiunta**|Nuova riga.|  

@@ -1,27 +1,15 @@
 ---
 title: Esecuzione di query
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: db246037c388408e5722582049cf7a2b902caa18
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-execution"></a>Esecuzione di query
 Dopo essere stata creata da un utente, una query LINQ viene convertita in un albero dei comandi. Un albero dei comandi è una rappresentazione di una query compatibile con Entity Framework. L'albero dei comandi viene quindi eseguito sull'origine dati. In fase di runtime della query, tutte le espressioni di query, ovvero tutti i componenti della query, vengono valutate, incluse le espressioni usate nella materializzazione del risultato.  

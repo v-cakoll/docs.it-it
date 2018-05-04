@@ -1,62 +1,61 @@
 ---
 title: Buffer a dimensione fissa (Guida per programmatori C#)
-ms.date: 07/20/2015
+ms.date: 04/20/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.assetid: 6220d454-947c-4977-ac9d-9308c6ed5051
-caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f99c2c6d477fca988fcca77de5ca5c2f8addd4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9158550885ea0a95a56f318362b21db48e648234
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
-In C# è possibile usare l'istruzione [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) per creare un buffer con una matrice di dimensioni fisse in una struttura di dati. Ciò si rivela utile quando si usa codice esistente, ad esempio codice scritto in altri linguaggi, DLL preesistenti o progetti COM. La matrice fissa può accettare attributi o modificatori consentiti per i membri struct normali. L'unica restrizione è rappresentata dal fatto che il tipo di matrice deve essere `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float` o `double`.  
-  
-```  
-private fixed char name[30];  
-```  
-  
-## <a name="remarks"></a>Note  
- Nelle versioni precedenti di C# era difficile dichiarare una struttura a dimensioni fisse di tipo C++, in quanto uno struct C# contenente una matrice non include gli elementi della matrice. Lo struct contiene invece un riferimento agli elementi.  
-  
- In C# 2.0 è stata aggiunta la possibilità di incorporare una matrice di dimensioni fisse in uno [struct](../../../csharp/language-reference/keywords/struct.md) quando viene usata in un blocco di codice [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
-  
- Ad esempio, prima di C# 2.0, lo struct `struct` seguente avrebbe avuto una dimensione di 8 byte. La matrice `pathName` è un riferimento alla matrice con allocazione heap:  
-  
- [!code-csharp[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
-  
- A partire da C# 2.0, un oggetto `struct` può contenere una matrice incorporata. Nell'esempio seguente la matrice `fixedBuffer` è di dimensioni fisse. Per accedere agli elementi della matrice, si usa un'istruzione `fixed` per definire un puntatore al primo elemento. L'istruzione `fixed` blocca un'istanza di `fixedBuffer` a un percorso specifico nella memoria.  
-  
- [!code-csharp[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
-  
- Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../../csharp/language-reference/keywords/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.  
-  
- Un'altra matrice a dimensione fissa comune è la matrice [bool](../../../csharp/language-reference/keywords/bool.md). Gli elementi in una matrice `bool` hanno sempre le dimensioni di un byte. Le matrici `bool` non sono adatte per la creazione di matrici o buffer di bit.  
-  
+
+In C# è possibile usare l'istruzione [fixed](../../language-reference/keywords/fixed-statement.md) per creare un buffer con una matrice di dimensioni fisse in una struttura di dati. I buffer a dimensione fissa sono utili quando si scrivono metodi con interoperabilità con origini dati di altri linguaggi o piattaforme. La matrice fissa può accettare attributi o modificatori consentiti per i membri struct normali. L'unica restrizione è rappresentata dal fatto che il tipo di matrice deve essere `bool`, `byte`, `char`, `short`, `int`, `long`, `sbyte`, `ushort`, `uint`, `ulong`, `float` o `double`.
+
+```csharp
+private fixed char name[30];
+```
+
+## <a name="remarks"></a>Note
+
+Nel codice safe, uno struct C# che contiene una matrice non contiene gli elementi della matrice. Lo struct contiene invece un riferimento agli elementi. È possibile incorporare una matrice di dimensioni fisse in uno [struct](../../language-reference/keywords/struct.md) quando viene usata in un blocco di codice [unsafe](../../language-reference/keywords/unsafe.md).
+
+Lo `struct` seguente ha una dimensione di 8 byte. La matrice `pathName` è un riferimento:
+
+[!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
+
+Un oggetto `struct` può contenere una matrice incorporata in codice unsafe. Nell'esempio seguente la matrice `fixedBuffer` è di dimensioni fisse. Viene usata un'istruzione `fixed` per definire un puntatore al primo elemento. Gli elementi della matrice sono accessibili tramite il puntatore. L'istruzione `fixed` blocca un'istanza di `fixedBuffer` in un percorso specifico nella memoria.
+
+[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
+
+Le dimensioni della matrice `char` a 128 elementi sono di 256 byte. I buffer [char](../../language-reference/keywords/char.md) a dimensione fissa accettano sempre due byte per carattere, indipendentemente dalla codifica. Questo vale anche quando viene eseguito il marshalling di buffer char in metodi API o struct con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.CharSet>.
+
+L'esempio precedente illustra l'accesso ai cambi `fixed` senza blocco, opzione disponibile a partire da C# 7.3.
+
+Un'altra matrice a dimensione fissa comune è la matrice [bool](../../language-reference/keywords/bool.md). Gli elementi in una matrice `bool` hanno sempre le dimensioni di un byte. Le matrici `bool` non sono adatte per la creazione di matrici o buffer di bit.
+
 > [!NOTE]
->  Eccezione fatta per la memoria creata con [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md), il compilatore C# e Common Language Runtime (CLR) non eseguono controlli di sicurezza per sovraccarico del buffer. Come per tutto il codice unsafe, è necessario prestare la massima attenzione.  
-  
- I buffer unsafe sono diversi dalle normali matrici per i motivi seguenti:  
-  
--   È possibile usare i buffer unsafe solo in un contesto unsafe.  
-  
--   I buffer unsafe sono sempre vettori, ovvero matrici unidimensionali.  
-  
--   La dichiarazione della matrice deve includere un conteggio, ad esempio `char id[8]`. Non è invece possibile usare `char id[]`.  
-  
--   I buffer unsafe possono essere solo campi di istanza di struct in un contesto unsafe.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [Interoperabilità](../../../csharp/programming-guide/interop/index.md)
+> Eccezione fatta per la memoria creata con [stackalloc](../../language-reference/keywords/stackalloc.md), il compilatore C# e Common Language Runtime (CLR) non eseguono controlli di sicurezza per sovraccarico del buffer. Come per tutto il codice unsafe, è necessario prestare la massima attenzione.
+
+I buffer unsafe sono diversi dalle normali matrici per i motivi seguenti:
+
+- È possibile usare i buffer unsafe solo in un contesto unsafe.
+- I buffer unsafe sono sempre vettori, ovvero matrici unidimensionali.
+- La dichiarazione della matrice deve includere un conteggio, ad esempio `char id[8]`. Non è possibile usare `char id[]`.
+- I buffer unsafe possono essere solo campi di istanza di struct in un contesto unsafe.
+
+## <a name="see-also"></a>Vedere anche
+
+[Guida per programmatori C#](../index.md)  
+[Codice unsafe e puntatori](index.md)  
+[Istruzione fixed](../../language-reference/keywords/fixed-statement.md)  
+[Interoperabilità](../interop/index.md)

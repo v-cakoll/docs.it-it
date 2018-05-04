@@ -1,34 +1,22 @@
 ---
 title: '&lt;message&gt; di &lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; di &lt;ws2007HttpBinding&gt;
 Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<ws2007HttpBinding>  
 \<binding>  
 \<security>  
-\<message>  
+\<messaggio >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -94,7 +82,7 @@ Definisce le impostazioni per la sicurezza a livello di messaggio di [ \<ws2007H
 |`Windows`|Consente lo svolgimento degli scambi SOAP nel contesto autenticato di una credenziale `Windows`. Se l'attributo `negotiateServiceCredential` è impostato su `true`, esegue una negoziazione SSPI o Kerberos (un standard interoperabile).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- nessuno  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

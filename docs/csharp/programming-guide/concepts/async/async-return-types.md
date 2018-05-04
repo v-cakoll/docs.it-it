@@ -1,21 +1,22 @@
 ---
 title: Tipi restituiti async (C#)
-ms.custom: 
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Tipi restituiti async (C#)
 I metodi asincroni possono avere i seguenti tipi restituiti:
@@ -26,7 +27,7 @@ I metodi asincroni possono avere i seguenti tipi restituiti:
 
 - `void` per un gestore eventi. 
 
-- A partire da C# 7, qualsiasi tipo con un metodo `GetAwaiter` accessibile. L'oggetto restituito dal metodo `GetAwaiter` deve implementare l'interfaccia <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
+- A partire da C# 7.0, qualsiasi tipo con un metodo `GetAwaiter` accessibile. L'oggetto restituito dal metodo `GetAwaiter` deve implementare l'interfaccia <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Per altre informazioni sulla funzionalità dei metodi asincroni, vedere [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md) (Programmazione asincrona con async e await (C#)).  
   
@@ -76,7 +77,7 @@ L'esempio seguente definisce un gestore eventi asincrono.
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Tipi restituiti asincroni generalizzati e ValueTask<T>
 
-A partire da C# 7, un metodo asincrono può restituire qualsiasi tipo con un metodo `GetAwaiter` accessibile.
+A partire da C# 7.0, un metodo asincrono può restituire qualsiasi tipo con un metodo `GetAwaiter` accessibile.
  
 Dato che <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> sono tipi riferimento, l'allocazione della memoria in percorsi critici per le prestazioni, in particolare quando le allocazioni si verificano in cicli ravvicinati, può influire negativamente sulle prestazioni. Il supporto dei tipi restituiti generalizzati implica la possibilità di restituire un tipo valore leggero anziché un tipo riferimento per evitare allocazioni di memoria aggiuntive. 
 

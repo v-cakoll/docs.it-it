@@ -1,13 +1,6 @@
 ---
 title: '&lt;proxy&gt; elemento (impostazioni di rete)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b0b397e66e0f73d10f482bc9151a6fbacf3e774d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; elemento (impostazioni di rete)
 Definisce un server proxy.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<defaultProxy >  
 \<proxy >  
   
@@ -54,7 +45,7 @@ Definisce un server proxy.
 |**Attributo**|**Descrizione**|  
 |-------------------|---------------------|  
 |`autoDetect`|Specifica se il proxy viene rilevato automaticamente. Il valore predefinito è `unspecified`.|  
-|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale (http://localhost, http://loopback o http://127.0.0.1) e un URI senza punto (http://webserver). Il valore predefinito è `unspecified`.|  
+|`bypassonlocal`|Specifica se il proxy viene ignorato per le risorse locali. Le risorse locali includono il server locale (http://localhost, http://loopback, o http://127.0.0.1) e l'URI senza un punto (http://webserver). Il valore predefinito è `unspecified`.|  
 |`proxyaddress`|Specifica l'URI del proxy da utilizzare.|  
 |`scriptLocation`|Specifica il percorso dello script di configurazione.|  
 |`usesystemdefault`|Specifica se utilizzare le impostazioni proxy di Internet Explorer. Se impostato su `true`, gli attributi successivi sostituiranno le impostazioni proxy di Internet Explorer. Il valore predefinito è `unspecified`.|  

@@ -1,13 +1,6 @@
 ---
 title: '&lt;traccia&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttracegt-element"></a>&lt;traccia&gt; elemento
 Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.  
@@ -82,7 +73,7 @@ Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di tracc
 |`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `<trace>` elemento per aggiungere il listener `MyListener` per il `Listeners` insieme. `MyListener`Crea un file denominato `MyListener.log` e scrive l'output del file. Il `useGlobalLock` attributo è impostato su `false`, che comporta il blocco globale non deve essere utilizzata se il listener di traccia è thread-safe. Il `autoflush` attributo è impostato su `true`, causando il listener di traccia da scrivere nel file indipendentemente dal fatto che il <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> metodo viene chiamato. Il `indentsize` attributo è impostato su 0 (zero), che fa sì che il listener per il rientro quando il <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> metodo viene chiamato.  
+ Nell'esempio seguente viene illustrato come utilizzare il `<trace>` elemento per aggiungere il listener `MyListener` per il `Listeners` insieme. `MyListener` Crea un file denominato `MyListener.log` e scrive l'output al file. Il `useGlobalLock` attributo è impostato su `false`, che comporta il blocco globale non deve essere utilizzata se il listener di traccia è thread-safe. Il `autoflush` attributo è impostato su `true`, causando il listener di traccia da scrivere nel file indipendentemente dal fatto che il <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> metodo viene chiamato. Il `indentsize` attributo è impostato su 0 (zero), che fa sì che il listener per il rientro quando il <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> metodo viene chiamato.  
   
 ```xml  
 <configuration>  

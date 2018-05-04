@@ -1,30 +1,18 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Fornisce il controllo completo dello stack di messaggistica per l'utente.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<le associazioni >  
 \<customBinding>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -241,7 +229,7 @@ Fornisce il controllo completo dello stack di messaggistica per l'utente.
   
 -   Quindi una classe <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> facoltativa che fornisce una sessione e un meccanismo di ordinamento come definito nella specifica WS-ReliableMessaging. Questa nozione di sessione può attraversare SOAP e può trasportare intermediari.  
   
--   Segue un elemento di associazione di sicurezza facoltativo che fornisce funzionalità di sicurezza quali, ad esempio, autorizzazione, autenticazione, protezione e riservatezza. Gli elementi di associazione di sicurezza seguenti sono forniti da [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Segue un elemento di associazione di sicurezza facoltativo che fornisce funzionalità di sicurezza quali, ad esempio, autorizzazione, autenticazione, protezione e riservatezza. Gli elementi di associazione di sicurezza seguenti sono forniti da Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ Fornisce il controllo completo dello stack di messaggistica per l'utente.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   Segue infine un elemento di trasporto obbligatorio. È possibile usare un trasporto proprio o uno degli elementi di associazione di trasporto forniti da [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
+-   Segue infine un elemento di trasporto obbligatorio. È possibile utilizzare un trasporto personalizzato o usare uno degli elementi forniti da Windows Communication Foundation (WCF) di associazione di trasporto:  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

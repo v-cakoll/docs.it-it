@@ -1,28 +1,16 @@
 ---
-title: '&lt;filtro&gt;'
-ms.custom: 
+title: '&lt;Filtro&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltfiltergt"></a>&lt;filtro&gt;
+# <a name="ltfiltergt"></a>&lt;Filtro&gt;
 
-Definisce un filtro di routing che determina il tipo di [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] di <xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo, nonché gli eventuali dati o parametri di supporto necessari per il filtro.
+Definisce un filtro di routing che determina il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo, nonché gli eventuali dati di supporto o i parametri richiesti dal filtro.
 
 \<System. ServiceModel > \<routing > \<filtri > \<filtro >
 
@@ -47,7 +35,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 | Attributo  | Descrizione |
 | ---------- | ----------- |
-| customType | Stringa contenente il nome di tipo completo del tipo personalizzato da utilizzare come filtro. Se `filterType` è impostato su `custom`, questo attributo contiene il nome completo del tipo di classe da creare.  `filterData`può inoltre contenere i valori da utilizzare durante la valutazione del filtro di tipo personalizzato. |
+| customType | Stringa contenente il nome di tipo completo del tipo personalizzato da utilizzare come filtro. Se `filterType` è impostato su `custom`, questo attributo contiene il nome completo del tipo di classe da creare.  `filterData` può inoltre contenere i valori da utilizzare durante la valutazione del filtro di tipo personalizzato. |
 | filterData | Stringa contenente i dati del filtro. Per altre informazioni su come specificare questo attributo, vedere <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Stringa contenente i tipo di filtro. L'attributo è di tipo <xref:System.ServiceModel.Routing.Configuration.FilterType>.  Per altre informazioni sul funzionamento con l'attributo `filterData`, vedere <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | name       | Stringa contenente il nome univoco di questo elemento di filtro. |
@@ -60,7 +48,7 @@ Nessuno.
 
 | Elemento | Descrizione |
 | ------- | ----------- |
-| [\<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Sezione di configurazione per la definizione di un set di filtri di routing che determinano il tipo di [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> da usare durante la valutazione di messaggi in arrivo. |
+| [\<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Una sezione di configurazione per la definizione di un set di filtri di routing, che determinano il tipo di Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> da utilizzare durante la valutazione di messaggi in arrivo. |
 
 ## <a name="see-also"></a>Vedere anche
 

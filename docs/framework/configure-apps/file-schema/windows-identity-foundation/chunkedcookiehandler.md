@@ -1,29 +1,19 @@
 ---
 title: '&lt;chunkedCookieHandler&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c5d526ccd48ea5e822d5d29fb38dacd895c2556c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 193b783e44fe4386d3575e180dc5baa6a7f9a8be
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 Configura il <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Questo elemento può essere presente solo se il `mode` attributo del `<cookieHandler>` elemento è "Default" o "Chunked".  
   
- \<System >  
+ \<IdentityModel >  
 \<federationConfiguration >  
 \<cookieHandler >  
 \<chunkedCookieHandler >  
@@ -51,7 +41,7 @@ Configura il <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Questo e
 |chunkSize|Dimensione massima in caratteri, di dati dei cookie HTTP per di un cookie HTTP. È necessario prestare attenzione quando si modifica la dimensione del blocco. Browser Web hanno limiti diversi sulle dimensioni dei cookie e il numero consentito per ogni dominio. Ad esempio, la specifica Netscape originale stipulata questi limiti: 300 cookie totali, pari a 4.096 byte per ogni intestazione cookie (inclusi i metadati, non solo il valore del cookie) e 20 cookie per dominio. Il valore predefinito è 2000. Obbligatorio.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

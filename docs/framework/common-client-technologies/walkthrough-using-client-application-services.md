@@ -1,13 +1,13 @@
 ---
 title: 'Procedura dettagliata: utilizzo di servizi delle applicazioni client'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procedura dettagliata: utilizzo di servizi delle applicazioni client
 Questo argomento descrive come creare un'applicazione Windows che usa i servizi delle applicazioni client per autenticare gli utenti e recuperare impostazioni e ruoli utente.  
@@ -75,7 +75,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 7.  Assicurarsi che l'opzione **Usa autenticazione basata su form** sia selezionata, quindi impostare **Percorso servizio di autenticazione**, **Percorso servizi ruoli**e **Percorso servizi impostazioni Web** su `http://localhost:55555/AppServices`.  
   
-8.  In [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]selezionare la scheda **Applicazione** e scegliere **Definita dall'applicazione** per **Modalità di autenticazione**.  
+8.  In Visual Basic, selezionare la scheda **Applicazione** e scegliere **Definita dall'applicazione** per **Modalità di autenticazione**.  
   
  Le impostazioni specificate nel file app.config dell'applicazione vengono archiviate nella finestra di progettazione.  
   
@@ -315,7 +315,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
 ### <a name="creating-a-login-form"></a>Creazione di un form di accesso  
  Un provider di credenziali è una classe che implementa l'interfaccia <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Questa interfaccia contiene un solo metodo denominato <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> che restituisce un oggetto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . Le procedure seguenti illustrano come creare una finestra di dialogo di accesso che implementi <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> in modo che venga visualizzata la finestra stessa e vengano restituite le credenziali specificate dall'utente.  
   
- È necessario seguire procedure separate per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e C# perché [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] include un modello **Form di accesso**, che consente di risparmiare tempo richiedendo meno codice da scrivere.  
+ È necessario seguire procedure separate per Visual Basic e C# perché Visual Basic include un modello **Form di accesso** che consente di risparmiare tempo richiedendo meno codice da scrivere.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Per creare una finestra di dialogo di accesso come provider di credenziali in Visual Basic  
   
@@ -329,7 +329,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 4.  Nella finestra di progettazione aggiungere un controllo `CheckBox` al form sotto la casella di testo **Password** .  
   
-5.  Nella finestra **Proprietà** specificare il valore  **per** (Name)`rememberMeCheckBox` e il valore  **per** Text`&Remember me`.  
+5.  Nella finestra **Proprietà** specificare il valore **per**(Name)`rememberMeCheckBox` e il valore **per**Text`&Remember me`.  
   
 6.  Scegliere **Visualizza &#124; Codice** dal menu principale di [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
@@ -407,7 +407,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  È ora possibile eseguire l'applicazione e accedere come employee per non vedere il pulsante e come manager per visualizzarlo.  
   
 ## <a name="accessing-web-settings"></a>Accesso alle impostazioni Web  
- Nella procedura seguente verrà aggiunta al form una casella di testo che verrà associata a un'impostazione Web. Come il codice precedente che usa autenticazione e ruoli, il codice delle impostazioni non accede direttamente al provider delle impostazioni. Usa invece la classe `Settings` fortemente tipizzata (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) generata per il progetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Nella procedura seguente verrà aggiunta al form una casella di testo che verrà associata a un'impostazione Web. Come il codice precedente che usa autenticazione e ruoli, il codice delle impostazioni non accede direttamente al provider delle impostazioni. Usa invece la classe `Settings` fortemente tipizzata (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in Visual Basic) generata per il progetto da [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Per usare le impostazioni Web nell'interfaccia utente  
   
@@ -486,7 +486,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 1.  Nella finestra di progettazione Form1 aggiungere un controllo <xref:System.Windows.Forms.Button> al form dalla **Casella degli strumenti**.  
   
-2.  Nella finestra **Proprietà** specificare il valore  **per** (Name)`logoutButton` e il valore **&Disconnetti** per **Text**.  
+2.  Nella finestra **Proprietà** specificare il valore **per**(Name)`logoutButton` e il valore **&Disconnetti** per **Text**.  
   
 3.  Fare doppio clic su `logoutButton` per generare un gestore eventi <xref:System.Windows.Forms.Control.Click>.  
   
@@ -527,7 +527,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
     > [!NOTE]
     >  Il metodo <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> viene fornito solo per praticità e poiché non restituisce un valore non può indicare se la riconvalida non è riuscita. La riconvalida può non riuscire, ad esempio, se le credenziali utente sono state modificato nel server. In questo caso, è necessario includere il codice che convalida in modo esplicito gli utenti dopo l'esito negativo di una chiamata al servizio. Per altre informazioni, vedere la sezione Accesso alle impostazioni Web descritta in precedenza in questa procedura dettagliata.  
   
-     Dopo la riconvalida, questo codice salva tutte le modifiche apportate alle impostazioni Web locali chiamando il metodo `SaveSettings` aggiunto in precedenza. Recupera quindi tutti i nuovi valori nel server chiamando il metodo <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> della classe `Settings` del progetto (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Dopo la riconvalida, questo codice salva tutte le modifiche apportate alle impostazioni Web locali chiamando il metodo `SaveSettings` aggiunto in precedenza. Recupera quindi tutti i nuovi valori nel server chiamando il metodo <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> della classe `Settings` del progetto (alla quale si accede come `Properties.Settings.Default` in C# e come `My.Settings` in Visual Basic).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

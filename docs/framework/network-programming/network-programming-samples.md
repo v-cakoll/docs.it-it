@@ -1,80 +1,74 @@
 ---
 title: Esempi di programmazione di rete
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e450582e85c07060d13eb90a4c069abdbd17982
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="network-programming-samples"></a>Esempi di programmazione di rete
-Questa sezione contiene descrizioni e collegamenti per esempi di programmazione di rete scaricabili, che usano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e negli spazi dei nomi correlati.  
+Questa sezione contiene descrizioni e collegamenti per esempi di programmazione di rete scaricabili, che usano le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> e negli spazi dei nomi correlati. 
   
+> [!NOTE]
+> Tutti gli esempi sono disponibili nel file di [download degli esempi di .NET Framework SDK versione 2.0](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181), che è stato rilasciato per .NET Framework 2.0 e potrebbe essere obsoleto.
+
 ## <a name="in-this-section"></a>In questa sezione  
- [Download Progress Indicator Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179556) (Esempio di tecnologia indicatore di stato di download)  
+ [Download Progress Indicator Technology Sample](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx) (Esempio di tecnologia indicatore di stato di download)  
  Mostra come visualizzare lo stato di avanzamento di un download di file.  
   
- [FTP Client Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179557) (Esempio di tecnologia client FTP)  
+ [FTP Client Technology Sample](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx) (Esempio di tecnologia client FTP)  
  Mostra come caricare e scaricare file in e da un server FTP.  
   
- [HttpListener Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179558) (Esempio di tecnologia HttpListener)  
+ [HttpListener Technology Sample](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx) (Esempio di tecnologia HttpListener)  
  Mostra come elaborare le richieste HTTP da un'applicazione.  
+ 
+ [HttpListener ASPX Host Application Sample](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))  (Esempio di applicazione host ASPX HttpListener)  
+ Dimostra come usare le funzionalità della classe <xref:System.Net.HttpListener?displayProperty=nameWithType> per creare un server HTTP che instrada le chiamate a un'applicazione ASP.NET ospitata.
   
- [HttpListener ASPX Host Application Sample](http://go.microsoft.com/fwlink/?LinkID=179560) (Esempio di applicazione host ASPX HttpListener)  
- Dimostra come usare le funzionalità della classe <xref:System.Net.HttpListener> per creare un server HTTP che instrada le chiamate a un'applicazione ASP.NET ospitata.  
-  
- [Mailer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179561) (Esempio di tecnologia mailer)  
+ [Mailer Technology Sample](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx) (Esempio di tecnologia mailer)  
  Mostra come inviare messaggi di posta elettronica da un'applicazione client.  
   
- [NetStat Tool Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179562) (Esempio di tecnologia dello strumento NetStat)  
+ [NetStat Tool Technology Sample](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx) (Esempio di tecnologia dello strumento NetStat)  
  Dimostrazione dello strumento per raccogliere informazioni di rete NCLNetStat.  
   
- [Network Information Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179564) (Esempio di tecnologia per informazioni di rete)  
+ [Network Information Technology Sample](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx) (Esempio di tecnologia per informazioni di rete)  
  Mostra come monitorare e visualizzare informazioni sulla rete.  
   
- [Ping Client Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179565) (Esempio di tecnologia ping)  
+ [Ping Client Technology Sample](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx) (Esempio di tecnologia ping)  
  Dimostrazione di un'applicazione client che può eseguire il ping di un host remoto.  
   
- [WebClient Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179566) (Esempio di tecnologia WebClient)  
+ [WebClient Technology Sample](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx) (Esempio di tecnologia WebClient)  
  Dimostra come eseguire operazioni comuni, ad esempio il caricamento o download di file o dati.  
   
- [Secure Streams Sample](http://go.microsoft.com/fwlink/?LinkID=179567) (Esempio di flussi protetti)  
+ [Secure Streams Sample](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx) (Esempio di flussi protetti)  
  Mostra come usare un flusso protetto per le comunicazioni tra un client e un server.  
   
- [IPv6 Sockets Sample](http://go.microsoft.com/fwlink/?LinkID=179568) (Esempio di socket IPv6)  
+ [IPv6 Sockets Sample](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx) (Esempio di socket IPv6)  
  Dimostra come usare i socket quando IPv6 è abilitato.  
   
- [FTP Explorer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179569) (Esempio di tecnologia esplora risorse FTP)  
+ [FTP Explorer Technology Sample](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx) (Esempio di tecnologia esplora risorse FTP)  
  Dimostra come elencare il contenuto di un server FTP.  
   
- [Socket Performance Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179570) (Esempio di tecnologia per le prestazioni del socket)  
- Mostra come usare i miglioramenti nella classe <xref:System.Net.Sockets.Socket> per compilare un'applicazione server che usa l'I/O di rete asincrono per ottenere le massime prestazioni.  
-  
- [PeerToPeer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179571) (Esempio di tecnologia PeerToPeer)  
- Mostra come usare le nuove classi nello spazio dei nomi <xref:System.Net.PeerToPeer> per registrare e pubblicare un nome di peer e quindi risolvere un nome di peer.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
- <xref:System.Net.PeerToPeer>  
-  
- <xref:System.Net.Sockets>  
-  
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Procedure per la programmazione di rete](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Esempi di rete per .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

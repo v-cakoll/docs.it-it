@@ -1,24 +1,12 @@
 ---
 title: Valori letterali (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7665d0cb2e3c0a3cff5f602e7b02c572a3dc341d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-entity-sql"></a>Valori letterali (Entity SQL)
 In questo argomento viene descritto il supporto [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per i valori letterali.  
@@ -78,7 +66,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Un valore letterale di tipo DateTimeOffset è indipendente dalle impostazioni locali ed è composto da una parte relativa alla data, una parte relativa all'ora e una parte relativa all'offset. Tutte e tre le parti sono obbligatorie e non vi sono valori predefiniti. La parte relativa alla data deve essere nel formato YYYY-MM-DD, dove YYYY è un valore dell'anno a quattro cifre compreso tra 0001 e 9999, MM è il mese compreso tra 1 e 12, e DD è il valore del giorno valido per il mese specificato. La parte relativa all'ora deve essere nel formato HH:MM[:SS[.fffffff]], dove HH è il valore dell'ora compreso tra 0 e 23, MM è il valore dei minuti compreso tra 0 e 59, SS è il valore dei secondi compreso tra 0 e 59 e fffffff è il valore dei secondi frazionari compreso tra 0 e 9999999. Tutti gli intervalli includono il primo e l'ultimo valore. I secondi frazionari sono facoltativi. I secondi sono facoltativi, a meno che non vengano specificati i secondi frazionari. In questo caso, i secondi sono obbligatori. Quando i secondi o le frazioni di secondo non sono specificati, viene usato il valore predefinito zero. La parte offset deve essere nel formato {+ &#124;-} hh: mm, dove HH e MM hanno lo stesso significato come la parte dell'ora. L'intervallo dell'offset deve tuttavia essere compreso tra -14:00 e + 14:00.  
+ Un valore letterale di tipo DateTimeOffset è indipendente dalle impostazioni locali ed è composto da una parte relativa alla data, una parte relativa all'ora e una parte relativa all'offset. Tutte e tre le parti sono obbligatorie e non vi sono valori predefiniti. La parte relativa alla data deve essere nel formato YYYY-MM-DD, dove YYYY è un valore dell'anno a quattro cifre compreso tra 0001 e 9999, MM è il mese compreso tra 1 e 12, e DD è il valore del giorno valido per il mese specificato. La parte relativa all'ora deve essere nel formato HH:MM[:SS[.fffffff]], dove HH è il valore dell'ora compreso tra 0 e 23, MM è il valore dei minuti compreso tra 0 e 59, SS è il valore dei secondi compreso tra 0 e 59 e fffffff è il valore dei secondi frazionari compreso tra 0 e 9999999. Tutti gli intervalli includono il primo e l'ultimo valore. I secondi frazionari sono facoltativi. I secondi sono facoltativi, a meno che non vengano specificati i secondi frazionari. In questo caso, i secondi sono obbligatori. Quando i secondi o le frazioni di secondo non sono specificati, viene usato il valore predefinito zero. La parte relativa all'offset deve essere nel formato {+&#124;-} hh: mm, dove HH e MM hanno lo stesso significato come la parte dell'ora. L'intervallo dell'offset deve tuttavia essere compreso tra -14:00 e + 14:00.  
   
  Tra il simbolo DATETIMEOFFSET e il payload con valore letterale può essere presente un numero qualsiasi di spazi ma non possono essere presenti nuove righe.  
   

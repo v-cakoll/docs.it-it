@@ -1,24 +1,12 @@
 ---
 title: Generazione di comandi SQL di modifica
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 Questa sezione descrive come sviluppare un modulo di generazione SQL di modifica per il provider (database conforme a SQL:1999). Tale modulo è responsabile della conversione di un albero dei comandi di modifica nelle istruzioni SQL INSERT, UPDATE o DELETE appropriate.  
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generazione di un comando SQL di inserimento  
  Per un determinato DbInsertCommandTree nel provider di esempio, il comando di inserimento generato si basa su uno dei due modelli di inserimento riportati di seguito.  
   
- Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "@@ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "keyMemberI = keyValueI &#124; SCOPE_IDENTITY () "assume la forma" keyMemberI = SCOPE_IDENTITY () "solo se keyMemeberI è una chiave generata dall'archivio, in quanto SCOPE_IDENTITY () restituisce l'ultimo valore identity inserito in una colonna di identità (generate dall'archivio).  
+ Il primo modello presenta un comando per l'esecuzione dell'inserimento in base ai valori dell'elenco di SetClauses e un'istruzione SELECT per la restituzione delle proprietà specificate nella proprietà Returning della riga inserita se la proprietà Returning non è null. L'elemento predicato "@@ROWCOUNT > 0" è true se è stata inserita una riga. L'elemento predicato "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume la forma "keyMemberI = SCOPE_IDENTITY ()" solo se keyMemeberI è una chiave generata dall'archivio, in quanto SCOPE_IDENTITY () restituisce l'ultimo valore identity inserito in un'identità ( colonna generata dall'archivio).  
   
 ```  
 -- first insert Template  

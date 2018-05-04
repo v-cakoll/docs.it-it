@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>Tipi di tupla di C# #
 
-Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi includono una sintassi più semplice, regole per le conversioni basate su numero (note come cardinalità) e tipi di elementi, nonché regole coerenti per le copie e le assegnazioni. Come un compromesso, le tuple non supportano gli idiomi orientati agli oggetti associati all'ereditarietà. È possibile ottenere una panoramica della sezione nell'argomento [Tuples in the What's new in C# 7](whats-new/csharp-7.md#tuples) (Tuple in Novità di C# 7).
+Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi includono una sintassi più semplice, regole per le conversioni basate su numero (note come cardinalità) e tipi di elementi, nonché regole coerenti per le copie e le assegnazioni. Come un compromesso, le tuple non supportano gli idiomi orientati agli oggetti associati all'ereditarietà. È possibile ottenere una panoramica della sezione nell'argomento [Tuple in Novità di C# 7.0](whats-new/csharp-7.md#tuples).
 
-Questo argomento descrive le regole del linguaggio che controllano le tuple in C# 7, le diverse modalità di uso delle stesse e una guida iniziale per l'uso delle tuple.
+Questo argomento descrive le regole del linguaggio che controllano le tuple in C# 7.0, le diverse modalità di utilizzo delle stesse e una guida iniziale per l'utilizzo delle tuple.
 
 > [!NOTE]
 > Le nuove funzionalità delle tuple richiedono i tipi <xref:System.ValueTuple>.
@@ -77,7 +77,7 @@ Se viene fornito un nome esplicito, esso ha la precedenza su qualsiasi nome prev
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Per i campi in cui non viene fornito un nome esplicito, viene previsto un nome implicito applicabile. Si noti che non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente avranno nomi di campo `Item1`, il cui valore è `42` e `StringContent`, il cui valore è "La risposta a tutti gli elementi":
+Per i campi in cui non viene fornito un nome esplicito, viene previsto un nome implicito applicabile. Si noti che non è obbligatorio fornire nomi semantici, in modo esplicito o implicito. L'inizializzatore seguente avrà nomi di campo `Item1` con valore `42`, e `StringContent` con valore "La risposta a tutto":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -143,7 +143,7 @@ Aggiorniamo questo metodo in modo tale che i tre valori calcolati durante l'enum
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Refactoring supporto di Visual Studio rende più facile estrarre le funzionalità per le statistiche di base in un metodo privato. Ciò offre un metodo `private static` che restituisce il tipo di tupla con tre valori di `Sum`, `SumOfSquares`, e `Count`:
+Il supporto del refactoring di Visual Studio semplifica l'estrazione delle funzionalità per le statistiche principali in un metodo privato. Ciò offre un metodo `private static` che restituisce il tipo di tupla con tre valori di `Sum`, `SumOfSquares`, e `Count`:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
@@ -198,7 +198,7 @@ La tupla con nome può essere parte della firma. Consente al compilatore e agli 
 
 ## <a name="deconstruction"></a>Decostruzione
 
-È possibile decomprimere tutte le voci in una tupla *decostruendo* la tupla restituita da un metodo. Esistono tre diversi approcci per Decostruzione dei Tuple.  È prima possibile dichiarare il tipo di ogni campo all'interno di parentesi per creare variabili discrete per ognuno degli elementi nella tupla:
+È possibile decomprimere tutte le voci in una tupla *decostruendo* la tupla restituita da un metodo. Per la decostruzione delle tuple esistono tre diversi approcci.  È prima possibile dichiarare il tipo di ogni campo all'interno di parentesi per creare variabili discrete per ognuno degli elementi nella tupla:
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -214,7 +214,7 @@ In aggiunta, è possibile usare la parola chiave `var` con una o tutte le dichia
 
 Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi, anche se ogni campo nella tupla presenta lo stesso tipo.
 
-È possibile annullare le tuple con dichiarazioni esistenti nonché:
+È possibile decostruire le tuple anche con le dichiarazioni esistenti:
 
 ```csharp
 public class Point
@@ -227,7 +227,7 @@ public class Point
 ```
 
 > [!WARNING]
->  È possibile combinare le dichiarazioni esistenti con le dichiarazioni all'interno delle parentesi. Ad esempio, non sono consentita le operazioni seguenti: `(var x, y) = MyMethod();`. Viene prodotto un errore CS8184 perché *x* è dichiarato all'interno delle parentesi e *y* è dichiarato in precedenza in un' posizione.
+>  Non è possibile combinare le dichiarazioni esistenti con dichiarazioni all'interno di parentesi. Ad esempio, la dichiarazione seguente non è consentita: `(var x, y) = MyMethod();`. Questa operazione genera un errore CS8184 perché *x* è dichiarato all'interno delle parentesi e *y* è già stato dichiarato in precedenza in un'altra posizione.
 
 ### <a name="deconstructing-user-defined-types"></a>Decostruzione dei tipi definiti dall'utente
 

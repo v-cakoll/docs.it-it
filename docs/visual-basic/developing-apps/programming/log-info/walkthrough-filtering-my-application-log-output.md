@@ -1,25 +1,26 @@
 ---
 title: Filtro dell'output di My.Application.Log (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: filtro dell'output di My.Application.Log
 Questa procedura dettagliata illustra come modificare il filtro di log predefinito per l'oggetto `My.Application.Log` per stabilire quali informazioni vengono passate dall'oggetto `Log` ai listener e quali informazioni vengono scritte dai listener. È possibile modificare il comportamento di registrazione anche dopo la compilazione dell'applicazione, poiché le informazioni di configurazione vengono archiviate nel file di configurazione dell'applicazione.  
@@ -29,7 +30,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 #### <a name="to-build-the-sample-application"></a>Per compilare l'applicazione di esempio  
   
-1.  Aprire un nuovo progetto Applicazione Windows in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+1.  Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
   
 2.  Aggiungere un pulsante denominato Button1 a Form1.  
   
@@ -65,7 +66,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
 |---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` o `Error`|  
-|`Warning`|`Critical`, `Error` o `Warning`|  
+|`Warning`|`Critical`, `Error`o `Warning`|  
 |`Information`|`Critical`, `Error`, `Warning` o `Information`|  
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|  
@@ -81,7 +82,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 1.  Fare clic con il pulsante destro del mouse su app.config **Esplora soluzioni** e selezionare **Apri**.  
   
-     -oppure-  
+     oppure  
   
      Se non è presente alcun file app.config:  
   
@@ -156,7 +157,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 1.  Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
   
-     -oppure-  
+     oppure  
   
      Se non è presente alcun file app.config:  
   

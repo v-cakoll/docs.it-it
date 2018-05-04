@@ -1,6 +1,6 @@
 ---
-title: "Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate"
-description: "Architettura di microservizi .NET per applicazioni .NET in contenitori | Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate"
+title: Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
+description: Architettura di microservizi .NET per applicazioni .NET in contenitori | Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 keywords: Docker, microservizi, ASP.NET, contenitore
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrazione di microservizi e applicazioni a più contenitori per la scalabilità e la disponibilità elevate
 
@@ -124,20 +124,20 @@ Il servizio contenitore di Azure è attualmente disponibile per macchine virtual
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Introduzione alle soluzioni di hosting di contenitori Docker con il servizio contenitore di Azure**
-    [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
+-   **Introduction to Docker container hosting solutions with Azure Container Service**
+    [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro) (Introduzione alle soluzioni di hosting del contenitore Docker con servizio contenitore di Azure)
 
--   **Docker Swarm overview** (Panoramica di Docker Swarm) 
-    [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
+-   **Docker Swarm overview**
+    [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)(Panoramica di Docker Swarm)
 
--   **Swarm mode overview** (Panoramica della modalità Swarm) 
-    [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
+-   **Swarm mode overview**
+    [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)(Panoramica della modalità Swarm)
 
--   **Mesosphere DC/OS Overview** (Panoramica di Mesosphere DC/OS) 
-    [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
+-   **Mesosphere DC/OS Overview**
+    [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/) (Panoramica di Mesosphere DC/OS)
 
 -   **Kubernetes.** Sito ufficiale.\
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

@@ -11,20 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a4f3439888ad3744be1633bb39e1c241343343a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uint-c-reference"></a>uint (Riferimenti per C#)
 
 La parola chiave `uint` rappresenta un tipo integrale che archivia valori in base alla dimensione e all'intervallo mostrato nella tabella seguente.  
   
-|Tipo|Intervallo|Dimensioni|Tipo .NET Framework|  
+|Tipo|Intervallo|Dimensione|Tipo .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`uint`|Da 0 a 4.294.967.295|Intero senza segno a 32 bit|<xref:System.UInt32?displayProperty=nameWithType>|  
   
@@ -32,7 +32,7 @@ La parola chiave `uint` rappresenta un tipo integrale che archivia valori in bas
   
 ## <a name="literals"></a>Valori letterali  
 
-È possibile dichiarare e inizializzare una variabile `uint` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `uint`, vale a dire se è minore di <xref:System.UInt32.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
+È possibile dichiarare e inizializzare una variabile `uint` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7.0) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `uint`, vale a dire se è minore di <xref:System.UInt32.MinValue?displayProperty=nameWithType> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, si verifica un errore di compilazione.
 
 Nell'esempio seguente, i valori interi uguali a 3.000.000.000 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `uint`.  
   
@@ -41,11 +41,11 @@ Nell'esempio seguente, i valori interi uguali a 3.000.000.000 rappresentati come
 > [!NOTE] 
 > Viene usato il prefisso `0x` o `0X` per identificare un valore letterale esadecimale e il prefisso `0b` o `0B` per identificare un valore letterale binario. I valori letterali decimali non hanno prefissi. 
 
-A partire da c# 7, alcune funzionalità sono state aggiunte migliorare la leggibilità. 
- - C# 7.0 consente l'utilizzo dei caratteri di sottolineatura, `_`, come un separatore di cifre.
- - Consente di c# 7.2 `_` da utilizzare come separatore di cifre per un valore letterale binario o esadecimale, dopo il prefisso. Un valore letterale decimale non è consentito utilizzare un carattere di sottolineatura.
+A partire da C# 7.0, sono state aggiunte alcune funzionalità che migliorano la leggibilità. 
+ - C# 7.0 consente l'utilizzo del carattere di sottolineatura (`_`) come separatore di cifre.
+ - C# 7.2 consente l'utilizzo di `_` dopo il prefisso, come separatore di cifre per un valore letterale binario o esadecimale. In un valore letterale decimale non è consentito l'utilizzo di un carattere di sottolineatura iniziale.
 
-Di seguito sono illustrati alcuni esempi.
+Di seguito sono riportati alcuni esempi.
 
 [!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
@@ -77,7 +77,7 @@ uint uInt1 = aLong;
 uint uInt2 = (uint)aLong;  
 ```  
   
- Si noti inoltre che non avviene alcuna conversione implicita dai tipi a virgola mobile in `uint`. Ad esempio, l'istruzione seguente genera un errore del compilatore, a meno che non venga usato un cast esplicito:  
+ Si noti inoltre che non avviene alcuna conversione implicita dai tipi a virgola mobile in `uint`. Ad esempio, l'istruzione seguente genera un errore di compilazione, a meno che non venga usato un cast esplicito:  
   
 ```csharp  
 // Error -- no implicit conversion from double:  

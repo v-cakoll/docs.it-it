@@ -1,27 +1,15 @@
 ---
 title: Metodi generici Field e SetField (LINQ to DataSet)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6281f2fdd00f210f09c97861d2ea723d259af004
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2f7d5cc5689914db2107febadf60bee6da1c2b72
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Metodi generici Field e SetField (LINQ to DataSet)
 In [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sono disponibili metodi di estensione della classe <xref:System.Data.DataRow> per l'accesso ai valori di colonna: il metodo <xref:System.Data.DataRowExtensions.Field%2A> e il metodo <xref:System.Data.DataRowExtensions.SetField%2A>. Questi metodi semplificano l'accesso ai valori di colonna per gli sviluppatori, in particolare per quanto riguarda i valori Null. <xref:System.Data.DataSet> utilizza <xref:System.DBNull.Value> per rappresentare valori Null, mentre in [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] viene utilizzato il supporto dei tipi nullable introdotto in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Utilizzando la funzione di accesso colonna preesistente in <xref:System.Data.DataRow> richiede di eseguire il cast dell'oggetto restituito nel tipo appropriato. Se un campo specifico in un <xref:System.Data.DataRow> può essere null, è necessario controllare in modo esplicito per un valore null poiché restituisce <xref:System.DBNull.Value> e, in modo implicito il cast a un altro tipo genera un <xref:System.InvalidCastException>. Nell'esempio seguente, se il <xref:System.Data.DataRow.IsNull%2A> metodo non è stato utilizzato per verificare la presenza di un valore null, verrà generata un'eccezione se l'indicizzatore restituito <xref:System.DBNull.Value> e ha tentato di eseguirne il cast su un <xref:System.String>.  

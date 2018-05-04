@@ -1,27 +1,15 @@
 ---
 title: Generazione di dataset fortemente tipizzati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1231413303b60eade96d989114372c4443bc67d4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bb536416a043fc392d0c4e94378239ae3ee37f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generazione di dataset fortemente tipizzati
 Dato un XML Schema conforme allo standard XSD (XML Schema Definition Language), è possibile generare un <xref:System.Data.DataSet> fortemente tipizzato usando lo strumento XSD.exe fornito con [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
@@ -34,7 +22,7 @@ Dato un XML Schema conforme allo standard XSD (XML Schema Definition Language), 
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- In questa sintassi, il `/d` direttiva richiede lo strumento per generare un **DataSet**e `/l:` indica allo strumento la lingua da utilizzare (ad esempio, c# o Visual Basic .NET). Facoltativo `/eld` direttiva specifica che è possibile utilizzare [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] per eseguire query sul generato **set di dati.** Questa opzione viene usata quando si specifica anche l'opzione `/d`. Per ulteriori informazioni, vedere [l'esecuzione di query di dataset tipizzati](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Facoltativo `/n:` direttiva richiede lo strumento per generare anche uno spazio dei nomi per il **DataSet** chiamato **XSDSchema**. L'output del comando è costituito dal file XSDSchemaFileName.dll, che può essere compilato e usato in un'applicazione ADO.NET. È possibile compilare il codice generato come libreria o modulo.  
+ In questa sintassi, il `/d` direttiva richiede lo strumento per generare un **DataSet**e `/l:` indica allo strumento la lingua da utilizzare (ad esempio, c# o Visual Basic .NET). Il parametro facoltativo `/eld` direttiva specifica che è possibile usare [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] per eseguire query sul generato **set di dati.** Questa opzione viene usata quando si specifica anche l'opzione `/d`. Per ulteriori informazioni, vedere [l'esecuzione di query di dataset tipizzati](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Facoltativo `/n:` direttiva richiede lo strumento per generare anche uno spazio dei nomi per il **DataSet** chiamato **XSDSchema**. L'output del comando è costituito dal file XSDSchemaFileName.dll, che può essere compilato e usato in un'applicazione ADO.NET. È possibile compilare il codice generato come libreria o modulo.  
   
  Nel codice seguente viene mostrata la sintassi per la compilazione del codice generato come libreria usando il compilatore C# (csc.exe).  
   

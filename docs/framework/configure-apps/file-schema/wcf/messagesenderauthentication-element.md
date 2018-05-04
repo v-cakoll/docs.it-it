@@ -1,24 +1,12 @@
 ---
 title: Elemento &lt;messageSenderAuthentication&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 898569796c65a7999583f4faba9f11a6172a5af8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>Elemento &lt;messageSenderAuthentication&gt;
 Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.  
@@ -27,10 +15,10 @@ Specifica opzioni di autenticazione per i mittenti di messaggi peer-to-peer.
   
  \<system.ServiceModel>  
 \<i comportamenti >  
-\<endpointBehaviors>  
-\<behavior>  
+\<endpointBehaviors >  
+\<comportamento >  
 \<clientCredentials>  
-\<peer>  
+\<peer >  
 \<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Sintassi  
@@ -87,7 +75,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Specifica una credenziale usata per l'autenticazione del client con un servizio peer.|  
+|[\<peer >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Specifica una credenziale usata per l'autenticazione del client con un servizio peer.|  
   
 ## <a name="remarks"></a>Note  
  Se è stata scelta l'autenticazione dei messaggi, sarà necessario configurare questo elemento. Per i canali di output, ogni messaggio viene firmato utilizzando il certificato fornito dal [ \<certificato >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Prima che vengano recapitati all'applicazione, tutti i messaggi vengono controllati a fronte delle credenziali del messaggio usando la convalida specificata dall'attributo `customCertificateValidatorType` di questo elemento. La convalida può accettare o rifiutare la credenziale.  

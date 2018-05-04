@@ -1,13 +1,6 @@
 ---
 title: '&lt;defaultHttpCachePolicy&gt; elemento (impostazioni di rete)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 048d9a373c77e530bd352b3caa0e122b3833a5c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; elemento (impostazioni di rete)
 Indica se la memorizzazione nella cache HTTP è attivo e viene descritto il valore predefinito di criteri di memorizzazione nella cache.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<requestCaching >  
 \<defaultHttpCachePolicy >  
   
@@ -58,7 +49,7 @@ Indica se la memorizzazione nella cache HTTP è attivo e viene descritto il valo
 |`policyLevel`|Specifica se i criteri di memorizzazione nella cache sono automatico o se la cache viene ignorata. Il valore predefinito è `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

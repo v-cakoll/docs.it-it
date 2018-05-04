@@ -1,24 +1,12 @@
 ---
 title: Considerazioni sulle prestazioni (Entity Framework)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e27d6ec040557d682082a6fb5a05677ad52afae9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 581f3bc81c689909164ed3fec246371cf83245ff
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  
@@ -32,7 +20,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 |Apertura della connessione al database|Moderato<sup>1</sup>|Secondo le necessità.|Poiché una connessione aperta al database richiede una risorsa preziosa, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] apre e chiude la connessione al database solo in base alle esigenze. È possibile aprire anche in modo esplicito la connessione. Per ulteriori informazioni, vedere [alla gestione delle connessioni e transazioni](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).|  
 |Generazione di visualizzazioni|High|Una volta in ogni dominio dell'applicazione. Possono essere generate anticipatamente.|Prima di poter eseguire una query su un modello concettuale o salvare delle modifiche all'origine dati, Entity Framework deve generare un set di visualizzazioni query locali per accedere al database. A causa del costo elevato della generazione di queste visualizzazioni, è possibile generarle in anticipo e aggiungerle al progetto in fase di progettazione. Per ulteriori informazioni, vedere [come: Pre-Generate viste per migliorare le prestazioni di Query](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
 |Preparazione della query|Moderato<sup>2</sup>|Una volta per ogni query univoca.|Include i costi per creare il comando della query, generare un albero dei comandi basato sui metadati del modello e di mapping e definire la forma dei dati restituiti. Poiché vengono memorizzati nella cache sia i comandi delle query Entity SQL sia le query LINQ, le successive esecuzioni dei comandi della stessa query sono più veloci. Tuttavia, è possibile usare le query LINQ compilate per ridurre il costo nelle esecuzioni successive e le query compilate possono essere più efficienti di quelle LINQ che vengono memorizzate nella cache automaticamente. Per ulteriori informazioni, vedere [query compilate (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). Per informazioni generali sull'esecuzione di query LINQ, vedere [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Nota:** query LINQ to Entities che applicano il `Enumerable.Contains` operatore alle raccolte in memoria non vengono memorizzati nella cache automaticamente. Inoltre, la parametrizzazione delle raccolte in memoria nelle query LINQ compilate non è consentita.|  
-|Esecuzione della query|Low<sup>2</sup>|Una volta per ogni query.|Costo dell'esecuzione del comando sull'origine dati tramite il provider di dati ADO.NET. Poiché la maggior parte delle origini dati memorizzano nella cache i piani di query, è possibile che le successive esecuzioni della stessa query siano ancor più veloci.|  
+|Esecuzione della query|Bassa<sup>2</sup>|Una volta per ogni query.|Costo dell'esecuzione del comando sull'origine dati tramite il provider di dati ADO.NET. Poiché la maggior parte delle origini dati memorizzano nella cache i piani di query, è possibile che le successive esecuzioni della stessa query siano ancor più veloci.|  
 |Caricamento e convalida di tipi|Low<sup>3</sup>|Una volta per ciascuna istanza <xref:System.Data.Objects.ObjectContext>.|I tipi vengono caricati e convalidati rispetto ai tipi definiti nel modello concettuale.|  
 |Rilevamento|Low<sup>3</sup>|Una volta per ogni oggetto restituito da una query. <sup>4</sup>|Se una query usa l'opzione di unione <xref:System.Data.Objects.MergeOption.NoTracking>, questa fase non influisce sulle prestazioni.<br /><br /> Se la query usa l'opzione di unione <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, i risultati della query vengono rilevati nell'oggetto <xref:System.Data.Objects.ObjectStateManager>. Un oggetto <xref:System.Data.EntityKey> viene generato per ogni oggetto rilevato che la query restituisce e viene usato per creare un oggetto <xref:System.Data.Objects.ObjectStateEntry> in <xref:System.Data.Objects.ObjectStateManager>. Se è possibile trovare un oggetto <xref:System.Data.Objects.ObjectStateEntry> per <xref:System.Data.EntityKey>, viene restituito l'oggetto esistente. Se viene usata l'opzione <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, l'oggetto viene aggiornato prima di essere restituito.<br /><br /> Per ulteriori informazioni, vedere [risoluzione di identità, la gestione dello stato e il rilevamento delle modifiche](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
 |Materializzazione degli oggetti|Moderato<sup>3</sup>|Una volta per ogni oggetto restituito da una query. <sup>4</sup>|Processo di lettura dell'oggetto <xref:System.Data.Common.DbDataReader> restituito, di creazione di oggetti e di impostazione di valori di proprietà che si basano sui valori in ciascuna istanza della classe <xref:System.Data.Common.DbDataRecord>. Se l'oggetto esiste già in <xref:System.Data.Objects.ObjectContext> e la query usa l'opzione di unione <xref:System.Data.Objects.MergeOption.AppendOnly> o <xref:System.Data.Objects.MergeOption.PreserveChanges>, questa fase non influisce sulle prestazioni. Per ulteriori informazioni, vedere [risoluzione di identità, la gestione dello stato e il rilevamento delle modifiche](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
@@ -43,7 +31,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
  <sup>3</sup> costo totale aumenta proporzionalmente al numero di oggetti restituiti dalla query.  
   
- <sup>4</sup> questo overhead non è necessario per le query EntityClient perché le query EntityClient restituiscono un <xref:System.Data.EntityClient.EntityDataReader> anziché oggetti. Per ulteriori informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+ <sup>4</sup> questo overhead non è obbligatorio per le query EntityClient perché le query EntityClient restituiscono un <xref:System.Data.EntityClient.EntityDataReader> anziché oggetti. Per ulteriori informazioni, vedere [EntityClient Provider per Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="additional-considerations"></a>Considerazioni aggiuntive  
  Di seguito sono illustrate altre considerazioni che possono influire sulle prestazioni di applicazioni Entity Framework.  

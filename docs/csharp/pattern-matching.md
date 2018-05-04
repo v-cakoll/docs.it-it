@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pattern-matching"></a>Criteri di ricerca #
 
@@ -37,7 +37,7 @@ Da queste strutture scrivere un metodo che calcola l'area di una forma.
 
 ## <a name="the-is-type-pattern-expression"></a>Espressione del criterio di tipo `is`
 
-Prima di C# 7, era necessario testare ogni tipo di una serie di istruzioni `if` e `is`:
+Prima di C# 7.0, era necessario testare ogni tipo di una serie di istruzioni `if` e `is`:
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 

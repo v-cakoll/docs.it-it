@@ -1,33 +1,21 @@
 ---
 title: '&lt;resolver&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db95b6f9a988c133a6b4afd55849fc6fb650c24c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f29c34f53a8bdaee4b30c72bb5d764ae3935fe7a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltresolvergt"></a>&lt;resolver&gt;
 Specifica un resolver peer usato per risolvere un ID della rete di peer in un insieme di indirizzi di nodo peer che rappresenta alcuni nodi che partecipano nella rete.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<le associazioni >  
 \<netPeerBinding>  
 \<binding>  
-\<resolver>  
+\<sistema di risoluzione >  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +39,7 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Specifica le impostazioni di un servizio resolver peer personalizzato.|  
+|[\<intestazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Specifica le impostazioni di un servizio resolver peer personalizzato.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -69,4 +57,4 @@ Specifica un resolver peer usato per risolvere un ID della rete di peer in un in
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [Resolver del peer](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Aggiunta di un Resolver personalizzato a un'applicazione il canale peer](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Aggiunta di un Resolver personalizzato a un'applicazione di PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

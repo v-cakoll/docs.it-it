@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
-A partire da C# 7, C# supporta i valori restituiti di riferimento (valori restituiti ref). Un valore restituito di riferimento consente a un metodo di restituire a un chiamante un riferimento a una variabile, invece di un valore. Il chiamante può quindi scegliere di trattare la variabile come se fosse stata restituita da un valore o un riferimento. Il chiamante può creare una nuova variabile che è di per sé un riferimento al valore restituito, chiamata variabile locale ref.
+A partire da C# 7.0, C# supporta i valori restituiti di riferimento (valori restituiti ref). Un valore restituito di riferimento consente a un metodo di restituire a un chiamante un riferimento a una variabile, invece di un valore. Il chiamante può quindi scegliere di trattare la variabile come se fosse stata restituita da un valore o un riferimento. Il chiamante può creare una nuova variabile che è di per sé un riferimento al valore restituito, chiamata variabile locale ref.
 
 ## <a name="what-is-a-reference-return-value"></a>Che cos'è un valore restituito di riferimento?
 

@@ -1,13 +1,6 @@
 ---
 title: '&lt;impostazioni&gt; elemento (impostazioni di rete)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 6fd4b608964bca2e05424f2f76136fa69111adc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f717705a6cd4cc29fe333f5012c7fec466d350b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;impostazioni&gt; elemento (impostazioni di rete)
 Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?displayProperty=nameWithType>.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
 \<Impostazioni >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -57,12 +48,12 @@ Configura le opzioni di rete di base per lo spazio dei nomi <xref:System.Net?dis
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Consente di personalizzare i parametri utilizzati per la <xref:System.Net.HttpListener> classe.|  
-|[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Consente di personalizzare i parametri della richiesta Web.|  
+|[HttpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Consente di personalizzare i parametri utilizzati per la <xref:System.Net.HttpListener> classe.|  
+|[HttpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Consente di personalizzare i parametri della richiesta Web.|  
 |[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Protocollo Internet versione 6 (IPv6) consente il supporto.|  
 |[\<performanceCounter > elemento (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Abilita i contatori delle prestazioni di rete.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Configura le connessioni alle risorse di rete.|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
+|[Socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Specifica se le operazioni socket utilizzano le porte di completamento.|  
 |[\<webProxyScript > elemento (impostazioni di rete)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Consente di configurare le caratteristiche dello script utilizzato per individuare il proxy Web.|  
   
 ### <a name="parent-elements"></a>Elementi padre  

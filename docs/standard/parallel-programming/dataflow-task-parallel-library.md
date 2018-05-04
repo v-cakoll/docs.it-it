@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Flusso di dati (Task Parallel Library)
 <a name="top"></a> La libreria Task Parallel Library (TPL) fornisce componenti del flusso di dati per aumentare l'affidabilità delle applicazioni abilitate per la concorrenza. Questi componenti del flusso di dati vengono definiti collettivamente *libreria del flusso di dati TPL*. Con questo modello del flusso di dati viene promossa la programmazione basata su attori fornendo il passaggio di messaggi in-process per attività di pipelining e per un flusso di dati con granularità grossolana. I componenti del flusso di dati sono basati sui tipi e sull'infrastruttura di pianificazione della libreria TPL e si integrano con il supporto dei linguaggi C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e F# per la programmazione asincrona. Questi componenti sono utili qualora siano presenti più operazioni che devono comunicare tra loro in modo asincrono o qualora si desideri elaborare i dati non appena diventano disponibili. Si consideri, ad esempio, un'applicazione tramite cui vengono elaborati i dati immagine di una webcam. Tramite il modello del flusso di dati, l'applicazione è in grado di elaborare i fotogrammi delle immagini quando diventano disponibili. Se tramite l'applicazione vengono migliorati i fotogrammi dell'immagine, ad esempio, eseguendo la correzione della luce o la riduzione occhi rossi, è possibile creare una *pipeline* di componenti del flusso di dati. In ogni fase della pipeline è possibile utilizzare la funzionalità di parallelismo con maggiore granulosità grossolana, ad esempio la funzionalità fornita dalla libreria TPL, per trasformare l'immagine.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- È inoltre possibile utilizzare proprietà come <xref:System.Threading.Tasks.Task.IsCanceled%2A> nel corpo dell'attività di continuazione per determinare informazioni aggiuntive sullo stato di completamento di un blocco di flussi di dati. Per altre informazioni sulle attività di continuazione e il modo in cui interagiscono con l'annullamento e la gestione degli errori, vedere [Attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md), [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB: Procedura: gestire le eccezioni generate dalle attività](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+ È inoltre possibile utilizzare proprietà come <xref:System.Threading.Tasks.Task.IsCanceled%2A> nel corpo dell'attività di continuazione per determinare informazioni aggiuntive sullo stato di completamento di un blocco di flussi di dati. Per altre informazioni sulle attività di continuazione e il modo in cui interagiscono con l'annullamento e la gestione degli errori, vedere [Attività di continuazione](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [Annullamento delle attività](../../../docs/standard/parallel-programming/task-cancellation.md), [Gestione delle eccezioni](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [NIB: Procedura: gestire le eccezioni generate dalle attività](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
  [[vai all'inizio](#top)]  
   
@@ -166,8 +166,8 @@ ms.lasthandoff: 01/19/2018
   
 |Tipo|Tipo delegato sincrono|Tipo delegato asincrono|  
 |----------|-------------------------------|--------------------------------|  
-|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func\<TInput, Task>`|  
-|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
+|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
+|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
  È inoltre possibile utilizzare le espressioni lambda quando si utilizzano tipi di blocchi di esecuzione. Per un esempio in cui viene illustrato l'uso di un'espressione lambda con un blocco di esecuzione, vedere [Procedura: eseguire un'azione alla ricezione di dati in un blocco di flussi di dati](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md).  

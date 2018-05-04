@@ -1,29 +1,19 @@
 ---
 title: '&lt;wsFederation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de7be463403b675e5f03786e85807e6685348680
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Fornisce la configurazione per il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-\<System >  
+\<IdentityModel >  
 \<federationConfiguration >  
 \<wsFederation >  
   
@@ -78,7 +68,7 @@ Fornisce la configurazione per il <xref:System.IdentityModel.Services.WSFederati
 |signOutReply|Specifica l'URL a cui il client deve essere reindirizzato dal servizio token di sicurezza (STS) durante la disconnessione tramite il protocollo WS-Federation passivo. Imposta il parametro wreply su una richiesta di disconnessione WS-Federation. Facoltativo. Il valore predefinito è una stringa vuota, che specifica che nessuna parametri aggiuntivi devono essere inclusi nella richiesta.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
- None  
+ Nessuno  
   
 ### <a name="parent-elements"></a>Elementi padre  
   

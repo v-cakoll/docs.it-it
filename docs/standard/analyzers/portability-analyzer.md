@@ -1,6 +1,6 @@
 ---
 title: .NET Portability Analyzer | .NET
-description: "Informazioni su come usare lo strumento .NET Portability Analyzer per valutare la portabilità del codice tra le diverse implementazioni di .NET, inclusi .NET Core, .NET Standard, UWP e Xamarin."
+description: Informazioni su come usare lo strumento .NET Portability Analyzer per valutare la portabilità del codice tra le diverse implementazioni di .NET, inclusi .NET Core, .NET Standard, UWP e Xamarin.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-È possibile fare in modo che le librerie in uso siano multi-piattaforma e valutare la quantità di lavoro necessario per rendere l'applicazione compatibile con altri profili e implementazioni di .NET, tra cui .NET Core, .NET Standard, UWP e Xamarin per iOS, Android e Mac. [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) è uno strumento che crea un report dettagliato sulla flessibilità del programma in tutte le implementazioni di .NET analizzando gli assembly. Portability Analyzer è offerto come estensione di Visual Studio e come applicazione della console.
+È possibile fare in modo che le librerie in uso siano multi-piattaforma e valutare la quantità di lavoro necessario per rendere l'applicazione compatibile con altri profili e implementazioni di .NET, tra cui .NET Core, .NET Standard, UWP e Xamarin per iOS, Android e Mac. [.NET Portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) è uno strumento che crea un report dettagliato sulla flessibilità del programma in tutte le implementazioni di .NET analizzando gli assembly. Portability Analyzer è offerto come estensione di Visual Studio e come applicazione della console.
 
 ## <a name="new-targets"></a>Nuove destinazioni
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="how-to-use-portability-analyzer"></a>Come usare Portability Analyzer
 
-Per iniziare a usare .NET Portability Analyzer, scaricare l'estensione da [Visual Studio Gallery](http://go.microsoft.com/fwlink/?LinkID=507467) e installarla. Funziona in Visual Studio 2015 e Visual Studio 2017. È possibile configurarlo in Visual Studio scegliendo **Analyze** > **Portability Analyzer Settings** (Analizza - Impostazioni di Portability Analyzer ) e selezionando le piattaforme di destinazione.
+Per iniziare a usare .NET Portability Analyzer, scaricare l'estensione da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) e installarla. Funziona in Visual Studio 2015 e Visual Studio 2017. È possibile configurarlo in Visual Studio scegliendo **Analyze** > **Portability Analyzer Settings** (Analizza - Impostazioni di Portability Analyzer ) e selezionando le piattaforme di destinazione.
 
 ![Schermata della portabilità](./media/portability-analyzer/portability-screenshot.png)
 

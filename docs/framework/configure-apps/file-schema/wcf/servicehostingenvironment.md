@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto. Se questo elemento è vuoto, viene usato il tipo predefinito. Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>Sintassi  
@@ -51,9 +39,9 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente. Il valore predefinito è `false`.<br /><br /> Quando questo attributo è impostato su `true`, le richieste ai servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] passano attraverso la pipeline HTTP ASP.NET. Viene inoltre impedita la comunicazione tra protocolli non HTTP. Per ulteriori informazioni, vedere [servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Numero intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima che un servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] possa essere attivato. **Attenzione:** specificare questo attributo con attendibilità parziale nel file Web. config di un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizio comporterà un <xref:System.Security.SecurityException> quando si esegue il servizio.|  
-|multipleSiteBindingsEnabled|Valore booleano che specifica se sono abilitate più associazioni IIS per sito.<br /><br /> IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali. È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS. Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione. Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito. Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.<br /><br /> In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema. Tuttavia, un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ospitato su un sito consente l'associazione di un solo indirizzo di base per schema.<br /><br /> Per abilitare più associazioni IIS per sito in un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], impostare questo attributo su `true`. Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP. L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.|  
+|aspNetCompatibilityEnabled|Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente. Il valore predefinito è `false`.<br /><br /> Quando questo attributo è impostato su `true`, le richieste ai servizi Windows Communication Foundation (WCF) passano attraverso la pipeline HTTP ASP.NET e non è consentita la comunicazione su protocolli non HTTP. Per ulteriori informazioni, vedere [servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Numero intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima che un servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] possa essere attivato. **Attenzione:** specificando l'attributo con attendibilità parziale nel file Web. config di un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizio comporterà un <xref:System.Security.SecurityException> quando viene eseguito il servizio.|  
+|multipleSiteBindingsEnabled|Valore booleano che specifica se sono abilitate più associazioni IIS per sito.<br /><br /> IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali. È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS. Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione. Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito. Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.<br /><br /> In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema. Tuttavia, un servizio Windows Communication Foundation (WCF) ospitato in un sito consente l'associazione a un solo indirizzo di base per schema.<br /><br /> Per abilitare più associazioni IIS per ogni sito per un servizio Windows Communication Foundation (WCF), impostare questo attributo su `true`. Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP. L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   

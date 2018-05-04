@@ -1,31 +1,19 @@
 ---
 title: '&lt;serviceDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1e9a8a310a2b3154568b20ea225faead1c71d64f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
-Specifica informazioni di debug e di Guida per un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Specifica le funzionalità di informazioni di debug e di Guida per un servizio Windows Communication Foundation (WCF).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<i comportamenti >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamento >  
 \<serviceDebug >  
   
@@ -65,7 +53,7 @@ Specifica informazioni di debug e di Guida per un servizio [!INCLUDE[indigo1](..
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Specifica un elemento di comportamento.|  
   
 ## <a name="remarks"></a>Note  
  Impostazione `includeExceptionDetailInFaults` a `true` consente al servizio di restituire qualsiasi eccezione generata dal codice dell'applicazione, anche se l'eccezione non è dichiarata mediante il <xref:System.ServiceModel.FaultContractAttribute>. Questa impostazione è utile in caso dell'esecuzione il debug di casi dove il server sta generando un'eccezione imprevista. L'utilizzo di questo attributo consente la restituzione di un modulo serializzato dell'eccezione sconosciuta e offre all'utente la possibilità di esaminare l'eccezione in dettaglio.  

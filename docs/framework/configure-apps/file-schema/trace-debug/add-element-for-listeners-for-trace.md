@@ -1,14 +1,6 @@
 ---
 title: '&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;
 Aggiunge un listener per il **listener** insieme.  
@@ -96,7 +85,7 @@ Aggiunge un listener per il **listener** insieme.
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Il nome del file che il <xref:System.Diagnostics.XmlWriterTraceListener> scrive.|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare  **\<aggiungere >** elementi per aggiungere i listener `MyListener` e `MyEventListener` per il **listener** insieme. `MyListener`Crea un file denominato `MyListener.log` e scrive l'output del file. `MyEventListener`Crea una voce nel registro eventi.  
+ Nell'esempio seguente viene illustrato come utilizzare  **\<aggiungere >** elementi per aggiungere i listener `MyListener` e `MyEventListener` per il **listener** insieme. `MyListener` Crea un file denominato `MyListener.log` e scrive l'output al file. `MyEventListener` Crea una voce nel registro eventi.  
   
 ```xml  
 <configuration>  

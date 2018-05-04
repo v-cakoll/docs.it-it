@@ -1,12 +1,12 @@
 ---
 title: 'Procedura: Scrivere un testo in un file'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedura: Scrivere un testo in un file
 Questo argomento illustra diverse modalità con cui è possibile scrivere un testo in un file per le applicazioni .NET Framework o le app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Per scrivere un testo in un file vengono in genere usati le classi e i metodi seguenti:  
@@ -38,7 +38,10 @@ Questo argomento illustra diverse modalità con cui è possibile scrivere un tes
 -   <xref:System.IO.File> : da usare con le applicazioni .NET Framework. Fornisce i metodi statici per scrivere un testo in un file, ad esempio <xref:System.IO.File.WriteAllLines%2A> e <xref:System.IO.File.WriteAllText%2A>, o per aggiungere un testo in un file (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> o <xref:System.IO.File.AppendText%2A>).  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) : da usare con le app di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Contiene i metodi asincroni per scrivere un testo in un file ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) o [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) o per aggiungere un testo in un file ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) o [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
-  
+
+- <xref:System.IO.Path>: da usare per su stringhe che contengono informazioni sul percorso di file o directory. Contiene il metodo <xref:System.IO.Path.Combine%2A>, che consente la concatenazione di stringhe per compilare un percorso di file o directory.
+
+
  Gli esempi sono semplici per concentrarsi sull'attività da eseguire. Per questo motivo, gli esempi eseguono eventualmente delle procedure minime di controllo degli errori e di gestione delle eccezioni. Un'applicazione reale fornisce in genere procedure di controllo degli errori e di gestione delle eccezioni più efficaci.  
   
 ## <a name="example"></a>Esempio  
@@ -95,6 +98,7 @@ Questo argomento illustra diverse modalità con cui è possibile scrivere un tes
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [Procedura: Enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [Procedura: Leggere e scrivere su un file di dati appena creato](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

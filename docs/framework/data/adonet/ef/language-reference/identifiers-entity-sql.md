@@ -1,27 +1,15 @@
 ---
 title: Identificatori (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Identificatori (Entity SQL)
-Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]sono disponibili due tipi di identificatori: gli identificatori semplici e gli identificatori tra virgolette.  
+Gli identificatori vengono usati in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] per rappresentare alias di espressioni di query, riferimenti di variabili, proprietà di oggetti, funzioni e così via. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili due tipi di identificatori: gli identificatori semplici e gli identificatori tra virgolette.  
   
 ## <a name="simple-identifiers"></a>Identificatori semplici  
  Un identificatore semplice in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è una sequenza di caratteri alfanumerici e caratteri di sottolineatura. Il primo carattere dell'identificatore deve essere un carattere alfabetico (a-z o A-Z).  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Regole di ambito  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]definisce le regole di ambito che determinano quando determinate variabili sono visibili nel linguaggio di query. Alcune espressioni o istruzioni introducono nuovi nomi. Le regole di ambito determinano dove possono essere usati tali nomi, nonché quando o dove una nuova dichiarazione con lo stesso nome di un'altra può nascondere il relativo predecessore.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definisce le regole di ambito che determinano quando determinate variabili sono visibili nel linguaggio di query. Alcune espressioni o istruzioni introducono nuovi nomi. Le regole di ambito determinano dove possono essere usati tali nomi, nonché quando o dove una nuova dichiarazione con lo stesso nome di un'altra può nascondere il relativo predecessore.  
   
  Quando i nomi vengono definiti un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query, si dice che vengono definiti in un ambito. Un ambito include l'intera area della query. I nomi definiti in un ambito sono visibili per tutte le espressioni o i riferimenti ai nomi inclusi in tale ambito. Prima dell'inizio di un ambito e dopo la sua fine, non è possibile fare riferimento ai nomi definiti nell'ambito.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   L'ordine di valutazione delle clausole nell'espressione SELECT determina l'ordine con cui i nomi vengono introdotti nell'ambito. La clausola FROM viene valutata per prima, seguita dalle clausole WHERE, GROUP BY, HAVING, SELECT e infine ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Gestione delle aggregazioni  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]supporta due forme di aggregazione: aggregazioni basate sulle raccolte e aggregazioni basate su gruppo. Le aggregazioni basate sulle raccolte rappresentano il costrutto preferito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], mentre quelle basate sui gruppi sono supportate per offrire compatibilità con SQL.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due forme di aggregazione: aggregazioni basate sulle raccolte e aggregazioni basate su gruppo. Le aggregazioni basate sulle raccolte rappresentano il costrutto preferito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], mentre quelle basate sui gruppi sono supportate per offrire compatibilità con SQL.  
   
  Quando si risolve un'aggregazione, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di considerarlo come una funzione di aggregazione basate sulle raccolte. Se il problema persiste, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Trasforma l'input di aggregazione in un riferimento all'aggregazione annidata e tenta di risolvere questa nuova espressione, come illustrato nell'esempio seguente.  
   

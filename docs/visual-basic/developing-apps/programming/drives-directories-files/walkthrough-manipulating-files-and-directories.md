@@ -1,11 +1,12 @@
 ---
 title: Modifica di file e directory in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
-Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
+Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in Visual Basic. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
   
- In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
+ In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in Visual Basic. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -51,13 +52,13 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   
-    |Controllo|Proprietà|Valore|  
+    |Control|Proprietà|Valore|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Nome**|`filesListBox`|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Sfoglia**|  
-    |**Pulsante**|**Nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esaminare**|  
-    |**CheckBox**|**Nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
-    |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Pulsante**|**Name**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Name**<br /><br /> **per**|`examineButton`<br /><br /> **Esaminare**|  
+    |**CheckBox**|**Name**<br /><br /> **per**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
   

@@ -1,26 +1,12 @@
 ---
 title: Costruttore di tipo denominato (Entity SQL)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: b572d09b812d43fa64e30a3058da9af01d29b747
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9ffaf55ed54e8479a56e6f9fc4d7a5efe47f8e2a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="named-type-constructor-entity-sql"></a>Costruttore di tipo denominato (Entity SQL)
 Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esempio i tipi di entità o i tipi complessi.  
@@ -33,7 +19,7 @@ Utilizzato per creare istanze di tipi nominali del modello concettuale, ad esemp
   
 ## <a name="arguments"></a>Argomenti  
  `identifier`  
- Valore che rappresenta un identificatore semplice o delimitato. Per ulteriori informazioni, vedere [identificatori](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ Valore che rappresenta un identificatore semplice o delimitato. Per altre informazioni, vedere [identificatori](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
   
  `expression`  
  Attributi del tipo che si presuppone essere nello stesso ordine in cui appaiono nella dichiarazione del tipo.  

@@ -1,27 +1,15 @@
 ---
 title: Concorrenza ottimistica
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4cc1ac0446f13bcc6bc1c8262eae5716302c3e2d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 In un ambiente con più utenti sono disponibili due modelli per l'aggiornamento di dati in un database: la concorrenza ottimistica e la concorrenza pessimistica. L'oggetto <xref:System.Data.DataSet> è stato progettato per favorire l'uso della concorrenza ottimistica per attività di lunga durata, quali la gestione in remoto dei dati e l'interazione con i dati.  
@@ -107,7 +95,7 @@ UPDATE Table1 Set Col1 = @NewVal1
  Quando si usa il modello di concorrenza ottimistica, è possibile applicare anche criteri meno restrittivi. Ad esempio, se si usano solo le colonne di chiave primaria nella clausola WHERE, i dati verranno sovrascritti, indipendentemente dagli eventuali aggiornamenti apportati alle altre colonne successivamente all'ultima query. È inoltre possibile applicare una clausola WHERE solo a colonne specifiche, in modo che i dati vengano sovrascritti a meno che particolari campi non siano stati aggiornati successivamente all'ultima query.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- Il **RowUpdated** evento del <xref:System.Data.Common.DataAdapter> oggetto può essere utilizzato in combinazione con le tecniche descritte in precedenza, per fornire la notifica all'applicazione di eventuali violazioni alla concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornare un **Modified** riga da un **DataSet**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. Il <xref:System.Data.Common.RowUpdatedEventArgs> restituirà un **RecordsAffected** proprietà contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando di aggiornamento per la concorrenza ottimistica, la **RecordsAffected** proprietà, di conseguenza, restituirà un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, poiché nessun record sono stati aggiornati. In questo caso viene generata un'eccezione. Il **RowUpdated** evento consente di gestire questa occorrenza e di evitare l'eccezione impostando un appropriato **RowUpdatedEventArgs** valore, ad esempio  **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sul **RowUpdated** eventi, vedere [gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Il **RowUpdated** evento del <xref:System.Data.Common.DataAdapter> oggetto può essere utilizzato in combinazione con le tecniche descritte in precedenza, per fornire la notifica all'applicazione di eventuali violazioni alla concorrenza ottimistica. **RowUpdated** si verifica dopo ogni tentativo di aggiornare un **Modified** riga da una **DataSet**. È quindi possibile aggiungere un particolare codice di gestione, che includa l'elaborazione nel caso in cui si verifichi un'eccezione, l'aggiunta di informazioni personalizzate relative agli errori, l'aggiunta di logica relativa ai nuovi tentativi e così via. Il <xref:System.Data.Common.RowUpdatedEventArgs> restituirà un **RecordsAffected** proprietà contenente il numero di righe interessate da un particolare comando di aggiornamento per una riga modificata in una tabella. Impostando il comando di aggiornamento per la concorrenza ottimistica, la **RecordsAffected** proprietà, di conseguenza, restituirà un valore pari a 0 quando si verifica una violazione della concorrenza ottimistica, poiché nessun record sono stati aggiornati. In questo caso viene generata un'eccezione. Il **RowUpdated** evento consente di gestire questa occorrenza e di evitare l'eccezione impostando un appropriato **RowUpdatedEventArgs** valore, ad esempio  **UpdateStatus. SkipCurrentRow**. Per ulteriori informazioni sul **RowUpdated** eventi, vedere [gestione di eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
  Facoltativamente, è possibile impostare **DataAdapter. ContinueUpdateOnError** a **true**, prima di chiamare **aggiornamento**e rispondere alle informazioni di errore archiviate nel **RowError** proprietà di una particolare riga quando il **aggiornamento** è stata completata. Per ulteriori informazioni, vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   

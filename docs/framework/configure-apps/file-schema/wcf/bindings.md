@@ -1,26 +1,14 @@
 ---
-title: '&lt;associazioni&gt;'
-ms.custom: 
+title: '&lt;Associazioni&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d89fc465c1e82fab638b57dbf712f1396385f80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76ebd7c317bf5f0aa1ec02d4014235df232314f0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltbindingsgt"></a>&lt;associazioni&gt;
+# <a name="ltbindingsgt"></a>&lt;Associazioni&gt;
 Questa sezione contiene una raccolta di associazioni standard e personalizzate. Ogni voce è un elemento `binding` che può essere identificato dal relativo `name` univoco. I servizi usano le associazioni collegandole mediante l'oggetto `name`. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e senza nome associazioni e comportamenti, vedere [configurazione semplificata](../../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="system-provided-binding"></a>Associazione fornita dal sistema  
@@ -55,5 +43,5 @@ Questa sezione contiene una raccolta di associazioni standard e personalizzate. 
  <xref:System.ServiceModel.Channels.BindingElement>  
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
  [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)
