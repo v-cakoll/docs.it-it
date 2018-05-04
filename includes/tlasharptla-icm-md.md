@@ -1,1 +1,0 @@
-Gestione colori immagine (ICM)

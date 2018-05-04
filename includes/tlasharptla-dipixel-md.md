@@ -1,1 +1,0 @@
-unità indipendente dal dispositivo (1/96 di pollice)
