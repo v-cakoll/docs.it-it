@@ -1,24 +1,12 @@
 ---
 title: Metodo CLR per il mapping di funzioni canoniche
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metodo CLR per il mapping di funzioni canoniche
 In Entity Framework è disponibile un set di funzioni canoniche che implementano funzionalità comuni in numerosi sistemi di database, ad esempio modifica delle stringhe e funzioni matematiche. In questo modo gli sviluppatori possono scegliere come destinazione un'ampia gamma di sistemi di database. In caso di chiamata da una tecnologia di query, ad esempio LINQ to Entities, queste funzioni canoniche vengono convertite nella funzione di archivio corrispondente appropriata per il provider usato. Le chiamate alle funzioni possono pertanto essere espresse con una forma comune indipendentemente dall'origine dati, per offrire un'esperienza di query coerente in diverse origini dati. Anche gli operatori AND, OR, NOT e XOR bit per bit vengono mappati alle funzioni canoniche quando l'operando è un tipo numerico. Per gli operandi booleani, gli operatori AND, OR, NOT e XOR bit per bit calcolano le operazioni AND, OR, NOT e XOR dei relativi operandi. Per ulteriori informazioni, vedere [funzioni canoniche](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -51,7 +39,7 @@ In Entity Framework è disponibile un set di funzioni canoniche che implementano
 |Metodo System.String (istanza)|Funzione canonica|Note|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Se `value` non è una costante, viene eseguito il mapping a IndexOf(`this`, `value`) > 0|  
-|Boolean EndsWith(String `value`)|`this`AD ESEMPIO `'` % `value`'|Se `value` non è una costante, viene eseguito il mapping a Right(`this`, length(`value`)) = `value`.|  
+|Boolean EndsWith(String `value`)|`this` AD ESEMPIO `'` % `value`'|Se `value` non è una costante, viene eseguito il mapping a Right(`this`, length(`value`)) = `value`.|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Se `value` non è una costante, viene eseguito il mapping a IndexOf(`this`, `value`) = 1.|  
 |Lunghezza|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
@@ -81,7 +69,7 @@ sistema. Stringa di sostituzione (stringa `oldValue`, stringa `newValue`)|Replac
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (operatore)||  
 |Booleano op_LessThan (DateTime `t1`, DateTime `t2`)|< (operatore)||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (operatore)||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` come DateInterval,\_<br /><br /> ByVal `DateValue` come valore DateTime,\_<br /><br /> ByVal facoltativo `FirstDayOfWeekValue` come FirstDayOfWeek = VbSunday,\_<br /><br /> ByVal facoltativo `FirstWeekOfYearValue` come FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||Per altre informazioni, vedere la sezione relativa alla funzione DatePart.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` come DateInterval, \_<br /><br /> ByVal `DateValue` come valore DateTime, \_<br /><br /> ByVal facoltativo `FirstDayOfWeekValue` come FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal facoltativo `FirstWeekOfYearValue` come FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Per altre informazioni, vedere la sezione relativa alla funzione DatePart.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  

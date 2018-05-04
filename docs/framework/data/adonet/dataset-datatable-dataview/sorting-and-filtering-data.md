@@ -1,34 +1,22 @@
 ---
 title: Ordinamento e applicazione di filtri ai dati
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Ordinamento e applicazione di filtri ai dati
 In <xref:System.Data.DataView> sono disponibili diversi metodi di ordinamento e applicazione di filtri ai dati in una <xref:System.Data.DataTable>:  
   
 -   La proprietà <xref:System.Data.DataView.Sort%2A> viene usata per specificare criteri di ordinamento basati su una o più colonne e includere i parametri ASC (ascendente) e DESC (discendente).  
   
--   La proprietà <xref:System.Data.DataView.ApplyDefaultSort%2A> consente di creare automaticamente un criterio di ordinamento ascendente, basato sulla colonna o sulle colonne di chiave primaria della tabella. <xref:System.Data.DataView.ApplyDefaultSort%2A>si applica solo quando il **ordinamento** proprietà è un riferimento null o una stringa vuota, e quando la tabella contiene una chiave primaria definita.  
+-   La proprietà <xref:System.Data.DataView.ApplyDefaultSort%2A> consente di creare automaticamente un criterio di ordinamento ascendente, basato sulla colonna o sulle colonne di chiave primaria della tabella. <xref:System.Data.DataView.ApplyDefaultSort%2A> viene applicata solo se il **ordinamento** proprietà è un riferimento null o una stringa vuota, e quando la tabella contiene una chiave primaria definita.  
   
 -   La proprietà <xref:System.Data.DataView.RowFilter%2A> consente di specificare subset di righe sulla base dei relativi valori di colonna. Per informazioni dettagliate sulle espressioni valide per il **RowFilter** proprietà, vedere le informazioni di riferimento per il <xref:System.Data.DataColumn.Expression%2A> proprietà del <xref:System.Data.DataColumn> classe.  
   
@@ -42,7 +30,7 @@ In <xref:System.Data.DataView> sono disponibili diversi metodi di ordinamento e 
     |------------------------------|-----------------|  
     |**CurrentRows**|Il **corrente** versione della riga di tutti i **Unchanged**, **Added**, e **Modified** righe. Questa è l'impostazione predefinita.|  
     |**Aggiunta**|Il **corrente** versione di riga all **Added** righe.|  
-    |**Eliminato**|Il **originale** versione di riga all **Deleted** righe.|  
+    |**eliminato**|Il **originale** versione di riga all **Deleted** righe.|  
     |**ModifiedCurrent**|Il **corrente** versione di riga all **Modified** righe.|  
     |**ModifiedOriginal**|Il **originale** versione di riga all **Modified** righe.|  
     |**None**|Nessuna riga.|  

@@ -1,20 +1,13 @@
 ---
 title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
-keywords: .NET, .NET Core, C#, C# Primer, Guida a C#
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#  
 
@@ -70,7 +63,7 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
     - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
 * [Struct](structs.md)
     - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
-* [Matrici](arrays.md)
+* [Array](arrays.md)
     - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
 * [Interfacce](interfaces.md)
     - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.

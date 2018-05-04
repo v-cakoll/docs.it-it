@@ -1,31 +1,19 @@
 ---
 title: Entity Data Model
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e1a1bdeffcc85383d241c277240187ede41401cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bb3c529a19ca96ea5695061fb1b612f9179899be
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 EDM (Entity Data Model) è un set di concetti che descrivono la struttura dei dati, indipendentemente dal form archiviato. EDM è mutuato dal modello entità-relazione descritto da Peter Chen nel 1976, ma è anche basato su tale modello di cui estende gli utilizzi tradizionali.  
   
  EDM consente di superare le difficoltà derivanti dall'archiviazione dei dati in più form. Si pensi, ad esempio, a un'azienda che archivia i dati in database relazionali, file di testo, file XML, fogli di calcolo e rapporti. Ne derivano difficoltà considerevoli nella modellazione dati, nella progettazione di applicazioni e nell'accesso ai dati. Quando si progetta un'applicazione orientata ai dati, è difficile scrivere un codice efficiente e gestibile senza sacrificare accesso ai dati, archiviazione e scalabilità efficienti. Quando la struttura dei dati è relazionale, l'accesso ai dati, l'archiviazione e la scalabilità sono molto efficienti, ma la scrittura di un codice efficiente e gestibile diventa più difficile. Quando la struttura dei dati è basata sugli oggetti, si verifica il contrario: per scrivere un codice efficiente e gestibile, è necessario rinunciare ad accesso ai dati, archiviazione e scalabilità efficienti. Anche se è possibile trovare un giusto equilibrio tra queste due condizioni, nuove difficoltà sorgono quando i dati vengono spostati da un form a un altro. Entity Data Model risolve questi problemi descrivendo la struttura dei dati in termini di entità e relazioni indipendenti da qualsiasi schema di archiviazione. In questo modo il form di dati archiviato risulta irrilevante per la progettazione e lo sviluppo di applicazioni. E, poiché le entità e le relazioni descrivono la struttura dei dati usata in un'applicazione (non nel form archiviato), possono evolvere esattamente come un'applicazione.  
   
- Un `conceptual model` è una rappresentazione specifica della struttura di dati come entità e relazioni e viene in genere definito in un linguaggio specifico di dominio che implementa i concetti del modello EDM. [Il linguaggio di definizione di schema concettuale (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) è riportato un esempio di tale linguaggio specifico di dominio di. Entità e relazioni descritte in un modello concettuale possono essere considerate come astrazioni di oggetti e associazioni in un'applicazione. In questo modo gli sviluppatori hanno la possibilità di concentrarsi sul modello concettuale senza preoccuparsi dello schema di archiviazione e di scrivere il codice avendo come obiettivo l'efficienza e la manutenibilità. Nel frattempo i progettisti dello schema di archiviazione possono concentrarsi sull'efficienza di accesso ai dati, archiviazione e scalabilità.  
+ Un `conceptual model` è una rappresentazione specifica della struttura di dati come entità e relazioni e viene in genere definito in un linguaggio specifico di dominio che implementa i concetti del modello EDM. [Linguaggio di definizione di schema concettuale (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) è riportato un esempio di tale linguaggio specifico di dominio di. Entità e relazioni descritte in un modello concettuale possono essere considerate come astrazioni di oggetti e associazioni in un'applicazione. In questo modo gli sviluppatori hanno la possibilità di concentrarsi sul modello concettuale senza preoccuparsi dello schema di archiviazione e di scrivere il codice avendo come obiettivo l'efficienza e la manutenibilità. Nel frattempo i progettisti dello schema di archiviazione possono concentrarsi sull'efficienza di accesso ai dati, archiviazione e scalabilità.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti di questa sezione vengono descritti i concetti relativi a Entity Data Model. I linguaggi DSL che implementano EDM devono includere i concetti descritti di seguito. Si noti che il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa CSDL per definire i modelli concettuali. Per ulteriori informazioni, vedere [specifica CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
