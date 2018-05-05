@@ -1,1 +1,0 @@
-<span data-ttu-id="5f55c-101">Extensible Rights Markup Language (XrML)</span><span class="sxs-lookup"><span data-stu-id="5f55c-101">Extensible Rights Markup Language (XrML)</span></span>

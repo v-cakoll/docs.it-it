@@ -1,1 +1,0 @@
-<span data-ttu-id="d6e05-101">International Color Consortium (ICC)</span><span class="sxs-lookup"><span data-stu-id="d6e05-101">International Color Consortium (ICC)</span></span>
